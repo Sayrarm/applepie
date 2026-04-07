@@ -1,0 +1,42 @@
+/****************************HEADER********************************/
+
+.header,
+.nav,
+.link {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    margin-left: 10px;
+}
+
+.header,
+.nav {
+    width: 100%;
+}
+
+.nav,
+.link {
+    display: flex;
+    justify-content: space-between;
+}
+
+.link {
+    width: 50%;
+    margin-right: 10px;
+}
+
+.header {
+    background-color: #ADAAB5;
+}
+
+.a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: var(--inter-font), sans-serif;
+    font-size: 20px;
+}
