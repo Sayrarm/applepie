@@ -1,4 +1,5 @@
 import styles from './Memories.module.css'
+import { memoriesData } from '../data/memories-data.js'
 import Card from "../components/Card.jsx";
 
 function Memories() {
@@ -19,8 +20,10 @@ function Memories() {
                     <button>Sorting by</button>
                     <button>Filter</button>
                 </aside>
-                <div>
-                    <Card />
+                <div className={styles.cardsGrid}>
+                    {memoriesData.map(memory => (
+                        <Card key={memory.id} data={memory} />
+                    ))}
                 </div>
             </section>
         </>

@@ -1,21 +1,16 @@
 import styles from './Card.module.css'
 
-function Card() {
+function Card({ data }) {
 
 
     return (
         <>
             <article className={styles.card}>
-                <img
-                    src="/src/assets/pictures/b2_card_fy_0057.png" alt="caleb_1"
-                    width={150}
-                    height={200}
-                />
-                <div>stella</div>
-                <div>lunar/solar</div>
-                <div>lvl</div>
-                <div>name</div>
-                <div>rarity</div>
+                <img src={data.image} alt={data.name} width={150} height={200}/>
+                <h3>{data.char}: {data.name}</h3>
+                <img src={data.stella} alt={data.stellaName} width={24} height={24}/>
+                <img src={data.placement} alt={data.placementName} width={24} height={24}/>
+                <img src={data.talent} alt={data.talentName} width={24} height={24}/>
             </article>
         </>
     )
