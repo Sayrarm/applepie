@@ -1635,10 +1635,10 @@ export const memoriesData = [
         talent: "src/assets/icons/atk.png"
     },
     {
-        id: 111,
+        id: 110,
         char: "Xavier",
         name: "Nestle",
-        image: "src/assets/pictures/Xavier/Xavier_111.png",
+        image: "src/assets/pictures/Xavier/Xavier_110.png",
         stellaName: "amber",
         placementName: "lunar",
         talentName: "def",
@@ -1650,10 +1650,10 @@ export const memoriesData = [
         talent: "src/assets/icons/def.png"
     },
     {
-        id: 112,
+        id: 111,
         char: "Xavier",
         name: "Listen",
-        image: "src/assets/pictures/Xavier/Xavier_112.png",
+        image: "src/assets/pictures/Xavier/Xavier_111.png",
         stellaName: "ruby",
         placementName: "lunar",
         talentName: "hp",
@@ -1665,10 +1665,10 @@ export const memoriesData = [
         talent: "src/assets/icons/hp.png"
     },
     {
-        id: 113,
+        id: 112,
         char: "Xavier",
         name: "Combat Ready",
-        image: "src/assets/pictures/Xavier/Xavier_113.png",
+        image: "src/assets/pictures/Xavier/Xavier_112.png",
         stellaName: "pearl",
         placementName: "lunar",
         talentName: "atk",
@@ -1680,10 +1680,10 @@ export const memoriesData = [
         talent: "src/assets/icons/atk.png"
     },
     {
-        id: 114,
+        id: 113,
         char: "Xavier",
         name: "The Rain",
-        image: "src/assets/pictures/Xavier/Xavier_114.png",
+        image: "src/assets/pictures/Xavier/Xavier_113.png",
         stellaName: "emerald",
         placementName: "lunar",
         talentName: "hp",
@@ -1695,10 +1695,10 @@ export const memoriesData = [
         talent: "src/assets/icons/hp.png"
     },
     {
-        id: 115,
+        id: 114,
         char: "Xavier",
         name: "Reflection",
-        image: "src/assets/pictures/Xavier/Xavier_115.png",
+        image: "src/assets/pictures/Xavier/Xavier_114.png",
         stellaName: "sapphire",
         placementName: "lunar",
         talentName: "atk",
@@ -1710,10 +1710,10 @@ export const memoriesData = [
         talent: "src/assets/icons/atk.png"
     },
     {
-        id: 116,
+        id: 115,
         char: "Xavier",
         name: "Recall",
-        image: "src/assets/pictures/Xavier/Xavier_116.png",
+        image: "src/assets/pictures/Xavier/Xavier_115.png",
         stellaName: "violet",
         placementName: "lunar",
         talentName: "def",
@@ -1725,10 +1725,10 @@ export const memoriesData = [
         talent: "src/assets/icons/def.png"
     },
     {
-        id: 117,
+        id: 116,
         char: "Xavier",
         name: "About To Hit The Ball",
-        image: "src/assets/pictures/Xavier/Xavier_117.png",
+        image: "src/assets/pictures/Xavier/Xavier_116.png",
         stellaName: "amber",
         placementName: "lunar",
         talentName: "hp",
@@ -1740,10 +1740,10 @@ export const memoriesData = [
         talent: "src/assets/icons/hp.png"
     },
     {
-        id: 118,
+        id: 117,
         char: "Xavier",
         name: "Holding Hands",
-        image: "src/assets/pictures/Xavier/Xavier_118.png",
+        image: "src/assets/pictures/Xavier/Xavier_117.png",
         stellaName: "ruby",
         placementName: "lunar",
         talentName: "atk",
@@ -1755,10 +1755,10 @@ export const memoriesData = [
         talent: "src/assets/icons/atk.png"
     },
     {
-        id: 119,
+        id: 118,
         char: "Xavier",
         name: "Calls",
-        image: "src/assets/pictures/Xavier/Xavier_119.png",
+        image: "src/assets/pictures/Xavier/Xavier_118.png",
         stellaName: "pearl",
         placementName: "lunar",
         talentName: "def",
@@ -1770,10 +1770,10 @@ export const memoriesData = [
         talent: "src/assets/icons/def.png"
     },
     {
-        id: 120,
+        id: 119,
         char: "Xavier",
         name: "Real Look",
-        image: "src/assets/pictures/Xavier/Xavier_120.png",
+        image: "src/assets/pictures/Xavier/Xavier_119.png",
         stellaName: "emerald",
         placementName: "lunar",
         talentName: "atk",
@@ -1781,29 +1781,29 @@ export const memoriesData = [
         rarity: "src/assets/icons/3-star.png",
         rarityStars: 3,
         stella: "src/assets/icons/emerald.png",
+        placement: "src/assets/icons/lunar.png",
+        talent: "src/assets/icons/atk.png"
+    },
+    {
+        id: 120,
+        char: "Xavier",
+        name: "Ardent Threads",
+        image: "src/assets/pictures/Xavier/Xavier_120.png",
+        stellaName: "amber",
+        placementName: "lunar",
+        talentName: "atk",
+        rarityName: "3-star",
+        rarity: "src/assets/icons/3-star.png",
+        rarityStars: 3,
+        stella: "src/assets/icons/amber.png",
         placement: "src/assets/icons/lunar.png",
         talent: "src/assets/icons/atk.png"
     },
     {
         id: 121,
         char: "Xavier",
-        name: "Ardent Threads",
-        image: "src/assets/pictures/Xavier/Xavier_121.png",
-        stellaName: "amber",
-        placementName: "lunar",
-        talentName: "atk",
-        rarityName: "3-star",
-        rarity: "src/assets/icons/3-star.png",
-        rarityStars: 3,
-        stella: "src/assets/icons/amber.png",
-        placement: "src/assets/icons/lunar.png",
-        talent: "src/assets/icons/atk.png"
-    },
-    {
-        id: 122,
-        char: "Xavier",
         name: "Unfading Wish",
-        image: "src/assets/pictures/Xavier/Xavier_122.png",
+        image: "src/assets/pictures/Xavier/Xavier_121.png",
         stellaName: "ruby",
         placementName: "lunar",
         talentName: "def",
@@ -1815,10 +1815,10 @@ export const memoriesData = [
         talent: "src/assets/icons/def.png"
     },
     {
-        id: 123,
+        id: 122,
         char: "Xavier",
         name: "Silent Swipe",
-        image: "src/assets/pictures/Xavier/Xavier_123.png",
+        image: "src/assets/pictures/Xavier/Xavier_122.png",
         stellaName: "pearl",
         placementName: "lunar",
         talentName: "hp",
@@ -1830,10 +1830,10 @@ export const memoriesData = [
         talent: "src/assets/icons/hp.png"
     },
     {
-        id: 124,
+        id: 123,
         char: "Xavier",
         name: "Starry Stroll",
-        image: "src/assets/pictures/Xavier/Xavier_124.png",
+        image: "src/assets/pictures/Xavier/Xavier_123.png",
         stellaName: "sapphire",
         placementName: "lunar",
         talentName: "def",
@@ -1845,10 +1845,10 @@ export const memoriesData = [
         talent: "src/assets/icons/def.png"
     },
     {
-        id: 125,
+        id: 124,
         char: "Xavier",
         name: "Heart-To-Heart",
-        image: "src/assets/pictures/Xavier/Xavier_125.png",
+        image: "src/assets/pictures/Xavier/Xavier_124.png",
         stellaName: "sapphire",
         placementName: "solar",
         talentName: "def",
@@ -1860,10 +1860,10 @@ export const memoriesData = [
         talent: "src/assets/icons/def.png"
     },
     {
-        id: 126,
+        id: 125,
         char: "Xavier",
         name: "Good Morning",
-        image: "src/assets/pictures/Xavier/Xavier_126.png",
+        image: "src/assets/pictures/Xavier/Xavier_125.png",
         stellaName: "violet",
         placementName: "solar",
         talentName: "hp",
@@ -1875,10 +1875,10 @@ export const memoriesData = [
         talent: "src/assets/icons/hp.png"
     },
     {
-        id: 127,
+        id: 126,
         char: "Xavier",
         name: "Apple Of My Eye",
-        image: "src/assets/pictures/Xavier/Xavier_127.png",
+        image: "src/assets/pictures/Xavier/Xavier_126.png",
         stellaName: "amber",
         placementName: "solar",
         talentName: "atk",
@@ -1890,10 +1890,10 @@ export const memoriesData = [
         talent: "src/assets/icons/atk.png"
     },
     {
-        id: 128,
+        id: 127,
         char: "Xavier",
         name: "Blade",
-        image: "src/assets/pictures/Xavier/Xavier_128.png",
+        image: "src/assets/pictures/Xavier/Xavier_127.png",
         stellaName: "ruby",
         placementName: "solar",
         talentName: "def",
@@ -1905,10 +1905,10 @@ export const memoriesData = [
         talent: "src/assets/icons/def.png"
     },
     {
-        id: 129,
+        id: 128,
         char: "Xavier",
         name: "Gaze",
-        image: "src/assets/pictures/Xavier/Xavier_129.png",
+        image: "src/assets/pictures/Xavier/Xavier_128.png",
         stellaName: "pearl",
         placementName: "solar",
         talentName: "hp",
@@ -1920,10 +1920,10 @@ export const memoriesData = [
         talent: "src/assets/icons/hp.png"
     },
     {
-        id: 130,
+        id: 129,
         char: "Xavier",
         name: "A Break",
-        image: "src/assets/pictures/Xavier/Xavier_130.png",
+        image: "src/assets/pictures/Xavier/Xavier_129.png",
         stellaName: "emerald",
         placementName: "solar",
         talentName: "atk",
@@ -1935,10 +1935,10 @@ export const memoriesData = [
         talent: "src/assets/icons/atk.png"
     },
     {
-        id: 131,
+        id: 130,
         char: "Xavier",
         name: "Close Feelings",
-        image: "src/assets/pictures/Xavier/Xavier_131.png",
+        image: "src/assets/pictures/Xavier/Xavier_130.png",
         stellaName: "emerald",
         placementName: "lunar",
         talentName: "atk",
@@ -1950,10 +1950,10 @@ export const memoriesData = [
         talent: "src/assets/icons/atk.png"
     },
     {
-        id: 132,
+        id: 131,
         char: "Xavier",
         name: "Succumb",
-        image: "src/assets/pictures/Xavier/Xavier_132.png",
+        image: "src/assets/pictures/Xavier/Xavier_131.png",
         stellaName: "pearl",
         placementName: "lunar",
         talentName: "def",
@@ -1961,29 +1961,29 @@ export const memoriesData = [
         rarity: "src/assets/icons/4-star.png",
         rarityStars: 4,
         stella: "src/assets/icons/pearl.png",
+        placement: "src/assets/icons/lunar.png",
+        talent: "src/assets/icons/def.png"
+    },
+    {
+        id: 132,
+        char: "Xavier",
+        name: "A Captured Moment",
+        image: "src/assets/pictures/Xavier/Xavier_132.png",
+        stellaName: "emerald",
+        placementName: "lunar",
+        talentName: "def",
+        rarityName: "4-star",
+        rarity: "src/assets/icons/4-star.png",
+        rarityStars: 4,
+        stella: "src/assets/icons/emerald.png",
         placement: "src/assets/icons/lunar.png",
         talent: "src/assets/icons/def.png"
     },
     {
         id: 133,
         char: "Xavier",
-        name: "A Captured Moment",
-        image: "src/assets/pictures/Xavier/Xavier_133.png",
-        stellaName: "emerald",
-        placementName: "lunar",
-        talentName: "def",
-        rarityName: "4-star",
-        rarity: "src/assets/icons/4-star.png",
-        rarityStars: 4,
-        stella: "src/assets/icons/emerald.png",
-        placement: "src/assets/icons/lunar.png",
-        talent: "src/assets/icons/def.png"
-    },
-    {
-        id: 134,
-        char: "Xavier",
         name: "Perfect Sunset",
-        image: "src/assets/pictures/Xavier/Xavier_134.png",
+        image: "src/assets/pictures/Xavier/Xavier_133.png",
         stellaName: "sapphire",
         placementName: "lunar",
         talentName: "hp",
@@ -1995,10 +1995,10 @@ export const memoriesData = [
         talent: "src/assets/icons/hp.png"
     },
     {
-        id: 135,
+        id: 134,
         char: "Xavier",
         name: "Lost Signal",
-        image: "src/assets/pictures/Xavier/Xavier_135.png",
+        image: "src/assets/pictures/Xavier/Xavier_134.png",
         stellaName: "sapphire",
         placementName: "lunar",
         talentName: "def",
@@ -2010,10 +2010,10 @@ export const memoriesData = [
         talent: "src/assets/icons/def.png"
     },
     {
-        id: 136,
+        id: 135,
         char: "Xavier",
         name: "Kind Words",
-        image: "src/assets/pictures/Xavier/Xavier_136.png",
+        image: "src/assets/pictures/Xavier/Xavier_135.png",
         stellaName: "ruby",
         placementName: "lunar",
         talentName: "hp",
@@ -2025,10 +2025,10 @@ export const memoriesData = [
         talent: "src/assets/icons/hp.png"
     },
     {
-        id: 137,
+        id: 136,
         char: "Xavier",
         name: "A Day Of Snow",
-        image: "src/assets/pictures/Xavier/Xavier_137.png",
+        image: "src/assets/pictures/Xavier/Xavier_136.png",
         stellaName: "emerald",
         placementName: "lunar",
         talentName: "hp",
@@ -2040,10 +2040,10 @@ export const memoriesData = [
         talent: "src/assets/icons/hp.png"
     },
     {
-        id: 138,
+        id: 137,
         char: "Xavier",
         name: "Garden Of Secrets",
-        image: "src/assets/pictures/Xavier/Xavier_138.png",
+        image: "src/assets/pictures/Xavier/Xavier_137.png",
         stellaName: "amber",
         placementName: "lunar",
         talentName: "atk",
@@ -2053,6 +2053,21 @@ export const memoriesData = [
         stella: "src/assets/icons/amber.png",
         placement: "src/assets/icons/lunar.png",
         talent: "src/assets/icons/atk.png"
+    },
+    {
+        id: 138,
+        char: "Xavier",
+        name: "Dreams Within Reach",
+        image: "src/assets/pictures/Xavier/Xavier_138.png",
+        stellaName: "amber",
+        placementName: "lunar",
+        talentName: "def",
+        rarityName: "4-star",
+        rarity: "src/assets/icons/4-star.png",
+        rarityStars: 4,
+        stella: "src/assets/icons/amber.png",
+        placement: "src/assets/icons/lunar.png",
+        talent: "src/assets/icons/def.png"
     },
     {
         id: 139,
@@ -2072,23 +2087,8 @@ export const memoriesData = [
     {
         id: 140,
         char: "Xavier",
-        name: "Dreams Within Reach",
-        image: "src/assets/pictures/Xavier/Xavier_140.png",
-        stellaName: "amber",
-        placementName: "lunar",
-        talentName: "def",
-        rarityName: "4-star",
-        rarity: "src/assets/icons/4-star.png",
-        rarityStars: 4,
-        stella: "src/assets/icons/amber.png",
-        placement: "src/assets/icons/lunar.png",
-        talent: "src/assets/icons/def.png"
-    },
-    {
-        id: 141,
-        char: "Xavier",
         name: "Shimmering Sunlight",
-        image: "src/assets/pictures/Xavier/Xavier_141.png",
+        image: "src/assets/pictures/Xavier/Xavier_140.png",
         stellaName: "ruby",
         placementName: "lunar",
         talentName: "atk",
@@ -2100,10 +2100,10 @@ export const memoriesData = [
         talent: "src/assets/icons/atk.png"
     },
     {
-        id: 142,
+        id: 141,
         char: "Xavier",
         name: "Galactic Harmony",
-        image: "src/assets/pictures/Xavier/Xavier_142.png",
+        image: "src/assets/pictures/Xavier/Xavier_141.png",
         stellaName: "ruby",
         placementName: "lunar",
         talentName: "def",
@@ -2115,10 +2115,10 @@ export const memoriesData = [
         talent: "src/assets/icons/def.png"
     },
     {
-        id: 143,
+        id: 142,
         char: "Xavier",
         name: "Dawn To Dusk",
-        image: "src/assets/pictures/Xavier/Xavier_143.png",
+        image: "src/assets/pictures/Xavier/Xavier_142.png",
         stellaName: "pearl",
         placementName: "lunar",
         talentName: "hp",
@@ -2130,10 +2130,10 @@ export const memoriesData = [
         talent: "src/assets/icons/hp.png"
     },
     {
-        id: 144,
+        id: 143,
         char: "Xavier",
         name: "Spring Letter",
-        image: "src/assets/pictures/Xavier/Xavier_144.png",
+        image: "src/assets/pictures/Xavier/Xavier_143.png",
         stellaName: "sapphire",
         placementName: "lunar",
         talentName: "atk",
@@ -2145,10 +2145,10 @@ export const memoriesData = [
         talent: "src/assets/icons/atk.png"
     },
     {
-        id: 145,
+        id: 144,
         char: "Xavier",
         name: "Warm Wishes",
-        image: "src/assets/pictures/Xavier/Xavier_145.png",
+        image: "src/assets/pictures/Xavier/Xavier_144.png",
         stellaName: "pearl",
         placementName: "lunar",
         talentName: "atk",
@@ -2160,10 +2160,10 @@ export const memoriesData = [
         talent: "src/assets/icons/atk.png"
     },
     {
-        id: 146,
+        id: 145,
         char: "Xavier",
         name: "Dreaming",
-        image: "src/assets/pictures/Xavier/Xavier_146.png",
+        image: "src/assets/pictures/Xavier/Xavier_145.png",
         stellaName: "violet",
         placementName: "lunar",
         talentName: "hp",
@@ -2175,10 +2175,10 @@ export const memoriesData = [
         talent: "src/assets/icons/hp.png"
     },
     {
-        id: 147,
+        id: 146,
         char: "Xavier",
         name: "Starry Sound",
-        image: "src/assets/pictures/Xavier/Xavier_147.png",
+        image: "src/assets/pictures/Xavier/Xavier_146.png",
         stellaName: "violet",
         placementName: "lunar",
         talentName: "atk",
@@ -2190,10 +2190,10 @@ export const memoriesData = [
         talent: "src/assets/icons/atk.png"
     },
     {
-        id: 148,
+        id: 147,
         char: "Xavier",
         name: "Enlightenment",
-        image: "src/assets/pictures/Xavier/Xavier_148.png",
+        image: "src/assets/pictures/Xavier/Xavier_147.png",
         stellaName: "amber",
         placementName: "lunar",
         talentName: "hp",
@@ -2205,10 +2205,10 @@ export const memoriesData = [
         talent: "src/assets/icons/hp.png"
     },
     {
-        id: 149,
+        id: 148,
         char: "Xavier",
         name: "Winters's Sun",
-        image: "src/assets/pictures/Xavier/Xavier_149.png",
+        image: "src/assets/pictures/Xavier/Xavier_148.png",
         stellaName: "emerald",
         placementName: "lunar",
         talentName: "def",
@@ -2220,10 +2220,10 @@ export const memoriesData = [
         talent: "src/assets/icons/def.png"
     },
     {
-        id: 150,
+        id: 149,
         char: "Xavier",
         name: "Seeker Of Light",
-        image: "src/assets/pictures/Xavier/Xavier_150.png",
+        image: "src/assets/pictures/Xavier/Xavier_149.png",
         stellaName: "violet",
         placementName: "lunar",
         talentName: "def",
@@ -2235,10 +2235,10 @@ export const memoriesData = [
         talent: "src/assets/icons/def.png"
     },
     {
-        id: 151,
+        id: 150,
         char: "Xavier",
         name: "Planned Crush",
-        image: "src/assets/pictures/Xavier/Xavier_151.png",
+        image: "src/assets/pictures/Xavier/Xavier_150.png",
         stellaName: "amber",
         placementName: "lunar",
         talentName: "hp",
@@ -2250,9 +2250,24 @@ export const memoriesData = [
         talent: "src/assets/icons/hp.png"
     },
     {
-        id: 152,
+        id: 151,
         char: "Xavier",
         name: "Planned Crush",
+        image: "src/assets/pictures/Xavier/Xavier_151.png",
+        stellaName: "ruby",
+        placementName: "lunar",
+        talentName: "atk",
+        rarityName: "4-star",
+        rarity: "src/assets/icons/4-star.png",
+        rarityStars: 4,
+        stella: "src/assets/icons/ruby.png",
+        placement: "src/assets/icons/lunar.png",
+        talent: "src/assets/icons/atk.png"
+    },
+    {
+        id: 152,
+        char: "Xavier",
+        name: "Love Syndrome",
         image: "src/assets/pictures/Xavier/Xavier_152.png",
         stellaName: "ruby",
         placementName: "lunar",
@@ -2267,23 +2282,8 @@ export const memoriesData = [
     {
         id: 153,
         char: "Xavier",
-        name: "Love Syndrome",
-        image: "src/assets/pictures/Xavier/Xavier_153.png",
-        stellaName: "ruby",
-        placementName: "lunar",
-        talentName: "atk",
-        rarityName: "4-star",
-        rarity: "src/assets/icons/4-star.png",
-        rarityStars: 4,
-        stella: "src/assets/icons/ruby.png",
-        placement: "src/assets/icons/lunar.png",
-        talent: "src/assets/icons/atk.png"
-    },
-    {
-        id: 154,
-        char: "Xavier",
         name: "Unreturned Traveler",
-        image: "src/assets/pictures/Xavier/Xavier_154.png",
+        image: "src/assets/pictures/Xavier/Xavier_153.png",
         stellaName: "pearl",
         placementName: "lunar",
         talentName: "hp",
@@ -2295,9 +2295,24 @@ export const memoriesData = [
         talent: "src/assets/icons/hp.png"
     },
     {
-        id: 155,
+        id: 154,
         char: "Xavier",
         name: "Unreturned Traveler",
+        image: "src/assets/pictures/Xavier/Xavier_154.png",
+        stellaName: "sapphire",
+        placementName: "lunar",
+        talentName: "hp",
+        rarityName: "4-star",
+        rarity: "src/assets/icons/4-star.png",
+        rarityStars: 4,
+        stella: "src/assets/icons/sapphire.png",
+        placement: "src/assets/icons/lunar.png",
+        talent: "src/assets/icons/hp.png"
+    },
+    {
+        id: 155,
+        char: "Xavier",
+        name: "Twofold Heartbeat",
         image: "src/assets/pictures/Xavier/Xavier_155.png",
         stellaName: "sapphire",
         placementName: "lunar",
@@ -2312,23 +2327,8 @@ export const memoriesData = [
     {
         id: 156,
         char: "Xavier",
-        name: "Twofold Heartbeat",
-        image: "src/assets/pictures/Xavier/Xavier_156.png",
-        stellaName: "sapphire",
-        placementName: "lunar",
-        talentName: "hp",
-        rarityName: "4-star",
-        rarity: "src/assets/icons/4-star.png",
-        rarityStars: 4,
-        stella: "src/assets/icons/sapphire.png",
-        placement: "src/assets/icons/lunar.png",
-        talent: "src/assets/icons/hp.png"
-    },
-    {
-        id: 157,
-        char: "Xavier",
         name: "Sweetness Pursuit",
-        image: "src/assets/pictures/Xavier/Xavier_157.png",
+        image: "src/assets/pictures/Xavier/Xavier_156.png",
         stellaName: "violet",
         placementName: "lunar",
         talentName: "hp",
@@ -2340,10 +2340,10 @@ export const memoriesData = [
         talent: "src/assets/icons/hp.png"
     },
     {
-        id: 158,
+        id: 157,
         char: "Xavier",
         name: "Horizon's Pulse",
-        image: "src/assets/pictures/Xavier/Xavier_158.png",
+        image: "src/assets/pictures/Xavier/Xavier_157.png",
         stellaName: "emerald",
         placementName: "lunar",
         talentName: "hp",
@@ -2355,10 +2355,10 @@ export const memoriesData = [
         talent: "src/assets/icons/hp.png"
     },
     {
-        id: 159,
+        id: 158,
         char: "Xavier",
         name: "Nocturnal Hunt",
-        image: "src/assets/pictures/Xavier/Xavier_159.png",
+        image: "src/assets/pictures/Xavier/Xavier_158.png",
         stellaName: "amber",
         placementName: "lunar",
         talentName: "atk",
@@ -2370,10 +2370,10 @@ export const memoriesData = [
         talent: "src/assets/icons/atk.png"
     },
     {
-        id: 160,
+        id: 159,
         char: "Xavier",
         name: "Firelit Embrace",
-        image: "src/assets/pictures/Xavier/Xavier_160.png",
+        image: "src/assets/pictures/Xavier/Xavier_159.png",
         stellaName: "pearl",
         placementName: "lunar",
         talentName: "atk",
@@ -2385,10 +2385,10 @@ export const memoriesData = [
         talent: "src/assets/icons/atk.png"
     },
     {
-        id: 161,
+        id: 160,
         char: "Xavier",
         name: "Celestial Yearn",
-        image: "src/assets/pictures/Xavier/Xavier_161.png",
+        image: "src/assets/pictures/Xavier/Xavier_160.png",
         stellaName: "ruby",
         placementName: "lunar",
         talentName: "def",
@@ -2400,9 +2400,24 @@ export const memoriesData = [
         talent: "src/assets/icons/def.png"
     },
     {
-        id: 162,
+        id: 161,
         char: "Xavier",
         name: "Starry Witness",
+        image: "src/assets/pictures/Xavier/Xavier_161.png",
+        stellaName: "emerald",
+        placementName: "solar",
+        talentName: "atk",
+        rarityName: "4-star",
+        rarity: "src/assets/icons/4-star.png",
+        rarityStars: 4,
+        stella: "src/assets/icons/emerald.png",
+        placement: "src/assets/icons/solar.png",
+        talent: "src/assets/icons/atk.png"
+    },
+    {
+        id: 162,
+        char: "Xavier",
+        name: "An Appointment",
         image: "src/assets/pictures/Xavier/Xavier_162.png",
         stellaName: "emerald",
         placementName: "solar",
@@ -2417,7 +2432,7 @@ export const memoriesData = [
     {
         id: 163,
         char: "Xavier",
-        name: "An Appointment",
+        name: "Moment's Respite",
         image: "src/assets/pictures/Xavier/Xavier_163.png",
         stellaName: "emerald",
         placementName: "solar",
@@ -2432,22 +2447,22 @@ export const memoriesData = [
     {
         id: 164,
         char: "Xavier",
-        name: "Moment's Respite",
+        name: "Shining Light",
         image: "src/assets/pictures/Xavier/Xavier_164.png",
-        stellaName: "emerald",
+        stellaName: "amber",
         placementName: "solar",
-        talentName: "atk",
+        talentName: "def",
         rarityName: "4-star",
         rarity: "src/assets/icons/4-star.png",
         rarityStars: 4,
-        stella: "src/assets/icons/emerald.png",
+        stella: "src/assets/icons/amber.png",
         placement: "src/assets/icons/solar.png",
-        talent: "src/assets/icons/atk.png"
+        talent: "src/assets/icons/def.png"
     },
     {
         id: 165,
         char: "Xavier",
-        name: "Shining Light",
+        name: "Shining Traces",
         image: "src/assets/pictures/Xavier/Xavier_165.png",
         stellaName: "amber",
         placementName: "solar",
@@ -2462,22 +2477,22 @@ export const memoriesData = [
     {
         id: 166,
         char: "Xavier",
-        name: "Shining Traces",
+        name: "Heartfelt Guide",
         image: "src/assets/pictures/Xavier/Xavier_166.png",
-        stellaName: "amber",
+        stellaName: "ruby",
         placementName: "solar",
-        talentName: "def",
+        talentName: "hp",
         rarityName: "4-star",
         rarity: "src/assets/icons/4-star.png",
         rarityStars: 4,
-        stella: "src/assets/icons/amber.png",
+        stella: "src/assets/icons/ruby.png",
         placement: "src/assets/icons/solar.png",
-        talent: "src/assets/icons/def.png"
+        talent: "src/assets/icons/hp.png"
     },
     {
         id: 167,
         char: "Xavier",
-        name: "Heartfelt Guide",
+        name: "Heartfelt Code",
         image: "src/assets/pictures/Xavier/Xavier_167.png",
         stellaName: "ruby",
         placementName: "solar",
@@ -2492,22 +2507,22 @@ export const memoriesData = [
     {
         id: 168,
         char: "Xavier",
-        name: "Heartfelt Code",
+        name: "Veiled Starlight",
         image: "src/assets/pictures/Xavier/Xavier_168.png",
-        stellaName: "ruby",
+        stellaName: "pearl",
         placementName: "solar",
-        talentName: "hp",
+        talentName: "atk",
         rarityName: "4-star",
         rarity: "src/assets/icons/4-star.png",
         rarityStars: 4,
-        stella: "src/assets/icons/ruby.png",
+        stella: "src/assets/icons/pearl.png",
         placement: "src/assets/icons/solar.png",
-        talent: "src/assets/icons/hp.png"
+        talent: "src/assets/icons/atk.png"
     },
     {
         id: 169,
         char: "Xavier",
-        name: "Veiled Starlight",
+        name: "Veiled Guardian",
         image: "src/assets/pictures/Xavier/Xavier_169.png",
         stellaName: "pearl",
         placementName: "solar",
@@ -2522,17 +2537,17 @@ export const memoriesData = [
     {
         id: 170,
         char: "Xavier",
-        name: "Veiled Guardian",
+        name: "Gilded Mirage",
         image: "src/assets/pictures/Xavier/Xavier_170.png",
-        stellaName: "pearl",
+        stellaName: "sapphire",
         placementName: "solar",
-        talentName: "atk",
+        talentName: "def",
         rarityName: "4-star",
         rarity: "src/assets/icons/4-star.png",
         rarityStars: 4,
-        stella: "src/assets/icons/pearl.png",
+        stella: "src/assets/icons/sapphire.png",
         placement: "src/assets/icons/solar.png",
-        talent: "src/assets/icons/atk.png"
+        talent: "src/assets/icons/def.png"
     },
     {
         id: 171,
@@ -2552,23 +2567,8 @@ export const memoriesData = [
     {
         id: 172,
         char: "Xavier",
-        name: "Gilded Mirage",
-        image: "src/assets/pictures/Xavier/Xavier_172.png",
-        stellaName: "sapphire",
-        placementName: "solar",
-        talentName: "def",
-        rarityName: "4-star",
-        rarity: "src/assets/icons/4-star.png",
-        rarityStars: 4,
-        stella: "src/assets/icons/sapphire.png",
-        placement: "src/assets/icons/solar.png",
-        talent: "src/assets/icons/def.png"
-    },
-    {
-        id: 173,
-        char: "Xavier",
         name: "Heartstring Symphony",
-        image: "src/assets/pictures/Xavier/Xavier_173.png",
+        image: "src/assets/pictures/Xavier/Xavier_172.png",
         stellaName: "amber",
         placementName: "lunar",
         talentName: "atk",
@@ -2580,10 +2580,10 @@ export const memoriesData = [
         talent: "src/assets/icons/atk.png"
     },
     {
-        id: 174,
+        id: 173,
         char: "Xavier",
         name: "Fragment Of Time",
-        image: "src/assets/pictures/Xavier/Xavier_174.png",
+        image: "src/assets/pictures/Xavier/Xavier_173.png",
         stellaName: "amber",
         placementName: "lunar",
         talentName: "def",
@@ -2595,10 +2595,10 @@ export const memoriesData = [
         talent: "src/assets/icons/def.png"
     },
     {
-        id: 175,
+        id: 174,
         char: "Xavier",
         name: "Fluffy Trap",
-        image: "src/assets/pictures/Xavier/Xavier_175.png",
+        image: "src/assets/pictures/Xavier/Xavier_174.png",
         stellaName: "emerald",
         placementName: "lunar",
         talentName: "atk",
@@ -2610,10 +2610,10 @@ export const memoriesData = [
         talent: "src/assets/icons/atk.png"
     },
     {
-        id: 176,
+        id: 175,
         char: "Xavier",
         name: "Precious Bonfire",
-        image: "src/assets/pictures/Xavier/Xavier_176.png",
+        image: "src/assets/pictures/Xavier/Xavier_175.png",
         stellaName: "ruby",
         placementName: "lunar",
         talentName: "hp",
@@ -2625,10 +2625,10 @@ export const memoriesData = [
         talent: "src/assets/icons/hp.png"
     },
     {
-        id: 177,
+        id: 176,
         char: "Xavier",
         name: "Romantic Afternoon",
-        image: "src/assets/pictures/Xavier/Xavier_177.png",
+        image: "src/assets/pictures/Xavier/Xavier_176.png",
         stellaName: "emerald",
         placementName: "lunar",
         talentName: "atk",
@@ -2640,10 +2640,10 @@ export const memoriesData = [
         talent: "src/assets/icons/atk.png"
     },
     {
-        id: 178,
+        id: 177,
         char: "Xavier",
         name: "Unique Aftertaste",
-        image: "src/assets/pictures/Xavier/Xavier_178.png",
+        image: "src/assets/pictures/Xavier/Xavier_177.png",
         stellaName: "ruby",
         placementName: "lunar",
         talentName: "atk",
@@ -2655,10 +2655,10 @@ export const memoriesData = [
         talent: "src/assets/icons/atk.png"
     },
     {
-        id: 179,
+        id: 178,
         char: "Xavier",
         name: "Tender Night",
-        image: "src/assets/pictures/Xavier/Xavier_179.png",
+        image: "src/assets/pictures/Xavier/Xavier_178.png",
         stellaName: "amber",
         placementName: "lunar",
         talentName: "atk",
@@ -2668,6 +2668,21 @@ export const memoriesData = [
         stella: "src/assets/icons/amber.png",
         placement: "src/assets/icons/lunar.png",
         talent: "src/assets/icons/atk.png"
+    },
+    {
+        id: 179,
+        char: "Xavier",
+        name: "Faint Sensation",
+        image: "src/assets/pictures/Xavier/Xavier_179.png",
+        stellaName: "amber",
+        placementName: "lunar",
+        talentName: "hp",
+        rarityName: "5-star",
+        rarity: "src/assets/icons/5-star.png",
+        rarityStars: 5,
+        stella: "src/assets/icons/amber.png",
+        placement: "src/assets/icons/lunar.png",
+        talent: "src/assets/icons/hp.png"
     },
     {
         id: 180,
@@ -2687,23 +2702,8 @@ export const memoriesData = [
     {
         id: 181,
         char: "Xavier",
-        name: "Faint Sensation",
-        image: "src/assets/pictures/Xavier/Xavier_181.png",
-        stellaName: "amber",
-        placementName: "lunar",
-        talentName: "hp",
-        rarityName: "5-star",
-        rarity: "src/assets/icons/5-star.png",
-        rarityStars: 5,
-        stella: "src/assets/icons/amber.png",
-        placement: "src/assets/icons/lunar.png",
-        talent: "src/assets/icons/hp.png"
-    },
-    {
-        id: 182,
-        char: "Xavier",
         name: "21 Days",
-        image: "src/assets/pictures/Xavier/Xavier_182.png",
+        image: "src/assets/pictures/Xavier/Xavier_181.png",
         stellaName: "emerald",
         placementName: "lunar",
         talentName: "def",
@@ -2715,10 +2715,10 @@ export const memoriesData = [
         talent: "src/assets/icons/def.png"
     },
     {
-        id: 183,
+        id: 182,
         char: "Xavier",
         name: "No Restraint",
-        image: "src/assets/pictures/Xavier/Xavier_183.png",
+        image: "src/assets/pictures/Xavier/Xavier_182.png",
         stellaName: "pearl",
         placementName: "lunar",
         talentName: "atk",
@@ -2730,10 +2730,10 @@ export const memoriesData = [
         talent: "src/assets/icons/atk.png"
     },
     {
-        id: 184,
+        id: 183,
         char: "Xavier",
         name: "Floral Blessing",
-        image: "src/assets/pictures/Xavier/Xavier_184.png",
+        image: "src/assets/pictures/Xavier/Xavier_183.png",
         stellaName: "pearl",
         placementName: "lunar",
         talentName: "hp",
@@ -2745,10 +2745,10 @@ export const memoriesData = [
         talent: "src/assets/icons/hp.png"
     },
     {
-        id: 185,
+        id: 184,
         char: "Xavier",
         name: "Celestial Message",
-        image: "src/assets/pictures/Xavier/Xavier_185.png",
+        image: "src/assets/pictures/Xavier/Xavier_184.png",
         stellaName: "sapphire",
         placementName: "lunar",
         talentName: "def",
@@ -2760,10 +2760,10 @@ export const memoriesData = [
         talent: "src/assets/icons/def.png"
     },
     {
-        id: 186,
+        id: 185,
         char: "Xavier",
         name: "Floof Attack",
-        image: "src/assets/pictures/Xavier/Xavier_186.png",
+        image: "src/assets/pictures/Xavier/Xavier_185.png",
         stellaName: "emerald",
         placementName: "lunar",
         talentName: "hp",
@@ -2771,29 +2771,29 @@ export const memoriesData = [
         rarity: "src/assets/icons/5-star.png",
         rarityStars: 5,
         stella: "src/assets/icons/emerald.png",
+        placement: "src/assets/icons/lunar.png",
+        talent: "src/assets/icons/hp.png"
+    },
+    {
+        id: 186,
+        char: "Xavier",
+        name: "Outcast's Voyage",
+        image: "src/assets/pictures/Xavier/Xavier_186.png",
+        stellaName: "amber",
+        placementName: "lunar",
+        talentName: "hp",
+        rarityName: "5-star",
+        rarity: "src/assets/icons/5-star.png",
+        rarityStars: 5,
+        stella: "src/assets/icons/amber.png",
         placement: "src/assets/icons/lunar.png",
         talent: "src/assets/icons/hp.png"
     },
     {
         id: 187,
         char: "Xavier",
-        name: "Outcast's Voyage",
-        image: "src/assets/pictures/Xavier/Xavier_187.png",
-        stellaName: "amber",
-        placementName: "lunar",
-        talentName: "hp",
-        rarityName: "5-star",
-        rarity: "src/assets/icons/5-star.png",
-        rarityStars: 5,
-        stella: "src/assets/icons/amber.png",
-        placement: "src/assets/icons/lunar.png",
-        talent: "src/assets/icons/hp.png"
-    },
-    {
-        id: 188,
-        char: "Xavier",
         name: "Silvery Polyphony",
-        image: "src/assets/pictures/Xavier/Xavier_188.png",
+        image: "src/assets/pictures/Xavier/Xavier_187.png",
         stellaName: "ruby",
         placementName: "lunar",
         talentName: "def",
@@ -2805,10 +2805,10 @@ export const memoriesData = [
         talent: "src/assets/icons/def.png"
     },
     {
-        id: 189,
+        id: 188,
         char: "Xavier",
         name: "Misty Silhouette",
-        image: "src/assets/pictures/Xavier/Xavier_189.png",
+        image: "src/assets/pictures/Xavier/Xavier_188.png",
         stellaName: "violet",
         placementName: "lunar",
         talentName: "hp",
@@ -2820,10 +2820,10 @@ export const memoriesData = [
         talent: "src/assets/icons/hp.png"
     },
     {
-        id: 190,
+        id: 189,
         char: "Xavier",
         name: "Deluded Fiction",
-        image: "src/assets/pictures/Xavier/Xavier_190.png",
+        image: "src/assets/pictures/Xavier/Xavier_189.png",
         stellaName: "pearl",
         placementName: "lunar",
         talentName: "def",
@@ -2835,10 +2835,10 @@ export const memoriesData = [
         talent: "src/assets/icons/def.png"
     },
     {
-        id: 191,
+        id: 190,
         char: "Xavier",
         name: "Inflorescence Imprints",
-        image: "src/assets/pictures/Xavier/Xavier_191.png",
+        image: "src/assets/pictures/Xavier/Xavier_190.png",
         stellaName: "sapphire",
         placementName: "lunar",
         talentName: "atk",
@@ -2850,10 +2850,10 @@ export const memoriesData = [
         talent: "src/assets/icons/atk.png"
     },
     {
-        id: 192,
+        id: 191,
         char: "Xavier",
         name: "Feverish Attempts",
-        image: "src/assets/pictures/Xavier/Xavier_192.png",
+        image: "src/assets/pictures/Xavier/Xavier_191.png",
         stellaName: "violet",
         placementName: "lunar",
         talentName: "def",
@@ -2865,10 +2865,10 @@ export const memoriesData = [
         talent: "src/assets/icons/def.png"
     },
     {
-        id: 193,
+        id: 192,
         char: "Xavier",
         name: "Starfall Sanctuary",
-        image: "src/assets/pictures/Xavier/Xavier_193.png",
+        image: "src/assets/pictures/Xavier/Xavier_192.png",
         stellaName: "emerald",
         placementName: "lunar",
         talentName: "atk",
@@ -2880,10 +2880,10 @@ export const memoriesData = [
         talent: "src/assets/icons/atk.png"
     },
     {
-        id: 194,
+        id: 193,
         char: "Xavier",
         name: "Coolsplash Soak",
-        image: "src/assets/pictures/Xavier/Xavier_194.png",
+        image: "src/assets/pictures/Xavier/Xavier_193.png",
         stellaName: "sapphire",
         placementName: "lunar",
         talentName: "hp",
@@ -2895,10 +2895,10 @@ export const memoriesData = [
         talent: "src/assets/icons/hp.png"
     },
     {
-        id: 195,
+        id: 194,
         char: "Xavier",
         name: "Between Stars",
-        image: "src/assets/pictures/Xavier/Xavier_195.png",
+        image: "src/assets/pictures/Xavier/Xavier_194.png",
         stellaName: "ruby",
         placementName: "lunar",
         talentName: "hp",
@@ -2910,10 +2910,10 @@ export const memoriesData = [
         talent: "src/assets/icons/hp.png"
     },
     {
-        id: 196,
+        id: 195,
         char: "Xavier",
         name: "Offbeat Track",
-        image: "src/assets/pictures/Xavier/Xavier_196.png",
+        image: "src/assets/pictures/Xavier/Xavier_195.png",
         stellaName: "violet",
         placementName: "lunar",
         talentName: "atk",
@@ -2925,10 +2925,10 @@ export const memoriesData = [
         talent: "src/assets/icons/atk.png"
     },
     {
-        id: 197,
+        id: 196,
         char: "Xavier",
         name: "Precious Moment",
-        image: "src/assets/pictures/Xavier/Xavier_197.png",
+        image: "src/assets/pictures/Xavier/Xavier_196.png",
         stellaName: "pearl",
         placementName: "lunar",
         talentName: "atk",
@@ -2940,10 +2940,10 @@ export const memoriesData = [
         talent: "src/assets/icons/atk.png"
     },
     {
-        id: 198,
+        id: 197,
         char: "Xavier",
         name: "Eulogy Of Light",
-        image: "src/assets/pictures/Xavier/Xavier_198.png",
+        image: "src/assets/pictures/Xavier/Xavier_197.png",
         stellaName: "sapphire",
         placementName: "lunar",
         talentName: "def",
@@ -2955,10 +2955,10 @@ export const memoriesData = [
         talent: "src/assets/icons/def.png"
     },
     {
-        id: 199,
+        id: 198,
         char: "Xavier",
         name: "Blades With Blossoms",
-        image: "src/assets/pictures/Xavier/Xavier_199.png",
+        image: "src/assets/pictures/Xavier/Xavier_198.png",
         stellaName: "violet",
         placementName: "lunar",
         talentName: "hp",
@@ -2970,10 +2970,10 @@ export const memoriesData = [
         talent: "src/assets/icons/hp.png"
     },
     {
-        id: 200,
+        id: 199,
         char: "Xavier",
         name: "Tranquil Moments",
-        image: "src/assets/pictures/Xavier/Xavier_200.png",
+        image: "src/assets/pictures/Xavier/Xavier_199.png",
         stellaName: "ruby",
         placementName: "lunar",
         talentName: "atk",
@@ -2985,9 +2985,24 @@ export const memoriesData = [
         talent: "src/assets/icons/atk.png"
     },
     {
-        id: 201,
+        id: 200,
         char: "Xavier",
         name: "Lightseeking Obsession",
+        image: "src/assets/pictures/Xavier/Xavier_200.png",
+        stellaName: "emerald",
+        placementName: "solar",
+        talentName: "atk",
+        rarityName: "5-star",
+        rarity: "src/assets/icons/5-star.png",
+        rarityStars: 5,
+        stella: "src/assets/icons/emerald.png",
+        placement: "src/assets/icons/solar.png",
+        talent: "src/assets/icons/atk.png"
+    },
+    {
+        id: 201,
+        char: "Xavier",
+        name: "Lightseeking Shadowrend",
         image: "src/assets/pictures/Xavier/Xavier_201.png",
         stellaName: "emerald",
         placementName: "solar",
@@ -3002,22 +3017,22 @@ export const memoriesData = [
     {
         id: 202,
         char: "Xavier",
-        name: "Lightseeking Shadowrend",
+        name: "Midnight Rainfall",
         image: "src/assets/pictures/Xavier/Xavier_202.png",
-        stellaName: "emerald",
+        stellaName: "amber",
         placementName: "solar",
-        talentName: "atk",
+        talentName: "def",
         rarityName: "5-star",
         rarity: "src/assets/icons/5-star.png",
         rarityStars: 5,
-        stella: "src/assets/icons/emerald.png",
+        stella: "src/assets/icons/amber.png",
         placement: "src/assets/icons/solar.png",
-        talent: "src/assets/icons/atk.png"
+        talent: "src/assets/icons/def.png"
     },
     {
         id: 203,
         char: "Xavier",
-        name: "Midnight Rainfall",
+        name: "Midnight Whispers",
         image: "src/assets/pictures/Xavier/Xavier_203.png",
         stellaName: "amber",
         placementName: "solar",
@@ -3032,22 +3047,22 @@ export const memoriesData = [
     {
         id: 204,
         char: "Xavier",
-        name: "Midnight Whispers",
+        name: "Nightvow Mooncurse",
         image: "src/assets/pictures/Xavier/Xavier_204.png",
-        stellaName: "amber",
+        stellaName: "ruby",
         placementName: "solar",
-        talentName: "def",
+        talentName: "hp",
         rarityName: "5-star",
         rarity: "src/assets/icons/5-star.png",
         rarityStars: 5,
-        stella: "src/assets/icons/amber.png",
+        stella: "src/assets/icons/ruby.png",
         placement: "src/assets/icons/solar.png",
-        talent: "src/assets/icons/def.png"
+        talent: "src/assets/icons/hp.png"
     },
     {
         id: 205,
         char: "Xavier",
-        name: "Nightvow Mooncurse",
+        name: "Nightvow Requiem",
         image: "src/assets/pictures/Xavier/Xavier_205.png",
         stellaName: "ruby",
         placementName: "solar",
@@ -3060,10 +3075,10 @@ export const memoriesData = [
         talent: "src/assets/icons/hp.png"
     },
     {
-        id: 206,
+        id: 205,
         char: "Xavier",
         name: "Nightvow Requiem",
-        image: "src/assets/pictures/Xavier/Xavier_206.png",
+        image: "src/assets/pictures/Xavier/Xavier_205.png",
         stellaName: "ruby",
         placementName: "solar",
         talentName: "hp",
