@@ -1,3 +1,18 @@
 .memories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.sortBy {
+    display: flex;
+}
+
+.filterBy {
+    display: flex;
+}
+
+.cardsGrid {
+    display: flex;
+    flex-wrap: wrap;
 }
