@@ -9,20 +9,25 @@ function Card({data}) {
 
                 <div className={styles.imgInfo}>
                     <img className={styles.img} src={data.image} alt={data.name}/>
-                    {[...Array(data.rarityStars)].map((_, i) => (
-                        <img
-                            className={styles.stars}
-                            key={i}
-                            src={data.rarity}
-                            alt={data.rarityName}
-                            width={20}
-                            height={20}
-                        />
-                    ))}
-                    <img className={styles.stella} src={data.stella} alt={data.stellaName} width={24} height={24}/>
-                    <img className={styles.placement} src={data.placement} alt={data.placementName} width={24}
-                         height={24}/>
-                    <img className={styles.talent} src={data.talent} alt={data.talentName} width={24} height={24}/>
+
+                    <div className={styles.starsGroup}>
+                        {[...Array(data.rarityStars)].map((_, i) => (
+                            <img
+                                className={styles.stars}
+                                key={i}
+                                src={data.rarity}
+                                alt={data.rarityName}
+                                width={15}
+                                height={15}
+                            />
+                        ))}
+                    </div>
+                    <img className={styles.stella} src={data.stella} alt={data.stellaName} width={22} height={22}/>
+                    <img className={styles.placement} src={data.placement} alt={data.placementName} width={22}
+                         height={22}/>
+                    <img className={styles.talent} src={data.talent} alt={data.talentName} width={22} height={22}/>
+
+                    <div className={styles.parametrsBG}></div>
                 </div>
 
                 <h3 className={styles.cardName}>{data.name}</h3>

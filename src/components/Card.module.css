@@ -1,7 +1,6 @@
 .card {
     display: flex;
     flex-direction: column;
-    position: relative;
 }
 
 .cardName {
@@ -20,15 +19,46 @@
 .imgInfo {
     width: 150px;
     height: 200px;
+    position: relative;
+
+}
+
+.parametrsBG {
+    position: absolute;
+    width: 100%;
+    height: 15%;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .stella,
 .placement,
 .talent,
-.stars {
+.starsGroup  {
     position: absolute;
 }
 
-.stars {
+.starsGroup {
+    display: flex;
+    bottom: 5px;
+    right: 5px;
+    z-index: 1;
+}
 
+.placement {
+    bottom: 5px;
+    left: 5px;
+    z-index: 1;
+}
+
+.talent {
+    bottom: 5px;
+    left: 28px;
+    z-index: 2;
+}
+
+.stella {
+    bottom: 5px;
+    left: 51px;
+    z-index: 3;
 }
