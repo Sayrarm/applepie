@@ -1,15 +1,18 @@
 .card {
     display: flex;
     flex-direction: column;
+    padding-bottom: 15px;
 }
 
 .cardName {
     display: flex;
     flex-direction: column;
     text-align: center;
-    font-size: 1.5rem;
-    font-family: var(--general-font), 'serif';
+    font-size: 1.2rem;
+    font-family: Trebuchet MS, sans-serif;
     color: black;
+    word-break: break-word;
+    max-width: 170px;
 }
 
 .img {
@@ -24,7 +27,6 @@
     width: 170px;
     height: 300px;
     position: relative;
-
 }
 
 .parametrsBG {
