@@ -677,7 +677,7 @@ export const memoriesData = [
     {
         id: 46,
         char: "Caleb",
-        name: "Hidden Waves",
+        name: "Exclusive Aftertaste",
         image: "src/assets/pictures/Caleb/Caleb_46.png",
         stellaName: "ruby",
         placementName: "lunar",
@@ -812,7 +812,7 @@ export const memoriesData = [
     {
         id: 55,
         char: "Sylus",
-        name: "Satiated",
+        name: "Just Encounter",
         image: "src/assets/pictures/Sylus/Sylus_55.png",
         stellaName: "emerald",
         placementName: "lunar",
@@ -827,7 +827,7 @@ export const memoriesData = [
     {
         id: 56,
         char: "Sylus",
-        name: "Satiated",
+        name: "In Charge",
         image: "src/assets/pictures/Sylus/Sylus_56.png",
         stellaName: "pearl",
         placementName: "solar",
