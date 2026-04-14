@@ -53,18 +53,18 @@
 
 .placement {
     bottom: 5px;
-    left: 5px;
+    left: 28px;
     z-index: 1;
 }
 
 .talent {
     bottom: 5px;
-    left: 28px;
+    left: 51px;
     z-index: 2;
 }
 
 .stella {
     bottom: 5px;
-    left: 51px;
+    left: 5px;
     z-index: 3;
 }
