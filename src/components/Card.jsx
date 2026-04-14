@@ -8,7 +8,7 @@ function Card({data}) {
             <article className={styles.card}>
 
                 <div className={styles.imgInfo}>
-                    <img className={styles.img} src={data.image} alt={data.name}/>
+                    <img className={styles.img} src={data.imageSmall} alt={data.name}/>
 
                     <div className={styles.starsGroup}>
                         {[...Array(data.rarityStars)].map((_, i) => (
