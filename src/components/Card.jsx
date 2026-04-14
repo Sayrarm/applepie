@@ -30,7 +30,7 @@ function Card({data}) {
                     <div className={styles.parametrsBG}></div>
                 </div>
 
-                <h3 className={styles.cardName}>{data.name}</h3>
+                <h3 className={styles.cardName}>{data.char}: {data.name}</h3>
             </article>
         </>
     )
