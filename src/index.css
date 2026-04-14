@@ -35,20 +35,3 @@ a, button {
 }
 
 /****************************Шрифты*********************************/
-
-@font-face {
-    font-family: 'TTLimesSlab';
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: url('public/fonts/TTLimesSlab-Regular.otf') format('opentype');
-}
-
-@font-face {
-    font-family: 'Bahij';
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: url('public/fonts/Bahij Uthman Taha Regular.ttf') format('truetype');
-}
-
