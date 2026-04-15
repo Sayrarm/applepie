@@ -2,15 +2,17 @@ import {useState} from 'react'
 import styles from './Memories.module.css'
 import {memoriesData} from '../data/memories-data.js'
 import Card from "../components/Card.jsx";
-import {Input, Select, Space} from 'antd';
+import {Input, Select, Space, Button} from 'antd';
 
 const {Search} = Input;
+
 
 function Memories() {
 
     const [searchQuery, setSearchQuery] = useState('')
     const [selectedChar, setSelectedChar] = useState('ALL')
     const [sortCriteria, setSortCriteria] = useState([])
+
 
     // Функции сравнения для каждого типа сортировки
     const compareFunctions = {
@@ -32,7 +34,7 @@ function Memories() {
             return order.indexOf(a.placementName) - order.indexOf(b.placementName)
         },
         talent: (a, b) => {
-            const order = ['def', 'hp', 'atk']
+            const order = ['atk', 'def', 'hp']
             return order.indexOf(a.talentName) - order.indexOf(b.talentName)
         }
     }
@@ -59,21 +61,10 @@ function Memories() {
         })
     }
 
-    // Обработчик добавления сортировки
-    const handleSortChange = (value) => {
-        if (!value) return
-
-        // Добавляем новый критерий в конец массива
-        setSortCriteria(prev => {
-            // Если критерий уже есть, удаляем его из старого места и добавляем в конец
-            const filtered = prev.filter(criterion => criterion !== value)
-            return [...filtered, value]
-        })
-    }
-
-    // Удаление критерия сортировки (по желанию)
-    const removeSortCriterion = (criterionToRemove) => {
-        setSortCriteria(prev => prev.filter(criterion => criterion !== criterionToRemove))
+    // Обработчик изменения сортировки (для mode="tags")
+    const handleSortChange = (values) => {
+        // values — это массив выбранных значений, например ['char', 'rarity']
+        setSortCriteria(values)
     }
 
     // Очистка всех сортировок
@@ -81,18 +72,6 @@ function Memories() {
         setSortCriteria([])
     }
 
-    // Получение названия для отображения
-    const getCriterionLabel = (criterion) => {
-        const labels = {
-            char: 'Character',
-            name: "Memory's name",
-            rarity: 'Rarity',
-            stella: 'Stellactrum',
-            placement: 'Placement',
-            talent: 'Talent'
-        }
-        return labels[criterion]
-    }
 
     // Фильтруем данные
     const filteredMemories = memoriesData.filter(memory => {
@@ -131,6 +110,7 @@ function Memories() {
                         </div>
                     </nav>
                     <aside className={styles.filterBy}>
+
                         <Space vertical>
                             <Search
                                 placeholder="Search by memory name..."
@@ -138,38 +118,31 @@ function Memories() {
                                 style={{width: 200}}
                             />
                         </Space>
-                        <Select
-                            defaultValue="Sorting by"
-                            style={{ width: 150 }}
-                            onChange={handleSortChange}
-                            options={[
-                                { value: 'char', label: 'Character' },
-                                { value: 'name', label: 'Memory\'s name' },
-                                { value: 'rarity', label: 'Rarity' },
-                                { value: 'stella', label: 'Stellactrum' },
-                                { value: 'placement', label: 'Placement' },
-                                { value: 'talent', label: 'Talent' },
-                            ]}
-                        />
 
-                        {/* Кнопка очистки сортировки */}
-                        {sortCriteria.length > 0 && (
-                            <button onClick={clearSorting} style={{ width: 180 }}>
-                                Clear sorting ({sortCriteria.length})
-                            </button>
-                        )}
+                        <Space>
+                            <Select
+                                mode="tags"
+                                size={"medium"}
+                                value={sortCriteria}
+                                placeholder="Sorting by"
+                                onChange={handleSortChange}
+                                style={{ width: 250 }}
+                                options={[
+                                    { value: 'char', label: 'Character' },
+                                    { value: 'name', label: 'Memory\'s name' },
+                                    { value: 'rarity', label: 'Rarity' },
+                                    { value: 'stella', label: 'Stellactrum' },
+                                    { value: 'placement', label: 'Placement' },
+                                    { value: 'talent', label: 'Talent' },
+                                ]}
 
-                        {/* Отображение активных сортировок */}
+                            />
+                        </Space>
+
                         {sortCriteria.length > 0 && (
-                            <div className={styles.activeSorts}>
-                                <strong>Sorting by:</strong>
-                                {sortCriteria.map((criterion, index) => (
-                                    <span key={criterion} className={styles.sortChip}>
-                                {index + 1}. {getCriterionLabel(criterion)}
-                                        <button onClick={() => removeSortCriterion(criterion)}>×</button>
-                            </span>
-                                ))}
-                            </div>
+                        <Button onClick={clearSorting} color="default" variant="solid">
+                            Clear ({sortCriteria.length})
+                        </Button>
                         )}
 
                     </aside>
