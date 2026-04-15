@@ -8,57 +8,90 @@ const {Search} = Input;
 
 function Memories() {
 
-    // Состояние для поискового запроса
     const [searchQuery, setSearchQuery] = useState('')
-
-    // Состояние для выбранного персонажа (опционально, если нужен фильтр по кнопкам)
     const [selectedChar, setSelectedChar] = useState('ALL')
+    const [sortCriteria, setSortCriteria] = useState([])
 
-    const [sortBy, setSortBy] = useState(null)
+    // Функции сравнения для каждого типа сортировки
+    const compareFunctions = {
+        char: (a, b) => {
+            const order = ['Caleb', 'Rafayel', 'Sylus', 'Xavier', 'Zayne']
+            return order.indexOf(a.char) - order.indexOf(b.char)
+        },
+        name: (a, b) => a.name.localeCompare(b.name),
+        rarity: (a, b) => {
+            const order = { '3-star': 1, '4-star': 2, '5-star': 3 }
+            return (order[a.rarityName] || 0) - (order[b.rarityName] || 0)
+        },
+        stella: (a, b) => {
+            const order = ['emerald', 'sapphire', 'violet', 'amber', 'ruby', 'pearl']
+            return order.indexOf(a.stellaName) - order.indexOf(b.stellaName)
+        },
+        placement: (a, b) => {
+            const order = ['solar', 'lunar']
+            return order.indexOf(a.placementName) - order.indexOf(b.placementName)
+        },
+        talent: (a, b) => {
+            const order = ['def', 'hp', 'atk']
+            return order.indexOf(a.talentName) - order.indexOf(b.talentName)
+        }
+    }
 
-    // Функция для сортировки
-    const sortMemories = (memories, sortType) => {
-        if (!sortType) return memories
+    // Функция для многоуровневой сортировки
+    const multiSort = (memories, criteria) => {
+        if (criteria.length === 0) return memories
 
         const sorted = [...memories]
 
-        switch (sortType) {
-            case 'char':
-                return sorted.sort((a, b) => {
-                    const order = ['Caleb', 'Rafayel', 'Sylus', 'Xavier', 'Zayne']
-                    return order.indexOf(a.char) - order.indexOf(b.char)
-                })
+        return sorted.sort((a, b) => {
+            // Проходим по всем критериям сортировки в порядке их добавления
+            for (const criterion of criteria) {
+                const compare = compareFunctions[criterion]
+                const result = compare(a, b)
 
-            case 'name':
-                return sorted.sort((a, b) => a.name.localeCompare(b.name))
+                // Если элементы отличаются по текущему критерию, возвращаем результат
+                if (result !== 0) {
+                    return result
+                }
+                // Если равны, переходим к следующему критерию
+            }
+            return 0 // Если все критерии равны
+        })
+    }
 
-            case 'rarity':
-                return sorted.sort((a, b) => {
-                    const order = { '3-star': 1, '4-star': 2, '5-star': 3 }
-                    return (order[a.rarityName] || 0) - (order[b.rarityName] || 0)
-                })
+    // Обработчик добавления сортировки
+    const handleSortChange = (value) => {
+        if (!value) return
 
-            case 'stella':
-                return sorted.sort((a, b) => {
-                    const order = ['emerald', 'sapphire', 'violet', 'amber', 'ruby', 'pearl']
-                    return order.indexOf(a.stellaName) - order.indexOf(b.stellaName)
-                })
+        // Добавляем новый критерий в конец массива
+        setSortCriteria(prev => {
+            // Если критерий уже есть, удаляем его из старого места и добавляем в конец
+            const filtered = prev.filter(criterion => criterion !== value)
+            return [...filtered, value]
+        })
+    }
 
-            case 'placement':
-                return sorted.sort((a, b) => {
-                    const order = ['solar', 'lunar']
-                    return order.indexOf(a.placementName) - order.indexOf(b.placementName)
-                })
+    // Удаление критерия сортировки (по желанию)
+    const removeSortCriterion = (criterionToRemove) => {
+        setSortCriteria(prev => prev.filter(criterion => criterion !== criterionToRemove))
+    }
 
-            case 'talent':
-                return sorted.sort((a, b) => {
-                    const order = ['atk', 'def', 'hp']
-                    return order.indexOf(a.talentName) - order.indexOf(b.talentName)
-                })
+    // Очистка всех сортировок
+    const clearSorting = () => {
+        setSortCriteria([])
+    }
 
-            default:
-                return memories
+    // Получение названия для отображения
+    const getCriterionLabel = (criterion) => {
+        const labels = {
+            char: 'Character',
+            name: "Memory's name",
+            rarity: 'Rarity',
+            stella: 'Stellactrum',
+            placement: 'Placement',
+            talent: 'Talent'
         }
+        return labels[criterion]
     }
 
     // Фильтруем данные
@@ -71,11 +104,7 @@ function Memories() {
     })
 
     // Сортируем отфильтрованные данные
-    const sortedMemories = sortMemories(filteredMemories, sortBy)
-
-    const handleSortChange = (value) => {
-        setSortBy(value)
-    }
+    const sortedMemories = multiSort(filteredMemories, sortCriteria)
 
     // Функция для обработки поиска из antd
     const onSearch = (value) => {
@@ -123,7 +152,26 @@ function Memories() {
                             ]}
                         />
 
-                        <button>Filter</button>
+                        {/* Кнопка очистки сортировки */}
+                        {sortCriteria.length > 0 && (
+                            <button onClick={clearSorting} style={{ width: 180 }}>
+                                Clear sorting ({sortCriteria.length})
+                            </button>
+                        )}
+
+                        {/* Отображение активных сортировок */}
+                        {sortCriteria.length > 0 && (
+                            <div className={styles.activeSorts}>
+                                <strong>Sorting by:</strong>
+                                {sortCriteria.map((criterion, index) => (
+                                    <span key={criterion} className={styles.sortChip}>
+                                {index + 1}. {getCriterionLabel(criterion)}
+                                        <button onClick={() => removeSortCriterion(criterion)}>×</button>
+                            </span>
+                                ))}
+                            </div>
+                        )}
+
                     </aside>
                 </div>
                 <div className={styles.cardsGrid}>
@@ -133,7 +181,7 @@ function Memories() {
                 </div>
 
                 {/* Если ничего не найдено */}
-                {filteredMemories.length === 0 && (
+                {sortedMemories.length === 0 && (
                     <p className={styles.noResults}>No memories found</p>
                 )}
             </section>
