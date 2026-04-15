@@ -22,7 +22,7 @@ function Memories() {
         },
         name: (a, b) => a.name.localeCompare(b.name),
         rarity: (a, b) => {
-            const order = { '3-star': 1, '4-star': 2, '5-star': 3 }
+            const order = { '3-star': 3, '4-star': 2, '5-star': 1 }
             return (order[a.rarityName] || 0) - (order[b.rarityName] || 0)
         },
         stella: (a, b) => {
@@ -108,16 +108,6 @@ function Memories() {
                             <button onClick={() => setSelectedChar('Sylus')}>Sylus</button>
                             <button onClick={() => setSelectedChar('Caleb')}>Caleb</button>
                         </div>
-                    </nav>
-                    <aside className={styles.filterBy}>
-
-                        <Space vertical>
-                            <Search
-                                placeholder="Search by memory name..."
-                                onSearch={onSearch}
-                                style={{width: 200}}
-                            />
-                        </Space>
 
                         <Space>
                             <Select
@@ -126,7 +116,7 @@ function Memories() {
                                 value={sortCriteria}
                                 placeholder="Sorting by"
                                 onChange={handleSortChange}
-                                style={{ width: 250 }}
+                                style={{ width: 350 }}
                                 options={[
                                     { value: 'char', label: 'Character' },
                                     { value: 'name', label: 'Memory\'s name' },
@@ -140,10 +130,21 @@ function Memories() {
                         </Space>
 
                         {sortCriteria.length > 0 && (
-                        <Button onClick={clearSorting} color="default" variant="solid">
-                            Clear ({sortCriteria.length})
-                        </Button>
+                            <Button onClick={clearSorting} color="default" variant="solid">
+                                Clear ({sortCriteria.length})
+                            </Button>
                         )}
+                    </nav>
+
+                    <aside className={styles.filterBy}>
+
+                        <Space vertical>
+                            <Search
+                                placeholder="Search by memory name"
+                                onSearch={onSearch}
+                                style={{width: 215}}
+                            />
+                        </Space>
 
                     </aside>
                 </div>
