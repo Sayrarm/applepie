@@ -29,9 +29,7 @@
 button {
     border: none;
     background: none;
-    font-family: Trebuchet MS, sans-serif;
     font-size: 20px;
-    font-weight: 600;
 }
 
 .characters {
@@ -41,4 +39,11 @@ button {
 
 .allButton {
     display: flex;
+}
+
+.options {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
