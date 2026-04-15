@@ -2,7 +2,7 @@ import {useState} from 'react'
 import styles from './Memories.module.css'
 import {memoriesData} from '../data/memories-data.js'
 import Card from "../components/Card.jsx";
-import {Input, Select, Space, Button} from 'antd';
+import {Input, Select, Space, Button, Modal, Checkbox, Tag} from 'antd';
 import myFilterIcon from '/public/filter.png';
 
 const {Search} = Input;
@@ -13,6 +13,71 @@ function Memories() {
     const [searchQuery, setSearchQuery] = useState('')
     const [selectedChar, setSelectedChar] = useState('ALL')
     const [sortCriteria, setSortCriteria] = useState([])
+    const [modal, contextHolder] = Modal.useModal();
+
+    const onChange = checkedValues => {
+        console.log('checked = ', checkedValues);
+    };
+    const optionsRarity = [
+        { label: '5-star', value: '5-star', className: 'label-1' },
+        { label: '4-star', value: '4-star', className: 'label-2' },
+        { label: '3-star', value: '3-star', className: 'label-2' },
+    ];
+    const optionsPlace = [
+        { label: 'Solar', value: 'solar', className: 'label-1' },
+        { label: 'Lunar', value: 'lunar', className: 'label-2' },
+    ];
+    const optionsTalent = [
+        { label: 'ATK', value: 'atk', className: 'label-1' },
+        { label: 'DEF', value: 'def', className: 'label-2' },
+        { label: 'HP', value: 'hp', className: 'label-2' },
+    ];
+
+    const optionsStella = [{ value: 'gold' }, { value: 'lime' }, { value: 'green' }, { value: 'cyan' }];
+
+    const tagRender = props => {
+        const { label, value, closable, onClose } = props;
+        const onPreventMouseDown = event => {
+            event.preventDefault();
+            event.stopPropagation();
+        };
+        return (
+            <Tag
+                color={value}
+                onMouseDown={onPreventMouseDown}
+                closable={closable}
+                onClose={onClose}
+                style={{ marginInlineEnd: 4 }}
+            >
+                {label}
+            </Tag>
+        );
+    };
+
+
+    const modalConfig = {
+        title: 'Filter',
+        content: (
+            <>
+                <span>Rarity: </span>
+                <Checkbox.Group options={optionsRarity} defaultValue={['Pear']} onChange={onChange} />
+                <br/>
+                <span>Placement: </span>
+                <Checkbox.Group options={optionsPlace} defaultValue={['solar']} onChange={onChange} />
+                <br/>
+                <span>Talent: </span>
+                <Checkbox.Group options={optionsTalent} defaultValue={['atk']} onChange={onChange} />
+                <br/>
+                <Select
+                    mode="multiple"
+                    tagRender={tagRender}
+                    defaultValue={['gold', 'cyan']}
+                    style={{ width: '100%' }}
+                    options={optionsStella}
+                />
+            </>
+        ),
+    };
 
 
     // Функции сравнения для каждого типа сортировки
@@ -148,13 +213,16 @@ function Memories() {
                         </Space>
 
                         <Button
+                            onClick={() => {
+                                modal.confirm(modalConfig);
+                            }}
                             icon={<img
                                 className={styles.imgIcon}
                                 src={myFilterIcon}
                                 style={{ width: 20, height: 20 }}
                                 alt={'filter'} />}
                         />
-
+                        {contextHolder}
                     </aside>
                 </div>
                 <div className={styles.cardsGrid}>
