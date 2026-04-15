@@ -3,6 +3,7 @@ import styles from './Memories.module.css'
 import {memoriesData} from '../data/memories-data.js'
 import Card from "../components/Card.jsx";
 import {Input, Select, Space, Button} from 'antd';
+import myFilterIcon from '/public/filter.png';
 
 const {Search} = Input;
 
@@ -145,6 +146,14 @@ function Memories() {
                                 style={{width: 215}}
                             />
                         </Space>
+
+                        <Button
+                            icon={<img
+                                className={styles.imgIcon}
+                                src={myFilterIcon}
+                                style={{ width: 20, height: 20 }}
+                                alt={'filter'} />}
+                        />
 
                     </aside>
                 </div>

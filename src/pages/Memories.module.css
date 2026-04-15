@@ -51,3 +51,7 @@ button {
     justify-content: center;
     gap: 20px;
 }
+
+.imgIcon {
+    margin-top: 4px;
+}

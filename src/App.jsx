@@ -5,6 +5,7 @@ import Characters from "./pages/Characters.jsx";
 import HunterContest from "./pages/HunterContest.jsx";
 import Lore from "./pages/Lore.jsx";
 import Home from "./pages/Home.jsx";
+import { FloatButton } from 'antd';
 
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
                     <Route path="/hunter-contest" element={<HunterContest/>}/>
                     <Route path="/lore" element={<Lore/>}/>
                 </Routes>
+
+                <FloatButton.BackTop />
             </div>
         </>
     )
