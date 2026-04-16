@@ -26,6 +26,15 @@ function Memories() {
         setFilters(newFilters)
     }
 
+    const clearFilters = () => {
+        setFilters({
+            rarity: [],
+            placement: [],
+            talent: [],
+            stella: []
+        })
+    }
+
     // Функции сравнения для каждого типа сортировки
     const compareFunctions = {
         char: (a, b) => {
@@ -123,16 +132,6 @@ function Memories() {
         setSearchQuery(value.toLowerCase()) // сохраняем запрос в нижнем регистре
     }
 
-    // Очистка всех фильтров
-    const clearFilters = () => {
-        setFilters({
-            rarity: [],
-            placement: [],
-            talent: [],
-            stella: []
-        })
-    }
-
     return (
         <>
             <section className={styles.memories}>
@@ -201,6 +200,7 @@ function Memories() {
                             open={isModalOpen}
                             onClose={() => setIsModalOpen(false)}
                             onFilter={applyFilters}
+                            onClearFilters={clearFilters}
                         />
                     </aside>
                 </div>

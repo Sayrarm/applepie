@@ -1,12 +1,13 @@
 import { useState } from 'react';
-import { Modal, Checkbox, Select, Tag } from "antd";
+import {Modal, Checkbox, Select, Tag, Button} from "antd";
 
-function FilterModalWindow({ open, onClose, onFilter }) {
+function FilterModalWindow({ open, onClose, onFilter, onClearFilters }) {
     // Состояния для каждого фильтра
     const [rarity, setRarity] = useState([]);
     const [placement, setPlacement] = useState([]);
     const [talent, setTalent] = useState([]);
     const [stella, setStella] = useState([]);
+
 
     const optionsRarity = [
         { label: '5-star', value: '5-star' },
@@ -58,17 +59,27 @@ function FilterModalWindow({ open, onClose, onFilter }) {
     // Обработчики изменений
     const handleRarityChange = (checkedValues) => {
         setRarity(checkedValues);
-        console.log('Выбрано rarity:', checkedValues);
     };
 
     const handlePlacementChange = (checkedValues) => {
         setPlacement(checkedValues);
-        console.log('Выбрано placement:', checkedValues);
     };
 
     const handleTalentChange = (checkedValues) => {
         setTalent(checkedValues);
-        console.log('Выбрано talent:', checkedValues);
+    };
+
+    const handleClear = () => {
+        // Очищаем локальные состояния
+        setRarity([]);
+        setPlacement([]);
+        setTalent([]);
+        setStella([]);
+
+        // Вызываем функцию очистки из родителя
+        if (onClearFilters) {
+            onClearFilters();
+        }
     };
 
     const handleOk = () => {
@@ -80,7 +91,6 @@ function FilterModalWindow({ open, onClose, onFilter }) {
             stella: stella,
         };
 
-        console.log('Применяем фильтры:', filters);
         onFilter(filters); // отправляем родителю
         onClose(); // закрываем модалку
     };
@@ -131,6 +141,10 @@ function FilterModalWindow({ open, onClose, onFilter }) {
                     options={optionsStella}
                 />
             </div>
+
+            <Button onClick={() => handleClear()}>
+            Clear
+            </Button>
         </Modal>
     );
 }
