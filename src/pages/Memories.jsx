@@ -2,8 +2,9 @@ import {useState} from 'react'
 import styles from './Memories.module.css'
 import {memoriesData} from '../data/memories-data.js'
 import Card from "../components/Card.jsx";
-import {Input, Select, Space, Button, Modal, Checkbox, Tag} from 'antd';
-import myFilterIcon from '/public/filter.png';
+import {Input, Select, Space, Button} from 'antd';
+import myFilterIcon from '/src/assets/icons/filter.png';
+import FilterModalWindow from "../components/FilterModalWindow.jsx";
 
 const {Search} = Input;
 
@@ -13,72 +14,17 @@ function Memories() {
     const [searchQuery, setSearchQuery] = useState('')
     const [selectedChar, setSelectedChar] = useState('ALL')
     const [sortCriteria, setSortCriteria] = useState([])
-    const [modal, contextHolder] = Modal.useModal();
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [filters, setFilters] = useState({
+        rarity: [],
+        placement: [],
+        talent: [],
+        stella: []
+    })
 
-    const onChange = checkedValues => {
-        console.log('checked = ', checkedValues);
-    };
-    const optionsRarity = [
-        { label: '5-star', value: '5-star', className: 'label-1' },
-        { label: '4-star', value: '4-star', className: 'label-2' },
-        { label: '3-star', value: '3-star', className: 'label-2' },
-    ];
-    const optionsPlace = [
-        { label: 'Solar', value: 'solar', className: 'label-1' },
-        { label: 'Lunar', value: 'lunar', className: 'label-2' },
-    ];
-    const optionsTalent = [
-        { label: 'ATK', value: 'atk', className: 'label-1' },
-        { label: 'DEF', value: 'def', className: 'label-2' },
-        { label: 'HP', value: 'hp', className: 'label-2' },
-    ];
-
-    const optionsStella = [{ value: 'gold' }, { value: 'lime' }, { value: 'green' }, { value: 'cyan' }];
-
-    const tagRender = props => {
-        const { label, value, closable, onClose } = props;
-        const onPreventMouseDown = event => {
-            event.preventDefault();
-            event.stopPropagation();
-        };
-        return (
-            <Tag
-                color={value}
-                onMouseDown={onPreventMouseDown}
-                closable={closable}
-                onClose={onClose}
-                style={{ marginInlineEnd: 4 }}
-            >
-                {label}
-            </Tag>
-        );
-    };
-
-
-    const modalConfig = {
-        title: 'Filter',
-        content: (
-            <>
-                <span>Rarity: </span>
-                <Checkbox.Group options={optionsRarity} defaultValue={['Pear']} onChange={onChange} />
-                <br/>
-                <span>Placement: </span>
-                <Checkbox.Group options={optionsPlace} defaultValue={['solar']} onChange={onChange} />
-                <br/>
-                <span>Talent: </span>
-                <Checkbox.Group options={optionsTalent} defaultValue={['atk']} onChange={onChange} />
-                <br/>
-                <Select
-                    mode="multiple"
-                    tagRender={tagRender}
-                    defaultValue={['gold', 'cyan']}
-                    style={{ width: '100%' }}
-                    options={optionsStella}
-                />
-            </>
-        ),
-    };
-
+    const applyFilters = (newFilters) => {
+        setFilters(newFilters)
+    }
 
     // Функции сравнения для каждого типа сортировки
     const compareFunctions = {
@@ -141,11 +87,32 @@ function Memories() {
 
     // Фильтруем данные
     const filteredMemories = memoriesData.filter(memory => {
+        // Поиск по тексту
         const matchesSearch = memory.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
             memory.char.toLowerCase().includes(searchQuery.toLowerCase())
+
+        // Фильтр по персонажу (кнопки)
         const matchesChar = selectedChar === 'ALL' ||
             memory.char.toLowerCase() === selectedChar.toLowerCase()
-        return matchesSearch && matchesChar
+
+        // Фильтр по редкости (из модалки)
+        const matchesRarity = filters.rarity.length === 0 ||
+            filters.rarity.includes(memory.rarityName)
+
+        // Фильтр по размещению (solar/lunar)
+        const matchesPlacement = filters.placement.length === 0 ||
+            filters.placement.includes(memory.placementName)
+
+        // Фильтр по таланту
+        const matchesTalent = filters.talent.length === 0 ||
+            filters.talent.includes(memory.talentName)
+
+        // Фильтр по стилле (цвету)
+        const matchesStella = filters.stella.length === 0 ||
+            filters.stella.includes(memory.stellaName)
+
+        return matchesSearch && matchesChar && matchesRarity &&
+            matchesPlacement && matchesTalent && matchesStella
     })
 
     // Сортируем отфильтрованные данные
@@ -154,6 +121,16 @@ function Memories() {
     // Функция для обработки поиска из antd
     const onSearch = (value) => {
         setSearchQuery(value.toLowerCase()) // сохраняем запрос в нижнем регистре
+    }
+
+    // Очистка всех фильтров
+    const clearFilters = () => {
+        setFilters({
+            rarity: [],
+            placement: [],
+            talent: [],
+            stella: []
+        })
     }
 
     return (
@@ -213,16 +190,18 @@ function Memories() {
                         </Space>
 
                         <Button
-                            onClick={() => {
-                                modal.confirm(modalConfig);
-                            }}
+                            onClick={() => setIsModalOpen(true)}
                             icon={<img
                                 className={styles.imgIcon}
                                 src={myFilterIcon}
                                 style={{ width: 20, height: 20 }}
                                 alt={'filter'} />}
                         />
-                        {contextHolder}
+                        <FilterModalWindow
+                            open={isModalOpen}
+                            onClose={() => setIsModalOpen(false)}
+                            onFilter={applyFilters}
+                        />
                     </aside>
                 </div>
                 <div className={styles.cardsGrid}>
