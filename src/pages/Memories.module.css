@@ -63,3 +63,11 @@
 .imgIcon {
     margin-top: 4px;
 }
+
+.noResults {
+    font-size: 20px;
+}
+
+.colorBrown {
+    border-color: #2b1611 !important;
+}

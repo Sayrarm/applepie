@@ -18,7 +18,7 @@ function Header() {
                     <div className={styles.link}>
                         <Link className={styles.a} to="/memories">Memories</Link>
                         <Link className={styles.a} to="/characters">Characters</Link>
-                        <Link className={styles.a} to="/hunter-contest">Hunter Contest</Link>
+                        <Link className={styles.a} to="/battle">Battle</Link>
                         <Link className={styles.a} to="/lore">Lore</Link>
                     </div>
                 </nav>

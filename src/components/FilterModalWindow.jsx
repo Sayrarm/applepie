@@ -25,7 +25,7 @@ function FilterModalWindow({ open, onClose, onFilter, onClearFilters }) {
     ];
 
     const optionsStella = [
-        { value: 'emerald', label: 'emerald', color: '#3fff00' },
+        { value: 'emerald', label: 'emerald', color: '#27650d' },
         { value: 'sapphire', label: 'sapphire', color: '#00b1ff' },
         { value: 'violet', label: 'violet', color: '#8141ff' },
         { value: 'amber', label: 'amber', color: '#ff8711' },

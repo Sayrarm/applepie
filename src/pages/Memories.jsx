@@ -8,6 +8,23 @@ import {useSearch} from '../hooks/useSearch';
 import {useSort} from '../hooks/useSort';
 import {useFilter} from '../hooks/useFilter';
 import myClearIcon from '/src/assets/icons/eraser_16863523.png';
+const stylesFnSearch = info => {
+    if (info.props.size === 'medium') {
+        return {
+            root: { color: '#2b1611' },
+            input: { color: '#2b1611', borderColor: '#2b1611' },
+            prefix: { color: '#2b1611' },
+            suffix: { color: '#2b1611' },
+            count: { color: '#2b1611' },
+            button: {
+                root: { color: '#2b1611', borderColor: '#2b1611' },
+                icon: { color: '#2b1611' },
+            },
+        };
+    }
+    return {};
+};
+
 
 function Memories() {
 
@@ -70,13 +87,13 @@ function Memories() {
                             </button>
                         </div>
 
-                        <Space>
                             <Select
                                 mode="tags"
-                                size={"medium"}
+                                size="medium"
                                 value={sortCriteria}
                                 placeholder="Sorting by"
                                 onChange={handleSortChange}
+                                className={styles.colorBrown}
                                 style={{width: 350}}
                                 options={[
                                     {value: 'char', label: 'Character'},
@@ -88,8 +105,6 @@ function Memories() {
                                 ]}
 
                             />
-                        </Space>
-
 
                         <Button
                             onClick={clearSorting}
@@ -101,6 +116,7 @@ function Memories() {
                                 style={{width: 22, height: 22}}
                                 alt={'filter'}/>}
                             title={"Clear sorting"}
+                            className={styles.colorBrown}
                         >
                         </Button>
 
@@ -108,13 +124,16 @@ function Memories() {
 
                     <aside className={styles.filterBy}>
 
-                        <Space vertical>
-                            <Search
-                                placeholder="Search by memory name"
-                                onSearch={onSearch}
-                                style={{width: 215}}
-                            />
-                        </Space>
+
+                        <Search
+                            placeholder="Search by memory name"
+                            onSearch={onSearch}
+                            style={{ width: 215 }}
+                            styles={stylesFnSearch}
+                            name="search-fn"
+                            size={"medium"}
+                        />
+
 
                         <Button
                             onClick={() => setIsModalOpen(true)}
@@ -124,6 +143,7 @@ function Memories() {
                                 style={{width: 20, height: 20}}
                                 alt={'filter'}/>}
                             title={"Filter"}
+                            className={styles.colorBrown}
                         />
                         <FilterModalWindow
                             open={isModalOpen}
@@ -139,9 +159,8 @@ function Memories() {
                     ))}
                 </div>
 
-                {/* Если ничего не найдено */}
                 {sortedMemories.length === 0 && (
-                    <p className={styles.noResults}>No memories found</p>
+                    <p className={styles.noResults}>No memories found ¯\_(ツ)_/¯</p>
                 )}
             </section>
         </>
