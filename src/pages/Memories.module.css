@@ -12,35 +12,43 @@
 .sortBy {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 .filterBy {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 .cardsGrid {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 18px;
 }
 
-button {
+.buttonSelectChar {
     border: none;
     background: none;
     font-size: 20px;
+    color: var(--brown);
+    padding: 4px 8px;
+}
+
+.active {
+    color: white;
+    background-color: var(--brown);
+    padding: 4px 8px;
+
+    -webkit-box-shadow: 10px 10px 6px -5px rgba(148, 148, 148, 0.6);
+    -moz-box-shadow: 10px 10px 6px -5px rgba(148, 148, 148, 0.6);
+    box-shadow: 10px 10px 6px -5px rgba(148, 148, 148, 0.6);
 }
 
 .characters {
     display: flex;
-    gap: 10px;
-}
-
-.allButton {
-    display: flex;
+    gap: 5px;
 }
 
 .options {
@@ -49,7 +57,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 .imgIcon {

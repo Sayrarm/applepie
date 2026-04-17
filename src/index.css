@@ -20,6 +20,10 @@ body {
 
     font-family: TikTok Sans, monospace;
     font-size: 14px;
+    color: var(--brown);
+
+    background-image: url(src/assets/bg/x3_collection_bg_01.png);
+    background-attachment: fixed;
 }
 
 .container {
@@ -28,7 +32,7 @@ body {
 }
 
 :root {
-    --brown: #5B4A58;
+    --brown: #35312d;
     --general-font: 'TTLimesSlab', sans-serif;
     --title-font: 'Bahij', serif;
 }

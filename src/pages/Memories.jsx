@@ -1,20 +1,20 @@
 import styles from './Memories.module.css';
-import { memoriesData } from '../data/memories-data.js';
+import {memoriesData} from '../data/memories-data.js';
 import Card from "../components/Card.jsx";
-import { Input, Select, Space, Button } from 'antd';
+import {Button, Input, Select, Space} from 'antd';
 import myFilterIcon from '/src/assets/icons/filter.png';
 import FilterModalWindow from "../components/FilterModalWindow.jsx";
-import { useSearch } from '../hooks/useSearch';
-import { useSort } from '../hooks/useSort';
-import { useFilter } from '../hooks/useFilter';
-
+import {useSearch} from '../hooks/useSearch';
+import {useSort} from '../hooks/useSort';
+import {useFilter} from '../hooks/useFilter';
+import myClearIcon from '/src/assets/icons/eraser_16863523.png';
 
 function Memories() {
 
     const {Search} = Input;
     // Используем хуки
-    const { searchQuery, onSearch  } = useSearch();
-    const { sortCriteria, handleSortChange, clearSorting, sortMemories } = useSort();
+    const {searchQuery, onSearch} = useSearch();
+    const {sortCriteria, handleSortChange, clearSorting, sortMemories} = useSort();
     const {
         selectedChar,
         setSelectedChar,
@@ -28,10 +28,8 @@ function Memories() {
     // Фильтруем данные
     const filteredMemories = filterMemories(memoriesData).filter(memory => {
         // Поиск по тексту
-        const matchesSearch = memory.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        return memory.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
             memory.char.toLowerCase().includes(searchQuery.toLowerCase());
-
-        return matchesSearch;
     });
 
     // Сортируем отфильтрованные данные
@@ -43,17 +41,33 @@ function Memories() {
                 <div className={styles.options}>
                     <nav className={styles.sortBy}>
                         <div>
-                            <button className={`${styles.allButton} ${selectedChar === 'ALL' ? styles.active : ''}`}
-                                    onClick={() => setSelectedChar('ALL')}>
+                            <button
+                                className={`${styles.buttonSelectChar} ${selectedChar === 'ALL' ? styles.active : ''}`}
+                                onClick={() => setSelectedChar('ALL')}>
                                 ALL
                             </button>
                         </div>
                         <div className={styles.characters}>
-                            <button onClick={() => setSelectedChar('Xavier')}>Xavier</button>
-                            <button onClick={() => setSelectedChar('Zayne')}>Zayne</button>
-                            <button onClick={() => setSelectedChar('Rafayel')}>Rafayel</button>
-                            <button onClick={() => setSelectedChar('Sylus')}>Sylus</button>
-                            <button onClick={() => setSelectedChar('Caleb')}>Caleb</button>
+                            <button
+                                className={`${styles.buttonSelectChar} ${selectedChar === 'Xavier' ? styles.active : ''}`}
+                                onClick={() => setSelectedChar('Xavier')}>Xavier
+                            </button>
+                            <button
+                                className={`${styles.buttonSelectChar} ${selectedChar === 'Zayne' ? styles.active : ''}`}
+                                onClick={() => setSelectedChar('Zayne')}>Zayne
+                            </button>
+                            <button
+                                className={`${styles.buttonSelectChar} ${selectedChar === 'Rafayel' ? styles.active : ''}`}
+                                onClick={() => setSelectedChar('Rafayel')}>Rafayel
+                            </button>
+                            <button
+                                className={`${styles.buttonSelectChar} ${selectedChar === 'Sylus' ? styles.active : ''}`}
+                                onClick={() => setSelectedChar('Sylus')}>Sylus
+                            </button>
+                            <button
+                                className={`${styles.buttonSelectChar} ${selectedChar === 'Caleb' ? styles.active : ''}`}
+                                onClick={() => setSelectedChar('Caleb')}>Caleb
+                            </button>
                         </div>
 
                         <Space>
@@ -63,24 +77,33 @@ function Memories() {
                                 value={sortCriteria}
                                 placeholder="Sorting by"
                                 onChange={handleSortChange}
-                                style={{ width: 350 }}
+                                style={{width: 350}}
                                 options={[
-                                    { value: 'char', label: 'Character' },
-                                    { value: 'name', label: 'Memory\'s name' },
-                                    { value: 'rarity', label: 'Rarity' },
-                                    { value: 'stella', label: 'Stellactrum' },
-                                    { value: 'placement', label: 'Placement' },
-                                    { value: 'talent', label: 'Talent' },
+                                    {value: 'char', label: 'Character'},
+                                    {value: 'name', label: 'Memory\'s name'},
+                                    {value: 'rarity', label: 'Rarity'},
+                                    {value: 'stella', label: 'Stellactrum'},
+                                    {value: 'placement', label: 'Placement'},
+                                    {value: 'talent', label: 'Talent'},
                                 ]}
 
                             />
                         </Space>
 
-                        {sortCriteria.length > 0 && (
-                            <Button onClick={clearSorting} color="default" variant="solid">
-                                Clear ({sortCriteria.length})
-                            </Button>
-                        )}
+
+                        <Button
+                            onClick={clearSorting}
+                            color="default"
+                            variant="outlined"
+                            icon={<img
+                                className={styles.imgIcon}
+                                src={myClearIcon}
+                                style={{width: 22, height: 22}}
+                                alt={'filter'}/>}
+                            title={"Clear sorting"}
+                        >
+                        </Button>
+
                     </nav>
 
                     <aside className={styles.filterBy}>
@@ -98,8 +121,9 @@ function Memories() {
                             icon={<img
                                 className={styles.imgIcon}
                                 src={myFilterIcon}
-                                style={{ width: 20, height: 20 }}
-                                alt={'filter'} />}
+                                style={{width: 20, height: 20}}
+                                alt={'filter'}/>}
+                            title={"Filter"}
                         />
                         <FilterModalWindow
                             open={isModalOpen}
