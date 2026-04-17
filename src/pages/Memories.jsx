@@ -1,136 +1,41 @@
-import {useState} from 'react'
-import styles from './Memories.module.css'
-import {memoriesData} from '../data/memories-data.js'
+import styles from './Memories.module.css';
+import { memoriesData } from '../data/memories-data.js';
 import Card from "../components/Card.jsx";
-import {Input, Select, Space, Button} from 'antd';
+import { Input, Select, Space, Button } from 'antd';
 import myFilterIcon from '/src/assets/icons/filter.png';
 import FilterModalWindow from "../components/FilterModalWindow.jsx";
-
-const {Search} = Input;
+import { useSearch } from '../hooks/useSearch';
+import { useSort } from '../hooks/useSort';
+import { useFilter } from '../hooks/useFilter';
 
 
 function Memories() {
 
-    const [searchQuery, setSearchQuery] = useState('')
-    const [selectedChar, setSelectedChar] = useState('ALL')
-    const [sortCriteria, setSortCriteria] = useState([])
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [filters, setFilters] = useState({
-        rarity: [],
-        placement: [],
-        talent: [],
-        stella: []
-    })
-
-    const applyFilters = (newFilters) => {
-        setFilters(newFilters)
-    }
-
-    const clearFilters = () => {
-        setFilters({
-            rarity: [],
-            placement: [],
-            talent: [],
-            stella: []
-        })
-    }
-
-    // Функции сравнения для каждого типа сортировки
-    const compareFunctions = {
-        char: (a, b) => {
-            const order = ['Caleb', 'Rafayel', 'Sylus', 'Xavier', 'Zayne']
-            return order.indexOf(a.char) - order.indexOf(b.char)
-        },
-        name: (a, b) => a.name.localeCompare(b.name),
-        rarity: (a, b) => {
-            const order = { '3-star': 3, '4-star': 2, '5-star': 1 }
-            return (order[a.rarityName] || 0) - (order[b.rarityName] || 0)
-        },
-        stella: (a, b) => {
-            const order = ['emerald', 'sapphire', 'violet', 'amber', 'ruby', 'pearl']
-            return order.indexOf(a.stellaName) - order.indexOf(b.stellaName)
-        },
-        placement: (a, b) => {
-            const order = ['solar', 'lunar']
-            return order.indexOf(a.placementName) - order.indexOf(b.placementName)
-        },
-        talent: (a, b) => {
-            const order = ['atk', 'def', 'hp']
-            return order.indexOf(a.talentName) - order.indexOf(b.talentName)
-        }
-    }
-
-    // Функция для многоуровневой сортировки
-    const multiSort = (memories, criteria) => {
-        if (criteria.length === 0) return memories
-
-        const sorted = [...memories]
-
-        return sorted.sort((a, b) => {
-            // Проходим по всем критериям сортировки в порядке их добавления
-            for (const criterion of criteria) {
-                const compare = compareFunctions[criterion]
-                const result = compare(a, b)
-
-                // Если элементы отличаются по текущему критерию, возвращаем результат
-                if (result !== 0) {
-                    return result
-                }
-                // Если равны, переходим к следующему критерию
-            }
-            return 0 // Если все критерии равны
-        })
-    }
-
-    // Обработчик изменения сортировки (для mode="tags")
-    const handleSortChange = (values) => {
-        // values — это массив выбранных значений, например ['char', 'rarity']
-        setSortCriteria(values)
-    }
-
-    // Очистка всех сортировок
-    const clearSorting = () => {
-        setSortCriteria([])
-    }
-
+    const {Search} = Input;
+    // Используем хуки
+    const { searchQuery, onSearch  } = useSearch();
+    const { sortCriteria, handleSortChange, clearSorting, sortMemories } = useSort();
+    const {
+        selectedChar,
+        setSelectedChar,
+        isModalOpen,
+        setIsModalOpen,
+        applyFilters,
+        clearFilters,
+        filterMemories
+    } = useFilter();
 
     // Фильтруем данные
-    const filteredMemories = memoriesData.filter(memory => {
+    const filteredMemories = filterMemories(memoriesData).filter(memory => {
         // Поиск по тексту
         const matchesSearch = memory.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            memory.char.toLowerCase().includes(searchQuery.toLowerCase())
+            memory.char.toLowerCase().includes(searchQuery.toLowerCase());
 
-        // Фильтр по персонажу (кнопки)
-        const matchesChar = selectedChar === 'ALL' ||
-            memory.char.toLowerCase() === selectedChar.toLowerCase()
-
-        // Фильтр по редкости (из модалки)
-        const matchesRarity = filters.rarity.length === 0 ||
-            filters.rarity.includes(memory.rarityName)
-
-        // Фильтр по размещению (solar/lunar)
-        const matchesPlacement = filters.placement.length === 0 ||
-            filters.placement.includes(memory.placementName)
-
-        // Фильтр по таланту
-        const matchesTalent = filters.talent.length === 0 ||
-            filters.talent.includes(memory.talentName)
-
-        // Фильтр по стилле (цвету)
-        const matchesStella = filters.stella.length === 0 ||
-            filters.stella.includes(memory.stellaName)
-
-        return matchesSearch && matchesChar && matchesRarity &&
-            matchesPlacement && matchesTalent && matchesStella
-    })
+        return matchesSearch;
+    });
 
     // Сортируем отфильтрованные данные
-    const sortedMemories = multiSort(filteredMemories, sortCriteria)
-
-    // Функция для обработки поиска из antd
-    const onSearch = (value) => {
-        setSearchQuery(value.toLowerCase()) // сохраняем запрос в нижнем регистре
-    }
+    const sortedMemories = sortMemories(filteredMemories);
 
     return (
         <>
