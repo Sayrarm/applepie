@@ -1,30 +1,14 @@
 import styles from './Memories.module.css';
 import {memoriesData} from '../data/memories-data.js';
 import Card from "../components/Card.jsx";
-import {Button, Input, Select, Space} from 'antd';
+import {Button, Input, Select} from 'antd';
 import myFilterIcon from '/src/assets/icons/filter.png';
 import FilterModalWindow from "../components/FilterModalWindow.jsx";
 import {useSearch} from '../hooks/useSearch';
 import {useSort} from '../hooks/useSort';
 import {useFilter} from '../hooks/useFilter';
 import myClearIcon from '/src/assets/icons/eraser_16863523.png';
-const stylesFnSearch = info => {
-    if (info.props.size === 'medium') {
-        return {
-            root: { color: '#2b1611' },
-            input: { color: '#2b1611', borderColor: '#2b1611' },
-            prefix: { color: '#2b1611' },
-            suffix: { color: '#2b1611' },
-            count: { color: '#2b1611' },
-            button: {
-                root: { color: '#2b1611', borderColor: '#2b1611' },
-                icon: { color: '#2b1611' },
-            },
-        };
-    }
-    return {};
-};
-
+import {stylesFnSearch} from "../components/stylesAntd.js";
 
 function Memories() {
 
