@@ -21,12 +21,14 @@ function WuArticle() {
                     <div>{categories.title}</div>
                 </div>
             )}
-
+            <br/>
             {/* Статьи */}
             {articles.map(article => (
                 <article key={article.id}>
-                    <div>{article.subtitle}</div>
+                    <div>{article.serialNumber} {article.subtitle}</div>
+                    <br/>
                     <div dangerouslySetInnerHTML={{ __html: article.content }} />
+                    <br/>
                 </article>
             ))}
         </div>
