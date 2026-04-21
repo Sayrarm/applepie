@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import {Modal, Checkbox, Select, Tag, Button} from "antd";
 
+
+
 function FilterModalWindow({ open, onClose, onFilter, onClearFilters }) {
     // Состояния для каждого фильтра
     const [rarity, setRarity] = useState([]);
@@ -103,16 +105,16 @@ function FilterModalWindow({ open, onClose, onFilter, onClearFilters }) {
             onCancel={onClose}
             width={400}
         >
-            <div style={{ marginBottom: 16 }}>
+            <div style={{ marginBottom: 15 }}>
                 <span>Rarity: </span>
                 <Checkbox.Group
                     options={optionsRarity}
-                    value={rarity}           // ← текущее состояние
-                    onChange={handleRarityChange}  // ← обновляем состояние
+                    value={rarity}
+                    onChange={handleRarityChange}
                 />
             </div>
 
-            <div style={{ marginBottom: 16 }}>
+            <div style={{ marginBottom: 15 }}>
                 <span>Placement: </span>
                 <Checkbox.Group
                     options={optionsPlace}
@@ -121,7 +123,7 @@ function FilterModalWindow({ open, onClose, onFilter, onClearFilters }) {
                 />
             </div>
 
-            <div style={{ marginBottom: 16 }}>
+            <div style={{ marginBottom: 15 }}>
                 <span>Talent: </span>
                 <Checkbox.Group
                     options={optionsTalent}
@@ -130,7 +132,7 @@ function FilterModalWindow({ open, onClose, onFilter, onClearFilters }) {
                 />
             </div>
 
-            <div style={{ marginBottom: 16 }}>
+            <div style={{ marginBottom: 15 }}>
                 <span>Stella: </span>
                 <Select
                     tagRender={tagRender}
