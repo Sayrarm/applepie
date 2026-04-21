@@ -29,7 +29,7 @@ function App() {
                     <Route path="/lore" element={<Lore/>}/>
                     <Route path="/spacepedia" element={<Spacepedia/>}/>
                     <Route path="/world-underneath" element={<WorldUnderneath/>}/>
-                    <Route path="/world/:articleLink" element={<WuArticle />} />
+                    <Route path="/world-underneath/:articleLink" element={<WuArticle />} />
                     <Route path="/main-story" element={<MainStory/>}/>
                 </Routes>
 

@@ -1,4 +1,4 @@
-export const categories = [
+export const wuCategories = [
     { id: 10,  link: "lf", title: "Longly Flame", image: "src/assets/wu/a2_backgroundstory_pic1005.png", },
     { id: 20,  link: "st", title: "Snowy Stairs", image: "src/assets/wu/a2_backgroundstory_pic1006.png", },
     { id: 30,  link: "bad", title: "Bouquets And Dirges", image: "src/assets/wu/a2_backgroundstory_pic1003.png", },
