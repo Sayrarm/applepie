@@ -44,7 +44,7 @@ stands as straight as a pine tree.
 "Good morning, Dr. Noah."</p>
 
 <p>At Zayne's greeting, Dr. Noah smiles. He turns
-and pats Zayne's shoulder:. "Well, it's just the
+and pats Zayne's shoulder. "Well, it's just the
 two of us this year. Will was too busy, and now
 you are too. I wonder who'll come with me
 next year."</p>
@@ -140,7 +140,7 @@ Noah looks up at the building, lost in thought.
 Ghost in the office?"</p>
 
 <p>Zayne frowns, a little-exasperated. "These
-kinds Of unscientific rumors are everywhere
+kinds of unscientific rumors are everywhere
 in the School of Medicine."</p>
 
 <p>"Indeed," Dr. Noah says. His gaze lingers on
@@ -235,7 +235,7 @@ ladies stood up with furrowed brows and
 returned to their stations. Losing his
 audience, the security guard prepared to
 leave. He turned around and saw Dr. Noah
-looking at him. "Dr. Noah, l...I said what I
+looking at him. "Dr. Noah, I...I said what I
 said, but I don't think there's anything wrong
 with the medical school." He smiles.</p>
 
@@ -270,14 +270,16 @@ sorry."</p>
 The med school won't give you special
 treatment just because you're you."</p>
 
-<p>"l know. It's my fault for missing the exam. I
+<p>"I know. It's my fault for missing the exam. I
 don't deserve to have a score."</p>
 
 <p>"Zayne," Dr. Noah said, looking at the faint,
-dark circles around his student's eyes. "l know
+dark circles around his student's eyes. "I know
 you're taking this project very seriously and
 you're committed to your studies. But don't
 wear yourself out."</p>
+
+<p>"I..."</p>
 
 <p>After a moment of silence, Zayne put down his
 chopsticks and said softly, "Dr. Noah, I'm not
@@ -345,7 +347,7 @@ his footsteps carried away by the wind. Just
 when Dr. Noah thought Zayne wouldn't answer
 him, he spoke up.</p>
 
-<p>"lt's also... because of... someone."
+<p>"It's also... because of... someone."
 Dr. Noah kind of expected that. He stopped
 walking and turned to look at his student, who
 rarely opened up about his feelings. He saw
@@ -387,9 +389,10 @@ waste? I know it wasn't an accident. Explain
 yourself."</p>
 
 <p>Behind Zayne, his senior and labmate, Carter,
-started to speak, "As long as we re—
-"Quiet, boy." Dr. Noah pushed Carter behind
-him. "lill handle this. Let the students go
+started to speak, "As long as we re—"</p>
+
+<p>"Quiet, boy." Dr. Noah pushed Carter behind
+him. "I'll handle this. Let the students go
 first."</p>
 
 <br>
@@ -485,7 +488,7 @@ experiment's data were destroyed.</p>
 <p>Perhaps the path the young man walks has
 only heavy snow and level ground. He's
 destined to walk alone. As his teacher, Dr.
-Noah .can only hope that one day a fork in the
+Noah can only hope that one day a fork in the
 road will appear before the young man,
 offering him tranquil respite.</p>
 `,
@@ -496,26 +499,26 @@ offering him tranquil respite.</p>
         serialNumber: "01",
         subtitle: "Die In Spring",
         content: `
-<p>"It doesn't matter if the annual salary is in the
-millions or if the research lab is top-notch Without me,Carter, could Xander Sciences have come this far? What truly drives the development of science is not experiments, 
-but ideas! I'm such a person,and so is Zayne That's why you need him, right?"</p>
+<p>"It doesn't matter if the annual salary is in the millions or if the research lab is top-notch Without me, 
+Carter, could Xander Sciences have come this far? What truly drives the development of science is not experiments, but ideas! 
+I'm such a person, and so is Zayne That's why you need him, right?"</p>
 
-<p>Laughter echoes in the conference room Carter stands up,leans on the table, and
+<p>Laughter echoes in the conference room Carter stands up, leans on the table, and
 tosses the contract back to the executives. "If the medical genius Zayne valued these things. why would he accept Akso Hospital's
 invitation? Can a hospital offer more than our research institute?"</p>
 
 <p>"What do you suggest, Dr. Carter?"</p>
 
 <p>"I didn't get my doctorate degree." With a smile on his lips that can send chills down
-someone's spine,Carter glances at the
+someone's spine, Carter glances at the
 institute director asking the question. "Give me the file of Cabin 607's patient. Let me try.</p>
 
 <br>
 
 <p>After a round of New Year's fireworks, 2048 officially begins.</p>
 
-<p>During the year Dr.Carter decided to quit school, this area of Empyreal Ring Park was
-just a newly abandoned construction site. The property owner declared bankruptcy,and it turned out they had invested in the emerging industry of Protocore technology in Skyhaven. 
+<p>During the year Dr. Carter decided to quit school, this area of Empyreal Ring Park was
+just a newly abandoned construction site. The property owner declared bankruptcy, and it turned out they had invested in the emerging industry of Protocore technology in Skyhaven. 
 The homeowners formed a group to defend their rights on the construction site. Carter and Zayne happened to pass by and saved an elderly man who had a heart attack.</p>
 
 <p>After the ambulance took the man away,they
@@ -537,9 +540,9 @@ knows this is the path his stubborn junior will take every day for his morning j
 
 <p>"...He already passed away."</p>
 
-<p>Following the voice,Carter finds Zayne
+<p>Following the voice, Carter finds Zayne
 squatting next to a crying child by a bench. The boy pulls at Zayne's arm. A stray dog lies
-motionless in front of them.It's not breathing.</p>
+motionless in front of them. It's not breathing.</p>
 
 <p>"Pilot always played with me. I even bought it cookies."</p>
 
@@ -560,7 +563,7 @@ sight of the Protocore. He stands up and stares at Carter's smiling face.</p>
         serialNumber: "02",
         subtitle: "Yesterday Once More",
         content: `
-<p>"You're still cold-hearted,Zayne. The dog also
+<p>"You're still cold-hearted, Zayne. The dog also
 counts as a life, and the poor kid is heartbroken."</p> 
 
 <p>Carter follows Zayne to the restaurant they visited all those years ago,which is now a fast-food restaurant.</p>
@@ -573,10 +576,10 @@ right. Most people don't even want to try. Tell me, is the natural law an unshak
 
 <p>"I thought I made that clear," Zayne says. He places his phone on the table after ordering breakfast. "I see you haven't changed at all, Carter."</p>
 
-<p>"No,no, that's where you're wrong. Xander Sciences has given me a lot of opportunities." Without allowing things to be dismissed,
+<p>"No, no, that's where you're wrong. Xander Sciences has given me a lot of opportunities." Without allowing things to be dismissed,
 Carter takes out an elegant-looking business card from his bag and slides it across the table toward Zayne.</p>
 
-<p>"If you had kept going,maybe you would've already broken free from the shackles of the natural law," Carter says. "Zayne, your talents are wasted at Akso Hospital. Xander Sciences
+<p>"If you had kept going, maybe you would've already broken free from the shackles of the natural law," Carter says. "Zayne, your talents are wasted at Akso Hospital. Xander Sciences
 doesn't want to see a genius like you be forgotten. The Evol technology you're
 insisting on is so last year. No one wants an
 artificial lump that needs to be charged in
@@ -599,13 +602,11 @@ Zayne's phone.Zayne doesn't move, so Carter reaches out and accepts it for him.<
 <p>"The patient's heart surgery is scheduled for next week. His other organs are in such a
 terrible state that he may not survive the side effects of the treatment. We're at a loss. Why don't you take a look?"</p>
 
-<p>Knowing Zayne can glean insights from abnormal data in the medical record, he
-doesn't provide any more details. As expected Zayne looks away, furrowing his brow in
-barely disguised displeasure. "Are you unsure of what to do? If that's the case, Xander
-Sciences wouldn't have kept him until now." Smiling, Carter nods. "That's why we need you.</p>
-
-<p>My skills are nothing compared to yours and
-Dr. Noah's. I can't be as meticulous and efficient as you." </p>
+<p>Knowing Zayne can glean insights from abnormal data in the medical record, he doesn't provide any more details. 
+As expected, Zayne looks away, furrowing his brow in barely disguised displeasure. 
+"Are you unsure of what to do? If that's the case, Xander Sciences wouldn't have kept him until now." 
+Smiling, Carter nods. "That's why we need you. My skills are nothing compared to yours and Dr. Noah's. 
+I can't be as meticulous and efficient as you."</p>
 
 <p>The restaurant owner brings out a bowl of sweet tofu pudding and places it in front of Zayne.</p>
 
@@ -663,7 +664,8 @@ stopped. I brought it to Xander Sciences. Now it has a name: X-Heart."</p>
 
 <p>Zayne frowns. "Have you conducted animal experiments with it?"</p>
 
-<p>"Of course we've completed all the standard procedures. Otherwise, I wouldn't have invited you. When he was admitted, he only had less than six months. It's been two years now. This is what Ioffered him,and he's happy to be a pioneer. But I get it. You're the genius here.I
+<p>"Of course we've completed all the standard procedures. Otherwise, I wouldn't have invited you. When he was admitted, he only had less than six months. It's been two years now. 
+This is what I offered him,and he's happy to be a pioneer. But I get it. You're the genius here.I
 only implemented a genius' great ideas." After a moment of silence,Zayne speaks
 again. "Have you seen William since then? He died at Mt. Eternal. You were closest to him in the team."</p>
 
@@ -683,8 +685,8 @@ clenches his fists,unable to hold back his words.</p>
 better consider it! Our job is to save people. If
 we can control life and death,why shouldn't We?!"</p>
 
-<p>"Don't you remember what we thought every
-time a surgery failed? Give me another chance. I could save him if I had another chance! This is the 'chance' we've always Wanted!"</p>
+<p>"Don't you remember what we thought every time a surgery failed? Give me another chance. 
+I could save him if I had another chance! This is the 'chance' we've always Wanted!"</p>
 
 <p>"There is no we," Zayne replies.</p>
 
@@ -757,17 +759,17 @@ Evol-Cardiac Medical Research Lab as its principal investigator.</p>
 <p>The night before, Carter sent him a
 congratulatory message and told him about the death of the patient in Cabin 607.</p>
 
-<p>"His name was Felix,only 45 years old. He helped a lot of poor students during his lifetime,giving them a comfortable and affluent life.He also allowed them to
-participate in our great experiment near the
-end of their lives. What a shame. Despite  Xander Sciences sparing no expense to keep him alive, he still passed away after two years But don't you think this is just the beginning?" 
-Zayne doesn't reply.</p>
+<p>"His name was Felix, only 45 years old. He helped a lot of poor students during his lifetime, 
+giving them a comfortable and affluent life. He also allowed them to participate in our great experiment near the end of their lives. 
+What a shame. Despite Xander Sciences sparing no expense to keep him alive, he still passed away after two years. 
+But don't you think this is just the beginning?" Zayne doesn't reply.</p>
 
 <p>Unsatisfied, Carter sends another picture.</p>
 
 <p>It's a failed attempt at resuscitating a patient in Cabin 607.He lies on the floor outside the life pod, a cluster of black 
 crystals blooming on the left side of his chest like a magnificent dahlia.</p>
 
-<p>"Zayne, if the person lying on the operating table was your lover,would you let her die?"</p>
+<p>"Zayne, if the person lying on the operating table was your lover, would you let her die?"</p>
 
 <p>After that message,a thought hits Carter like
 the first drop of rain falling outside the window.</p>
@@ -826,5 +828,159 @@ At least, he still has another option. His last one.</p>
 
 <p>He could also hold her hand and resist the avalanche-like onslaught of selfish wishes together.</p>
         
-        `,},
+`,
+},
+    {
+        id: 11,
+        link: "bad",
+        serialNumber: "01",
+        subtitle: "Emerald Vines",
+        content: `
+<p>"This one is for Talia."</p>
+<p>On the trellis are emerald-colored vines.</p>
+<p>Rafayel holds one of them. Soon, this garden full of exotic plants will be the place where Talia and her lover will hold their wedding.</p>
+<p>"Not bad. It matches the design of the necklace I gave her."</p>
+<p>The garden's owner, Charles, is a jewelry designer. He enjoys gardening in his spare time and has done conservation work for endangered plants and animals. 
+This is how he had met Rafayel.</p>
+<p>"Choosing flowers is a psychological experience," Charles says. "It's a process akin to someone trying to understand another person."</p>
+<p>"Really?" Rafayel draws a series of random lines on a sheet of paper. "I chose them based on the impression they gave. It doesn't sound as cool."</p>
+<p>"People have also said that giving flowers to a lover is a surefire way to their heart." Charles remembers a girl he caught a glimpse of in Rafayel's photo album. 
+"If you ever want to do that, you're welcome to pick any flowers from my garden."</p>
+<p>"Stop reading stuff from those weird articles." Charles shrugs and responds with a helpless smile after being teased. 
+He walks back through a path that's adorned in a faint, floral fragrance.</p>
+<p>When he returns, he hears a conversation between Rafayel and Talia.</p>
+<p>"Are you really not going to attend? It's my wedding."</p>
+<p>"Nope."</p>
+<p>The aloof artist continues to doodle. His phone is on speaker, and his responses are quick and simple. 
+If Charles wasn't doing a commission for Talia's wedding, he would've believed Rafayel.</p>
+<p>"But I've finally found someone I like."</p>
+<p>"You said the same thing last time."</p>
+<p>"And how long ago was that? Why are you so stingy with your blessings?"</p>
+<p>"I blessed you when you made the pact. Any more would be pointless."</p>
+<p>"What do you mean? Not everyone is as lucky as you...”</p>
+<p>"I'm hanging up."</p>
+<p>Rafayel ends the call and hands the sketch in his hand to the jewelry designer.</p>
+<p>The once chaotic lines are now an elegant yet fancy bouquet. A pencil may not be able to display any color beyond black, 
+but Charles can still imagine the blue that Rafayel chose earlier.</p>
+<p>He carefully takes the sketch and hands over the necklace design. "This is from the plan we previously agreed upon. 
+The gemstone is Talia's favorite and matches the color of her wedding dress- “</p>
+<p>Before he can finish his sentence, they hear Talia's laughter from Rafayel's phone Rafayel's expression changes as he realizes the call is still going.</p>
+<p>Talia sounds even happier than before. "I knew you wouldn't disappoint me! I'll be waiting. See you then!"</p>
+<p>The call actually ends this time.</p>
+<p>Charles chuckles and ignores Rafayel's annoyance. "There's no point in hiding it if you're going anyway."</p>
+<p>He points out a few modifications about the gemstone setting to Rafayel. "You put a lot of care into the details. I'm sure my plan will be harshly criticized."</p>
+<p>Rafayel lowers his gaze and doesn't reply.</p>
+<p>Charles thinks he's maybe thinking about his lover. Sensing that Rafayel has no intention of responding, he changes the conversation topic to the necklace's color scheme.</p>
+        `,
+    },
+    {
+        id: 12,
+        link: "bad",
+        serialNumber: "02",
+        subtitle: "Wedding",
+        content: `
+<p>Passing through the archway decorated with emerald vines, Rafayel reaches the central fountain. The relaxed atmosphere in the garden makes him sigh, even though it's what he had expected.</p>
+<p>He picked out two suits for today. But after a few minutes, he ended up not wearing either. Instead, he chose comfortable, casual clothes suitable for dancing, which turned out to be the best choice. If Rafayel wore a suit, he would've been teased by Talia, the same person who's wearing a simple dress and dancing barefoot on the grass.</p>
+<p>"He's too plain. If he fell into a pond, let alone the sea, no one would be able to find him..."</p>
+<p>"Our Talia is the most dazzling pearl in the ocean. If you can find her, wouldn't you be able to find him too?"</p>
+<p>At a small round table, a group of Lemurians are whispering to each other. Rafayel turns to see a familiar face he hadn't seen since "the disaster." He cheerfully plays an ancient Lemurian instrument, a happy melody flowing from his moving fingertips.</p>
+<br>
+<p>"Thank your friend for me. His garden is beautiful," Talia says to Rafayel after she makes her way through the crowd to him. "He was kind to let us hold the ceremony here." Rafayel's gaze shifts to the man not far away from Talia. "He doesn't mind?"</p>
+<p>"He likes whatever I like," she says. She spins around in front of him. Her flared skirt twirls, making her look like a graceful, swimming fish. "He designed this for me. It's pretty good, right?"</p>
+<p>"It suits you." Rafayel chuckles, recalling Charles's words. The process of choosing flowers for someone is also a process of understanding that person. Maybe the same applies to designing clothes.</p>
+<p>He's silent for a few seconds. He drinks his wine and pushes the empty cup back onto the table. "Raymond is dead."</p>
+<p>"…"</p>
+<p>Talia takes a deep breath, a smile blooming on her face. "Then we can all get a good night's sleep for now."</p>
+<p>"Yeah, for now."</p>
+<p>She understands the emphasis Rafayel put in his words. Crossing her arms, her gaze wanders over the singing, dancing, and chatting people. "Guess you don't want fleeting happiness."</p>
+<p>Rafayel subtly turns away. To avoid Talia, he inevitably has to look at the guests attending her wedding.</p>
+<p>Almost all the familiar and unfamiliar Lemurian survivors are present. The music is harmonious, and the singing is rich, but every smile seems to be covered with a gray veil. Then he hears Talia's melodious voice again. "I'm getting married not because I've forgotten the past, but because I want to live in the present... Look at every Lemurian here. They're all looking for an anchor, a reason to live. I've found mine, and others have found theirs," Talia says. Her eyes lock onto Rafayel.</p>
+<p>“But there are still those who don't realize how important it is to have an anchor." Rafayel shakes his head. "Lemuria is more important."</p>
+<p>"Lemuria will always be important." Talia puts down her glass, looking serious. "But what about you? When your own heart is devouring you, is there anything that can pull you back? Can you really let her go?"</p>
+<p>The light in Rafayel's eyes dims at her last question.</p>
+<p>"Rafayel, have you ever thought about your own wedding?"</p>
+<p>He's silent for a while. Then he takes off the boutonniere from his chest, places it on the table, and turns to leave the bustling scenery that doesn't belong to him.</p>
+<p>"No."</p>
+        `,
+    },
+    {
+        id: 13,
+        link: "bad",
+        serialNumber: "03",
+        subtitle: "Gardenia",
+        content: `
+<p>"Freedom, happiness, and rebirth."</p>
+<p>Charles hangs the shovel back on the tool board, nodding at the light-yellow gardenia Rafayel has been staring at. "That's what it means in the language of flowers. Are you giving it to someone?"</p>
+<p>"A relative's daughter." Rafayel stands under the courtyard door's eaves, tilting his head to observe the flower's petals. "Can you tell me what it means again?"</p>
+<p>"People believe it represents freedom, happiness, and rebirth. I highly recommend it for the opening ceremony for the school year or a birthday party."</p>
+<p>"I'll take it." Rafayel returns the sample to Charles and walks past him. "Help me arrange a bouquet. I'll take it to her funeral. Her father can no longer give her flowers."</p>
+<p>"...Funeral?"</p>
+<p>Charles stops counting his tools and makes a mistake on his paper. "Wouldn't that be a bit...".</p>
+<p>"It's fine," Rafayel says. "Based on what you told me, it's suitable for a funeral too."</p>
+        `,
+    },
+    {
+        id: 14,
+        link: "bad",
+        serialNumber: "04",
+        subtitle: "Lament",
+        content: `
+<p>Rafayel crosses the courtyard as it's bathed in a golden glow. He walks through the corridor where Raymond's glorious deeds are being played on a loop on a digital screen. Then, he arrives at Raymond's house.
+<p>Raymond's funeral is being held in the living room. At the entrance, the butler mechanically takes the condolence money from the mourners. He looks stiffly and professionally ahead until Rafayel passes him He narrows his eyes and quickly sizes Rafayel up, seemingly surprised by his presence. Rafayel ignores these malicious glances and walks straight to the center of the hall where the glass fish tank is placed. He pauses for a second or two in front of the mermaid skeleton inside, then turns to Raymond's coffin and stands with the others.</p>
+<p>"Mom, this is so boring. We were supposed to be on vacation in the Arctic!"</p>
+<p>The child's voice echoes clearly in the hall. Her innocent comment makes the parent cover the brat's mouth in embarrassment, quickly returning to a sorrowful expression after flashing an apologetic smile.</p>
+<p>After all, she had yet to secure the inheritance She wanted. When it's Rafayel's turn to mourn, he steps forward. He leans over the coffin and places the carefully selected gardenias on it, making sure its most beautiful side faces the fish tank.</p>
+<p>In the midst of all the black and white, this bright yellow bouquet is the only burst of color.</p>
+<p>He clasps his hands together and closes his eyes. At a barely noticeable angle, he aligns himself with the bouquet, silently reciting a eulogy.</p>
+<br>
+<p>A familiar song begins.</p>
+<p>Talia stands at the very front of the hall singing a dirge. Rafayel opens his eyes. The dazzling sunlight passes through the fish tank and the skeleton inside silently gazes at the sky in a forever-frozen pose.</p>
+<p>He knows who Talia is singing for, just as she knows who Rafayel came here for.</p>
+<br>
+<p>"Murderer! You murderer!"</p>
+<p>As Rafayel is about to leave, an elderly woman suddenly pushes through the crowd. She rushes out of the hall, pointing at his retreating figure and screaming at the top of her lungs.</p>
+<p>"My boy was only thirty-nine! It was supposed to be a time for rebirth, a fresh start. But he died because of a stupid, frivolous painter! A painting that doesn't make any sense! Rafayel! You killed my son!"</p>
+<p>Like sharks smelling blood in the water, the reporters' cameras instantly surround him. The mourners in the darkened hall look on, excited, yet they also carry the right amount of regret. No one steps forward to intervene. The child who wants to go on an Arctic vacation watches with interest, standing on her tiptoes to take a lollipop from her mother.</p>
+<p>How sad... With her son dead, the anchor that held her up was taken by a dark tide.</p>
+<p>Rafayel calmly looks around the room full of cameras and leaves.</p>
+        `,
+    },
+    {
+        id: 15,
+        link: "bad",
+        serialNumber: "05",
+        subtitle: "Bouquet",
+        content: `
+<p>Another week passes. Rafayel slips away from his uninspiring new work and Thomas's repeated nagging to visit Talia in a small house in Verona. Talia is admiring a dress. It's one among countless other dresses that her new husband had designed for her. It's entirely black with just a stroke of white. Talia points at the black part of the dress. </p>
+<p>"He said this is him." Then she points at the white. "And this is me. What do you think? Interesting, right?"</p>
+<p>Rafayel pours himself a glass of water and takes a sip without looking. "Has he ever designed a wedding dress?"</p>
+<p>"What do you mean?" Talia raises an eyebrow, then she smiles. "No. But if you want to commission him, I can help you get a family discount."</p>
+<br>
+<p>When Rafayel leaves, Talia tosses him a small bouquet of flowers. He turns and catches them.</p>
+<p>"I wanted to toss the bouquet to you that day, but you left early. This was what I had left." Rafayel looks down at his hand. An unknown flower sits in his palm, reminding him of someone.</p>
+<br>
+<p>On his way back, he sees many familiar faces among the Verona street performers. Those people stand amidst music, color, and dancing bubbles. They smile at him. Rafayel remembers what Talia said at the wedding. Everyone was looking for an anchor. It's why they're still here.</p>
+<p>He waves back, hoping they can make their dream come true. Then he turns around and goes home.</p>
+        `,
+    },
+    {
+        id: 16,
+        link: "bad",
+        serialNumber: "06",
+        subtitle: "Gloriosa",
+        content: `
+<p>"Are you tired from painting? You don't look so good." Charles wraps up the fiery flame lilies Rafayel chose and hands them over. "Are these also a gift? I think they suit you more." "Great." Rafayel takes the bouquet. "I'm thinking of giving them to someone."</p>
+<p>"Are you giving yourself away?"</p>
+<p>Rafayel never mentioned it, but Charles had a hunch a long time ago. There must be</p>
+<p>someone in his heart that he didn't want to mention.</p>
+<p>"My garden is always open to you."</p>
+<p>He pats Rafayel's shoulder, then sees him and his flame lilies off.</p>
+<br>
+<p>The flowers are light, their weight in his hand almost nonexistent.</p>
+<p>He walks for a long time after leaving the garden, but he still hasn't decided whether or not he should give this bouquet away. He hasn't come up with a good excuse either. "When your own heart is devouring you, is there anything that can pull you back?"</p>
+<p>He remembers the question Talia once asked and avoids the underlying meaning. Can this flame lily bouquet become his anchor? He's not sure.</p>
+<p>Under the night sky, the black waves haven't fully rolled in. For now, he still has a chance to get a good sleep.</p>
+<p>Until he must face the never-ending tsunami in his dreams alone.</p>
+        `,
+    },
 ]
