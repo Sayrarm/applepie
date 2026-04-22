@@ -3,25 +3,33 @@ export const wuData = [{
     link: "lf",
     serialNumber: "01",
     subtitle: "The One Left",
-    content:
-        `<p>Someone knocks.</p>
-         <p>Zayne opens the office door to find William's girlfriend, Sienna, standing outside. 
-         She manages a pale smile and holds up a box. "This is for you, Zayne."</p>
-         <p>A martyr's badge sits inside it. It's very conspicuous on the velvet cushioning. 
-         It reminds Zayne of the spilled blood that night at Mt. Eternal. 
-         Zayne is silent for a moment before he steps aside to let her in.</p>
-         <p>"I've been thinking, but... I just can't accept it," Sienna says as she sits across from him. 
-         She cradles a cup of hot water in her hands. 
-         "William was always so busy after he joined the Evol Special Rescue Unit, 
-         but he would always come home after he was done with work. Now..."</p>
-         <p>Her hand clenches around the cup as her lips tremble uncontrollably. 
-         "If I don't see this badge, I can tell myself that he's still at work and just hasn't come home yet."</p>
-         <p>Wiping away her tears, Sienna puts down the cup, gently pushing the box toward Zayne. 
-         "Keeping this with me will only serve as a constant reminder that my William will never return... I can't take it anymore."</p>
-         <p>Zayne's expression becomes more solemn. After a while, he nods, opens the drawer closest to him, and puts the box inside. Sienna bows and says, "Thank you."</p>
-         <p>As she prepares to leave, she glances at the swaying tree branches outside. 
-         "William told me that you and Dr. Noah would return to the university together every year during first-year admissions. 
-         He was always too busy to go... Zayne, if you see Dr. Noah this year, please tell him William said hi."</p>`,
+    content: `
+<p>Someone knocks.</p>
+
+<p>Zayne opens the office door to find William's girlfriend, Sienna, standing outside. 
+She manages a pale smile and holds up a box. "This is for you, Zayne."</p>
+
+<p>A martyr's badge sits inside it. It's very conspicuous on the velvet cushioning. 
+It reminds Zayne of the spilled blood that night at Mt. Eternal. 
+Zayne is silent for a moment before he steps aside to let her in.</p>
+
+<p>"I've been thinking, but... I just can't accept it," Sienna says as she sits across from him. 
+She cradles a cup of hot water in her hands. 
+"William was always so busy after he joined the Evol Special Rescue Unit, 
+but he would always come home after he was done with work. Now..."</p>
+
+<p>Her hand clenches around the cup as her lips tremble uncontrollably. 
+"If I don't see this badge, I can tell myself that he's still at work and just hasn't come home yet."</p>
+
+<p>Wiping away her tears, Sienna puts down the cup, gently pushing the box toward Zayne. 
+"Keeping this with me will only serve as a constant reminder that my William will never return... I can't take it anymore."</p>
+
+<p>Zayne's expression becomes more solemn. After a while, he nods, opens the drawer closest to him, and puts the box inside. Sienna bows and says, "Thank you."</p>
+
+<p>As she prepares to leave, she glances at the swaying tree branches outside. 
+"William told me that you and Dr. Noah would return to the university together every year during first-year admissions. 
+He was always too busy to go... Zayne, if you see Dr. Noah this year, please tell him William said hi."</p>
+`,
 },
     {
         id: 2,
@@ -29,18 +37,21 @@ export const wuData = [{
         serialNumber: "02",
         subtitle: "Review",
         content: `
-        <p>On the first day of school, Dr. Noah is already
+<p>On the first day of school, Dr. Noah is already
 waiting at the entrance to Skyhaven
 University. The soon-to-be-retired professor
 stands as straight as a pine tree.
 "Good morning, Dr. Noah."</p>
+
 <p>At Zayne's greeting, Dr. Noah smiles. He turns
 and pats Zayne's shoulder:. "Well, it's just the
 two of us this year. Will was too busy, and now
 you are too. I wonder who'll come with me
 next year."</p>
+
 <p>His expression changes as he sighs. "That boy,
 Carter... Never mind."</p>
+
 <p>"William sends his regards," Zayne says. "I'll
 also accompany you every year from now on."
 "That's nice to hear, but nothing is more
@@ -52,6 +63,7 @@ innocent excitement of being newly admitted,
 their steps are lighter and faster than Dr.
 Noah's and Zayne's. Soon enough, they get
 ahead of the crowd and disappear.</p>
+
 <p>The two push open the main door of the
 auditorium to find several seniors setting up
 the venue. A banner reading "47th First-Year
@@ -62,6 +74,7 @@ badge around his neck jumps down from the
 ladder, runs toward them, and bows. "Hello,
 Dr. Noah! I'm new. I heard from my seniors
 that you'll also be here for the oath."</p>
+
 <p>"I'm here to reminisce," Dr. Noah replies, then
 turns to Zayne. "This is your senior, Zayne."
 The young man looks surprised. "You're the
@@ -70,8 +83,10 @@ to before exams! And now I get to finally see
 you in person... Um, many of us look up to you
 as a role model, me included. Can I take a
 picture with you later?"</p>
+
 <p>Zayne is taken aback by the request but,
 eventually, nods</p>
+
 <p>As they talk, soft but solemn music begins to
 play in the auditorium. A large number of
 first-years enter the hall in an orderly
@@ -81,16 +96,19 @@ them again and goes back to the stage to
 adjust the microphone. Dr. Noah takes a step
 back, making way for a few students to pass
 by.</p>
+
 <p>"...l will have the utmost reverence for human
 life. Maintain a sense of duty and dignity in
 practicing medicine and adhere to good
 medical standards..."</p>
+
 <p>The oath begins. The newly admitted medical
 students look on with determination. Their
 eyes sparkle under the morning light.
 Dr. Noah looks at Zayne, recalling how many
 years ago, he watched this man participate in
 the same ceremony.</p>
+
 <p>As a first-year student, Zayne was younger
 than everyone else. His presence alone made
 him stand out. When he raised his hand to
@@ -102,13 +120,16 @@ imbued with the responsibility and honor of
 taking their oath, leave one by one. Dr. Noah
 leads Zayne to the cafeteria through the
 excited crowd.</p>
+
 <p>"William and Carter were like this too." Dr.
 Noah can't help but get caught up in the
 moment. He shakes his head and changes the
 topic. "Never mind. I heard the cafeteria has
 sweet and sour ribs today. Do you want to
 grab a bite?"</p>
+
 <p>Zayne smiles. "All right."</p>
+
 <p>Near the end of the cafeteria is the towering
 research building. Three students wipe their
 mouths, run past them, and mutter about
@@ -117,12 +138,15 @@ fly over their heads from the treetops. Dr.
 Noah looks up at the building, lost in thought.
 "Zayne, have you heard of the rumor? The
 Ghost in the office?"</p>
+
 <p>Zayne frowns, a little-exasperated. "These
 kinds Of unscientific rumors are everywhere
 in the School of Medicine."</p>
+
 <p>"Indeed," Dr. Noah says. His gaze lingers on
 Zayne for a moment before he chuckles. "l
-wonder who started it."</p>`,
+wonder who started it."</p>
+`,
     },
     {
         id: 3,
@@ -130,9 +154,10 @@ wonder who started it."</p>`,
         serialNumber: "03",
         subtitle: "Heart",
         content: `
-        <p>It was probably in the year 2040, when the
+<p>It was probably in the year 2040, when the
 main cafeteria of the university had just been
 renovated.</p>
+
 <p>Dr. Noah got his soup and chose a place to sit.
 His phone vibrated twice. It was a message
 from the dean of the medical school. "l read
@@ -144,51 +169,67 @@ They couldn't fully understand it either. I can't
 say for sure that Zayne will make progress,
 but his report makes me feel this approach is
 worth trying."</p>
+
 <p>Then, there was another message. "Your
 student has great ideas and seems to be quite
 bold."</p>
+
 <p>Dr. Noah didn't hide his pride. "Of course he's
 good. I chose him."</p>
+
 <p>He put his phone on the table, intending to
 finish reading a paper he had started the day
 before. But the noise from the neighboring
 table got his attention.</p>
+
 <p>A security guard was sitting with three
 serious cafeteria ladies, all holding spoons.
 The guard, also solemn, waved his hand and
 began to talk...</p>
+
 <p>"I'm telling you, there's something fishy going
 on in the research lab at the medical school!"
 "Really? I see the kids from the lab come to
 eat every day. They seem fine."</p>
+
 <p>"The problem is in the research lab!" The
 security guard knocked on the table, speaking
 with an air of mystery. "I'm telling you when I
 went on patrol on Monday..."</p>
+
 <p>"What happened?"</p>
+
 <p>"You know how a lot of people stay late in the
 research labs there? It's not a big deal.'l just
 remind them to lock the doors when they
 leave. But on Monday, I saw everyone leave.
 When I was locking up, I heard—"</p>
+
 <p>"Heard what?"</p>
+
 <p>"l heard this swishing sound...! It scared me
 half to death. I couldn't even figure out what
 it was!"</p>
+
 <p>"Are you sure you didn't just scare yourself?
 There must've been a student still in the lab."
 "l thought so too, so I checked again, but
 there was no one!"</p>
+
 <p>"...Really?"</p>
+
 <p>"Yes, really! I looked everywhere and I
 couldn't see anyone! I was about to turn off
 the lights and leave when I thought I heard a
 voice!"</p>
+
 <p>"But you said there wasn't anyone...?"</p>
+
 <p>"That's why I said it's totally abnormal! You
 guys have no idea just how many skeletons
 are in the research lab. What if one Of them
 came back to life...?"</p>
+
 <p>"0h, stop saying nonsense!" The cafeteria
 ladies stood up with furrowed brows and
 returned to their stations. Losing his
@@ -197,16 +238,20 @@ leave. He turned around and saw Dr. Noah
 looking at him. "Dr. Noah, l...I said what I
 said, but I don't think there's anything wrong
 with the medical school." He smiles.</p>
+
 <p>Dr. Noah waved his hand, signaling the guard
 not to worry.</p>
+
 <p>At the front of the cafeteria, Zayne had gotten
 his meal and was trying to find a place to sit
 down. Seeing him, Dr. Noah beckoned Zayne
 to sit next to him.</p>
+
 <p>"Dr. Noah, we can proceed with the next
 experiment tomorrow," Zayne said. Those
 were the first words out of hiS mouth after
 taking a seat.</p>
+
 <p>"Stick to your plan." Dr. Noah didn't ask for
 more details. He had been closely following
 this project. He knew Zayne never slacked off
@@ -214,31 +259,39 @@ for even a second and had double-checked,
 triple-checked the data. He understood the
 importance of this project to Zayne and
 trusted that he had it under control.</p>
+
 <p>As he ate, Dr. Noah remembered something.
 "Tuesday morning, did you miss the exam?"
 Zayne's hand paused for a moment. A hint of
 embarrassment flickered in his eyes. "I'm
 sorry."</p>
+
 <p>"If you don't take it, you won't get a score.
 The med school won't give you special
 treatment just because you're you."</p>
+
 <p>"l know. It's my fault for missing the exam. I
 don't deserve to have a score."</p>
+
 <p>"Zayne," Dr. Noah said, looking at the faint,
 dark circles around his student's eyes. "l know
 you're taking this project very seriously and
 you're committed to your studies. But don't
 wear yourself out."</p>
+
 <p>After a moment of silence, Zayne put down his
 chopsticks and said softly, "Dr. Noah, I'm not
 tired. I just want to move on to my clinical
 rotations as soon as possible."</p>
+
 <p>Dr. Noah nodded. He understood, yet couldn't
 help but sigh. This child was too mature for
 his age and carried too much on his shoulders.
 He wanted to say something to comfort
 Zayne. But in the end, he said nothing.</p>
+
 <br>
+
 <p>Thursday night, Dr. Noah stepped out of the
 research lab. He greeted the patrolling
 security guard and was about to leave when
@@ -247,6 +300,7 @@ then occurred to him that a few days ago, he
 had given the keys to Zayne, allowing him to
 access the research reports he had completed
 several years ago at any time.</p>
+
 <p>Through the glass, he scanned the room for a
 moment before spotting Zayne. Zayne was
 sitting behind a human model, reading a
@@ -273,13 +327,16 @@ Looking at Zayne, he remembered a rumor he
 heard. "l heard your parents are also doctors.
 You chose the medical field to follow in their
 footsteps, right?"</p>
+
 <p>Zayne smiled. "Yes. Even the bedtime stories
 they told me during my childhood were about
 the hospital. Most of the things at home that I
 could use to kill time were medical textbooks,
 too. So, I was influenced by them."
 "Is there another reason?"</p>
+
 <p>"No."</p>
+
 <p>"That was too quick of a response. Besides,
 the way you're obsessing over this doesn't
 seem like there's only one reason."
@@ -287,16 +344,18 @@ Zayne was quiet for a long time, the sound of
 his footsteps carried away by the wind. Just
 when Dr. Noah thought Zayne wouldn't answer
 him, he spoke up.</p>
+
 <p>"lt's also... because of... someone."
 Dr. Noah kind of expected that. He stopped
 walking and turned to look at his student, who
 rarely opened up about his feelings. He saw
 Zayne standing alone in the first snowfall of
 that winter.</p>
+
 <p>"l don't want to be incapable of doing
 anything again when I become a threat to
 her."</p>
-        `,
+`,
     },
     {
         id: 4,
@@ -304,15 +363,17 @@ her."</p>
         serialNumber: "04",
         subtitle: "Oath",
         content: `
-        <p>A few days later, Dr. Noah received a call from
+<p>A few days later, Dr. Noah received a call from
 the dean of the medical school. He sounded
 displeased.</p>
+
 <p>He massaged his temples as he went to the
 dean's office. As soon as he opened the door,
 he heard a quiet voice ask, "Why did you
 destroy your part of the experimental data,
 Zayne stood in the middle of the room, silent
 and expressionless.</p>
+
 <p>"Sure, it doesn't affect others. But it could've
 helped this project achieve its purpose
 faster." The dean stepped closer to Zayne, his
@@ -324,20 +385,26 @@ weeks. Did you think about how erasing your
 data means all your efforts have gone to
 waste? I know it wasn't an accident. Explain
 yourself."</p>
+
 <p>Behind Zayne, his senior and labmate, Carter,
 started to speak, "As long as we re—
 "Quiet, boy." Dr. Noah pushed Carter behind
 him. "lill handle this. Let the students go
 first."</p>
+
 <br>
+
 <p>"Thank you, Dr. Noah."</p>
+
 <p>Zayne walked over to the flower bed and sat
 down next to Dr. Noah.</p>
+
 <p>He chuckled at Zayne's thanks. "l told the dean
 about you wanting to leave the group too. If
 you really want to thank me, write fewer
 negative comments about me in your
 dissertation acknowledgments."</p>
+
 <p>"You're very brave, Zayne." Worried that the
 dean's words might affect him, Dr. Noah
 added, "Not everyone is willing to abandon
@@ -346,6 +413,7 @@ research they've put so much effort into."
 of Protocore Energy in interventional
 cardiology procedures. But during the
 experiment..."</p>
+
 <p>Zayne closed his eyes and shook his head. He
 took out the only remaining image from his
 data and handed it to Dr. Noah.
@@ -354,7 +422,7 @@ covered in black crystals.
 To be more precise, it looked like a human
 heart, beating and growing out of black
 crystals.</p>
-        `
+`,
         },
     {
         id: 5,
@@ -362,29 +430,34 @@ crystals.</p>
         serialNumber: "05",
         subtitle: "Trek",
         content: `
-        <p>Dr. Noah's thoughts return to the autumn of
+<p>Dr. Noah's thoughts return to the autumn of
 2047. The students, having just attended the
 first-year oath ceremony, finish their meals
 and are about to attend their first class at
 Skyhaven University's School of Medicine. He
 and Zayne have also finished eating and are
 taking their trays back.</p>
+
 <p>Still savoring his meal, Dr. Noah walks out of
 the cafeteria with Zayne. "The sweet and sour
 ribs this year aren't great. But no matter how
 bad the food is, I always want to eat here
 when I come back."</p>
+
 <p>"Once I retire, I'll leave Linkon City." At the
 front gate, Dr. Noah turns around and pats
 Zayne's arm. "When you're free, I'll take you to
 a restaurant near my home. The food there is
 delicious."</p>
+
 <p>As soon as he finishes speaking, his phone
 rings. Glancing at the caller ID, he sighs. "And
 that's why doctors should never say they're
 free."</p>
+
 <p>Then, with a serious expression, he starts
 walking away to answer the call.</p>
+
 <p>"Dr. Noah, I'll drive you back to the hospital."
 After the call ends, Zayne walks with him to
 the parking lot. As they pass the flower bed
@@ -392,26 +465,366 @@ outside the research lab, Dr. Noah remembers
 something important. "Have you visited her?"
 Zayne pauses. Then he says, "Not yet."
 "Are you afraid?"</p>
+
 <p>"No." He shakes his head, his voice steady.
 Dr. Noah gets out of the car in front of Akso
 Hospital. He watches as Zayne drives away.
 When he disappears into the traffic, the
 elderly doctor slowly turns around.</p>
+
 <p>For some reason, that kid always feels surreal.
 It feels as though, despite standing in the
 crowd, he would never be a part of it.</p>
+
 <p>He remembers that night when a single light
 glowed in the campsite during a blizzard in
 the Arctic. He remembered the lonely figure
 leaving in the cold wind the next day when the
 experiment's data were destroyed.</p>
+
 <p>Perhaps the path the young man walks has
 only heavy snow and level ground. He's
 destined to walk alone. As his teacher, Dr.
 Noah .can only hope that one day a fork in the
 road will appear before the young man,
-offering him tranquil respite.</p>`
+offering him tranquil respite.</p>
+`,
     },
+    {
+        id: 6,
+        link: "st",
+        serialNumber: "01",
+        subtitle: "Die In Spring",
+        content: `
+<p>"It doesn't matter if the annual salary is in the
+millions or if the research lab is top-notch Without me,Carter, could Xander Sciences have come this far? What truly drives the development of science is not experiments, 
+but ideas! I'm such a person,and so is Zayne That's why you need him, right?"</p>
 
+<p>Laughter echoes in the conference room Carter stands up,leans on the table, and
+tosses the contract back to the executives. "If the medical genius Zayne valued these things. why would he accept Akso Hospital's
+invitation? Can a hospital offer more than our research institute?"</p>
 
+<p>"What do you suggest, Dr. Carter?"</p>
+
+<p>"I didn't get my doctorate degree." With a smile on his lips that can send chills down
+someone's spine,Carter glances at the
+institute director asking the question. "Give me the file of Cabin 607's patient. Let me try.</p>
+
+<br>
+
+<p>After a round of New Year's fireworks, 2048 officially begins.</p>
+
+<p>During the year Dr.Carter decided to quit school, this area of Empyreal Ring Park was
+just a newly abandoned construction site. The property owner declared bankruptcy,and it turned out they had invested in the emerging industry of Protocore technology in Skyhaven. 
+The homeowners formed a group to defend their rights on the construction site. Carter and Zayne happened to pass by and saved an elderly man who had a heart attack.</p>
+
+<p>After the ambulance took the man away,they
+sat down in a restaurant for a late-night snack, discussing the trending topic of the
+time: the ethics of applying Protocore technology to revive dead cells.</p>
+
+<p>At dawn, the door of the restaurant opened again. Zayne headed in the opposite direction in the morning fog,and they never saw each other again.</p>  
+
+<br>
+
+<p>Now, vibrant plants have replaced the construction rubble, and Empyreal Ring District has been revitalized with the
+resurgence of Linkon City. However, Carter
+believes that no matter how the world changes, Zayne will remain the same. He
+knows this is the path his stubborn junior will take every day for his morning jog.</p>
+
+<p>As he strolls through the park, a familiar voice is heard from behind a bush.</p>  
+
+<p>"But you're a doctor. Please save Pilot!"</p>
+
+<p>"...He already passed away."</p>
+
+<p>Following the voice,Carter finds Zayne
+squatting next to a crying child by a bench. The boy pulls at Zayne's arm. A stray dog lies
+motionless in front of them.It's not breathing.</p>
+
+<p>"Pilot always played with me. I even bought it cookies."</p>
+
+<p>"Pilot knows. He's very happy," Zayne
+murmurs. He gently pats the child's head"But I don't want Pilot to die..."</p>
+
+<p>Carter laughs to himself and walks over to them, Protocore in hand. "Hey, kid. Pilot can live again with this."</p>
+
+<p>He casually joins in on the conversation. Zayne looks up, his softened gaze turning cold at the
+sight of the Protocore. He stands up and stares at Carter's smiling face.</p>
+
+<p>"Death is part of life. We can't change that."</p>
+`,
+    },
+    {
+        id: 7,
+        link: "st",
+        serialNumber: "02",
+        subtitle: "Yesterday Once More",
+        content: `
+<p>"You're still cold-hearted,Zayne. The dog also
+counts as a life, and the poor kid is heartbroken."</p> 
+
+<p>Carter follows Zayne to the restaurant they visited all those years ago,which is now a fast-food restaurant.</p>
+
+<p>He squints and looks around as if admiring its rebirth. "If someone wants a life to continue,
+how would you know if you can't bring it back? Shouldn't you try first?"</p>
+
+<p>Carter remembers the frightened look in the child's eyes when he brought the Protocore close to the stray dog. "Then again, you're
+right. Most people don't even want to try. Tell me, is the natural law an unshakeable moral boundary? Or is it just a comforting phrase people use?" His voice drips with sarcasm.</p>
+
+<p>"I thought I made that clear," Zayne says. He places his phone on the table after ordering breakfast. "I see you haven't changed at all, Carter."</p>
+
+<p>"No,no, that's where you're wrong. Xander Sciences has given me a lot of opportunities." Without allowing things to be dismissed,
+Carter takes out an elegant-looking business card from his bag and slides it across the table toward Zayne.</p>
+
+<p>"If you had kept going,maybe you would've already broken free from the shackles of the natural law," Carter says. "Zayne, your talents are wasted at Akso Hospital. Xander Sciences
+doesn't want to see a genius like you be forgotten. The Evol technology you're
+insisting on is so last year. No one wants an
+artificial lump that needs to be charged in
+their heart now. Protocore tech is the golden
+brick that will pave the way to the future." Carter is confident. The Xander Sciences
+Research Institute's logo and the research he's
+in charge of will easily catch the eye of top experts worldwide.</p>
+
+<p>Zayne doesn't take the card. Instead, he shifts his gaze to the window. "Hold on to that brick
+then. If you drop it, your foot won't be the only thing that's hurting."</p>
+
+<p>Carter shrugs. He knows moving this iceberg wouldn't be easy. The business card is an
+opportunity for Zayne to reject him. He brings out his trump card.</p>
+
+<p>"Take a look at this.It's a case from our project, a very rare condition."</p>
+
+<p>Carter sends the meticulously prepared medical record of Cabin 6o7's patient to
+Zayne's phone.Zayne doesn't move, so Carter reaches out and accepts it for him.</p>
+
+<p>"The patient's heart surgery is scheduled for next week. His other organs are in such a
+terrible state that he may not survive the side effects of the treatment. We're at a loss. Why don't you take a look?"</p>
+
+<p>Knowing Zayne can glean insights from abnormal data in the medical record, he
+doesn't provide any more details. As expected Zayne looks away, furrowing his brow in
+barely disguised displeasure. "Are you unsure of what to do? If that's the case, Xander
+Sciences wouldn't have kept him until now." Smiling, Carter nods. "That's why we need you.</p>
+
+<p>My skills are nothing compared to yours and
+Dr. Noah's. I can't be as meticulous and efficient as you." </p>
+
+<p>The restaurant owner brings out a bowl of sweet tofu pudding and places it in front of Zayne.</p>
+
+<p>Carter laughs again. "Dr. Noah thinks highly of you,you know. He would mention you to me
+and Will all the time back then.It made us really curious about you before we met."</p>
+
+<p>Eating a spoonful of his hot and spicy soup, he continues, "You may not like Xander Sciences, but the patient is innocent. Just like that dead
+dog. He also has families waiting for them. Take a look, Dr. Zayne. It won't violate your medical ethics."</p>
+
+`,
+    },
+    {
+        id: 8,
+        link: "st",
+        serialNumber: "03",
+        subtitle: "Undying Tree",
+        content: `
+<p>The person Carter has been waiting for still hasn't stepped through the doors of Xander Sciences even after Cabin 607's patient is brought into the operating room. 
+Five hours later, the less-than-successful surgery forced him to confront the gap between him and a genius once more.</p>
+
+<p>They workedon the theoretical model of this research back in school. He even
+outperformed Zayne on this front. Yet when it
+comes to applying it, things never go smoothly.</p>
+
+<p>Where does he fall short compared to Zayne? He desperately wants to know what Zayne
+discovered and why he stopped researching it.</p>
+
+<p>"Dr. Carter, Dr. Zayne is here."</p>
+
+<p>Carter stiffens at the news. He quickly raises his head,masking his frustration. By the time he swivels around in his office chair and
+stands up, his usual, confident demeanor is back.</p>
+
+<br>
+
+<p>Xander Sciences's life pods look like enormous
+capsules with countless, intertwined tubes connecting them to the surrounding
+equipment. Red tubes sucked away death while the blue ones injected new life. The
+daily cost of one device could burn through a month's worth of resources in a regular
+hospital's ICU. Xander Sciences has fifteen of these.</p>
+
+<p>Outside of Cabin 607's glass window, Zayne stares at the patient who's soaking in the liquid, shriveled like a skeleton.</p>
+
+<p>"Familiar, isn't it?"Carter walks up to the cabin's exterior, crossing his arms and
+admiring the ward that looks straight out of a sci-fi movie."You're late. His heart
+regeneration failed,so we had to put a new one in to keep him going."</p>
+
+<p>"How did you perform the surgery?"</p>
+
+<p>"You'll know everything if you join us,though
+Actually,you won't struggle with this conundrum.You might be the one most familiar with it."</p>
+
+<p>Zayne being here means there's hope. Feeling
+he has the upper hand, Carter teases him. "Remember the project we worked on for several years at school? The same one you
+stopped. I brought it to Xander Sciences. Now it has a name: X-Heart."</p>
+
+<p>Zayne frowns. "Have you conducted animal experiments with it?"</p>
+
+<p>"Of course we've completed all the standard procedures. Otherwise, I wouldn't have invited you. When he was admitted, he only had less than six months. It's been two years now. This is what Ioffered him,and he's happy to be a pioneer. But I get it. You're the genius here.I
+only implemented a genius' great ideas." After a moment of silence,Zayne speaks
+again. "Have you seen William since then? He died at Mt. Eternal. You were closest to him in the team."</p>
+
+<p>Carter doesn't understand why Zayne has to bring him up. After some thought, he guesses Zayne wants to bring attention to his death.
+"Mt. Eternal, huh... The view's good, but there was an anomaly with the Wanderers a few years ago-"</p>
+
+<p>Before he can finish, Zayne gets up and leaves Carter quickly follows him. "Wait, aren't you here to join us?"</p>
+
+<p>Zayne keeps walking, pulling out his phone.
+"I'm here to warn you.Hiding a Trojan horse in the medical record you sent can easily get you arrested."</p>
+
+<p>Carter watches as Zayne walks further and further away, unmoving as always. His
+painstaking efforts are apparently worthless in Zayne's eyes. In the empty corridor, Carter
+clenches his fists,unable to hold back his words.</p>
+
+<p>"Zayne, I'm giving you an opportunity. You
+better consider it! Our job is to save people. If
+we can control life and death,why shouldn't We?!"</p>
+
+<p>"Don't you remember what we thought every
+time a surgery failed? Give me another chance. I could save him if I had another chance! This is the 'chance' we've always Wanted!"</p>
+
+<p>"There is no we," Zayne replies.</p>
+
+<p>"Do you remember how happy everyone was when the experiment worked? It was like a message left by God,and now we can finally respond! Zayne, do you believe in God?"
+At the end of the corridor, Zayne finally stops and looks back at him, his hands in his coat pockets.</p>
+
+<p>"You're crazy."</p>
+        `,
+    },
+    {
+        id: 9,
+        link: "st",
+        serialNumber: "04",
+        subtitle: "Gone",
+        content: `
+<p>After leaving Cabin 607,Zayne walks to the elevator. The sound of rolling wheels comes
+from an unassuming door next to him Through the small window, he can see a
+hallway. A metal cart used for waste disposal passes by. There's a lifeless hand poking out from under the white cloth.</p>
+
+<p>"Make way."</p>
+
+<p>A simple-looking couple blocks the cart.</p>
+
+<p>The masked researcher sounds exhausted and tries to push the cart forward. "Isn't this what you agreed to when you accepted the
+institute's donation? Once they select him, we have full usage and disposal rights. He's gone now, so there's no need to play the part of a dutiful parent."</p>
+
+<p>The woman tightly clutches the cart's iron
+rails.She's almost kneeling. "But he's our
+son...Please let us see him one last time. We promise we won't tell anyone...!"</p>
+
+<p>"Just so you know,he came straight from the
+operating table. He doesn't have a heart anymore. Do you still want to see him?"</p>
+
+<p>"...!"</p>
+
+<p>"Excuse me," Zayne says as he opens the door."Could you leave him with me for a moment?" </p>
+
+<p>Over the past few months,Zayne has become well-known at Xander Sciences,so the
+researcher recognizes him. All Zayne wants is a clean room and a set of surgical tools. The researcher hesitates. It's a favor that can be easily granted.</p>
+
+<p>"...All right, but no more than half an hour."</p>
+
+<p>After a while, the young man who had lost his heart finally appears before his parents in a
+clean, intact state. The father presses his forehead against the wall, his hand tightly clutching his chest as he bites his lips. 
+The mother bends over the bed, her head buried deep in the white sheets.</p>
+
+<p>Moments pass,and then Zayne hears her muffled sobbing.</p>
+
+<p>"Son, we've come to say goodbye..."</p>
+
+<p>In the surveillance room,Carter watches the whole thing through the screen. A smirk plays on his lips as he opens the comms.</p>
+
+<p>"Zayne, do you remember what we discussed before? We talked about it for a long time. In this era of technological advancement,why must we face death?"</p>
+
+<p>On the screen,Zayne slowly turns to the
+camera. Unfortunately, he's just too far away for Carter to see his expression.</p>
+
+<p>"My perspective hasn't changed. We will face death eventually,one way or another." Then Zayne glances at the couple. "Just not like this."</p>
+        `,
+    },
+    {
+        id: 10,
+        link: "st",
+        serialNumber: "05",
+        subtitle: "Snow Depth",
+        content: `
+<p>A few days later, Zayne officially joins Akso's
+Evol-Cardiac Medical Research Lab as its principal investigator.</p>
+
+<p>The night before, Carter sent him a
+congratulatory message and told him about the death of the patient in Cabin 607.</p>
+
+<p>"His name was Felix,only 45 years old. He helped a lot of poor students during his lifetime,giving them a comfortable and affluent life.He also allowed them to
+participate in our great experiment near the
+end of their lives. What a shame. Despite  Xander Sciences sparing no expense to keep him alive, he still passed away after two years But don't you think this is just the beginning?" 
+Zayne doesn't reply.</p>
+
+<p>Unsatisfied, Carter sends another picture.</p>
+
+<p>It's a failed attempt at resuscitating a patient in Cabin 607.He lies on the floor outside the life pod, a cluster of black 
+crystals blooming on the left side of his chest like a magnificent dahlia.</p>
+
+<p>"Zayne, if the person lying on the operating table was your lover,would you let her die?"</p>
+
+<p>After that message,a thought hits Carter like
+the first drop of rain falling outside the window.</p>
+
+<p>He suddenly understands.</p>
+
+<p>Why go to such great lengths to persuade Zayne? What he really needs is not a like-minded colleague,but a pair of hands.Ones
+that can carry out God's mission and allow for God's descent.</p>
+
+<p>Zayne's hands.
+Carter remembers that Zayne became a doctor because of a girl. A person like him wouldn't join Akso Hospital for no reason. 
+He has to be taking over Dr. Noah's work. If he can see which cases are being transferred from Dr. Noah to Zayne, he can find that girl. 
+That's his trump card... And he thought so highly of Zayne. As long as he has that mysterious girl, he knows he'll always have those hands.</p>
+
+<p>In an instant, countless thoughts surge into Carter's brain like bubbles in a soda can.</p>
+
+<p>Maybe that girl is even more interesting than
+Cabin 607's patients, considering how Dr. Noah and Zayne seem to be unable to help her.</p>
+
+<p>Maybe her value to X-Heart would far exceed that of Zayne's.</p>
+
+<p>"Zayne,you should know you're rejecting a path to life's truth. My answer hasn't changed either. I've always believed that death is just a
+small obstacle.It can be overcome in due time."</p>
+
+<p>Happy,Carter tosses his phone onto the carpet and spins in place.</p>
+
+<p>His horizons have expanded now that he's changed gears. He pours himself half a glass of red wine in celebration and raises it 
+to the highest point of the city lights as it's soaked in heavy rain.</p>
+
+<p>A toast to humanity's greatest dream.</p>
+
+<p>In a dimly lit study, Zayne reviews the patient
+records Dr.Noah transferred to him. He sees a name he knows all too well.</p>
+
+<p>He recalls the conversation he had with Carter back in med school. They sat across from each other at the restaurant. Zayne had stared at his senior as he was about to eat.</p>
+
+<p>"Even if we can avoid death,we still need it," he had said.</p>
+
+<p>Now,Zayne rubs his temples. He stares at the name for a long time.</p>
+
+<p>Then he takes off his glasses, leaning back slowly in his chair.</p>
+
+<p>As if time and space intertwined, Carter's
+indignant voice rings in his ears and questions him once more.</p>
+
+<p>"Wouldn't you use everything in your power to prevent your loved ones from dying?"</p>
+
+<p>Ofcourse he would.</p>
+
+<p>Zayne answered this question countless times in his heart. And no matter how many years have passed, 
+his answer still hasn't changed He would do everything he could to prevent her death and save her. But the night is long. 
+The fog is dense... If the end of the road is truly what's left... Zayne closes his eyes.
+At least, he still has another option. His last one.</p>
+
+<p>And before the storm arrives,he only hopes he can walk a little further on this rugged path.</p>
+
+<p>He could also hold her hand and resist the avalanche-like onslaught of selfish wishes together.</p>
+        
+        `,},
 ]
