@@ -14,25 +14,25 @@ function SpacepediaNavigation() {
                 className={({ isActive }) => `${styles.a} ${isActive ? styles.active : ''}`}
                 to="/spacepedia/message"
             >
-                Message
+                Deepspace Messages
             </NavLink>
             <NavLink
                 className={({ isActive }) => `${styles.a} ${isActive ? styles.active : ''}`}
                 to="/spacepedia/life"
             >
-                Life
+                Life At Linkon
             </NavLink>
             <NavLink
                 className={({ isActive }) => `${styles.a} ${isActive ? styles.active : ''}`}
                 to="/spacepedia/tale"
             >
-                Tale
+                Tales
             </NavLink>
             <NavLink
                 className={({ isActive }) => `${styles.a} ${isActive ? styles.active : ''}`}
                 to="/spacepedia/note"
             >
-                Note
+                My Notes
             </NavLink>
         </nav>
     );
