@@ -1,4 +1,5 @@
-export const wuData = [{
+export const wuData = [
+    {
     id: 1,
     link: "lf",
     serialNumber: "01",

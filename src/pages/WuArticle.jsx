@@ -5,7 +5,6 @@ import { wuCategories } from '../data/wu-categories.js'
 function WuArticle() {
     const { articleLink } = useParams();
 
-    // Просто фильтруем данные напрямую — без useEffect!
     const articles = wuData.filter(article => article.link === articleLink);
     const categories = wuCategories.find(category => category.link === articleLink);
 

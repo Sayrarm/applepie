@@ -31,6 +31,7 @@ function App() {
                     <Route path="/world-underneath" element={<WorldUnderneath/>}/>
                     <Route path="/world-underneath/:articleLink" element={<WuArticle />} />
                     <Route path="/main-story" element={<MainStory/>}/>
+                    <Route path="/spacepedia/:navigation" element={<Spacepedia />} />
                 </Routes>
 
                 <FloatButton.BackTop />
