@@ -1,4 +1,25 @@
 .nav {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
 }
+
+.link {
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    left: 20px;
+    bottom: 40px;
+    width: 50%;
+
+    text-decoration: none;
+    color: white;
+}
+
