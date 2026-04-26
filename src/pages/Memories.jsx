@@ -1,5 +1,5 @@
 import styles from './Memories.module.css';
-import {memoriesData} from '../data/memories-data.js';
+import memoriesData from '../data/memories-data.json';
 import Card from "../components/Card.jsx";
 import {Button, Input, Select} from 'antd';
 import myFilterIcon from '/src/assets/icons/filter.png';
@@ -9,6 +9,8 @@ import {useSort} from '../hooks/useSort';
 import {useFilter} from '../hooks/useFilter';
 import myClearIcon from '/src/assets/icons/eraser_16863523.png';
 import {stylesFnSearch} from "../components/stylesAntd.js";
+import { fetchData } from '../data/api';
+import {useEffect, useState} from "react";
 
 function Memories() {
 
@@ -16,6 +18,7 @@ function Memories() {
     // Используем хуки
     const {searchQuery, onSearch} = useSearch();
     const {sortCriteria, handleSortChange, clearSorting, sortMemories} = useSort();
+    const [memoriesData, setMemoriesData] = useState([]);
     const {
         selectedChar,
         setSelectedChar,
@@ -25,6 +28,10 @@ function Memories() {
         clearFilters,
         filterMemories
     } = useFilter();
+
+    useEffect(() => {
+        fetchData('memories-data').then(data => setMemoriesData(data));
+    }, []);
 
     // Фильтруем данные
     const filteredMemories = filterMemories(memoriesData).filter(memory => {
