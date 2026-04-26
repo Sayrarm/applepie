@@ -34,6 +34,7 @@ function Spacepedia() {
             <SpacepediaNavigation/>
 
             <Collapse
+                key={navigation}
                 className={styles.content}
                 ghost
                 items={articles.map(article => ({
