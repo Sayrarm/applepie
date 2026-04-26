@@ -1,5 +1,4 @@
 import styles from './Memories.module.css';
-import memoriesData from '../data/memories-data.json';
 import Card from "../components/Card.jsx";
 import {Button, Input, Select} from 'antd';
 import myFilterIcon from '/src/assets/icons/filter.png';

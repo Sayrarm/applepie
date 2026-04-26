@@ -10,6 +10,7 @@ import WorldUnderneath from "./pages/WorldUnderneath.jsx";
 import MainStory from "./pages/MainStory.jsx";
 import { FloatButton } from 'antd';
 import WuArticle from "./pages/WuArticle.jsx";
+import MsArticle from "./pages/MsArticle.jsx";
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
                     <Route path="/world-underneath" element={<WorldUnderneath/>}/>
                     <Route path="/world-underneath/:articleLink" element={<WuArticle />} />
                     <Route path="/main-story" element={<MainStory/>}/>
+                    <Route path="/main-story/:articleLink" element={<MsArticle />} />
                     <Route path="/spacepedia/:navigation" element={<Spacepedia />} />
                 </Routes>
 

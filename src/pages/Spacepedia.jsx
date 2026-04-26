@@ -1,6 +1,5 @@
 import {Navigate, useParams} from 'react-router-dom';
 import SpacepediaNavigation from "../components/SpacepediaNavigation.jsx";
-import spacepediaData from '../data/spacepedia-data.json';
 import styles from "./Spacepedia.module.css";
 import {Collapse} from 'antd';
 import {useEffect, useState} from "react";

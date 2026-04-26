@@ -1,13 +1,24 @@
+import styles from "./MainStory.module.css";
+import {msCategories} from "../data/ms-categories.js";
+import {Link} from "react-router-dom";
 
 
 function MainStory() {
 
-
     return (
-        <>
-            <div>Main Story</div>
-        </>
-    )
+        <nav className={styles.nav}>
+            {msCategories.map(category => (
+                <Link
+                    key={category.id}
+                    className={styles.link}
+                    to={`/main-story/${category.link}`}
+                >
+                    <img src={category.image} alt="image"/>
+                    <div className={styles.title}>{category.title}</div>
+                </Link>
+            ))}
+        </nav>
+    );
 }
 
 export default MainStory
