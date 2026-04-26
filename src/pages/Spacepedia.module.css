@@ -1,4 +1,15 @@
 .content {
-    font-size: 16px;
-    color: var(--brown);
+    font-size: 16px !important;
+    color: var(--brown) !important;
+
+
+}
+
+.title {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+}
+
+.content :global(.ant-collapse-header) {
+    align-items: center !important;
 }
