@@ -10,6 +10,7 @@ import myClearIcon from '/src/assets/icons/eraser_16863523.png';
 import {stylesFnSearch} from "../components/stylesAntd.js";
 import { fetchData } from '../data/api';
 import {useEffect, useState} from "react";
+import PageLoader from '../components/PageLoader';
 
 function Memories() {
 
@@ -44,6 +45,7 @@ function Memories() {
 
     return (
         <>
+            <PageLoader delay={1000}>
             <section className={styles.memories}>
                 <div className={styles.options}>
                     <nav className={styles.sortBy}>
@@ -153,6 +155,7 @@ function Memories() {
                     <p className={styles.noResults}>No memories found ¯\_(ツ)_/¯</p>
                 )}
             </section>
+            </PageLoader>
         </>
     )
 }
