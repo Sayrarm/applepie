@@ -13,7 +13,7 @@ function MainStory() {
                     className={styles.link}
                     to={`/main-story/${category.link}`}
                 >
-                    <img src={category.image} alt="image"/>
+                    <img className={styles.img} src={category.image} alt="image"/>
                     <div className={styles.title}>{category.title}</div>
                 </Link>
             ))}

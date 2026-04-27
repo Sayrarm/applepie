@@ -1,6 +1,6 @@
 import { wuData } from '../data/wu-data';
 import { wuCategories } from '../data/wu-categories.js'
-import GenericArticlePage from "./GenericArticlePage.jsx";
+import GenericArticlePage from "../components/GenericArticlePage.jsx";
 
 
 function WuArticle() {

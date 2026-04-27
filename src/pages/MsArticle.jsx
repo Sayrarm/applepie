@@ -1,6 +1,6 @@
 import { msData } from '../data/ms-data';
 import { msCategories } from '../data/ms-categories';
-import GenericArticlePage from "./GenericArticlePage.jsx";
+import GenericArticlePage from "../components/GenericArticlePage.jsx";
 
 
 function MsArticle() {
