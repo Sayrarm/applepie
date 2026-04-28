@@ -141,67 +141,145 @@ export const spacepediaData = [
     "id": 12,
     "navigation": "message",
     "title": "Deepspace Tunnel",
-    "content": "text here"
+    "content": `
+<p>In 2034, a spacetime anomaly appeared above Linkon City. Bound by a gravitational force and filled with an abundance of barely detectable energy and matter, it raised many questions.</p>
+<p>From that point on, Earth started to see the emergence of alien creatures known as Wanderers. This event sparked curiosity throughout human society. Space exploration truly began in earnest, significantly advancing research in this field. </p>
+<br>
+<h4>Chronorift Catastrophe of 2034</h4>
+<p>Fourteen years ago, with the opening of the Deepspace Tunnel, countless Wanderers invaded Earth and began attacking humans. Many lives were lost. Among the affected areas, Linkon City suffered the highest number of casualties.</p>
+    
+    `
   },
   {
     "id": 13,
     "navigation": "message",
     "title": "Skyhaven",
-    "content": "text here"
+    "content": `
+<p>Skyhaven is an artificial floating island hovering near Linkon City. A Protocore serves as its primary energy source. It is home to the most cutting-edge research centers and advanced tech organizations such as the Deepspace Aviation Administration.</p>
+<br>
+<h4>Deepspace Aviation Administration</h4>
+<p>Located in the tallest building on Skyhaven, it is an aerospace organization responsible for research, combat training, and space exploration. It has many flight facilities and is the world's most advanced military aerospace institute.</p>
+<br>
+<h4>Skyrise Isle</h4>
+<p>Skyhaven stands as a miracle of the Protocore energy era.</p>
+<p>To reach Skyhaven, passengers must board the antigravity Protocore-powered train-the Coelum Express. After passing through the clouds, you'll witness this floating metropolis that embodies both technological prowess and futuristic charm.        </p>
+    `
   },
   {
     "id": 14,
     "navigation": "message",
     "title": "Protocore Syndrome",
-    "content": "text here"
+    "content": `
+<p>A unique disease caused by Protocores. There are different types, and they harm the human body in various ways. Currently, the known types are A, E, and Y.</p>
+<br>
+<h4>Alterum</h4>
+<p>This rare mutation of Protocore Syndrome produces Alterum who still appear human but have lost all free will, driven solely by the urge to attack.</p>
+<p>Reports speak of a mysterious figure known as the "Dawnbreaker" in Linkon City, someone who eliminates Alterum before law enforcement can even respond.</p>
+    
+    `
   },
   {
     "id": 15,
     "navigation": "message",
     "title": "The Arctic",
-    "content": "text here"
+    "content": `
+<p>An area blanketed with ice and snow most of the year. It is a very popular tourist destination due to its stunning aurora and silvery, frost-covered ground.</p>
+<p>Simultaneously serving as the Earth's magnetic pole, it is frequented by Wanderers. Numerous research institutions and relevant military forces are stationed here.</p>
+<br>
+<h4>Snowcrest</h4>
+<p>Nestled in the southern region of the Arctic is a little town, home to warm, sincere locals and a unique winter-themed culture. It attracts many tourists year-round and boasts a thriving tourism industry. It's a must-visit destination for any polar adventurer. </p>
+<br>
+<h4>Mt. Eternal</h4>
+<p>In the northernmost region of the Arctic is a place perpetually covered in snow. Humans rarely travel to it, and energy fluctuations often occur due to its proximity to Earth's magnetic pole. This makes it a suitable location for many research institutions. There was a wide-scale Wanderer attack that resulted in many casualties. Linkon City dispatched several medical teams to participate in the rescue efforts at that time.</p>
+    
+    `
   },
   {
     "id": 16,
     "navigation": "message",
     "title": "EVER Group",
-    "content": "text here"
+    "content": `
+<p>With its roots in biotechnology, Ever Group has become a large company in industries such as biotech, aerospace, Evol Energy, and international trade.</p>
+<br>
+<h4>Xander Sciences</h4>
+<p>A high-end medical institution founded by the late collector Raymond. It's now acquired by Ever. </p>
+<br>
+<h4>Radio-Frequency Chip</h4>
+<p>An energy emitter capable of resonating with energy fluctuations, designed to attract Wanderers and locate Protocores through vibrations.</p>
+<p>Based on the available information, it has been confirmed that Ever manufactured this chip.</p>
+<br>
+<h4>Gaia Research Center</h4>
+<p>A research institution under the EVER Group and the predecessor of today's Gaia Biotechnology Research Center. Its original site is located within the Charon Market arena in N109.</p>
+<p>The Gaia Research Center spanned multiple disciplines and housed several specialized teams, including the Unicorn team, to which Josephine belonged.</p> 
+    `
   },
   {
     "id": 17,
     "navigation": "message",
     "title": "Philos",
-    "content": "text here"
+    "content": `
+<p>The celestial body a-P0159 was discovered via the Deepspace Tunnel. It's speculated to be the core of a star. While this core no longer reacts to energy, research suggests that traces of life may very well exist within its galaxy.</p>
+<p>Using the most vibrant colors of Deepspace, the galaxy where a-P0159 resides responded to humanity's lifelong vision of the universe. Thus, it was named Philos, a word meaning "love."</p> 
+    `
   },
   {
     "id": 18,
     "navigation": "message",
     "title": "Farspace Fleet",
-    "content": "text here"
+    "content": `
+<p>The Farspace Fleet gained public recognition following its establishment in Skyhaven. It possesses formidable patrol and combat capabilities in the depths of the Deepspace Tunnel, carrying out missions of the highest security clearance.</p>
+<p>The Fleet maintains strict internal management and classified operations throughout its ranks, making it nearly impossible for outsiders to obtain any intelligence.</p>
+<br>
+<h4>Toring Chip</h4>
+<p>A cybernetic enhancement chip implanted in the human body, designed to boost physical capabilities and regulate emotional states.</p>
+<p>Individuals with Toring Chip implants must take regular doses of Cybezin to mitigate side effects. Currently, the technology is implemented among Farspace Fleet officers.</p>
+   
+    `
   },
   {
     "id": 19,
     "navigation": "message",
     "title": "Prototists",
-    "content": "text here"
+    "content": `
+<p>A school of thought that advocates for advancing Protocore technology.</p>
+<p>Prototists view Protocores as a powerful energy source that could enhance quality of life,aid in the fight against Wanderers, and enable exploration of Deepspace Tunnels and other cosmic frontiers.</p>
+    `
   },
   {
     "id": 20,
     "navigation": "message",
     "title": "Purists",
-    "content": "text here"
+    "content": `
+<p>A school of thought opposing the development of Protocore technology.</p>
+<p>The Purists argue that, despite their power, Protocores are inherently dangerous and poorly understood. Warning of a potential catastrophe caused by the overdevelopment of Protocores,they advocate returning to Earth's original energy sources as the only viable path to a sustainable future.    </p>
+    `
   },
   {
     "id": 21,
     "navigation": "message",
     "title": "The Fountain of Atei",
-    "content": "text here"
+    "content": `
+<p>A series of research initiatives launched by the EVER Group, touted as "a groundbreaking leap in human evolution" through the use of Protocore technology.</p>
+<p>The Val Sanatorium marked the first phase of this vision, but all subsequent press conferences were mysteriously canceled.</p>
+<br>
+<h4>Rebirth Cocoon</h4>
+<p>The Val Sanatorium's core initiative involves using medical pods known as "Rebirth Cocoons" to treat patients with Protocore Syndrome, but it may be a front for something far more sinister. </p>
+<br>
+<h4>X-Heart</h4>
+<p>Originally a university research project led by Zayne and Carter, it explored the use of Protocore technology in cardiac therapy. Following an accident during early trials, Zayne shut the project down. Carter later secretly brought the X-Heart technology to Xander Sciences, where it became the foundation for the "Rebirth Cocoon" system-marking the first step in the Fountain of Atei project.</p>
+    `
   },
   {
     "id": 22,
     "navigation": "message",
     "title": "Verona",
-    "content": "text here"
+    "content": `
+<p>Verona, known as the Capital of Arts, attracts creators from all over the world and is home to long-standing artistic families. Its streets are lined with studios, concert halls, and galleries, making creativity a natural part of everyday life.</p>
+<p>Exhibitions and festivals run year-round, keeping the entire city vibrant and full of artistic energy.</p>
+<br>
+<h4>Wavechaser Island</h4>
+<p>Mysterious relief fragments depicting a human face were recently discovered on an offshore island near Verona. Early expert analysis shows that these fragments closely resemble the ruins found in 2034 in the distant waters near Linkon City, suggesting they may come from the same civilization.</p>
+    `
   },
   {
     "id": 23,
