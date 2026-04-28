@@ -500,126 +500,198 @@ export const spacepediaData = [
     "id": 45,
     "navigation": "note",
     "title": "Tara",
-    "content": "text here"
+    "content": `
+<p>The first colleague I befriended after becoming a hunter. Young with a cute personality that suits her name. Aside from being in the know on interesting gossip and info, she really likes divination and the occult. Not only is she a true friend, but also a trustworthy teammate.</p>    
+    `
   },
   {
     "id": 46,
     "navigation": "note",
     "title": "Jenna",
-    "content": "text here"
+    "content": `
+<p>The leader of UNICORNS and my boss. She personally manages the Alpha Team. Cheerful and decisive, she is known for her hands-on approach She's one of the best in terms of combat.</p>    
+    `
   },
   {
     "id": 47,
     "navigation": "note",
     "title": "Yvonne",
-    "content": "text here"
+    "content": `
+<p>A nurse working at cardiac surgery department, Akso Hospital. Having just graduated from nursing school, she is young and lively. Responsible and always gets the job done, she has earned her patients' respect.</p>    
+    `
   },
   {
     "id": 48,
     "navigation": "note",
     "title": "Caleb",
-    "content": "text here"
+    "content": `
+<p>My childhood friend. Grandma took us in when we were young. Now he works as a fighter pilot for the Deepspace Aviation Administration. Ever since he went to Aerospace Academy in Skyhaven, we don't often see each other. But we always visit Grandma during the holidays. While he loves teasing me, he's actually a reliable person whom I trust.</p>
+<br>
+<h4>Death Certificate</h4>
+<p>He "died" in an accident. His death certificate forced me to accept it. But now, he's back.</p>
+<br>
+<h4>Colonel of the Farspace Fleet</h4>
+<p>When I met Caleb again, he had risen to the rank of Colonel in the Farspace Fleet.</p>
+<p>Political undercurrents run deep within the Fleet. While the position of Colonel carries great authority, it also conceals numerous dangers.</p>
+<br>
+<h4>Mechanical Arm Modification</h4>
+<p>Caleb was gravely injured in that explosion, and those who rescued him modified his damaged right arm.</p>
+<p>Now his right arm has undergone complete enhancement of bone, muscle, and skin. When needed, it can even transform into high-density metal. But the price he paid... the sensations of pain, warmth, and softness have all but disappeared.</p>
+`
   },
   {
     "id": 49,
     "navigation": "note",
     "title": "Nero",
-    "content": "text here"
+    "content": `
+<p>Nero is a colleague from Data Analysis who suffers from severe social anxiety. His personal space has a circumference of two meters, and no outsiders are allowed inside it. Since Alpha Team's office is rarely crowded, he uses it to find some peace and quiet. That's why we're acquaintances. Whenever issues related to Wanderers are brought up, he becomes a chatterbox.</p>    
+    `
   },
   {
     "id": 50,
     "navigation": "note",
     "title": "Thomas",
-    "content": "text here"
+    "content": `
+<p>Rafayel's friend and the owner of Flux Arts. He works himself to the bone every day, planning Rafayel's exhibitions and scheduling appointments. In contrast to his friend's carefree spirit, he often sees himself as a "mature and professional businessman."</p>    
+    `
   },
   {
     "id": 51,
     "navigation": "note",
     "title": "Talia",
-    "content": "text here"
+    "content": `
+<p>A famous soprano singer. She looks to be around my age, but is actually Rafayel's aunt. Elegant, clever, and generous, she has many suitors.</p>    
+    `
   },
   {
     "id": 51,
     "navigation": "note",
     "title": "Flux Nexus",
-    "content": "text here"
+    "content": `
+<p>A device resembling a rock sculpture. It's a totem embedded with diamonds. According to Xavier, it can capture Metaflux and even resurrect Wanderers.</p>    
+    `
   },
   {
     "id": 52,
     "navigation": "note",
     "title": "Josephine",
-    "content": "text here"
+    "content": `
+<p>When I was little, Grandma took me and Caleb in. She's my closest, dearest family member.</p>    
+    `
   },
   {
     "id": 53,
     "navigation": "note",
     "title": "Greyson",
-    "content": "text here"
+    "content": `
+<p>He's a cardiac surgeon at Akso Hospital and Zayne's assistant. Humorous and witty, he brings joy to everyone in his division. But he's still a professional. However, there's a rumor that no one knows his real age...</p>    
+    `
   },
   {
     "id": 54,
     "navigation": "note",
     "title": "Dr. Noah",
-    "content": "text here"
+    "content": `
+<p>The former chief medical officer of Akso Hospital, an old acquaintance of Grandma, and Zayne's teacher. He was the one originally responsible for my heart disease and treatment. </p>
+<br>
+<h4>Pie</h4>
+<p>Dr. Noah rescued a small white fox from Mt. Eternal. Pie's intelligence is equivalent to that of a nine-year-old child. He has an exceptional appetite and is adept at acting cute to get food.It's a tactic that never fails. His name is Pie because he devoured six meat pies in one sitting when rescued.    </p>
+    `
   },
   {
     "id": 55,
     "navigation": "note",
     "title": "Aether Core",
-    "content": "text here"
+    "content": `
+<p>For reasons unknown, the Protocore that resides within my heart is a secret known to only a select few.</p>
+<p>Aether Cores, their power surpassing that of a regular Protocore, attracts anyone aware of their existence. Maybe it has something to do with Grandma's past and what happened to my family.</p>
+<br>
+<h4>Sylus's Eye</h4>
+<p>Sylus has an Aether Core in his eye, which allows him to see people's desires.</p>
+<p>It turns out there's more than one Aether Core in the world.</p>
+<br>
+<h4>Complete Aether Core Structure</h4>
+<p>The Association's analysis shows that the Aether Core's energy core can concentrate energy through gravity, forming energy crystals around it. A complete Aether Core has a stable Aether Barrier on its outermost layer, which utilizes the gravitational field to seal and contain all of the core's energy, thus ensuring its internal balance and stability.</p>
+<br>
+<h4>Spatium Core</h4>
+<p>An Aether Core capable of influencing space, even creating entirely new spaces.</p>
+<p>Though originally shattered, it has reassembled, drawn together by some gravitational pull.    </p>
+    `
   },
   {
     "id": 56,
     "navigation": "note",
     "title": "Jeremiah",
-    "content": "text here"
+    "content": `
+<p>The owner of Philo, a flower shop. He's also Xavier's friend. Aside from selling flowers, he has a lot of "skills" such as creating new identities and manipulating data so I could enter the N109 Zone... Where did Xavier meet such a friend?</p>    
+    `
   },
   {
     "id": 57,
     "navigation": "note",
     "title": "Sylus",
-    "content": "text here"
+    "content": `
+<p>The leader of Onychinus is said to have built his empire on illegal Evol weapons and Protocore deals. He's the most influential, dominant figure in the N109 Zone. However, he hasn't been seen for a while.</p>    
+    `
   },
   {
     "id": 58,
     "navigation": "note",
     "title": "Luke & Kieran",
-    "content": "text here"
+    "content": `
+<p>Eccentric, rule-breaking twins who enjoy playing pranks.</p>
+<p>They often wear masks that conceal their faces, so it's difficult to tell the two apart. However, upon closer inspection, one can discern the vivacious and unpredictable nature of the older brother, Luke. This contrasts with the comparatively calm and dependable personality of his younger brother, Kieran.    </p>
+    `
   },
   {
     "id": 59,
     "navigation": "note",
     "title": "Mephisto",
-    "content": "text here"
+    "content": `
+<p>A mechanical crow that always accompanies Sylus. He's very skilled but has a temper. Sylus doesn't treat him as a pet.</p>    
+    `
   },
   {
     "id": 60,
     "navigation": "note",
     "title": "Philip",
-    "content": "text here"
+    "content": `
+<p>The owner of Odd Workshop. He's skilled in creating peculiar inventions and modifying Wanderers. He seems to have a connection with Grandma.</p>
+<p>He possesses extensive knowledge about the Aether Core since his previous work involved monitoring it.    </p>
+    `
   },
   {
     "id": 61,
     "navigation": "note",
     "title": "Andrew",
-    "content": "text here"
-  },
-  {
-    "id": 61,
-    "navigation": "note",
-    "title": "Simone",
-    "content": "text here"
+    "content": `
+<p>The captain of Data Analysis and the direct supervisor of Nero and Tara, who is known for his logical rigor, meticulous thinking, and emotional stability.</p>
+<p>His Evol is Memory Alteration, but it only affects those with a lower Evol level than his and lasts no longer than 30 minutes.    </p>
+    `
   },
   {
     "id": 62,
     "navigation": "note",
-    "title": "Ulysses",
-    "content": "text here"
+    "title": "Simone",
+    "content": `
+<p>A former colleague of the UNICORNs Armament Tech, whose Evol is Micromodification.</p>
+<p>True to her Evol, she excels at modifying weapons and equipment, though these modifications sometimes result in a slightly higher equipment wear rate.   </p> 
+    `
   },
   {
     "id": 63,
     "navigation": "note",
+    "title": "Ulysses",
+    "content": `
+<p>An old friend of Xavier, currently an associate professor of astrophysics at Prestara University</p>    
+    `
+  },
+  {
+    "id": 64,
+    "navigation": "note",
     "title": "Backtrackers",
-    "content": "text here"
+    "content": `
+<p>Hailing from Xavier's hometown, this group once included members like Xavier, Jeremiah, and Soren. They had many companions in the past, but now only a few remain.</p>    
+    `
   }
 ]
