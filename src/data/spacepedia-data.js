@@ -285,85 +285,119 @@ export const spacepediaData = [
     "id": 23,
     "navigation": "life",
     "title": "Linkon City",
-    "content": "text here"
+    "content": `
+<p>Linkon was one of the cities that suffered from the initial Wanderer attacks during the Chronorift Catastrophe 14 years ago. It also served as the first line of defense in the battle against them.</p>
+<p>With the help of Protocore Energy, it has been rebuilt into a bustling metropolis, but many areas still maintain traditional ways of life. It is a city that embodies heroism and the liveliness of everyday life.</p>
+<br>
+<h4>Linkon Monthly</h4>
+<p>A comprehensive monthly publication for Linkon City residents, visitors, research institutions, and cultural organizations. It covers urban life, scientific developments, hazard alerts, cultural events, and policy analysis, making it one of the city's most authoritative, influential, and trusted public information sources.</p>
+    `
   },
   {
     "id": 24,
     "navigation": "life",
     "title": "Azure Square",
-    "content": "text here"
+    "content": `
+<p>A beautiful square in the heart of Linkon City.</p>    
+    `
   },
   {
     "id": 25,
     "navigation": "life",
     "title": "OTTO",
-    "content": "text here"
+    "content": `
+<p>The 5th-gen guide robot developed by Ever Group has a cute, spherical appearance. This adorable machine is available in various forms and designed for different scenarios. In addition to basic systems like navigation, sightseeing commentary, and a lost item tracker, these robots have new features such as weather alerts and a Metaflux monitor.</p>    
+    `
   },
   {
     "id": 26,
     "navigation": "life",
     "title": "Super Hunters",
-    "content": "text here"
+    "content": `
+<p>A franchise centered around hunters with different Evols. Its main plot is them working together to defeat Wanderers. It is very popular among elementary and middle school students.</p>    
+    `
   },
   {
     "id": 27,
     "navigation": "life",
     "title": "Hat Island",
-    "content": "text here"
+    "content": `
+<p>A small island located near Linkon's coast. The mountains resemble a hat, hence its name. It was once a popular tourist site. Now, it is abandoned, for Wanderers have taken over.</p>   
+    `
   },
   {
     "id": 28,
     "navigation": "life",
     "title": "Whitesand Bay",
-    "content": "text here"
+    "content": `
+<p>Whitesand Bay is along the coast of Linkon City, where under sunlight, its sand shines a faint, silvery-white hue. The area is romantic and serene. It's a popular resort area and art center.</p>    
+    `
   },
   {
     "id": 29,
     "navigation": "life",
     "title": "Akso Hospital",
-    "content": "text here"
+    "content": `
+<p>Linkon's municipal hospital, located downtown. A facility focused on medicine, research, and education. Its divisions such as the Division of Cardiac Surgery and Division of General Surgery are widely respected. At the forefront of healthcare, it is a world-renowned medical institute.</p>    
+    `
   },
   {
     "id": 30,
     "navigation": "life",
     "title": "Flux Arts",
-    "content": "text here"
+    "content": `
+<p>This gallery in the city center is owned by a professional curator named Thomas. He is also the exclusive agent for an artist named Rafayel.</p>    
+    `
   },
   {
     "id": 31,
     "navigation": "life",
     "title": "Lizio Auctions",
-    "content": "text here"
+    "content": `
+<p>Founded in 1749, this auction house gathers rare art pieces, jewelry watches, vintage cars, and fine wines from all over the world. The majority of these items are heirlooms. Contemporary works make a rare appearance.</p>    
+    `
   },
   {
     "id": 32,
     "navigation": "life",
     "title": "Mo Art Studio",
-    "content": "text here"
+    "content": `
+<p>Situated on an island in Whitesand Bay, it is an art gallery and the private art studio of Rafayel, a famous painter. The first floor is the gallery, but it is usually closed to the public. The second floor is Rafayel's home and art studio.</p>    
+    `
   },
   {
     "id": 33,
     "navigation": "life",
     "title": "Twinkle Toys",
-    "content": "text here"
+    "content": `
+<p>Twinkle Toys is a brand inspired by "bringing joy." Its plushie collections are a worldwide hit. It often collabs with popular animes, games, idols, etc. for events and introduces limited-time products.</p>   
+    `
   },
   {
     "id": 34,
     "navigation": "life",
     "title": "Meow's Cafe",
-    "content": "text here"
+    "content": `
+<p>A mysterious cat cafe in Linkon City. Its founder invented a game called Kitty Cards, which has become popular among the younger generations. The Evol kitties in its coffee cups are the cafe's specialty.</p>    
+    `
   },
   {
     "id": 35,
     "navigation": "life",
     "title": "Universum",
-    "content": "text here"
+    "content": `
+<p>Linkon City's largest central business district, housing the world's top brands in luxury goods, dining, and entertainment.</p>
+<p>The mall also seamlessly integrates fashion and technology, employing the latest shopping guides for all. It provides the most thoughtful environment for every customer.</p>
+    
+    `
   },
   {
     "id": 35,
     "navigation": "life",
     "title": "Bloomshore District",
-    "content": "text here"
+    "content": `
+<p>An administrative division in Linkon City. While it's right next to the city center, it's as if time has stopped. The architecture and streets have kept their look from two or three decades ago. It's a place with a very down-to-earth charm, where one can find tranquility.</p>    
+    `
   },
   {
     "id": 36,
