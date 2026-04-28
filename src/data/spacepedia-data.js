@@ -392,7 +392,7 @@ export const spacepediaData = [
     `
   },
   {
-    "id": 35,
+    "id": 36,
     "navigation": "life",
     "title": "Bloomshore District",
     "content": `
@@ -400,7 +400,7 @@ export const spacepediaData = [
     `
   },
   {
-    "id": 36,
+    "id": 37,
     "navigation": "tale",
     "title": "Lemuria",
     "content": `
@@ -416,7 +416,7 @@ export const spacepediaData = [
     `
   },
   {
-    "id": 37,
+    "id": 38,
     "navigation": "tale",
     "title": "Tenebra",
     "content": `
@@ -424,7 +424,7 @@ export const spacepediaData = [
     `
   },
   {
-    "id": 38,
+    "id": 39,
     "navigation": "tale",
     "title": "Lumiere",
     "content": `
@@ -432,7 +432,7 @@ export const spacepediaData = [
     `
   },
   {
-    "id": 39,
+    "id": 40,
     "navigation": "tale",
     "title": "N109 Zone",
     "content": `
@@ -455,7 +455,7 @@ export const spacepediaData = [
     `
   },
   {
-    "id": 40,
+    "id": 41,
     "navigation": "tale",
     "title": "The Nest",
     "content": `
@@ -463,7 +463,7 @@ export const spacepediaData = [
     `
   },
   {
-    "id": 41,
+    "id": 42,
     "navigation": "tale",
     "title": "Odd Workshop",
     "content": `
@@ -472,7 +472,7 @@ export const spacepediaData = [
     `
   },
   {
-    "id": 42,
+    "id": 43,
     "navigation": "tale",
     "title": "RMFMA",
     "content": `
@@ -481,7 +481,7 @@ export const spacepediaData = [
     `
   },
   {
-    "id": 43,
+    "id": 44,
     "navigation": "tale",
     "title": "Solon Hotel",
     "content": `
@@ -489,7 +489,7 @@ export const spacepediaData = [
     `
   },
   {
-    "id": 44,
+    "id": 45,
     "navigation": "tale",
     "title": "Abyssal Chaos",
     "content": `
@@ -497,7 +497,7 @@ export const spacepediaData = [
     `
   },
   {
-    "id": 45,
+    "id": 46,
     "navigation": "note",
     "title": "Tara",
     "content": `
@@ -505,7 +505,7 @@ export const spacepediaData = [
     `
   },
   {
-    "id": 46,
+    "id": 47,
     "navigation": "note",
     "title": "Jenna",
     "content": `
@@ -513,7 +513,7 @@ export const spacepediaData = [
     `
   },
   {
-    "id": 47,
+    "id": 48,
     "navigation": "note",
     "title": "Yvonne",
     "content": `
@@ -521,7 +521,7 @@ export const spacepediaData = [
     `
   },
   {
-    "id": 48,
+    "id": 49,
     "navigation": "note",
     "title": "Caleb",
     "content": `
@@ -540,7 +540,7 @@ export const spacepediaData = [
 `
   },
   {
-    "id": 49,
+    "id": 50,
     "navigation": "note",
     "title": "Nero",
     "content": `
@@ -548,7 +548,7 @@ export const spacepediaData = [
     `
   },
   {
-    "id": 50,
+    "id": 51,
     "navigation": "note",
     "title": "Thomas",
     "content": `
@@ -556,7 +556,7 @@ export const spacepediaData = [
     `
   },
   {
-    "id": 51,
+    "id": 52,
     "navigation": "note",
     "title": "Talia",
     "content": `
@@ -564,7 +564,7 @@ export const spacepediaData = [
     `
   },
   {
-    "id": 51,
+    "id": 53,
     "navigation": "note",
     "title": "Flux Nexus",
     "content": `
@@ -572,7 +572,7 @@ export const spacepediaData = [
     `
   },
   {
-    "id": 52,
+    "id": 54,
     "navigation": "note",
     "title": "Josephine",
     "content": `
@@ -580,7 +580,7 @@ export const spacepediaData = [
     `
   },
   {
-    "id": 53,
+    "id": 55,
     "navigation": "note",
     "title": "Greyson",
     "content": `
@@ -588,7 +588,7 @@ export const spacepediaData = [
     `
   },
   {
-    "id": 54,
+    "id": 56,
     "navigation": "note",
     "title": "Dr. Noah",
     "content": `
@@ -599,7 +599,7 @@ export const spacepediaData = [
     `
   },
   {
-    "id": 55,
+    "id": 57,
     "navigation": "note",
     "title": "Aether Core",
     "content": `
@@ -619,7 +619,7 @@ export const spacepediaData = [
     `
   },
   {
-    "id": 56,
+    "id": 58,
     "navigation": "note",
     "title": "Jeremiah",
     "content": `
@@ -627,7 +627,7 @@ export const spacepediaData = [
     `
   },
   {
-    "id": 57,
+    "id": 59,
     "navigation": "note",
     "title": "Sylus",
     "content": `
@@ -635,7 +635,7 @@ export const spacepediaData = [
     `
   },
   {
-    "id": 58,
+    "id": 60,
     "navigation": "note",
     "title": "Luke & Kieran",
     "content": `
@@ -644,7 +644,7 @@ export const spacepediaData = [
     `
   },
   {
-    "id": 59,
+    "id": 61,
     "navigation": "note",
     "title": "Mephisto",
     "content": `
@@ -652,7 +652,7 @@ export const spacepediaData = [
     `
   },
   {
-    "id": 60,
+    "id": 62,
     "navigation": "note",
     "title": "Philip",
     "content": `
@@ -661,7 +661,7 @@ export const spacepediaData = [
     `
   },
   {
-    "id": 61,
+    "id": 63,
     "navigation": "note",
     "title": "Andrew",
     "content": `
@@ -670,7 +670,7 @@ export const spacepediaData = [
     `
   },
   {
-    "id": 62,
+    "id": 64,
     "navigation": "note",
     "title": "Simone",
     "content": `
@@ -679,7 +679,7 @@ export const spacepediaData = [
     `
   },
   {
-    "id": 63,
+    "id": 65,
     "navigation": "note",
     "title": "Ulysses",
     "content": `
@@ -687,7 +687,7 @@ export const spacepediaData = [
     `
   },
   {
-    "id": 64,
+    "id": 66,
     "navigation": "note",
     "title": "Backtrackers",
     "content": `
