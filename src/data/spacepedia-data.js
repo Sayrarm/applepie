@@ -403,55 +403,98 @@ export const spacepediaData = [
     "id": 36,
     "navigation": "tale",
     "title": "Lemuria",
-    "content": "text here"
+    "content": `
+<p>An ancient, marine civilization recorded in legends Its unique, advanced technologies are difficult to use. Also, Lemurians had achieved great mastery over many art-related fields such as music, painting, literature, architecture, and carving.</p>
+<p>In 2034, the ruins of an underwater city were discovered to the southeast of Linkon City, proving the existence of Lemuria.  </p>
+<br>
+<h4>Tome of the Sea God</h4>
+<p>The Tome of the Sea God records the history and prophecies of Lemuria's past, present, and future, carrying within it the primordial power of the Sea God.</p>
+<br>
+<h4>The Lost Whalefall City</h4>
+<p>Whalefall City, which quietly emerged in the ocean depths at an unknown time, is believed to be the final resting place for every Lemurian soul.</p>
+    
+    `
   },
   {
     "id": 37,
     "navigation": "tale",
     "title": "Tenebra",
-    "content": "text here"
+    "content": `
+<p>In the world of hunters, "Tenebra" often refers to those who broke the Hunter's Code and engaged in illegal activities. They may do things such as Protocore smuggling or endanger the lives of others. Tenebrae often have ties to secret organizations, carrying out covert missions behind the scenes. They are one of the many targets pursued by the Hunters Association.</p>    
+    `
   },
   {
     "id": 38,
     "navigation": "tale",
     "title": "Lumiere",
-    "content": "text here"
+    "content": `
+<p>In the midst of the 2034 Chronorift Catastrophe, a mysterious hunter emerged, taking down numerous formidable Wanderers and rescuing countless citizens in Linkon City. This enigmatic hunter played a crucial role in resolving the crisis. Their true identity remains shrouded in mystery, and after the catastrophe, they disappeared without a trace. They appeared again in the last two years, with rumors suggesting that they have already transformed into Tenebra.</p>    
+    `
   },
   {
     "id": 39,
     "navigation": "tale",
     "title": "N109 Zone",
-    "content": "text here"
+    "content": `
+<p>Once a bustling technology hub, it is now one of the most dangerous areas after the Catastrophe occurred. Surrounded by other no-hunt zones, it has evolved into a lawless land where danger and opportunity coexist. It is rife with violence and crime.</p>
+<p>With illicit trade and dangerous research, many of its activities are related to Protocores and Wanderers. Its many benefits have driven countless outlaws to risk their lives.</p>
+<br>
+<h4>Onychinus</h4>
+<p>A mysterious faction stationed in the N109 Zone. Unlike other shady groups, Onychinus is omnipresent. They have connections everywhere, forming a vast web of sin to control every illegal activity.</p>
+<br>
+<h4>The Origin Of The N109 Zone's Name</h4>
+<p>The N109 Zone, also known as No-Hunt Zone No. 109, does not belong to the 108 regions designated officially as no-hunt zones by the Hunters Association. Prolonged energy fluctuations and dangerous Wanderers are characteristic of a no-hunt zone. The Wanderer threat in the N109 Zone has been suppressed, but its inherent dangers persist due to the complex web of factions and poor living conditions. Consequently, it has earned the reputation of being "No-Hunt Zone No.109" because it's difficult to enter and is even more dangerous than a typical no-hunt zone.</p>
+<br>
+<h4>Charon Market</h4>
+<p>Charon Market is a lawless free-trade hub in the N109 Zone.</p>
+<p>Intelligence reports suggest that Dimitri, known as the "Lord of Charon," is both the market's true owner and the organizer of Zoion Hunt, a deadly tournament held every three years. The central arena at Charon is also part of his domain.</p>
+<br>
+<h4>Elysium</h4>
+<p>Elysium is a modest tavern in the N109 Zone, but its "Connoisseur's Special" isn't just a menu. It's a rotating list of intelligence deals and high-risk missions.</p>
+<p>Its owner, Aislinn, seems to have some history with Sylus.</p>
+    `
   },
   {
     "id": 40,
     "navigation": "tale",
     "title": "The Nest",
-    "content": "text here"
+    "content": `
+<p>Tucked away in a small alley, the bar is only accessible to those with an invitation to its secret Hunting Day. Behind the scenes, it is a complex network brimming with intel and secrets unknown to the public.</p>    
+    `
   },
   {
     "id": 41,
     "navigation": "tale",
     "title": "Odd Workshop",
-    "content": "text here"
+    "content": `
+<p>Before the Chronorift Catastrophe, the Odd Workshop was a humble robot company. It was abandoned when the area fell into ruin.</p>
+<p>After the disaster, individuals harboring secrets, including the workshop's owner, Philip, relocated to the N109 Zone to begin anew. With Philip's modifications, the Odd Workshop became a facility dedicated to researching Wanderers and Protocores.  </p>  
+    `
   },
   {
     "id": 42,
     "navigation": "tale",
     "title": "RMFMA",
-    "content": "text here"
+    "content": `
+<p>The Reflective Metaflux Field Monitor and Analyzer RMFMA) is more sensitive than standard stabilizers, and capable of detecting even the slightest Protofield fluctuations.</p>
+<p>Fewer than ten exist worldwide, one of which is housed at the Prestara University Deepspace Exploration Research Center.    </p>
+    `
   },
   {
     "id": 43,
     "navigation": "tale",
     "title": "Solon Hotel",
-    "content": "text here"
+    "content": `
+<p>Situated at the heart of the N109 Zone, this luxury hotel serves as a venue for banquets and local transactions. On its rooftop, the remnants of abandoned collectors, transport tubes, and other devices lie scattered. Once a place where Ever conducted experiments, it is now abandoned and devoid of activity.</p>    
+    `
   },
   {
     "id": 44,
     "navigation": "tale",
     "title": "Abyssal Chaos",
-    "content": "text here"
+    "content": `
+<p>An anonymous virtual platform. It's primarily used to publish and sell information as well as commissions. No one knows who created it, but the creator is unfathomably skilled. As a result, the Abyssal Chaos is the most secretive and powerful platform on the dark web.</p>    
+    `
   },
   {
     "id": 45,
