@@ -1,0 +1,470 @@
+export const spacepediaData = [
+  {
+    "id": 1,
+    "navigation": "guidance",
+    "title": "Hunter Association",
+    "content": `
+<p>An organization founded by experts in the deepspace hunting industry under the World Evol Government's supervision. Its purpose is to select talented individuals, regulate the deepspace hunting industry, and sometimes discipline hunters. The Association also serves as a support service for every hunter, providing them with resources in their fight against Wanderers. </p>
+<br>
+<h4>Hunter's Code</h4>
+<p>Also known as the Code of Deepspace Hunters. Created by the World Hunters Association, it sets the rules for how a hunter should operate. It is an agreement all hunters must abide by. </p>
+<br>
+<h4>The Special Operation</h4>
+<p>Special operation missions issued by the Hunters Association are specifically tailored to address various unusual incidents, often involving a significant level of confidentiality and risk. </p>
+<br>
+<h4>Special Task Force Joint Operation</h4>
+<p>The Hunters Association and the Special Task Force have jointly launched a cooperative initiative to strengthen coordination and knowledge-sharing between Hunters and security forces. This action also serves as a timely response to the recent anomalies occurring across several No-Hunt Zones.</p>
+
+    `
+  },
+  {
+    "id": 2,
+    "navigation": "guidance",
+    "title": "Protocore",
+    "content": `
+<p>When Wanderers of a high threat level are eliminated, they drop Protocores. After years of research, the methods of extracting their energy have become very advanced. Protocore Energy is now used in various fields such as electronics, healthcare, and space. Utilized effectively, Protocores can enhance combat capabilities.</p>    
+    `
+  },
+  {
+    "id": 3,
+    "navigation": "guidance",
+    "title": "Evol",
+    "content": `
+<p>A special superpower only possessed by a small portion of the human population. Those who have Evol are called Evolvers. After many studies into the field of Evol, scientists can now extract its power, create new weapons, and use it to improve daily life.</p>    
+    `
+  },
+  {
+    "id": 4,
+    "navigation": "guidance",
+    "title": "Deepspace Hunter",
+    "content": `
+<p>This growing profession was a result of the disaster 14 years ago. Its main goal is to eliminate Wanderers and get their Protocores. Hunters typically exhibit physical and mental prowess. Those who are Evolvers sometimes have better combat capabilities. To become a certified Deepspace Hunter, one must take the Hunters Association's licensure exam, obtain a license, and adhere to the Hunter's Code.</p>    
+    `
+  },
+  {
+    "id": 5,
+    "navigation": "guidance",
+    "title": "Hunter Equipment",
+    "content": `
+<p>Developed by the Hunters Association and the Deepspace Society, this is a professional set of gear issued to hunters. Weapons, armor, detectors, support devices, etc. are included.</p>
+<br>
+<h4>Hunter's Watch</h4>
+<p>An essential piece of equipment for any Deepspace Hunter. It resembles a watch and provides many functions such as assigning missions, detecting nearby Wanderers, scanning for Metaflux, and calling for backup. </p>
+<br>
+<h4>270HM</h4>
+<p>This is an exclusive motorcycle for Deepspace Hunters developed by Ever Group's Research Facility. It employs state-of-the-art aerodynamic technology. There are two other models:310HM and 380HM.</p>
+<p>Because it can reach such high speeds, only those who have undergone professional training can obtain a motorcycle license for it. </p>
+<br>
+<h4>Hunter Weapon</h4>
+<p>Crafted with Evol, this hunter-exclusive weapon is powered and enhanced by Protocore Energy. It can kill Wanderers, but it is harmless against humans. Hunters can pick from an assortment of weapon types with distinct features to suit their personal preferences.</p>
+<br>
+<h4>470HM</h4>
+<p>Developed in-house by the Hunters Association, this next-generation motorcycle features higher speeds, improved environmental adaptability, and enhanced maneuverability.</p>
+    `
+  },
+  {
+    "id": 6,
+    "navigation": "guidance",
+    "title": "Wanderers",
+    "content": `
+<p>These monsters are made from Metaflux. They first appeared from the Deepspace Tunnel in various forms. While most species lack intelligence, they are formidable. They attack humans and animals and are not easy to defeat.</p>    
+    `
+  },
+  {
+    "id": 7,
+    "navigation": "guidance",
+    "title": "Protofield",
+    "content": `
+<p>Wanderers create an alternate dimension using an energy field. Currently, all relevant information is from hunters who have fought them.</p>
+<p>Because of the threats lurking in these mysterious Protofields, the Hunters Association requires two Evolvers to be present in them so they can support each other. They must also be ready to retreat should one of them encounter any danger.</p>
+<br>
+<h4>Stellactrum</h4>
+<p>The spectrographic image, generated by scanning energy waves within a planet's Protofield using Protofield Imaging, reveals the fluctuating properties of Metaflux during combat.</p>
+<p>So far, six types of Stellactrum have been identified: Emerald, Sapphire, Violet, Amber, Ruby, and Pearl. When the Stellactrum used in combat matches the ones on the field, its effects are amplified twofold.</p>
+    `
+  },
+  {
+    "id": 8,
+    "navigation": "guidance",
+    "title": "UNICORNS",
+    "content": `
+<p>One of the teams under the Hunters Association. First established during the disaster 14 years ago, it is responsible for dealing with Wanderer-related incidents, especially those involving dangerous Wanderers. Its logo is that of a unicorn.</p>
+<br>
+<h4>Alpha Team</h4>
+<p>A UNICORNS sector known for its rigorous selection process. To prevent a crisis, it is responsible for carrying out missions that include the following: detecting Wanderers, searching for Wanderers, and eliminating Wanderers. Its members consist of highly skilled hunters. </p>
+<br>
+<h4>Data Analysis</h4>
+<p>A UNICORNS sector. Responsible for the following: gathering and analyzing data, detecting and identifying Protocores, monitoring regional energy fluctuations, etc. They serve as the intelligence processing center for the entire team and provide support to other sectors.</p>
+<br>
+<h4>Armament Tech</h4>
+<p>The Hunters Association assigns a specialized team to each squad, dedicated to the development, optimization, and maintenance of combat equipment. This team provides state-of-the-art technological support to hunters and enhances the combat capabilities and efficiency of the entire squad.</p>
+    
+    `
+  },
+  {
+    "id": 9,
+    "navigation": "guidance",
+    "title": "No-Hunt Zone",
+    "content": `
+<p>If there is a chaotic Protofield and frequent Wanderer appearances, the Hunters Association will designate the area as a no-hunt zone. Citizens are prohibited from entering. Hunters are also not allowed to enter without official authorization. Most of these areas were greatly affected by the Deepspace Tunnel during the Chronorift Catastrophe 14 years ago. The most hellish of battles took place in them, and the impact of the Catastrophe continues to this day. </p>
+<br>
+<h4>No-Hunt Zone No.7</h4>
+<p>Originally a forest surrounding Linkon City, it was chosen as the location for a cosmic signal station. It was one of the places first attacked during the Chronorift Catastrophe, and the signal station was destroyed. Now, a large number of Wanderers live here.</p>
+<br>
+<h4>No-Hunt Zone No.39</h4>
+<p>Once part of Linkon City's Lumiaestas District, this eastern riverside area used to host a stretch of luxury high-rises with panoramic river views, all of which were destroyed during the Chronorift Catastrophe.</p>
+<p>Although the region briefly stabilized after Flux Stabilizers were deployed, it has recently begun experiencing abnormal fluctuations once again.</p>
+    
+    `
+  },
+  {
+    "id": 10,
+    "navigation": "guidance",
+    "title": "Flux Stabilizer",
+    "content": `
+<p>By transforming and releasing stored Evol Energy, it balances the Metaflux, preventing the emergence of Wanderers. It is primarily used in public areas.</p>    
+    `
+  },
+  {
+    "id": 11,
+    "navigation": "guidance",
+    "title": "Arctic Hunter",
+    "content": `
+<p>They are hunters under the Arctic Team of the Hunters Association. Unlike the agile Sky Hunters who are lightly equipped, Arctic Hunters need to gear up to deal with extreme weather conditions. They are equipped with heavy protective suits to resist the cold, face masks, and goggles to ensure they can see in blizzards. The Evol Railgun, with its large attack range, is also more suitable for combat in uninhabited areas.  </p>
+<br>
+<h4>SnowDog</h4>
+<p>This sled dog replica was initially developed for swift traversal through snowy forests and mountains. Due to the influx of Arctic tourists, and in an effort not to upset the public's aesthetic sensibilities, the robot has been modified with realistic fur. It has gradually evolved into a multifunctional patrol dog complete with navigation capabilities. It's become a unique spectacle in the polar regions.</p>
+    
+    `
+  },
+  {
+    "id": 12,
+    "navigation": "message",
+    "title": "Deepspace Tunnel",
+    "content": "text here"
+  },
+  {
+    "id": 13,
+    "navigation": "message",
+    "title": "Skyhaven",
+    "content": "text here"
+  },
+  {
+    "id": 14,
+    "navigation": "message",
+    "title": "Protocore Syndrome",
+    "content": "text here"
+  },
+  {
+    "id": 15,
+    "navigation": "message",
+    "title": "The Arctic",
+    "content": "text here"
+  },
+  {
+    "id": 16,
+    "navigation": "message",
+    "title": "EVER Group",
+    "content": "text here"
+  },
+  {
+    "id": 17,
+    "navigation": "message",
+    "title": "Philos",
+    "content": "text here"
+  },
+  {
+    "id": 18,
+    "navigation": "message",
+    "title": "Farspace Fleet",
+    "content": "text here"
+  },
+  {
+    "id": 19,
+    "navigation": "message",
+    "title": "Prototists",
+    "content": "text here"
+  },
+  {
+    "id": 20,
+    "navigation": "message",
+    "title": "Purists",
+    "content": "text here"
+  },
+  {
+    "id": 21,
+    "navigation": "message",
+    "title": "The Fountain of Atei",
+    "content": "text here"
+  },
+  {
+    "id": 22,
+    "navigation": "message",
+    "title": "Verona",
+    "content": "text here"
+  },
+  {
+    "id": 23,
+    "navigation": "life",
+    "title": "Linkon City",
+    "content": "text here"
+  },
+  {
+    "id": 24,
+    "navigation": "life",
+    "title": "Azure Square",
+    "content": "text here"
+  },
+  {
+    "id": 25,
+    "navigation": "life",
+    "title": "OTTO",
+    "content": "text here"
+  },
+  {
+    "id": 26,
+    "navigation": "life",
+    "title": "Super Hunters",
+    "content": "text here"
+  },
+  {
+    "id": 27,
+    "navigation": "life",
+    "title": "Hat Island",
+    "content": "text here"
+  },
+  {
+    "id": 28,
+    "navigation": "life",
+    "title": "Whitesand Bay",
+    "content": "text here"
+  },
+  {
+    "id": 29,
+    "navigation": "life",
+    "title": "Akso Hospital",
+    "content": "text here"
+  },
+  {
+    "id": 30,
+    "navigation": "life",
+    "title": "Flux Arts",
+    "content": "text here"
+  },
+  {
+    "id": 31,
+    "navigation": "life",
+    "title": "Lizio Auctions",
+    "content": "text here"
+  },
+  {
+    "id": 32,
+    "navigation": "life",
+    "title": "Mo Art Studio",
+    "content": "text here"
+  },
+  {
+    "id": 33,
+    "navigation": "life",
+    "title": "Twinkle Toys",
+    "content": "text here"
+  },
+  {
+    "id": 34,
+    "navigation": "life",
+    "title": "Meow's Cafe",
+    "content": "text here"
+  },
+  {
+    "id": 35,
+    "navigation": "life",
+    "title": "Universum",
+    "content": "text here"
+  },
+  {
+    "id": 35,
+    "navigation": "life",
+    "title": "Bloomshore District",
+    "content": "text here"
+  },
+  {
+    "id": 36,
+    "navigation": "tale",
+    "title": "Lemuria",
+    "content": "text here"
+  },
+  {
+    "id": 37,
+    "navigation": "tale",
+    "title": "Tenebra",
+    "content": "text here"
+  },
+  {
+    "id": 38,
+    "navigation": "tale",
+    "title": "Lumiere",
+    "content": "text here"
+  },
+  {
+    "id": 39,
+    "navigation": "tale",
+    "title": "N109 Zone",
+    "content": "text here"
+  },
+  {
+    "id": 40,
+    "navigation": "tale",
+    "title": "The Nest",
+    "content": "text here"
+  },
+  {
+    "id": 41,
+    "navigation": "tale",
+    "title": "Odd Workshop",
+    "content": "text here"
+  },
+  {
+    "id": 42,
+    "navigation": "tale",
+    "title": "RMFMA",
+    "content": "text here"
+  },
+  {
+    "id": 43,
+    "navigation": "tale",
+    "title": "Solon Hotel",
+    "content": "text here"
+  },
+  {
+    "id": 44,
+    "navigation": "tale",
+    "title": "Abyssal Chaos",
+    "content": "text here"
+  },
+  {
+    "id": 45,
+    "navigation": "note",
+    "title": "Tara",
+    "content": "text here"
+  },
+  {
+    "id": 46,
+    "navigation": "note",
+    "title": "Jenna",
+    "content": "text here"
+  },
+  {
+    "id": 47,
+    "navigation": "note",
+    "title": "Yvonne",
+    "content": "text here"
+  },
+  {
+    "id": 48,
+    "navigation": "note",
+    "title": "Caleb",
+    "content": "text here"
+  },
+  {
+    "id": 49,
+    "navigation": "note",
+    "title": "Nero",
+    "content": "text here"
+  },
+  {
+    "id": 50,
+    "navigation": "note",
+    "title": "Thomas",
+    "content": "text here"
+  },
+  {
+    "id": 51,
+    "navigation": "note",
+    "title": "Talia",
+    "content": "text here"
+  },
+  {
+    "id": 51,
+    "navigation": "note",
+    "title": "Flux Nexus",
+    "content": "text here"
+  },
+  {
+    "id": 52,
+    "navigation": "note",
+    "title": "Josephine",
+    "content": "text here"
+  },
+  {
+    "id": 53,
+    "navigation": "note",
+    "title": "Greyson",
+    "content": "text here"
+  },
+  {
+    "id": 54,
+    "navigation": "note",
+    "title": "Dr. Noah",
+    "content": "text here"
+  },
+  {
+    "id": 55,
+    "navigation": "note",
+    "title": "Aether Core",
+    "content": "text here"
+  },
+  {
+    "id": 56,
+    "navigation": "note",
+    "title": "Jeremiah",
+    "content": "text here"
+  },
+  {
+    "id": 57,
+    "navigation": "note",
+    "title": "Sylus",
+    "content": "text here"
+  },
+  {
+    "id": 58,
+    "navigation": "note",
+    "title": "Luke & Kieran",
+    "content": "text here"
+  },
+  {
+    "id": 59,
+    "navigation": "note",
+    "title": "Mephisto",
+    "content": "text here"
+  },
+  {
+    "id": 60,
+    "navigation": "note",
+    "title": "Philip",
+    "content": "text here"
+  },
+  {
+    "id": 61,
+    "navigation": "note",
+    "title": "Andrew",
+    "content": "text here"
+  },
+  {
+    "id": 61,
+    "navigation": "note",
+    "title": "Simone",
+    "content": "text here"
+  },
+  {
+    "id": 62,
+    "navigation": "note",
+    "title": "Ulysses",
+    "content": "text here"
+  },
+  {
+    "id": 63,
+    "navigation": "note",
+    "title": "Backtrackers",
+    "content": "text here"
+  }
+]

@@ -2,16 +2,12 @@ import {Navigate, useParams} from 'react-router-dom';
 import SpacepediaNavigation from "../components/SpacepediaNavigation.jsx";
 import styles from "./Spacepedia.module.css";
 import {Collapse} from 'antd';
-import {useEffect, useState} from "react";
-import {fetchData} from "../data/api.js";
+import {spacepediaData} from "../data/spacepedia-data.js";
+
 
 function Spacepedia() {
     const {navigation} = useParams(); // получаем "guidance", "message" и т.д.
-    const [spacepediaData, setSpacepediaData] = useState([]);
 
-    useEffect(() => {
-        fetchData('spacepedia-data').then(data => setSpacepediaData(data));
-    }, []);
 
     // Фильтруем статьи по navigation
     const articles = spacepediaData.filter(
