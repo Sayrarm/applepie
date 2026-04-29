@@ -13,3 +13,10 @@
 .content :global(.ant-collapse-header) {
     align-items: center !important;
 }
+
+.img {
+    width: 350px;
+    height: 150px;
+    object-fit: cover;
+    object-position: 10% 20%;
+}

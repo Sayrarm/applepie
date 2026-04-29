@@ -42,7 +42,14 @@ function Spacepedia() {
                 items={articles.map(article => ({
                     key: article.id,
                     label: <div className={styles.title}>{article.title}</div>,
-                    children: <div dangerouslySetInnerHTML={{__html: article.content}}/>
+                    children: (
+                        <>
+                            {article.img && (
+                                <img className={styles.img} src={article.img} alt={article.title} />
+                            )}
+                            <div dangerouslySetInnerHTML={{__html: article.content}} />
+                        </>
+                    )
                 }))}
             />
 
