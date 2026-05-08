@@ -769,4 +769,313 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 
         `,
     },
+    {
+        id: 61,
+        link: "sid",
+        serialNumber: "01",
+        subtitle: "Whispers",
+        content: `
+<p>The door is slightly ajar. A young man wearing a duckbill cap snorts, pushing the door open with a finger. His steps kick up dust, and the sound of his shoes hitting the ground echoes in the empty room.</p>
+<p>At the window, a man in a raincoat turns his head when he hears the noise. He pulls back his pointed hood. "Long time no see. You look older now."</p>
+<p>"Have you gone blind as you kept an eye on Ever?" the man with a duckbill cap retorts, his voice surprisingly old-sounding compared to his appearance. He hands over a black briefcase. "Here are the goods."</p>
+<p>An explosion site's striking scent still lingers, rushing into his nose. The man in the raincoat frowns. He pulls out a clean handkerchief from his pocket and wraps it around his hand to pinch a corner of the briefcase. He gives it a couple of shakes before opening it.</p>
+<p>Four slightly yellowed pages unfold before him. They quietly tell a story from 14 years ago.</p>
+
+        `,
+    },
+    {
+        id: 62,
+        link: "sid",
+        serialNumber: "02",
+        subtitle: "Unicorn",
+        content: `
+<p>Subject Anomalies Record</p>
+<p>Recorder:</p>
+<p>Josephine, Gaia Research Center, Unicorn Team, Researcher/Team Leader </p>
+<p>Date</p>
+<p>Observation No. 5, Day 42 </p>
+<p>Anomalies</p>
+<p>Subject 001 regained vital signs after death.</p>
+<p>Details</p>
+<p>Subject 001: Female, Evol: Anhaunsen Class Day 41 of 0bservation: 2:00 A.M. For reasons unknown (suspected to be a researcher's mishandling of the subject), the subject's energy values rapidly increased and peaked at 2:39 A.M. It resulted in a powerful energy burst within her body (no casualties or equipment was damaged). All vital signs disappeared after the explosion.</p>
+<p>Day 42 of Observation (Today): 4:00 P.M. Vital sign monitors suddenly restarted and slowly transmitted data again. Heart rate, breathing, and brain activity resumed. Not only did Subject 001 appear to be alive again, but energy values also returned to normal A comprehensive physical examination revealed a newly created, unidentified substance in her heart.</p>
+<p>Experiment Notes</p>
+<p>Last night's incident... was like watching a planet evolve and be reborn via an explosion. The substance in her heart is composed of an unknown element. We've never seen it before.</p>
+<p>When the data was released, the team applauded and cheered. But I wasn't as excited as I imagined myself to be. My intense curiosity overshadowed the joy of achievement.</p>
+<p>If she has a "nonexistent element," then what kind of existence is she?</p>
+<p>Outside the observation room, Phil asked what we should call this element before we had the right to name it. Everyone gathered around him, and "aether" became the most popular, irresistible candidate. Using that, the unidentified object in her heart composed of "aether" was dubbed an "Aether Core."</p>
+<p>After calming down from the excitement, we began to look at her resurrection. Phil quietly asked me if this could be considered a "resurrection from death."</p>
+<p>Everyone knew very well that the best way to study her resurrection was to "kill" her again.</p>
+<p>If she woke up once more, then we could confirm that she's truly a unique miracle of life in this research center.</p>
+<p>She's just like a mythical creature long sought after and believed to exist only in our imagination: a "unicorn."</p>
+<p>A fantastical, beautiful creature.</p>
+<br>
+<p>A box for collecting votes was placed in the corner of the lab. I passed by it several times, unable to give a vote of approval. I know experimentation is a necessary process. She holds too many secrets that are worth researching and carries an unpredictable amount of energy.</p>
+<p>Yet despite my desire for knowledge, I still can't ignore the fact that she's a child.</p>
+
+        `,
+    },
+    {
+        id: 63,
+        link: "sid",
+        serialNumber: "03",
+        subtitle: "Observation Log",
+        content: `
+<p>Observer: Josephine </p>
+<p>Entry No. 1</p>
+<p>"Unicorn" became the child's name in various reports, replacing the cold designation of "Subject 001" (only Phil insisted on calling her "Little Bomb"). She was like a newborn creature, exploring the world every day using only primitive instincts.</p>
+<p>After her resurrection, her cognition and memory of her previous "life" were erased. To reassess her abilities, I gave her picture books and cards with words. She quickly passed my tests with flying colors, performing better than children at her age. She absorbed and understood information faster and more thoroughly.</p>
+<p>If she were in school, she could easily be a fifth-grade student. </p>
+<p>Entry No. 2</p>
+<p>In terms of the Evol experiment, we could only hypothesize from a numerical perspective Before she used Evol of her own accord, no one could be sure how the Resonance Evol would manifest.</p>
+<p>Only once did she use Resonance unconsciously. The target and range were unclear. Phil has the Acoustic Transmission Evol. That day, everyone heard him talking on the phone with his girlfriend as if he were a broadcaster. </p>
+<p>Entry No. 3</p>
+<p>Following the voting results, we began our experiment to kill Unicorn in an observation unit yesterday. We also prepared emergency measures.</p>
+<p>The same situation repeated itself. The energy inside her was stimulated to peak faster than last time, which led to a more intense energy burst. It even spread outside the observation unit. Subsequently, all vital signs disappeared, and she entered a state of "death" as we typically understood it.</p>
+<p>The shrill alarm of the life detector went off and I realized my right hand had been tightly clutching the back of my left hand. My forehead was also covered in sweat. I was worried the child would never wake up again, but in this research center, being attached to a test subject is prohibited.</p>
+<p>This morning, under the Aether Core's influence, she opened her eyes again as expected. Phil breathed a sigh of relief. So did I.</p>
+<p>I wanted to apologize to the child. But I knew that for her, who had woken up again, the world was a brand new place. She doesn't remember any of us.</p>
+<p>However, what was more intriguing than her blank slate of an emotional state was the Aether Core's energy in her heart.</p>
+<p>With the reawakening of her consciousness, it had become stronger.</p>
+
+        `,
+    },
+    {
+        id: 64,
+        link: "sid",
+        serialNumber: "04",
+        subtitle: "Post-Catastrophe Journal",
+        content: `
+<p>Day 49, Post-Chronorift Catastrophe, Sunny </p>
+<p>Observations on Unicorn had yet to enter Phase 6 when the Chronorift Catastrophe changed the world.</p>
+<p>The Gaia Research Center couldn't escape the destruction. When I was rescued from the ruins, the child was nowhere to be seen. She might have escaped when the observation unit was smashed. The Evol Police who helped in the rescue efforts said they haven't seen the child I described.</p>
+<p>I imagined many possibilities, but I was certain she was alive.</p>
+<p>Days after the disaster, I finally found her in a shelter.</p>
+<p>When I took her hand, I heard her call me "Grandma." I never taught her that term, nor had she ever called me that. She didn't recognize me either. The days in the research center had once again disappeared from her memory. Yet the seemingly instinctual trust and closeness she showed made me feel as if those forgotten days were always there, invisibly linking us together.</p>
+<p>I asked her if she wanted to come home with me. She smiled and nodded.</p>
+<p>In the research center, the moment I pushed her into the observation unit felt like a horrible nightmare... Now, holding her soft hand felt like I grasped a redemption bestowed by fate.</p>
+<br>
+<p>Day 75, Post-Chronorift Catastrophe, Sunny </p>
+<p>Our lives have calmed down, yet she still forgets things from time to time. Her memory is like a faint signal, intermittent and sometimes wavering.</p>
+<p>So, I took on the responsibility of a true guardian and cared for her. I don't know how to describe my current feelings. I never had children, nor did I ever imagine having relatives. It's always been just me at home. But with her and... </p>
+<p>Things have started to change.</p>
+
+        `,
+    },
+    {
+        id: 65,
+        link: "sid",
+        serialNumber: "05",
+        subtitle: "Journal Entry 4",
+        content: `
+<p>Day 134, Post-Chronorift Catastrophe, Sunny </p>
+<p>Her condition has improved a lot recently She's less likely to forget things. Perhaps it's because her condition is stabilizing. But I'm still worried and want to check her and the Aether Core. However, I'm unable to contact the researchers who knew of her existence back then, including Phil.</p>
+<p>Strange. Maybe Ever's research center called them, or... I don't know.</p>
+<p>Looking back, Ever's investment in Gaia wasn't simple research. Our life form observation project was not just for observation. There must be a bigger scheme.</p>
+<p>At this point, the only person who I can turn to is Dr. Noah. In the field of cardiology, he's the leading expert and the only one I can still trust.</p>
+<p>The data after the checkup shows the energy peak in her heart is only half of what it used to be.</p>
+<p>...What happened to this child when she faced the Chronorift Catastrophe alone? When I subtly asked her, she just shook her head, showing neither pain nor sadness on her face. Seeing her reaction, I suddenly felt that maybe forgetting isn't such a bad thing for her.</p>
+
+        `,
+    },
+    {
+        id: 66,
+        link: "sid",
+        serialNumber: "06",
+        subtitle: "Dust",
+        content: `
+<p>"Is this it?"</p>
+<p>Having gone through all the pages, the man in a raincoat appears slightly unsatisfied.</p>
+<p>"Don't be too greedy," the man with a duckbill cap snarled. "This is enough for you to confirm her identity and role."</p>
+<p>"You silenced Josephine and retrieved the research material from back then. Good work." The man in a raincoat tosses a vial to the hat-wearing man. Then he tucks the pages into his bag and returns the briefcase with a two-finger push. "It stinks. Be careful walking around with it. Otherwise, sharp-nosed hunters might follow its scent back to you.”</p>
+<p>"Then you better be careful with your handkerchief. When it's tainted with that, you won't make it out either." After checking that the drug is the correct one, the hat-wearing man's lips curl into a smirk, his old voice trembling slightly with excitement. "When are you planning to make your move?"</p>
+<p>"Why should we rush? Her powers aren't complete yet. Besides...”</p>
+<p>The man in a raincoat pauses, glancing outside the window. "Your Prince Xavier has been glued to her side watching over her, right? I've been curious for a while. Do people still practice feudalism where you're from? Isn't that regression in a sense?"</p>
+<p>"Hmph, Xavier can only guard her for so long. He's too busy dealing with his own issues," the hat-wearing man says, eagerly stepping forward. "Don't say I didn't warn you. It's not just Ever who wants her. Strike first to gain an advantage."</p>
+<p>"The one who strikes first is helping her cultivation." The man in a raincoat ignores him, pulling the hood over his head again. "If you can get rid of Xavier in the process, you'd be doing us a big favor. Isn't internal struggle your specialty? Kill Xavier and let Ever crown you as a prince. Haha—"</p>
+<p>Arrogant laughter is abruptly cut off as a thin beam of light cuts his neck. Blood spills out as a wrinkled hand grabs his throat and lifts him.</p>
+<p>"I can't kill Xavier, but I can do more than deal with a two-legged, carbon-based monkey like you."</p>
+<p>"You... Cough, cough... Kill me, then. But how long can you survive in this era?" The man in a raincoat faintly smiles, his trembling fingers pointing at the drug in the hat-wearing man's hand.</p>
+<p>Then, a scoff resounds near his ear. He's thrown into a corner.</p>
+<p>"Tell your masters that they better get their hands on her fast. Based on my experience, her existence isn't as simple as the observation records suggest." The man lowers his hat and turns to leave. "If you keep stalling, Ever will end up losing more than they bargained for once she develops."</p>
+<p>Footsteps fade into the distance. The door is slammed shut, leaving the man who's wearing a raincoat lying in the rubble.</p>
+<p>"Acting all high and mighty. Backtrackers my ass. Cough... By seniority, I'm your ancestor." He staggers to his feet, brushing off the dust on him.</p>
+<p>Fortunately, the substance mixed in the drug hasn't been discovered yet. According to Ever's plan, if they can control that Backtracker with that drug, then controlling Xavier shouldn't be far off. He will soon beat other "Raincoats" and join the real plan.</p>
+<p>Ever Group has always valued talent such as a useful lightblade. They can't let it break so easily. Since Unicorn's power isn't complete yet, it's perfectly fine to let her absorb some power--Xavier's, specifically.</p>
+<p>Letting his lightblade serve her and becoming the strongest weapon in her hands is something the Resonance Evol can easily achieve. Xavier will surely give her every bit of himself.</p>
+<p>With these thoughts, the man wearing a raincoat can't help but be moved, pulling out a handkerchief to wipe the corner of his eye. Love truly is a wonderful thing.</p>
+
+        `,
+    },
+    {
+        id: 71,
+        link: "wl",
+        serialNumber: "01",
+        subtitle: "A More Important Matter  ",
+        content: `
+<p>The office is quiet as night falls. Tara tiptoes past empty desks, her eyes drawn by the faint hum of electronics to a bunch of old monitors in the corner.</p>
+<p>"Nero," she whispers. "Everyone's at the team building retreat. Why don't you join them?" Tara taps the back of a monitor and leans against the window. She crosses her arms.</p>
+<p>After a second passes,the screen flickers as a single word is heard. "I..."</p>
+<p>"I told Andrew that if you showed up, you'd be buried in brand-new Wanderer data for the next month. And you'd even get to visit the Wanderer Sampling Center in person. He was willing to give his seal of approval."</p>
+<p>The response wavers this time. Tara can't help but feel more confident.</p>
+<p>There's a team-building event tonight, and Tara's on a mission. A bet, actually. The prize? Afternoon tea with the loser paying for a mountain of fees. Everyone's convinced Nero, the opposite of a social butterfly, won't show up. Everyone except Tara. She believes she has a knack for persuasion. And with Andrew on her side, her odds are looking good.</p>
+<p>"It's such a good opportunity to bond with people. You'd be crazy to miss it! Three, two.”</p>
+<p>“I…!”</p>
+<p>Half of Nero's face peeks out from behind the monitor. Terror and excitement hilariously battle each other in his eyes. Just as victory seems within reach, a notification erupts from his phone. Nero grabs it, his face draining of color as he reads it.</p>
+<p>"No, I'm not going."</p>
+<p></p>Tara's smile evaporates as Nero makes a beeline for the exit. What could possibly be more important than a chance to see a rare Wanderer closely? The answer arrives like a fly on her phone. A notification pops up from the group chat called "Spilling Tea." And it's a bombshell.</p>
+<p>Linkon citizens are holding another poll for their Top Ten Hunters. After seven days, will "that man" still reign supreme as the strongest hunter?</p>
+<p>The pieces fall into place for Tara. When it comes to Nero, there's only one thing that takes higher priority than a visit to Wanderers --</p>
+<p>His unwavering worship of Lumiere, the legendary hunter.</p>
+
+        `,
+    },
+    {
+        id: 72,
+        link: "wl",
+        serialNumber: "02",
+        subtitle: "Sleepless Friday Night",
+        content: `
+<p>7:28 P.M.Nero slams the door to his home, turns on his computer, and rubs his hands together in anticipation. There are 32 minutes left until the Lumiere voting begins. He could easily rig the whole thing with his tech skills, but that's not how he works. Nero believes in the awesome power of light itself.</p>
+<p>Suddenly, a series of swooshes pierce the air. Nero jumps. It's the unmistakable ringtone from his phone--the iconic sound effect of Hunter Lux's entrance straight from Super Hunters: Hunter Lux Special. It's time to become his alter ego: the leader of Lumiere's ultimate fansite.</p>
+<p>"Chief! It's a disaster! The site's been hacked!" </p>
+<p>“Quantum Bro, another rumor mill is starting!”</p>
+<p>"Lumiere Hater Alert!"</p>
+<p>"Chief, check the top comment!"</p>
+<p>…</p>
+<p>Nero opens the meticulously maintained Lightchasers website, his heart sinking as an unfamiliar post appears on the homepage. A deep breath buys him a moment to compose himself. He is a warrior preparing to face a great adversary: a troll.</p>
+<p>The post is a monstrosity. An indiscernible figure wearing a Lumiere outfit lurks in the dark corners of a grimy N109 Zone alleyway That unmistakable mask leaves no doubt about who it is: Lumiere. Bold text screams across the top of the page.</p>
+<p>Lumiere: The Deceiver Unmasked! His Seven Sins Revealed!</p>
+<p>*** ***</p>
+<p>The First Sin Is Deception: Tragic! Where's the ultimate beauty beneath the mask?</p>
+<p>Here's the security footage. A burst of light transforms into a hooded figure near a florist's. It's enough to send shivers down anyone's spine. After all, anyone with the Light Evol is incredibly rare, and this hooded guy has the same physique as Lumiere. It's uncanny. And when he lowered his hood, he had a face etched with wrinkles. It's a stark contrast to the youthful image of Lumiere that everyone imagined! Decades of heroism should leave him middle-aged at least, right? Still…</p>
+<p>*** ***</p>
+<p>A blurry video sits below the text, the wrinkles catching the street lights illumination in a way that makes Nero shudder.</p>
+<p>Voting is only a few minutes away. Nero springs into action. His fingers fly across the keyboard, bypassing the city's security system to access the raw footage from that location The Lightchaser flashes a confident smile. As the revered leader of the Lightchasers website, his data-wrangling skills are legendary. Even though he never shows up for their offline events.</p>
+<p>A calming message flashes across the site: "It's okay, everyone. I'm on the case."</p>
+<p>*** ***</p>
+<p>QuantumSocialite</p>
+<p>Actually, a frame-by-frame analysis confirms that geezer in the video isn't Lumiere. Here's why:</p>
+<p>1. It's clear he's built differently. Lumiere's got a superior physique.</p>
+<p>2. This guy walks like a sack of potatoes compared to Lumiere's graceful moves.</p>
+<p>3. And here's a deep dive into the Evol particle readings. The colors and amplitude aren't</p>
+<p>even close to Lumiere's signature. Check the pinned video for the full breakdown. Truth prevails</p>
+<p>*** ***</p>
+<p>4:00 A.M.Nero, sporting some serious eye bags, finally catches a glimpse of dawnlight seeping through the curtains. Exhaustion crashes over him like a welcoming wave after he spent the night defending his hero. A small smile graces his lips. Justice was served.</p>
+
+        `,
+    },
+    {
+        id: 73,
+        link: "wl",
+        serialNumber: "03",
+        subtitle: "The Introvert Bites Back",
+        content: `
+<p>*** ***</p>
+<p>The Second Sin Is Pride: Ridiculous! Does Lumiere even care?</p>
+<p>A new day, a new sin to expose!</p>
+<p>Let's hear what this old Lightchaser has to say! Here's a disgruntled voice, disguised by a voice changer, ranting about a night of dashed hopes. That year, an "insider tip" promised Lumiere's appearance at the grand opening of Azure Square. Thousands of fans shivered in the spring chill only to be left disappointed! This self-absorbed guy doesn't deserve their devotion!</p>
+<p>*** ***</p>
+<br>
+<p>A memory flickers to life. Nero, a scrawny ten-year-old back when the high-speed railway was a dream, remembers his dad planning a grueling seven- to eight-hour drive to Linkon City. According to a rumor, Lumiere would appear at Azure Square. But the Hunters Association dispelled this rumor, so he stayed at home.</p>
+<p>Something was off. Even the Association wouldn't have Lumiere's personal info. Where did this "insider tip" come from? Nero activates his Expert Mode and scours the web for traces of this old rumor. Finally, buried in an outdated private forum's back-end database, he stumbles upon a message.</p>
+<p>"We must construct the illusion of truth! Spread the rumor, and we can force Lumiere to show up!"</p>
+<p>*** ***</p>
+<p>QuantumSocialite</p>
+<p>Actually, the Hunters Association issued a notice three days before the opening. They said Lumiere wouldn't be attending. It's still on their website.</p>
+<p>Now, let's talk about real pride! These chat logs clearly show people were spreading rumors even after the official announcement They were basically trying to guilt-trip Lumiere's fans into forcing him to appear. Those people don't deserve to be Lightchasers!</p>
+<p>*** ***</p>
+<br>
+<p>Just as Nero wraps up his digital investigation. a blast from the past pops up. It's a message he sent to the Hunters Association in his younger days.</p>
+<p>"I really want to meet Lumiere!"</p>
+<p>And nestled among the few responses is a gem.</p>
+<p>"Instead of looking up to the light, why not become a light that illuminates the world for others?"</p>
+<p>The memory sparks a familiar warmth. It was the summer he decided to become a hunter himself.</p>
+<br>
+<br>
+<p>*** ***</p>
+<p>The Third Sin Is Sloth: Shocking! Lumiere actually sleeps with Wanderers!</p>
+<p>You thought Lumiere was different? Here he is, sharing a cozy nap with the enemy! Look closely. Doesn't that glow next to the Herte Knave look familiar? The photographer claims he stumbled upon this scene. Lumiere supposedly vanished the moment the picture was snapped, and this incriminating evidence was left behind! </p>
+<br>
+<p>QuantumSocialite</p>
+<p>Talking about Wanderers in front of me is like teaching a fish how to swim. As an Intelligentia Type Wanderer, Herte Knave can influence the human psyche. Being attacked by a Herte Knave means the victim can be trapped in an illusion. It's extremely dangerous! But if you look closely at the Herte Knave's hands, you'll see light cuffs. The crystalline blade has also lost its shine, indicating its Protocore Energy has been</p>
+<p>depleted! By the way, this photo was taken at</p>
+<p>2:37 A.M.While we were sleeping, Lumiere was out there battling Wanderers to protect us. He must've been exhausted from his efforts! He wanted to rest after his victory. But he was disturbed by you, an unethical photographer, and had to leave. It can get chilly at night. Please cover Lumiere with a soft blanket next time to keep him from catching a cold!</p>
+<p>*** ***</p>
+<br>
+<p>Nero hammers away at the keyboard. frustration fueling his fingers. But there's a flicker of hope. The photo of the Herte Knave is undeniably real, and the curled-up figure sparks a strange joy. He doesn't know why the flash of light that supposedly belongs to Lumiere feels familiar.</p>
+<p>It reminds him of a similar light he saw behind a monitor at the Hunters Association. It was but a fleeting moment when he was alone Where did that light come from…</p>
+<br>
+<p>The next three days drag on. The remaining accusations--structured and seemingly logical--crumble under scrutiny. Nero blasts through them with official data from the Hunters Association's public platform. There was no need for his expert skills this time The Fourth Sin Is Greed! This post claims Lumiere hoards Protocores and secretly auctions them off to the black market after "conveniently" finding them in battle. Lumiere's presence leads to unrecycled Protocores. But the Association's Protocore tracking platform exposes this lie. The cores in question were destroyed after the Wanderer encounters were confirmed.</p>
+<p>The Fifth Sin Is Envy! This claims Lumiere often hacks the hunting leaderboard on the Abyssal Chaos forum. By baiting challengers with a fake top spot, he eliminates them to steal their Protocores. But it turns out Lumiere helped apprehend the Tenebrae the Association had been chasing for years. The Sixth Sin Is Violence talks about the recent Tezcatlipoca subway sighting and the Azure Square attack. They were elaborate hoaxes set up by Lumiere's team to make him more popular. The other person fighting alongside Lumiere is the true mastermind. It's a money-grabbing scheme to push Lumiere into the Top Ten Hunters and allow him to rule the hunter world with an iron fist!</p>
+<br>
+<p>*** ***</p>
+<p>QuantumSocialite</p>
+<p>Six days, huh. I'd like to thank the troll for stirring the pot! While your last accusation was all over the place, it did give me a chance to showcase Lumiere's heroism to everyone. It was even greater proof that he's the ultimate role model!</p>
+<p>*** ***</p>
+<br>
+<p>But amidst the flurry of denials, Nero obtains a detail from some classified documents. Whether it's the destroyed Protocores, Tezcatlipoca's return, or the Azure Square attack, all these events involve one person.</p>
+<p>It's his constantly absent colleague from Alpha Team: Xavier.</p>
+<p>Nero starts piecing together a theory about this mysterious teammate... But compared to the bombshell of the seventh day, they're nothing.</p>
+
+        `,
+    },
+    {
+        id: 74,
+        link: "wl",
+        serialNumber: "04",
+        subtitle: "Has the Light Vanished? ",
+        content: `
+<p>Nero stares at the screen. The words "The Seventh Sin Is Death: The light has faded" burn themselves into his retinas. This isn't the dramatic takedown he expected. It's just a few Ieft-over documents. But their content hits him hard like venom coursing through his veins. He feels nauseated as he reads them</p>
+<p>“...Light Evol has been detected. Evolver's Evol limit cannot be defined."</p>
+<p>"Any attempts to probe its limit triggers a special neck suppressor, which prevents the Evolver from using their full power.”</p>
+<p>"The techies can't explain it. No physical form detected,no scars, and the energy suppression field acts like a Protofield anomaly."</p>
+<p>"After conducting a series of experiments in the lab, the techies finally unraveled the suppressor's mechanism. They boosted its threshold and got a basic understanding of some of its mechanisms."</p>
+<p>Below the text is a close-up of someone's throat, the Evol suppressor pulsating as a vicious, constrictive red ring of light. And then, there's a bit of silver in the corner. It's a tassel earring. Nero's breath hitches. He knows only one person who would wear that. </p>
+<p>The site explodes. Thousands tag QuantumSocialite and demand answers. Others mock the blind faith in "the light." </p>
+<p>Their words pierce Nero's insides. This information isn't in his meticulously curated Lumiere archives. Panic claws away at him. The empty Alpha Team office makes him feel colder. He bites his lip. His fists are clenched and he breaks out in a cold sweat. No matter how deep his breaths are, the Hunter's Watch on his wrist keeps sounding a health warning.</p>
+<br>
+<p>Xavier has been going to the office more than usual. He's meeting up with someone, maybe He scans the room as incessant beeping reaches his ears. Following the sound, he finds Nero, whose eyes are red and teary.</p>
+<p>"Did something happen?" Xavier asks, his gaze flitting between Nero and the screen.</p>
+<p>Nero slowly lifts his head and glances at the colleague he rarely sees. He wants to ignore the question. But the photo on his screen--the captured Lumiere radiating an unshakeable serenity--triggers a tsunami of emotions he's been desperately trying to hold back.</p>
+<p>"Did something happen? Why are you asking me that? Look! Look at this! Do you even recognize him?!"</p>
+<p>He practically throws the screen at Xavier who raises an eyebrow and leans back a little.</p>
+<p>"See the earring? That's Lumiere! Lumiere could be dead!"</p>
+<p>"...Oh." Xavier nods. "Maybe you should go home."</p>
+<p>"Go home?! We don't even know if he's alive. And you just want to go home?!"</p>
+<p>Replacing the beeping is a shrill alarm that pierces the tense silence. Nero's breathing quickens and hyperventilation threatens to take hold. Xavier quickly grabs a paper bag and offers it to him. He tries to offer a few words of comfort.</p>
+<p>"Calm down. He should be okay now."</p>
+<p>Nero glares at Xavier, his gaze capable of melting glaciers. He snatches the paper bag and buries his face in it. His shoulders slump, and a defeated sigh escapes his lips.</p>
+<p>"You... don't understand him at all."</p>
+
+        `,
+    },
+    {
+        id: 75,
+        link: "wl",
+        serialNumber: "05",
+        subtitle: "A Little Chat",
+        content: `
+<p>Two weeks of nail-biting anticipation finally culminate as the latest Top Ten Hunters list is released. Unsurprisingly, Lumiere reigns supreme once again, with even more votes than in previous years.</p>
+<p>But a new name throws a curveball. </p>
+<p>QuantumSocialite rockets into tenth place and sports the official Deepspace Hunter logo instead of a personal photo. Who is this mysterious hunter? Is "he" even real? The public doesn't seem to care and showers QuantumSocialite with votes anyway.</p>
+<br>
+<p>“…The bold colors and flashy design--this Intelligentia Type Wanderer perfectly captures the spirit of today's youth. Especially the Herte Knave with its crystalline blade, supermodel-like figure, and creepy, hollow face. It's mesmerizing! I hope your company seriously considers launching a line of Wanderer plushies. They'd be a hit. Trust me!" After sending his 42nd feedback email to Twinkle Toys, Nero puts his phone away and stands outside the Training Room. Xavier walks out, and Nero takes a deep breath. He stops him.</p>
+<p>"Hey, I overreacted last time. Sorry about that...! And Xavier, I think I figured out one of your secrets. It's okay if you want to deny it. But hear me out…”</p>
+<p>A flicker of confusion crosses Xavier's face. He waits for Nero to continue.</p>
+<p>"The Protocore incidents that involve Lumiere Tezcatlipoca, Azure Square-I know the truth.</p>
+<p>You're Lumiere…”</p>
+<p>A hint of surprise appears on Xavier's brow. Nero leans closer to him, a triumphant smirk on his face. "Lumiere's ultimate fan, right? You pulled some strings for that movie gig, didn't you? I get it. You're a real Lightchaser. But you don't need to confess. You can pretend this never happened if you want."</p>
+<p>Xavier's expression softens, and a small smile plays on his lips. "Thanks."</p>
+<p>"No worries. Lumiere scoop drops are coming your way as soon as I can get them!”</p>
+<br>
+<p>Nero watches Xavier walk away, a whirlwind of emotions swirling in his chest. What kind of connection does this guy have with Lumiere? Regardless, Lumiere's legacy will keep inspiring others, one group at a time. With renewed purpose, Nero opens his Lightchasers website and creates a new post.</p>
+<br>
+<p>*** ***</p>
+<p>Pinned by QuantumSocialite</p>
+<p>Lumiere is a beacon in the darkness, guiding us to forge ahead. And I believe, with unwavering certainty, that his light will continue to shine in the future. Because there's light everywhere.</p>
+<p>*** ***</p>
+
+        `,
+    },
 ]
