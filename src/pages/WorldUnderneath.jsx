@@ -14,7 +14,7 @@ function WorldUnderneath() {
                     to={`/world-underneath/${category.link}`}
                 >
                     <img src={category.image} alt="image"/>
-                    <div className={styles.title}>{category.title}</div>
+                    <div className={styles.title}>{category.id}. {category.title}</div>
                 </Link>
             ))}
         </nav>

@@ -1078,4 +1078,50 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 
         `,
     },
+    {
+        id: 81,
+        link: "mu",
+        serialNumber: "01",
+        subtitle: "Art Appreciation & Criticism",
+        content: `
+<p>The Gaia Research Center looms before Michael--a hulking fortress of lead-gray concrete, its thick walls pierced only by rows of tiny, square windows.</p>
+<p>Michael stands in front of the iris scanner and Steps out. He takes in a breath of fresh air. He's spent half a year cooped up in this biological fortress cultivating cells</p>
+<p>"All the data's been uploaded? And we got a master's student this year? Nice."</p>
+<p>Michael forces himself to smile before his colleagues, grabs his backpack, and sprints to the shuttle bus as its doors are about to close.</p>
+<br>
+<p>Sunlight filters through the canopy of lush trees on the university's campus. Dappled light paints the ground in emerald hues. He feels alive. Before graduation, with his thesis looming like a monster and job applications piling up, the only saving grace is Art Appreciation and Criticism. It's a highly sought-after elective course.</p>
+<p>As he walks into the classroom, phone in hand he sees the course evaluation system buzzing with comments.</p>
+<p>Comment: I'm wasting my time! I can't remember a word the professor said. I just zoned out while staring at his face!</p>
+<p>Comment: Here's what the professor says when he starts class: "Sorry, wrong classroom."</p>
+<p>A chuckle escapes Michael's lips.</p>
+<p>Comment: Well, in this course... Students from other faculties learn to appreciate art, while art students learn criticism. It's not about criticizing art; it's about criticizing you. Michael nods, his smile widening.</p>
+<p>Comment: This professor must be a fish monster with the way he nitpicks everything! My work was nothing according to him!</p>
+<p>Comment: I know right. He once told me that "if eating fish made you smarter, you'd need the whole ocean."</p>
+<p>Michael throws his head back and laughs.</p>
+<p>Comment: Prepare to be shocked by the most elegant critique on the worst art! Especially when that terrible art is mine!</p>
+<p>Comment: What's the best way to skip class? Bring a cat. But honestly, who would want to miss this?</p>
+<p>Michael grins. Every comment brings back his memories of Rafayel.</p>
+
+        `,
+    },
+    {
+        id: 81,
+        link: "mu",
+        serialNumber: "01",
+        subtitle: "Art Appreciation & Criticism",
+        content: `
+<p>Michael noticed Rafayel after seeing one of his paintings online. He couldn't grasp it on a professional level, but the colors vibrated with a beauty he couldn't deny.</p>
+<p>Arriving for the first class, the room was bursting with activity. Even the stairs were packed. Rafayel stood gracefully by the podium, his voice weaving a tapestry of art appreciation and criticism.</p>
+<p>Still catching his breath as he had to run from the lab, Michael scanned the room and finally found a spot. "Hey, can you tell me what the third point on the slide was?"</p>
+<p>Michael pulled out his laptop and nudged an engrossed classmate who appeared surprised.</p>
+<p>"Seriously, you're here for art?"</p>
+<p>Michael didn't know why the energy in the room was infectious. Laughter rippled through the crowd as Rafayel threw out another witty remark. The gloom Michael had brought from the lab instantly disappeared.</p>
+<p>After class, Michael walked up to Rafayel, his laptop screen open to display his half-finished notes. "Excuse me, Professor! I didn't really understand your last point about appreciation and interpretation. Can you explain for me?"</p>
+<p>"The key to appreciation lies in trusting your gut," Rafayel said. He helped Michael fill in the missing lecture content and glanced thoughtfully at Michael's notes. "Grab that seat next time. You'll be in the front row, center stage.”</p>
+<p>Surprised, Michael followed Rafayel's gaze. He was flattered to see the spot in front of the podium being offered.</p>
+<p>In his mind, artists were enigmatic and aloof. Meanwhile, scientists were the ones who valued clarity and communication. Earlier that day, a harsh scolding for questioning an overly aggressive experiment in the lab left Michael jaded. He never expected solace to come from a seemingly sharp-tongued artist. But Michael quickly discovered that Rafayel needed his notes as a reminder. He was prone to losing his train of thought mid-lecture Whenever Rafayel's eyes met his, Michael flipped around his laptop screen, his notes typed up in a large font for easy reading. It happens when your ideas get a little too tangled. Michael tried to explain for Rafayel, then recalled the first painting that captivated him.</p>
+<p>The unforgettable colors and abstract patterns echoed the playful doodles he used to create in Petri dishes.</p>
+
+        `,
+    },
 ]
