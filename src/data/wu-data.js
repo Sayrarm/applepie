@@ -1,7 +1,7 @@
 export const wuData = [
     {
     id: 11,
-    link: "lf",
+    link: "longly-flame",
     serialNumber: "01",
     subtitle: "The One Left",
     content: `
@@ -19,7 +19,7 @@ export const wuData = [
 },
     {
         id: 12,
-        link: "lf",
+        link: "longly-flame",
         serialNumber: "02",
         subtitle: "Review",
         content: `
@@ -48,7 +48,7 @@ export const wuData = [
     },
     {
         id: 13,
-        link: "lf",
+        link: "longly-flame",
         serialNumber: "03",
         subtitle: "Heart",
         content: `
@@ -96,7 +96,7 @@ export const wuData = [
     },
     {
         id: 14,
-        link: "lf",
+        link: "longly-flame",
         serialNumber: "04",
         subtitle: "Oath",
         content: `
@@ -119,7 +119,7 @@ export const wuData = [
         },
     {
         id: 15,
-        link: "lf",
+        link: "longly-flame",
         serialNumber: "05",
         subtitle: "Trek",
         content: `
@@ -145,7 +145,7 @@ export const wuData = [
     },
     {
         id: 21,
-        link: "st",
+        link: "snowy-stairs",
         serialNumber: "01",
         subtitle: "Die In Spring",
         content: `
@@ -174,7 +174,7 @@ export const wuData = [
     },
     {
         id: 22,
-        link: "st",
+        link: "snowy-stairs",
         serialNumber: "02",
         subtitle: "Yesterday Once More",
         content: `
@@ -199,7 +199,7 @@ export const wuData = [
     },
     {
         id: 23,
-        link: "st",
+        link: "snowy-stairs",
         serialNumber: "03",
         subtitle: "Undying Tree",
         content: `
@@ -233,7 +233,7 @@ export const wuData = [
     },
     {
         id: 24,
-        link: "st",
+        link: "snowy-stairs",
         serialNumber: "04",
         subtitle: "Gone",
         content: `
@@ -259,7 +259,7 @@ export const wuData = [
     },
     {
         id: 25,
-        link: "st",
+        link: "snowy-stairs",
         serialNumber: "05",
         subtitle: "Snow Depth",
         content: `
@@ -300,7 +300,7 @@ export const wuData = [
 },
     {
         id: 31,
-        link: "bad",
+        link: "bouquets-and-dirges",
         serialNumber: "01",
         subtitle: "Emerald Vines",
         content: `
@@ -343,7 +343,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
     },
     {
         id: 32,
-        link: "bad",
+        link: "bouquets-and-dirges",
         serialNumber: "02",
         subtitle: "Wedding",
         content: `
@@ -373,7 +373,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
     },
     {
         id: 33,
-        link: "bad",
+        link: "bouquets-and-dirges",
         serialNumber: "03",
         subtitle: "Gardenia",
         content: `
@@ -389,7 +389,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
     },
     {
         id: 34,
-        link: "bad",
+        link: "bouquets-and-dirges",
         serialNumber: "04",
         subtitle: "Lament",
         content: `
@@ -415,7 +415,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
     },
     {
         id: 35,
-        link: "bad",
+        link: "bouquets-and-dirges",
         serialNumber: "05",
         subtitle: "Bouquet",
         content: `
@@ -433,7 +433,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
     },
     {
         id: 36,
-        link: "bad",
+        link: "bouquets-and-dirges",
         serialNumber: "06",
         subtitle: "Gloriosa",
         content: `
@@ -453,7 +453,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
     },
     {
         id: 41,
-        link: "fts",
+        link: "from-the-stars",
         serialNumber: "01",
         subtitle: "Sweeties",
         content: `
@@ -476,7 +476,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
     },
     {
         id: 42,
-        link: "fts",
+        link: "from-the-stars",
         serialNumber: "02",
         subtitle: "Home",
         content: `
@@ -517,7 +517,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
     },
     {
         id: 43,
-        link: "fts",
+        link: "from-the-stars",
         serialNumber: "03",
         subtitle: "Waterfall Inside Forest",
         content: `
@@ -539,7 +539,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
     },
     {
         id: 44,
-        link: "fts",
+        link: "from-the-stars",
         serialNumber: "04",
         subtitle: "Catastrophe",
         content: `
@@ -564,7 +564,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
     },
     {
         id: 45,
-        link: "fts",
+        link: "from-the-stars",
         serialNumber: "05",
         subtitle: "Philo",
         content: `
@@ -599,7 +599,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
     },
     {
         id: 51,
-        link: "llt",
+        link: "long-lost-treasures",
         serialNumber: "01",
         subtitle: "Submerged Rock",
         content: `
@@ -618,7 +618,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
     },
     {
         id: 52,
-        link: "llt",
+        link: "long-lost-treasures",
         serialNumber: "02",
         subtitle: "Audio File No.1: Mo Art Studio",
         content: `
@@ -632,7 +632,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
     },
     {
         id: 53,
-        link: "llt",
+        link: "long-lost-treasures",
         serialNumber: "03",
         subtitle: "Audio File No.2: Disappearance",
         content: `
@@ -649,7 +649,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
     },
     {
         id: 54,
-        link: "llt",
+        link: "long-lost-treasures",
         serialNumber: "04",
         subtitle: "Audio File No.3: Blue Fish",
         content: `
@@ -695,7 +695,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
     },
     {
         id: 55,
-        link: "llt",
+        link: "long-lost-treasures",
         serialNumber: "05",
         subtitle: "Audio File No.4: Shadow Underneath",
         content: `
@@ -711,7 +711,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
     },
     {
         id: 56,
-        link: "llt",
+        link: "long-lost-treasures",
         serialNumber: "06",
         subtitle: "Audio File No.5: Conflict",
         content: `
@@ -771,7 +771,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
     },
     {
         id: 61,
-        link: "sid",
+        link: "sealed-in-dust",
         serialNumber: "01",
         subtitle: "Whispers",
         content: `
@@ -785,7 +785,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
     },
     {
         id: 62,
-        link: "sid",
+        link: "sealed-in-dust",
         serialNumber: "02",
         subtitle: "Unicorn",
         content: `
@@ -817,7 +817,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
     },
     {
         id: 63,
-        link: "sid",
+        link: "sealed-in-dust",
         serialNumber: "03",
         subtitle: "Observation Log",
         content: `
@@ -842,7 +842,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
     },
     {
         id: 64,
-        link: "sid",
+        link: "sealed-in-dust",
         serialNumber: "04",
         subtitle: "Post-Catastrophe Journal",
         content: `
@@ -864,7 +864,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
     },
     {
         id: 65,
-        link: "sid",
+        link: "sealed-in-dust",
         serialNumber: "05",
         subtitle: "Journal Entry 4",
         content: `
@@ -880,7 +880,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
     },
     {
         id: 66,
-        link: "sid",
+        link: "sealed-in-dust",
         serialNumber: "06",
         subtitle: "Dust",
         content: `
@@ -909,7 +909,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
     },
     {
         id: 71,
-        link: "wl",
+        link: "with-light",
         serialNumber: "01",
         subtitle: "A More Important Matter  ",
         content: `
@@ -932,7 +932,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
     },
     {
         id: 72,
-        link: "wl",
+        link: "with-light",
         serialNumber: "02",
         subtitle: "Sleepless Friday Night",
         content: `
@@ -967,7 +967,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
     },
     {
         id: 73,
-        link: "wl",
+        link: "with-light",
         serialNumber: "03",
         subtitle: "The Introvert Bites Back",
         content: `
@@ -1022,7 +1022,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
     },
     {
         id: 74,
-        link: "wl",
+        link: "with-light",
         serialNumber: "04",
         subtitle: "Has the Light Vanished? ",
         content: `
@@ -1052,7 +1052,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
     },
     {
         id: 75,
-        link: "wl",
+        link: "with-light",
         serialNumber: "05",
         subtitle: "A Little Chat",
         content: `
@@ -1080,7 +1080,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
     },
     {
         id: 81,
-        link: "mu",
+        link: "micro-universe",
         serialNumber: "01",
         subtitle: "Art Appreciation & Criticism",
         content: `
@@ -1105,10 +1105,10 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
         `,
     },
     {
-        id: 81,
-        link: "mu",
-        serialNumber: "01",
-        subtitle: "Art Appreciation & Criticism",
+        id: 82,
+        link: "micro-universe",
+        serialNumber: "02",
+        subtitle: "Lesson One",
         content: `
 <p>Michael noticed Rafayel after seeing one of his paintings online. He couldn't grasp it on a professional level, but the colors vibrated with a beauty he couldn't deny.</p>
 <p>Arriving for the first class, the room was bursting with activity. Even the stairs were packed. Rafayel stood gracefully by the podium, his voice weaving a tapestry of art appreciation and criticism.</p>
@@ -1121,6 +1121,1096 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>Surprised, Michael followed Rafayel's gaze. He was flattered to see the spot in front of the podium being offered.</p>
 <p>In his mind, artists were enigmatic and aloof. Meanwhile, scientists were the ones who valued clarity and communication. Earlier that day, a harsh scolding for questioning an overly aggressive experiment in the lab left Michael jaded. He never expected solace to come from a seemingly sharp-tongued artist. But Michael quickly discovered that Rafayel needed his notes as a reminder. He was prone to losing his train of thought mid-lecture Whenever Rafayel's eyes met his, Michael flipped around his laptop screen, his notes typed up in a large font for easy reading. It happens when your ideas get a little too tangled. Michael tried to explain for Rafayel, then recalled the first painting that captivated him.</p>
 <p>The unforgettable colors and abstract patterns echoed the playful doodles he used to create in Petri dishes.</p>
+
+        `,
+    },
+    {
+        id: 83,
+        link: "micro-universe",
+        serialNumber: "03",
+        subtitle: "True Colors",
+        content: `
+<p>Michael initially saw Rafayel's class as a welcome break from the lab. But the day Rafayel unveiled his own work was when the art world truly opened its doors for Michael. To give students from other faculties a deeper understanding of art appreciation and criticism, Rafayel presented one of his creations and let the art students critique it. As classmates showered the piece with praise Michael felt a growing disconnect with them. Comments like "liberating yet short, separate brushstrokes," "blurred edges that hide lines and let colors flow with vibrant energy" and "like a rapid sea current capturing the fleeting interplay of light and shadow" flew over his head. He didn't understand a single bit.</p>
+<p>"Now let's hear from students from other faculties."</p>
+<p>Rafayel announced, his gaze landing on Michael. Nervous and tense, he scrambled to look for notes from the first class.</p>
+<p>1. Appreciation and criticism: the union of sensibility and reason.</p>
+<p>2. Critique is a personal journey, shaped by individual aesthetic preferences. It's an active recreation by the viewer.</p>
+<p>3. All appreciation is interpretation. The key to appreciation lies in trusting your gut Taking a deep breath, Michael clenched his fists and stood up. His voice trembled slightly as he spoke.</p>
+<p>"Okay, I know I'm not an art major like the rest of you. My understanding of art is, well, also limited." With a deep breath, he began to explain his interpretation. "Honestly, it's a bit... messy to me."</p>
+<p>The room went silent. Michael nervously glances at Rafayel only to find the professor tilting his head in encouragement.</p>
+<p>"But the colors are strong. They work together... somehow. It's actually quite calming to look at, a-and peaceful..."</p>
+<p>He lowered his head, the sweat prickling his back.</p>
+<p>"Biology, right? Your artistic intuition is spot on, actually. This piece was just me venting my frustration at my agent. A few angry strokes to blow off steam, you know."</p>
+<p>Laughter rippled through the classroom and washed away the tension. Michael was surprised that Rafayel even remembered his major.</p>
+<p>It was a small moment. But it shattered his perception of art as this complicated, unattainable world. He saw a young boy once captivated by the vibrant colors of flowers and the diversity of animals. Now he was a young man trapped in a world of gray concrete buildings, peering under a microscope at a single color called "LCMECs.”</p>
+
+        `,
+    },
+    {
+        id: 84,
+        link: "micro-universe",
+        serialNumber: "04",
+        subtitle: "Absurdity & Negative Space",
+        content: `
+<p>Rafayel's classes weren't always sunshine and rainbows. During the midterm exam, Michael got his first taste of pressure.</p>
+<p>It was a practical exam. Art students brought in their creations for the class to appreciate and critique.</p>
+<p>When the exam was announced, Michael found it intriguing. But little did he know that the intrigue was reserved for non-art students. As the comments rolled in, it became clear: art students were getting critiqued while students from other faculties were learning to appreciate.</p>
+<p>Despite the low-key setup of the "exhibition, a nervous tension hung in the air. The usually free-spirited art students became surprisingly serious. When Rafayel approached them, their fists were clenched.</p>
+<p>Michael might not understand everything on display, but certain pieces drew him in. One painting had a hazy, dreamlike quality, and Rafayel commented on it.</p>
+<p>"The intended blank is good. You can keep that. Now, let's think about the rest." Another was bursting with color and exaggerated strokes. It caught Michael's eye Rafayel made a gentle remark. "Interesting You're pioneering a new genre. Let's call it Absurd Abstraction." The student walked away while biting their lip. Under his breath, Rafayel added, "Enough abstraction and way too much absurdity."</p>
+<p>This side of Rafayel threw Michael for a loop. He realized that within the realm of art, Rafayel can be surprisingly strict, bordering aloofness even.</p>
+<p>Stepping out of class with the creator of the Absurd Abstraction piece, Michael couldn't help but comment. "The professor can be tough during critiques. He doesn't even sugarcoat things. But I like your painting! The colors are cool, and it's kinda cute... It's a bit out there, though."</p>
+<p>The student gave Michael a long look before they broke into a fit of laughter. "No wonder Rafayel likes you."</p>
+<p>Michael's brow furrowed in confusion. The student explained, "Enough abstraction and too much absurdity.' It's similar to the 'out there' part you mentioned."</p>
+<p>"Wait, so he wasn't criticizing you?"</p>
+<p>"Art critique isn't always what you expect Rafayel didn't say it was bad. Whatever he acknowledges is a win for me!"</p>
+<p>"So, about the intended blank. Does keeping it mean erasing everything else?"</p>
+<p>"That's the trickiest part. Using it well means your composition and concept are on point Skills come with practice."</p>
+<p>Michael listened intently, and a bold idea for his final project blossomed in his mind.</p>
+
+        `,
+    },
+    {
+        id: 85,
+        link: "micro-universe",
+        serialNumber: "05",
+        subtitle: "Field Trip",
+        content: `
+<p>As the semester was near its end, Rafayel took his class on a field trip to a rural architectural gem: a place steeped in centuries of history. This small town boasted a treasure trove of well-preserved buildings, cloisters, courtyards, and halls tucked away within private homes.</p>
+<p>Michael always envisioned Rafayel as a product of Verona's elite art world. Yet here he was, effortlessly identifying the age of a resident's salted fish by scent and wielding a paper-cutting scissor to recreate building silhouettes. This down-to-earth side made Rafayel seem more approachable.</p>
+<p>With free time on his hands, Michael wandered along the towering white walls, their weathered surfaces adorned with moss.</p>
+<p>He couldn't help but be reminded of Rafayel's paintings. As he turned a corner, he spotted Rafayel sitting alone. He was on a stone bench in a secluded courtyard.</p>
+<p>Rafayel stared straight ahead. In the courtyard, vibrant peonies bloomed, and a majestic sophora tree's canopy rose over a tall wall. Clusters of sophora flowers swayed gently in the breeze, like wind chimes. Even Michael couldn't deny the picturesque scene He must be lost in artistic contemplation. I shouldn't disturb him.</p>
+<p>"Wait."</p>
+<p>Just as Michael prepared to leave, Rafayel called out to him. "You. Take that away!'</p>
+<p>Michael scanned the courtyard, searching for anything out of place. He saw Rafayel's furrowed brow.</p>
+<p>Rafayel pointed at the sophora tree. "T-that thing. Get rid of it, quickly!"</p>
+<p>Perched on the stone steps beside the tree was a chubby orange cat, easily nine kilograms, meticulously grooming itself. It occasionally cast a disdainful glance at the two men.</p>
+<p>Suspicious, Michael eyed the fat orange cat.</p>
+<p>But to his surprise, the cat rolled onto its back in an obvious display of trust. As Rafayel let out a dramatic sniffle, Michael scooped up the cat and turned to face him. Rafayel, however, averted his gaze and began walking out of the courtyard.</p>
+<p>With a curt nod, he acknowledged Michael.</p>
+<p>"I'm glad you showed up, Michael."</p>
+<p>For a long time, it was the only interaction that put Michael at ease. It somehow even lightened the nine-kilo cat in his arms. After all, back in the lab, he was just "that Linkon intern" or S460602, his staff number.</p>
+<br>
+<p>The long, tree-lined path ends as the memories of the field trip fade into the distance. Rafayel's final class is about to begin, and Michael can't shake the feeling that this might be his closest and last brush with art.</p>
+<p>Stepping into the familiar classroom, the scene mirrors the first class. Except now Michael has his own designated spot.</p>
+<p>As he walks past the podium, a group of students huddles together, clearly hoping for leniency on their final grades. From behind Rafayel's voice cuts through. He's light on his feet but firm in his tone. "Teachers guide, not cheat."</p>
+<p>The final class is a breeze. It's just an open discussion about the semester's journey. Conversations flow freely, weaving tales of discovery and a newfound appreciation for beauty. A few students even present revised versions of their midterm projects, each retaining their unique style. Yet something has subtly changed. Michael can't quite put his finger on it. But he knows that the abstract and the absurd are valid. And the intended blank can spark imagination that transcends others.</p>
+<br>
+<p>Michael also brings his work, but he holds back until more students leave. He then approaches Rafayel and unfolds his meticulously prepared artwork.</p>
+<p>It's an image of LCMECs, cells from the lab where he spends most of his days and nights.</p>
+<p>"LCMECs are a type of immortalized cells. They're not uncommon in the microscopic world. But they remind me of your paintings!" The splendid microscopic world, teeming with life under high magnification, has become Michael's sanctuary in the sterile, gray lab. He steps forward, energized, but his next words are stuck in his throat.</p>
+<p>Rafayel wasn't listening to him. His gaze is fixed, almost glued, to the name of that cell. Confused by the professor's intense focus, Michael racks his brain to remember the full name of the cells. LCMECs... Cardiac Microvascular Endothelial Cells. As for the first word, it was Lem-something.</p>
+
+        `,
+    },
+    {
+        id: 86,
+        link: "micro-universe",
+        serialNumber: "06",
+        subtitle: "LCMECs",
+        content: `
+<p>"Michael! Are you already on your way to Ever HQ? Three months in, huh? That's impressive!" The elevator doors open and reveal a familiar face. He's three months out of grad school and summer's golden grip loosens. An awkward silence hangs in the air until, like clockwork, someone pipes up.</p>
+<p>Michael flashes a smile. "Hey. You doing good?"</p>
+<p>"Ha, I can't complain! A new intern discovered a pancreatic enzyme that's almost the same color as my growth medium and swapped it. How perfect is that? The cells haven't hit the Hayflick limit yet, but I'm already feeling fried!" Realizing his voice has gotten a bit loud, he coughs and quickly switches to a hushed tone. "Listen, HQ's a jungle. Keep your head on a swivel, and don't get lost in your work like you always do."</p>
+<p>"Thanks, but..." Michael hesitates and then leans in to question his senior colleague. "Just out of curiosity, where do LCMECs come from?"</p>
+<p>"Be careful with that curiosity of yours. HQ keeps that under wraps. Besides, what good would come out of having such knowledge?" Michael isn't entirely sure himself. Based on that first word, Lem-something, a wild guess forms in his mind. But that civilization is long gone. How could life still exist?</p>
+<br>
+<p>Exiting the building, his colleague waves goodbye and sprints for the shuttle bus. Michael is left alone under the vast, gray structure. He glances back, and the setting sun is partially obscured.</p>
+<p>This mirrors the scene from that final art appreciation class. At that time, in the empty classroom, Rafayel held Michael's LCMECs image. He walked to the window and slowly lifted the artwork.</p>
+<p>The setting sun, just like today's, cast a soft glow through the paper. A gust of wind tapped the window, and the microscopic universe on the paper seemingly came alive. Tiny colored blocks transformed into miniature colorful fish, their tails flickering as they danced from Rafayel's fingertips into the dusty air. </p>
+<p>“…Professor?" Michael approached him cautiously, unsure if he should interrupt.</p>
+<p>“Question. Do you typically extract cells from living subjects? Or are they…”</p>
+<p>Michael was surprised by Rafayel's unexpected inquiry. "It depends, honestly. I'm not privy to that information. I'll have to check with the lab. Next time I'm there, I'll put in a request.”</p>
+<p>"Ah... Don't worry, I was just curious. But tell me, what do you think of these cells?"</p>
+<p>"They're... a perfect blend of biology and art! They make me see life as an art form. Honestly, Professor, the lab work can be boring sometimes. I almost lost my passion for research. But these cells are incredible. Not only are they beautiful, but they seem to hold secrets about life itself. Maybe... the microscopic world is just as rich and colorful as the one you paint. That makes me want to keep exploring it."</p>
+<p>A genuine smile graced Rafayel's lips as he lowered his arm and turned to face Michael.</p>
+<p>His posture remained as poised and elegant as when they first met.</p>
+<p>"Yeah, biology is a fascinating subject. It reveals the underlying colors of all life on Earth. It's a masterpiece painted by nature itself."</p>
+<p>He handed the cell image back to Michael. Then, he turned and walked away from the window.</p>
+<p>"Michael, if you achieve great things in biology, never forget that."</p>
+
+        `,
+    },
+    {
+        id: 91,
+        link: "no-morning",
+        serialNumber: "01",
+        subtitle: "Crush",
+        content: `
+<p>"Does my baby face make me look a bit green?"</p>
+<p>Yvonne pushes a patient to radiology when she spots Greyson muttering to himself, his image reflected in the elevator's polished steel.</p>
+<p>"Thank goodness Dr. Zayne's out. Otherwise, you'd be in for a lecture."</p>
+<p>"Dr. Zayne's been busy catching up on work since his Mt. Eternal trip. No time to micromanage." Greyson eyes the patient in the wheelchair. His leg is wrapped in a specialized cast for Wanderer infections. The guy is glued to his phone and doesn't appear to be an average patient.</p>
+<p>"Hunter?"</p>
+<p>The man lifts his wrist and reveals an information band. Greyson scans it with the hospital's internal system app. He gets a result: Arctic Hunter. The patient had received a traumatic injury during battle and was briefly exposed to a high volume of Metaflux.</p>
+<p>After going through post-treatment at the Arctic Trauma Center, a panel of experts flagged him for a procedure at Linkon's Akso Hospital.</p>
+<p>The hunter in the wheelchair grumbles impatiently. "What's with this kidnapping routine? When am I getting out of here? It's just a minor injury. Besides, the Arctic is a mess, we're already short-staffed as it is. You dragged me all the way here...”</p>
+<p>"It's standard protocol, and it's for your own good." Yvonne replies with a shrug.</p>
+<p>Greyson nods. Based on their limited interactions with hunters, mostly through Dr Zayne's special cases, they understood that these individuals prioritize missions over everything else. This is especially true for Alpha Team, for whom a recommendation for further examination is but a suggestion.</p>
+<p>Greyson remembers something and decides to change the subject. "By the way, I'm curious. What do hunters do on their days off?"</p>
+<p>The Arctic Hunter continues scrolling through his phone, determined to shut Greyson down with one quick retort. "Get wheeled around for checkups."</p>
+<p>But Greyson isn't giving up that easily. </p>
+<p>"Then, do hunters have any hobbies they share?"</p>
+<p>The hunter finally looks up, scrutinizing Greyson's earnest expression with a hint of confusion. Then, as if a lightbulb goes off in Yvonne's head, she exclaims, "Greyson! Don't tell me you got a crush on..."</p>
+<p>Greyson scratches his head sheepishly and coughs as if his throat has become very itchy.</p>
+<p>Ding! The elevator bell rings. Yvonne, understanding the situation, pushes the hunter out of the elevator. Greyson quickly follows.</p>
+<p>"What are you following me for?"</p>
+<p>"I haven't gotten my answer from the hunter yet!"</p>
+<p>"The medical examination briefing for the Hunters Association is about to start."</p>
+<p>"Being a couple of minutes late won't hurt."</p>
+<p>"Dr. Zayne's already there."</p>
+<p>"What?! Why didn't you tell me sooner... Why would Dr. Zayne be at this meeting... Greyson quickly turns and rushes to the elevator. His body is already inside, but his eyes are fixed on the Arctic Hunter, desperate for an answer. He doesn't even care if he's blocking the elevator door in a way that almost screams "Don't try this stunt at home, kids."</p>
+<p>“...Punching Wanderers!"</p>
+<p>Greyson's heart sinks. He purses his lips in disappointment and lets out a sigh as the elevator door closes.</p>
+
+        `,
+    },
+    {
+        id: 92,
+        link: "no-morning",
+        serialNumber: "02",
+        subtitle: "Sustenance",
+        content: `
+<p>By the time Greyson reaches the conference room, Dr. Zayne is reviewing a case file with Dr. Wu from the Division of Evol and Protocore Medical Technology. Just as Greyson is about to greet him, Dr. Zayne stands up and leaves the room. A trail of icy air is left behind.
+<p>"Stop by my office after the meeting." Greyson nods and finds a seat. It's just a regular briefing about the annual event where the Hunters Association's Health Center partners with Akso Hospital to conduct comprehensive medical examinations on hunters. It ensures the effects of Metaflux and Protocore Energy on their bodies remain within manageable limits. Greyson's mind, however, drifts elsewhere. It replays a scene where an injured person's heartbeat is brought back to life in his hands, and the girl smiles at him against the backlight. The Wanderers behind her burst like fireworks, their light echoing the blossoming warmth in his heart.</p>
+<p>His phone buzzes, pulling him back to reality Yvonne had sent him a message.</p>
+<p>"Hey, regarding your hunter girl, why not take a cue from Dr. Zayne? He's so close with Miss Hunter! You know that saying her .name turns him into a softie!"</p>
+<p>Greyson shivers at the thought of Dr. Zayne's reaction if he asked something like "Dr. Zayne how did you pursue Miss Hunter?"</p>
+<p>"It's not that I don't want to. It's that I don't dare!" Greyson thought.</p>
+<p>After the meeting, Greyson walks to Dr. Zayne's office at a slower pace this time. To ask or not to ask--that is the question.</p>
+<p>"Dr. Zayne, I'm here."</p>
+<p>As he enters the office, a refreshing, cool fragrance reaches him. Dr. Zayne, who is currently reviewing a file, has a slight frown on his face. It's a common sight when faced with a patient's challenging medical condition. "There's a Type-A Cryozina implant surgery scheduled for the day after tomorrow. Get ready."</p>
+<p>Greyson takes the file, which belongs to the Arctic Hunter he met earlier. The Metaflux reaction in the patient's leg wound exceeds the reference limit and cannot be completely removed. Medical imaging results show that the residual Metaflux has entered the bloodstream. A Cryozina must be implanted as soon as possible to prevent the Metaflux from affecting the patient's heart even more.</p>
+<p>"It could lead to a powerful surge, and he was still yelling about being discharged when I saw him this afternoon...'</p>
+<p>"We'll be performing two surgeries back-to-back, so it will take a while. You can skip the Hunters Association medical examination tomorrow and get some rest."</p>
+<p>Greyson nods, then shakes his head. "I'll be fine! The Association medical examination is always a breeze, just like a day off."</p>
+<p>Dr. Zayne doesn't stop writing. His gaze from behind his glasses meets Greyson's for a moment. It's followed by a soft "hmph" that sounds suspiciously meaningful to Greyson. Greyson responds with an awkward "hehe." Staring at the desk, he tries to change the subject.</p>
+<p>"What a fascinating flower! Those buds look just like tiny snowballs. Is it for Miss Hunter?" Greyson curls his finger and reaches for a small potted plant with white buds nestled in snow. It's on Zayne's desk. "It's a little droopy-"</p>
+<p>"Don't touch it."</p>
+<p>Zayne's pen smacks Greyson's knuckles.</p>
+<p>Startled, he pulls his hand back. Realizing his attempt at a conversation has failed, Greyson shifts to another topic.</p>
+<p>"...Dr. Zayne, you're more than inspirational You're not only my mentor in my specialty, but also the guiding light for my life's journey. A teacher for a day and for—”</p>
+<p>"Do you have a crush now?"</p>
+<p>Zayne, with a stack of documents, heads to the filing cabinet. Greyson follows closely behind.</p>
+<p>"Not really. It's just a budding feeling— “</p>
+<p>"Hunter?"</p>
+<p>"Oh, Dr. Zayne, you're always so perceptive. I—”</p>
+<p>"You want to get to know her, but don't know how to break the ice?"</p>
+<p>"Exactly! I don't want to bother her during work. And I also don't know how to talk to her outside of work...Dr. Zayne, how did you and Miss Hunter become friends?"</p>
+<p>"Our situation is unique. It's not a fair comparison."</p>
+<p>"Of course. I'm not asking for a roadmap. I'm just... curious about the lives of hunters' loved ones."</p>
+<p>Zayne settles back into his chair and clasps his hands together. He lets out a soft sigh. It's similar to the expression he wore on Greyson's first day when he couldn't answer a question during his rounds.</p>
+<p>"Can you tell jokes?"</p>
+<p>"What?" Greyson is completely baffled. Jokes?</p>
+<p>How could Dr. Zayne's dry humor, the kind that would make a cricket chirp, possibly get him a girlfriend?</p>
+<p>Looking at Zayne's eyes, Greyson tries to discern whether this is genuine advice. But all he sees is a cold glint reflected in Zayne's glasses.</p>
+<p>...Well, maybe hunters have a unique sense of humor.</p>
+<p>"I... I'll give it a shot..."</p>
+<p>Greyson lingers in the office. He turns back as if on the verge of asking a question. Then, catching a glimpse of snowflakes swirling in Zayne's palm, he watches them land in the flowerpot. The previously wilted stem seems to come alive, and the bud raises itself as if being gently awakened. His fingertip traces across the sepals, caressing them like a beloved's face. It's a rare sight, Zayne, ever-stoic and "resting-glacier-face" to his patients, has a hint of a smile gracing his lips as he looks at the flower.</p>
+<p>Guessing question time is over, Greyson turns back around and exhales.</p>
+<p>There has to be more to it than just telling jokes if Dr. Zayne's able to charm Miss Hunter.</p>
+
+        `,
+    },
+    {
+        id: 93,
+        link: "no-morning",
+        serialNumber: "03",
+        subtitle: "In The Shadows",
+        content: `
+<p>The next morning, Greyson hums cheerfully as he enters the cafeteria with his breakfast tray. Yvonne, in the middle of biting a piece of bread, looks up in surprise. Today, Greyson is wearing a sharp, navy-blue three-piece suit with a tie. His white lab coat is nowhere to be found.</p>
+<p>"Ah, men." Swallowing her food, Yvonne speaks as if she isn't new to the games that guys play.</p>
+<p>"It's better to be prepared and not panic. That's key, right? What if she notices me during the medical examination today?" Greyson digs into his yogurt.</p>
+<p>But a sudden, almost jarring alarm cuts through the chatter.</p>
+<p>"Metaflux leak in the northern suburbs. Exposure Level 5!"</p>
+<p>Greyson shoves a piece of bread in his pocket and sprints for the rooftop helipad. A rescue helicopter lifts off, and Zayne's figure disappears behind the fuselage's door Zayne is always one step ahead in emergencies. Greyson leaps into another helicopter that was prepared. Inside the cramped fuselage, he and another doctor scramble to change into protective gear, their eyes occasionally glancing at the northern suburbs.</p>
+<p>The rescue zone falls under her jurisdiction Will their paths cross? A part of him hopes she's not there. But another part of him can't help but pray that if she is hurt, he'll be the one to treat her.</p>
+<p>The rescue operation lasts for two grueling days and nights. On the third day, just before dawn, Greyson slumps against a stack of supplies in the temporary tent. He's utterly drained.</p>
+<p>"Did you evacuate everyone from Zone II?" a voice asks from behind. Greyson is too exhausted to turn.</p>
+<p>"Dr. Zayne. You're here too."</p>
+<p>Fatigue crashes over Greyson like a wave. Finally, he reaches into his pocket and pulls out his phone.</p>
+<p>"Dr. Zayne, she remembered me." He shows Zayne the phone's screen. There's a chaotic post-battle street picture with the following caption: "The moment my heart started beating again was so cool!"</p>
+<p>'See, this post is about me! And earlier when I was unloading supplies, she volunteered to help. She said I should take care of my hands because I'm a surgeon."</p>
+<p>After a second of silence, Zayne responds.</p>
+<p>"...And you let her take the box?"</p>
+<p>"Why not?"</p>
+<p>In the unseen shadows, Zayne cracks a faint smile. The hint of weariness beneath it escapes Greyson, who's drunk on his romance.</p>
+<p>"Letting the girl you like do all the heavy lifting. You're quite the charmer."</p>
+<p>"Hey, she's stronger than me! I struggle with one box, and she carries two with ease." Recalling his earlier helicopter struggle, Greyson adds, "Speaking of which, Miss Hunter's job is so dangerous. Shouldn't you try to convince her to be less reckless?"</p>
+<p>The response comes in faint breaths in the cold air. It seems Zayne has fallen asleep.</p>
+<p>There's another question burning in Greyson's mind. If something happened to Miss Hunter, what would Dr. Zayne do? But then he remembers the faint scars crisscrossing on Zayne's hands.</p>
+<p>With his superior medical skills, powerful Evol and unwavering resolve, Greyson knows Zayne wouldn't let anyone get hurt, especially when it's someone he cares about. Even today, during a rescue break, Zayne had once again saved people from Wanderers.</p>
+<p>Only Zayne can truly stand beside Miss Hunter in battle.</p>
+<p>Greyson glances down at his own hands.</p>
+<p>They're ordinary surgeon's hands, and they don't have a strong Evol at their disposal. What could he do?</p>
+<p>The tent becomes colder. Greyson closes his eyes and surrenders to the encroaching darkness.</p>
+
+        `,
+    },
+    {
+        id: 94,
+        link: "no-morning",
+        serialNumber: "04",
+        subtitle: "Snow Velvet",
+        content: `
+<p>The emergency rescue operation throws the Arctic Hunter's surgeries back two days. Thankfully, everything went smoothly. The next day, Greyson follows Zayne. They're going to do a check-up on the hunter. Restless after complaining about overkill treatment. the patient is now stuck in bed. He's bored out of his mind as daily status updates for Mt Eternal's Protofield appear on the projector. As Zayne and Greyson enter the room, he throws out a casual question. "Can I still be a hunter?"</p>
+<p>It catches Greyson off guard. He throws a worried glance at the sagging blanket that covers the hunter's leg. He looks to Zayne for an answer.</p>
+<p>"Yes," Zayne replies. "As long as you promise to avoid getting injured again."</p>
+<p>"Haha, I'll try my best!"</p>
+<p>"Trying isn't good enough! It's good you have Dr. Zayne here. Otherwise, what you might've lost wouldn't be—"</p>
+<p>Zayne throws a look at Greyson. Recovering his composure, Greyson uses his professional tone. "Movement can increase blood flow. If you're planning to be out on the field, you should schedule more frequent check-ups. Also, the Cryozina needs to be replaced regularly."</p>
+<p>"Ugh, fine. When can I get out of here?" No longer sad, the hunter's impatience returns to what it was before his surgery Greyson is upset.</p>
+<p>“Physical therapy starts in two weeks, and the stitches come out in four weeks. As for a bionic exoskeleton that will be six to eight weeks. It depends on how your wound heals." </p>
+<p>Zayne remains calm as he lays out the recovery timeline. The eight-week wait makes the hunter frown, but Zayne cuts him off before he can protest. "There are two ways out of here: walking or rolling. You'll experience the walking part soon. But if you want to keep hunting, follow the doctor's orders. Otherwise, you might be rolling out of the hospital."</p>
+<p>A chill runs through the room, and frost seemingly appears on the window. The hunter gulps and nods, clearly getting the message.</p>
+<br>
+<p>A week later, Greyson enters the room for the Arctic Hunter's final check-up. The good news is that the residual Metaflux remained contained for two weeks. The Cryozina is working perfectly, so the surgery was a success.</p>
+<p>"Congratulations. Off to physical therapy, you go. And then you'll be back on the battlefield in no time!"</p>
+<p>He supports the hunter by offering an elbow They stroll through the sun-drenched hospital garden.</p>
+<p>"So, Dr. Greyson. Did anything happen with that hunter girl?"</p>
+<p>"She asked me out. We'll be having dinner together on my next day off." He smiles, but a flicker of concern crosses his face as the hunter winces with every step.</p>
+<p>"Are you worrying about her again?"</p>
+<p>"Yeah...I can't help it. Your guys' job is dangerous!"</p>
+<p>As they step into the elevator, a memory surfaces: their first encounter a month ago. It was right here that the hunter's voice boomed in protest against a" kidnapping." But now…</p>
+<p>"What's there to be scared of? We got you guys watching our backs!"</p>
+<p>The hunter remains nonchalant about potential risks. Greyson is infuriated again.</p>
+<p>"Hey, we're just regular, hardworking doctors! The way you charge into danger and face all those risks almost scares us to death!"</p>
+<br>
+<p>Passing by Zayne's office, the hunter stops in his tracks.</p>
+<p>"Is the glacier-face doc in? I owe him a thank you."</p>
+<p>"He usually takes a break around this time. Greyson says, but the determined hunter throws open the door before he can finish. The office thermostat must be on the fritz… Greyson can't help but shiver. A booming voice interrupts the silence as the Arctic Hunter utters a "whoa" in front of Zayne's desk.</p>
+<p>"Isn't this snow velvet?"</p>
+<p>"Don't touch it!" Greyson rushes forward, pushing away the hunter's finger before it brushes against the delicate flower. "You know what it is?"</p>
+<p>"Of course I do. It's rare stuff even in the Arctic. It only grows on the northern cliffs of Mt. Eternal. Not just anyone can go there, but that's where you can find the cleanest snow. Something's been happening in the mountains lately, though... The wildlife is practically extinct. It makes me wonder if Glacier-face got some kind of hobby for saving pretty things."</p>
+
+        `,
+    },
+    {
+        id: 95,
+        link: "no-morning",
+        serialNumber: "05",
+        subtitle: "A Long Night",
+        content: `
+<p>After the Arctic Hunter was discharged, this year's hunter data from the medical examination has been finally analyzed.</p>
+<p>Zayne assigns Greyson the task of writing the report for the hunters' heart health. Buried in the data, Greyson discovers a worrying trend. A large number of hunters are showing signs of Type-Y Protocore Syndrome, more than the usual amount seen in previous years.</p>
+<p>This syndrome involves Metaflux that hides in various organs and systems, with a long latency period and slow progression. By the time it's detected, it's often too late. There is currently no known cure.</p>
+<p>He flags this potential risk to the Hunters Association. Andrew from Data Analysis takes it all in stride. He politely replies that they'll tweak their algorithms based on these hunters' past missions to minimize the risks. Greyson can't help but think Andrew is a little too composed sometimes. Especially after hearing him say, "This is all we can do for now."</p>
+<p>It hits a little too close to home.</p>
+<p>The night shift at the inpatient building is like a giant circulatory system. Blood and breath move silently through the halls. Souls slumber in the small, white cubes lining the corridors.</p>
+<p>Greyson feels like he's gone adrift, a lone white blood cell wandering a weary body. And the only beacon in the night? Zayne's office, of course.</p>
+<p>That ever-vigilant lighthouse keeper guards the shores of life. Does even he feel the weight, the helplessness?</p>
+<p>Lost in thought, Greyson pushes open the office door. Light spills from the computer screen, his gaze drawn to the snow velvet on the desk as he approaches. This flower...</p>
+<p>Bending down, Greyson sees the snowball-like buds that Zayne saved. The plant had started to bloom. But now it's drooping, the stem twisted and shrinking against the white porcelain.</p>
+<p>A single wilted petal falls and lands on the black ice crystals nestled in the pot.</p>
+<p>He remembers pristine white snow used to be there.</p>
+<p>"Dr. Zayne...?!"</p>
+<p>The cold computer light casts an unsettling glow over the scene. It inexplicably reminds him of the frigid tent they were in a few weeks back. It was morning, yet the light seemed to have been filtered through a thick black veil. Drowsy and disoriented, he vaguely remembers a faint voice. It was a conversation with Dr. Zayne that lingers just out of reach.</p>
+<p>The sterile office gloom makes him come to his senses, and Greyson searches for Zayne. He takes in the scattered case files on the desk and the chair that's facing the door. It's a scene that screams of a hurried exit.</p>
+<p>"An emergency surgery?"</p>
+<p>Before panicked thoughts overwhelm Greyson's mind, the office door opens with a click. Zayne enters, rubbing his knuckles against his brow.</p>
+<p>"I... I was passing by and decided to walk in. Dr. Zayne, your flower…”</p>
+<p>A harsh chill seems to emanate from Zayne as he approaches the desk. His hand reaches out to the wilted snow velvet. He hesitates, his hand remaining suspended in midair as if held back by an invisible force.</p>
+<p>"...It seems it's beyond saving."</p>
+<p>Zayne gathers the case files and talks with Greyson about the check-ups tonight. The conversation drifts to the hunter Greyson's been crushing on.</p>
+<p>"She said if the worst-case scenario happens, and someone needs to perform CPR... Even if it means breaking her ribs, and her heart stops for six minutes and they don't give up… She wants it to be me."</p>
+<p>Zayne offers a knowing smile. They both understand the unspoken question of what lies beyond those six minutes.</p>
+<p>"Dr. Zayne, when we declare someone gone… In the eyes of their family, are we guardian angels or the Grim Reaper?"</p>
+<p>It's an unanswered question that hangs in the air. Zayne can't help but glance at the desk. A few, fragile petals of the snow velvet fall, only with its tiny heart still desperately clinging to life amidst the black ice crystals.</p>
+
+        `,
+    },
+    {
+        id: 101,
+        link: "mischief",
+        serialNumber: "01",
+        subtitle: "Rule No. 1",
+        content: `
+<p>2046, Early Spring</p>
+<p>"Good evening, listeners. We're talking to you live on Combat Zone FM. I'm your host...”</p>
+<p>The armored truck veers onto a deserted road under the moonlight. The signal fades in and out, and the vehicle's radio crackles. "Let's talk about ambushes tonight."</p>
+<p>Linton, the driver, steps on the gas. The moving truck gradually picks up speed, its cabin swaying and creaking as if on its last legs. He glances at the door leading to the back of the vehicle. The curtain is drawn and obscures the interior. It's quiet, and nothing seems amiss. At least, that's what he tells himself. His job is just to drive. The "cargo" back there is under the direct supervision of Ever's researchers. It's none of his business.</p>
+<p>He's been doing this for years without incident.</p>
+<p>Tonight, however, is different. Maybe it's the pitch-black surroundings and the quiet road. Or perhaps it's the violent swaying of the truck and its bone-chilling creaks. Whatever the reason, Linton can't shake off this uneasy feeling. To drown it, he reaches out and turns up the radio.</p>
+<p>"Here's the first rule for a successful ambush: Conceal your strengths."</p>
+<p>Just as the radio host finishes speaking, a young, amused voice resounds beside Linton's ear. "Well, he's not wrong.” </p>
+<p>Linton's heart nearly stops.</p>
+<p>He slams on the brakes. The inertia throws them forward, and the person beside him playfully lunges at Linton. A cold, sharp metal blade is pressed against his collar and thus his neck.</p>
+<p>"You want to live? I'll give you five minutes. Run."</p>
+<p>The young man's voice is chillingly playful, reminiscent of a child taunting caged animals at a zoo. It'd be infuriating if Linton weren't paralyzed with fear. He glances back to see the door to the cargo area is wide open. A nauseating stench of blood wafts out. Inside, a few motionless researchers are drenched in crimson. They're clearly beyond help. In the center of the compartment, two sets of restraints that should have secured a person have been cut open. The escapee now crouches beside him, his blade brandished.</p>
+<p>Only one thought races through Linton's mind: "Run!"</p>
+<p>He stumbles into an alley. It's so dark that not even the moon casts its light there. He crouches behind a large dumpster, his heart pounding so violently that he swears he can hear his nerves screaming.</p>
+<p>"Time's up! I hope you found a good spot."</p>
+<p>Footsteps echo at the alley's entrance and are accompanied by the young man's cheerful laughter. Linton swallows, hugging his knees and willing himself to become inconspicuous like a discarded piece of trash. Through a small gap, he peeks out.</p>
+<p>He sees a slender figure, tall for his age, moving with unnervingly carefree steps as he searches and talks. If it weren't for the shining blade in his hand and the blood staining his clothes, Linton could almost believe this was just some harm-free game of hide-and-seek. </p>
+<p>Tap. Tap. Tap.</p>
+<p>The sound of footsteps on pavement fades into the distance. Linton allows himself to breathe and shakily stands up. Something moves in his periphery, but when he turns to look, there's nothing but darkness. </p>
+<p>"It's over..." Linton reassures himself.</p>
+<p>"Not quite." The voice chuckles.</p>
+<p>The laugh is like a cold hand tapping Linton's shoulder. His legs give way, and he tumbles as he turns. Terrified, he stares at the figure emerging from the shadows.</p>
+<p>"You... But I heard you..."</p>
+<p>"Walk away?" The young man grins, seemingly in high spirits. "Your ears must not be working. I never left.</p>
+<p>"Impossible..."</p>
+<p>Terror floods Linton's mind. Without thinking, he scrambles to his feet and dashes to the unobstructed exit.</p>
+<p>"Not so fast. You didn't think it'd be that easy, did you?"</p>
+<p>Another figure suddenly appears and blocks Linton's last escape route. Linton finally understands what's happening. Two individuals with identical faces have him cornered from both sides. They wear the same sly grins, and they fiddle with their blades in perfect unison.</p>
+<p>"Allow me to do the introductions. I'm Luke, and the one behind you is my shadow, Kieran."</p>
+<p>"We were going to let you off the hook, but someone snitched on us to the guards when we tried to escape last time. That was you, right?"</p>
+<p>Linton breaks into a cold sweat. "N-no, it Wasn't! I just..."</p>
+<p>"Okay, okay, save your excuses," Kieran, holding a blade, rests his cold hand on Linton's shoulder again, which sends another shiver down his spine. "People will say anything when they're begging for their lives. One of the researchers told us how sorry they felt for us. You think we believe that? Luke, do you Want to do the honors? Or shall I?"</p>
+<p>"I'll do it. Any last words? On second thought. don't bother. I'm not really in the mood to listen."</p>
+<p>Kieran sits cross-legged in the filthy alley, resting his chin on his hand as he watches Luke pin Linton against the wall and press the blade to his throat. In the darkest hours of the night, the spurting blood vanishes. And so, the final cry of a life on death's door is swallowed by the darkness.</p>
+<p>Monozygotic Twin Comparative Test Record</p>
+<p>Subject ID 808</p>
+<p>Subject Names </p>
+<p>Luke, Kieran</p>
+<p>Age</p>
+<p>16</p>
+<p>Experimental Side Effect(s) Log</p>
+<p>Subjects mutually influence each other's visual, pain, and auditory senses. Here are examples of this phenomenon:</p>
+<p>1. The subject Luke can see images within Kieran's field of vision, and vice versa. </p>
+<p>2. The subjects Luke and Kieran can experience the same level of pain at the same time.</p>
+<p>3. …</p>
+<p>Evaluation Results</p>
+<p>After the Protocore exposure, both subjects show rejection reactions. A transformation occurring within three months is highly possible.</p>
+<p>Comprehensive risk assessment far exceeds standard values. Subjects are to be transferred to the disposal site for termination.</p>
+<p>Notes</p>
+<p>The disposal site is adjacent to the N109 Zone. Researchers must complete the Firearms Request Form and collect weapons for self. defense before leaving.</p>
+<br>
+<p>"Transformation within three months... That's a fancy way of saying we won't live past three months."</p>
+<p>Kieran wipes the blood from his face and hands Luke a dirt-smudged document from the ground. After skimming it, Luke shrugs and nonchalantly scratches his chin. "It's just a prediction, right? They might be wrong. Didn't someone outlive their estimate before? The younger one of the 303 twins... Phi- something?"</p>
+<p>"I can't remember."</p>
+<p>"Whatever. It doesn't matter. We finally made it out, and if we only have three months left..." Luke leans against the armored truck He raises an eyebrow. Then, his eyes widen as he looks at Kieran, and he pounds his fist on the hood excitedly.</p>
+<p>"What is it?" Based on that reaction alone, Kieran knows his brother's mind is probably concocting another scheme to turn the world upside down.</p>
+<p>"Since we're on borrowed time anyway, why don't we go out with a bang? How about doing something epic in these last three months?" Eager, Kieran leans in. Despite Luke's ideas always ending up as messes he has to clean up, the prospect of doing something epic still holds an irresistible allure. "What do you have in mind?"</p>
+<p>"Check this out." Luke points to the name "N109 Zone" in the notes section of the document. "Do you remember Sylus?"</p>
+<p>"The guy the researchers mentioned before? The Protocore smuggler... Yeah, that ruthless boss of Onychinus?"</p>
+<p>"Exactly!" Excited, Luke hops onto the hood of the truck. "Let's kill him. Nothing can be more epic than that, right?"</p>
+<p>Kieran bursts into a fit of laughter. "What if he's a hundred times stronger than us? If we try to kill him, wouldn't that be…”</p>
+<p>"Even more fun!" they exclaim in unison. But Kieran quickly suppresses his bubbling excitement. He tries to be sensible. "Wouldn't it be easier for Sylus to kill us than for us to kill him?"</p>
+<p>"So what?" Luke sits cross-legged, the enthusiasm in his voice gradually fading and being replaced with calm. "Have you seen the ones who transformed? I'd rather get killed and die early than become... something like that."</p>
+<p>After a long silence, Kieran nods. He crumples up the document and tosses it behind him.</p>
+<p>"True. We should count ourselves lucky if we get killed by him."</p>
+<p>"You ready?"</p>
+<p>"Let's go."</p>
+<p>In the depths of night, the two brothers walk side by side down a path that leads a person away from all light. It lazily stretches into the horizon.</p>
+<p>"I hope Sylus turns out to be an interesting guy."</p>
+
+        `,
+    },
+    {
+        id: 102,
+        link: "mischief",
+        serialNumber: "02",
+        subtitle: "Rumor",
+        content: `
+<p>Here's the second rule of a successful ambush: Know your enemy.</p>
+<p>It's been fourteen days since Luke and Kieran arrived in the N109 Zone. For the past two weeks, they heard all sorts of rumors about Sylus.</p>
+<p>"I heard Sylus has been in cahoots with Wanderers for ages. He's just waiting for the right moment to blow up the N109 Zone."</p>
+<p>"Well, they say Sylus has a permanent luxury suite at Solon Hotel. The walls are stuffed with the bodies of his enemies. It's haunted at night."</p>
+<p>"Oh, I heard Sylus is the son of that stock market tycoon from Linkon City..."</p>
+<p>"Really? Someone told me Sylus is the stock market tycoon himself."</p>
+<p>Kieran doubles over from laughing, but his hands never stop crafting darts. "So, did you find out what Sylus actually looks like?"</p>
+<p>"They say he doesn't have a fixed appearance. He wears a new face every day. No one has ever seen his real appearance."</p>
+<p>Luke can't help but chuckle at his own words Before he can finish laughing, Kieran chimes in. "Well, I heard he's quite young, but he has to drink the blood of teenagers every day just to maintain his human form."</p>
+<p>Laughter fills the small house they've claimed as their temporary home once more. Most buildings in the N109 Zone are renovated from previously derelict structures. In the shadows where neon lights from the bustling streets don't reach, it's easy to find a vacant space that's not too dilapidated. It's perfect for two unexpected visitors new to the area. But Luke and Kieran aren't the only new faces.</p>
+<p>Every day, people like them flood into the N109 Zone. Lately, their "neighbors" have been multiplying. Some disappear after a few encounters, never to be seen again. Others schedule a get-together one night and fail to show only for the twins to learn the next day that they died two blocks over. The N109 Zone is like a beast lurking in the darkness. Its maw is wide open to devour everyone who stumbles in. Here, death is just a matter of time. The only way to cheat it is to find the master of this savage beast, and his name is Sylus. In their two weeks here, amid all these far-fetched rumors, everyone seems to agree only on one thing: Kill him, replace him, or become his subordinate.</p>
+<p>"Last night, someone told me Sylus is celebrating his 80th birthday today: The party's at—'</p>
+<p>The ice maker in the room suddenly interrupts Luke's dubious rumor. It's the only appliance in the house that still works. Luke waits next to it. He scoops up two cubes as they fall and pops them into his mouth. He turns back. "You want some ice?"</p>
+<p>Kieran waves his hand. "Ice reminds me of when I got beat up. I'll pass."</p>
+<p>Laughter fills the room as Luke tosses an ice cube at Kieran before plopping onto the couch and crossing his legs. "Serves you right."</p>
+<p>Years ago, during their first escape attempt, Kieran had gotten into a scuffle with the guards and ended up with a mouthful of blood. Two weeks in solitary confinement couldn't break him. He endured the pain in stubborn silence and refused all medical treatment. In the adjacent cell, Luke yelled at him. "Next time you decide to play tough guy before the medical staff, could you maybe ask me beforehand? I'm also in pain!"</p>
+<p>During that time, Luke developed his love for ice. It was to initially numb the pain that wasn't his own, and it later developed into a thrill for the cold. Kieran, after his two-week confinement, took the lesson to heart. The day his punishment ended, he exacted his revenge with a dart he made. After that, crafting darts became a hobby. It brought him joy.</p>
+<p>"Remember Sherman? He's the guy we met at Elysium." Kieran quickly shakes off the cold and picks up where he left off.</p>
+<p>"Yeah, the peacock. How could I forget?"</p>
+<p>"Anyone who can strut around the N109 Zone like that and still breathe must have some serious support."</p>
+<p>Luke crunches the ice in his mouth. "You think Sylus is behind him? What are we waiting for then? Let's find him."</p>
+<p>He's about to bolt out the door when Kieran, as if he's done this a million times, grabs his collar and pulls him back. He presses the finished darts into Luke's hand before releasing him. "Now we can go. I've been tailing Sherman for a while. Onychinus is about to attend an important business meeting. Sylus might be there. We should check it out."</p>
+<p>Luke pockets the darts and pushes his slightly overgrown hair to the back. When he opens the door, he notices Kieran tying his hair back into a short ponytail. After thinking for a bit, Luke ties his hair back in the same style.</p>
+<p>Nighttime, on the rooftop across from Solon Hotel.</p>
+<p>In the luxury suite where the deal is being discussed, the curtains are half-drawn. Through the gap, a hand with elegant, pronounced knuckles is visible. It idly taps on the leather armrest. A velvet box is humbly presented to the hand's owner. The individual pauses before leisurely waving his fingers. Someone with a deferential demeanor takes the box away.</p>
+<p>Although the hanging curtains obscure the faces of everyone in the room, it's not difficult to discern who bears the name "Sylus." It's as legendary as it is dangerous based on that interaction. Across the street and perched on the edge of the rooftop, two figures watch them as if it were a movie.</p>
+<p>Luke, his eyes alight with excitement, points out something. "Sylus isn't carrying a weapon."</p>
+<p>"Isn't he afraid of someone making a move?" His question is swiftly answered. The deferential attitude fails to save the life of Sylus's business partner. Sylus strikes so fast that even the rooftop audience can't follow his movement. His actions are a blur, but they see a terrified body yanked to the window by an invisible force. A mist swallows it. When it dissipates, nothing remains of the man. Oh. Sylus doesn't need to carry a weapon because he's a weapon himself.</p>
+<p>No one in the luxurious suite dares to move. The deal's participants and Sylus's underlings bow and lower their heads. Sylus finally stands up, and Luke and Kieran see his face. He looks indifferent as if the scene before him isn't his doing. The ceiling light casts ominous shadows across his features as he turns. He sweeps his gaze across the street.</p>
+<p>The two brothers, spectators a few seconds ago, suddenly become alert. Their bodies react faster than their minds. They propel themselves off the ledge and into the shadows with lightning fast speed.</p>
+<p>"Did he see us?"</p>
+<p>"I doubt it... We're so far away from him. Is his eyesight that good?"</p>
+<p>An inexplicable feeling sends a chill down their spines. After a moment, they cautiously peek out from the edge of the rooftop. Sylus has already left.</p>
+<p>"Did he look... bored to you?" Luke breaks the silence.</p>
+<p>"You mean when he dealt with that guy? Or when he left?"</p>
+<p>"Both."</p>
+<p>Kieran hadn't particularly paid attention to Sylus's demeanor. Knowing Luke would keep an eye on it, he noticed something else. From the moment Sylus entered the room, it was as if an invisible barrier had formed around him No one dared to cross this unseen line to stand near him. It remained that way until the very end. He had entered alone, and he left alone.</p>
+<p>Kieran can't help but muse out loud. "Is there someone who can get close to Sylus?"</p>
+<p>After two weeks of gathering intel, he had expected Sylus to be surrounded by people Now, it seems they couldn't be further from the truth.</p>
+<p>No allies dare to stand beside him, and no enemies can stand against him. Just like the expression on his face, everything seems boring to him.</p>
+<p>"No one," Luke and Kieran declare in unison The thought of Sylus living such a tedious life for a long time while still having countless years ahead of him stirs a flicker of pity in their hearts. Then again, if they kill him, that's a different story.</p>
+
+        `,
+    },
+    {
+        id: 103,
+        link: "mischief",
+        serialNumber: "03",
+        subtitle: "Trick",
+        content: `
+<p>This is the third rule of a successful ambush: Exploit your advantage when the enemy least expects it.</p>
+<p>For Luke and Kieran, their advantage lies in their "sameness." Identical faces, identical builds, identical movements – they're almost the same person.</p>
+<p>It's enough to lower their opponent's guard and make them believe there's only one person.</p>
+<p>This trick has never failed them. From the streets they grew up in to Ever's research facility, it continues to work in the N109 Zone.</p>
+<p>Whether it's "purchasing" necessities from someone who increases prices after glancing at Luke, fending off strangers who try to rob Kieran of their supplies, or slipping past a merchant into a Protocore warehouse... Just like their names suggest, one is always in the light, and the other is in the shadows. One plays the conspicuous target while the other lurks in the dark, ready to strike. The side effects from the experiment have become their strength. When they act together, they're even more coordinated than one person.</p>
+<p>On Wednesday night, the concert hall in the N109 Zone's bustling district will host a grand performance. At Mr. R's invitation, an orchestra was rushed over here after their international tour. For the first time, the hall's pipe organ sheds its dusty protective cover. It's not an important event. But after the hall manager repeatedly refused those willing to pay exorbitant prices for a seat, this performance and the mysterious Mr. R have become a hot topic in the N109 Zone. In a corner unnoticed by all, two inconspicuous insects quietly enter the concert hall.</p>
+<br>
+<p>Kieran is looking at two very different scenes.</p>
+<p>He crouches to hide behind the auditorium seats. Not far away, in the center of this space, sits Sylus. Kieran can only see Sylus's back. The vast concert hall stands empty save for this lone figure, and his question resurfaces: Is there someone who can get close to Sylus?</p>
+<p>Yet Sylus just sits there. He's resting his eyes and waiting for the concert to begin like a normal person would.</p>
+<p>Kieran knows the concert's start will inevitably be delayed because of the other scene he's looking at</p>
+<p>Through Luke's eyes, he sees the dressing room where the impeccably dressed conductor and orchestra members are bound one by one. Sheet music has been stuffed in their mouths to muffle any cries. After his hard work, Luke dusts himself off and bends down to retrieve a fallen dart.</p>
+<p>"These pack quite a punch. The Protocores really do make a difference." He's in awe. The Protocore makes the dart feel a bit awkward to hold, but it's tolerable. Luke shakes his hand and checks himself in the mirror. Something's missing. He yanks the conductor's jacket off and puts it on. "Should I go onstage with this?"</p>
+<p>Their ability to converse effortlessly even when apart is perhaps the most useful side effect.</p>
+<p>"It's a little too big. Try that violinist's outfit. the one from the third row."</p>
+<p>"Oh, this is a lot better."</p>
+<p>"Ready?"</p>
+<p>"Rea—wait!"</p>
+<p>Luke takes a step toward the stage before stopping. He turns back to the dressing room and picks up an ice cube from the wine bucket on the table. He pops it in his mouth and crunches it. "Now I'm ready."</p>
+<p>Just before he goes on stage, he hears Kieran's voice again. "Before we do this, any last words?"</p>
+<p>"Nope, I have nothing to say."</p>
+<p>It's pointless anyway. They're still going to die. They might as well save the energy and wear a smile instead.</p>
+<p>"Let's do this."</p>
+<p>The lights in the hall dim as the performance is scheduled to begin at this time. The curtain slowly rises, and a spotlight switches on with a click. Luke is onstage within a few quick strides and stops before Sylus.</p>
+<p>There's no music, but Sylus doesn't open his eyes. It's as if he anticipated this.</p>
+<p>Luke's excitement grows. His hand, initially reaching for the dart, changes course on a whim. He grabs two small, circular devices hidden at his waist and flings them at Sylus.</p>
+<p>“Mind if I borrow two – no, three minutes of your time? Let me have a go at killing you before the concert starts."</p>
+<p>His words echo through the hall. The small projectiles hurled at Sylus are suspended in the soft mist around him. The person who stopped them with his power hasn't even lifted a finger.</p>
+<p>Luke grins. "You might want to open your eyes. It could get messy, even for Onychinus's boss-man."</p>
+<p>As soon as he closed his mouth, the spheres, squeezed by the black-red mist, suddenly burst.</p>
+<p>With a loud splash, water drenches the seats around Sylus</p>
+<p>“…”</p>
+<p>Sylus opens his eyes, his finger on his temple Luke shrugs. "I told you."</p>
+<p>"What's your motive?" Sylus's nonchalant question echoes throughout the concert hall.</p>
+<p>"My reason for wanting to kill you, huh? Hmm..." Luke rubs his face and pretends to be deep in thought. In the N109 Zone, a lot of people want Sylus dead--for profit, revenge, or because they're weak. He wonders if "a spur-of-the-moment decision" would pique the curiosity of this man who leads Onychinus.</p>
+<p>But he decides to drag it out, at least for the show. That way he can buy time for Kieran who's moving stealthily through the shadows. As their conversation continues, Kieran silently positions himself. Now directly behind Sylus, he holds several darts between his fingers. They're aimed at Sylus's carotid artery. Through Luke's eyes, he monitors Sylus's movements and confirms the man's attention is fixed on Luke, who's still fumbling for an answer. He's oblivious to Kieran's presence.</p>
+<p>Kieran bends his knees and prepares to lunge. </p>
+<p>And then—</p>
+<p>Before he moves, he hears Sylus's derisive chuckle. "If you want to kill me, at least use a method that's less boring."</p>
+<p>From a distance, Kieran senses Luke's body go rigid onstage.</p>
+<p>He quickly realizes why Luke reacted that way. It's because of him. At some point, two wisps of black-red mist have enveloped his body Although they looked easy to shake off, they pinned him in place. He can't move. How did Sylus notice him?</p>
+<p>Restraining one of them effortlessly subdues the other. The owner of this power closes his eyes once more. The twins are then lifted into the air and hurled out of the concert hall, one after the other. The hall's doors slam shut, the lingering echo a composed mockery of their failed attempt.</p>
+<p>"Huh?"</p>
+<p>The twins scratch their heads before checking their necks, arms, and legs. They stare blankly at the concert hall's opulent chandelier before reality finally sinks in.</p>
+<p>"Sylus... didn't kill us...”</p>
+<p>Still shocked, Kieran sits up reluctantly.</p>
+<p>"That's the first time we've ever been caught."</p>
+<p>Luke, still sprawled in the position he landed. tugs at Kieran's arm. "But did you hear what</p>
+<p>he said?"</p>
+<p>"What?"</p>
+<p>"He called us boring...!"</p>
+
+        `,
+    },
+    {
+        id: 104,
+        link: "mischief",
+        serialNumber: "04",
+        subtitle: "Thrill Seeker",
+        content: `
+<p>The fighting arena in the N109 Zone lurks behind the facade of a five-story building with neon lights. An oversized ring that surpasses expectations will greet you once you enter: Spectator seats climb the surrounding walls, and the highest one is perched almost perpendicular to the ring. At first glance, it looks like a fortress or lair of some ferocious beast. Noticing the members of Onychinus frequenting the place lately, Luke and Kieran tear down a recruitment flyer plastered outside and knock on the door.</p>
+<p>"Get lost! We're not hiring. You're as skinny as a rail. I bet you two would die a hundred times before landing a single punch!"</p>
+<p>The door is slammed shut. The burly arena owner glares at them through a small window before stomping downstairs.</p>
+<p>Kieran chuckles. "A rail? We're scarecrows at least."</p>
+<p>The next morning, Luke and Kieran are back and knock on the door to the arena. The owner answers, cursing under his breath. He freezes. The arena's fighters, mysteriously missing since dawn, are sprawled on the ground, clutching their stomachs and whimpering. The two young men he turned away yesterday grin.</p>
+<p>"So, about your staff shortage...”</p>
+<br>
+<p>The reason for Onychinus's frequent visits soon becomes clear. On Wednesday night, the members of Onychinus storm into the arena with one goal: To take this place down. As the two groups clash in the arena with their weapons drawn, the leader of Onychinus materializes in the place with the best view He surveys the chaos below unperturbed</p>
+<p>Amidst the mayhem, the twins, having already shed their fighter outfits, move behind him. They exchange glances.</p>
+<p>Then the two get down on one knee.</p>
+<br>
+<p>Here's the fourth rule of a successful ambush: Swiftly abandon flawed tactics and use new</p>
+<p>strategies to confuse your opponent.</p>
+<p>"Boss, we want to be your followers!"</p>
+<p>“…”</p>
+<p>Noticing Sylus's silence, the two continue to speak.</p>
+<p>"We'll be your blades, Boss."</p>
+<p>"We'll handle all the dirty work you can't be bothered with."</p>
+<p>"Whether it's assassinations or heists—"</p>
+<p>"Or pranks and scheming—"</p>
+<p>"We'll take care of it, Boss!"</p>
+<p>"Our loyalty is yours!”</p>
+<p>"And…”</p>
+<p>Approaching footsteps interrupt their unsolicited oath. The tips of Sylus's shoes appear in Luke and Kieran's vision, and intimidation washes over them. Kieran looks at Luke from the corner of his eye. He sees the barely contained excitement in his brother's gaze.</p>
+<p>What will Sylus do next? Luke is waiting for it. And Kieran realizes his own expression must mirror his twin's. From the moment they were born, they were the same. They don't need mirrors. Simply looking at each other is enough to know their own faces.</p>
+<p>"I have no use for trash," Sylus states.</p>
+<p>A knife clatters to the ground between them. </p>
+<p>"Prove yourselves."</p>
+<p>They look up and meet Sylus's stern gaze.</p>
+<p>Below, gunfire erupts and blood splatters. The chaotic battle beckons.</p>
+<br>
+<p>In less than half an hour, the gleaming knife is stained a dark red. The twins present it to Sylus.</p>
+<p>"Well? The trash is on the ground now. Do you Want us to do anything else?"</p>
+<p>The sounds of combat have turned into barely audible pleas for mercy. In the vast arena, only Sylus, Luke, and Kieran remain standing. The hands holding the knife slightly tremble from excitement, not fear. Fresh blood drips from the blade's tip, their palms, and their nearly identical faces. It stains the once-clean spectator walkways.</p>
+<p>The knife's cold glint reflects in Sylus's eyes. He tilts his chin up slightly and smirks. "Now use each other's lives to prove yourselves.”</p>
+<p>So that's what it was.</p>
+<p>Kieran hears laughter echoing in his mind Luke is laughing, and he's laughing too.</p>
+<p>So that's what it was. Sylus is also looking for some fun.</p>
+<br>
+<p>They lost count of how many times they've fought like this.</p>
+<p>Because of those side effects, their senses are bound. Fighting each other during heated arguments no longer relieves their anger. Instead, it's a form of self-torture. But they soon discovered that fighting could earn them many things: painkillers, sedatives, and if the fight was severe enough, even a pass on the next day's "trials." So, despite their reluctance, they became experts at fighting each other.</p>
+<p>Sylus sits in the spectator seat. He watches the twins fight for the knife with an amused expression.</p>
+<p>Their faces are fierce, their movements swift and precise. Only when they draw near each other is there a barely perceptible hesitation, a quick exchange of glances as they try to come up with a strategy.</p>
+<p>Sylus props up his chin on his hand.</p>
+<p>He can sense the brothers' true intentions These young beasts are putting on a show.</p>
+<p>They carefully hide their fangs and claws while waiting for the right moment to throw the knife. Little do they know that their target has already grown weary of such tricks. Still, Sylus stays in his seat.</p>
+<p>The persistence of these weaklings suddenly piqued his curiosity. He wants to see how this will play out.</p>
+<br>
+<p>That's when the unexpected happens.</p>
+<p>The sharp sound of crystals piercing skin fills the air. The twin holding the knife goes limp, crying out in pain as he collapses. Like snakes, black crystals crawl up his face from within his body and reach his eyes.</p>
+<p>In an instant, the other twin, seemingly unharmed, also falls to his knees because of the unbearable agony. Their show falls apart and is replaced by the onset of the transformation.</p>
+
+        `,
+    },
+    {
+        id: 105,
+        link: "mischief",
+        serialNumber: "05",
+        subtitle: "Thrill Seeker",
+        content: `
+<p>The knife tumbles to the ground and stops at Sylus's feet.</p>
+<p>He bends down to pick it up. A crystal-covered hand trembles as it desperately reaches for the blade.</p>
+<p>Sylus smirks and hands it over. The person before him musters all his strength to aim the knife at his heart. He tries to push it in...</p>
+<p>But he hesitates and freezes as he notices his brother, who's bound to him, curl up into a ball because of their shared agony.</p>
+<p>These two are like marionettes tangled in invisible strings. When one transforms, the other feels inexplicable torment. Sylus watches with keen interest. He wonders if this bond will remain unbroken even in the face of death. He knows this question now looms over them like a suffocating nightmare. He stays because he wants to know what they'll do.</p>
+<p>The knife's tip veers off by a few centimeters. Then, the twin slashes the knife upward. The crystals shatter, and blood splatters onto the spectator seats. The twin abandons the thought of ending his life and instead violently gouges out the crystals. Sylus slowly claps.</p>
+<p>"At least you've got some guts."</p>
+<p>He lifts the knife again but is quickly intercepted by the other twin. Although he's unaffected by the transformation, he's forced to endure the pain due to their shared senses Still, he grips his brother's hand.</p>
+<p>"Don't worry about me." His voice lacks its usual lilt and is replaced by a chilling calm.</p>
+<p>"Let me help you... I'll help you."</p>
+<p>The weight behind the word "help" is unmistakable. Its true meaning is unspoken but clearly understood.</p>
+<p>"...Okay."</p>
+<br>
+<p>Luke and Kieran have never realized how loud a heartbeat could be until now.</p>
+<p>Perhaps this is the noise a person only hears at life's end.</p>
+<p>They come to the same conclusion while the one who didn't transform struggles to control the knife.</p>
+<p>Beside them, a fiend whispers, "If you do this, you won't survive either."</p>
+<p>"...I'll die with him." That's his response to Sylus. He takes a few deep breaths before flashing a sly grin. "I don't care anyway.”</p>
+<p>"Is that so?"</p>
+<p>A wisp of black-red mist suddenly plunges into his twin's chest. A more intense pain immediately follows, the trembling now mixed with a fear they've never experienced before It's the fear of dying.</p>
+<p>Sylus intends to kill them this time.</p>
+<p>It feels as if a chunk of their chest is missing Their limbs gradually numb, the cold blood building up in their throats. They shudder uncontrollably. At first, they manage to hide their terror. But as the mist grows sharper and touches their beating hearts—</p>
+<p>So this is what death feels like.</p>
+<br>
+<p>The feeling of being at death's door finally breaks their resolve. Fragmented pleas escape their lips. "No...!"</p>
+<p>But the agony of their demise intensifies. Sylus's towering figure blurs into a beast toying with its prey. Their internal organs feel violently constricted, their desperate desire to live drowning in pain. Panting, they spit out blood and raise their voices.</p>
+<p>"Stop...!"</p>
+<p>"I thought you had a death wish."</p>
+<p>"We don't...!"</p>
+<p>With a derisive snort, Sylus opens his palm The mist dissipates before it claims their lives.</p>
+<p>The once-bright room is plunged into darkness. A strong force surrounds the twins and shatters the growing black crystals.</p>
+<p>A ringing persists in Luke and Kieran's ears, but the pain vanishes in a heartbeat.</p>
+<p>"In the N109 Zone, dying is easy," Sylus says as he leaves, his tone almost teasing.</p>
+<p>"Staying alive-now that's the real proof of strength.</p>
+
+        `,
+    },
+    {
+        id: 106,
+        link: "mischief",
+        serialNumber: "06",
+        subtitle: "Twins",
+        content: `
+<p>"Boss, we're not here to kill you this time.”</p>
+<p>Two weeks have passed, and Luke and Kieran once again stand before Sylus. They've fully recovered. One was never injured in the first place, and the other's wounds—a result of gouging out the crystals—have healed. There are only grotesque scars on his face and body. Otherwise, they appear healthy.</p>
+<p>"We genuinely want to be your followers!"</p>
+<p>Emphasizing this statement, they drop to one knee.</p>
+<p>Sylus is slightly irritated. "Drop the act."</p>
+<p>“…”</p>
+<p>After the twins exchange glances, Luke looks up with a sly grin. "Actually, we're curious to see if anyone can kill you, Boss."</p>
+<p>"Since we couldn't do it, we want to stick around and see if someone else can."</p>
+<p>They widen their eyes soon after. If they're not mistaken, Sylus flashed a cold smile tinged with anticipation. It's an expression they've never seen before.</p>
+<p>But the smile vanishes so quickly that they wonder if they imagined it. After a moment of hesitation, Luke lowers his head again and speaks in a respectful tone. "Boss, that Sherman guy is suspicious. We'll keep an eye on him for you!"</p>
+<p>Bowing his head, Kieran adds, "We know his address, his usual spots, and his contacts. We can report to you every two weeks."</p>
+<p>"Go then."</p>
+<p>These words constitute the only command they receive.</p>
+<p>"Understood, Boss!"</p>
+<p>When they finally stand up, they realize Sylus has already vanished.</p>
+<br>
+<p>As they exit the base, the streets of the N109 Zone remain as sunless as ever. Passing a glass wall, they pause to look at their reflections.</p>
+<p>It's been years since they used a mirror since they always used each other. It's an extra perk of being identical twins. But now, that's no longer possible.</p>
+<p>"I still think twins should look like twins." Luke pulls out the backpack he's been carrying and fishes out two masks. He tosses one to Kieran and puts the other on himself. "I got 303 to make these. Just found out he set up a workshop in the N109 Zone. Try it."</p>
+<p>Kieran examines the mask in his hands and holds it up to his face. It's a perfect fit. He puts it on and playfully taps Luke with the long beak of his mask. "Why are we even wearing these in the first place?"</p>
+<p>"No reason. But with them, we're identical again."</p>
+<p>It's noon. The two young men walk side by side down a path that shuns all light. They stretch lazily.</p>
+<p>"What do you think his smile meant? Can someone actually kill him?"</p>
+<p>"...I'm guessing it's a no?"</p>
+<p>"Yeah, I don't think so either."</p>
+
+        `,
+    },
+    {
+        id: 111,
+        link: "frontline-hunter",
+        serialNumber: "01",
+        subtitle: "Hunter Dispatch Center ",
+        content: `
+<p>Beep...Beep.</p>
+<p>It's the middle of the night at the Hunters Association.</p>
+<p>In the center of the room, a holographic control console displays a 3D map of Linkon City. A blinking red dot keeps flashing at one spot.</p>
+<p>Then, a hand reaches out and silences the alert.</p>
+<p>"Linkon Hunter Dispatch Center, how may help you? ...Stay calm. We have your location. Head to the nearest shelter immediately to avoid another Wanderer attack."</p>
+<p>Colin, who has been a Hunter Dispatcher for twelve years, handles emergencies like it's nothing. He quickly forwards the incident details to the nearest Hunters on the map.</p>
+<p>Almost immediately, two small blue dots on the holographic display begin racing toward the yellow one.</p>
+<p>A timer appears overhead. Ten precious minutes for the rescue to succeed.</p>
+<p>Deployed medical teams, hazard alarms, real time positioning now active... The dispatchers coordinate seamlessly, their hands moving swiftly across an array of holographic screens Together, they weave an invisible safety net over Linkon City.</p>
+<p>Finally, the yellow dot disappears from the map. The countdown stops at 8:27.</p>
+<p>Colin watches the holographic map return to normal. He sighs in relief, sorts through the information he collected, and begins drafting his first incident report of the day.</p>
+<br>
+<p>HUNTER DISPATCH CENTER INCIDENT REPORT </p>
+<p>Case Number: LK204x01101</p>
+<p>Incident Type: Wanderer Attack</p>
+<p>Threat Level: C Class </p>
+<p>Details:</p>
+<p>A single Wanderer (an Elemental subspecies) appeared in the riverside area of the Empyreal Ring District. The target was neutralized, and the cleanup crew has been notified. No civilian casualties.</p>
+<p>Status: Resolved</p>
+<p>Reporting Dispatcher: Colin</p>
+<p>That's a typical day at the Linkon Hunter Dispatch Center.</p>
+
+        `,
+    },
+    {
+        id: 112,
+        link: "frontline-hunter",
+        serialNumber: "02",
+        subtitle: "Three-Man Robbery",
+        content: `
+<p>6:00 A.M. Lights remain on around the clock at the dispatch center.</p>
+<p>"Linkon Hunter Dispatch Center, how may I — “</p>
+<p>"Help! It's a Wanderer! It's trying to kill us! Hurry!"</p>
+<p>The call has barely gone through when frantic screams nearly burst Colin's eardrums.</p>
+<p>"Stay calm and tell me about the situation to the best of your ability," he says as he hits the location tracker.</p>
+<p>A young man's shaky voice answers, "There are three of us... And an older lady with her groceries. We—"</p>
+<p>A loud roar drowns him out. Then, it's followed by bloodcurdling screams.</p>
+<p>"Are you still there? Hello? Hello!" Colin calls out to them, but there's only silence.</p>
+<br>
+<p>Next to him, the surveillance officer pulls up local traffic feeds. "Captain Colin, we've contacted the Hunters on patrol. They need approximately six minutes to get there." </p>
+<p>Six minutes…</p>
+<p>Colin feels powerless. This is what usually happens. No matter how fast the dispatch center reacts, it still takes time for help to arrive.</p>
+<p>All they can do is provide the Hunters with a clear route. </p>
+<p>And then—</p>
+<p>"No! Let me go! Ahhh...!" The desperate shrieks returning through the speaker make everyone's stomach drop. Their worst nightmare is becoming a reality.</p>
+<p>Despite having heard these agonized cries countless times before, watching a life slip away in real time is still unsettling. Before a few dispatchers can turn away, gunfire erupts on the other end. The Wanderer lets out one last screech before falling to the ground with a heavy thud. </p>
+<p>They survived.</p>
+<p>Relieved, Colin glances at the map. He frowns when he notices the two blue dots are still too far away to have reached the designated site.</p>
+<p>The Hunters haven't arrived…</p>
+<p>So who fired the shots?</p>
+<p>"That's it? And you call this a robbery? Luckily for you, I took my gun for maintenance while I was out getting groceries. Otherwise, you'd be in real trouble!" a confident female voice shouts.</p>
+<p>Robbery? Gun? Colin and his coworker exchange looks of bewilderment. Before they can say anything, panicked shouts come over the line again.</p>
+<p>"Ah! Ma'am, it's standing back up! Help us! Hurry!"</p>
+<p>"What are you doing? Get behind me!" More shots ring out, then the Wanderer's cry fades.</p>
+<p>Colin sees the yellow dot on the map disappear.</p>
+<p>Everyone at the dispatch center stares at one another in astonishment. Moments later, the comms crackle, and that same confident voice returns. "Hello? Hunter Dispatch Center?"</p>
+<p>Colin responds immediately. "Yes, we're here Is anyone hurt?"</p>
+<p>"No injuries, but we'll need a cleanup crew for the mess." The response is quick. "The</p>
+<p>Wanderer was an A Type. It's already been dealt with. Also, the Security Department should be dispatched. The victims were actually attempting a robbery. Please notify the Special Task Force to investigate."</p>
+<p>"Understood. And you are...?”</p>
+<p>The practiced precision in her response has already given him the answer.</p>
+<p>Sure enough, the seasoned, composed voice on the other end confirms his suspicions</p>
+<p>"Retired Hunter. Former Sector: DAWN, ID No. 10041."</p>
+<br>
+<p>HUNTER DISPATCH CENTER INCIDENT REPORT </p>
+<p>Case Number: LK204x01102</p>
+<p>Incident Type: Wanderer Attack</p>
+<p>Threat Level: C Class </p>
+<p>Details:</p>
+<p>Three young men attempted to rob a woman near a Bloomshore District market when a Wanderer (a Bestial subspecies) appeared. The would-be victim eliminated the Wanderer with her own Hunter-grade firearm.</p>
+<p>The woman was confirmed to be a retired Hunter. Cleanup is en route, and no civilian injuries were reported.</p>
+<p>Note: The three suspects have been turned over to the authorities for attempted robbery.</p>
+<p>Status: Resolved</p>
+<p>Reporting Dispatcher: Colin</p>
+<br>
+<p>Colin finishes his report, glances at the clock, and realizes he missed lunch.</p>
+<p>He grabs a pack of instant noodles and heads to the break room.</p>
+<p>"Noodles again?" A colleague drops the latest Wanderer activity report in front of him when he returns to his desk.</p>
+<p>"The Wanderers have been too active lately."</p>
+<p>"Yeah, it's related to a Deepspace Tunnel anomaly or a Protocore malfunction. I hear they sent someone to investigate, but who knows what they'll find."</p>
+<p>His colleague plops into the chair next to him and sips his soy milk. "Ugh, I told the cafeteria guy I wanted it sugar-free! I'm cutting back on sugar, and this just messed up my diet."</p>
+<p>"Hey, at least we have a cafeteria." Colin smiles. "The Alpha Team doesn't get that luxury."</p>
+<p>"True, but they're not stuck at a desk all day either," the colleague responds. Then he</p>
+<p>pauses, remembering the grueling practical assessments those people endure.</p>
+<p>"Forget it, I guess I should just be—"</p>
+<p>The communication device at the dispatch center buzzes again.</p>
+
+        `,
+    },
+    {
+        id: 113,
+        link: "frontline-hunter",
+        serialNumber: "03",
+        subtitle: "The Counterfeit Protocore Case ",
+        content: `
+<p>To Colin's surprise, a familiar voice speaks.</p>
+<p>"Hey, Captain Colin. It's me, Orson!" An overly ingratiating tone comes through as soon as the call connects.</p>
+<p>"Can you arrest me right now?"</p>
+<p>???</p>
+<p>Orson, the Linkon City Police Department's infamous repeat offender, is known for Protocore smuggling. Caught countless times, he's always finding new ways to stir up trouble.</p>
+<p>As a dispatcher, Colin usually doesn't deal with criminals directly. But Orson managed to change that when his greed for Protocores led him to target live Wanderers.</p>
+<p>Back then, a Wanderer had him crawling around like a cornered rat. Desperate, he called the dispatch center for help. Thanks to Colin's quick thinking and precise directions he survived long enough for the Hunters to arrive. Without that, he'd probably be nothing more than a bloody smear under a Wanderer's claws.</p>
+<p>To show his "gratitude," Orson gifted Colin a ceremonial banner that had the following:</p>
+<p>"The Voice of Salvation, A Dispatcher Protecting Life Itself!"</p>
+<p>"You little... Didn't five months in jail teach you anything?" Colin feels a vein bulge at the sound of that familiar voice.</p>
+<p>"I-I swear I'm not smuggling Protocores this time..." Orson stammers. "I'm just...selling rock candy. That's all."</p>
+<p>Orson isn't illegally selling Protocores this time. He's making rock candy that looks like Protocores. Since his buyers don't dare to report him, his scam thrives. It's even disrupting the market with cheap prices. But his success doesn't go unnoticed. A crime syndicate involved in Protocore smuggling has marked him as a target.</p>
+<p>"Orson... You really are a piece of work!" Colin says through gritted teeth.</p>
+<p>"Please, Captain Colin! Send over a Hunter to save me! They've tracked me down and are outside my house with Protocore weapons! If they get me, I'm as good as dead!" Orson's voice cracks from desperation.</p>
+<p>As much as Colin wants to ignore him, he knows he can't. Protocore smuggling isn't a minor crime, and dealing with an organized gang armed with Protocore weapons is far beyond what a single Hunter can handle.</p>
+<p>"Activate the Emergency Response Protocol,” Colin states without hesitation.</p>
+<p>"Understood." The surveillance officer's fingers race across the keyboard, and the yellow dot on the holographic map flashes red.</p>
+<p>The Emergency Response Protocol is a high-level procedure triggered only for threats equivalent to five or more Wanderers. It requires the coordinated effort of at least five Hunters.</p>
+<p>After issuing the order, Colin is worried about whether or not they can gather enough Hunters in time.</p>
+<p>To his surprise, the mission is accepted almost immediately.</p>
+<p>Two blue dots light up on the screen, and Colin lets out a sigh of relief. "Good, now we just need three more…”</p>
+<p>His words catch in his throat as his eyes widen. The two blue dots are charging into the rescue zone.</p>
+<p>"Send a message to intercept them right now!" Colin feels his head start to pound. This is clearly a high-level mission. Are they out of their minds?</p>
+<p>"Wait!" Excited, the surveillance officer calls out. "I think they're from UNICORNS!"</p>
+<p>"UNICORNS? Are you sure?" Colin whirls around.</p>
+<p>Every Hunter knows about UNICORNS. They're the best combat unit under the Hunters Association. Known for their unmatched power and fast responses, they specialize in tackling extremely dangerous Wanderer incidents that regular Hunters can't handle Colin has never met them, but he heard the stories. Their elite sector is small and notoriously unconventional. One rumor claims a UNICORNS Hunter once blew up an entire subway station just to take down a Wanderer. They're definitely not the kind of people he wants to mess with…</p>
+<p>But right now, that's exactly what he needs.</p>
+<p>"Captain Colin, they're here!" Orson's voice crackles through the communication device. He's tense and shaky. "But... there's only' two of them. Can they handle this? There are eight or nine guys here. Oh—!"</p>
+<br>
+<p>Orson lets out a startled cry as chaos erupts on the other end of the communication device. It's followed by panicked screams.</p>
+<p>"Orson? Orson!"</p>
+<p>Colin calls out, his voice tinged with urgency Just as everyone is holding their breath.</p>
+<p>Orson's voice comes through again. "Captain Colin, the people you sent are insane! They just showed up and everyone went down! Protocore weapons? They didn't even get a chance to pull them out!"</p>
+<p>Everyone in the room collectively sighs in relief. "Good, we'll send someone to pick you up. Stay put…”</p>
+<p>Colin frowns and hears a strange crunching sound from the communication device.</p>
+<p>Before he can ask, a clear female voice shouts,</p>
+<p>"Xavier! Stop eating the evidence!"</p>
+<p>HUNTER DISPATCH CENTER INCIDENT REPORT </p>
+<p>Case Number:LK204x01103</p>
+<p>Incident Type: Protocore Smuggling</p>
+<p>Threat Level: A Class </p>
+<p>Details:</p>
+<p>Shellbank District. Orson, a repeat offender with eight Protocore smuggling charges, sought assistance from the dispatch center after facing retaliation from a crime syndicate over his sale of counterfeit Protocores that were actually dyed rock candy. The involved criminal organization has been successfully apprehended. Orson, the reporting party, has been handed over to the relevant authorities for investigation of fraud.</p>
+<p>Note: A portion of the evidence is suspected to have been consumed Status: Resolved</p>
+<p>Reporting Dispatcher: Colin</p>
+
+        `,
+    },
+    {
+        id: 114,
+        link: "frontline-hunter",
+        serialNumber: "04",
+        subtitle: "City Hero",
+        content: `
+<p>Linkon's Joysky offers the most comprehensive selection of fresh vegetables and fresh products at affordable prices Colin steps out of the supermarket. He's holding a steaming box of fried chicken. He stretches, content.</p>
+<p>His busy day is finally over, and all he wants to do now is head home and enjoy some well-deserved rest.</p>
+<p>The supermarket is not far from his apartment. All it takes is a walk through the business district and the plaza. It's rush hour and many parents are walking with their children.</p>
+<p>The setting sun lights up their joyful figures and casts bouncing shadows on the ground. Colin pauses, unable to look away from this heartwarming scene. It's something he hasn't seen in a long time.</p>
+<p>As a survivor of the 2034 Chronorift Catastrophe, he, like countless others, knows how hard-won today's peace is.</p>
+<p>And like many people, he chose to be a guardian of this precious tranquility.</p>
+<p>But even guardians need rest. At least for tonight, he'll relax.</p>
+<p>"Mommy, there's a lollipop in the sky!'</p>
+<p>As he passes a small fountain, he hears a little girl shouting excitedly to her parents and pointing up at the sky.</p>
+<p>Colin thinks the child must be imagining candy in the clouds. He glances up at the sky. But that single look makes his blood run cold. A terrifying howl cuts through the air and is followed by the screams of frightened women. </p>
+<p>For a moment, no one reacts. Then, massive figures emerge from the dust, their bodies covered in jagged black crystals.</p>
+<p>"Jenny!" A mother in the distance stares in horror as the spot where her daughter stood is covered in rubble. Her legs give out, and she falls to the ground.</p>
+<p>"Mommy!" A cry rings out. Hope flickers back into the woman's tearful eyes.</p>
+<p>"Ugh! Cough cough…”</p>
+<p>Colin falls to the ground. He rolls a few times with the girl held tightly in his arms before stopping. As soon as he saw the Wanderers, he dropped his fried chicken and sprinted over to Save her.</p>
+<p>A sharp pain shoots through his back. He's dizzy, but he forces himself to dial a number on his communication device.</p>
+<p>"Hunter Dispatch Center. How may I help—"</p>
+<p>"Wanderers at Silverbay Creek Plaza! There's three of them, and they're highly dangerous! Send backup!"</p>
+<p>"Captain Colin?" The voice on the other end pauses. Then it adopts a serious tone.</p>
+<p>"Understood! We'll contact all nearby Hunters right now!" </p>
+<p>Roar!</p>
+<p>Frustrated, the Wanderers shriek. They're furious that their prey has escaped. Their massive forelimbs, reminiscent of bulldozer blades, dig into the ground. They surge toward them again.</p>
+<p>Clutching the child to his chest, Colin rolls to the side. The monster's limb sweeps past them. It was close enough to graze his scalp. He shudders as he thinks about what would've happened if he had been a second slower. </p>
+<p>Boom!</p>
+<p>A powerful shockwave hurls Colin through the air. His vision darkens, and the world spins uncontrollably. When he manages to lift his head, he sees another Wanderer towering right in front of him. The ground trembles beneath its cry.</p>
+<p>Its massive compound eyes glint coldly as they turn downward. Energy particles gather in its gaping maw.</p>
+<p>Just a little longer...Colin clenches his fists. </p>
+<p>He forces himself to stay conscious. Rescue should be here any –</p>
+<br>
+<p>Bang bang bang!</p>
+<p>Gunshots ring out in quick succession.</p>
+<p>A beam of light slices through the Wanderer's attack as two figures leap before Colin.</p>
+<p>"Captain Jenna, we've arrived at the designated location!"</p>
+<p>Colin's eyes snap open at the sound of a clear, authoritative female voice.</p>
+<p>A young man and woman stand before him. Their movements were swift like shooting stars. After finishing her report, the female Hunter lowers her communication device and briefly checks on Colin. Confirming he's unhurt, she raises her weapon again.</p>
+<p>"Let's move, Xavier." Without waiting, she dashes forward like an arrow. The male</p>
+<p>Hunter —now a glowing blur—is right behind her. </p>
+<p>Roar!</p>
+<p>The Wanderer gathers energy particles in its maw again. It's preparing to launch another attack. But the female Hunter is faster. She leaps onto the monster's shoulder and fires her gun at point-blank range. </p>
+<p>Bang!</p>
+<p>At the same time, her partner's lightblade pierces the creature's weak spot. The two Hunters kill the Wanderer before it can deploy its Protofield.</p>
+<p>Stunned, Colin can only watch in silence. What seemed like a deadly threat moments ago now lies in pieces at their feet.</p>
+<p>They must be from UNICORNS.</p>
+<br>
+<p>It's not long before the Wanderers are eliminated. As the last one collapses, applause and cheers erupt from the gathered crowd Colin claps and puts extra effort into it.</p>
+<p>"Let's go, Xavier," the female Hunter says to her partner. The young man nods and picks up the hotpot ingredients he dropped during the fight.</p>
+<p>Watching their figures disappear into the distance, Colin suddenly feels that UNICORNS' eccentric methods don't seem strange anymore.</p>
+<p>At least they keep Linkon City safe</p>
+<p>A gentle tug on his sleeve interrupts his thoughts. Looking down, he sees the little girl he rescued staring at him.</p>
+<p>"Come here, Mister. I want to tell you something." She beckons him closer with a secretive look on her face.</p>
+<p>Amused, Colin crouches down. "What is it?" Without warning, the girl throws her arms around him. She's hugging him.</p>
+<p>"Thank you, Mister. Thank you for protecting me," she says with a serious expression on her face.</p>
+<p>Colin watches her skip back to her family. A Iump forms in his throat.</p>
+<p>He lowers his head and rubs his nose to hide his emotions. His gaze falls on the box of fried chicken lying where he had dropped it earlier. The first thing he needs to do is rest properly tonight.</p>
+
+        `,
+    },
+    {
+        id: 121,
+        link: "fractal-library-q&a",
+        serialNumber: "01",
+        subtitle: "Question 1",
+        content: `
+<p>Q1. Why is it called the Fractal'Library? </p>
+<p>A1.</p>
+<p>Hello! Welcome to the Fractal Library. Since this is the very first question in our guest book, I'd like to use it as a chance to share the library's story.</p>
+<p>I've never been the type to settle down. Over the years, I did all sorts of jobs: mason, gardener, delivery driver, janitor, clerk, and more. One day, I, drawn in by the peculiar name of this library, pushed open its doors. Inside, it was deserted and coated in dust Driven by curiosity, I took a "book" from the shelf and opened it. In that instant, a new universe unfolded before my eyes, and I fell in love with this place.</p>
+<p>While I was engrossed in reading, a telephone at the front desk rang, its chime echoing through the library's towering halls. For some reason, I approached the counter and answered the phone as if beckoned by an unseen force.</p>
+<p>Ten minutes later, the call ended. I can't talk about what was discussed. But after that conversation, I became the library's administrator and finally understood why it's called the Fractal Library.</p>
+<p>Most of the books here are science fiction. Nearly every fictional universe inside them branches out after its own Big Bang and spawns countless worlds of infinite complexity. Yet their similarities are uncanny. The books themselves reflect this fractal nature, each with a sense of endless variety and overarching similarity. They highlight recursion (chapters mirroring the entire book paragraphs echoing the chapters' themes, sentences extending the paragraphs' ideas), multiple layers within their structure (like fractal patterns that reveal finer details), and non-linear complexity (interwoven narratives forming intricate, dynamic patterns).</p>
+<p>Realizing this only made me love the library more.</p>
+<p>I've never met its actual owner, so sometimes I imagine what I'd do if I were in charge.</p>
+<p>Maybe I'd rename it. The word "fractal" is a bit abstract. I might call it the "10^33 Library" instead. Most of the books here are sci-fi. And every time I open a new one, it feels like I'm witnessing the birth of a universe, that instant of 10^-33 seconds when the cosmos explodes from a tiny singularity.</p>
+<p>It's a name you could explain in a single sentence—straightforward and easy to grasp.</p>
+<p>Still... Whenever I imagine making that change, the phone rings again and reminds me that this place already belongs to someone else.</p>
+
+        `,
+    },
+    {
+        id: 122,
+        link: "fractal-library-q&a",
+        serialNumber: "02",
+        subtitle: "Question 2",
+        content: `
+<p>Q2. Why did you want to open this kind of library? </p>
+<p>A2.</p>
+<p>First of all, I didn't open this library. It's always been here. I'm just a temporary administrator. But I can tell you why one phone call convinced me to stay aside from the money.</p>
+<p>Change is the only constant in the world. As I said before, I used to wander from place to place and never stayed in one spot for long Over time, I learned to love that freewheeling life... until I stumbled upon this library. Here, I found everything I had seen and experienced Even if I traveled across the entire globe, it wouldn't add up to a fraction of what's contained in these shelves.</p>
+<p>This place holds countless stories and infinite possibilities from ancient times to modern days and distant oceans to nearby mountains Human imagination truly knows no bounds Many ancient myths have become today's reality. Perhaps all the things we consider impossible now and the mysteries we haven't observed really exist somewhere... Maybe in the future, or maybe in another universe I choose to believe in the worlds that you can find in those stories. Even if I spent my entire life reading, I'd only explore a tiny corner of this library. Yet this corner would still hold more wonders than I could ever encounter outside. As an administrator, I feel like my journey here has no end because I never know what awe-inspiring world awaits me each time I open a new book.</p>
+<p>There's another reason that's even more important. The more I read, the more I sense an unavoidable responsibility resting on my shoulders:</p>
+<p>I'm waiting for someone. I know an atheist will step through these doors one day. That person is the library's true owner. How do I know? Call it intuition. My curiosity refuses to let it go, so I need to see what kind of person would own a place like this. I'm certain that if I wait long enough, they'll appear before me P.S. Dear readers, I hope you'll spare some time in this ever-changing world to read, explore times and places beyond your experience, and discover all that lies hidden within the pages.</p>
+
+        `,
+    },
+    {
+        id: 123,
+        link: "fractal-library-q&a",
+        serialNumber: "03",
+        subtitle: "Question 3",
+        content: `
+<p>Q3. Since there's an extensive collection, which book is the curator's favorite? </p>
+<p>A3.</p>
+<p>First, let me say again that I'm not the curator. I'm just an administrator. Now, about your question... Let me think.</p>
+<p>Choosing a favorite... This is tough. I can't pick one, but I can tell you about a story that really stuck with me. I still think about it even when I finished reading it a long time ago It was set in a world obsessed with efficiency. People had no names, only numbers. Those in power genetically screened embryos and based on the results, decided their entire lives from what education they'd get, what work they'd do, whom they'd love and marry, and even the traits of their children. Everything was determined by genetics, and the talents" bestowed by the gods" were fully realized. Nature and nurture, when perfectly fused, left no room for debate. No matter where you looked, it seemed like flawless harmony. At first, the world seemed dazzlingly beautiful and everyone believed this was exactly how the world should be. But the balance was shattered when a wealthy individual engineered a child without flaws. This child could adapt to anything, yet he revered nothing. He soared above every rule and sneered at order itself. Cracks in the system appeared, and where there are cracks, rebellion follows. But we all know that rebels in any universe, are branded as traitors. And they are forever condemned in history I encountered another world. It was nothing like that harmonious place I described before. By the time I looked at it, it was already on the brink of death. Everyone but "him" had fallen victim to a virus that stripped away the human form and humanity. It turned people into an energy that would perish along with the planet. It reminded me of cancer cells-once harmless symbionts that entered a frenzy of endless replication until they destroyed their host and died with it. All of it done for the sake of immortality. To prevent this calamity from spreading elsewhere, "he" became that world's lone survivor. He had a single mission: Eliminate every infected individual, root out every trace of this disease, and then guard those warm "remains" until they had fully crumbled away. He waited for what felt like an eternity until all drifted into emptiness. He became a prisoner of time, the embodiment of loneliness, forever the last person. And in the end, as the final speck of that world turned to dust, he vanished too... Now that I think about it, the stories that truly stayed with me all seem to prove an old saying... "Happy stories are the same, but unhappy stories each have their own kind of unhappiness." Once a story finds its perfect ending, it stops, and no one looks back. Imperfections, however, remain unforgettable. They echo without a response until the end of time.</p>
+<p>If these stories are someone's reality, if their worlds truly exist or once did...Could they have been just experimental playgrounds for some god's whim? Bits and pieces thrown together without a second thought, proportions guided by mood, one failure after another. Each would be more fleeting than a grain of sand and a flicker of light.</p>
+
+        `,
+    },
+    {
+        id: 124,
+        link: "fractal-library-q&a",
+        serialNumber: "04",
+        subtitle: "Question 4",
+        content: `
+<p>Q4. What's your ideal future? And what would your ideal world look like?</p>
+<p>A4.</p>
+<p>It's interesting that you asked about an "ideal future" after we talked about books. Perhaps you noticed how most sci-fi stories tell the "future" as one imagined at the time they were written. From the perspective of "the end of time," the future is just another piece of that universe. The universe isn't good or bad. It's simply a collection of stories following their own laws. If you understand those laws, you can see the final page.</p>
+<p>That's the theory, anyway. But stories come from life, and reality is often stranger than fiction. Even though this place has shown me countless possibilities, how I spend each day is still up to me. We might be tiny on a cosmic scale. But within our own little universes, we're everything. Even if we use knowledge to predict where the world might go, we can't be sure of our own futures. Maybe that uncertainty is what I find most ideal.</p>
+<p>I just noticed I'm humming a little tune. It's amazing how long I've been here. I've picked up habits from those around me.</p>
+<p>As for the ideal world... If I must respond, I suppose the "utopia" so often mentioned in books sounds appealing. It's a place where everyone can be who they want and live as they wish. But a world with nothing but light and no darkness is as stagnant as a dead pond Such a place can never exist. Still, I hope everyone can become their own utopia. After all, there's no law against making a wish right? People can wish wherever and whenever they please, and I'll write my sincere blessings for every reader here.</p>
+
+        `,
+    },
+    {
+        id: 125,
+        link: "fractal-library-q&a",
+        serialNumber: "05",
+        subtitle: "To Be Continued",
+        content: `
+<p>"Hello? According to my calendar, it's not time yet. When the moment arrives, I'm sure he'll come looking for me."</p>
+<p>"Almost there! Give me a break! We'll know the truth soon enough. And if he doesn't show up, well, we know exactly where to find him, right?"</p>
+<p>"...By the way, how did that new book of yours turn out? When can I read it? Oh... it failed again?"</p>
+<p>"That's okay. The one I'm working on now is long, so there's still hope. Stop nagging me!"</p>
+<p>"Okay, okay. If he doesn't appear, I'll find him myself. I have to get back to work. I'm in Linkon City now, so I have to stick to the schedule here. Bye!"</p>
+<p>After hanging up, I notice the clock above the door says it's 10:00 A.M. No one manages time as precisely as that caller. I draw back the curtains, open the door, and breathe in the scent wafting in from the cafe next door Standing outside, I stretch and order my morning treat: a 100% sugar sea salt cheese latte with double whipped cream and chocolate drizzle. It's a sweet dopamine rush to kick off a lovely day!</p>
+<p>A child, perhaps seven or eight, stops at my doorway and peeks inside. But he doesn't enter.</p>
+<p>"Do you want to come in and look around?"</p>
+<p>The child glances hesitantly at the sign on the doorframe. I realize my mistake and flip the "Closed" sign.</p>
+<p>He follows me into the library, opens the guest book by the counter, reads a few lines, and then scans the room while being puzzled. He soon meets my gaze.</p>
+<p>"A library? But most of these things don't look like books…”</p>
+<p>What a perceptive kid. That's another reason for me to love this place.</p>
+<p>"You're right. A lot of the things here aren't what you'd call books, but let's call them 'books' for the sake of convenience."</p>
+<p>"Can I check out the things that don't look like books too?"</p>
+<p>"Of course. When you want to read them, they'll take on a form that's easy for you to understand. Books are the ideal medium. But if you prefer cartoons, that works too."</p>
+<p>"Wow! That's amazing!"</p>
+<p>As the child loses himself in this new discovery, I lean against the doorframe and watch the busy street.</p>
+<p>If each "book" holds a tiny world, and everyone who enters a library seeks some kind of answer... Then I hope you find your own "singularity" in this little library-your personal starting point, your own universe. l might not meet all your expectations, but I'll still say the following with sincerity: "Hello! Welcome to the Fractal Library."</p>
+
+        `,
+    },
+    {
+        id: 131,
+        link: "high-&-low-culture",
+        serialNumber: "01",
+        subtitle: "Artist Life Insider",
+        content: `
+<p>"Special Feature: Balancing Art and Livelihood"</p>
+<p>"Art is liberating, rebellious, and uncompromising."</p>
+<p>Yet when art intersects with markets, promotion, and commercialization, artists often need a trusted partner—someone who can help them step out of their own world and connect with the outside.</p>
+<p>Today, we have the privilege of interviewing Mr. Thomas, Rafayel's gallery manager. While Rafayel's paintings overflow with personality and romance, Thomas's work lies in finding balance within this freedom, paving the perfect path between artistic creation and the art market.</p>
+<br>
+<p>Join us for Issue 14 of "Artist Life Insider" as we delve into "The Gallery Manager: Thomas's Story."</p>
+<p>Opening: Mr. Thomas, hello! Thank you for taking the time for this interview. Could you start with a self-introduction to help our readers understand your background and Work?</p>
+<p>Hello everyone, I'm Thomas. No need for formalities—just Thomas is fine, like how Rafayel calls me.</p>
+<p>I've been in art management for several years now. I started as an agent, and later partnered with Rafayel to open a gallery, focusing on curation and contemporary art promotion. Rafayel and I aren't just business partners—I'd say we've been friends for many years now. </p>
+<br>
+<p>Q1: As both an artist's manager and gallery director, what do you find most challenging in your daily work?</p>
+<p>Finding Rafayel, without a doubt!</p>
+<p>Did you expect me to talk about business negotiations or exhibition curation? Well, sure, the business side comes with all sorts of challenges, but those are just basic work to me.</p>
+<p>But we haven't seen Rafayel at all today, have We? Haha!</p>
+<br>
+<p>Q2: The artists we've interviewed before all had their unique creative habits. Some keep their favorite plush bear nearby, while others must drink exactly three bubble teas before starting work. From your observation, does Rafayel have any such peculiar habits? </p>
+<p>Wait, they all have such odd habits?</p>
+<p>Thomas blinks in surprise before falling into deep thought for nearly a minute.</p>
+<p>When creating art, Rafayel likes to put his glass fish tank over his head to truly experience life from a fish's perspective, to see the world through their eyes...</p>
+<p>Okay, he doesn't actually do that. I was just thinking how these quirky personas can be effective marketing for artists, but I couldn't come up with a good one on the spot.</p>
+<p>What? Did you all actually believe that? I suppose artists can get away with anything these days...</p>
+<p>But if I had to point out something genuinely concerning, it would be how Rafayel completely forgets to eat when he's working. I used to bring food to his studio just to make sure he hadn't passed out from hunger. </p>
+<p>Though lately, I don't have to worry about that anymore.</p>
+<p>When we tried to inquire about this recent change, Thomas insisted it was a private matter of Rafayel's and politely declined to elaborate further.</p>
+<p>>>So is Rafayel the type to forget to eat when he's working?</p>
+<p>I don't think he sees painting as work at all .</p>
+<p>>>How can you tell if Rafayel is getting inspiration or just spacing out?</p>
+<p>Ah, well, I never ask him directly—he'll always say he's getting inspiration.</p>
+<br>
+<p>Q3: Rafayel is an artist who pursues individuality and romance. Do you think commercialization restricts him?</p>
+<p>Sometimes I wish it would... Just a little.</p>
+<p>Thomas sighs wistfully at the thought.</p>
+<p>The thing is, Rafayel couldn't care less about how much his paintings sell for, or his commercial value as an artist.</p>
+<p>We're only bound by the things we care about. aren't we?</p>
+<br>
+<p>Q4: Have you ever considered what would happen if Rafayel lost his creative spark?</p>
+<p>"That's impossible."</p>
+<p>This was Thomas's most resolute answer of the entire interview.</p>
+<br>
+<p>Q5: This interview will be released during art school admission season. Do you have any words for those who are about to enter this field?</p>
+<p>First, to all young aspiring artists, congratulations on choosing a path full of challenges and endless possibilities.</p>
+<p>Second, there will certainly be moments of uncertainty along the way, but as long as you stay true to your artistic voice, you'll eventually find your own path.</p>
+<p>Who knows? Perhaps one of you will become as remarkable as Rafayel—I'll definitely be there to sign you when you do!</p>
+<p>Finally, try to dance with the industry. Art isn't just about creation--it's intimately connected with markets, audiences, and society. Understanding how the industry works and finding your place within it is an art in itself... Your work will ultimately dialogue with the world through various channels.</p>
+<p>Here's to all the young artist's—may you find joy in the world of art.</p>
+
+        `,
+    },
+    {
+        id: 132,
+        link: "high-&-low-culture",
+        serialNumber: "02",
+        subtitle: "Birthday",
+        content: `
+<p>The scent of fresh vegetables still clinging to soil mingles with the sharp smell of raw meat, while the sound of haggling fills the air. In the market, Thomas's designer blue-gray coat stands out. A nearby elderly man, in nothing but slippers and shorts for his grocery run, eyes Thomas's jingling metal necklace with visible disapproval.</p>
+<p>The produce vendor stares for a good three seconds before recognition dawns. "Thomas? Solana was here this morning. Didn't you two coordinate?"</p>
+<p>"Getting all dressed up for your birthday, huh? The outfit, the hair... even makeup?"</p>
+<p>Thomas carefully selects a few stalks of fresh green onions. "Just getting something to make garlic shrimp for her. The styling is for a magazine interview today... Wait, how did you know it's my birthday?"</p>
+<p>"Solana mentioned it this morning..." The vendor weighs the green onions. "What magazine? I'll buy a copy for ya!"</p>
+<p>"No need, sales numbers don't affect me… Thomas hands over the garlic and ginger. "If you really want to show support, how about a discount?"</p>
+<p>"A discount? But my wholesale price from the farmers...”</p>
+<p>"Solana told me you sold her Chinese cabbage for fifteen bucks this morning."</p>
+<p>"Ah—fine, fine! Here you go, Mr. Artist!</p>
+<p>Fussing over a few dollars... Just take them, they're on the house!"</p>
+<p>*** ***</p>
+<p>Thinking back to today's interview, while it wasn't meant to be impromptu, having Thomas as the interviewee was purely a work mishap.</p>
+<p>"I'm terribly sorry. I mentioned it to Rafayel, but I've been so swamped lately that I didn't realize I hadn't synced his schedule. He's probably off getting inspiration in some remote mountain with no signal again…”</p>
+<p>Thomas apologizes profusely. "Do you have a backup plan? If needed, I can help contact other artists we've worked with."</p>
+<p>But the magazine came specifically for Rafayel. The staff huddled together in discussion for several minutes before finally reaching a solution.</p>
+<p>"Interview me? Me?" Thomas points to himself in surprise.</p>
+<p>"Art school admission season waits for no one, and we need to submit the draft immediately," the staff explains. "Please help us out, Mr. Thomas. We need something to fill the pages today...”</p>
+<p>The interview itself turned out quite relaxed and afterward, the staff invited him for seafood barbecue at Whitesand Bay—they had actually brought a gift box of mantis shrimp as a gesture of sincerity, but with Rafayel absent, they had "no choice" but to enjoy an extra meal together.</p>
+<p>"You all go ahead," Thomas waves them off.</p>
+<p>"It's my birthday, so I'm heading home to celebrate with my wife."</p>
+<p>"What? We had no idea you were married!"</p>
+<p>"Happy birthday, Thomas!"</p>
+<p>"This is so sudden, and we don't have anything else to give you... but please take this!"</p>
+<p>Thomas feels the weight of the seafood gift box in his hands and looks at it in surprise swallowing back his polite refusal.</p>
+<p>"Well then, thank you everyone. I'll graciously accept—my wife happens to love garlic shrimp."</p>
+<p>"Aww...you're so sweet!"</p>
+<p>*** ***</p>
+<p>As Thomas opens his front door, he's struck by the thunderous sound of crying.</p>
+<p>Solana is cradling their wailing daughter, her gentle cooing doing little to soothe the baby. Thomas quickly sets down his things and rushes to the kitchen. With practiced movements, he mixes the hot and cold water, levels off a scoop of formula powder, pours it into the bottle, and shakes it thoroughly After letting it settle, he tests the temperature against the back</p>
+<p>Making formula for their daughter has turned both Thomas and Solana into human thermometers these days.</p>
+<p>The piercing wails finally subside with the warm bottle of formula.</p>
+<p>Solana gently pokes their daughter's chubby cheeks. "You little glutton, you just had formula two hours ago."</p>
+<p>"Don't listen to Mommy. You're not a glutton at all. Eat up, you'll grow big and strong—" Just as they finally manage to get their daughter to sleep, the phone breaks the silence, undoing half an hour of the couple's efforts in an instant.</p>
+<p>While Solana hurries to comfort their crying daughter again, Thomas takes the call and Walks to the balcony.</p>
+<p>After handling some business matters, Thomas ties on an apron and heads to the kitchen. As he pours the seafood from the gift box into the sink, water splashes up, and Solana chuckles while grabbing some paper towels to wipe his face.</p>
+<p>Just as he's about to start preparing the seafood, his phone buzzes in his pocket again. With both hands occupied, Solana takes out his phone and holds it to his ear. Thomas continues peeling shrimp while talking to the person on the other end.</p>
+<p>"Regarding transportation, I've confirmed with the logistics company. The timing works."</p>
+<p>"The lighting design needs to be adjusted based on the exhibits' materials and color schemes to ensure proper presentation."</p>
+<p>"We should use neutral tones for the background to avoid competing with the visual focus of the exhibits. As for the overall atmosphere..."</p>
+<p>Thomas takes four phone calls in the time it takes to prepare dinner.</p>
+<p>Finally, as the couple enjoys their homey dinner of dishes and soup at the coffee table with their TV, Thomas's phone is silent, as if it too wants him to properly enjoy his birthday. While Solana goes to get the cake from the fridge, he quickly switches the mystery show on TV to his favorite romantic drama, "Let's Watch the Meteor Shower."</p>
+<p>Returning with the cake, Solana glances at the screen and sighs with familiar resignation. "This show again? Are you sure you're really an art professional...”</p>
+<p>"High art meets pop culture, pop culture meets high art!"</p>
+<p>*** ***</p>
+<p>In the flickering candlelight, Thomas closes. His eyes and makes his birthday wishes.</p>
+<p>- May Solana be safe and happy.</p>
+<p>- May our daughter grow up healthy and strong.</p>
+<p>- May our family stay together forever</p>
+<p>- Oh right, and Rafayel. Hope he gives me less to worry about this year, and may he and his Miss Bodyguard be happy together for a long, long time.</p>
+<p>The moment he blows out the candles. darkness falls, and his phone decides to vibrate at that exact moment.</p>
+<p>Thomas reaches for his phone with resignation, but upon seeing the caller's name, he springs to his feet. In one fluid motion, he throws on the blue-gray coat draped over his chair and heads to the entryway to change his shoes.</p>
+<p>"It's Rafayel. If he's calling at this hour, it must be important-he's probably back in Linkon. I need to go see him. We'll have the cake when I get back later..."</p>
+<p>Answering the call, he hears Rafayel's unusually serious voice: "Thomas, come to Mo-quickly-I have something extremely important to discuss with you."</p>
+<p>Thomas manages to take the call, change his shoes, and press the elevator button all in one seamless motion, taking no more than ten Seconds.</p>
+<p>"Actually, I had something pretty important today too. I mentioned it to you, but I failed to put it in your schedule. That's my bad... Though it's all been taken care of now."</p>
+<p>Rafayel sounds confused. "...Huh? This needs to go in my schedule too?"</p>
+<p>As the elevator dings open, the voice from the phone receiver merges with one in real space.</p>
+<p>"Happy birthday!"</p>
+<p>Thomas looks up to find two familiar faces-Rafayel and his Miss Bodyguard.</p>
+<p>"Happy birthday, my friend." Seeing Thomas still stunned, Rafayel leans against the doorframe and lifts the gift box in his right hand. "Important business accomplished-this didn't need to go in my schedule, right?"</p>
+<p>"That's not what I…" Thomas trails off with a helpless laugh, quickly accepting the gift box. </p>
+<p>"Come up for a bit? Have some cake?"</p>
+<p>"Better not. You might lock me in and start demanding manuscript updates."</p>
+<p>The girl, still in her hunter's uniform, playfully shrugs and links arms with Rafayel. "Free time is precious—spend it with the ones who matter. We won't keep you any longer."</p>
+<p>"Exactly. Stop thinking about work and watching my every move." Rafayel waves with a light "bye" and turns away, walking into the evening breeze with his Miss Bodyguard.</p>
+<p>And so Thomas returns to his doorstep, gift box in hand.</p>
+<p>Click—the key turns in the lock, and the corridor's motion sensor light flickers on.</p>
+<p>Behind the door, Solana's face lights up with pleasant surprise—</p>
+<p>"You're back already?"</p>
+<p>"Nothing urgent with Rafayel, he just came to deliver this," he says, setting the gift box on the table with a pat. "Now then--let's go cut that cake."</p>
+
+        `,
+    },
+    {
+        id: 133,
+        link: "high-&-low-culture",
+        serialNumber: "03",
+        subtitle: "Microscope",
+        content: `
+<p>WishiCouldPaint: As an art school applicant and devoted fan of "Artist Life Insider," I heard this one would feature Rafayel. Saved it specially for the day before my entrance exam hoping for some inspiration from my idol… but why did we get his manager instead? </p>
+<p>PotatoSectleader: Rafayel wasn't there, but his presence is everywhere. Think about it. Really think about it. </p>
+<p>momo: l actually believed the part about him wearing a fishbowl while painting…</p>
+<p>rafayel_ridable_fish_dinner: It's thanks to having such a professional manager like Thomas that Rafayel can focus on creating art! Supporting Thomas!</p>
+<p>User426835: So why exactly don't we need to worry about Rafayel starving anymore? Details please!</p>
+<p>NightReaderOfUselessBooks: Rafayel's truly strong for never complaining about the industry...</p>
+<p>GarlicShrimpSupremacy: Thomas clearly shows his expertise as a manager. The insights he shared in the interview are really valuable for anyone planning to enter the art industry! Good luck to everyone with their entrance exams!</p>
+<p>confidentwomenlivebest: When is Rafayel releasing new work?</p>
+<p>JustALeek: Was hoping to read about a master artist's journey in this special exam issue...</p>
+<p>*** ***</p>
+<p>"The art exam special is generating quite a buzz online. Thank you, Mr. Thomas!"</p>
+<p>After hanging up, Thomas pauses his work and checks his phone, wondering if his insights had particularly resonated with art students and guided countless exam candidates... On the trending page, several topics are marked with red "VIRAL" badges</p>
+<br>
+<p>#ArtistLifelnsider ArtExamSpecial#</p>
+<p>#Rafayel: True Masters Never Complain About The Industry#</p>
+<p>#Rafayel Paints While Wearing A Fishbowl#</p>
+<br>
+<p>"This hardly has anything to do with me." </p>
+<p>He scratches his head in confusion, opens a discussion thread, and scrolls through until he finally finds a few mentions of Thomas among the flood of Rafayel comments.</p>
+<p>Well, at least some people have the insight to recognize his expertise as an artist's manager Thomas turns off his phone with satisfaction and returns to work.</p>
+<br>
+<p>Beside him, Solana suppresses a smile, quietly keeping her achievement to herself. Garlic shrimp supremacy for sure!</p>
 
         `,
     },
