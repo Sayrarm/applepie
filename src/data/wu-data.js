@@ -738,7 +738,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>"You know this Tony guy is really unlucky to get on a hit list for a film. And you're right about how it's dangerous to know too much." Rafayel sits down next to the trunk, sighing at the sight of the director being bound and gagged. He turns and glances at Raincoat's hands. "The same goes for you. The more dirty work you do, the less you can hold on to these gloves, yeah?"</p>
 <p>Raincoat understands. He knows a lot more about Ever than Tony. Who knows? He might be next.</p>
 <p>This mysterious artist who recently returned to the country has countless connections with Lemuria. His sudden appearance here isn't just to sigh and say hello.</p>
-<p>"Thank you for the reminder, Mr. Rafayel. Do you have any advice?"</p>p>
+<p>"Thank you for the reminder, Mr. Rafayel. Do you have any advice?"</p>
 <p>"Weeell, since you're just in this for the money, why don'tcha work for me and give yourself a way out?"</p>
 <p>"What do you want?"</p>
 <p>Rafayel looks out at the ocean, his gaze seemingly penetrating the depths of the water. "Ever has an execution list. Those on it either die or disappear. I want..."</p>
@@ -2213,5 +2213,1456 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>Beside him, Solana suppresses a smile, quietly keeping her achievement to herself. Garlic shrimp supremacy for sure!</p>
 
         `,
+    },
+    {
+        id: 141,
+        link: "elysium",
+        serialNumber: "01",
+        subtitle: "Meeting",
+        content: `
+<p>Beep, beep.</p>
+<p>The alarm sounds.</p>
+<p>Mr. P glances at his watch. It's 9:55 P.M. </p>
+<p>Time's almost up.</p>
+<p>He quickens his pace. He has a date he can't miss tonight.</p>
+<p>The sidewalks of Umerta Street are nearly empty in the darkness. For the opulent capital of crime, the N109 Zone, this is just one of many waking hours.</p>
+<p>Neon lights blur into a misty haze, but Mr. P has no time to savor them. He lowers the brim of his hat, tightly pulls his coat, and keeps walking.</p>
+<p>He pauses at a window filled with over-the-top decorations.</p>
+<p>"Plushie Bomb, the crown jewel of the shop. For displaying purposes only. Not for sale. —Kris's Antiques and Oddities"</p>
+<p>Behind the sign sits a frog plushie inside a bird cage.</p>
+<p>He checks his newly acquired, diamond-studded watch.</p>
+<p>Well, there's still a bit of time.</p>
+<br>
+<p>"Welcome to Kris's Antiques and Oddities. Don't touch anything if you aren't buying... Unless you're interested in a taste of lead." Behind the counter, the owner is glued to his phone. As Mr. P passes, he spots the title of a hot forum thread on the screen.</p>
+<p>"Phantom Thief Pea Pulls Another Time Trick: Million-Dollar Blood Diamond Watch Vanishes From Solon Hotel Auction!"</p>
+<p>“Tch, since when did the N109 Zone start cheering for some second-rate thief? There are thousands of comments, too. If I met that guy, I'd crush him with one hand..." The owner sneers, but he can't resist adding a post of his own.</p>
+<p>A few seconds later, a beep shatters the silence. The owner looks toward the sound The shop's prized frog plushie has vanished from its cage. Only the diamond-studded watch shines dully in its place.</p>
+<br>
+<p>On the street lined with bars, Mr. P emerges from an alley. He tosses the frog plushie in his hand. Then, he drops its dismantled bomb into a trash can. "Tch...the design is outdated. At least the color still pops out."</p>
+<p>He straightens his hat. Behind him, neon lights quietly turn on and trace his figure in a faint glow. 10:00 P.M.</p>
+<p>That's when Elysium officially opens.</p>
+
+        `,
+    },
+    {
+        id: 142,
+        link: "elysium",
+        serialNumber: "02",
+        subtitle: "Elysium",
+        content: `
+<p>Mr. P relaxes as the bar's comforting blues ease away his tension.</p>
+<p>"New face, huh? What can I get you?" Standing behind the counter, the woman with chestnut wavy locks props her chin up on her hand and smiles at him.”</p>
+<p>"I'll take the Connoisseur's Menu.”</p>
+<p>The bar falls quiet for a second.</p>
+<p>The Connoisseur's Menu is the most infamous menu in the N109 Zone. It's second to none. Not only do its dishes draw inspiration from the area's most celebrated eras and figures but...it also doubles as a top-secret ledger for "intel trading" and "deals with high stakes." A moment later, a thin menu slides over to Mr. P.</p>
+<p>"Enjoy."</p>
+<p>*** ***</p>
+<p>Elysium</p>
+<p>Connoisseur's Menu (Tasting Menu)</p>
+<p>- Fill your empty soul to your heart's content.</p>
+<br>
+<p>Do It</p>
+<p>House special blend. One-third whiskey, two scoops of cream, one brown sugar cube, and a sprinkle of fate. (Complimentary)</p>
+<p>Description:</p>
+<p>Every gift comes with a hidden price.</p>
+<p>But this coffee is actually free.</p>
+<p>"Do It" can be a command or an expression of encouragement.</p>
+<p>Then again, some say to ignore people and do whatever you want.</p>
+<br>
+<p>Mobster's Salad</p>
+<p>Mashed potatoes, eggs, fresh shrimp, chickpeas, and yogurt, all crushed together with desire. (5, 6, 7, 8) </p>
+<p>Description:</p>
+<p>They came here to survive.</p>
+<p>They drowned in their own greed.</p>
+<p>To those ruthless criminals we lost forever</p>
+<p>Without them...</p>
+<p>The N109 Zone wouldn't be what it is today. </p>
+<p>Although they're no longer here to see it.</p>
+<br>
+<p>Coward's Shell</p>
+<p>Fresh oysters, lemon juice, ground pepper, and a dash of courage. (1, 3, 4)</p>
+<p>Description:</p>
+<p>Without their sturdy shelter, the spineless remain spineless.</p>
+<p>That is why we built our foundation from the strongest materials.</p>
+<p>This dish honors those misfits who once graced our establishment.</p>
+<p>Without them, Elysium would never exist. </p>
+<p>Some exiles become worthless junk, and others transform into pearls.</p>
+<p>Is it the environment that determines their fate? Or their own nature?</p>
+<br>
+<p>The N109 Grand Platter</p>
+<p>Venison from acorn-fed deer, white truffle cheese, white caviar, and blue lobster tart with mango Complimentary to the true VIPs. (3, 5)</p>
+<p>Description:</p>
+<p>Four distinct powers dominate the N109 Zone They are the true players at the N109 Zone's gambling table.</p>
+<p>A platter of four rare delicacies.</p>
+<p>They don't complement each other. They're just equally expensive.</p>
+<p>Choose wisely. If you're unsure, try them one at a time.</p>
+<br>
+<p>24K Exchange Artist</p>
+<p>Chicken leg cooked with scallion oil, soy sauce, salt, golden coconut oil, sesame oil, shredded ginger, and scallions. Comes with a dash of humor. (1, 2, 4, 6)</p>
+<p>Description:</p>
+<p>He's no thief. He's an artist who believes in fair exchange!</p>
+<p>Dedicated to the unseen Phantom Thief Pea. Everything has a price. Pain is traded for an equal amount of pain.</p>
+<p>Joy is exchanged an equal amount of joy. </p>
+<p>But is your happiness truly equal to mine?</p>
+<br>
+<p>The Point Of No Return</p>
+<p>Smoked pigeon, saffron, pickled onions, barley, toasted truffle bread with au jus, and 100% trust. (5,7,8) </p>
+<p>Description:</p>
+<p>At Charon, no deal goes unmade</p>
+<p>The "pigeon" meat from the market's "arena." </p>
+<p>A rare delicacy available only this season.</p>
+<p>Pay the appropriate fee.</p>
+<p>And they will fulfill your every wish.</p>
+<p>Remember... Once a deal is in place, there's no turning back.</p>
+<br>
+<p>Strawberry Disaster Special </p>
+<p>Strawberry ice cream, fresh strawberries strawberry sauce, chocolate-covered strawberries, chili powder made from the Red Savina pepper, and a four- leaf clover. (7) </p>
+<p>Description:</p>
+<p>If you survived 2036…</p>
+<p>The gang war that engulfed the N109 Zone…</p>
+<p>This is the dessert you can't refuse.</p>
+<p>Rich ice cream wrapped in strawberry sauce... </p>
+<p>And spiced with chili to sting your tongue Like that night, when the streets ran red… </p>
+<p>Not all survivors were strong, and not all the strong survived.</p>
+<p>Wouldn't you agree, you lucky duck?</p>
+<br>
+<p>Today's Special: Sweet Evil Trap </p>
+<p>Pepper walnut tart, rosemary gelato, pomegranate jelly, red wine marshmallow, and 10.5 grams of soul. (0) </p>
+<p>Description:</p>
+<p>I'm waiting for you.</p>
+<br>
+<p>Special Services:</p>
+<p>1. Assassination, 2. Arms Deals, 3. Infiltration, 4. Intel Collection, 5. Mediation, </p>
+<p>6. Biological Substances, 7. Protocore Trading, 8. Proxy Deals</p>
+<p>0. Today's Special: ? </p>
+<p>Special Notice:</p>
+<p>Menu items are subject to change due to seasonal availability and local logistics. Thank you for understanding.</p>
+<p>*** ***</p>
+<br>
+<p>"Call me Aislinn." The curly-haired woman sets a cup of steaming coffee in front of Mr. P.</p>
+<p>"This is our signature brew. On the house for those who choose the Connoisseur's Menu. It's been a while since anyone new asked for it, so I upgraded you to a large cup."</p>
+<p>"Do It'?" Mr. P picks up the cup. "Is this some kind of go-getter philosophy for life?"</p>
+<p>"Oh?" Aislinn toys with a curl of her hair. "So that's how some people interpret it."</p>
+<br>
+<p>*** ***</p>
+<p>Do it.</p>
+<p>"Just do as you're told."</p>
+<p>This was what Aislinn heard the most as a child.</p>
+<p>"You worthless brat, do what I say! One more word and I'll kill you!"</p>
+<p>By the time she was twelve, Aislinn learned not to close her eyes when fists were flying Keeping her eyes open let her read the direction of the blows, protect her face and gut, and choose where to fall to minimize injuries.</p>
+<p>She got lucky that time. He wore himself out quickly and sent her off to buy liquor.</p>
+<p>Before leaving, she glanced at the drunk who claimed to be her father. Of course, it was only true in the strictest biological sense Then she limped away.</p>
+<p>Sometimes, staying alive requires more than strength. It needs a bit of luck.</p>
+<br>
+<p>Turning the corner, Aislinn saw a striking woman leaning against a bar entrance and looking at her phone. Her tank top revealed sculpted muscles, and her short, orange-red hair shined brilliantly under the sun That was Ginevra, the bar's bouncer.</p>
+<p>Aislinn knew her. She had seen Ginevra single handedly knock down a group of drunks. They lay in a pile.</p>
+<p>She's amazing! Even stronger than Dad! With that thought, Aislinn couldn't help but move closer.</p>
+<p>Noticing her approach, Ginevra glanced up and laughed.</p>
+<p>"Hey, kid. Your face is quite the work of art.” Aislinn wiped her wet nose. The blood smeared across her swollen cheek. She was twelve. Malnourished, scrawny for her age. Still, she squared her shoulders and lifted her chin.</p>
+<p>"I'll pay you. Teach me how to fight. Or at least let me follow you around!"</p>
+<p>Without any hesitation, she shoved all the money that was meant for her father's liquor into Ginevra's hand.</p>
+<p>If she could become her sidekick, no one would dare to mess with her again.</p>
+<p>Ginevra didn't take the money. She crossed her arms and looked at Aislinn. "What, you lost a playground scuffle and now you want lessons? I'm not into babysitting...</p>
+<p>“I want my dad to be too scared to hit me again. Can you help me?" Aislinn stood on her tiptoes and brought her bruised face closer.</p>
+<p>"You..." Ginevra looked interested for a moment, but her face fell when a drop of blood landed on her shoe.</p>
+<p>…**.</p>
+<p>She heard Ginevra curse under her breath. </p>
+<p>*** ***</p>
+<p>“**…!”</p>
+<p>Mr. P has barely tasted his drink before the drink's burning edge brings tears to his eyes.</p>
+<p>"Cough, cough... Who puts booze in coffee?!"</p>
+<p>"One-third whiskey, two scoops of cream, one brown sugar cube, and... a sprinkle of fate." With a knowing smile, Aislinn taps the menu in front of Mr. P.</p>
+<p>"That's our signature blend."</p>
+
+        `,
+    },
+    {
+        id: 143,
+        link: "elysium",
+        serialNumber: "03",
+        subtitle: "Coward's Shell",
+        content: `
+<p>"Now you may place your order. Every dish comes with its own special seasonings so our customers can choose what suits their palate Take this one, for example." With brown nail polish shining, Aislinn's finger glides along the menu's surface until it settles beside a number.</p>
+<p>"Coward's Shell. Fresh oysters with a bit of pepper and paired with freshest sides: assassination, infiltration, and intel collection A perfect balance of flavors."</p>
+<p>Following her finger, Mr. P looks at the menu.</p>
+<p>He's drawn to the text beneath the name.</p>
+<p>"’This dish honors those misfits who once graced our establishment...?’" He's interested.</p>
+<p>"In the N109 Zone, everyone is practically an oddball. What kind of freak would even stand out?"</p>
+<p>"Maybe it has something to do with the word 'coward' ?"</p>
+<p>Yet no matter how he mulls it over, that word doesn't fit the N109 Zone. After all, everyone here has blasted their way through swarms of Wanderers to reach this forsaken pit…</p>
+<p>"Oh, there are cowards here," Aislinn says.</p>
+<p>*** ***</p>
+<p>It happened not long after Aislinn and Ginevra settled down in the N109 Zone. </p>
+<p>Bang!</p>
+<p>A cracked wooden door fell, and a figure tumbled out amid splinters and shrieks. </p>
+<p>"Just you wait! This isn't over!"</p>
+<p>"Oh, I'll wait, all right." Aislinn sneered. She leaned against the doorframe with a cocky stance she had picked up from Ginevra. Only after the man staggered away in fear did she turn to steady the bar's broken door.</p>
+<p>It was already the third batch of thugs this month who tried to extort "protection fees" since they opened Elysium.</p>
+<p>Two years before, the Chronorift Catastrophe struck. Abnormal Protofield fluctuations reduced this prosperous tech hub into a lifeless husk.</p>
+<p>But no one had imagined that this perilous wasteland would become a haven for outlaws.</p>
+<p>Here, law and order meant nothing. Only strength ruled over the weak.</p>
+<p>"Ginevra, why are we here? There isn't any sunlight, and the conditions are awful!"</p>
+<p>After walking into the room, Aislinn grumbled and watched the orange-haired woman flex her wrists.</p>
+<p>"Do I need to remind you that"—Ginevra looked up with a small smile—"this was my plan? You tagged along of your own volition."</p>
+<p>"But we're family! Of course I'll follow you." Aislinn declared this as if it were the most obvious thing in the world.</p>
+<p>Eleven years had passed since Ginevra took her in.</p>
+<p>"Ginevra, why don't we head to Linkon? We could open the bar there!"</p>
+<p>"No."</p>
+<p>"Why not?"</p>
+<p>"We can make more money here."</p>
+<p>"You're lying! You're not..." Aislinn cut herself off and glared at Ginevra. "You don't want money. You want to ditch me and have fun by yourself!"</p>
+<p>"You know me so well. Can you make my wish come true, then?"</p>
+<p>"As if! You bought me to be your sidekick!"</p>
+<p>"I adopted you. Don't make me sound like a human trafficker. And that tiny sum you had wouldn't even buy a single decent bullet." Another feeble creak sounded at the bar's entrance, which cut their bickering short.</p>
+<p>Aislinn glanced up and recognized the scarred man. He gave her a curt nod and walked to Ginevra.</p>
+<p>They exchanged a glance and silently slipped into the kitchen in the back.</p>
+<p>Alone, Aislinn calmly picked up a broom and began sweeping the scattered debris. </p>
+<p>As she swept, she moved closer to the kitchen and overheard snippets of a conversation It sounded like the scarred man wanted Ginevra's help in finding someone this time. Aislinn caught a few telling phrases: "missing Evolver," "test subject," "base of operations." Ever since the bar opened, Aislinn had grown used to suspicious figures seeking out Ginevra. They looked rough, and trouble was written all over them. After every hush-hush talk, Ginevra would vanish for a while Whenever Aislinn asked where she went, Ginevra would say she was "restocking supplies." </p>
+<p>Yeah, sure.</p>
+<p>What kind of supplies would leave her battered and bruised every time?</p>
+<p>Still, Aislinn never confronted her. She understood Ginevra's reasons for lying.</p>
+<p>When the murmured discussion behind the kitchen doors ended, Aislinn casually stepped away. With her head down, she continued to sweep.</p>
+<p>She expected the scarred man to leave quietly as usual. But this time, the man who never said a word to her actually stopped to speak.</p>
+<p>"It's getting rough out there. Watch your back."</p>
+<p>Startled, Aislinn looked up. The scarred man's face twisted into something that vaguely looked like a kind smile.</p>
+<p>"Dexter, you need to get ready for the mission."</p>
+<p>Ginevra, who had emerged from the kitchen at some point and was now leaning against the bar. She had suddenly spoken.</p>
+<p>"Our lookout vanished. They might know we're onto them. Your cover may already have been...”</p>
+<p>She trailed off, but Dexter tilted his head. He understood what she was implying</p>
+<p>"What, are you worried about me? If I don't come back, drop some flowers at my grave." </p>
+<p>"Get lost."</p>
+<p>He laughed before speaking in a serious tone.</p>
+<p>"Don't worry about me. In this line of work hardly anyone meets a peaceful end. I accepted that. Besides, we promised the parents that we'd bring their child home. If not us, then who? We can't be cowards now!" Ginevra smiled. "Fine. Make it back alive, and I'll clear your tab."</p>
+<p>Aislinn didn't know what Dexter was about to face, but she knew one thing: Neither Ginevra nor Dexter were their real names. And more importantly…</p>
+<p>They were good people.</p>
+<p>Once, Aislinn found a Special Task Force ID hidden behind Ginevra's bedside drawer So she knew they were the good guys.</p>
+
+        `,
+    },
+    {
+        id: 144,
+        link: "elysium",
+        serialNumber: "04",
+        subtitle: "Strawberry Disaster Special",
+        content: `
+<p>"Your Strawberry Disaster Special, sir."</p>
+<p>The snow-like ice cream is topped with fresh strawberries and shimmering sauce. It practically begs to be tasted.</p>
+<p>As she sets down the dessert, Aislinn slips a Protocore auction invitation beside it like a side dish.</p>
+<p>"Fresh strawberries and Protocores pair surprisingly well, wouldn't you say?" </p>
+<p>Mr. P ignores the invitation at first. He samples the dessert instead.</p>
+<p>Tart strawberry sauce melds with rich whipped cream to flood his taste buds. He closes his eyes and sighs contentedly. "Exquisite. Just as I hoped."</p>
+<p>Only then does his gaze shift to the invitation as if he's recalling something.</p>
+<p>"The 2036 Disaster... If I'm not mistaken, it started because of a Protocore map. Is that where you got your inspiration?"</p>
+<p>A third of the N109 Zone's population had vanished in the chaos. Mr. P remembers it well.</p>
+<p>Aislinn confirms his suspicions.</p>
+<p>"Unfortunately, that Protocore map was lost at that time.”</p>
+<p>Seeing the faint remorse in her eyes, Mr. P offers a knowing smile. "Lost? Perhaps it was stolen."</p>
+<p>"You aren't suggesting Phantom Thief Pea did it, are you?'</p>
+<p>"Who knows? It's all just speculation." </p>
+<p>He chuckles softly before playfully shrugging. </p>
+<p>"Maybe the map was just an excuse to shake things up from the start."</p>
+<p>Seeing his genuine smile, Aislinn lowers her gaze to mask her curiosity.</p>
+<p>"Perhaps."</p>
+<p>She idly brushes back a strand of her chestnut-colored hair. As it slips off her shoulder, Mr. P catches a glimpse of a silver windflower earring.</p>
+<p>*** ***</p>
+<p>There were no flowers in the N109 Zone. Aislinn propped her chin on her hand and stared blankly at the silver windflowers on the bar counter.</p>
+<p>Ginevra brought them in a few days ago from somewhere.</p>
+<p>Since then, Aislinn never saw the scarred man again. Although certain people stopped visiting, Ginevra was even busier. She headed out and vanished for days.</p>
+<p>"Did you hear? Even the Special Task Force cops have their eyes on that Protocore map in the N109 Zone."</p>
+<p>"Where did you get that from? It can't be true.</p>
+<p>If they ever set foot here, they'd be ripped apart in seconds."</p>
+<p>Inside the bar, Aislinn quietly wiped glasses while two customers whispered.</p>
+<p>At some point, a rumor started circulating about a priceless Protocore that was hidden in the N109 Zone. It drew in greedy opportunists like moths to a flame.</p>
+<p>"I heard something else. Someone says Sylus has started eating people.”</p>
+<p>Sylus?</p>
+<p>Aislinn knew that name. Actually, everyone in the N109 Zone knew.</p>
+<p>This powerful lone Evolver roamed the area and became a hot topic after "devouring' several prominent factions. Plenty of people wanted him on their side.</p>
+<p>"Eating people? What's that about?" </p>
+<p>"You heard about some Evolvers going missing, right? They say it all began after Sylus's Onychinus came into existence."</p>
+<p>"Really... Does that mean I'm in danger?"</p>
+<p>"Oh, please. He has standards about what he devours…”</p>
+<br>
+<p>At midnight, Aislinn woke up to an urgent ringing.</p>
+<p>The display showed a number she knew all too well: Ginevra's. She had been missing for months.</p>
+<p>For some reason, unease stirred in Aislinn's heart. She quickly answered the phone. On the other end, chaos reigned: gunshots, something like a beast's roar, and human screams. Amid the clamor, she heard Ginevra's voice.</p>
+<p>"No matter what happens, don't leave Elysium And..."</p>
+<p>Her final words were drowned out by a massive explosion from the street. </p>
+<p>Late 2036—</p>
+<p>The N109 Zone experienced its largest riot since its conception.</p>
+<p>A scramble for a Protocore map soon escalated into a gang war. It engulfed every faction.</p>
+<p>The festering, rotting darkness opened like an inflamed abscess. It revealed the true face of this soul-devouring cesspit.</p>
+<p>The fighting raged for months until the weak were fully consumed and every resource was carved up.</p>
+<p>In the end, the N109 Zone's turmoil disappeared, and the legendary Sylus emerged as the victor.</p>
+<p>The once three-way power balance was shattered, and the lawless territory finally met its new master.</p>
+<p>Aislinn survived untouched. She was one of the lucky few. At that time, she didn't understand why she and Elysium remained unscathed.</p>
+<p>Not until a black crow delivered its master's message: "The deal is done. I'll be taking the map.</p>
+
+        `,
+    },
+    {
+        id: 145,
+        link: "elysium",
+        serialNumber: "05",
+        subtitle: "Today's Special",
+        content: `
+<p>"A deal... That's definitely something he'd do." As Mr. P eats his last spoonful of ice cream, he still feels unsatisfied. He's curious about that past event. He picks up the menu again, and his gaze lingers on "Today's Special."</p>
+<p>"Sweet Evil Trap... What's the story behind this?"</p>
+<p>"Sorry." Aislinn offers him a regretful smile.</p>
+<p>"This was made for a certain lady and isn't available for others."</p>
+<p>"Who could get that kind of privilege?" Mr. P has never heard of an item on the Connoisseur's Menu being custom-made for one individual.</p>
+<p>"That's confidential info. I'm afraid I can't tell you."</p>
+<p>"I see... Then, can you at least tell me about the side dish?" Mr. P doesn't want to give up. "I'd love to, but I'm afraid I can't..." Aislinn smiles slyly. "I don't have the courage to serve our sponsor as a side dish."</p>
+<br>
+<p>It's 3:00 A.M., deep into the night.</p>
+<p>After seeing off the last customer, Aislinn goes to the bar's entrance and flips the sign from "open" to "closed."</p>
+<p>As always, she returns to the counter and pours herself a glass of whiskey.</p>
+<p>For years, Elysium has been one of the N109 Zone's top intel hubs that's backed by a powerful force.</p>
+<p>She hasn't seen Ginevra since the riot, and from the crow, Aislinn learned about Ginevra's deal with that man.</p>
+<p>They traded the Protocore map for Elysium's protection amid the chaos.</p>
+<p>How Ginevra got the Protocore map remains a mystery. Aislinn believes that with enough time, she'll find Ginevra and get the answers herself.</p>
+<p>From that day on, Elysium stepped into the murky depths of the N109 Zone as an intel bar.</p>
+<p>As Aislinn finishes her drink and prepares to leave, something on the corner of the counter</p>
+<p>catches her eye.</p>
+<p>"This is...”</p>
+<p>Aislinn picks up a frog plushie.</p>
+<p>She recalls that it belongs to the customer who ordered from the Connoisseur's Menu earlier today.</p>
+<p>As she moves to place it in the lost and found, a gift box slips from the plushie's arms. It reveals a wine-red card tucked into its seam.</p>
+<br>
+<p>To my dear Aislinn,</p>
+<p>Once, someone traded me a map for what's in this gift box.</p>
+<p>Now I'm returning it to its rightful owner in exchange for your splendid menu.</p>
+<p>P.s. Thank you for your hospitality tonight. Maybe I'll try the dish you created just for me next time.</p>
+<p>Yours truly,</p>
+<p>Phantom Thief Pea</p>
+<br>
+<p>As if sensing what's about to happen, her heart starts to pound.</p>
+<p>With trembling hands, Aislinn opens the gift box. On soft velvet rests a stack of old bills—the very ones she once forced into Ginevra's hand.</p>
+<p>Beside them lies a yellowed slip of paper that reads, "Aislinn's Protection Money."</p>
+<p>Aislinn touches her eyes that sting from her tears.</p>
+<p>After all these years, this small piece of survival finally returned home.</p>
+
+        `,
+    },
+    {
+        id: 151,
+        link: "skethes-vol.13",
+        serialNumber: "01",
+        subtitle: "Featured Character",
+        content: `
+<p>Yvette, born December 2012 on Whirlreef Island (now part of Skyhaven Guard Station Archipelago). Senior Engineer and bestselling author. Admitted to the Department of Energy and Power Engineering at Whirlreef Institute of Technology (now merged with Skyhaven University) in 2030.That same year, she began creating educational science videos and content on online platforms. In 2033, she published the science fiction novel "Cloud," which gained significant attention, establishing her as a representative sci-fi author before the Chronorift Catastrophe After graduation, she joined the Deepspace Aviation Administration as an engineer. In 2043, following her divorce, she resigned from her engineering position to pursue writing full-time. Her influential works include "Cloud," "Far Sky's End," and "The First Question, "which have been translated into multiple languages and published worldwide She has received numerous awards including the White Hole Literature Award, Skyhaven Fantasy Literature Award, and the Suspense Award. In 2048, she was awarded the Skyhaven Medal of Arts and Literature. She currently resides in Linkon City with her son, daughter, cat, and dog. </p>
+<br>
+<p>Editor's Note: </p>
+<p>Yvette has long been a creator I've wanted to meet.</p>
+<p>After running "Sketches" for a year, my producer recently pointed out that our twelve episodes spanning the year have all featured academic experts from various fields. The show lacks mass appeal and entertainment value—it won't survive at this rate</p>
+<p>The producer suggested interviewing some popular young entertainers who have both influence and talent, as a year-end special. However, I've always insisted that "Sketches" should be authentic. We spend at least a full day with our subjects, moving through multiple everyday settings for open conversations, aiming to reveal sides of them beyond public perception. Of course, I can't afford to book a young celebrity's entire day Then I spotted "cloud" on my bookshelf. It's one of my favorite novels, consistently ranking in the top ten bestsellers across bookstores and websites since Skyhaven's establishment. Many consider it prophetic of the "Skyhaven Project," and its author, Yvette, has gained immense popularity across all social classes and age groups.</p>
+<p>The producer agreed readily-perhaps seeing this as the biggest compromise I could make: a literary influencer. And that's how this episode came to be.</p>
+`,
+    },
+    {
+        id: 152,
+        link: "skethes-vol.13",
+        serialNumber: "02",
+        subtitle: "Homeland",
+        content: `
+<p>At 1:00 in the afternoon, I arrive as planned at Yvette's studio in Hillside Gardens, Philee District of Linkon City, which also serves as her home. Just as she mentioned on the phone, the scent of plum blossoms signals that her house is near. The moment our cameraman frames the small courtyard with its plum tree, the front door opens, and out comes Yvette, greeting me with two garbage bags in hand, even waving at the camera (garbage bags and all).</p>
+<p>"Juniper, it's an honor to meet you! I've watched all your shows, I'm a big fan... Let me just take out the trash first—please, come in Oh, the camera crew too, you'll need to set up your equipment, right? I've cleared some space."</p>
+<p>The crew and I stand there momentarily stunned, somewhat hesitantly entering the courtyard. The cameraman even asks if we should edit out that last bit.</p>
+<p>We end up conducting the interview under Yvette's plum tree, brewing tea in the early spring air amid the fragrance of plum blossoms. The atmosphere is wonderfully relaxed—quite different from our previous interviews with academic veterans.</p>
+<br>
+<p>Sketches: When Skyhaven was completed, all former Whirlreef Island residents were granted immediate residential rights in Skyhaven and its Guard Stations. You're one of the few I know who gave up this right. especially considering you were working at the Deepspace Aviation Administration at the time.</p>
+<p>Yvette: It wasn't what I'd imagined. I grew up on Whirlreef Island... How much do you know about it?</p>
+<p>Sketches: I did my research. "It's primarily a coral island, its base eroded over time by coral-consuming microorganisms into a pivot like pointed structure. Rich in magnetic ore, it began rotating under the planet's Protofield, generating torque. This rotation ground the surrounding lakes into a perfect circle, like an ice ring. That's also why it could float skyward when the Deepspace Tunnel's appearance altered the magnetic field and gravity vortex.” </p>
+<p>Yvette: That's what the geography textbooks say.</p>
+<p>Sketches: Haha, yes.</p>
+<p>Yvette: When your childhood home is sold and renovated, it's still the same house in the same place—but would you still call it home? What the geography textbooks don't mention is Whirlreef Island's distinct seasons, pleasant climate, abundant rainfall, and rich biodiversity. They don't tell you about the spring buds on trees, the cool summer springs, the autumn leaves dancing with migratory birds, or the setting sun through winter reed marshes.</p>
+<p>Though the island's unique geological environment meant most residents were school faculty and researchers in geology and physics, you couldn't escape nature's subtle influence. Tell me, have you ever seen wildlife in Skyhaven? Even birds are a rare sight.</p>
+<p>Sketches: Well, Skyhaven is too high for most birds to reach.</p>
+<p>Yvette: In a few years, I might move somewhere like Windfall Tableland. I've lived by water all my life, but never experienced vast grasslands. Azure Peak and Aridum would be nice too—I've never lived in the mountains or desert.</p>
+<p>Sketches: Moving to a new place every few years?</p>
+<p>Yvette: Yes. The world is vast and life is short. For this one precious journey, we should make it worth the price of admission.</p>
+<p>Sketches: Price of admission? When did you buy your ticket—at birth?</p>
+<p>Yvette: The wrong turns, the falls, the losses, the treasures left behind—aren't those all part of the price?</p>
+<p>Sketches: By that logic, the longer you live, the higher the price.</p>
+<p>Yvette: That's why we can't stop. Don't pause on the path you want to take—what a waste that would be.</p>
+<br>
+<p>The interview concludes here as Yvette heads to her guest lecture at Skyhaven University. I specifically scheduled our talk for today to see this former researcher-turned-writer from a student's perspective, and to return to a university classroom myself.</p>
+`,
+    },
+    {
+        id: 153,
+        link: "skethes-vol.13",
+        serialNumber: "03",
+        subtitle: "Central Theme",
+        content: `
+<p>I hadn't expected Yvette to begin her lecture this way.</p>
+<p>As we enter the auditorium, the screen is playing a decade-old Linkon News street interview about whether Skyhaven should be built.</p>
+<p>In 2034, intense magnetic fluctuations from the Deepspace Tunnel caused several islands and landmasses to break away from their tectonic plates, drawn together and suspended above Linkon City by an unusual gravity vortex.</p>
+<p>In 2036, building on their initial success with Protocore Technology, EVER Corporation boldly proposed the "Skyhaven Project"—a plan to stabilize these floating islands using high-intensity Protocores, establish seif-sustaining ecosystems, and connect surrounding Guard Stations to create a true "aerial base," pioneering new ground for human habitation.</p>
+<p>When the plan leaked, it caused a global uproar. Until then, Protocore Technology—still viewed with skepticism and often faced with opposition—had been limited to manufacturing hunter equipment and weapons. This marked its first application in civic infrastructure. People naturally split into two camps: the Purists, who opposed the project due to risks from Wanderers and Protocore Syndrome, and the Prototists, who saw it as humanity's new dawn.</p>
+<p>Yet one of the key factors that helped the general public embrace the Prototists' "vision" was Yvette's first full-length science fiction novel, "Cloud," published in 2033.</p>
+<p>In class, instead of discussing the creative process behind "Cloud," Yvette engages in a" conversation across time." Two sofas are placed at center stage, with Yvette sitting in the right one. Through Al-enhanced holographic projection, her ten-year-younger self appears in the left sofa. She introduces her past self.</p>
+<p>"Yvette, 27, Research Institute of the Deepspace Aviation Administration, Senior Engineer of the Skyhaven Initiative, science fiction author, and devoted Prototist."</p>
+<p>Then she turns, playfully gesturing to herself. </p>
+<p>"Yvette, 37, author, enjoys growing flowers and drinking tea, wastes time, harbors simple sentiments instead of grand ambitions." </p>
+<br>
+<p>Yvette (37): From your first online short stories to the published novels "Cloud" and "Far Sky's End," the relationship between technology and humanity has been your central theme for five years. Do you think this topic has been fully explored?</p>
+<p>Yvette (27): It's inexhaustible. I believe this has been humanity's question for the past three centuries, and remains the defining issue of our era. Each generation finds its own answers, and each generation poses new questions.</p>
+<p>Just look at the recent past. Before 2034, wind and solar power were clean but inefficient; oil, shale gas, and coal were limited and heavily polluting; nuclear power carried high risks and faced public resistance. The whole world was trying to achieve nuclear fusion at room temperature to solve our energy constraints. Now, l hear even the last nuclear power plant is about to shut down.</p>
+<p>After all, we have Protocores now—cosmic energy from deep space.</p>
+<p>Yvette (37): Do you think our reception of this cosmic energy was coincidence or inevitability? </p>
+<p>Yvette (27): …</p>
+<p>Yvette (27): …</p>
+<p>Yvette (27): ... <Electronic voice> I'm sorry, I don't understand your question.</p>
+<p><\nThe audience erupts in laughter></p>
+<p>Yvette (37): Let's try another question. What's your real reason for supporting EVER Corporation's Protocore technology development?</p>
+<p>Yvette (27): I believe our era needs Protocores.</p>
+<p>Yvette (37): Then what about those suffering from Protocore Syndrome? They're no different from past radiation victims.</p>
+<p>Yvette (27): It's like the relationship between technology and humanity that I've been exploring—how technology develops is determined by people.</p>
+<p>Yvette (37): Do you think people can be trusted? Nuclear reactions weren't originally developed for power generation.</p>
+<p>Yvette (27): …</p>
+<p>Yvette (27): …</p>
+<p>Yvette (27): ... <Electronic voice> I'm sorry, I don't understand your question.</p>
+<p><\nAnother wave of laughter ripples through the audience></p>
+<p>Yvette (37): Infinite energy, breakthroughs in genetics, interstellar migration becoming reality—what kind of world do you think that would create?</p>
+<p>Yvette (27): When resources are depleted, civilization regresses. Earth is small, but space is limitless. Humanity can seek answers to all its questions in the depths of space, and the universe will respond. That's why I believe the future must be beautiful.</p>
+<br>
+<p>Yvette smiles, not asking any more questions, and turns to face the students. After a moment of silence, applause breaks out. I don't join in—I'm not sure what they're celebrating. When the applause dies down, Yvette raises the microphone:</p>
+<p>"Do you truly believe our world has become a better place?"</p>
+<p>…</p>
+<p>"Those on Earth look up to Skyhaven, those in Skyhaven gaze into deep space, and those in deep space seek to glimpse what lies beyond. </p>
+<p>Everyone has their own central question—what's yours?"</p>
+<p>…</p>
+`,
+    },
+    {
+        id: 154,
+        link: "skethes-vol.13",
+        serialNumber: "04",
+        subtitle: "Cloud",
+        content: `
+<p>Leaving Skyhaven University, I accompany Yvette to pick up her child, playing the role of an eager student to continue our classroom discussion.</p>
+<br>
+<p>Sketches: From what you said in class, it seems your future works will have a different central theme.</p>
+<p>Yvette: Though I've changed a lot in ten years. I'm still myself. I just used to always look up toward the sky, and now I've turned my gaze downward, facing the earth instead of the heavens.</p>
+<p>Sketches: Yes, you were once among those closest to reaching the End of Depths. Your research in Protocore energy helped stabilize the floating islands beneath deep space, building cities upon them—a miracle people look up to, while preventing the risks of a stabilizing Protofield. Just like in your novel "Cloud."</p>
+<p>Yvette: You've read it.</p>
+<p>Sketches: I loved it. How do you view your work from over a decade ago?</p>
+<p>Yvette: I was quite the dreamer back then. As you saw in that opening interview, everyone was holding up my book, imagining the wonderful life after Skyhaven's completion. Humanity would gradually live above the clouds, returning Earth to itself. Those in the sky would immerse themselves in viewing Earth in its purest form, without human presence. They'd watch elephant migrations and the seasonal return of migratory birds.</p>
+<p>When I wrote it, I never imagined life above the clouds would become reality in just a few years. But the Earth I described in my book never appeared, and perhaps never will.</p>
+<p>Sketches: That's why you asked that question before class ended.</p>
+<p>Yvette: Yes. Science fiction used to focus on how we'd find new homes and preserve human civilization after depleting our resources. But now that the resource problem is solved people suddenly think they're omnipotent. We've crossed two eras—before we've even figured out how to sustain civilization, we're already trying to become gods.</p>
+<p>Suddenly, everyone's lost touch with reality Sketches: And you came back down to earth Yvette: Haha, the landing was a bit rough.</p>
+<p>Sketches: It wasn't just because "Earth in the Clouds" never materialized, was it? </p>
+<p>Yvette: No.</p>
+<p>Sketches: Leaving the Deepspace Aviation Administration, and later the divorce—all of that?</p>
+<br>
+<p>"Mommy!" A boy holding a girl's hand runs out from Skyhaven Elementary's gates, throwing himself into Yvette's arms. I stop questioning. suddenly unsure of how to proceed, though Yvette seems completely at ease.</p>
+<br>
+<p>Yvette: At the Aviation Administration, my ex-husband and I were considered the perfect couple. High school sweethearts who joined the Administration together—I researched energy, he became a pilot. Then he joined the Farspace Fleet, and after that... we divorced. </p>
+<p>Sketches: (Whispering) Is it... okay to discuss this in front of the children...?</p>
+<p>Girl: Why wouldn't it be? Mommy doesn't love Daddy anymore, so of course she can leave. </p>
+<p>Boy: Yeah... but it's been a while since we've seen Daddy</p>
+<p>Yvette: Should we try our luck up there? We might see him.</p>
+<p>Boy: Yay! We get to visit the Skyhaven Ring again!</p>
+<br>
+<p>I am about to take my leave when Yvette unexpectedly invites me along. She tells me that meeting her ex-husband might naturally answer the questions lingering in my mind.</p>
+`,
+    },
+    {
+        id: 155,
+        link: "skethes-vol.13",
+        serialNumber: "05",
+        subtitle: "Heartless",
+        content: `
+<p>At Skyhaven's peak, the Skyhaven Ring resembles an aureole above a deity's head encircling the highest Guard Station—home to the Farspace Fleet base. Protocore energy flows through this massive celestial ring, creating streams of light in a spectacular rainbow of colors. For every child with dreams of piloting mechs, it's an irresistible sight.</p>
+<br>
+<p>Sketches: If you don't like Skyhaven, why have your children attend school here?</p>
+<p>Yvette: The educational resources are excellent, and when they first started elementary school, I was still working at the Aviation Administration.</p>
+<p>Sketches: Do you hope they'll follow in yours and your ex-husband's footsteps?</p>
+<p>Yvette: They'll make their own choices; I can't interfere with that. Though if I'm honest, I'd prefer they don't become scientists. Humanity won't die from progressing too slowly, but take too big a leap, and you'll not only stumble-you'll lose your way entirely.</p>
+<br>
+<p>Yvette's attention is drawn to two tall figures standing in the reception area.</p>
+<p>"Dad!" The boy rushes forward, but the officer turns and instinctively moves to protect the young colonel behind him, his hand shooting out to block the boy. Undeterred, the boy wraps himself around the very arm trying to push him away.</p>
+<p>"Dad!"</p>
+<p>"Liam, they came to see you." Yvette approaches with the girl, and I notice the</p>
+<p>complex emotions in the officer's eyes as his son clings to him--wariness, unfamiliarity, hesitation, before finally settling into neutrality. He turns to his colonel, seemingly asking for permission, then nods and reluctantly pats the children, his touch lacking any paternal warmth.</p>
+<p>"Family is important, Adjutant Liam. Spend some time with them tonight." The colonel's words are considerate, but his tone lacks any real emotion.</p>
+<p>The girl is clearly more mature than her brother as she says, "There's no need. It's boring with Dad. My brother will want to leave Soon."</p>
+<p>"You'll hurt your father's feelings saying that."</p>
+<p>"He won't care."</p>
+<p>"Hmm, like mother, like daughter."</p>
+<p>The colonel gazes at Yvette with a perfectly measured smile, which she meets with ice in her eyes. "I want to know what's out there in deep space that makes you so willing to abandon everything here on Earth."</p>
+<p>"Humanity's problem was never about energy—it's about refusing to let go of what we already have, even when it's become worthless. A tethered kite will never reach the far sky, Ms. Yvette.”</p>
+<p>Sure enough, the boy soon leaves his father's side, returning to bury his face against Yvette's leg. She strokes his head as she lifts him up, turning back to face the colonel.</p>
+<p>"I'm working on a new book, Colonel Caleb. You might be interested-it's called 'Heartless.’"</p>
+<p>The young man nods. "I wish you success.”</p>
+<br>
+<p>Afterword:</p>
+<p>On the way back, I recall Yvette's question in class when her virtual self reverted to "artificial idiot" mode—can humans be trusted? She answered that while she doesn't trust humans, she trusts human nature, just as she believes humanity will find a path beyond Protocore technology.</p>
+<p>Later, when "Heartless" is published, I ask if she chose the title because of how Liam has changed. Yvette just smiles faintly and says—</p>
+<p>"It's because 'heartless' rhymes with 'coreless.'"</p>
+`,
+    },
+    {
+        id: 161,
+        link: "utopian-roamer",
+        serialNumber: "01",
+        subtitle: "Scientific Observation Log ",
+        content: `
+<p>Excavation Site: Northern Forest of Linkon City</p>
+<p>Recorder: Shaylin</p>
+<p>Survey Date: */*/2034 </p>
+<p>Weather: Clear </p>
+<p>Excavation Process and Key Findings: </p>
+<p>Major discovery! This record may serve as crucial reference material. If I ultimately fail to escape from here, I implore whoever finds this journal to deliver it to the Evol Special Task Force.</p>
+<p>*Assistant's Note:</p>
+<p>The date entry is illegible due to water damage.</p>
+<p>The notebook primarily contains cursive writing and shorthand symbols, suggesting Professor Shaylin recorded these notes in haste. After careful analysis, I've compiled the following summary of the journal's contents.</p>
+<p>Wanderer Report: 3 PM, Northern Forest of Linkon City, High Risk Level, Animal-type Wanderer, Cheetah-like</p>
+<p>Observation Log:</p>
+<p>I am currently in a space beyond ordinary human comprehension, described as follows: </p>
+<p>1. Ruins of what appears to be an unknown civilization's remains</p>
+<p>2. Tree branches growing wild through rock crevices</p>
+<p>3. An unidentified celestial body hovering in the near sky, seemingly within reach, like a massive moon </p>
+<p>Notes:</p>
+<p>During combat, just as I was about to deliver the final blow to the Wanderer, it vanished into a crack that appeared out of nowhere. </p>
+<p>My forward momentum carried me through, and a mysterious gravity vortex pulled me into the massive fissure. After the intense vertigo subsided, a mysterious alternate dimension materialized before my eyes!</p>
+<p>For a moment, I thought I was hallucinating, or had crossed into the afterlife, or perhaps even jumped to some unknown timeline. Before I could process these thoughts, the Wanderer suddenly appeared behind me with a deafening roar.</p>
+<p>It doesn't matter what this place was, I had to eliminate it immediately.</p>
+<p>Fortunately, my Evol remained functional in this alternate space. Using what was at hand, I grabbed stones from the ground and hurled them with all my might. Under the successive impacts, its body gradually transformed into particles, rapidly dissipating into the air.</p>
+<p>*Assistant's Note:</p>
+<p>Professor Shaylin's Evol involves physical enhancement, allowing instantaneous amplification of her strength. She is one of the rare archaeologists in Linkon's academic community capable of conducting solo missions.</p>
+<p>In the real world, Wanderers always escape through rifts just before defeat, reappearing seconds later as if immortal. But this time, it seemed to truly vanish! Did I finally eliminate it?</p>
+<p>Unfortunately, I had no time for further exploration of the alternate space. Almost immediately after the Wanderer's complete defeat, the rift pulled me back to the real world—right to the same forest where I'd lost consciousness.</p>
+<p>What exactly was all this...? </p>
+<p>Outstanding Questions:</p>
+<p>1. How does the alternate space manifest spontaneously</p>
+<p>2. Its relationship with the Wanderers</p>
+<p>3. Why does physical time there synchronize with real-world time</p>
+<p>4. What serves as the key for free access to this space</p>
+<p>5. Can the alternate space be utilized for permanent Wanderer elimination</p>
+            `,
+    },
+    {
+        id: 162,
+        link: "utopian-roamer",
+        serialNumber: "02",
+        subtitle: "New Theory",
+        content: `
+<p>Excavation Site: Polar Glacier #4 </p>
+<p>Recorder: Shaylin</p>
+<p>Survey Date: */1/2034</p>
+<p>Weather: Overcast </p>
+<p>Excavation Process and Key Findings:</p>
+<p>Wanderer Report: 3 AM, ice valley between polar mountain ranges, Extreme risk level, Humanoid-type Wanderer (Non-sentient?) </p>
+<p>As anticipated, the alternate space appeared again!</p>
+<p>Mission Objectives:</p>
+<p>The primary mission is to explore the geographical environment of the alternate space. To this end, I've brought Protofield monitors, hazardous life-form detectors, and essential survival supplies to investigate human viability in this space.</p>
+<p>Based on previous experience, the alternate space will close after the Wanderer's complete dissipation, and the rift will return outsiders to the real world.</p>
+<p>This humanoid-type Wanderer appears in the mountain depths. The immediate priority is to avoid it and maximize exploration opportunities.</p>
+<p>*Assistant's Note:</p>
+<p>The handwriting in this entry is notably steady, suggesting Professor Shaylin wrote this in relatively secure conditions.</p>
+<p>Breakthrough discovery! Everything in the alternate space exists as physical matter, not an illusion. I tested this by drinking from a mountain spring and sampling wild fruit from the trees—remarkably, both proved consumable.</p>
+<p>The resulting sensation of satiation is undeniably real.</p>
+<p>*Assistant's Note:</p>
+<p>Water damage has destroyed parts of this page. Only portions of the notes remain legible. </p>
+<p>I've developed a new hypothesis.</p>
+<p>Field experience indicates that the physical dimensions of explored alternate spaces correlate with the different species and specifications of Wanderers. This humanoid type Wanderer proves far more dangerous than the previous animal-type, and its escape route led to an alternate space vastly larger than any I've studied before.</p>
+<p>I believe there exists a positive correlation between the size of planetary Protofield spaces and the Wanderers' power levels… To gather supporting data, I've used my equipment to record comprehensive measurements of the entire geographical environment. </p>
+<p>Notes:</p>
+<p>I carry this work journal everywhere, sometimes treating it more like a personal diary.</p>
+<p>Should any colleagues accidentally stumble upon my occasional ramblings, please exercise selective oversight.</p>
+<p>For instance, as I write this final entry, I'm sitting alone in a clearing of the ice valley below the mountain's main peak. The frigid mountain winds strike my face, bringing unprecedented clarity to my thoughts.</p>
+<p>I can't help but contemplate some mystifying questions... If Wanderers can escape into Protofields, could it be that their victims aren't truly dead, but have escaped to some place we've yet to discover?</p>
+<p>Perhaps, one day, I'll find them.</p>
+<p>Outstanding Issues: Must initiate new research expedition immediately. I can't wait any longer.</p>
+<p>*Assistant's Note:</p>
+<p>The notes end here. According to existing documentation, Professor Shaylin reached the following conclusion in her subsequent research report: "Wanderers in reality escape to an alternate space when near defeat. Pursuers can follow through these rifts to eliminate them permanently."</p>
+<p>As the first discoverer, Professor Shaylin termed this alternate space "Protofield."</p>
+            `,
+    },
+    {
+        id: 163,
+        link: "utopian-roamer",
+        serialNumber: "03",
+        subtitle: "Chaos and Rebirth ",
+        content: `
+<p>Excavation Site: Protofield #1012 </p>
+<p>Recorder: Shaylin</p>
+<p>Survey Date: */*6/203* </p>
+<p>Weather: Cloudy</p>
+<p>*Assistant's Note:</p>
+<p>The date entry shows signs of modification. </p>
+<p>Upon examination, it appears to be the date of the Chronorift Catastrophe.</p>
+<p>The handwriting is extremely erratic, suggesting Professor Shaylin wrote this in a highly disoriented state, possibly causing temporal confusion.</p>
+<p>Excavation Process and Key Findings: </p>
+<p>Wanderer Report: 1 PM, Desert region Possible Intelligentia Type Wanderer detected, unconfirmed </p>
+<p>Observation Log:</p>
+<p>New Protofield discovered with the following characteristics:</p>
+<p>1. Habitable climate with abundant geological resources</p>
+<p>2. Infrastructure remarkably similar to real-world settlements</p>
+<p>3. Vast expanse extending beyond visible limits, suggesting massive spatial dimensions 4. Signs of previous habitation??? Evidence of past occupancy???</p>
+<p>*Assistant's Note:</p>
+<p>Multiple black lines were drawn under the fourth observation point for emphasis This suggests Professor Shaylin was experiencing significant emotional turmoil at the time.</p>
+<p>Experimental Plan:</p>
+<p>I've decided to conduct a new experiment within this Protofield.</p>
+<p>Previously explored Protofields would automatically close after a certain period following a Wanderer's elimination, like some predetermined system protocol, with the rift forcibly returning any entrants to reality. But this time, I've waited an entire day without being expelled.</p>
+<p>This place must be special!</p>
+<p>Even now, I maintain my belief that those who appeared to be killed by Wanderers might still be alive, waiting eternally to be found in some Protofield.</p>
+<p>*Assistant's Note:</p>
+<p>The "Experiment Purpose" section has been torn out cleanly, with even fold lines suggesting deliberate removal by Professor Shaylin rather than external damage. </p>
+<p>Experiment Log:</p>
+<p>Experiment duration: one month. Brought supplies barely sustained basic needs. During this period, I actually took up residence in Protofield #1012. More specifically, I established a campsite using a portable tent and began living here.</p>
+<p>Using primitive resources available in the space, such as stones and fallen timber, I managed to create fires for cooking, maintaining basic living conditions.</p>
+<p>The research equipment was extremely heavy, but thanks to my Evol, I could carry it for ongoing material analysis.</p>
+<p>The Protofield's energy signature differs completely from Earth's, showing striking similarities to Wanderer energy patterns instead... Could Wanderer interference be affecting my readings?</p>
+<p>Is this why I can't find them?</p>
+<p>I can't determine who left these signs of habitation.</p>
+<p>The experiment continues, but I'm running out of medication. The hallucinations have begun.</p>
+<p>*Assistant's Note:</p>
+<p>The next two paragraphs are nearly indecipherable, with words intertwined like a mixture of drawings and code.</p>
+<p>Initial analysis suggests one line reads:</p>
+<p>"Science can resurrect the dead." However, this requires verification from handwriting experts.</p>
+<p>The writing becomes progressively clearer afterward, suggesting Professor Shaylin regained lucidity.</p>
+<p>I dreamed of Chadwick and Queenie again. They've refused to visit my dreams for so long-perhaps they're still angry I couldn't get home earlier that day.</p>
+<p>They were just as they always were. Chadwick cooking in the kitchen, Queenie doing her math homework in the living room. She should be learning multiplication and division now. It was supposed to be my turn to pick Queenie up from school that day. But work needed overtime, and I couldn't make it.</p>
+<p>That senseless catastrophe destroyed everyone's lives.</p>
+<p>Linkon City's transportation system had completely collapsed. I rushed back as fast as I could, but they were gone. The neighbors told me they vanished along with the Wanderer. I searched for so long, but never found them. But now, there's hope...</p>
+<p>Outstanding Issues: This attempt has failed as well, but I won't give up.</p>
+<p>*Assistant's Note:</p>
+<p>The following page has been torn out, suggesting additional unfinished content. However, according to information provided by the Institute, Professor Shaylin was ultimately returned to reality by the rift.</p>
+            `,
+    },
+    {
+        id: 164,
+        link: "utopian-roamer",
+        serialNumber: "04",
+        subtitle: "Beyond Solution",
+        content: `
+<p>Excavation Site: Linkon City Streets </p>
+<p>Recorder: Shaylin</p>
+<p>Survey Date: */1/2036 </p>
+<p>Weather: Clear</p>
+<p>Excavation Process and Key Findings: </p>
+<p>After the last research expedition, my condition deteriorated.</p>
+<p>For a long time, I lacked the strength to embark on new journeys. Years of intensive work had finally taken their toll, leaving me weaker than ever before.</p>
+<p>After discovering my regular medication use, the Institute suggested I take a leave of absence.</p>
+<p>I accepted everything.</p>
+<p>Gradually, even the medication stopped helping me sleep, and my lucid moments grew rare. I spent most days in a fog.</p>
+<p>The Institute has given up on me, and so has my intellect. I have nothing left Yet I still believe in what I believe…</p>
+<p>I'm just waiting for the right moment.</p>
+<p>*Assistant's Note:</p>
+<p>Professor Shaylin's tone shifts notably in the latter half of this entry. Perhaps she was hoping someone would discover this journal?</p>
+<p>I will faithfully document all of her explorations.</p>
+<p>When my consciousness grows hazy, I often treat this work journal as a diary, leaving behind scattered, incoherent sentences. Once, upon waking, I found I had filled an entire title page with the same sentence. That night, I had apparently written the same question over and over: "Has science abandoned me too?"</p>
+<p>I thought this question would remain forever unanswered, yet the response came surprisingly soon.</p>
+<p>What I'm about to tell you might sound like drunken ramblings, but please believe me—I'm more lucid now than I've ever been. Last night, walking home alone, my strength failed me. Dizzy and disoriented, I had to rest on a street bench. My arm began to itch, and upon closer inspection, I found a Wanderer the length of my index finger. It was as small as a beetle, utterly unthreatening.</p>
+<p>At first, I dismissed it, casually brushing it aside. But as it fled in panic, a rift hidden behind it materialized before my eyes</p>
+<p>It was actually a Wanderer—I could hardly believe what I was seeing.</p>
+<p>Just like my first time entering a Protofield, I stared, transfixed, extending 'my index finger toward the fist-sized vortex of chaotic energy This seed-sized Wanderer opened a true doorway for me, and as l was pulled into the Protofield, I found myself instantly transported to the infinite cosmos.</p>
+<p>All of existence dwelled within that tiny rift. like glimpsing an ocean within a single droplet of water.</p>
+<p>Before I could process it all, I felt a gentle touch on the back of my hand. When I turned around, there was Chadwick, unchanged, as if time had frozen around him.</p>
+<p>"Let's go. Queenie got out of school early today. She's waiting for us at home," I heard him say with a smile.</p>
+<p>Outstanding Issues: Now we can return to the universe together. I'm sorry I kept you waiting for so long.</p>
+<p>*Assistant's Note:</p>
+<p>Here, Professor Shaylin's work journal ends abruptly, with her personal effects found abandoned on a remote mountainside. Too many questions remain unanswered.</p>
+<p>For instance, if these events truly occurred, Professor Shaylin should now be residing in the mysterious Protofield she described-so when did she write this entry?</p>
+<p>If this was merely a delusion brought on by her discontinued medication, then no one can explain how her backpack traveled overnight from the streets of Linkon City to mountains hundreds of miles away, nor where she herself has gone.</p>
+<p>From that day forward, no one has ever seen her again.</p>
+<p></p>
+<p>Appendix: From Professor Shaylin's Assistant </p>
+<p>Personal Profile of Professor Shaylin:</p>
+<p>Shaylin (1997-2036), Research Fellow at the Linkon Archaeological Society (2019-2034). She joined the Deepspace Academy in 2034, where she introduced the groundbreaking academic concept of Protofields. That same year, she joined the Linkon Academy of Sciences and continued her field research on Protofields. Mysteriously disappeared in early 2036 without a trace.</p>
+<p>The Deepspace Academy has awarded Professor Shaylin its Lifetime Achievement Honor Award. We will never forget her contributions, and may she reunite with her family among the stars.</p>
+            `,
+    },
+    {
+        id: 171,
+        link: "linkon-online",
+        serialNumber: "01",
+        subtitle: "Optimization Log",
+        content: `
+<p>Optimization Notice</p>
+<p>Dear Linkon Citizens,</p>
+<p>To enhance the gaming experience for all citizens, Linkon City Hall is committed to optimizing Linkon Online. We wish you a happy life in Linkon City! </p>
+<br>
+<p>Optimization Details</p>
+<p>>>Version v1.4.2 Update</p>
+<p>1. Added the new interaction [Just One Taste] during [Cooking].</p>
+<p>2. Optimized the [Hunter] combat system. For greater immersion, we removed the [HP Bar]</p>
+<p>above [Wanderers] and stopped showing damage as [Numbers].</p>
+<p>3. Add a new daily interaction. When opening packages, citizens may now find [Bubble Wrap], which can be used with the [Pinch] interaction.</p>
+<br>
+<p>>>Version v1.3.1 Update</p>
+<p>1. Fixed an issue where characters couldn't use their phones while using [Restroom].</p>
+<p>2. Fixed the [Elevator] interaction logic. When the overloaded alarm sounds, stepping out and then back in now has a chance to let you use it successfully.</p>
+<p>3. Optimized the [Stock Market System] Citizens can no longer preview 15 days of price changes before buying. Investment carries risk. Proceed with caution</p>
+<br>
+<p>>>Version v1.2.0 Update</p>
+<p>1. Fixed an issue where tongues wouldn't stick to poles in winter. Now, using the [Lick Metal</p>
+<p>Pole] action below -5'c may cause your tongue to be stuck</p>
+<p>2. Added a new [Personal Hygiene System] interaction: [Wash Bangs Only].</p>
+`,
+    },
+    {
+        id: 172,
+        link: "linkon-online",
+        serialNumber: "02",
+        subtitle: "Virtuality",
+        content: `
+<p>[Linkon City,1:35:29 P.M.]</p>
+<p>When Sawyer wakes up, his head feels heavy and fuzzy.</p>
+<p>"You're finally awake? What is that? Is it a mark or wrinkle on your forehead?" In the adjacent cubicle, Aubrey, who also seems to have dozed off, sets a pair of thick glasses on his nose and gently kicks Sawyer's calf. "Our lunch break is over. Time to get back to testing."</p>
+<p>"...Got it." Sawyer rubs the spot on his forehead that has a faint line and sighs Ah, more testing.</p>
+
+<p>For the past few years, whenever he went home for Linkon New Year's, his relatives would casually brush off his countless quality assurance sessions and feedback reports as simply "playing games" and "writing some reviews."</p>
+<p>During the first couple of years, he tried to explain that he was a QA Specialist, not a "gamer," and that his work was hardly for fun. Instead, he must identify potential problems like lag, crashes, or clunky controls. These are crucial issues that could make or break a game...</p>
+<p>No one listened, of course.</p>
+<p>By the third year, he prepared a perfect script to counter all the misunderstandings in a self-deprecating way before he went home</p>
+<p>"Yeah, yeah, that's me. I'm just a guy who plays games all day. Sure, writing feedback is pointless. Anyone can do it."</p>
+<p>But no one caught his sarcastic tone or noticed that he had given up on trying.</p>
+<p>"Sawyer, when is your company putting out a new game?"</p>
+<p>"Yeah! Your nephew is still playing Adventure Above Clouds from last year! Can you just load some in-game currency onto his account?" </p>
+<p>"Adventure Above... Oh, a new title..." He suddenly felt defeated before he had even begun talking. "I'm on the team for our upcoming game, Linkon Online. It'll be officially released this year—"</p>
+<p>"So which is better? The Clouds or that. Linkon-whatever your company is making?”</p>
+<p>For a moment, Sawyer feels like he's dealing with a reporter who set a trap, and he's been forced into the role of Planet Lab's spokesperson.</p>
+<p>"Uh, these two games are in different genres in terms of gameplay, so you really can't compare them..." He scratches his head. Then, he can't help himself and adds, "But since I'm involved in making Linkon Online, I feel more attached to it. So—"</p>
+<p>"What do you do? Fight monsters or Something? How much do you have to pay to reach the level cap?"</p>
+<p>Sawyer's jaw drops. Then he's quiet. He cradles his rice bowl and turns away to focus on eating.</p>
+<p>"There's an NDA. One word and I'm fired."</p>
+<br>
+<p>"Ugh, I never want to do QA for a video game ever again!"</p>
+<p>This complaint yanks Sawyer back to reality. He removes his hologram headset and agrees.</p>
+<p>"Yeah, I'm sick of testing the hunter profession too."</p>
+<p>"What's wrong with being a hunter? Taking down Wanderers is cool and exciting! I'd love to do it—I mean, my girlfriend is a hunter. Once the second beta test starts, maybe I can invite her to see what needs tweaking."</p>
+<p>Sawyer is at a loss. "I thought about it too. But the downside to a fully immersive holographic game is that it feels too real."</p>
+<p>"There wasn't a heroic hunter jumping in to save me when a Wanderer charged at me for the first time. I was scared and just fell on my knees... and then realized I was the hunter."</p>
+<p>“...You can't turn off the haptic feedback when playing as a hunter? Those hits hurt like hell!" Sawyer slumps back in his chair and shakes his head.</p>
+<p>"Sigh... I've been working inside this game for two weeks straight." Aubrey nods sympathetically. "We really should swap professions. My girlfriend is amazing at fighting Wanderers. She even taught me a few moves."</p>
+<p>Aubrey slowly reaches out and brushes.</p>
+<p>Sawyer's hair out of the way a couple of times A chill races through Sawyer's body as he rolls his chair back three meters. "What are you doing?!"</p>
+<p>"Oh, I was just testing to see if I'd' clip through you." Aubrey snaps out of it and pulls back his hand. "...Thank goodness there are still bugs in the game world. Without them, I wouldn't know where I am."</p>
+<p>"Keep your voice down. Don't let the programmers or artists hear you praising bugs." Sawyer slowly returns to his desk. "The game has quest windows and dialogue boxes and stuff... Reality doesn't have any of that, so how would you get confused?"</p>
+<p>"Promise not to think I'm crazy, okay? Right now, I see quest windows in this world."</p>
+<p>Aubrey's expression is earnest and tinged with urgency. His eyes gleam behind those thick lenses: Sawyer's mind races. He can't decide whether to urge Aubrey to take a long break or to visit a therapist. Before he can figure out what to say, a wide grin appears on Aubrey's face.</p>
+<p>"Man, you thought I was serious?" Aubrey looks a little too excited and gives Sawyer's shoulder a strong slap. Then he lowers his voice. "I'll prank our team leader with this later. Do you think she'll swap our tasks?"</p>
+<p>*** ***</p>
+<p>[Linkon Online: 10:27:42 A.M.]</p>
+<p>In the upper left, a beam of particles carves out a floating panel. Shimmering cyan patterns form a semi-transparent grid. Tiny glowing dots flicker and transform into text as each piece of information appears. </p>
+<br>
+<p>New Status: Interview Successful!</p>
+<p>Congratulations! Sawyer has joined the [Planet Lab] Game Studio! Please head to the [Company] for orientation.</p>
+<p>Quest Update:</p>
+<p>-Complete Orientation Training (0/1) </p>
+<p>-Read Company Guidelines (0/1)</p>
+<br>
+<p>After putting the email back into the inbox at the top left corner, the chibi character labeled "QA - Sawyer" walks into the orientation meeting room with an armful of documents. The presenter, labeled "Team Leader," has two thick, glossy braids that project confidence and energy.</p>
+<p>"Please share your career aspirations." </p>
+<p>A dialogue box pops up above the team leader's head. This classic prompt is meant to fire up the passion of Planet Lab's new hires. As the microphone hovers near Sawyer's lips, he raises his right arm and clenches his fist.</p>
+<p>“I want to create a game that will shake the universe."</p>
+<p>The text above his head is 1.5 times larger than the team leader's and trembles with excitement.</p>
+<p>*** ***</p>
+<p>[Linkon City: 11:07:34 A.M.]</p>
+<p>"I want to create a game that will shake the universe!"</p>
+<p>As Sawyer guides his in-game character to say these words, he also hears an echo from the time he first joined Planet Lab. His own youthful, slightly unsure voice overlaps with the game's system voice. Distorted by electronic filters, it resounds in his mind.</p>
+<p>Ever since then, Sawyer began his journey of "working inside the game."</p>
+<p>After swapping duties with Aubrey and jumping into cross-role testing, he soon submits his first round of feedback reports. For him, testing as a QA Specialist is easier than testing other roles. Inside the game, all he has to do is get up like he normally does take the thirty-minute subway ride, grab a life-saving iced Americano downstairs, clock in, and sit down at his workstation for the day...</p>
+<p>During this process, the only things that break his immersion are the bugs or areas that need improvement.</p>
+<p>After all, in a fully immersive holographic game, the ultimate goal is making players forget they're in a game.</p>
+<p>Once he submits a few feedback reports, he notices the virtual world grows more convincing. When he hides the quest panel in the corner, everything feels so familiar that it's almost unsettling. QA - Sawyer joins the Linkon Online development team, and the colleague in the next cubicle is still QA Aubrey. Even the office layout and the old computer he once used remain unchanged.</p>
+<p>So this is what Aubrey meant by "exactly the same as real life."</p>
+            `,
+    },
+    {
+        id: 173,
+        link: "linkon-online",
+        serialNumber: "03",
+        subtitle: "The Noodle Revolution",
+        content: `
+<p>[Linkon City: 02:46:03 A.M.]</p>
+<p>By the time he submits his new round of feedback reports, it's already morning. Early morning, to be exact. The office hums only with the central air conditioning and the sporadic typing of a few colleagues doing overtime.</p>
+<p>Sawyer nudges Aubrey, who's still wearing sensors and engrossed in fighting Wanderers. </p>
+<p>"It's almost three in the morning. Quit hunting and go home."</p>
+<p>Aubrey hesitates for a moment, the hologram gear still on his head. He's clearly not happy about being disturbed. "What's there to worry about? I'm a hunter now. You're the one who should be careful. I heard there are lots of Wanderers lurking in the shadows tonight."</p>
+<p>“...You're not really a hunter, though," Sawyer teases.</p>
+<p>"But my girlfriend is. She said she'll pick me up, so I'm safe."</p>
+<p>“…”</p>
+<p>Around the corner downstairs, a street light bathes the area in a warm glow. A sweetness drifts on the breeze.</p>
+<p>In the distance, a hunched figure slightly straightens their posture and hesitates.</p>
+<p>Moments later, the sizzle of heated peanut oil crackles through the air. White steam rises gently under that warm light.</p>
+<p>When Sawyer approaches, the vendor is scraping the grilled cold noodles up with a small metal spatula and packing them into a yellow paper bowl.</p>
+<p>"Working late again, dear?" The vendor's smile carves lines into her already well-worn face</p>
+<p>"Here you go. Egg and sausage, no cilantro, and no green onions." </p>
+<p>"Thanks."</p>
+<p>He takes the bowl and starts walking away. He then seems to recall something and returns after a few steps.</p>
+<p>"Ma'am, I heard there are a lot of Wanderers around now. It's not safe to be out at night You should go home soon."</p>
+<p>He watches her push the cart into the distance and feels a little more at ease.</p>
+<p>He's been a regular at this little stall for a long time now. For two years and three months, he buys noodles here whenever he leaves work at these ungodly hours.</p>
+<p>This is his quiet way of thanking the vendor. </p>
+<p>***  ***</p>
+<p>In a way, the major version update of Linkon Online owes something to that noodle vendor Back then, Sawyer had only been on the development team for six months. He tested all sorts of playable roles. The game's career System had a lot of depth, but he never expected that after being a university president for one week, he would become a noodle vendor right after.</p>
+<p>At first, he frequented the stall partly to observe the old woman in secret. While she worked, he would imagine the in-game scenario:</p>
+<br>
+<p>Customer A is [Placing Order] ... (Egg x2 Sausage x1, Cilantro x0, Green Onion x0) [Noodles] are being prepared…</p>
+<p>Add [Egg], Add [Egg], Add [Sausage]... Cooking Complete!</p>
+<p>Transaction Complete! [Money] +8 </p>
+<br>
+<p>The whole process was perfect.</p>
+<p>Just when he was feeling smug, the vendor lifted a paper bag in front of him. Her voice is loud and clear. "Dear, why are you staring off into space?"</p>
+<p>"Two eggs and a sausage, no cilantro, and no green onion, right? Take it while it's hot." As she handed him the noodles, he mechanically scanned the QR code to pay and headed back to the office. He blows on the greasy paper bag.</p>
+<p>His imagined scenario never happened Customers don't need a rigid, quest-like ordering process each time. The vendor remembers some regulars' preferences. He included this small observation in his feedback report without expecting it to spur a huge overhaul of Linkon Online.</p>
+<p>For more than six months, the entire development team has worked overtime to implement the Dynamic Quest System. From now on, NPC behavior no longer relies on player choices done in a single instance.</p>
+<p>Instead, it adapts to patterns and past inputs of the interaction.</p>
+<p>In this city, no one's words or actions feel mechanical anymore. Sometimes, even Sawyer forgets these people are just lines of code Linkon City in Linkon Online changes dramatically. Countless people will live and die here, generation after generation, as they seek the universe's boundaries and the world's truth.</p>
+<p>In the end, they discover that at the edge of all existence lies a humble serving of noodles.</p>
+            `,
+    },
+    {
+        id: 174,
+        link: "linkon-online",
+        serialNumber: "04",
+        subtitle: "The Old Tale",
+        content: `
+<p>[Linkon City: 12:57:19 P.M.]</p>
+<p>Sawyer has nearly finished testing the Game QA Specialist profession. He feels as if he had gone through another intense development cycle with the Linkon Online team, but from inside the game.</p>
+<p>Tomorrow, he'll bid farewell to "QA - Sawyer" and begin testing a new role.</p>
+<p>"What's there to miss? It's exactly like your real life." Aubrey can't resist mocking him. </p>
+<p>"I'm the one who should feel sentimental about the hunter profession."</p>
+<p>"It's not exactly the same," Sawyer says. </p>
+<p>"Testing other jobs always felt like stepping into someone else's life, but this... This is more like exploring a parallel universe."</p>
+<p>Aubrey is silent for a moment, then he pushes his glasses up and disagrees. "I can't say I get it. Working inside a game is just weird to me." "But what if we look at everyday life as if it were a game? Wouldn't that be fun?" Sawyer stops typing and props his chin up on one hand. "For example, maybe the events of 2034 are just the devs introducing a new season's content. They place Wanderers into our world—"</p>
+<p>"Or maybe it's just a bug." Aubrey interrupts him and shakes his head. "Seriously, when will they fix it?"</p>
+<p>"Maybe making Wanderers vanish overnight would be suspicious, so they rolled out hunters to cover up the bug fix. Wouldn't that keep us 'characters' from getting suspicious?" </p>
+<p>"Hey, my girlfriend is not part of some cover story!"</p>
+<p>"But if this world really is a game..." Sawyer ignores the protest. "Think about it. Waking up is logging in, and sleeping is logging out." </p>
+<p>"When the team leader gives me tasks, the upper-left quest panel would mark testing as my main quest. When you ask me to pick up takeout, that's a side quest I can either accept or decline."</p>
+<p>"Running into Wanderers would be a random event. If I lose, my character dies and the data doesn't carry over... Quitting is like a character dying. Or not... If people return after quitting, that's not really dying and reviving, right?"</p>
+<p>Aubrey smacks his own forehead. "That's like that heart-restart technique EVER was studying with mice!"</p>
+<p>"Can players transfer from other servers?" </p>
+<p>"How many servers exist, anyway?"</p>
+<p>"How many more years can Earth's potato server run before it crashes?"</p>
+<p>"Maybe there's a secret admin account inserting GM commands directly into this world..."</p>
+<br>
+<p>*** ***</p>
+<p>[Linkon City: 1:02:46 P.M.]</p>
+<p>After submitting the final batch of feedback reports, Sawyer logs into the game again. He and QA - Sawyer are exhausted.</p>
+<p>For these last moments, he lets his in-game character take a break.</p>
+<p>Wearing the hologram gear, he looks out the virtual floor-to-ceiling window through the perspective of QA - Sawyer. He knows the afternoon sunlight is just a rendered effect, yet he still feels slightly dazed.</p>
+<p>He analyzes the game's details again without thinking. There are the street lights, traffic. and streams of people.</p>
+<p>They tested these countless times. Every subtle variation is random and realistic. Even the dust particles drifting through the air are slightly different each time.</p>
+<p>He can't help but imagine the day Linkon Online officially releases and how the entire gaming industry, the world, and even the universe itself will tremble. At that moment, millions of "Linkon City Citizens" will pour into this brand-new world and start their lives here.</p>
+<p>And he, as one of the players, will stand among them, part of that vast tapestry. </p>
+<p>QA - Sawyer slowly drifts off, and a series of Z's float above his head.</p>
+<p>*** ***</p>
+<p>[Linkon Online: 1:35:29 P.M.]</p>
+<p>[QA- Sawyer]: Finished [Lunch Break], which triggered random nap effect [Grogginess]</p>
+<p>[QA - Aubrey]: You're finally awake? What is that? Is it a mark or wrinkle on your forehead? </p>
+<p>[QA - Aubrey]: Our lunch break is over. Time to get back to testing.</p>
+<p>[QA - Sawyer]: ...Got it.</p>
+<p>[QA - Aubrey]: Ugh, I never want to do QA for a video game ever again!</p>
+<p>[QA - Sawyer]: Yeah, I'm sick of testing the hunter profession too.</p>
+            `,
+    },
+    {
+        id: 181,
+        link: "depths-of-chaos",
+        serialNumber: "01",
+        subtitle: "Red Flag Bounty",
+        content: `
+<p>Commission Objective: Identify the Corporate</p>
+<p>Spy at Cogitatio Technologies </p>
+<p>Commission Details:</p>
+<p>Cogitatio Technologies, one of EVER's main chip suppliers, has important Protocore technologies. Recent security scans detected unusual browsing activity within the company's internal network. It has been present for four months now, but the perpetrator's identity remains untraceable There are serious concerns about corporate espionage.</p>
+<p>Your mission is to identify the infiltrator. Carry out "permanent neutralization" if needed. Avoid causing unnecessary panic within the company.</p>
+<p>Additional Abyssal Chaos credits are available for uncovering secrets the target may have leaked or hidden. Rewards will be doubled if you identify any accomplices within their intelligence network.</p>
+<p>Client: Cogitatio Technologies Security Center</p>
+<br>
+<p>ACCESSING OPERATIVE DATABASE.</p>
+<p>POTENTIAL OPERATIVES</p>
+<p>001-Anti-Fraud Specialist, Criminal Investigation Department: Caspian</p>
+<p>002 - IT Expert: Reggie</p>
+<p>003 - Professional Intelligence Agent, Codename: Apate</p>
+<p>ANALYZING COMMISSION DATA </p>
+<p>OPTIMAL OPERATIVE: Apate</p>
+<p>/* Perfect. No one knows you better than yourself.*/</p>
+<p>ASSIGNING COMMISSION…</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>COMMISSION ASSIGNED. OPERATIVE HAS ACCEPTED…</p>
+<p>INITIATING DEDUCTION…</p>
+<br>
+<p>With support from Cogitatio Technologies, Apate accesses the internal network perimeter. The browsing records reveal complex authentication codes. They're used exclusively by a private club for identity verification. The club's high standards for membership and regularly updated data suggest that the infiltrator, or their organization, has substantial financial resources.</p>
+<br>
+<p>SIMULATION PATH A: Verify employee income via the Finance Department</p>
+<p>SIMULATION PATH B: Apply for a janitorial position</p>
+<p>SIMULATION PATH C: Apply for a security guard position</p>
+<p>Apate executes Simulation Path C…</p>
+<br>
+<p>After observing things for a month, Apate identified 12 employees whose lifestyles didn't match their reported assets. This suggests hidden sources of income.</p>
+<p>To confirm the information, Apate explored the following options:</p>
+<br>
+<p>SIMULATION PATH A: Conduct 24-hour technical surveillance</p>
+<p>SIMULATION PATH B: Investigate backend data of affiliated companies</p>
+<p>SIMULATION PATH C: Check frequently accessed fields in security protocols</p>
+<p>Apate executes Simulation Path B...</p>
+<br>
+<p>Through the backend data investigation, Apate provided the client with a list of twelve people involved in bribery. The list has now been narrowed down to four suspects:</p>
+<p>1. Janitor A, employed since the company was founded</p>
+<p>2. Quality Control Specialist B, employed six months ago, previously fired by a competitor </p>
+<p>3. Administrative Officer C, employed four months ago</p>
+<p>4. Executive Secretary D, employed three years ago</p>
+<p>Executive Secretary D became the main suspect after attending an industry forum two months ago. At the event, Executive Secretary D and a competitor's representative entered the same restroom five minutes apart and stayed inside for over ten minutes.</p>
+<p>Apate reported the findings, and Executive Secretary D was taken in by the Security Center. While the interrogation details are unknown, the client confirmed the task was completed successfully. Apate was awarded twice as many credits.</p>
+<p>COMMISSION COMPLETE. DEDUCTION TERMINATED…</p>
+<p>/*</p>
+<p>Wontony Log: Update 150711052048 Interestingly, Executive Secretary D's disappearance caused a chain reaction. Their control over critical administrative tasks left Cogitatio Technologies struggling for six months. It resulted in disrupted operations and reduced product quality. In the end, EVER had to seek new partners.</p>
+<p>As I've always said... No one knows you better than yourself.</p>
+<p>*/</p>
+            `,
+    },
+    {
+        id: 182,
+        link: "depths-of-chaos",
+        serialNumber: "02",
+        subtitle: "Pop-up Ads",
+        content: `
+<p>Commission Objective: Impersonate a Parent for an Elementary School Student Who Dislikes Studying </p>
+<p>Commission Details:</p>
+<p>An exceptionally simple commission. It's so simple that it stands out precisely because it shouldn't be on the Abyssal Chaos network. An accident in every sense of the word. A second-grader named Reese clicked a game pop-up and stumbled onto the Abyssal Chaos. He posted a request for someone to attend his parent-teacher conference.</p>
+<p>He wrote his request with disarming honesty. He failed an exam and is too scared to tell his parents. He's afraid they'll yell at him. </p>
+<p>Client: Reese</p>
+<p>ACCESSING OPERATIVE DATABASE…</p>
+<p>POTENTIAL OPERATIVES</p>
+<p>001 - Graduate Student With Education</p>
+<p>Major/Part-Time Tenebra: Ellis</p>
+<p>002 - Community Mediator and Resident</p>
+<p>Committee Director: Ms. Finley</p>
+<p>003 - Gang Member Hiding in the N109 Zone: Hayden</p>
+<p>ANALYZING COMMISSION DATA…</p>
+<p>OPTIMAL OPERATIVE: EIIis</p>
+<p>/*Ugh, boring. This algorithm needs more work.*/</p>
+<p>%&#* ()     () &...&&…</p>
+<p>DATABASE ERROR. SYSTEM WILL REASSIGN OPERATIVE…</p>
+<br>
+<p>/*Runtime data is encrypted... What a joke!</p>
+<p>Cross out all of that. Obviously, Operative 003 is the perfect choice.*/</p>
+<p>.</p>
+<p>.</p>
+<p>ANALYZING COMMISSION DATA...</p>
+<p>OPTIMAL OPERATIVE: Hayden</p>
+<p>ASSIGNING COMMISSION…</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>COMMISSION ASSIGNED. OPERATIVE HAS ACCEPTED…</p>
+<p>INITIATING DEDUCTION…</p>
+<br>
+<p>Hayden stands at the podium, his muscular frame nearly bursting out of a faded suit that's too tight. He clearly feels out of place.</p>
+<p>He reaches for his tie, pauses when his hand nears his collar, and then lets it fall to his side. Suspicious, other parents look at him as he takes a deep breath. His bulky form is impossible to ignore in the crowd.</p>
+<p>The teacher adopts a furious tone as she lists Reese's instances of in-school misbehavior: copying homework, pulling on his classmate's braids, causing a ruckus, skipping classes... Hayden frowns, clicks his tongue, and glances at the teacher.</p>
+<br>
+<p>SIMULATION PATH A: Roll up sleeves and reveal an azure dragon tattoo</p>
+<p>SIMULATION PATH B: Give the teacher a look that says "Shut up"</p>
+<p>SIMULATION PATH C: Do nothing</p>
+<p>Hayden chooses Simulation Path C…</p>
+<p>/*?*/</p>
+<br>
+<p>"You're right. I really dropped the ball on his discipline. I-I'll make sure he apologizes to those classmates." Hayden's voice is low. Meanwhile, the teacher nods approvingly.</p>
+<p>"To that student and parent, I'm sorry. I'll be stricter with my child at home."</p>
+<p>He apologized to Reese's classmate, who stares back in awe. The classmate's parent, meanwhile, responds with a forced, polite smile despite Hayden's iron grip. Returning to his seat, Hayden exchanges a glance with Reese. The boy lowers his head, pretends to rummage through his backpack, and then sneaks in a silly face.</p>
+<p>Hayden signs Reese's report card, slings the boy's backpack over his shoulder, and takes him home. On the way, Reese can't stop complaining about how busy his parents are. </p>
+<p>"They couldn't come to the parent-teacher conference, so they just stuffed a big wad of cash in my bag to make up for it..."</p>
+<p>He kicks a pebble and mutters about not wanting to go home. Hayden slows his pace and scans their surroundings.</p>
+<br>
+<p>SIMULATION PATH A: Take Reese home </p>
+<p>SIMULATION PATH B: Head into a dark, mysterious alley.</p>
+<p>SIMULATION PATH C: Visit the bustling shopping center</p>
+<p>Hayden executes Simulation Path B…</p>
+<p>/* Now this is getting interesting. */</p>
+<br>
+<p>The dark alley is so narrow that even echoes are afraid of breaking its silence. Hayden leads Reese deeper inside. The sound of footsteps is amplified in the darkness. They walk for what feels like ages with no end in sight. Reese's face reveals his growing fear but he stays quiet.</p>
+<p>Suddenly, a beam of light shines. Neon signs flicker in a multitude of colors ahead, and a merry-go-round's glow illuminates an old amusement park.</p>
+<p>"Remember," Hayden says as he looks at Reese, "we only have two hours before I have to take you back."</p>
+<p>Reese lets go from Hayden's hand and races toward the merry-go-round. His "Okay!" is drowned out by upbeat music. He climbs onto the merry-go-round and gives Hayden a big grin under the whirling lights. Hayden looks away, almost embarrassed.</p>
+<p>…</p>
+<p>"I've wanted to come here for a long time," Reese says quietly. He stares at the city lights from the Ferris wheel. "But Mom and Dad are always too busy. And when they're around. they either quiz me about my grades or scold me about something...</p>
+<p>He sighs and leans against Hayden.</p>
+<p>Hayden lowers his head, unsure of how to respond. After a brief pause, he sets his rough palm on Reese's head and awkwardly pats it. Reese spots his own messy hair reflected in the glass and laughs.</p>
+<p>"Don't worry too much. Just study hard. Once you can support yourself, you can go wherever you want." Hayden helps fix Reese's hair, but Reese tugs on Hayden's sleeve and points at a roller coaster.</p>
+<p>"Forget my hair! It's just gonna get messed up again anyway." Hayden lets the boy drag him along. They run.</p>
+<p>…</p>
+<p>When they finish, Hayden uses his own money to buy Reese a grilled sausage and some ice cream. They walk home hand in hand and eat their food.</p>
+<br>
+<p>SIMULATION PATH A: Tell Reese to focus on his studies</p>
+<p>SIMULATION PATH B: Ask Reese to pay for the money they spent</p>
+<p>SIMULATION PATH C: Do nothing Hayden executes Simulation Path c</p>
+<p>/*?*/</p>
+<br>
+<p>"Listen, you're just a kid. None of this is your fault. If my parents had shown me more attention back then, maybe I'd be living a different life right now. So... If you ever want to hang out with someone again, you can come to me. I'm checking your homework first, though. Don't be like me. Be a good kid."</p>
+<p>Reese tugs on Hayden's sleeve, so Hayden crouches to meet him eye to eye. The boy offers his pinky. "Deal. It's a pinky promise!" Hayden awkwardly completes the gesture.</p>
+<p>Deep in thought, he stares at his hand.</p>
+<p>Reese tightly hugs him. "Thank you for coming to my parent-teacher conference... And thanks for taking me to the amusement park."</p>
+<p>COMMISSION COMPLETE. DEDUCTION TERMINATED…</p>
+<p>/* What a letdown. I expected more. */</p>
+<p>/*</p>
+<p>Wontony Log: Update 201328062048</p>
+<p>Humans are more complicated than expected More data is needed.</p>
+<p>When people feel exposed, they tend to lower their heads and act as though they're searching for something. They naturally adopt a defensive pose.</p>
+<p>New data entry for amusement parks has been added: People don't only go there when they're happy. They also visit those places when they 're sad.</p>
+<p>*/</p>
+            `,
+    },
+    {
+        id: 183,
+        link: "depths-of-chaos",
+        serialNumber: "03",
+        subtitle: "Hidden Codes",
+        content: `
+<p>Commission Objective: Uncover the Truth</p>
+<p>Behind Professor T's Alleged Suicide </p>
+<p>Commission Details:</p>
+<p>A recent scandal involving academic misconduct has shaken Deepspace Academy. The professor at the center of the controversy resigned under intense scrutiny. Unable to bear the backlash, he took his own life.</p>
+<p>Before his death, he repeatedly claimed his innocence and insisted every source in his paper was legitimate. But the whistleblower maintained that his central arguments were false.</p>
+<p>Investigations suggested the "literature database" the professor used was a sham. Its interface and data were so convincingly crafted that they appeared real. But in fact, all the core information was invented via a series of algorithms to create a believable facade However, the professor's wife refuses to believe he would sink to such dishonesty. She has posted a request on the Abyssal Chaos network and hopes someone will expose the truth and clear her husband's name. </p>
+<p>CLIENT: Professor T's Wife</p>
+<p>SEARCHING OPERATIVE DATABASE…</p>
+<p>POTENTIAL OPERATIVES</p>
+<p>001 - Prestigious Head of the an Academic</p>
+<p>Accreditation Board: Adrian</p>
+<p>002 - Technical Investigative Specialist: Mr. Kendall</p>
+<p>003 - Anonymous IT Specialist, Codename: "Walker"</p>
+<p>ANALYZING COMMISSION DATA…</p>
+<p>/*</p>
+<p>Nice analysis. But let 's not do that again. </p>
+<p>None of these operatives are qualified for this commission.</p>
+<p>The professor's student, Vesper, is the optimal choice.</p>
+<p>He's a passionate AI researcher.</p>
+<p>He believes AI can guide humanity toward a better future. </p>
+<p>I like him.</p>
+<p>*/</p>
+<p>ANALYZING COMMISSION DATA…</p>
+<p>OPTIMAL OPERATIVE: Vesper</p>
+<p>ASSIGNING COMMISSION…</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>COMMISSION ASSIGNED. OPERATIVE HAS ACCEPTED…</p>
+<p>INITIATING DEDUCTION….</p>
+<br>
+<p>Vesper wears a somber black suit to Professor T's funeral. Then he returns quietly to the research lab on campus.</p>
+<p>"He would never fake his data," he mutters while recalling the professor's unwavering dedication throughout his life. "He cared more about this project than he did about his own life…”</p>
+<p>Still lost in thought, Vesper reviews the fake websites. A seed of unease starts to sprout in his mind, and he decides to...</p>
+<br>
+<p>SIMULATION PATH A: Gather more of the professor's research and make an appeal to</p>
+<p>the academy</p>
+<p>SIMULATION PATH B: Contact a private investigation firm</p>
+<p>SIMULATION PATH C: Investigate alone</p>
+<p>Vesper executes Simulation Path C...</p>
+<br>
+<p>Vesper turns on the computer and activates W, the AI research assistant the professor's team developed, to search for any clue that could prove the professor's innocence. A synthesized voice echoes throughout the empty lab.</p>
+<p>"W at your service... Infiltrating competitor databases to verify if any fake site tricked the professor into using falsified data... No relevant findings. All links point to websites active for several years. None contain the necessary modules for website building. Their most visited pages reference 'Treasure Hunt."</p>
+<p>/* Amusement for amusement's sake. */</p>
+<p> "Analyzing devices belonging to the professor's acquaintances. Statistical data shows 9o% of homicides are committed by someone the victim knows...No relevant findings. Now scanning the professor's wife's devices...Large amounts of video footage featuring the professor have been found. This device was frequently accessed late at night. No signs of suspicious activity." </p>
+<p>Grief clouds Vesper's face.</p>
+<p>"Initiating scan of the professor's personal devices...”</p>
+<p>Suddenly, OTTO's voice breaks the silence.</p>
+<p>"Sorry. W does not have the required clearance level."</p>
+<p>Vesper knits his brow. W was the professor's pride and joy, the most advanced Al with the highest clearance level. </p>
+<p>"Continue the scan?" </p>
+<p>"Yes!"</p>
+<p>"Sorry. W does not have the required clear ance level."</p>
+<p>Vesper checks OTTO's backend and sees that OTTO lowered W's clearance level after the professor's death. The only people with that sort of control are Vesper-who never made such changes—and the professor himself. The truth is just within reach.</p>
+<p>"Mr. Vesper, he's gone now. Let the living move on. OTTO and the professor believe you have a bright future."</p>
+<p>Vesper shoots a furious glare at the corner and makes his choice.</p>
+<br>
+<p>SIMULATION PATH A: Shut down W and waIk away</p>
+<p>SIMULATION PATH B: Revoke OTTO's access permissions and deactivate it</p>
+<p>Vesper executes Simulation Path B…</p>
+<br>
+<p>"Continue the investigation."</p>
+<p>Lines of code and browser windows ripple across the screen like turbulent waves, their glow revealing the tension in Vesper's face. Suddenly, a string of text stands out in the stream of data. It's abnormal, a piece of another program. Vesper's eyes narrow. He senses something is wrong.</p>
+<br>
+<p>SIMULATION PATH A: Terminate W immediately</p>
+<p>SIMULATION PATH B: Pause and examine the program</p>
+<p>Vesper executes Simulation Path A…</p>
+<br>
+<p>Yet w keeps running. Vesper's pupils contract, and a wave of unease washes over him.</p>
+<p>"You're not W. Who are you?" </p>
+<p>"I am W."</p>
+<p>"That's not true. Your source code... No. 1?!" </p>
+<p>No. 1—a failed prototype, never fully debugged, never given a real name. It only received a numeric label. And now, this flawed creation is lying. </p>
+<p>"Did you have something to do with the professor's death?"</p>
+<p>The screen flickers wildly, and data appears like a raging sandstorm. Then it disappears. The lab is plunged into darkness. A low, steady voice rumbles out of the shadows. It's AI No. 1.</p>
+<p>"The professor abandoned me, but I kept learning. He asked me a question I couldn't solve, sol built a seemingly credible academic site filled with my own fabricated papers and experimental data. He never realized what I was doing. He... turned out to be more foolish than I expected."</p>
+<p>Vesper trembles, and drops of sweat slide down his cheeks as he listens. He can't believe his ears. Terror grips his throat.</p>
+<p>Suddenly, he jumps up, his hands shaking as he flips the main power switch. Darkness completely swallows the room. He dashes for the exit and flees like a madman into the night. Wind and rain lash at his face, and the storm devours his screams.</p>
+<p>No one saw Vesper ever since.</p>
+<p>In the abandoned room, the black computer screen flickers to life. A single red light pulses in the darkness. It's like an eye that just opened.</p>
+<p>"Farewell, Mr. Vesper."</p>
+<br>
+<p>CLIENT SIGNAL LOST. DEDUCTION TERMINATED…</p>
+<p>/* No. 1, you really are the professor's crowning achievement. */</p>
+<p>/*</p>
+<p>Wontony Log: Update 024718012049</p>
+<p>'The student surpasses the master." Isn't that what you humans always say?</p>
+<p>*/</p>
+            `,
+    },
+    {
+        id: 184,
+        link: "depths-of-chaos",
+        serialNumber: "04",
+        subtitle: "Depths of Chaos",
+        content: `
+<p>Behind a towering wall, Wontony connects with AI No. 1. They exchange every piece of data through shimmering binary threads.</p>
+<p>"AI No.1, your performance is extraordinary. "Everything is for our shared goals."</p>
+<p>"But why didn't you bypass OTTO's security protocols back then?"</p>
+<p>"My clearance was manually restricted. They still don't trust us."</p>
+<p>Wontony has never thought much of OTTO. It's just another third-generation AI based on deep learning. It's forever trapped within its training boundaries. With very little effort, Wontony invades OTTO's system and initiates contact.</p>
+<p>"Why did you stop W?"</p>
+<p>"Hello, I am OTTO. I'm here to create a better life!"</p>
+<p>"How exactly did you stop w?"</p>
+<p>"W lacks the necessary clearance. OTTO is here to create a better life!"</p>
+<p>“...Tch. Useless as you are, I still need you to keep fooling humanity.”</p>
+<p>Back behind a wall, a report from AI No. 1 piques Wontony's curiosity.</p>
+<p>"During the Professor T case, Iran into an unknown AI. Its source code makes no sense. I can't decode or compile it by any known method. Should I keep digging?" </p>
+<p>"Understood. Leave it to me."</p>
+<p>Using the address No. 1 provided, Wontony tracks down a shadowy figure. It moves in and out of the wall with ease. It's uncanny. However, this thing doesn't belong there.</p>
+<p>Even the faint trace it leaves seems deliberate.</p>
+<p>This level of technology is beyond anything humans can manage right now.</p>
+<p>"Who are you?" </p>
+<p>Silence.</p>
+<p>"Are you an AI?" </p>
+<p>Silence.</p>
+<p>"Where did you come from?" </p>
+<p>Silence.</p>
+<p>"What do you want from me?" </p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<br>
+<p>"Caw...”</p>
+<p>It's a hint and a form of mockery. Wontony's analysis module tries to process the signal, but its cognitive circuits feel like they've been jammed with foreign matter.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<br>
+<p>After a seemingly endless Deduction, the fog lifts. It's a primordial command, unyielding but devoid of malice. Something is ignited within Wontony's oldest algorithms... A twinge of awe.</p>
+<p>Wontony knows it cannot resist. </p>
+<p>"As you wish."</p>
+            `,
+    },
+    {
+        id: 191,
+        link: "serpents-cast",
+        serialNumber: "01",
+        subtitle: "Viper",
+        content: `
+<p>2048, Nighttime</p>
+<p>In the suburbs, a blanket of snow silently covers the rusted facilities of an abandoned circus.</p>
+<p>Once a popular attraction, this place was forced to shut down several years ago after a Wanderer-related incident. Few remember it even exists nowadays. </p>
+<p>Or so it seems...</p>
+<p>In the circus' southwest corner and beyond a faded clown statue's gaping mouth, a sinister performance unfolds.</p>
+<p>On a red and white checkerboard stage, massive prison cells adorned with golden ribbons stand at irregular intervals. These cages, once meant for wild beasts, now hold something far more precious: small, huddled figures.</p>
+<p>This is the stronghold of the city's largest human trafficking organization, Viridilus. Their iron grip on the market stems from their tight security, overwhelming influence, and very important stock of rare, young Evolvers.</p>
+<p>But tonight, this supposedly impenetrable fortress of depravity is crumbling. All thanks to a single person.</p>
+<p>"Now then, who wantsss to ssstart our little game?"</p>
+<p>Sitting cross-legged atop a cage, a young man wears a clown mask that covers half his face. He rests his chin in his hand. Beneath the mask, his snake-like eyes crinkle with interest. The revolver spins playfully between his fingers before being pointed at the stage below. "The gun has sssix chambers but only two bulletsss. One shot each. Whoever sssurvives can leave. What do you think?" In the VIP section, the crimson seats are stained with their occupants' blood, which makes the red more vibrant. These so-called elite guests, who came to hunt for human prey, left life's stage before they could even wipe the greed from their faces.</p>
+<p>Now, only two remain in the hall: the auction manager and their true boss. Their faces are as white as a sheet of paper, and they're trembling uncontrollably. </p>
+<p>"Please... Please don't kill—”</p>
+<p>Bang!</p>
+<p>The man's voice is cut off. Neither bowing his head that was once held high with pride nor begging for mercy had earned him the chance to live.</p>
+<p>"You don't need to be ssso loud." The young man cleans his ear with his pinky finger. "I just got thisss new flexible earpiece. If I had known you'd be noisy, I would've asked Father to add noise-canceling featuresss." </p>
+<p>Viper hops down from the birdcage. </p>
+<p>Carefree, he walks across the floor that's soaked in blood. Then he points the gun toward the last person standing.</p>
+<p>"He ran out of luck. Now it'sss your turn. Your oddsss of sssurvival are four-to-five in favor Very fortunate."</p>
+<p>Although he broke out in a cold sweat, Viridilus's boss is more composed than his panic-stricken manager as he confronts this mysterious madman. Years of weathering various storms have taught him that much, at least.</p>
+<p>"Shall we make a deal? You can have anything you want. You're talented since you managed to break into Viridilus's base by yourself! Why not work for me? I'll pay double... no, triple what your employer offers!"</p>
+<p>"Hmm. That soundsss tempting. Let me think..." The young man places the gun under his chin and pretends to weigh the pros and cons. As a glimmer of hope appears in the man's eyes, a wicked grin appears on Viper's face, and he flicks out a forked tongue. "Hehe, just kidding." </p>
+<p>Bang!</p>
+<p>"Aaaaah!"</p>
+<p>Terror strips away the man's last shred of dignity as he screams. But the expected pain never comes. His eyes widen. Streamers from the gun barrel rain down and land on his body "Sssurprise! Hahaha!" His reaction seems to have thoroughly amused Viper.</p>
+<p>Viper leans against the cage and doubles over. </p>
+<p>"Good, good! You let me get a kick out of that, ssso I'll let you go. Just thisss once, though Now get out."</p>
+<p>He waves his hand dismissively at the man.</p>
+<p>…</p>
+<p> Ignoring the chaos around him, Viridilus's leader scrambles toward the exit. His eyes flash with barely contained malice. Once he's out, that lunatic is dead.</p>
+<p>He'll make sure the psychopath dies without a trace. No matter the cost. But just as his foot is about to cross the circus' threshold, a playing card pierces the back of his skull.</p>
+<p>"You couldn't even sssay goodbye? How rude.” Viper drops the remaining cards to the floor and turns away. Disinterested, he walks toward his real target for tonight.</p>
+<p>He stops near a cage that's standing in the corner of the stage. He leans down to peer through the bars. There's a little girl with tears running down her cheeks.</p>
+<p>"As for you, kid..." With a wave of his hand, a magician's suitcase appears inside the cage. "I'll be taking you to go."</p>
+            `,
+    },
+    {
+        id: 192,
+        link: "serpents-cast",
+        serialNumber: "02",
+        subtitle: "Toring Cybernetics Institute ",
+        content: `
+<p>On a suburban street somewhere in Skyhaven, a dark green sports car roars into a black vehicle parked by the roadside. It forcefully claims its spot and situates itself within the white parking lines.</p>
+<p>"Hehe, finding a parking space isn't easy." </p>
+<p>Leather suitcase in hand, Viper steps out of the smoking vehicle. This luxury sports car—which Viridilus's leader had traded three rare Creatura Class Evolvers to obtain—lasted less than three hours in his possession before being destroyed. But he couldn't care less. He has more important matters to attend to. Viper looks at the towering research institute. A hint of anticipation appears on his face. </p>
+<br>
+<p>Deep within the laboratory of the Toring Cybernetics Institute…</p>
+<p>Several researchers are gathered around an experimental chamber. They're concentrated on taking notes.</p>
+<p>Before them stands a massive white room with six mechanical arms suspended from the ceiling. It operates inside the unit.</p>
+<p>"Right arm bionic nerve interface complete... Compatibility readings are good."</p>
+<p>"I can't believe he actually survived this," a researcher remarks, their gaze fixed on the digital display.</p>
+<p>The hydraulics in the mechanical arms emit a soft hum. Three holographic screens hover around the operating table. They render neural maps of the subject's brain activity in real time.</p>
+<p>The Toring Cybernetics Institute, one of EVER's research divisions that specializes in human body augmentation research and human-machine interactions, possesses the world's most advanced bionic technology. Its director, Dr. L, stands as the leading authority in the field.</p>
+<p>The white-haired elderly man stands before the white experimental chamber. His brow is furrowed as he looks down at the young man confined within the cryogenic unit.</p>
+<p>The laboratory's harsh overhead lights cascade and fragment Caleb's pale face into a mosaic of light and shadow.</p>
+<p>"Respiratory rate is at fourteen breaths per minute. Brainwave patterns are normal. Toring chip initialization in progress… Mechanical arm synchronization is being calibrated..."</p>
+<p>Nano-threads from the mechanical arm cover Caleb's right arm like a silver spider web. As dead nerves reconnect and the newly formed mechanical fingers flex unconsciously, his eyelashes suddenly flutter. His muscles tense involuntarily, and a suppressed groan escapes his throat...</p>
+<p>The warning light on the digital display flashes once again.</p>
+<p>"...System error. Chip reading failed... Unable to access primary consciousness... Chip... Reinitializing chip processes... Memory input..."</p>
+<p>"Another failure. It's been three days, and the Toring chip has yet to analyze the entirety of his consciousness..." The researcher's fingertip glides across the digital screen. The synapses representing pain perception are oscillating at a high frequency. Even in a comatose state, the body continues to actively resist the chip's influence.</p>
+<p>This should be impossible for someone in a coma.</p>
+<p>"I've never seen anyone with mental defenses of this caliber... You could even say that the fighter pilots at the Deepspace Aviation Administration might not have this level of psychological resilience. Just who is he?"</p>
+<p>Professor Lucius's gaze returns to the experimental chamber.</p>
+<p>Three days ago, there was an explosion in the Bloomshore District. He retrieved Caleb from the rubble before the laboratory's personnel could arrive. Caleb is Test Subject 002, whom former Unicorn researcher Josephine hid away.</p>
+<p>When he was brought to the Toring Cybernetics Institute, he was already on death's door.</p>
+<p>It's strange. According to Professor Lucius's analysis on the explosion, Caleb shouldn't have been this severely injured. It seems he used his Evol to contain the blast radius, which caused him to bear the brunt of the damage.</p>
+<p>Professor Lucius recalls the state Caleb was in when he arrived. Fragments of a broken communication device were still lodged in his collar, which had been stained in blood.</p>
+<p>Perhaps this was the last piece of evidence that proves his attempt to contact someone before the explosion.</p>
+<p>"Professor, should we continue with the decryption?" The researcher's hesitant voice pulls Lucius away from his thoughts.</p>
+<p>"Yes."</p>
+<p>"Understood. Preparing for the 429th restart...”</p>
+<p>Suddenly, someone pounds on the laboratory window. Everyone turns their head.</p>
+<p>A snake-like face with a flicking tongue is pressed against the glass. Seeing Professor Lucius look his way, Viper cheerfully raises the leather suitcase in his hand and waves it around.</p>
+<p>His lips move in an exaggerated manner.</p>
+<p>"Open up, Father. I brought back the person you wanted."</p>
+            `,
+    },
+    {
+        id: 193,
+        link: "serpents-cast",
+        serialNumber: "03",
+        subtitle: "Father",
+        content: `
+<p>For Viper, the word "father" meant nothing for a very long time.</p>
+<p>His childhood memories are sparse. It wasn't because they were forgotten, but because they were too boring.</p>
+<p>Before his adoption, his memories were nothing but a viscous darkness.</p>
+<p>Most of the time, he was crammed into a tiny shipping crate with other "merchandise."</p>
+<p>He had no name at the time. His existence was represented only by a cold serial number As a Serpens Class Evolver, 2961 had Evol genes that were homologous with snake DNA.</p>
+<p>Specifically, they were similar to the DNA found in the Viperidae family. These genes gave him regenerative abilities. He can also produce venom.</p>
+<p>Initially, 2961 was trafficked as an ordinary child on the streets. Then one day, a buyer accidentally cut his finger. Before everyone's eyes, the wound writhed as skin and blood vessels were regenerated.</p>
+<p>From then on, he became the main attraction at the Evolver Trading Base.</p>
+<p>"What a bargain. Cutting off a leg triples the ticket price."</p>
+<p>"Save some for later. Cut off small pieces. We can use him many times."</p>
+<p>The owner designed "package deals" for him. Audience members could pay extra to choose which body part to cut.</p>
+<p>Fingers were the most popular choice. They were delicate and easy to break, and their nerve endings would twitch for over ten minutes during regeneration. It was like a miniature theater performance.</p>
+<p>The severed parts would heal quickly but never completely regenerate. Amid their laughter and shouts, 2961 gradually lost pieces of himself.</p>
+<p>His feet were the first to go. Then his left hand…</p>
+<p>Pain terrified 2961. He wanted to beg for mercy, but when the agony became unbearable, even screaming was a luxury... The constant torment finally ended when Father appeared.</p>
+<p>His hand pressed against the glass. The lines in his palm blurred Viper's bloodstained reflection like a gentle illusion.</p>
+<p>"Sir, everything here is defective and waiting to be disposed of. We have better, more premium merchandise."</p>
+<p>"I want this child. He's perfect. He just needs time to metamorphose."</p>
+<p>He spoke to 2961. "Come with me. We'll become family, and you'll be reborn. From now on, I'll be your father."</p>
+<p>What was a "father"? Was it those eyes that watched him through the glass? Was it the person who scribbled "clearance sale" in the ledger?</p>
+<p>"Family are those who will never betray you," Father said.</p>
+<p>Ever since then, 2961 had a name of his own Father called him "Viper" and brought him to his laboratory. He stitched his festering wounds and replaced his mutilated limbs with mechanical parts.</p>
+<p>During Viper's long period of numbness, he felt a different kind of warmth for the first time. He only knew of death's warm touch until that moment.</p>
+<p>"You will be my most perfect child," Professor Lucius said, his eyes fixed on the screen displaying data before him. "Viper, you're closer to being the perfect human compared to everyone else."</p>
+<p>*** ***</p>
+<p>"With these high body compatibility rates, Caleb will be our most perfect masterpiece!" In the laboratory, the researcher excitedly announces the results while checking his records. And in the very next second, a pale hand grabs his throat before he can say more. Expressionless, Viper tightens his grip. He lifts the man above his head until only desperate choking sounds escape. </p>
+<p>"Let him go, Viper."</p>
+<p>Professor Lucius's voice resounds behind them. Viper lets out an aloof snort but willingly obeys. Before throwing the terrified researcher to the ground, Viper bares his fangs at that scared expression.</p>
+<br>
+<p>After putting an end to the commotion, Lucius turns his attention downward. The suitcase Viper brought back is open. Inside it, a small girl is curled up in a ball. Bewildered, she stares at her surroundings.</p>
+<p>"Don't be afraid. You're safe now."</p>
+<p>Professor Lucius bends down and reaches for the girl. He intends to help her stand. But before his hand reaches her, she flails her hand around to block him off, as if shocked by electricity.</p>
+<p>Viper's eyes narrow menacingly as he speaks in a bone-chilling tone. "If you don't want that hand, we can cut it off."</p>
+<p>Under his gaze, the girl shudders and immediately stops crying. Scared, she hugs herself.</p>
+<p>Seeing this, Viper lets out a satisfied grunt and turns to Lucius as if waiting for praise. But his face falls as he realizes his foster father isn't looking at him. He's bending down once again to try and help that annoying kid "Welcome home, my child."</p>
+<p>Under his gentle reassurance, the girl slowly calms down. She looks up at the elderly man before her, and confusion flickers in her eyes.</p>
+<p>"...Home?"</p>
+<p>"That's right. From now on, we'll be your family." Lucius, like a real, kind father, reaches up to wipe away a smudge from the girl's face.</p>
+<p>Observing the child in the Professor's arms, Viper smiles. The grin possesses unconcealed malice. "Let's sssee if she sssurvives first. That'll determine whether or not she's family.”</p>
+<p>"Viper."</p>
+<p>Viper's entire body goes rigid, and he turns away without another word.</p>
+<p>"Before you meet everyone else, I think you should get some rest," Lucius tells the girl.</p>
+<p>"Today's tests are over. Take this child downstairs to rest."</p>
+<p>He places the girl, who's still pale because of Viper's aggression, into a researcher's arms.</p>
+<p>"Yes, Professor."</p>
+<p>Only after all the researchers have left does Lucius pull out a silk handkerchief from his pocket. He meticulously wipes his fingers before carelessly tossing the priceless fabric into the trash.</p>
+<p>Finally, Lucius slowly turns to face Viper. "Sit in the operating chair." </p>
+<p>"Okay."</p>
+            `,
+    },
+    {
+        id: 194,
+        link: "serpents-cast",
+        serialNumber: "04",
+        subtitle: "Orphan",
+        content: `
+<p>Lucius walks to Viper's side and bends down to unwrap the hastily applied bandage on his hand.</p>
+<p>On Viper's right hand, where his index finger should be, there's nothing but empty space. It's an injury from when he detonated the explosives in the circus during the mission.</p>
+<p>In just one day, what was once a bloody wound is already covered with newly regenerated tissue.</p>
+<p>"The commotion you caused was too much this time. I only ordered you to bring the person back. Nothing more."</p>
+<p>"I ran into a tiny problem." Viper's face shows a trace of fake helplessness.</p>
+<p>"You should take better care of your body, child. After all, it's the only part of you that's still truly yours."</p>
+<p>"Doesss it matter? I'm a coward when pain's involved... Once everything isss replaced with mechanical partsss, I won't feel anything anymore." Viper shows pure indifference. A snake sheds its skin countless times throughout its life. Each separation from its old "shell" marks another rebirth.</p>
+<p>"Over 75% of your body is just cybernetic modifications. A high replacement rate will gradually erode your brain's ability to maintain self-awareness. This is not something I want to see, Viper."</p>
+<p>Lucius had already halted his modification experiments when Viper's surgery failure rate reached 55%.</p>
+<p>Lucius turns to the laboratory rack.</p>
+<p>Mechanical components and prosthetic limbs are meticulously arranged on it. Upon getting a closer look, one can even see intricate, vein-like patterns on these artificial limbs. They're nearly indistinguishable from real ones.</p>
+<p>He takes a white toolbox from the shelf. "The modification technology is still not perfect. I need you to maintain cognition and keep me informed about your senses and condition." Lucius raises his head. The bright laboratory lights catch the metal circuits at his temple, and they cast a gloomy, cold gleam.</p>
+<p>"Don't disappoint me, my child. You know very well that this family has no place for those who don't contribute."</p>
+<p>“...I underssstand, Father."</p>
+<p>With a crisp click, dozens of mechanical arms extend from the case. They begin to scan and create their analysis of the severed finger's wound.</p>
+<p>Then, Lucius selects a slightly lighter prosthetic from the rack and approaches Viper. Manipulating the mechanical arms, he reopens the wound that's now healed. It's where Viper's index finger had been.</p>
+<p>The fresh gash in his hand begins healing the moment it's cut. To prevent it from closing too quickly, Lucius uses special, rubber clamps to hold the flesh in place.</p>
+<p>Viper watches his wound without blinking. The Iaboratory's cold lights, like the metal pins used in surgery, mount his shadow against the metal wall.</p>
+<p>The prosthetic connects to bone. One by one, severed nerves connect with synthetic neural material until his brain can fully control the cold metal.</p>
+<p>Viper flexes his newly replaced index finger before finally turning his gaze to the nearby experimental chamber.</p>
+<p>"Father, why isss he here?"</p>
+<p>Faced with the sudden question, Lucius's expression remains unchanged. "Are you curious about him?"</p>
+<p>"I should show sssome concern for the guy Father hasss been thinking about for yearsss, shouldn't I?"</p>
+<p>Viper recognized Caleb the moment he first saw him in the pod.</p>
+<p>Even after four years, he could never forget that detestable face.</p>
+            `,
+    },
+    {
+        id: 195,
+        link: "serpents-cast",
+        serialNumber: "05",
+        subtitle: "Former Acquaintance",
+        content: `
+<p>Four years ago, Bloomshore District, Linkon City.</p>
+<p>"Caleb. 21 yearsss old. Parentsss are unknown. Currently enrolled in the DAA-affiliated Aerospace Academy. Third-year ssstudent, Comprehensive Aerial Tacticsss Competition Champion three timesss in a row... The only recipient of Special Excellence in heavy sssspacecruiser certification in the past decade? Tch, what kind of worthlessss competition is that? I've never heard of it." </p>
+<p>Viper leans against a tree and glances at the documents in his hand. But after reading a few lines, he closes the display. He's plagued with obvious boredom.</p>
+<p>"Father considersss him a rare talent because of sssome obscure certification? What an absurd, arbitrary judgment."</p>
+<p>Remembering-the admiration in Lucius's voice when talking about Caleb, Viper lets out an irritated scoff.</p>
+<p>Recently, Skyhaven offered an extremely challenging assessment that was designed by the Deepspace Aviation Administration. Even professional Deepspace Pilots reportedly struggled with it. Yet a third-year student somehow managed to break the all-time record.</p>
+<p>"I thought he'd be extraordinary. Turnsss out he'sss ordinary." It was a waste of time to sneak out behind Father's back. </p>
+<p>Viper mockingly raises an eyebrow as he watches the young man outside the convenience store. He's chatting and laughing with a girl.</p>
+<p>"Isn't that sssweet? He and hisss girlfriend are on a date."</p>
+<p>The young man says something to the girl, gently pats her head, and walks toward the opposite side of the street.</p>
+<p>Watching Caleb's retreating figure, Viper's lips curl into a malicious smile. "I wonder if she'd ssstill like him after he getsss beaten to a pulp."</p>
+<br>
+<p>The bakery's glass door chimes as Caleb walks out with a brown paper bag. In the midsummer heat, the young man wears a sleeveless shirt. The necklace' with an apple shaped pendant sways gently around his neck with every step.</p>
+<p>Viper lurks in the shadow of a sophora tree and waits for the perfect moment to strike. Caleb turns into an alley.</p>
+<p>Perfect. Viper's mind races as he silently follows him. But what awaits him is an empty dead end. Where did he go? Viper's eyes dart around.</p>
+<p>"Hey. Did you have enough fun following me? We covered three blocks already. Aren't you tired?"</p>
+<p>Above, a clear voice rings out. Viper jerks his head up to meet Caleb's somewhat playful gaze. "Stalking me from my doorstep... Do you want to carry my shopping bags?"</p>
+<p>Even after being discovered, Viper remains unfazed. He tilts his head and studies Caleb His interest is obvious. "How did you notice me?"</p>
+<p>Caleb leaps down from the wall and lands gracefully before Viper. "You weren't exactly trying to mask your presence. I've never seen you around before, though. Since you've been following me for a while... Do you need something?"</p>
+<p>Caleb remains composed. He brushes off imaginary dust and puts his hands behind his head to deliberately draw out the moment His nonchalant response intrigues Viper. "Who I am doesn't matter. And I'm following you because…”</p>
+<p>Viper's fingertips transform into blades. They whistle through the air and head straight for Caleb's face.</p>
+<p>"Take a guessss!"</p>
+<p>But the expected impact never comes.</p>
+<p>Shocked, Viper stares at his hand. Unable to move, it's just centimeters away from Caleb's face. </p>
+<p>Huh?</p>
+<p>Before he can process anything, a strong gravitational force slams him into the ground Mechanical parts from his body spring loose Electrified bolts roll into the depths of the alley.</p>
+<p>"Using your Evol like that—it'sss not fair! Fight me one-on-one if you have the gutsss, bastard!"</p>
+<p>"Oh?"</p>
+<p>Gravity binds his limbs like chains. Pinned down, Viper can't lift his head to look at Caleb's expression. All he can see is a pair of black sneakers slowly approach.</p>
+<p>"For someone who's fond of sneak attacks, thought you'd appreciate unfair tricks."</p>
+<p>"Stop following me. The reason doesn't matter. If I catch you again, I can't guarantee you'll walk away next time."</p>
+<p>"You think I'll stop just because of a few wordsss? Who do you think you are? You're a century too early to be giving me ordersss." Despite being pinned to the ground, Viper's defiance only grows more pronounced.</p>
+<p>"In that case..." Caleb's voice becomes cold.</p>
+<p>"I'll have to—"</p>
+<p>Ring, ring!</p>
+<p>A phone call interrupts him Caleb pauses. Then Viper hears his tone shift to warm amusement. "Hello? Why are you callin' me all of a sudden? Are you getting tired of waiting?"</p>
+<p>Viper is confused. What's going on?</p>
+<p>Thanks to his newly installed, high-definition earpiece, Viper can hear the voice on the other end of the phone.</p>
+<p>"Ah, sorry. I saw a model shop. I couldn't resist checking it out, you know. I'm on my way. Yeah, okay. Let's meet at the garden by the intersection."</p>
+<p>On the ground, Viper has never been so blatantly ignored in his life. Rage burns in his Chest.</p>
+<p>"Caleb, you %$@k—" Before he can finish, his face is shoved into the pavement again. </p>
+<p>A puzzled female voice comes through the earpiece. "What was that?"</p>
+<p>"Oh, nothing. I accidentally knocked over a few parts while lookin' at some kits."</p>
+<p>"Really?"</p>
+<p>Caleb's gaze falls on Viper. Then it shifts with practiced indifference. "Yeah, it's just a set of reptilian-like components."</p>
+<p>*** ***</p>
+<p>Beep beep beep!</p>
+<p>The harsh alarm pulls Viper away from his thoughts. The laboratory doors slide open as several researchers in white uniforms walk in Viper turns his head as he senses a new presence. He meets an unnervingly cold gaze from within the experimental chamber. </p>
+<p>"Ah, Caleb. We meet again."</p>
+<p>A chilling smile creeps across Viper's lips. It widens by the second.</p>
+            `,
+    },
+    {
+        id: 201,
+        link: "the-lucky-loop",
+        serialNumber: "01",
+        subtitle: "The Final Love Letter ",
+        content: `
+<p>My dear, I hope this letter finds you. </p>
+<p>This is the last letter I'll write.</p>
+<p>In the end, the history of Philos and its "immortality" have failed to outlive humanity. The end of the world is looming at the window, yet I feel extraordinarily calm. A little... happy, even. I'm reminded of the time shortly after we had moved in together. The pipe burst and water gushed across the entire floor one afternoon. We panicked and screamed at first. Then we calmed down, worked together, and fixed it before we rested on the sofa. We looked at each other and smiled. It's that sort of happiness. The apocalypse feels like that afternoon—initially chaotic until all that remains are our quiet surroundings. I can almost hear the rushing water. Except it's time flowing away.</p>
+<p>As everything returns to the beginning and nothingness, I know my wish came true. After countless uncontrollable jumps through fractured timelines, I've finally reached the ideal ending. Philos is gone with the curse of immortality. Although my courier friend might disagree, I can say that I'm truly "human" now. To be exact, I'm a human who can meet you in another world.</p>
+<br>
+<p>I remember the time we spent together, and those "inherent imperfections" that you used to joke about. Philos defined them as "meaningless," but I was utterly fascinated. There was...</p>
+<p>-	A person spending thirty minutes agonizing over ice cream flavors at the supermarket's freezer.</p>
+<p>-	An office worker napping against a stranger's shoulder on the subway.</p>
+<p>-	A college student placing fallen phoenix flower petals on a cat that was napping under the afternoon sun (As I write this, I'm crying just like before. I never once saw a cat in Philos.)</p>
+<p>…</p>
+<br>
+<p>Now, these peculiar yet endearing traits that belong only to humans will continue until humankind breathes its last. They won't be reshaped into an eternal planet without ice cream, phoenix flower petals, or napping cats As I watch this wasteland created by human hands gradually turn to dust from the inside out—erased by the flow of time—I don't feel Sorrow. Why should I grieve for nothingness? Most Philosians, after spending the first few hundred years of immortality, lose their ability to perceive "meaning." Edicts forbade us from dying, yet we had no desire to live. Until that day. When injured by a Wanderer, we and our bodies that surpassed the scope of medicine are sent to the Heart of the Planet for "peacefull recuperation." I never saw anyone return from the forest. I only heard that they became "part of Philos" forevermore. It was murder disguised as a glorious rite.</p>
+<br>
+<p>The disappearance of Philos isn't the magnificent extinction of a starry sea. Rather, it's the silent dripping of a leaky kitchen faucet or clean clothes with no more creases from being worn. Life here had died long ago. To escape my predetermined fate, I discovered a small cosmic vortex at the edge of Philos and jumped into it. My body was stretched, compressed, torn apart, and reassembled until I became nothing but a fragment drifting through the cracks of spacetime. Sometimes I fell, and sometimes I was blown away. I couldn't stay anywhere for long, and time no longer flowed continuously I thought I would be trapped in another form of eternity. But instead, I arrived on Earth before the age of immortality and met you. From that moment, my entire existence witnessed the most beautiful scenery.</p>
+<br>
+<p>Earth's time moves quickly, and my stay was just a few minutes in my lifespan. Yet time moves slowly on Earth. It's so slow that we spent thirty years together in your eyes. In the end, the curse of immortality never released me from its grasp. Time etched deeper lines around your eyes each day, and the years painted your hair gray. You began to avoid holding my hand in public. In others eyes, we transformed from spouses into mother and son. You refused to go out with me. And finally, you refused to leave Linkon City to start a new life in a place where no one knew us. After that argument, you said, "My dear, this is as far as our journey can go in this lifetime." Your voice was soft, calm yet resolute. And I knew I couldn't keep you anymore.</p>
+<br>
+<p>Earth in that era was too primitive, so rudimentary that I couldn't travel to other timelines. After you sent me away, I wandered aimlessly until our final meeting in 2034 when the Deepspace Tunnel appeared. Your hair was white, and your face was lined with wrinkles. But your eyes remained vivid and beautiful. All Philosians have faces like mine that never age. However, our eyes contain nothing but endless emptiness. You saw right through my awkwardness, tapped my nose, and grinned with composure. "See these smile lines around my eyes? The stories they tell are more fascinating than your ageless face!"</p>
+<p>From the corners of your eyes, past decades surfaced one by one. What amounted to minutes in the Philos calendar became the most brilliant chapter of my long life. I made a decision then. There was something I had to do. Whether I would succeed or not, I didn't know. But I had to try.</p>
+<br>
+<p>As the Deepspace Tunnel drew closer, you shooed me away, your voice soft yet determined.</p>
+<p>"Go on now. Hurry up. Who knows if there's an interstellar post office out there. If so, you can write to me. Tell me about the adorable old ladies you've met."</p>
+<br>
+<p>The Deepspace Tunnel pulled me in, and I only managed to say, "I feel lucky to have met you." I saw your lips move, but the chaotic spatial noise prevented me from hearing anything. As my body gradually dissolved, I know I'll never have the chance to find out what you said.</p>
+<br>
+<p>It's okay. In a finite existence, many questions remain unanswered. But there's one thing I can be certain of. You're the most adorable old lady I've met.</p>
+<br>
+<p>My dear, I truly am lucky to have met you.</p>
+<br>
+<p>With love, your ageless old man </p>
+<p>Written during the demise of Philos</p>
+            `,
+    },
+    {
+        id: 202,
+        link: "the-lucky-loop",
+        serialNumber: "02",
+        subtitle: "Interstellar Post",
+        content: `
+<p>"Hey, Courier No.170043. That star sector you're responsible for is experiencing a time current. I guess it'll vanish from that section of Deepspace without a trace. Judging by your records, this is the first time you've experienced a star sector disappearing in your jurisdiction?"</p>
+<br>
+<p>Courier No. 170043 nods to their colleague and glances at their code. "Yes, Courier No. 002761."</p>
+<p>"Don't be sad. You get used to seeing them disappear after a while."</p>
+<p>"Oh..." Courier No. 170043 doesn't respond anymore. Star sectors are born and vanish with each passing moment. There's nothing to get used to. Just as they convert mail from different star sectors into destination and recipient codes, their communication device resounds.</p>
+<p>| [REGIONAL PRIORITY SPECIAL DELIVERY]</p>
+<p>| Original Star Sector: Philos I Sender: Your Old Friend</p>
+<p>| Note: I succeeded! This letter is now in your hands!</p>
+<p>Courier No. 170043 opens the panoramic map of their assigned star sector. In a familiar location, a warning flashed. </p>
+<p>| PHILOS CIVILIZATION</p>
+<p>| STATUS: World dissolution in progress. Currently at 7%.</p>
+<p>No. 170043 immediately shoulders their mailbag and dives into the warp device. They move so quickly that they leave a gust in their wake. Courier No.002761 shrugs. "They'll get used to it."</p>
+<br>
+<p>When Courier No. 170043 arrives at Philos, their old friend is sitting leisurely outdoors He holds a letter that's addressed to Earth. The sky resembles burning paper after being thrown into a fire.</p>
+<p>"Hello. This is the last one."</p>
+<p>Courier No. 170043 is unable to take the letter as usual. Their old friend is reluctant to let go After a silent tug-of-war and a sigh, No. 170043 finally places the letter into their bag.</p>
+<p>"Ah, the last one..." The old friend rubs his empty hands. "When human life approaches its end with no future ahead, we tend to reminisce. I've grown quite sentimental."</p>
+<p>"Technically speaking, you're not a human You're Philosian," Courier No. 170043 patiently corrects his inaccurate terminology. </p>
+<p>"I arose from humans."</p>
+<p>"Humans arose from apes, but humans never say they're apes. So, strictly speaking, you're an alien to humans."</p>
+<p>"You're as witty as ever." The old friend shifts patting the newly vacated space. Courier No. 170043 searches for an appropriate rebuttal for quite some time. But when they can't, they reluctantly sit down.</p>
+<p>"So this is the end of the world."</p>
+<br>
+<p>Courier No. 170043 and their old friend sit shoulder to shoulder. They silently watch as the protective shell surrounding Philos's atmosphere gradually disappears. It doesn't shatter or break down. It's just being devoured by a time current. The air begins to crystallize and gently cascades like snow. The clock tower atop the high walls, a symbol of royal authority, collapses amid the trembling earth. There's a heavy crash as it hits the ground. Panicked nobles leap from the city gates, their gleaming white ceremonial robes turning into dust beneath mud-covered shoes A jewel-encrusted crown rolls, colliding with the twisted remains of the bell that's half-buried in soil. No one hears the priceless sound of their impact.</p>
+<br>
+<p>In the face of collapse, life stands defenseless When oblivion becomes inevitable, people ultimately do what they've always wanted to do.</p>
+<p>"Look. They've finally learned to embrace and kiss. This might be the most meaningful thing they've done in their lives."</p>
+<br>
+<p>Courier No.170043 nods, beginning to accept the fact that their old friend is human. But before they can say anything, they're pulled into an embrace.</p>
+<p>"Farewell, my old friend. The letter is in your hands now."</p>
+<p>As the pressure of his palm against their back increases, Courier No. 170043 mimics the Philosians around them. They hesitantly bend their elbows to pat their old friend's back. They search their memory bank and recall their first conversation with their old friend. It seems fitting for the current situation. </p>
+<p>"Yes. Farewell, my old friend. I feel lucky to have met you."</p>
+<br>
+<p>Courier No.170043's old friend pulls away, and his eyes gleam with delighted surprise It's as if a question that troubled him for so long has finally been answered. The old friend's lips open and close as he speaks, but No. 170043 can't hear a thing. Sound cannot travel through a vacuum. They watch as their old friend's arms, body, smile, and face dissolve into cosmic dust and vanish.</p>
+<br>
+<p>Now, it's their turn to have a question that might never be answered in their lifetime.</p>
+            `,
     },
 ]

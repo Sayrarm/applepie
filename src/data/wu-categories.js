@@ -17,7 +17,7 @@ export const wuCategories = [
     { id: 16, link: "utopian-roamer", title: "Utopian Roamer", image: "src/assets/wu/a2_backgroundstory_pic1016.png", },
     { id: 17, link: "linkon-online", title: "Linkon Online", image: "src/assets/wu/a2_backgroundstory_pic1017.png", },
     { id: 18, link: "depths-of-chaos", title: "Depths of Chaos", image: "src/assets/wu/a2_backgroundstory_pic1018.png", },
-    { id: 19, link: "serpent's-cast", title: "Serpent's Cast", image: "src/assets/wu/a2_backgroundstory_pic1019.png", },
+    { id: 19, link: "serpents-cast", title: "Serpent's Cast", image: "src/assets/wu/a2_backgroundstory_pic1019.png", },
     { id: 20, link: "the-lucky-loop", title: "The Lucky Loop", image: "src/assets/wu/a2_backgroundstory_pic1020.png", },
     { id: 21, link: "dusk-to-autumn", title: "Dusk to Autumn", image: "src/assets/wu/a2_backgroundstory_pic1021.png", },
     { id: 22, link: "bucket-list", title: "Bucket List", image: "src/assets/wu/a2_backgroundstory_pic1022.png", },
