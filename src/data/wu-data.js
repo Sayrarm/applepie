@@ -3665,4 +3665,360 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>Now, it's their turn to have a question that might never be answered in their lifetime.</p>
             `,
     },
+    {
+        id: 203,
+        link: "the-lucky-loop",
+        serialNumber: "03",
+        subtitle: "An Afternoon Letter from the Stars",
+        content: `
+<p>Back at Interstellar Post, Courier No. 170043 stares at the final letter from a life form that has vanished. After struggling, they decided to enter the postal service's central transfer hub. Crossing through spacetime is never easy. The greater the mass, the greater the difficulty. Most mail is sent through the central transfer hub. For registered mail, couriers typically project their consciousness into relay vessels in the corresponding timeline. But the Earth their old friend wanted to send letters to is too ancient and distant It's unreachable even with the use of relay vessels.</p>
+<br>
+<p>Courier No. 170043 has a private mailbag filled with letters their old friend sent to that ancient planet. Sadly, none were successfully delivered. However, No.170043 decided to see what place created those few minutes that their millennia-old friend cherished so deeply Even if it means they might never return or vanish into the spacetime rift.</p>
+<br>
+<p>Their surroundings become bizarre and kaleidoscopic. Courier No. 170043 feels their body being flattened, stretched, squeezed into a square, and then bent into a triangle They search Earth's vocabulary for quite some time before finding appropriate descriptors. Have you ever been stuffed into a front loader? Or... have you played simulation games that involve managing an amusement park? It's like using every wild idea to build an outrageous, sadistic, epic roller coaster with countless loops and drop towers. Then you press start only to discover yourself as the single passenger on the untested ride Nothing matters except for hoping to survive... No, even death would be acceptable because this is...So! Unbearably! Painful!</p>
+<br>
+<p>When the sky finally stops spinning, a figure replaces the light that was stinging Courier No. 170043's eyelids. There's fluttering, which sends a gentle breeze toward their face.</p>
+<p>Opening their eyes, No. 170043 finds a pair of large, curious eyes blinking repeatedly.</p>
+<p>They're staring at them. No. 170043 takes a moment to gather their thoughts before looking around. They're in a small garden belonging to an Earth residence.</p>
+<br>
+<p>“I…”</p>
+<p>"Are you okay?" </p>
+<p>"Yes, I'm fine..."</p>
+<br>
+<p>Courier No.170043 sits up, looking at those big eyes while searching for an explanation about their sudden appearance. It should be one that doesn't cause unnecessary trouble. The little Earth girl before them looks about seven or eight years old—the perfect age to believe in fairy tales. Perhaps making up a story about an alien visiting Earth would be enough...</p>
+<br>
+<p>"Great-grandma! Great-grandma, Mr. Mailman is awake!"</p>
+<p>See, she already decided this alien's identity... A mailman. Huh? As No. 170043 watches the little girl run off, they spot an elderly woman under a gazebo at the far end of the garden.</p>
+<p>This is their first meeting, yet they have known her for a long time. Their old friend told the story of those few minutes countless times—her hair gradually turning white, her wrinkles deepening, her body slowly becoming smaller and frailer. But those eyes that "contained galaxies" never changed.</p>
+<br>
+<p>The elderly woman beckons. Courier No. 170043 follows the cobblestone path and slowly walks toward the gazebo. That strange sensation they felt while embracing their old friend returns. With each step, the metal components beneath their skin seem to corrode under Earth's atmosphere. Although they don't want to admit it, they feel as if all that remains in their body is the tiny fragment of human consciousness that stems from their origins.</p>
+<br>
+<p>"Are you... here to deliver a letter?"</p>
+<p>The elderly woman takes the letters from Courier No. 170043, her fingers caressing the timeless handwriting. She slowly removes the paper and gently rocks in her lounge chair as she reads one after another. Courier No. 170043 stands nearby. The afternoon breeze is quiet, and the sunlight is gentle. They watch as particles, like dust from another dimension, pass through her wrinkled, delicate fingers and scatter across her body. Her expression remains serene. A smile plays at her lips as if this final testament before her is another cycle of seasons changing.</p>
+<p>"Heh..." Her soft chuckle pulls No. 170043's drifting thoughts back to the present. She carefully refolds the letters along their creases and gently presses them against her lap. "Of course I'll be the most adorable old lady you'll meet in your lifetime."</p>
+<br>
+<p>Seconds pass in silence. Then she raises her head to look at No. 170043. "Thank you." </p>
+<br>
+<p>Courier No. 170043 finally has an image to match the afternoon their old friend described so many times. In a garden where one sits on a chair and listens to stories of distant times and worlds he tells, human eyes truly can contain an entire galaxy within them.</p>
+            `,
+    },
+    {
+        id: 204,
+        link: "the-lucky-loop",
+        serialNumber: "04",
+        subtitle: "The Story of Your Life",
+        content: `
+<p>Courier No. 170043 strolls through the streets of Linkon City. Their task is complete, but they don't want to immediately return to the postal office. Based on past experiences, the elderly woman will send her reply in three days.</p>
+<p>| [LOCAL NETWORK MESSAGE]</p>
+<p>| From: No. 002761 </p>
+<p>| To: No. 170043</p>
+<p>| Content: You've gone quite far. New star sector assignments have been allocated Remember to claim yours when you return.</p>
+<p>***</p>
+<p>| [LOCAL NETWORK MESSAGE]</p>
+<p>| From: No. 170043 I To: No. 002761</p>
+<p>| Content: I'm waiting for a response letter.</p>
+<p>***</p>
+<p>It takes Courier No. 170043 many attempts to send this message. Earth is primitive and isolated. It's just as their old friend said. They barely send a single message. </p>
+<p>| [LOCAL NETWORK MESSAGE]</p>
+<p>| From: No.002761 </p>
+<p>| To: No. 170043</p>
+<p>| Content: A response letter? Oh, you mean from your Philosian friend's ancient Earth sweetheart? Didn't she read the letters?</p>
+<p>***</p>
+<p>| [LOCAL NETWORK MESSAGE</p>
+<p>| From: No. 170043 </p>
+<p>| To: No. 002761 </p>
+<p>| Content: She did</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>| [FAILED TO SEND] </p>
+<p>| [FAILED TO SEND] </p>
+<p>| [FAILED TO SEND]</p>
+<p>***</p>
+<p>| [LOCAL NETWORK MESSAGE]</p>
+<p>| From: No. 002761 </p>
+<p>| To: No. 170043</p>
+<p>| Content: Why aren't you responding? What's going on over there?! I have tons of work to do! I can't keep monitoring the central transfer hub for you!</p>
+<p>***</p>
+<p>| [LOCAL NETWORK MESSAGE]</p>
+<p>| From: No. 170043 </p>
+<p>| To: No. 002761</p>
+<p>| Content: Then don't wait for me.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>| [FAILED TO SEND] </p>
+<p>| [FAILED TO SEND] </p>
+<p>| [FAILED TO SEND]</p>
+<p>***</p>
+<p>| [LOCAL NETWORK MESSAGE]</p>
+<p>| From:No.002761 </p>
+<p>| To: No. 170043</p>
+<p>| Content: Come back! Who writes a response to a dead person?!</p>
+<p>***</p>
+<p>Courier No.170043 throws their communication device aside and feels inexplicably agitated. Courier No. 002761 isn't wrong, but they feel their old friend hasn't received the respect they deserve. It's only three days, a short vacation. Perhaps there will be a response. Courier No. 170043 decides to wait on Earth. They find a secluded place where a massive ring-shaped spacecraft has disrupted the area's magnetic field. It's inaccessible to ordinary people.</p>
+<br>
+<p>The abandoned spacecraft carries a temporal essence similar to their old friend's. Leaning against the scattered parts, they recall their old friend's life.</p>
+<br>
+<p>They met their old friend during a "rite." They used a relay vessel to deliver mail to Philos and never expected it'd become evidence condemning them as an Anti-Philosian dissident. They were escorted to the white plaza beneath the clock tower in the royal capital. Their old friend was convicted alongside them.</p>
+<br>
+<p>A nobleman dressed in white ceremonial robes embroidered with gold threads looked down imperiously. He proclaimed their unforgivable crimes, his jewel-encrusted crown blindingly bright. The nobleman's self-righteous speech didn't register with Courier No. 170043. It was almost time to clock off, and they still had mail to deliver.</p>
+<br>
+<p>"Do you have anything to say?"</p>
+<br>
+<p>Someone asked this question. Courier No 170043 shook their head. They want to get this over with. They didn't want to work overtime.</p>
+<br>
+<p>"Do you have anything to say?"</p>
+<br>
+<p>That person then walked over to their old friend and asked the same question.</p>
+<p>"Yes! I say immortality is a curse that has made you forget where you came from. It robbed you of the ability to love, and it has left you ignorant of ice cream's sweetness and a kitty's softness."</p>
+<p>"You're unable to appreciate the vitality bursting from blooming flowers while being deaf to the nightingale's final song before dawn. You call yourselves immortal, yet you cannot perceive moments of happiness."</p>
+<p>"You possess time, but you've lost your reverence for life. You've conquered the stars despite not comprehending the luster of tears. You will eventually perish. And the love in my heart will be more than you."</p>
+<p>"It will be more enduring, genuine, and everlasting!"</p>
+<br>
+<p>The cry's echoes reverberated between the high walls, but the crowd didn't shout, surge, or rage. There was only silence. Courier No. 170043 turned to look at the overly dramatic Philosian beside them. With a barely perceptible sigh, his tense body slackened. He missed the slightly quirked eyebrow on the young crown prince's face as he stood in the clock tower's shadow. And they failed to notice the determined gaze of the young girl holding a sword at the far end of the high Wall.</p>
+<br>
+<p>They were escorted to a forest. The nobleman who judged them declared that criminals would receive a "glorious rite" there. Once their sins were washed away, they would be reborn. 0f course, Courier No. 170043 later learned that they would become fuel to keep the planet's hollow heart running.</p>
+<br>
+<p>During a short break while waiting to be converted into energy, Courier No. 170043 heard their old friend muttering. I can't hold on much longer. I'm being tossed back and forth through spacetime rifts. After depleting my energy at one point in time, I'm thrown into a new one. When will it end? Will my cries ever receive a response?! Who can bring an end to this cursed immortality?!"</p>
+<br>
+<p>"You're certainly quick to make friends."</p>
+<br>
+<p>"Aren't you a dissident too?"</p>
+<p>Courier No. 170043 was surprised by the question. After a quick search in their database, they decided it was better to keep things simple.</p>
+<br>
+<p>"...Is it worth it?"</p>
+<br>
+<p>“It must be. I promised someone that humans would achieve immortality through love."</p>
+<br>
+<p>"The word 'Philos' in some ancient Earth language means 'love.' Since Philos has achieved immortality, the concept of love is immortal in a sense."</p>
+<br>
+<p>"That's a funny joke."</p>
+<br>
+<p>"...Thank you."</p>
+<br>
+<p>"It seems you won't die either. Where are you from?"</p>
+<p>"I'm from Interstellar Post. I'm here to deliver mail. But my mission is about to fail. Once my energy is depleted, I'll return to my original body."</p>
+<br>
+<p>"Who's the letter for?"</p>
+<br>
+<p>Courier No.170043 realized they had forgotten to check the recipient's information because they were too hasty. They pulled up the record.</p>
+<br>
+<p>| [MAILINFORMATION]</p>
+<p>| Recipient Area: Philos Galaxy </p>
+<p>| Recipient: Ageless Old Man</p>
+<br>
+<p>"...It's for you."</p>
+<br>
+<p>"This is... a letter from her? How could she be writing to me? Have you been to Earth?!"</p>
+<br>
+<p>"No, it was a fragment I captured while traversing star sectors. When I capture something, I have to deliver it. I do it out of professional integrity."</p>
+<br>
+<p>As their old friend finishes reading the letter, his slumping body straightens, and his dull gray eyes sparkle with light again. "That's right! I promised I would keep shouting. I'd yell until the day someone hears me! I want to write back to her and tell her about all these years... Will you help deliver my response?"</p>
+<br>
+<p>"I can't. That place is too far away. It's impossible to reach."</p>
+<br>
+<p>"Is that so... It matters not. I'll still write. Neither of us can die, so there will always be a chance!" In his final moments before being converted into fuel, he flashes a goofy smile at Courier No.170043. "I feel lucky to have met you."</p>
+<br>
+<p>Looking back, facing death together during their first meeting had created a bond forged in the face of oblivion.</p>
+            `,
+    },
+    {
+        id: 205,
+        link: "the-lucky-loop",
+        serialNumber: "05",
+        subtitle: "Three Days Later",
+        content: `
+<p>Three days later, Courier No.170043 returns to the garden they crashed into only to find people dressed in black coming and going. The little girl with bright, blinking eyes runs up to them and hands over a letter. As Courier No. 170043 is about to place it in their pouch, the little girl holds their hand.</p>
+<br>
+<p>"Great-grandma said this letter is for you, Mr. Mailman."</p>
+<br>
+<p>At a cafe located on a street corner near the garden, Courier No. 170043 follows the ritual their old friend had when reading letters. They wash their hands, find a comfortable chair, and open the envelope. Inside is just a single sentence. "Thank you, Mr. Mailman. I feel lucky to have met you."</p>
+<br>
+<p>A young couple walks into the cafe. No. 170043 immediately recognizes the crown prince, the only one whose eyes held a persistent spark among the countless numb faces on the high wall that day. His royal garments have been replaced with a simple hoodie. This prince, who granted his old friend's wish and left no regrets, now blends into the crowds of ancient Earth. Someday, at one point in the future, he'd return life to its original meaning.</p>
+<br>
+<p>What would their old friend want to do if he were still here? Courier No. 170043 thinks before standing up. The scraping sound of the table breaks the cafe's silence. Courier No. 170043 realizes they've become just as dramatic as their old friend. The prince's and the girl's gazes fall on Courier No. 170043. No 170043 approaches them, walks up to the crown prince, and delivers a message for their old friend who no longer exists. </p>
+<br>
+<p>"I feel lucky to have met you."</p>
+<br>
+<p>The crown prince furrows his brow in confusion. He's bewildered as he accepts Courier No. 170043's greeting. No. 170043 glances between them and recognizes the girl who's always the focus of the prince's gaze—the place where hope was born. The looks exchanged between them resemble those in their old friend's eyes when he spoke of the elderly woman. It's that unique radiance shared between humans in love, what their old friend called "true immortality."</p>
+<br>
+<p>After a moment, the crown prince turns and repeats the same words to the girl beside him.</p>
+<p>Her response makes the prince smile. The light in his eyes grows even brighter as if it contains the entire universe. And finally, Courier No.170043 hears the answer they have missed countless times before.</p>
+<br>
+<p>"I feel lucky to have met you, too."</p>
+            `,
+    },
+    {
+        id: 211,
+        link: "dusk-to-autumn",
+        serialNumber: "01",
+        subtitle: "Divergence",
+        content: `
+<p>"Wow! His hair is as white as snow…”</p>
+<p>"I've never seen clothes like these before. They must be complicated to put on!"</p>
+<p>"I wonder how old he is. Where did he come from?"</p>
+<p>…</p>
+<p>"He's awake! He's awake!"</p>
+<p>When Shubai opens his eyes, he sees faces crowded around him. Having always been the observer of humans, Shubai finds himself being observed for the first time. Curious children with varying appearances are gathered by his bedside. They speak in a language that belongs to the "outside world" he observed for so long.</p>
+<br>
+<p>Shubai's head dully aches as he struggles to recall everything that happened. He was in the lecture hall to study the proper etiquette for serving the Emissary. Then fierce winds arose and the sky darkened. A massive rift appeared at the junction where the Fractal Library branched off into different worlds. While everyone was trying to determine the cause of this new branch, Shiqi, calling excitedly, charged into the opening.</p>
+<p>As order gradually returned, the Administrator spoke to Shubai with grave solemnity. "Your reading companion has found the Emissary. Your mission has begun."</p>
+<p>Afterward, Shubai gave in and followed Shiqi's calls into the rift. In a whirlwind of chaos where the sky and earth seemed to spin amid howling winds and blizzards, Shubai landed on wilted grass. His head struck a tree stump. His vision went dark, and he lost consciousness while hearing Shiqi's anxious howls.</p>
+<br>
+<p>Now that he's awake, he finds himself surrounded by children. After going through the trouble of getting here, the first face he sees isn't the revered Emissary's. Shubai wishes he could pass out again.</p>
+<br>
+<p>"Everyone, please give him some space. Don't crowd around him. He needs air to breathe."</p>
+<p>A woman approaches. She appears to be in her forties and is wearing a white lab coat. Shubai has studied many materials about this era in preparation for meeting the Emissary, so he recognizes this as a doctor's attire.</p>
+<p>Unfortunately, with no hospital name embroidered on her coat, he can't determine where he is or how far he might be from the Emissary.</p>
+<p>The children obediently make way as the doctor sits next to the bed. She holds up her hands, gestures with her fingers, and speaks in a gentle voice. "Hey, kiddo. How many fingers am I holding up?"</p>
+<p>Shubai takes a moment to process the fact that he was called a child. Then he cautiously answers this impromptu cognitive test.</p>
+<p>"Seven?"</p>
+<p>"Good." The doctor smiles at him. "The wound on your forehead has been treated. Why don't you lie down for a while longer?"</p>
+<p>Ignoring her suggestion, Shubai asks, "What year is it now?" It's the most important question at hand.</p>
+<p>One of the children speaks. "2035!"</p>
+<p>"Oh, I thought I was unconscious for years Like in those TV shows, haha!" Noticing the confusion and concern in the doctor's eyes, Shubai quickly explains himself. Thankfully, TV shows were his most important resource for learning about this era. The doctor smiles, and Shubai breathes a sigh of relief.</p>
+<p>Then he asks another important question.</p>
+<p>"This is Linkon City, right?" In the autumn of 2035, this timeline's Emissary of the Divine should've just entered Linkon Medical School Three years later, he'd relocate and attend the medical school in Skyhaven.</p>
+<br>
+<p>"Linkon City?" The doctor looks surprised.</p>
+<p>"That's thousands of kilometers from here When the patrolling Hunters found you this morning, you were unconscious in the wasteland nearby. You were alone." </p>
+<p>The Emissary isn't here?</p>
+<p>Shubai's eyes widen, unable to believe it Shiqi's nose is more sensitive than a dog's.</p>
+<p>How could he have led him astray? Throwing aside the covers, he immediately tries to get out of bed and put on his shoes. "I need to go to Linkon City."</p>
+<p>"No." The doctor's expression becomes stern as she presses him back down with one hand. Her voice remains calm. "You've been unconscious all day, and it's already nighttime. Wanderers emerged from the cracks in the stone walls near where you were found. The Hunters Association has temporarily designated it as a no-hunt zone It's extremely dangerous, and transportation won't resume until the alert is lifted."</p>
+<p>"Will it take a long time?" Shubai asks. Lying down, his face reveals his disappointment.</p>
+<p>"It's for everyone's safety," the doctor replies She leans forward to check the bandages on his forehead and examine any wound drainage. Her ID badge slips into Shubai's view. "Do you live in Linkon City?"</p>
+<p>Like it's his home? They serve the Emissary of the Divine. They don't need homes.</p>
+<p>"No, I'm looking for someone," Shubai replies, his gaze falling on the ID badge before him. The upper left corner displays a human figure outlined in red and white lines—the symbol of Doctors Worldwide. In the name section... Dr Althea.</p>
+<p>"Linkon City is huge. Who are you looking for?"</p>
+<p>"He's..." Shubai furrows his brow and tries to recall the Emissary's appearance. It has been too long since they met. Or rather, Shubai has always been a reader who learned about him through objective descriptions. "He's tall, cold, and with a hard-ice core."</p>
+<p>Dr. Althea blinks a few times as if trying hard to imagine him.</p>
+<p>Shubai stares at her expectantly. "Do you know someone like that?"</p>
+<p>Dr. Althea shakes her head and laughs. "No, but this is the first time I heard someone with such a description."</p>
+            `,
+    },
+    {
+        id: 212,
+        link: "dusk-to-autumn",
+        serialNumber: "02",
+        subtitle: "Soft and Sturdy",
+        content: `
+<p>It's late, and all the children are asleep. </p>
+<p>Shubai, not truly a child, tosses and turns.</p>
+<p>He's unable to sleep. He quietly gets out of bed and walks to the courtyard. The moon hangs high, its light like frost, as the trees’ branches near the wall droop. Crystalline dewdrops form on the leaves. September nights are heavy with dew here, and the leaves have yellowed early. It's almost like late autumn.</p>
+<p>This is unlike the Library's perpetual spring, and it's the first time Shubai has seen leaves that are half-green and half-yellow. He can't help but stare.</p>
+<br>
+<p>Dr. Althea sits under a lamp while filling out medical records. She looks up to see him, and a hint of resignation crosses her face as she beckons. "Come here."</p>
+<p>Shubai brings over a small stool and sits down. Snoring softly, Shiqi is curled up at Dr Althea's feet. The doctor peels a tangerine and carefully separates the pieces before handing them to him. There are only two doctors at this field hospital. In addition to Dr. Althea, whom Shubai has grown familiar with, there's also her husband, Dr. Jace. He's spending the night at the Hunters' camp for a shift.</p>
+<p>Althea looks at Shubai, and her smile reaches her eyes. "Our son is only a couple of years older than you. He's studying in Linkon City.”</p>
+<p>She opens her phone, selects a contact marked with an orange emoji, and scrolls through their chat to find a photo. "Here.”</p>
+<p>Shubai leans forward to look, and his expression freezes. No wonder Shiqi ran here. </p>
+<br>
+<p>In the photo, flower petals dance in the wind across a university campus. A boy who still has a boyish look carries a stack of materials that nearly reaches his chin. He's walking alone through the crowd. The students around him were older and taller. His youthful, fair face stares into the camera with wide, cat-like eyes. He looks very... very…</p>
+<p>"Tiny, adorable, and soft, right?" Althea sighs with motherly affection. "He's already a teenager, but whenever I look at my Zaynie, I can't help but feel this way."</p>
+<p>Shubai doesn't dare to respond. He pretends his mouth is too full of mandarin orange pieces to speak.</p>
+<p>To him, this "tiny, soft boy" in the photo is none other than the supreme, solemnly dignified Emissary of the Divine. The Emissary is like a blade forged from frost and snow as he stands above every world that deserved to be erased. "Tall, cold, and with a hard-ice core" is the only accurate description.</p>
+<br>
+<p>Shubai raises his hand and taps the screen.</p>
+<p>Althea smiles and opens an album titled "Zaynie" for him.</p>
+<p>- A family photo where he, as a five-year-old, mimics his parents by clenching his little fists against his cheeks to imitate a cat.</p>
+<p>- A picture of his calm, chubby, eight-year-old face after winning a gold medal in a youth mathematics competition.</p>
+<p>- A photograph featuring the look of wonder on his eleven-year-old face while Jace lifted him onto a massive 577-kilogram pumpkin during a family outing.</p>
+<p>- A recent photo where he's attending a university entrance ceremony surrounded by peers who were half a head taller than him.</p>
+<p>…</p>
+<p>There are also photos of a summer night spent eating ice cream and stargazing with a neighborhood girl, as well as the frequent appearances of a woman who transformed from a young mother in her twenties to a gentle woman in her early forties. Seeing the Emissary gradually growing up with a happy expression and his mother slowly aging, Shubai feels the reality of this world for the first time.</p>
+<p>People grow old, the Emissary grows up, and leaves turn yellow.</p>
+            `,
+    },
+    {
+        id: 213,
+        link: "dusk-to-autumn",
+        serialNumber: "03",
+        subtitle: "Autumn's Embrace",
+        content: `
+<p>Several weeks pass. Shubai's clothes are washed, dried, ironed, and then dirtied again from playing. Shiqi is plumper now. Finally, the alert is lifted. The Hunters Association's dispatch team conducts a thorough sweep of the surrounding areas to ensure there's no lingering danger from the Wanderers.</p>
+<p>While staying at the field hospital and waiting for transportation to resume, Shubai receives a cartoon hoodie as a replacement. It supposedly belonged to the Emissary of the Divine when he was younger. It features an angry carrot that Shubai particularly liked According to Dr.Jace, the Emissary wasn't fond of the design, but he didn't want to disappoint his parents. So whenever he wore this hoodie, he'd carry his backpack on his chest. Later, Dr. Jace bought him a dog-head backpack, which made the Emissary even more reluctant to wear it. Recently, the Emissary got tall so quickly that he outgrew the clothes entirely. Jace slaps his thigh with laughter as he tells the story.</p>
+<p>Exasperated, Althea swats Jace. He just returned from the Hunters' camp with injuries. But without even putting down his first-aid kit, he's already roughhousing with the children in the courtyard.</p>
+<p>Jace especially likes to tease Shubai, who can only sit and silently fume. He repeatedly tells himself that Dr. Jace is the Emissary's father. He's the Emissary's father…</p>
+<p>Thankfully, the Emissary's personality is different from his father's.</p>
+<p>Shubai can feel how beloved the couple is in the local community. He meets a little girl wiping away her tears. She says, "Grandma told me that Dr. Althea and Dr. Jace went to the market this morning to stock up for their next journey."</p>
+<p>"They're not staying?"</p>
+<p>"It'd be nice if they did! But they're from Doctors Worldwide. They're only stationed here temporarily because of the sudden appearance of Wanderers and their mission to mark off the no-hunt zone. Once the magnetic field stabilizes and this area is safe, they'll leave. There are people in other places who need them…”</p>
+<br>
+<p>Shubai understands to an extent. Sitting on a swing in the corner of the courtyard, he moves back and forth. He notices the leaves are more yellow as they fall onto his lap. Leaves return to their roots, and life ends Shubai picks up a crisp fallen leaf. Time's passage, as described in books, is light when rolled between his fingers. It crumbles at the slightest touch.</p>
+<br>
+<p>Now that transportation has resumed, Dr Althea and Dr. Jace are preparing to depart. It's time for him to set off in search of the Emissary of the Divine. The distance from here to Linkon City is vast. He needs to find the quickest route.</p>
+<p>The courtyard gate opens from the outside as the couple returns from shopping. Each carries several large bags of local specialties. For once, they aren't wearing their white coats. With sleeves rolled up, they cut pieces of colorful cardboard, fold them into perfect boxes, and place the items inside. It takes him a moment to realize that these must be what people call "gifts."</p>
+<p>The gifts prepared by Althea and Jace are neatly arranged. They're waiting to be wrapped. Althea smiles as she takes out her phone and starts a video call.</p>
+<p>"Zaynie, dear."</p>
+<p>"Dad, Mom."</p>
+<p>The call quickly connects. Shubai watches quietly, gazing at the Emissary's face on the screen. It feels as though he's seen it countless times before, yet somehow this is also the first time.</p>
+<br>
+<p>The Emissary of the Divine walks from the laboratory to the corridor. He holds his phone and meticulously keeps his face centered in the frame with the same precision he applies to his research.</p>
+<p>Althea laughs. "Holed up in the lab again? Your father and I bought some local specialties as gifts. As usual, you get to be the first one to pick your favorite before we give them to the other children."</p>
+<p>She turns the camera toward her husband, who's enthusiastically showcasing each gift. The Emissary's answer is exactly what Shubai expected. "Any of them will do."</p>
+<p>"Hey!" Jace responds with a playfully scolding expression. "How can you say that?"</p>
+<p>Althea also looks at him tenderly. "Zayne everyone should have something they like the best."</p>
+<p>In the video, the Emissary lowers his gaze. He appears to be considering something. Seconds pass before he offers his parents a faint smile and nods.</p>
+<p>Even after the call ends, Shubai remains puzzled. He has no "favorites" either. Every world's story is equally interesting, and every world's ending is the same. From a perspective that exists on a higher plane of existence, the one emotion he can never possess is preference.</p>
+<br>
+<p>After dinner, Althea and Jace give the beautifully wrapped gifts to the children, who jump with excitement. Althea looks around and waves to Shubai, who has stepped aside.</p>
+<p>"Shubai, come here. This is for you."</p>
+<p>"I get one too?" Shubai's mouth opens slightly in surprise. He doesn't belong here.</p>
+<p>"Of course!" Jace mimics Shubai's surprised expression. Smiling, he says, "And since you're heading to Linkon City to find someone, we've prepared snacks and travel essentials for you. A raincoat, wet wipes, a power bank…</p>
+<p>Remember to change your forehead bandages regularly! We also asked a Hunter who's returning to the Hunters Association to take you to Linkon City. That way we won't have to worry."</p>
+<p>He points to a backpack placed under the table nearby. The "snacks and travel essentials" he mentioned are actually a bag that's packed to the brim.</p>
+<p>"Will it be too heavy?" Concerned, Althea touches her chin.</p>
+<p>"Not really. It's better to be fully prepared. Didn't we do the same for Zayne?" Jace says cheerfully.</p>
+<p>Shubai catches the keyword, and his eyes light up. "The Emis—Uh... Zayne used to travel like this too?"</p>
+<p>"Yes. Sometimes to visit us, sometimes to travel alone. When you go to Linkon City, you might find this useful." As Althea speaks, she takes out a neatly folded map. Shubai unfolds it to see marked routes. There are detailed notes next to each stop with handwriting that's elegant yet steadfast.</p>
+<p>"First take the bus, then the plane, the light rail, walk three kilometers..." Shubai murmurs to himself as he traces the route on the map His eyes scan the printed information.</p>
+<p>Abbreviated place names, scale bars, shapes of regional boundaries, and the direction of every road... With the help of the handwritten notes, understanding the complex map is remarkably easy. He can instantly memorize the entire thing.</p>
+<br>
+<p>Confused, Shubai points to the final section that involves traveling on foot. "Wouldn't it be closer if you got off at the previous station? Why go one station further and then walk back?"</p>
+<br>
+<p>“Because it's autumn." Althea smiles when she answers.</p>
+<p>"Taking a detour from the next station lets you walk through a grove of blooming osmanthus trees. Golden blossoms with their faint fragrance are colors and scents that only belong to autumn. No one puts these things on maps. This is the kind of beauty that's only known to those who have walked the path themselves."</p>
+<p>“...Is beauty really important? The osmanthus trees will eventually become bare." Shubai is more confused.</p>
+<p>Althea pauses for a moment and looks at her husband. Then they both laugh simultaneously.</p>
+<p>"Zayne once said almost the exact same thing," Jace says somewhat wistfully.</p>
+<p>"When he was little, the only time he ever came to us with a question about school was when his teacher commented that his narrative essay lacked emotion. We tried to help him figure it out, but he still couldn't understand. Then one day he accidentally missed his stop, discovered the grove of osmanthus trees, wrote about it in his essay, and earned an A+ for the first time."</p>
+<p>"Huh?" How can someone with a meticulous, flawless mind as the Emissary miss a stop? And what did that have to do with beauty and emotion?</p>
+<p>Seeing Shubai's confusion, Althea doesn't continue to explain. She just gently strokes his hair and says, "During your trip to Linkon City, you'll have the perfect opportunity to see it for yourself."</p>
+            `,
+    },
+    {
+        id: 214,
+        link: "dusk-to-autumn",
+        serialNumber: "04",
+        subtitle: "Falling Letters",
+        content: `
+<p>Before departing, Shubai changes back into the clothes he arrived in and runs up to Althea. He places a note in her palm with handwriting like little sketches. "I asked the Hunter about the proper format for an IOU. I'll repay you tenfold for all the expenses during my stay."</p>
+<p>Jace leans in to examine it. "Whoa! This isn't an IOU you should sign willy-nilly."</p>
+<p>"But all the books I read say that one should repay a drop of kindness with a fountain of gratitude," Shubai recites earnestly. "When others are good to me, I should give them appropriate compensation so we don't owe each other anything. I calculated everything last night. You gave me ointment, snacks, the angry carrot hoodie, travel expenses to Linkon City—"</p>
+<p>Jace quickly interrupts him. "Why are you listing everything?"</p>
+<p>Althea's eyes crinkle with amusement as she takes out her pen, makes a few changes to the IOU, and hands it back to Shubai. "If you must satisfy your sense of fairness, then help us with something. The medical school isn't far from the grove. Could you please deliver Zayne's gift for us?"</p>
+<p>Attached to the gift is a note that says the following: "Dad and Mom's 'favorite' will always be Zaynie."</p>
+<br>
+<p>"Dear passengers, we're approaching Linkon University. Those who are exiting at this stop, please prepare to disembark…”</p>
+<p>As the train announcement resounds, Shubai is jolted awake. Looking out the window, he can see faint golden hues stretching into the distance. Getting off at this station will lead him to the Emissary. Going to the stop after will take him to the edge of the grove of osmanthus trees, and he'll need to walk back three kilometers through that golden landscape.</p>
+<br>
+<p>After autumn is winter. The most fundamental, inescapable truth of the world materializes as a real landscape in Shubai's mind for the first time. By then, the branches will be bare, people will wear thick clothes, and snow will cover everything.</p>
+<p>But Shubai also knows that after countless cycles of wintry chill and summer heat, autumn harvest and winter dormancy…</p>
+<p>Eventually, a world will exhaust its last bit of vitality for change. Spring will no longer bring forth new green, thunderstorms will no longer roar, and there will be no more mothers growing old nor children growing tall… When the last fallen leaf turns to soil, the Emissary will appear. He will bring an end to that world without any hesitation. It'll be as nonchalant as brushing off a speck of dust from his shoulder. He did it for every world Shubai had read about in books.</p>
+<p>Did the Emissary imagine it this way too? That every place he experiences will eventually become one he must destroy…</p>
+<br>
+<p>Shubai recalls how, before departing, he asked Althea why the Emissary missed his stop. Her gentle sigh drifted away with the breeze. </p>
+<p>"Early last autumn, we moved."</p>
+<br>
+<p>The changing of seasons, even when written in vast, endless stories, would be glossed over in a single glance. They carry no emotion or meaning. Yet someone who never made mistakes was momentarily lost in thought and missed his stop. He walked into a grove of osmanthus trees he was never supposed to enter. What his pen recorded was autumn, and what was etched on paper was a farewell.</p>
+<br>
+<p>Shiqi, hidden in the backpack, lets out a small yelp. Shubai hurries just before the doors closed.</p>
+<p>Standing on the platform, he looks back one last time toward the direction of the grove of osmanthus trees. This journey ends here. His mission is to find the Emissary of the Divine And he must remind him of his duty—to let go of seasons destined for destruction and to never miss his stop again.</p>
+<br>
+<p>Behind him, the train rushes past. Its melodious announcement gradually fades away.</p>
+<p>"...We look forward to seeing you again."</p>
+            `,
+    },
 ]
