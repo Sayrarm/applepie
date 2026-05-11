@@ -5314,4 +5314,284 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>The nights in the N109 Zone are long, long enough for Philip to finish his tea.</p>
             `,
     },
+    {
+        id: 291,
+        link: "above-the-ashes",
+        serialNumber: "01",
+        subtitle: "Bygone Bloom",
+        content: `
+<p>A low-frequency hum permeates every corner of the Farspace Fleet's HQ as if the air trembles in sync with the distant pulse of the floating harbor and the steady breath of nearby engines.</p>
+<p>Rufus strides down the corridor. His pace is brisk, each footstep landing heavy and measured against the deck because of his military boots. As he passes the operations center, a cluster of young technicians is locked in a heated debate over simulation data. When they see him, the argument dies in the middle of a sentence. They fix their posture, their eyes following his retreating figure.</p>
+<p>Rufus doesn't break stride. He simply raises a hand over his shoulder as he passes. "Don't rush when DC voltage's involved. Engineering is about closed-loop thinking. Get your fundamentals down on a support ship first.</p>
+<p>"...Yes, Captain!" The technicians freeze for a second before erupting into murmurs of sudden understanding.</p>
+<p>Rufus turns the corner and nearly collides with a logistics crew member clutching a stack of documents. His gaze notes the member's haggard features. His pace slows slightly.</p>
+<p>"How did the surgery go for the elder back home?"</p>
+<p>"I-it went well. Recovery is still under observation, but..." The crew member stammers, caught off guard by the attention.</p>
+<p>"If your vacation quota falls short, submit a special authorization request through the system. Use my code." The words are already behind him as Rufus reaches the end of the corridor. The automatic doors slide open without a sound, and they seal away the faint warmth of human presence behind him.</p>
+<br>
+<p>The air in the interrogation room is cold and carries the dry, rusty scent of old blood The man seated across the long table sits rigid. He's the quartermaster who has served under Rufus for five years. Now he doesn't dare lift his head, his hands clenched white in his lap. The supplies partner representative lounging on the side sofa, however, appears more at ease. She studies Rufus with obvious curiosity.</p>
+<p>"Captain Rufus, there's no need to be so serious. "She taps the table, her tone airy.</p>
+<p>"You can't expect a horse to run without letting it graze. Your quartermaster is a man who understands how the world works."</p>
+<p>Rufus doesn't spare her a glance. He walks to the head of the table and takes his seat. He removes his officer's cap and sets it on the surface. The soft click is deliberate. The quartermaster flinches.</p>
+<p>"Graze." Rufus repeats the word, his voice betraying nothing. "Smuggling unquarantined high-risk Protocores into Skyhaven means there's quite an appetite."</p>
+<p>The representative spreads her hands. "No one was hurt. Besides, we've always been the Fleet's most loyal supporters...”</p>
+<p>Rufus doesn't acknowledge her. His fingers swipe across the electronic display.</p>
+<p>A harsh vibration alert resounds from the quartermaster's personal terminal. The public notice screen on the interrogation room wall flashes red. It's the designation for a Fleet-wide broadcast at the highest clearance level.</p>
+<br>
+<p>Notice: The former Logistics Division Quartermaster exploited his position during his tenure to illegally transfer unquarantined high -risk Protocores. Per Article 4.3 of the Farspace Fleet Code of Conduct and Disciplinary Regulations, he shall be stripped of all duties. Effective immediately. He is permanently barred from serving in the future.</p>
+<br>
+<p>"Past merits aren't a get-out-of-jail-free card.” </p>
+<p>Rufus's gaze passes over his former colleague. </p>
+<p>"I trusted you."</p>
+<p>The quartermaster's face is ashen. He leans back in his chair. The representative's smile freezes. She rises and speaks, her tone cold "Rufus, we're hardly the only ones who have issues with you. You're cutting off your own path."</p>
+<p>"Door's over there." Rufus straightens his officer's cap, his gaze already fixed on the holographic sand table beyond her.</p>
+<br>
+<p>Two weeks later. The gangway connection in the Farspace Fleet's port.</p>
+<p>The restructuring of partnerships has caused no disruptions. It has the opposite effect.</p>
+<p>EVER's cobalt-blue logo blinks to life across the harbor's docking arms and equipment interfaces one after another. Everything runs smoother, cleaner than before. When one of the Fleet's largest former partners withdrew in the wake of the Protocore smuggling scandal, EVER seized the moment to step in and slowly consolidated a number of smaller specialized resources under its umbrella Rufus stands on the elevated bridge. He watches that cobalt blue rise like a tide and wash over every corner he knows by heart.</p>
+<p>"Dismantle the spoof signal array."</p>
+<p>A cold voice cuts through the ambient hum. Rufus frowns, turning to descend the stairs. A technical advisor wearing an EVER uniform stands at the side of the bridge and gestures toward a cluster of old-model signal reception arrays that have survived to this day. They're relics from the Fleet's founding and older than Skyhaven itself. The massive bowl-shaped primary reflector gathers signals from Deepspace. Surrounding it is a ring of curved secondary panels. Each is independently adjustable as they fan outward like layered petals and focus signal beams from every direction toward the central feed cabin. The entire structure is supported by metal spokes at its back. It rises like the stem of a flower, so the crew has always called it a "sunflower." Rufus walks over, raising a hand to halt the work. "Stop."</p>
+<p>The advisor notices him and offers a perfunctory smile. He nudges his glasses.</p>
+<p>"Captain, according to our assessment, this signal array's effective information capture rate is too low. The Fleet is now equipped with EVER's latest receivers. There's no need to waste processing power on meaningless background noise."</p>
+<p>Rufus stands his ground before the advisor, his gaze unyielding. "Its efficiency may not meet some people's standards, but it's honest. It records everything it sees and hears exactly as received."</p>
+<p>"I understand your attachment to legacy equipment. After all, you've been with the Fleet for over a decade now. But this is 2048. The new receivers are paired with the most intelligent, most advanced algorithmic systems available. Decision-making efficiency will improve dramatically.”</p>
+<p>"This isn't about nostalgia. We must have access to the raw frequency bands. It's nonnegotiable."</p>
+<p>"Perhaps you don't fully appreciate what these algorithms offer." The advisor's tone is patient. "Their filtering parameters are modeled on over a decade of data from every Deepspace-related incident Skyhaven has faced. Any signal the system filters out is either known, a harmless natural phenomenon, or its energy signature is so negligible that even if it reached the surface, it couldn't possibly pose a threat."</p>
+<p>"Your models are built on known quantities and current ground capabilities. But the entire point of Deepspace exploration is confronting the unknown. What your system trims away as signal noise could be a new type of transmission never before recorded or..." He pauses. </p>
+<p>"The intermittent distress call from a powerless escape pod as it drifts in the dark."</p>
+<p>"The probability of something that extreme—"The Farspace Fleet's history is full of such cases. You're welcome to look them up."</p>
+<p>“…”</p>
+<p>The advisor falls silent. Rufus steps forward his voice steadfast. "When the system declares everything as clear, I need to verify the raw frequency bands myself."</p>
+<p>The two maintain eye contact for a while. The advisor has no desire to start a conflict with a captain of Rufus's standing. Not in the early days of a new partnership anyway. He shrugs, conceding. "Fine. If you insist on this level of...caution, I'll have to note in my report that it will add to the Fleet's operating budget." After the advisor leaves, Rufus stands alone before the sunflower's master control panel. He enters a long, complex encryption key and locks the analog array's output directly to his personal terminal and sets the highest priority override. It bypasses EVER's system preprocessing.</p>
+<br>
+<p>The warship slips into the planet's shadow.</p>
+<p>Rufus returns to the deck where a file marked "Highest Priority" unfolds across the holographic display. The young man in the photograph has a striking, handsome face and a flawless smile.</p>
+<p>Rufus's gaze sweeps over the dazzling service record: S-Rank pilot, voyage record holder, solo breach specialist... Each title represents countless brushes with death where survival relied on sheer skill.</p>
+<p>But as he lowers his gaze, four words sit at the bottom of the file: Recommended by EVER.</p>
+<p>His adjutant stands nearby, observing Rufus's expression. The air holds its silence before Rufus presses his palms together and closes the file. To him, possessing an extraordinary talent only to willingly become EVER's instrument is more tragic than incompetence.</p>
+            `,
+    },
+    {
+        id: 292,
+        link: "above-the-ashes",
+        serialNumber: "02",
+        subtitle: "Peril",
+        content: `
+<p>"The energy output from this mutated Protocore has breached the standard threshold. The magnetic storm it's triggering is still expanding."</p>
+<p>The lights in the briefing room have been dimmed. In almost complete darkness, a holographic sand table hovers at the center of the room. EVER's technical representative stands in the shadows and sweeps the air to pull up a set of raw frequency bands captured by the sunflower. It's overlaid against the sand table's imaging.</p>
+<p>Once converted, faint specks of light flicker at the edge of the hazard zone.</p>
+<p>"Captain Rufus, you know how to plan ahead." The representative smiles and slowly claps.</p>
+<p>"Our new algorithms are designed to filter out fluctuations in Deepspace that pose no threat. Unfortunately, they also screen out life-support signals whose spectral signatures overlap too closely with the magnetic field. If you hadn't insisted on preserving those inefficient frequency bands, we likely wouldn't have known that anyone was trapped in the magnetic storm until their wreckage drifted out."</p>
+<p>"A Deepspace Aviation Administration patrol squadron." He unhurriedly gestures toward the flickering specks of light. "They were conducting routine Deepspace cartography when the magnetic storm's sudden expansion swept them in. Navigation systems across the board failed. They're surviving on backup power alone. Life support systems were operating at a bare minimum while they were in the turbulence. I imagine DAA is still scrambling to locate their missing research team as we speak...”</p>
+<p>The adjutant stands behind Rufus and gulps Ever since the sunflower dispute, EVER's displeasure with their uncooperative captain has surfaced in one resource approval clash and technical disagreement after another. The sudden show of goodwill is impossible to take at face value.</p>
+<p>"This is currently the only viable solution." The representative rotates the hologram to reveal a model of a black, angular device. "A suppressor developed by EVER under emergency protocols. Deploy it to the central zone and activate it. It will neutralize the energy fluctuations. Not only will it save the DAA's researchers, but it will also allow us to salvage the mutated Protocore."</p>
+<p>"Its mutation profile exceeds anything in our existing archives, so its research value is immeasurable."</p>
+<p>The representative pauses, his gaze cutting through the hologram to land directly on Rufus.</p>
+<p>"The magnetic storm is a meat grinder. Any standard fighter that enters is as good as dead. After careful consideration, only the flagship's armor integrity combined with your personal piloting skill, stands any chance of delivering the suppressor to the central area." The briefing room falls deathly silent. Rufus runs his thumb along a scratch on his glove.</p>
+<p>His adjutant leans in and murmurs, "Captain, please reconsider. That Protocore may be valuable, but if we bide our time and wait for the storm to weaken, we can find a safer way to salvage it."</p>
+<p>Rufus says nothing. His gaze remains fixed on the light drifting across the sand table. Each one represents a life. He understands the logic his adjutant is laying out all too well. If he ignores the distress signals, signals that would have been filtered out regardless, he can refuse EVER's hastily assembled solution on perfectly reasonable grounds. Avoid the unknown risk. Protect himself.</p>
+<p>A flicker of amusement passes through the representative's eyes. The adjutant's voice grows more urgent. "Besides, DAA has nothing to do with us. At worst, we send a perimeter fleet to hover at the edge to put on a show of rescue efforts…</p>
+<p>"Notify all stations. The flagship departs in ten minutes." Rufus stands up. His gaze passes over the EVER representative without stopping, his voice as steadfast as iron as it severs every unspoken protest before it can leave his adjutant's lips.</p>
+<p>If he turns a blind eye now and saves himself by pretending he never heard the cries for help, then what was the point of keeping the sunflower in the first place? EVER has hoisted him onto a pedestal built of duty. Only two paths remain: become a blade that bends to their hand or an obstacle marked for removal They've tested his limits time and time again.</p>
+<p>Very well. He'll give them an answer that leaves no room for misreading.</p>
+<p>"Central Fleet, here's your mission objective We're bringing them home."</p>
+            `,
+    },
+    {
+        id: 293,
+        link: "above-the-ashes",
+        serialNumber: "03",
+        subtitle: "The Final Decision",
+        content: `
+<p>The flagship presses forward, step by step, into the heart of the magnetic storm's vortex. The space around it has already been warped under the onslaught of furious energy currents, yet Rufus's hands remain steady on the sensory control interface. He operates with the certainty of a surgeon with a scalpel. His neural link feeds directly into the warship's systems. Every minute shift in the chaos outside registers against his senses Under his command, the vessel moves with almost instinctive precision. The bow tilts briefly, riding an incoming wave of energy flux as cover. He threads the needle past gravitational forces strong enough to tear through armor. A pulse burst from the starboard support thrusters corrects their attitude. The movement is elegant.</p>
+<p>"Arrival at designated coordinates has been confirmed. Protocore detected. Extending docking bridge."</p>
+<p>With a heavy thud of impact, the black, angular suppressor locks onto the Protocore. On the hologram, the readings representing Protocore fluctuations spike wildly. It's an expected reaction to the intervention. But when the system countdown ends, there is no stabilization. Instead, a glaring warning flashes across the control interface.</p>
+<br>
+<p>Insufficient power detected. An external energy source is required to initiate neutralization protocol.</p>
+<br>
+<p>Rufus stares at the prompt, his pupils contracting. Inside this sealed maelstrom, only two power sources exist: the flagship's engines and the life-support systems of the stranded patrol squadron.</p>
+<p>So this is the trap. He always knew EVER's generosity would come with a price. He prepared for the obvious ones: using a Deepspace crisis to eliminate him, leveraging a failed mission to demand his death, or engineering a power grab over the Fleet.</p>
+<p>None of that frightened him. He believed in his own skills and his crew's loyalty. But he never anticipated this. In EVER's calculations, the Protocore's transformation wasn't a crisis to be managed. It was an opportunity. They placed assets on one side of the scale and human lives on the other. Then they forced his hand onto the weight.</p>
+<p>Through the comms channel, the EVER representative's voice cuts through the storm It's crisp, unhurried, and as soft as silk.</p>
+<p>"Captain Rufus, please confirm immediately. If this Protocore's fluctuations spiral out of control, it will trigger a cascading overload across Skyhaven's power grid. For the greater good, a certain degree of resource loss is acceptable."</p>
+<p>"We know every pilot in the Farspace Fleet and the Deepspace Aviation Administration has made peace with the possibility of resting among the stars..." The voice pauses. Then it continues as if stating the most natural truth in the world. "Besides, the research value of this Protocore is worth ten squadrons like these."</p>
+<p>"Captain, just press it!" The adjutant's voice cracks as it cuts in. "They're so certain that the Protocore is one of a kind. If this mission fails, you'll be stripped of everything! This was always a rigged game. EVER is forcing you to choose—"</p>
+<p>Rufus's vision narrows until nothing remains but that scarlet activation key.</p>
+<p>His hand hovers above it, its weight as heavy as a thousand lives. A chill rises through him and seeps into his bones and soul. He cannot accept a world where human lives are placed on a scale and measured, where every breath is converted into cold numerical columns of profit and loss.</p>
+<p>"All units!"</p>
+<p>A violent shudder tears through the flagship. Energy overload screams through the hull. The comms signal fractures into static. His right hand comes down not on the activation key. It slashes through the cables connecting the suppressor. In one swift motion, he kills EVER's dedicated interface permanently.</p>
+<p>"...This is my final order! Evacuate immediately!"</p>
+<p>Rufus's voice rings through the Fleet's internal channel. There was neither hesitance nor the intention of taking it back.</p>
+<p>"Captain? Captain! What are you doing?!" His adjutant's panicked cry is severed and locked outside the comms channel.</p>
+<br>
+<p>Without the suppressor's guidance, the Protocore at the vortex's center breaks free. </p>
+<p>It begins to collapse and expand.</p>
+<p>Rufus slams the thrusters into dangerous thresholds marked in red. Against his own orders, every shield generator on the flagship overloads at once. They flare to life in a single desperate, fragile barrier planted directly between the raging torrent of energy about to burst and the DAA's stranded squadron. Alarms scream in overlapping waves. The warship groans at the edge of structural failure. Rufus's nervous system is fused deep into the flagship's system. Every inch of armor that's torn away feels as though it's being ripped from his flesh.</p>
+<p>But he grits his teeth. He endures and refuses to move.</p>
+            `,
+    },
+    {
+        id: 294,
+        link: "above-the-ashes",
+        serialNumber: "04",
+        subtitle: "The Final Bow and the Debut",
+        content: `
+<p>On the bridge's main display, the lights representing the DAA's patrol squadron fade from red one by one. They vanish into the area beyond the boundaries of the safe zone After the final onslaught of energy flux, the flagship is unrecognizable. Its sleek figure has been torn apart, its starboard armor stripped clean. Conduits and cables are exposed to outer space like raw veins. Inside the cockpit, life-support oxygen levels have dropped below the safety threshold.</p>
+<p>Rufus feels a suffocating coldness closing around his consciousness.</p>
+<p>Beyond the viewport, over a dozen EVER observation drones haven't withdrawn. They circle the dying warship like carrion birds. </p>
+<p>Countless dark lenses gaze down in silence to record the proud captain's curtain call Is this how it ends?</p>
+<p>Rufus's breath comes in ragged gasps. His vision blurs and drifts. He sees himself as a young man. He sees the faces of old crewmates one after another. He sees the day he first set foot in the Farspace Fleet's HQ and the sunflower's metal petals unfurling under the sunlight.</p>
+<p>When his lighthouse goes dark, where will this ship called the Farspace Fleet sail in the approaching darkness? Will it still hold true to the purpose it was born to follow? Will it chart Deepspace with independence and conviction? Or will it become nothing more than a pawn beneath a vast machine and wait for orders? He has no regrets. There's only a lingering ache of unfinished business.</p>
+<p>...He never made it as far as he wanted to go.</p>
+<br>
+<p>"Warning! High-level energy signature approaching!"</p>
+<p>A pitch-black fighter jet rips through the chaotic energy field at staggering speed. As soon as it appears, a tightly focused EM pulse blankets the airspace occupied by EVER's drone swarm. Data uplinks are severed, and camera feeds dissolve into static.</p>
+<p>Rufus's fading vision can't even track its trajectory. The fighter jet doesn't slow. In the same breath, it grazes the singularity and fires a single unremarkable silver beacon. </p>
+<p>There's no explosion.</p>
+<p>That beacon functions like a lightning rod as it seizes the furious energy torrent that should've devoured the flagship. It's bent into a wicked refraction through space. The redirected surge screams past the warship's mangled hull and plunges into the circling swarm of drones.</p>
+<p>Without any sound or warning, the entire formation is swept into oblivion and swallowed by light.</p>
+<p>The massive shockwave's aftermath hurls the flagship and makes it tumble toward the far reaches of Deepspace. Amid the violent shuddering, Rufus finally slips beyond the edge of consciousness. At last, he falls into a long, dreamless night.</p>
+            `,
+    },
+    {
+        id: 295,
+        link: "above-the-ashes",
+        serialNumber: "05",
+        subtitle: "The Eve",
+        content: `
+<p>When his consciousness returns, the scent clinging to his nostrils is no longer the acrid char of ozone. It's the cold, sterile bite of antiseptic. The white walls of a covert medical station slowly sharpen into focus. Rufus tries to gather his thoughts, but something refuses to align. He doesn't need a doctor to deliver the verdict. After half a lifetime of fighting in Deepspace, he knows the neural-link's feedback with intimate precision. And now, that seamless spatial awareness of blending with his warship is slipping away. He's no longer fit for any sort of intensive command. The automatic door slides open without a sound. Rufus remembers the name of every soul aboard the Farspace Fleet. So he knows Liam is the one to step inside. Liam skips the pleasantries, his voice low. "Captain, please allow me to give the Fleet's official debriefing that was submitted to EVER. 'Rufus, stripped of his rank and having defied reasonable technical guidance during the operation, has perished alongside his ship."</p>
+<p>Rufus listens. His sharp gaze is fixated on Liam, and he waits for the rest.</p>
+<p>"...Colonel Caleb was dispatched under emergency protocols. He successfully salvaged the high-risk mutated Protocore and prevented a power grid crisis in Skyhaven. It's a flawless debut for the new colonel." Liam's tone remains measured and factual.</p>
+<p>"Heh. I assume he piloted that black fighter jet." A faint, knowing smile crosses Rufus's lips. Certain suspicions fall into place.</p>
+<p>“The official report is clear, Captain. The energy flux at the vortex's center was highly unpredictable. The drones were lost due to an unfortunate accident while attempting close-range combat documentation. No other cause has been identified." Liam recites the script with perfect neutrality. "Additionally, you should be aware that your survival is strictly classified. This medical station is Colonel Caleb's private facility. You're encouraged to focus on recovering here."</p>
+<p>Rufus's expression doesn't soften. His gaze remains locked on Liam, and he cuts straight to the point. "And Caleb's hidden everything he's done from EVER?"</p>
+<p>Liam presses his lips together and lowers his gaze.</p>
+<p>“Captain Rufus."</p>
+<p>The automatic door slides open once more. A tall figure steps through the backlit threshold Sporting a black-gold uniform and spotless leather gloves, he has the face Rufus once studied in a holographic dossier. Caleb carries a medical report in one hand. He reaches the bedside, carefully sets it down, and lets his gaze drift past the tangle of tubes and monitors until it settles on the sunflowers arranged in a nearby vase. He says gently, "You're still recovering. Try not to overexert yourself."</p>
+<p>This is the first time Rufus has laid eyes on his successor. In person, Caleb is every bit as striking and composed as his photograph, yet something in the depths of his gaze carries an unexpected warmth.</p>
+<p>Rufus maintains eye contact with him before finally speaking. His voice is rough. "You wrote yourself a perfect script."</p>
+<p>"Yes." Caleb's admission lacks any semblance of hesitation. "They needed a story like this to establish new rules. And I needed this identity to preserve some of the old ones."</p>
+<p>"Your road will be harder than mine, "Rufus says, his voice heavy with the weight of certainty. </p>
+<p>Caleb's eyes reveal the faintest hint of amusement. There's the stillness of someone who has long since mastered a game.</p>
+<p>Rufus scoffs, letting his eyes close as he turns away. He says nothing more and listens to the measured steps of military boots returning to the door. When the door is just about to close, he opens his eyes one last time.</p>
+<p>Caleb's figure is resolute and unwavering as he strides toward the treacherous labyrinth of power.</p>
+<p>A long silence passes. Then, Rufus's lips slowly twist into something caught between self- mockery and release. He believed the Farspace Fleet needed a lighthouse, one willing to burn itself to ashes. But perhaps he was wrong. This dark frontier doesn't need more fire. It needs a greater night.</p>
+<p>And hidden at night's end will be the morning finally unsheathed.</p>
+            `,
+    },
+    {
+        id: 301,
+        link: "fairnights-edge",
+        serialNumber: "01",
+        subtitle: "Civ Research Division Archive Guide",
+        content: `
+<p>Since its founding in 1960, the Deepspace Academy has compiled and organized observational records concerning Earth's civilizations.</p>
+<p>Giant insects of the Paleozoic Era, towering trees of the Carboniferous Period, massive marine creatures of the Permian Period…</p>
+<p>They once ruled the Earth only to vanish into the depths of geological time. Each mass extinction.is Earth's way of renewing itself.</p>
+<p>Old species disappear, new ones emerge, and life continues.</p>
+<p>What if humanity is part of one such renewal? </p>
+<p>What if our civilization is a fleeting chapter in Earth's long history?</p>
+<br>
+<p>[Note]</p>
+<p>This file is restricted to important members in the Deepspace Academy.</p>
+<p>Unauthorized disclosure will be punished in accordance with Academy Disciplinary Code Article 7.</p>
+`,
+    },
+    {
+        id: 302,
+        link: "fairnights-edge",
+        serialNumber: "02",
+        subtitle: "Known Civilization Types",
+        content: `
+<p>Case File No.: 000001</p>
+<p>Archivist: Chronis, Deepspace Academy Physics Division </p>
+<br>
+<p>[Data]</p>
+<p>Observation No. 1: Sc214 - Extraterrestrial Civilization</p>
+<p>Since the Academy's discovery of a complex device designated 4201 in the northern mountainous region, decades of covert observation documented multiple individuals whose appearances have remained unchanged for decades. These entities appear and disappear, which defies physics. They also exhibit instantaneous displacement... (They bear a striking resemblance to the Backtracker appearance observed years ago).</p>
+<br>
+<p>*Update: Recently, Subject No. [X] was seen using this ability while helping a friend deliver flowers (presumably to avoid late deliveries) It confirms that this is unrelated to No-Hunt Zone No.42's effects and is unique to this group. It suggests they might be humans from the future who have evolved.</p>
+<br>
+<p>Observation No. 2: OCG003407 - Oceanic Civilization</p>
+<p>Organisms of this category possess a humanoid upper body and a tail structure adapted to aquatic environments. It's consistent with what humans refer to as "merfolk." Aside from normal vision, hearing, smell, and taste, their sensory system relies on clusters of synapses distributed across their skin. They're imperceptible to the naked eye.</p>
+<p>Thanks to sensory capabilities exceeding those of humans, these individuals demonstrate exceptional artistic intuition. Their works possess a staggering emotional depth and unmatched expression. They surpass the technical range of even the most accomplished human artists.</p>
+<br>
+<p>Observation No. 3: FB001 - Higher Plane of Existence</p>
+<p>Eyewitness reports indicate that unidentified "mirages" have appeared at multiple locations worldwide including Linkon City and the Arctic. These phenomena consistently manifest as white, geometric, semi-transparent structures that remain briefly visible. No additional data is available at this time.</p>
+<p>*Update: Recently, some witnesses near the Arctic have reported multiple sightings of a figure moving between unidentified structures and the snowcapped mountains Notably, temperatures in the nearby vicinity are significantly lower than that of the surrounding area. As of this recording, the timing and mechanism of these unpredictable appearances and disappearances remain unexplained. No photographic evidence is available. </p>
+<br>
+<p>Appendix </p>
+<p>Perhaps millions of life forms have already existed in this world long before humanity emerged.</p>
+<p>If the rumors about the end of the world are true and humanity now stands at its twilight. Are these diverse "civilizations" appearing to save us or replace us?</p>
+<p>-Chronis</p>
+            `,
+    },
+    {
+        id: 303,
+        link: "fairnights-edge",
+        serialNumber: "03",
+        subtitle: "Other Supplementary Records ",
+        content: `
+<p>Case File No.: 000017</p>
+<p>Archivist: Velasha, Deepspace Academy</p>
+<p>Anomalous Research Division </p>
+<br>
+<p>[Data File No.1]</p>
+<p>A facility under EVER once attempted to achieve a primitive form of life digitization by extracting the consciousness of fruit flies. The project, codenamed "OpenSwarm," was forcibly terminated after the experiments triggered uncontrollable mechanical interference. It narrowly averted a large-scale crisis.</p>
+<br>
+<p>[Data File No. 2]</p>
+<p>Earlier this month, a biological research team from Linkon University saw the silhouette of a massive unidentified creature emerging from the woods behind an estate in Linkon's southern suburbs during a nocturnal sampling expedition. Witnesses reported that the creature moved through the forest at a high speed without making any sound.</p>
+<br>
+<p>[Data File No. 3]</p>
+<p>Yesterday at 22:21, a drone was performing cleaning duties on a tech company's building downtown. Its infrared sensor detected an extremely high heat signature behind the windows of an office located on the top floor. The recording was forcibly intercepted and wiped by security systems before it could be uploaded to the cloud.</p>
+<br>
+<p>[Appendix]</p>
+<p>How strange...What did I see last night...? It's weird...I sneezed, and then I couldn't remember anything…</p>
+<p>-Velasha</p>
+`,
+    },
+    {
+        id: 304,
+        link: "fairnights-edge",
+        serialNumber: "04",
+        subtitle: "Gaia Research Center",
+        content: `
+<p>Case File No.: 000053</p>
+<p>Archivist: Amena, Deepspace Academy Biology Division</p>
+<br>
+<p>[Data]</p>
+<p>EVER's Gaia Research Center is the earliest known cross-civilization research institution Its core data requires clearance of the highest level within EVER. The Deepspace Academy maintained a friendly collaboration with the institute during the early days of signal decryption, but Gaia has always concealed an unobservable black box within its operations Notably, the timing of Gaia's establishment—or rather, EVER's rise to prominence—coincides closely with a mysterious family's investment in EVER. Our current hypothesis is that Gaia didn't originate from within EVER. It's possibly a preemptive arrangement by its backers, a semi-independent experimental institution operating outside of EVER's system.</p>
+<p>While tracing the source of the mysterious investment, a new company called EonCore Tech, which dabbles in Protocore Energy, appeared. Its Chief Director, their background untraceable, remains shrouded in mystery and appears to maintain a form of close collaboration with EVER.</p>
+<br>
+<p>[Related Files]</p>
+<p>[X][X] Protocore Energy Research System Note: Archive is corrupted. Waiting for repairs.</p>
+<br>
+<p>Appendix</p>
+<p>Conducted an in-depth investigation into the behind-the-scenes collaboration between that company and EVER but found no written or electronic records whatsoever. (*Note: There are no records. At all.)</p>
+<p>-Amena</p>
+            `,
+    },
+    {
+        id: 305,
+        link: "fairnights-edge",
+        serialNumber: "05",
+        subtitle: "Deepspace Signal",
+        content: `
+<p>Case File No.: Un-0000</p>
+<p>Archivist: Chronis, Deepspace Academy Physics Division </p>
+<br>
+<p>Data</p>
+<p>A Signal Acquisition Log</p>
+<p>Source Coordinates: At a depth of 57 tunnel units, Tunnel Wall at 26.35 degrees </p>
+<p>Reception Time: July 4, 2034</p>
+<p>Carrier Medium: Neutrino Beam </p>
+<br>
+<p>Speculative Hypothesis</p>
+<p>Through collaborative decryption efforts by all seven divisions of the Deepspace Academy. the following message has been decoded into readable text. Based on a joint analysis, this is highly likely to be a prophecy sent to Earth via a civilization currently undergoing annihilation. Or perhaps it's already been annihilated.</p>
+<br>
+<p>Decoded Signal</p>
+<p>The universe 's ultimate state is absolute disorder. What we perceive as order is merely a correction mechanism, a will resisting the universe 's entropy. To sustain civilization, the evolution of complex systems inevitably triggers periodic resets to offset information redundancy. It also redistributes resources. All vessels of life and intelligence must, after progressive natural selection, return to the singularity. Oblivion is the final conclusion of the law of conservation of energy.</p>
+<p>The observed civilization's complexity is approaching the correction threshold. The  twilight of humanity may soon be upon them When we awaken, we hope to still share the boundless Deepspace with them.</p>
+            `,
+    },
     ]
