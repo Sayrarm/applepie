@@ -4941,4 +4941,377 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>He will watch, truly watch, the sunrise after a long night.</p>
             `,
     },
-]
+    {
+        id: 271,
+        link: "a-fairy-tale",
+        serialNumber: "01",
+        subtitle: "The First Thread",
+        content: `
+<p>In the ocean's depths lies a place closer to the Heart of the Planet than even the deepest seabed. It's Deepspace's most tender secret: the Dreamweaving Bureau.</p>
+<p>A baby Dream Weaver axolotl with shiny, round eyes watches his mother intently and tries his best to mimic her movements by waving the six fluffy, feathery fins on either side of his head. These soft fins will one day become nimble shuttles for combing through the universe's thoughts. But for now, their master has no interest in using them for such a purpose.</p>
+<p>When Mother isn't looking, the baby Dream Weaver sneaks off to chase the fish darting between the seagrass. Meanwhile, his mother—a Dream Weaver perpetually bathed in a gentle, soft light--weaves. Each unfurling and folding of her feathery fins moves with the rhythm of a wandering bard regardless of the dream she crafts. Puzzled, the baby watches his mother. This work brings him no joy whatsoever... Yet Mother always has a tender smile.</p>
+<br>
+<p>Mother! Mother, I don't want to weave anymore! The baby Dream Weaver droops his head. These words have been stuck in his throat for days, and now they finally tumble out.</p>
+<p>“...All right." As if she had known her son would resist his innate gift long ago, she calmly smiles. "You can rest for a while. Once I find the most beautiful threads, you'll love this role."</p>
+<p>"No!" The baby Dream Weaver shakes his head fiercely, his feathery fins flaring. He's the angriest a Dream Weaver can possibly be. "I don't want to weave, and I don't want Mother to weave either! It's not fun! Why must we sit and weave these dreams? Why can't we swim freely like the other sea creatures?!"</p>
+<p>Sighing softly, Mother gathers her little one into her arms. A little fish slips away as a gentle voice whisper in the baby's ear. "Once upon a time, the ocean and Deepspace were one.</p>
+<br>
+<p>"It was an age before life was created. A boundless ocean cradled the slumbering Earth, and the world was but a silent dream.</p>
+<p>The waters were warm, the sky hung low, and the continents, shy as children, would only peek their foreheads above the waves every now and then. Sunlight could reach the deepest depths. It nourished those first, most delicate breaths upon the seabed. And alongside those faint, fragile pulses, we came into being.</p>
+<p>Perhaps it was at dusk or at dawn. In any case, it was when the blue-violet sky blushed pink at the edges. Our very first ancestor floated in the water. With every fiber of his being, he listened to that primordial silence. </p>
+<p>And then, he saw it: a strand of pure green. Neither a water current nor light or sound, it was woven from countless tiny, shimmering motes. Soft as silk threads, they brushed against every inch of his skin. This thread carried the most primal and genuine of feelings: joy under the sun and longing for the flowing water. Our ancestor was consumed with curiosity. Gently, tentatively, he reached out with his feathery fins to touch that thread…”</p>
+<p>The baby Dream Weaver holds his breath, his eyes akin to the full moon.</p>
+<p>"A miracle happened, my dear child. When his feathery fins combed through that thread, the tangled feelings were gently guided. The scattered motes of light began to dance, and before his eyes unfurled a tapestry so beautiful that it made his heart tremble Seagrass was woven into forests. Tiny creatures darted past. Some were restless and others were peaceful and warm as if a pair of eyes were watching these lives come into being. This is how it all started. We learned to catch those wandering, fragile emotional ripples drifting through the universe. We spin them into silk, weave them into visions, and craft dreams that soothe chaos and bring about peace."</p>
+<br>
+<p>"Mother... Mother, where did the very first thread come from?"</p>
+<p>"No one knows, my child. No one knows. Perhaps it was the mingled, hazy feelings of every tiny life in the ocean that stirred upon birth. Or it was the murmur of one paramecium in a distant lake. Maybe... it was a sigh whispered by Deepspace in the midst of a dream. In any case, those threads have always been there, always waiting. We learned to listen and weave them."</p>
+<br>
+<p>The baby Dream Weaver pulls his feathery fins, their tips now flushed a rosy red, in front of his eyes. He gently rubs them with his tiny claws. He's rarely ever this quiet.</p>
+            `,
+    },
+    {
+        id: 272,
+        link: "a-fairy-tale",
+        serialNumber: "02",
+        subtitle: "Colors of the Cambrian Period",
+        content: `
+<p>The rosy flush slowly fades from the baby's feathery fins, and they return to their usual pinkish-white. The little Dream Weaver edges forward as if to try again, but he pulls back at the last moment. With his head lowered, he quietly asks, "Mother, what happened next? How did the threads become what they are now?" Gone is the whining from before. Only pure curiosity remains.</p>
+<p>Mother's eyes shimmer with a gentle, dancing light. "Before we get to that, my child, we have a long story that must be told." She guides her little one through the glowing seagrass. They drift upward to a place the sunlight can still reach, and they settle upon a great giant clam adorned with beautiful blue-frilled edges. The world around them is lively.</p>
+<p>“After that first thread was woven into a green forest, some 500 million moonsets before our time in an age the stones themselves remember as the Cambrian era… This world, silent for a long time, awakened seemingly overnight. The ocean, our eternal home, transformed into a wondrous, teeming paradise. Countless beings never before took on forms beyond our wildest imagination Every shape you could ever dream of appeared in those days. Every color you could behold bloomed..."</p>
+<br>
+<p>The baby's feathery fins excitedly flutter, as bright lights flash from his eyes. "That... must have been lively!"</p>
+<p>"Indeed. But it was also infinitely more complex. A new creature brought feelings never felt before, so our threads bloomed into countless hues. Green was for life. But there was the gray-blue for fading, the orange-red of hunger when a hunter first tasted prey, and the white of fear from those who fled. In the struggle for claiming territory, black threads of fury clashed in the undertow. And in the search for a mate, ribbons of pastel bliss rippled through the currents."</p>
+<p>Mother looks down at her baby's six feathery fins. They've unfurled without him noticing and tremble ever so slightly. Her smile becomes gentler. "The ocean became a boiling, churning dyehouse woven from countless vivid hues. More threads appeared the thick layers so tangled that our feathery fins alone could no longer comb through all those colorful threads. Thus, through countless generations of listening and trying, we evolved." With the slender, delicate tips of her feathery fins adorned with countless tiny, sensitive filaments, she gently brushes the fuzzy ends of her baby's fins. The little one shudders. "See these soft, downy fibers? Each one is the keenest of weaving needles. They trace life's pulse into dreams for the sleeping That was our first true flourishing, my child. The wisdom to perceive, granted to us when the universe was born, made us the most focused, most faithful witnesses to the carnival of life. In those days, we lived in vast. creative joy and weaved the most beautiful tapestries the world had ever seen."</p>
+<p>The giant clam begins to snore, and a bubble rises. It carries within it a saffron-yellow thread that floats up and becomes entwined around the baby's fuzzy fins. It tickles, and the little Dream Weaver giggles. For the first time, he thinks that maybe dreamweaving isn't that bad.</p>
+            `,
+    },
+    {
+        id: 273,
+        link: "a-fairy-tale",
+        serialNumber: "03",
+        subtitle: "A Long Night",
+        content: `
+<p>The giant clam's snoring slowly fades, and those bubbles wrapped in saffron-yellow threads drift apart and pop one by one. The baby Dream Weaver is still lost in the splendor of the Cambrian era. "What happened next, Mother?" He lifts his head, his eyes shining with thirst for knowledge. "Why can't we see those soft threads anymore?"</p>
+<p>The gentle light in Mother's eyes dims for a second, but he doesn't notice. She draws her little one closer. The giant clam awakens, shaking its great body as it swims away Together, mother and child sink once more into the depths of the sea.</p>
+<p>"Very few lives can stay the same forever, my child. Likewise, only some beautiful songs repeat a single note. Ages passed, and many of our dreamy tapestries overflowed and flourished. Our sensitive synapses grew accustomed to the softness of those threads." Mother parts the darkness to reveal a mass of tangled threads. A suffocating, murky dark green-marbled with charred black and scarred by red streaks, like the raw marks left by sharp rocks against skin.</p>
+<br>
+<p>"And then... a long night descended. It was a wail that swept across the entire planet.It rose from the ocean's howl, every breath of the air, every shudder of the earth: Dreams were no longer filled with joy, sorrow, or fear There was only suffocation. It were as if the world had turned to thick, viscous tar, and all life struggled in vain. Invisible flames spread from the seabed and scorched the foundations upon which all living things depended on. An endless void made the threads sprout agonizing thorns. Many vanished in that night. They never woke up. They no longer dreamed. In other words, their entire species found an eternal rest.</p>
+<p>We called it an eradication of civilization. Death was no longer a ripple stirring every now and then in the river of life. It was a grand eradication that silenced the land and returned the ocean to stillness."</p>
+<br>
+<p>Joy's light flickers out. The baby Dream Weaver's wide eyes hold nothing but shock and fear. "Then... what did we do?"</p>
+<p>"We wove, my child." Mother's voice remains soft and calm. "We had no choice but to weave. It is our mission. Even as the flame of one species was extinguished forever, those who remained still fought to survive: Thread by thread, strand by strand, we gathered what we could and tried to channel the howling and the agony into something the world could bear. We wove terrible, twisted nightmares in hopes they could hold the despair. Maybe they wouldn't tear apart the fabric of reality."</p>
+<p>She falls silent for a long, long time. The child thinks the story has ended. Then, she speaks more slowly in a softer voice.</p>
+<p>"And yet, we were wrong. To feel life's pulse and sense the joy and sorrow of all living things—this had been our gift. But in that long night, it became the cruelest torture."</p>
+<p>The baby Dream Weaver makes a horrifying discovery. Upon Mother's body, always aglow with that gentle light, are scars. Faint lines trace the tips of her sensitive feathery fins, the roots of her limbs, and the skin nearest her heart.</p>
+<p>"You see them, don't you?" Mother tenderly strokes those marks with her claws. "Our kind is blessed with the gift of regeneration. A broken heart can mend itself anew. An exhausted mind can be restored, and even a severed limb will slowly sprout like a fresh bud. But... the despair of an entire planet spread faster than we could ever heal. Our synapses couldn't bear the weight. Whenever we combed through those charred, tangled threads and wove suffocating agony into shape, our bodies were torn apart and devoured."</p>
+<br>
+<p>The baby Dream Weaver clamps the six feathery fins over his ears. He doesn't want to hear any more. But as Mother gently teases apart the tangle of threads, she pulls out a beautiful peacock green strand. It's bluer than life's beginnings like an emerald from a deep sea vein that was kissed by golden sunlight.</p>
+<p>"Do not be afraid, my child. I'm still here, which means we were blessed enough to survive that night." She cradles the shimmering thread. "Just as we did when we first came into being, we returned to this seabed, the place closest to the planet's heart and fell into a deep slumber. For 30 million years, this world was silent once more...And we slept, waiting to be awakened again by life."</p>
+<br>
+<p>The baby Dream Weaver twines that peacock green strand that's still flecked with tiny grains of sand with the soft saffron-yellow. As he works, the feathery fins on either side of his head feel as light as air, as heavy as stone... Before his eyes, a tapestry unfurls: the sea and the land are woven into form.</p>
+            `,
+    },
+    {
+        id: 274,
+        link: "a-fairy-tale",
+        serialNumber: "04",
+        subtitle: "Cosmic Tides",
+        content: `
+<p>This is the baby Dream Weaver's first creation. The threads Mother placed in his tiny claws awaken something within him. For the first time, he understands how wondrous this gift truly is. As the silk glides through the delicate synapses located on the tips of his feathery fins, he listens with every fiber of his being. Finally, he "tastes" the emotions lingering in the giant clam's dream: a longing for sunlight, a quiet determination to grow.</p>
+<p>"Mother, did the world teem with life again after that night?" It's a question he can't help but ask.</p>
+<br>
+<p>"Yes. This world always finds a way to live again, but it's never quite the same." Mother brushes a feathery fin across her child's first creation. After so many years of weaving the dreams in this age, her feathery fins have lost the soft sensitivity of youth. Yet the memory of touch remains as vivid as ever. Before her eyes rise visions of the most magnificent creatures she has ever witnessed, which is followed by the grandest radiance she has ever woven.</p>
+<p>"The ebb and flow of life are the universe's tides. When the waters receded, the land became a new sanctuary for new lives. The cutest piece I wove came from a little fern. It clung to life in a gap between the rocks. In its dream, each of its fronds became a tiny drawer, and when those drawers opened, little universes made of all manner of spores rested inside them. The sun it imagined was a rainbow rolled into a lollipop. Then even grander silhouettes appeared upon the land: the dinosaurs. The most magnificent tapestry I ever created came from them: In those dreams, colors spread in great, bold swaths. Plants towered to pierce the clouds. When the dinosaurs ran, the earth shook beneath their feet...</p>
+<p>"How big were the dinosaurs?"</p>
+<p>"Hmm... About as big as whales…”</p>
+<p>"Wow... Why can't we see them anymore, though?"</p>
+<p>"The world fell silent once again. The dinosaurs vanished, swallowed by skies choked with ash and the white of an endless winter that gripped the globe. And so we retreated to the deep sea once more to compose requiems for the finale of the Cretaceous era. When the last note faded and the final dream unraveled, we dragged our broken bodies into another slumber. We rise and fall over and over like one's breath." </p>
+<br>
+<p>The baby Dream Weaver tilts his head, his feathery fins flailing about like little claws grasping at thoughts. Then his small eyes begin to sparkle once more. "And then? Oh, I know. After every tide, this planet welcomes new visitors!"</p>
+<p>"And then..." A note of reverence steals into Mother's voice. "Humanity was born. Their dreams are no longer simply what their eyes behold or what their bodies feel. Their dreams reach beyond the present. They hold regrets about yesterday, hopes for tomorrow. And yet this isn't the most wondrous part."</p>
+<p>Mother's eye begin to shimmer with a light never seen before.</p>
+<p>"There's a brilliant splendor when they dream of each other. It's no longer the simple attraction or intimidation between animals nor the primal urge to survive or reproduce The colors that surge through their dreams can be veiled in ivory, the courage to walk into danger and oblivion for the sake of another soul. They can also give rise to a light as crystalline as diamond, the steadfast will to gaze upon the stars and dream of touching them. Their feelings have granted us the richest tapestries we have ever created.</p>
+<p>Sound, color, rhythm, and every sensation are woven together into a new art form. It's an art that's vivid and immersive. It's as though within each small human body lies a newborn universe aching to exist."</p>
+<p>The baby Dream Weaver hasn't felt so exhilarated before. But when a new thread becomes entwined around his fins, he finally realizes the chill never faded.</p>
+<br>
+<p>A light that's too bright casts the darkest of shadows. Those beautiful colors began to clash and blend until they grew foul and tainted. The curiosity that once sparked exploration transformed into a greed that would devour all things. Within selfless love, the thorns of possession took root. And in the radiance of life, the seeds of death began to churn. We watched as our home was upended by curiosity. We buried, with our own hands, dear friends whose bones were picked clean by those who wielded a weapon 'in the name of love.' In their dreams, we found a splendor beyond anything we'd ever known and something else we had never witnessed: a black hole. A 'void.' Mother's gaze lands on her child's feathery fins. With scarred hands, she tears away the fibers clinging to those tender synapses. Where they scrape across the skin, pink transforms into an angry red, and blood begins to seep.</p>
+            `,
+    },
+    {
+        id: 275,
+        link: "a-fairy-tale",
+        serialNumber: "05",
+        subtitle: "Nightmare",
+        content: `
+<p>"Is that why the threads exist like this now, Mother?"</p>
+<p>"Yes. They are no longer threads, my child. They have a new name now. They are thorns." Mother gazes upon the tapestry before her. She cannot recall when it happened, when those soft, singing, glorious silken threads first grew hard shells and sprouted barbs.</p>
+<p>After all, in the long chronicle of this planet's dreams, the age of humanity is in the last few seconds. It's short, easy to be forgotten.</p>
+<p>"Mother, can they change back?"</p>
+<p>"I don't know, my child. Perhaps this world will fall silent once more when the hues are no longer pure amongst the thorns. Unlike the cataclysms of ages past, this silence may occur without thunder or flame. It may creep in quietly, ordinary as any other day, and settle down when they stay silent despite their conscience, when they turn a blind eye to beauty... And perhaps we will have no more dreams left to weave."</p>
+<p>"Will we disappear too?"</p>
+<p>"I'm not sure. In the end, we are artists who chronicle civilization through our creations. Humanity once sought from us the secret to eternal life, a way to escape death, but we ourselves do not know the answer. Maybe this planet will be undone one day. And when that day comes... With nowhere left to go, we shall drift apart alongside its mountains and lakes and seas and scatter into Deepspace." </p>
+<br>
+<p>On land, humanity continues to enact its tragicomedies that are too tangled to fully unravel. They're dazzling in their brilliance yet chaotic beyond measure. The baby Dream Weaver nestles close to Mother, his eyes shiny and bright. He looks at the unfinished tapestry woven from thorns. With trembling feathery fins, he reaches out alongside Mother, and together they complete the final corner of the dream. Although his powerful gift of regeneration swiftly covers each wound with new tissue, Mother always knows about the pains her child has yet to speak. "To have brought you into this age, my child... I'm sorry."</p>
+            `,
+    },
+    {
+        id: 276,
+        link: "a-fairy-tale",
+        serialNumber: "06",
+        subtitle: "A Bedtime Story for Good Kids",
+        content: `
+<p>Somewhere in this world, a human stirs from slumber. And on the far side of the earth, a child by the sea fights drowsiness and asks one last question before sleep takes hold.</p>
+<p>"Why don't the Dream Weavers just stop? If dreamweaving hurts so much, then why do they keep weaving for humans? Or... they could just weave the pretty ones!"</p>
+<br>
+<p>The old butler gently closes the book of fairy tales. A sea breeze slips through the window, and the seashell wind chime beneath the eaves rings once. It's as soft as a whisper Then peace returns.</p>
+<p>"Children, if you had never seen ugliness, how would you know what beauty is? If the sun only rose but never set and the sea only took but never breathed into clouds…”</p>
+<p>The drowsy children fall into a thoughtful silence. One shakes their head uncertainly Then a soft voice tinged with sorrow speaks.</p>
+<p>"Yeah... It sounds like the sun and the sea would be... dead." The child lifts their face, and the others turn to look at the old butler too, their bright eyes covered with a thin veil of tears.</p>
+<br>
+<p>The old butler smiles.</p>
+<p>"Exactly. For the Dream Weavers, what to weave and whether to weave were never choices to make. It's simply the way they exist. Like breathing. Breathing in the bitter cold stings. Breathing in the desert can be suffocating. But does life stop breathing because it hurts?"</p>
+<p>The old butler dims the warm bedside lamp. Starlight from Deepspace drifts through the window and spills into the room. It settles softly upon each small, upturned face.</p>
+<p>"The Dream Weavers never stopped weaving not because they believed they could prevent the end or because they were ordered to. l think it was precisely because they knew all too well that death is inevitable." The old butler looks out the window, his eyes finding a galaxy's distant stars. "In Deepspace, humanity is no different from the Cambrian period's trilobites, the Jurassic period's dinosaurs, the frozen plains' mammoths... or us. What the Dream Weavers wove was proof of one's existence, a testimony to how life once burned, how it struggled, and how beautiful it was."</p>
+<p>"Like...It's like when we draw pictures! And sing songs!"</p>
+<p>"Yes, it’s like how we create with our lives. Even if we vanish one day... So long as the songs are still hummed and our works still endure, then all the lives that have come and gone in Deepspace... They won't exist in vain."</p>
+<br>
+<p>Young faces reveal earnest pride. These little chroniclers of Deepspace's civilization have finally decided it's time to go to bed. They'll need their energy to greet tomorrow's mission.</p>
+<p>The old butler walks to the window sill. A figure leaning quietly against the outer wall has listened to the story alongside the children. The butler follows his gaze toward the distance. There lies the sea, deep and fathomless... And Deepspace, vast and boundless, merging gently into one.</p>
+            `,
+    },
+    {
+        id: 281,
+        link: "onychinus-aesthetics",
+        serialNumber: "01",
+        subtitle: "Surprise Attack",
+        content: `
+<p>In the Odd Workshop, the central area is bare. Several securing clamps have been violently wrenched apart, and the somewhat repaired invention that once sat upon the table has vanished without a trace. A gaping hole yawns in the workshop's roof. A blood moon hangs in the sky and casts a crimson sheen over the mountain of mechanical wreckage piled below. </p>
+<br>
+<p>It all started thirty minutes ago. EVER's attack was sudden and unexpected. It swept away the invention in the middle of calibrating, and they left a mess. But to be fair, at least half of this "mess" should be credited to a certain pair of twins whose idea of "support" looked suspiciously like "demolition."</p>
+<br>
+<p>Philip picks up the only intact thermos from the ground. "Did you have fun?"</p>
+<p>Eager to continue, Luke and Kieran are crouching atop the summit. "It wasn't bad. EVER got better. This batch of bots could actually take a hit."</p>
+<p>Philip unscrews the cap and blows on the steam. "You were so caught up in the brawl that you lost the titanium alloy wing-type exoskeleton, which was commissioned by Mr. Sylus and developed by the Odd Workshop. It was one calibration away from deployment and being a gift for Mephisto... Was that also fun?"</p>
+<p>“…”</p>
+<p>The two exchange glances. "That's not the point."</p>
+<p>"We're on the same team. Why does Mr. Mephie get one and we don't? It's not fair." Unfazed, Philip takes a sip of tea. "Save that for Mephisto."</p>
+<p>"Look, boss-man's picking her up. Just whip us up two sets. It's not like Mr. Mephie and the boss-man are free right now…"</p>
+<p>"Philly, Philip, Phiiiilip. We want ours to be better than Mr.Mephie's!"</p>
+<p>The twins flank Philip on either side, the long beaks of their crow masks almost clacking together. EVER and the ambush have been forgotten as a fresh round of blood feud erupts over the burning question of who gets dibs on the extra set of new gear. </p>
+<p>Bzzt.</p>
+<p>Philip's communication device suddenly vibrates, which interrupts the twins nonsense. He opens the terminal, and all three crowd around as an encrypted message appears in the center of the screen:</p>
+<br>
+<p>Sender: Anemone</p>
+<p>"Mr. Sylus was hit with an antimatter weapon in the ruins. He already entered the killing zone."</p>
+<p>"EVER's going to use this chance to ambush Onychinus. Remember to... Oh, they already said hello. ^_^ I'll send you a list of good renovation companies later."</p>
+<p>'I'm being watched too, so I'll be going dark for now. Let everyone know. And prepare yourselves."</p>
+<br>
+<p>The workshop is silent.</p>
+<p>Philip taps the nearby flickering monitor. Two sharp crackles of static later, the screen flickers to life. On the 3D corrected map of the N109 Zone, a red dot blinks steadily. It's moving toward Charon Market.</p>
+<p>"Good thing I planted a microtracker in that gear ahead of time." Philip fishes out a palm-sized metal block from under the workstation. </p>
+<p>"Fourth-gen comms device. Encrypted channels, real-time holograms, and onboard Al. Effective range covers the entire N109 Zone."</p>
+<p>He turns it on and tosses it to Luke and Kieran. "You want the good gear? Get our stuff back."</p>
+            `,
+    },
+    {
+        id: 282,
+        link: "onychinus-aesthetics",
+        serialNumber: "02",
+        subtitle: "Violent Aesthetics",
+        content: `
+<p>It's nighttime.</p>
+<p>The asphalt gleams slick and cold under the headlights while the hulking shells of abandoned factories crouch in silence beneath the blood-red dome. A battered gray van trundles down the road. "All repairs welcome" is plastered across its side in all caps, and every window is smothered under a patchwork of garish flyers. It's so ancient that it doesn't even qualify as "vintage." It's a prehistoric automatic crawling along at a pace boring enough to put anyone to sleep.</p>
+<p>In the back seat, Luke is sprawled against the door. One of his legs is on the headrest in front of him. A peeling flyer by his head cheerfully advertises "L4 Support Driving Technology." He lets out a listless groan.</p>
+<p>“...We don't have anything cooler to roll up in?"</p>
+<p>Kieran sits on the opposite side, his posture mirrored so perfectly that they might as well be reflections. "I agree. This doesn't meet a killer's aesthetic standards."</p>
+<p>Philip glances at them through the rearview mirror. "What exactly would meet your standards?"</p>
+<p>"A jet-black armored motorcycle with blue flames roaring from the exhaust..."</p>
+<p>"Instead of this rust bucket that can't even keep up with EVER's fumes."</p>
+<p>"Deal with it." Philip is accustomed to their nonsense. He watches the red dot on the holographic map move closer, his composure unshaken. "This is the only vehicle with any modifications and offensive and defensive modules. Besides...we're almost there."</p>
+<br>
+<p>Luke and Kieran exchange a glance before pulling out their communication device. A newly created three-person group chat pops up, and the group name has already been changed to "Reborn: Reclaiming Everything That Belongs to Our Boss Mr. Mephie."</p>
+<p>**Luke: [Location Shared: N109 Zone, North District, Abandoned Factory, Lane 1]</p>
+<p>**Luke: @Hank, you free?</p>
+<p>**Hank: What's up?</p>
+<p>**Kieran: Go to a gray van. We're with 303.</p>
+<p>**Hank: Philip's doing fieldwork himself? That's rare.</p>
+<p>**Luke: It's an understatement. Ever since he opened the workshop, the number of times he's done fieldwork with us can be counted on one hand. I thought it was because he wasn't used to us yet. But then I realized…</p>
+<p>**Kieran: He's a tech shut-in. If he can sit, he won't stand. If he can attack from afar, he won't show his face.</p>
+<p>Luke's fingers pause. He glances at the back of Philip's head since he's in the driver's seat. It reminds him of the first time they met. Back then, neither of them understood why boss man had taken an interest in EVER trash, defector or not. But orders were orders, so they personally "invited" Philip to "visit" Onychinus.</p>
+<p>No matter how Luke tried to charm or threaten Philip, the man sat there like a corpse. That changed the moment Kieran showed up, draping himself over Luke with practiced ease. "Why waste breath on logic," Kieran chirped, "when kidnapping is so much faster?" When Philip's gaze locked onto him, it was with an almost hungry, unblinking intensity. Kieran bristled. He was half a second away from lashing out. At that razor's edge, the strange researcher finally relented and accepted the invitation. After that, Philip's reputation as the "mad scientist" spread across the N109 Zone. He has skills, an eccentric personality, allergic to the outside world... Nothing like the man he is now.</p>
+<p>Luke lowers his gaze and goes back to slacking off.</p>
+<p>**Luke: But this time's different. EVER hit the workshop, and they took Mr. Mephie's stuff. If 303 doesn't want the crow pecking at him for eternity, it makes sense that he'd show up himself.</p>
+<p>**Hank: Fair.</p>
+<p>**Hank: I happen to be nearby since I'm scouting the route for the next race. Give me a few minutes.</p>
+<p>Luke's eyes light up.</p>
+<p>**Luke: Really? What are you driving?</p>
+<p>**Hank: A motorcycle.</p>
+<p>**Kieran: What kind of motorcycle?</p>
+<p>**Hank: Black.</p>
+<p>**Kieran: Does it breathe fire?</p>
+<p>**Hank: Yes.</p>
+<p>**Luke: Perfect! 303 drives like a grandpa on a morning stroll...</p>
+<p>**Kieran: Get over here noooooow!</p>
+<p>**Hank: I'm on my way.</p>
+<p>Luke and Kieran are giddy. Leave it to Hank, who's mature and dependable, to actually</p>
+<p>show up when it counts. </p>
+<br>
+<p>Meanwhile...</p>
+<br>
+<p>"Has it ever occurred to you that"—Philip watches the two through the rearview mirror-"this is my communication device. The backend monitors data traffic. It includes...”</p>
+<p>He taps the side of the steering wheel, and the car's audio system switches to speaker mode. A voice reads,"303 drives like a grandpa on a morning stroll..."</p>
+<p>The tone is dripping with mockery, and the inflection is almost unsettlingly human. But the model it was trained on sounds suspiciously like Philip's voice. The van is very, very quiet.</p>
+<br>
+<p>But the silence doesn't last more than a second. At the intersection, Philip steps on the brake.</p>
+<br>
+<p>Two SUVs barrel out of the abandoned factories on either side without warning and cut across the lane. They box in the van from the front. Windows roll down, and a row of black muzzles emerges. It's EVER.</p>
+<p>Philip is already shifting into reverse gear.</p>
+<p>"We closed the distance too fast. So they countered us…” </p>
+<p>Boom!</p>
+<br>
+<p>The roar of a motorcycle engine tears through the night as it surges from behind.</p>
+<p>A black figure streaks past like lightning. Twin headlights carve blazing white trails through the darkness. It's a pure black heavy-duty cruiser, its sleek frame sheathed in matte coating. Its exhaust pipes spit ghostly blue flames as every line is an ode to cold composed violence.</p>
+<p>From the back seat of the humble van, Luke cranes his head out the window to admire the view. "Sick!"</p>
+<p>"Black..." Kieran opens his mouth, his envy dripping from every word. "And it breathes blue fire...”</p>
+<p>Before he can continue, the rider guns the throttle. The motorcycle rockets toward the SUVs like a missile. EVER can't react in time. and two vehicles crash. They tumble through the guardrail and plunge into the ditch below. Flames erupt toward the sky. It's a perfect one-for-one trade.</p>
+<br>
+<p>Philip watches as the rider jumps off the motorcycle at the last possible second, tucks into a roll, and tumbles to a stop beside the van. The helmet comes off and reveals a face that can only be described as "mature and composed." Philip pinches the bridge of his nose. He lets out a weary sigh.</p>
+<p>It was a roadblock. Was that really necessary?</p>
+            `,
+    },
+    {
+        id: 283,
+        link: "onychinus-aesthetics",
+        serialNumber: "03",
+        subtitle: "Drastic Measures",
+        content: `
+<p>Wind howls past the windows as it's entangled with the growing roar of engines closing in from behind.</p>
+<p>The gray van tears down the road. Hank has taken the wheel now. Being a former pro racer, he's somehow wrangling a speed-trial performance out of this rust bucket. And speed trials are where the limit is the minimum, mind you. He weaves and swerves the vehicle with reckless abandon.</p>
+<p>The consequences of kicking the hornet's nest arrive faster than expected. The EVER operatives forced into that mutual destruction stunt with the motorcycle have abandoned their original route. They've mobilized every reserve unit in the area and are intent on trapping the van inside this maze of steel and concrete.</p>
+<p>"Warning! Multiple unidentified vehicles are approaching from rear flanks. Their current speed is approximately 70 km/h."</p>
+<p>Hank swerves to dodge a stray bullet from the rear flank. The Philip-like voice echoes through the cabin. "Philip, your car just gained sentience."</p>
+<p>Philip doesn't look up. He's busy simulating multiple routes on the map. "Unfortunately, no. It's an intelligent model I trained a while back. It's still in beta testing. There's a critical technical bottleneck I haven't managed to break through yet, but its combined theoretical IQ is 1.5 times my own. It can handle most driving scenarios."</p>
+<p>“Correct." The Al's tone is modest, its voice 99% identical to Philip's. "You may also call me Phil."</p>
+<p>Hank's eyes light up with understanding. "So it's a fancy navigation system with a custom voice pack."</p>
+<br>
+<p>As the minutes stretch on, the blue lines marking "passable routes" on the holographic map disappear one by one. Philip's brow furrows. "Good news is the tracker hasn't been discovered. The pursuit route's still within manageable parameters."</p>
+<p>The Al, unburdened by the human habit of sugarcoating, cuts in bluntly. "Bad news is that the enemy's infiltration of the N109 Zone runs deeper than previously known. The encirclement is now complete."</p>
+<p>“Five o'clock, four hundred meters. Four vehicles just pulled out of Warehouse 3, and they're moving fast. Doesn't look like standard transport." Kieran provides the intel.</p>
+<p>"Drones overhead. At least twelve." Luke clicks his tongue at the news. He's already cracking his knuckles in anticipation.</p>
+<p>"The enemy combat units exceed the safety threshold by 187%."</p>
+<p>"Recalculating escape routes... Recalculation failed. Strategic withdrawal with counterattack contingency is highly recommended."</p>
+<p>As if to validate the Al's assessment, the enemy barrier contracts. Bullets and energy beams pour down like a monsoon.</p>
+<p>Hank wrenches the wheel, the question arriving a beat too late. "What contingency?" Amid the hail of gunfire, Phil patiently clarifies. "In layman's terms, turn around. Run. Now."</p>
+<p>“…”</p>
+<p>A moment of silence. Then Hank speaks up. </p>
+<p>"Back in my underground racing days, Mr. Sylus taught me something. When you're boxed in on the track, the best counterattack isn't shaking off your opponent…”</p>
+<p>With a flawless drift, the van slams through a crumbling wall and bursts out of the chemical plant's ruins. He launches it into a suspended corridor linking two cooling towers. The walkway groans and sways. Hank shifts gears.</p>
+<p>"It's forcing them onto the track where you have the advantage."</p>
+<p>For one heart-stopping instant, the momentum tips the van a sit grinds across the corridor. When the van clears the walkway, the entire structure gives way. EVER's pursuers slam their brakes, but those lumbering SUVs have nowhere to go. One after another, they plunge, and a thunderous impact resounds. Dust billows. Flames roar to life.</p>
+<p>Before Philip can exhale, several light blue energy masses begin converging behind the smoke and dust. It's their antimatter weapons!</p>
+<p>"Get down!"</p>
+<p>Kieran, the only one crouched outside the van, reacts. A volley of throwing knives strikes the launcher, but a beam of blue light still grazes his left cheek. A thin crack is left across his mask. The antimatter attack veers off course and slams into the ground instead, but the heat it creates nearly flips the van.</p>
+<p>Caught off guard, Philip is thrown out of the cabin and tumbles across the ground. When the communication device slips from his grip. everything goes black.</p>
+            `,
+    },
+    {
+        id: 284,
+        link: "onychinus-aesthetics",
+        serialNumber: "04",
+        subtitle: "Memory Fragments",
+        content: `
+<p>The damaged device lies in a heap of rubble a few meters away. Phil's voice cuts in and out.</p>
+<p>"In the face of failure, choosing to retreat is not shameful. Now... charting&*#@!...contingency&#**plans. Total of..."</p>
+<p>The electronic voice forces its way through the gaps in the ringing only to be swallowed again by a shrill, piercing whine. Philip's consciousness drifts at the edge of darkness Everything in his vision slowly spins, and the colors bleed.</p>
+<br>
+<p>"Hey, Philip. Your phone 's off again? Good thing I have the communication you made Otherwise, I'd never get through to you."</p>
+<p>"Don't worry, it's not like this is my first stay in the hospital. I can take care of myself. "</p>
+<p>"You don't believe me? Look at the report. ‘Felix. Vitals stable and may be discharged</p>
+<p>after observation...' Focus on your work. Don't take time off to see me."</p>
+<p>…</p>
+<p>"Hey, Philip.... Your phone died again? You always forget everything the second you start an experiment..."</p>
+<p>"The doctor said even identical twins can have minor genetic mutations... Don 't cry. Look on the bright side. Medication can keep things stable for a long time."</p>
+<p>…</p>
+<p>"After the Chronorift Catastrophe, the hospitals overflowed... But I know you're still alive. You just don't have anywhere to charge your phone, right, Philip?"</p>
+<p>…</p>
+<p>"Hey, Philip. I've volunteered for a new trial at Xander Sciences. Don't worry --I'm your twin, aren't I? We 're made of tougher stuff. Once I'm better, I'll find you."</p>
+<br>
+<p>"You're really something else." Luke kills two hostiles in quick succession and then helps Kieran haul an unconscious Philip behind the crumbling wall of the abandoned factory. "No wonder you never do fieldwork. You're more fragile than glass... Tch, looks like 303's precious device is dead."</p>
+<p>Kieran doesn't respond. His fingertips trace the crack on his mask and linger. Seconds pass. Then he lets out a quiet "yeah." Luke tucks the gadget back into Philip's loosely curled palm. "What's there to be upset about? 303 built the thing in the first place. Once we clean this up, he can fix yours."</p>
+<p>That lifts Kieran's spirits. He flicks a handful of throwing knives into the fray. "Then I want one just like yours."</p>
+<p>Neither of them notices Philip's fingers twitch and curl ever so slightly.</p>
+<br>
+<p>"I've been meaning to ask since we first met. Philip, why do you stare at us like that? It's creepy."</p>
+<p>"We're twins. Of course we look the same… Tch, the scar doesn't count. It's a medal of honor."</p>
+<p>…</p>
+<p>"No wonder Kieran agreed to come with us when he saw you. Your number is 303."</p>
+<p>"I heard everyone with a number in that experiment was an identical twin. Where's your brother? I've never seen him around."</p>
+<p>…</p>
+<p>"Getting treated at an EVER hospital meant you couldn't contact anyone? It's no big deal Which hospital? The boys and I can tear the place down for you... So there really are diseases only they can treat? I bet they're the ones who created them...”</p>
+<p>"Side effects from our time there? Yeah, we had them: But boss-man took care of it. You should've seen him crush those crystals with his bare hands. Spoiler alert... It was cool. "</p>
+<p>…</p>
+<p>"Hey, 303. Uh...Do you think you could make us masks? Something cool and the kind that covers your face."</p>
+<p>"Actually, forget cool. That's secondary. What matters most is that they 're exactly the same."</p>
+<br>
+<p>"Get in!" Hank barrels through a crumbling wall with the van. Its tires shriek as he pulls a hairpin drift that narrowly dodges the antimatter beam's ghostly blue arc. The door flies open with a metallic clang in front of the three.</p>
+<p>Kieran barely manages to drag Philip into the back seat before his eyes notice a flash of silver-gray. It's a metal container bearing the unmistakable signature of the Odd Workshop It's launched skyward by the blast and is now arcing back down. "Up there. That's it!"</p>
+<p>Hank spots the container and wrenches the wheel. He spins the van nearly 180 degrees.</p>
+<p>"Get it back!" Luke and Kieran are already moving. They vault through the hail of gunfire and intercept the container. They toss it between them like a ball and toy with their pursuers until they've had their fun. Then they land with perfect grace.</p>
+<p>The van roars toward the drop point, and gravity slams Philip into his seat. Bullets scream past. Casings clatter against the roof like hail. His colleagues' voices fade in and out. "Why isn't Philip awake yet?!"</p>
+<p>"I'm filing a report with boss-man for slacking on the job!"</p>
+<p>Philip's eyes stay closed. His consciousness keeps sinking and falling through the chaos and the noise.</p>
+<br>
+<p>Philip was in the middle of a routine briefing when he learned that resuscitation efforts for Felix had failed.</p>
+<p>The comms device in his pocket buzzed once. The message from his informant was short, yet it rooted Philip to the spot, his mind blank. Then came the flood. Pathology reports, medical records, and even detailed profiles of the lead surgeons. The screen flickered on and off, its pale glow reflecting the slow unraveling of his expression into emptiness.</p>
+<p>He wasn't a doctor. He never really understood medical jargon. That was precisely why when modern medicine threw up its hands, he'd pinned his hopes for Felix's recovery on Xander Sciences and their "breakthrough treatment." The supposed stuff from legends. But disease doesn't slow its corrosive march just because the cure hasn't caught up. For the vast majority of ordinary lives, death is still the one destination no road can bypass.</p>
+<p>Philip looked up, his gaze finding the man before him. Sylus sat in his usual place.</p>
+<p>Composed as usual, his figure overlapped with the memory of their first meeting when Philip had fled to Onychinus with nothing but secrets and desperation. That same unshakeable composure... The same effortless control.</p>
+<p>"Mr. Sylus." Philip heard himself ask the question before he could stop it. "Did I... make the wrong choice? If I hadn't... " If he hadn't run from EVER's operatives. If he hadn't clung to the hollow hope Xander Sciences dangled before him instead of facing reality ... Would he at least have been there at Felix's side and walking with him to the end? But no matter which path he took, his only wish had been to keep his twin alive for just a little longer. Sylus said nothing. Mephisto flew down and landed. His sharp beak curiously tapped at the communication device.</p>
+<p>Philip's gaze burned. His throat tightened. He was about to say something, an apology, maybe, for the outburst, for overstepping. But Sylus's gaze settled on him. There was no judgment, no pity, nor the weight of gravity.</p>
+<p>"Don't give death more power than it deserves."</p>
+<p>"You're still alive. That means his life hasn't truly reached its end."</p>
+<br>
+<br>
+<p>In the passenger seat, the comms device in Philip's palm flickers to life without warning. On the screen, a shadowy pixel-crow flies before scattering into countless lines of code It scrolls updates and vanishes.</p>
+<p>A heartbeat later, "Phil"'s voice returns.</p>
+<p>"I'm sorry we never got to meet again." </p>
+<p>The tone is gentle, steadfast. Beneath the static, there's the faintest trace of a sigh.</p>
+<p>"But I never blamed you. Not once."</p>
+<p>…</p>
+<p>Amid the shriek of bullets tearing past him, Philip opens his eyes.</p>
+<br>
+<p>Cold air floods his lungs. Philip touches the crow's feet at the corners of his eyes. Under Hank's bewildered stare, he leans between the front seats, pries open the glovebox beneath the center console, and pulls out a secondary control panel. It's charmingly analog in design. A rapid sequence of inputs later, the van's interior rumbles with a series of heavy. purposeful mechanical clicks.</p>
+<p>The side door panels open to reveal honeycomb-like composite alloy armor beneath. A medium-sized weapon platform, sheathed in heat-dissipation grills, rises from the roof. The rear hatch splits like wings and folds outward to expose rows of micromissiles, their warheads glinting in the dim light…</p>
+<p>In seconds, the van has become a bristling mechanical fortress, and the tide of battle turns. </p>
+<br>
+<p>Luke: …?</p>
+<p>Kieran: ...? </p>
+<p>Hank: ...?</p>
+<br>
+<p>"Didn't I mention this before?" Philip adjusts his goggles, his voice carrying the weight of too many years and too little sleep. "This van got... a few tweaks."</p>
+            `,
+    },
+    {
+        id: 285,
+        link: "onychinus-aesthetics",
+        serialNumber: "05",
+        subtitle: "Tonight, As Always",
+        content: `
+<p>The blood moon hangs high in the night sky Unreliable street lights flicker and dim. The district lies empty in the wake of the Zoion Hunt. Nothing stirs save for a single van parked at the corner, its engine cold.</p>
+<p>Philip sits alone inside. He stares at the faint glow of the dashboard indicators. The mission's over. The others peeled off one by one on the way back. A gust sweeps through, stirring scraps of paper across the pavement Before long, a mechanical crow descends in a flutter of dark wings and gives light to a rusty Iamppost. His crimson eyes silently observe him.</p>
+<p>Philip steps out, retrieving the battered container from the back. "New equipment. Didn't lose it. It's already been calibrated to your preferences."</p>
+<p>The crow lets out a sharp caw and flies down, his metal beak tapping against the case as if running his own inspection. Philip continues.</p>
+<p>"I mapped out all the Gaia Biotech routes too. For the biometric key Mr. Sylus's after, follow the markers. Then it's yours."</p>
+<p>Mephisto deigns to look satisfied. He clamps his beak around the handle, bobs his head in regal approval on behalf of his master, and takes off. Two lazy circles in the air. Then he vanishes into the darkness.</p>
+<br>
+<p>Across the street, Elysium's neon lights make it appear like an island adrift in the dark</p>
+<p>Light spills through the window and pools into a soft halo on the pavement. Jazz slips through the cracks in the door. A saxophone croons, its sounds low and lazy and threaded with distant laughter.</p>
+<p>Philip stands in the cold, his thumb tracing the small device in his pocket. He wavers. A drink or return to the workshop to fix the communication device? He pushes through the bar's front door.</p>
+<p>The overtime match is still playing. There aren't a lot of customers. A few unfamiliar faces have claimed a table in the corner. Cards in hand, they have stacked their chips high. The owner stands behind the counter while polishing a whiskey glass. She offers an occasional smile in response to the patrons' banter.</p>
+<p>A cup of hot tea sits at the center of the empty bar, its steam curling upward before dissolving into the overhead light's glow Beneath it lies a drink menu, and in the margins, someone has doodled two grinning faces wearing crow masks with a black marker. Outside of the window's reflection, a motorcycle engine's growl fades into the distance</p>
+<p>And farther still, in the ruins of the. Gaia Research Center, fire blooms one last time Smoke rises into the sky, swells, and then is swiftly submerged in the darkness.</p>
+<br>
+<p>The nights in the N109 Zone are long, long enough for Philip to finish his tea.</p>
+            `,
+    },
+    ]
