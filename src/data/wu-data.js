@@ -4021,4 +4021,924 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>"...We look forward to seeing you again."</p>
             `,
     },
+    {
+        id: 221,
+        link: "bucket-list",
+        serialNumber: "01",
+        subtitle: "An Atypical Lemurian",
+        content: `
+<p>Few will notice Aiden among the students at Verona Middle School.</p>
+<p>After all, he's ordinary to the extreme: mediocre grades, average looks, and a personality that could be called introverted. In short, he blends in seamlessly among the human students.</p>
+<p>Of course, certain moments are an exception. </p>
+<br>
+<p>Aiden looks up from the desert photo album he's holding. A row of faces is crowded around him. Suddenly, he feels like his tongue is in a twist.</p>
+<p>"Me? Are you talking about me?"</p>
+<p>The club performance they've been preparing for all semester is just around the corner, but the student who's supposed to lead the song is hospitalized with a stomach bug. Frantic, the teacher tries to come up with what he thinks is a brilliant idea.</p>
+<p>"Everyone knows Aiden's family are musicians!"</p>
+<p>"His family runs the music store on Central Street!"</p>
+<p>"I heard his dad playing piano and singing when I walked past the store!"</p>
+<p>"His grandpa's humming sounds amazing too!"</p>
+<p>"Wow! That means he's been learning through example since he was little! Aiden's singing must be better than most!"</p>
+<p>Before Aiden can speak, he's swept up by the crowd and hustled backstage with an energy</p>
+<p>he's never seen before.</p>
+<p>"We're counting on you!"</p>
+<p>The microphone finally lands in his hands after three tries. The stage lights haven't even been turned on yet, but Aiden's face is already red.</p>
+<p>His family does run a music store, his father and mother are skilled with many instruments, and his grandfather does enjoy humming a few tunes while repairing instruments. But… He's tone-deaf!</p>
+<br>
+<p>"I know. This is... What do you call it... Rap!"</p>
+<p>"I don't think so. Slam poetry would be more accurate."</p>
+<p>"...But we need him to sing!"</p>
+<br>
+<p>Aiden wants to tell them that he isn't human and not like them. But once he thinks about it his statement isn't really accurate. He doesn't seem like a Lemurian either.</p>
+<p>He's a disaster in the world of art.</p>
+<p>His swimming can only be called "not drowning."</p>
+<p>And he's half-human.</p>
+<p>This is Aiden's secret. Over a decade ago, when Lemuria suffered from a great catastrophe, an adventurous human girl saved his grandfather and father. Later on, she became his grandfather's daughter-in-law, his father's wife, and eventually Aiden's mother. They say the greater the genetic distance, the stronger the advantages of species diversity But in Aiden's case, it seems like he got some genetic bug that activated recessive genes.</p>
+<p>Aiden has no artistic talent and no courage to see life as an open wilderness.</p>
+<p>This gradually became a grievance that exists only in Aiden's heart. It slowly evolved into a small instance of rebellion. "I don't care that I'm unlike other Lemurians."</p>
+<br>
+<p>Instead of heading to music class as he should he stands before a holographic banner that reads, "Desert Life: Aridum." He imagines the sensation of his feet sinking into quicksand This is another one of Aiden's secrets.</p>
+<p>As a half-Lemurian who has to soak in the bathtub almost every day, he has always had a desire to see the desert. Maybe it's out of curiosity. Or maybe it's because the desert, like the ocean depths his father spoke of, is a place strange and distant to him. And compared to swimming, he always preferred building sand sculptures on the beach</p>
+<p>Aiden looks down at his restless toes, but he still decides to go to tutoring. Adventurous Spirit? What's that? It doesn't exist. His relationship with the desert lecture is a tragic story of a fish falling in love with a bird or a rebellious tale of a fish leaving the sea There's no good ending either way.</p>
+<br>
+<p>As he turns around, he spots a familiar figure at the entrance of the classroom Grandfather?</p>
+<p>He tries to come up with reasons for why he'd be here. Aiden figures Grandfather wants to catch him skipping class. Aiden immediately turns to leave, but he hasn't taken more than a few steps before he's pulled back</p>
+<p>"G-Grandfather? I-I'll go to class now." His grandfather, who has always been steadfast and composed, pulls him into the classroom. Aiden has no idea what he'll say next.</p>
+<p>"Don't tell your dad. He doesn't know I snuck out!"</p>
+<p>“…?”</p>
+            `,
+    },
+    {
+        id: 222,
+        link: "bucket-list",
+        serialNumber: "02",
+        subtitle: "One: Learn about the Desert",
+        content: `
+<p>Unlike Aiden, his grandfather is a striking old man who stands out among humans and Lemurians.</p>
+<p>In Lemuria, he's renowned far and wide in the underwater singing circles for his exceptionally outstanding voice. After the catastrophe, some chose to live as hermits, and others lived in hatred. But Grandfather chose to hide his brilliance and disappear into the crowd of humanity. He just wants to survive.</p>
+<p>He dutifully runs a music store. When his son chose that brave human girl, he only wanted his son to be happy. After Aiden became old enough to understand the world, Grandfather taught him that the first rule of survival on land is "vigilance." As he slowly approaches the end of his life, he should be peacefully living in his final days... while resting in bed as per the doctor's orders. But here he is, having snuck out against medical advice. Grandfather pulls him into a seat. Aiden fidgets as if two sea urchins are under him and turns to look at the old man. He's staring at the podium and listening. He shows no feeling of guilt for sneaking out.</p>
+<p>"In today's lesson, we'll mainly be discussing the mindsets of Ariduts. Aandulo and Huluen are their lifelong pursuits. More often than not, they would sing these words...”</p>
+<p>Grandfather hums along with the lyrics. Then he immediately leans toward Aiden. "What do they mean?"</p>
+<p>"Adventure and freedom. She explained it twice already."</p>
+<p>"Ah, yes... I'm getting old. It's normal for me to be forgetful."</p>
+<p>"Does anyone remember what these lyrics mean?" the teacher at the podium asks.</p>
+<p>Before Aiden can react, Grandfather suddenly shoots up like a fish and instantly catches the attention of the entire classroom. Everyone waits for this confident old man to answer, but the air grows thick with silence. After a few seconds of blankly staring, his grandfather leans toward Aiden again.</p>
+<p>"What was it again?" </p>
+<p>Of course.</p>
+<p>Having expected Grandfather's forgetfulness, Aiden slips him the answer. Then, with a voice that's energetic and earnest, his grandfather brings the vast, distant desert into the classroom.</p>
+<p>Watching his grandfather acknowledge the audience, Aiden feels as if he's meeting him for the first time.</p>
+<p>Setting aside the fact that he should never have ignored the doctor's orders, left the bathtub, and snuck out of the house…</p>
+<p>Whenever he had to attend public gatherings in the past, he would always repeatedly remind Aiden to "not draw attention" and "only do what you're supposed to do." It's the complete opposite of what he's doing now. </p>
+<p></p>
+<p>Leaving the classroom, Aiden prepares a list of questions, but all of them are answered by two words.</p>
+<p>“...Bucket list?"</p>
+<p>Grandfather mysteriously pulls a crumpled piece of paper from his pocket. It looks like it's been folded and unfolded countless times. The words at the top of the page strikingly stand out.</p>
+<p>"These are all the things I've always wanted to do. But I never got the chance. I can't wait any longer!"</p>
+<p>As if to prove the lecture's message about adventure and freedom, his grandfather prepares to run away from home at the end of his life.</p>
+<p>BUCKET LIST</p>
+<p>1.	Learn about the desert – DONE</p>
+<p>"A long time ago, when I was your age, I wanted to explore the desert!" His grandfather leans in. "I heard Ariduts are incredibly brave. They even treat their gods like a dish to be served!"</p>
+<p>"The doctor said you need to spend at least twenty hours a day soaking in the bathtub..."</p>
+<p>"Why should Irush? There will be plenty of time to sleep in the ocean after the Seamoon Ceremony."</p>
+<p>"Mom and Dad will worry.'</p>
+<p>"I already talked to your mother. She'll deal with your father. The only condition is that you have to accompany me."</p>
+<p>"How long will we be gone? When are we coming back?"</p>
+<p>"Why are you thinking about going home before we leave? That should be my last wish." Aiden's grandfather walks ahead with his backpack. His steps are as determined as a dream-chasing teenager's.</p>
+            `,
+    },
+    {
+        id: 223,
+        link: "bucket-list",
+        serialNumber: "03",
+        subtitle: "Two: Go Skydiving",
+        content: `
+<p>"All Lemurians are afraid of heights." Even as Aiden says this, Grandfather's face shows no signs of fear.</p>
+<p>"Aren't you curious? What kind of world could we see by jumping down from here?"</p>
+<p>The city outside the cabin door looks like a miniature model. Aiden looks calm, but he quietly gulps.</p>
+<p>"Are you ready?!" Their instructors are shouting. "Three, two, one!"</p>
+<br>
+<p>The moment they leave the helicopter, Aiden's ears ring briefly.</p>
+<p>His hearing is restored by his grandfather's screaming. The instructor warned them to keep their mouths shut during the jump. The wind is so fast that once you open your mouth, you won't be able to close it for the rest of the fall. But looking at Grandfather—screaming one moment and laughing heartily the next--he seems to have never considered that.</p>
+<p>Grandfather has always been quiet. He's always sitting behind the store counter and hiding most of his body without saying a word. He walks down the most inconspicuous streets and says nothing, even when hurried vendors bump into him. He makes himself the most ordinary person among humans.</p>
+<p>But now, he's the noisiest bird in the sky Aiden sees him gesture to the instructor. Accompanied by fading laughter, his grandfather suddenly spirals away. Then he spirals back again after a short while. He's like a bird that has just gained ownership of the sky. He eagerly savors a realm he never experienced before.</p>
+<p>What does it feel like when birds fly?</p>
+<p>It's just one jump. Aiden grits his teeth and tentatively spreads his arms. He tries to feel the wind like his grandfather.</p>
+<p>This experience brings him so many sensations that even fear takes a back seat When his feet touch solid ground again, Aiden feels reluctant to let it go.</p>
+<p>BUCKET LIST</p>
+<p>2. Go skydiving - DONE</p>
+<p>"I've never heard wind like that before!" It's already over, but his grandfather is still holding onto the instructor and chatting away. "The wind is so free up there! It has pitch, melody, and dynamics! You heard it too, right..."</p>
+<p>Aiden feels like Grandfather is becoming less like the old Lemurian in his memory.</p>
+<p>But does it matter? Aiden remembers the pain of sitting through sight-singing classes. He never quite grasped the concepts, no matter how hard he listened. He remembers the excitement and anticipation when imagining himself skipping class to attend desert lectures. He realizes that Lemurians don't have to be a certain way. His grandfather can be a Lemurian, a human, a bird, or even a sea buckthorn standing against the desert wind and possessing another kind of possibility amid roughness and aridity.</p>
+<br>
+<p>Aiden sifts through his thoughts and pulls out the word he feels describes his grandfather the best right now. Selfish? Self-centered? Free.</p>
+<p>While his current life experience isn't enough to understand the true meaning of this word, he knows that birds that possess the sky are free. So sea creatures that possess the sky are, of course, even more so.</p>
+            `,
+    },
+    {
+        id: 224,
+        link: "bucket-list",
+        serialNumber: "04",
+        subtitle: "Three: Go to Aridum",
+        content: `
+<p>At the final stop of their journey, they arrive in an expanse of yellow sand. And naturally, their first stop is a local restaurant.</p>
+<p>In a crowded rest stop amid Aridum's yellow sands, an old man, a child, and a man sit around a table. They're carrying bags and packs of various sizes.</p>
+<p>But Aiden and his grandfather don't know the Aridum local sharing their table. It's just that the restaurant is full, and by the time they realize what's happening, the stranger has already put down his backpack. He's sitting across from them.</p>
+<p>"You're... not locals." The Aridut lowers his head and eats for a while. Then he looks up and gives the two a quick once-over. "Are you runaways too?"</p>
+<p>Too?</p>
+<p>"A lot of people run away from home. Either from here or to here. Whether they're leaving or arriving, they always eat at this place." As they talk, dishes are served one after another. Aiden suspects this Aridut has ordered the entire menu. Or he's close to achieving it.</p>
+<p>"Do you want to try some? It's my treat. I'll be leaving soon anyway. A lot of what you ordered are dishes that specifically rip off tourists. This is the real local specialty."</p>
+<p>“…”</p>
+<p>"Every dish in this restaurant has a story." The Aridut introduces them one by one. "Like this, that, and this. The dish here is called Deity's Temptation. It has the longest history! It's the last dish our god ate before running away. Aiden's mind spins as he barely manages to follow what the Aridut is saying. Now he's even more confused. "Your god ran away?"</p>
+<p>"I heard about it from my great-great-grandfather. They used to worship the man who led them to survive in the desert. They made him their god. Until one day, he ran away!" The Aridut winks mysteriously. "And then they worshipped him even more! He was brave. That's why we have so many people who are inspired to leave the desert and pursue their own goals. After all, it's the desert. When the wind blows, it looks one way today and completely different tomorrow."</p>
+<br>
+<p>"Their god ran away?" Grandfather still looks incredulous as the two of them follow the trail deeper into the desert. He carries the takeout container with the unfinished Deity's Temptation.</p>
+<p>"Grandfather, do you think their god was also getting old? So he made a bucket list and ran away to fulfill it."</p>
+<p>"Hmm... That makes sense." His grandfather murmurs. "He was born in the desert, yearned for the world beyond, and had to bear so many responsibilities throughout his life. But in his final days, he still decided to be true to himself..."</p>
+<p>Aiden thinks this is similar to his grandfather's story.</p>
+<p>Dad said that when Grandfather was young, he ran away to the surface world because he was curious and yearned for the unknown.</p>
+<p>However, after that disaster, survivors had no choice but to reclaim their Lemurian identity. For the sake of their family's survival, they had to maintain a certain dignity and vigilance. It was difficult to be true to themselves. It's possible that in the final moments of his life, Grandfather is determined to fulfill his small desires and create a beautiful ending to his life's story.</p>
+<p>"His bucket list would probably be the opposite of mine! For example, it would include having a seafood feast...”</p>
+<p>Aiden thinks for a moment. Would he want to see the legendary Lemurians?</p>
+<p>His grandfather adds, "Swimming. There would be something about swimming in the world's largest pool."</p>
+<p>"What's the largest pool? I've never been there."</p>
+<p>"It's our home! Lemuria! The sea!"</p>
+<p>The two of them speculate about this god's thoughts. Compared to a real god, Aiden thinks the Aridum god in his people's eyes is more like a person who's also freer.</p>
+<p>Aiden also thinks about the Lemurian Sea God But instead of calling him the Sea God or His Quintessence, Aiden prefers to call him Rafayel.</p>
+<p>"Grandfather, will the Sea God... have a bucket list?"</p>
+<p>"His Quintessence has a very, very long lifespan. Think of him as basically being immortal!"</p>
+<p>Aiden understood.</p>
+<p>At the end of this journey, Aiden isn't happy after learning that the Sea God is immortal His feelings become more complicated.</p>
+<p>If the Sea God doesn't die, wouldn't that mean he'll never have a bucket list? And so he'll never have the opportunity to be himself like the Aridum god and his grandfather?</p>
+            `,
+    },
+    {
+        id: 225,
+        link: "bucket-list",
+        serialNumber: "05",
+        subtitle: "52 Hz",
+        content: `
+<p>This is Aiden's first time attending the Seamoon Ceremony.</p>
+<p>In the middle of the night, the distant sea and sky blend into one blue expanse. When the moon reaches the highest point in the sky, he watches as his people guide his grandfather toward the deep sea. The Sea God stands at the very front, his back to his people, his head slightly turned. He sings softly amid the sound of the waves.</p>
+<p>Between the rise and fall of the melody, Rafayel weaves the transitions between minor and major keys perfectly. There isn't a lot of sadness, and a bit of freedom is present. He sings perfectly for Aiden's grandfather, who finally became himself in the end.</p>
+<p>They say a song is forged by the composer and the performer. This is his grandfather's final work, a song about being himself. The composer already told his story. But what about the performer?</p>
+<p>Immortality, overwhelming strength... Aiden heard that the Sea God is strong. He can lead the Lemurians back to Lemuria. But in his eyes, he's just a man who loves to paint, excels in many art forms, and is interesting and fun to be around. He's not ordinary, yet he's also not that different. He could be like his grandfather. He can laugh freely and choose to become a Lemurian, a human, a bird, or even a sea buckthorn in the desert. He can give his desires to that most important blue.</p>
+<p></p>
+<p>The song flows beautifully, but Aiden cannot see the singer's expression.</p>
+<p>Aiden hopes that one day, he'll have more stories about himself. Not just as the Sea God, but also as Rafayel.</p>
+            `,
+    },
+    {
+        id: 231,
+        link: "beyond-survival",
+        serialNumber: "01",
+        subtitle: "Art of Survival",
+        content: `
+<p>After spending years on Earth, Myer still hasn't shaken a certain habit. Whenever the doorbell rings, his muscles tense and he slips into battle readiness.</p>
+<p>As an Astral Enforcer, he learned that a bell usually means trouble, a warning before things go sideways. It could mean you need to perform an emergency warp to dodge cosmic radiation or your warp coordinates suddenly shift, and you'll be flung into uncharted space Sometimes, it means the number one fugitive on his list, Sylus, shows up in exactly the wrong stretch of the galaxy.</p>
+<p>When the criminal who had vanished for a Iong time appeared, almost within reach, Myer didn't hesitate. He followed Sylus to Earth-a place where a bell can mean more than just "danger."</p>
+<br>
+<p>"Restarting data protocol. Please wait…”</p>
+<p>Myer puts the repaired power core back into the mechanical sentinel's eye socket. These machines, custom-built to hunt Sylus, stand silent beside his workbench. Ever since the failed ambush in the N109 Zone, he's been studying ways to enhance their capabilities. The doorbell continues to ring as Myer draws the curtain to conceal everything. Through the peephole, he spots a familiar face.</p>
+<p>Mr. Lopez, male, 48, lives alone. He's the owner of the hardware store down the street. The shop opens at 9:10 A.M. Monday through Thursday. He visits the climbing gym across the street at 8:00 P.M. Friday through Sunday. His climbing skills remain at the beginner level, but he spends at least 15 minutes chatting with the climbing gym's female owner. Statistical analysis shows a 66.7% chance he ends conversations with "good night" and a 33.3% chance of "see you tomorrow." He lives next door. Earthlings would say he and Mr. Lopez are "neighbors. On Philos, Myer never met his neighbors. People kept their distance and avoided close relationships with anyone. This even applied to blood relatives. On his first day as an Astral Enforcer, he was taught that desire and emotions are primitive human flaws that only hinder Philos's new humans from advancing. So when it comes to "someone stopping by for no apparent reason, "Myer has already drawn his conclusion. This Earthling is acting abnormally, and he must have ulterior motives for approaching him. A colleague? A rival? Or one of Sylus's underlings? Perhaps the climbing gym around the corner served as his intel exchange location.</p>
+<p>Either way, he's nothing but trouble.</p>
+<br>
+<p>With three security chains on the door, Myer conceals a pocket pistol behind his back and slightly opens the door.</p>
+<p>"Hey, Myer. Sorry to bother you again…”</p>
+<p>Furrowed brows, fidgeting hands... Myer has thoroughly internalized an "Earthling Behavior Analysis Manual." He quickly assesses his neighbor's psychological state: three parts nervousness, three parts awkwardness, and three parts ulterior motives. As for the remaining part... Noticing the peculiar pink flush creeping up from his neighbor's ears, Myer frowns. This Earthling has never shown signs of shyness in front of him before.</p>
+<p>His neighbor mumbles, "Excuse me." Then he holds up a heart-shaped LED sign. "There's a small problem with this thing, and I can't find my reading glasses. I was wondering if you could fix it..."</p>
+<p>Staring at the flickering "LOV" and the dim "E" on the sign, Myer quickly lists possible uses for this LED sign. Given how simple his neighbor's daily routine is and how he knows very few people, there can only be one possibility.</p>
+<p>"You want to give this to someone at the climbing gym."</p>
+<p>"Oh! Um..." The neighbor clutches the door frame as the redness from his ears spreads across his face.</p>
+            `,
+    },
+    {
+        id: 232,
+        link: "beyond-survival",
+        serialNumber: "02",
+        subtitle: "Passion and Desire",
+        content: `
+<p>After removing the "E" from the sign, Myer determines that some of the LED bulbs have short-circuited.</p>
+<p>"Her birthday is next Saturday. I plan to order a cake in advance and then take this sign to the gym to meet her." His neighbor rambles on about his confession plans. "I'm not exaggerating, but she's the most beautiful person at the gym. Whenever I go, I spot her immediately. She has more energy than everyone else!"</p>
+<p>While focused on replacing the LED bulbs, Myer spares a thought for the woman his neighbor keeps mentioning. Female, 53, lives alone. She's the owner of the climbing gym around the corner. Significantly older than 99% of the gym members, yet possesses superior physical fitness. The only person at the gym who could complete a V10 climbing route.</p>
+<p>"No, no, I can't order a cake." The neighbor suddenly shakes his head. "She's cutting back on sugar lately. 'It's 30% gym, 70% diet.’ Maybe I should make her a beef tartare instead? Yeah, that sounds like a good idea. He nods only to shake his head again moments later.</p>
+<p>"I'm still hesitant about going... She has a great personality with so many friends. I'm just one of the most ordinary among them."</p>
+<p>Seemingly dissatisfied with himself, he looks a little dejected. "Myer, do you think she'll</p>
+<p>accept my feelings?" </p>
+<p>The room falls silent.</p>
+<p>On Earth, a "confession" might mark the beginning of a relationship or toll the death knell for a crush. The very concept is interwoven with countless stories, but in the harsh Philosian laws, these sorts of confessions are explicitly prohibited. Crushes, admiration, and romantic love are condemned as grave sins, and jurisprudence is cold and absolute. Emotions are poisonous seeds of desire. Once they germinate, they allow the flaws buried deep within one's genes to corrode the soul's purity and ignite the fires of chaos. They're just like the most dangerous interstellar fugitive, Sylus. The man Myer has Spent his entire life hunting.</p>
+<br>
+<p>Myer offers no answer because discussing such matters can send him to a spacetime</p>
+<p>prison. He'll end up as an Astral Enforcer who was promoted to a temporal inmate.</p>
+<br>
+<p>"It's fixed."</p>
+<p>"That was quick." His neighbor immediately steps forward and turns on the sign. The four letters flash in alternating garish light. "Great! I'm sure she'll be happy to see this. When she encourages those young people worn down by the daily grind, she holds up a sign that says 'Once more! With feeling!’"</p>
+<p>Myer thinks the climbing gym owner will smile from just seeing his neighbor show up.</p>
+<p>Objectively speaking, anyway.</p>
+<p>"Thanks, Myer..."</p>
+<p>However, just as Myer is about to usher him out, his neighbor clings to the door frame. "By the way, I noticed how you're always by yourself. Wouldn't you like some comp—"</p>
+<p>Before his neighbor can finish, Myer hastily says goodbye and closes the door. Compared to useless emotional entanglements, he has more important matters to attend to as an Astral Enforcer.</p>
+<p>Back behind the curtain, Myer tests the masked sentinels' power core once more. With a final low hum, these weapons, designed specifically to counter Sylus, enter combat mode.</p>
+<p>Three days ago, Myer learned that Sylus is planning a major operation next week. The rumors were wildly exaggerated. There was talk of "strikes" and "taking all four in one go. Whatever it was, it appeared he was heading to Linkon City for something monumental. </p>
+<p>After working around the clock for three days, Myer upgraded the power cores of these weapons. Now, they await the opportunity to face Sylus once again.</p>
+<p>At present, Myer sits at his workbench. Pen in hand, he analyzes the possible motives behind Sylus's actions.</p>
+<p>1. Hunting Day's new round at The Nest</p>
+<p>2. The Hunters Association's recent movements</p>
+<p>Speaking of the Hunters Association, Myer recalls the ambush at the N109 Zone. Back then, there was a girl beside Sylus, someone Myer spotted near the Hunters Association.</p>
+<p>Myer narrows his eyes.</p>
+<p>After another round of rigorous analysis, he crosses out the newly written item on the list:</p>
+<p>"3. That girl."</p>
+<p>After all, Sylus is a fiend who constantly plots "strikes" and moves that can "take all four in one go." Even if it involves her, it's just another one of Sylus's strategies to achieve his goals.</p>
+            `,
+    },
+    {
+        id: 233,
+        link: "beyond-survival",
+        serialNumber: "03",
+        subtitle: "Insight",
+        content: `
+<p>One week later, at the border between the N109 Zone and Linkon's Empyreal Ring District, a motorcycle speeds past. Dark figures crouching in the bushes silently transform into shadows trailing behind him. Meanwhile, Myer sits in a cafe and monitors everything remotely. The Nest, the Hunters Association... He already positioned surveillance devices at every possible destination Sylus might visit. This ensures he can be intercepted no matter where he goes. However, he watches Sylus make an unexpected detour to a beverage shop. Is this to throw off any surveillance? Myer continues to stare at the screen. Five minutes later, Sylus emerges with two cups of milk tea. Was he just thirsty? But why two drinks? Perhaps he's heading to an intel exchange location first?</p>
+<p>Myer watches as Sylus stops in front of a vintage vinyl record store. A quarter of an hour later, he walks out with an elegantly packaged box containing a record.</p>
+<p>...Records? It seems to be an ancient medium that Earthlings use to store music. Myer has reached a conclusion. This must be a new intel exchange location. After all, the record store is in a strategic position as it sits on the border between the N109 Zone and Linkon City. It's ideal for recruiting new factions from this gray zone.</p>
+<p>Just as he's getting a clear view of the record Sylus is holding, the target suddenly stops beside his motorcycle.</p>
+<p>Myer's breath stops for a second as Sylus makes eye contact with him.</p>
+<p>Three seconds later, Sylus looks away.</p>
+<p>Continuing his silent observation, Myer's palms are already clammy. Sylus didn't do anything. But what was that about? Has he been compromised?</p>
+<p>Sylus starts his motorcycle while a masked sentinel is surrounded by curious pedestrians.</p>
+<p>It paces back and forth, trying to leave the crowd. But the onlookers are more curious.</p>
+<p>"Hey, these mechanical components are intricate. Look at the joint movements and bionic structure."</p>
+<p>"I heard EVER was about to release a new generation of caretaker AI. Is this it? Cyber eldercare is a win for everyone!"</p>
+<p>"That face needs a redo, though. It's too dark and gives me the creeps."</p>
+<br>
+<p>Myer's head starts to hurt. Exploratory desire and curiosity, emotions equally forbidden in Philos, are now allowing him to truly understand their "detrimental effects." They obstruct objectives and desecrate order. Although using suppression tactics against civilians doesn't align with his usual approach. it's a necessary price to pay for hunting Sylus right now.</p>
+<p>"Clear the area."</p>
+<p>Myer issues the command without any hesitation.</p>
+<p>Three seconds. </p>
+<p>Thirty seconds.</p>
+<p>Three minutes.</p>
+<p>Nothing happens except for the remote surveillance feed going black.</p>
+<br>
+<p>As the crowd disperses, sweat forms on Myer's temples. He hurriedly activates the backup power supply, restores the real-time surveillance feed to assess the situation, and checks the power core. But he's still too late Staring at the motionless masked sentinel, Myer grits his teeth. The power core's combat module was destroyed three minutes and five seconds ago. After convulsing briefly, the sentinel collapses to the ground.</p>
+<p>"Whoa?! It dances?"</p>
+<p>"Why is it lying down now... Oh, it's broken."</p>
+<p>"Boring. Let's go."</p>
+<p>Through gaps in the dispersing crowd, Myer spots a motorcycle heading toward Linkon Tower. A black crow circles overhead and lets out a shrill caw in Myer's direction. Then the bird departs with his master.</p>
+<p>Myer slams his coffee cup on the table and follows them.</p>
+            `,
+    },
+    {
+        id: 234,
+        link: "beyond-survival",
+        serialNumber: "04",
+        subtitle: "Earth-Shattering Crisis",
+        content: `
+<p>Inside the mall, parents carry their children, friends walk side by side, and everyone moves casually. Their gazes never linger on strangers for more than a second. Myer begins to doubt himself. Where was the transaction? The armed confrontation? Has Sylus spotted him and changed destinations at the last minute? Then he catches sight of that figure again at the escalator. After checking the arsenal stuffed in his pockets countless times, Myer cautiously follows. Hugging the wall, he arrives at his destination: the entrance of Twinkle Toys (Limited-Time Pop-Up Store).</p>
+<br>
+<p>Ten meters away, Myer finally detects vigilance and seriousness on Sylus's face. Except it's directed at a claw machine. The Hunter girl stands beside him. She's not wearing her sleek battle uniform today. Instead, she's hugging a fluffy Sunny Dino while staring intently at the claw machine in front of her.</p>
+<p>The girl says something to Sylus. He responds with a slight smile before bending down to insert a token into the claw machine. The lights flash as the machinery charges. Sylus grips the joystick, moves the claw, and presses the button in one fluid motion. He gets nothing.</p>
+<p>Another token goes into the claw machine Myer notices thin wisps of black-red mist swirling around the claw. That's Sylus's Evol, which is powerful enough to devastate an entire planet. When he sees this Evol be used, Myer reaches for the weapon in his pocket. But the most dramatic thing that happens next is the plushie falling as the claw moves. It's followed by the claw machine emitting a sound effect to signify failure.</p>
+<p>After a third unsuccessful attempt, Myer catches a glimpse of something small and fleeting on Sylus's face: a flash of defiance and heartbreak.</p>
+<p>An earthshaking revelation strikes him If his colleagues find out that this fugitive-legendary for committing atrocities without batting an eye—can make such an expression at a claw machine on Earth... Who knows how many more interstellar horror stories beginning with "Sylus" would proliferate?</p>
+<p>Myer watches as the girl gives Sylus a playful poke. She's seemingly gloating about the rare plushie she clawed out earlier. Sylus says nothing. He lowers his gaze, raises his hand, and gently flicks her forehead.</p>
+<p>Myer recognizes an emotion on their faces. It's the same one he saw on his neighbor's face during his weekend visits to the climbing gym.</p>
+<br>
+<p>So the "strikes" in the intel are actually about a pop-up store? "Taking all four in one go" meant getting four different colored plushies? And the "major operation" is actually... a date? Myer remains confused.</p>
+<p>The colorful plushies lie inside the claw machine, and they seemingly mock Myer and</p>
+<p>all his preparations. He pulled out all the stops to counter this fugitive's Evol. And his target... used his Evol on a mall's claw machine?!</p>
+<p>The girl goes to the counter to buy more tokens. Meanwhile, Myer feels the intense sensation of being watched.</p>
+<p>He sees Sylus stroll toward his hiding place. In his left hand, he still carries the two unfinished cups of milk tea while his right hand reaches toward his pants pocket. Of course, everything had been part of Sylus's disguise. Now he's finally revealing his true intentions.</p>
+<p>Stepping back, Myer quickly adopts a defensive stance, his mind running through countless possibilities of what weapon Sylus might pull out. As beads of sweat form on his temples, he feels a mixture of thrill and trepidation unlike anything he's experienced before. Unlike the red dot marked "Sylus" on the interstellar map and the figure seen through a monitor, it's a face-to-face showdown.</p>
+<p>Ten meters. Five meters. Three meters. </p>
+<p>Sylus pulls out a coin.</p>
+<p>Sylus holds the coin between two fingers. </p>
+<p>Sylus tosses the coin—</p>
+<p>A microbomb disguised as a coin? A regional mind control device? Or is it a listening device? Myer ducks and rolls. But before he can congratulate himself on dodging the attack, something hits his right knee.</p>
+<p>Pain and numbness shoot through him. He's forced to fall to his knees. The culprit is a token bearing the Twinkle Toys logo. It spins on the ground. To be exact, it spins in the spot where he once stood. It's untouched by anything else.</p>
+<p>Frozen in a pose more ridiculous than most plushies, Myer watches as Sylus turns and walks away. He returns to the girl's side. He hasn't said a word throughout the entire encounter as if he was disturbed by someone insignificant. He just sent a warning: Whoever it was should take the hint and choose another day to visit. Or it won't just be a token flying their way.</p>
+<p>With the masked sentinel no longer by his side, Myer feels there's no need to continue. Sylus's schedule today revolved around a single concept: a date The banner with "Big News!" at the dessert counter catches his eye. In the past, Myer would've scoffed. How could this possibly count as "big" news? Physical pleasures are more trivial than a speck of dust. But now, his mind is blank.</p>
+<p>This fruitless pursuit finally made Myer realize something. He never truly understood this Earth. Where to eat, what to wear, and what games to play are considered matters of great importance. Naturally, he also never understood Sylus, the man who chose to become a fiend while destroying and leaving Philos behind. He rejected everything it stood for.</p>
+            `,
+    },
+    {
+        id: 235,
+        link: "beyond-survival",
+        serialNumber: "05",
+        subtitle: "Way of Life",
+        content: `
+<p>After giving up the pursuit, Myer returns to the record store and purchases the same vinyl record as Sylus. He hopes to gain new intel about Sylus from it. By becoming more familiar with his opponent, he'll gain an advantage for his next operation.</p>
+<p>However, once the record is brought home, he discovers that the second-hand record player he acquired is broken. The same man who remains composed when facing lethal weapons is at a loss before a turntable that won't spin properly. After repeatedly searching for fixes and failing to find one, Myer finally knocks on his neighbor's door. He vaguely recalls that the man had a record player tucked in the corner of his hardware store.</p>
+<p>“It's an easy fix." The neighbor enters Myer's apartment and begins tinkering with the record player.</p>
+<p>Looking at the climbing chalk that still lingers on his neighbor's hands, Myer remembers that the man planned to confess his feelings at the climbing gym yesterday.</p>
+<p>"Did she smile when she saw your light display?" Myer asks.</p>
+<p>"Huh? Oh, that...'</p>
+<p>Before he continues, the needle falls and classical music gently fills the air. There's no intel as Myer had hoped. It's an ordinary record, and the soft melody is unlike anything from Philos.</p>
+<p>"I gave her the beef tartare, but I left the sign at home, "the neighbor says while patting his somewhat soft limbs. "I'm not quite there yet. At least...I should wait until I can climb V10 with her. That would probably increase my chances."</p>
+<p>"She has lots of friends, and others look at her with the same gaze as yours. Someone else might confess to her while you wait."</p>
+<p>"If she accepts someone else's confession, it means she likes them too..." The neighbor rubs the fabric of his pants and gazes out the window. He's looking at the street corner.</p>
+<p>"Isn't that wonderful? When the person you like also feels the same way, that's the best thing in the world."</p>
+<p>"You don't want to have her?"</p>
+<p>"Where did you learn that phrase? It's not about having her. It's about being with her, living together, and dreaming of a future together! But I want her to be happy, joyful, fulfilled. That's more important."</p>
+<p>This is something Myer didn't expect.</p>
+<p>"Loving her made me fall in love with rock climbing," the neighbor says. He's made himself at home on Myer's sofa. "My weight loss is starting to show results, and my high blood pressure, blood sugar, and cholesterol are going down. Falling in love with a wonderful person is beautiful in itself. As for whether we end up together... Well, you can't force these things."</p>
+<br>
+<p>According to Philos's doctrine, a person "in love" would be governed by their greed. selfishness, and desires. It'd lead them to possess the other person and take endlessly They'll forever be trapped in a downward spiral with no escape. How could such a person say something like "you can't force these things"?</p>
+<br>
+<p>Myer is lost in thought when his neighbor pats his shoulder, and he snaps back to reality.</p>
+<p>"It's okay. Even if she's not in my future, I can always drag you along as my friend to go rock climbing…”</p>
+<p>The record spins as classical music flows gently throughout the room. After several seconds pass, Myer finally releases his grip on the pocket pistol in his right hand, switches on the safety, and quietly hides it behind the sofa.</p>
+<p>Perhaps this is Earth's basic etiquette for treating a friend.</p>
+<p>When he sets down the gun, Myer feels something unusual stir within him. Listening to his neighbor, he's struck by a sudden urge to share his own experiences in tracking Sylus.</p>
+<p>This impulse immediately confuses him. It serves no functional purpose, is completely meaningless, and can even expose his identity.</p>
+<p>But if he imagines himself as an Earthling… Perhaps this is what his neighbor called "friendship," this desire to share that Earthlings possessed.</p>
+<br>
+<p>Myer has finally tuned into the same wavelength as Earthlings. They don't view "possession" as love's ultimate goal. They have another interpretation: being not concerned with outcomes, but with how it makes them better people.</p>
+<p>In Earthlings' eyes, having desires isn't foolish. Being controlled by those desires is what led to ruin. Here, some are governed by their desires. Others master them, and a few treat "desire" as a spice of life for finding purpose. They gave a new name to the state of "having just enough desires." They call it "living." Eating, drinking, enjoying life, the everyday necessities of life... These are the things that truly mattered to the people on Earth.</p>
+<p>They even have a more appealing name for these "perfectly balanced desires": aspirations.</p>
+<br>
+<p>"What's this..." The neighbor rolls over on the sofa. When he pulls out a fluffy plushie from under him, his expression cycles through several emotions.</p>
+<p>Myer doesn't know how to explain himself because it's a plushie he got with that token the other day. He can't articulate the reason why. Maybe he wanted to check and see if there was something unusual about the plushies Sylus obtained. Or maybe he had developed that Earthling desire to snatch toys from the claw machine.</p>
+<p>Myer feels it's time to study "the act of living." Since Sylus has chosen Earth, he would need to adopt the Earthlings' ways to know his enemy as well as himself.</p>
+<p>Listening to the gentle music and having a simple friendship, Myer experiences the most peaceful rest he has had since arriving on Earth.</p>
+            `,
+    },
+    {
+        id: 241,
+        link: "crease",
+        serialNumber: "01",
+        subtitle: "Daily Circle",
+        content: `
+<p>The notification sounds from Daily Circle are continuous. Gideon stares at his phone and springs up from his chair. "I didn't change a single word except the title. How can their reactions be different?!"</p>
+<p>Patrick, who's changing into his uniform, nudges Gideon back down with his arm. "I told you. The guy in your lower bunk is what brings all the traffic to Daily Circle!"</p>
+<br>
+<p>Two days ago, at midnight, Patrick returned from an emergency mission. He held up fresh ingredients in front of Caleb while asking for a late-night meal. Their dorm quickly became a hub, with other boys showing up with bowls in hand. Many colleagues from neighboring dorms were drawn in by the aroma, but the chicken wings Patrick brought back weren't enough. Gideon rolled his eyes and told everyone to follow his account, MyHeartSoars, on Daily Circle. It's the DAA's internal forum That's where he regularly shares the dorm's secret recipes. Then he politely closed the door.</p>
+<p>After leaving the final chicken wing bone spotless, Gideon—for the umpteenth time—makes a declaration. "I have a feeling this post will go viral." Then he tapped the send button with confidence.</p>
+<p>Two days later, he achieved a grand total of two replies and three likes.</p>
+<p>"I told you. If you change 'dormitory confessions' to 'DAA heartthrob,' your notifications will blow up. Why won't you believe me?"</p>
+<p>"Whenever he wanted to look up stuff like 'making ginger taste good' or 'removing the bitterness from bitter melon,' we acted as his guinea pigs since we were university students!"</p>
+<p>"Do you want the clicks or the credit?"</p>
+<p>Faced with Patrick's soul-searching question, Gideon blinks and opens the edit page.</p>
+<p>"If I hesitate for a second, it'd be disrespectful to myself. If I choose the clicks, I might go viral. If I choose the credit, I'll be second place at best compared to him... Send!"</p>
+<p>A chuckle drifts over from the nearby lower bunk.</p>
+<p>Gideon is about to question why he sounded sarcastic, wondering if it's because the top three spots are held by the same person, when notifications start appearing.</p>
+<br>
+<p>HugePancakeTunnel</p>
+<p>I scrolled past this before without really looking. But once I saw "DAA heartthrob," I got excited. I didn't know OP is the DAA heartthrob's roommate! </p>
+<p>> MyHeartSoars (OP) Reply</p>
+<p>If you're excited, you can get in some extra training!</p>
+<br>
+<p>MidnightMelancholyKeyboard</p>
+<p>The DAA heartthrob posted a new recipe Check it out! @happymorningmouse @Afternooncrazyscreen @Evening_Graphics_Card</p>
+<p>> MyHeartSoars (OP) Reply</p>
+<p>I'm the one who posted it. Look at the ID! </p>
+<br>
+<p>MidnightMelancholyKeyboard</p>
+<p>Anomalies in the Deepspace Tunnel are more frequent this year. When we're busy,we can't make it to the dining hall during business hours. Luckily, I followed the DAA heartthrob's advice and bought a 4-in-1 multicooker that fries, boils, braises, and deep-fries. Now I can always have a hot meal! </p>
+<p>>MyHeartSoars (OP) Reply</p>
+<p>I'm the one who posted the link! </p>
+<br>
+<p>CantCarryAnymore</p>
+<p>What caught my attention is that you can actually ask the dining hall for ingredients!</p>
+<p>I've been going to the East District's supermarket to buy frozen stuff this whole time...</p>
+<p>>GreatRoc Reply</p>
+<p>Ikr. Your DAA heartthrob has high standards for cooking. He won't accept anything but fresh ingredients. Idk how he does it, but he can charm Weber from the kitchen with just a few words...</p>
+<p>> CantCarryAnymore Reply</p>
+<p>Is Weber the bald guy from the East District's dining hall? I want to try it too. </p>
+<p>> MyHeartSoars (OP) Reply</p>
+<p>Let me give you some advice. Don't mention hair around Weber. </p>
+<br>
+<p>21CaratstarDiamond</p>
+<p>A pilot who can't cook isn't a good boyfriend I'm learning. When I'm on leave next time, I'll</p>
+<p>show off my skills to my girlfriend. </p>
+<p>> SwordWieldingScholar Reply</p>
+<p>We know. Get lost. Our DAA heartthrob @PaperAppleis better than you. He's just thinking about his DAA colleagues' stomachs. </p>
+<p>> MyHeartSoars (OP) Reply</p>
+<p>But I'm the one thinking about you guys?! </p>
+<p>> PaperApple Reply</p>
+<p>I'm mostly thinking about Miss Apple. </p>
+<p>> 21CaratStarDiamond reply</p>
+<p>The DAA heartthrob has appeared! </p>
+<p>> SwordWieldingScholar Reply</p>
+<p>Got it. One has a girlfriend and another has someone special. Both have precious people at home, unlike the lonely single people like me and OP.</p>
+<p>> MyHeartSoars (OP) Reply</p>
+<p>Why are you dragging me into this?!</p>
+<br>
+<p>"You don't have anything else to do, Gideon?" Patrick refreshes the comment section in real time. "You're replying to every comment."</p>
+<p>"That's nothing compared to the DAA heartthrob. He only picks the one he wants to reply to." Gideon scoffs, grabbing a pillow from his chair and hurling it toward the bed. The pillow.is suspended in midair before floating over to gently smack Gideon's face. </p>
+<p>"Let's go. The awards ceremony is about to start." Patrick adjusts his uniform in the mirror. Then he helps straighten the back part of Gideon's collar. Caleb gives SwordwieldingScholar a like before unhurriedly sitting up from his bed. There's not even one wrinkle on his clothes.</p>
+<p>After the ceremony ends, the three walk down from the podium shoulder to shoulder. They're high-spirited amid thunderous applause.</p>
+            `,
+    },
+    {
+        id: 242,
+        link: "crease",
+        serialNumber: "02",
+        subtitle: "DAA Heartthrob",
+        content: `
+<p>Since university, Gideon has watched his buddy, Caleb, rise from class heartthrob to faculty heartthrob to school heartthrob. Now he's become the Deepspace Aviation Administration's heartthrob.</p>
+<p>Back in school, being called a heartthrob only required an outstandingly handsome face. But that rule doesn't apply at DAA. Since the Deepspace Tunnel can easily leave people battered beyond recognition, good looks are the most useless thing of all. And everyone at DAA was once a top graduate from an aerospace academy. When they put on their new uniforms, proud, determined faces are everywhere. Each person believes they're the bird that can fly the farthest.</p>
+<br>
+<p>During their second month on the job, the detection data brought back from patrols showed strange fluctuation values. Conspiracy theories began surfacing on Daily Circle, and they grew more outlandish with each retelling. Whether spies had infiltrated DAA or the Deepspace Tunnel was about to collapse, it had the markings of the most significant DAA crisis that people had seen in a decade The most popular post directly mentioned PaperApple. It hoped the DAA heartthrob would step forward to provide a comprehensive analysis on the patrol data.</p>
+<p>With countless replies and endless calls for his response, the DAA heartthrob's silence was deafening. Meanwhile, someone discovered that PaperApple had started a new thread in the forum section Plastic Model Enthusiast. He shared his latest PG model acquisition and posted real-time assembly updates. His relaxed attitude was conspicuously obvious. </p>
+<br>
+<p>When he finished assembling the left leg of the model, someone finally asked him in the comments about his thoughts on the patrol data. His only reply: "Minor issue."</p>
+<p>The passionate user wasn't pleased. They tried to argue with him using elaborate references and citations and said he was practically leading DAA toward irreversible ruin. After going back and forth for over ten posts, PaperApple finally responded with "Thanks for bumping the thread."</p>
+<br>
+<p>When he finished assembling the right leg of the model, the data returned to normal DAA issued a mission briefing stating that Caleb had completed the mission perfectly. He brought back a Protocore, which was the culprit behind the previous data anomalies The Wanderer had been moving through the Deepspace Tunnel while staying close to the back of the aircraft. It was able to control its own energy to blend into the magnetic field, so it was very difficult to detect. </p>
+<p>The rumors fell apart on their own.</p>
+<p>Daily Circle's newly crowned spam post king, MyHeartSoars, described the mission details more vividly and dramatically. The conclusion ended with a pointed remark: "Caleb resolved it in less than ten minutes, so it wouldn't have Ied to DAA's decade-defining crisis." </p>
+<p>A certain user got so angry that they dejectedly sent PaperApple one final message before deleting their account. "You should thank Caleb, *****. " The inappropriate words were automatically censored by the system and replaced with heart icons. This amusing incident spread among colleagues who knew that Caleb was PaperApple. Everyone started jokingly calling him "the DAA heartthrob," which caught on.</p>
+<br>
+<p>"I figured it out. There are three things the newcomers must do now. First, they need to install Daily Circle and become addicted like me...</p>
+<p>At this point, Gideon pauses and puts on the demeanor of a former coach. He shakes his head thoughtfully before saying, "After scrolling through the featured posts on Daily Circle, they need to wonder why the DAA heartthrobis called the DAA heartthrob."</p>
+<p>"What about the third thing?" Patrick asks.</p>
+<p>"The forever enthusiastic forum members must rush in to explain the whole story and drag Crisis Guy out for another round of roasting!"</p>
+<p>Gideon never gets tired of telling that story, and the atmosphere in the break room lightened considerably thanks to this shared memory. The new mission is extremely dangerous, and DAA doesn't have enough pilots who are capable of completing it. The pressure distributed among them has increased dramatically. A few of them have been working around the clock for several days without sleep or rest, and after this extremely brief respite, they'll have to take off again. Even Caleb, who's recognized as having superhuman endurance, shows faint shadows of fatigue beneath his eyelashes after continuous high-intensity navigation.</p>
+<p>After livening up the atmosphere, Gideon sits down and pats Caleb on the shoulder. "You're still holding up?"</p>
+<p>Caleb snaps back to reality, puts away his precious necklace, and smiles brightly. "Of course. I still need to go home this weekend." Gideon gives him a thumbs-up. At the time, he never would've imagined that PaperApple's "Model Assembly Real-Time Updates" would forever remain on a page showing scattered parts.</p>
+            `,
+    },
+    {
+        id: 243,
+        link: "crease",
+        serialNumber: "03",
+        subtitle: "Assessment Guide",
+        content: `
+<p> His phone chimes with Daily Circle's distinctive notification sound. Gideon taps the screen and glances at it. Your post "[Featured] DAA Heartthrob's Hacks: Hurry, Sign Up for Charwood's Deepspace Tunnel Emergency Combat Assessment!" has received a new comment.</p>
+<p> Thud! Gideon slams the phone face down on the table. Swallowing the dining hall's stir-fry is difficult. Patrick, who's sitting across from him, gives him a look.</p>
+<p> "Someone replied to it again? If it gets too bad, delete the post. Out of sight, out of mind."</p>
+<p> "That won't do." Gideon forces himself to smile. "This is my best in Daily Circle! It even set a record. If it's gone, it'd be a waste!"</p>
+<br>
+<p> Patrick says nothing and unlocks his phone to find that post with the unbeatable record for reply count.</p>
+<br>
+<p> [Featured] DAA Heartthrob's Hacks: Hurry, Sign Up for Charwood's Deepspace Tunnel Emergency Combat Assessment!</p>
+<p> MyHeartSoars posted in subsection: Daily Progress ></p>
+<p> Today he's wearing a pink shirt under his uniform jacket. It's the one his wife gave him as an anniversary gift. It represents his mood today: sunny. This is the only chance to get full marks for trainee impressions aside from achieving a perfect score of 90 on the written exam!</p>
+<p> Trust me!</p>
+<p> *** ***</p>
+<p> The post originated from a casual dorm chat. The midyear assessment for first-year DAA recruits is a nightmarish hurdle that strikes fear into everyone's hearts. Passing the evaluation undoubtedly requires extremely solid technical skills and professional competency. And Charwood has incredibly strict requirements for pilots' personal conduct and flying habits. Even with expertise, scoring above 90 is still wishful thinking.</p>
+<p> But Gideon made a casual remark. "There has to be some kind of trick to it, right?" He rolled up the DAA test papers into a makeshift microphone and pointed it at Caleb. "Say something, pretty boy with a perfect score."</p>
+<p> Caleb was concentrating on painting his model and didn't even look up. "Technical skills are what really matter."</p>
+<p> Gideon shrugged. An hour later, the first exam strategy post appeared in Daily Circle's Featured section. Starting with the main post's seemingly ridiculous pink shirt rumors, the comments section became packed with valuable intel. For direct advice, it cut to the chase and shared encrypted study packages which rescued people from desperate situations. As for the more subtle hints, it figured out different instructors' grading preferences and discreetly offered the most appealing solutions. Any new developments about the DAA assessments could be uncovered here, and it remained relevant year after year.</p>
+<p> Someone even tagged Charwood in the post. Everyone thought he'd asked for it to be deleted, but unexpectedly, his reply revealed a hint of pride between the lines.</p>
+<p> "No one understands DAA more thoroughly than he does!"</p>
+<br>
+<p> Charwood's reply was pinned by the administrator, and under his response, Patrick sees the latest comment that made Gideon's phone buzz.</p>
+<p> "Charwood retired. When will the DAA heartthrob update his guide? @PaperApple"</p>
+            `,
+    },
+    {
+        id: 244,
+        link: "crease",
+        serialNumber: "04",
+        subtitle: "Drifting Away",
+        content: `
+<p>Did everyone get recommended this article?</p>
+<p>Solitude posted in subsection: Horizon's Embrace ></p>
+<p>Link: The Truth Behind the Farspace Fleet's Reform</p>
+<p>At first glance, it seems to clear up our relationship with the Farspace Fleet. But upon getting a closer look, it sort of has that vibe of tearing down one to build up another.</p>
+<p>What's with the comment about "the Farspace Fleet reaching a Deepspace Tunnel depth that exceeds the DAA's? And it possesses stronger cruising and combat capabilities"?</p>
+<p>*** ***</p>
+<p>soclose_sobeautiful</p>
+<p>I won't comment on the latter half. We haven't talked to any Farspace Fleet personnel... But the first half is true.</p>
+<p>>DeepspaceInMyHeart Reply </p>
+<p>You're siding with outsiders. </p>
+<p>> soclose_sobeautiful Reply</p>
+<p>You can't judge everything based on the depth they reached. We have different philosophies. DAA's most important duty will always be to protect the land beneath the sky, not to advance without any principles. </p>
+<br>
+<p>Echo </p>
+<p>I was confused as soon as I opened this thread. Isn't this section supposed to be for a casual chat?</p>
+<p>> SouthernClouds Reply</p>
+<p>People are free to discuss whatever they want. Doesn't DAA promote openness and freedom? There's nothing wrong with chatting about the Farspace Fleet.</p>
+<p>> MOMO Reply</p>
+<p>How could anyone from DAA put on a friendly face toward them? There are tons of citizens who don't understand what's going on. They think the city-wide restrictions and Protocore cleanup operations are our doing! </p>
+<p>> NoMeaninglessSocializing Reply</p>
+<p>We could never pull that off. We fly a little too far, and the control tower starts issuing warnings.</p>
+<br>
+<p>Confrontation_Winner</p>
+<p>True. We could never pull that off. Soon their detection depth and research progress will leave us in the dust.</p>
+<p>Protocore technology is trending lately Strictly following traditions will only make us fall behind. </p>
+<p>> Echo Reply</p>
+<p>? Leave this thread and take another look at the forum rules. Or recite the oath you took when you joined DAA. Face Deepspace with reverence, look back at Earth with the responsibility to protect, and hold reverence for the universe. Have you forgotten it? </p>
+<p>2Lazy2 Reply</p>
+<p>This article mentioned it too. The Farspace Fleet's newly appointed Colonel is mysterious. No one knows his background. Those disturbances in Skyhaven recently were his doing, right? I wonder what his attitude toward DAA will be.</p>
+<p>> Riot Reply</p>
+<p>What more do we need to know? since he joined the Farspace Fleet, it proves one thing. He has no reverence for Deepspace and no attachment to Earth.</p>
+<br>
+<p>"That's why you turned down the Farspace Fleet's offer? Because of your attachment to Earth?"</p>
+<p>"Pretty much. My most admired senior from university worked here after graduation. They say his go-to excuse for turning down unnecessary social gatherings was always needing to eat dinner at home. I trust someone who values family that much."</p>
+<p>"Hey, who is it? Did you see him at today's oath ceremony?"</p>
+<p>"No, he was probably out on a mission. I'm several years behind him in school, and he doesn't even know me. During his days at the Aerospace Academy, everyone would run over to watch whenever it was his turn for test flights. Talk about beautiful flying...”</p>
+<p>Clear, bright voices of three newcomers drift from the auditorium as they discuss their motivations for joining DAA. Gideon and Patrick happen to pass by, and the young recruits immediately straighten their postures, pull their shoulders back, and respectfully salute.</p>
+<p>"Gideon, sir! Patrick, sir!"</p>
+<p>The two nod, and the three recruits walk away for a while before relaxing and laughing. They wrap their arms around each other. Patrick squints as he watches their retreating figures Then he looks back at the platform where he once stood together with Gideon and Caleb. "If he were still here, only one of us could've been an instructor."</p>
+<p>"Would we have to wait this long then?"</p>
+<p>Gideon's quick response catches Patrick off guard.</p>
+<p>"You've already made peace with it over the weekend?"</p>
+<br>
+<p>Gideon recalls the day that has come and gone. After saying goodbye to that girl, he and Caleb fell into an unspoken silence while sitting on the Coelum Express back to Skyhaven. It's as if their previous friendliness and laughter in front of her had been an act of reassurance. Caleb still looked the same, yet he somehow felt like a stranger to Gideon He had so many words bottled up that he wanted to express, but when the train passed by the sunset, shadows fell on Caleb. In the end, Gideon couldn't say anything.</p>
+<br>
+<p>"Yeah, I've made peace with it." Gideon has taken one step out of the auditorium, and sunlight falls on him. "I never thought the three of us would split up. Looking back now, the fact that he walked this far with us is the real surprise."</p>
+            `,
+    },
+    {
+        id: 245,
+        link: "crease",
+        serialNumber: "05",
+        subtitle: "Different Horizons",
+        content: `
+<p>"This patrol follows standard protocol. Probe the shallow Deepspace Tunnel layers and report back on the latest terrestrial magnetic field conditions."</p>
+<p>After giving the team one final rundown of their mission objectives, Gideon notices a junior colleague in the corner. He barely made it through his probationary period, and his nervousness is written all over his face. He grins and reassuringly pats his colleague's shoulder.</p>
+<p>"It gets easier after a few missions. We've all been there."</p>
+<p>The junior nods. Whether from excessive nerves or something else, he begins positioning his limbs at specific angles in a series of strange poses.</p>
+<p>"What are you doing? What kind of technique is that?" Gideon's face scrunches up, his bewilderment evident.</p>
+<p>"These are some of the most common model poses from the DAA heartthrob's posts. They say doing them before a mission gets you his protective blessing!"</p>
+<p>Gideon is about to say something when the overhead announcement reminds them that it's time to depart. With an unreadable smile. he mimics the junior's pose. The team bursts into laughter, and their steps are noticeably lighter as they head out.</p>
+<br>
+<p>At the entrance of the Deepspace Tunnel, the DAA's patrol briefly crosses paths with the Farspace Fleet as they glide through their respective airspaces.</p>
+<p>Gideon navigates with his trainer aircraft, his gaze fixed on the warship at the front of the Farspace Fleet where the newly appointed Colonel is. They used to joke about the future. And they imagined that if they both ended up as instructors at the Deepspace Aviation Administration, heading toward the same destination, they'd compete to see whose students could fly better and faster. Now, DAA carries research data toward Earth while the Farspace Fleet pushes deeper into the unknown regions of the Deepspace Tunnel. They pass each other and go their separate ways.</p>
+`,
+    },
+    {
+        id: 251,
+        link: "light-into-dust",
+        serialNumber: "01",
+        subtitle: "Invitation",
+        content: `
+<p>The endless bickering floods Isaiah's ears, which throws off his sword.</p>
+<p>He despises being interrupted when he's trying to focus. He furrows his brow and sheathes his blade. Today's self-imposed training has been cut short. He walks toward the source of the commotion.</p>
+<p>At the entrance to the training grounds, two groups are in the middle of a confrontation. On one side, a handful of unremarkable students stand. Commoners. On the other there's that insufferable young marquis Isaiah finds the most annoying. He's flanked by his dim-witted lackeys.</p>
+<p>With the Order of Lightseekers selection ceremony fast approaching, there's unrest at every turn.</p>
+<p>"We reserved this space in advance and followed the appropriate procedure! What gives you the right to take it from us?" The young man leading the commoners clenches his fists.</p>
+<p>"Procedure?" The young marquis adjusts his bracer with lazy indifference. "That exists to ensure efficiency. And right now, the most efficient approach is to allocate resources to those who are most likely to be chosen." He steps forward, his followers surging behind him. "After all, no amount of effort can bridge the gap between bloodlines."</p>
+<p>The young man's face flushes with anger, and his chest heaves. Isaiah approaches. When their gazes meet, a flicker of hope crosses the commoner's expression. In Astria Knyght Academy, few don't recognize this royal known for his arrogance and sharp tongue. More importantly, his status grants him the authority to settle this dispute.</p>
+<p>Faced with Isaiah, the young marquis immediately plasters on a warm smile. "It's not a significant matter. Surely it's nothing noteworthy."</p>
+<p>Isaiah ignores him and walks toward the commoners. He doesn't even bother distinguishing one from another. He pulls an envelope stamped with his family crest from his coat and holds it between two fingers to the young man at the front.</p>
+<p>"Passes to the outer hall." Isaiah's voice is cool, his tone unquestionable. "Take them. My father is hosting a banquet. You can try your luck there."</p>
+<p>To him, this is a more efficient exchange of value than squabbling over the training grounds. A chance ordinary students could only dream of-for him, it's a trivial gift—traded for immediate peace and quiet. The students freeze. The young man at the front stares at the gold-embossed envelope, his face a war of humiliation and hesitation. The young marquis grins. He opens his mouth to flatter, but Isaiah's attention has already drifted elsewhere. Two tall figures are approaching from the opposite direction. Xavier was clearly pulled away from his training. The sword in his hand still gleams with a cold silver light. Confused, Jeremiah walks beside him, and he's craning his neck at the group of students. "You're not training? Didn't you say someone took your spot? So you asked me to fetch the prefect..."</p>
+<p>Isaiah has always found this curly-haired commoner annoying, especially when he talks too much and forgets his place.</p>
+<p>"Xavier!" The students latch onto Xavier like a lifeline. They hurry behind him, and their voices brim with indignation. "We reserved the training grounds first and followed the</p>
+<p>rules. They just appeared and took it."</p>
+<p>"Is that so?" Xavier doesn't acknowledge Isaiah. Instead, his gaze settles on the young marquis standing behind him.</p>
+<p>The young marquis has been on edge as soon as Xavier appeared. His smile freezes, and the atmosphere is heavy.</p>
+<p>"The training grounds belong to the royal family. Why would anyone need to make a reservation..."</p>
+<p>Xavier's gaze calmly sweeps over everyone Then he raises his hand, and a soft yet solid screen of light materializes over the entrance It reveals the access registration protocols. On the screen's surface, the time slot the students had reserved glows and shows it has yet to expire.</p>
+<p>"The training ground's systems are well-maintained. Your eyesight must be poor if you couldn't read it." Xavier regards the young marquis with aloofness. "Can you see it now?"</p>
+<p>"I... I see it...”</p>
+<p>As the cheering commoners crowd around Xavier, he never once glances in Isaiah's direction. It's an omission that feels deliberate.</p>
+<p>Maintaining his haughty composure, Isaiah grits his teeth and swallows his resentment. Ignoring Jeremiah, he steps forward and presents Xavier with a more exquisite invitation. "Perfect timing. This saves me the trouble of asking that junior of yours. My father insisted the invitation be delivered personally to Your Highness."</p>
+<p>Jeremiah rolls his eyes when Isaiah opens his mouth. Isaiah notices it and shoots him a glare. The curly-haired commoner is being rude again! The fact that Xavier keeps such company is utterly beneath his station.</p>
+<p>"How considerate of you," Xavier says. "The banquet conflicts with my training schedule. won't be attending."</p>
+<p>He turns to Jeremiah with easygoing familiarity. "Let's head back."</p>
+<p>"All right." Jeremiah falls into step beside him without missing a beat.</p>
+<p>The two walk away shoulder-to-shoulder, their strides perfectly matched. Fragments of their conversation about the selection are carried back on the wind.</p>
+<p>Isaiah remains rooted in place, the rejected invitation crumpling in his grip.</p>
+            `,
+    },
+    {
+        id: 252,
+        link: "light-into-dust",
+        serialNumber: "02",
+        subtitle: "Choice",
+        content: `
+<p>Xavier...truly regards Jeremiah as his equal. A commoner. Their retreating figures, moving in perfect sync, hang like an unspoken answer beyond the borders of the world Isaiah has always upheld. It's impossible to explain impossible to ignore.</p>
+<p>Days pass, yet each memory only sharpens the image.</p>
+<p>During his solitary training sessions, Isaiah's swordwork falters uncharacteristically. When his blade trembles, what he cannot suppress is something deeper: an instinctive, gnawing unease.</p>
+<p>Xavier, the future king of Philos, repeatedly strays from the world he was born to lead.</p>
+<p>And Jeremiah serves as the most glaring point of reference. He's an insignificant commoner who dares to covet a place in the Order of Lightseekers.</p>
+<p>Being a knight means carrying the weight of one's bloodline and duty. Its meaning and its honor aren't to be taken lightly.</p>
+<p>Isaiah will show Xavier the proper path. Those truly qualified to walk beside him are those born to shoulder the future of Philos, not some happenstance companion who happened to fall into step.</p>
+<br>
+<p>Beneath the Holy Sword of the Goddess, Isaiah levels his blade at Jeremiah. "I shall be the one to test your qualifications."</p>
+<p>"Isaiah, third-year student of House Starhunters, son of the Senior Councillor of the Royal Council, and member of the royal family, formally challenges you to an honorable duel!" The words have barely left his lips before his blade flashes like lightning He doesn't wait for Jeremiah's response.</p>
+<p>Jeremiah's hand flies to his hilt and meets the strike with equal intensity.</p>
+<p>The exchange is swift and fierce. Relentless, sharp steel resounds. The duel doesn't last long. Isaiah's swordsmanship proves to be superior. Years of elite training were forged into strict precision and cutting grace. Ten moves in, he exploits a minute opening and sends Jeremiah's weapon spinning from his grip. He brings his blade to hover at his opponent's throat. Isaiah lifts his chin, pride radiating from every ounce of his movements The murmurs of astonishment rise around him exactly as anticipated.</p>
+<p>Yes. This is what it should feel like. Isaiah senses his blade has finally stopped trembling Jeremiah exhales slowly and concedes without pretense. "I lost."</p>
+<p>Isaiah sheaths his blade and looks past Jeremiah. With barely concealed expectations, his gaze seeks Xavier in the crowd. </p>
+<p>Look.</p>
+<p>This is the clearest proof of the Order of Lightseekers he believes in. There can only be strength, technique, and the resolve to claim victory at any cost. The gap these concepts create is the most irrefutable evidence of the values he holds sacred.</p>
+<p>But Xavier doesn't meet his gaze. He walks past Isaiah, picks up the fallen sword, and places it in Jeremiah's hands as though he witnessed an unremarkable sparring match between peers.</p>
+<p>Jeremiah accepts it, and the frustration of defeat quickly gives way to his usual easygoing demeanor.</p>
+<p>The pride on Isaiah's face freezes. The shadow of the Holy Sword slants across the ground and swallows him in cold darkness. He won. Yet the bond he fought so hard to sever remains untouched. The measuring stick he devoted everything to proving, the one he uses to judge one's worth, means nothing in Xavier's eyes.</p>
+            `,
+    },
+    {
+        id: 253,
+        link: "light-into-dust",
+        serialNumber: "03",
+        subtitle: "Backtracker's Diary",
+        content: `
+<p>Petals spiral down from the treetops and slip silently between the open pages of a diary. It chronicles what must be the countless springs since the backtracking began.</p>
+<p>The author's emotions spiraled out of control as he wrote, the handwriting growing increasingly erratic and messy. The diary was abandoned in a fit of spite. It's as though he buried a memory.</p>
+<p>A man sits beneath the tree and reads it. He's quiet and focused. Although he occasionally pauses, his gaze lingers on a particular phrase as if weighing something. His fingertips trace the Philosian noble crest embossed on the cover. He appears gaunt and pale from the side.</p>
+<p>***</p>
+<p>When Xavier announced our departure, the weight in my chest finally settled. I kept my expression under control, lest some foolish commoner catch me off guard. Even after all those long months of preparation underground, I still can't get used to being around my supposed teammates.</p>
+<p>It was the same in the beginning. When Xavier told me about Operation Backtrack, I took it as a sign that he finally realized what sort of person was qualified to intervene in the fate of Philos! And then? I followed him into the secret base only for a mechanical sugar glider to fly at me. It was singing. That's when I discovered this team was more... motley than I had imagined.</p>
+<p>Aside from a handful of noble scions I could tolerate, the ones with actual skills, the rest were commoners Xavier scraped together from who knows where. None of them met the minimum standard of value required to participate in Operation Backtrack. When I confronted Xavier about it, he blinked and said every team member has something unique about them. If you ask me, Xavier has been blinded by his own Evol!</p>
+<p>Hal gave me this diary as an apology for the sugar glider attacking my face. He said he taught it to sing. Apparently, it chirps "you can do it" for a morale boost sometimes, but he typically uses it to log data inside the ship These Backtrackers work outside humanity's comprehension.</p>
+<p>***</p>
+<p>Whenever another potential warp point is ruled out, the mood in our group worsens. The only thing that stays consistent is that mechanical sugar glider as it flies and sings. Since we started backtracking, we've squandered too much time on unnecessary detours. Today, Xavier chose the longer route again to accommodate a teammate suffering from warpspace rejection. He can't even withstand this level of intensity. That's what the blood of a commoner gets you! So what if he's skilled in conducting analyses and various calculations? Anyone can be trained to be an expert in those fields, so they hold a limited value. He could be replaced at any moment If we left him behind, we'd save half of the time we'll spend. Yet Xavier lacks resolve. When I raised my objection, he had the audacity to say that every teammate's safety is tied to our ultimate goal. Tsk... Is our goal not the salvation of Philos?</p>
+<p>The time before last was the same. We encountered a perfect warp opportunity. I said I would hold the rear. In the worst-case scenario, I would die as a glorious martyr. But Xavier turned back with Sullivan to rescue me. When they hauled me onto the ship, I didn't pass out from my injuries. I promise it wasn't that at all. Rather, the fury at the missed opportunity got to me!</p>
+<br>
+<p>***</p>
+<p>We're stranded on Earth now. Hope grows dimmer by the day. Everything makes me angry. Being part of these Backtrackers means endless arguments. The curly-haired idiot Jeremiah is everywhere, and he actually said no one wants to work with someone like me... He knows nothing! Efficient commands and necessary sacrifices are what it means to be responsible for everyone!</p>
+<p>Yet somewhere along the way, fewer people argue with me. Life on Earth is eroding their will. Those who choose to leave always slip away in silence... To some nameless island or an unremarkable bookstore. Some succumb to the fear of their bodies aging. Others fall to the loneliness gnawing away at the soul.</p>
+<p>Today, that mechanical sugar glider sputtered and died. The person who could fix it is already gone.</p>
+<p>Why does Xavier never reveal his anger? If it were me, I would've removed that dead weight long ago! Yet he stands there, watching people come and go.</p>
+<br>
+<p>***</p>
+<p>...I've had enough. Maybe I should leave too. It's not like the Slepen Pod's door can survive another one of my outbursts! Today I walked out alone, farther than I've ever gone. But perhaps "today" no longer means anything Operation Backtrack has stretched on for so long that my sense of time and space grows hazier by the day. At some point during my wandering, I met Soren. It took me a moment to recall his name.</p>
+<p>Soren's presence in the Backtrackers was always negligible. He always shrank into corners and agreed to everything anyone said. Just looking at him made me irritated. What Was his "unique quality" again? Oh, right Xavier once praised his sharp mind. </p>
+<p>Apparently, some of the Backtrackers' boldest early concepts had his fingerprints on them.</p>
+<p>He was surprisingly open around me and shared many of his ideas. I changed my opinion of him. He's more tolerable than the other commoners. He doesn't talk back, and he remembers several of my flawless proposals that Xavier vetoed. With perfect clarity, I might add.</p>
+<p>If I run into Soren again, I might be willing to exchange a few more words with him.</p>
+<p>…</p>
+<br>
+<p>The endless days since their backtracking began are condensed between these pages. It only took two days to read through them Soren closes the diary and tosses it into the depths of a drawer. When he steps out of the gray EVER building once more, he slips on a well-practiced mask of humble deference. His objective is clear as he walks toward the distance.</p>
+<p>This will be the last staged encounter. He's confident of that.</p>
+<p>"It's been a long time."</p>
+<p>Isaiah turns and finds Soren reaching out with a smile. "I knew you'd choose this path.</p>
+<p>Someone has to take the first step to save Philos, and it can only be you," Soren says.</p>
+            `,
+    },
+    {
+        id: 254,
+        link: "light-into-dust",
+        serialNumber: "04",
+        subtitle: "Test Records",
+        content: `
+<p>Trial Subject </p>
+<p>Isaiah</p>
+<p>Record Keeper </p>
+<p>Soren</p>
+<p>-------------------------------------------------------------</p>
+<p>[Test Record A-0731]</p>
+<p>Trial Subject Status: Excellent, Compliance: High</p>
+<p>After administering the Beta-type Adaptation Serum, the subject's native Philosian vital signs and physiological markers remain stable No acute rejection from the immune system or organ dysfunction was observed as initially anticipated. Note: The subject's royal bloodline demonstrates significant environmental tolerance with no signs of physical aging. The data surpasses all previous samples. The subject shares a blood relation with X. Early observational data show partial alignment with X.</p>
+<p>This phase has verified the viability of using a comparable high-quality bloodline as a substitute model to study the unique physiological mechanisms of X. Data will be applied to optimize development of the next serum. The application target is still X. </p>
+<p>Note:</p>
+<p>The trial subject's desire for self-validation that surpasses the Crown Prince provides a perfect behavioral motivator for the project. This psychological suggestion should be continuously reinforced. </p>
+<p>Dialogue Recording:</p>
+<p>"Increase my dosage for the next phase. I'll prove that the path I've chosen is more effective than Xavier's!"</p>
+<p>"Of course. Once you successfully tolerate it and go past this threshold, we 'll reach a new horizon. When that happens, you'll be the pioneer who's crucial to saving Philos."</p>
+<p>"Hmph... When did you get your hands on all this high -precision equipment?"</p>
+<p>"The fairest thing about fate is that it rewards those who prepare in advance." </p>
+<p></p>
+<p>Test Record E-0929</p>
+<p>To support the development of Beta-type Adaptation Serum II, a request has been submitted to EVER HQ for the latest functional observation pod.</p>
+<p>The subject exhibits symptoms of neuropathic pain and cellular metabolic dysfunction, but the body hasn't been irreversibly damaged. The most noteworthy observation is how the physiological age fluctuation is stabilizing. The passage of time affects the subject even less than baseline levels.</p>
+<p>This strongly suggests that royal bloodlines may have a genetic mechanism capable of significantly decelerating telomere degradation while maintaining high-level cellular regeneration. It exceeds the slow aging exhibited by ordinary Philosians.</p>
+<p>Given the subject's status as an experimental body who's the most closely related to X via bloodline, data on tolerance limits must be obtained. This data aims to decode the core mechanisms of royal bloodlines and precisely extrapolate dosage thresholds and potential control nodes applicable to X.</p>
+<p>Consequently, data from this phase is critical to securing long-term stability and compliance from X within the planet transplantation initiative. </p>
+<p>Note:</p>
+<p>Targeted psychological intervention has been enhanced to address emerging anxiety and suspicions.</p>
+<p>Dialogue Recording:</p>
+<p>"This... doesn't feel right...”</p>
+<p>"Your body is restructuring itself. It's adapting to a new world."</p>
+<p>"...I thought we were going back to our original world! Our Philos! Ugh...”</p>
+<p>"Return demands unassailable power. What you're gaining is power Xavier could never hope to obtain. He's still running in circles and stuck in his delusions. But you—we –will lead the Philosians."</p>
+<p>"But it hurts so much...My head's a mess... Soren...”</p>
+<p>"See? You're breaking past your limits. Grit your teeth and push through. It's proof that you're better than him. Don't you believe in yourself?"</p>
+<p></p>
+<p>[Test Record H-1113]</p>
+<p>The subject's rejection has become critical It's accompanied by intermittent mental</p>
+<p>disorientation, memory retrieval dysfunction, and an unstable Evol.</p>
+<p>Tolerance limits are approaching. Acquisition of critical data is nearing completion and proves to be highly valuable. Currently awaiting HQ's approval of the report before advancing the adaptation serum.</p>
+<p>HQ's latest attempt to directly acquire X has failed. As such, this trial subject remains the only viable substitute model for in-depth live experimentation. The subject must be kept until a finalized adaptation serum capable of controlling X is successfully developed. </p>
+<p>Note:</p>
+<p>The trial subject has discovered the planet transplantation initiative and refused to cooperate with the trials. Forced containment measures will be implemented. </p>
+<p>Dialogue Recording:</p>
+<p>"The planet transplantation initiative...Soren, you were never trying to help me!"</p>
+<p>"Calm down. Since our backtracking began, surely you understand that no one can help us. There are only choices to make. Xavier clings to his useless principles and runs in place. But you dared to choose a path with an end in sight. I need data. You crave superiority. We each get what we want. "</p>
+<p>"You bastard! You've been experimenting on my noble body to develop drugs to control him?!"</p>
+<p>"He is the key and the most unstable variable Emotion and duty are too fragile against the weight of time. I must possess the means to ensure his cooperation."</p>
+<p>"From the very beginning, you only saw me as his substitute..."</p>
+<p>"You can think of it that way. After all, Xavier was born with everything. Including the privilege to run away. But you and I are the ones left behind. We have no choice but to seize what we can, even if it means taking risks. Put down the documents, Isaiah."</p>
+<p>“…”</p>
+<p>"Your value determines your place. Now please accept the final injection."</p>
+            `,
+    },
+    {
+        id: 255,
+        link: "light-into-dust",
+        serialNumber: "05",
+        subtitle: "Salvation",
+        content: `
+<p>"Are you spacing out again?"</p>
+<p>Jeremiah walks in and sets a warm meal on the small table. The clatter is deliberately loud, an attempt to drag Isaiah's attention back to the present. It's been over two weeks since Xavier rescued him, yet Isaiah still drifts into these "daydreams" from time to time. Beneath the loose hospital gown, the wrists peeking out still bear fading ligature marks and bruises from needles. The slightest sound makes him go rigid. His unfocused pupils contract before dilating again.</p>
+<p>It's no different now. Isaiah flinches subconsciously, his eyes darting warily from the food to Jeremiah's hands. No weapon, no syringe. There's just a large bouquet of fresh flowers clutched against his chest.</p>
+<p>"What are you staring at?" Jeremiah responds with an unapologetic glare. "I've got a shop to run. Dropping off your food and delivering flowers to a client nearby is killing two birds with one stone."</p>
+<p>“...Xavier sent you?" Isaiah's voice comes out dry and rough because of disuse. Soren's final words echo in his ears like a recurring nightmare. He's disoriented, struggling to reconnect with reality.</p>
+<p>"Obviously. You think I'd willingly look at your grumpy face?" Jeremiah huffs. "He's got other things to deal with."</p>
+<p>"You don't have to do this." Isaiah turns away, his tone deliberately distant. "A curly-haired commoner suddenly acting charitable... If you want something from me, just say it."</p>
+<p>“Stop spouting nonsense." Jeremiah's movements are brisk and efficient as he raises the folding bed's backrest and swings the meal tray in front of Isaiah. "Eat. Otherwise I'll hold your nose and pour it down your throat Pick."</p>
+<p>A utensil is shoved into Isaiah's hands. He doesn't touch the food. Irritated, he jabs at a stubborn piece of broccoli until it rolls to the edge of the container. He scoffs. "Did you make the broccoli this tough on purpose as petty revenge? Let me make one thing clear. I never believed in Soren. It was mutual exploitation, nothing more. I... just chose the wrong ally."</p>
+<p>Jeremiah leans back in his chair. "Oh? That works out perfectly, then. If it was only about using each other, you wouldn't have expected him to be sincere."</p>
+<p>Isaiah lets out a humorless laugh. Refusing to lose, he pushes himself up against the bed.</p>
+<p>"Sincere? Does anyone in the Backtrackers even know what that means? Weren't we just in it for ourselves from the start?"</p>
+<p>"If you never trusted anyone, then why did you join?"</p>
+<p>"Who knows what Xavier's really after?"</p>
+<p>Silence settles over the room. Isaiah catches his breath and braces for Jeremiah's biting comeback.</p>
+<p>But Jeremiah smirks. He takes back Isaiah's utensil and replaces it with a spoon. Then he rescues the battered broccoli by putting it into his own mouth. Cheeks puffed, he answers. It's muffled but clear. "The first time Xavier brought me one of those awful meat patties from Astria Knyght Academy's cafeteria, he wasn't expecting me to help him save a planet."</p>
+            `,
+    },
+    {
+        id: 256,
+        link: "light-into-dust",
+        serialNumber: "06",
+        subtitle: "Isaiah vs. the World",
+        content: `
+<p>Day after day, through arguments that seem to have no end in sight, Linkon's annual carnival finally arrives.</p>
+<p>That evening, a peculiar Wanderer-shaped lamp appears on one of Philo's window sills. Its crooked grin beams lopsidedly into the room. Isaiah stares at it until his vision goes dark. A heavy bundle of clothes landed on his head and blocked his view.</p>
+<p>"Jeremiah!" Isaiah yanks off the offending garment and turns around. He's fuming. The culprit flashes him an utterly unapologetic expression. Two people stand nearby. Xavier wears an expression of pure innocence while she smiles warmly.</p>
+<p>There's a beautifully wrapped gift cradled in her hands. "Isaiah, this is for you."</p>
+<p>"Are you sure you want to give it to him?"</p>
+<p>Xavier leans in to whisper to her, as if lodging a very serious complaint. "He didn't prepare a gift."</p>
+<p>"Exactly! Isaiah doesn't understand any Earth holidays!" Jeremiah chimes in.</p>
+<p>And yet she still walks up to him with the gift Isaiah's expression tenses. He wants to say he has no need for childish Earth gimmicks. But she holds it, the wrapping paper crinkling softly, and smiles. "Take it. You'll understand all of Earth's holidays by next year."</p>
+<p>Isaiah hears Xavier and Jeremiah snickering behind her. But the laughter doesn't ignite his temper this time. The tips of his ears burn as he accepts the gift. He clutches it tightly to his chest.</p>
+<p>Pushed and dragged, Isaiah is hauled onto the street.</p>
+<p>By the time he emerges from Philo, he has been transformed into a leafy green pea pod launcher. His mouth is a cylindrical tube designed to fire candy-stuffed pellets Jeremiah dressed up as a walnut. She and Xavier walk slightly ahead. They're wearing matching cherry headpieces with intertwined stems as they carry a wicker basket to exchange small gifts with other participants.</p>
+<p>"Do you want to know why I made you wear this costume?" Jeremiah shares his design philosophy with Isaiah. "I realized you and peas have something in common. You're great at shooting your mouths off."</p>
+<p>"You're asking for a beating."</p>
+<p>Isaiah moves to kick Jeremiah, but when he lifts his leg, a group of excited children comes rushing over. They're surrounding him. Little hands stretch into the air, and their eyes sparkle as they cheer. "Peaman, give us pea flavored candy!"</p>
+<p>Isaiah freezes. He wants to back away and snap at them to get lost. When he glances behind him and sees Jeremiah, Xavier, and her smiling and playing along, however, the words die in his throat. He swallows them. With every bit of irritation he has, he spits two candy balls from his launcher. "...There. Now leave."</p>
+<p>The children's cheers grow even louder as they scatter like they've just claimed treasure Jeremiah and Isaiah carry a large cloth sack between them and collect the small gifts passersby offer in return. Whenever someone approaches with goodwill, the stiff "no thank you" forming in Isaiah's throat never escapes.</p>
+<p>It's stuffed back down by whatever trinket gets pressed into his hands. Colorful candy, knitted coasters, homemade cookies...A bright jumbled mess piles up at the bottom of the bag.</p>
+<p>"I hope you have a fun carnival experience!” The gift-givers reveal bright smiles before they melt back into the crowd.</p>
+<p>Everything in the sack is light, yet Isaiah's arms feel heavy. Resting on a roadside bench, he fishes out an unremarkable piece of fruit candy, its wrapper almost cheap-looking Slowly, he peels it open to reveal the translucent orange drop inside. Philos's banquets always featured exquisite confections arranged on silver platters. They were symbols of etiquette and status.</p>
+<p>He's genuinely hungry. Isaiah puts the candy into his mouth and tastes artificial flavoring. It's nothing like the subtle, layered complexity the palace chefs once crafted. Yet this simple unrefined sweetness cuts through the numbness on his tongue, rushes down his throat, and spreads warmth.</p>
+<p>"Well? Isn't it lively here?" Jeremiah gazes at the stream of people flowing through the street.</p>
+<p>“...It's whatever," Isaiah mutters. "Philos was lively too."</p>
+<p>An evening breeze drifts by, carrying the scent of flowers and pastries. A pea sits beside a walnut. Jeremiah pats his shell, his gaze drifting toward the cake store on the corner. Something flickers in his eyes.</p>
+<p>Seconds pass in silence. Then he quietly says, "If this were Philos, these people might have been turned into nutrients for the planet." Festival lights strung along both sides of the long street flicker to life with a soft pop. They blaze against the approaching dark. Surprised cheers ripple through the crowd as strangers embrace one another. The glow is impartial. It offers him a small bit of light, too.</p>
+<p>"Hmph."</p>
+<p>The candy's sweetness still lingers on Isaiah's tongue. A long time passes before he finally sits up, his back stiff and aching. He doesn't notice that he carefully folded the crumpled wrapper into a tiny square. He's clutching it in his palm.</p>
+            `,
+    },
+    {
+        id: 261,
+        link: "good-night-frostmere",
+        serialNumber: "01",
+        subtitle: "News",
+        content: `
+<p>"Good morning. The joint rescue mission at the site of the recent geological and meteorological disaster in the Arctic town, Frostmere, has ended. As of this moment, there have been…”</p>
+<p>Someone changes the channel. The broadcast stutters for a few seconds before the anchor's voice continues. That heavy number has been skipped. "...deaths. 53 people are still missing..."</p>
+<p>The TV is turned off.</p>
+<p>Outside, a breeze stirs. Clouds briefly veil the sun, which dims the room. The dark screen reflects a haggard face with stubble. Greyson remains frozen as he's turning off the TV. In this silence, he recalls how not long ago, he was fretting that his baby face looked too young. Yvonne had teased him earlier. "A baby face keeps you looking young! Or would you rather have features ravaged by work?"</p>
+<br>
+<p>When he steps outside, the wind carries the clouds, and sunlight grows bright once more. Having missed the morning rush hour, the subway station is almost empty: Greyson has just taken a seat when a jarring electronic voice blares through the quiet car. "A once-in-a-millennium event, folks! The Arctic magnetic field anomaly triggered a glacial canyon collapse and an extremely cold downdraft! The true culprit behind Frostmere's disaster... The sound cuts off abruptly. He glances over. At the far end of the bench, a passenger fumbles to turn down their phone's speaker volume. Greyson inadvertently catches a glimpse of their screen. There's a news headline in glaring red. It's impossible to ignore. Only when the subway reaches his stop does he realize he's been holding his breath the entire time.</p>
+<br>
+<p>Akso Hospital is as busy as ever. When Greyson gets off the elevator, he spots Yvonne striding briskly down the corridor. They exchange a hurried glance in passing, and a conversation from the elevator resurfaces in his memory. Besides himself and Yvonne, there had been another person, a patient Dr. Zayne had practically "dragged" in An Arctic Hunter who was always glued to his phone. He was unable to go three sentences without saying, "Let me head back."</p>
+<p>At some point, the TV in the waiting area was switched to the news channel. Despite the surrounding noise and his best efforts to avoid it, fragments of the broadcast still pierce through the clamor and burrow into his mind. "Due to the anomalous magnetic fluctuations in the Arctic and the destabilized ice sheet triggering a chain reaction, the affected area experienced a flash flood at approximately 2:00 P.M. that day. It was followed by extreme temperatures plunging to negative fifty degrees Celsius...</p>
+<p>"Greyson? You're back from the Arctic?" A colleague from a neighboring division passes by and spots him. A flicker of surprise crosses their face. Before they can continue, a patient's family member cuts in. "Excuse me, doctor. Why aren't there any appointments available with Dr. Zayne? When is he coming back to work?"</p>
+<p>Greyson looks away. He hasn't changed into his white coat yet, which spares himself from the barrage of questions. His colleague stays behind, scratching their head awkwardly as they explain." Dr. Zayne is on a business trip. I'm not sure exactly when he'll return."</p>
+<p>Greyson crosses the waiting area and retreats to his own office.</p>
+<br>
+<p>Greyson has just returned to Linkon City from the Frostmere rescue mission. His phone, the TV, the Internet-news alerts are everywhere They're relentlessly updating coverage of the Arctic disaster from several days ago. He turns on his computer and takes a deep breath. Herecalls how Zayne always remained composed in the face of such incidents. He wants to suppress the weight pressing down on his chest... and the fear. He logs into the system and pulls up the files. As a member of the medical support team during the rescue operation, he must now confront the heaviest chapter of this nightmare: writing death reports for the victims and the rescue workers who never made it back.</p>
+            `,
+    },
+    {
+        id: 262,
+        link: "good-night-frostmere",
+        serialNumber: "02",
+        subtitle: "Relocation",
+        content: `
+<p>Among the many tourist towns scattered across the Arctic, Frostmere can only be classified as ordinary.</p>
+<p>Situated at the end of a glacial canyon, the town has a small population. In the eyes of discerning travelers, its scenery is nothing remarkable. It's typically a backup choice for those who failed to secure reservations for the popular resorts in Snowcrest. Its redeeming feature lies twenty kilometers away: a glacial lake nestled in the lower part of the canyon. It's like a cold mirror the gods cast down to reflect the world. Each year, when it's peak tourist season, visitors will flock in like migratory birds only to scatter just as swiftly once it ends.</p>
+<p>With the new year approaching, this year's holiday preparations carry an unusual weight. According to monitoring results from the Arctic Hunters Association, the magnetic field in the region has been displaying anomalies. So as a safety precaution, the townspeople will be evacuated. The last group will relocate to a different area after the new year.</p>
+<p>"We narrowly escaped the chaos in 2034 and that incident at Mt. Eternal a few years back." Inside the town's tavern, the patrons show little sign of anxiety despite the ongoing evacuation. "Trust the Association, follow the Hunters, and everything will be fine!"</p>
+<p>Everyone believes the Hunters Association will handle it like before. The speaker winks at Jeroen, the only Arctic Hunter present, and the others give him a unanimous thumbs-up.</p>
+<p>Jeroen waves his hands bashfully. "Thank you for your cooperation, everyone. Really, thank you!"</p>
+<p>The conversation soon drifts elsewhere Jeroen rises from his seat, exchanges farewells with a few familiar faces, and leaves the tavern. The biting wind that greets him scatters the warm flush of alcohol from his cheeks. Rummaging through a cardboard box for the new year's string lights, the tavern owner stands by the entrance.</p>
+<br>
+<p>Jeroen walks over and claps the man on the shoulder. "Busy?"</p>
+<p>"This is the last time we'll be spending the new year's here. Gotta have the right atmosphere at least." The owner slowly untangles the string lights from the box of miscellaneous items. "Drinks are on me today."</p>
+<p>Jeroen blinks before breaking into a grin.</p>
+<p>"You're too kind. And here I thought you stayed behind with the last group just to squeeze out another bit of profit."</p>
+<p>"Business is all about strategy. Besides, you're one of us. You've helped this town over the years. And you only just got back from recovering from that injury..." Perhaps realizing that bringing it up is still upsetting, the owner cuts himself short. But his gaze lingers on Jeroen's leg.</p>
+<p>Noticing the look, Jeroen shifts his stance. The new prosthetic bone in his leg works well. Its power is even better than before, actually.</p>
+<p>Shrugging, he takes the string of lights and helps hang it along the door frame. "It comes with being a Hunter. Avoiding a few bumps and scrapes is impossible."</p>
+<p>"The magnetic field has been unstable lately, and the weather's been changing. Some tourists who came through mentioned they found something in the glacier... The remains of some massive ancient creature."</p>
+<p>"We've already issued a notice. That area is still under investigation. Don't worry, if anything serious comes up, the Association will step in."</p>
+<p>"And you'll be first in line, Jeroen," the owner teases before continuing, "People are just speculating. They think it might be connected to the recent fluctuations in the Deepspace Tunnel."</p>
+<p>He pauses, as if recalling something. "Over a decade ago...Back in '34, there was something similar. They said they found signs of ancient activity in the glacier. The magnetic field went crazy, and everyone was on high alert for ages. Your Association looked like they were bracing for the worst... Then it just ended. Same thing happened with Mt. Eternal The situation seemed critical, but in the end, nothing came out of it..."</p>
+<br>
+<p>"Daddy! Oh, Uncle Jeroen is here too!" A child wearing a red coat bounces over like a rubber ball until she lands right in front of the two men.</p>
+<p>Jeroen ruffles the girl's hair. "We haven't seen each other in ages, huh. I've been downgraded."</p>
+<p>The child's eyes dart mischievously as she launches a preemptive strike. "Uncle Jeroen still owes me a trip to see the snow velvet! But when we got close to the cliff, you said you couldn't go any further. Uncle Jeroen is a scaredy-cat!"</p>
+<p>The tavern owner gently brushes the snowflakes off the child's coat. "Uncle Jeroen was looking out for you. That doesn't make him a scaredy-cat. Besides, snow velvet is rare. There's only a little growing on the north cliff of Mt. Eternal, and it's dangerous. Didn't something just happen there recently? You tried to sweet-talk Uncle Jeroen for that?"</p>
+<p>"We didn't even go! We just looked from a distance and left."</p>
+<p>Jeroen fishes a hair clip from his pocket and waves it in front of the child. His smile softens. "I didn't forget about you while I was away. How's this for a peace offering? You know, snow velvet looks exactly like this little pom-pom."</p>
+<p>The child accepts the gift with delight. Quietly relieved she didn't ask how he's seen real snow velvet, Jeroen pats her head. He can hardly tell her that in Linkon City, a stone-faced doctor once tried to save a pot of them and seemingly failed. Children don't usually care about stories without happy endings.</p>
+<br>
+<p>Nearby, the little girl chatters with her father about something. Jeroen gazes into the distance. Although most of the town has relocated, the remaining residents still fill the air with noise. At first, he dismisses it as typical hustle and bustle. Then the clamor grows heavier, thicker, like it's drowning out even the din from inside the tavern. It can't be the people.</p>
+<p>His prosthetic's sensors relay a delayed tremor. He tears off his gloves, presses his palm to the ground, and then snaps his head up. A deep rumble is already rolling toward them from afar.</p>
+<p>His Hunter's Watch shrieks. He lost both his legs the last time he heard an alarm like this—</p>
+<p>#Warning! A breach in the glacial lake has been detected 20 kilometers away</p>
+<p>Floodwaters are arriving in 15 minutes!</p>
+<p>Magnetic fluctuations had delayed the disaster by 20 minutes. Now the guillotine finally falls.</p>
+            `,
+    },
+    {
+        id: 263,
+        link: "good-night-frostmere",
+        serialNumber: "03",
+        subtitle: "Blessing",
+        content: `
+<p>Like a dream shattering without warning, panic seeps through the air.</p>
+<p>Amid the overlapping screams and blaring alarms, the girl barely grasps what's happening before she's swept into her father's arms. His hands tremble, but Uncle Jeroen's voice remains steady. "Floodwaters are coming! Get to high ground. Don't drive and stay out of basements!"</p>
+<p>Her father carries her, and they're swept along by the tide of bodies. She cranes her neck and strains to look at where Uncle Jeroen stood. That familiar figure is moving against the crowd. The Arctic wind, laced with stinging snow, carries his frantic shouts</p>
+<p>"Everyone, stay calm. Head for the mining tower. The bell tower—"</p>
+<p>The first wave of people to receive the warning splits into two streams. One surges toward the old mining tower beside the edge of the canyon. The other flows toward the bell tower at the heart of town. It's second only to the mining tower in height. In two days, that tower was supposed to ring this town's final blessing before the relocation at the stroke of midnight.</p>
+<p>She tears her gaze away and realizes she's still clutching the pom-pom hair clip Uncle Jeroen gave her, the one that supposedly looks exactly like snow velvet. As one of the Arctic's rarest flowers, legends about them have always drifted across the tundra. One of them speaks of the simplest blessing: life and good fortune.</p>
+<p>"Don't worry, Daddy," she says as she clumsily pats her father's pale cheek. "The snow velvet will bless us."</p>
+<br>
+<p>At 7:34 P.M., Greyson fastens his seatbelt inside the helicopter. The deafening roar of the rotors becomes the opening note of this operation. The cabin is silent. Rescue missions always feel like fractures torn into ordinary life, but Greyson is accustomed to this rhythm.</p>
+<p>By the time his afternoon surgery ended, night had already fallen. He barely managed to get in a few bites of his cold boxed meal before the call came. The rumors swirling about Wanderer mutations and a grand eradication of life had yet to produce any real consequences, but even within Akso Hospital Greyson sensed the subtle shift. More patients. Never enough hands. The Hunters Association was running past its capacity After Dr. Zayne left, the burden he once shouldered alone now rested on everyone's shoulders.Only then did people belatedly realize just how much Dr. Zayne had been carrying. It's more than any of them ever imagined.</p>
+<br>
+<p>Dark red tactical lights flicker inside the cabin. Static crackles through the headsets as the comms channel opens.</p>
+<p>"All units, please listen to me. I'm your team leader, and I'll be giving you your mission briefing."</p>
+<p>A tablet, its brightness maxed out, is passed from hand to hand. The satellite imagery on screen shows their destination.</p>
+<p>"Our destination is Frostmere. At approximately 2:00 P.M., a breach in the glacial lake triggered a flash flood. Over three hundred people were affected. The first Arctic</p>
+<p>hunter rescue team arrived on-site around 3:30 P.M., but all contact was lost due to the magnetic field anomalies and signal interference. Linkon City has received a request from the Arctic Emergency Command Center to dispatch medical support."</p>
+<p>"All contact lost..." The Arctic is unforgiving. Everyone knows exactly what those words imply.</p>
+<p>The briefing is certainly brief. "Everyone, close your eyes. Rest. Conserve your energy. If Dr. Zayne were leading this mission, he'd probably say a few more words to calm everyone. The thought surfaces unbidden in Greyson's mind. Some time ago, Zayne had submitted his resignation to the hospital director. His explanation had been vague and only mentioned that he was going away for a while. But Greyson has a nagging sense that it's somehow a continuation of something else. Before joining Akso Hospital, Zayne served with the Evol Special Rescue Unit during the Mt. Eternal incident when the magnetic field there underwent a dangerous change. The situation was significant enough that even Greyson heard about it. After Zayne returned from Mt. Eternal, he practically wrestled an Arctic Hunter into becoming a patient. Greyson still remembers seeing the snow velvet that had been rescued alongside him. It sat on Zayne's desk... That flower didn't survive. It's a shame.</p>
+<br>
+<p>The pang of wistfulness is quickly swallowed by a rising tide of exhaustion. He can't afford to keep thinking. The team leader is right.</p>
+<p>Once they arrive, every second will count. This is humanity pitted against a natural disaster, and until then, every ounce of energy must be conserved.</p>
+<p>After what feels like an eternity, the team leader's voice crackles through the comms channel once more.</p>
+<p>"You will be arriving in thirty minutes. The latest intel from the command center confirms that the target zone was hit by a secondary disaster around 5:00 P.M.. A cold downdraft. Temperatures have plunged below negative forty-two degrees Celsius. Everyone, follow proper protection protocols. Don't let hypothermia get to you!"</p>
+<p>The team leader doesn't say it outright, but Greyson knows. Everyone has already braced for the worst.</p>
+            `,
+    },
+    {
+        id: 264,
+        link: "good-night-frostmere",
+        serialNumber: "04",
+        subtitle: "Mending",
+        content: `
+<p>Jeroen brings up the rear of the panicked crowd and pulls back a few people still desperate to retrieve their belongings. He hoists an elderly man with bad legs onto his back and races toward the bell tower. His prosthetic bones dampen the muscle strain and stress fractures that would normally come from intense exertion. It's just enough to make the most of this narrow window before disaster strikes.</p>
+<p>The rumbling grows louder. From deep within the canyon, the wind shrieks like something is alive. The magnetic field interference intensifies. His Hunter's Watch keeps displaying the word "connecting." It's frozen on the last alert from the nearest Hunter outpost.</p>
+<p>The air is thick with dirt and snow. Breathing burns his lungs. Jeroen pushes against the gale and guides the last person in sight through the bell tower doors. Pain stabs his heart as he gasps. He almost retches. On the steps, his leg buckles, and he almost falls forward. Someone hesitantly steadies him. A voice, close yet distant, reaches his ears.</p>
+<p>"Jeroen, are you okay?"</p>
+<p>He raises a hand and forces himself to smile, the same carefree grin as always. But his voice has gone hoarse. "I'm fine."</p>
+<p>The bell tower is packed. What was once the heart of the town's blessings is now crammed with terror. Jeroen sits on the steps, a dull ache radiating from where his prosthetic bones meet flesh. He's a Hunter. He should always be first in line. But now, he remembers that he, too, is only human.</p>
+<p>"Jeroen, are we supposed to wait here? Will anyone come?" A trembling voice reaches him He gulps, clearing his throat. "The nearest Hunter outpost is only seventy kilometers away. They'll be here soon. Don't worry."</p>
+<br>
+<p>Jeroen has seen his share of injuries. His legs were replaced with prosthetic bones. A Cryozina was implanted in his heart. The Association had initially decided against adding him to the emergency operation standby roster... Yet here he is, exactly where he's needed the most.</p>
+<p>"The floodwaters are coming! Everyone, spread out. Don't crowd together! Find the iron pillars! Anchor yourselves!"</p>
+<p>Under Jeroen's directions, people latch themselves to the bell tower's railings. They grab one another's hands or lock arms to stay steady. They find anchor points to brace against the coming impact. Jeroen remains at the outermost edge of the crowd where the ground is at its lowest.</p>
+<p>The earth begins to tremble. Somewhere in the crowd, a child's wail rises, which is amplified many times over by the bell tower's acoustics. Jeroen thinks of the tavern owner and his daughter, who had parted ways with him earlier. He wonders if they made it.</p>
+<p>"Everyone, breathe in and hold on!" His roar dissolves into the deafening impact of wind and metal like a lighthouse's final warning before the tsunami strikes.</p>
+<p>The floodwaters slam into the bell tower.</p>
+<p>Thankfully, every structure is built to endure trial after trial in the Arctic. Water sprays upward and freezes into shards of ice. They strike the bronze bell with a sharp, almost crystalline crack before bursting into a veil of frost that swallows everything.</p>
+<br>
+<p>The flood passes, and before the silence can settle, hope arrives. "The rescue team! The Hunters are here to save us!"</p>
+<p>Jeroen exhales. At last, he lets his body relax.</p>
+<p>He slumps against the wall as he finds his breath again. Sunlight breaks through the clouds and refracts off the ice and snow There's a rainbow. It's like the day he was discharged from Akso after being practically kidnapped to Linkon City by that stone-faced doctor.</p>
+<p>"Everyone, stay calm. The situation is still unstable. Maintain order and let the elderly and children evacuate first!" His voice is ragged, and he pauses. "I'll stay until everyone's gone."</p>
+            `,
+    },
+    {
+        id: 265,
+        link: "good-night-frostmere",
+        serialNumber: "05",
+        subtitle: "Good Night",
+        content: `
+<p>Many days have passed since then.</p>
+<p>The death toll across Frostmere and the surrounding area is staggering. Night has fallen when Greyson opens the final document: Post-Mortem Examination and Death Certificate. It bears the Hunter's unique biosignature and name—Jeroen. The last time Greyson had seen that name was during his Cryozina implant surgery. Dr. Zayne had been the lead surgeon. Greyson himself was the surgical assistant.</p>
+<p>It was unexpected, yet it also wasn't.</p>
+<br>
+<p> When the rescue team handed over these files, one of them was already sobbing uncontrollably. A calmer teammate removed his protective helmet and spoke in a low voice. The last Hunter on the bell tower had grasped the dangling ladder when a sudden downdraft tore the ropes. The helicopter lurched like a scrap of paper caught in the gale. They fought desperately to reel in the ladder. But in the end, they couldn't grab the hands that had already let go. His energy was spent.</p>
+<p>Greyson fills in each blank field one by one. He's methodical and precise. The condition upon discovery, description of clothing, external examination, injury documentation, inferred cause of death, the determined cause of death…</p>
+<p>Unlike the others, Jeroen's previously implanted Type-A Cryozina continued to function even in the extreme cold. It provided support to his heart and drove it to pump at a high frequency. This kept the thermoregulatory center active when it should've shut down from hypothermia, yet it simultaneously accelerated his body's heat loss to twice the normal rate.</p>
+<p>This was fate at its cruelest. While others succumbed to the cold and drifted into the warm delirium of hypothermic dreams, the Cryozina's continued operation tore him away from that mercy. He was forced to face the brutal punishment of the freezing temperatures in absolute, agonizing clarity Greyson takes a deep breath, reviews everything with calm professionalism, and affixes his electronic signature.</p>
+<p>Work is finished. After hesitating for a long time, he sends Zayne a message about the rescue mission. He types the last word, sets down his phone, and doesn't expect an immediate reply.</p>
+<p>But in the chat, "Typing..." appears. That word somehow puts him at ease.</p>
+<p>After a long wait, it disappears. Zayne calls him.</p>
+<p>"Dr. Zayne, how have you been? Everyone in the division keeps worrying about you even if they won't say it out loud."</p>
+<p>Greyson speaks once the call connects. His voice carries a slight rasp. Or perhaps he's afraid his emotions might break through.</p>
+<p>The voice on the other end speaks. "If you're still struggling, there's a bench in the south corner of the garden outside the inpatient building. It's in one of the security cameras' blind spots. You can cry for a bit there."</p>
+<p>Greyson pauses, caught off guard. "...You cried in that spot, Dr. Zayne?"</p>
+<p>"No, that's where I go to watch the sunrise whenever a surgery doesn't end well."</p>
+<p>Yes, the sun will always rise the next day, but some will never see it again.</p>
+<p>The longer you practice medicine, the more you understand that death's cruelest edge lies in these small, specific losses.</p>
+<p>"You can let yourself cry tonight or wait until dawn and watch the sunrise for them. Make sure to actually watch it."</p>
+<p>Something in Greyson finally gives way. He weeps openly and doesn't hold himself back. By the time the call ends, he realizes that he forgot to ask when Zayne would return to Akso Hospital.</p>
+<p>On second thought, maybe it doesn't matter. Whether Zayne comes back or not, he still has to keep walking one step at a time.</p>
+<br>
+<p>It's past midnight, yet the hospital building remains ablaze with light. Greyson shuts his office door and looks up at the TV in the waiting area, where the news cycles through updates from the disaster site.</p>
+<p>"There's a miracle of life! A survivor with vital signs was discovered in the ruins of Frostmere! A girl, approximately seven years old, was found wrapped in thick clothing by several deceased adults. They used their own bodies to shield her from the bitter cold and spared her from the initial onset of hypothermia. It allowed her to slip into a deep coma... At the time of discovery, she was in what medical professionals call a state of suspended animation...”</p>
+<p>The footage cuts to the scene. Greyson exhales softly. Before he left the Arctic, the girl had already been stabilized. When they first detected her vital signs, she was still unconscious and cocooned in the victims embrace. She clutched a pom-pom hair clip like a talisman.</p>
+<br>
+<p>The new year is almost here. Time pushes people forward, and the weight in their hearts slowly settles.</p>
+<p>A string of messages lights up his phone. They were sent by his crush, who's on a mission.</p>
+<p>"Good evening...How was your day?</p>
+<p>Remember to eat properly. Your health comes first. Just wrapped up today's mission. S-Rank Wanderer. A few teammates got hurt, but thanks to you guys, everything's stable now! I'm gonna get some rest. Tomorrow night's my shift. P.s. You don't have to reply if you're busy. Just get back to me when you can!" Greyson reads each word carefully and imagines the voice behind them. Before long, his screen lights up again.</p>
+<p>"Rest well. I'm here."</p>
+<br>
+<p>His footsteps ease as the city still slumbers.</p>
+<p>For those who return late, the day hasn't ended yet. There's still time to say "good night. "He glances at the corner of his screen. 3:37A.M. In about three hours, the sun will rise, and morning will come.</p>
+<p>He will watch, truly watch, the sunrise after a long night.</p>
+            `,
+    },
 ]
