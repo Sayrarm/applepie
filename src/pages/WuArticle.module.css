@@ -1,0 +1,8 @@
+.nav {
+    margin: 10px 5px;
+}
+
+.link {
+    text-decoration: none;
+    color: var(--brown);
+}

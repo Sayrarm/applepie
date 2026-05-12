@@ -1,16 +1,41 @@
-import { wuData } from '../data/wu-data';
-import { wuCategories } from '../data/wu-categories.js'
+import {wuData} from '../data/wu-data';
+import {wuCategories} from '../data/wu-categories.js'
 import GenericArticlePage from "../components/GenericArticlePage.jsx";
+import {Link, useParams} from "react-router-dom";
+import {Fragment} from "react";
+import styles from "./WuArticle.module.css";
 
 
 function WuArticle() {
 
+    const { articleLink } = useParams();
+
+    // Находим текущую категорию
+    const currentCategory = wuCategories.find(cat => cat.link === articleLink);
+
     return (
-        <GenericArticlePage
-            data={wuData}
-            categories={wuCategories}
-            linkField="link"
-        />
+        <>
+
+            <nav className={styles.nav}>
+                <Fragment>
+                    <Link
+                        className={styles.link}
+                        to="/world-underneath">
+                        World Underneath
+                    </Link>
+                    <span> &gt; </span>
+                    {currentCategory && (
+                        <span>{currentCategory.title}</span>
+                    )}
+                </Fragment>
+            </nav>
+
+            <GenericArticlePage
+                data={wuData}
+                categories={wuCategories}
+                linkField="link"
+            />
+        </>
     );
 }
 
