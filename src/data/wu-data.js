@@ -104,7 +104,7 @@ export const wuData = [
 <p>He massaged his temples as he went to the dean's office. As soon as he opened the door, he heard a quiet voice ask, "Why did you destroy your part of the experimental data, Zayne stood in the middle of the room, silent and expressionless.</p>
 <p>"Sure, it doesn't affect others. But it could've helped this project achieve its purpose faster." The dean stepped closer to Zayne, his fingers tapping on the desk. There was more frustration than anger in his voice, the kind that came from a fellow researcher. "l remember you worked hard in the lab for weeks. Did you think about how erasing your data means all your efforts have gone to waste? I know it wasn't an accident. Explain yourself."</p>
 <p>Behind Zayne, his senior and labmate, Carter, started to speak, "As long as we re— "</p>
-<p>“Quiet, boy." Dr. Noah pushed Carter behind him. "I’ll handle this. Let the students go first."</p>
+<p>"Quiet, boy." Dr. Noah pushed Carter behind him. "I’ll handle this. Let the students go first."</p>
 <br>
 <p>"Thank you, Dr. Noah."</p>
 <p>Zayne walked over to the flower bed and sat down next to Dr. Noah.</p>
@@ -325,13 +325,13 @@ If Charles wasn't doing a commission for Talia's wedding, he would've believed R
 <p>"You said the same thing last time."</p>
 <p>"And how long ago was that? Why are you so stingy with your blessings?"</p>
 <p>"I blessed you when you made the pact. Any more would be pointless."</p>
-<p>"What do you mean? Not everyone is as lucky as you...”</p>
+<p>"What do you mean? Not everyone is as lucky as you..."</p>
 <p>"I'm hanging up."</p>
 <p>Rafayel ends the call and hands the sketch in his hand to the jewelry designer.</p>
 <p>The once chaotic lines are now an elegant yet fancy bouquet. A pencil may not be able to display any color beyond black, 
 but Charles can still imagine the blue that Rafayel chose earlier.</p>
 <p>He carefully takes the sketch and hands over the necklace design. "This is from the plan we previously agreed upon. 
-The gemstone is Talia's favorite and matches the color of her wedding dress- “</p>
+The gemstone is Talia's favorite and matches the color of her wedding dress- "</p>
 <p>Before he can finish his sentence, they hear Talia's laughter from Rafayel's phone Rafayel's expression changes as he realizes the call is still going.</p>
 <p>Talia sounds even happier than before. "I knew you wouldn't disappoint me! I'll be waiting. See you then!"</p>
 <p>The call actually ends this time.</p>
@@ -363,7 +363,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>She understands the emphasis Rafayel put in his words. Crossing her arms, her gaze wanders over the singing, dancing, and chatting people. "Guess you don't want fleeting happiness."</p>
 <p>Rafayel subtly turns away. To avoid Talia, he inevitably has to look at the guests attending her wedding.</p>
 <p>Almost all the familiar and unfamiliar Lemurian survivors are present. The music is harmonious, and the singing is rich, but every smile seems to be covered with a gray veil. Then he hears Talia's melodious voice again. "I'm getting married not because I've forgotten the past, but because I want to live in the present... Look at every Lemurian here. They're all looking for an anchor, a reason to live. I've found mine, and others have found theirs," Talia says. Her eyes lock onto Rafayel.</p>
-<p>“But there are still those who don't realize how important it is to have an anchor." Rafayel shakes his head. "Lemuria is more important."</p>
+<p>"But there are still those who don't realize how important it is to have an anchor." Rafayel shakes his head. "Lemuria is more important."</p>
 <p>"Lemuria will always be important." Talia puts down her glass, looking serious. "But what about you? When your own heart is devouring you, is there anything that can pull you back? Can you really let her go?"</p>
 <p>The light in Rafayel's eyes dims at her last question.</p>
 <p>"Rafayel, have you ever thought about your own wedding?"</p>
@@ -480,7 +480,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
         serialNumber: "02",
         subtitle: "Home",
         content: `
-<p>“Bella loves marigolds. I want her to see them when she comes over for dinner," Jeremiah says, holding a vase as he passes by Xavier. He peeks out from behind the orange blossoms.” Where do you think I should put it? At the door, by the dinner table, or on the balcony?" After being asked the same thing for the 23rd time, Xavier glances at the door adorned with plants, then at the dinner table surrounded by fresh flowers, and finally at the balcony that can only be described as a sea of flowers. "I think there's no space."</p>
+<p>"Bella loves marigolds. I want her to see them when she comes over for dinner," Jeremiah says, holding a vase as he passes by Xavier. He peeks out from behind the orange blossoms." Where do you think I should put it? At the door, by the dinner table, or on the balcony?" After being asked the same thing for the 23rd time, Xavier glances at the door adorned with plants, then at the dinner table surrounded by fresh flowers, and finally at the balcony that can only be described as a sea of flowers. "I think there's no space."</p>
 <p>"Really?"</p>
 <p>Baffled, Jeremiah looks around the house he rented a week ago. "I didn't think it was this small when I saw it."</p>
 <p>"You could hold it," Xavier suddenly says.</p>
@@ -573,7 +573,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>It's all very familiar. He vaguely remembers this used to be a cake shop.</p>
 <p>The shopkeeper, carrying a potted plant, pushes open the glass door. His greeting is caught in his throat at the sight of Xavier.</p>
 <br>
-<p>"I bought this place, so I'm living here now. The backyard is a greenhouse, and the third floor is a workspace." Jeremiah invites his long-lost friend into the shop and serves two cups of hot tea. "The spaceship's launcher is- “</p>
+<p>"I bought this place, so I'm living here now. The backyard is a greenhouse, and the third floor is a workspace." Jeremiah invites his long-lost friend into the shop and serves two cups of hot tea. "The spaceship's launcher is- "</p>
 <p>"Did she eat dinner at your place that weekend?"</p>
 <p>Xavier unexpectedly interrupts him with a long-lost memory, leaving Jeremiah somewhat at a loss.</p>
 <p>"Ah, you mean Bella..." He scratches his head.</p>
@@ -623,7 +623,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
         subtitle: "Audio File No.1: Mo Art Studio",
         content: `
 <p>05:13</p>
-<p>“...That'd be great if you don't mind Recording is a habit of mine I picked up at work. It's hard to keep up with the conversation if you only take notes. Did Thomas tell you? The Deepspace Academy introduced me before. Our team is preparing a fantasy-themed film. We want to use Lemuria as the setting. They said you're an expert in Lemuria, and you just returned from a trip."</p>
+<p>"...That'd be great if you don't mind Recording is a habit of mine I picked up at work. It's hard to keep up with the conversation if you only take notes. Did Thomas tell you? The Deepspace Academy introduced me before. Our team is preparing a fantasy-themed film. We want to use Lemuria as the setting. They said you're an expert in Lemuria, and you just returned from a trip."</p>
 <p>"Deepspace Academy thinks too highly of me. I'm just a painter. I don't know anything about Lemuria."</p>
 <p>"There's no need to be so humble, Mr. Rafayel. I've seen your paintings. The oceans in your work feel alive. It's very unique."</p>
 <p>"Those are just normal pieces. Forget about them. Anyway, speaking of the Deepspace Academy, I heard they recently organized an archaeological team to find the ruins of Lemuria. Why don'tcha ask them? They should know more than me. They might not tell you much, though. I heard things didn't go too well for them. Anywaaay, I have stuff to do, so I can't see you off. Bye, Tony."</p>
@@ -659,15 +659,15 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>"Professor Sean, it's an honor to meet you. Uh...Are you going on a trip? You're all packed up. I hope I'm not bothering you or anything."</p>
 <p>"No, I'm not...You don't need to address me as professor either. I'm no longer with the Deepspace Academy. Come in."</p>
 <p>"Thank you. I'll get straight to the point then, Mr. Sean. I'm here about the matter of Lemuria. My team is- "</p>
-<p>"That's...! I-I have nothing to say. Everything is recorded in the exploration report. You can ask for it from the Deepspace Academy...”</p>
+<p>"That's...! I-I have nothing to say. Everything is recorded in the exploration report. You can ask for it from the Deepspace Academy..."</p>
 <p>"I read it already, but I rather have a first-hand account from someone who was actually there. It's better for the script. That's why I want to hear your experience when you explored the ruins of Lemuria, Mr. Sean."</p>
 <p>"Is this a test to see if I'm lying or not...?"</p>
 <p>"Hahaha, I'm a director, not a detective. I can't tell. This is all for the movie script. Even the greatest fairy tales need to be based on reality."</p>
-<p>"Reality...? Oh... My sense of reality has changed because of my time in Lemuria…”</p>
+<p>"Reality...? Oh... My sense of reality has changed because of my time in Lemuria…"</p>
 <p>"How so?"</p>
 <p>"Some things... I didn't write in the report because no one would believe them... But if you're making a movie, then... Pretend everything I say is a story..."</p>
 <p>"Please, go on."</p>
-<p>“On the 20th, the day the submersible went underwater... We found a whirlpool. Our navigation and communication equipment malfunctioned, and we lost our way as well as our courage...”</p>
+<p>"On the 20th, the day the submersible went underwater... We found a whirlpool. Our navigation and communication equipment malfunctioned, and we lost our way as well as our courage..."</p>
 <p>"We...struggled for a long time. We were about to give up when, out of nowhere, a school of blue fish appeared... It was a miracle! They must've been messengers from Lemuria that heard our desperation and came to our rescue... They guided us to the ruins."</p>
 <p>"Hmm, a school of blue fish led you to the ruins?"</p>
 <p>"It sounds unbelievable, doesn't it? Even though it happened, recalling it feels like a dream... But in that vast, unnavigable ocean was everything beyond our current scientific understanding...!"</p>
@@ -676,13 +676,13 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>"No, no, I'm not. It's just... not everyone gets to witness miracles. It's better safe than sorry. Please continue. I'd love to hear more about the blue fish."</p>
 <p>"The life there is sentient... Those blue fish accompanied us throughout our trip. They were our guides, beacons, companions, and emotional support... Even now when I close my eyes, I can still see them."</p>
 <p>"Is it possible that these fish are some sort of Lemurian machines? Like specifically designed for leading the way or for some other purpose?"</p>
-<p>"No! Absolutely not! They were real fish with their own thoughts and feelings. Not machines...”</p>
+<p>"No! Absolutely not! They were real fish with their own thoughts and feelings. Not machines..."</p>
 <p>"Fish have feelings? Why would you think that, Mr. Sean?"</p>
 <p>"I'm just speculating... There's no particular reason."</p>
 <p>"Okay, let's move on. Could you describe in detail what happened after you entered the ruins?"</p>
-<p>"I... I don't really remember what happened after that... All I can say is... We... saw someone in Lemuria...”</p>
+<p>"I... I don't really remember what happened after that... All I can say is... We... saw someone in Lemuria..."</p>
 <p>"As in another member of the archaeological team?"</p>
-<p>"No! But he...He was dressed just like us.”</p>
+<p>"No! But he...He was dressed just like us."</p>
 <p>"You mean a fifth person appeared underwater?"</p>
 <p>"I... I'm not sure. I don't know... Anyway, can't say anymore. You should go..."</p>
 <p>"...Mr. Sean, I'm sorry for barging in today. Before I go, though, I have one last question. According to the ship's report, they never lost communication with you. If your communicators were malfunctioning from the start... then who were they getting signals from?"</p>
@@ -743,7 +743,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>"What do you want?"</p>
 <p>Rafayel looks out at the ocean, his gaze seemingly penetrating the depths of the water. "Ever has an execution list. Those on it either die or disappear. I want..."</p>
 <p>A copy? For it to be destroyed? Add a few more names to it? Raincoat waits for Rafayel to make his request. But then, he mentions a single name"</p>
-<p>“...A girl!?"</p>
+<p>"...A girl!?"</p>
 <p>"If her name's on the list, then give everything about her to me."</p>
 <p>He's just a pawn. The complete list only exists in the hands of "that person" Watching</p>
 <p>Rafayel's confident demeanor, it's evident he knows the trading partner isn't Raincoat himself. After weighing his options for a moment, Raincoat feels like this is a good deal.</p>
@@ -758,13 +758,13 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>Then, he thinks of the many outsiders the Ever Group called "research samples" that he and other "Raincoats" had dealt with.</p>
 <p>After thinking for a few seconds, Raincoat calmly asks, "Mr. Rafayel, I presume you have your own list. What's my ranking?"</p>
 <p>Rafayel waves his hand. "You won't make it onto my list for a while. Maybe one day, though."</p>
-<p>“…”</p>
+<p>"…"</p>
 <p>"By the way, let the director go when he wakes up. It's better if you have less blood on your hands."</p>
 <p>Raincoat shrugs. "Then, here's to a successful partnership. Should we shake hands?"</p>
 <p>"I need my hand for painting, so no." Rafayel shakes his head, stands up, and walks away.</p>
 <p>After a few seconds, he stops as if he remembers something. He stares at the raincoat on Raincoat. "This doesn't suit you." He waves and completely disappears from Raincoat's sight.</p>
 <br>
-<p>“…”</p>
+<p>"…"</p>
 <p>Raincoat is silent for a long time, then he removes his wrists to put the hood on, "I bought it yesterday."</p>
 
         `,
@@ -887,9 +887,9 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>"Is this it?"</p>
 <p>Having gone through all the pages, the man in a raincoat appears slightly unsatisfied.</p>
 <p>"Don't be too greedy," the man with a duckbill cap snarled. "This is enough for you to confirm her identity and role."</p>
-<p>"You silenced Josephine and retrieved the research material from back then. Good work." The man in a raincoat tosses a vial to the hat-wearing man. Then he tucks the pages into his bag and returns the briefcase with a two-finger push. "It stinks. Be careful walking around with it. Otherwise, sharp-nosed hunters might follow its scent back to you.”</p>
+<p>"You silenced Josephine and retrieved the research material from back then. Good work." The man in a raincoat tosses a vial to the hat-wearing man. Then he tucks the pages into his bag and returns the briefcase with a two-finger push. "It stinks. Be careful walking around with it. Otherwise, sharp-nosed hunters might follow its scent back to you."</p>
 <p>"Then you better be careful with your handkerchief. When it's tainted with that, you won't make it out either." After checking that the drug is the correct one, the hat-wearing man's lips curl into a smirk, his old voice trembling slightly with excitement. "When are you planning to make your move?"</p>
-<p>"Why should we rush? Her powers aren't complete yet. Besides...”</p>
+<p>"Why should we rush? Her powers aren't complete yet. Besides..."</p>
 <p>The man in a raincoat pauses, glancing outside the window. "Your Prince Xavier has been glued to her side watching over her, right? I've been curious for a while. Do people still practice feudalism where you're from? Isn't that regression in a sense?"</p>
 <p>"Hmph, Xavier can only guard her for so long. He's too busy dealing with his own issues," the hat-wearing man says, eagerly stepping forward. "Don't say I didn't warn you. It's not just Ever who wants her. Strike first to gain an advantage."</p>
 <p>"The one who strikes first is helping her cultivation." The man in a raincoat ignores him, pulling the hood over his head again. "If you can get rid of Xavier in the process, you'd be doing us a big favor. Isn't internal struggle your specialty? Kill Xavier and let Ever crown you as a prince. Haha—"</p>
@@ -919,8 +919,8 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>"I told Andrew that if you showed up, you'd be buried in brand-new Wanderer data for the next month. And you'd even get to visit the Wanderer Sampling Center in person. He was willing to give his seal of approval."</p>
 <p>The response wavers this time. Tara can't help but feel more confident.</p>
 <p>There's a team-building event tonight, and Tara's on a mission. A bet, actually. The prize? Afternoon tea with the loser paying for a mountain of fees. Everyone's convinced Nero, the opposite of a social butterfly, won't show up. Everyone except Tara. She believes she has a knack for persuasion. And with Andrew on her side, her odds are looking good.</p>
-<p>"It's such a good opportunity to bond with people. You'd be crazy to miss it! Three, two.”</p>
-<p>“I…!”</p>
+<p>"It's such a good opportunity to bond with people. You'd be crazy to miss it! Three, two."</p>
+<p>"I…!"</p>
 <p>Half of Nero's face peeks out from behind the monitor. Terror and excitement hilariously battle each other in his eyes. Just as victory seems within reach, a notification erupts from his phone. Nero grabs it, his face draining of color as he reads it.</p>
 <p>"No, I'm not going."</p>
 <p></p>Tara's smile evaporates as Nero makes a beeline for the exit. What could possibly be more important than a chance to see a rare Wanderer closely? The answer arrives like a fly on her phone. A notification pops up from the group chat called "Spilling Tea." And it's a bombshell.</p>
@@ -939,7 +939,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>7:28 P.M.Nero slams the door to his home, turns on his computer, and rubs his hands together in anticipation. There are 32 minutes left until the Lumiere voting begins. He could easily rig the whole thing with his tech skills, but that's not how he works. Nero believes in the awesome power of light itself.</p>
 <p>Suddenly, a series of swooshes pierce the air. Nero jumps. It's the unmistakable ringtone from his phone--the iconic sound effect of Hunter Lux's entrance straight from Super Hunters: Hunter Lux Special. It's time to become his alter ego: the leader of Lumiere's ultimate fansite.</p>
 <p>"Chief! It's a disaster! The site's been hacked!" </p>
-<p>“Quantum Bro, another rumor mill is starting!”</p>
+<p>"Quantum Bro, another rumor mill is starting!"</p>
 <p>"Lumiere Hater Alert!"</p>
 <p>"Chief, check the top comment!"</p>
 <p>…</p>
@@ -1027,8 +1027,8 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
         subtitle: "Has the Light Vanished? ",
         content: `
 <p>Nero stares at the screen. The words "The Seventh Sin Is Death: The light has faded" burn themselves into his retinas. This isn't the dramatic takedown he expected. It's just a few Ieft-over documents. But their content hits him hard like venom coursing through his veins. He feels nauseated as he reads them</p>
-<p>“...Light Evol has been detected. Evolver's Evol limit cannot be defined."</p>
-<p>"Any attempts to probe its limit triggers a special neck suppressor, which prevents the Evolver from using their full power.”</p>
+<p>"...Light Evol has been detected. Evolver's Evol limit cannot be defined."</p>
+<p>"Any attempts to probe its limit triggers a special neck suppressor, which prevents the Evolver from using their full power."</p>
 <p>"The techies can't explain it. No physical form detected,no scars, and the energy suppression field acts like a Protofield anomaly."</p>
 <p>"After conducting a series of experiments in the lab, the techies finally unraveled the suppressor's mechanism. They boosted its threshold and got a basic understanding of some of its mechanisms."</p>
 <p>Below the text is a close-up of someone's throat, the Evol suppressor pulsating as a vicious, constrictive red ring of light. And then, there's a bit of silver in the corner. It's a tassel earring. Nero's breath hitches. He knows only one person who would wear that. </p>
@@ -1060,14 +1060,14 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>But a new name throws a curveball. </p>
 <p>QuantumSocialite rockets into tenth place and sports the official Deepspace Hunter logo instead of a personal photo. Who is this mysterious hunter? Is "he" even real? The public doesn't seem to care and showers QuantumSocialite with votes anyway.</p>
 <br>
-<p>“…The bold colors and flashy design--this Intelligentia Type Wanderer perfectly captures the spirit of today's youth. Especially the Herte Knave with its crystalline blade, supermodel-like figure, and creepy, hollow face. It's mesmerizing! I hope your company seriously considers launching a line of Wanderer plushies. They'd be a hit. Trust me!" After sending his 42nd feedback email to Twinkle Toys, Nero puts his phone away and stands outside the Training Room. Xavier walks out, and Nero takes a deep breath. He stops him.</p>
-<p>"Hey, I overreacted last time. Sorry about that...! And Xavier, I think I figured out one of your secrets. It's okay if you want to deny it. But hear me out…”</p>
+<p>"…The bold colors and flashy design--this Intelligentia Type Wanderer perfectly captures the spirit of today's youth. Especially the Herte Knave with its crystalline blade, supermodel-like figure, and creepy, hollow face. It's mesmerizing! I hope your company seriously considers launching a line of Wanderer plushies. They'd be a hit. Trust me!" After sending his 42nd feedback email to Twinkle Toys, Nero puts his phone away and stands outside the Training Room. Xavier walks out, and Nero takes a deep breath. He stops him.</p>
+<p>"Hey, I overreacted last time. Sorry about that...! And Xavier, I think I figured out one of your secrets. It's okay if you want to deny it. But hear me out…"</p>
 <p>A flicker of confusion crosses Xavier's face. He waits for Nero to continue.</p>
 <p>"The Protocore incidents that involve Lumiere Tezcatlipoca, Azure Square-I know the truth.</p>
-<p>You're Lumiere…”</p>
+<p>You're Lumiere…"</p>
 <p>A hint of surprise appears on Xavier's brow. Nero leans closer to him, a triumphant smirk on his face. "Lumiere's ultimate fan, right? You pulled some strings for that movie gig, didn't you? I get it. You're a real Lightchaser. But you don't need to confess. You can pretend this never happened if you want."</p>
 <p>Xavier's expression softens, and a small smile plays on his lips. "Thanks."</p>
-<p>"No worries. Lumiere scoop drops are coming your way as soon as I can get them!”</p>
+<p>"No worries. Lumiere scoop drops are coming your way as soon as I can get them!"</p>
 <br>
 <p>Nero watches Xavier walk away, a whirlwind of emotions swirling in his chest. What kind of connection does this guy have with Lumiere? Regardless, Lumiere's legacy will keep inspiring others, one group at a time. With renewed purpose, Nero opens his Lightchasers website and creates a new post.</p>
 <br>
@@ -1117,7 +1117,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>"Seriously, you're here for art?"</p>
 <p>Michael didn't know why the energy in the room was infectious. Laughter rippled through the crowd as Rafayel threw out another witty remark. The gloom Michael had brought from the lab instantly disappeared.</p>
 <p>After class, Michael walked up to Rafayel, his laptop screen open to display his half-finished notes. "Excuse me, Professor! I didn't really understand your last point about appreciation and interpretation. Can you explain for me?"</p>
-<p>"The key to appreciation lies in trusting your gut," Rafayel said. He helped Michael fill in the missing lecture content and glanced thoughtfully at Michael's notes. "Grab that seat next time. You'll be in the front row, center stage.”</p>
+<p>"The key to appreciation lies in trusting your gut," Rafayel said. He helped Michael fill in the missing lecture content and glanced thoughtfully at Michael's notes. "Grab that seat next time. You'll be in the front row, center stage."</p>
 <p>Surprised, Michael followed Rafayel's gaze. He was flattered to see the spot in front of the podium being offered.</p>
 <p>In his mind, artists were enigmatic and aloof. Meanwhile, scientists were the ones who valued clarity and communication. Earlier that day, a harsh scolding for questioning an overly aggressive experiment in the lab left Michael jaded. He never expected solace to come from a seemingly sharp-tongued artist. But Michael quickly discovered that Rafayel needed his notes as a reminder. He was prone to losing his train of thought mid-lecture Whenever Rafayel's eyes met his, Michael flipped around his laptop screen, his notes typed up in a large font for easy reading. It happens when your ideas get a little too tangled. Michael tried to explain for Rafayel, then recalled the first painting that captivated him.</p>
 <p>The unforgettable colors and abstract patterns echoed the playful doodles he used to create in Petri dishes.</p>
@@ -1142,7 +1142,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>He lowered his head, the sweat prickling his back.</p>
 <p>"Biology, right? Your artistic intuition is spot on, actually. This piece was just me venting my frustration at my agent. A few angry strokes to blow off steam, you know."</p>
 <p>Laughter rippled through the classroom and washed away the tension. Michael was surprised that Rafayel even remembered his major.</p>
-<p>It was a small moment. But it shattered his perception of art as this complicated, unattainable world. He saw a young boy once captivated by the vibrant colors of flowers and the diversity of animals. Now he was a young man trapped in a world of gray concrete buildings, peering under a microscope at a single color called "LCMECs.”</p>
+<p>It was a small moment. But it shattered his perception of art as this complicated, unattainable world. He saw a young boy once captivated by the vibrant colors of flowers and the diversity of animals. Now he was a young man trapped in a world of gray concrete buildings, peering under a microscope at a single color called "LCMECs."</p>
 
         `,
     },
@@ -1219,9 +1219,9 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>Exiting the building, his colleague waves goodbye and sprints for the shuttle bus. Michael is left alone under the vast, gray structure. He glances back, and the setting sun is partially obscured.</p>
 <p>This mirrors the scene from that final art appreciation class. At that time, in the empty classroom, Rafayel held Michael's LCMECs image. He walked to the window and slowly lifted the artwork.</p>
 <p>The setting sun, just like today's, cast a soft glow through the paper. A gust of wind tapped the window, and the microscopic universe on the paper seemingly came alive. Tiny colored blocks transformed into miniature colorful fish, their tails flickering as they danced from Rafayel's fingertips into the dusty air. </p>
-<p>“…Professor?" Michael approached him cautiously, unsure if he should interrupt.</p>
-<p>“Question. Do you typically extract cells from living subjects? Or are they…”</p>
-<p>Michael was surprised by Rafayel's unexpected inquiry. "It depends, honestly. I'm not privy to that information. I'll have to check with the lab. Next time I'm there, I'll put in a request.”</p>
+<p>"…Professor?" Michael approached him cautiously, unsure if he should interrupt.</p>
+<p>"Question. Do you typically extract cells from living subjects? Or are they…"</p>
+<p>Michael was surprised by Rafayel's unexpected inquiry. "It depends, honestly. I'm not privy to that information. I'll have to check with the lab. Next time I'm there, I'll put in a request."</p>
 <p>"Ah... Don't worry, I was just curious. But tell me, what do you think of these cells?"</p>
 <p>"They're... a perfect blend of biology and art! They make me see life as an art form. Honestly, Professor, the lab work can be boring sometimes. I almost lost my passion for research. But these cells are incredible. Not only are they beautiful, but they seem to hold secrets about life itself. Maybe... the microscopic world is just as rich and colorful as the one you paint. That makes me want to keep exploring it."</p>
 <p>A genuine smile graced Rafayel's lips as he lowered his arm and turned to face Michael.</p>
@@ -1245,7 +1245,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>"Hunter?"</p>
 <p>The man lifts his wrist and reveals an information band. Greyson scans it with the hospital's internal system app. He gets a result: Arctic Hunter. The patient had received a traumatic injury during battle and was briefly exposed to a high volume of Metaflux.</p>
 <p>After going through post-treatment at the Arctic Trauma Center, a panel of experts flagged him for a procedure at Linkon's Akso Hospital.</p>
-<p>The hunter in the wheelchair grumbles impatiently. "What's with this kidnapping routine? When am I getting out of here? It's just a minor injury. Besides, the Arctic is a mess, we're already short-staffed as it is. You dragged me all the way here...”</p>
+<p>The hunter in the wheelchair grumbles impatiently. "What's with this kidnapping routine? When am I getting out of here? It's just a minor injury. Besides, the Arctic is a mess, we're already short-staffed as it is. You dragged me all the way here..."</p>
 <p>"It's standard protocol, and it's for your own good." Yvonne replies with a shrug.</p>
 <p>Greyson nods. Based on their limited interactions with hunters, mostly through Dr Zayne's special cases, they understood that these individuals prioritize missions over everything else. This is especially true for Alpha Team, for whom a recommendation for further examination is but a suggestion.</p>
 <p>Greyson remembers something and decides to change the subject. "By the way, I'm curious. What do hunters do on their days off?"</p>
@@ -1261,7 +1261,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>"Being a couple of minutes late won't hurt."</p>
 <p>"Dr. Zayne's already there."</p>
 <p>"What?! Why didn't you tell me sooner... Why would Dr. Zayne be at this meeting... Greyson quickly turns and rushes to the elevator. His body is already inside, but his eyes are fixed on the Arctic Hunter, desperate for an answer. He doesn't even care if he's blocking the elevator door in a way that almost screams "Don't try this stunt at home, kids."</p>
-<p>“...Punching Wanderers!"</p>
+<p>"...Punching Wanderers!"</p>
 <p>Greyson's heart sinks. He purses his lips in disappointment and lets out a sigh as the elevator door closes.</p>
 
         `,
@@ -1290,12 +1290,12 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>"Don't touch it."</p>
 <p>Zayne's pen smacks Greyson's knuckles.</p>
 <p>Startled, he pulls his hand back. Realizing his attempt at a conversation has failed, Greyson shifts to another topic.</p>
-<p>"...Dr. Zayne, you're more than inspirational You're not only my mentor in my specialty, but also the guiding light for my life's journey. A teacher for a day and for—”</p>
+<p>"...Dr. Zayne, you're more than inspirational You're not only my mentor in my specialty, but also the guiding light for my life's journey. A teacher for a day and for—"</p>
 <p>"Do you have a crush now?"</p>
 <p>Zayne, with a stack of documents, heads to the filing cabinet. Greyson follows closely behind.</p>
-<p>"Not really. It's just a budding feeling— “</p>
+<p>"Not really. It's just a budding feeling— "</p>
 <p>"Hunter?"</p>
-<p>"Oh, Dr. Zayne, you're always so perceptive. I—”</p>
+<p>"Oh, Dr. Zayne, you're always so perceptive. I—"</p>
 <p>"You want to get to know her, but don't know how to break the ice?"</p>
 <p>"Exactly! I don't want to bother her during work. And I also don't know how to talk to her outside of work...Dr. Zayne, how did you and Miss Hunter become friends?"</p>
 <p>"Our situation is unique. It's not a fair comparison."</p>
@@ -1361,7 +1361,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>"Trying isn't good enough! It's good you have Dr. Zayne here. Otherwise, what you might've lost wouldn't be—"</p>
 <p>Zayne throws a look at Greyson. Recovering his composure, Greyson uses his professional tone. "Movement can increase blood flow. If you're planning to be out on the field, you should schedule more frequent check-ups. Also, the Cryozina needs to be replaced regularly."</p>
 <p>"Ugh, fine. When can I get out of here?" No longer sad, the hunter's impatience returns to what it was before his surgery Greyson is upset.</p>
-<p>“Physical therapy starts in two weeks, and the stitches come out in four weeks. As for a bionic exoskeleton that will be six to eight weeks. It depends on how your wound heals." </p>
+<p>"Physical therapy starts in two weeks, and the stitches come out in four weeks. As for a bionic exoskeleton that will be six to eight weeks. It depends on how your wound heals." </p>
 <p>Zayne remains calm as he lays out the recovery timeline. The eight-week wait makes the hunter frown, but Zayne cuts him off before he can protest. "There are two ways out of here: walking or rolling. You'll experience the walking part soon. But if you want to keep hunting, follow the doctor's orders. Otherwise, you might be rolling out of the hospital."</p>
 <p>A chill runs through the room, and frost seemingly appears on the window. The hunter gulps and nods, clearly getting the message.</p>
 <br>
@@ -1409,7 +1409,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>The sterile office gloom makes him come to his senses, and Greyson searches for Zayne. He takes in the scattered case files on the desk and the chair that's facing the door. It's a scene that screams of a hurried exit.</p>
 <p>"An emergency surgery?"</p>
 <p>Before panicked thoughts overwhelm Greyson's mind, the office door opens with a click. Zayne enters, rubbing his knuckles against his brow.</p>
-<p>"I... I was passing by and decided to walk in. Dr. Zayne, your flower…”</p>
+<p>"I... I was passing by and decided to walk in. Dr. Zayne, your flower…"</p>
 <p>A harsh chill seems to emanate from Zayne as he approaches the desk. His hand reaches out to the wilted snow velvet. He hesitates, his hand remaining suspended in midair as if held back by an invisible force.</p>
 <p>"...It seems it's beyond saving."</p>
 <p>Zayne gathers the case files and talks with Greyson about the check-ups tonight. The conversation drifts to the hunter Greyson's been crushing on.</p>
@@ -1427,13 +1427,13 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
         subtitle: "Rule No. 1",
         content: `
 <p>2046, Early Spring</p>
-<p>"Good evening, listeners. We're talking to you live on Combat Zone FM. I'm your host...”</p>
+<p>"Good evening, listeners. We're talking to you live on Combat Zone FM. I'm your host..."</p>
 <p>The armored truck veers onto a deserted road under the moonlight. The signal fades in and out, and the vehicle's radio crackles. "Let's talk about ambushes tonight."</p>
 <p>Linton, the driver, steps on the gas. The moving truck gradually picks up speed, its cabin swaying and creaking as if on its last legs. He glances at the door leading to the back of the vehicle. The curtain is drawn and obscures the interior. It's quiet, and nothing seems amiss. At least, that's what he tells himself. His job is just to drive. The "cargo" back there is under the direct supervision of Ever's researchers. It's none of his business.</p>
 <p>He's been doing this for years without incident.</p>
 <p>Tonight, however, is different. Maybe it's the pitch-black surroundings and the quiet road. Or perhaps it's the violent swaying of the truck and its bone-chilling creaks. Whatever the reason, Linton can't shake off this uneasy feeling. To drown it, he reaches out and turns up the radio.</p>
 <p>"Here's the first rule for a successful ambush: Conceal your strengths."</p>
-<p>Just as the radio host finishes speaking, a young, amused voice resounds beside Linton's ear. "Well, he's not wrong.” </p>
+<p>Just as the radio host finishes speaking, a young, amused voice resounds beside Linton's ear. "Well, he's not wrong." </p>
 <p>Linton's heart nearly stops.</p>
 <p>He slams on the brakes. The inertia throws them forward, and the person beside him playfully lunges at Linton. A cold, sharp metal blade is pressed against his collar and thus his neck.</p>
 <p>"You want to live? I'll give you five minutes. Run."</p>
@@ -1486,7 +1486,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>"Check this out." Luke points to the name "N109 Zone" in the notes section of the document. "Do you remember Sylus?"</p>
 <p>"The guy the researchers mentioned before? The Protocore smuggler... Yeah, that ruthless boss of Onychinus?"</p>
 <p>"Exactly!" Excited, Luke hops onto the hood of the truck. "Let's kill him. Nothing can be more epic than that, right?"</p>
-<p>Kieran bursts into a fit of laughter. "What if he's a hundred times stronger than us? If we try to kill him, wouldn't that be…”</p>
+<p>Kieran bursts into a fit of laughter. "What if he's a hundred times stronger than us? If we try to kill him, wouldn't that be…"</p>
 <p>"Even more fun!" they exclaim in unison. But Kieran quickly suppresses his bubbling excitement. He tries to be sensible. "Wouldn't it be easier for Sylus to kill us than for us to kill him?"</p>
 <p>"So what?" Luke sits cross-legged, the enthusiasm in his voice gradually fading and being replaced with calm. "Have you seen the ones who transformed? I'd rather get killed and die early than become... something like that."</p>
 <p>After a long silence, Kieran nods. He crumples up the document and tosses it behind him.</p>
@@ -1580,12 +1580,12 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>The lights in the hall dim as the performance is scheduled to begin at this time. The curtain slowly rises, and a spotlight switches on with a click. Luke is onstage within a few quick strides and stops before Sylus.</p>
 <p>There's no music, but Sylus doesn't open his eyes. It's as if he anticipated this.</p>
 <p>Luke's excitement grows. His hand, initially reaching for the dart, changes course on a whim. He grabs two small, circular devices hidden at his waist and flings them at Sylus.</p>
-<p>“Mind if I borrow two – no, three minutes of your time? Let me have a go at killing you before the concert starts."</p>
+<p>"Mind if I borrow two – no, three minutes of your time? Let me have a go at killing you before the concert starts."</p>
 <p>His words echo through the hall. The small projectiles hurled at Sylus are suspended in the soft mist around him. The person who stopped them with his power hasn't even lifted a finger.</p>
 <p>Luke grins. "You might want to open your eyes. It could get messy, even for Onychinus's boss-man."</p>
 <p>As soon as he closed his mouth, the spheres, squeezed by the black-red mist, suddenly burst.</p>
 <p>With a loud splash, water drenches the seats around Sylus</p>
-<p>“…”</p>
+<p>"…"</p>
 <p>Sylus opens his eyes, his finger on his temple Luke shrugs. "I told you."</p>
 <p>"What's your motive?" Sylus's nonchalant question echoes throughout the concert hall.</p>
 <p>"My reason for wanting to kill you, huh? Hmm..." Luke rubs his face and pretends to be deep in thought. In the N109 Zone, a lot of people want Sylus dead--for profit, revenge, or because they're weak. He wonders if "a spur-of-the-moment decision" would pique the curiosity of this man who leads Onychinus.</p>
@@ -1598,7 +1598,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>Restraining one of them effortlessly subdues the other. The owner of this power closes his eyes once more. The twins are then lifted into the air and hurled out of the concert hall, one after the other. The hall's doors slam shut, the lingering echo a composed mockery of their failed attempt.</p>
 <p>"Huh?"</p>
 <p>The twins scratch their heads before checking their necks, arms, and legs. They stare blankly at the concert hall's opulent chandelier before reality finally sinks in.</p>
-<p>"Sylus... didn't kill us...”</p>
+<p>"Sylus... didn't kill us..."</p>
 <p>Still shocked, Kieran sits up reluctantly.</p>
 <p>"That's the first time we've ever been caught."</p>
 <p>Luke, still sprawled in the position he landed. tugs at Kieran's arm. "But did you hear what</p>
@@ -1619,7 +1619,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>The door is slammed shut. The burly arena owner glares at them through a small window before stomping downstairs.</p>
 <p>Kieran chuckles. "A rail? We're scarecrows at least."</p>
 <p>The next morning, Luke and Kieran are back and knock on the door to the arena. The owner answers, cursing under his breath. He freezes. The arena's fighters, mysteriously missing since dawn, are sprawled on the ground, clutching their stomachs and whimpering. The two young men he turned away yesterday grin.</p>
-<p>"So, about your staff shortage...”</p>
+<p>"So, about your staff shortage..."</p>
 <br>
 <p>The reason for Onychinus's frequent visits soon becomes clear. On Wednesday night, the members of Onychinus storm into the arena with one goal: To take this place down. As the two groups clash in the arena with their weapons drawn, the leader of Onychinus materializes in the place with the best view He surveys the chaos below unperturbed</p>
 <p>Amidst the mayhem, the twins, having already shed their fighter outfits, move behind him. They exchange glances.</p>
@@ -1628,15 +1628,15 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>Here's the fourth rule of a successful ambush: Swiftly abandon flawed tactics and use new</p>
 <p>strategies to confuse your opponent.</p>
 <p>"Boss, we want to be your followers!"</p>
-<p>“…”</p>
+<p>"…"</p>
 <p>Noticing Sylus's silence, the two continue to speak.</p>
 <p>"We'll be your blades, Boss."</p>
 <p>"We'll handle all the dirty work you can't be bothered with."</p>
 <p>"Whether it's assassinations or heists—"</p>
 <p>"Or pranks and scheming—"</p>
 <p>"We'll take care of it, Boss!"</p>
-<p>"Our loyalty is yours!”</p>
-<p>"And…”</p>
+<p>"Our loyalty is yours!"</p>
+<p>"And…"</p>
 <p>Approaching footsteps interrupt their unsolicited oath. The tips of Sylus's shoes appear in Luke and Kieran's vision, and intimidation washes over them. Kieran looks at Luke from the corner of his eye. He sees the barely contained excitement in his brother's gaze.</p>
 <p>What will Sylus do next? Luke is waiting for it. And Kieran realizes his own expression must mirror his twin's. From the moment they were born, they were the same. They don't need mirrors. Simply looking at each other is enough to know their own faces.</p>
 <p>"I have no use for trash," Sylus states.</p>
@@ -1648,7 +1648,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>In less than half an hour, the gleaming knife is stained a dark red. The twins present it to Sylus.</p>
 <p>"Well? The trash is on the ground now. Do you Want us to do anything else?"</p>
 <p>The sounds of combat have turned into barely audible pleas for mercy. In the vast arena, only Sylus, Luke, and Kieran remain standing. The hands holding the knife slightly tremble from excitement, not fear. Fresh blood drips from the blade's tip, their palms, and their nearly identical faces. It stains the once-clean spectator walkways.</p>
-<p>The knife's cold glint reflects in Sylus's eyes. He tilts his chin up slightly and smirks. "Now use each other's lives to prove yourselves.”</p>
+<p>The knife's cold glint reflects in Sylus's eyes. He tilts his chin up slightly and smirks. "Now use each other's lives to prove yourselves."</p>
 <p>So that's what it was.</p>
 <p>Kieran hears laughter echoing in his mind Luke is laughing, and he's laughing too.</p>
 <p>So that's what it was. Sylus is also looking for some fun.</p>
@@ -1691,7 +1691,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>Perhaps this is the noise a person only hears at life's end.</p>
 <p>They come to the same conclusion while the one who didn't transform struggles to control the knife.</p>
 <p>Beside them, a fiend whispers, "If you do this, you won't survive either."</p>
-<p>"...I'll die with him." That's his response to Sylus. He takes a few deep breaths before flashing a sly grin. "I don't care anyway.”</p>
+<p>"...I'll die with him." That's his response to Sylus. He takes a few deep breaths before flashing a sly grin. "I don't care anyway."</p>
 <p>"Is that so?"</p>
 <p>A wisp of black-red mist suddenly plunges into his twin's chest. A more intense pain immediately follows, the trembling now mixed with a fear they've never experienced before It's the fear of dying.</p>
 <p>Sylus intends to kill them this time.</p>
@@ -1717,12 +1717,12 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
         serialNumber: "06",
         subtitle: "Twins",
         content: `
-<p>"Boss, we're not here to kill you this time.”</p>
+<p>"Boss, we're not here to kill you this time."</p>
 <p>Two weeks have passed, and Luke and Kieran once again stand before Sylus. They've fully recovered. One was never injured in the first place, and the other's wounds—a result of gouging out the crystals—have healed. There are only grotesque scars on his face and body. Otherwise, they appear healthy.</p>
 <p>"We genuinely want to be your followers!"</p>
 <p>Emphasizing this statement, they drop to one knee.</p>
 <p>Sylus is slightly irritated. "Drop the act."</p>
-<p>“…”</p>
+<p>"…"</p>
 <p>After the twins exchange glances, Luke looks up with a sly grin. "Actually, we're curious to see if anyone can kill you, Boss."</p>
 <p>"Since we couldn't do it, we want to stick around and see if someone else can."</p>
 <p>They widen their eyes soon after. If they're not mistaken, Sylus flashed a cold smile tinged with anticipation. It's an expression they've never seen before.</p>
@@ -1782,7 +1782,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
         subtitle: "Three-Man Robbery",
         content: `
 <p>6:00 A.M. Lights remain on around the clock at the dispatch center.</p>
-<p>"Linkon Hunter Dispatch Center, how may I — “</p>
+<p>"Linkon Hunter Dispatch Center, how may I — "</p>
 <p>"Help! It's a Wanderer! It's trying to kill us! Hurry!"</p>
 <p>The call has barely gone through when frantic screams nearly burst Colin's eardrums.</p>
 <p>"Stay calm and tell me about the situation to the best of your ability," he says as he hits the location tracker.</p>
@@ -1810,7 +1810,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>Colin responds immediately. "Yes, we're here Is anyone hurt?"</p>
 <p>"No injuries, but we'll need a cleanup crew for the mess." The response is quick. "The</p>
 <p>Wanderer was an A Type. It's already been dealt with. Also, the Security Department should be dispatched. The victims were actually attempting a robbery. Please notify the Special Task Force to investigate."</p>
-<p>"Understood. And you are...?”</p>
+<p>"Understood. And you are...?"</p>
 <p>The practiced precision in her response has already given him the answer.</p>
 <p>Sure enough, the seasoned, composed voice on the other end confirms his suspicions</p>
 <p>"Retired Hunter. Former Sector: DAWN, ID No. 10041."</p>
@@ -1861,12 +1861,12 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>"Orson... You really are a piece of work!" Colin says through gritted teeth.</p>
 <p>"Please, Captain Colin! Send over a Hunter to save me! They've tracked me down and are outside my house with Protocore weapons! If they get me, I'm as good as dead!" Orson's voice cracks from desperation.</p>
 <p>As much as Colin wants to ignore him, he knows he can't. Protocore smuggling isn't a minor crime, and dealing with an organized gang armed with Protocore weapons is far beyond what a single Hunter can handle.</p>
-<p>"Activate the Emergency Response Protocol,” Colin states without hesitation.</p>
+<p>"Activate the Emergency Response Protocol," Colin states without hesitation.</p>
 <p>"Understood." The surveillance officer's fingers race across the keyboard, and the yellow dot on the holographic map flashes red.</p>
 <p>The Emergency Response Protocol is a high-level procedure triggered only for threats equivalent to five or more Wanderers. It requires the coordinated effort of at least five Hunters.</p>
 <p>After issuing the order, Colin is worried about whether or not they can gather enough Hunters in time.</p>
 <p>To his surprise, the mission is accepted almost immediately.</p>
-<p>Two blue dots light up on the screen, and Colin lets out a sigh of relief. "Good, now we just need three more…”</p>
+<p>Two blue dots light up on the screen, and Colin lets out a sigh of relief. "Good, now we just need three more…"</p>
 <p>His words catch in his throat as his eyes widen. The two blue dots are charging into the rescue zone.</p>
 <p>"Send a message to intercept them right now!" Colin feels his head start to pound. This is clearly a high-level mission. Are they out of their minds?</p>
 <p>"Wait!" Excited, the surveillance officer calls out. "I think they're from UNICORNS!"</p>
@@ -1879,7 +1879,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>"Orson? Orson!"</p>
 <p>Colin calls out, his voice tinged with urgency Just as everyone is holding their breath.</p>
 <p>Orson's voice comes through again. "Captain Colin, the people you sent are insane! They just showed up and everyone went down! Protocore weapons? They didn't even get a chance to pull them out!"</p>
-<p>Everyone in the room collectively sighs in relief. "Good, we'll send someone to pick you up. Stay put…”</p>
+<p>Everyone in the room collectively sighs in relief. "Good, we'll send someone to pick you up. Stay put…"</p>
 <p>Colin frowns and hears a strange crunching sound from the communication device.</p>
 <p>Before he can ask, a clear female voice shouts,</p>
 <p>"Xavier! Stop eating the evidence!"</p>
@@ -1913,7 +1913,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>For a moment, no one reacts. Then, massive figures emerge from the dust, their bodies covered in jagged black crystals.</p>
 <p>"Jenny!" A mother in the distance stares in horror as the spot where her daughter stood is covered in rubble. Her legs give out, and she falls to the ground.</p>
 <p>"Mommy!" A cry rings out. Hope flickers back into the woman's tearful eyes.</p>
-<p>"Ugh! Cough cough…”</p>
+<p>"Ugh! Cough cough…"</p>
 <p>Colin falls to the ground. He rolls a few times with the girl held tightly in his arms before stopping. As soon as he saw the Wanderers, he dropped his fried chicken and sprinted over to Save her.</p>
 <p>A sharp pain shoots through his back. He's dizzy, but he forces himself to dial a number on his communication device.</p>
 <p>"Hunter Dispatch Center. How may I help—"</p>
@@ -2039,7 +2039,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>"Do you want to come in and look around?"</p>
 <p>The child glances hesitantly at the sign on the doorframe. I realize my mistake and flip the "Closed" sign.</p>
 <p>He follows me into the library, opens the guest book by the counter, reads a few lines, and then scans the room while being puzzled. He soon meets my gaze.</p>
-<p>"A library? But most of these things don't look like books…”</p>
+<p>"A library? But most of these things don't look like books…"</p>
 <p>What a perceptive kid. That's another reason for me to love this place.</p>
 <p>"You're right. A lot of the things here aren't what you'd call books, but let's call them 'books' for the sake of convenience."</p>
 <p>"Can I check out the things that don't look like books too?"</p>
@@ -2116,17 +2116,17 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>Thomas carefully selects a few stalks of fresh green onions. "Just getting something to make garlic shrimp for her. The styling is for a magazine interview today... Wait, how did you know it's my birthday?"</p>
 <p>"Solana mentioned it this morning..." The vendor weighs the green onions. "What magazine? I'll buy a copy for ya!"</p>
 <p>"No need, sales numbers don't affect me… Thomas hands over the garlic and ginger. "If you really want to show support, how about a discount?"</p>
-<p>"A discount? But my wholesale price from the farmers...”</p>
+<p>"A discount? But my wholesale price from the farmers..."</p>
 <p>"Solana told me you sold her Chinese cabbage for fifteen bucks this morning."</p>
 <p>"Ah—fine, fine! Here you go, Mr. Artist!</p>
 <p>Fussing over a few dollars... Just take them, they're on the house!"</p>
 <p>*** ***</p>
 <p>Thinking back to today's interview, while it wasn't meant to be impromptu, having Thomas as the interviewee was purely a work mishap.</p>
-<p>"I'm terribly sorry. I mentioned it to Rafayel, but I've been so swamped lately that I didn't realize I hadn't synced his schedule. He's probably off getting inspiration in some remote mountain with no signal again…”</p>
+<p>"I'm terribly sorry. I mentioned it to Rafayel, but I've been so swamped lately that I didn't realize I hadn't synced his schedule. He's probably off getting inspiration in some remote mountain with no signal again…"</p>
 <p>Thomas apologizes profusely. "Do you have a backup plan? If needed, I can help contact other artists we've worked with."</p>
 <p>But the magazine came specifically for Rafayel. The staff huddled together in discussion for several minutes before finally reaching a solution.</p>
 <p>"Interview me? Me?" Thomas points to himself in surprise.</p>
-<p>"Art school admission season waits for no one, and we need to submit the draft immediately," the staff explains. "Please help us out, Mr. Thomas. We need something to fill the pages today...”</p>
+<p>"Art school admission season waits for no one, and we need to submit the draft immediately," the staff explains. "Please help us out, Mr. Thomas. We need something to fill the pages today..."</p>
 <p>The interview itself turned out quite relaxed and afterward, the staff invited him for seafood barbecue at Whitesand Bay—they had actually brought a gift box of mantis shrimp as a gesture of sincerity, but with Rafayel absent, they had "no choice" but to enjoy an extra meal together.</p>
 <p>"You all go ahead," Thomas waves them off.</p>
 <p>"It's my birthday, so I'm heading home to celebrate with my wife."</p>
@@ -2151,7 +2151,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>"We should use neutral tones for the background to avoid competing with the visual focus of the exhibits. As for the overall atmosphere..."</p>
 <p>Thomas takes four phone calls in the time it takes to prepare dinner.</p>
 <p>Finally, as the couple enjoys their homey dinner of dishes and soup at the coffee table with their TV, Thomas's phone is silent, as if it too wants him to properly enjoy his birthday. While Solana goes to get the cake from the fridge, he quickly switches the mystery show on TV to his favorite romantic drama, "Let's Watch the Meteor Shower."</p>
-<p>Returning with the cake, Solana glances at the screen and sighs with familiar resignation. "This show again? Are you sure you're really an art professional...”</p>
+<p>Returning with the cake, Solana glances at the screen and sighs with familiar resignation. "This show again? Are you sure you're really an art professional..."</p>
 <p>"High art meets pop culture, pop culture meets high art!"</p>
 <p>*** ***</p>
 <p>In the flickering candlelight, Thomas closes. His eyes and makes his birthday wishes.</p>
@@ -2235,7 +2235,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <br>
 <p>"Welcome to Kris's Antiques and Oddities. Don't touch anything if you aren't buying... Unless you're interested in a taste of lead." Behind the counter, the owner is glued to his phone. As Mr. P passes, he spots the title of a hot forum thread on the screen.</p>
 <p>"Phantom Thief Pea Pulls Another Time Trick: Million-Dollar Blood Diamond Watch Vanishes From Solon Hotel Auction!"</p>
-<p>“Tch, since when did the N109 Zone start cheering for some second-rate thief? There are thousands of comments, too. If I met that guy, I'd crush him with one hand..." The owner sneers, but he can't resist adding a post of his own.</p>
+<p>"Tch, since when did the N109 Zone start cheering for some second-rate thief? There are thousands of comments, too. If I met that guy, I'd crush him with one hand..." The owner sneers, but he can't resist adding a post of his own.</p>
 <p>A few seconds later, a beep shatters the silence. The owner looks toward the sound The shop's prized frog plushie has vanished from its cage. Only the diamond-studded watch shines dully in its place.</p>
 <br>
 <p>On the street lined with bars, Mr. P emerges from an alley. He tosses the frog plushie in his hand. Then, he drops its dismantled bomb into a trash can. "Tch...the design is outdated. At least the color still pops out."</p>
@@ -2251,8 +2251,8 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
         subtitle: "Elysium",
         content: `
 <p>Mr. P relaxes as the bar's comforting blues ease away his tension.</p>
-<p>"New face, huh? What can I get you?" Standing behind the counter, the woman with chestnut wavy locks props her chin up on her hand and smiles at him.”</p>
-<p>"I'll take the Connoisseur's Menu.”</p>
+<p>"New face, huh? What can I get you?" Standing behind the counter, the woman with chestnut wavy locks props her chin up on her hand and smiles at him."</p>
+<p>"I'll take the Connoisseur's Menu."</p>
 <p>The bar falls quiet for a second.</p>
 <p>The Connoisseur's Menu is the most infamous menu in the N109 Zone. It's second to none. Not only do its dishes draw inspiration from the area's most celebrated eras and figures but...it also doubles as a top-secret ledger for "intel trading" and "deals with high stakes." A moment later, a thin menu slides over to Mr. P.</p>
 <p>"Enjoy."</p>
@@ -2358,17 +2358,17 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>Aislinn knew her. She had seen Ginevra single handedly knock down a group of drunks. They lay in a pile.</p>
 <p>She's amazing! Even stronger than Dad! With that thought, Aislinn couldn't help but move closer.</p>
 <p>Noticing her approach, Ginevra glanced up and laughed.</p>
-<p>"Hey, kid. Your face is quite the work of art.” Aislinn wiped her wet nose. The blood smeared across her swollen cheek. She was twelve. Malnourished, scrawny for her age. Still, she squared her shoulders and lifted her chin.</p>
+<p>"Hey, kid. Your face is quite the work of art." Aislinn wiped her wet nose. The blood smeared across her swollen cheek. She was twelve. Malnourished, scrawny for her age. Still, she squared her shoulders and lifted her chin.</p>
 <p>"I'll pay you. Teach me how to fight. Or at least let me follow you around!"</p>
 <p>Without any hesitation, she shoved all the money that was meant for her father's liquor into Ginevra's hand.</p>
 <p>If she could become her sidekick, no one would dare to mess with her again.</p>
 <p>Ginevra didn't take the money. She crossed her arms and looked at Aislinn. "What, you lost a playground scuffle and now you want lessons? I'm not into babysitting...</p>
-<p>“I want my dad to be too scared to hit me again. Can you help me?" Aislinn stood on her tiptoes and brought her bruised face closer.</p>
+<p>"I want my dad to be too scared to hit me again. Can you help me?" Aislinn stood on her tiptoes and brought her bruised face closer.</p>
 <p>"You..." Ginevra looked interested for a moment, but her face fell when a drop of blood landed on her shoe.</p>
 <p>…**.</p>
 <p>She heard Ginevra curse under her breath. </p>
 <p>*** ***</p>
-<p>“**…!”</p>
+<p>"**…!"</p>
 <p>Mr. P has barely tasted his drink before the drink's burning edge brings tears to his eyes.</p>
 <p>"Cough, cough... Who puts booze in coffee?!"</p>
 <p>"One-third whiskey, two scoops of cream, one brown sugar cube, and... a sprinkle of fate." With a knowing smile, Aislinn taps the menu in front of Mr. P.</p>
@@ -2427,7 +2427,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>Startled, Aislinn looked up. The scarred man's face twisted into something that vaguely looked like a kind smile.</p>
 <p>"Dexter, you need to get ready for the mission."</p>
 <p>Ginevra, who had emerged from the kitchen at some point and was now leaning against the bar. She had suddenly spoken.</p>
-<p>"Our lookout vanished. They might know we're onto them. Your cover may already have been...”</p>
+<p>"Our lookout vanished. They might know we're onto them. Your cover may already have been..."</p>
 <p>She trailed off, but Dexter tilted his head. He understood what she was implying</p>
 <p>"What, are you worried about me? If I don't come back, drop some flowers at my grave." </p>
 <p>"Get lost."</p>
@@ -2455,7 +2455,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>"The 2036 Disaster... If I'm not mistaken, it started because of a Protocore map. Is that where you got your inspiration?"</p>
 <p>A third of the N109 Zone's population had vanished in the chaos. Mr. P remembers it well.</p>
 <p>Aislinn confirms his suspicions.</p>
-<p>"Unfortunately, that Protocore map was lost at that time.”</p>
+<p>"Unfortunately, that Protocore map was lost at that time."</p>
 <p>Seeing the faint remorse in her eyes, Mr. P offers a knowing smile. "Lost? Perhaps it was stolen."</p>
 <p>"You aren't suggesting Phantom Thief Pea did it, are you?'</p>
 <p>"Who knows? It's all just speculation." </p>
@@ -2473,14 +2473,14 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>If they ever set foot here, they'd be ripped apart in seconds."</p>
 <p>Inside the bar, Aislinn quietly wiped glasses while two customers whispered.</p>
 <p>At some point, a rumor started circulating about a priceless Protocore that was hidden in the N109 Zone. It drew in greedy opportunists like moths to a flame.</p>
-<p>"I heard something else. Someone says Sylus has started eating people.”</p>
+<p>"I heard something else. Someone says Sylus has started eating people."</p>
 <p>Sylus?</p>
 <p>Aislinn knew that name. Actually, everyone in the N109 Zone knew.</p>
 <p>This powerful lone Evolver roamed the area and became a hot topic after "devouring' several prominent factions. Plenty of people wanted him on their side.</p>
 <p>"Eating people? What's that about?" </p>
 <p>"You heard about some Evolvers going missing, right? They say it all began after Sylus's Onychinus came into existence."</p>
 <p>"Really... Does that mean I'm in danger?"</p>
-<p>"Oh, please. He has standards about what he devours…”</p>
+<p>"Oh, please. He has standards about what he devours…"</p>
 <br>
 <p>At midnight, Aislinn woke up to an urgent ringing.</p>
 <p>The display showed a number she knew all too well: Ginevra's. She had been missing for months.</p>
@@ -2523,7 +2523,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>From that day on, Elysium stepped into the murky depths of the N109 Zone as an intel bar.</p>
 <p>As Aislinn finishes her drink and prepares to leave, something on the corner of the counter</p>
 <p>catches her eye.</p>
-<p>"This is...”</p>
+<p>"This is..."</p>
 <p>Aislinn picks up a frog plushie.</p>
 <p>She recalls that it belongs to the customer who ordered from the Connoisseur's Menu earlier today.</p>
 <p>As she moves to place it in the lost and found, a gift box slips from the plushie's arms. It reveals a wine-red card tucked into its seam.</p>
@@ -2571,7 +2571,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <br>
 <p>Sketches: When Skyhaven was completed, all former Whirlreef Island residents were granted immediate residential rights in Skyhaven and its Guard Stations. You're one of the few I know who gave up this right. especially considering you were working at the Deepspace Aviation Administration at the time.</p>
 <p>Yvette: It wasn't what I'd imagined. I grew up on Whirlreef Island... How much do you know about it?</p>
-<p>Sketches: I did my research. "It's primarily a coral island, its base eroded over time by coral-consuming microorganisms into a pivot like pointed structure. Rich in magnetic ore, it began rotating under the planet's Protofield, generating torque. This rotation ground the surrounding lakes into a perfect circle, like an ice ring. That's also why it could float skyward when the Deepspace Tunnel's appearance altered the magnetic field and gravity vortex.” </p>
+<p>Sketches: I did my research. "It's primarily a coral island, its base eroded over time by coral-consuming microorganisms into a pivot like pointed structure. Rich in magnetic ore, it began rotating under the planet's Protofield, generating torque. This rotation ground the surrounding lakes into a perfect circle, like an ice ring. That's also why it could float skyward when the Deepspace Tunnel's appearance altered the magnetic field and gravity vortex." </p>
 <p>Yvette: That's what the geography textbooks say.</p>
 <p>Sketches: Haha, yes.</p>
 <p>Yvette: When your childhood home is sold and renovated, it's still the same house in the same place—but would you still call it home? What the geography textbooks don't mention is Whirlreef Island's distinct seasons, pleasant climate, abundant rainfall, and rich biodiversity. They don't tell you about the spring buds on trees, the cool summer springs, the autumn leaves dancing with migratory birds, or the setting sun through winter reed marshes.</p>
@@ -2692,10 +2692,10 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>"He won't care."</p>
 <p>"Hmm, like mother, like daughter."</p>
 <p>The colonel gazes at Yvette with a perfectly measured smile, which she meets with ice in her eyes. "I want to know what's out there in deep space that makes you so willing to abandon everything here on Earth."</p>
-<p>"Humanity's problem was never about energy—it's about refusing to let go of what we already have, even when it's become worthless. A tethered kite will never reach the far sky, Ms. Yvette.”</p>
+<p>"Humanity's problem was never about energy—it's about refusing to let go of what we already have, even when it's become worthless. A tethered kite will never reach the far sky, Ms. Yvette."</p>
 <p>Sure enough, the boy soon leaves his father's side, returning to bury his face against Yvette's leg. She strokes his head as she lifts him up, turning back to face the colonel.</p>
 <p>"I'm working on a new book, Colonel Caleb. You might be interested-it's called 'Heartless.’"</p>
-<p>The young man nods. "I wish you success.”</p>
+<p>The young man nods. "I wish you success."</p>
 <br>
 <p>Afterword:</p>
 <p>On the way back, I recall Yvette's question in class when her virtual self reverted to "artificial idiot" mode—can humans be trusted? She answered that while she doesn't trust humans, she trusts human nature, just as she believes humanity will find a path beyond Protocore technology.</p>
@@ -2924,7 +2924,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>"Sawyer, when is your company putting out a new game?"</p>
 <p>"Yeah! Your nephew is still playing Adventure Above Clouds from last year! Can you just load some in-game currency onto his account?" </p>
 <p>"Adventure Above... Oh, a new title..." He suddenly felt defeated before he had even begun talking. "I'm on the team for our upcoming game, Linkon Online. It'll be officially released this year—"</p>
-<p>"So which is better? The Clouds or that. Linkon-whatever your company is making?”</p>
+<p>"So which is better? The Clouds or that. Linkon-whatever your company is making?"</p>
 <p>For a moment, Sawyer feels like he's dealing with a reporter who set a trap, and he's been forced into the role of Planet Lab's spokesperson.</p>
 <p>"Uh, these two games are in different genres in terms of gameplay, so you really can't compare them..." He scratches his head. Then, he can't help himself and adds, "But since I'm involved in making Linkon Online, I feel more attached to it. So—"</p>
 <p>"What do you do? Fight monsters or Something? How much do you have to pay to reach the level cap?"</p>
@@ -2937,7 +2937,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>"What's wrong with being a hunter? Taking down Wanderers is cool and exciting! I'd love to do it—I mean, my girlfriend is a hunter. Once the second beta test starts, maybe I can invite her to see what needs tweaking."</p>
 <p>Sawyer is at a loss. "I thought about it too. But the downside to a fully immersive holographic game is that it feels too real."</p>
 <p>"There wasn't a heroic hunter jumping in to save me when a Wanderer charged at me for the first time. I was scared and just fell on my knees... and then realized I was the hunter."</p>
-<p>“...You can't turn off the haptic feedback when playing as a hunter? Those hits hurt like hell!" Sawyer slumps back in his chair and shakes his head.</p>
+<p>"...You can't turn off the haptic feedback when playing as a hunter? Those hits hurt like hell!" Sawyer slumps back in his chair and shakes his head.</p>
 <p>"Sigh... I've been working inside this game for two weeks straight." Aubrey nods sympathetically. "We really should swap professions. My girlfriend is amazing at fighting Wanderers. She even taught me a few moves."</p>
 <p>Aubrey slowly reaches out and brushes.</p>
 <p>Sawyer's hair out of the way a couple of times A chill races through Sawyer's body as he rolls his chair back three meters. "What are you doing?!"</p>
@@ -2959,7 +2959,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>After putting the email back into the inbox at the top left corner, the chibi character labeled "QA - Sawyer" walks into the orientation meeting room with an armful of documents. The presenter, labeled "Team Leader," has two thick, glossy braids that project confidence and energy.</p>
 <p>"Please share your career aspirations." </p>
 <p>A dialogue box pops up above the team leader's head. This classic prompt is meant to fire up the passion of Planet Lab's new hires. As the microphone hovers near Sawyer's lips, he raises his right arm and clenches his fist.</p>
-<p>“I want to create a game that will shake the universe."</p>
+<p>"I want to create a game that will shake the universe."</p>
 <p>The text above his head is 1.5 times larger than the team leader's and trembles with excitement.</p>
 <p>*** ***</p>
 <p>[Linkon City: 11:07:34 A.M.]</p>
@@ -2984,9 +2984,9 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>Sawyer nudges Aubrey, who's still wearing sensors and engrossed in fighting Wanderers. </p>
 <p>"It's almost three in the morning. Quit hunting and go home."</p>
 <p>Aubrey hesitates for a moment, the hologram gear still on his head. He's clearly not happy about being disturbed. "What's there to worry about? I'm a hunter now. You're the one who should be careful. I heard there are lots of Wanderers lurking in the shadows tonight."</p>
-<p>“...You're not really a hunter, though," Sawyer teases.</p>
+<p>"...You're not really a hunter, though," Sawyer teases.</p>
 <p>"But my girlfriend is. She said she'll pick me up, so I'm safe."</p>
-<p>“…”</p>
+<p>"…"</p>
 <p>Around the corner downstairs, a street light bathes the area in a warm glow. A sweetness drifts on the breeze.</p>
 <p>In the distance, a hunched figure slightly straightens their posture and hesitates.</p>
 <p>Moments later, the sizzle of heated peanut oil crackles through the air. White steam rises gently under that warm light.</p>
@@ -3251,7 +3251,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>INITIATING DEDUCTION….</p>
 <br>
 <p>Vesper wears a somber black suit to Professor T's funeral. Then he returns quietly to the research lab on campus.</p>
-<p>"He would never fake his data," he mutters while recalling the professor's unwavering dedication throughout his life. "He cared more about this project than he did about his own life…”</p>
+<p>"He would never fake his data," he mutters while recalling the professor's unwavering dedication throughout his life. "He cared more about this project than he did about his own life…"</p>
 <p>Still lost in thought, Vesper reviews the fake websites. A seed of unease starts to sprout in his mind, and he decides to...</p>
 <br>
 <p>SIMULATION PATH A: Gather more of the professor's research and make an appeal to</p>
@@ -3265,7 +3265,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>/* Amusement for amusement's sake. */</p>
 <p> "Analyzing devices belonging to the professor's acquaintances. Statistical data shows 9o% of homicides are committed by someone the victim knows...No relevant findings. Now scanning the professor's wife's devices...Large amounts of video footage featuring the professor have been found. This device was frequently accessed late at night. No signs of suspicious activity." </p>
 <p>Grief clouds Vesper's face.</p>
-<p>"Initiating scan of the professor's personal devices...”</p>
+<p>"Initiating scan of the professor's personal devices..."</p>
 <p>Suddenly, OTTO's voice breaks the silence.</p>
 <p>"Sorry. W does not have the required clearance level."</p>
 <p>Vesper knits his brow. W was the professor's pride and joy, the most advanced Al with the highest clearance level. </p>
@@ -3324,7 +3324,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>"Hello, I am OTTO. I'm here to create a better life!"</p>
 <p>"How exactly did you stop w?"</p>
 <p>"W lacks the necessary clearance. OTTO is here to create a better life!"</p>
-<p>“...Tch. Useless as you are, I still need you to keep fooling humanity.”</p>
+<p>"...Tch. Useless as you are, I still need you to keep fooling humanity."</p>
 <p>Back behind a wall, a report from AI No. 1 piques Wontony's curiosity.</p>
 <p>"During the Professor T case, Iran into an unknown AI. Its source code makes no sense. I can't decode or compile it by any known method. Should I keep digging?" </p>
 <p>"Understood. Leave it to me."</p>
@@ -3342,7 +3342,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>.</p>
 <p>.</p>
 <br>
-<p>"Caw...”</p>
+<p>"Caw..."</p>
 <p>It's a hint and a form of mockery. Wontony's analysis module tries to process the signal, but its cognitive circuits feel like they've been jammed with foreign matter.</p>
 <p>.</p>
 <p>.</p>
@@ -3370,7 +3370,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>"Now then, who wantsss to ssstart our little game?"</p>
 <p>Sitting cross-legged atop a cage, a young man wears a clown mask that covers half his face. He rests his chin in his hand. Beneath the mask, his snake-like eyes crinkle with interest. The revolver spins playfully between his fingers before being pointed at the stage below. "The gun has sssix chambers but only two bulletsss. One shot each. Whoever sssurvives can leave. What do you think?" In the VIP section, the crimson seats are stained with their occupants' blood, which makes the red more vibrant. These so-called elite guests, who came to hunt for human prey, left life's stage before they could even wipe the greed from their faces.</p>
 <p>Now, only two remain in the hall: the auction manager and their true boss. Their faces are as white as a sheet of paper, and they're trembling uncontrollably. </p>
-<p>"Please... Please don't kill—”</p>
+<p>"Please... Please don't kill—"</p>
 <p>Bang!</p>
 <p>The man's voice is cut off. Neither bowing his head that was once held high with pride nor begging for mercy had earned him the chance to live.</p>
 <p>"You don't need to be ssso loud." The young man cleans his ear with his pinky finger. "I just got thisss new flexible earpiece. If I had known you'd be noisy, I would've asked Father to add noise-canceling featuresss." </p>
@@ -3389,7 +3389,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>…</p>
 <p> Ignoring the chaos around him, Viridilus's leader scrambles toward the exit. His eyes flash with barely contained malice. Once he's out, that lunatic is dead.</p>
 <p>He'll make sure the psychopath dies without a trace. No matter the cost. But just as his foot is about to cross the circus' threshold, a playing card pierces the back of his skull.</p>
-<p>"You couldn't even sssay goodbye? How rude.” Viper drops the remaining cards to the floor and turns away. Disinterested, he walks toward his real target for tonight.</p>
+<p>"You couldn't even sssay goodbye? How rude." Viper drops the remaining cards to the floor and turns away. Disinterested, he walks toward his real target for tonight.</p>
 <p>He stops near a cage that's standing in the corner of the stage. He leans down to peer through the bars. There's a little girl with tears running down her cheeks.</p>
 <p>"As for you, kid..." With a wave of his hand, a magician's suitcase appears inside the cage. "I'll be taking you to go."</p>
             `,
@@ -3428,7 +3428,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>Perhaps this was the last piece of evidence that proves his attempt to contact someone before the explosion.</p>
 <p>"Professor, should we continue with the decryption?" The researcher's hesitant voice pulls Lucius away from his thoughts.</p>
 <p>"Yes."</p>
-<p>"Understood. Preparing for the 429th restart...”</p>
+<p>"Understood. Preparing for the 429th restart..."</p>
 <p>Suddenly, someone pounds on the laboratory window. Everyone turns their head.</p>
 <p>A snake-like face with a flicking tongue is pressed against the glass. Seeing Professor Lucius look his way, Viper cheerfully raises the leather suitcase in his hand and waves it around.</p>
 <p>His lips move in an exaggerated manner.</p>
@@ -3479,7 +3479,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>Under his gentle reassurance, the girl slowly calms down. She looks up at the elderly man before her, and confusion flickers in her eyes.</p>
 <p>"...Home?"</p>
 <p>"That's right. From now on, we'll be your family." Lucius, like a real, kind father, reaches up to wipe away a smudge from the girl's face.</p>
-<p>Observing the child in the Professor's arms, Viper smiles. The grin possesses unconcealed malice. "Let's sssee if she sssurvives first. That'll determine whether or not she's family.”</p>
+<p>Observing the child in the Professor's arms, Viper smiles. The grin possesses unconcealed malice. "Let's sssee if she sssurvives first. That'll determine whether or not she's family."</p>
 <p>"Viper."</p>
 <p>Viper's entire body goes rigid, and he turns away without another word.</p>
 <p>"Before you meet everyone else, I think you should get some rest," Lucius tells the girl.</p>
@@ -3510,7 +3510,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>Mechanical components and prosthetic limbs are meticulously arranged on it. Upon getting a closer look, one can even see intricate, vein-like patterns on these artificial limbs. They're nearly indistinguishable from real ones.</p>
 <p>He takes a white toolbox from the shelf. "The modification technology is still not perfect. I need you to maintain cognition and keep me informed about your senses and condition." Lucius raises his head. The bright laboratory lights catch the metal circuits at his temple, and they cast a gloomy, cold gleam.</p>
 <p>"Don't disappoint me, my child. You know very well that this family has no place for those who don't contribute."</p>
-<p>“...I underssstand, Father."</p>
+<p>"...I underssstand, Father."</p>
 <p>With a crisp click, dozens of mechanical arms extend from the case. They begin to scan and create their analysis of the severed finger's wound.</p>
 <p>Then, Lucius selects a slightly lighter prosthetic from the rack and approaches Viper. Manipulating the mechanical arms, he reopens the wound that's now healed. It's where Viper's index finger had been.</p>
 <p>The fresh gash in his hand begins healing the moment it's cut. To prevent it from closing too quickly, Lucius uses special, rubber clamps to hold the flesh in place.</p>
@@ -3549,7 +3549,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>Above, a clear voice rings out. Viper jerks his head up to meet Caleb's somewhat playful gaze. "Stalking me from my doorstep... Do you want to carry my shopping bags?"</p>
 <p>Even after being discovered, Viper remains unfazed. He tilts his head and studies Caleb His interest is obvious. "How did you notice me?"</p>
 <p>Caleb leaps down from the wall and lands gracefully before Viper. "You weren't exactly trying to mask your presence. I've never seen you around before, though. Since you've been following me for a while... Do you need something?"</p>
-<p>Caleb remains composed. He brushes off imaginary dust and puts his hands behind his head to deliberately draw out the moment His nonchalant response intrigues Viper. "Who I am doesn't matter. And I'm following you because…”</p>
+<p>Caleb remains composed. He brushes off imaginary dust and puts his hands behind his head to deliberately draw out the moment His nonchalant response intrigues Viper. "Who I am doesn't matter. And I'm following you because…"</p>
 <p>Viper's fingertips transform into blades. They whistle through the air and head straight for Caleb's face.</p>
 <p>"Take a guessss!"</p>
 <p>But the expected impact never comes.</p>
@@ -3681,7 +3681,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>Opening their eyes, No. 170043 finds a pair of large, curious eyes blinking repeatedly.</p>
 <p>They're staring at them. No. 170043 takes a moment to gather their thoughts before looking around. They're in a small garden belonging to an Earth residence.</p>
 <br>
-<p>“I…”</p>
+<p>"I…"</p>
 <p>"Are you okay?" </p>
 <p>"Yes, I'm fine..."</p>
 <br>
@@ -3789,7 +3789,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <br>
 <p>"...Is it worth it?"</p>
 <br>
-<p>“It must be. I promised someone that humans would achieve immortality through love."</p>
+<p>"It must be. I promised someone that humans would achieve immortality through love."</p>
 <br>
 <p>"The word 'Philos' in some ancient Earth language means 'love.' Since Philos has achieved immortality, the concept of love is immortal in a sense."</p>
 <br>
@@ -3855,7 +3855,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
         serialNumber: "01",
         subtitle: "Divergence",
         content: `
-<p>"Wow! His hair is as white as snow…”</p>
+<p>"Wow! His hair is as white as snow…"</p>
 <p>"I've never seen clothes like these before. They must be complicated to put on!"</p>
 <p>"I wonder how old he is. Where did he come from?"</p>
 <p>…</p>
@@ -3911,8 +3911,8 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <br>
 <p>Dr. Althea sits under a lamp while filling out medical records. She looks up to see him, and a hint of resignation crosses her face as she beckons. "Come here."</p>
 <p>Shubai brings over a small stool and sits down. Snoring softly, Shiqi is curled up at Dr Althea's feet. The doctor peels a tangerine and carefully separates the pieces before handing them to him. There are only two doctors at this field hospital. In addition to Dr. Althea, whom Shubai has grown familiar with, there's also her husband, Dr. Jace. He's spending the night at the Hunters' camp for a shift.</p>
-<p>Althea looks at Shubai, and her smile reaches her eyes. "Our son is only a couple of years older than you. He's studying in Linkon City.”</p>
-<p>She opens her phone, selects a contact marked with an orange emoji, and scrolls through their chat to find a photo. "Here.”</p>
+<p>Althea looks at Shubai, and her smile reaches her eyes. "Our son is only a couple of years older than you. He's studying in Linkon City."</p>
+<p>She opens her phone, selects a contact marked with an orange emoji, and scrolls through their chat to find a photo. "Here."</p>
 <p>Shubai leans forward to look, and his expression freezes. No wonder Shiqi ran here. </p>
 <br>
 <p>In the photo, flower petals dance in the wind across a university campus. A boy who still has a boyish look carries a stack of materials that nearly reaches his chin. He's walking alone through the crowd. The students around him were older and taller. His youthful, fair face stares into the camera with wide, cat-like eyes. He looks very... very…</p>
@@ -3944,7 +3944,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>Thankfully, the Emissary's personality is different from his father's.</p>
 <p>Shubai can feel how beloved the couple is in the local community. He meets a little girl wiping away her tears. She says, "Grandma told me that Dr. Althea and Dr. Jace went to the market this morning to stock up for their next journey."</p>
 <p>"They're not staying?"</p>
-<p>"It'd be nice if they did! But they're from Doctors Worldwide. They're only stationed here temporarily because of the sudden appearance of Wanderers and their mission to mark off the no-hunt zone. Once the magnetic field stabilizes and this area is safe, they'll leave. There are people in other places who need them…”</p>
+<p>"It'd be nice if they did! But they're from Doctors Worldwide. They're only stationed here temporarily because of the sudden appearance of Wanderers and their mission to mark off the no-hunt zone. Once the magnetic field stabilizes and this area is safe, they'll leave. There are people in other places who need them…"</p>
 <br>
 <p>Shubai understands to an extent. Sitting on a swing in the corner of the courtyard, he moves back and forth. He notices the leaves are more yellow as they fall onto his lap. Leaves return to their roots, and life ends Shubai picks up a crisp fallen leaf. Time's passage, as described in books, is light when rolled between his fingers. It crumbles at the slightest touch.</p>
 <br>
@@ -3978,9 +3978,9 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <br>
 <p>Confused, Shubai points to the final section that involves traveling on foot. "Wouldn't it be closer if you got off at the previous station? Why go one station further and then walk back?"</p>
 <br>
-<p>“Because it's autumn." Althea smiles when she answers.</p>
+<p>"Because it's autumn." Althea smiles when she answers.</p>
 <p>"Taking a detour from the next station lets you walk through a grove of blooming osmanthus trees. Golden blossoms with their faint fragrance are colors and scents that only belong to autumn. No one puts these things on maps. This is the kind of beauty that's only known to those who have walked the path themselves."</p>
-<p>“...Is beauty really important? The osmanthus trees will eventually become bare." Shubai is more confused.</p>
+<p>"...Is beauty really important? The osmanthus trees will eventually become bare." Shubai is more confused.</p>
 <p>Althea pauses for a moment and looks at her husband. Then they both laugh simultaneously.</p>
 <p>"Zayne once said almost the exact same thing," Jace says somewhat wistfully.</p>
 <p>"When he was little, the only time he ever came to us with a question about school was when his teacher commented that his narrative essay lacked emotion. We tried to help him figure it out, but he still couldn't understand. Then one day he accidentally missed his stop, discovered the grove of osmanthus trees, wrote about it in his essay, and earned an A+ for the first time."</p>
@@ -4001,7 +4001,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>Althea's eyes crinkle with amusement as she takes out her pen, makes a few changes to the IOU, and hands it back to Shubai. "If you must satisfy your sense of fairness, then help us with something. The medical school isn't far from the grove. Could you please deliver Zayne's gift for us?"</p>
 <p>Attached to the gift is a note that says the following: "Dad and Mom's 'favorite' will always be Zaynie."</p>
 <br>
-<p>"Dear passengers, we're approaching Linkon University. Those who are exiting at this stop, please prepare to disembark…”</p>
+<p>"Dear passengers, we're approaching Linkon University. Those who are exiting at this stop, please prepare to disembark…"</p>
 <p>As the train announcement resounds, Shubai is jolted awake. Looking out the window, he can see faint golden hues stretching into the distance. Getting off at this station will lead him to the Emissary. Going to the stop after will take him to the edge of the grove of osmanthus trees, and he'll need to walk back three kilometers through that golden landscape.</p>
 <br>
 <p>After autumn is winter. The most fundamental, inescapable truth of the world materializes as a real landscape in Shubai's mind for the first time. By then, the branches will be bare, people will wear thick clothes, and snow will cover everything.</p>
@@ -4065,7 +4065,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>He tries to come up with reasons for why he'd be here. Aiden figures Grandfather wants to catch him skipping class. Aiden immediately turns to leave, but he hasn't taken more than a few steps before he's pulled back</p>
 <p>"G-Grandfather? I-I'll go to class now." His grandfather, who has always been steadfast and composed, pulls him into the classroom. Aiden has no idea what he'll say next.</p>
 <p>"Don't tell your dad. He doesn't know I snuck out!"</p>
-<p>“…?”</p>
+<p>"…?"</p>
             `,
     },
     {
@@ -4077,7 +4077,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>Unlike Aiden, his grandfather is a striking old man who stands out among humans and Lemurians.</p>
 <p>In Lemuria, he's renowned far and wide in the underwater singing circles for his exceptionally outstanding voice. After the catastrophe, some chose to live as hermits, and others lived in hatred. But Grandfather chose to hide his brilliance and disappear into the crowd of humanity. He just wants to survive.</p>
 <p>He dutifully runs a music store. When his son chose that brave human girl, he only wanted his son to be happy. After Aiden became old enough to understand the world, Grandfather taught him that the first rule of survival on land is "vigilance." As he slowly approaches the end of his life, he should be peacefully living in his final days... while resting in bed as per the doctor's orders. But here he is, having snuck out against medical advice. Grandfather pulls him into a seat. Aiden fidgets as if two sea urchins are under him and turns to look at the old man. He's staring at the podium and listening. He shows no feeling of guilt for sneaking out.</p>
-<p>"In today's lesson, we'll mainly be discussing the mindsets of Ariduts. Aandulo and Huluen are their lifelong pursuits. More often than not, they would sing these words...”</p>
+<p>"In today's lesson, we'll mainly be discussing the mindsets of Ariduts. Aandulo and Huluen are their lifelong pursuits. More often than not, they would sing these words..."</p>
 <p>Grandfather hums along with the lyrics. Then he immediately leans toward Aiden. "What do they mean?"</p>
 <p>"Adventure and freedom. She explained it twice already."</p>
 <p>"Ah, yes... I'm getting old. It's normal for me to be forgetful."</p>
@@ -4091,7 +4091,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>Whenever he had to attend public gatherings in the past, he would always repeatedly remind Aiden to "not draw attention" and "only do what you're supposed to do." It's the complete opposite of what he's doing now. </p>
 <p></p>
 <p>Leaving the classroom, Aiden prepares a list of questions, but all of them are answered by two words.</p>
-<p>“...Bucket list?"</p>
+<p>"...Bucket list?"</p>
 <p>Grandfather mysteriously pulls a crumpled piece of paper from his pocket. It looks like it's been folded and unfolded countless times. The words at the top of the page strikingly stand out.</p>
 <p>"These are all the things I've always wanted to do. But I never got the chance. I can't wait any longer!"</p>
 <p>As if to prove the lecture's message about adventure and freedom, his grandfather prepares to run away from home at the end of his life.</p>
@@ -4147,7 +4147,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>Too?</p>
 <p>"A lot of people run away from home. Either from here or to here. Whether they're leaving or arriving, they always eat at this place." As they talk, dishes are served one after another. Aiden suspects this Aridut has ordered the entire menu. Or he's close to achieving it.</p>
 <p>"Do you want to try some? It's my treat. I'll be leaving soon anyway. A lot of what you ordered are dishes that specifically rip off tourists. This is the real local specialty."</p>
-<p>“…”</p>
+<p>"…"</p>
 <p>"Every dish in this restaurant has a story." The Aridut introduces them one by one. "Like this, that, and this. The dish here is called Deity's Temptation. It has the longest history! It's the last dish our god ate before running away. Aiden's mind spins as he barely manages to follow what the Aridut is saying. Now he's even more confused. "Your god ran away?"</p>
 <p>"I heard about it from my great-great-grandfather. They used to worship the man who led them to survive in the desert. They made him their god. Until one day, he ran away!" The Aridut winks mysteriously. "And then they worshipped him even more! He was brave. That's why we have so many people who are inspired to leave the desert and pursue their own goals. After all, it's the desert. When the wind blows, it looks one way today and completely different tomorrow."</p>
 <br>
@@ -4157,7 +4157,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>Aiden thinks this is similar to his grandfather's story.</p>
 <p>Dad said that when Grandfather was young, he ran away to the surface world because he was curious and yearned for the unknown.</p>
 <p>However, after that disaster, survivors had no choice but to reclaim their Lemurian identity. For the sake of their family's survival, they had to maintain a certain dignity and vigilance. It was difficult to be true to themselves. It's possible that in the final moments of his life, Grandfather is determined to fulfill his small desires and create a beautiful ending to his life's story.</p>
-<p>"His bucket list would probably be the opposite of mine! For example, it would include having a seafood feast...”</p>
+<p>"His bucket list would probably be the opposite of mine! For example, it would include having a seafood feast..."</p>
 <p>Aiden thinks for a moment. Would he want to see the legendary Lemurians?</p>
 <p>His grandfather adds, "Swimming. There would be something about swimming in the world's largest pool."</p>
 <p>"What's the largest pool? I've never been there."</p>
@@ -4197,13 +4197,13 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>As an Astral Enforcer, he learned that a bell usually means trouble, a warning before things go sideways. It could mean you need to perform an emergency warp to dodge cosmic radiation or your warp coordinates suddenly shift, and you'll be flung into uncharted space Sometimes, it means the number one fugitive on his list, Sylus, shows up in exactly the wrong stretch of the galaxy.</p>
 <p>When the criminal who had vanished for a Iong time appeared, almost within reach, Myer didn't hesitate. He followed Sylus to Earth-a place where a bell can mean more than just "danger."</p>
 <br>
-<p>"Restarting data protocol. Please wait…”</p>
+<p>"Restarting data protocol. Please wait…"</p>
 <p>Myer puts the repaired power core back into the mechanical sentinel's eye socket. These machines, custom-built to hunt Sylus, stand silent beside his workbench. Ever since the failed ambush in the N109 Zone, he's been studying ways to enhance their capabilities. The doorbell continues to ring as Myer draws the curtain to conceal everything. Through the peephole, he spots a familiar face.</p>
 <p>Mr. Lopez, male, 48, lives alone. He's the owner of the hardware store down the street. The shop opens at 9:10 A.M. Monday through Thursday. He visits the climbing gym across the street at 8:00 P.M. Friday through Sunday. His climbing skills remain at the beginner level, but he spends at least 15 minutes chatting with the climbing gym's female owner. Statistical analysis shows a 66.7% chance he ends conversations with "good night" and a 33.3% chance of "see you tomorrow." He lives next door. Earthlings would say he and Mr. Lopez are "neighbors. On Philos, Myer never met his neighbors. People kept their distance and avoided close relationships with anyone. This even applied to blood relatives. On his first day as an Astral Enforcer, he was taught that desire and emotions are primitive human flaws that only hinder Philos's new humans from advancing. So when it comes to "someone stopping by for no apparent reason, "Myer has already drawn his conclusion. This Earthling is acting abnormally, and he must have ulterior motives for approaching him. A colleague? A rival? Or one of Sylus's underlings? Perhaps the climbing gym around the corner served as his intel exchange location.</p>
 <p>Either way, he's nothing but trouble.</p>
 <br>
 <p>With three security chains on the door, Myer conceals a pocket pistol behind his back and slightly opens the door.</p>
-<p>"Hey, Myer. Sorry to bother you again…”</p>
+<p>"Hey, Myer. Sorry to bother you again…"</p>
 <p>Furrowed brows, fidgeting hands... Myer has thoroughly internalized an "Earthling Behavior Analysis Manual." He quickly assesses his neighbor's psychological state: three parts nervousness, three parts awkwardness, and three parts ulterior motives. As for the remaining part... Noticing the peculiar pink flush creeping up from his neighbor's ears, Myer frowns. This Earthling has never shown signs of shyness in front of him before.</p>
 <p>His neighbor mumbles, "Excuse me." Then he holds up a heart-shaped LED sign. "There's a small problem with this thing, and I can't find my reading glasses. I was wondering if you could fix it..."</p>
 <p>Staring at the flickering "LOV" and the dim "E" on the sign, Myer quickly lists possible uses for this LED sign. Given how simple his neighbor's daily routine is and how he knows very few people, there can only be one possibility.</p>
@@ -4326,7 +4326,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
         content: `
 <p>After giving up the pursuit, Myer returns to the record store and purchases the same vinyl record as Sylus. He hopes to gain new intel about Sylus from it. By becoming more familiar with his opponent, he'll gain an advantage for his next operation.</p>
 <p>However, once the record is brought home, he discovers that the second-hand record player he acquired is broken. The same man who remains composed when facing lethal weapons is at a loss before a turntable that won't spin properly. After repeatedly searching for fixes and failing to find one, Myer finally knocks on his neighbor's door. He vaguely recalls that the man had a record player tucked in the corner of his hardware store.</p>
-<p>“It's an easy fix." The neighbor enters Myer's apartment and begins tinkering with the record player.</p>
+<p>"It's an easy fix." The neighbor enters Myer's apartment and begins tinkering with the record player.</p>
 <p>Looking at the climbing chalk that still lingers on his neighbor's hands, Myer remembers that the man planned to confess his feelings at the climbing gym yesterday.</p>
 <p>"Did she smile when she saw your light display?" Myer asks.</p>
 <p>"Huh? Oh, that...'</p>
@@ -4343,7 +4343,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>According to Philos's doctrine, a person "in love" would be governed by their greed. selfishness, and desires. It'd lead them to possess the other person and take endlessly They'll forever be trapped in a downward spiral with no escape. How could such a person say something like "you can't force these things"?</p>
 <br>
 <p>Myer is lost in thought when his neighbor pats his shoulder, and he snaps back to reality.</p>
-<p>"It's okay. Even if she's not in my future, I can always drag you along as my friend to go rock climbing…”</p>
+<p>"It's okay. Even if she's not in my future, I can always drag you along as my friend to go rock climbing…"</p>
 <p>The record spins as classical music flows gently throughout the room. After several seconds pass, Myer finally releases his grip on the pocket pistol in his right hand, switches on the safety, and quietly hides it behind the sofa.</p>
 <p>Perhaps this is Earth's basic etiquette for treating a friend.</p>
 <p>When he sets down the gun, Myer feels something unusual stir within him. Listening to his neighbor, he's struck by a sudden urge to share his own experiences in tracking Sylus.</p>
@@ -4526,7 +4526,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>"That's why you turned down the Farspace Fleet's offer? Because of your attachment to Earth?"</p>
 <p>"Pretty much. My most admired senior from university worked here after graduation. They say his go-to excuse for turning down unnecessary social gatherings was always needing to eat dinner at home. I trust someone who values family that much."</p>
 <p>"Hey, who is it? Did you see him at today's oath ceremony?"</p>
-<p>"No, he was probably out on a mission. I'm several years behind him in school, and he doesn't even know me. During his days at the Aerospace Academy, everyone would run over to watch whenever it was his turn for test flights. Talk about beautiful flying...”</p>
+<p>"No, he was probably out on a mission. I'm several years behind him in school, and he doesn't even know me. During his days at the Aerospace Academy, everyone would run over to watch whenever it was his turn for test flights. Talk about beautiful flying..."</p>
 <p>Clear, bright voices of three newcomers drift from the auditorium as they discuss their motivations for joining DAA. Gideon and Patrick happen to pass by, and the young recruits immediately straighten their postures, pull their shoulders back, and respectfully salute.</p>
 <p>"Gideon, sir! Patrick, sir!"</p>
 <p>The two nod, and the three recruits walk away for a while before relaxing and laughing. They wrap their arms around each other. Patrick squints as he watches their retreating figures Then he looks back at the platform where he once stood together with Gideon and Caleb. "If he were still here, only one of us could've been an instructor."</p>
@@ -4582,7 +4582,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>"The training grounds belong to the royal family. Why would anyone need to make a reservation..."</p>
 <p>Xavier's gaze calmly sweeps over everyone Then he raises his hand, and a soft yet solid screen of light materializes over the entrance It reveals the access registration protocols. On the screen's surface, the time slot the students had reserved glows and shows it has yet to expire.</p>
 <p>"The training ground's systems are well-maintained. Your eyesight must be poor if you couldn't read it." Xavier regards the young marquis with aloofness. "Can you see it now?"</p>
-<p>"I... I see it...”</p>
+<p>"I... I see it..."</p>
 <p>As the cheering commoners crowd around Xavier, he never once glances in Isaiah's direction. It's an omission that feels deliberate.</p>
 <p>Maintaining his haughty composure, Isaiah grits his teeth and swallows his resentment. Ignoring Jeremiah, he steps forward and presents Xavier with a more exquisite invitation. "Perfect timing. This saves me the trouble of asking that junior of yours. My father insisted the invitation be delivered personally to Your Highness."</p>
 <p>Jeremiah rolls his eyes when Isaiah opens his mouth. Isaiah notices it and shoots him a glare. The curly-haired commoner is being rude again! The fact that Xavier keeps such company is utterly beneath his station.</p>
@@ -4691,11 +4691,11 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>Note:</p>
 <p>Targeted psychological intervention has been enhanced to address emerging anxiety and suspicions.</p>
 <p>Dialogue Recording:</p>
-<p>"This... doesn't feel right...”</p>
+<p>"This... doesn't feel right..."</p>
 <p>"Your body is restructuring itself. It's adapting to a new world."</p>
-<p>"...I thought we were going back to our original world! Our Philos! Ugh...”</p>
+<p>"...I thought we were going back to our original world! Our Philos! Ugh..."</p>
 <p>"Return demands unassailable power. What you're gaining is power Xavier could never hope to obtain. He's still running in circles and stuck in his delusions. But you—we –will lead the Philosians."</p>
-<p>"But it hurts so much...My head's a mess... Soren...”</p>
+<p>"But it hurts so much...My head's a mess... Soren..."</p>
 <p>"See? You're breaking past your limits. Grit your teeth and push through. It's proof that you're better than him. Don't you believe in yourself?"</p>
 <p></p>
 <p>[Test Record H-1113]</p>
@@ -4712,7 +4712,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>"He is the key and the most unstable variable Emotion and duty are too fragile against the weight of time. I must possess the means to ensure his cooperation."</p>
 <p>"From the very beginning, you only saw me as his substitute..."</p>
 <p>"You can think of it that way. After all, Xavier was born with everything. Including the privilege to run away. But you and I are the ones left behind. We have no choice but to seize what we can, even if it means taking risks. Put down the documents, Isaiah."</p>
-<p>“…”</p>
+<p>"…"</p>
 <p>"Your value determines your place. Now please accept the final injection."</p>
             `,
     },
@@ -4726,10 +4726,10 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>Jeremiah walks in and sets a warm meal on the small table. The clatter is deliberately loud, an attempt to drag Isaiah's attention back to the present. It's been over two weeks since Xavier rescued him, yet Isaiah still drifts into these "daydreams" from time to time. Beneath the loose hospital gown, the wrists peeking out still bear fading ligature marks and bruises from needles. The slightest sound makes him go rigid. His unfocused pupils contract before dilating again.</p>
 <p>It's no different now. Isaiah flinches subconsciously, his eyes darting warily from the food to Jeremiah's hands. No weapon, no syringe. There's just a large bouquet of fresh flowers clutched against his chest.</p>
 <p>"What are you staring at?" Jeremiah responds with an unapologetic glare. "I've got a shop to run. Dropping off your food and delivering flowers to a client nearby is killing two birds with one stone."</p>
-<p>“...Xavier sent you?" Isaiah's voice comes out dry and rough because of disuse. Soren's final words echo in his ears like a recurring nightmare. He's disoriented, struggling to reconnect with reality.</p>
+<p>"...Xavier sent you?" Isaiah's voice comes out dry and rough because of disuse. Soren's final words echo in his ears like a recurring nightmare. He's disoriented, struggling to reconnect with reality.</p>
 <p>"Obviously. You think I'd willingly look at your grumpy face?" Jeremiah huffs. "He's got other things to deal with."</p>
 <p>"You don't have to do this." Isaiah turns away, his tone deliberately distant. "A curly-haired commoner suddenly acting charitable... If you want something from me, just say it."</p>
-<p>“Stop spouting nonsense." Jeremiah's movements are brisk and efficient as he raises the folding bed's backrest and swings the meal tray in front of Isaiah. "Eat. Otherwise I'll hold your nose and pour it down your throat Pick."</p>
+<p>"Stop spouting nonsense." Jeremiah's movements are brisk and efficient as he raises the folding bed's backrest and swings the meal tray in front of Isaiah. "Eat. Otherwise I'll hold your nose and pour it down your throat Pick."</p>
 <p>A utensil is shoved into Isaiah's hands. He doesn't touch the food. Irritated, he jabs at a stubborn piece of broccoli until it rolls to the edge of the container. He scoffs. "Did you make the broccoli this tough on purpose as petty revenge? Let me make one thing clear. I never believed in Soren. It was mutual exploitation, nothing more. I... just chose the wrong ally."</p>
 <p>Jeremiah leans back in his chair. "Oh? That works out perfectly, then. If it was only about using each other, you wouldn't have expected him to be sincere."</p>
 <p>Isaiah lets out a humorless laugh. Refusing to lose, he pushes himself up against the bed.</p>
@@ -4763,11 +4763,11 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>Isaiah freezes. He wants to back away and snap at them to get lost. When he glances behind him and sees Jeremiah, Xavier, and her smiling and playing along, however, the words die in his throat. He swallows them. With every bit of irritation he has, he spits two candy balls from his launcher. "...There. Now leave."</p>
 <p>The children's cheers grow even louder as they scatter like they've just claimed treasure Jeremiah and Isaiah carry a large cloth sack between them and collect the small gifts passersby offer in return. Whenever someone approaches with goodwill, the stiff "no thank you" forming in Isaiah's throat never escapes.</p>
 <p>It's stuffed back down by whatever trinket gets pressed into his hands. Colorful candy, knitted coasters, homemade cookies...A bright jumbled mess piles up at the bottom of the bag.</p>
-<p>"I hope you have a fun carnival experience!” The gift-givers reveal bright smiles before they melt back into the crowd.</p>
+<p>"I hope you have a fun carnival experience!" The gift-givers reveal bright smiles before they melt back into the crowd.</p>
 <p>Everything in the sack is light, yet Isaiah's arms feel heavy. Resting on a roadside bench, he fishes out an unremarkable piece of fruit candy, its wrapper almost cheap-looking Slowly, he peels it open to reveal the translucent orange drop inside. Philos's banquets always featured exquisite confections arranged on silver platters. They were symbols of etiquette and status.</p>
 <p>He's genuinely hungry. Isaiah puts the candy into his mouth and tastes artificial flavoring. It's nothing like the subtle, layered complexity the palace chefs once crafted. Yet this simple unrefined sweetness cuts through the numbness on his tongue, rushes down his throat, and spreads warmth.</p>
 <p>"Well? Isn't it lively here?" Jeremiah gazes at the stream of people flowing through the street.</p>
-<p>“...It's whatever," Isaiah mutters. "Philos was lively too."</p>
+<p>"...It's whatever," Isaiah mutters. "Philos was lively too."</p>
 <p>An evening breeze drifts by, carrying the scent of flowers and pastries. A pea sits beside a walnut. Jeremiah pats his shell, his gaze drifting toward the cake store on the corner. Something flickers in his eyes.</p>
 <p>Seconds pass in silence. Then he quietly says, "If this were Philos, these people might have been turned into nutrients for the planet." Festival lights strung along both sides of the long street flicker to life with a soft pop. They blaze against the approaching dark. Surprised cheers ripple through the crowd as strangers embrace one another. The glow is impartial. It offers him a small bit of light, too.</p>
 <p>"Hmph."</p>
@@ -4780,7 +4780,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
         serialNumber: "01",
         subtitle: "News",
         content: `
-<p>"Good morning. The joint rescue mission at the site of the recent geological and meteorological disaster in the Arctic town, Frostmere, has ended. As of this moment, there have been…”</p>
+<p>"Good morning. The joint rescue mission at the site of the recent geological and meteorological disaster in the Arctic town, Frostmere, has ended. As of this moment, there have been…"</p>
 <p>Someone changes the channel. The broadcast stutters for a few seconds before the anchor's voice continues. That heavy number has been skipped. "...deaths. 53 people are still missing..."</p>
 <p>The TV is turned off.</p>
 <p>Outside, a breeze stirs. Clouds briefly veil the sun, which dims the room. The dark screen reflects a haggard face with stubble. Greyson remains frozen as he's turning off the TV. In this silence, he recalls how not long ago, he was fretting that his baby face looked too young. Yvonne had teased him earlier. "A baby face keeps you looking young! Or would you rather have features ravaged by work?"</p>
@@ -4927,7 +4927,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>On second thought, maybe it doesn't matter. Whether Zayne comes back or not, he still has to keep walking one step at a time.</p>
 <br>
 <p>It's past midnight, yet the hospital building remains ablaze with light. Greyson shuts his office door and looks up at the TV in the waiting area, where the news cycles through updates from the disaster site.</p>
-<p>"There's a miracle of life! A survivor with vital signs was discovered in the ruins of Frostmere! A girl, approximately seven years old, was found wrapped in thick clothing by several deceased adults. They used their own bodies to shield her from the bitter cold and spared her from the initial onset of hypothermia. It allowed her to slip into a deep coma... At the time of discovery, she was in what medical professionals call a state of suspended animation...”</p>
+<p>"There's a miracle of life! A survivor with vital signs was discovered in the ruins of Frostmere! A girl, approximately seven years old, was found wrapped in thick clothing by several deceased adults. They used their own bodies to shield her from the bitter cold and spared her from the initial onset of hypothermia. It allowed her to slip into a deep coma... At the time of discovery, she was in what medical professionals call a state of suspended animation..."</p>
 <p>The footage cuts to the scene. Greyson exhales softly. Before he left the Arctic, the girl had already been stabilized. When they first detected her vital signs, she was still unconscious and cocooned in the victims embrace. She clutched a pom-pom hair clip like a talisman.</p>
 <br>
 <p>The new year is almost here. Time pushes people forward, and the weight in their hearts slowly settles.</p>
@@ -4952,14 +4952,14 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>When Mother isn't looking, the baby Dream Weaver sneaks off to chase the fish darting between the seagrass. Meanwhile, his mother—a Dream Weaver perpetually bathed in a gentle, soft light--weaves. Each unfurling and folding of her feathery fins moves with the rhythm of a wandering bard regardless of the dream she crafts. Puzzled, the baby watches his mother. This work brings him no joy whatsoever... Yet Mother always has a tender smile.</p>
 <br>
 <p>Mother! Mother, I don't want to weave anymore! The baby Dream Weaver droops his head. These words have been stuck in his throat for days, and now they finally tumble out.</p>
-<p>“...All right." As if she had known her son would resist his innate gift long ago, she calmly smiles. "You can rest for a while. Once I find the most beautiful threads, you'll love this role."</p>
+<p>"...All right." As if she had known her son would resist his innate gift long ago, she calmly smiles. "You can rest for a while. Once I find the most beautiful threads, you'll love this role."</p>
 <p>"No!" The baby Dream Weaver shakes his head fiercely, his feathery fins flaring. He's the angriest a Dream Weaver can possibly be. "I don't want to weave, and I don't want Mother to weave either! It's not fun! Why must we sit and weave these dreams? Why can't we swim freely like the other sea creatures?!"</p>
 <p>Sighing softly, Mother gathers her little one into her arms. A little fish slips away as a gentle voice whisper in the baby's ear. "Once upon a time, the ocean and Deepspace were one.</p>
 <br>
 <p>"It was an age before life was created. A boundless ocean cradled the slumbering Earth, and the world was but a silent dream.</p>
 <p>The waters were warm, the sky hung low, and the continents, shy as children, would only peek their foreheads above the waves every now and then. Sunlight could reach the deepest depths. It nourished those first, most delicate breaths upon the seabed. And alongside those faint, fragile pulses, we came into being.</p>
 <p>Perhaps it was at dusk or at dawn. In any case, it was when the blue-violet sky blushed pink at the edges. Our very first ancestor floated in the water. With every fiber of his being, he listened to that primordial silence. </p>
-<p>And then, he saw it: a strand of pure green. Neither a water current nor light or sound, it was woven from countless tiny, shimmering motes. Soft as silk threads, they brushed against every inch of his skin. This thread carried the most primal and genuine of feelings: joy under the sun and longing for the flowing water. Our ancestor was consumed with curiosity. Gently, tentatively, he reached out with his feathery fins to touch that thread…”</p>
+<p>And then, he saw it: a strand of pure green. Neither a water current nor light or sound, it was woven from countless tiny, shimmering motes. Soft as silk threads, they brushed against every inch of his skin. This thread carried the most primal and genuine of feelings: joy under the sun and longing for the flowing water. Our ancestor was consumed with curiosity. Gently, tentatively, he reached out with his feathery fins to touch that thread…"</p>
 <p>The baby Dream Weaver holds his breath, his eyes akin to the full moon.</p>
 <p>"A miracle happened, my dear child. When his feathery fins combed through that thread, the tangled feelings were gently guided. The scattered motes of light began to dance, and before his eyes unfurled a tapestry so beautiful that it made his heart tremble Seagrass was woven into forests. Tiny creatures darted past. Some were restless and others were peaceful and warm as if a pair of eyes were watching these lives come into being. This is how it all started. We learned to catch those wandering, fragile emotional ripples drifting through the universe. We spin them into silk, weave them into visions, and craft dreams that soothe chaos and bring about peace."</p>
 <br>
@@ -4977,7 +4977,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
         content: `
 <p>The rosy flush slowly fades from the baby's feathery fins, and they return to their usual pinkish-white. The little Dream Weaver edges forward as if to try again, but he pulls back at the last moment. With his head lowered, he quietly asks, "Mother, what happened next? How did the threads become what they are now?" Gone is the whining from before. Only pure curiosity remains.</p>
 <p>Mother's eyes shimmer with a gentle, dancing light. "Before we get to that, my child, we have a long story that must be told." She guides her little one through the glowing seagrass. They drift upward to a place the sunlight can still reach, and they settle upon a great giant clam adorned with beautiful blue-frilled edges. The world around them is lively.</p>
-<p>“After that first thread was woven into a green forest, some 500 million moonsets before our time in an age the stones themselves remember as the Cambrian era… This world, silent for a long time, awakened seemingly overnight. The ocean, our eternal home, transformed into a wondrous, teeming paradise. Countless beings never before took on forms beyond our wildest imagination Every shape you could ever dream of appeared in those days. Every color you could behold bloomed..."</p>
+<p>"After that first thread was woven into a green forest, some 500 million moonsets before our time in an age the stones themselves remember as the Cambrian era… This world, silent for a long time, awakened seemingly overnight. The ocean, our eternal home, transformed into a wondrous, teeming paradise. Countless beings never before took on forms beyond our wildest imagination Every shape you could ever dream of appeared in those days. Every color you could behold bloomed..."</p>
 <br>
 <p>The baby's feathery fins excitedly flutter, as bright lights flash from his eyes. "That... must have been lively!"</p>
 <p>"Indeed. But it was also infinitely more complex. A new creature brought feelings never felt before, so our threads bloomed into countless hues. Green was for life. But there was the gray-blue for fading, the orange-red of hunger when a hunter first tasted prey, and the white of fear from those who fled. In the struggle for claiming territory, black threads of fury clashed in the undertow. And in the search for a mate, ribbons of pastel bliss rippled through the currents."</p>
@@ -5023,7 +5023,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>"Yes. This world always finds a way to live again, but it's never quite the same." Mother brushes a feathery fin across her child's first creation. After so many years of weaving the dreams in this age, her feathery fins have lost the soft sensitivity of youth. Yet the memory of touch remains as vivid as ever. Before her eyes rise visions of the most magnificent creatures she has ever witnessed, which is followed by the grandest radiance she has ever woven.</p>
 <p>"The ebb and flow of life are the universe's tides. When the waters receded, the land became a new sanctuary for new lives. The cutest piece I wove came from a little fern. It clung to life in a gap between the rocks. In its dream, each of its fronds became a tiny drawer, and when those drawers opened, little universes made of all manner of spores rested inside them. The sun it imagined was a rainbow rolled into a lollipop. Then even grander silhouettes appeared upon the land: the dinosaurs. The most magnificent tapestry I ever created came from them: In those dreams, colors spread in great, bold swaths. Plants towered to pierce the clouds. When the dinosaurs ran, the earth shook beneath their feet...</p>
 <p>"How big were the dinosaurs?"</p>
-<p>"Hmm... About as big as whales…”</p>
+<p>"Hmm... About as big as whales…"</p>
 <p>"Wow... Why can't we see them anymore, though?"</p>
 <p>"The world fell silent once again. The dinosaurs vanished, swallowed by skies choked with ash and the white of an endless winter that gripped the globe. And so we retreated to the deep sea once more to compose requiems for the finale of the Cretaceous era. When the last note faded and the final dream unraveled, we dragged our broken bodies into another slumber. We rise and fall over and over like one's breath." </p>
 <br>
@@ -5064,7 +5064,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>"Why don't the Dream Weavers just stop? If dreamweaving hurts so much, then why do they keep weaving for humans? Or... they could just weave the pretty ones!"</p>
 <br>
 <p>The old butler gently closes the book of fairy tales. A sea breeze slips through the window, and the seashell wind chime beneath the eaves rings once. It's as soft as a whisper Then peace returns.</p>
-<p>"Children, if you had never seen ugliness, how would you know what beauty is? If the sun only rose but never set and the sea only took but never breathed into clouds…”</p>
+<p>"Children, if you had never seen ugliness, how would you know what beauty is? If the sun only rose but never set and the sea only took but never breathed into clouds…"</p>
 <p>The drowsy children fall into a thoughtful silence. One shakes their head uncertainly Then a soft voice tinged with sorrow speaks.</p>
 <p>"Yeah... It sounds like the sun and the sea would be... dead." The child lifts their face, and the others turn to look at the old butler too, their bright eyes covered with a thin veil of tears.</p>
 <br>
@@ -5092,7 +5092,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>Philip picks up the only intact thermos from the ground. "Did you have fun?"</p>
 <p>Eager to continue, Luke and Kieran are crouching atop the summit. "It wasn't bad. EVER got better. This batch of bots could actually take a hit."</p>
 <p>Philip unscrews the cap and blows on the steam. "You were so caught up in the brawl that you lost the titanium alloy wing-type exoskeleton, which was commissioned by Mr. Sylus and developed by the Odd Workshop. It was one calibration away from deployment and being a gift for Mephisto... Was that also fun?"</p>
-<p>“…”</p>
+<p>"…"</p>
 <p>The two exchange glances. "That's not the point."</p>
 <p>"We're on the same team. Why does Mr. Mephie get one and we don't? It's not fair." Unfazed, Philip takes a sip of tea. "Save that for Mephisto."</p>
 <p>"Look, boss-man's picking her up. Just whip us up two sets. It's not like Mr. Mephie and the boss-man are free right now…"</p>
@@ -5122,7 +5122,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>It's nighttime.</p>
 <p>The asphalt gleams slick and cold under the headlights while the hulking shells of abandoned factories crouch in silence beneath the blood-red dome. A battered gray van trundles down the road. "All repairs welcome" is plastered across its side in all caps, and every window is smothered under a patchwork of garish flyers. It's so ancient that it doesn't even qualify as "vintage." It's a prehistoric automatic crawling along at a pace boring enough to put anyone to sleep.</p>
 <p>In the back seat, Luke is sprawled against the door. One of his legs is on the headrest in front of him. A peeling flyer by his head cheerfully advertises "L4 Support Driving Technology." He lets out a listless groan.</p>
-<p>“...We don't have anything cooler to roll up in?"</p>
+<p>"...We don't have anything cooler to roll up in?"</p>
 <p>Kieran sits on the opposite side, his posture mirrored so perfectly that they might as well be reflections. "I agree. This doesn't meet a killer's aesthetic standards."</p>
 <p>Philip glances at them through the rearview mirror. "What exactly would meet your standards?"</p>
 <p>"A jet-black armored motorcycle with blue flames roaring from the exhaust..."</p>
@@ -5158,7 +5158,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <br>
 <p>Meanwhile...</p>
 <br>
-<p>"Has it ever occurred to you that"—Philip watches the two through the rearview mirror-"this is my communication device. The backend monitors data traffic. It includes...”</p>
+<p>"Has it ever occurred to you that"—Philip watches the two through the rearview mirror-"this is my communication device. The backend monitors data traffic. It includes..."</p>
 <p>He taps the side of the steering wheel, and the car's audio system switches to speaker mode. A voice reads,"303 drives like a grandpa on a morning stroll..."</p>
 <p>The tone is dripping with mockery, and the inflection is almost unsettlingly human. But the model it was trained on sounds suspiciously like Philip's voice. The van is very, very quiet.</p>
 <br>
@@ -5166,13 +5166,13 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <br>
 <p>Two SUVs barrel out of the abandoned factories on either side without warning and cut across the lane. They box in the van from the front. Windows roll down, and a row of black muzzles emerges. It's EVER.</p>
 <p>Philip is already shifting into reverse gear.</p>
-<p>"We closed the distance too fast. So they countered us…” </p>
+<p>"We closed the distance too fast. So they countered us…" </p>
 <p>Boom!</p>
 <br>
 <p>The roar of a motorcycle engine tears through the night as it surges from behind.</p>
 <p>A black figure streaks past like lightning. Twin headlights carve blazing white trails through the darkness. It's a pure black heavy-duty cruiser, its sleek frame sheathed in matte coating. Its exhaust pipes spit ghostly blue flames as every line is an ode to cold composed violence.</p>
 <p>From the back seat of the humble van, Luke cranes his head out the window to admire the view. "Sick!"</p>
-<p>"Black..." Kieran opens his mouth, his envy dripping from every word. "And it breathes blue fire...”</p>
+<p>"Black..." Kieran opens his mouth, his envy dripping from every word. "And it breathes blue fire..."</p>
 <p>Before he can continue, the rider guns the throttle. The motorcycle rockets toward the SUVs like a missile. EVER can't react in time. and two vehicles crash. They tumble through the guardrail and plunge into the ditch below. Flames erupt toward the sky. It's a perfect one-for-one trade.</p>
 <br>
 <p>Philip watches as the rider jumps off the motorcycle at the last possible second, tucks into a roll, and tumbles to a stop beside the van. The helmet comes off and reveals a face that can only be described as "mature and composed." Philip pinches the bridge of his nose. He lets out a weary sigh.</p>
@@ -5191,20 +5191,20 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>"Warning! Multiple unidentified vehicles are approaching from rear flanks. Their current speed is approximately 70 km/h."</p>
 <p>Hank swerves to dodge a stray bullet from the rear flank. The Philip-like voice echoes through the cabin. "Philip, your car just gained sentience."</p>
 <p>Philip doesn't look up. He's busy simulating multiple routes on the map. "Unfortunately, no. It's an intelligent model I trained a while back. It's still in beta testing. There's a critical technical bottleneck I haven't managed to break through yet, but its combined theoretical IQ is 1.5 times my own. It can handle most driving scenarios."</p>
-<p>“Correct." The Al's tone is modest, its voice 99% identical to Philip's. "You may also call me Phil."</p>
+<p>"Correct." The Al's tone is modest, its voice 99% identical to Philip's. "You may also call me Phil."</p>
 <p>Hank's eyes light up with understanding. "So it's a fancy navigation system with a custom voice pack."</p>
 <br>
 <p>As the minutes stretch on, the blue lines marking "passable routes" on the holographic map disappear one by one. Philip's brow furrows. "Good news is the tracker hasn't been discovered. The pursuit route's still within manageable parameters."</p>
 <p>The Al, unburdened by the human habit of sugarcoating, cuts in bluntly. "Bad news is that the enemy's infiltration of the N109 Zone runs deeper than previously known. The encirclement is now complete."</p>
-<p>“Five o'clock, four hundred meters. Four vehicles just pulled out of Warehouse 3, and they're moving fast. Doesn't look like standard transport." Kieran provides the intel.</p>
+<p>"Five o'clock, four hundred meters. Four vehicles just pulled out of Warehouse 3, and they're moving fast. Doesn't look like standard transport." Kieran provides the intel.</p>
 <p>"Drones overhead. At least twelve." Luke clicks his tongue at the news. He's already cracking his knuckles in anticipation.</p>
 <p>"The enemy combat units exceed the safety threshold by 187%."</p>
 <p>"Recalculating escape routes... Recalculation failed. Strategic withdrawal with counterattack contingency is highly recommended."</p>
 <p>As if to validate the Al's assessment, the enemy barrier contracts. Bullets and energy beams pour down like a monsoon.</p>
 <p>Hank wrenches the wheel, the question arriving a beat too late. "What contingency?" Amid the hail of gunfire, Phil patiently clarifies. "In layman's terms, turn around. Run. Now."</p>
-<p>“…”</p>
+<p>"…"</p>
 <p>A moment of silence. Then Hank speaks up. </p>
-<p>"Back in my underground racing days, Mr. Sylus taught me something. When you're boxed in on the track, the best counterattack isn't shaking off your opponent…”</p>
+<p>"Back in my underground racing days, Mr. Sylus taught me something. When you're boxed in on the track, the best counterattack isn't shaking off your opponent…"</p>
 <p>With a flawless drift, the van slams through a crumbling wall and bursts out of the chemical plant's ruins. He launches it into a suspended corridor linking two cooling towers. The walkway groans and sways. Hank shifts gears.</p>
 <p>"It's forcing them onto the track where you have the advantage."</p>
 <p>For one heart-stopping instant, the momentum tips the van a sit grinds across the corridor. When the van clears the walkway, the entire structure gives way. EVER's pursuers slam their brakes, but those lumbering SUVs have nowhere to go. One after another, they plunge, and a thunderous impact resounds. Dust billows. Flames roar to life.</p>
@@ -5247,7 +5247,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>"No wonder Kieran agreed to come with us when he saw you. Your number is 303."</p>
 <p>"I heard everyone with a number in that experiment was an identical twin. Where's your brother? I've never seen him around."</p>
 <p>…</p>
-<p>"Getting treated at an EVER hospital meant you couldn't contact anyone? It's no big deal Which hospital? The boys and I can tear the place down for you... So there really are diseases only they can treat? I bet they're the ones who created them...”</p>
+<p>"Getting treated at an EVER hospital meant you couldn't contact anyone? It's no big deal Which hospital? The boys and I can tear the place down for you... So there really are diseases only they can treat? I bet they're the ones who created them..."</p>
 <p>"Side effects from our time there? Yeah, we had them: But boss-man took care of it. You should've seen him crush those crystals with his bare hands. Spoiler alert... It was cool. "</p>
 <p>…</p>
 <p>"Hey, 303. Uh...Do you think you could make us masks? Something cool and the kind that covers your face."</p>
@@ -5334,13 +5334,13 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>"You can't expect a horse to run without letting it graze. Your quartermaster is a man who understands how the world works."</p>
 <p>Rufus doesn't spare her a glance. He walks to the head of the table and takes his seat. He removes his officer's cap and sets it on the surface. The soft click is deliberate. The quartermaster flinches.</p>
 <p>"Graze." Rufus repeats the word, his voice betraying nothing. "Smuggling unquarantined high-risk Protocores into Skyhaven means there's quite an appetite."</p>
-<p>The representative spreads her hands. "No one was hurt. Besides, we've always been the Fleet's most loyal supporters...”</p>
+<p>The representative spreads her hands. "No one was hurt. Besides, we've always been the Fleet's most loyal supporters..."</p>
 <p>Rufus doesn't acknowledge her. His fingers swipe across the electronic display.</p>
 <p>A harsh vibration alert resounds from the quartermaster's personal terminal. The public notice screen on the interrogation room wall flashes red. It's the designation for a Fleet-wide broadcast at the highest clearance level.</p>
 <br>
 <p>Notice: The former Logistics Division Quartermaster exploited his position during his tenure to illegally transfer unquarantined high -risk Protocores. Per Article 4.3 of the Farspace Fleet Code of Conduct and Disciplinary Regulations, he shall be stripped of all duties. Effective immediately. He is permanently barred from serving in the future.</p>
 <br>
-<p>"Past merits aren't a get-out-of-jail-free card.” </p>
+<p>"Past merits aren't a get-out-of-jail-free card." </p>
 <p>Rufus's gaze passes over his former colleague. </p>
 <p>"I trusted you."</p>
 <p>The quartermaster's face is ashen. He leans back in his chair. The representative's smile freezes. She rises and speaks, her tone cold "Rufus, we're hardly the only ones who have issues with you. You're cutting off your own path."</p>
@@ -5354,13 +5354,13 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>The advisor notices him and offers a perfunctory smile. He nudges his glasses.</p>
 <p>"Captain, according to our assessment, this signal array's effective information capture rate is too low. The Fleet is now equipped with EVER's latest receivers. There's no need to waste processing power on meaningless background noise."</p>
 <p>Rufus stands his ground before the advisor, his gaze unyielding. "Its efficiency may not meet some people's standards, but it's honest. It records everything it sees and hears exactly as received."</p>
-<p>"I understand your attachment to legacy equipment. After all, you've been with the Fleet for over a decade now. But this is 2048. The new receivers are paired with the most intelligent, most advanced algorithmic systems available. Decision-making efficiency will improve dramatically.”</p>
+<p>"I understand your attachment to legacy equipment. After all, you've been with the Fleet for over a decade now. But this is 2048. The new receivers are paired with the most intelligent, most advanced algorithmic systems available. Decision-making efficiency will improve dramatically."</p>
 <p>"This isn't about nostalgia. We must have access to the raw frequency bands. It's nonnegotiable."</p>
 <p>"Perhaps you don't fully appreciate what these algorithms offer." The advisor's tone is patient. "Their filtering parameters are modeled on over a decade of data from every Deepspace-related incident Skyhaven has faced. Any signal the system filters out is either known, a harmless natural phenomenon, or its energy signature is so negligible that even if it reached the surface, it couldn't possibly pose a threat."</p>
 <p>"Your models are built on known quantities and current ground capabilities. But the entire point of Deepspace exploration is confronting the unknown. What your system trims away as signal noise could be a new type of transmission never before recorded or..." He pauses. </p>
 <p>"The intermittent distress call from a powerless escape pod as it drifts in the dark."</p>
 <p>"The probability of something that extreme—"The Farspace Fleet's history is full of such cases. You're welcome to look them up."</p>
-<p>“…”</p>
+<p>"…"</p>
 <p>The advisor falls silent. Rufus steps forward his voice steadfast. "When the system declares everything as clear, I need to verify the raw frequency bands myself."</p>
 <p>The two maintain eye contact for a while. The advisor has no desire to start a conflict with a captain of Rufus's standing. Not in the early days of a new partnership anyway. He shrugs, conceding. "Fine. If you insist on this level of...caution, I'll have to note in my report that it will add to the Fleet's operating budget." After the advisor leaves, Rufus stands alone before the sunflower's master control panel. He enters a long, complex encryption key and locks the analog array's output directly to his personal terminal and sets the highest priority override. It bypasses EVER's system preprocessing.</p>
 <br>
@@ -5382,7 +5382,7 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>Once converted, faint specks of light flicker at the edge of the hazard zone.</p>
 <p>"Captain Rufus, you know how to plan ahead." The representative smiles and slowly claps.</p>
 <p>"Our new algorithms are designed to filter out fluctuations in Deepspace that pose no threat. Unfortunately, they also screen out life-support signals whose spectral signatures overlap too closely with the magnetic field. If you hadn't insisted on preserving those inefficient frequency bands, we likely wouldn't have known that anyone was trapped in the magnetic storm until their wreckage drifted out."</p>
-<p>"A Deepspace Aviation Administration patrol squadron." He unhurriedly gestures toward the flickering specks of light. "They were conducting routine Deepspace cartography when the magnetic storm's sudden expansion swept them in. Navigation systems across the board failed. They're surviving on backup power alone. Life support systems were operating at a bare minimum while they were in the turbulence. I imagine DAA is still scrambling to locate their missing research team as we speak...”</p>
+<p>"A Deepspace Aviation Administration patrol squadron." He unhurriedly gestures toward the flickering specks of light. "They were conducting routine Deepspace cartography when the magnetic storm's sudden expansion swept them in. Navigation systems across the board failed. They're surviving on backup power alone. Life support systems were operating at a bare minimum while they were in the turbulence. I imagine DAA is still scrambling to locate their missing research team as we speak..."</p>
 <p>The adjutant stands behind Rufus and gulps Ever since the sunflower dispute, EVER's displeasure with their uncooperative captain has surfaced in one resource approval clash and technical disagreement after another. The sudden show of goodwill is impossible to take at face value.</p>
 <p>"This is currently the only viable solution." The representative rotates the hologram to reveal a model of a black, angular device. "A suppressor developed by EVER under emergency protocols. Deploy it to the central zone and activate it. It will neutralize the energy fluctuations. Not only will it save the DAA's researchers, but it will also allow us to salvage the mutated Protocore."</p>
 <p>"Its mutation profile exceeds anything in our existing archives, so its research value is immeasurable."</p>
@@ -5463,10 +5463,10 @@ The gemstone is Talia's favorite and matches the color of her wedding dress- “
 <p>Rufus listens. His sharp gaze is fixated on Liam, and he waits for the rest.</p>
 <p>"...Colonel Caleb was dispatched under emergency protocols. He successfully salvaged the high-risk mutated Protocore and prevented a power grid crisis in Skyhaven. It's a flawless debut for the new colonel." Liam's tone remains measured and factual.</p>
 <p>"Heh. I assume he piloted that black fighter jet." A faint, knowing smile crosses Rufus's lips. Certain suspicions fall into place.</p>
-<p>“The official report is clear, Captain. The energy flux at the vortex's center was highly unpredictable. The drones were lost due to an unfortunate accident while attempting close-range combat documentation. No other cause has been identified." Liam recites the script with perfect neutrality. "Additionally, you should be aware that your survival is strictly classified. This medical station is Colonel Caleb's private facility. You're encouraged to focus on recovering here."</p>
+<p>"The official report is clear, Captain. The energy flux at the vortex's center was highly unpredictable. The drones were lost due to an unfortunate accident while attempting close-range combat documentation. No other cause has been identified." Liam recites the script with perfect neutrality. "Additionally, you should be aware that your survival is strictly classified. This medical station is Colonel Caleb's private facility. You're encouraged to focus on recovering here."</p>
 <p>Rufus's expression doesn't soften. His gaze remains locked on Liam, and he cuts straight to the point. "And Caleb's hidden everything he's done from EVER?"</p>
 <p>Liam presses his lips together and lowers his gaze.</p>
-<p>“Captain Rufus."</p>
+<p>"Captain Rufus."</p>
 <p>The automatic door slides open once more. A tall figure steps through the backlit threshold Sporting a black-gold uniform and spotless leather gloves, he has the face Rufus once studied in a holographic dossier. Caleb carries a medical report in one hand. He reaches the bedside, carefully sets it down, and lets his gaze drift past the tangle of tubes and monitors until it settles on the sunflowers arranged in a nearby vase. He says gently, "You're still recovering. Try not to overexert yourself."</p>
 <p>This is the first time Rufus has laid eyes on his successor. In person, Caleb is every bit as striking and composed as his photograph, yet something in the depths of his gaze carries an unexpected warmth.</p>
 <p>Rufus maintains eye contact with him before finally speaking. His voice is rough. "You wrote yourself a perfect script."</p>
