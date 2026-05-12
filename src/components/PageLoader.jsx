@@ -22,7 +22,7 @@ function PageLoader({ children, delay = 500 }) {
                 alignItems: 'center',
                 height: '70vh'
             }}>
-                <Spin size="large" tip="Loading..." />
+                <Spin size="large" description="Loading..." />
             </div>
         );
     }

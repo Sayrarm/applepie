@@ -47,6 +47,7 @@
 
 .burgerContainer {
     display: flex;
+    margin-right: 15px;
 }
 
 .burger {
@@ -167,3 +168,20 @@
         opacity: 0;
     }
 }
+
+/*MOBILE*/
+
+@media screen and (min-width: 600px) {
+    .burgerContainer {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .link {
+        display: none;
+    }
+
+}
+
