@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom';
+import styles from "./GenericArticlePage.module.css";
 
 function GenericArticlePage({ data, categories, linkField = "link" }) {
     const { articleLink } = useParams();
@@ -14,20 +15,19 @@ function GenericArticlePage({ data, categories, linkField = "link" }) {
     }
 
     return (
-        <div>
+        <div className={styles.containerArticle}>
             {/* Заголовок категории */}
             {category && (
-                <div className="categoryHeader">
-                    <div>{category.title}</div>
+                <div>
+                    <div className={styles.mainTitle}>{category.title}</div>
                 </div>
             )}
-            <br/>
             {/* Статьи */}
             {articles.map(article => (
-                <article key={article.id}>
-                    <div>{article.serialNumber} {article.subtitle}</div>
+                <article key={article.id} className={styles.article}>
+                    <div className={styles.articleTitle}>{article.serialNumber} {article.subtitle}</div>
                     <br/>
-                    <div dangerouslySetInnerHTML={{ __html: article.content }} />
+                    <div className={styles.articleText} dangerouslySetInnerHTML={{ __html: article.content }} />
                     <br/>
                 </article>
             ))}
