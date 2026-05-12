@@ -4,21 +4,31 @@
     align-items: center;
 }
 
-.sortBy,
-.filterBy {
+.options {
     margin-bottom: 10px;
+}
+
+.select {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+.filterBy {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .sortBy {
     display: flex;
-    align-items: center;
     gap: 5px;
 }
 
-.filterBy {
+.selectChar{
     display: flex;
-    align-items: center;
-    gap: 5px;
 }
 
 .cardsGrid {
@@ -31,7 +41,7 @@
 .buttonSelectChar {
     border: none;
     background: none;
-    font-size: 20px;
+    font-size: 19px;
     color: var(--brown);
     padding: 4px 8px;
 }
@@ -57,6 +67,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
