@@ -20,3 +20,11 @@
     object-fit: cover;
     object-position: 10% 20%;
 }
+
+@media (max-width: 450px) {
+    .img {
+        display: flex;
+        justify-self: center;
+        margin-bottom: 10px;
+    }
+}

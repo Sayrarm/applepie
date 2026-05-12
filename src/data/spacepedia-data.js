@@ -574,7 +574,7 @@ export const spacepediaData = [
         title: "Caleb",
         img: "/sp/a2_worldinfo_5_0003_new.png",
         content: `
-<p>My childhood friend. Grandma took us in when we were young. Now he works as a fighter pilot for the Deepspace Aviation Administration. Ever since he went to Aerospace Academy in Skyhaven, we don't often see each other. But we always visit Grandma during the holidays. While he loves teasing me, he's actually a reliable person whom I trust.</p>
+<p>My childhood friend and brother. Grandma took us in when we were young. Now he works as a fighter pilot for the Deepspace Aviation Administration. Ever since he went to Aerospace Academy in Skyhaven, we don't often see each other. But we always visit Grandma during the holidays. While he loves teasing me, he's actually a reliable person whom I trust.</p>
 <br>
 <h4>Death Certificate</h4>
 <p>He "died" in an accident. His death certificate forced me to accept it. But now, he's back.</p>
