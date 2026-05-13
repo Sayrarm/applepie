@@ -1,8 +1,12 @@
 import FlexibleTimer from "../components/FlexibleTimer.jsx";
 import styles from './Home.module.css'
+import {useRecurringTimer} from "../hooks/resetTimer.js";
 
 function Home() {
 
+    const timeLeftDay = useRecurringTimer('day');
+    const timeLeftWeek = useRecurringTimer('week');
+    const timeLeftMonth = useRecurringTimer('month');
 
     return (
         <div className={styles.containerMain}>
@@ -84,13 +88,15 @@ function Home() {
                         <div>
                             <h3>Daily</h3>
                             <div>Awards</div>
-                            <div>Timer</div>
+                            <div>
+                                <h3>До конца дня (5 утра): {timeLeftDay.hours}ч {timeLeftDay.minutes}м {timeLeftDay.seconds}с</h3>
+                            </div>
                         </div>
 
                         <div>
                             <h3>Weekly</h3>
                             <div>Awards</div>
-                            <div>Timer</div>
+                            <h3>До конца недели: {timeLeftWeek.days}д {timeLeftWeek.hours}ч {timeLeftDay.minutes}м {timeLeftDay.seconds}с</h3>
                         </div>
 
                         <div>
@@ -99,7 +105,7 @@ function Home() {
                                 <img src="" alt=""/>
                                 Memories
                             </div>
-                            <div>Timer</div>
+                            <h3>До конца месяца: {timeLeftMonth.days}д {timeLeftMonth.hours}ч {timeLeftDay.minutes}м {timeLeftDay.seconds}с</h3>
                         </div>
 
                     </div>
