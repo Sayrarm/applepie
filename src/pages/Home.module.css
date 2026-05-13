@@ -1,0 +1,23 @@
+.container {
+    padding: 5px;
+}
+
+.containerTitleTimer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 413px;
+
+    backdrop-filter: blur(10px);
+    background: rgba(255, 203, 144, 0.1);
+
+
+    -webkit-box-shadow: 10px 10px 6px -5px rgba(148, 148, 148, 0.4);
+    -moz-box-shadow: 10px 10px 6px -5px rgba(148, 148, 148, 0.4);
+    box-shadow: 10px 10px 6px -5px rgba(148, 148, 148, 0.4);
+}
+
+.img {
+    width: 413px;
+    height: 210px;
+}

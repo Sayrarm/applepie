@@ -1,3 +1,6 @@
+import FlexibleTimer from "../components/FlexibleTimer.jsx";
+import styles from './Home.module.css'
+
 function Home() {
 
 
@@ -5,10 +8,15 @@ function Home() {
         <>
             <div>
                 <h2>Banners</h2>
-                <div>
-                    <img src="" alt=""/>
-                    <h3>Title</h3>
-                    <div>Timer</div>
+                <div className={styles.container}>
+                    <img className={styles.img} src="src/assets/main-page/new-banner.png" alt="new-banner"/>
+                    <div className={styles.containerTitleTimer}>
+                        <h3>Lingering Lust</h3>
+                        <FlexibleTimer
+                            startDateTime="2026-04-30T05:00:00+02:00"
+                            endDateTime="2026-05-15T04:59:00+02:00"
+                        />
+                    </div>
                     <div>Memories</div>
                 </div>
             </div>
