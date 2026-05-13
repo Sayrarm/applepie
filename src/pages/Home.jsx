@@ -49,22 +49,6 @@ function Home() {
                 </div>
 
                 <div>
-                    <h2>Events</h2>
-                    <div>
-                        <div className={styles.containerBanner}>
-                            <img className={styles.img} src="src/assets/main-page/event-1.png" alt="event"/>
-                            <div className={styles.containerTitleTimer}>
-                                <h3>10 Days With You</h3>
-                                <FlexibleTimer
-                                    startDateTime="2026-05-10T05:00:00+02:00"
-                                    endDateTime="2026-05-28T04:59:00+02:00"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
                     <h2>Battle Pass</h2>
                     <div className={styles.containerBanner}>
                         <img className={styles.img} src="src/assets/main-page/new-promise.png" alt="event"/>
@@ -81,6 +65,23 @@ function Home() {
 
 
             <div className={styles.containerSchedule}>
+
+                <div>
+                    <h2>Events</h2>
+                    <div>
+                        <div className={styles.containerBanner}>
+                            <img className={styles.img} src="src/assets/main-page/event-1.png" alt="event"/>
+                            <div className={styles.containerTitleTimer}>
+                                <h3>10 Days With You</h3>
+                                <FlexibleTimer
+                                    startDateTime="2026-05-10T05:00:00+02:00"
+                                    endDateTime="2026-05-28T04:59:00+02:00"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div>
                     <h2>Reset</h2>
 
@@ -88,7 +89,7 @@ function Home() {
 
                         <div className={styles.containerDaily}>
                             <div className={styles.containerAwards}>
-                                <h3>Daily</h3>
+                                <h3>Daily Awards</h3>
                                 <div>
                                     <img
                                         className={styles.imgAwards}
@@ -101,7 +102,7 @@ function Home() {
 
                         <div className={styles.containerDaily}>
                             <div className={styles.containerAwards}>
-                                <h3>Weekly</h3>
+                                <h3>Weekly Awards</h3>
                                 <div>
                                     <img
                                         className={styles.imgAwards}
@@ -114,10 +115,11 @@ function Home() {
 
                         <div className={styles.containerDaily}>
                             <div className={styles.containerAwards}>
-                                <h3>Monthly</h3>
+                                <h3>Monthly (Wishing Weil Shop)</h3>
                                 <div>
-                                    <img src="" alt=""/>
-                                    Memories
+                                    <img
+                                        className={styles.imgAwards}
+                                        src="src/assets/main-page/cards-jajo.png" alt="cards"/>
                                 </div>
                             </div>
 
