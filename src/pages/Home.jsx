@@ -1,6 +1,7 @@
 import FlexibleTimer from "../components/FlexibleTimer.jsx";
 import styles from './Home.module.css'
 import {useRecurringTimer} from "../hooks/resetTimer.js";
+import DailyResetTimer from "../components/DailyResetTimer.jsx";
 
 function Home() {
 
@@ -88,15 +89,13 @@ function Home() {
                         <div>
                             <h3>Daily</h3>
                             <div>Awards</div>
-                            <div>
-                                <h3>До конца дня (5 утра): {timeLeftDay.hours}ч {timeLeftDay.minutes}м {timeLeftDay.seconds}с</h3>
-                            </div>
+                            <DailyResetTimer timeLeft={timeLeftDay} />
                         </div>
 
                         <div>
                             <h3>Weekly</h3>
                             <div>Awards</div>
-                            <h3>До конца недели: {timeLeftWeek.days}д {timeLeftWeek.hours}ч {timeLeftDay.minutes}м {timeLeftDay.seconds}с</h3>
+                            <DailyResetTimer timeLeft={timeLeftWeek} />
                         </div>
 
                         <div>
@@ -105,7 +104,7 @@ function Home() {
                                 <img src="" alt=""/>
                                 Memories
                             </div>
-                            <h3>До конца месяца: {timeLeftMonth.days}д {timeLeftMonth.hours}ч {timeLeftDay.minutes}м {timeLeftDay.seconds}с</h3>
+                            <DailyResetTimer timeLeft={timeLeftMonth} />
                         </div>
 
                     </div>
