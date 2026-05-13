@@ -6350,5 +6350,21 @@
     "stella": "src/assets/icons/emerald.png",
     "placement": "src/assets/icons/lunar.png",
     "talent": "src/assets/icons/atk.png"
+  },
+  {
+    "id": 399,
+    "char": "Zayne",
+    "name": "Blooming Hour",
+    "image": "src/assets/pictures/Zayne/Zayne_399.png",
+    "imageSmall": "src/assets/pictures/card-middle/Zayne_399.png",
+    "stellaName": "violet",
+    "placementName": "lunar",
+    "talentName": "atk",
+    "rarityName": "4-star",
+    "rarity": "src/assets/icons/4-star.png",
+    "rarityStars": 4,
+    "stella": "src/assets/icons/violet.png",
+    "placement": "src/assets/icons/lunar.png",
+    "talent": "src/assets/icons/atk.png"
   }
 ]
