@@ -1,4 +1,9 @@
-.container {
+.containerMain {
+    display: flex;
+    justify-content: space-between;
+}
+
+.containerBanner {
     padding: 5px;
 }
 
@@ -19,5 +24,4 @@
 
 .img {
     width: 413px;
-    height: 210px;
 }
