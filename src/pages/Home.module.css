@@ -7,10 +7,8 @@
     padding: 5px;
 }
 
+.containerDaily,
 .containerTitleTimer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     width: 413px;
 
     backdrop-filter: blur(10px);
@@ -22,6 +20,30 @@
     box-shadow: 10px 10px 6px -5px rgba(148, 148, 148, 0.4);
 }
 
+.containerTitleTimer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.containerDaily {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+}
+
+.containerAwards {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
 .img {
     width: 413px;
+}
+
+.imgAwards {
+    width: 350px;
 }

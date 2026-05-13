@@ -80,31 +80,48 @@ function Home() {
             </div>
 
 
-            <div className={styles.containerDaily}>
+            <div className={styles.containerSchedule}>
                 <div>
                     <h2>Reset</h2>
 
                     <div>
 
-                        <div>
-                            <h3>Daily</h3>
-                            <div>Awards</div>
-                            <DailyResetTimer timeLeft={timeLeftDay} />
-                        </div>
-
-                        <div>
-                            <h3>Weekly</h3>
-                            <div>Awards</div>
-                            <DailyResetTimer timeLeft={timeLeftWeek} />
-                        </div>
-
-                        <div>
-                            <h3>Monthly</h3>
-                            <div>
-                                <img src="" alt=""/>
-                                Memories
+                        <div className={styles.containerDaily}>
+                            <div className={styles.containerAwards}>
+                                <h3>Daily</h3>
+                                <div>
+                                    <img
+                                        className={styles.imgAwards}
+                                        src="src/assets/main-page/daily-awards.png" alt="awards"/>
+                                </div>
                             </div>
-                            <DailyResetTimer timeLeft={timeLeftMonth} />
+
+                            <DailyResetTimer timeLeft={timeLeftDay}/>
+                        </div>
+
+                        <div className={styles.containerDaily}>
+                            <div className={styles.containerAwards}>
+                                <h3>Weekly</h3>
+                                <div>
+                                    <img
+                                        className={styles.imgAwards}
+                                        src="src/assets/main-page/weekly-awards.png" alt="awards"/>
+                                </div>
+                            </div>
+
+                            <DailyResetTimer timeLeft={timeLeftWeek}/>
+                        </div>
+
+                        <div className={styles.containerDaily}>
+                            <div className={styles.containerAwards}>
+                                <h3>Monthly</h3>
+                                <div>
+                                    <img src="" alt=""/>
+                                    Memories
+                                </div>
+                            </div>
+
+                            <DailyResetTimer timeLeft={timeLeftMonth}/>
                         </div>
 
                     </div>
