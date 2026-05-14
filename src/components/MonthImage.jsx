@@ -4,15 +4,18 @@ const MonthImage = () => {
     const roster = [
         {
             conditions: ['january', 'april', 'july', 'october'],
-            image: '/cards-jan-apr-jul-oct.png'
+            image: '/cards-jan-apr-jul-oct.png',
+            id: 'card-1',
         },
         {
             conditions: ['february', 'may', 'august', 'november'],
-            image: '/cards-feb-may-aug-nov.png'
+            image: '/cards-feb-may-aug-nov.png',
+            id: 'card-2',
         },
         {
             conditions: ['march', 'june', 'september', 'december'],
-            image: '/cards-mar-jun-sep-dec.png'
+            image: '/cards-mar-jun-sep-dec.png',
+            id: 'card-3',
         }
     ];
 

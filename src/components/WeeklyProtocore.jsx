@@ -4,15 +4,18 @@ const WeeklyProtocore = () => {
     const roster = [
         {
             conditions: ['monday', 'thursday', 'sunday'],
-            image: '/prot-mon-thur-sun.png'
+            image: '/prot-mon-thur-sun.png',
+            id: 'prot-1',
         },
         {
             conditions: ['tuesday', 'friday', 'sunday'],
-            image: '/prot-tue-fri-sun.png'
+            image: '/prot-tue-fri-sun.png',
+            id: 'prot-2',
         },
         {
             conditions: ['wednesday', 'saturday', 'sunday'],
-            image: '/prot-wed-sat-sun.png'
+            image: '/prot-wed-sat-sun.png',
+            id: 'prot-3',
         },
     ];
 

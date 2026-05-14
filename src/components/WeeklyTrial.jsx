@@ -5,27 +5,27 @@ const WeeklyTrial = () => {
         {
             conditions: ['wednesday', 'friday', 'saturday', 'sunday'],
             image: '/caleb-wed-fri-sat-sun.png',
-            id: 1
+            id: 'caleb'
         },
         {
             conditions: ['wednesday', 'friday', 'saturday', 'sunday'],
             image: '/raf-wed-fri-sat-sun.png',
-            id: 2
+            id: 'rafayel'
         },
         {
             conditions: ['tuesday', 'thursday', 'saturday', 'sunday'],
             image: '/sylus-tye-thur-sat-sun.png',
-            id: 3
+            id: 'sylus'
         },
         {
             conditions: ['monday', 'thursday', 'saturday', 'sunday'],
             image: '/xavier-mon-thur-sat-sun.png',
-            id: 4
+            id: 'xavier'
         },
         {
             conditions: ['tuesday', 'friday', 'saturday', 'sunday'],
             image: '/zayne-tue-fri-sat-sun.png',
-            id: 5
+            id: 'zayne'
         },
     ];
 
