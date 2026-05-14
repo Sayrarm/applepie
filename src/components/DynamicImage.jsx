@@ -15,50 +15,78 @@ const DynamicImage = ({
                           basePath = '/images',
                           type = 'weekday',
                           className = '',
-                          alt = 'Dynamic image'
+                          containerClassName = '',
+                          alt = 'Dynamic image',
+                          dayStartHour = 5 // Новый день начинается в 5 утра
                       }) => {
+
+        // Получаем текущую дату с учетом начала дня в 5 утра
+        const currentDate = useMemo(() => {
+            const now = new Date();
+            const currentHour = now.getHours();
+
+            // Корректируем дату: если текущий час меньше 5, то мы все еще в предыдущем дне
+            const adjustedDate = new Date(now);
+            if (currentHour < dayStartHour) {
+                adjustedDate.setDate(adjustedDate.getDate() - 1);
+            }
+
+            return adjustedDate;
+        }, [dayStartHour]);
 
     // Определяем текущий день недели или месяц
     const currentCondition = useMemo(() => {
-        const now = new Date();
 
-        if (type === 'weekday') {
-            // getDay(): 0 - воскресенье, 1 - понедельник, ..., 6 - суббота
-            const weekdays = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
-            return weekdays[now.getDay()];
-        }
+    if (type === 'weekday') {
+        // getDay(): 0 - воскресенье, 1 - понедельник, ..., 6 - суббота
+        const weekdays = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+        return weekdays[currentDate.getDay()];
+    }
 
-        if (type === 'month') {
-            // getMonth(): 0 - январь, 1 - февраль, ..., 11 - декабрь
-            const months = ['january', 'february', 'march', 'april', 'may', 'june',
-                'july', 'august', 'september', 'october', 'november', 'december'];
-            return months[now.getMonth()];
-        }
+    if (type === 'month') {
+        // getMonth(): 0 - январь, 1 - февраль, ..., 11 - декабрь
+        const months = ['january', 'february', 'march', 'april', 'may', 'june',
+            'july', 'august', 'september', 'october', 'november', 'december'];
+        return months[currentDate.getMonth()];
+    }
 
-        return null;
-    }, [type]);
+    return null;
+}, [type, currentDate]);
 
-    // Находим подходящую картинку из ростра
-    const selectedImage = useMemo(() => {
-        // Ищем первое правило, которое подходит под текущие условия
-        const matchedRule = roster.find(rule => {
-            // Проверяем, подходит ли условие (день недели или месяц)
-            return rule.conditions.includes(currentCondition);
-        });
+// Находим подходящую картинку из ростра
+const matchingImages = useMemo(() => {
+    const matchedRules = roster.filter(rule => {
+        return rule.conditions.includes(currentCondition);
+    });
+    return matchedRules.map(rule => {
+        const imagePath = rule.image.startsWith('/')
+            ? rule.image
+            : `/${rule.image}`;
+        return {
+            src: `${basePath}${imagePath}`,
+            id: rule.id
+        };
+    });
+}, [roster, currentCondition, basePath]);
 
-        // Если нашли правило - берем картинку, иначе дефолтную
-        const imageName = matchedRule?.image || roster[0]?.image || 'default.png';
+if (matchingImages.length === 0) {
+    return null;
+}
 
-        return `${basePath}/${imageName}`;
-    }, [roster, currentCondition, basePath]);
 
-    return (
-        <img
-            src={selectedImage}
-            alt={alt}
-            className={className}
-        />
-    );
-};
+return (
+    <div className={containerClassName}>
+        {matchingImages.map((image, index) => (
+            <img
+                key={image.id}
+                src={image.src}
+                alt={`${alt} ${index + 1}`}
+                className={className}
+            />
+        ))}
+    </div>
+);
+}
+;
 
 export default DynamicImage;

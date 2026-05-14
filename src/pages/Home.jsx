@@ -3,6 +3,8 @@ import styles from './Home.module.css'
 import {useRecurringTimer} from "../hooks/resetTimer.js";
 import DailyResetTimer from "../components/DailyResetTimer.jsx";
 import MonthImage from "../components/MonthImage.jsx";
+import WeeklyProtocore from "../components/WeeklyProtocore.jsx";
+import WeeklyTrial from "../components/WeeklyTrial.jsx";
 
 function Home() {
 
@@ -134,12 +136,12 @@ function Home() {
 
                         <div>
                             <h3>Protocores</h3>
-                            <div>protocore list</div>
+                            <WeeklyProtocore />
                         </div>
 
                         <div>
                             <h3>Deepspace Trial</h3>
-                            <div>trial list</div>
+                            <WeeklyTrial />
                         </div>
 
                     </div>
