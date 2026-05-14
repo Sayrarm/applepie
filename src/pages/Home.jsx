@@ -2,6 +2,7 @@ import FlexibleTimer from "../components/FlexibleTimer.jsx";
 import styles from './Home.module.css'
 import {useRecurringTimer} from "../hooks/resetTimer.js";
 import DailyResetTimer from "../components/DailyResetTimer.jsx";
+import MonthImage from "../components/MonthImage.jsx";
 
 function Home() {
 
@@ -115,12 +116,8 @@ function Home() {
 
                         <div className={styles.containerDaily}>
                             <div className={styles.containerAwards}>
-                                <h3>Monthly (Wishing Weil Shop)</h3>
-                                <div>
-                                    <img
-                                        className={styles.imgAwards}
-                                        src="src/assets/main-page/cards-jajo.png" alt="cards"/>
-                                </div>
+                                <h3>Monthly (Wishing Well Shop)</h3>
+                                <MonthImage />
                             </div>
 
                             <DailyResetTimer timeLeft={timeLeftMonth}/>
