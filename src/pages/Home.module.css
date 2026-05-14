@@ -36,6 +36,7 @@
 
 .containerAwards {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 5px;
 }
@@ -44,6 +45,3 @@
     width: 413px;
 }
 
-.imgAwards {
-    width: 350px;
-}

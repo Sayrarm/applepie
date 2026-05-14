@@ -1,7 +1,15 @@
 import { useState, useEffect } from 'react';
 
-const getNextTriggerDate = (type) => {
+// Вспомогательная функция для получения текущего времени в UTC+2
+const getCurrentTimeInUTC2 = () => {
     const now = new Date();
+    // Получаем UTC время и добавляем 2 часа
+    const utcTime = now.getTime() + (now.getTimezoneOffset() * 60000);
+    return new Date(utcTime + (2 * 60 * 60 * 1000));
+};
+
+const getNextTriggerDate = (type) => {
+    const now = getCurrentTimeInUTC2();
     const target = new Date(now);
     target.setHours(5, 0, 0, 0);
 
@@ -38,7 +46,8 @@ const getNextTriggerDate = (type) => {
 
 const calculateTimeLeft = (type) => {
     const nextDate = getNextTriggerDate(type);
-    const difference = nextDate - new Date();
+    const now = getCurrentTimeInUTC2();
+    const difference = nextDate - now;
 
     if (difference <= 0) {
         return { days: 0, hours: 0, minutes: 0, seconds: 0 };
@@ -56,14 +65,12 @@ export const useRecurringTimer = (type) => {
     const [timeLeft, setTimeLeft] = useState(() => calculateTimeLeft(type));
 
     useEffect(() => {
-        // Создаем интервал для обновления
         const timer = setInterval(() => {
             setTimeLeft(calculateTimeLeft(type));
         }, 1000);
 
-        // Cleanup функция
         return () => clearInterval(timer);
-    }, [type]); // Зависимость только от type
+    }, [type]);
 
     return timeLeft;
 };
