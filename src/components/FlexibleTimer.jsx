@@ -86,7 +86,7 @@ function FlexibleTimer({
                 </div>
             ) : (
                 <div>
-                    Time's up
+                    Ended
                 </div>
             )}
         </div>

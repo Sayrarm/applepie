@@ -15,7 +15,7 @@ function Home() {
     return (
         <div className={styles.containerMain}>
             <div className={styles.containerEvents}>
-                <h2>Banners</h2>
+                <h2 className={styles.h2}>Banners</h2>
                 <div>
                     <div className={styles.containerBanner}>
                         <img className={styles.img} src="src/assets/main-page/new-banner.png" alt="new-banner"/>
@@ -52,7 +52,7 @@ function Home() {
                 </div>
 
                 <div>
-                    <h2>Battle Pass</h2>
+                    <h2 className={styles.h2}>Battle Pass</h2>
                     <div className={styles.containerBanner}>
                         <img className={styles.img} src="src/assets/main-page/new-promise.png" alt="event"/>
                         <div className={styles.containerTitleTimer}>
@@ -70,7 +70,7 @@ function Home() {
             <div className={styles.containerSchedule}>
 
                 <div>
-                    <h2>Events</h2>
+                    <h2 className={styles.h2}>Events</h2>
                     <div>
                         <div className={styles.containerBanner}>
                             <img className={styles.img} src="src/assets/main-page/event-1.png" alt="event"/>
@@ -86,7 +86,7 @@ function Home() {
                 </div>
 
                 <div>
-                    <h2>Reset</h2>
+                    <h2 className={styles.h2}>Reset</h2>
 
                     <div>
 
@@ -119,7 +119,7 @@ function Home() {
                         <div className={styles.containerDaily}>
                             <div className={styles.containerAwards}>
                                 <h3>Monthly (Wishing Well Shop)</h3>
-                                <MonthImage />
+                                <MonthImage/>
                             </div>
 
                             <DailyResetTimer timeLeft={timeLeftMonth}/>
@@ -130,20 +130,24 @@ function Home() {
                 </div>
 
                 <div>
-                    <h2>Schedule</h2>
+                    <h2 className={styles.h2}>Schedule</h2>
 
-                    <div>
+                    <div className={styles.scheduleContainerGeneral}>
+                        <div className={styles.scheduleContainer}>
 
-                        <div>
-                            <h3>Protocores</h3>
-                            <WeeklyProtocore />
+                            <div className={styles.schedule}>
+                                <h3>Protocores</h3>
+                                <WeeklyProtocore/>
+                            </div>
+
+                            <div className={styles.schedule}>
+                                <h3>Deepspace Trial</h3>
+                                <WeeklyTrial/>
+                            </div>
+
+
                         </div>
-
-                        <div>
-                            <h3>Deepspace Trial</h3>
-                            <WeeklyTrial />
-                        </div>
-
+                        <DailyResetTimer timeLeft={timeLeftDay}/>
                     </div>
                 </div>
             </div>
