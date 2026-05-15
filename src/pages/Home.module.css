@@ -4,13 +4,13 @@
 }
 
 .containerBanner {
-    padding: 5px;
+    margin: 5px;
 }
 
 .scheduleContainerGeneral,
 .containerDaily,
 .containerTitleTimer {
-    width: 413px;
+    flex-wrap: wrap;
 
     backdrop-filter: blur(10px);
     background: rgba(255, 203, 144, 0.1);
@@ -54,15 +54,44 @@
 
 .scheduleContainer {
     display: flex;
-    justify-content: space-evenly
+    justify-content: space-evenly;
 }
 
 .scheduleContainerGeneral {
     display: flex;
     flex-direction: column;
+    margin: 5px;
 
 }
 
 .h2 {
     margin: 5px;
+}
+
+@media screen and (max-width: 860px) {
+
+    .containerMain {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .weeklyImg{
+        width: 70px;
+    }
+
+
+    .monthImg,
+    .img,
+    .imgAwards {
+        width: 275px;
+    }
+
+    .scheduleContainerGeneral,
+    .containerDaily,
+    .container,
+    .containerTitleTimer {
+        font-size: 12px;
+        width: 275px;
+    }
+
 }

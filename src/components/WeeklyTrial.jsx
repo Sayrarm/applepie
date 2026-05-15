@@ -1,4 +1,5 @@
 import DynamicImage from "./DynamicImage.jsx";
+import styles from '/src/pages/Home.module.css'
 
 const WeeklyTrial = () => {
     const roster = [
@@ -35,6 +36,7 @@ const WeeklyTrial = () => {
             type="weekday"
             basePath="src/assets/main-page/change-pic"
             dayStartHour={5}
+            className={styles.weeklyImg}
         />
     );
 };

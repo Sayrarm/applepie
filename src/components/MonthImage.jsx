@@ -1,4 +1,5 @@
 import DynamicImage from './DynamicImage.jsx';
+import styles from '/src/pages/Home.module.css'
 
 const MonthImage = () => {
     const roster = [
@@ -26,6 +27,7 @@ const MonthImage = () => {
             basePath="src/assets/main-page/change-pic"
             alt="memories from wishing well"
             dayStartHour={5}
+            className={styles.monthImg}
         />
     );
 };
