@@ -65,7 +65,8 @@
 }
 
 .h2 {
-    margin: 5px;
+    margin: 10px;
+    font-size: 25px;
 }
 
 @media screen and (max-width: 860px) {
@@ -92,6 +93,11 @@
     .containerTitleTimer {
         font-size: 12px;
         width: 275px;
+    }
+
+    .h2 {
+        margin: 5px;
+        font-size: 18px;
     }
 
 }
