@@ -11,7 +11,7 @@ function GenericArticlePage({ data, categories, linkField = "link" }) {
     const category = categories?.find(cat => cat[linkField] === articleLink);
 
     if (articles.length === 0) {
-        return <div>Статья не найдена</div>;
+        return <div>Article not found</div>;
     }
 
     return (

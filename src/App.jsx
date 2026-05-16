@@ -22,8 +22,9 @@ function App() {
             <div className="container">
                 <Header/>
 
+                <main className="main">
                 {/* Контент меняется здесь */}
-                <Routes>
+                <Routes className="main">
                     <Route path="/" element={<Home/>}/>
                     <Route path="/memories" element={<Memories/>}/>
                     <Route path="/characters" element={<Characters/>}/>
@@ -36,6 +37,7 @@ function App() {
                     <Route path="/main-story/:articleLink" element={<MsArticle />} />
                     <Route path="/spacepedia/:navigation" element={<Spacepedia />} />
                 </Routes>
+                </main>
 
                 <Footer />
 
