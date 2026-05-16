@@ -11,6 +11,7 @@ import MainStory from "./pages/MainStory.jsx";
 import { FloatButton } from 'antd';
 import WuArticle from "./pages/WuArticle.jsx";
 import MsArticle from "./pages/MsArticle.jsx";
+import Footer from "./components/Footer.jsx";
 
 
 function App() {
@@ -35,6 +36,8 @@ function App() {
                     <Route path="/main-story/:articleLink" element={<MsArticle />} />
                     <Route path="/spacepedia/:navigation" element={<Spacepedia />} />
                 </Routes>
+
+                <Footer />
 
                 <FloatButton.BackTop />
             </div>

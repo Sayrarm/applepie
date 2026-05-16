@@ -44,13 +44,29 @@ function Home() {
                     */}
 
                     <div className={styles.containerBanner}>
-                        <img className={styles.img} src="src/assets/main-page/rerun-banner-2.jpg" alt="rerun-banner-2"/>
+                        <img className={styles.img} src="src/assets/main-page/rerun-banner-2.png" alt="rerun-banner-2"/>
                         <div className={styles.containerTitleTimer}>
                             <h3>Fallen Crown</h3>
                             <FlexibleTimer
                                 startDateTime="2026-05-15T05:00:00+02:00"
                                 endDateTime="2026-05-22T04:59:00+02:00"
                             />
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 className={styles.h2}>Events</h2>
+                    <div>
+                        <div className={styles.containerBanner}>
+                            <img className={styles.img} src="src/assets/main-page/event-1.png" alt="event"/>
+                            <div className={styles.containerTitleTimer}>
+                                <h3>10 Days With You</h3>
+                                <FlexibleTimer
+                                    startDateTime="2026-05-10T05:00:00+02:00"
+                                    endDateTime="2026-05-28T04:59:00+02:00"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -72,22 +88,6 @@ function Home() {
 
 
             <div className={styles.containerSchedule}>
-
-                <div>
-                    <h2 className={styles.h2}>Events</h2>
-                    <div>
-                        <div className={styles.containerBanner}>
-                            <img className={styles.img} src="src/assets/main-page/event-1.png" alt="event"/>
-                            <div className={styles.containerTitleTimer}>
-                                <h3>10 Days With You</h3>
-                                <FlexibleTimer
-                                    startDateTime="2026-05-10T05:00:00+02:00"
-                                    endDateTime="2026-05-28T04:59:00+02:00"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <div>
                     <h2 className={styles.h2}>Reset</h2>
