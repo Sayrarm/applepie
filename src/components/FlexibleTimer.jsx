@@ -4,9 +4,12 @@ import styles from './FlexibleTimer.module.css'
 function FlexibleTimer({
                            startDateTime = '2026-01-01T00:00:00',  // Формат: YYYY-MM-DDTHH:MM:SS
                            endDateTime = '2026-12-31T23:59:59',
+                           autoRefresh = false,
                        }) {
     const [timeLeft, setTimeLeft] = useState({});
     const [status, setStatus] = useState('waiting'); // waiting, active, finished
+    const [currentStart, setCurrentStart] = useState(startDateTime);
+    const [currentEnd, setCurrentEnd] = useState(endDateTime);
 
     const calculateTimeLeft = (difference) => {
         if (difference <= 0) {
@@ -21,9 +24,21 @@ function FlexibleTimer({
         };
     };
 
+    const shiftDates = () => {
+        const start = new Date(currentStart);
+        const end = new Date(currentEnd);
+
+        // Сдвигаем на 14 дней
+        const newStart = new Date(start.getTime() + 14 * 24 * 60 * 60 * 1000);
+        const newEnd = new Date(end.getTime() + 14 * 24 * 60 * 60 * 1000);
+
+        setCurrentStart(newStart.toISOString());
+        setCurrentEnd(newEnd.toISOString());
+    };
+
     useEffect(() => {
-        const startDate = new Date(startDateTime);
-        const endDate = new Date(endDateTime);
+        const startDate = new Date(currentStart);
+        const endDate = new Date(currentEnd);
 
         const updateTimer = () => {
             const now = new Date();
@@ -34,12 +49,15 @@ function FlexibleTimer({
                 setTimeLeft(calculateTimeLeft(diff));
             } else if (now >= startDate && now <= endDate) {
                 setStatus(prev => prev !== 'active' ? 'active' : prev)
-
                 const diff = endDate - now;
                 setTimeLeft(calculateTimeLeft(diff));
             } else {
-                setStatus(prev => prev !== 'finished' ? 'finished' : prev);
-                setTimeLeft({days: 0, hours: 0, minutes: 0, seconds: 0});
+                if (autoRefresh) {
+                    shiftDates();
+                } else {
+                    setStatus(prev => prev !== 'finished' ? 'finished' : prev);
+                    setTimeLeft({days: 0, hours: 0, minutes: 0, seconds: 0});
+                }
             }
         };
 
@@ -47,7 +65,7 @@ function FlexibleTimer({
         updateTimer();
 
         return () => clearInterval(interval);
-    }, [startDateTime, endDateTime]);
+    }, [currentStart, currentEnd, autoRefresh]);
 
     const formatNumber = (num) => num.toString().padStart(2, '0');
 

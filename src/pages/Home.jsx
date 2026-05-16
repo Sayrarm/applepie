@@ -116,6 +116,33 @@ function Home() {
                             <DailyResetTimer timeLeft={timeLeftWeek}/>
                         </div>
 
+                        <div className={styles.containerActivity}>
+                            <div className={styles.containerResetActivity}>
+                                <h3>Hunter Contest</h3>
+                                <FlexibleTimer
+                                    startDateTime='2026-05-04T05:00:00+02:00'
+                                    endDateTime='2026-05-17T23:59:59+02:00'
+                                    autoRefresh={true}
+                                />
+                            </div>
+                            <div className={styles.containerResetActivity}>
+                                <h3>UNICORNS</h3>
+                                <FlexibleTimer
+                                    startDateTime='2026-05-11T05:00:00+02:00'
+                                    endDateTime='2026-05-25T04:59:59+02:00'
+                                    autoRefresh={true}
+                                />
+                            </div>
+                            <div className={styles.containerResetActivity}>
+                                <h3>Abyssal Chaos</h3>
+                                <FlexibleTimer
+                                    startDateTime='2026-05-11T05:00:00+02:00'
+                                    endDateTime='2026-05-25T04:59:59+02:00'
+                                    autoRefresh={true}
+                                />
+                            </div>
+                        </div>
+
                         <div className={styles.containerDaily}>
                             <div className={styles.containerAwards}>
                                 <h3>Monthly (Wishing Well Shop)</h3>
