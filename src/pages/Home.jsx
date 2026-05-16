@@ -17,6 +17,7 @@ function Home() {
             <div className={styles.containerEvents}>
                 <h2 className={styles.h2}>Banners</h2>
                 <div>
+                    {/*
                     <div className={styles.containerBanner}>
                         <img className={styles.img} src="src/assets/main-page/new-banner.png" alt="new-banner"/>
                         <div className={styles.containerTitleTimer}>
@@ -27,7 +28,9 @@ function Home() {
                             />
                         </div>
                     </div>
+                    */}
 
+                    {/*
                     <div className={styles.containerBanner}>
                         <img className={styles.img} src="src/assets/main-page/rerun-banner.png" alt="rerun-banner"/>
                         <div className={styles.containerTitleTimer}>
@@ -37,7 +40,8 @@ function Home() {
                                 endDateTime="2026-05-15T04:59:00+02:00"
                             />
                         </div>
-                    </div>
+                    </div
+                    */}
 
                     <div className={styles.containerBanner}>
                         <img className={styles.img} src="src/assets/main-page/rerun-banner-2.jpg" alt="rerun-banner-2"/>

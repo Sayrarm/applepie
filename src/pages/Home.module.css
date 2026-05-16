@@ -111,7 +111,8 @@
     .scheduleContainerGeneral,
     .containerDaily,
     .container,
-    .containerTitleTimer {
+    .containerTitleTimer,
+    .containerActivity {
         font-size: 12px;
         width: 275px;
     }
@@ -119,6 +120,11 @@
     .h2 {
         margin: 5px;
         font-size: 18px;
+    }
+
+    .containerResetActivity h3,
+    .containerTitleTimer h3 {
+        font-size: 12px;
     }
 
 }
