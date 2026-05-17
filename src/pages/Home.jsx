@@ -5,12 +5,20 @@ import DailyResetTimer from "../components/DailyResetTimer.jsx";
 import MonthImage from "../components/MonthImage.jsx";
 import WeeklyProtocore from "../components/WeeklyProtocore.jsx";
 import WeeklyTrial from "../components/WeeklyTrial.jsx";
+import ModalWindow from "../components/ModalWindow.jsx";
+import {useRef} from "react";
 
 function Home() {
 
     const timeLeftDay = useRecurringTimer('day');
     const timeLeftWeek = useRecurringTimer('week');
     const timeLeftMonth = useRecurringTimer('month');
+
+    const modalRef = useRef();
+
+    const showModal = () => {
+        modalRef.current.showModal();
+    };
 
     return (
         <div className={styles.containerMain}>
@@ -94,7 +102,7 @@ function Home() {
 
                     <div>
 
-                        <button className={styles.containerActivityButton}>
+                        <button onClick={showModal} className={styles.containerActivityButton}>
                             <div className={styles.containerResetActivity}>
                                 <h3>Daily Mission</h3>
                                 <DailyResetTimer timeLeft={timeLeftDay}/>
@@ -105,6 +113,18 @@ function Home() {
                                 <DailyResetTimer timeLeft={timeLeftWeek}/>
                             </div>
                         </button>
+
+                        <ModalWindow
+                            ref={modalRef}
+                            title={'Daily and Weekly Awards'}
+                            tag={
+                                <>
+                                    <div>Daily Awards</div>
+                                    <img src={'src/assets/main-page/daily-awards.png'} alt={'daily awards'}/>
+                                    <div>Weekly Awards</div>
+                                    <img src={'src/assets/main-page/weekly-awards.png'} alt={'weekly awards'}/>
+                                </>
+                            }/>
 
                         <div className={styles.containerActivity}>
                             <div className={styles.containerResetActivity}>

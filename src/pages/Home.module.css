@@ -118,7 +118,8 @@
     .scheduleContainerGeneral,
     .container,
     .containerTitleTimer,
-    .containerActivity {
+    .containerActivity,
+    .containerActivityButton {
         font-size: 12px;
         width: 275px;
     }
