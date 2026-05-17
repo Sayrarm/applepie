@@ -94,31 +94,17 @@ function Home() {
 
                     <div>
 
-                        <div className={styles.containerDaily}>
-                            <div className={styles.containerAwards}>
-                                <h3>Daily Awards</h3>
-                                <div>
-                                    <img
-                                        className={styles.imgAwards}
-                                        src="src/assets/main-page/daily-awards.png" alt="awards"/>
-                                </div>
+                        <button className={styles.containerActivityButton}>
+                            <div className={styles.containerResetActivity}>
+                                <h3>Daily Mission</h3>
+                                <DailyResetTimer timeLeft={timeLeftDay}/>
                             </div>
 
-                            <DailyResetTimer timeLeft={timeLeftDay}/>
-                        </div>
-
-                        <div className={styles.containerDaily}>
-                            <div className={styles.containerAwards}>
-                                <h3>Weekly Awards</h3>
-                                <div>
-                                    <img
-                                        className={styles.imgAwards}
-                                        src="src/assets/main-page/weekly-awards.png" alt="awards"/>
-                                </div>
+                            <div className={styles.containerResetActivity}>
+                                <h3>Weekly Mission</h3>
+                                <DailyResetTimer timeLeft={timeLeftWeek}/>
                             </div>
-
-                            <DailyResetTimer timeLeft={timeLeftWeek}/>
-                        </div>
+                        </button>
 
                         <div className={styles.containerActivity}>
                             <div className={styles.containerResetActivity}>
@@ -130,7 +116,7 @@ function Home() {
                                 />
                             </div>
                             <div className={styles.containerResetActivity}>
-                                <h3>UNICORNS</h3>
+                                <h3>UNICORNS Operation</h3>
                                 <FlexibleTimer
                                     startDateTime='2026-05-11T05:00:00+02:00'
                                     endDateTime='2026-05-25T04:59:59+02:00'
@@ -147,7 +133,7 @@ function Home() {
                             </div>
                         </div>
 
-                        <div className={styles.containerDaily}>
+                        <div className={styles.containerActivity}>
                             <div className={styles.containerAwards}>
                                 <h3>Monthly (Wishing Well Shop)</h3>
                                 <MonthImage/>

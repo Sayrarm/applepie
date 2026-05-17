@@ -29,6 +29,7 @@ function Header() {
                         height={70}/>
                 </Link>
                 <div className={styles.link}>
+                    <Link className={styles.a} to="/">Home</Link>
                     <Link className={styles.a} to="/memories">Memories</Link>
                     <Link className={styles.a} to="/characters">Characters</Link>
                     <Link className={styles.a} to="/battle">Battle</Link>
@@ -49,6 +50,9 @@ function Header() {
 
                 <div className={`${styles.modalNav} ${isMenuOpen ? styles.active : ''}`}>
                     <div className={styles.border}></div>
+                    <Link className={styles.a} to="/" onClick={closeMenu}>
+                        Home
+                    </Link>
                     <Link className={styles.a} to="/memories" onClick={closeMenu}>
                         Memories
                     </Link>
