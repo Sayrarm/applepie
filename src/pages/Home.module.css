@@ -10,6 +10,7 @@
 }
 
 .scheduleContainerGeneral,
+.scheduleContainerGeneralButton,
 .containerTitleTimer,
 .containerActivity,
 .containerActivityButton {
@@ -62,7 +63,8 @@
     justify-content: space-evenly;
 }
 
-.scheduleContainerGeneral {
+.scheduleContainerGeneral,
+.scheduleContainerGeneralButton {
     margin: 5px;
     width: 413px;
     display: flex;
@@ -78,7 +80,8 @@
     width: 413px;
 }
 
-.containerActivityButton {
+.containerActivityButton,
+.scheduleContainerGeneralButton {
     text-decoration: none;
     border: none;
     font: inherit;
@@ -116,6 +119,7 @@
     }
 
     .scheduleContainerGeneral,
+    .scheduleContainerGeneralButton,
     .container,
     .containerTitleTimer,
     .containerActivity,

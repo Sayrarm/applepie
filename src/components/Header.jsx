@@ -21,13 +21,6 @@ function Header() {
 
         <header className={styles.header}>
             <nav className={styles.nav}>
-                <Link className={styles.logo} to="/">
-                    <img
-                        src="/apple-logo.png"
-                        alt="logo"
-                        width={75}
-                        height={70}/>
-                </Link>
                 <div className={styles.link}>
                     <Link className={styles.a} to="/">Home</Link>
                     <Link className={styles.a} to="/memories">Memories</Link>

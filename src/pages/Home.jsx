@@ -14,10 +14,26 @@ function Home() {
     const timeLeftWeek = useRecurringTimer('week');
     const timeLeftMonth = useRecurringTimer('month');
 
-    const modalRef = useRef();
+    const dailyModalRef = useRef();
+    const missionModalRef = useRef();
+    const wishWellModalRef = useRef();
+    const scheduleModalRef = useRef();
 
-    const showModal = () => {
-        modalRef.current.showModal();
+
+    const showDailyModal = () => {
+        dailyModalRef.current.showModal();
+    };
+
+    const showMissionModal = () => {
+        missionModalRef.current.showModal();
+    };
+
+    const showWishWellModal = () => {
+        wishWellModalRef.current.showModal();
+    };
+
+    const showScheduleModal = () => {
+        scheduleModalRef.current.showModal();
     };
 
     return (
@@ -102,7 +118,7 @@ function Home() {
 
                     <div>
 
-                        <button onClick={showModal} className={styles.containerActivityButton}>
+                        <button onClick={showDailyModal} className={styles.containerActivityButton}>
                             <div className={styles.containerResetActivity}>
                                 <h3>Daily Mission</h3>
                                 <DailyResetTimer timeLeft={timeLeftDay}/>
@@ -115,18 +131,18 @@ function Home() {
                         </button>
 
                         <ModalWindow
-                            ref={modalRef}
+                            ref={dailyModalRef}
                             title={'Daily and Weekly Awards'}
                             tag={
                                 <>
                                     <div>Daily Awards</div>
-                                    <img src={'src/assets/main-page/daily-awards.png'} alt={'daily awards'}/>
+                                    <img className={styles.img} src={'src/assets/main-page/modal-window/daily-awards.png'} alt={'daily awards'}/>
                                     <div>Weekly Awards</div>
-                                    <img src={'src/assets/main-page/weekly-awards.png'} alt={'weekly awards'}/>
+                                    <img className={styles.img} src={'src/assets/main-page/modal-window/weekly-awards.png'} alt={'weekly awards'}/>
                                 </>
                             }/>
 
-                        <div className={styles.containerActivity}>
+                        <button onClick={showMissionModal} className={styles.containerActivityButton}>
                             <div className={styles.containerResetActivity}>
                                 <h3>Hunter Contest</h3>
                                 <FlexibleTimer
@@ -151,16 +167,41 @@ function Home() {
                                     autoRefresh={true}
                                 />
                             </div>
-                        </div>
+                        </button>
 
-                        <div className={styles.containerActivity}>
+                        <ModalWindow
+                            ref={missionModalRef}
+                            title={'Where to find it in the game'}
+                            tag={
+                                <>
+                                    <div>You can find it in the "Battle"</div>
+                                    <img
+                                        className={styles.img}
+                                        src={'src/assets/main-page/modal-window/hint-1.png'}
+                                        alt={'Battle page'}/>
+                                </>
+                            }/>
+
+                        <button onClick={showWishWellModal} className={styles.containerActivityButton}>
                             <div className={styles.containerAwards}>
                                 <h3>Monthly (Wishing Well Shop)</h3>
                                 <MonthImage/>
                             </div>
 
                             <DailyResetTimer timeLeft={timeLeftMonth}/>
-                        </div>
+                        </button>
+
+                        <ModalWindow
+                            ref={wishWellModalRef}
+                            title={'Wishing Well Schedule'}
+                            tag={
+                                <>
+                                    <img
+                                        className={styles.img}
+                                        src={'src/assets/main-page/modal-window/shop-schedule.png'}
+                                        alt={'Battle page'}/>
+                                </>
+                            }/>
 
                     </div>
 
@@ -169,7 +210,7 @@ function Home() {
                 <div>
                     <h2 className={styles.h2}>Schedule</h2>
 
-                    <div className={styles.scheduleContainerGeneral}>
+                    <button onClick={showScheduleModal} className={styles.scheduleContainerGeneralButton}>
                         <div className={styles.scheduleContainer}>
 
                             <div className={styles.schedule}>
@@ -185,7 +226,23 @@ function Home() {
 
                         </div>
                         <DailyResetTimer timeLeft={timeLeftDay}/>
-                    </div>
+                    </button>
+
+                    <ModalWindow
+                        ref={scheduleModalRef}
+                        title={'Schedule of Protocores and Trials'}
+                        tag={
+                            <>
+                                <img
+                                    className={styles.img}
+                                    src={'src/assets/main-page/modal-window/protocore-schedule.png'}
+                                    alt={'protocore schedule'}/>
+                                <img
+                                    className={styles.img}
+                                    src={'src/assets/main-page/modal-window/trial-schedule.png'}
+                                    alt={'trial schedule'}/>
+                            </>
+                        }/>
                 </div>
             </div>
         </div>
