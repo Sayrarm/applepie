@@ -122,6 +122,7 @@ function Memories() {
 
                             <Search
                                 placeholder="Search by memory name"
+                                allowClear
                                 onSearch={onSearch}
                                 style={{width: 215}}
                                 styles={stylesFnSearch}

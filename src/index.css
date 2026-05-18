@@ -56,4 +56,17 @@ h4 {
     font-weight: 600;
 }
 
-/****************************Шрифты*********************************/
+.css-var-root.ant-input-css-var {
+    --ant-input-hover-border-color: #35312d;
+    --ant-input-active-border-color: #35312d;
+    --ant-btn-color-base: #35312d;
+}
+.ant-btn.ant-btn-color-primary {
+    --ant-btn-color-base: #35312d !important;
+    --ant-btn-color-hover: rgba(43, 22, 17, 0.44) !important;
+    --ant-btn-color-active: #35312d !important;
+}
+
+:where(.css-dev-only-do-not-override-xogyor).ant-checkbox-checked {
+    background-color: #35312d !important;
+}
