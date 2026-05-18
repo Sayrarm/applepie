@@ -9,12 +9,10 @@
 
 }
 
-.scheduleContainerGeneral,
 .scheduleContainerGeneralButton,
 .containerTitleTimer,
 .containerActivity,
 .containerActivityButton {
-    flex-wrap: wrap;
     width: 100%;
 
     backdrop-filter: blur(10px);
@@ -61,9 +59,9 @@
 .scheduleContainer {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
-.scheduleContainerGeneral,
 .scheduleContainerGeneralButton {
     margin: 5px;
     width: 413px;
@@ -118,7 +116,6 @@
         width: 275px;
     }
 
-    .scheduleContainerGeneral,
     .scheduleContainerGeneralButton,
     .container,
     .containerTitleTimer,
