@@ -1,6 +1,21 @@
 /****************************HEADER********************************/
 
-.header,
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 1115px;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.headerHidden {
+    transform: translateY(-100%);
+}
+
+header,
 .nav,
 .link {
     width: 100%;
@@ -15,12 +30,16 @@
     padding-left: 15px;
 }
 
-.header {
+header {
     background-color: var(--brown);
 
     -webkit-box-shadow: 10px 10px 6px -5px rgba(148, 148, 148, 0.6);
     -moz-box-shadow: 10px 10px 6px -5px rgba(148, 148, 148, 0.6);
     box-shadow: 10px 10px 6px -5px rgba(148, 148, 148, 0.6);
+}
+
+.header-hidden {
+    transform: translateX(-50%) translateY(-100%);
 }
 
 .logo,

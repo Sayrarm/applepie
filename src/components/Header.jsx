@@ -1,6 +1,6 @@
 import styles from './Header.module.css'
 import {Link} from "react-router-dom";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 
 function Header() {
@@ -17,9 +17,34 @@ function Header() {
         setIsMenuOpen(false);
     };
 
+    const [isHidden, setIsHidden] = useState(false);
+    const [lastScroll, setLastScroll] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll <= 0) {
+                setIsHidden(false);
+            } else if (currentScroll > lastScroll) {
+                setIsHidden(true);
+            } else {
+                setIsHidden(false);
+            }
+
+            setLastScroll(currentScroll);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [lastScroll]);
+
     return (
 
-        <header className={styles.header}>
+        <header className={isHidden ? styles.headerHidden : ''}>
             <nav className={styles.nav}>
                 <div className={styles.link}>
                     <Link className={styles.a} to="/">Home</Link>
