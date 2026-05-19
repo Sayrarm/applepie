@@ -171,14 +171,23 @@ function Home() {
 
                         <ModalWindow
                             ref={missionModalRef}
-                            title={'Where to find it in the game'}
+                            title={'Hunter Contest Buffs'}
                             tag={
                                 <>
-                                    <div>You can find it in the "Battle"</div>
-                                    <img
-                                        className={styles.img}
-                                        src={'src/assets/main-page/modal-window/hint-1.png'}
-                                        alt={'Battle page'}/>
+                                    <div>
+                                        <h3>Team A: Oath Amplification</h3>
+                                         <p>After using the Ardent Oath, DMG dealt by you and Companion increases by 100% for 10s.</p>
+                                    </div>
+                                    <br/>
+                                    <div>
+                                        <h3>Team B: Press On Stacks</h3>
+                                        <p>After an Active Skill is used, Support Skill damage increases by 35% for 4s. This effect can stack up to 3 times.</p>
+                                    </div>
+                                    <br/>
+                                    <div>
+                                        <h3>Team C: Empowerment</h3>
+                                        <p>Increases ATK of all allied units.</p>
+                                    </div>
                                 </>
                             }/>
 

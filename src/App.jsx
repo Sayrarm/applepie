@@ -1,5 +1,5 @@
 import Header from "./components/Header.jsx";
-import {Route, Routes} from "react-router-dom";
+import {Link, Route, Routes} from "react-router-dom";
 import Memories from "./pages/Memories.jsx";
 import Characters from "./pages/Characters.jsx";
 import Battle from "./pages/Battle.jsx";
@@ -13,6 +13,7 @@ import WuArticle from "./pages/WuArticle.jsx";
 import MsArticle from "./pages/MsArticle.jsx";
 import Footer from "./components/Footer.jsx";
 import {CardProvider} from "./components/CardProvider.jsx";
+import Anecdotes from "./pages/Anecdotes.jsx";
 
 
 
@@ -44,6 +45,7 @@ function App() {
                         <Route path="/main-story" element={<MainStory/>}/>
                         <Route path="/main-story/:articleLink" element={<MsArticle/>}/>
                         <Route path="/spacepedia/:navigation" element={<Spacepedia/>}/>
+                        <Route path="/anecdotes/" element={<Anecdotes/>}/>
                     </Routes>
                 </main>
 

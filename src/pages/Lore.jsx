@@ -19,7 +19,11 @@ function Lore() {
                 </Link>
                 <Link className={styles.link} to="/main-story">
                     <img className={styles.img} src="src/assets/bg/b2_mainline_chapterbg_08.png" alt="spacepedia"/>
-                    <div className={styles.title}> Main Story</div>
+                    <div className={styles.title}>Main Story</div>
+                </Link>
+                <Link className={styles.link} to="/anecdotes">
+                    <img className={styles.img} src="src/assets/bg/x3_radioplay_bg.png" alt="spacepedia"/>
+                    <div className={styles.title}>Anecdotes</div>
                 </Link>
             </nav>
 
