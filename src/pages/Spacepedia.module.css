@@ -21,6 +21,16 @@
     object-position: 10% 20%;
 }
 
+.text {
+    background-color: var(--bg-brown-light);
+    -webkit-box-shadow: var(--box-shadow);
+    -moz-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
+    color: black;
+    padding: 5px;
+
+}
+
 @media (max-width: 450px) {
     .img {
         display: flex;

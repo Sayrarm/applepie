@@ -47,7 +47,7 @@ function Spacepedia() {
                             {article.img && (
                                 <img className={styles.img} src={article.img} alt={article.title} />
                             )}
-                            <div dangerouslySetInnerHTML={{__html: article.content}} />
+                            <div className={styles.text} dangerouslySetInnerHTML={{__html: article.content}} />
                         </>
                     )
                 }))}
