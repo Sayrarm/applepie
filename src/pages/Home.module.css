@@ -16,7 +16,7 @@
     width: 100%;
 
     backdrop-filter: blur(10px);
-    background: rgba(255, 203, 144, 0.1);
+    background: var(--bg-brown-light);
 
 
     -webkit-box-shadow: 10px 10px 6px -5px rgba(148, 148, 148, 0.4);
@@ -93,6 +93,15 @@
     justify-content: center;
 }
 
+.weeklyImg{
+    width: 100px;
+}
+
+.weeklyImgProtocore {
+    width: 150px;
+}
+
+
 .h2 {
     margin: 10px;
     font-size: 25px;
@@ -109,6 +118,9 @@
         width: 70px;
     }
 
+    .weeklyImgProtocore {
+        width: 100px;
+    }
 
     .monthImg,
     .img,

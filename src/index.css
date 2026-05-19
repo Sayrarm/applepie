@@ -44,8 +44,9 @@ body {
 
 :root {
     --brown: #35312d;
-    --general-font: 'TTLimesSlab', sans-serif;
-    --title-font: 'Bahij', serif;
+    --bg-brown: #ffcb90;
+    --bg-brown-light: color-mix(in srgb, var(--bg-brown) 10%, transparent);
+    --box-shadow: 10px 10px 6px -5px rgba(148, 148, 148, 0.6);
 }
 
 a, button {

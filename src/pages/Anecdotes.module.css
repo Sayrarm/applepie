@@ -1,0 +1,39 @@
+.link {
+    display: flex;
+    justify-content: flex-start;
+
+    height: 120px;
+    margin: 10px 5px;
+
+    background-color: var(--bg-brown-light);
+
+    -webkit-box-shadow: var(--box-shadow);
+    -moz-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
+
+    text-decoration: none;
+    align-items: center;
+    color: var(--brown);
+    font-size: 25px;
+}
+
+.img {
+    width: 300px;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center 16%;
+}
+
+@media screen and (max-width: 600px) {
+    .link {
+        display: flex;
+        justify-content: space-between;
+        font-size: 20px;
+        padding-right: 5px;
+    }
+
+    .title {
+        text-align: end;
+    }
+}

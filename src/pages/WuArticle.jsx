@@ -3,7 +3,7 @@ import {wuCategories} from '../data/wu-categories.js'
 import GenericArticlePage from "../components/GenericArticlePage.jsx";
 import {Link, useParams} from "react-router-dom";
 import {Fragment} from "react";
-import styles from "./WuArticle.module.css";
+import styles from "./Article.module.css";
 
 
 function WuArticle() {

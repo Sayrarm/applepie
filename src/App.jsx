@@ -1,5 +1,5 @@
 import Header from "./components/Header.jsx";
-import {Link, Route, Routes} from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
 import Memories from "./pages/Memories.jsx";
 import Characters from "./pages/Characters.jsx";
 import Battle from "./pages/Battle.jsx";

@@ -26,7 +26,7 @@ const WeeklyProtocore = () => {
             type="weekday"
             basePath="src/assets/main-page/change-pic"
             dayStartHour={5}
-            className={styles.weeklyImg}
+            className={styles.weeklyImgProtocore}
             containerClassName={styles.weeklyImgContainer}
         />
     );

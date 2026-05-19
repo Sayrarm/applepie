@@ -35,9 +35,9 @@
 .footer {
     background-color: var(--brown);
 
-    -webkit-box-shadow: 10px 10px 6px -5px rgba(148, 148, 148, 0.6);
-    -moz-box-shadow: 10px 10px 6px -5px rgba(148, 148, 148, 0.6);
-    box-shadow: 10px 10px 6px -5px rgba(148, 148, 148, 0.6);
+    -webkit-box-shadow: var(--box-shadow);
+    -moz-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
 }
 
 .footerTextContainer {

@@ -1,7 +1,7 @@
 import GenericArticlePage from "../components/GenericArticlePage.jsx";
 import {Link, useParams} from "react-router-dom";
 import {Fragment} from "react";
-import styles from "./WuArticle.module.css";
+import styles from "./Article.module.css";
 import {anCategories} from "../data/an-categories.js";
 import {anData} from "../data/an-data.js";
 
