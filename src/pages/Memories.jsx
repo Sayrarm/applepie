@@ -9,7 +9,7 @@ import {useSearch} from '../hooks/useSearch';
 import {useSort} from '../hooks/useSort';
 import {useFilter} from '../hooks/useFilter';
 import {stylesFnSearch} from "../components/stylesAntd.js";
-import {fetchData} from '../data/api';
+import {fetchData} from '../hooks/api.js';
 import {useContext, useEffect, useState} from "react";
 import PageLoader from '../components/PageLoader';
 import {CardContext} from "../components/CardContext.jsx";

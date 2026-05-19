@@ -14,6 +14,7 @@ import MsArticle from "./pages/MsArticle.jsx";
 import Footer from "./components/Footer.jsx";
 import {CardProvider} from "./components/CardProvider.jsx";
 import Anecdotes from "./pages/Anecdotes.jsx";
+import AnArticle from "./pages/AnArticle.jsx";
 
 
 
@@ -46,6 +47,7 @@ function App() {
                         <Route path="/main-story/:articleLink" element={<MsArticle/>}/>
                         <Route path="/spacepedia/:navigation" element={<Spacepedia/>}/>
                         <Route path="/anecdotes/" element={<Anecdotes/>}/>
+                        <Route path="/anecdotes/:articleLink" element={<AnArticle/>}/>
                     </Routes>
                 </main>
 
