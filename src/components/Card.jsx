@@ -1,14 +1,21 @@
 import styles from './Card.module.css'
+import {useContext} from "react";
+import {CardContext} from "./CardContext.jsx";
+
 
 function Card({data}) {
 
+    const { isImageSmall } = useContext(CardContext);
+    const imageClass = isImageSmall ? styles.imgSmall : styles.img;
 
     return (
         <>
             <article className={styles.card}>
+                <img className={imageClass}
+                     src={data.imageSmall}
+                     alt={data.name}/>
 
                 <div className={styles.imgInfo}>
-                    <img className={styles.img} src={data.imageSmall} alt={data.name}/>
 
                     <div className={styles.starsGroup}>
                         {[...Array(data.rarityStars)].map((_, i) => (

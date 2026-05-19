@@ -2,15 +2,17 @@ import styles from './Memories.module.css';
 import Card from "../components/Card.jsx";
 import {Button, Input, Select} from 'antd';
 import myFilterIcon from '/src/assets/icons/filter.png';
+import myClearIcon from '/src/assets/icons/eraser_16863523.png';
+import myChangeIcon from '/src/assets/icons/icons8-change-64.png';
 import FilterModalWindow from "../components/FilterModalWindow.jsx";
 import {useSearch} from '../hooks/useSearch';
 import {useSort} from '../hooks/useSort';
 import {useFilter} from '../hooks/useFilter';
-import myClearIcon from '/src/assets/icons/eraser_16863523.png';
 import {stylesFnSearch} from "../components/stylesAntd.js";
 import {fetchData} from '../data/api';
-import {useEffect, useState} from "react";
+import {useContext, useEffect, useState} from "react";
 import PageLoader from '../components/PageLoader';
+import {CardContext} from "../components/CardContext.jsx";
 
 function Memories() {
 
@@ -19,6 +21,7 @@ function Memories() {
     const {searchQuery, onSearch} = useSearch();
     const {sortCriteria, handleSortChange, clearSorting, sortMemories} = useSort();
     const [memoriesData, setMemoriesData] = useState([]);
+    const { toggleImageSize } = useContext(CardContext); // получаем функцию переключения
     const {
         selectedChar,
         setSelectedChar,
@@ -88,7 +91,7 @@ function Memories() {
                                 placeholder="Sorting by"
                                 onChange={handleSortChange}
                                 className={styles.colorBrown}
-                                style={{width: 350}}
+                                style={{width: 250}}
                                 options={[
                                     {value: 'char', label: 'Character'},
                                     {value: 'name', label: 'Memory\'s name'},
@@ -119,7 +122,6 @@ function Memories() {
 
                         <aside className={styles.filterBy}>
 
-
                             <Search
                                 placeholder="Search by memory name"
                                 allowClear
@@ -129,7 +131,6 @@ function Memories() {
                                 name="search-fn"
                                 size={"medium"}
                             />
-
 
                             <Button
                                 onClick={() => setIsModalOpen(true)}
@@ -146,6 +147,17 @@ function Memories() {
                                 onClose={() => setIsModalOpen(false)}
                                 onFilter={applyFilters}
                                 onClearFilters={clearFilters}
+                            />
+
+                            <Button
+                                onClick={toggleImageSize}
+                                icon={<img
+                                    className={styles.imgIcon}
+                                    src={myChangeIcon}
+                                    style={{width: 20, height: 20}}
+                                    alt={'filter'}/>}
+                                title={"change size of Cards"}
+                                className={styles.colorBrown}
                             />
                         </aside>
                     </div>

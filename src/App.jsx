@@ -8,10 +8,12 @@ import Home from "./pages/Home.jsx";
 import Spacepedia from "./pages/Spacepedia.jsx";
 import WorldUnderneath from "./pages/WorldUnderneath.jsx";
 import MainStory from "./pages/MainStory.jsx";
-import { FloatButton } from 'antd';
+import {FloatButton} from 'antd';
 import WuArticle from "./pages/WuArticle.jsx";
 import MsArticle from "./pages/MsArticle.jsx";
 import Footer from "./components/Footer.jsx";
+import {CardProvider} from "./components/CardProvider.jsx";
+
 
 
 function App() {
@@ -23,25 +25,31 @@ function App() {
                 <Header/>
 
                 <main className="main">
-                {/* Контент меняется здесь */}
-                <Routes className="main">
-                    <Route path="/" element={<Home/>}/>
-                    <Route path="/memories" element={<Memories/>}/>
-                    <Route path="/characters" element={<Characters/>}/>
-                    <Route path="/battle" element={<Battle/>}/>
-                    <Route path="/lore" element={<Lore/>}/>
-                    <Route path="/spacepedia" element={<Spacepedia/>}/>
-                    <Route path="/world-underneath" element={<WorldUnderneath/>}/>
-                    <Route path="/world-underneath/:articleLink" element={<WuArticle />} />
-                    <Route path="/main-story" element={<MainStory/>}/>
-                    <Route path="/main-story/:articleLink" element={<MsArticle />} />
-                    <Route path="/spacepedia/:navigation" element={<Spacepedia />} />
-                </Routes>
+                    {/* Контент меняется здесь */}
+                    <Routes className="main">
+                        <Route path="/" element={<Home/>}/>
+                        <Route path="/memories"
+                               element={
+                                   <CardProvider>
+                                       <Memories/>
+                                   </CardProvider>
+                               }
+                        />
+                        <Route path="/characters" element={<Characters/>}/>
+                        <Route path="/battle" element={<Battle/>}/>
+                        <Route path="/lore" element={<Lore/>}/>
+                        <Route path="/spacepedia" element={<Spacepedia/>}/>
+                        <Route path="/world-underneath" element={<WorldUnderneath/>}/>
+                        <Route path="/world-underneath/:articleLink" element={<WuArticle/>}/>
+                        <Route path="/main-story" element={<MainStory/>}/>
+                        <Route path="/main-story/:articleLink" element={<MsArticle/>}/>
+                        <Route path="/spacepedia/:navigation" element={<Spacepedia/>}/>
+                    </Routes>
                 </main>
 
-                <Footer />
+                <Footer/>
 
-                <FloatButton.BackTop />
+                <FloatButton.BackTop/>
             </div>
         </>
     )

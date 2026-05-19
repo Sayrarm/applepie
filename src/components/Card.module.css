@@ -1,6 +1,7 @@
 .card {
     display: flex;
     flex-direction: column;
+    width: 170px;
 }
 
 .cardName {
@@ -9,12 +10,11 @@
     text-align: center;
     font-size: 18px;
     word-break: break-word;
-    max-width: 170px;
+    max-width: 100%;
     margin-top: 5px;
 }
 
 .img {
-    width: 170px;
     height: 300px;
     object-fit: cover;
     object-position: center 20%;
@@ -25,16 +25,25 @@
 
 }
 
+.imgSmall {
+
+    height: 170px;
+    object-fit: cover;
+    object-position: center 20%;
+
+    -webkit-box-shadow: 10px 10px 6px -5px rgba(148, 148, 148, 0.6);
+    -moz-box-shadow: 10px 10px 6px -5px rgba(148, 148, 148, 0.6);
+    box-shadow: 10px 10px 6px -5px rgba(148, 148, 148, 0.6);
+}
+
 .imgInfo {
-    width: 170px;
-    height: 300px;
     position: relative;
 }
 
 .parametrsBG {
     position: absolute;
     width: 100%;
-    height: 11%;
+    height: 30px;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -69,4 +78,57 @@
     bottom: 5px;
     left: 5px;
     z-index: 3;
+}
+
+@media screen and (max-width: 900px) {
+    .card {
+        width: 160px;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .card {
+        width: 100px;
+    }
+
+    .cardName {
+        font-size: 14px;
+    }
+
+    .img {
+        height: 170px;
+    }
+
+    .imgSmall {
+        height: 110px;
+    }
+
+    .stella,
+    .placement,
+    .talent {
+        width: 15px;
+        height: 15px;
+    }
+
+    .stella {
+        left: 2px;
+    }
+
+    .placement {
+        left: 18px;
+    }
+
+    .talent {
+        left: 33px;
+    }
+
+    .starsGroup {
+        right: 1px;
+        bottom: 6px;
+    }
+
+    .stars {
+        width: 10px;
+        height: 10px;
+    }
 }

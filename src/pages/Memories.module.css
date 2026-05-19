@@ -82,3 +82,17 @@
 .colorBrown {
     border-color: #2b1611 !important;
 }
+
+@media screen and (max-width: 1114px) {
+
+    .cardsGrid {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 510px) {
+
+    .cardsGrid {
+        gap: 5px;
+    }
+}
