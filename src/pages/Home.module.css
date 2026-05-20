@@ -1,6 +1,7 @@
 .containerMain {
     display: flex;
     justify-content: space-between;
+    margin: 5px;
 }
 
 .containerEvents,
@@ -9,27 +10,31 @@
 
 }
 
+.containerEvents {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
 .scheduleContainerGeneralButton,
 .containerTitleTimer,
-.containerActivity,
 .containerActivityButton {
-    width: 100%;
 
     backdrop-filter: blur(10px);
     background: var(--bg-brown-light);
 
 
-    -webkit-box-shadow: 10px 10px 6px -5px rgba(148, 148, 148, 0.4);
-    -moz-box-shadow: 10px 10px 6px -5px rgba(148, 148, 148, 0.4);
-    box-shadow: 10px 10px 6px -5px rgba(148, 148, 148, 0.4);
+    -webkit-box-shadow: var(--box-shadow);
+    -moz-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
 }
+
 
 .containerTitleTimer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 5px;
-
+    padding-left: 5px;
 }
 
 .containerResetActivity {
@@ -44,6 +49,15 @@
     flex-direction: column;
     align-items: center;
     gap: 5px;
+}
+
+.imgBanner {
+
+    width: 60%;
+    height: 100%;
+
+    -webkit-mask-image: -webkit-linear-gradient(270deg, black 0%, black 50%, transparent 100%);
+    mask-image: linear-gradient(270deg, black 0%, black 50%, transparent 100%);
 }
 
 .img {
@@ -64,18 +78,18 @@
 
 .scheduleContainerGeneralButton {
     margin: 5px;
-    width: 413px;
+    width: 100%;
     display: flex;
     flex-direction: column;
 
 }
 
-.containerActivity,
+
 .containerActivityButton {
     display: flex;
     flex-direction: column;
     margin: 5px;
-    width: 413px;
+    width: 100%;
 }
 
 .containerActivityButton,
@@ -107,11 +121,30 @@
     font-size: 25px;
 }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 940px) {
 
     .containerMain {
-        flex-wrap: wrap;
-        justify-content: space-evenly;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5px;
+    }
+
+    .containerEvents,
+    .containerSchedule {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .containerTitleTimer {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .containerSchedule {
+        display: flex;
     }
 
     .weeklyImg{
@@ -122,29 +155,36 @@
         width: 100px;
     }
 
+    .imgBanner {
+        width: 50%;
+        height: 100%;
+    }
+
     .monthImg,
     .img,
     .imgAwards {
         width: 275px;
     }
 
+    .h2 {
+        margin: 5px;
+        align-self: start;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
     .scheduleContainerGeneralButton,
     .container,
     .containerTitleTimer,
-    .containerActivity,
-    .containerActivityButton {
-        font-size: 12px;
-        width: 275px;
-    }
-
-    .h2 {
-        margin: 5px;
-        font-size: 18px;
-    }
-
+    .containerActivityButton,
     .containerResetActivity h3,
     .containerTitleTimer h3 {
         font-size: 12px;
     }
 
+    .h2 {
+        font-size: 18px;
+    }
 }
