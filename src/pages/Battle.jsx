@@ -5,7 +5,11 @@ function Battle() {
 
     return (
         <>
-            <div>Battle info</div>
+            <section>
+                <nav>
+
+                </nav>
+            </section>
         </>
     )
 }

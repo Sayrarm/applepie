@@ -25,7 +25,7 @@ function GenericArticlePage({ data, categories, linkField = "link" }) {
             {/* Статьи */}
             {articles.map(article => (
                 <article key={article.id} className={styles.article}>
-                    <div className={styles.articleTitle}>{article.serialNumber} {article.subtitle}</div>
+                    <div className={styles.articleTitle}>{article.serialNumber}. {article.subtitle}</div>
                     <br/>
                     <div className={styles.articleText} dangerouslySetInnerHTML={{ __html: article.content }} />
                     <br/>

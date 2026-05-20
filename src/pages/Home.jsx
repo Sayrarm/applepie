@@ -37,7 +37,7 @@ function Home() {
     };
 
     return (
-        <div className={styles.containerMain}>
+        <section className={styles.containerMain}>
             <div className={styles.containerEvents}>
                 <h2 className={styles.h2}>Banners</h2>
                 <div>
@@ -254,7 +254,7 @@ function Home() {
                         }/>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
