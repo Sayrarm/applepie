@@ -1276,7 +1276,7 @@
         "rarityName": "5-star",
         "rarity": "src/assets/icons/5-star.png",
         "rarityStars": 5,
-        "stella": "src/assets/icons/pearl.png",
+        "stella": "src/assets/icons/sapphire.png",
         "placement": "src/assets/icons/lunar.png",
         "talent": "src/assets/icons/atk.png"
     },
@@ -1657,9 +1657,9 @@
         "stellaName": "sapphire",
         "placementName": "lunar",
         "talentName": "atk",
-        "rarityName": "5-star",
-        "rarity": "src/assets/icons/5-star.png",
-        "rarityStars": 5,
+        "rarityName": "3-star",
+        "rarity": "src/assets/icons/3-star.png",
+        "rarityStars": 3,
         "stella": "src/assets/icons/sapphire.png",
         "placement": "src/assets/icons/lunar.png",
         "talent": "src/assets/icons/atk.png"
