@@ -965,74 +965,78 @@ export const anData = [
         serialNumber: "01",
         subtitle: "Night's Daytime Brightness",
         content: `
-<p>All Zayne sees is a world of ice and snow. He steps over dozens of bodies, blood still dripping from his hands. With a wave, dark crystals pierce through several others still struggling</p>
-<p>There are no screams. It's so quiet that only the sound of his own footsteps can be heard. There is only a shivering little boy. Zayne stands before him, his shadow looming across the boy's blood-covered face</p>
-<p>Afraid, the boy is silent. He can only look up at Zayne with wide, shining eyes</p>
-<p>After a moment of silence, the wind rises. Zayne raises his hand, dark crystals once again forming on his palm</p>
-<p>"Ladies and gentlemen, we will arrive at Miran Airport in 30 minutes. Please fasten your seatbelts...</p>
-<p>Following the slightly mechanical-sounding announcement, Zayne opens his eyes</p>
-<p>There is no snow, no death. Everything is as peaceful, calm as it always is</p>
-<p>Zayne takes one of the plane's disinfectant wipes and cleans the nonexistent blood off his hands. These hands have mended heart valves and saved hearts. Yet for the past ten years, these same hands have ended countless lives in an endlessly repeating dream</p>
-<p>"Zayne, we're almost there.</p>
-<p>His mentor's voice interrupts his thoughts. Beside him, the energetic professor notices Zayne's serious expression. "It's normal to be nervous. You only just started working and now you're being sent to the Arctic for an important rescue mission. Don't put so much pressure on yourself.</p>
-<p>There is a lot of traffic at Mt. Eternal. Once the medical team arrives at Miran Airport, a helicopter takes them to the Evol Special Rescue Unit's location</p>
-<p>In the unsteady helicopter, Zayne ignores his discomfort and looks out the window</p>
-<p>Outside, as the flurry of snow slowly dissipates, the foreboding Mt. Eternal comes into view</p>
-<p>The rescue unit is stationed on the mountain's southern side. The snow has stopped, and the ground, an ugly color from the muddy water, is covered in footprints</p>
-<p>Before he can even get to the area for cardiac surgery, Zayne hears the faint Sound of sirens behind him. Turning around, he sees several ambulances speeding in his direction. Dozens of medics emerge from the various tents around him, ready to go</p>
-<p>"Make way! Make way!</p>
-<p>"What happened?</p>
-<p>"Open fracture on the lower left leg. Major artery damaged. Specific details unclear. Apply pressure to stop the bleeding first!</p>
-<p>"What's their blood pressure?</p>
-<p>"What's their heart rate?!</p>
-<p>In the blink of an eye, the narrow space becomes more crowded. It's different from the organized chaos in regular hospitals. Right now, everything in front of him is more urgent, rushed</p>
-<p>"Are there any surgeons? We need a cardiac surgeon!</p>
-<p>"Dr. William and the others are still in the operating room!</p>
-<p>Zayne hurries over. "I'm Zayne from the medical team. How's the patient?</p>
-<p>"23-year-old soldier, body temperature at 36.3 degrees Celsius, respiratory rate 10 bpm, heart rate 125 bpm, diastolic 70, systolic 90. Unconscious. Penetrating cardiac trauma from a sharp object resulting in intrapericardial hemorrhage. Cardiac tamponade," the doctor quickly reports</p>
-<p>"Prepare a blood transfusion," Zayne says to the nurse</p>
-<p>The patient is transferred to the hospital bed as the nurse rushes in with the crash cart. Zayne cuts open the patient's clothes and discovers a bullet fragment lodged deep in the chest cavity</p>
-<p>"...Zayne? Dr. Zayne, right?" The nurse hooks up the patient to an IV bag. "The patient's heart rate is below 50 bpm.</p>
-<p>Zayne puts on his gloves as he watches the dropping blood pressure. "We need t</p>
-<p>operate now.</p>
-<p>"But—</p>
-<p>An urgent alarm from the monitor interrupts the nurse and Zayne's expression changes</p>
-<p>"The patient's heart has stopped!</p>
-<p>"Get an oxygen mask. Prepare the bag valve mask and notify the anesthesiologist to assist with intubation!</p>
-<p>The nurse promptly does as she's told. "But Dr. Zayne, what should we do? The bullet fragment is still in his chest cavity. We can't perform chest compressions.</p>
-<p>"Then we proceed with open chest cardiopulmonary resuscitation. Bring the thoracotomy instruments and contact the operating room nurse to prepare the OR.</p>
-<p>She's shocked. "OC-CPR?!</p>
-<p>"Hurry!</p>
-<p>Donning protective clothing, Zayne disinfects himself. With a steady hand, he cuts along the left side of the sternum, slicing the subcutaneous tissue and muscle with an electrosurgical knife. In one seamless motion, the pleural cavity is opened, revealing the bullet fragment and the pericardium, which continues to bleed. Zayne remembers the cardiac ultrasound image shown to him by the doctor, confirming that removing the bullet fragment wouldn't cause further harm to the patient. Without hesitation, he makes incisions along the pericardium and extracts the fragment. The blood accumulated within the pericardium gushes out. The suction device in his hand is already in position</p>
-<p>"Suture.</p>
-<p>The suction is complete within a matter of seconds</p>
-<p>"I found the source of the bleeding." Yet the patient's heartbeat still hasn't resumed</p>
-<p>Without a moment's hesitation, Zayne reaches into the patient's pericardial cavity and grasps the still heart</p>
-<p>The nurse can't help but gasp. While it's theoretically feasible, every medical professional knows the immense difficulty and low success rate of performing emergency open-chest CPR</p>
-<p>Zayne, however, remains completely focused. He gently squeezes the heart with the utmost care, one beat at a time</p>
-<p>The harsh winds cut through the thick tent and dozens of heaters. The chill flows in from the gaps and washes over the bed. The nurse tightly closes the curtains next to her, only to see tiny beads of sweat forming on Zayne's forehead</p>
-<p>"Beep beep. Beep beep. Beep beep...</p>
-<p>The blaring alarm stops, and the heart in his hand begins to beat</p>
-<p>Zayne glances at the ECG monitor. Only then does his tense nerves slightly loosen</p>
-<p>"The operating room is ready, Dr. Zayne.</p>
-<p>"What happened, Zayne?</p>
-<p>His instructor hurries over. When he takes in what occurred, he breathes out a sigh of relief. "Good work, Zayne. Let's move him to the OR.</p>
-<p>The area around the hospital bed becomes busy once more. As Zayne is about to stand up, his gaze lingers on the Evol monitor on the soldier's bedside</p>
-<p>For a moment, the originally steady beats suddenly spikes to the top of the screen</p>
-<p>The surgery went well. Back at the ward, Zayne looks up at the blinding light above him to gather himself. Only when he drinks a glass of cold water does the tightness in his heart slightly loosen</p>
-<p>"Zayne?</p>
-<p>A person in a military doctor's uniform pokes his head into the room. Hearing the other man say his name, Zayne frowns in confusion</p>
-<p>The man laughs. "Thirty-fifth cohort of the Skyhaven School of Medicine. Medical Sciences MD-PhD eight-year program, right?" Seeing as Zayne still doesn't recognize him, the man stands up straight</p>
-<p>"Thirty-first cohort of the Skyhaven School of Medicine. Now a medic of the Evol Special Rescue Unit. William, at your service.</p>
-<p>As some memories resurface, Zayne's expression relaxes. "William.</p>
-<p>William is a fellow cardiac surgeon. When Zayne worked as an intern, William took him under his wing</p>
-<p>William pats him on the arm and says, "Time flies. You're a real doctor now!" Seeing the documents in Zayne's hands, William takes and flips through them. "Is it serious?</p>
-<p>"It's currently under control." Zayne puts his pen back in his breast pocket. He runs his fingers down the indents of the notebook inside, parallel to each other and right atop his heart. He lowers his hand and accompanies William to the ward</p>
-<p>"When did you arrive?</p>
-<p>"The night of the incident," William says. Seeing Zayne look around, he smiles bitterly. "Bad, right? But it's already a lot better than before. I'll show you around. There are a couple of tricky patients at the moment. They've all been buried in the snow for too long after being attacked by Wanderers. Especially the one who just got a heart transplant. We might need your help with...</p>
-<p>A distant roar resounds, followed closely by the loud sound of collapsing snow and gravel</p>
-<p>William sighs. "Seems like we won't be getting any sleep tonight either. Let's go. It will be a while before the injured arrive. We'll talk in the meantime.</p>
-<p>Zayne follows William. He turns around to see the distant Mt. Eternal lit up, as bright as day, by flash bombs</p>
+<p>All Zayne sees is a world of ice and snow. He steps over dozens of bodies, blood still dripping from his hands. With a wave, dark crystals pierce through several others still struggling.</p>
+<p>There are no screams. It's so quiet that only the sound of his own footsteps can be heard. There is only a shivering little boy. Zayne stands before him, his shadow looming across the boy's blood-covered face.</p>
+<p>Afraid, the boy is silent. He can only look up at Zayne with wide, shining eyes.</p>
+<p>After a moment of silence, the wind rises. Zayne raises his hand, dark crystals once again forming on his palm—</p>
+<br>
+<p>"Ladies and gentlemen, we will arrive at Miran Airport in 30 minutes. Please fasten your seatbelts..."</p>
+<p>Following the slightly mechanical-sounding announcement, Zayne opens his eyes.</p>
+<p>There is no snow, no death. Everything is as peaceful, calm as it always is.</p>
+<p>Zayne takes one of the plane's disinfectant wipes and cleans the nonexistent blood off his hands. These hands have mended heart valves and saved hearts. Yet for the past ten years, these same hands have ended countless lives in an endlessly repeating dream.</p>
+<p>"Zayne, we're almost there."</p>
+<p>His mentor's voice interrupts his thoughts. Beside him, the energetic professor notices Zayne's serious expression. "It's normal to be nervous. You only just started working and now you're being sent to the Arctic for an important rescue mission. Don't put so much pressure on yourself."</p>
+<br>
+<p>There is a lot of traffic at Mt. Eternal. Once the medical team arrives at Miran Airport, a helicopter takes them to the Evol Special Rescue Unit's location.</p>
+<p>In the unsteady helicopter, Zayne ignores his discomfort and looks out the window.</p>
+<p>Outside, as the flurry of snow slowly dissipates, the foreboding Mt. Eternal comes into view.</p>
+<br>
+<p>The rescue unit is stationed on the mountain's southern side. The snow has stopped, and the ground, an ugly color from the muddy water, is covered in footprints.</p>
+<p>Before he can even get to the area for cardiac surgery, Zayne hears the faint Sound of sirens behind him. Turning around, he sees several ambulances speeding in his direction. Dozens of medics emerge from the various tents around him, ready to go.</p>
+<p>"Make way! Make way!"</p>
+<p>"What happened?"</p>
+<p>"Open fracture on the lower left leg. Major artery damaged. Specific details unclear. Apply pressure to stop the bleeding first!"</p>
+<p>"What's their blood pressure?"</p>
+<p>"What's their heart rate?!"</p>
+<p>In the blink of an eye, the narrow space becomes more crowded. It's different from the organized chaos in regular hospitals. Right now, everything in front of him is more urgent, rushed.</p>
+<p>"Are there any surgeons? We need a cardiac surgeon!"</p>
+<p>"Dr. William and the others are still in the operating room!"</p>
+<p>Zayne hurries over. "I'm Zayne from the medical team. How's the patient?"</p>
+<p>"23-year-old soldier, body temperature at 36.3 degrees Celsius, respiratory rate 10 bpm, heart rate 125 bpm, diastolic 70, systolic 90. Unconscious. Penetrating cardiac trauma from a sharp object resulting in intrapericardial hemorrhage. Cardiac tamponade," the doctor quickly reports.</p>
+<p>"Prepare a blood transfusion," Zayne says to the nurse.</p>
+<p>The patient is transferred to the hospital bed as the nurse rushes in with the crash cart. Zayne cuts open the patient's clothes and discovers a bullet fragment lodged deep in the chest cavity.</p>
+<p>"...Zayne? Dr. Zayne, right?" The nurse hooks up the patient to an IV bag. "The patient's heart rate is below 50 bpm."</p>
+<p>Zayne puts on his gloves as he watches the dropping blood pressure. "We need to</p>
+<p>operate now."</p>
+<p>"But—"</p>
+<p>An urgent alarm from the monitor interrupts the nurse and Zayne's expression changes.</p>
+<p>"The patient's heart has stopped!"</p>
+<p>"Get an oxygen mask. Prepare the bag valve mask and notify the anesthesiologist to assist with intubation!"</p>
+<p>The nurse promptly does as she's told. "But Dr. Zayne, what should we do? The bullet fragment is still in his chest cavity. We can't perform chest compressions."</p>
+<p>"Then we proceed with open chest cardiopulmonary resuscitation. Bring the thoracotomy instruments and contact the operating room nurse to prepare the OR."</p>
+<p>She's shocked. "OC-CPR?!"</p>
+<p>"Hurry!"</p>
+<p>Donning protective clothing, Zayne disinfects himself. With a steady hand, he cuts along the left side of the sternum, slicing the subcutaneous tissue and muscle with an electrosurgical knife. In one seamless motion, the pleural cavity is opened, revealing the bullet fragment and the pericardium, which continues to bleed. Zayne remembers the cardiac ultrasound image shown to him by the doctor, confirming that removing the bullet fragment wouldn't cause further harm to the patient. Without hesitation, he makes incisions along the pericardium and extracts the fragment. The blood accumulated within the pericardium gushes out. The suction device in his hand is already in position.</p>
+<p>"Suture."</p>
+<p>The suction is complete within a matter of seconds.</p>
+<p>"I found the source of the bleeding." Yet the patient's heartbeat still hasn't resumed.</p>
+<p>Without a moment's hesitation, Zayne reaches into the patient's pericardial cavity and grasps the still heart.</p>
+<p>The nurse can't help but gasp. While it's theoretically feasible, every medical professional knows the immense difficulty and low success rate of performing emergency open-chest CPR.</p>
+<p>Zayne, however, remains completely focused. He gently squeezes the heart with the utmost care, one beat at a time.</p>
+<p>The harsh winds cut through the thick tent and dozens of heaters. The chill flows in from the gaps and washes over the bed. The nurse tightly closes the curtains next to her, only to see tiny beads of sweat forming on Zayne's forehead.</p>
+<p>"Beep beep. Beep beep. Beep beep..."</p>
+<p>The blaring alarm stops, and the heart in his hand begins to beat.</p>
+<p>Zayne glances at the ECG monitor. Only then does his tense nerves slightly loosen.</p>
+<p>"The operating room is ready, Dr. Zayne."</p>
+<p>"What happened, Zayne?"</p>
+<p>His instructor hurries over. When he takes in what occurred, he breathes out a sigh of relief. "Good work, Zayne. Let's move him to the OR."</p>
+<p>The area around the hospital bed becomes busy once more. As Zayne is about to stand up, his gaze lingers on the Evol monitor on the soldier's bedside.</p>
+<p>For a moment, the originally steady beats suddenly spikes to the top of the screen.</p>
+<br>
+<p>The surgery went well. Back at the ward, Zayne looks up at the blinding light above him to gather himself. Only when he drinks a glass of cold water does the tightness in his heart slightly loosen.</p>
+<p>"Zayne?"</p>
+<p>A person in a military doctor's uniform pokes his head into the room. Hearing the other man say his name, Zayne frowns in confusion.</p>
+<p>The man laughs. "Thirty-fifth cohort of the Skyhaven School of Medicine. Medical Sciences MD-PhD eight-year program, right?" Seeing as Zayne still doesn't recognize him, the man stands up straight.</p>
+<p>"Thirty-first cohort of the Skyhaven School of Medicine. Now a medic of the Evol Special Rescue Unit. William, at your service."</p>
+<p>As some memories resurface, Zayne's expression relaxes. "William."</p>
+<p>William is a fellow cardiac surgeon. When Zayne worked as an intern, William took him under his wing.</p>
+<p>William pats him on the arm and says, "Time flies. You're a real doctor now!" Seeing the documents in Zayne's hands, William takes and flips through them. "Is it serious?"</p>
+<p>"It's currently under control." Zayne puts his pen back in his breast pocket. He runs his fingers down the indents of the notebook inside, parallel to each other and right atop his heart. He lowers his hand and accompanies William to the ward.</p>
+<p>"When did you arrive?"</p>
+<p>"The night of the incident," William says. Seeing Zayne look around, he smiles bitterly. "Bad, right? But it's already a lot better than before. I'll show you around. There are a couple of tricky patients at the moment. They've all been buried in the snow for too long after being attacked by Wanderers. Especially the one who just got a heart transplant. We might need your help with..."</p>
+<p>A distant roar resounds, followed closely by the loud sound of collapsing snow and gravel.</p>
+<p>William sighs. "Seems like we won't be getting any sleep tonight either. Let's go. It will be a while before the injured arrive. We'll talk in the meantime."</p>
+<p>Zayne follows William. He turns around to see the distant Mt. Eternal lit up, as bright as day, by flash bombs.</p>
 
 `,
     },
