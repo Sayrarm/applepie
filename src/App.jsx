@@ -15,6 +15,7 @@ import Footer from "./components/Footer.jsx";
 import {CardProvider} from "./components/CardProvider.jsx";
 import Anecdotes from "./pages/Anecdotes.jsx";
 import AnArticle from "./pages/AnArticle.jsx";
+import CompanionBattleInfo from "./pages/CompanionBattleInfo.jsx";
 
 
 
@@ -48,6 +49,7 @@ function App() {
                         <Route path="/spacepedia/:navigation" element={<Spacepedia/>}/>
                         <Route path="/anecdotes/" element={<Anecdotes/>}/>
                         <Route path="/anecdotes/:articleLink" element={<AnArticle/>}/>
+                        <Route path="/battle/:articleLink" element={<CompanionBattleInfo />} />
                     </Routes>
                 </main>
 

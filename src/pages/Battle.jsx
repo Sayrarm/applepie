@@ -86,13 +86,13 @@ function Battle() {
             label: 'Caleb',
             children: (
                 <>
-                    <Link to="/caleb/netherlord">Netherlord</Link>
+                    <Link to="/battle/caleb-netherlord">Netherlord</Link>
                     <br/>
-                    <Link to="/caleb/x-02">Ultimate Weapon X-02</Link>
+                    <Link to="/battle/caleb-x02">Ultimate Weapon X-02</Link>
                     <br/>
-                    <Link to="/caleb/colonel">Farspace Colonel</Link>
+                    <Link to="/battle/caleb-colonel">Farspace Colonel</Link>
                     <br/>
-                    <Link to="/caleb/pilot">Deepspace Pilot</Link>
+                    <Link to="/battle/caleb-pilot">Deepspace Pilot</Link>
                 </>
             ),
         },
@@ -136,8 +136,12 @@ function Battle() {
                         <div>Name of char</div>
                         <div>DPS | Heal | Single Target</div>
                         <div>Support Skill</div>
+                        <div>Support Skill Cooldown</div>
+                        <div>Support Skill Cost</div>
                         <div>Text of support skill</div>
                         <div>Resonance Skill</div>
+                        <div>Resonance Skill Cooldown</div>
+                        <div>Resonance Skill Cost</div>
                         <div>Text of resonance skill</div>
                         <div>Ardent Oath</div>
                         <div>Text of ardent oath</div>
@@ -152,6 +156,8 @@ function Battle() {
                         <div>Basic Attack</div>
                         <div>Text of Basic Attack</div>
                         <div>Active Skill</div>
+                        <div>Active Skill Cooldown</div>
+                        <div>Active Skill Cost</div>
                         <div>Text of active skill</div>
                         <div>Passive Skill</div>
                         <div>Text of passive skill</div>

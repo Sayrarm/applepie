@@ -2,7 +2,7 @@ export const compData = [
 
     {
         id: 11,
-        img: "src/assets/companions/xavier-kod.png",
+        img: "/companions/xavier-kod.png",
         companionName: "Xavier: King of Darknight",
         weaponName: "Final Resound",
         specialty: "DPS | Burst | Single-target",
@@ -27,7 +27,7 @@ export const compData = [
     },
     {
         id: 12,
-        img: "src/assets/companions/xavier-lumiere.png",
+        img: "/companions/xavier-lumiere.png",
         companionName: "Xavier: Lumiere",
         weaponName: "Moonchaser",
         specialty: "DPS | Burst | Control",
@@ -52,7 +52,7 @@ export const compData = [
     },
     {
         id: 13,
-        img: "src/assets/companions/xavier-lightseeker.png",
+        img: "/companions/xavier-lightseeker.png",
         companionName: "Xavier: Lightseeker",
         weaponName: "Luminescence Blade",
         specialty: "DPS | AoE | Empower",
@@ -77,7 +77,7 @@ export const compData = [
     },
     {
         id: 14,
-        img: "src/assets/companions/xavier-police.png",
+        img: "/companions/xavier-police.png",
         companionName: "Xavier: Evol Police",
         specialty: "Support | Control",
         supportSkill: "Refulgent Shadow",
@@ -91,7 +91,7 @@ export const compData = [
     },
     {
         id: 15,
-        img: "src/assets/companions/xavier-youth.png",
+        img: "/companions/xavier-youth.png",
         companionName: "Xavier: Distant Youth",
         specialty: "Defend | Buff",
         supportSkill: "Paper Blade",
@@ -105,7 +105,7 @@ export const compData = [
     },
     {
         id: 16,
-        img: "src/assets/companions/xavier-hunter.png",
+        img: "/companions/xavier-hunter.png",
         companionName: "Xavier: Deepspace Hunter",
         specialty: "DPS | Single-target",
         supportSkill: "Hidden Star",
@@ -119,7 +119,7 @@ export const compData = [
     },
     {
         id: 21,
-        img: "src/assets/companions/zayne-goa.png",
+        img: "/companions/zayne-goa.png",
         companionName: "Zayne: God of Annihilation",
         weaponName: "Divine Grip",
         specialty: "DPS | Burst | Empower",
@@ -144,7 +144,7 @@ export const compData = [
     },
     {
         id: 22,
-        img: "src/assets/companions/zayne-mof.png",
+        img: "/companions/zayne-mof.png",
         companionName: "Zayne: Master of Fate",
         weaponName: "Sacred Rainfall",
         specialty: "DPS | Burst | Sustained",
@@ -169,7 +169,7 @@ export const compData = [
     },
     {
         id: 23,
-        img: "src/assets/companions/zayne-foreseer.png",
+        img: "/companions/zayne-foreseer.png",
         companionName: "Zayne: Foreseer",
         weaponName: "Everlasting Song",
         specialty: "Defend | DMG | AoE",
@@ -194,7 +194,7 @@ export const compData = [
     },
     {
         id: 24,
-        img: "src/assets/companions/zayne-medic.png",
+        img: "/companions/zayne-medic.png",
         companionName: "Zayne: Medic of the Arctic",
         specialty: "Support | Dispel",
         supportSkill: "Snowfall",
@@ -208,7 +208,7 @@ export const compData = [
     },
     {
         id: 25,
-        img: "src/assets/companions/zayne-dawnbreaker.png",
+        img: "/companions/zayne-dawnbreaker.png",
         companionName: "Zayne: Dawnbreaker",
         specialty: "Burst | Single-target",
         supportSkill: "Dawnfrost Scythe",
@@ -222,7 +222,7 @@ export const compData = [
     },
     {
         id: 26,
-        img: "src/assets/companions/zayne-doctor.png",
+        img: "/companions/zayne-doctor.png",
         companionName: "Zayne: Linkon doctor",
         specialty: "Heal | Control",
         supportSkill: "Healing Rime",
@@ -236,7 +236,7 @@ export const compData = [
     },
     {
         id: 31,
-        img: "src/assets/companions/rafayel-lsg.png",
+        img: "/companions/rafayel-lsg.png",
         companionName: "Rafayel: Lemurian Sea God",
         weaponName: "Ballad of Ebbs",
         specialty: "DPS | AoE | Empower",
@@ -261,7 +261,7 @@ export const compData = [
     },
     {
         id: 32,
-        img: "src/assets/companions/rafayel-got.png",
+        img: "/companions/rafayel-got.png",
         companionName: "Rafayel: God of the Tides",
         weaponName: "Tidal Embrace",
         specialty: "Sustained | Buff | AoE",
@@ -286,7 +286,7 @@ export const compData = [
     },
     {
         id: 33,
-        img: "src/assets/companions/rafayel-abysswalker.png",
+        img: "/companions/rafayel-abysswalker.png",
         companionName: "Rafayel: Abysswalker",
         weaponName: "Phantasma Sands",
         specialty: "Burst | Single-target | Pull",
@@ -311,7 +311,7 @@ export const compData = [
     },
     {
         id: 34,
-        img: "src/assets/companions/rafayel-freshpaint.png",
+        img: "/companions/rafayel-freshpaint.png",
         companionName: "Rafayel: Frash Paint",
         specialty: "Heal | Single-target",
         supportSkill: "Swirling Colors",
@@ -325,7 +325,7 @@ export const compData = [
     },
     {
         id: 35,
-        img: "src/assets/companions/rafayel-phantom.png",
+        img: "/companions/rafayel-phantom.png",
         companionName: "Rafayel: Phantom of the Siren",
         specialty: "Support | Debuff",
         supportSkill: "Aria",
@@ -339,7 +339,7 @@ export const compData = [
     },
     {
         id: 36,
-        img: "src/assets/companions/rafayel-artist.png",
+        img: "/companions/rafayel-artist.png",
         companionName: "Rafayel: Artist",
         specialty: "Burst | AoE",
         supportSkill: "Scarlet Shade",
@@ -353,7 +353,7 @@ export const compData = [
     },
     {
         id: 41,
-        img: "src/assets/companions/sylus-fiend.png",
+        img: "/companions/sylus-fiend.png",
         companionName: "Sylus: Silverwing Fiend",
         weaponName: "Crimson Malison",
         specialty: "Burst | AoE | Empower",
@@ -378,7 +378,7 @@ export const compData = [
     },
     {
         id: 42,
-        img: "src/assets/companions/sylus-sovereign.png",
+        img: "/companions/sylus-sovereign.png",
         companionName: "Sylus: Abysm Sovereign",
         weaponName: "Fiend Reaper",
         specialty: "DPS | AoE | Empower",
@@ -403,7 +403,7 @@ export const compData = [
     },
     {
         id: 43,
-        img: "src/assets/companions/sylus-conqueror.png",
+        img: "/companions/sylus-conqueror.png",
         companionName: "Sylus: Relentless Conqueror",
         weaponName: "Harrier 700",
         specialty: "DMG | Single-target | Control",
@@ -428,7 +428,7 @@ export const compData = [
     },
     {
         id: 44,
-        img: "src/assets/companions/sylus-visitor.png",
+        img: "/companions/sylus-visitor.png",
         companionName: "Sylus: Visitor",
         specialty: "DPS | Single-target",
         supportSkill: "Shattering Burst",
@@ -442,7 +442,8 @@ export const compData = [
     },
     {
         id: 51,
-        img: "src/assets/companions/caleb_netherlord.png",
+        link: "caleb-netherlord",
+        img: "/companions/caleb_netherlord.png",
         companionName: "Caleb: Netherlord",
         weaponName: "Azuregaze",
         specialty: "DPS | Heal | Single-target",
@@ -484,7 +485,7 @@ export const compData = [
 <p>Wield Azuregaze to attack enemies.</p>
 <p>First Strike: 74+39% ATK+3.5% of Max HP DMG Second Strike: 66+34% ATK+3.2% of Max HP DMG.</p>
 <p>Third Strike: Thrust Azuregaze upward, dealing DMG equal to 135+72% ATK+6.5% of Max HP. This attack is not considered the final hit of Basic Attack. After the upward strike, you enter [Sword Stance]. While in [Sword Stance], different attacks can be derived based on [Paired Knot]</p>
-<p>Charged Attack slashes forward, dealing DMG equal to 174+93% ATK+8.4% of Max HP.        </p>
+<p>Charged Attack slashes forward, dealing DMG equal to 174+93% ATK+8.4% of Max HP.</p>
         `,
         activeSkill: "Severance Dance",
         activeSkillCooldown: "6 sec.",
@@ -522,7 +523,8 @@ export const compData = [
     },
     {
         id: 52,
-        img: "src/assets/companions/caleb_X02.png",
+        link: "caleb-x02",
+        img: "/companions/caleb_X02.png",
         companionName: "Caleb: Ultimate Weapon X-02",
         weaponName: "Awakened Vitality",
         specialty: "DPS | Sustained | AoE",
@@ -547,7 +549,8 @@ export const compData = [
     },
     {
         id: 53,
-        img: "src/assets/companions/caleb_colonel.png",
+        link: "caleb-colonel",
+        img: "/companions/caleb_colonel.png",
         companionName: "Caleb: Farspace Colonel",
         weaponName: "Skybreaker-SN",
         specialty: "DPS | Burst | Empower",
@@ -572,7 +575,8 @@ export const compData = [
     },
     {
         id: 54,
-        img: "src/assets/companions/caleb_pilot.png",
+        link: "caleb-pilot",
+        img: "/companions/caleb_pilot.png",
         companionName: "Caleb: Deepspace Pilot",
         specialty: "DPS | Defend",
         supportSkill: "Fuse",
@@ -586,7 +590,7 @@ export const compData = [
     },
     {
         id: 61,
-        img: "src/assets/companions/sword.png",
+        img: "/companions/sword.png",
         companionName: "MC",
         weaponName: "Hunter Sword",
         specialty: "DPS | Sustained | Empower",
@@ -599,7 +603,7 @@ export const compData = [
     },
     {
         id: 62,
-        img: "src/assets/companions/wand.png",
+        img: "/companions/wand.png",
         companionName: "MC",
         weaponName: "Hunter Wand",
         specialty: "Support | AoE | Heal",
@@ -612,7 +616,7 @@ export const compData = [
     },
     {
         id: 63,
-        img: "src/assets/companions/claymore.png",
+        img: "/companions/claymore.png",
         companionName: "MC",
         weaponName: "Hunter Claymore",
         specialty: "DPS | Burst | Interrupt",
@@ -625,7 +629,7 @@ export const compData = [
     },
     {
         id: 64,
-        img: "src/assets/companions/firearm.png",
+        img: "/companions/firearm.png",
         companionName: "MC",
         weaponName: "Hunter Firearm",
         specialty: "DPS | Single-target | Sustained",
