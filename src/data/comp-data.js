@@ -531,7 +531,7 @@ export const compData = [
     },
     {
         id: 61,
-        img: "",
+        img: "src/assets/companions/sword.png",
         companionName: "MC",
         weaponName: "Hunter Sword",
         specialty: "DPS | Sustained | Empower",
@@ -544,7 +544,7 @@ export const compData = [
     },
     {
         id: 62,
-        img: "",
+        img: "src/assets/companions/wand.png",
         companionName: "MC",
         weaponName: "Hunter Wand",
         specialty: "Support | AoE | Heal",
@@ -557,7 +557,7 @@ export const compData = [
     },
     {
         id: 63,
-        img: "",
+        img: "src/assets/companions/claymore.png",
         companionName: "MC",
         weaponName: "Hunter Claymore",
         specialty: "DPS | Burst | Interrupt",
@@ -570,7 +570,7 @@ export const compData = [
     },
     {
         id: 64,
-        img: "",
+        img: "src/assets/companions/firearm.png",
         companionName: "MC",
         weaponName: "Hunter Firearm",
         specialty: "DPS | Single-target | Sustained",
