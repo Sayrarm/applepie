@@ -6366,5 +6366,21 @@
     "stella": "src/assets/icons/violet.png",
     "placement": "src/assets/icons/lunar.png",
     "talent": "src/assets/icons/atk.png"
+  },
+  {
+    "id": 400,
+    "char": "Sylus",
+    "name": "Kitten Included",
+    "image": "src/assets/pictures/Sylus/Sylus_400.png",
+    "imageSmall": "src/assets/pictures/card-middle/Sylus_400.png",
+    "stellaName": "sapphire",
+    "placementName": "lunar",
+    "talentName": "def",
+    "rarityName": "5-star",
+    "rarity": "src/assets/icons/5-star.png",
+    "rarityStars": 5,
+    "stella": "src/assets/icons/sapphire.png",
+    "placement": "src/assets/icons/lunar.png",
+    "talent": "src/assets/icons/def.png"
   }
 ]
