@@ -1,4 +1,6 @@
 .portrait {
+    margin-top: 20px;
+
     width: 200px;
     height: 700px;
 
@@ -11,4 +13,96 @@
 
 .skillsContainer {
     display: flex;
+}
+
+.borderHorizontal {
+    border: 1px solid var(--brown);
+    width: 100%;
+    margin: 10px 0;
+}
+
+.borderHorizontalWhite {
+    border: 1px solid white;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.borderVertical {
+    border-right: 2px solid white;
+    height: 80px;
+    margin: 0;
+}
+
+.skillsSection {
+    margin: 2px;
+}
+
+.sectionTitle {
+    background: var(--brown);
+    color: white;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.skillTitle {
+    height: 100%;
+    padding: 10px 5px;
+}
+
+.skillName,
+.skillTitle {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.skillNameContainer {
+    width: 100%;
+}
+
+.h1Title {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    height: 70px;
+}
+
+.skillsText {
+    margin-bottom: 10px;
+    padding: 5px;
+
+    background: var(--bg-brown-light);
+    -webkit-box-shadow: var(--box-shadow);
+    -moz-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
+}
+
+@media screen and (max-width: 510px) {
+
+    .skillsContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .portrait {
+        margin-top: 0;
+
+        width: 100%;
+        height: 200px;
+
+        object-fit: cover;
+        object-position: 20% 20%;
+
+        -webkit-mask-image: -webkit-linear-gradient(180deg, black 0%, black 20%, transparent 100%);
+        mask-image: linear-gradient(180deg, black 0%, black 20%, transparent 100%);
+    }
+
+    .h1Title {
+        height: 100%;
+    }
+
+    .titleSection {
+        padding: 5px;
+    }
 }

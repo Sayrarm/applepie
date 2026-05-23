@@ -29,43 +29,71 @@ function CompanionArticlePage({data, linkField = "link"}) {
                 <section className={styles.companionSkills}>
 
                     <div className={styles.titleSection}>
-                        <h1 className={styles.mainTitle}>{companion.companionName}</h1>
+                        <h1 className={styles.h1Title}>{companion.companionName}</h1>
                         <p className={styles.specialty}>{companion.speciality}</p>
                     </div>
 
+                    <div className={styles.borderHorizontal}></div>
+
                     {/* Resonance Skill */}
-                    <section className={styles.section}>
-                        <h2 className={styles.sectionTitle}>
-                            Resonance Skill: {companion.resonanceSkill}
-                            <div className={styles.cooldown}>
-                                (Cooldown: {companion.resonanceSkillCooldown} | Cost: {companion.resonanceSkillCost})
+                    <section className={styles.skillsSection}>
+                        <div className={styles.sectionTitle}>
+                            <div className={styles.skillTitle}>Resonance Skill</div>
+                            <div className={styles.borderVertical}></div>
+                            <div className={styles.skillNameContainer}>
+                                <div className={styles.skillName}>{companion.resonanceSkill}</div>
+                                <div className={styles.borderHorizontalWhite}></div>
+                                <div>Cooldown: {companion.resonanceSkillCooldown} | Cost: {companion.resonanceSkillCost}</div>
                             </div>
-                        </h2>
-                        <div className={styles.content}
+                        </div>
+                        <div className={styles.skillsText}
                              dangerouslySetInnerHTML={{__html: companion.resonanceSkillText}}/>
                     </section>
 
                     {/* Support Skill */}
-                    <section className={styles.section}>
-                        <h2 className={styles.sectionTitle}>
-                            Support Skill: {companion.supportSkill}
-                            <div className={styles.cooldown}>
-                                (Cooldown: {companion.supportSkillCooldown} | Cost: {companion.supportSkillCost})
+
+                    <section className={styles.skillsSection}>
+                        <div className={styles.sectionTitle}>
+                            <div className={styles.skillTitle}>Support Skill</div>
+                            <div className={styles.borderVertical}></div>
+                            <div className={styles.skillNameContainer}>
+                                <div className={styles.skillName}>{companion.supportSkill}</div>
+                                <div className={styles.borderHorizontalWhite}></div>
+                                <div>Cooldown: {companion.supportSkillCooldown} | Cost: {companion.supportSkillCost}</div>
                             </div>
-                        </h2>
-                        <div className={styles.content} dangerouslySetInnerHTML={{__html: companion.supportSkillText}}/>
+                        </div>
+                        <div className={styles.skillsText}
+                             dangerouslySetInnerHTML={{__html: companion.supportSkillText}}/>
                     </section>
 
                     {/* Passive Skill */}
-                    <section className={styles.section}>
-                        <h2 className={styles.sectionTitle}>Passive Skill: {companion.passiveSkill}</h2>
-                        <div className={styles.content} dangerouslySetInnerHTML={{__html: companion.passiveSkillText}}/>
+                    <section className={styles.skillsSection}>
+                        <div className={styles.sectionTitle}>
+                            <div className={styles.skillTitle}>Passive Skill</div>
+                            <div className={styles.borderVertical}></div>
+                            <div className={styles.skillNameContainer}>
+                                <div className={styles.skillName}>{companion.passiveSkill}</div>
+                                <div className={styles.borderHorizontalWhite}></div>
+                                <div>Cooldown: none | Cost: none</div>
+                            </div>
+                        </div>
+                        <div className={styles.skillsText}
+                             dangerouslySetInnerHTML={{__html: companion.passiveSkillText}}/>
                     </section>
 
                     {/* Ardent Oath */}
-                    <section className={styles.section}>
-                        <h2 className={styles.sectionTitle}>Ardent Oath: {companion.ardentOath}</h2>
-                        <div className={styles.content} dangerouslySetInnerHTML={{__html: companion.ardentOathText}}/>
+                    <section className={styles.skillsSection}>
+                        <div className={styles.sectionTitle}>
+                            <div className={styles.skillTitle}>Ardent Oath</div>
+                            <div className={styles.borderVertical}></div>
+                            <div className={styles.skillNameContainer}>
+                                <div className={styles.skillName}>{companion.ardentOath}</div>
+                                <div className={styles.borderHorizontalWhite}></div>
+                                <div>Cooldown: none | Cost: {companion.ardentOathCost}</div>
+                            </div>
+                        </div>
+                        <div className={styles.skillsText}
+                             dangerouslySetInnerHTML={{__html: companion.ardentOathText}}/>
                     </section>
 
                 </section>
@@ -74,32 +102,56 @@ function CompanionArticlePage({data, linkField = "link"}) {
                 <section className={styles.mcSkills}>
 
                     <div className={styles.titleSection}>
-                        <h1 className={styles.weapon}>Weapon: {companion.weaponName}</h1>
+                        <h1 className={styles.h1Title}>MC Weapon: {companion.weaponName}</h1>
                         <p className={styles.specialty}>{companion.specialityMC}</p>
                     </div>
 
+                    <div className={styles.borderHorizontal}></div>
+
                     {/* Basic Attack */}
-                    <div className={styles.section}>
-                        <h2 className={styles.sectionTitle}>Basic Attack: {companion.basicAttack}</h2>
-                        <div className={styles.content} dangerouslySetInnerHTML={{__html: companion.basicAttackText}}/>
-                    </div>
+                    <section className={styles.skillsSection}>
+                        <div className={styles.sectionTitle}>
+                            <div className={styles.skillTitle}>Basic Attack</div>
+                            <div className={styles.borderVertical}></div>
+                            <div className={styles.skillNameContainer}>
+                                <div className={styles.skillName}>{companion.basicAttack}</div>
+                                <div className={styles.borderHorizontalWhite}></div>
+                                <div>Cooldown: none | Cost: none</div>
+                            </div>
+                        </div>
+                        <div className={styles.skillsText}
+                             dangerouslySetInnerHTML={{__html: companion.basicAttackText}}/>
+                    </section>
 
                     {/* Active Skill */}
-                    <div className={styles.section}>
-                        <h2 className={styles.sectionTitle}>
-                            Active Skill: {companion.activeSkill}
-                            <div className={styles.cooldown}>
-                                (Cooldown: {companion.activeSkillCooldown} | Cost: {companion.activeSkillCooldownCost})
+                    <section className={styles.skillsSection}>
+                        <div className={styles.sectionTitle}>
+                            <div className={styles.skillTitle}>Active Skill</div>
+                            <div className={styles.borderVertical}></div>
+                            <div className={styles.skillNameContainer}>
+                                <div className={styles.skillName}>{companion.activeSkill}</div>
+                                <div className={styles.borderHorizontalWhite}></div>
+                                <div>Cooldown: {companion.activeSkillCooldown} | Cost: {companion.activeSkillCost}</div>
                             </div>
-                        </h2>
-                        <div className={styles.content} dangerouslySetInnerHTML={{__html: companion.activeSkillText}}/>
-                    </div>
+                        </div>
+                        <div className={styles.skillsText}
+                             dangerouslySetInnerHTML={{__html: companion.basicAttackText}}/>
+                    </section>
 
                     {/* Passive MC Skill */}
-                    <div className={styles.section}>
-                        <h2 className={styles.sectionTitle}>Passive Skill: {companion.passiveMCSkill}</h2>
-                        <div className={styles.content} dangerouslySetInnerHTML={{__html: companion.passiveMCText}}/>
-                    </div>
+                    <section className={styles.skillsSection}>
+                        <div className={styles.sectionTitle}>
+                            <div className={styles.skillTitle}>Passive Skill</div>
+                            <div className={styles.borderVertical}></div>
+                            <div className={styles.skillNameContainer}>
+                                <div className={styles.skillName}>{companion.passiveMCSkill}</div>
+                                <div className={styles.borderHorizontalWhite}></div>
+                                <div>Cooldown: none | Cost: none</div>
+                            </div>
+                        </div>
+                        <div className={styles.skillsText}
+                             dangerouslySetInnerHTML={{__html: companion.passiveMCText}}/>
+                    </section>
 
                 </section>
 
@@ -107,27 +159,64 @@ function CompanionArticlePage({data, linkField = "link"}) {
 
             {/* Eidolons */}
             <section className={styles.eidolonsContainer}>
-                <h2 className={styles.sectionTitle}>Eidolons</h2>
+                <h1 className={styles.h1Title}>Solar Slot Memories</h1>
 
-                <div className={styles.eidolon}>
-                    <h3 className={styles.eidolonTitle}>Rank 0</h3>
-                    <div className={styles.content} dangerouslySetInnerHTML={{__html: companion.eidolon0}}/>
-                </div>
+                <section className={styles.skillsSection}>
+                    <div className={styles.sectionTitle}>
+                        <div className={styles.skillTitle}>I</div>
+                        <div className={styles.borderVertical}></div>
+                        <div className={styles.skillNameContainer}>
+                            <div className={styles.skillName}>Starring Effect</div>
+                            <div className={styles.borderHorizontalWhite}></div>
+                            <div>All Solar Memories are Rank 0</div>
+                        </div>
+                    </div>
+                    <div className={styles.skillsText}
+                         dangerouslySetInnerHTML={{__html: companion.eidolon0}}/>
+                </section>
 
-                <div className={styles.eidolon}>
-                    <h3 className={styles.eidolonTitle}>Rank 1</h3>
-                    <div className={styles.content} dangerouslySetInnerHTML={{__html: companion.eidolon1}}/>
-                </div>
+                <section className={styles.skillsSection}>
+                    <div className={styles.sectionTitle}>
+                        <div className={styles.skillTitle}>II</div>
+                        <div className={styles.borderVertical}></div>
+                        <div className={styles.skillNameContainer}>
+                            <div className={styles.skillName}>Duo Rank 1</div>
+                            <div className={styles.borderHorizontalWhite}></div>
+                            <div>All Solar Memories are Rank 1</div>
+                        </div>
+                    </div>
+                    <div className={styles.skillsText}
+                         dangerouslySetInnerHTML={{__html: companion.eidolon1}}/>
+                </section>
 
-                <div className={styles.eidolon}>
-                    <h3 className={styles.eidolonTitle}>Rank 2</h3>
-                    <div className={styles.content} dangerouslySetInnerHTML={{__html: companion.eidolon2}}/>
-                </div>
+                <section className={styles.skillsSection}>
+                    <div className={styles.sectionTitle}>
+                        <div className={styles.skillTitle}>III</div>
+                        <div className={styles.borderVertical}></div>
+                        <div className={styles.skillNameContainer}>
+                            <div className={styles.skillName}>Duo Rank 2</div>
+                            <div className={styles.borderHorizontalWhite}></div>
+                            <div>All Solar Memories are Rank 2</div>
+                        </div>
+                    </div>
+                    <div className={styles.skillsText}
+                         dangerouslySetInnerHTML={{__html: companion.eidolon2}}/>
+                </section>
 
-                <div className={styles.eidolon}>
-                    <h3 className={styles.eidolonTitle}>Rank 3</h3>
-                    <div className={styles.content} dangerouslySetInnerHTML={{__html: companion.eidolon3}}/>
-                </div>
+                <section className={styles.skillsSection}>
+                    <div className={styles.sectionTitle}>
+                        <div className={styles.skillTitle}>IV</div>
+                        <div className={styles.borderVertical}></div>
+                        <div className={styles.skillNameContainer}>
+                            <div className={styles.skillName}>Duo Rank 3</div>
+                            <div className={styles.borderHorizontalWhite}></div>
+                            <div>All Solar Memories are Rank 3</div>
+                        </div>
+                    </div>
+                    <div className={styles.skillsText}
+                         dangerouslySetInnerHTML={{__html: companion.eidolon3}}/>
+                </section>
+
             </section>
         </article>
     );

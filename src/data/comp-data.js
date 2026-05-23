@@ -464,6 +464,7 @@ export const compData = [
 <p>When casting [Soulguide Bell], [Yin-Yang Cycle]'s cooldown is reduced by 3s.</p>
         `,
         ardentOath: "Fate Unforgotten",
+        ardentOathCost: "100% Oath Energy",
         ardentOathText: `
 <p>As you embrace, a lotus from the nether realm blooms to its fading splendor. Caleb draws upon the power of the nether realm to resonate with you, dealing total damage equal to 1800+960% ATK+86% of Max HP.</p>
 <p>During [Fate Unforgotten], you can perform [Dustbreak] 3 times. Each [Dustbreak] triggered at the correct timing restores 5% of Max HP to both you and Caleb after the skill ends. If all 3 [Dustbreaks] are triggered at the correct timing, you both gain 20% DMG Reduction for 15s after the skill ends.</p>
@@ -490,7 +491,7 @@ export const compData = [
         `,
         activeSkill: "Severance Dance",
         activeSkillCooldown: "6 sec.",
-        activeSkillCooldownCost: "1 charge",
+        activeSkillCost: "1 charge",
         activeSkillText: `
 <p>Swing Azuregaze to perform a two-hit combo, dealing total DMG equal to 358+190% ATK+17.2% of Max HP. You become unstoppable throughout the attack. After the second hit you enter [Sword Stance]. While in [Sword Stance], different attacks can be derived based on [Paired Knot].</p>        
         `,
