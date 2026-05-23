@@ -7,13 +7,13 @@
 .containerEvents,
 .containerSchedule {
     margin: 5px;
-
+    width: 50%;
 }
 
 .containerEvents {
     display: flex;
     flex-direction: column;
-    width: 50%;
+
 }
 
 .scheduleContainerGeneralButton,
@@ -121,7 +121,7 @@
     font-size: 25px;
 }
 
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 1020px) {
 
     .containerMain {
         display: flex;

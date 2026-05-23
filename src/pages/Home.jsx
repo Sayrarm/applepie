@@ -44,11 +44,11 @@ function Home() {
 
                 <div className={styles.containerTitleTimer}>
                     <FlexibleTimer
-                        startDateTime="2026-05-15T05:00:00+02:00"
-                        endDateTime="2026-05-22T04:59:00+02:00"
+                        startDateTime="2026-05-22T05:00:00+02:00"
+                        endDateTime="2026-05-31T04:59:00+02:00"
                     />
-                    <img className={styles.imgBanner} src="src/assets/main-page/rerun-banner-2.png"
-                         alt="rerun-banner-2"/>
+                    <img className={styles.imgBanner} src="src/assets/main-page/new-banner.png"
+                         alt="new-banner"/>
                 </div>
 
 
