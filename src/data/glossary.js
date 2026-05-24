@@ -1,4 +1,36 @@
 const glossary = {
+    "Protocore DMG": {
+        title: "Protocore DMG",
+        description: "Deals damage to protocore shield of enemy",
+    },
+    "Paired Knot: Yang": {
+        title: "Paired Knot: Yang",
+        description: "Exit [Sword Stance] and swing the sword to the front right, dealing DMG equal to 135+72% ATK+6.5% of Max HP. You are unstoppable throughout. This attack counts as the final hit of Basic Attack. When this attack applies [Bingdi Lotus], it will always apply [Bingdi Lotus: Yang].",
+    },
+    "Paired Knot: Yin": {
+        title: "Paired Knot: Yin",
+        description: "Exit [Sword Stance] and swing the sword to the front left, dealing DMG equal to 135+72% ATK+6.5% of Max HP. You become unstoppable throughout. This attack counts as the final hit of Basic Attack. When this attack applies [Bingdi Lotus], it will always apply [Bingdi Lotus: Yin].",
+    },
+    "Fate Unforgotten": {
+        title: "Fate Unforgotten",
+        description: "Ardent Oath",
+    },
+    "Azure Ballad": {
+        title: "Azure Ballad",
+        description: "Cooldown is 3.1s. When this skill is replaced, the cooldown begins at 1s. Costs 1 Energy Charge to cast, throwing Azuregaze to deal AoE DMG equal to 671+358% ATK+32.2% of Max HP. The resonating chime of Azuregaze in the air activates [Yin-Yang Rift] throughout its duration. When [Azure Ballad] activates [Yin-Yang Rift], the next [Azure Ballad] will not cost Energy Charge. This effect lasts until the current [Yin-Yang Union] ends.",
+    },
+    "Netherseal Slash: Empowered": {
+        title: "Netherseal Slash: Empowered",
+        description: "(when dodge are success) Deals increased damage equal to 585+312% ATK+28.1% of Max HP.",
+    },
+    "Spectral Slash": {
+        title: "Spectral Slash",
+        description: "Caleb wields Netherseal to slash enemies, dealing DMG equal to 296+158% ATK+14.2% of Max HP. Cooldown: 3.1s. If used while under [Yin-Yang Union] state, Netherseal tears open a [Yin-Yang Rift]. Caleb is unstoppable for the skill's duration.",
+    },
+    "Soulguide Bell": {
+        title: "Soulguide Bell",
+        description: "Caleb's Resonance Skill",
+    },
     "Bingdi Lotus": {
         title: "Bingdi Lotus",
         description: "[Bingdi Lotus]: A special mark you and Caleb apply to enemies. Consists of two halves: [Bingdi Lotus: Yang] and [Bingdi Lotus: Yin]. When an enemy has both [Bingdi Lotus: Yin] and [Bingdi Lotus: Yang], the Bingdi Lotus blooms, dealing DMG.",
@@ -7,7 +39,7 @@ const glossary = {
         title: "Bingdi Lotus: Yang",
         description: "A special mark you and Caleb apply to enemies. When an enemy has both [Bingdi Lotus: Yin] and [Bingdi Lotus: Yang], the Bingdi Lotus blooms, dealing DMG.",
     },
-    "Bingdi Lotus Yin": {
+    "Bingdi Lotus: Yin": {
         title: "Bingdi Lotus Yin",
         description: "A special mark you and Caleb apply to enemies. When an enemy has both [Bingdi Lotus:Yin] and [Bingdi Lotus Yang], the Bingdi Lotus blooms, dealing DMG.",
     },

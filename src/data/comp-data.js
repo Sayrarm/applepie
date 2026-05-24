@@ -454,7 +454,8 @@ export const compData = [
         supportSkillCost: "none",
         supportSkillImg: "/battle-icons/support-skill.png",
         supportSkillText: `
-Caleb wields Netherseal and charges toward enemies, dealing DMG equal to 336+179% ATK+16.2% of Max HP and applying half a [Bingdi Lotus] to targets hit (prioritizing the missing half). Caleb is unstoppable throughout the skill. Netherseal Slash: Empowered: Deals increased damage equal to 585+312% ATK+28.1% of Max HP.
+Caleb wields Netherseal and charges toward enemies, dealing DMG equal to 336+179% ATK+16.2% of Max HP and applying half a [Bingdi Lotus] to targets hit (prioritizing the missing half). Caleb is unstoppable throughout the skill. 
+Netherseal Slash: Empowered: Deals increased damage equal to 585+312% ATK+28.1% of Max HP.
 During [Yin-Yang Union], [Netherseal Slash] becomes the Support Skill [Spectral Slash], and [Netherseal Slash: Empowered] cannot be triggered.
 [Spectral Slash]: Caleb wields Netherseal to slash enemies, dealing DMG equal to 296+158% ATK+14.2% of Max HP. Cooldown: 3.1s. If used while under [Yin-Yang Union] state, Netherseal tears open a [Yin-Yang Rift]. Caleb is unstoppable for the skill's duration.
         `,
@@ -471,7 +472,7 @@ When casting [Soulguide Bell], [Yin-Yang Cycle]'s cooldown is reduced by 3s.
         ardentOathImg: "/battle-icons/ardent-oath.png",
         ardentOathText: `
 As you embrace, a lotus from the nether realm blooms to its fading splendor. Caleb draws upon the power of the nether realm to resonate with you, dealing total damage equal to 1800+960% ATK+86% of Max HP.
-During [Fate Unforgotten], you can perform [Dustbreak] 3 times. Each [Dustbreak] triggered at the correct timing restores 5% of Max HP to both you and Caleb after the skill ends. If all 3 [Dustbreaks] are triggered at the correct timing, you both gain 20% DMG Reduction for 15s after the skill ends.
+During [Fate Unforgotten], you can perform [Dustbreak] 3 times. Each [Dustbreak] triggered at the correct timing restores 5% of Max HP to both you and Caleb after the skill ends. If all 3 [Dustbreak]'s are triggered at the correct timing, you both gain 20% DMG Reduction for 15s after the skill ends.
 When [Yin-Yang Rift] appears, 2% Oath Energy is restored. This effect is not affected by Oath Recovery Boost.
         `,
         passiveSkill: "Yin-Yang Crossing",
@@ -517,7 +518,7 @@ When you apply [Bingdi Lotus] to an enemy that already has the same half, you ga
         eidolon1: `
 Increases Ardent Oath charge by 20%.
 Outside [Yin-Yang Union]:
-When you consume [Lotus Seed], Caleb performs an additional [Netherseal slash]. This attack does not affect [Netherseal Slash]'s original cooldown.
+When you consume [Lotus Seed], Caleb performs an additional [Netherseal Slash]. This attack does not affect [Netherseal Slash]'s original cooldown.
 During [Yin-Yang Union]: When the spectral hand summoned by [Yin-Yang Rift] attacks, it unleashes an additional shockwave, dealing AoE DMG equal to 327+175% ATK+15.7% of Max HP. If the shockwave hits during [Yin-Yang Union], enemies struck are marked as [Ghost]
 [Ghost]: If the target is marked again while already marked, the target takes DMG equal to 251+134% ATK+12.1% of Max HP When [Yin-Yang Rift] is activated, enemies marked as [Ghost] are marked again. When [Yin-Yang Union] ends, the mark is removed.
         `,
