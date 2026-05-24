@@ -6,6 +6,7 @@ function SkillBlock({
                         skillName,
                         skillTitle,
                         cooldown,
+                        stick = '|',
                         cost,
                         skillText
                     }) {
@@ -24,7 +25,7 @@ function SkillBlock({
                 <div className={styles.skillNameContainer}>
                     <div className={styles.skillName}>{skillName}</div>
                     <div className={styles.borderHorizontalWhite}></div>
-                    <div>{cooldown} | {cost}</div>
+                    <div>{cooldown} {stick} {cost}</div>
                 </div>
             </div>
             <div
