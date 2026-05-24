@@ -1,4 +1,5 @@
 import styles from "./SkillBlock.module.css";
+import TipText from "./TipText.jsx";
 
 function SkillBlock({
                         skillImg,
@@ -28,8 +29,9 @@ function SkillBlock({
             </div>
             <div
                 className={styles.skillsText}
-                dangerouslySetInnerHTML={{ __html: skillText }}
-            />
+            >
+                <TipText text={skillText} />
+            </div>
         </section>
     );
 }

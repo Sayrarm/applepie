@@ -454,82 +454,82 @@ export const compData = [
         supportSkillCost: "none",
         supportSkillImg: "/battle-icons/support-skill.png",
         supportSkillText: `
-<p>Caleb wields Netherseal and charges toward enemies, dealing DMG equal to 336+179% ATK+16.2% of Max HP and applying half a [Bingdi Lotus] to targets hit (prioritizing the missing half). Caleb is unstoppable throughout the skill. Netherseal Slash: Empowered: Deals increased damage equal to 585+312% ATK+28.1% of Max HP.</p>
-<p>During [Yin-Yang Union], [Netherseal Slash] becomes the Support Skill [Spectral Slash], and [Netherseal Slash: Empowered] cannot be triggered.</p>
-<p>[Spectral Slash]: Caleb wields Netherseal to slash enemies, dealing DMG equal to 296+158% ATK+14.2% of Max HP. Cooldown: 3.1s. If used while under [Yin-Yang Union] state, Netherseal tears open a [Yin-Yang Rift]. Caleb is unstoppable for the skill's duration.</p>
+Caleb wields Netherseal and charges toward enemies, dealing DMG equal to 336+179% ATK+16.2% of Max HP and applying half a [Bingdi Lotus] to targets hit (prioritizing the missing half). Caleb is unstoppable throughout the skill. Netherseal Slash: Empowered: Deals increased damage equal to 585+312% ATK+28.1% of Max HP.
+During [Yin-Yang Union], [Netherseal Slash] becomes the Support Skill [Spectral Slash], and [Netherseal Slash: Empowered] cannot be triggered.
+[Spectral Slash]: Caleb wields Netherseal to slash enemies, dealing DMG equal to 296+158% ATK+14.2% of Max HP. Cooldown: 3.1s. If used while under [Yin-Yang Union] state, Netherseal tears open a [Yin-Yang Rift]. Caleb is unstoppable for the skill's duration.
         `,
         resonanceSkill: "Soulguide Bell",
         resonanceSkillCooldown: "15 sec.",
         resonanceSkillCost: "2 charges",
         resonanceSkillImg: "/battle-icons/resonance-skill.png",
         resonanceSkillText: `
-<p>Caleb swings Netherseal as you twirl gracefully into his arms. Together, you ring the Soulguide Bell, pulling in enemies and dealing total AoE DMG equal to 1361+725% ATK+65.3% of Max HP and 1 [Protocore DMG].</p>
-<p>When casting [Soulguide Bell], [Yin-Yang Cycle]'s cooldown is reduced by 3s.</p>
+Caleb swings Netherseal as you twirl gracefully into his arms. Together, you ring the Soulguide Bell, pulling in enemies and dealing total AoE DMG equal to 1361+725% ATK+65.3% of Max HP and 1 [Protocore DMG].
+When casting [Soulguide Bell], [Yin-Yang Cycle]'s cooldown is reduced by 3s.
         `,
         ardentOath: "Fate Unforgotten",
         ardentOathCost: "100% Oath Energy",
         ardentOathImg: "/battle-icons/ardent-oath.png",
         ardentOathText: `
-<p>As you embrace, a lotus from the nether realm blooms to its fading splendor. Caleb draws upon the power of the nether realm to resonate with you, dealing total damage equal to 1800+960% ATK+86% of Max HP.</p>
-<p>During [Fate Unforgotten], you can perform [Dustbreak] 3 times. Each [Dustbreak] triggered at the correct timing restores 5% of Max HP to both you and Caleb after the skill ends. If all 3 [Dustbreaks] are triggered at the correct timing, you both gain 20% DMG Reduction for 15s after the skill ends.</p>
-<p>When [Yin-Yang Rift] appears, 2% Oath Energy is restored. This effect is not affected by Oath Recovery Boost.</p>
+As you embrace, a lotus from the nether realm blooms to its fading splendor. Caleb draws upon the power of the nether realm to resonate with you, dealing total damage equal to 1800+960% ATK+86% of Max HP.
+During [Fate Unforgotten], you can perform [Dustbreak] 3 times. Each [Dustbreak] triggered at the correct timing restores 5% of Max HP to both you and Caleb after the skill ends. If all 3 [Dustbreaks] are triggered at the correct timing, you both gain 20% DMG Reduction for 15s after the skill ends.
+When [Yin-Yang Rift] appears, 2% Oath Energy is restored. This effect is not affected by Oath Recovery Boost.
         `,
         passiveSkill: "Yin-Yang Crossing",
         passiveSkillImg: "/battle-icons/passive-skill.png",
         passiveSkillText: `
-<p>Upon entering combat, you'll gain [Yin-Yang Cycle]. Its cooldown starts at 33s. When casting [Yin-Yang Cycle], you and Caleb enter the [Yin-Yang Union] state. During [Yin-Yang Union], you become unstoppable. Some of Caleb's attacks are empowered, and his certain skills can tear open a [Yin-Yang Rift]. Your Active Skill becomes [Azure Ballad].  After [Yin-Yang Union] ends, the cooldown of [Yin-Yang Cycle] starts at 31s.</p>
-<p>[Yin-Yang Rift]: Can be activated by certain attacks. Upon activation, it summons a spectral hand to pull in enemies within range and deal DMG equal to 645+344% ATK+31% of Max HP. The Rift then closes immediately. Only one inactive [Yin-Yang Rift] can exist on the battlefield at a time.</p>
-<p>[Azure Ballad]: Cooldown is 3.1s. When this skill is replaced, the cooldown begins at 1s. Costs 1 Energy Charge to cast, throwing Azuregaze to deal AoE DMG equal to 671+358% ATK+32.2% of Max HP. The resonating chime of Azuregaze in the air activates [Yin-Yang Rift] throughout its duration. When [Azure Ballad] activates [Yin-Yang Rift], the next [Azure Ballad] will not cost Energy Charge. This effect lasts until the current [Yin-Yang Union] ends.</p>
-<br>
-<p>While outside the [Yin-Yang Union] state, the final hit of your Basic Attack applies [Bingdi Lotus] to enemies hit. When your Active Skill hits, you gain [Lotus Seed]. When your Charged Attack hits, it consumes [Lotus Seed] to apply [Bingdi Lotus] to one of the targets hit (prioritizing the missing half). You can only carry one [Lotus Seed] at a time. While holding [Lotus Seed], you are unstoppable.</p>
-<p>[Bingdi Lotus]: consists of two halves, namely [Bingdi Lotus: Yin] and [Bingdi Lotus: Yang]. When applied, one is randomly selected. When both [Bingdi Lotus: Yin] and [Bingdi Lotus: Yang] are on the same enemy, they merge and bloom, dealing DMG equal to 491+262% ATK+23.6% of Max HP and restoring 0.5 Energy Charge. Each Bingdi Lotus bloom reduces [Yin-Yang Cycle]'s cooldown by 3s. This effect can trigger up to 7 times. Casting [Yin-Yang Cycle] resets this limit.</p>
-<br>
-<p>When entering [Yin-Yang Union], all [Bingdi Lotus] on enemies and your [Lotus Seed] are cleared.</p>
-<p>When [Yin-Yang Union] ends, any inactive [Yin-Yang Rift] closes immediately, and your Active Skill and Support Skill start with 2s cooldown.</p>  
+Upon entering combat, you'll gain [Yin-Yang Cycle]. Its cooldown starts at 33s. When casting [Yin-Yang Cycle], you and Caleb enter the [Yin-Yang Union] state. During [Yin-Yang Union], you become unstoppable. Some of Caleb's attacks are empowered, and his certain skills can tear open a [Yin-Yang Rift]. Your Active Skill becomes [Azure Ballad].  After [Yin-Yang Union] ends, the cooldown of [Yin-Yang Cycle] starts at 31s.
+[Yin-Yang Rift]: Can be activated by certain attacks. Upon activation, it summons a spectral hand to pull in enemies within range and deal DMG equal to 645+344% ATK+31% of Max HP. The Rift then closes immediately. Only one inactive [Yin-Yang Rift] can exist on the battlefield at a time.
+[Azure Ballad]: Cooldown is 3.1s. When this skill is replaced, the cooldown begins at 1s. Costs 1 Energy Charge to cast, throwing Azuregaze to deal AoE DMG equal to 671+358% ATK+32.2% of Max HP. The resonating chime of Azuregaze in the air activates [Yin-Yang Rift] throughout its duration. When [Azure Ballad] activates [Yin-Yang Rift], the next [Azure Ballad] will not cost Energy Charge. This effect lasts until the current [Yin-Yang Union] ends.
+
+While outside the [Yin-Yang Union] state, the final hit of your Basic Attack applies [Bingdi Lotus] to enemies hit. When your Active Skill hits, you gain [Lotus Seed]. When your Charged Attack hits, it consumes [Lotus Seed] to apply [Bingdi Lotus] to one of the targets hit (prioritizing the missing half). You can only carry one [Lotus Seed] at a time. While holding [Lotus Seed], you are unstoppable.
+[Bingdi Lotus]: consists of two halves, namely [Bingdi Lotus: Yin] and [Bingdi Lotus: Yang]. When applied, one is randomly selected. When both [Bingdi Lotus: Yin] and [Bingdi Lotus: Yang] are on the same enemy, they merge and bloom, dealing DMG equal to 491+262% ATK+23.6% of Max HP and restoring 0.5 Energy Charge. Each Bingdi Lotus bloom reduces [Yin-Yang Cycle]'s cooldown by 3s. This effect can trigger up to 7 times. Casting [Yin-Yang Cycle] resets this limit.
+
+When entering [Yin-Yang Union], all [Bingdi Lotus] on enemies and your [Lotus Seed] are cleared.
+When [Yin-Yang Union] ends, any inactive [Yin-Yang Rift] closes immediately, and your Active Skill and Support Skill start with 2s cooldown.  
         `,
         basicAttack: "Azure Cleave",
         basicAttackImg: "/battle-icons/basic-attack.png",
         basicAttackText: `
-<p>Wield Azuregaze to attack enemies.</p>
-<p>First Strike: 74+39% ATK+3.5% of Max HP DMG</p>
-<p>Second Strike: 66+34% ATK+3.2% of Max HP DMG.</p>
-<p>Third Strike: Thrust Azuregaze upward, dealing DMG equal to 135+72% ATK+6.5% of Max HP. This attack is not considered the final hit of Basic Attack. After the upward strike, you enter [Sword Stance]. While in [Sword Stance], different attacks can be derived based on [Paired Knot].</p>
-<p>Charged Attack slashes forward, dealing DMG equal to 174+93% ATK+8.4% of Max HP.</p>
+Wield Azuregaze to attack enemies.
+First Strike: 74+39% ATK+3.5% of Max HP DMG
+Second Strike: 66+34% ATK+3.2% of Max HP DMG.
+Third Strike: Thrust Azuregaze upward, dealing DMG equal to 135+72% ATK+6.5% of Max HP. This attack is not considered the final hit of Basic Attack. After the upward strike, you enter [Sword Stance]. While in [Sword Stance], different attacks can be derived based on [Paired Knot].
+Charged Attack slashes forward, dealing DMG equal to 174+93% ATK+8.4% of Max HP.
         `,
         activeSkill: "Severance Dance",
         activeSkillCooldown: "6 sec.",
         activeSkillCost: "1 charge",
         activeSkillImg: "/battle-icons/active-skill.png",
         activeSkillText: `
-<p>Swing Azuregaze to perform a two-hit combo, dealing total DMG equal to 358+190% ATK+17.2% of Max HP. You become unstoppable throughout the attack. After the second hit you enter [Sword Stance]. While in [Sword Stance], different attacks can be derived based on [Paired Knot].</p>        
+Swing Azuregaze to perform a two-hit combo, dealing total DMG equal to 358+190% ATK+17.2% of Max HP. You become unstoppable throughout the attack. After the second hit you enter [Sword Stance]. While in [Sword Stance], different attacks can be derived based on [Paired Knot].        
         `,
         passiveMCSkill: "Paired Knot",
         passiveMCSkillImg: "/battle-icons/mc-passive-skill.png",
         passiveMCText: `
-<p>After performing certain attacks, you enter [Sword Stance]. Movement, attacking, or certain circumstances will end this state. You are unstoppable while it lasts. During this time, tap Basic Attack to perform [Paired Knot: Yang]; hold Basic Attack to perform [Paired Knot: Yin].</p>
-<p>[Paired Knot: Yang]: Exit [Sword Stance] and swing the sword to the front right, dealing DMG equal to 135+72% ATK+6.5% of Max HP. You are unstoppable throughout. This attack counts as the final hit of Basic Attack. When this attack applies [Bingdi Lotus], it will always apply [Bingdi Lotus: Yang].</p>
-<p>[Paired Knot: Yin]: Exit [Sword Stance] and swing the sword to the front left, dealing DMG equal to 135+72% ATK+6.5% of Max HP. You become unstoppable throughout. This attack counts as the final hit of Basic Attack. When this attack applies [Bingdi Lotus], it will always apply [Bingdi Lotus: Yin].</p>
+After performing certain attacks, you enter [Sword Stance]. Movement, attacking, or certain circumstances will end this state. You are unstoppable while it lasts. During this time, tap Basic Attack to perform [Paired Knot: Yang]; hold Basic Attack to perform [Paired Knot: Yin].
+[Paired Knot: Yang]: Exit [Sword Stance] and swing the sword to the front right, dealing DMG equal to 135+72% ATK+6.5% of Max HP. You are unstoppable throughout. This attack counts as the final hit of Basic Attack. When this attack applies [Bingdi Lotus], it will always apply [Bingdi Lotus: Yang].
+[Paired Knot: Yin]: Exit [Sword Stance] and swing the sword to the front left, dealing DMG equal to 135+72% ATK+6.5% of Max HP. You become unstoppable throughout. This attack counts as the final hit of Basic Attack. When this attack applies [Bingdi Lotus], it will always apply [Bingdi Lotus: Yin].
         `,
         eidolon0: `
-<p>The team deals 8% more DMG and takes 8% less DMG.</p>
-<p>When you apply [Bingdi Lotus] to an enemy that already has the same half, you gain [Lotus Seed]. When [Yin-Yang Rift] is active, you restore 0.3 Energy Charge, and both you and Caleb restore 5% of Max HP. </p>       
+The team deals 8% more DMG and takes 8% less DMG.
+When you apply [Bingdi Lotus] to an enemy that already has the same half, you gain [Lotus Seed]. When [Yin-Yang Rift] is active, you restore 0.3 Energy Charge, and both you and Caleb restore 5% of Max HP.        
         `,
         eidolon1: `
-<p>Increases Ardent Oath charge by 20%.</p>
-<p>Outside [Yin-Yang Union]:</p>
-<p>When you consume [Lotus Seed], Caleb performs an additional [Netherseal slash]. This attack does not affect [Netherseal Slash]'s original cooldown.</p>
-<p>During [Yin-Yang Union]: When the spectral hand summoned by [Yin-Yang Rift] attacks, it unleashes an additional shockwave, dealing AoE DMG equal to 327+175% ATK+15.7% of Max HP. If the shockwave hits during [Yin-Yang Union], enemies struck are marked as [Ghost]</p>
-<p>[Ghost]: If the target is marked again while already marked, the target takes DMG equal to 251+134% ATK+12.1% of Max HP When [Yin-Yang Rift] is activated, enemies marked as [Ghost] are marked again. When [Yin-Yang Union] ends, the mark is removed.</p>
+Increases Ardent Oath charge by 20%.
+Outside [Yin-Yang Union]:
+When you consume [Lotus Seed], Caleb performs an additional [Netherseal slash]. This attack does not affect [Netherseal Slash]'s original cooldown.
+During [Yin-Yang Union]: When the spectral hand summoned by [Yin-Yang Rift] attacks, it unleashes an additional shockwave, dealing AoE DMG equal to 327+175% ATK+15.7% of Max HP. If the shockwave hits during [Yin-Yang Union], enemies struck are marked as [Ghost]
+[Ghost]: If the target is marked again while already marked, the target takes DMG equal to 251+134% ATK+12.1% of Max HP When [Yin-Yang Rift] is activated, enemies marked as [Ghost] are marked again. When [Yin-Yang Union] ends, the mark is removed.
         `,
         eidolon2: `
-<p>Energy Charge limit is raised by 1.</p>
-<p>When fighting alongside Netherlord, you start with 42% Oath Energy, and the duration of the enemy's weakened state is extended by 1 second. DMG dealt when [Ghost]is marked again is increased by 10%.</p>    
+Energy Charge limit is raised by 1.
+When fighting alongside Netherlord, you start with 42% Oath Energy, and the duration of the enemy's weakened state is extended by 1 second. DMG dealt when [Ghost] is marked again is increased by 10%.
         `,
         eidolon3: `
-<p>The team deals 8% more DMG.</p>
-<p>During [Yin-Yang Union], when your Active Skill hits, you gain [Lotus Seed]. This effect can trigger only once per Active Skill. When your Charged Attack hits an enemy, it consumes [Lotus Seed] to unleash an additional shockwave at the target's location, dealing AoE DMG equal to 327+175% ATK+15.7% of Max HP. If the shockwave hits during [Yin-Yang Union], enemies struck are marked as [Ghost]. This effect can trigger only once per Charged Attack.</p>
-<p>When [Yin-Yang Rift] appears, you restore an additional 11% Oath Energy. This effect is not affected by Oath Recovery Boost.</p>
-<p>DMG dealt by Ardent Oath [Fate Unforgotten] can trigger critical hits.</p>
+The team deals 8% more DMG.
+During [Yin-Yang Union], when your Active Skill hits, you gain [Lotus Seed]. This effect can trigger only once per Active Skill. When your Charged Attack hits an enemy, it consumes [Lotus Seed] to unleash an additional shockwave at the target's location, dealing AoE DMG equal to 327+175% ATK+15.7% of Max HP. If the shockwave hits during [Yin-Yang Union], enemies struck are marked as [Ghost]. This effect can trigger only once per Charged Attack.
+When [Yin-Yang Rift] appears, you restore an additional 11% Oath Energy. This effect is not affected by Oath Recovery Boost.
+DMG dealt by Ardent Oath [Fate Unforgotten] can trigger critical hits.
         `,
     },
     {
