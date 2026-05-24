@@ -24,9 +24,15 @@
     padding: 10px 5px;
 }
 
-.skillName,
 .skillTitle {
     font-size: 18px;
+    text-transform: uppercase;
+}
+
+.skillName {
+    color: var(--orange);
+    font-size: 20px;
+    font-weight: 500;
     text-transform: uppercase;
 }
 

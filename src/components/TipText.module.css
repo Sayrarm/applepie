@@ -5,7 +5,7 @@
 }
 
 .glossaryTerm {
-    color: #e68038;
+    color: var(--orange);
     cursor: help;
     font-weight: 500;
     text-decoration: underline;
@@ -16,7 +16,7 @@
 }
 
 .glossaryTerm:hover {
-    color: #ff4444;
+    color: var(--red);
     text-decoration-style: solid;
 }
 
