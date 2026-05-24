@@ -118,7 +118,7 @@ function Battle() {
         <>
             <section>
                 <nav>
-                    Companions
+                    <h1>Companions and MC Weapons</h1>
                     <Collapse
                         key={items.key}
                         className={styles.content}
@@ -128,41 +128,6 @@ function Battle() {
                 </nav>
 
                 <section>
-
-                    <img src="" alt=""/>
-                    
-                    <div>
-                        <div>Companion</div>
-                        <div>Name of char</div>
-                        <div>DPS | Heal | Single Target</div>
-                        <div>Support Skill</div>
-                        <div>Support Skill Cooldown</div>
-                        <div>Support Skill Cost</div>
-                        <div>Text of support skill</div>
-                        <div>Resonance Skill</div>
-                        <div>Resonance Skill Cooldown</div>
-                        <div>Resonance Skill Cost</div>
-                        <div>Text of resonance skill</div>
-                        <div>Ardent Oath</div>
-                        <div>Text of ardent oath</div>
-                        <div>Passive Skill</div>
-                        <div>Text of passive skill</div>
-                    </div>
-
-                    <div>
-                        <div>MC Weapon</div>
-                        <br/>
-                        <div>DPS | Heal | Single Target</div>
-                        <div>Basic Attack</div>
-                        <div>Text of Basic Attack</div>
-                        <div>Active Skill</div>
-                        <div>Active Skill Cooldown</div>
-                        <div>Active Skill Cost</div>
-                        <div>Text of active skill</div>
-                        <div>Passive Skill</div>
-                        <div>Text of passive skill</div>
-                    </div>
-
                 </section>
             </section>
         </>
