@@ -1,5 +1,6 @@
 import {useParams} from 'react-router-dom';
 import styles from "./CompanionArticlePage.module.css";
+import SkillBlock from "./SkillBlock.jsx";
 
 function CompanionArticlePage({data, linkField = "link"}) {
     const {articleLink} = useParams();
@@ -15,8 +16,6 @@ function CompanionArticlePage({data, linkField = "link"}) {
         <article className={styles.generalContainer}>
 
             <section className={styles.skillsContainer}>
-
-
 
                 <section className={styles.companionContainer}>
 
@@ -38,101 +37,48 @@ function CompanionArticlePage({data, linkField = "link"}) {
                         <div className={styles.borderHorizontal}></div>
 
                         {/* Resonance Skill */}
-                        <section className={styles.skillsSection}>
-                            <div className={styles.sectionTitle}>
-                                {companion.resonanceSkillImg && (
-                                    <img
-                                        src={companion.resonanceSkillImg}
-                                        alt={companion.resonanceSkill}
-                                        className={styles.skillImg}
-                                    />
-                                )}
-                                <div className={styles.skillTitle}>Resonance Skill</div>
-                                <div className={styles.borderVertical}></div>
-                                <div className={styles.skillNameContainer}>
-                                    <div className={styles.skillName}>{companion.resonanceSkill}</div>
-                                    <div className={styles.borderHorizontalWhite}></div>
-                                    <div>Cooldown: {companion.resonanceSkillCooldown} | Cost: {companion.resonanceSkillCost}</div>
-                                </div>
-                            </div>
-                            <div className={styles.skillsText}
-                                 dangerouslySetInnerHTML={{__html: companion.resonanceSkillText}}/>
-                        </section>
+                        <SkillBlock
+                            skillImg={companion.resonanceSkillImg}
+                            skillName={companion.resonanceSkill}
+                            skillTitle="Resonance Skill"
+                            cooldown={companion.resonanceSkillCooldown}
+                            cost={companion.resonanceSkillCost}
+                            skillText={companion.resonanceSkillText}
+                        />
 
                         {/* Support Skill */}
-
-                        <section className={styles.skillsSection}>
-                            <div className={styles.sectionTitle}>
-                                {companion.supportSkillImg && (
-                                    <img
-                                        src={companion.supportSkillImg}
-                                        alt={companion.supportSkill}
-                                        className={styles.skillImg}
-                                    />
-                                )}
-                                <div className={styles.skillTitle}>Support Skill</div>
-                                <div className={styles.borderVertical}></div>
-                                <div className={styles.skillNameContainer}>
-                                    <div className={styles.skillName}>{companion.supportSkill}</div>
-                                    <div className={styles.borderHorizontalWhite}></div>
-                                    <div>Cooldown: {companion.supportSkillCooldown} | Cost: {companion.supportSkillCost}</div>
-                                </div>
-                            </div>
-                            <div className={styles.skillsText}
-                                 dangerouslySetInnerHTML={{__html: companion.supportSkillText}}/>
-                        </section>
+                        <SkillBlock
+                            skillImg={companion.supportSkillImg}
+                            skillName={companion.supportSkill}
+                            skillTitle="Support Skill"
+                            cooldown={companion.supportSkillCooldown}
+                            cost={companion.supportSkillCost}
+                            skillText={companion.supportSkillText}
+                        />
 
                         {/* Passive Skill */}
-                        <section className={styles.skillsSection}>
-                            <div className={styles.sectionTitle}>
-                                {companion.passiveSkillImg && (
-                                    <img
-                                        src={companion.passiveSkillImg}
-                                        alt={companion.passiveSkill}
-                                        className={styles.skillImg}
-                                    />
-                                )}
-                                <div className={styles.skillTitle}>Passive Skill</div>
-                                <div className={styles.borderVertical}></div>
-                                <div className={styles.skillNameContainer}>
-                                    <div className={styles.skillName}>{companion.passiveSkill}</div>
-                                    <div className={styles.borderHorizontalWhite}></div>
-                                    <div>Cooldown: none | Cost: none</div>
-                                </div>
-                            </div>
-                            <div className={styles.skillsText}
-                                 dangerouslySetInnerHTML={{__html: companion.passiveSkillText}}/>
-                        </section>
+                        <SkillBlock
+                            skillImg={companion.passiveSkillImg}
+                            skillName={companion.passiveSkill}
+                            skillTitle="Passive Skill"
+                            cooldown="none"
+                            cost="none"
+                            skillText={companion.passiveSkillText}
+                        />
 
                         {/* Ardent Oath */}
-                        <section className={styles.skillsSection}>
-                            <div className={styles.sectionTitle}>
-                                {companion.ardentOathImg && (
-                                    <img
-                                        src={companion.ardentOathImg}
-                                        alt={companion.ardentOath}
-                                        className={styles.skillImg}
-                                    />
-                                )}
-                                <div className={styles.skillTitle}>Ardent Oath</div>
-                                <div className={styles.borderVertical}></div>
-                                <div className={styles.skillNameContainer}>
-                                    <div className={styles.skillName}>{companion.ardentOath}</div>
-                                    <div className={styles.borderHorizontalWhite}></div>
-                                    <div>Cooldown: none | Cost: {companion.ardentOathCost}</div>
-                                </div>
-                            </div>
-                            <div className={styles.skillsText}
-                                 dangerouslySetInnerHTML={{__html: companion.ardentOathText}}/>
-                        </section>
+                        <SkillBlock
+                            skillImg={companion.ardentOathImg}
+                            skillName={companion.ardentOath}
+                            skillTitle="Ardent Oath"
+                            cooldown="none"
+                            cost={companion.ardentOathCost}
+                            skillText={companion.ardentOathText}
+                        />
 
                     </section>
 
-
-
                 </section>
-
-
 
                 <section className={styles.companionContainer}>
 
@@ -153,74 +99,36 @@ function CompanionArticlePage({data, linkField = "link"}) {
                         <div className={styles.borderHorizontal}></div>
 
                         {/* Basic Attack */}
-                        <section className={styles.skillsSection}>
-                            <div className={styles.sectionTitle}>
-                                {companion.basicAttackImg && (
-                                    <img
-                                        src={companion.basicAttackImg}
-                                        alt={companion.basicAttack}
-                                        className={styles.skillImg}
-                                    />
-                                )}
-                                <div className={styles.skillTitle}>Basic Attack</div>
-                                <div className={styles.borderVertical}></div>
-                                <div className={styles.skillNameContainer}>
-                                    <div className={styles.skillName}>{companion.basicAttack}</div>
-                                    <div className={styles.borderHorizontalWhite}></div>
-                                    <div>Cooldown: none | Cost: none</div>
-                                </div>
-                            </div>
-                            <div className={styles.skillsText}
-                                 dangerouslySetInnerHTML={{__html: companion.basicAttackText}}/>
-                        </section>
+                        <SkillBlock
+                            skillImg={companion.basicAttackImg}
+                            skillName={companion.basicAttack}
+                            skillTitle="Basic Attack"
+                            cooldown="none"
+                            cost="none"
+                            skillText={companion.basicAttackText}
+                        />
 
                         {/* Active Skill */}
-                        <section className={styles.skillsSection}>
-                            <div className={styles.sectionTitle}>
-                                {companion.activeSkillImg && (
-                                    <img
-                                        src={companion.activeSkillImg}
-                                        alt={companion.activeSkill}
-                                        className={styles.skillImg}
-                                    />
-                                )}
-                                <div className={styles.skillTitle}>Active Skill</div>
-                                <div className={styles.borderVertical}></div>
-                                <div className={styles.skillNameContainer}>
-                                    <div className={styles.skillName}>{companion.activeSkill}</div>
-                                    <div className={styles.borderHorizontalWhite}></div>
-                                    <div>Cooldown: {companion.activeSkillCooldown} | Cost: {companion.activeSkillCost}</div>
-                                </div>
-                            </div>
-                            <div className={styles.skillsText}
-                                 dangerouslySetInnerHTML={{__html: companion.basicAttackText}}/>
-                        </section>
+                        <SkillBlock
+                            skillImg={companion.activeSkillImg}
+                            skillName={companion.activeSkill}
+                            skillTitle="Active Skill"
+                            cooldown={companion.activeSkillCooldown}
+                            cost={companion.activeSkillCost}
+                            skillText={companion.activeSkillText}
+                        />
 
                         {/* Passive MC Skill */}
-                        <section className={styles.skillsSection}>
-                            <div className={styles.sectionTitle}>
-                                {companion.passiveMCSkillImg && (
-                                    <img
-                                        src={companion.passiveMCSkillImg}
-                                        alt={companion.passiveMCSkill}
-                                        className={styles.skillImg}
-                                    />
-                                )}
-                                <div className={styles.skillTitle}>Passive Skill</div>
-                                <div className={styles.borderVertical}></div>
-                                <div className={styles.skillNameContainer}>
-                                    <div className={styles.skillName}>{companion.passiveMCSkill}</div>
-                                    <div className={styles.borderHorizontalWhite}></div>
-                                    <div>Cooldown: none | Cost: none</div>
-                                </div>
-                            </div>
-                            <div className={styles.skillsText}
-                                 dangerouslySetInnerHTML={{__html: companion.passiveMCText}}/>
-                        </section>
+                        <SkillBlock
+                            skillImg={companion.passiveMCSkillImg}
+                            skillName={companion.passiveMCSkill}
+                            skillTitle="Passive Skill"
+                            cooldown="none"
+                            cost="none"
+                            skillText={companion.passiveMCText}
+                        />
 
                     </section>
-
-
 
                 </section>
 
@@ -230,61 +138,41 @@ function CompanionArticlePage({data, linkField = "link"}) {
             <section className={styles.eidolonsContainer}>
                 <h1 className={styles.h1Title}>Solar Slot Memories</h1>
 
-                <section className={styles.skillsSection}>
-                    <div className={styles.sectionTitle}>
-                        <div className={styles.skillTitle}>I</div>
-                        <div className={styles.borderVertical}></div>
-                        <div className={styles.skillNameContainer}>
-                            <div className={styles.skillName}>Starring Effect</div>
-                            <div className={styles.borderHorizontalWhite}></div>
-                            <div>All Solar Memories are Rank 0</div>
-                        </div>
-                    </div>
-                    <div className={styles.skillsText}
-                         dangerouslySetInnerHTML={{__html: companion.eidolon0}}/>
-                </section>
+                {/*R0*/}
+                <SkillBlock
+                    skillName="Starring Effect"
+                    skillTitle="I"
+                    cooldown="All Solar Memories are Rank 0"
+                    cost=""
+                    skillText={companion.eidolon0}
+                />
 
-                <section className={styles.skillsSection}>
-                    <div className={styles.sectionTitle}>
-                        <div className={styles.skillTitle}>II</div>
-                        <div className={styles.borderVertical}></div>
-                        <div className={styles.skillNameContainer}>
-                            <div className={styles.skillName}>Duo Rank 1</div>
-                            <div className={styles.borderHorizontalWhite}></div>
-                            <div>All Solar Memories are Rank 1</div>
-                        </div>
-                    </div>
-                    <div className={styles.skillsText}
-                         dangerouslySetInnerHTML={{__html: companion.eidolon1}}/>
-                </section>
+                {/*R1*/}
+                <SkillBlock
+                    skillName="Duo Rank 1"
+                    skillTitle="II"
+                    cooldown="All Solar Memories are Rank 1"
+                    cost=""
+                    skillText={companion.eidolon1}
+                />
 
-                <section className={styles.skillsSection}>
-                    <div className={styles.sectionTitle}>
-                        <div className={styles.skillTitle}>III</div>
-                        <div className={styles.borderVertical}></div>
-                        <div className={styles.skillNameContainer}>
-                            <div className={styles.skillName}>Duo Rank 2</div>
-                            <div className={styles.borderHorizontalWhite}></div>
-                            <div>All Solar Memories are Rank 2</div>
-                        </div>
-                    </div>
-                    <div className={styles.skillsText}
-                         dangerouslySetInnerHTML={{__html: companion.eidolon2}}/>
-                </section>
+                {/*R2*/}
+                <SkillBlock
+                    skillName="Duo Rank 2"
+                    skillTitle="III"
+                    cooldown="All Solar Memories are Rank 2"
+                    cost=""
+                    skillText={companion.eidolon2}
+                />
 
-                <section className={styles.skillsSection}>
-                    <div className={styles.sectionTitle}>
-                        <div className={styles.skillTitle}>IV</div>
-                        <div className={styles.borderVertical}></div>
-                        <div className={styles.skillNameContainer}>
-                            <div className={styles.skillName}>Duo Rank 3</div>
-                            <div className={styles.borderHorizontalWhite}></div>
-                            <div>All Solar Memories are Rank 3</div>
-                        </div>
-                    </div>
-                    <div className={styles.skillsText}
-                         dangerouslySetInnerHTML={{__html: companion.eidolon3}}/>
-                </section>
+                {/*R3*/}
+                <SkillBlock
+                    skillName="Duo Rank 3"
+                    skillTitle="IV"
+                    cooldown="All Solar Memories are Rank 3"
+                    cost=""
+                    skillText={companion.eidolon3}
+                />
 
             </section>
         </article>

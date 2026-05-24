@@ -11,12 +11,6 @@
     mask-image: linear-gradient(90deg, transparent 0%, black 40%, black 60%, transparent 100%);
 }
 
-.skillImg {
-    width: 70px;
-    height: 70px;
-    padding: 5px;
-}
-
 .skillsContainer {
     display: flex;
     flex-direction: column;
@@ -32,62 +26,10 @@
     margin: 10px 0;
 }
 
-.borderHorizontalWhite {
-    border: 1px solid white;
-    width: 100%;
-    margin: 5px 0;
-}
-
-.borderVertical {
-    border-right: 2px solid white;
-    height: 80px;
-    margin: 0;
-}
-
-.skillsSection {
-    margin: 2px;
-}
-
-.sectionTitle {
-    background: var(--brown);
-    color: white;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 2px;
-    width: 100%;
-}
-
-.skillTitle {
-    height: 100%;
-    width: 180px;
-    padding: 10px 5px;
-}
-
-.skillName,
-.skillTitle {
-    font-size: 18px;
-    text-transform: uppercase;
-}
-
-.skillNameContainer {
-    width: 100%;
-}
-
 .h1Title {
     display: flex;
     align-items: center;
     margin: 10px 0;
-}
-
-.skillsText {
-    margin-bottom: 10px;
-    padding: 5px;
-
-    background: var(--bg-brown-light);
-    -webkit-box-shadow: var(--box-shadow);
-    -moz-box-shadow: var(--box-shadow);
-    box-shadow: var(--box-shadow);
 }
 
 @media screen and (max-width: 630px) {
