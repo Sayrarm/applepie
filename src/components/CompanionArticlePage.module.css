@@ -11,7 +11,18 @@
     mask-image: linear-gradient(90deg, transparent 0%, black 40%, black 60%, transparent 100%);
 }
 
+.skillImg {
+    width: 70px;
+    height: 70px;
+    padding: 5px;
+}
+
 .skillsContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.companionContainer {
     display: flex;
 }
 
@@ -44,10 +55,12 @@
     display: flex;
     align-items: center;
     gap: 2px;
+    width: 100%;
 }
 
 .skillTitle {
     height: 100%;
+    width: 180px;
     padding: 10px 5px;
 }
 
@@ -78,9 +91,9 @@
     box-shadow: var(--box-shadow);
 }
 
-@media screen and (max-width: 510px) {
+@media screen and (max-width: 630px) {
 
-    .skillsContainer {
+    .companionContainer {
         display: flex;
         flex-direction: column;
     }

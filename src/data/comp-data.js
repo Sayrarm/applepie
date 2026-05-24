@@ -444,6 +444,7 @@ export const compData = [
         id: 51,
         link: "caleb-netherlord",
         img: "/companions/caleb_netherlord.png",
+        imgWeapon: "/companions/azuregaze.png",
         companionName: "Caleb: Netherlord",
         speciality: "DPS | Heal | Single-target",
         weaponName: "Azuregaze",
@@ -451,6 +452,7 @@ export const compData = [
         supportSkill: "Netherseal Slash",
         supportSkillCooldown: "9 sec.",
         supportSkillCost: "none",
+        supportSkillImg: "/battle-icons/support-skill.png",
         supportSkillText: `
 <p>Caleb wields Netherseal and charges toward enemies, dealing DMG equal to 336+179% ATK+16.2% of Max HP and applying half a [Bingdi Lotus] to targets hit (prioritizing the missing half). Caleb is unstoppable throughout the skill. Netherseal Slash: Empowered: Deals increased damage equal to 585+312% ATK+28.1% of Max HP.</p>
 <p>During [Yin-Yang Union], [Netherseal Slash] becomes the Support Skill [Spectral Slash], and [Netherseal Slash: Empowered] cannot be triggered.</p>
@@ -459,18 +461,21 @@ export const compData = [
         resonanceSkill: "Soulguide Bell",
         resonanceSkillCooldown: "15 sec.",
         resonanceSkillCost: "2 charges",
+        resonanceSkillImg: "/battle-icons/resonance-skill.png",
         resonanceSkillText: `
 <p>Caleb swings Netherseal as you twirl gracefully into his arms. Together, you ring the Soulguide Bell, pulling in enemies and dealing total AoE DMG equal to 1361+725% ATK+65.3% of Max HP and 1 [Protocore DMG].</p>
 <p>When casting [Soulguide Bell], [Yin-Yang Cycle]'s cooldown is reduced by 3s.</p>
         `,
         ardentOath: "Fate Unforgotten",
         ardentOathCost: "100% Oath Energy",
+        ardentOathImg: "/battle-icons/ardent-oath.png",
         ardentOathText: `
 <p>As you embrace, a lotus from the nether realm blooms to its fading splendor. Caleb draws upon the power of the nether realm to resonate with you, dealing total damage equal to 1800+960% ATK+86% of Max HP.</p>
 <p>During [Fate Unforgotten], you can perform [Dustbreak] 3 times. Each [Dustbreak] triggered at the correct timing restores 5% of Max HP to both you and Caleb after the skill ends. If all 3 [Dustbreaks] are triggered at the correct timing, you both gain 20% DMG Reduction for 15s after the skill ends.</p>
 <p>When [Yin-Yang Rift] appears, 2% Oath Energy is restored. This effect is not affected by Oath Recovery Boost.</p>
         `,
         passiveSkill: "Yin-Yang Crossing",
+        passiveSkillImg: "/battle-icons/passive-skill.png",
         passiveSkillText: `
 <p>Upon entering combat, you'll gain [Yin-Yang Cycle]. Its cooldown starts at 33s. When casting [Yin-Yang Cycle], you and Caleb enter the [Yin-Yang Union] state. During [Yin-Yang Union], you become unstoppable. Some of Caleb's attacks are empowered, and his certain skills can tear open a [Yin-Yang Rift]. Your Active Skill becomes [Azure Ballad].  After [Yin-Yang Union] ends, the cooldown of [Yin-Yang Cycle] starts at 31s.</p>
 <p>[Yin-Yang Rift]: Can be activated by certain attacks. Upon activation, it summons a spectral hand to pull in enemies within range and deal DMG equal to 645+344% ATK+31% of Max HP. The Rift then closes immediately. Only one inactive [Yin-Yang Rift] can exist on the battlefield at a time.</p>
@@ -483,6 +488,7 @@ export const compData = [
 <p>When [Yin-Yang Union] ends, any inactive [Yin-Yang Rift] closes immediately, and your Active Skill and Support Skill start with 2s cooldown.</p>  
         `,
         basicAttack: "Azure Cleave",
+        basicAttackImg: "/battle-icons/basic-attack.png",
         basicAttackText: `
 <p>Wield Azuregaze to attack enemies.</p>
 <p>First Strike: 74+39% ATK+3.5% of Max HP DMG Second Strike: 66+34% ATK+3.2% of Max HP DMG.</p>
@@ -492,10 +498,12 @@ export const compData = [
         activeSkill: "Severance Dance",
         activeSkillCooldown: "6 sec.",
         activeSkillCost: "1 charge",
+        activeSkillImg: "/battle-icons/active-skill.png",
         activeSkillText: `
 <p>Swing Azuregaze to perform a two-hit combo, dealing total DMG equal to 358+190% ATK+17.2% of Max HP. You become unstoppable throughout the attack. After the second hit you enter [Sword Stance]. While in [Sword Stance], different attacks can be derived based on [Paired Knot].</p>        
         `,
         passiveMCSkill: "Paired Knot",
+        passiveMCSkillImg: "/battle-icons/mc-passive-skill.png",
         passiveMCText: `
 <p>After performing certain attacks, you enter [Sword Stance]. Movement, attacking, or certain circumstances will end this state. You are unstoppable while it lasts. During this time, tap Basic Attack to perform [Paired Knot: Yang]; hold Basic Attack to perform [Paired Knot: Yin].</p>
 <p>[Paired Knot: Yang]: Exit [Sword Stance] and swing the sword to the front right, dealing DMG equal to 135+72% ATK+6.5% of Max HP. You are unstoppable throughout. This attack counts as the final hit of Basic Attack. When this attack applies [Bingdi Lotus], it will always apply [Bingdi Lotus: Yang].</p>
