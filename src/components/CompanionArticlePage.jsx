@@ -41,8 +41,8 @@ function CompanionArticlePage({data, linkField = "link"}) {
                             skillImg={companion.resonanceSkillImg}
                             skillName={companion.resonanceSkill}
                             skillTitle="Resonance Skill"
-                            cooldown={companion.resonanceSkillCooldown}
-                            cost={companion.resonanceSkillCost}
+                            cooldown={`Cooldown: ${companion.resonanceSkillCooldown}`}
+                            cost={`Cost: ${companion.resonanceSkillCost}`}
                             skillText={companion.resonanceSkillText}
                         />
 
@@ -51,8 +51,8 @@ function CompanionArticlePage({data, linkField = "link"}) {
                             skillImg={companion.supportSkillImg}
                             skillName={companion.supportSkill}
                             skillTitle="Support Skill"
-                            cooldown={companion.supportSkillCooldown}
-                            cost={companion.supportSkillCost}
+                            cooldown={`Cooldown: ${companion.supportSkillCooldown}`}
+                            cost={`Cost: ${companion.supportSkillCost}`}
                             skillText={companion.supportSkillText}
                         />
 
@@ -61,8 +61,8 @@ function CompanionArticlePage({data, linkField = "link"}) {
                             skillImg={companion.passiveSkillImg}
                             skillName={companion.passiveSkill}
                             skillTitle="Passive Skill"
-                            cooldown="none"
-                            cost="none"
+                            cooldown="Cooldown: none"
+                            cost="Cost: none"
                             skillText={companion.passiveSkillText}
                         />
 
@@ -71,8 +71,8 @@ function CompanionArticlePage({data, linkField = "link"}) {
                             skillImg={companion.ardentOathImg}
                             skillName={companion.ardentOath}
                             skillTitle="Ardent Oath"
-                            cooldown="none"
-                            cost={companion.ardentOathCost}
+                            cooldown="Cooldown: none"
+                            cost={`Cost: ${companion.ardentOathCost}`}
                             skillText={companion.ardentOathText}
                         />
 
@@ -103,8 +103,8 @@ function CompanionArticlePage({data, linkField = "link"}) {
                             skillImg={companion.basicAttackImg}
                             skillName={companion.basicAttack}
                             skillTitle="Basic Attack"
-                            cooldown="none"
-                            cost="none"
+                            cooldown="Cooldown: none"
+                            cost="Cost: none"
                             skillText={companion.basicAttackText}
                         />
 
@@ -113,8 +113,8 @@ function CompanionArticlePage({data, linkField = "link"}) {
                             skillImg={companion.activeSkillImg}
                             skillName={companion.activeSkill}
                             skillTitle="Active Skill"
-                            cooldown={companion.activeSkillCooldown}
-                            cost={companion.activeSkillCost}
+                            cooldown={`Cooldown: ${companion.activeSkillCooldown}`}
+                            cost={`Cost: ${companion.activeSkillCost}`}
                             skillText={companion.activeSkillText}
                         />
 
@@ -123,8 +123,8 @@ function CompanionArticlePage({data, linkField = "link"}) {
                             skillImg={companion.passiveMCSkillImg}
                             skillName={companion.passiveMCSkill}
                             skillTitle="Passive Skill"
-                            cooldown="none"
-                            cost="none"
+                            cooldown="Cooldown: none"
+                            cost="Cost: none"
                             skillText={companion.passiveMCText}
                         />
 
@@ -143,7 +143,6 @@ function CompanionArticlePage({data, linkField = "link"}) {
                     skillName="Starring Effect"
                     skillTitle="I"
                     cooldown="All Solar Memories are Rank 0"
-                    cost=""
                     skillText={companion.eidolon0}
                 />
 
@@ -152,7 +151,6 @@ function CompanionArticlePage({data, linkField = "link"}) {
                     skillName="Duo Rank 1"
                     skillTitle="II"
                     cooldown="All Solar Memories are Rank 1"
-                    cost=""
                     skillText={companion.eidolon1}
                 />
 
@@ -161,7 +159,6 @@ function CompanionArticlePage({data, linkField = "link"}) {
                     skillName="Duo Rank 2"
                     skillTitle="III"
                     cooldown="All Solar Memories are Rank 2"
-                    cost=""
                     skillText={companion.eidolon2}
                 />
 
@@ -170,7 +167,6 @@ function CompanionArticlePage({data, linkField = "link"}) {
                     skillName="Duo Rank 3"
                     skillTitle="IV"
                     cooldown="All Solar Memories are Rank 3"
-                    cost=""
                     skillText={companion.eidolon3}
                 />
 
