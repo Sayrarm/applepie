@@ -40,7 +40,7 @@ function CompanionArticlePage({data, linkField = "link"}) {
                         {/* Resonance Skill */}
                         <section className={styles.skillsSection}>
                             <div className={styles.sectionTitle}>
-                                {companion.img && (
+                                {companion.resonanceSkillImg && (
                                     <img
                                         src={companion.resonanceSkillImg}
                                         alt={companion.resonanceSkill}
@@ -63,7 +63,7 @@ function CompanionArticlePage({data, linkField = "link"}) {
 
                         <section className={styles.skillsSection}>
                             <div className={styles.sectionTitle}>
-                                {companion.img && (
+                                {companion.supportSkillImg && (
                                     <img
                                         src={companion.supportSkillImg}
                                         alt={companion.supportSkill}
@@ -85,7 +85,7 @@ function CompanionArticlePage({data, linkField = "link"}) {
                         {/* Passive Skill */}
                         <section className={styles.skillsSection}>
                             <div className={styles.sectionTitle}>
-                                {companion.img && (
+                                {companion.passiveSkillImg && (
                                     <img
                                         src={companion.passiveSkillImg}
                                         alt={companion.passiveSkill}
@@ -107,7 +107,7 @@ function CompanionArticlePage({data, linkField = "link"}) {
                         {/* Ardent Oath */}
                         <section className={styles.skillsSection}>
                             <div className={styles.sectionTitle}>
-                                {companion.img && (
+                                {companion.ardentOathImg && (
                                     <img
                                         src={companion.ardentOathImg}
                                         alt={companion.ardentOath}
@@ -136,7 +136,7 @@ function CompanionArticlePage({data, linkField = "link"}) {
 
                 <section className={styles.companionContainer}>
 
-                    {companion.img && (
+                    {companion.imgWeapon && (
                         <img
                             src={companion.imgWeapon}
                             alt={companion.companionName}
@@ -155,7 +155,7 @@ function CompanionArticlePage({data, linkField = "link"}) {
                         {/* Basic Attack */}
                         <section className={styles.skillsSection}>
                             <div className={styles.sectionTitle}>
-                                {companion.img && (
+                                {companion.basicAttackImg && (
                                     <img
                                         src={companion.basicAttackImg}
                                         alt={companion.basicAttack}
@@ -177,7 +177,7 @@ function CompanionArticlePage({data, linkField = "link"}) {
                         {/* Active Skill */}
                         <section className={styles.skillsSection}>
                             <div className={styles.sectionTitle}>
-                                {companion.img && (
+                                {companion.activeSkillImg && (
                                     <img
                                         src={companion.activeSkillImg}
                                         alt={companion.activeSkill}
@@ -199,7 +199,7 @@ function CompanionArticlePage({data, linkField = "link"}) {
                         {/* Passive MC Skill */}
                         <section className={styles.skillsSection}>
                             <div className={styles.sectionTitle}>
-                                {companion.img && (
+                                {companion.passiveMCSkillImg && (
                                     <img
                                         src={companion.passiveMCSkillImg}
                                         alt={companion.passiveMCSkill}

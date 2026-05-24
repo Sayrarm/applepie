@@ -77,8 +77,7 @@
 .h1Title {
     display: flex;
     align-items: center;
-    margin-top: 10px;
-    height: 70px;
+    margin: 10px 0;
 }
 
 .skillsText {
