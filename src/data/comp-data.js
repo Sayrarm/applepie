@@ -442,7 +442,7 @@ export const compData = [
     },
     {
         id: 51,
-        link: "caleb-netherlord",
+        link: "netherlord",
         img: "/companions/caleb_netherlord.png",
         imgWeapon: "/companions/azuregaze.png",
         companionName: "Caleb: Netherlord",
@@ -535,70 +535,224 @@ DMG dealt by Ardent Oath [Fate Unforgotten] can trigger critical hits.
     },
     {
         id: 52,
-        link: "caleb-x02",
+        link: "x02",
         img: "/companions/caleb_X02.png",
+        imgWeapon: "/companions/awakened-vitality.png",
         companionName: "Caleb: Ultimate Weapon X-02",
-        weaponName: "Awakened Vitality",
         speciality: "DPS | Sustained | AoE",
+        weaponName: "Awakened Vitality",
+        specialityMC: "DPS | Burst | Single-Target",
         supportSkill: "Nulledge Field",
+        supportSkillCooldown: "8 sec.",
+        supportSkillCost: "none",
+        supportSkillImg: "/battle-icons/a2_skill_fy_2402_02.png",
+        supportSkillText: `
+Caleb creates an energy field centered on himself to attack enemies, dealing 461+615% ATK DMG in total.
+Empowered Nulledge Field: Increases the number of hits and damage dealt, dealing 685+913% ATK DMG in total.
+        `,
         resonanceSkill: "Nulledge Chain",
+        resonanceSkillCooldown: "15 sec.",
+        resonanceSkillCost: "2 charges",
+        resonanceSkillImg: "/battle-icons/a2_skill_fy_2402_03.png",
+        resonanceSkillText: `
+You create an energy field centered on the enemy. Caleb rises into the air and controls his Floating Blades to repeatedly bombard enemies within the field, dealing a total of 990+1322% ATK DMG and 1 [Protocore DMG].        
+        `,
         ardentOath: "Synced Awakening",
+        ardentOathCost: "100% Oath Energy",
+        ardentOathImg: "/battle-icons/a2_skill_fy_2402_04.png",
+        ardentOathText: `
+Caleb empowers his mech and joins forces with you to control it to attack enemies. After activating [Synced Awakening], you and Caleb enter [Ultimate Synced State] and become invincible for 12s.
+During [Ultimate Synced State], hold Basic Attack to continuously attack enemies. Additionally, [Stasis Particles] will be cleared and replaced by [Synced Particles]. Your basic attacks restore [Synced Particles] when they hit enemies. When [Synced Particles] are full, they are immediately consumed to unleash a [Synced Strike].[Synced Strike]: Creates an energy field at the target location that pulls in nearby enemies, then launches an attack at the center, dealing 380+500% ATK DMG to enemies in range.
+During [Ultimate Synced State], all damage dealt by your and Caleb's attack is considered [Oath DMG] and will trigger critical hits.
+You start with 15% of [Oath Energy].        
+        `,
         passiveSkill: "Quantum Stasis",
+        passiveSkillImg: "/battle-icons/a2_skill_fy_2402_01.png",
+        passiveSkillText: `
+Charged Attacks and Resonance Skills that hit enemies will apply [Quantum Stasis], increasing DMG inflicted on them by 10% for 5.5s.
+Outside of [Ultimate Synced State], basic attacks on enemies affected by [Quantum Stasis] accumulate [Stasis Particles]. This accumulation effect can trigger only once per Basic Attack but can stack up to 4 times.
+Using an Active Skill consumes 1 [Stasis Particle].
+Each [Stasis Particle] consumed restores a small amount of [Energy Charge] and increases Active Skill DMG by 5% for 3s. This DMG increase effect can stack up to 4 times when triggered repeatedly, refreshing the duration. All stacks are cleared when the duration ends.        
+        `,
         basicAttack: "Nulledge Flash",
+        basicAttackImg: "/battle-icons/a2_skill_pl_1903_01_fy_2402.png",
+        basicAttackText: `
+Wield Awakened Vitality to start a combo up to 4 hits.
+First Strike: 77+103% ATK DMG 
+Second Strike: 74+99% ATK DMG 
+Third Strike: 109+145% ATK DMG 
+Fourth Strike: 137+182% ATK DMG
+Charged Attack creates an energy field at the target location, dealing a total of 252+336% ATK DMG in multiple hits.        
+        `,
         activeSkill: "Nulledge Rain",
+        activeSkillCooldown: "10 sec.",
+        activeSkillCost: "1 charge",
+        activeSkillImg: "/battle-icons/a2_skill_pl_1903_03_fy_2402.png",
+        activeSkillText: `
+Hold the Active Skill button to charge. During this time, [Quantum Clustering] stacks at regular intervals, up to 3 times.
+Each [Quantum Clustering] generates 2 [Quantum Clusters] that hover around you. When the gathering ends or when you release the button, all [Quantum Clusters] will launch at the target enemy, dealing 72+96% ATK DMG each and restoring 3.7% [0ath Energy] on hit.        
+        `,
         passiveMCSkill: "Nulledge Double",
-        supportText: ``,
-        resonanceText: ``,
-        ardentText: ``,
-        passiveText: ``,
-        basicText: ``,
-        activeText: ``,
-        passiveMCText: ``,
-        eidolon0: ``,
-        eidolon1: ``,
-        eidolon2: ``,
-        eidolon3: ``,
+        passiveMCSkillImg: "",
+        passiveMCText: `
+Each time you perform [Quantum Clustering], consume 1 [Stasis Particle] to trigger an additional [Quantum Clustering]. This additional [Quantum Clustering] cannot trigger this passive effect.
+While using Active Skills, you gain 50% DMG Reduction.        
+        `,
+        eidolon0: `
+The team deals 8% more DMG and takes 8% Iess DMG. When fighting alongside Ultimate Weapon X-02, Ardent Oath DMG increases by 20%. When you use [Nulledge Field] or [Empowered Nulledge Field] immediately restore 1 [Stasis Particles].        
+        `,
+        eidolon1: `
+Increases Ardent Oath charge by 20%. Extends [Quantum Stasis] duration by 2.5s and increases DMG taken by affected enemies by 10%.
+Hitting enemies with [Nulledge Field] and [Empowered Nulledge Field] also applies [Quantum Stasis].
+When fighting alongside  Ultimate Weapon X-02, you become unstoppable while using Active Skills.        
+        `,
+        eidolon2: `
+Increases Energy Charge cap by 1. When fighting alongside Ultimate Weapon X-02, using Active Skills increases ATK for both of you by 8% for 10s. Whenever your Active Skills deal DMG, you both recover a small amount of HP.        
+        `,
+        eidolon3: `
+The team deals 8% more DMG. When entering [Ultimate Synced State], immediately restore 80% [Synced Particles] and increase [Synced Particles] acquisition efficiency by 30%. When using [synced strike], he will also summon multiple Floating Blades at the target location to assist in the attack, dealing a total of 122+164% ATK DMG.        
+        `,
     },
     {
         id: 53,
-        link: "caleb-colonel",
+        link: "colonel",
         img: "/companions/caleb_colonel.png",
+        imgWeapon: "/companions/skybreaker-sn.png",
         companionName: "Caleb: Farspace Colonel",
-        weaponName: "Skybreaker-SN",
         speciality: "DPS | Burst | Empower",
+        weaponName: "Skybreaker-SN",
+        specialityMC: "DPS | Burst | Empower",
         supportSkill: "Particle Beam",
+        supportSkillCooldown: "10 sec.",
+        supportSkillCost: "none",
+        supportSkillImg: "/battle-icons/a2_skill_fy_2401_02.png",
+        supportSkillText: `
+Caleb dashes to the enemy, leaps upward, and fires a Particle Beam at the target, dealing DMG equal to 284+151% ATK+599% DEF and recovers 5 [Firepower].
+Empowered Particle Beam: Increases DMG to 392+209% ATK+828% DEF.        
+        `,
         resonanceSkill: "Deep Strike",
+        resonanceSkillCooldown: "none",
+        resonanceSkillCost: "100 Firepower points",
+        resonanceSkillImg: "/battle-icons/a2_skill_fy_2401_03.png",
+        resonanceSkillText: `
+You and Caleb summon an aerial combat unit to unleash a powerful air strike on the target, dealing DMG equal to 245+131% ATK+519% DEF, plus 2 [Protocore DMG].
+This attack creates a [Battlefront] across the combat zone. Caleb gradually consumes [Firepower] to maintain it for 15s.
+Within the [Battlefront], [Deep Strike] is replaced by [Ground Breach]. The final hit of your basic attack applies 1[Focus] marks, up to 3 marks. [Focus] increases the damage dealt by [Ground Breach]. Also, [Firepower] cannot be recovered while in the [Battlefront]. 
+
+[Ground Breach]:
+You and Caleb set up a sniping position, dealing DMG equal to 512+273% ATK+1082% DEF to enemies in range. The first [Focus] mark increases damage by 4o%; each subsequent mark increases damage by 20%.
+After sniping, all [Firepower] is consumed and the [Battlefront] disappears.        
+        `,
         ardentOath: "Total Blokade",
+        ardentOathCost: "100% Oath Energy",
+        ardentOathImg: "/battle-icons/a2_skill_fy_2401_05.png",
+        ardentOathText: `
+You and Caleb lock down the entire perimeter and call in an aerial array for a full-scale sweep, dealing DMG equal to 1440+780% ATK+3060% DEF in total.        
+        `,
         passiveSkill: "Combat Guidance",
+        passiveSkillImg: "/battle-icons/a2_skill_fy_2401_01.png",
+        passiveSkillText: `
+Each hit of your basic attack restores 1 [Firepower]. The final hit recovers an additional 2.
+[Firepower] is capped at 100. When full, you can use [Deep Strike]. Using [Deep Strike] or [Ground Breach] restores 0.3 [Energy Charge].
+Enemy Weakened status duration is extended by 2s.        
+        `,
         basicAttack: "Swift Strike",
+        basicAttackImg: "/battle-icons/a2_skill_pl_1901_01_FY_2401.png",
+        basicAttackText: `
+Wield Skybreaker-SN to perform a combo up to 4 hits. 
+First Strike: 47+25% ATK+99% DEF
+Second Strike: 70+37% ATK+148% DEF 
+Third Strike:68+36% ATK+144% DEF 
+Fourth Strike: 85+45% ATK+180% DEF
+
+Charged Attack pierces through enemies in a fan-shaped area, dealing DMG equal to 133+71% ATK+281% DEF.        
+        `,
         activeSkill: "Air Strike",
+        activeSkillCooldown: "12 sec.",
+        activeSkillCost: "1 charge",
+        activeSkillImg: "/battle-icons/a2_skill_pl_1901_02_FY_2401.png",
+        activeSkillText: `
+Fire into the sky to call for support, launching multiple air strikes at enemies in range. Deal DMG equal to 200+105% ATK+420% DEF in total and recover 2 [Firepower].
+When casting [Air Strike] with 2 or more Energy Charges, consume 1 additional Energy Charges to increase DMG by 185+100% ATK+395% DEF.
+Each hit of [Air Strike] restores 1 [Firepower]. This effect can be triggered once every 1s.        
+        `,
         passiveMCSkill: "Blast Strike",
-        supportText: ``,
-        resonanceText: ``,
-        ardentText: ``,
-        passiveText: ``,
-        basicText: ``,
-        activeText: ``,
+        passiveMCSkillImg: "/battle-icons/a2_skill_pl_1901_03_FY_2401.png",
+        passiveMCText: `
+While inside the [Battlefront]:
+After using a Charged Attack or [Air Strike], tap Basic Attack to instantly perform its third strike. 
+While outside the [Battlefront]:
+Dodging grants 10 stack(s) of [Zerom] every 5s. While you have [Zerom], each basic attack consumes 1 stack(s) of [Zerom] to restore 1 [Firepower].        
+        `,
+        eidolon0: `
+The team deals 8% more DMG and takes 8% less DMG. After using Charged Attacks or Active Skills within [Battlefront], you and Caleb's DMG is increased by 20% for 5s. This effect's duration can stack and is cleared when [Ground Breach] ends.        
+        `,
+        eidolon1: `
+Increases Ardent Oath charge by 20%. [Focus] mark limit +2. Within [Battlefront], your Active Skills on-hit grant1 Focus mark and reduce Active Skill cooldown by 6s.        
+        `,
+        eidolon2: `
+Energy Charge limit is raised by 1. Using [Ground Breach] or [Deep Strike] restores 0.2 Energy Charge.
+When consuming Zerom, additionally restore 0.5 [Firepower].        
+        `,
+        eidolon3: `
+The team deals 8% more DMG. You and Caleb deal 5% increased DMG to enemies with Protocore Shield. Within [Battlefront], when the final hit of your basic attack lands, you gain an additional [Focus] mark When Focus marks exceed the limit, excess marks unleash a gravity vortex at the target location, dealing 225+120% ATK+476% DEF DMG to enemies in range.        
+        `,
+    },
+    {
+        id: 54,
+        link: "pilot",
+        img: "/companions/caleb_pilot.png",
+        companionName: "Caleb: Pilot",
+        speciality: "DPS | Defend",
+        weaponName: "none",
+        supportSkill: "Fuse",
+        supportSkillCooldown: "10 sec.",
+        supportSkillCost: "none",
+        supportSkillImg: "/battle-icons/a2_skill_fy_2403_02.png",
+        supportSkillText: `
+Caleb uses Evol to fire multiple rounds into the air, guiding them to strike enemies and dealing 285+381% ATK AoE DMG.
+Empowered Fuse: Increases damage to 318+423% ATK DMG and grants you [Directed Defense].
+        `,
+        resonanceSkill: "Suppressing Fire",
+        resonanceSkillCooldown: "15 sec.",
+        resonanceSkillCost: "2 charges",
+        resonanceSkillImg: "/battle-icons/a2_skill_fy_2403_03.png",
+        resonanceSkillText: `
+You and Caleb leap into the air and exchange firearms. Caleb uses Evol to keep both of you airborne while laying down suppressing fire on the enemy. Deals 867+1156% ATK DMG and 1 [Protocore DMG].        
+        `,
+        ardentOath: "Encirclement",
+        ardentOathCost: "100% Oath Energy",
+        ardentOathImg: "/battle-icons/a2_skill_fy_2403_04.png",
+        ardentOathText: `
+Your Evol resonates with Caleb's as you two launch a joint attack against the enemy, dealing massive DMG equal to 1200+1600% ATK.        
+        `,
+        passiveSkill: "Mark",
+        passiveSkillImg: "/battle-icons/a2_skill_fy_2403_01.png",
+        passiveSkillText: `
+Hitting enemies with Active Skills [Fuse], or [Suppressing Fire] applies [Target Mark]. [Target Mark] lasts for 8s.
+[Target Mark]:
+When an enemy inflicted with [Target Mark] receives another mark or is hit by the final strike of your basic attack, their [Target Mark] triggers, dealing 53+70% ATK DMG and releasing a [Target Particle].
+[Target Particle]:
+Explodes after 15s, dealing 113+150% ATK DMG to nearby enemies and granting you [Directed Defense] Hitting enemies with a Charged Attack will detonate all [Target Particles] immediately.
+[Directed Defense]:
+When taking damage, you consume [Directed Defense] to gain 25% DMG Reduction for 5s. Cannot gain new [Directed Defense] while DMG Reduction is active.
+You enter combat with [Directed Defense] active.        
+        `,
+        basicAttack: "",
+        basicAttackImg: "",
+        basicAttackText: ``,
+        activeSkill: "",
+        activeSkillCooldown: "",
+        activeSkillCost: "",
+        activeSkillImg: "",
+        activeSkillText: ``,
+        passiveMCSkill: "",
+        passiveMCSkillImg: "",
         passiveMCText: ``,
         eidolon0: ``,
         eidolon1: ``,
         eidolon2: ``,
         eidolon3: ``,
-    },
-    {
-        id: 54,
-        link: "caleb-pilot",
-        img: "/companions/caleb_pilot.png",
-        companionName: "Caleb: Deepspace Pilot",
-        speciality: "DPS | Defend",
-        supportSkill: "Fuse",
-        resonanceSkill: "Suppressing Fire",
-        ardentOath: "Encirclement",
-        passiveSkill: "Mark",
-        supportText: ``,
-        resonanceText: ``,
-        ardentText: ``,
-        passiveText: ``,
     },
     {
         id: 61,
