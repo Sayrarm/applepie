@@ -8,7 +8,7 @@ function SkillBlock({
                         cooldown,
                         stick = '|',
                         cost,
-                        skillText
+                        skillText = ""
                     }) {
     return (
         <section className={styles.skillsSection}>

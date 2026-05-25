@@ -90,6 +90,7 @@ function CompanionArticlePage({data, linkField = "link"}) {
                         />
                     )}
 
+                    {(companion.eidolon0 || companion.eidolon1 || companion.eidolon2 || companion.eidolon3) && (
                     <section className={styles.skillSetContainer}>
                         <div className={styles.titleSection}>
                             <h1 className={styles.h1Title}>MC Weapon: {companion.weaponName}</h1>
@@ -128,15 +129,17 @@ function CompanionArticlePage({data, linkField = "link"}) {
                             skillText={companion.passiveMCText}
                         />
 
-                    </section>
+                    </section>)}
 
                 </section>
 
             </section>
 
             {/* Eidolons */}
-            <section className={styles.eidolonsContainer}>
-                <h1 className={styles.h1Title}>Solar Slot Memories</h1>
+            {(companion.eidolon0 || companion.eidolon1 || companion.eidolon2 || companion.eidolon3) && (
+                <section className={styles.eidolonsContainer}>
+                    <h1 className={styles.h1Title}>Solar Slot Memories</h1>
+
 
                 {/*R0*/}
                 <SkillBlock
@@ -174,7 +177,7 @@ function CompanionArticlePage({data, linkField = "link"}) {
                     skillText={companion.eidolon3}
                 />
 
-            </section>
+            </section>)}
         </article>
     );
 }

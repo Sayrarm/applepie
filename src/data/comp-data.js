@@ -704,7 +704,6 @@ The team deals 8% more DMG. You and Caleb deal 5% increased DMG to enemies with 
         img: "/companions/caleb_pilot.png",
         companionName: "Caleb: Pilot",
         speciality: "DPS | Defend",
-        weaponName: "none",
         supportSkill: "Fuse",
         supportSkillCooldown: "10 sec.",
         supportSkillCost: "none",
