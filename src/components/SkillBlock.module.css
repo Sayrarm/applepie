@@ -13,14 +13,14 @@
 }
 
 .skillImg {
-    width: 70px;
-    height: 70px;
+    width: 8%;
+    height: 8%;
     padding: 5px;
 }
 
 .skillTitle {
     height: 100%;
-    width: 180px;
+    width: 200px;
     padding: 10px 5px;
 }
 

@@ -27,6 +27,7 @@ function CompanionArticlePage({data, linkField = "link"}) {
                         />
                     )}
 
+                    {(companion.resonanceSkill || companion.supportSkill || companion.passiveSkill || companion.ardentOath) && (
                     <section className={styles.skillSetContainer}>
 
                         <div className={styles.titleSection}>
@@ -76,7 +77,7 @@ function CompanionArticlePage({data, linkField = "link"}) {
                             skillText={companion.ardentOathText}
                         />
 
-                    </section>
+                    </section>)}
 
                 </section>
 
@@ -90,7 +91,7 @@ function CompanionArticlePage({data, linkField = "link"}) {
                         />
                     )}
 
-                    {(companion.eidolon0 || companion.eidolon1 || companion.eidolon2 || companion.eidolon3) && (
+                    {(companion.basicAttack || companion.activeSkill || companion.passiveMCSkill) && (
                     <section className={styles.skillSetContainer}>
                         <div className={styles.titleSection}>
                             <h1 className={styles.h1Title}>MC Weapon: {companion.weaponName}</h1>

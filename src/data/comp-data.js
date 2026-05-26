@@ -738,34 +738,36 @@ Explodes after 15s, dealing 113+150% ATK DMG to nearby enemies and granting you 
 When taking damage, you consume [Directed Defense] to gain 25% DMG Reduction for 5s. Cannot gain new [Directed Defense] while DMG Reduction is active.
 You enter combat with [Directed Defense] active.        
         `,
-        basicAttack: "",
-        basicAttackImg: "",
-        basicAttackText: ``,
-        activeSkill: "",
-        activeSkillCooldown: "",
-        activeSkillCost: "",
-        activeSkillImg: "",
-        activeSkillText: ``,
-        passiveMCSkill: "",
-        passiveMCSkillImg: "",
-        passiveMCText: ``,
-        eidolon0: ``,
-        eidolon1: ``,
-        eidolon2: ``,
-        eidolon3: ``,
     },
     {
         id: 61,
-        img: "/companions/sword.png",
-        companionName: "MC",
+        link: "sword",
+        imgWeapon: "/companions/sword.png",
         weaponName: "Hunter Sword",
-        speciality: "DPS | Sustained | Empower",
+        specialityMC: "DPS | Sustained | Empower",
         basicAttack: "Pierce",
+        basicAttackImg: "/battle-icons/a2_skill_pl_1904_02.png",
+        basicAttackText: `
+Wield a sword to start a combo of up to 4 hits.
+First Strike: 60+80% ATK DMG
+Second Strike: 60+80% ATK DMG 
+Third Strike: 72+96% ATK DMG 
+Fourth Strike: 96+129% ATK DMG
+
+Charged Attack unleashes a single slash, dealing 118+157% ATK AoE DMG. When [Hunter's Intention] is at 10 stacks, Charged Attack will be enhanced and deal 250+333% single target ATK DMG.       
+        `,
         activeSkill: "Blade's Shadow",
+        activeSkillCooldown: "8 sec.",
+        activeSkillCost: "1 charge",
+        activeSkillImg: "/battle-icons/a2_skill_pl_1904_03.png",
+        activeSkillText: `
+After a brief charge-up, lunge forward and unleash a slashing attack on the enemies ahead, dealing AoE DMG of 341+455% ATK.     
+        `,
         passiveMCSkill: "Hunter's Intention",
-        basicText: ``,
-        activeText: ``,
-        passiveMCText: ``,
+        passiveMCSkillImg: "/battle-icons/a2_skill_pl_1904_01.png",
+        passiveMCText: `
+For every instance of DMG, gains a stack of Hunter's Intention, up to 10 stacks. Each stack of Hunter's Intention increases ATK by 1.4%. When Hunter's Intention reaches 10 stacks, Charged Attack will be enhanced. Hunter's Intention has no set duration, but all stacks will be removed upon being hit.        
+        `,
     },
     {
         id: 62,
