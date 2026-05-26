@@ -23,7 +23,7 @@ function CompanionArticlePage({data, linkField = "link"}) {
                         <img
                             src={companion.img}
                             alt={companion.companionName}
-                            className={styles.portrait}
+                            className={styles.portraitComp}
                         />
                     )}
 
@@ -87,7 +87,7 @@ function CompanionArticlePage({data, linkField = "link"}) {
                         <img
                             src={companion.imgWeapon}
                             alt={companion.companionName}
-                            className={styles.portrait}
+                            className={styles.portraitMC}
                         />
                     )}
 

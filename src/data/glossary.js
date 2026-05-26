@@ -15,6 +15,10 @@ const glossary = {
         title: "Oath Energy",
         description: "This is a special energy scale that fills up during combat. When it is fully ready, you can activate the Ardent Oath",
     },
+    "Hunter's Intention": {
+        title: "Hunter's Intention",
+        description: "Whenever you deal damage, you accumulate [Hunter's Intention]. [Hunter's Intention] increases ATK and empowers Charged Attacks when fully stacked.",
+    },
     "Paired Knot: Yang": {
         title: "Paired Knot: Yang",
         description: "Exit [Sword Stance] and swing the sword to the front right, dealing DMG equal to 135+72% ATK+6.5% of Max HP. You are unstoppable throughout. This attack counts as the final hit of Basic Attack. When this attack applies [Bingdi Lotus], it will always apply [Bingdi Lotus: Yang].",

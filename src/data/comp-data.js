@@ -787,7 +787,7 @@ Fourth Strike: 94+125% ATK DMG
 Charged Attack forces the enemy into the air, dealing 122+162% ATK DMG.       
         `,
         activeSkill: "Magnetic Nexus",
-        activeSkillCooldown: "8 sec.",
+        activeSkillCooldown: "10 sec.",
         activeSkillCost: "1 charge",
         activeSkillImg: "/battle-icons/a2_skill_pl_1903_03.png",
         activeSkillText: `
@@ -802,29 +802,67 @@ Your Charged Attack is Empowered with an increased attack range every 15s, deali
     },
     {
         id: 63,
-        img: "/companions/claymore.png",
-        companionName: "MC",
+        link: "claymore",
+        imgWeapon: "/companions/claymore.png",
         weaponName: "Hunter Claymore",
-        speciality: "DPS | Burst | Interrupt",
+        specialityMC: "DPS | Burst | Interrupt",
         basicAttack: "Indomitable Edge",
+        basicAttackImg: "/battle-icons/a2_skill_pl_1902_02.png",
+        basicAttackText: `
+Wield a claymore to start a combo up to 4 hits.
+First Strike:112+150% ATK DMG
+Second Strike:112+150% ATK DMG 
+Third Strike: 124+165% ATK DMG 
+Fourth Strike: 135+180% ATK DMG
+
+Charged Attack will cause you to leap forward and smash the ground, dealing 337+449% ATK AoE DMG.
+      
+        `,
         activeSkill: "Frangere Slash",
+        activeSkillCooldown: "7 sec.",
+        activeSkillCost: "1 charge",
+        activeSkillImg: "/battle-icons/a2_skill_pl_1902_03.png",
+        activeSkillText: `
+Enter a charging state before using a claymore to attack enemies. For an incomplete charge, deal 410+547% ATK DMG. For a complete charge, can attack twice and deal 621+829% ATK DMG.
+        `,
         passiveMCSkill: "Persistence",
-        basicText: ``,
-        activeText: ``,
-        passiveMCText: ``,
+        passiveMCSkillImg: "/battle-icons/a2_skill_pl_1902_01.png",
+        passiveMCText: `
+Your attacks are less likely to be interrupted, and you take 20.5% less DMG.
+When using a Basic Attack or Dodge, Precise Momentum activates.
+Continuous Basic Attacks while in Precise Momentum will grant a stack of Gathering which increases the DMG of your next Basic Attack by 12.9%, up to 3 stacks. Upon reaching 3 stacks of Gathering, you can use Frangere Slash. All stacks of Gathering will be consumed in the process, and the DMG of the Frangere Slash is increased by 50%.
+        `,
     },
     {
         id: 64,
-        img: "/companions/firearm.png",
-        companionName: "MC",
+        link: "firearm",
+        imgWeapon: "/companions/firearm.png",
         weaponName: "Hunter Firearm",
-        speciality: "DPS | Single-target | Sustained",
+        specialityMC: "DPS | Single-target | Sustained",
         basicAttack: "Precise Firing",
+        basicAttackImg: "/battle-icons/a2_skill_pl_1901_02.png",
+        basicAttackText: `
+Wield dual guns for a combo up to 5 hits, The final Basic Attack inflicts multiple instances of DMG.
+First Strike: 44+59% ATK DMG 
+Second Strike: 40+53% ATK DMG 
+Third Strike: 53+71% ATK DMG 
+Fourth Strike: 57+77% ATK DMG 
+Fifth Strike: 62+82% ATK DMG
+
+Charged Attack will knock back nearby enemies, dealing AoE DMG equal to 120%+160% ATK.      
+        `,
         activeSkill: "In Hot Pursuit",
+        activeSkillCooldown: "10 sec.",
+        activeSkillCost: "1 charge",
+        activeSkillImg: "/battle-icons/a2_skill_pl_1902_03.png",
+        activeSkillText: `
+Perform an enhanced linear attack, dealing 160+213% ATK DMG.
+        `,
         passiveMCSkill: "Weakpoint",
-        basicText: ``,
-        activeText: ``,
-        passiveMCText: ``,
+        passiveMCSkillImg: "/battle-icons/a2_skill_pl_1901_03.png",
+        passiveMCText: `
+Basic attacks have a 20% chance of inflicting additional DMG. Upon using an Active Skill, the chance to do additional DMG increases by 80% while ATK SPD increases by 16% for 6s.
+        `,
     },
 
 ]
