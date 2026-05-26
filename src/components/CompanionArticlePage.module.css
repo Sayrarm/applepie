@@ -15,7 +15,7 @@
 }
 
 .portraitMC {
-    object-position: 30% center;
+    object-position: center;
 }
 
 .skillsContainer {
@@ -46,7 +46,8 @@
         flex-direction: column;
     }
 
-    .portrait {
+    .portraitComp,
+    .portraitMC {
         margin-top: 0;
 
         width: 100%;
