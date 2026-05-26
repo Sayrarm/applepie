@@ -771,16 +771,34 @@ For every instance of DMG, gains a stack of Hunter's Intention, up to 10 stacks.
     },
     {
         id: 62,
-        img: "/companions/wand.png",
-        companionName: "MC",
+        link: "wand",
+        imgWeapon: "/companions/wand.png",
         weaponName: "Hunter Wand",
-        speciality: "Support | AoE | Heal",
+        specialityMC: "Support | AoE | Heal",
         basicAttack: "Magnetic Pulse",
+        basicAttackImg: "/battle-icons/a2_skill_pl_1903_02.png",
+        basicAttackText: `
+Wield a wand to start a combo up to 4 hits.
+First Strike: 72+96% ATK DMG
+Second Strike: 79+106% ATK DMG 
+Third Strike: 85+115% ATK DMG 
+Fourth Strike: 94+125% ATK DMG
+
+Charged Attack forces the enemy into the air, dealing 122+162% ATK DMG.       
+        `,
         activeSkill: "Magnetic Nexus",
+        activeSkillCooldown: "8 sec.",
+        activeSkillCost: "1 charge",
+        activeSkillImg: "/battle-icons/a2_skill_pl_1903_03.png",
+        activeSkillText: `
+Create a Magnetic Nexus at the target location that inflicts 6 instances of DMG on enemies within its range, each dealing 34+45% ATK DMG.
+When a Magnetic Nexus is active, all allied units restore HP equal to 30+40% ATK when attacking enemies.
+        `,
         passiveMCSkill: "Magnetic Resonance",
-        basicText: ``,
-        activeText: ``,
-        passiveMCText: ``,
+        passiveMCSkillImg: "/battle-icons/a2_skill_pl_1903_02.png",
+        passiveMCText: `
+Your Charged Attack is Empowered with an increased attack range every 15s, dealing 265+353% ATK DMG.     
+        `,
     },
     {
         id: 63,
