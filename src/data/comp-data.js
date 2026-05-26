@@ -582,6 +582,7 @@ First Strike: 77+103% ATK DMG
 Second Strike: 74+99% ATK DMG 
 Third Strike: 109+145% ATK DMG 
 Fourth Strike: 137+182% ATK DMG
+
 Charged Attack creates an energy field at the target location, dealing a total of 252+336% ATK DMG in multiple hits.        
         `,
         activeSkill: "Nulledge Rain",
@@ -590,7 +591,7 @@ Charged Attack creates an energy field at the target location, dealing a total o
         activeSkillImg: "/battle-icons/a2_skill_pl_1903_03_fy_2402.png",
         activeSkillText: `
 Hold the Active Skill button to charge. During this time, [Quantum Clustering] stacks at regular intervals, up to 3 times.
-Each [Quantum Clustering] generates 2 [Quantum Clusters] that hover around you. When the gathering ends or when you release the button, all [Quantum Clusters] will launch at the target enemy, dealing 72+96% ATK DMG each and restoring 3.7% [0ath Energy] on hit.        
+Each [Quantum Clustering] generates 2 [Quantum Clusters] that hover around you. When the gathering ends or when you release the button, all [Quantum Clusters] will launch at the target enemy, dealing 72+96% ATK DMG each and restoring 3.7% [Oath Energy] on hit.        
         `,
         passiveMCSkill: "Nulledge Double",
         passiveMCSkillImg: "",
@@ -610,7 +611,7 @@ When fighting alongside  Ultimate Weapon X-02, you become unstoppable while usin
 Increases Energy Charge cap by 1. When fighting alongside Ultimate Weapon X-02, using Active Skills increases ATK for both of you by 8% for 10s. Whenever your Active Skills deal DMG, you both recover a small amount of HP.        
         `,
         eidolon3: `
-The team deals 8% more DMG. When entering [Ultimate Synced State], immediately restore 80% [Synced Particles] and increase [Synced Particles] acquisition efficiency by 30%. When using [synced strike], he will also summon multiple Floating Blades at the target location to assist in the attack, dealing a total of 122+164% ATK DMG.        
+The team deals 8% more DMG. When entering [Ultimate Synced State], immediately restore 80% [Synced Particles] and increase [Synced Particles] acquisition efficiency by 30%. When using [Synced Strike], he will also summon multiple Floating Blades at the target location to assist in the attack, dealing a total of 122+164% ATK DMG.        
         `,
     },
     {
@@ -637,7 +638,7 @@ Empowered Particle Beam: Increases DMG to 392+209% ATK+828% DEF.
         resonanceSkillText: `
 You and Caleb summon an aerial combat unit to unleash a powerful air strike on the target, dealing DMG equal to 245+131% ATK+519% DEF, plus 2 [Protocore DMG].
 This attack creates a [Battlefront] across the combat zone. Caleb gradually consumes [Firepower] to maintain it for 15s.
-Within the [Battlefront], [Deep Strike] is replaced by [Ground Breach]. The final hit of your basic attack applies 1[Focus] marks, up to 3 marks. [Focus] increases the damage dealt by [Ground Breach]. Also, [Firepower] cannot be recovered while in the [Battlefront]. 
+Within the [Battlefront], [Deep Strike] is replaced by [Ground Breach]. The final hit of your basic attack applies 1 [Focus] marks, up to 3 marks. [Focus] increases the damage dealt by [Ground Breach]. Also, [Firepower] cannot be recovered while in the [Battlefront]. 
 
 [Ground Breach]:
 You and Caleb set up a sniping position, dealing DMG equal to 512+273% ATK+1082% DEF to enemies in range. The first [Focus] mark increases damage by 4o%; each subsequent mark increases damage by 20%.
@@ -732,7 +733,7 @@ Hitting enemies with Active Skills [Fuse], or [Suppressing Fire] applies [Target
 [Target Mark]:
 When an enemy inflicted with [Target Mark] receives another mark or is hit by the final strike of your basic attack, their [Target Mark] triggers, dealing 53+70% ATK DMG and releasing a [Target Particle].
 [Target Particle]:
-Explodes after 15s, dealing 113+150% ATK DMG to nearby enemies and granting you [Directed Defense] Hitting enemies with a Charged Attack will detonate all [Target Particles] immediately.
+Explodes after 15s, dealing 113+150% ATK DMG to nearby enemies and granting you [Directed Defense]. Hitting enemies with a Charged Attack will detonate all [Target Particle]'s immediately.
 [Directed Defense]:
 When taking damage, you consume [Directed Defense] to gain 25% DMG Reduction for 5s. Cannot gain new [Directed Defense] while DMG Reduction is active.
 You enter combat with [Directed Defense] active.        
