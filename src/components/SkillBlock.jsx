@@ -25,7 +25,7 @@ function SkillBlock({
                 <div className={styles.skillNameContainer}>
                     <div className={styles.skillName}>{skillName}</div>
                     <div className={styles.borderHorizontalWhite}></div>
-                    <div>{cooldown} {stick} {cost}</div>
+                    <div className={styles.costText}>{cooldown} {stick} {cost}</div>
                 </div>
             </div>
             <div

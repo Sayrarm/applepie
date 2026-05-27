@@ -63,3 +63,26 @@
 
     white-space: pre-wrap;
 }
+
+@media screen and (max-width: 630px) {
+
+    .skillImg {
+        width: 15%;
+        height: 15%;
+        padding: 2px;
+    }
+
+    .skillTitle {
+        width: 120px;
+    }
+
+    .costText {
+        font-size: 12px;
+        white-space: pre-wrap;
+    }
+
+    .skillTitle {
+        font-size: 16px;
+    }
+
+}

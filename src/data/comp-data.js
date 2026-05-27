@@ -428,17 +428,35 @@ export const compData = [
     },
     {
         id: 44,
+        link: "visitor",
         img: "/companions/sylus-visitor.png",
         companionName: "Sylus: Visitor",
         speciality: "DPS | Single-target",
         supportSkill: "Shattering Burst",
+        supportSkillCooldown: "10 sec.",
+        supportSkillCost: "none",
+        supportSkillImg: "/battle-icons/a2_skill_fy_2403_02.png",
+        supportSkillText: `
+
+        `,
         resonanceSkill: "Shadowy Duo Strike",
+        resonanceSkillCooldown: "15 sec.",
+        resonanceSkillCost: "2 energy charges",
+        resonanceSkillImg: "/battle-icons/a2_skill_fy_2403_03.png",
+        resonanceSkillText: `
+        
+        `,
         ardentOath: "Thunderous Cryshock",
+        ardentOathCost: "100% Oath Energy",
+        ardentOathImg: "/battle-icons/a2_skill_fy_2403_04.png",
+        ardentOathText: `
+
+        `,
         passiveSkill: "Team Attack",
-        supportText: ``,
-        resonanceText: ``,
-        ardentText: ``,
-        passiveText: ``,
+        passiveSkillImg: "/battle-icons/a2_skill_fy_2403_01.png",
+        passiveSkillText: `
+     
+        `,
     },
     {
         id: 51,
@@ -461,7 +479,7 @@ During [Yin-Yang Union], [Netherseal Slash] becomes the Support Skill [Spectral 
         `,
         resonanceSkill: "Soulguide Bell",
         resonanceSkillCooldown: "15 sec.",
-        resonanceSkillCost: "2 charges",
+        resonanceSkillCost: "2 energy charges",
         resonanceSkillImg: "/battle-icons/resonance-skill.png",
         resonanceSkillText: `
 Caleb swings Netherseal as you twirl gracefully into his arms. Together, you ring the Soulguide Bell, pulling in enemies and dealing total AoE DMG equal to 1361+725% ATK+65.3% of Max HP and 1 [Protocore DMG].
@@ -499,7 +517,7 @@ Charged Attack slashes forward, dealing DMG equal to 174+93% ATK+8.4% of Max HP.
         `,
         activeSkill: "Severance Dance",
         activeSkillCooldown: "6 sec.",
-        activeSkillCost: "1 charge",
+        activeSkillCost: "1 energy charge",
         activeSkillImg: "/battle-icons/active-skill.png",
         activeSkillText: `
 Swing Azuregaze to perform a two-hit combo, dealing total DMG equal to 358+190% ATK+17.2% of Max HP. You become unstoppable throughout the attack. After the second hit you enter [Sword Stance]. While in [Sword Stance], different attacks can be derived based on [Paired Knot].        
@@ -552,7 +570,7 @@ Empowered Nulledge Field: Increases the number of hits and damage dealt, dealing
         `,
         resonanceSkill: "Nulledge Chain",
         resonanceSkillCooldown: "15 sec.",
-        resonanceSkillCost: "2 charges",
+        resonanceSkillCost: "2 energy charges",
         resonanceSkillImg: "/battle-icons/a2_skill_fy_2402_03.png",
         resonanceSkillText: `
 You create an energy field centered on the enemy. Caleb rises into the air and controls his Floating Blades to repeatedly bombard enemies within the field, dealing a total of 990+1322% ATK DMG and 1 [Protocore DMG].        
@@ -587,14 +605,14 @@ Charged Attack creates an energy field at the target location, dealing a total o
         `,
         activeSkill: "Nulledge Rain",
         activeSkillCooldown: "10 sec.",
-        activeSkillCost: "1 charge",
-        activeSkillImg: "/battle-icons/a2_skill_pl_1903_03_fy_2402.png",
+        activeSkillCost: "1 energy charge",
+        activeSkillImg: "/battle-icons/a2_skill_pl_1903_02_fy_2402.png",
         activeSkillText: `
 Hold the Active Skill button to charge. During this time, [Quantum Clustering] stacks at regular intervals, up to 3 times.
 Each [Quantum Clustering] generates 2 [Quantum Clusters] that hover around you. When the gathering ends or when you release the button, all [Quantum Clusters] will launch at the target enemy, dealing 72+96% ATK DMG each and restoring 3.7% [Oath Energy] on hit.        
         `,
         passiveMCSkill: "Nulledge Double",
-        passiveMCSkillImg: "",
+        passiveMCSkillImg: "/battle-icons/a2_skill_pl_1903_03_fy_2402.png",
         passiveMCText: `
 Each time you perform [Quantum Clustering], consume 1 [Stasis Particle] to trigger an additional [Quantum Clustering]. This additional [Quantum Clustering] cannot trigger this passive effect.
 While using Active Skills, you gain 50% DMG Reduction.        
@@ -670,7 +688,7 @@ Charged Attack pierces through enemies in a fan-shaped area, dealing DMG equal t
         `,
         activeSkill: "Air Strike",
         activeSkillCooldown: "12 sec.",
-        activeSkillCost: "1 charge",
+        activeSkillCost: "1 energy charge",
         activeSkillImg: "/battle-icons/a2_skill_pl_1901_02_FY_2401.png",
         activeSkillText: `
 Fire into the sky to call for support, launching multiple air strikes at enemies in range. Deal DMG equal to 200+105% ATK+420% DEF in total and recover 2 [Firepower].
@@ -715,7 +733,7 @@ Empowered Fuse: Increases damage to 318+423% ATK DMG and grants you [Directed De
         `,
         resonanceSkill: "Suppressing Fire",
         resonanceSkillCooldown: "15 sec.",
-        resonanceSkillCost: "2 charges",
+        resonanceSkillCost: "2 energy charges",
         resonanceSkillImg: "/battle-icons/a2_skill_fy_2403_03.png",
         resonanceSkillText: `
 You and Caleb leap into the air and exchange firearms. Caleb uses Evol to keep both of you airborne while laying down suppressing fire on the enemy. Deals 867+1156% ATK DMG and 1 [Protocore DMG].        
@@ -758,7 +776,7 @@ Charged Attack unleashes a single slash, dealing 118+157% ATK AoE DMG. When [Hun
         `,
         activeSkill: "Blade's Shadow",
         activeSkillCooldown: "8 sec.",
-        activeSkillCost: "1 charge",
+        activeSkillCost: "1 energy charge",
         activeSkillImg: "/battle-icons/a2_skill_pl_1904_03.png",
         activeSkillText: `
 After a brief charge-up, lunge forward and unleash a slashing attack on the enemies ahead, dealing AoE DMG of 341+455% ATK.     
@@ -788,7 +806,7 @@ Charged Attack forces the enemy into the air, dealing 122+162% ATK DMG.
         `,
         activeSkill: "Magnetic Nexus",
         activeSkillCooldown: "10 sec.",
-        activeSkillCost: "1 charge",
+        activeSkillCost: "1 energy charge",
         activeSkillImg: "/battle-icons/a2_skill_pl_1903_03.png",
         activeSkillText: `
 Create a Magnetic Nexus at the target location that inflicts 6 instances of DMG on enemies within its range, each dealing 34+45% ATK DMG.
@@ -820,7 +838,7 @@ Charged Attack will cause you to leap forward and smash the ground, dealing 337+
         `,
         activeSkill: "Frangere Slash",
         activeSkillCooldown: "7 sec.",
-        activeSkillCost: "1 charge",
+        activeSkillCost: "1 energy charge",
         activeSkillImg: "/battle-icons/a2_skill_pl_1902_03.png",
         activeSkillText: `
 Enter a charging state before using a claymore to attack enemies. For an incomplete charge, deal 410+547% ATK DMG. For a complete charge, can attack twice and deal 621+829% ATK DMG.
@@ -853,7 +871,7 @@ Charged Attack will knock back nearby enemies, dealing AoE DMG equal to 120%+160
         `,
         activeSkill: "In Hot Pursuit",
         activeSkillCooldown: "10 sec.",
-        activeSkillCost: "1 charge",
+        activeSkillCost: "1 energy charge",
         activeSkillImg: "/battle-icons/a2_skill_pl_1902_03.png",
         activeSkillText: `
 Perform an enhanced linear attack, dealing 160+213% ATK DMG.
