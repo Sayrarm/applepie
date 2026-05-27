@@ -53,7 +53,6 @@ function CompanionArticlePage({data, linkField = "link"}) {
                             skillName={companion.supportSkill}
                             skillTitle="Support Skill"
                             cooldown={`Cooldown: ${companion.supportSkillCooldown}`}
-                            cost={`Cost: ${companion.supportSkillCost}`}
                             skillText={companion.supportSkillText}
                         />
 
@@ -62,8 +61,6 @@ function CompanionArticlePage({data, linkField = "link"}) {
                             skillImg={companion.passiveSkillImg}
                             skillName={companion.passiveSkill}
                             skillTitle="Passive Skill"
-                            cooldown="Cooldown: none"
-                            cost="Cost: none"
                             skillText={companion.passiveSkillText}
                         />
 
@@ -72,7 +69,6 @@ function CompanionArticlePage({data, linkField = "link"}) {
                             skillImg={companion.ardentOathImg}
                             skillName={companion.ardentOath}
                             skillTitle="Ardent Oath"
-                            cooldown="Cooldown: none"
                             cost={`Cost: ${companion.ardentOathCost}`}
                             skillText={companion.ardentOathText}
                         />
@@ -105,8 +101,6 @@ function CompanionArticlePage({data, linkField = "link"}) {
                             skillImg={companion.basicAttackImg}
                             skillName={companion.basicAttack}
                             skillTitle="Basic Attack"
-                            cooldown="Cooldown: none"
-                            cost="Cost: none"
                             skillText={companion.basicAttackText}
                         />
 
@@ -125,8 +119,6 @@ function CompanionArticlePage({data, linkField = "link"}) {
                             skillImg={companion.passiveMCSkillImg}
                             skillName={companion.passiveMCSkill}
                             skillTitle="Passive Skill"
-                            cooldown="Cooldown: none"
-                            cost="Cost: none"
                             skillText={companion.passiveMCText}
                         />
 

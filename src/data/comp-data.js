@@ -403,28 +403,74 @@ export const compData = [
     },
     {
         id: 43,
+        link: "conqueror",
         img: "/companions/sylus-conqueror.png",
+        imgWeapon: "/companions/harrier-700.png",
         companionName: "Sylus: Relentless Conqueror",
-        weaponName: "Harrier 700",
         speciality: "DMG | Single-target | Control",
+        weaponName: "Harrier 700",
+        specialityMC: "DPS | Sustained| AoE",
         supportSkill: "Conqueror's Confinement",
+        supportSkillCooldown: "10 sec.",
+        supportSkillImg: "/battle-icons/a2_skill_yg_2301_02.png",
+        supportSkillText: `
+Sylus releases Boundless Energy to deal 239+318% ATK DMG to the target. The target is then immobilized and pulled toward him.
+Empowered Conqueror's Confinement: As the enemy is pulled, Boundless Energy explodes and deals 72+95% ATK DMG to targets within the area.
+        `,
         resonanceSkill: "Boundless Protection",
+        resonanceSkillCooldown: "15 sec.",
+        resonanceSkillCost: "2 energy charges",
+        resonanceSkillImg: "/battle-icons/a2_skill_yg_2301_03.png",
+        resonanceSkillText: `
+You shoot enemies with 3 instances of damage while Sylus stands before you to release Boundless Energy, dealing 1094+1458% ATK DMG and1 [Protocore DMG].
+        `,
         ardentOath: "Doomsday Trial",
+        ardentOathCost: "100% Oath Energy",
+        ardentOathImg: "/battle-icons/a2_skill_yg_2301_04.png",
+        ardentOathText: `
+You and Sylus attack together to unleash Boundless Energy and deal DMG equal to 1440+1920% ATK to the target.
+        `,
         passiveSkill: "Devouring Mark",
+        passiveSkillImg: "/battle-icons/a2_skill_yg_2301_01.png",
+        passiveSkillText: `
+Your Resonance Skill and Support Skill apply [Devour Mark] to enemies, which lasts for 8s. Marked enemies can drop [Dark Energy] when you damage them. Picking up [Dark Energy] recovers a small amount of HP for you and Sylus.
+[Devour Mark]: The target is infused with energy from Sylus and is forced to attack him. Applying [Devour Mark] again on an enemy who already has it will cause the mark to enter a charging state that lasts for 8s. When the charging state ends, [Devour Mark] will deal real DMG equal to 80% of the total DMG you have dealt to the target during the charging state (including the damage dealt by basic attacks, charged attacks, active skills and Resonance Skill). Applying [Devour Mark] again during the charging state will not extend its duration.
+        `,
         basicAttack: "Relentless Barrage",
+        basicAttackImg: "/battle-icons/a2_skill_pl_1901_02_yg_2301.png",
+        basicAttackText: `
+Wield the Harrier 700 to start a 4-hit combo to deal DMG. 
+First Strike:59+79% ATK DMG
+Second Strike:67+89% ATK DMG 
+Third Strike:89+119% ATK DMG 
+Fourth Strike:107+143% ATK DMG
+
+Charged Attacks will unleash a [Dark Energy] Bullet, which explodes upon hitting the target and deals 160+213% ATK DMG.
+        `,
         activeSkill: "Boundless Gunfire",
+        activeSkillCooldown: "10 sec.",
+        activeSkillCost: "1 energy charge",
+        activeSkillImg: "/battle-icons/a2_skill_pl_1901_03_yg_2301.png",
+        activeSkillText: `
+Move the joystick to sprint and quickly spin, dealing a total of 342+456% ATK DMG to nearby enemies.
+        `,
         passiveMCSkill: "Limitless Recovery",
-        supportText: ``,
-        resonanceText: ``,
-        ardentText: ``,
-        passiveText: ``,
-        basicText: ``,
-        activeText: ``,
-        passiveMCText: ``,
-        eidolon0: ``,
-        eidolon1: ``,
-        eidolon2: ``,
-        eidolon3: ``,
+        passiveMCSkillImg: "/battle-icons/a2_skill_pl_1901_01_yg_2301.png",
+        passiveMCText: `
+When an Active Skill hits a target with [Devour Mark], there is a 50% chance to reduce Active Skill cooldown by 1s and recover a small amount of Energy Charge.
+        `,
+        eidolon0: `
+The team deals 8% more DMG and takes 8% less DMG. When picking up [Dark Energy], your ATK is increased by 3.5% for 5s. This effect can stack up to 3 times.        
+        `,
+        eidolon1: `
+Increases Ardent Oath charge by 20%. When you pick up [Dark Energy], you gain an additional effect that applies [Devour Mark] to the next enemy you damage.
+        `,
+        eidolon2: `
+Energy Charge limit raised by 1. When you pick up [Dark Energy], a small amount of Energy Charge is restored.
+        `,
+        eidolon3: `
+The team deals 8% more DMG. When applying [Devour Mark] to an enemy that already has a [Devour Mark], directly deal 60+80% ATK DMG.
+        `,
     },
     {
         id: 44,
@@ -433,29 +479,31 @@ export const compData = [
         companionName: "Sylus: Visitor",
         speciality: "DPS | Single-target",
         supportSkill: "Shattering Burst",
-        supportSkillCooldown: "10 sec.",
-        supportSkillCost: "none",
-        supportSkillImg: "/battle-icons/a2_skill_fy_2403_02.png",
+        supportSkillCooldown: "14 sec.",
+        supportSkillImg: "/battle-icons/a2_skill_yg_2303_02.png",
         supportSkillText: `
-
+Sylus jumps closer to the target and punches the ground to deal DMG equal to 228+304% ATK.
+Empowered Shattering Burst: Sylus jumps closer to the target and punches the ground. He infuses Dark Energy into the earth and makes it explode, dealing DMG equal to 321+429% ATK and creating a [Synchronous Force Field].
+[Synchronous Force Field]: Increases your and Sylus's ATK by 8% and [Synergy] recovery rate by 30% for 12s.
         `,
         resonanceSkill: "Shadowy Duo Strike",
-        resonanceSkillCooldown: "15 sec.",
+        resonanceSkillCooldown: "18 sec.",
         resonanceSkillCost: "2 energy charges",
-        resonanceSkillImg: "/battle-icons/a2_skill_fy_2403_03.png",
+        resonanceSkillImg: "/battle-icons/a2_skill_yg_2303_03.png",
         resonanceSkillText: `
-        
+You and Sylus perform a multi-hit melee combo on the target to deal 950+1266% ATK DMG and 1 Protocore DMG.        
         `,
         ardentOath: "Thunderous Cryshock",
         ardentOathCost: "100% Oath Energy",
-        ardentOathImg: "/battle-icons/a2_skill_fy_2403_04.png",
+        ardentOathImg: "/battle-icons/a2_skill_yg_2303_04.png",
         ardentOathText: `
-
+Your and Sylus's Evols resonate before you attack the enemy together and deal 1200+1600% ATK DMG.
         `,
         passiveSkill: "Team Attack",
-        passiveSkillImg: "/battle-icons/a2_skill_fy_2403_01.png",
+        passiveSkillImg: "/battle-icons/a2_skill_yg_2303_01.png",
         passiveSkillText: `
-     
+When your and Sylus's attacks hit enemy targets, you gain [Synergy]. When [Synergy] is full, using [Shattering Burst] will consume all [Synergy] to transform it into [Empowered Shattering Burst].
+After you stop dealing DMG for 3s.[Synergy] will start to decrease.     
         `,
     },
     {
@@ -469,7 +517,6 @@ export const compData = [
         specialityMC: "DPS | Sustained | Single-target",
         supportSkill: "Netherseal Slash",
         supportSkillCooldown: "9 sec.",
-        supportSkillCost: "none",
         supportSkillImg: "/battle-icons/support-skill.png",
         supportSkillText: `
 Caleb wields Netherseal and charges toward enemies, dealing DMG equal to 336+179% ATK+16.2% of Max HP and applying half a [Bingdi Lotus] to targets hit (prioritizing the missing half). Caleb is unstoppable throughout the skill. 
@@ -562,7 +609,6 @@ DMG dealt by Ardent Oath [Fate Unforgotten] can trigger critical hits.
         specialityMC: "DPS | Burst | Single-Target",
         supportSkill: "Nulledge Field",
         supportSkillCooldown: "8 sec.",
-        supportSkillCost: "none",
         supportSkillImg: "/battle-icons/a2_skill_fy_2402_02.png",
         supportSkillText: `
 Caleb creates an energy field centered on himself to attack enemies, dealing 461+615% ATK DMG in total.
@@ -643,7 +689,6 @@ The team deals 8% more DMG. When entering [Ultimate Synced State], immediately r
         specialityMC: "DPS | Burst | Empower",
         supportSkill: "Particle Beam",
         supportSkillCooldown: "10 sec.",
-        supportSkillCost: "none",
         supportSkillImg: "/battle-icons/a2_skill_fy_2401_02.png",
         supportSkillText: `
 Caleb dashes to the enemy, leaps upward, and fires a Particle Beam at the target, dealing DMG equal to 284+151% ATK+599% DEF and recovers 5 [Firepower].
@@ -725,7 +770,6 @@ The team deals 8% more DMG. You and Caleb deal 5% increased DMG to enemies with 
         speciality: "DPS | Defend",
         supportSkill: "Fuse",
         supportSkillCooldown: "10 sec.",
-        supportSkillCost: "none",
         supportSkillImg: "/battle-icons/a2_skill_fy_2403_02.png",
         supportSkillText: `
 Caleb uses Evol to fire multiple rounds into the air, guiding them to strike enemies and dealing 285+381% ATK AoE DMG.

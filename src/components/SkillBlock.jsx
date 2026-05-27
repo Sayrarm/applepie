@@ -5,9 +5,9 @@ function SkillBlock({
                         skillImg,
                         skillName,
                         skillTitle,
-                        cooldown,
-                        stick = '|',
-                        cost,
+                        cooldown = "Cooldown: none",
+                        stick = "|",
+                        cost = "Cost: none",
                         skillText = ""
                     }) {
     return (
