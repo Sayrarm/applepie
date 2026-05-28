@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import glossary from '../data/glossary.js';
 import styles from './TipText.module.css'
 
@@ -21,6 +22,8 @@ const TipText = ({ text }) => {
 
     // Разбираем текст на части
     const parseText = (content) => {
+        if (!content || typeof content !== 'string') return [];
+
         const regex = /\[(.*?)]/g;
         const parts = [];
         let lastIndex = 0;
@@ -102,15 +105,14 @@ const TipText = ({ text }) => {
 
         event.stopPropagation(); // Предотвращаем всплытие
 
+        const rect = event.currentTarget.getBoundingClientRect();
+
         // Если уже открыта подсказка для этого термина - закрываем
         if (tooltip.visible && activeTermRef.current === termKey) {
             setTooltip(prev => ({ ...prev, visible: false }));
             activeTermRef.current = null;
             return;
         }
-
-        // Получаем позицию клика
-        const rect = event.currentTarget.getBoundingClientRect();
 
         // Показываем подсказку под термином
         setTooltip({
@@ -186,7 +188,8 @@ const TipText = ({ text }) => {
                 })}
             </div>
 
-            {tooltip.visible && (
+            {/* Рендерим подсказку в body через портал */}
+            {tooltip.visible && createPortal(
                 <div
                     className={styles.glossaryTooltip}
                     style={{
@@ -195,12 +198,7 @@ const TipText = ({ text }) => {
                         position: 'fixed',
                         pointerEvents: mobile ? 'auto' : 'none', // На мобилке можно взаимодействовать
                         transform: mobile ? 'translateX(-50%)' : 'none',
-                        zIndex: 1000
-                    }}
-                    onClick={(e) => {
-                        if (mobile) {
-                            e.stopPropagation(); // Не закрываем при клике на подсказку
-                        }
+                        zIndex: 9999
                     }}
                 >
                     {tooltip.text}
@@ -225,7 +223,8 @@ const TipText = ({ text }) => {
                             ✕
                         </button>
                     )}
-                </div>
+                </div>,
+                document.body
             )}
         </>
     );
