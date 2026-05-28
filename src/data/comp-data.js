@@ -377,29 +377,79 @@ export const compData = [
         eidolon3: ``,
     },
     {
-        id: 42,
+        id: 43,
+        link: "sovereign",
         img: "/companions/sylus-sovereign.png",
+        imgWeapon: "/companions/fiend-reaper.png",
         companionName: "Sylus: Abysm Sovereign",
-        weaponName: "Fiend Reaper",
         speciality: "DPS | AoE | Empower",
+        weaponName: "Fiend Reaper",
+        specialityMC: "DPS | Heal | Single-target",
         supportSkill: "Fiendish Claw",
+        supportSkillCooldown: "10 sec.",
+        supportSkillImg: "/battle-icons/a2_skill_yg_2302_02.png",
+        supportSkillText: `
+Sylus summons the Fiendish Claw to launch enemies into the air, dealing DMG equal to 508+271% ATK+24.4% of Max HP. You and Sylus recover 5% of Max HP.
+Fiendish Claw: Empowered: When Fiendish Claw lands, trigger an additional energy explosion. Deal total AoE DMG equal to 705+376% ATK+33.9% of Max HP to enemies.
+        `,
         resonanceSkill: "Wrath Judgment",
+        resonanceSkillCooldown: "15 sec.",
+        resonanceSkillCost: "2 energy charges",
+        resonanceSkillImg: "/battle-icons/a2_skill_yg_2302_03.png",
+        resonanceSkillText: `
+Plunge Fiend Reaper into the ground and channel abyssal energy with Sylus to hit enemies, dealing AoE DMG equal to 1024+546% ATK+49.2% of Max HP, plus 1 [Protocore DMG]. Wrath Judgment: Greed: Hold the Resonance Skill button to activate, switching you and Sylus from [Abyssal Feast] into [Abyssal Fury]. 
+[Abyssal Fury]: When you and Sylus hit enemies with Basic Attack, Active Skill, or Support Skill, consume HP to increase DMG dealt. HP consumption is capped at 20% Higher remaining HP grants higher DMG boost. Cannot be triggered when HP is < 25%.
+[Abyssal Fury] lasts for 11s before reverting to [Abyssal Feast].
+        `,
         ardentOath: "Insatiable Eye",
+        ardentOathCost: "100% Oath Energy",
+        ardentOathImg: "/battle-icons/a2_skill_yg_2302_04.png",
+        ardentOathText: `
+Sylus summons the Insatiable Eye to crush enemies, while you charge forward with your Fiend Reaper to cleave through the Insatiable Eye, dealing DMG equal to 1440+780% ATK+69.4% of Max HP to all enemies.
+        `,
         passiveSkill: "Sanguine Feast",
+        passiveSkillImg: "/battle-icons/a2_skill_yg_2302_01.png",
+        passiveSkillText: `
+Upon entering battle, you and Sylus lose 50% of current HP and enter [Abyssal Feast] state.
+[Abyssal Feast]: When you and Sylus hit enemies with Basic Attacks (except Charged Attacks), Active Skills, or Support Skills, recover some lost HP.
+        `,
         basicAttack: "Dream Breaker",
+        basicAttackImg: "/battle-icons/a2_skill_pl_1902_02_yg_2302.png",
+        basicAttackText: `
+Swing the Fiend Reaper to perform a 4-hit combo, dealing total DMG equal to 647+346% ATK+31.1% of Max HP.
+
+Charged Attack deals DMG equal to 204+109% ATK+9.8% of Max HP to nearby enemies. Recover 10% of Max HP for each enemy hit.
+Cannot use Charged Attack while in [Abyssal Fury] state.
+        `,
         activeSkill: "Life Sacrifice",
+        activeSkillCooldown: "5.5 sec.",
+        activeSkillCost: "1 energy charge",
+        activeSkillImg: "/battle-icons/a2_skill_pl_1902_03_yg_2302.png",
+        activeSkillText: `
+Hold to charge the Fiend Reaper. Release to attack enemies in front of you.
+While charging, you take reduced DMG and recover HP when hit by enemies. The first hit taken during charging will be nullified and instantly complete the charge.
+Uncharged: Deal DMG equal to 397+212% ATK+19.1% of Max HP.
+Fully Charged: Deal DMG equal to 632+337% ATK+30.3% of Max HP.
+        `,
         passiveMCSkill: "Soul Pact",
-        supportText: ``,
-        resonanceText: ``,
-        ardentText: ``,
-        passiveText: ``,
-        basicText: ``,
-        activeText: ``,
-        passiveMCText: ``,
-        eidolon0: ``,
-        eidolon1: ``,
-        eidolon2: ``,
-        eidolon3: ``,
+        passiveMCSkillImg: "/battle-icons/a2_skill_pl_1902_01_yg_2302.png",
+        passiveMCText: `
+Fiend Reaper grants DMG reduction to you and Sylus that increases as HP decreases: for every 1% of Max HP lost, reduce DMG taken by 0.7%. This effect applies to you and Sylus independently. Gain increased interrupt resistance while attacking enemies.
+[Abyssal Feast] provides more HP recovery.
+        `,
+        eidolon0: `
+The team deals 8% more DMG and takes 8%less DMG. After [Abyssal Fury] ends, you and Sylus recover 20% of Max HP.        
+        `,
+        eidolon1: `
+Increases Ardent Oath charge by 20%. After using [Fiendish Claw], your next 3 basic attacks on-hit deal DMG equal to 121+64.8% ATK+5.8% Max Hp to surrounding enemies centered on you.
+While [Abyssal Fury] is active Fiendish Claw cooldown is reduced.
+        `,
+        eidolon2: `
+Energy Charge limit is raised by 1. After using [Wrath Judgment] or [Wrath Judgment: Greed], your Energy Charge recovery speed is increased for 15s.
+        `,
+        eidolon3: `
+The team deals 8% more DMG. When using [Wrath Judgment: Greed], you and Sylus recover 5o% of Max HP. While [Abyssal Fury] is active, [Life Sacrifice] requires no charging and your Active Skills deal 30% increased DMG.
+        `,
     },
     {
         id: 43,
