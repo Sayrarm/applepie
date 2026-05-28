@@ -353,31 +353,94 @@ export const compData = [
     },
     {
         id: 41,
+        link: "silverwing-fiend",
         img: "/companions/sylus-fiend.png",
+        imgWeapon: "/companions/crimson-malison.png",
         companionName: "Sylus: Silverwing Fiend",
-        weaponName: "Crimson Malison",
         speciality: "Burst | AoE | Empower",
+        weaponName: "Crimson Malison",
+        specialityMC: "DPS | Buff | Single-target",
         supportSkill: "Crimson Break",
+        supportSkillCooldown: "10 sec.",
+        supportSkillImg: "/battle-icons/a2_skill_yg_2304_02.png",
+        supportSkillText: `
+Sylus releases magical power to pierce through enemies, dealing damage equal to 584+311% ATK+1244% DEF. On first hit, he also absorbs an extra 6 points of [Blood Essence].
+Crimson Break: Empowered: Sylus's staff is enhanced with fresh blood, dealing damage equal to 684+365% ATK+1446% DEF to enemies. This skill cannot be cast during [Crimson Bond].
+During the [Crimson Bond] state, Support Skill [Crimson Break] is replaced by Support Skill [Crimson Void].
+[Crimson Void]: Sylus swings his staff to summon blood pillars from the Underworld, dealing damage equal to 628+335% ATK+1327% DEF to enemies in a straight line. On hit, this also triggers [Rose Thorns], dealing AoE DMG equal to 675+360% ATK+1427% DEF. This effect can only trigger once per attack.
+[Crimson Void] cannot be cast manually. Sylus casts it automatically when [Bloodrose Seed] blooms.
+        `,
         resonanceSkill: "Crimson Coffin",
+        resonanceSkillCooldown: "15 sec.",
+        resonanceSkillCost: "2 energy charges",
+        resonanceSkillImg: "/battle-icons/a2_skill_yg_2304_03.png",
+        resonanceSkillText: `
+You summon a Crimson Coffin, into which Sylus descends The Crimson Coffin gathers enemies within range and deals damage equal to 1663+887% ATK+3515% DEF plus 1 [Protocore DMG]. On first hit, it additionally extracts 20 points of [Blood Essence].
+During the [Crimson Bond] state, the Resonance Skill is replaced by [Underworld Rift], with a cooldown of 8s.
+[Underworld Rift]: You and Sylus summon thorns from the Underworld. During the summoning, you and Sylus become invincible, while enemy Weakness timers are paused and [Bloodrose Seed] growth is suspended. After the summoning ends, the thorns are detonated by a pillar of blood, dealing damage equal to 1458+778% ATK+3084% DEF to enemies within range. This damage is considered Basic Attack damage. [Underworld Rift] is not considered a Resonance Skill.
+Any [Bloodrose] present on the field during summoning will be consumed by the thorns, increasing detonation damage by 30% for each [Bloodrose].
+After the thorns detonate, you and Sylus are released from [Crimson Bond], while [Blood Essence] is cleared, and [Bloodrose Seed] is removed from enemies.
+        `,
         ardentOath: "Crimson Finale",
+        ardentOathCost: "100% Oath Energy",
+        ardentOathImg: "/battle-icons/a2_skill_yg_2304_04.png",
+        ardentOathText: `
+In fate's final chapter, Sylus unfurls his silver wings, summoning the blood moon from the depths of the Underworld to the horizon. You and Sylus resonate, embracing amid the sky, merging your blood into night's splendid verse. Countless crimson crystals rain down upon the ground, devouring everything and dealing massive damage equal to 1800+960% ATK+3820% DEF.
+        `,
         passiveSkill: "Crimson Seal",
+        passiveSkillImg: "/battle-icons/a2_skill_yg_2304_01.png",
+        passiveSkillText: `
+When entering battle, Sylus grants you [Rose Mark]. [Rose Mark] recovers 10s after being consumed, and Non-Charged Basic Attack hits accelerate its recovery speed. This effect can trigger once per attack.
+When a Charged Attack hits, it consumes [Rose Mark] to inflict [Rose Thorns] on enemies, dealing AoE DMG equal to 675+360% ATK+1427% DEF and extracting 12 points of [Blood Essence]. This damage is considered Basic Attack damage. When your Basic Attacks or Charged Attacks hit enemies, you also absorb 3 points of [Blood Essence]. This effect can trigger once per attack.
+[Blood Essence] has a maximum of 100 points. When it's full, you can cast [Blood Pact] to awaken [Crimson Bond] between you, turning Sylus into your familiar. Your Resonance Skill is replaced by [Underworld Rift]. [Crimson Bond] clears [Rose Mark] from you. When it lasts, it prevents you from recovering [Rose Mark] or absorbing [Blood Essence].
+When entering the [Crimson Bond] state, Sylus applies [Bloodrose Seed] to an enemy on the field. When your Basic Attacks, Charged Attacks, or Active Skills hit an enemy, [Bloodrose Seed] transfers to that enemy and is stimulated to grow. This effect can trigger once per attack. When fully stimulated, [Bloodrose Seed] blooms into 1 [Bloodrose(s)] and resets to its initial state. [Bloodroses] enhance [Underworld Rift]'s attack effect. A maximum of 2 can exist simultaneously.
+When [Crimson Bond] ends, Sylus grants you [Rose Mark] again.
+        `,
         basicAttack: "Rose Spike",
+        basicAttackImg: "/battle-icons/a2_skill_pl_1903_01_YG_2304.png",
+        basicAttackText: `
+Wield [Crimson Malison] to perform a combo up to 4 hits, dealing damage to enemies.
+First Strike: 49+26% ATK+103% DEF 
+Second Strike: 49+26% ATK+103% DEF 
+Third Strike: 94+50% ATK+198% DEF 
+Fourth Strike:146+78% ATK+309% DEF
+
+Charged Attack summons a magical array beneath enemies, dealing DMG equal to 180+96% ATK+381% DEF.
+        `,
         activeSkill: "Rose Scent",
+        activeSkillCooldown: "10 sec.",
+        activeSkillCost: "1 energy charge",
+        activeSkillImg: "/battle-icons/a2_skill_pl_1903_02_YG_2304.png",
+        activeSkillText: `
+You draw the power of blood from [Crimson Malison] to apply [Bloodrose Scent] to yourself. [Bloodrose Scent] lasts for 8s, during which you become unstoppable and your damage increases by 15%.
+        `,
         passiveMCSkill: "Rose Rain",
-        supportText: ``,
-        resonanceText: ``,
-        ardentText: ``,
-        passiveText: ``,
-        basicText: ``,
-        activeText: ``,
-        passiveMCText: ``,
-        eidolon0: ``,
-        eidolon1: ``,
-        eidolon2: ``,
-        eidolon3: ``,
+        passiveMCSkillImg: "/battle-icons/a2_skill_pl_1903_04_YG_2304.png",
+        passiveMCText: `
+While [Crimson Bond] is active, your Active Skill is replaced by Active Skill [Bloodrose Rain], with a cooldown of 4s. [Bloodrose Rain]: You further unleash the power of blood from the [Crimson Malison], applying [Bloodrose Scent] to yourself while firing 6 bullet(s) at targets. Each bullet deals damage equal to 45+24% ATK+95% DEF to enemies and activates [Bloodrose Seed]. Hold to generate up to 8 additional bullet(s).
+[Bloodrose Rain] doesn't consume Energy Charge, but each cast increases its cooldown by 4s, up to an additional 36s.
+        `,
+        eidolon0: `
+The team deals 8% more DMG and takes 8%less DMG.
+When you consume [Rose Mark] you recover an additional 0.5 Energy Charge. 
+        `,
+        eidolon1: `
+Increases Ardent Oath charge by 20%.
+[Rose Thorns] damage increases by 10% and additionally pulls in enemies within range. Casting [Blood Pact] immediately refreshes your Active Skill cooldown and reduces the cooldown of your next Active Skill cast by 4s. This effect cannot stack.
+        `,
+        eidolon2: `
+Energy Charge limit is raised by 1.
+When [Crimson Void] hits, it additionally applies [Blood Spell] to enemies, increasing their DMG taken by 8% for 6s. [Blood Spell] is removed when [Crimson Bond] ends. When [Bloodrose Seed] blooms, you and Sylus each recover HP equal to 5% of max HP.
+        `,
+        eidolon3: `
+The team deals 8% IV more DMG.
+During [Crimson Bond], Sylus deals 10% more DMG. When Sylus applies [Bloodrose Seed] he also stimulates [Bloodrose Seed] to grow.
+During [Crimson Bond], casting Active Skill grants you [Bloodrose Wreath], increasing your DMG by 10% for 8s. When your Basic Attacks or Charged Attacks hit enemies, [Bloodrose Wreath] fires additional bullets at them, dealing damage equal to 79+42% ATK+168% DEF and stimulating [Bloodrose Seed]. This damage counts as Basic Attack damage and this effect can trigger once per attack. When you gain [Bloodrose Wreath], any [Bloodrose Scent you have is removed, and you gain all its effects.
+When [Crimson Bond] ends, [Bloodrose Wreath] is removed.
+        `,
     },
     {
-        id: 43,
+        id: 42,
         link: "sovereign",
         img: "/companions/sylus-sovereign.png",
         imgWeapon: "/companions/fiend-reaper.png",

@@ -206,8 +206,8 @@ function AsideCompanionList({className}) {
             label: 'Sylus',
             children: (
                 <>
-                    <Link className={styles.link} to="/battle/silvering-fiend">
-                        Silvering Fiend
+                    <Link className={styles.link} to="/battle/silverwing-fiend">
+                        Silverwing Fiend
                         <img
                             src="/companions/sylus-fiend.png"
                             alt="fiend"
