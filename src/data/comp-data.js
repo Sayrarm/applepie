@@ -311,45 +311,108 @@ export const compData = [
     },
     {
         id: 34,
+        link: "fresh-paint",
         img: "/companions/rafayel-freshpaint.png",
         companionName: "Rafayel: Frash Paint",
         speciality: "Heal | Single-target",
         supportSkill: "Swirling Colors",
+        supportSkillCooldown: "10 sec.",
+        supportSkillImg: "/battle-icons/a2_skill_ry_2505_02.png",
+        supportSkillText: `
+Rafayel forces the enemy into the air, then kicks them to the ground, dealing 194+258% ATK DMG and inflicting [Tinctus] on them.
+Empowered Swirling Colors: Rafayel inflicts 259+345% ATK additional DMG and 2 stacks of Tinctus on the enemy.
+        `,
         resonanceSkill: "Illuminating Strength",
+        resonanceSkillCooldown: "15 sec.",
+        resonanceSkillCost: "2 energy charges",
+        resonanceSkillImg: "/battle-icons/a2_skill_ry_2505_03.png",
+        resonanceSkillText: `
+Rafayel and you work together to perform a series of attacks, dealing 922+1229% ATK DMG and 1 Protocore DMG to enemies.       
+        `,
         ardentOath: "Dazzling Kaleidoscope",
+        ardentOathCost: "100% Oath Energy",
+        ardentOathImg: "/battle-icons/a2_skill_ry_2505_04.png",
+        ardentOathText: `
+Your and Rafayel's Evol work together to unleash a powerful slash, dealing massive AoE DMG equal to 1200+1600% ATK.
+        `,
         passiveSkill: "Gilded Tinctus",
-        supportText: ``,
-        resonanceText: ``,
-        ardentText: ``,
-        passiveText: ``,
+        passiveSkillImg: "/battle-icons/a2_skill_ry_2505_01.png",
+        passiveSkillText: `
+Certain attacks from you and Rafayel will inflict Tinctus on the enemy, up to 5 stacks.
+Active Skills, Resonance Skills, or Ardent Oaths that hit an enemy marked with Tinctus will detonate stack(s), dealing ATK DMG based on the number of stacks and restoring you and your Companion's HP. When 5 stacks are detonated, the enemy's DEF will be reduced by 20% for 5s.
+1 Stack: 23+30% ATK DMG 
+2 Stacks: 60+80% ATK DMG 
+3 Stacks: 113+150% ATK DMG 
+4 Stacks: 150+200% ATK DMG 
+5 Stacks: 188+250% ATK DMG   
+        `,
     },
     {
         id: 35,
+        link: "phantom",
         img: "/companions/rafayel-phantom.png",
         companionName: "Rafayel: Phantom of the Siren",
         speciality: "Support | Debuff",
         supportSkill: "Aria",
+        supportSkillCooldown: "10 sec.",
+        supportSkillImg: "/battle-icons/a2_skill_ry_2502_02.png",
+        supportSkillText: `
+Rafayel thrusts forward, dealing AoE DMG of 218 + 291% ATK with his dagger. Additionally, it reduces enemy movement SPD by 3o% for 5s. Aria: Reprise: After the Aria concludes, it leaves behind Reprise which impacts enemies in a larger area, dealing a total DMG of 315 + 420% ATK. It also reduces enemy movement SPD by 50% for 5s.
+        `,
         resonanceSkill: "Concerto",
+        resonanceSkillCooldown: "15 sec.",
+        resonanceSkillCost: "2 energy charges",
+        resonanceSkillImg: "/battle-icons/a2_skill_ry_2502_03.png",
+        resonanceSkillText: `
+You and Rafayel perform a concerto, rushing towards the enemy and dealing 508+678% ATK DMG, plus 1 [Protocore DMG]. If the target is currently inflicted with [Echo], they will receive an additional 254+339% ATK DMG.
+        `,
         ardentOath: "Sonata of Reunions",
+        ardentOathCost: "100% Oath Energy",
+        ardentOathImg: "/battle-icons/a2_skill_ry_2502_04.png",
+        ardentOathText: `
+You resonate with Rafayel's Evol. You two leap into the air and launch a powerful strike together at the enemy, dealing massive DMG of 1200+1600% ATK.
+        `,
         passiveSkill: "Recitativo",
-        supportText: ``,
-        resonanceText: ``,
-        ardentText: ``,
-        passiveText: ``,
+        passiveSkillImg: "/battle-icons/a2_skill_ry_2502_01.png",
+        passiveSkillText: `
+When you and Rafayel deal DMG, you will sing [Harmony] for Rafayel. After Harmony finishes, the next time you sing [Aria], it will leave behind an [Echo] at the target location for 5s. Enemies within the range of the [Echo] take 10% increased DMG and lose HP equal to 18 + 24% of Rafayel's ATK per second.
+        `,
     },
     {
         id: 36,
+        link: "artist",
         img: "/companions/rafayel-artist.png",
         companionName: "Rafayel: Artist",
         speciality: "Burst | AoE",
         supportSkill: "Scarlet Shade",
+        supportSkillCooldown: "10 sec.",
+        supportSkillImg: "/battle-icons/a2_skill_ry_2501_01.png",
+        supportSkillText: `
+Rafayel steps back, using fire to create a Scarlet Shade.
+The Scarlet Shade will deal AoE DMG equal to 84+112% ATK and inflict Burn upon dissipating.
+Empowered Scarlet Shade: Rafayel will also leave 3 [Flame Lilies] at his location.
+        `,
         resonanceSkill: "Scorching",
+        resonanceSkillCooldown: "15 sec.",
+        resonanceSkillCost: "2 energy charges",
+        resonanceSkillImg: "/battle-icons/a2_skill_ry_2501_03.png",
+        resonanceSkillText: `
+You ignite every active [Flame Lily] left by Rafayel and deal 1 Protocore DMG to all enemies. Each Flame Lily deals AoE DMG equal to 188+250% of your ATK while also inflicting Burn. Each restored Flame Lily increases your ATK by 5% for 8s.       
+        `,
         ardentOath: "Searing Motif",
+        ardentOathCost: "100% Oath Energy",
+        ardentOathImg: "/battle-icons/a2_skill_ry_2501_04.png",
+        ardentOathText: `
+Your and Rafayel's Evol work together to unleash a powerful slash, dealing massive DMG equal to 1200+1600% ATK.
+        `,
         passiveSkill: "Flowing Flame",
-        supportText: ``,
-        resonanceText: ``,
-        ardentText: ``,
-        passiveText: ``,
+        passiveSkillImg: "/battle-icons/a2_skill_ry_2501_02.png",
+        passiveSkillText: `
+When your and Rafayel's skills hit an enemy, Rafayel summons Flame Lilies to attack, dealing AoE DMG equal to 15+20% ATK every 2s.
+Up to 5 Flame Lilies can be on the field. When a total of 10 Flame Lilies have been summoned, Rafayel becomes Fervent, increasing his Basic Attack DMG and attack range. The Flame Lilies are active for 10s, after which they are replaced by newborn Lilies and trigger explosions, dealing DMG equal to 188+250% of his ATK to enemies in a small range around him while also inflicting Burn. This also happens when the max number of
+Flame Lilies on the battlefield is reached.
+Burn: Deals 20+26% ATK DMG every O.5s for 5s.
+        `,
     },
     {
         id: 41,
