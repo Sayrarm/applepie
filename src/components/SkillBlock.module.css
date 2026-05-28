@@ -56,6 +56,7 @@
     margin-bottom: 10px;
     padding: 5px;
 
+    backdrop-filter: blur(10px);
     background: var(--bg-brown-light);
     -webkit-box-shadow: var(--box-shadow);
     -moz-box-shadow: var(--box-shadow);

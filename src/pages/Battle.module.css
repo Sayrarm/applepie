@@ -1,0 +1,33 @@
+.img {
+    width: 250px;
+    height: 170px;
+
+    object-fit: cover;
+    object-position: top center;
+
+    background: var(--bg-brown-light);
+    -webkit-box-shadow: var(--box-shadow);
+    -moz-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+
+    margin-top: 20px;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.title {
+
+    text-align: center;
+    word-break: break-word;
+    color: var(--brown);
+}
