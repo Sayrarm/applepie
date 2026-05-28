@@ -14,6 +14,7 @@ const TipText = ({ text }) => {
     const timeoutRef = useRef(null);
     const mouseMoveRef = useRef(null);
     const activeTermRef = useRef(null); // Для отслеживания активного термина на мобилке
+    const tooltipRef = useRef(null);     // Для получения DOM-элемента подсказки
 
     // Определяем мобильное устройство
     const isMobile = () => {
@@ -114,25 +115,92 @@ const TipText = ({ text }) => {
             return;
         }
 
-        // Показываем подсказку под термином
+        // Базовые координаты: под термином
+        let x = rect.left + rect.width / 2;
+        let y = rect.bottom + 10; // Под термином
+
         setTooltip({
             visible: true,
             text: description,
-            x: rect.left + rect.width / 2,
-            y: rect.bottom + 10, // Под термином
+            x: x,
+            y: y
         });
         activeTermRef.current = termKey;
     };
+
+    // Корректировка позиции подсказки, чтобы она не выходила за пределы экрана
+    useEffect(() => {
+        if (tooltip.visible && tooltipRef.current) {
+            const tooltipEl = tooltipRef.current;
+            const rect = tooltipEl.getBoundingClientRect();
+            const viewportWidth = window.innerWidth;
+            const viewportHeight = window.innerHeight;
+            const margin = 10; // отступ от краёв экрана
+
+            let newX = tooltip.x;
+            let newY = tooltip.y;
+
+            // Горизонтальная корректировка
+            if (rect.width > viewportWidth - margin * 2) {
+                // Если подсказка шире экрана, центрируем
+                newX = viewportWidth / 2;
+            } else {
+                if (newX + rect.width / 2 > viewportWidth - margin) {
+                    newX = viewportWidth - rect.width / 2 - margin;
+                }
+                if (newX - rect.width / 2 < margin) {
+                    newX = rect.width / 2 + margin;
+                }
+            }
+
+            // Вертикальная корректировка (только для мобильных, так как на десктопе подсказка движется за мышью)
+            if (isMobile()) {
+                const isAbove = tooltip.y + rect.height > viewportHeight - margin;
+                if (isAbove) {
+                    // Показываем над термином
+                    const termRect = activeTermRef.current && document.querySelector(`.${styles.glossaryTerm}[data-term="${activeTermRef.current}"]`)?.getBoundingClientRect();
+                    if (termRect) {
+                        newY = termRect.top - rect.height - margin;
+                    } else {
+                        newY = viewportHeight - rect.height - margin;
+                    }
+                } else {
+                    // Под термином — оставляем как есть, но проверяем, чтобы не уходило вниз
+                    if (newY + rect.height > viewportHeight - margin) {
+                        newY = viewportHeight - rect.height - margin;
+                    }
+                }
+            } else {
+                // На десктопе просто не даём вылезти за края окна
+                if (newY + rect.height > viewportHeight - margin) {
+                    newY = viewportHeight - rect.height - margin;
+                }
+                if (newX + rect.width > viewportWidth - margin) {
+                    newX = viewportWidth - rect.width - margin;
+                }
+                if (newX < margin) {
+                    newX = margin;
+                }
+            }
+
+            // Обновляем позицию, если она изменилась
+            if (newX !== tooltip.x || newY !== tooltip.y) {
+                setTooltip(prev => ({ ...prev, x: newX, y: newY }));
+            }
+        }
+    }, [tooltip.visible, tooltip.x, tooltip.y]);
 
     // Закрытие подсказки при клике вне области (для мобилок)
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (isMobile() && tooltip.visible) {
-                // Проверяем, был ли клик не по термину
-                const isTermClick = event.target.className?.includes?.('glossaryTerm') ||
-                    event.target.parentElement?.className?.includes?.('glossaryTerm');
+                // Проверяем, был ли клик не по термину и не по подсказке
+                const isTermClick = event.target.classList?.contains('glossaryTerm') ||
+                    event.target.parentElement?.classList?.contains('glossaryTerm');
 
-                if (!isTermClick) {
+                const isTooltipClick = tooltipRef.current?.contains(event.target);
+
+                if (!isTermClick && !isTooltipClick) {
                     setTooltip(prev => ({ ...prev, visible: false }));
                     activeTermRef.current = null;
                 }
@@ -172,6 +240,7 @@ const TipText = ({ text }) => {
                         <span
                             key={index}
                             className={styles.glossaryTerm}
+                            data-term={part.key}
                             // Десктопные события
                             onMouseEnter={(e) => handleMouseEnter(e, part.description)}
                             onMouseLeave={handleMouseLeave}
@@ -191,6 +260,7 @@ const TipText = ({ text }) => {
             {/* Рендерим подсказку в body через портал */}
             {tooltip.visible && createPortal(
                 <div
+                    ref={tooltipRef}
                     className={styles.glossaryTooltip}
                     style={{
                         left: mobile ? `${tooltip.x}px` : `${tooltip.x + 15}px`,
