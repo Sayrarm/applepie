@@ -3,6 +3,15 @@
 }
 
 .aside {
+    display: block;
     position: absolute;
-    right: -40%;
+    right: -38%;
+}
+
+@media screen and (max-width: 1919px) {
+
+    .aside {
+        display: none;
+    }
+
 }
