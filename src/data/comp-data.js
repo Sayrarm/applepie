@@ -236,78 +236,226 @@ export const compData = [
     },
     {
         id: 31,
+        link: "lsg",
         img: "/companions/rafayel-lsg.png",
+        imgWeapon: "/companions/ballad-of-ebbs.png",
         companionName: "Rafayel: Lemurian Sea God",
-        weaponName: "Ballad of Ebbs",
         speciality: "DPS | AoE | Empower",
+        weaponName: "Ballad of Ebbs",
+        specialityMC: "DPS | Burst | Single-target",
         supportSkill: "Tide Cleaver",
+        supportSkillCooldown: "10 sec.",
+        supportSkillImg: "/battle-icons/a2_skill_ry_2507_02.png",
+        supportSkillText: `
+Rafayel throws his Tidebreaker Trident at a target and then recalls it, dealing DMG equal to 360+192% ATK+761% DEF to enemies in range. During the skill, Rafayel becomes unstoppable throughout.
+When a Charged Attack empowered by [Sea God Mark] hits an enemy, it reduces the Support Skill cooldown by 1.5s. This effect can only be triggered once per attack.
+Empowered Tide Cleaver: Rafayel's Tidebreaker Trident is enhanced with lightning, increasing DMG to 468+249% ATK+989% DEF.
+        `,
         resonanceSkill: "Cerulean Verdict",
+        resonanceSkillCooldown: "15 sec.",
+        resonanceSkillCost: "2 energy charges",
+        resonanceSkillImg: "/battle-icons/a2_skill_ry_2507_03.png",
+        resonanceSkillText: `
+You and Rafayel resonate with the power of the ocean together, unleash towering waves infused with lightning that gather enemies in range, and command the tides to deal massive DMG equal to 1311+699% ATK+2773% DEF in total and 1 [Protocore DMG] to enemies in range.
+        `,
         ardentOath: "Deluge Covenant",
+        ardentOathCost: "100% Oath Energy",
+        ardentOathImg: "/battle-icons/a2_skill_ry_2507_04.png",
+        ardentOathText: `
+You resonate with Rafayel's Evol, summoning tides and lightning to attack the enemy, dealing massive DMG equal to 1800+960% ATK+3820% DEF.
+        `,
         passiveSkill: "Deepfall Rite",
+        passiveSkillImg: "/battle-icons/a2_skill_ry_2507_01.png",
+        passiveSkillText: `
+Upon entering the battle, Rafayel grants you [Sea God Mark]. When you perform a Charged Attack, it consumes [Sea God Mark] to empower that attack, increasing DMG by 50% and making you unstoppable throughout its duration. 8s after [Sea God Mark] has been consumed, Rafayel will grant [Sea God Mark] to you again. Using your Active Skill immediately refreshes [Sea God Mark].
+When Rafayel uses his Support Skill or Empowered Support Skill, he accumulates [Raging Tide]. When your Basic Attack or Charged Attack hits an enemy, you accumulate [Ripple Breath]. These effects can only be triggered once per attack. When both [Ripple Breath] and [Raging Tide] are fully charged, the skill [Ocean's Descent] is unlocked. Using it floods the battlefield, granting you [Divine Favor] and making you unstoppable throughout its duration. [Divine Favor] lasts for 11s.
+While [Divine Favor] is active, your Active Skill generates a [Lightning Crystal] when it hits an enemy. This effect can only be triggered once per skill use.
+While [Divine Favor] is active, your Dodge is empowered by waves, allowing you to activate [Lightning Crystals] along the path and deal DMG equal to 32+17% ATK+68% DEF. 
+[Lightning Crystal]: When activated, restores 0.3 Energy Charge, reduces Active Skill cooldown by 3.3s, and generates [Lightning Tide]. [Lightning Tide] deals DMG equal to 450+240% ATK+951% DEF and activates other nearby [Lightning Crystals]. When [Divine Favor] ends, all [Lightning Crystals] are immediately activated.
+        `,
         basicAttack: "Wave Chase",
+        basicAttackImg: "/battle-icons/a2_skill_pl_1904_01_RY_2507.png",
+        basicAttackText: `
+Wield Ballad of Ebbs to perform a combo up to 4 hits
+First Strike:49+26% ATK+104% DEF 
+Second Strike:53+28% ATK+112% DEF 
+Third Strike: 83+44% ATK+175% DEF 
+Fourth Strike:137+73% ATK+290% DEF
+
+Charged Attack summons a wave that envelops your sword for a powerful slash, dealing DMG equal to 174+93% ATK+368% DEF.
+        `,
         activeSkill: "Riptide Rend",
+        activeSkillCooldown: "10 sec.",
+        activeSkillCost: "1 energy charge",
+        activeSkillImg: "/battle-icons/a2_skill_pl_1904_02_RY_2507.png",
+        activeSkillText: `
+Your Charged Attack is empowered by [Sea God Mark] to become a forward thrust, dealing DMG equal to 265+141% ATK+560% DEF and restoring 0.5 Energy Charge. Energy restoration can only be triggered once per attack.
+        `,
         passiveMCSkill: "Tide's Return",
-        supportText: ``,
-        resonanceText: ``,
-        ardentText: ``,
-        passiveText: ``,
-        basicText: ``,
-        activeText: ``,
-        passiveMCText: ``,
-        eidolon0: ``,
-        eidolon1: ``,
-        eidolon2: ``,
-        eidolon3: ``,
+        passiveMCSkillImg: "/battle-icons/a2_skill_pl_1904_03_RY_2507.png",
+        passiveMCText: `
+Dash forward with a swimming motion, dealing DMG equal to 312+166% ATK+660% DEF to enemies hit. You are invincible while using this Active Skill.
+        `,
+        eidolon0: `
+The team deals 8% more DMG and takes 8% less DMG. When your basic attack hits, [Sea God Mark] cooldown is reduced by o.8s.This effect can trigger once per attack. When [Lightning Tide] hits Weakened enemies, extends the Weakened duration by 0.5s. This effect can trigger up to 2 times per enemy.       
+        `,
+        eidolon1: `
+Increases Ardent Oath charge by 20%. While [Divine Favor] is active, when Rafayel throws his Tidebreaker Trident, it generates an additional vortex that continuously pulls nearby enemies toward its center. While [Divine Favor] is active, lightning will randomly strike the battlefield to assist you in battle, dealing DMG equal to 270+144% ATK+571% DEF with each hit.
+        `,
+        eidolon2: `
+Energy Charge limit is raised by 1. DMG boost from [Sea God Mark] is increased by 50%. While [Divine Favor] is active, you gain 40% DMG Reduction.
+        `,
+        eidolon3: `
+The team deals 8% more DMG. While [Divine Favor] is active, when your basic attack hits, Active Skill cooldown is reduced by 0.5s. While [Divine Favor] is active, when Charged Attacks empowered by [Sea God Mark] hit, [Lightning Tide] is triggered for 70% DMG. These effects can trigger once per attack.
+        `,
     },
     {
         id: 32,
+        link: "got",
         img: "/companions/rafayel-got.png",
+        imgWeapon: "/companions/tidal-embrace.png",
         companionName: "Rafayel: God of the Tides",
-        weaponName: "Tidal Embrace",
         speciality: "Sustained | Buff | AoE",
+        weaponName: "Tidal Embrace",
+        specialityMC: "Sustained | Buff | AoE",
         supportSkill: "Tidal Summoning",
+        supportSkillCooldown: "10 sec.",
+        supportSkillImg: "/battle-icons/a2_skill_ry_2504_02.png",
+        supportSkillText: `
+Rafayel comes to your side and summons a Sea Spirit in front of you to assist in combat.
+Empowered Tidal Summoning: Restores 10% [Faith] and temporarily increases DMG dealt by the Sea Spirit by 10%.
+
+Sea Spirit: A marine creature summoned by Rafayel to aid you in combat. It attacks enemies with water and lasts for 10 seconds. The Sea Spirits can be upgraded with skills. 
+Level 1: Each attack deals DMG equal to 47+25% ATK+2.2% of Max HP.
+Level 2: ATK SPD is increased by 20%. 
+Level 3: DMG is increased by 25%.
+        `,
         resonanceSkill: "Surging Tides",
+        resonanceSkillCooldown: "15 sec.",
+        resonanceSkillCost: "2 energy charges",
+        resonanceSkillImg: "/battle-icons/a2_skill_ry_2504_03.png",
+        resonanceSkillText: `
+Rafayel holds your hand, summoning tides around you. As you descend with the tides, a massive wave surges outward dealing DMG equal to 995 +531% ATK+47.8% of Max HP to enemies within the area, along with 1 [Protocore DMG].
+        `,
         ardentOath: "Oceanic Harmony",
+        ardentOathCost: "100% Oath Energy",
+        ardentOathImg: "/battle-icons/a2_skill_ry_2504_04.png",
+        ardentOathText: `
+The sound of Rafayel's flute reverberates the ocean, and the creatures of the sea respond with a hymn. You ride atop a floating whale, joining forces with the sea creatures to launch a powerful attack against the enemy, dealing massive DMG equal to 1440 + 780% ATK + 69.4% of Max HP.
+        `,
         passiveSkill: "Frenzy Surge",
+        passiveSkillImg: "/battle-icons/a2_skill_ry_2504_01.png",
+        passiveSkillText: `
+When you and Rafayel, as well as [Sea Spirits], hit the enemy with a basic attack, Rafayel's [Faith] will be restored.
+When [Faith] is fully restored, Rafayel will manifest a miracle, invoking [Heavenly Rain] within 10s, which increases the DMG dealt by you and allied units by 30%, and boosts the level of all Sea Spirits by 1.
+        `,
         basicAttack: "Waves",
+        basicAttackImg: "/battle-icons/a2_skill_pl_1903_02_RY_2504.png",
+        basicAttackText: `
+Wield a wand to start a multi-hit combo, up to 4 attacks Deal DMG equal to 398+211% ATK+19% of Max HP.
+
+Charged Attack forces the enemy into the air, dealing DMG equal to 182+97% ATK + 9% of Max HP.
+        `,
         activeSkill: "Tides",
-        passiveMCSkill: "Sea Shanty",
-        supportText: ``,
-        resonanceText: ``,
-        ardentText: ``,
-        passiveText: ``,
-        basicText: ``,
-        activeText: ``,
-        passiveMCText: ``,
-        eidolon0: ``,
-        eidolon1: ``,
-        eidolon2: ``,
-        eidolon3: ``,
+        activeSkillCooldown: "10 sec.",
+        activeSkillCost: "1 energy charge",
+        activeSkillImg: "/battle-icons/a2_skill_pl_1903_03_RY_2504.png",
+        activeSkillText: `
+After reciting a short incantation, you create waves that push back nearby enemies, dealing DMG equal to 73+39% ATK + 3.5% of Max HP and leaving behind a Tidal Field. Tidal Field gives allies within its range one stack of Tidal Strength, which increases CRIT Rate by 10%. For each ally in Tidal Field, an additional stack of Tidal Strength is granted, up to 3 stacks.
+        `,
+        passiveMCSkill: "Limitless Recovery",
+        passiveMCSkillImg: "/battle-icons/a2_skill_pl_1903_01_RY_2504.png",
+        passiveMCText: `
+When using [Tides], summon a [Sea Spirit] in front of you.
+        `,
+        eidolon0: `
+The team deals 8% more DMG and takes 8% less DMG. When fighting near a [Sea Spirit], CRIT DMG is increased by 10%.        
+        `,
+        eidolon1: `
+Increases Ardent Oath charge by 20%. The [Sea Spirit] starts at Lv. 2 and its duration is extended by 5 seconds.
+        `,
+        eidolon2: `
+Energy Charge limit is raised by 1. During [Heavenly Rain], Energy Charge recovery speed is increased by 30%.
+        `,
+        eidolon3: `
+The team deals 8% more DMG. [Surging Tides] restores 30% [Faith] for each enemy hit. This effect can trigger at most 3 times during Surging Tides.
+        `,
     },
     {
         id: 33,
+        link: "abysswalker",
         img: "/companions/rafayel-abysswalker.png",
+        imgWeapon: "/companions/phantasma-sands.png",
         companionName: "Rafayel: Abysswalker",
-        weaponName: "Phantasma Sands",
         speciality: "Burst | Single-target | Pull",
+        weaponName: "Phantasma Sands",
+        specialityMC: "DPS | Single-target | Sustained",
         supportSkill: "Eclipse Rend",
+        supportSkillCooldown: "14 sec.",
+        supportSkillImg: "/battle-icons/a2_skill_ry_2503_02.png",
+        supportSkillText: `
+Rafayel unleashes a series of attacks, ending with a ground attack that leaves 1 [Fishtail Beacon] for 10s.
+You can pick up the [Fishtail Beacon] to restore 2 [Potential]
+Empowered Eclipse Rend: Deals increased DMG equal to 306+408% ATK and [Burns] enemies.
+[Burn]: Deals 23+31% ATK DMG to the target for 5s.
+        `,
         resonanceSkill: "Fantasia Shark",
+        resonanceSkillCooldown: "15 sec.",
+        resonanceSkillCost: "2 energy charges",
+        resonanceSkillImg: "/battle-icons/a2_skill_ry_2503_03.png",
+        resonanceSkillText: `
+Uses Phantasy Chains to pull in enemies. After a short delay, Rafayel summons a Fantasia Shark that bites and [Burns] enemies, dealing DMG equal to 785+1047% of your combined ATK and 1 Protocore DMG.
+        `,
         ardentOath: "Four Scourges",
+        ardentOathCost: "100% Oath Energy",
+        ardentOathImg: "/battle-icons/a2_skill_ry_2503_04.png",
+        ardentOathText: `
+Rafayel harnesses the power of a Protofield to bind enemies with Phantasy Chains. You and Rafayel work together, using your Evol to deal massive DMG equal to 1440+1920% of your combined ATK.
+        `,
         passiveSkill: "Abyssal Beacon",
+        passiveSkillImg: "/battle-icons/a2_skill_ry_2503_01.png",
+        passiveSkillText: `
+Rafayel periodically applies Beacon on enemies. When you hit an enemy with Beacon using a Charged Attack, it triggers the mark and charges 1 point of Potential, up to 6 stacks.
+When Potential is charging, your and Rafayel's ATK increases by 8% for 5s. Retriggering the mark refreshes the duration.
+When Potential is fully charged, you and Rafayel will gain Deepsea Pursuit, increasing your CRIT Rate by 15% for 5s. Meanwhile, Rafayel will unleash a Searing Slash, dealing massive DMG.
+Searing Slash: After charging, Rafayel lunges forward, inflicting 540 + 720% ATK DMG on enemies in his path.
+        `,
         basicAttack: "Abyssal Rapid Fire",
+        basicAttackImg: "/battle-icons/a2_skill_pl_1901_02_RY_2503.png",
+        basicAttackText: `
+Wield dual guns for a combo up to 5 hits, The final Basic Attack inflicts multiple instances of DMG. 
+First Strike:53+71% ATK DMG
+Second Strike:48+64% ATK DMG 
+Third Strike:64+85% ATK DMG 
+Fourth Strike:69+92% ATK DMG 
+Fifth Strike:74+99% ATK DMG
+
+Charged Attack will knock back nearby enemies, dealing AoE DMG equal to 144%+192% ATK.
+        `,
         activeSkill: "Oceanic Traversal",
+        activeSkillCooldown: "8 sec.",
+        activeSkillCost: "1 energy charge",
+        activeSkillImg: "/battle-icons/a2_skill_pl_1901_03_RY_2503.png",
+        activeSkillText: `
+Perform an enhanced linear attack, dealing 309+412% ATK DMG.
+        `,
         passiveMCSkill: "Abyssal Shadow",
-        supportText: ``,
-        resonanceText: ``,
-        ardentText: ``,
-        passiveText: ``,
-        basicText: ``,
-        activeText: ``,
-        passiveMCText: ``,
-        eidolon0: ``,
-        eidolon1: ``,
-        eidolon2: ``,
-        eidolon3: ``,
+        passiveMCSkillImg: "/battle-icons/a2_skill_pl_1901_01_RY_2503.png",
+        passiveMCText: `
+Basic attacks generate a stack of Pursuit, increasing your ATK SPD by 4% and CRIT Rate by 2%, up to 5 stacks. If attacks stop, the stacks will quickly disappear. Active Skills will inflict [Burn] on enemies.
+        `,
+        eidolon0: `
+The team deals 8% more DMG and takes 8% less DMG. Abysswalker's [Deepsea Pursuit] gains 30% additional CRIT DMG.        
+        `,
+        eidolon1: `
+Increases Ardent Oath charge by 20%. When fighting together with Abysswalker, increases DMG taken of enemies inflicted with [Burn] by 20%.
+        `,
+        eidolon2: `
+Energy Charge limit is raised by 1. When triggering [Potential] recovery, Energy Charge recovery speed is increased by 50% for 4s.
+        `,
+        eidolon3: `
+The team deals 8% more DMG. Abysswalker's [Searing slash] deals 150% more DMG. When triggering [Beacon] additionally restore 1 [Potential].
+        `,
     },
     {
         id: 34,
@@ -585,7 +733,7 @@ The team deals 8% more DMG. When using [Wrath Judgment: Greed], you and Sylus re
         companionName: "Sylus: Relentless Conqueror",
         speciality: "DMG | Single-target | Control",
         weaponName: "Harrier 700",
-        specialityMC: "DPS | Sustained| AoE",
+        specialityMC: "DPS | Sustained | AoE",
         supportSkill: "Conqueror's Confinement",
         supportSkillCooldown: "10 sec.",
         supportSkillImg: "/battle-icons/a2_skill_yg_2301_02.png",
