@@ -1,0 +1,8 @@
+.container  {
+    position: relative;
+}
+
+.aside {
+    position: absolute;
+    right: -40%;
+}
