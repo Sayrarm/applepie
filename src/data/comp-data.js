@@ -157,70 +157,176 @@ The team deals 8% more DMG. When your Active Skills and Charged Attacks hit the 
     },
     {
         id: 13,
+        link: "lightseeker",
         img: "/companions/xavier-lightseeker.png",
+        imgWeapon: "/companions/luminescence-blade.png",
         companionName: "Xavier: Lightseeker",
-        weaponName: "Luminescence Blade",
         speciality: "DPS | AoE | Empower",
+        weaponName: "Luminescence Blade",
+        specialityMC: "DPS | Sustained | Empower",
         supportSkill: "Starlight Storm",
+        supportSkillCooldown: "10 sec.",
+        supportSkillImg: "/battle-icons/a2_skill_st_2103_02.png",
+        supportSkillText: `
+Xavier charges his sword and attacks multiple times, dealing 300+400% ATK DMG in a large area.
+Empowered Starlight Storm: DMG is increased, dealing 347+462% ATK DMG and recharging 6% of Ardent Oath.
+        `,
         resonanceSkill: "Luminescent Field",
+        resonanceSkillCooldown: "15 sec.",
+        resonanceSkillCost: "2 energy charges",
+        resonanceSkillImg: "/battle-icons/a2_skill_st_2103_03.png",
+        resonanceSkillText: `
+Wield a sword and resonate with light to summon a Radiant Blade.
+Radiant Blade: When active, it attacks enemies within a large area and deals AoE DMG equal to 641+854% ATK and 1 [Protocore DMG]. A Luminescent Field is also deployed providing allied units within Luminescent Field a 10% ATK bonus.
+If Radiant Blade breaks the enemy's shield, extra DMG of the team will boost by 20%, lasting for 10s.
+        `,
         ardentOath: "Galactic Pulse",
+        ardentOathCost: "100% Oath Energy",
+        ardentOathImg: "/battle-icons/a2_skill_st_2103_04.png",
+        ardentOathText: `
+You and Xavier brandish a blade and attack together, dealing massive DMG equal to 1440+1920% of your combined ATK.
+        `,
         passiveSkill: "Radiant Star",
+        passiveSkillImg: "/battle-icons/a2_skill_st_2103_01.png",
+        passiveSkillText: `
+When you use an Active Skill to score a hit while inside
+[Luminescent Field], [Luminescent Resonance] is triggered. [Luminescent Resonance]: Resonate with light and unleash an attack around yourself, dealing AoE DMG equal to 150+200% ATK.
+        `,
         basicAttack: "Slicing Light",
+        basicAttackImg: "/battle-icons/a2_skill_pl_1904_02_ST_2103.png",
+        basicAttackText: `
+Wield the Sword for a multi-hit combo.
+First Strike: 60+80% ATK DMG 
+Second Strike: 60+80% ATK DMG 
+Third Strike:72+96% ATK DMG 
+Fourth Strike: 96+129% ATK DMG
+
+Charged Attack will unleash a single forward slash, inflicting AoE DMG equal to 118+157% ATK.
+        `,
         activeSkill: "Shining Blade's Swadow",
+        activeSkillCooldown: "10 sec.",
+        activeSkillCost: "1 energy charge",
+        activeSkillImg: "/battle-icons/a2_skill_pl_1904_03_ST_2103.png",
+        activeSkillText: `
+[Luminescent Resonance] recovers 0.35 [Energy Charge] for each enemy hit.
+        `,
         passiveMCSkill: "Song of Light",
-        supportText: ``,
-        resonanceText: ``,
-        ardentText: ``,
-        passiveText: ``,
-        basicText: ``,
-        activeText: ``,
-        passiveMCText: ``,
-        eidolon0: ``,
-        eidolon1: ``,
-        eidolon2: ``,
-        eidolon3: ``,
+        passiveMCSkillImg: "/battle-icons/a2_skill_pl_1904_01_ST_2103.png",
+        passiveMCText: `
+After a brief charge-up, lunge forward and unleash a slashing attack on the enemies ahead, dealing AoE DMG of 341+455% ATK.
+        `,
+        eidolon0: `
+The team deals 8% more DMG and takes 8% less DMG. When fighting together with Lightseeker, your Active Skill DMG is increased by 25%.        
+        `,
+        eidolon1: `
+Increases Ardent Oath charge by 20%. When fighting alongside Lightseeker, each time [Luminescent Resonance] triggers, Radiant Blade's duration is extended by 2s.
+        `,
+        eidolon2: `
+Energy Charge limit is raised by 1. When you and Lightseeker are in [Luminescent Field], take 10% less DMG and gain increased Interruption Resistance.
+        `,
+        eidolon3: `
+Increases team DMG by 8%. When fighting together with Lightseeker in the [Luminescent Field] and hitting enemies with a Charged Attack, the cooldown of your Active Skill will be reduced by 2s.
+        `,
     },
     {
         id: 14,
+        link: "evol-police",
         img: "/companions/xavier-police.png",
         companionName: "Xavier: Evol Police",
         speciality: "Support | Control",
         supportSkill: "Refulgent Shadow",
+        supportSkillCooldown: "10 sec.",
+        supportSkillImg: "/battle-icons/a2_skill_st_2104_02.png",
+        supportSkillText: `
+With his ribbon of light, Xavier speedily seals off the area, dealing DMG equal to 306+408% of his ATK to all enemies in range. Empowered Refulgent Shadow: Attack attempts are further increased, dealing DMG equal to 396+528% of Xavier's ATK. The final segment of attacks inflicts Immobilized on the units hit.
+        `,
         resonanceSkill: "Refulgent Onsaulght",
+        resonanceSkillCooldown: "15 sec.",
+        resonanceSkillCost: "2 energy charges",
+        resonanceSkillImg: "/battle-icons/a2_skill_st_2104_03.png",
+        resonanceSkillText: `
+You quickly attack the enemy, dealing 1 [Protocore DMG]. Xavier then chases down the enemy for a follow-up attack, dealing 726+968% ATK DMG.       
+        `,
         ardentOath: "Refulgent Resonantia",
+        ardentOathCost: "100% Oath Energy",
+        ardentOathImg: "/battle-icons/a2_skill_st_2104_04.png",
+        ardentOathText: `
+Your Evol resonates with Xavier's. You gather the energy from the Protofield and work together to perform a powerful slash that deals DMG equal to 1200+1600 ATK DMG. 
+        `,
         passiveSkill: "Light Amplification",
-        supportText: ``,
-        resonanceText: ``,
-        ardentText: ``,
-        passiveText: ``,
+        passiveSkillImg: "/battle-icons/a2_skill_st_2104_01.png",
+        passiveSkillText: `
+When your Active Skill or Resonance Skill hits an enemy, one stack of Transmitted Light is applied to the enemy and lasts for 8s.
+When Transmitted Light is active your and Xavier's Basic Attacks will increase the number of stacks. Upon reaching 6 stacks, Transmitted Light is removed, and the enemy will be immobilized for 4s. The immobilized enemy will take 20% more DMG.
+Transmitted Light cannot be inflicted on the enemy while it is immobilized.   
+        `,
     },
     {
         id: 15,
+        link: "distant-youth",
         img: "/companions/xavier-youth.png",
         companionName: "Xavier: Distant Youth",
         speciality: "Defend | Buff",
         supportSkill: "Paper Blade",
+        supportSkillCooldown: "10 sec.",
+        supportSkillImg: "/battle-icons/a2_skill_st_2105_02.png",
+        supportSkillText: `
+Xavier leaps into the air and unleashes a sword energy wave, dealing 340 + 453% AoE DMG.
+Empowered Paper Blade: The sword energy explodes, causing an additional 90 + 120% ATK DMG.
+        `,
         resonanceSkill: "Fluttering Fireflies",
+        resonanceSkillCooldown: "18 sec.",
+        resonanceSkillCost: "2 energy charges",
+        resonanceSkillImg: "/battle-icons/a2_skill_st_2105_03.png",
+        resonanceSkillText: `
+You and Xavier dash forward to the enemy, performing three rapid thrusts, dealing a total of 739 + 986% ATK DMG. On the third thrust, an additional 1 point of [Protocore DMG] is inflicted.       
+        `,
         ardentOath: "Starry Wish",
+        ardentOathCost: "100% Oath Energy",
+        ardentOathImg: "/battle-icons/a2_skill_st_2105_04.png",
+        ardentOathText: `
+You resonate with Xavier's Evol.
+Harnessing the power of memories for each other, you two launch a combined attack. Together, you pierce through the enemy, dealing a substantial DMG of 1200 + 1600% ATK.
+        `,
         passiveSkill: "Rainfall Shield",
-        supportText: ``,
-        resonanceText: ``,
-        ardentText: ``,
-        passiveText: ``,
+        passiveSkillImg: "/battle-icons/a2_skill_st_2105_01.png",
+        passiveSkillText: `
+When you and Xavier hit an enemy, you recover a small amount of Sword Intent. Additionally, a shield is generated, granting immunity to the next control effect when taking damage, along with 50% DMG reduction. Your attacks deal 100% ATK DMG to enemies and provide additional recovery of Sword Intent. (The shield triggers every 10s.)
+When you unleash a Resonance Skill, you immediately gain a big amount of Sword Intent and enter the Energetic state. The Energetic state consumes Sword Intent and enhances your ATK DMG. The higher the target's HP, the more DMG you inflict, up to a maximum increase of 30%. This state persists until all Sword Intent is consumed.   
+        `,
     },
     {
         id: 16,
+        link: "hunter",
         img: "/companions/xavier-hunter.png",
         companionName: "Xavier: Deepspace Hunter",
         speciality: "DPS | Single-target",
         supportSkill: "Hidden Star",
+        supportSkillCooldown: "10 sec.",
+        supportSkillImg: "/battle-icons/a2_skill_st_2101_02.png",
+        supportSkillText: `
+Xavier disappears briefly before reappearing and attacking the enemy multiple times. After he gathers energy, he forces the enemy into the air and deals AoE DMG equal to 330+440% ATK.
+Empowered Hidden Star: Number of attacks increases, dealing 420+560% ATK DMG.
+        `,
         resonanceSkill: "Stella Sequor",
+        resonanceSkillCooldown: "15 sec.",
+        resonanceSkillCost: "2 energy charges",
+        resonanceSkillImg: "/battle-icons/a2_skill_st_2101_03.png",
+        resonanceSkillText: `
+Xavier teleports to the target's location and enters a charging state before joining you to stab enemies with a lightblade, dealing 318+424% ATK DMG and 1 [Protocore DMG].
+When using this Resonance Skill, you and Xavier gain a 20% ATK buff for 8s.      
+        `,
         ardentOath: "Supernova",
+        ardentOathCost: "100% Oath Energy",
+        ardentOathImg: "/battle-icons/a2_skill_st_2101_04.png",
+        ardentOathText: `
+Your Evol resonates with Xavier's. You gather the energy from the Protofield and work together to perform a powerful slash that deals DMG equal to 1200+1600% of your combined ATK.
+        `,
         passiveSkill: "Shattered Star",
-        supportText: ``,
-        resonanceText: ``,
-        ardentText: ``,
-        passiveText: ``,
+        passiveSkillImg: "/battle-icons/a2_skill_st_2101_01.png",
+        passiveSkillText: `
+Your and Xavier's CRIT Rate increases by 7%.    
+        `,
     },
     {
         id: 21,
