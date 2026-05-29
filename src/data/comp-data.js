@@ -119,120 +119,335 @@ export const compData = [
     },
     {
         id: 21,
+        link: "goa",
         img: "/companions/zayne-goa.png",
+        imgWeapon: "/companions/divine-grip.png",
         companionName: "Zayne: God of Annihilation",
-        weaponName: "Divine Grip",
         speciality: "DPS | Burst | Empower",
+        weaponName: "Divine Grip",
+        specialityMC: "DPS | Burst | Single-target",
         supportSkill: "Endbringer Arrow",
+        supportSkillCooldown: "10 sec.",
+        supportSkillImg: "/battle-icons/a2_skill_ys_2207_02.png",
+        supportSkillText: `
+Zayne fires a piercing arrow forward, dealing DMG equal to 98+52% ATK+4.7% of Max HP. The piercing arrow explodes upon hitting the first enemy, dealing total DMG equal to 272+143% ATK+13.1% of Max HP.
+Empowered Endbringer Arrow: Explosion damage is increased, dealing total DMG equal to 368+195% ATK+17.7% of Max HP. This skill cannot be triggered during the [Deity of Niava] state.
+During the Deity of Niava state, [Endbringer Arrow] will be replaced by [Divine Sever]
+[Divine Sever]: Fires multiple beams of energy that sever connections with the world, dealing total DMG equal to 852+456% ATK+40.8% of Max HP. This damage counts as Charged Attack damage. [Divine Sever] cannot be cast directly. You can refresh this skill by shattering an enemy's[Soul Rift].This skill is not considered a Support Skill and cannot be cast consecutively within a short period of time.
+        `,
         resonanceSkill: "Divinity Order",
+        resonanceSkillCooldown: "15 sec.",
+        resonanceSkillCost: "2 energy charges",
+        resonanceSkillImg: "/battle-icons/a2_skill_ys_2207_03.png",
+        resonanceSkillText: `
+Zayne unleashes divine power to continuously gather nearby enemies while you ready your [Divine Grip], resonating with him. The power of Resonance transforms into divine arrows that strike enemies, dealing AoE DMG equal to 1262+674% ATK+60.6% of Max HP and 1 [Protocore DMG].
+        `,
         ardentOath: "Aengru Radiance",
+        ardentOathCost: "100% Oath Energy",
+        ardentOathImg: "/battle-icons/a2_skill_ys_2207_04.png",
+        ardentOathText: `
+Zayne and you enter the Aengru Field, channeling the divine power of creation and annihilation to form a divine golden bow. [Divine Grip] transforms into an arrow, and together with countless Golden Aenzus, you unleash a final devastating strike, dealing DMG equal to 1800+960% ATK+86% of Max HP to all enemies.
+The deity knows neither birth nor death, bound to all that is set, until He develops desires of His own.
+        `,
         passiveSkill: "Fateful Bond",
+        passiveSkillImg: "/battle-icons/a2_skill_ys_2207_01.png",
+        passiveSkillText: `
+When entering battle, Zayne will be bound by 3 stacks of [Divine Shackles]. You can remove [Divine Shackles] using [Golden Arrows].
+When your Basic Attack hits an enemy, Zayne will load 1 [Golden Arrow] for you. This effect can trigger only once per Basic Attack. You can hold up to 4 [Golden Arrows] at once.
+When your Charged Attack hits the first enemy, all [Golden Arrows] will be fired at the target, with each [Golden Arrow] dealing DMG equal to 88+47% ATK+4.3% of Max HP Each [Golden Arrow] fired will leave behind a [Remnant Feather] that lasts for 5s. Obtaining a [Remnant Feather] refreshes the duration of all [Remnant Feathers]. [Remnant Feathers] share the same maximum capacity as [Golden Arrows]. When your Active Skill hits, all [Remnant Feathers] will convert into [Golden Arrows]. This effect can trigger only once per Active Skill cast.
+When [Golden Arrows] hit an enemy, they leave an [Arrow Mark]. [Arrow Mark] can stack up to 4 times. At maximum stacks, [Arrow Mark] will be consumed, removing 1 stack of [Divine Shackles] and restoring 0.35 [Energy Charge]. When [Arrow Mark] reaches maximum stacks, Zayne will also fire a [Terminus Arrow] as a follow-up attack, dealing DMG equal to 354+189% ATK+17% of Max HP and restoring HP equal to 5% of Max HP to both you and your Companion.
+When all [Divine Shackles] are removed, you can cast [Bind Gaze].
+[Bind Gaze]: You remove the Hidden Divinity covering Zayne's eyes. Zayne opens his divine eyes, clearing all [Golden Arrows], [Remnant Feathers], and [Arrow Marks].
+You and Zayne awaken as the [Deity of Niava] for 10s During this time, enemies' [Soul Rifts] are revealed.
+[Soul Rift]: Your Charged Attack will shatter an enemy's [Soul Rift] on hit, dealing DMG equal to 315+168%
+ATK+15.1% of Max HP. During the [Deity of Niava] state, enemies' [Soul Rifts] will be revealed again 6s after being shattered. Additionally, when your Active Skill hits an enemy for the first time, if that enemy has no [Soul Rift], the interval before its [Soul Rift] is revealed again will be reduced by 0.5s.
+After [Deity of Niava] ends, Zayne will once again have 3 stacks of [Divine Shackles], and all [Soul Rifts] will be cleared.
+        `,
         basicAttack: "Order Rupture",
+        basicAttackImg: "/battle-icons/a2_skill_pl_1902_01_YS_2207.png",
+        basicAttackText: `
+Wield [Divine Grip] to perform up to four consecutive attacks.
+First Strike:105+56% ATK+5.1% of Max HP 
+Second Strike:116+62% ATK+5.6% of Max HP 
+Third Strike:116+62% ATK+5.6% of Max HP 
+Fourth Strike: 147+78% ATK+7.1% of Max HP
+
+Charged Attack delivers two consecutive slashes, dealing total DMG equal to 112+60% ATK+5.3% of Max HP. The second slash on hit applies [Rupture Mark] to the enemy. This effect cannot stack.
+[Rupture Mark]: Deals DMG equal to 83+44% ATK+4% of Max HP every 1s for 2s.
+        `,
         activeSkill: "Divine Jugment",
+        activeSkillCooldown: "10 sec.",
+        activeSkillCost: "1 energy charge",
+        activeSkillImg: "/battle-icons/a2_skill_pl_1902_02_YS_2207.png",
+        activeSkillText: `
+Concentrate divine power to thrust forward, dealing DMG equal to 338+180% ATK+16.2% of Max HP to the target. After thrusting, immediately hold the Basic Attack button to chain into a Charged Attack.
+        `,
         passiveMCSkill: "Divine Slash",
-        supportText: ``,
-        resonanceText: ``,
-        ardentText: ``,
-        passiveText: ``,
-        basicText: ``,
-        activeText: ``,
-        passiveMCText: ``,
-        eidolon0: ``,
-        eidolon1: ``,
-        eidolon2: ``,
-        eidolon3: ``,
+        passiveMCSkillImg: "/battle-icons/a2_skill_pl_1902_04_YS_2207.png",
+        passiveMCText: `
+You are more resistant to interruption while attacking enemies. While unleashing Active Skills, you become unstoppable and take 40% less damage. Within 4s after [Divine Judgment] is cast, [Divine Judgment] will be replaced by the Active Skill [Divine Slash], which does not consume [Energy Charge].
+[Divine Slash]: Swing [Divine Grip] forward, then leap into the air and slam it into the ground, dealing total AoE DMG equal to 389+207% ATK+18.7% of Max HP. While leaping, you will also fire all your [Golden Arrows] at the target.
+        `,
+        eidolon0: `
+The team deals 8% more DMG and takes 8% less DMG.
+When fighting alongside God of Annihilation, you become unstoppable during Charged Attacks and take 40% less DMG.
+While awakened as [Deity of Niava], you and Zayne deal 8% additional DMG.
+        `,
+        eidolon1: `
+Increases Ardent Oath charge by 20%. 
+During the [Deity of Niava] state, your Basic Attacks can also shatter enemies' [Soul Rifts] on hit. Additionally, when your Active Skill hits an enemy for the first time, if that enemy has no [Soul Rift], their [Soul Rift] will be revealed again. [Divine Sever] creates an additional array that continuously pulls in nearby enemies. After a period of time, the array explodes, dealing AoE DMG equal to 242+129% ATK+11.6% of Max HP.
+        `,
+        eidolon2: `
+Energy Charge limit is raised by 1.
+When fighting alongside God of Annihilation, your Active Skill DMG is increased by 20%. When you shatter [Soul Rifts], you and Zayne each restore HP equal to 5% of Max HP.
+        `,
+        eidolon3: `
+The team deals 8% more DMG.
+Enemies hit by [Terminus Arrow or [Divine Sever] take 30% more DMG for 4s. When you load [Golden Arrows] with Basic Attacks, you will gain 1 additional [Golden Arrow].
+        `,
     },
     {
         id: 22,
+        link: "mof",
         img: "/companions/zayne-mof.png",
+        imgWeapon: "/companions/sacred-rainfall.png",
         companionName: "Zayne: Master of Fate",
-        weaponName: "Sacred Rainfall",
         speciality: "DPS | Burst | Sustained",
+        weaponName: "Sacred Rainfall",
+        specialityMC: "DPS | Burst | Single-target",
         supportSkill: "Return Unto Oblivion",
+        supportSkillCooldown: "10 sec.",
+        supportSkillImg: "/battle-icons/a2_skill_ys_2204_02.png",
+        supportSkillText: `
+Zayne forms hand seals to gather power, summoning 4 talismans to attack the enemy, dealing 260+348% ATK DMG in total.
+Empowered Return Unto Oblivion: The number of talismans is increased to 6, dealing 372+492% ATK DMG in total.
+        `,
         resonanceSkill: "Orchid Metamorphosis",
+        resonanceSkillCooldown: "15 sec.",
+        resonanceSkillCost: "2 energy charges",
+        resonanceSkillImg: "/battle-icons/a2_skill_ys_2204_03.png",
+        resonanceSkillText: `
+Zayne teleports to you and resonates to expand the Orchid Field, dealing 632+842% ATK DMG and 1 [Protocore DMG] to enemies in a large area, and applies [Shattered Jade] to enemies hit.
+        `,
         ardentOath: "Bamboo Mirage",
+        ardentOathCost: "100% Oath Energy",
+        ardentOathImg: "/battle-icons/a2_skill_ys_2204_04.png",
+        ardentOathText: `
+You and Zayne cast a spell together, gathering heavenly and earthly energy to create a mirage of bamboo. In the mirage, many talismans will attack the enemy, dealing 1440+1920% ATK DMG in total.
+        `,
         passiveSkill: "Jadesunder",
+        passiveSkillImg: "/battle-icons/a2_skill_ys_2204_01.png",
+        passiveSkillText: `
+When you and Zayne strike an enemy in [Shattered Jade] state, [Jadesunder Intention] will be inflicted on the enemy. When [Jadesunder Intention] reaches the upper limit, [Jadesunder] is triggered, dealing 233+310% ATK DMG to the enemy. The effect can be triggered for multiple times when the enemy is under [Shattered Jade] state.
+        `,
         basicAttack: "Wind Leaf",
+        basicAttackImg: "/battle-icons/a2_skill_pl_1904_02_YS_2204.png",
+        basicAttackText: `
+Wield a sword for a multi-hit combo to deal DMG. 
+First Strike:75+100% ATK DMG
+Second Strike:75+100% ATK DMG 
+Third Strike:90+121% ATK DMG 
+Fourth Strike:121+161% ATK DMG
+
+Charged Attack will unleash a single slash, inflicting AoE DMG equal to 141+188% ATK.
+        `,
         activeSkill: "Spiritual Sword",
-        passiveMCSkill: "Oiercing Rain",
-        supportText: ``,
-        resonanceText: ``,
-        ardentText: ``,
-        passiveText: ``,
-        basicText: ``,
-        activeText: ``,
-        passiveMCText: ``,
-        eidolon0: ``,
-        eidolon1: ``,
-        eidolon2: ``,
-        eidolon3: ``,
+        activeSkillCooldown: "8 sec.",
+        activeSkillCost: "1 energy charge",
+        activeSkillImg: "/battle-icons/a2_skill_pl_1904_03_YS_2204.png",
+        activeSkillText: `
+Raise the sword to summon multiple spiritual swords, then thrust them all forward to deal multiple segments of DMG equal to 404+539% ATK.
+        `,
+        passiveMCSkill: "Piercing Rain",
+        passiveMCSkillImg: "/battle-icons/a2_skill_pl_1904_01_YS_2204.png",
+        passiveMCText: `
+Within 13s after using [Orchid Metamorphosis], [Orchid Metamorphosis] will be replaced by [Piercing Rain]. When the skill is replaced, [Piercing Rain] can be used for up to 3 times.
+[Piercing Rain]: Use a sword to perform two consecutive attacks, dealing 205+273% ATK DMG in total. The damage dealt will be counted as Resonance Skill DMG.
+        `,
+        eidolon0: `
+The team deals 8% more DMG and takes 8% less DMG. Enemies inflicted with [Shattered Jade] have their DEF reduced by 10%.        
+        `,
+        eidolon1: `
+Increases Ardent Oath charge by 20%. When fighting alongside Master of Fate, the enemy's weakened state is extended by 2 seconds Each time an enemy in weakened state is hit, the damage it sustains increases by 0.5%, up to a maximum of 10%.
+        `,
+        eidolon2: `
+Energy Charge limit is raised by 1. When triggering [Jadesunder], a small amount of Energy Charge is restored.
+        `,
+        eidolon3: `
+The team deals 8% IV more DMG. [Jadesunder] DMG is increased by 100%. During skill replacement, [Piercing Rain] can be used1 additional time. When Piercing Rain hits enemies, its cooldown is reduced by 0.5s.
+This effect can trigger only once per use of Piercing Rain.
+        `,
     },
     {
         id: 23,
+        link: "foreseer",
         img: "/companions/zayne-foreseer.png",
+        imgWeapon: "/companions/everlasting-song.png",
         companionName: "Zayne: Foreseer",
-        weaponName: "Everlasting Song",
         speciality: "Defend | DMG | AoE",
+        weaponName: "Everlasting Song",
+        specialityMC: "Support | AoE | Heal",
         supportSkill: "Ward of Curses",
+        supportSkillCooldown: "15 sec.",
+        supportSkillImg: "/battle-icons/a2_skill_ys_2202_02.png",
+        supportSkillText: `
+Zayne wields his scepter and begins an incantation, granting you and himself Ward of Curses.
+Ward of Curses can absorb DMG up to 240% of its target's DEF.
+Empowered Ward of Curses: Zayne gains 1 stack of [Divine Prayer] and triggers [Eternal sin] at your location.
+        `,
         resonanceSkill: "Thorny Punishment",
+        resonanceSkillCooldown: "15 sec.",
+        resonanceSkillCost: "2 energy charges",
+        resonanceSkillImg: "/battle-icons/a2_skill_ys_2202_03.png",
+        resonanceSkillText: `
+Zayne uses magic to summon brambles to ensnare his target, dealing AoE DMG equal to 790+421% ATK+1670% DEF and 1 [Protocore DMG]. He also gains 1 stack of [Divine Prayer].
+        `,
         ardentOath: "Verglas Cage",
+        ardentOathCost: "100% Oath Energy",
+        ardentOathImg: "/battle-icons/a2_skill_ys_2202_04.png",
+        ardentOathText: `
+You and Zayne use a scepter to summon a loveless, harsh frost energy, then strike the ground, causing ice to explode and dealing massive DMG equal to 1440+780% of your combined ATK+3060% combined DEF.
+        `,
         passiveSkill: "Divine Prayer",
+        passiveSkillImg: "/battle-icons/a2_skill_ys_2202_01.png",
+        passiveSkillText: `
+Upon entering battle, Zayne gains a stack of Divine Prayer, up to 5 stacks.
+When your last Basic Attack in a combo hits the target, Zayne gains 1 stack of Divine Prayer.
+When your Charged Attack hits an enemy, Zayne consumes 1 stack of Divine Prayer to trigger Eternal Sin.
+Eternal Sin: Deals DMG to enemies within range equal to Zayne's 192+102% ATK + 406% DEF.
+        `,
         basicAttack: "Offering From On High",
+        basicAttackImg: "/battle-icons/a2_skill_pl_1903_02_YS_2202.png",
+        basicAttackText: `
+Wield a wand to start a combo up to 4 hits. Deals DMG equal to 288+154% ATK +609% DEF.
+Charged Attack forces the enemy into the air, dealing DMG equal to 167+89% ATK + 353% DEF.
+        `,
         activeSkill: "Sacred Signs",
+        activeSkillCooldown: "10 sec.",
+        activeSkillCost: "1 energy charge",
+        activeSkillImg: "/battle-icons/a2_skill_pl_1903_03_YS_2202.png",
+        activeSkillText: `
+Create a Sacred Sign at the target location that inflicts 6 instances of DMG on enemies within its range, each dealing 52+28% ATK+111% DEF DMG.
+        `,
         passiveMCSkill: "Divine Precerm",
-        supportText: ``,
-        resonanceText: ``,
-        ardentText: ``,
-        passiveText: ``,
-        basicText: ``,
-        activeText: ``,
-        passiveMCText: ``,
-        eidolon0: ``,
-        eidolon1: ``,
-        eidolon2: ``,
-        eidolon3: ``,
+        passiveMCSkillImg: "/battle-icons/a2_skill_pl_1903_01_YS_2202.png",
+        passiveMCText: `
+During a Dodge, you can use your basic attack. When you use an Active Skill, Zayne gains 1 stack of [Divine Prayer] restoring both of your HP equal to 1000+2.5% of your Max HP in 5s.
+        `,
+        eidolon0: `
+The team deals 8% more DMG and takes 8% less DMG. When fighting alongside Foreseer, [Eternal sin] DMG is increased by 25%.        
+        `,
+        eidolon1: `
+Increases Ardent Oath charge by 20%. When you and Foreseer are under [Ward of Curses], DMG dealt is increased by 12%.
+        `,
+        eidolon2: `
+Energy Charge limit is raised by 1. When using a Resonance Skill, Foreseer additionally gains 1 stack of [Divine Prayer], and your DMG is increased by 10% for 10s.
+        `,
+        eidolon3: `
+The team deals 8% more DMG. Every 6 seconds Foreseer gains 1 stack of [Divine Prayer].
+        `,
     },
     {
         id: 24,
+        link: "medic",
         img: "/companions/zayne-medic.png",
         companionName: "Zayne: Medic of the Arctic",
         speciality: "Support | Dispel",
         supportSkill: "Snowfall",
+        supportSkillCooldown: "10 sec.",
+        supportSkillImg: "/battle-icons/a2_skill_ys_2206_02.png",
+        supportSkillText: `
+Zayne summons Snowfall at the center of enemy area, dealing AoE DMG equal to 208+275% ATK to surrounding enemies.
+Empowered Snowfall: Attack frequency of Snowfall increases.
+Upon hitting target(s), Snowfall will freeze them for 4s.
+        `,
         resonanceSkill: "Guardian of Snow",
+        resonanceSkillCooldown: "15 sec.",
+        resonanceSkillCost: "2 energy charges",
+        resonanceSkillImg: "/battle-icons/a2_skill_ys_2206_03.png",
+        resonanceSkillText: `
+Zayne returns to your side and attacks the target with you, dealing AoE DMG equal to 362+482% ATK and 1 [Protocore DMG].
+After using a Resonance Skill, your attacks will have a 40% DMG buff for 8s.
+        `,
         ardentOath: "Relentless Snow",
+        ardentOathCost: "100% Oath Energy",
+        ardentOathImg: "/battle-icons/a2_skill_ys_2206_04.png",
+        ardentOathText: `
+Zayne's Evol field explodes into numerous ice shards to pierce enemies. You use Winter's Bow to fire frost projectiles at them, dealing AoE DMG equal to 1200+1600% of your ATK.
+        `,
         passiveSkill: "Wintery Immortality",
-        supportText: ``,
-        resonanceText: ``,
-        ardentText: ``,
-        passiveText: ``,
+        passiveSkillImg: "/battle-icons/a2_skill_ys_2206_01.png",
+        passiveSkillText: `
+When fighting alongside Zayne, you recover 0.4% HP every second, and your Energy Recovery SPD is increased by 25%. Zayne regularly eliminates all your debuff.   
+        `,
     },
     {
         id: 25,
+        link: "dawnbreaker",
         img: "/companions/zayne-dawnbreaker.png",
         companionName: "Zayne: Dawnbreaker",
         speciality: "Burst | Single-target",
         supportSkill: "Dawnfrost Scythe",
+        supportSkillCooldown: "10 sec.",
+        supportSkillImg: "/battle-icons/a2_skill_ys_2205_02.png",
+        supportSkillText: `
+Zayne creates an ice spear that quickly stretches forward, dealing 626+835% AoE DMG along its path. Empowered Dawnfrost Scythe: The ice spear will explode after a short while, dealing an additional 54+72% ATK DMG.
+        `,
         resonanceSkill: "Ghostly Reverberation",
+        resonanceSkillCooldown: "20 sec.",
+        resonanceSkillCost: "2 energy charges",
+        resonanceSkillImg: "/battle-icons/a2_skill_ys_2205_03.png",
+        resonanceSkillText: `
+You and Zayne conjure ice spears to impale the enemy. After the spears explode, they deal 252 + 336% ATK.
+DMG to each enemy in the area, along with 1 point of [Protocore DMG]. Additionally, you and Zayne gain Reverberation of the departed souls allowing for immediate HP recovery.
+Reverberation:
+During Reverberation, Zayne will be empowered, bolstering his resilience to interruptions, but he will no longer dodge enemy attacks. He deals increased DMG as the target's HP decreases. The lower the HP, the greater the DMG.
+With Reverberation, your resilience to interruptions is strengthened, and the final hit of your basic combo inflicts increased DMG. The lower the target's HP, the greater your DMG.
+        `,
         ardentOath: "Chilling Blossom",
+        ardentOathCost: "100% Oath Energy",
+        ardentOathImg: "/battle-icons/a2_skill_ys_2205_04.png",
+        ardentOathText: `
+You resonate with Zayne's Evol. As he creates numerous ice spears to impale the enemy, you gather ice and snow with your Frost Longbow, shooting it towards the enemy from mid-air. Together, you deal AoE DMG of 1200 + 1600% ATK.
+        `,
         passiveSkill: "Frostborne",
-        supportText: ``,
-        resonanceText: ``,
-        ardentText: ``,
-        passiveText: ``,
+        passiveSkillImg: "/battle-icons/a2_skill_ys_2205_01.png",
+        passiveSkillText: `
+When you and Zayne are granted [Reverberation] and defeat an enemy, recover 0.3 [Energy Charge] and reduce the cooldown of Resonance Skills by 2s. This effect can only be triggered once every 3s.    
+        `,
     },
     {
         id: 26,
+        link: "doctor",
         img: "/companions/zayne-doctor.png",
         companionName: "Zayne: Linkon doctor",
         speciality: "Heal | Control",
         supportSkill: "Healing Rime",
+        supportSkillCooldown: "15 sec.",
+        supportSkillImg: "/battle-icons/a2_skill_ys_2201_02.png",
+        supportSkillText: `
+Zayne releases rime at your location healing the target and inflicting AoE DMG equal to 75+100% ATK to surrounding enemies.
+The healing potency of the rime is 121+161% of Zayne's ATK.
+Empowered Healing Rime: When the rime hits surrounding enemies, it will Freeze them for 4s.
+        `,
         resonanceSkill: "Icy Bolt",
+        resonanceSkillCooldown: "15 sec.",
+        resonanceSkillCost: "2 energy charges",
+        resonanceSkillImg: "/battle-icons/a2_skill_ys_2201_03.png",
+        resonanceSkillText: `
+Your Evol resonates with Zayne's. Summon Winter's Bow before firing at enemies. Upon hitting its first target, the arrow explodes, dealing AoE DMG equal to 296+394% ATK and Freezes your enemies for 4s. Then, Zayne teleports to the targets' Iodation and deals AoE DMG equal to 296+394% ATK and 1 [Protocore DMG].      
+        `,
         ardentOath: "Hoarfrost Saber",
+        ardentOathCost: "100% Oath Energy",
+        ardentOathImg: "/battle-icons/a2_skill_ys_2201_04.png",
+        ardentOathText: `
+Zayne's Evol field produces numerous ice shards to pierce enemies. You use Winter's Bow to fire frost projectiles at them, dealing massive DMG equal to 1200+1600% ATK DMG.
+        `,
         passiveSkill: "Verglas",
-        supportText: ``,
-        resonanceText: ``,
-        ardentText: ``,
-        passiveText: ``,
+        passiveSkillImg: "/battle-icons/a2_skill_ys_2201_01.png",
+        passiveSkillText: `
+When attacking Frozen enemies with Zayne, deal 20% more DMG.
+        `,
     },
     {
         id: 31,
@@ -815,7 +1030,7 @@ Empowered Shattering Burst: Sylus jumps closer to the target and punches the gro
         resonanceSkillCost: "2 energy charges",
         resonanceSkillImg: "/battle-icons/a2_skill_yg_2303_03.png",
         resonanceSkillText: `
-You and Sylus perform a multi-hit melee combo on the target to deal 950+1266% ATK DMG and 1 Protocore DMG.        
+You and Sylus perform a multi-hit melee combo on the target to deal 950+1266% ATK DMG and 1 [Protocore DMG].        
         `,
         ardentOath: "Thunderous Cryshock",
         ardentOathCost: "100% Oath Energy",
@@ -827,7 +1042,7 @@ Your and Sylus's Evols resonate before you attack the enemy together and deal 12
         passiveSkillImg: "/battle-icons/a2_skill_yg_2303_01.png",
         passiveSkillText: `
 When your and Sylus's attacks hit enemy targets, you gain [Synergy]. When [Synergy] is full, using [Shattering Burst] will consume all [Synergy] to transform it into [Empowered Shattering Burst].
-After you stop dealing DMG for 3s.[Synergy] will start to decrease.     
+After you stop dealing DMG for 3s. [Synergy] will start to decrease.
         `,
     },
     {
@@ -930,7 +1145,7 @@ DMG dealt by Ardent Oath [Fate Unforgotten] can trigger critical hits.
         companionName: "Caleb: Ultimate Weapon X-02",
         speciality: "DPS | Sustained | AoE",
         weaponName: "Awakened Vitality",
-        specialityMC: "DPS | Burst | Single-Target",
+        specialityMC: "DPS | Burst | Single-target",
         supportSkill: "Nulledge Field",
         supportSkillCooldown: "8 sec.",
         supportSkillImg: "/battle-icons/a2_skill_fy_2402_02.png",
