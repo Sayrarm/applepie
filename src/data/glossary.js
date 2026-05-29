@@ -1,7 +1,7 @@
 const glossary = {
     "Empowered": {
-        title: "Empowered",
-        description: "When dodge are success, Support Skills can be instantly restored and deal more damage according to the description of the Support Skill",
+        title: "Empowered Support Skill",
+        description: "When dodge are success, Support Skill can be instantly restored and additional improvements can be added according to the description of the Support Skill.",
     },
     "Protocore DMG": {
         title: "Protocore DMG",
@@ -218,6 +218,26 @@ const glossary = {
     "Empowered Shattering Burst": {
         title: "Empowered Shattering Burst",
         description: "Sylus's Empowered Support Skill.",
+    },
+    "Moonfall": {
+        title: "Moonfall",
+        description: "When triggered, apply [Phasing Moon] to enemies.",
+    },
+    "Moonlight": {
+        title: "Moonlight",
+        description: "A special attack that can be triggered when Xavier assists you.",
+    },
+    "Moonstruck": {
+        title: "Moonstruck",
+        description: "An abnormal status is applied to enemies when Resonance Skills deal damage. Reduces the enemy's ATK.",
+    },
+    "Moontide": {
+        title: "Moontide",
+        description: "Your Active Skill when using the weapon [Moonchaser].",
+    },
+    "Phasing Moon": {
+        title: "Phasing Moon",
+        description: "A special mark applied to enemies hit by specific attacks from you and Xavier. When fully stacked, it will summon [Moonlight].",
     },
 
 };

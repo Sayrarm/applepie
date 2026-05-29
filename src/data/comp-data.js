@@ -102,8 +102,8 @@ After the moonlight disperses, the ATK and SPD reduction last for 2.5 more secon
         resonanceSkillCost: "2 energy charges",
         resonanceSkillImg: "/battle-icons/a2_skill_st_2106_03.png",
         resonanceSkillText: `
-Xavier teleports to the target enemy for multiple flash attacks, dealing DMG equal to 631+336% ATK+1333% DEF and leaving a Lunar Arclight. You fire two shots at the target before detonating the Arclight, causing all enemies in the blast zone to take 1 point [Protocore DMG] and enter Moonstruck for 5 seconds. In total, you deal 686 + 366% ATK +1450% DEF as damage.
-Moonstruck: Reduces ATK by 45%.
+Xavier teleports to the target enemy for multiple flash attacks, dealing DMG equal to 631+336% ATK+1333% DEF and leaving a Lunar Arclight. You fire two shots at the target before detonating the Arclight, causing all enemies in the blast zone to take 1 point [Protocore DMG] and enter [Moonstruck] for 5 seconds. In total, you deal 686 + 366% ATK +1450% DEF as damage.
+[Moonstruck]: Reduces ATK by 45%.
         `,
         ardentOath: "Moonlit Heart",
         ardentOathCost: "100% Oath Energy",
