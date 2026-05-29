@@ -139,6 +139,7 @@ function CompanionArticlePage({data, linkField = "link"}) {
                     skillName="Starring Effect"
                     skillTitle="I"
                     cooldown="All Solar Memories are Rank 0"
+                    cost=""
                     stick=""
                     skillText={companion.eidolon0}
                 />
@@ -148,6 +149,7 @@ function CompanionArticlePage({data, linkField = "link"}) {
                     skillName="Duo Rank 1"
                     skillTitle="II"
                     cooldown="All Solar Memories are Rank 1"
+                    cost=""
                     stick=""
                     skillText={companion.eidolon1}
                 />
@@ -157,6 +159,7 @@ function CompanionArticlePage({data, linkField = "link"}) {
                     skillName="Duo Rank 2"
                     skillTitle="III"
                     cooldown="All Solar Memories are Rank 2"
+                    cost=""
                     stick=""
                     skillText={companion.eidolon2}
                 />
@@ -166,6 +169,7 @@ function CompanionArticlePage({data, linkField = "link"}) {
                     skillName="Duo Rank 3"
                     skillTitle="IV"
                     cooldown="All Solar Memories are Rank 3"
+                    cost=""
                     stick=""
                     skillText={companion.eidolon3}
                 />
