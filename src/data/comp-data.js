@@ -13,8 +13,8 @@ export const compData = [
         supportSkillCooldown: "15 sec.",
         supportSkillImg: "/battle-icons/a2_skill_st_2102_02.png",
         supportSkillText: `
-Xavier pierces enemies with his sword, dealing DMG equal to 364+194% ATK+17% of Max HP in total and granting you 1 stack of [Last Words]. Xavier becomes unstoppable for the entire duration. When you enter the [Darknight Reign state or when [Darknight Reign] ends, [Royal Seal]'s cooldown will end in 5s.
-Empowered Royal Seal: Xavier strikes with his sword while detonating radiant light, sweeping up surrounding Lumenflora petals to deal additional DMG equal to 216+115% ATK+10% of Max HP. Empowered Support Skills cannot be triggered during [Darknight Reign].
+Xavier pierces enemies with his sword, dealing DMG equal to 364+194% ATK+17% of Max HP in total and granting you 1 stack of [Last Words]. Xavier becomes unstoppable for the entire duration. When you enter the [Darknight Reign] state or when [Darknight Reign] ends, [Royal Seal]'s cooldown will end in 5s.
+[Empowered] Royal Seal: Xavier strikes with his sword while detonating radiant light, sweeping up surrounding Lumenflora petals to deal additional DMG equal to 216+115% ATK+10% of Max HP. [Empowered] Support Skills cannot be triggered during [Darknight Reign].
         `,
         resonanceSkill: "Lumenflora Grace",
         resonanceSkillCooldown: "15 sec.",
@@ -28,13 +28,12 @@ Xavier leaps into the air with you, gathering enemies within the radiant light, 
         ardentOathImg: "/battle-icons/a2_skill_st_2102_04.png",
         ardentOathText: `
 Xavier thrusts his sword into the Sinders, summoning a sea of Lumenflora and mirages of Sindersfell. You bless him with resonance as he wields a giant sword to strike enemies, dealing DMG equal to 1800+960% ATK+86% of Max HP in total.
-In the dim twilight where Lumenflora petals dance, your story ends here, but your story begins anew.
         `,
         passiveSkill: "Coronation",
         passiveSkillImg: "/battle-icons/a2_skill_st_2102_01.png",
         passiveSkillText: `
 Upon entering battle, you gain an additional skill [Darknight Coronation]. After casting it, you and Xavier enter the [Darknight Reign] state for 9s. [Darknight Coronation] has a(n) 30s cooldown.
-When not in the [Darknight Reign] state, you accumulate [Last Words] over time, up to 3 stacks. Casting your Active Skill consumes 1 stack of [Last Words], reducing [Darknight Coronation] cooldown by 4s and granting 1 [Lumenflora Stamen]. [Lumenflora Stamens] provide special effects during [Darknight Reign]. You can hold up to 3 at once.
+When not in the [Darknight Reign] state, you accumulate [Last Words] over time, up to 3 stacks. Casting your Active Skill consumes 1 stack of [Last Words], reducing [Darknight Coronation] cooldown by 4s and granting 1 [Lumenflora Stamen]. [Lumenflora Stamen]'s provide special effects during [Darknight Reign]. You can hold up to 3 at once.
 During [Darknight Reign], Xavier's attacks are empowered, and his Support Skill [Royal Seal] will bloom additional [Lumenflora], dealing AoE DMG equal to 720+384% ATK+35% of Max HP.
 During [Darknight Reign], your Active Skill is replaced with Active Skill [The Chosen One's Blessing]. Casting [The Chosen One's Blessing] creates [Radiant Ripples] beneath your feet, dealing AoE DMG equal to 520+277% ATK+25% of Max HP. You're invincible while using [The Chosen One's Blessing].
 [The Chosen One's Blessing] has an initial 13s cooldown and can be cast up to 3 times during the duration of [Darknight Reign]. Upon entering the [Darknight Reign] state, each [Lumenflora Stamen] you possess reduces [The Chosen One's Blessing]'s initial cooldown by 3.4s.
@@ -96,7 +95,7 @@ While [Darknight Reign] is active, each time [Radiant Ripples] undulate, [Lumenf
         supportSkillText: `
 Xavier summons moonlight into his sword and stabs it into the ground, drawing enemies to the center of the moonlight, dealing DoT damage while reducing their ATK by 30% and speed by 50% for 5 second(s).
 After the moonlight disperses, the ATK and SPD reduction last for 2.5 more second(s).
-Empowered Lunar Vortex: Several beams of [Moonlight] will randomly descend within the area, dealing DMG to enemies.
+[Empowered] Lunar Vortex: Several beams of [Moonlight] will randomly descend within the area, dealing DMG to enemies.
         `,
         resonanceSkill: "Lunar Radiance",
         resonanceSkillCooldown: "15 sec.",
@@ -169,7 +168,7 @@ The team deals 8% more DMG. When your Active Skills and Charged Attacks hit the 
         supportSkillImg: "/battle-icons/a2_skill_st_2103_02.png",
         supportSkillText: `
 Xavier charges his sword and attacks multiple times, dealing 300+400% ATK DMG in a large area.
-Empowered Starlight Storm: DMG is increased, dealing 347+462% ATK DMG and recharging 6% of Ardent Oath.
+[Empowered] Starlight Storm: DMG is increased, dealing 347+462% ATK DMG and recharging 6% of Ardent Oath.
         `,
         resonanceSkill: "Luminescent Field",
         resonanceSkillCooldown: "15 sec.",
@@ -238,7 +237,8 @@ Increases team DMG by 8%. When fighting together with Lightseeker in the [Lumine
         supportSkillCooldown: "10 sec.",
         supportSkillImg: "/battle-icons/a2_skill_st_2104_02.png",
         supportSkillText: `
-With his ribbon of light, Xavier speedily seals off the area, dealing DMG equal to 306+408% of his ATK to all enemies in range. Empowered Refulgent Shadow: Attack attempts are further increased, dealing DMG equal to 396+528% of Xavier's ATK. The final segment of attacks inflicts Immobilized on the units hit.
+With his ribbon of light, Xavier speedily seals off the area, dealing DMG equal to 306+408% of his ATK to all enemies in range. 
+[Empowered] Refulgent Shadow: Attack attempts are further increased, dealing DMG equal to 396+528% of Xavier's ATK. The final segment of attacks inflicts Immobilized on the units hit.
         `,
         resonanceSkill: "Refulgent Onsaulght",
         resonanceSkillCooldown: "15 sec.",
@@ -272,7 +272,7 @@ Transmitted Light cannot be inflicted on the enemy while it is immobilized.
         supportSkillImg: "/battle-icons/a2_skill_st_2105_02.png",
         supportSkillText: `
 Xavier leaps into the air and unleashes a sword energy wave, dealing 340 + 453% AoE DMG.
-Empowered Paper Blade: The sword energy explodes, causing an additional 90 + 120% ATK DMG.
+[Empowered] Paper Blade: The sword energy explodes, causing an additional 90 + 120% ATK DMG.
         `,
         resonanceSkill: "Fluttering Fireflies",
         resonanceSkillCooldown: "18 sec.",
@@ -306,7 +306,7 @@ When you unleash a Resonance Skill, you immediately gain a big amount of Sword I
         supportSkillImg: "/battle-icons/a2_skill_st_2101_02.png",
         supportSkillText: `
 Xavier disappears briefly before reappearing and attacking the enemy multiple times. After he gathers energy, he forces the enemy into the air and deals AoE DMG equal to 330+440% ATK.
-Empowered Hidden Star: Number of attacks increases, dealing 420+560% ATK DMG.
+[Empowered] Hidden Star: Number of attacks increases, dealing 420+560% ATK DMG.
         `,
         resonanceSkill: "Stella Sequor",
         resonanceSkillCooldown: "15 sec.",
@@ -342,7 +342,7 @@ Your and Xavier's CRIT Rate increases by 7%.
         supportSkillImg: "/battle-icons/a2_skill_ys_2207_02.png",
         supportSkillText: `
 Zayne fires a piercing arrow forward, dealing DMG equal to 98+52% ATK+4.7% of Max HP. The piercing arrow explodes upon hitting the first enemy, dealing total DMG equal to 272+143% ATK+13.1% of Max HP.
-Empowered Endbringer Arrow: Explosion damage is increased, dealing total DMG equal to 368+195% ATK+17.7% of Max HP. This skill cannot be triggered during the [Deity of Niava] state.
+[Empowered] Endbringer Arrow: Explosion damage is increased, dealing total DMG equal to 368+195% ATK+17.7% of Max HP. This skill cannot be triggered during the [Deity of Niava] state.
 During the Deity of Niava state, [Endbringer Arrow] will be replaced by [Divine Sever]
 [Divine Sever]: Fires multiple beams of energy that sever connections with the world, dealing total DMG equal to 852+456% ATK+40.8% of Max HP. This damage counts as Charged Attack damage. [Divine Sever] cannot be cast directly. You can refresh this skill by shattering an enemy's[Soul Rift].This skill is not considered a Support Skill and cannot be cast consecutively within a short period of time.
         `,
@@ -431,7 +431,7 @@ Enemies hit by [Terminus Arrow or [Divine Sever] take 30% more DMG for 4s. When 
         supportSkillImg: "/battle-icons/a2_skill_ys_2204_02.png",
         supportSkillText: `
 Zayne forms hand seals to gather power, summoning 4 talismans to attack the enemy, dealing 260+348% ATK DMG in total.
-Empowered Return Unto Oblivion: The number of talismans is increased to 6, dealing 372+492% ATK DMG in total.
+[Empowered] Return Unto Oblivion: The number of talismans is increased to 6, dealing 372+492% ATK DMG in total.
         `,
         resonanceSkill: "Orchid Metamorphosis",
         resonanceSkillCooldown: "15 sec.",
@@ -504,7 +504,7 @@ This effect can trigger only once per use of Piercing Rain.
         supportSkillText: `
 Zayne wields his scepter and begins an incantation, granting you and himself Ward of Curses.
 Ward of Curses can absorb DMG up to 240% of its target's DEF.
-Empowered Ward of Curses: Zayne gains 1 stack of [Divine Prayer] and triggers [Eternal sin] at your location.
+[Empowered] Ward of Curses: Zayne gains 1 stack of [Divine Prayer] and triggers [Eternal sin] at your location.
         `,
         resonanceSkill: "Thorny Punishment",
         resonanceSkillCooldown: "15 sec.",
@@ -569,7 +569,7 @@ The team deals 8% more DMG. Every 6 seconds Foreseer gains 1 stack of [Divine Pr
         supportSkillImg: "/battle-icons/a2_skill_ys_2206_02.png",
         supportSkillText: `
 Zayne summons Snowfall at the center of enemy area, dealing AoE DMG equal to 208+275% ATK to surrounding enemies.
-Empowered Snowfall: Attack frequency of Snowfall increases.
+[Empowered] Snowfall: Attack frequency of Snowfall increases.
 Upon hitting target(s), Snowfall will freeze them for 4s.
         `,
         resonanceSkill: "Guardian of Snow",
@@ -602,7 +602,8 @@ When fighting alongside Zayne, you recover 0.4% HP every second, and your Energy
         supportSkillCooldown: "10 sec.",
         supportSkillImg: "/battle-icons/a2_skill_ys_2205_02.png",
         supportSkillText: `
-Zayne creates an ice spear that quickly stretches forward, dealing 626+835% AoE DMG along its path. Empowered Dawnfrost Scythe: The ice spear will explode after a short while, dealing an additional 54+72% ATK DMG.
+Zayne creates an ice spear that quickly stretches forward, dealing 626+835% AoE DMG along its path. 
+[Empowered] Dawnfrost Scythe: The ice spear will explode after a short while, dealing an additional 54+72% ATK DMG.
         `,
         resonanceSkill: "Ghostly Reverberation",
         resonanceSkillCooldown: "20 sec.",
@@ -639,7 +640,7 @@ When you and Zayne are granted [Reverberation] and defeat an enemy, recover 0.3 
         supportSkillText: `
 Zayne releases rime at your location healing the target and inflicting AoE DMG equal to 75+100% ATK to surrounding enemies.
 The healing potency of the rime is 121+161% of Zayne's ATK.
-Empowered Healing Rime: When the rime hits surrounding enemies, it will Freeze them for 4s.
+[Empowered] Healing Rime: When the rime hits surrounding enemies, it will Freeze them for 4s.
         `,
         resonanceSkill: "Icy Bolt",
         resonanceSkillCooldown: "15 sec.",
@@ -675,7 +676,7 @@ When attacking Frozen enemies with Zayne, deal 20% more DMG.
         supportSkillText: `
 Rafayel throws his Tidebreaker Trident at a target and then recalls it, dealing DMG equal to 360+192% ATK+761% DEF to enemies in range. During the skill, Rafayel becomes unstoppable throughout.
 When a Charged Attack empowered by [Sea God Mark] hits an enemy, it reduces the Support Skill cooldown by 1.5s. This effect can only be triggered once per attack.
-Empowered Tide Cleaver: Rafayel's Tidebreaker Trident is enhanced with lightning, increasing DMG to 468+249% ATK+989% DEF.
+[Empowered] Tide Cleaver: Rafayel's Tidebreaker Trident is enhanced with lightning, increasing DMG to 468+249% ATK+989% DEF.
         `,
         resonanceSkill: "Cerulean Verdict",
         resonanceSkillCooldown: "15 sec.",
@@ -694,7 +695,7 @@ You resonate with Rafayel's Evol, summoning tides and lightning to attack the en
         passiveSkillImg: "/battle-icons/a2_skill_ry_2507_01.png",
         passiveSkillText: `
 Upon entering the battle, Rafayel grants you [Sea God Mark]. When you perform a Charged Attack, it consumes [Sea God Mark] to empower that attack, increasing DMG by 50% and making you unstoppable throughout its duration. 8s after [Sea God Mark] has been consumed, Rafayel will grant [Sea God Mark] to you again. Using your Active Skill immediately refreshes [Sea God Mark].
-When Rafayel uses his Support Skill or Empowered Support Skill, he accumulates [Raging Tide]. When your Basic Attack or Charged Attack hits an enemy, you accumulate [Ripple Breath]. These effects can only be triggered once per attack. When both [Ripple Breath] and [Raging Tide] are fully charged, the skill [Ocean's Descent] is unlocked. Using it floods the battlefield, granting you [Divine Favor] and making you unstoppable throughout its duration. [Divine Favor] lasts for 11s.
+When Rafayel uses his Support Skill or [Empowered] Support Skill, he accumulates [Raging Tide]. When your Basic Attack or Charged Attack hits an enemy, you accumulate [Ripple Breath]. These effects can only be triggered once per attack. When both [Ripple Breath] and [Raging Tide] are fully charged, the skill [Ocean's Descent] is unlocked. Using it floods the battlefield, granting you [Divine Favor] and making you unstoppable throughout its duration. [Divine Favor] lasts for 11s.
 While [Divine Favor] is active, your Active Skill generates a [Lightning Crystal] when it hits an enemy. This effect can only be triggered once per skill use.
 While [Divine Favor] is active, your Dodge is empowered by waves, allowing you to activate [Lightning Crystals] along the path and deal DMG equal to 32+17% ATK+68% DEF. 
 [Lightning Crystal]: When activated, restores 0.3 Energy Charge, reduces Active Skill cooldown by 3.3s, and generates [Lightning Tide]. [Lightning Tide] deals DMG equal to 450+240% ATK+951% DEF and activates other nearby [Lightning Crystals]. When [Divine Favor] ends, all [Lightning Crystals] are immediately activated.
@@ -749,7 +750,7 @@ The team deals 8% more DMG. While [Divine Favor] is active, when your basic atta
         supportSkillImg: "/battle-icons/a2_skill_ry_2504_02.png",
         supportSkillText: `
 Rafayel comes to your side and summons a Sea Spirit in front of you to assist in combat.
-Empowered Tidal Summoning: Restores 10% [Faith] and temporarily increases DMG dealt by the Sea Spirit by 10%.
+[Empowered] Tidal Summoning: Restores 10% [Faith] and temporarily increases DMG dealt by the Sea Spirit by 10%.
 
 Sea Spirit: A marine creature summoned by Rafayel to aid you in combat. It attacks enemies with water and lasts for 10 seconds. The Sea Spirits can be upgraded with skills. 
 Level 1: Each attack deals DMG equal to 47+25% ATK+2.2% of Max HP.
@@ -822,7 +823,7 @@ The team deals 8% more DMG. [Surging Tides] restores 30% [Faith] for each enemy 
         supportSkillText: `
 Rafayel unleashes a series of attacks, ending with a ground attack that leaves 1 [Fishtail Beacon] for 10s.
 You can pick up the [Fishtail Beacon] to restore 2 [Potential]
-Empowered Eclipse Rend: Deals increased DMG equal to 306+408% ATK and [Burns] enemies.
+[Empowered] Eclipse Rend: Deals increased DMG equal to 306+408% ATK and [Burns] enemies.
 [Burn]: Deals 23+31% ATK DMG to the target for 5s.
         `,
         resonanceSkill: "Fantasia Shark",
@@ -894,7 +895,7 @@ The team deals 8% more DMG. Abysswalker's [Searing slash] deals 150% more DMG. W
         supportSkillImg: "/battle-icons/a2_skill_ry_2505_02.png",
         supportSkillText: `
 Rafayel forces the enemy into the air, then kicks them to the ground, dealing 194+258% ATK DMG and inflicting [Tinctus] on them.
-Empowered Swirling Colors: Rafayel inflicts 259+345% ATK additional DMG and 2 stacks of Tinctus on the enemy.
+[Empowered] Swirling Colors: Rafayel inflicts 259+345% ATK additional DMG and 2 stacks of Tinctus on the enemy.
         `,
         resonanceSkill: "Illuminating Strength",
         resonanceSkillCooldown: "15 sec.",
@@ -964,7 +965,7 @@ When you and Rafayel deal DMG, you will sing [Harmony] for Rafayel. After Harmon
         supportSkillText: `
 Rafayel steps back, using fire to create a Scarlet Shade.
 The Scarlet Shade will deal AoE DMG equal to 84+112% ATK and inflict Burn upon dissipating.
-Empowered Scarlet Shade: Rafayel will also leave 3 [Flame Lilies] at his location.
+[Empowered] Scarlet Shade: Rafayel will also leave 3 [Flame Lilies] at his location.
         `,
         resonanceSkill: "Scorching",
         resonanceSkillCooldown: "15 sec.",
@@ -1002,7 +1003,7 @@ Burn: Deals 20+26% ATK DMG every O.5s for 5s.
         supportSkillImg: "/battle-icons/a2_skill_yg_2304_02.png",
         supportSkillText: `
 Sylus releases magical power to pierce through enemies, dealing damage equal to 584+311% ATK+1244% DEF. On first hit, he also absorbs an extra 6 points of [Blood Essence].
-Crimson Break: Empowered: Sylus's staff is enhanced with fresh blood, dealing damage equal to 684+365% ATK+1446% DEF to enemies. This skill cannot be cast during [Crimson Bond].
+Crimson Break: [Empowered]: Sylus's staff is enhanced with fresh blood, dealing damage equal to 684+365% ATK+1446% DEF to enemies. This skill cannot be cast during [Crimson Bond].
 During the [Crimson Bond] state, Support Skill [Crimson Break] is replaced by Support Skill [Crimson Void].
 [Crimson Void]: Sylus swings his staff to summon blood pillars from the Underworld, dealing damage equal to 628+335% ATK+1327% DEF to enemies in a straight line. On hit, this also triggers [Rose Thorns], dealing AoE DMG equal to 675+360% ATK+1427% DEF. This effect can only trigger once per attack.
 [Crimson Void] cannot be cast manually. Sylus casts it automatically when [Bloodrose Seed] blooms.
@@ -1090,7 +1091,7 @@ When [Crimson Bond] ends, [Bloodrose Wreath] is removed.
         supportSkillImg: "/battle-icons/a2_skill_yg_2302_02.png",
         supportSkillText: `
 Sylus summons the Fiendish Claw to launch enemies into the air, dealing DMG equal to 508+271% ATK+24.4% of Max HP. You and Sylus recover 5% of Max HP.
-Fiendish Claw: Empowered: When Fiendish Claw lands, trigger an additional energy explosion. Deal total AoE DMG equal to 705+376% ATK+33.9% of Max HP to enemies.
+Fiendish Claw: [Empowered]: When Fiendish Claw lands, trigger an additional energy explosion. Deal total AoE DMG equal to 705+376% ATK+33.9% of Max HP to enemies.
         `,
         resonanceSkill: "Wrath Judgment",
         resonanceSkillCooldown: "15 sec.",
@@ -1165,7 +1166,7 @@ The team deals 8% more DMG. When using [Wrath Judgment: Greed], you and Sylus re
         supportSkillImg: "/battle-icons/a2_skill_yg_2301_02.png",
         supportSkillText: `
 Sylus releases Boundless Energy to deal 239+318% ATK DMG to the target. The target is then immobilized and pulled toward him.
-Empowered Conqueror's Confinement: As the enemy is pulled, Boundless Energy explodes and deals 72+95% ATK DMG to targets within the area.
+[Empowered] Conqueror's Confinement: As the enemy is pulled, Boundless Energy explodes and deals 72+95% ATK DMG to targets within the area.
         `,
         resonanceSkill: "Boundless Protection",
         resonanceSkillCooldown: "15 sec.",
@@ -1233,7 +1234,7 @@ The team deals 8% more DMG. When applying [Devour Mark] to an enemy that already
         supportSkillImg: "/battle-icons/a2_skill_yg_2303_02.png",
         supportSkillText: `
 Sylus jumps closer to the target and punches the ground to deal DMG equal to 228+304% ATK.
-Empowered Shattering Burst: Sylus jumps closer to the target and punches the ground. He infuses Dark Energy into the earth and makes it explode, dealing DMG equal to 321+429% ATK and creating a [Synchronous Force Field].
+[Empowered] Shattering Burst: Sylus jumps closer to the target and punches the ground. He infuses Dark Energy into the earth and makes it explode, dealing DMG equal to 321+429% ATK and creating a [Synchronous Force Field].
 [Synchronous Force Field]: Increases your and Sylus's ATK by 8% and [Synergy] recovery rate by 30% for 12s.
         `,
         resonanceSkill: "Shadowy Duo Strike",
@@ -1270,7 +1271,7 @@ After you stop dealing DMG for 3s. [Synergy] will start to decrease.
         supportSkillImg: "/battle-icons/support-skill.png",
         supportSkillText: `
 Caleb wields Netherseal and charges toward enemies, dealing DMG equal to 336+179% ATK+16.2% of Max HP and applying half a [Bingdi Lotus] to targets hit (prioritizing the missing half). Caleb is unstoppable throughout the skill. 
-Netherseal Slash: Empowered: Deals increased damage equal to 585+312% ATK+28.1% of Max HP.
+Netherseal Slash: [Empowered]: Deals increased damage equal to 585+312% ATK+28.1% of Max HP.
 During [Yin-Yang Union], [Netherseal Slash] becomes the Support Skill [Spectral Slash], and [Netherseal Slash: Empowered] cannot be triggered.
 [Spectral Slash]: Caleb wields Netherseal to slash enemies, dealing DMG equal to 296+158% ATK+14.2% of Max HP. Cooldown: 3.1s. If used while under [Yin-Yang Union] state, Netherseal tears open a [Yin-Yang Rift]. Caleb is unstoppable for the skill's duration.
         `,
@@ -1362,7 +1363,7 @@ DMG dealt by Ardent Oath [Fate Unforgotten] can trigger critical hits.
         supportSkillImg: "/battle-icons/a2_skill_fy_2402_02.png",
         supportSkillText: `
 Caleb creates an energy field centered on himself to attack enemies, dealing 461+615% ATK DMG in total.
-Empowered Nulledge Field: Increases the number of hits and damage dealt, dealing 685+913% ATK DMG in total.
+[Empowered] Nulledge Field: Increases the number of hits and damage dealt, dealing 685+913% ATK DMG in total.
         `,
         resonanceSkill: "Nulledge Chain",
         resonanceSkillCooldown: "15 sec.",
@@ -1442,7 +1443,7 @@ The team deals 8% more DMG. When entering [Ultimate Synced State], immediately r
         supportSkillImg: "/battle-icons/a2_skill_fy_2401_02.png",
         supportSkillText: `
 Caleb dashes to the enemy, leaps upward, and fires a Particle Beam at the target, dealing DMG equal to 284+151% ATK+599% DEF and recovers 5 [Firepower].
-Empowered Particle Beam: Increases DMG to 392+209% ATK+828% DEF.        
+[Empowered] Particle Beam: Increases DMG to 392+209% ATK+828% DEF.        
         `,
         resonanceSkill: "Deep Strike",
         resonanceSkillCooldown: "none",
@@ -1523,7 +1524,7 @@ The team deals 8% more DMG. You and Caleb deal 5% increased DMG to enemies with 
         supportSkillImg: "/battle-icons/a2_skill_fy_2403_02.png",
         supportSkillText: `
 Caleb uses Evol to fire multiple rounds into the air, guiding them to strike enemies and dealing 285+381% ATK AoE DMG.
-Empowered Fuse: Increases damage to 318+423% ATK DMG and grants you [Directed Defense].
+[Empowered] Fuse: Increases damage to 318+423% ATK DMG and grants you [Directed Defense].
         `,
         resonanceSkill: "Suppressing Fire",
         resonanceSkillCooldown: "15 sec.",

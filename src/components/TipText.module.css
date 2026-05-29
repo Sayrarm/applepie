@@ -1,6 +1,6 @@
-/* styles/glossary.css */
+
 .glossaryText {
-    line-height: 1.4;
+    line-height: 1.6;
     font-size: 14px;
 }
 
@@ -35,6 +35,20 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     white-space: normal;
     word-wrap: break-word;
+}
+
+.glossaryTooltipTitle {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 6px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--orange);
+}
+
+.glossaryTooltipText {
+    font-size: 12px;
+    line-height: 1.4;
 }
 
 /* Для мобильных устройств */

@@ -1,4 +1,8 @@
 const glossary = {
+    "Empowered": {
+        title: "Empowered",
+        description: "When dodge are success, Support Skills can be instantly restored and deal more damage according to the description of the Support Skill",
+    },
     "Protocore DMG": {
         title: "Protocore DMG",
         description: "Deals damage to protocore shield of enemy",
@@ -37,7 +41,7 @@ const glossary = {
     },
     "Netherseal Slash: Empowered": {
         title: "Netherseal Slash: Empowered",
-        description: "(when dodge are success) Deals increased damage equal to 585+312% ATK+28.1% of Max HP.",
+        description: "Caleb's Empowered Support Skill.",
     },
     "Spectral Slash": {
         title: "Spectral Slash",
@@ -49,7 +53,7 @@ const glossary = {
     },
     "Bingdi Lotus": {
         title: "Bingdi Lotus",
-        description: "[Bingdi Lotus]: A special mark you and Caleb apply to enemies. Consists of two halves: [Bingdi Lotus: Yang] and [Bingdi Lotus: Yin]. When an enemy has both [Bingdi Lotus: Yin] and [Bingdi Lotus: Yang], the Bingdi Lotus blooms, dealing DMG.",
+        description: "A special mark you and Caleb apply to enemies. Consists of two halves: [Bingdi Lotus: Yang] and [Bingdi Lotus: Yin]. When an enemy has both [Bingdi Lotus: Yin] and [Bingdi Lotus: Yang], the Bingdi Lotus blooms, dealing DMG.",
     },
     "Bingdi Lotus: Yang": {
         title: "Bingdi Lotus: Yang",
@@ -108,11 +112,11 @@ const glossary = {
         description: "A battle resource that can be obtained when fighting alongside Caleb. When it reaches the limit, you can use [Deep Strike].",
     },
     "Focus": {
-        title: "Firepower",
+        title: "Focus",
         description: "A special mark gained through specific attacks while inside [Battlefront]. It increases DMG dealt by Resonance Skills.",
     },
     "Ground Breach": {
-        title: "Firepower",
+        title: "Ground Breach",
         description: "A Resonance Skill that you and Caleb can use when inside [Battlefront].",
     },
     "Zerom": {
@@ -174,6 +178,46 @@ const glossary = {
     "Suppressing Fire": {
         title: "Suppressing Fire",
         description: "Your Resonance Skill with Caleb.",
+    },
+    "Darknight Reign": {
+        title: "Darknight Reign",
+        description: "An empowered state you and Xavier enter after casting [Darknight Coronation]",
+    },
+    "Last Words": {
+        title: "Last Words",
+        description: "Battle resources accumulated when not in [Darknight Reign] state. Using Active Skills consumes [Last Words] to reduce [Darknight Coronation]'s cooldown and grants you [Lumenflora Stamen].",
+    },
+    "Lumenflora": {
+        title: "Lumenflora",
+        description: "Obtained through Support Skills while [Darknight Reign] is active. Deals AoE DMG",
+    },
+    "Pilgrim's Prayer": {
+        title: "Pilgrim's Prayer",
+        description: "An empowered state that increases the accumulation rate of [Last Words]",
+    },
+    "Radiant Ripples": {
+        title: "Radiant Ripples",
+        description: "Created through [The Chosen One's Blessing]. Deals AoE DMG.",
+    },
+    "Royal Seal": {
+        title: "Royal Seal",
+        description: "Xavier's Support Skill",
+    },
+    "Darknight Coronation": {
+        title: "Darknight Coronation",
+        description: "Additional skill with cooldown 30s. After casting it, you and Xavier enter the [Darknight Reign] state for 9s",
+    },
+    "Lumenflora Stamen": {
+        title: "Lumenflora Stamen",
+        description: "Additional skill with cooldown 30s. After casting it, you and Xavier enter the [Darknight Reign] state for 9s",
+    },
+    "The Chosen One's Blessing": {
+        title: "The Chosen One's Blessing",
+        description: "Your Active Skill during [Darknight Reign]",
+    },
+    "Empowered Shattering Burst": {
+        title: "Empowered Shattering Burst",
+        description: "Sylus's Empowered Support Skill.",
     },
 
 };

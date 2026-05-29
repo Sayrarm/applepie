@@ -6,6 +6,7 @@ import styles from './TipText.module.css'
 const TipText = ({ text }) => {
     const [tooltip, setTooltip] = useState({
         visible: false,
+        title: '',
         text: '',
         x: 0,
         y: 0
@@ -45,6 +46,7 @@ const TipText = ({ text }) => {
                 type: 'term',
                 key: termKey,
                 displayText: match[0],
+                title: termData?.title || termKey,
                 description: termData?.description || `There is no description for "${termKey}"`
             });
 
@@ -62,7 +64,7 @@ const TipText = ({ text }) => {
     };
 
     // Обработчик для десктопа (hover)
-    const handleMouseEnter = (event, description) => {
+    const handleMouseEnter = (event, title, description) => {
         if (isMobile()) return; // На мобилке игнорируем hover
 
         if (timeoutRef.current) {
@@ -71,6 +73,7 @@ const TipText = ({ text }) => {
 
         setTooltip({
             visible: true,
+            title: title,
             text: description,
             x: event.clientX,
             y: event.clientY
@@ -101,7 +104,7 @@ const TipText = ({ text }) => {
     };
 
     // Обработчик для мобильных устройств (клик)
-    const handleClick = (event, description, termKey) => {
+    const handleClick = (event, title, description, termKey) => {
         if (!isMobile()) return; // Только для мобилок
 
         event.stopPropagation(); // Предотвращаем всплытие
@@ -121,6 +124,7 @@ const TipText = ({ text }) => {
 
         setTooltip({
             visible: true,
+            title: title,
             text: description,
             x: x,
             y: y
@@ -242,10 +246,10 @@ const TipText = ({ text }) => {
                             className={styles.glossaryTerm}
                             data-term={part.key}
                             // Десктопные события
-                            onMouseEnter={(e) => handleMouseEnter(e, part.description)}
+                            onMouseEnter={(e) => handleMouseEnter(e, part.title, part.description)}
                             onMouseLeave={handleMouseLeave}
                             // Мобильные события
-                            onClick={(e) => handleClick(e, part.description, part.key)}
+                            onClick={(e) => handleClick(e, part.title, part.description, part.key)}
                             // Добавляем атрибуты для доступности
                             role="button"
                             tabIndex={mobile ? 0 : -1}
@@ -271,7 +275,16 @@ const TipText = ({ text }) => {
                         zIndex: 9999
                     }}
                 >
-                    {tooltip.text}
+                    {/* Заголовок */}
+                    {tooltip.title && (
+                        <div className={styles.glossaryTooltipTitle}>
+                            {tooltip.title}
+                        </div>
+                    )}
+                    {/* Описание */}
+                    <div className={styles.glossaryTooltipText}>
+                        {tooltip.text}
+                    </div>
                     {mobile && (
                         <button
                             onClick={() => {
