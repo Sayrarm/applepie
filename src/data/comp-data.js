@@ -2,53 +2,158 @@ export const compData = [
 
     {
         id: 11,
+        link: "kod",
         img: "/companions/xavier-kod.png",
+        imgWeapon: "/companions/final-resound.png",
         companionName: "Xavier: King of Darknight",
-        weaponName: "Final Resound",
         speciality: "DPS | Burst | Single-target",
+        weaponName: "Final Resound",
+        specialityMC: "DPS | AoE | Empower",
         supportSkill: "Royal Seal",
+        supportSkillCooldown: "15 sec.",
+        supportSkillImg: "/battle-icons/a2_skill_st_2102_02.png",
+        supportSkillText: `
+Xavier pierces enemies with his sword, dealing DMG equal to 364+194% ATK+17% of Max HP in total and granting you 1 stack of [Last Words]. Xavier becomes unstoppable for the entire duration. When you enter the [Darknight Reign state or when [Darknight Reign] ends, [Royal Seal]'s cooldown will end in 5s.
+Empowered Royal Seal: Xavier strikes with his sword while detonating radiant light, sweeping up surrounding Lumenflora petals to deal additional DMG equal to 216+115% ATK+10% of Max HP. Empowered Support Skills cannot be triggered during [Darknight Reign].
+        `,
         resonanceSkill: "Lumenflora Grace",
+        resonanceSkillCooldown: "15 sec.",
+        resonanceSkillCost: "2 energy charges",
+        resonanceSkillImg: "/battle-icons/a2_skill_st_2102_03.png",
+        resonanceSkillText: `
+Xavier leaps into the air with you, gathering enemies within the radiant light, then strikes down toward the ground with his sword, blooming a sea of Lumenflora that deals DMG equal to 1767+942% ATK+84% of Max HP in total and 1 point of [Protocore DMG].
+        `,
         ardentOath: "Royal Decree",
+        ardentOathCost: "100% Oath Energy",
+        ardentOathImg: "/battle-icons/a2_skill_st_2102_04.png",
+        ardentOathText: `
+Xavier thrusts his sword into the Sinders, summoning a sea of Lumenflora and mirages of Sindersfell. You bless him with resonance as he wields a giant sword to strike enemies, dealing DMG equal to 1800+960% ATK+86% of Max HP in total.
+In the dim twilight where Lumenflora petals dance, your story ends here, but your story begins anew.
+        `,
         passiveSkill: "Coronation",
+        passiveSkillImg: "/battle-icons/a2_skill_st_2102_01.png",
+        passiveSkillText: `
+Upon entering battle, you gain an additional skill [Darknight Coronation]. After casting it, you and Xavier enter the [Darknight Reign] state for 9s. [Darknight Coronation] has a(n) 30s cooldown.
+When not in the [Darknight Reign] state, you accumulate [Last Words] over time, up to 3 stacks. Casting your Active Skill consumes 1 stack of [Last Words], reducing [Darknight Coronation] cooldown by 4s and granting 1 [Lumenflora Stamen]. [Lumenflora Stamens] provide special effects during [Darknight Reign]. You can hold up to 3 at once.
+During [Darknight Reign], Xavier's attacks are empowered, and his Support Skill [Royal Seal] will bloom additional [Lumenflora], dealing AoE DMG equal to 720+384% ATK+35% of Max HP.
+During [Darknight Reign], your Active Skill is replaced with Active Skill [The Chosen One's Blessing]. Casting [The Chosen One's Blessing] creates [Radiant Ripples] beneath your feet, dealing AoE DMG equal to 520+277% ATK+25% of Max HP. You're invincible while using [The Chosen One's Blessing].
+[The Chosen One's Blessing] has an initial 13s cooldown and can be cast up to 3 times during the duration of [Darknight Reign]. Upon entering the [Darknight Reign] state, each [Lumenflora Stamen] you possess reduces [The Chosen One's Blessing]'s initial cooldown by 3.4s.
+        `,
         basicAttack: "Prayer",
+        basicAttackImg: "/battle-icons/a2_skill_pl_1903_01_ST_2102.png",
+        basicAttackText: `
+Wield Final Resound to perform up to four consecutive attacks.
+First Strike: 98+52% ATK+4.7% of Max HP
+Second Strike: 88+46% ATK+4.2% of Max HP 
+Third Strike:122+65% ATK+5.9% of Max HP 
+Fourth Strike:147+78% ATK+7.1% of Max HP
+
+Charged Attack shoots forth a ray of radiant light, dealing DMG equal to 165+88% ATK+7.9% of Max HP.
+        `,
         activeSkill: "Final Elegy",
+        activeSkillCooldown: "12 sec.",
+        activeSkillCost: "1 energy charge",
+        activeSkillImg: "/battle-icons/a2_skill_pl_1903_02_ST_2102.png",
+        activeSkillText: `
+Wield Final Resound and sing an elegy, dealing AoE DMG equal to 351+187% ATK+16.8% of Max HP to enemies. Within 2.7s of casting your Active Skill, if you have at least 1 stack of [Last Words], you may cast your Active Skill again with enhanced damage, dealing AoE DMG equal to 376+200% ATK+18% of Max HP.
+        `,
         passiveMCSkill: "Procession",
-        supportText: ``,
-        resonanceText: ``,
-        ardentText: ``,
-        passiveText: ``,
-        basicText: ``,
-        activeText: ``,
-        passiveMCText: ``,
-        eidolon0: ``,
-        eidolon1: ``,
-        eidolon2: ``,
-        eidolon3: ``,
+        passiveMCSkillImg: "/battle-icons/a2_skill_pl_1903_03_ST_2102.png",
+        passiveMCText: `
+Hitting an enemy with the Active Skill for the first time recovers 0.45 Energy Charges. While casting your Active Skill, you become unstoppable and your damage taken is reduced by 10%. During [Darknight Reign], damage dealt is increased by 8%, and DMG Boost to Weakened is increased by 8%.
+        `,
+        eidolon0: `
+The team deals 8% more DMG and takes8%less DMG.
+The first hit of each Active Skill reduces Support Skill cooldown by 5s.
+When not in [Darknight Reign] hitting enemies with Charged Attacks grants [Pilgrim's Prayer], increasing the accumulation rate of [Last Words] for 10s.Gaining it again refreshes duration.
+        `,
+        eidolon1: `
+Increases Ardent Oath charge by 20%.
+When you create [Radiant Ripples], Support Skill cooldown is refreshed; [Radiant Ripples] damage increases by 40% When not in the [Darknight Reign] state, casting Resonance Skills grants you [Pilgrim's Prayer]. While [Darknight Reign] is active, you become unstoppable.
+        `,
+        eidolon2: `
+Energy Charge limit is raised by 1.
+While [Darknight Reign] is active, you and Xavier ignore 12.5% of enemy DEF and restore HP equal to2% of Max HP per second.
+        `,
+        eidolon3: `
+The team deals 8% more DMG.
+When you create [Radiant Ripples], Xavier will also create [Radiant Ripples].
+While [Darknight Reign] is active, each time [Radiant Ripples] undulate, [Lumenflora]'s damage increases by 6%, up to 36%. This damage boost effect is cleared when [Darknight Reign] ends.
+        `,
     },
     {
         id: 12,
+        link: "lumiere",
         img: "/companions/xavier-lumiere.png",
+        imgWeapon: "/companions/moonchaser.png",
         companionName: "Xavier: Lumiere",
-        weaponName: "Moonchaser",
         speciality: "DPS | Burst | Control",
+        weaponName: "Moonchaser",
+        specialityMC: "DPS | Sustained | Single-target",
         supportSkill: "Lunar Vortex",
+        supportSkillCooldown: "20 sec.",
+        supportSkillImg: "/battle-icons/a2_skill_st_2106_02.png",
+        supportSkillText: `
+Xavier summons moonlight into his sword and stabs it into the ground, drawing enemies to the center of the moonlight, dealing DoT damage while reducing their ATK by 30% and speed by 50% for 5 second(s).
+After the moonlight disperses, the ATK and SPD reduction last for 2.5 more second(s).
+Empowered Lunar Vortex: Several beams of [Moonlight] will randomly descend within the area, dealing DMG to enemies.
+        `,
         resonanceSkill: "Lunar Radiance",
+        resonanceSkillCooldown: "15 sec.",
+        resonanceSkillCost: "2 energy charges",
+        resonanceSkillImg: "/battle-icons/a2_skill_st_2106_03.png",
+        resonanceSkillText: `
+Xavier teleports to the target enemy for multiple flash attacks, dealing DMG equal to 631+336% ATK+1333% DEF and leaving a Lunar Arclight. You fire two shots at the target before detonating the Arclight, causing all enemies in the blast zone to take 1 point [Protocore DMG] and enter Moonstruck for 5 seconds. In total, you deal 686 + 366% ATK +1450% DEF as damage.
+Moonstruck: Reduces ATK by 45%.
+        `,
         ardentOath: "Moonlit Heart",
+        ardentOathCost: "100% Oath Energy",
+        ardentOathImg: "/battle-icons/a2_skill_st_2106_04.png",
+        ardentOathText: `
+You resonate with Xavier's Evol and jointly attack the enemy, tearing apart time and space, shooting countless rays of light at the enemy, and dealing 1440+780% ATK +3060% DEF DMG.
+The shining moonlight of those sealed memories is the light that always leads him to you.
+        `,
         passiveSkill: "Moonfall",
+        passiveSkillImg: "/battle-icons/a2_skill_st_2106_01.png",
+        passiveSkillText: `
+When you and Xavier release basic attacks and skills, a stack of [Phasing Moon] is added upon hitting the enemy. In particular,1 stack of [Phasing Moon] is added every time Xavier scores a hit. After reaching 4 stacks of [Phasing Moon], a beam of Moonlight will fall on the enemy, dealing 92+49% ATK+194% DEF DMG within a small area, and reducing the movement speed of enemies within the area by 25%.
+        `,
         basicAttack: "Moonburn",
+        basicAttackImg: "/battle-icons/a2_skill_pl_1901_02_ST_2106.png",
+        basicAttackText: `
+Wield dual guns for a combo up to 5 hits. The final Basic Attack inflicts multiple instances of DMG. 
+First Strike:55+29% ATK+117% DEF.
+Second Strike: 50+26% ATK+105% DEF 
+Third Strike: 66+35% ATK+140% DEF 
+Fourth Strike:72+38% ATK+152% DEF 
+Fifth Strike:77+41% ATK+163% DEF
+
+Charged Attack will knock back nearby enemies, dealing AoE DMG equal to 150+80% ATK+317% DEF.
+        `,
         activeSkill: "Moontide",
+        activeSkillCooldown: "10 sec.",
+        activeSkillCost: "1 energy charge",
+        activeSkillImg: "/battle-icons/a2_skill_pl_1901_03_ST_2106.png",
+        activeSkillText: `
+Attack the target with a 4-hit combo, dealing DMG equal to 403+215% ATK +852% DEF.
+        `,
         passiveMCSkill: "Moonbeam",
-        supportText: ``,
-        resonanceText: ``,
-        ardentText: ``,
-        passiveText: ``,
-        basicText: ``,
-        activeText: ``,
-        passiveMCText: ``,
-        eidolon0: ``,
-        eidolon1: ``,
-        eidolon2: ``,
-        eidolon3: ``,
+        passiveMCSkillImg: "/battle-icons/a2_skill_pl_1901_01_ST_2106.png",
+        passiveMCText: `
+[Moontide] triggers [Moonfall] with each successful hit.
+        `,
+        eidolon0: `
+The team deals 8% more DMG and takes 8% less DMG. The enemy's [Moonstruck] state duration is extended by 3s.        
+        `,
+        eidolon1: `
+Increases Ardent Oath charge by 20%. [Moonlight] deals 25% more DMG and applies 1 stack of [Phasing Moon] to the target.
+        `,
+        eidolon2: `
+Energy Charge limit is raised by 1. When [Moonlight] is triggered, your Active Skill cooldown is reduced by 0.5s and a small amount of Energy Charge is restored.
+        `,
+        eidolon3: `
+The team deals 8% more DMG. When your Active Skills and Charged Attacks hit the first target inflicted with [Moonstruck], directly trigger [Moonlight]. When Moonlight scores a critical hit, it deals an additional 3O% CRIT DMG.
+        `,
     },
     {
         id: 13,
