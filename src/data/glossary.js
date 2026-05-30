@@ -367,6 +367,38 @@ const glossary = {
         title: "Reverberation",
         description: "A status effect gained by you and Zayne after casting a Resonance Skill. Provides you both with various empowerment effects.",
     },
+    "Divine Favor": {
+        title: "Divine Favor",
+        description: "An empowered state gained by activating [Ocean's Descent] when both [Ripple Breath] and [Raging Tide] are full.",
+    },
+    "Lightning Tide": {
+        title: "Lightning Tide",
+        description: "Generated when a [Lightning Crystal] is activated. It deals DMG, activates other [Lightning Crystals] within range, and restores Energy Charge for you.",
+    },
+    "Sea God Mark": {
+        title: "Sea God Mark",
+        description: "A buff granted by Rafayel that enhances your next Charged Attack's DMG and makes you unstoppable for the entire duration of the attack. A while after [Sea God Mark] disappears, Rafayel will grant you [Sea God Mark].",
+    },
+    "Lightning Crystal": {
+        title: "Lightning Crystal",
+        description: "When activated, restores 0.3 Energy Charge, reduces Active Skill cooldown by 3.3s, and generates [Lightning Tide]",
+    },
+    "Lightning Crystals": {
+        title: "Lightning Crystal",
+        description: "When activated, restores 0.3 Energy Charge, reduces Active Skill cooldown by 3.3s, and generates [Lightning Tide]",
+    },
+    "Raging Tide": {
+        title: "Raging Tide",
+        description: "",
+    },
+    "Ripple Breath": {
+        title: "Ripple Breath",
+        description: "",
+    },
+    "Ocean's Descent": {
+        title: "Ocean's Descent",
+        description: "",
+    },
 
 };
 
