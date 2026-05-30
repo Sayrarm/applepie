@@ -263,6 +263,74 @@ const glossary = {
         title: "Radiant Blade",
         description: "When active, it attacks enemies within a large area and deals AoE DMG equal to 641+854% ATK and 1 [Protocore DMG]. A [Luminescent Field] is also deployed providing allied units within [Luminescent Field] a 10% ATK bonus.",
     },
+    "Deity of Niava": {
+        title: "Deity of Niava",
+        description: "An empowered state you and Zayne enter after casting [Bind Gaze].",
+    },
+    "Divine Sever": {
+        title: "Divine Sever",
+        description: "A skill that can be used during the [Deity of Niava] state.",
+    },
+    "Golden Arrow": {
+        title: "Golden Arrow",
+        description: "Arrows that Zayne loads for you. They can be fired with a Charged Attack to apply [Arrow Marks] to enemies.",
+    },
+    "Golden Arrows": {
+        title: "Golden Arrow",
+        description: "Arrows that Zayne loads for you. They can be fired with a Charged Attack to apply [Arrow Marks] to enemies.",
+    },
+    "Soul Rift": {
+        title: "Soul Rift",
+        description: "A special status applied to enemies by Zayne while awakened as [Deity of Niava]. Shattering [Soul Rifts] allows you to use [Divine Sever].",
+    },
+    "Soul Rifts": {
+        title: "Soul Rift",
+        description: "A special status applied to enemies by Zayne while awakened as [Deity of Niava]. Shattering [Soul Rifts] allows you to use [Divine Sever].",
+    },
+    "Terminus Arrow": {
+        title: "Terminus Arrow",
+        description: "A follow-up attack triggered when [Arrow Mark] is fully stacked.",
+    },
+    "Endbringer Arrow": {
+        title: "Endbringer Arrow",
+        description: "Zayne’s Support Skill",
+    },
+    "Divine Grip": {
+        title: "Divine Grip",
+        description: "your Weapon",
+    },
+    "Rupture Mark": {
+        title: "Rupture Mark",
+        description: "Deals DMG equal to 83+44% ATK+4% of Max HP every 1s for 2s.",
+    },
+    "Divine Slash": {
+        title: "Divine Slash",
+        description: "Your Passive Skill",
+    },
+    "Divine Shackles": {
+        title: "Divine Shackles",
+        description: "",
+    },
+    "Remnant Feather": {
+        title: "Remnant Feather",
+        description: "",
+    },
+    "Remnant Feathers": {
+        title: "Remnant Feather",
+        description: "",
+    },
+    "Arrow Mark": {
+        title: "Arrow Mark",
+        description: "",
+    },
+    "Bind Gaze": {
+        title: "Bind Gaze",
+        description: "",
+    },
+    "Divine Judgment": {
+        title: "Divine Judgment",
+        description: "",
+    },
 
 };
 
