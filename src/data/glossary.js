@@ -1,7 +1,7 @@
 const glossary = {
     "Empowered": {
         title: "Empowered Support Skill",
-        description: "When dodge are success, Support Skill can be instantly restored and additional improvements can be added according to the description of the Support Skill.",
+        description: "When dodge is successful, Support Skill can be instantly restored and additional improvements can be added according to the description of the Support Skill.",
     },
     "Protocore DMG": {
         title: "Protocore DMG",
@@ -34,6 +34,14 @@ const glossary = {
     "Fate Unforgotten": {
         title: "Fate Unforgotten",
         description: "Ardent Oath",
+    },
+    "Dustbreak": {
+        title: "Dustbreak",
+        description: "QTE (Quick Time Event) during Ardent Oath 'Fate Unforgotten'",
+    },
+    "Dustbreaks": {
+        title: "Dustbreak",
+        description: "QTE (Quick Time Event) during Ardent Oath 'Fate Unforgotten'",
     },
     "Azure Ballad": {
         title: "Azure Ballad",
@@ -211,6 +219,10 @@ const glossary = {
         title: "Lumenflora Stamen",
         description: "Additional skill with cooldown 30s. After casting it, you and Xavier enter the [Darknight Reign] state for 9s",
     },
+    "Lumenflora Stamens": {
+        title: "Lumenflora Stamen",
+        description: "Additional skill with cooldown 30s. After casting it, you and Xavier enter the [Darknight Reign] state for 9s",
+    },
     "The Chosen One's Blessing": {
         title: "The Chosen One's Blessing",
         description: "Your Active Skill during [Darknight Reign]",
@@ -238,6 +250,18 @@ const glossary = {
     "Phasing Moon": {
         title: "Phasing Moon",
         description: "A special mark applied to enemies hit by specific attacks from you and Xavier. When fully stacked, it will summon [Moonlight].",
+    },
+    "Luminescent Field": {
+        title: "Luminescent Field",
+        description: "A field created by [Radiant Blade]. Allies within the field gain increased ATK.",
+    },
+    "Luminescent Resonance": {
+        title: "Luminescent Resonance",
+        description: "AoE DMG dealt when hitting enemies with an Active Skill while within a [Luminescent Field].",
+    },
+    "Radiant Blade": {
+        title: "Radiant Blade",
+        description: "When active, it attacks enemies within a large area and deals AoE DMG equal to 641+854% ATK and 1 [Protocore DMG]. A [Luminescent Field] is also deployed providing allied units within [Luminescent Field] a 10% ATK bonus.",
     },
 
 };

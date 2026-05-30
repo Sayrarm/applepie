@@ -33,7 +33,7 @@ Xavier thrusts his sword into the Sinders, summoning a sea of Lumenflora and mir
         passiveSkillImg: "/battle-icons/a2_skill_st_2102_01.png",
         passiveSkillText: `
 Upon entering battle, you gain an additional skill [Darknight Coronation]. After casting it, you and Xavier enter the [Darknight Reign] state for 9s. [Darknight Coronation] has a(n) 30s cooldown.
-When not in the [Darknight Reign] state, you accumulate [Last Words] over time, up to 3 stacks. Casting your Active Skill consumes 1 stack of [Last Words], reducing [Darknight Coronation] cooldown by 4s and granting 1 [Lumenflora Stamen]. [Lumenflora Stamen]'s provide special effects during [Darknight Reign]. You can hold up to 3 at once.
+When not in the [Darknight Reign] state, you accumulate [Last Words] over time, up to 3 stacks. Casting your Active Skill consumes 1 stack of [Last Words], reducing [Darknight Coronation] cooldown by 4s and granting 1 [Lumenflora Stamen]. [Lumenflora Stamens] provide special effects during [Darknight Reign]. You can hold up to 3 at once.
 During [Darknight Reign], Xavier's attacks are empowered, and his Support Skill [Royal Seal] will bloom additional [Lumenflora], dealing AoE DMG equal to 720+384% ATK+35% of Max HP.
 During [Darknight Reign], your Active Skill is replaced with Active Skill [The Chosen One's Blessing]. Casting [The Chosen One's Blessing] creates [Radiant Ripples] beneath your feet, dealing AoE DMG equal to 520+277% ATK+25% of Max HP. You're invincible while using [The Chosen One's Blessing].
 [The Chosen One's Blessing] has an initial 13s cooldown and can be cast up to 3 times during the duration of [Darknight Reign]. Upon entering the [Darknight Reign] state, each [Lumenflora Stamen] you possess reduces [The Chosen One's Blessing]'s initial cooldown by 3.4s.
@@ -176,7 +176,7 @@ Xavier charges his sword and attacks multiple times, dealing 300+400% ATK DMG in
         resonanceSkillImg: "/battle-icons/a2_skill_st_2103_03.png",
         resonanceSkillText: `
 Wield a sword and resonate with light to summon a Radiant Blade.
-Radiant Blade: When active, it attacks enemies within a large area and deals AoE DMG equal to 641+854% ATK and 1 [Protocore DMG]. A Luminescent Field is also deployed providing allied units within Luminescent Field a 10% ATK bonus.
+Radiant Blade: When active, it attacks enemies within a large area and deals AoE DMG equal to 641+854% ATK and 1 [Protocore DMG]. A [Luminescent Field] is also deployed providing allied units within [Luminescent Field] a 10% ATK bonus.
 If Radiant Blade breaks the enemy's shield, extra DMG of the team will boost by 20%, lasting for 10s.
         `,
         ardentOath: "Galactic Pulse",
@@ -207,18 +207,18 @@ Charged Attack will unleash a single forward slash, inflicting AoE DMG equal to 
         activeSkillCost: "1 energy charge",
         activeSkillImg: "/battle-icons/a2_skill_pl_1904_03_ST_2103.png",
         activeSkillText: `
-[Luminescent Resonance] recovers 0.35 [Energy Charge] for each enemy hit.
+After a brief charge-up, lunge forward and unleash a slashing attack on the enemies ahead, dealing AoE DMG of 341+455% ATK.
         `,
         passiveMCSkill: "Song of Light",
         passiveMCSkillImg: "/battle-icons/a2_skill_pl_1904_01_ST_2103.png",
         passiveMCText: `
-After a brief charge-up, lunge forward and unleash a slashing attack on the enemies ahead, dealing AoE DMG of 341+455% ATK.
+[Luminescent Resonance] recovers 0.35 [Energy Charge] for each enemy hit.
         `,
         eidolon0: `
 The team deals 8% more DMG and takes 8% less DMG. When fighting together with Lightseeker, your Active Skill DMG is increased by 25%.        
         `,
         eidolon1: `
-Increases Ardent Oath charge by 20%. When fighting alongside Lightseeker, each time [Luminescent Resonance] triggers, Radiant Blade's duration is extended by 2s.
+Increases Ardent Oath charge by 20%. When fighting alongside Lightseeker, each time [Luminescent Resonance] triggers, [Radiant Blade]'s duration is extended by 2s.
         `,
         eidolon2: `
 Energy Charge limit is raised by 1. When you and Lightseeker are in [Luminescent Field], take 10% less DMG and gain increased Interruption Resistance.
@@ -343,8 +343,8 @@ Your and Xavier's CRIT Rate increases by 7%.
         supportSkillText: `
 Zayne fires a piercing arrow forward, dealing DMG equal to 98+52% ATK+4.7% of Max HP. The piercing arrow explodes upon hitting the first enemy, dealing total DMG equal to 272+143% ATK+13.1% of Max HP.
 [Empowered] Endbringer Arrow: Explosion damage is increased, dealing total DMG equal to 368+195% ATK+17.7% of Max HP. This skill cannot be triggered during the [Deity of Niava] state.
-During the Deity of Niava state, [Endbringer Arrow] will be replaced by [Divine Sever]
-[Divine Sever]: Fires multiple beams of energy that sever connections with the world, dealing total DMG equal to 852+456% ATK+40.8% of Max HP. This damage counts as Charged Attack damage. [Divine Sever] cannot be cast directly. You can refresh this skill by shattering an enemy's[Soul Rift].This skill is not considered a Support Skill and cannot be cast consecutively within a short period of time.
+During the [Deity of Niava] state, [Endbringer Arrow] will be replaced by [Divine Sever]
+[Divine Sever]: Fires multiple beams of energy that sever connections with the world, dealing total DMG equal to 852+456% ATK+40.8% of Max HP. This damage counts as Charged Attack damage. [Divine Sever] cannot be cast directly. You can refresh this skill by shattering an enemy's [Soul Rift].This skill is not considered a Support Skill and cannot be cast consecutively within a short period of time.
         `,
         resonanceSkill: "Divinity Order",
         resonanceSkillCooldown: "15 sec.",
@@ -414,7 +414,7 @@ When fighting alongside God of Annihilation, your Active Skill DMG is increased 
         `,
         eidolon3: `
 The team deals 8% more DMG.
-Enemies hit by [Terminus Arrow or [Divine Sever] take 30% more DMG for 4s. When you load [Golden Arrows] with Basic Attacks, you will gain 1 additional [Golden Arrow].
+Enemies hit by [Terminus Arrow] or [Divine Sever] take 30% more DMG for 4s. When you load [Golden Arrows] with Basic Attacks, you will gain 1 additional [Golden Arrow].
         `,
     },
     {
@@ -1288,7 +1288,7 @@ When casting [Soulguide Bell], [Yin-Yang Cycle]'s cooldown is reduced by 3s.
         ardentOathImg: "/battle-icons/ardent-oath.png",
         ardentOathText: `
 As you embrace, a lotus from the nether realm blooms to its fading splendor. Caleb draws upon the power of the nether realm to resonate with you, dealing total damage equal to 1800+960% ATK+86% of Max HP.
-During [Fate Unforgotten], you can perform [Dustbreak] 3 times. Each [Dustbreak] triggered at the correct timing restores 5% of Max HP to both you and Caleb after the skill ends. If all 3 [Dustbreak]'s are triggered at the correct timing, you both gain 20% DMG Reduction for 15s after the skill ends.
+During [Fate Unforgotten], you can perform [Dustbreak] 3 times. Each [Dustbreak] triggered at the correct timing restores 5% of Max HP to both you and Caleb after the skill ends. If all 3 [Dustbreaks] are triggered at the correct timing, you both gain 20% DMG Reduction for 15s after the skill ends.
 When [Yin-Yang Rift] appears, 2% Oath Energy is restored. This effect is not affected by Oath Recovery Boost.
         `,
         passiveSkill: "Yin-Yang Crossing",
@@ -1543,12 +1543,9 @@ Your Evol resonates with Caleb's as you two launch a joint attack against the en
         passiveSkillImg: "/battle-icons/a2_skill_fy_2403_01.png",
         passiveSkillText: `
 Hitting enemies with Active Skills [Fuse], or [Suppressing Fire] applies [Target Mark]. [Target Mark] lasts for 8s.
-[Target Mark]:
-When an enemy inflicted with [Target Mark] receives another mark or is hit by the final strike of your basic attack, their [Target Mark] triggers, dealing 53+70% ATK DMG and releasing a [Target Particle].
-[Target Particle]:
-Explodes after 15s, dealing 113+150% ATK DMG to nearby enemies and granting you [Directed Defense]. Hitting enemies with a Charged Attack will detonate all [Target Particle]'s immediately.
-[Directed Defense]:
-When taking damage, you consume [Directed Defense] to gain 25% DMG Reduction for 5s. Cannot gain new [Directed Defense] while DMG Reduction is active.
+[Target Mark]: When an enemy inflicted with [Target Mark] receives another mark or is hit by the final strike of your basic attack, their [Target Mark] triggers, dealing 53+70% ATK DMG and releasing a [Target Particle].
+[Target Particle]: Explodes after 15s, dealing 113+150% ATK DMG to nearby enemies and granting you [Directed Defense]. Hitting enemies with a Charged Attack will detonate all [Target Particles] immediately.
+[Directed Defense]: When taking damage, you consume [Directed Defense] to gain 25% DMG Reduction for 5s. Cannot gain new [Directed Defense] while DMG Reduction is active.
 You enter combat with [Directed Defense] active.        
         `,
     },
