@@ -62,6 +62,25 @@ function Home() {
                     <img className={styles.imgBanner} src="src/assets/main-page/event-1.png" alt="event"/>
                 </div>
 
+                <h2 className={styles.h2}>Wishing Well Shop</h2>
+
+                <button onClick={showWishWellModal} className={styles.containerShopCardsButton}>
+                    <DailyResetTimer timeLeft={timeLeftMonth}/>
+                    <MonthImage/>
+                </button>
+
+                <ModalWindow
+                    ref={wishWellModalRef}
+                    title={'Wishing Well Schedule'}
+                    tag={
+                        <>
+                            <img
+                                className={styles.img}
+                                src={'src/assets/main-page/modal-window/shop-schedule.png'}
+                                alt={'Battle page'}/>
+                        </>
+                    }/>
+
 
                 <h2 className={styles.h2}>Battle Pass</h2>
 
@@ -159,28 +178,6 @@ function Home() {
                             </div>
                         </>
                     }/>
-
-                <button onClick={showWishWellModal} className={styles.containerActivityButton}>
-                    <div className={styles.containerAwards}>
-                        <h3>Monthly (Wishing Well Shop)</h3>
-                        <MonthImage/>
-                    </div>
-
-                    <DailyResetTimer timeLeft={timeLeftMonth}/>
-                </button>
-
-                <ModalWindow
-                    ref={wishWellModalRef}
-                    title={'Wishing Well Schedule'}
-                    tag={
-                        <>
-                            <img
-                                className={styles.img}
-                                src={'src/assets/main-page/modal-window/shop-schedule.png'}
-                                alt={'Battle page'}/>
-                        </>
-                    }/>
-
 
                 <h2 className={styles.h2}>Schedule</h2>
 

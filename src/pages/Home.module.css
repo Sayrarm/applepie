@@ -4,10 +4,14 @@
     margin: 5px;
 }
 
-.containerEvents,
+.containerEvents {
+    margin: 5px;
+    width: 60%;
+}
+
 .containerSchedule {
     margin: 5px;
-    width: 50%;
+    width: 40%;
 }
 
 .containerEvents {
@@ -18,7 +22,8 @@
 
 .scheduleContainerGeneralButton,
 .containerTitleTimer,
-.containerActivityButton {
+.containerActivityButton,
+.containerShopCardsButton {
 
     background: var(--bg-brown-light);
 
@@ -43,12 +48,6 @@
     padding: 0 5px;
 }
 
-.containerAwards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-}
 
 .imgBanner {
 
@@ -61,6 +60,11 @@
 
 .img {
     width: 413px;
+}
+
+.monthImg {
+    width: 100%;
+    height: 100%;
 }
 
 .schedule {
@@ -83,15 +87,27 @@
 
 }
 
-
 .containerActivityButton {
     display: flex;
     flex-direction: column;
-    margin: 5px;
+    margin: 10px 5px;
     width: 100%;
 }
 
+.containerShopCardsButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    gap: 2px;
+}
+
+.monthImgContainer {
+    display: flex;
+}
+
 .containerActivityButton,
+.containerShopCardsButton,
 .scheduleContainerGeneralButton {
     text-decoration: none;
     border: none;
@@ -129,6 +145,20 @@
         margin: 5px;
     }
 
+    .containerShopCardsButton {
+        width: 100%;
+    }
+
+    .scheduleContainerGeneralButton {
+        margin: 5px;
+        padding: 5px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     .containerEvents,
     .containerSchedule {
         flex-direction: column;
@@ -159,7 +189,6 @@
         height: 100%;
     }
 
-    .monthImg,
     .img,
     .imgAwards {
         width: 275px;
@@ -178,6 +207,7 @@
     .container,
     .containerTitleTimer,
     .containerActivityButton,
+    .containerShopCardsButton,
     .containerResetActivity h3,
     .containerTitleTimer h3 {
         font-size: 12px;
@@ -185,5 +215,22 @@
 
     .h2 {
         font-size: 18px;
+    }
+
+    .scheduleContainerGeneralButton {
+        margin: 5px;
+        padding: 5px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .scheduleContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .schedule {
+        display: flex;
     }
 }

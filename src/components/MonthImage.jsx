@@ -28,6 +28,7 @@ const MonthImage = () => {
             alt="memories from wishing well"
             dayStartHour={5}
             className={styles.monthImg}
+            containerClassName={styles.monthImgContainer}
         />
     );
 };
