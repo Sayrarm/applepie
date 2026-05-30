@@ -331,6 +331,42 @@ const glossary = {
         title: "Divine Judgment",
         description: "",
     },
+    "Jadesunder": {
+        title: "Jadesunder",
+        description: "When enemies in [Shattered Jade] state are hit by you or Zayne, they accumulate [Jadesunder Intention]. At max Jadesunder Intention, [Jadesunder] is triggered, dealing DMG to the enemies.",
+    },
+    "Orchid Metamorphosis": {
+        title: "Orchid Metamorphosis",
+        description: "Your Resonance Skill with Zayne.",
+    },
+    "Piercing Rain": {
+        title: "Piercing Rain",
+        description: "When using the weapon [Sacred Rainfall], after casting the Resonance Skill [Orchid Metamorphosis], the Resonance Skill will be replaced with [Piercing Rain].",
+    },
+    "Shattered Jade": {
+        title: "Shattered Jade",
+        description: "A special status applied to enemies hit by Resonance Skills. When enemies in [Shattered Jade] state are hit by you or Zayne, they accumulate [Jadesunder Intention]. At max Jadesunder Intention, [Jadesunder] is triggered, dealing DMG to the enemies.",
+    },
+    "Jadesunder Intention": {
+        title: "Jadesunder Intention",
+        description: "",
+    },
+    "Divine Prayer": {
+        title: "Divine Prayer",
+        description: "A battle resource accumulated by you and Zayne during combat. Charged Attacks consume [Divine Prayer] to trigger [Eternal Sin], dealing additional AoE DMG.",
+    },
+    "Eternal Sin": {
+        title: "Eternal Sin",
+        description: "Triggered after using Charged Attacks to consume [Divine Prayer]. Deals damage to enemies within range.",
+    },
+    "Ward of Curses": {
+        title: "Ward of Curses",
+        description: "A shield effect that Zayne applies to both you and himself when using a Support Skill",
+    },
+    "Reverberation": {
+        title: "Reverberation",
+        description: "A status effect gained by you and Zayne after casting a Resonance Skill. Provides you both with various empowerment effects.",
+    },
 
 };
 

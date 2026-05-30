@@ -522,9 +522,9 @@ You and Zayne use a scepter to summon a loveless, harsh frost energy, then strik
         passiveSkill: "Divine Prayer",
         passiveSkillImg: "/battle-icons/a2_skill_ys_2202_01.png",
         passiveSkillText: `
-Upon entering battle, Zayne gains a stack of Divine Prayer, up to 5 stacks.
-When your last Basic Attack in a combo hits the target, Zayne gains 1 stack of Divine Prayer.
-When your Charged Attack hits an enemy, Zayne consumes 1 stack of Divine Prayer to trigger Eternal Sin.
+Upon entering battle, Zayne gains a stack of [Divine Prayer], up to 5 stacks.
+When your last Basic Attack in a combo hits the target, Zayne gains 1 stack of [Divine Prayer].
+When your Charged Attack hits an enemy, Zayne consumes 1 stack of [Divine Prayer] to trigger Eternal Sin.
 Eternal Sin: Deals DMG to enemies within range equal to Zayne's 192+102% ATK + 406% DEF.
         `,
         basicAttack: "Offering From On High",
@@ -546,7 +546,7 @@ Create a Sacred Sign at the target location that inflicts 6 instances of DMG on 
 During a Dodge, you can use your basic attack. When you use an Active Skill, Zayne gains 1 stack of [Divine Prayer] restoring both of your HP equal to 1000+2.5% of your Max HP in 5s.
         `,
         eidolon0: `
-The team deals 8% more DMG and takes 8% less DMG. When fighting alongside Foreseer, [Eternal sin] DMG is increased by 25%.        
+The team deals 8% more DMG and takes 8% less DMG. When fighting alongside Foreseer, [Eternal Sin] DMG is increased by 25%.        
         `,
         eidolon1: `
 Increases Ardent Oath charge by 20%. When you and Foreseer are under [Ward of Curses], DMG dealt is increased by 12%.
