@@ -399,6 +399,84 @@ const glossary = {
         title: "Ocean's Descent",
         description: "",
     },
+    "Faith": {
+        title: "Faith",
+        description: "A battle resource gained by you, Rafayel, and [Sea Spirit] through basic attacks in combat. When full, [Heavenly Rain] will descend.",
+    },
+    "Heavenly Rain": {
+        title: "Heavenly Rain",
+        description: "A miracle manifested by Rafayel in combat when [Faith] is full, which increases all allies's DMG and upgrades [Sea Spirit].",
+    },
+    "Sea Spirit": {
+        title: "Sea Spirit",
+        description: "Summoned units deployed by you and Rafayel in battle. They automatically attack enemies.",
+    },
+    "Sea Spirits": {
+        title: "Sea Spirit",
+        description: "Summoned units deployed by you and Rafayel in battle. They automatically attack enemies.",
+    },
+    "Surging Tides": {
+        title: "Surging Tides",
+        description: "Your Resonance Skill with Rafayel.",
+    },
+    "Beacon": {
+        title: "Beacon",
+        description: "A special state that Rafayel periodically applies to enemies. Hitting affected enemies with Charged Attacks grants [Potential].",
+    },
+    "Burn": {
+        title: "Burn",
+        description: "DoT effect applied by you or Rafayel on enemies.",
+    },
+    "Burns": {
+        title: "Burn",
+        description: "DoT effect applied by you or Rafayel on enemies.",
+    },
+    "Deepsea Pursuit": {
+        title: "Deepsea Pursuit",
+        description: "An empowered state that you and Rafayel enter when [Potential] is full.",
+    },
+    "Potential": {
+        title: "Potential",
+        description: "Gained by hitting enemies marked with [Beacon] using Charged attacks or by collecting [Fishtail Beacon]. When full, Rafayel uses [Searing Slash].",
+    },
+    "Searing Slash": {
+        title: "Searing Slash",
+        description: "A powerful attack that Rafayel performs when [Potential] is full.",
+    },
+    "Fishtail Beacon": {
+        title: "Fishtail Beacon",
+        description: "",
+    },
+    "Phantasy Chains": {
+        title: "Phantasy Chains",
+        description: "",
+    },
+    "Tinctus": {
+        title: "Tinctus",
+        description: "A special mark applied to enemies hit by specific attacks from you and Rafayel. It can be detonated to deal DMG when Active Skill, Resonance Skill, or Ardent Oath is released.",
+    },
+    "Echo": {
+        title: "Echo",
+        description: "An area created when using a Support Skill while [Harmony] is full.",
+    },
+    "Harmony": {
+        title: "Harmony",
+        description: "A battle resource gained when you and Rafayel deal DMG. When full, using a Support Skill leaves behind an [Echo].",
+    },
+    "Aria": {
+        title: "Aria",
+        description: "Rafayel’s Support Skill",
+    },
+    "Flame Lily": {
+        title: "Flame Lily",
+        description: "When you and Rafayel hit enemies, Rafayel will summon Flame Lilies that periodically deal DMG to enemies within range.",
+    },
+    "Flame Lilies": {
+        title: "Flame Lily",
+        description: "When you and Rafayel hit enemies, Rafayel will summon Flame Lilies that periodically deal DMG to enemies within range.",
+    },
+
+
 
 };
 

@@ -831,20 +831,20 @@ You can pick up the [Fishtail Beacon] to restore 2 [Potential]
         resonanceSkillCost: "2 energy charges",
         resonanceSkillImg: "/battle-icons/a2_skill_ry_2503_03.png",
         resonanceSkillText: `
-Uses Phantasy Chains to pull in enemies. After a short delay, Rafayel summons a Fantasia Shark that bites and [Burns] enemies, dealing DMG equal to 785+1047% of your combined ATK and 1 Protocore DMG.
+Uses [Phantasy Chains] to pull in enemies. After a short delay, Rafayel summons a Fantasia Shark that bites and [Burns] enemies, dealing DMG equal to 785+1047% of your combined ATK and 1 Protocore DMG.
         `,
         ardentOath: "Four Scourges",
         ardentOathCost: "100% Oath Energy",
         ardentOathImg: "/battle-icons/a2_skill_ry_2503_04.png",
         ardentOathText: `
-Rafayel harnesses the power of a Protofield to bind enemies with Phantasy Chains. You and Rafayel work together, using your Evol to deal massive DMG equal to 1440+1920% of your combined ATK.
+Rafayel harnesses the power of a Protofield to bind enemies with [Phantasy Chains]. You and Rafayel work together, using your Evol to deal massive DMG equal to 1440+1920% of your combined ATK.
         `,
         passiveSkill: "Abyssal Beacon",
         passiveSkillImg: "/battle-icons/a2_skill_ry_2503_01.png",
         passiveSkillText: `
-Rafayel periodically applies Beacon on enemies. When you hit an enemy with Beacon using a Charged Attack, it triggers the mark and charges 1 point of Potential, up to 6 stacks.
-When Potential is charging, your and Rafayel's ATK increases by 8% for 5s. Retriggering the mark refreshes the duration.
-When Potential is fully charged, you and Rafayel will gain Deepsea Pursuit, increasing your CRIT Rate by 15% for 5s. Meanwhile, Rafayel will unleash a Searing Slash, dealing massive DMG.
+Rafayel periodically applies [Beacon] on enemies. When you hit an enemy with [Beacon] using a Charged Attack, it triggers the mark and charges 1 point of [Potential], up to 6 stacks.
+When [Potential] is charging, your and Rafayel's ATK increases by 8% for 5s. Retriggering the mark refreshes the duration.
+When [Potential] is fully charged, you and Rafayel will gain [Deepsea Pursuit], increasing your CRIT Rate by 15% for 5s. Meanwhile, Rafayel will unleash a Searing Slash, dealing massive DMG.
 Searing Slash: After charging, Rafayel lunges forward, inflicting 540 + 720% ATK DMG on enemies in his path.
         `,
         basicAttack: "Abyssal Rapid Fire",
@@ -881,7 +881,7 @@ Increases Ardent Oath charge by 20%. When fighting together with Abysswalker, in
 Energy Charge limit is raised by 1. When triggering [Potential] recovery, Energy Charge recovery speed is increased by 50% for 4s.
         `,
         eidolon3: `
-The team deals 8% more DMG. Abysswalker's [Searing slash] deals 150% more DMG. When triggering [Beacon] additionally restore 1 [Potential].
+The team deals 8% more DMG. Abysswalker's [Searing Slash] deals 150% more DMG. When triggering [Beacon] additionally restore 1 [Potential].
         `,
     },
     {
@@ -932,7 +932,8 @@ Active Skills, Resonance Skills, or Ardent Oaths that hit an enemy marked with T
         supportSkillCooldown: "10 sec.",
         supportSkillImg: "/battle-icons/a2_skill_ry_2502_02.png",
         supportSkillText: `
-Rafayel thrusts forward, dealing AoE DMG of 218 + 291% ATK with his dagger. Additionally, it reduces enemy movement SPD by 3o% for 5s. Aria: Reprise: After the Aria concludes, it leaves behind Reprise which impacts enemies in a larger area, dealing a total DMG of 315 + 420% ATK. It also reduces enemy movement SPD by 50% for 5s.
+Rafayel thrusts forward, dealing AoE DMG of 218 + 291% ATK with his dagger. Additionally, it reduces enemy movement SPD by 3o% for 5s. 
+Aria: Reprise: After the Aria concludes, it leaves behind Reprise which impacts enemies in a larger area, dealing a total DMG of 315 + 420% ATK. It also reduces enemy movement SPD by 50% for 5s.
         `,
         resonanceSkill: "Concerto",
         resonanceSkillCooldown: "15 sec.",
