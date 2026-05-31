@@ -35,6 +35,7 @@
 
 
 .containerTitleTimer {
+    margin-bottom: 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -215,6 +216,11 @@
     .containerShopCardsButton,
     .containerResetActivity h3,
     .containerTitleTimer h3 {
+        font-size: 12px;
+    }
+
+    .scheduleContainerGeneralButton h3,
+    .containerShopCardsButton h3 {
         font-size: 12px;
     }
 

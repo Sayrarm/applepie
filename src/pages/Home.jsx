@@ -45,10 +45,10 @@ function Home() {
 
                 <div className={styles.containerTitleTimer}>
                     <FlexibleTimer
-                        startDateTime="2026-05-22T05:00:00+02:00"
-                        endDateTime="2026-05-31T04:59:00+02:00"
+                        startDateTime="2026-05-31T05:00:00+02:00"
+                        endDateTime="2026-06-07T04:59:00+02:00"
                     />
-                    <img className={styles.imgBanner} src="src/assets/main-page/new-banner.png"
+                    <img className={styles.imgBanner} src="src/assets/main-page/rerun-banner.png"
                          alt="new-banner"/>
                 </div>
 
@@ -57,15 +57,32 @@ function Home() {
 
                 <div className={styles.containerTitleTimer}>
                     <FlexibleTimer
-                        startDateTime="2026-05-10T05:00:00+02:00"
-                        endDateTime="2026-05-28T04:59:00+02:00"
+                        startDateTime="2026-05-31T05:00:00+02:00"
+                        endDateTime="2026-06-17T04:59:00+02:00"
                     />
                     <img className={styles.imgBanner} src="src/assets/main-page/event-1.png" alt="event"/>
                 </div>
 
+                <div className={styles.containerTitleTimer}>
+                    <FlexibleTimer
+                        startDateTime="2026-05-25T05:00:00+02:00"
+                        endDateTime="2026-06-14T04:59:00+02:00"
+                    />
+                    <img className={styles.imgBanner} src="src/assets/main-page/event-2.png" alt="event"/>
+                </div>
+
+                <div className={styles.containerTitleTimer}>
+                    <FlexibleTimer
+                        startDateTime="2026-05-25T05:00:00+02:00"
+                        endDateTime="2026-06-01T04:59:00+02:00"
+                    />
+                    <img className={styles.imgBanner} src="src/assets/main-page/event-3.png" alt="event"/>
+                </div>
+
                 <h2 className={styles.h2}>Wishing Well Shop</h2>
 
-                <button onClick={showWishWellModal} className={styles.containerShopCardsButton}>
+                <button onClick={showWishWellModal}
+                        className={styles.containerShopCardsButton}>
                     <DailyResetTimer timeLeft={timeLeftMonth}/>
                     <MonthImage/>
                 </button>
