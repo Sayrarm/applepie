@@ -8,6 +8,7 @@
 .title {
     font-size: 18px !important;
     font-weight: 600 !important;
+    color: var(--colorTextDark);
 }
 
 .content :global(.ant-collapse-header) {
@@ -26,7 +27,7 @@
     -webkit-box-shadow: var(--box-shadow);
     -moz-box-shadow: var(--box-shadow);
     box-shadow: var(--box-shadow);
-    color: black;
+    color: var(--colorTextDark);
     padding: 5px;
 
 }

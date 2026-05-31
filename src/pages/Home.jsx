@@ -196,7 +196,7 @@ function Home() {
                             />
                             <br/>
                             <HunterBuffCard
-                                iconCount={4}
+                                iconCount={3}
                                 iconSrc="/src/assets/icons/emerald.png"
                                 extraIconSrc="/src/assets/icons/pearl.png"
                                 title="Team C: Empowerment"

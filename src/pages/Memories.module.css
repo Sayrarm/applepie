@@ -42,18 +42,18 @@
     border: none;
     background: none;
     font-size: 19px;
-    color: var(--brown);
+    color: var(--colorTextDark);
     padding: 4px 8px;
 }
 
 .active {
     color: white;
-    background-color: var(--brown);
+    background-color: var(--forSelect);
     padding: 4px 8px;
 
-    -webkit-box-shadow: 10px 10px 6px -5px rgba(148, 148, 148, 0.6);
-    -moz-box-shadow: 10px 10px 6px -5px rgba(148, 148, 148, 0.6);
-    box-shadow: 10px 10px 6px -5px rgba(148, 148, 148, 0.6);
+    -webkit-box-shadow: var(--box-shadow);
+    -moz-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
 }
 
 .characters {

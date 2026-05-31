@@ -23,7 +23,7 @@
 }
 
 .title {
-    color: var(--brown);
+    color: var(--colorTextDark);
     font-size: 25px;
     font-weight: 400;
     padding-left: 10px;

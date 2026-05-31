@@ -1,6 +1,7 @@
 import styles from './Header.module.css'
 import {Link} from "react-router-dom";
 import {useEffect, useState} from "react";
+import ThemeToggleButton from "./ThemeToggleButton.jsx";
 
 
 function Header() {
@@ -64,6 +65,10 @@ function Header() {
                         <span></span>
                         <span></span>
                     </label>
+                </div>
+
+                <div>
+                    <ThemeToggleButton/>
                 </div>
 
                 <div className={`${styles.modalNav} ${isMenuOpen ? styles.active : ''}`}>

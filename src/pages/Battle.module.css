@@ -34,7 +34,7 @@
     text-align: center;
     word-break: break-word;
     white-space: normal;
-    color: var(--brown);
+    color: var(--colorTextDark);
 }
 
 @media screen and (max-width: 800px) {
