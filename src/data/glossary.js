@@ -475,8 +475,118 @@ const glossary = {
         title: "Flame Lily",
         description: "When you and Rafayel hit enemies, Rafayel will summon Flame Lilies that periodically deal DMG to enemies within range.",
     },
-
-
+    "Blood Essence": {
+        title: "Blood Essence",
+        description: "A battle resource that you and Sylus accumulate outside of [Crimson Bond]. When full, it unlocks [Blood Pact]",
+    },
+    "Blood Pact": {
+        title: "Blood Pact",
+        description: "A skill that can be used when the [Blood Essence] gauge is full.",
+    },
+    "Bloodrose Scent": {
+        title: "Bloodrose Scent",
+        description: "An effect gained when you cast [Rose Scent] or [Bloodrose Rain]",
+    },
+    "Bloodrose Seed": {
+        title: "Bloodrose Seed",
+        description: "A special mark that Sylus applies to an enemy during [Crimson Bond]",
+    },
+    "Bloodrose": {
+        title: "Bloodrose",
+        description: "When [Bloodrose Seed] blooms, it flourishes on the battlefield and can be consumed by [Underworld Rift].",
+    },
+    "Bloodrose(s)": {
+        title: "Bloodrose",
+        description: "When [Bloodrose Seed] blooms, it flourishes on the battlefield and can be consumed by [Underworld Rift].",
+    },
+    "Bloodroses": {
+        title: "Bloodrose",
+        description: "When [Bloodrose Seed] blooms, it flourishes on the battlefield and can be consumed by [Underworld Rift].",
+    },
+    "Crimson Bond": {
+        title: "Crimson Bond",
+        description: "An empowered state you and Sylus enter after casting [Blood Pact].",
+    },
+    "Crimson Void": {
+        title: "Crimson Void",
+        description: "A new skill that Sylus gains during [Crimson Bond].",
+    },
+    "Rose Mark": {
+        title: "Rose Mark",
+        description: "Outside of [Crimson Bond], your Charged Attack consumes this effect on hit to trigger [Rose Thorns].",
+    },
+    "Rose Thorns": {
+        title: "Rose Thorns",
+        description: "An attack triggered when your Charged Attack hits and consumes [Rose Mark], or when Sylus's Crimson Void hits.",
+    },
+    "Underworld Rift": {
+        title: "Underworld Rift",
+        description: "You and Sylus summon thorns from the Underworld. During the summoning, you and Sylus become invincible, while enemy Weakness timers are paused and [Bloodrose Seed] growth is suspended. After the summoning ends, the thorns are detonated by a pillar of blood, dealing damage equal to 1458+778% ATK+3084% DEF to enemies within range. This damage is considered Basic Attack damage. [Underworld Rift] is not considered a Resonance Skill.",
+    },
+    "Crimson Break": {
+        title: "Crimson Break",
+        description: "Sylus’s Support Skill",
+    },
+    "Crimson Malison": {
+        title: "Crimson Malison",
+        description: "Your Weapon",
+    },
+    "Bloodrose Rain": {
+        title: "Bloodrose Rain",
+        description: "",
+    },
+    "Blood Spell": {
+        title: "Blood Spell",
+        description: "",
+    },
+    "Bloodrose Wreath": {
+        title: "Bloodrose Wreath",
+        description: "",
+    },
+    "Abyssal Fury": {
+        title: "Abyssal Fury",
+        description: "A special state gained when using [Wrath Judgment: Greed] by holding the Resonance Skill button. Attacks from you and Sylus consume HP to increase DMG dealt.",
+    },
+    "Fiendish Claw": {
+        title: "Fiendish Claw",
+        description: "Sylus's Support Skill.",
+    },
+    "Life Sacrifice": {
+        title: "Life Sacrifice",
+        description: "Your Active Skill when using the weapon [Fiend Reaper].",
+    },
+    "Wrath Judgment: Greed": {
+        title: "Wrath Judgment: Greed",
+        description: "Your Resonance Skill with Sylus, activated by holding the Resonance Skill button.",
+    },
+    "Wrath Judgment": {
+        title: "Wrath Judgment",
+        description: "Your Resonance Skill with Sylus, activated by pressing the Resonance Skill button.",
+    },
+    "Fiend Reaper": {
+        title: "Fiend Reaper",
+        description: "Your Weapon",
+    },
+    "Abyssal Feast": {
+        title: "Abyssal Feast",
+        description: "When you and Sylus hit enemies with Basic Attacks (except Charged Attacks), Active Skills, or Support Skills, recover some lost HP.",
+    },
+    "Dark Energy": {
+        title: "Dark Energy",
+        description: "When you deal damage to enemies affected by [Devour Mark], there's a chance to drop [Dark Energy]. Collecting it restores a small amount of HP for both you and Sylus.",
+    },
+    "Devour Mark": {
+        title: "Devour Mark",
+        description: "A mark applied to enemies hit by Resonance Skills and Support Skills that forces enemies to attack Sylus. Enemies with a [Devour Mark] enter a charge-up state when marked again. During the charge-up, additional DMG is dealt based on the total DMG from certain skills.",
+    },
+    "Shattering Burst": {
+        title: "Shattering Burst",
+        description: "Sylus's Support Skill.",
+    },
+    "Synergy": {
+        title: "Synergy",
+        description: "",
+    },
 
 };
 
