@@ -7,6 +7,7 @@ import WeeklyProtocore from "../components/WeeklyProtocore.jsx";
 import WeeklyTrial from "../components/WeeklyTrial.jsx";
 import ModalWindow from "../components/ModalWindow.jsx";
 import {useRef} from "react";
+import HunterBuffCard from "../components/HunterContestDescription.jsx";
 
 function Home() {
 
@@ -160,22 +161,30 @@ function Home() {
                     title={'Hunter Contest Buffs'}
                     tag={
                         <>
-                            <div>
-                                <h3>Team A: Oath Amplification</h3>
-                                <p>After using the Ardent Oath, DMG dealt by you and Companion increases by 100%
-                                    for 10s.</p>
-                            </div>
+                            <HunterBuffCard
+                                iconCount={5}
+                                iconSrc="/src/assets/icons/violet.png"
+                                extraIconSrc="/src/assets/icons/ruby.png"
+                                title="Team A: Oath Amplification"
+                                description="After using the Ardent Oath, DMG dealt by you and Companion increases by 100% for 10s."
+                            />
                             <br/>
-                            <div>
-                                <h3>Team B: Press On Stacks</h3>
-                                <p>After an Active Skill is used, Support Skill damage increases by 35% for 4s.
-                                    This effect can stack up to 3 times.</p>
-                            </div>
+                            <HunterBuffCard
+                                iconCount={4}
+                                iconSrc="/src/assets/icons/ruby.png"
+                                extraIconSrc="/src/assets/icons/amber.png"
+                                title="Team B: Press On Stacks"
+                                description="After an Active Skill is used, Support Skill damage increases by 35% for 4s.
+                                    This effect can stack up to 3 times."
+                            />
                             <br/>
-                            <div>
-                                <h3>Team C: Empowerment</h3>
-                                <p>Increases ATK of all allied units.</p>
-                            </div>
+                            <HunterBuffCard
+                                iconCount={4}
+                                iconSrc="/src/assets/icons/emerald.png"
+                                extraIconSrc="/src/assets/icons/pearl.png"
+                                title="Team C: Empowerment"
+                                description="Increases ATK of all allied units."
+                            />
                         </>
                     }/>
 

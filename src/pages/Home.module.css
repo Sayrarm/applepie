@@ -67,6 +67,11 @@
     height: 100%;
 }
 
+.stellacrumImg {
+    width: 20px;
+    height: 20px;
+}
+
 .schedule {
     display: flex;
     flex-direction: column;
