@@ -38,7 +38,6 @@ body {
 
 .main {
     flex: 1;
-
     padding-top: 80px;
 }
 
@@ -46,15 +45,27 @@ body {
     --colorText: white;
     --colorTextDark: #35312d;
     --forSelect: #35312d;
+    --border: #e68038;
+    --a: #e68038;
+    --a-hover: #9a5929;
+    --background: #35312d;
+    --bg-glass: color-mix(in srgb, var(--bg-brown) 10%, transparent);
+
     --bg-primary: #ffe0c0;
+    --bg-image: url('../src/assets/bg/x3_collection_bg_01.png');
+    --box-shadow: 10px 10px 6px -5px rgba(148, 148, 148, 0.6);
+
+/****************************************************************************/
+
+    --dark: #202227;
+    --light-dark: #353840;
     --brown: #35312d;
     --bg-brown: #ffcb90;
     --orange: #e68038;
     --red: #ff4444;
     --bg-brown-light: color-mix(in srgb, var(--bg-brown) 10%, transparent);
-    --bg-brown-black: color-mix(in srgb, var(--brown) 10%, transparent);
-    --box-shadow: 10px 10px 6px -5px rgba(148, 148, 148, 0.6);
-    --bg-image: url('../src/assets/bg/x3_collection_bg_01.png');
+
+/****************************************************************************/
 
     color: var(--colorTextDark);
 }
@@ -62,19 +73,19 @@ body {
 html.dark {
     --colorText: #D8DADF;
     --colorTextDark: #D8DADF;
-    --brown: #202227;
-    --bg-brown: #353840;
     --forSelect: #9C2007;
-    --orange: #9C2007;
-    --red: #ff4444;
+    --border: #9C2007;
+    --a: #9C2007;
+    --a-hover: #ff4444;
+    --background: #202227;
+    --bg-glass: #202227;
+
     --bg-primary: #353840;
     --bg-image: none;
+    --box-shadow: 10px 10px 6px -5px rgb(21 21 21 / 0.6);
+
 
     color: var(--colorText);
-
-    --bg-brown-light: #202227;
-    --bg-brown-black: var(--bg-brown);
-    --box-shadow: 10px 10px 6px -5px rgb(21 21 21 / 0.6);
 }
 
 a, button {

@@ -15,7 +15,7 @@
 
     left: 25px;
     bottom: 10px;
-    color: white;
+    color: var(--colorText);
     font-size: 25px;
     font-weight: 400;
 }

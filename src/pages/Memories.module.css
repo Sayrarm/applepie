@@ -47,7 +47,7 @@
 }
 
 .active {
-    color: white;
+    color: var(--colorText);
     background-color: var(--forSelect);
     padding: 4px 8px;
 

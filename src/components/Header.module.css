@@ -31,7 +31,7 @@ header,
 }
 
 header {
-    background-color: var(--brown);
+    background-color: var(--background);
 
     -webkit-box-shadow: var(--box-shadow);
     -moz-box-shadow: var(--box-shadow);
@@ -46,7 +46,7 @@ header {
 .a {
     text-decoration: none;
     text-transform: uppercase;
-    color: #fff;
+    color: var(--colorText);
     font-size: 20px;
 }
 
@@ -75,7 +75,7 @@ header {
     position: absolute;
     height: var(--burger-thickness);
     width: 100%;
-    background: white;
+    background: var(--colorText);
     border-radius: calc(var(--burger-thickness) / 2);
     opacity: 1;
     left: 0;
@@ -126,7 +126,7 @@ header {
 .modalNav {
     position: absolute;
     top: 80px;
-    background-color: var(--brown);
+    background-color: var(--background);
     width: 100%;
 
     display: none;
@@ -136,7 +136,7 @@ header {
 }
 
 .border {
-    border: 1px solid white;
+    border: 1px solid var(--colorText);
     width: 100%;
     margin: 0;
 }

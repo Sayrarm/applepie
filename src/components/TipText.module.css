@@ -5,7 +5,7 @@
 }
 
 .glossaryTerm {
-    color: var(--orange);
+    color: var(--a);
     cursor: help;
     font-weight: 500;
     text-decoration: underline;
@@ -16,14 +16,14 @@
 }
 
 .glossaryTerm:hover {
-    color: var(--red);
+    color: var(--a-hover);
     text-decoration-style: solid;
 }
 
 .glossaryTooltip {
     position: fixed;
-    background: #35312d;
-    color: #ffffff;
+    background: var(--background);
+    color: var(--colorText);
     padding: 10px 14px;
     border-radius: 8px;
     font-size: 14px;
@@ -42,8 +42,8 @@
     font-size: 14px;
     margin-bottom: 6px;
     padding-bottom: 4px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    color: var(--orange);
+    border-bottom: 1px solid var(--border);
+    color: var(--a);
 }
 
 .glossaryTooltipText {
@@ -59,7 +59,7 @@
     }
 
     .glossaryTerm:active {
-        background-color: #35312d;
+        background-color: var(--background);
     }
 
     .glossaryTooltip {

@@ -25,7 +25,7 @@
 .containerActivityButton,
 .containerShopCardsButton {
 
-    background: var(--bg-brown-light);
+    background: var(--bg-glass);
 
 
     -webkit-box-shadow: var(--box-shadow);

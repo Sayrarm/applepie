@@ -1,6 +1,5 @@
 .content {
     font-size: 14px !important;
-    color: var(--brown) !important;
     font-family: TikTok Sans, monospace !important;
 
 }
@@ -23,7 +22,7 @@
 }
 
 .text {
-    background-color: var(--bg-brown-light);
+    background-color: var(--bg-glass);
     -webkit-box-shadow: var(--box-shadow);
     -moz-box-shadow: var(--box-shadow);
     box-shadow: var(--box-shadow);

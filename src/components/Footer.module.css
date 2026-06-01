@@ -19,13 +19,13 @@
 }
 
 .borderHorizontal {
-    border: 1px solid var(--orange);
+    border: 1px solid var(--border);
     width: 100%;
     margin: 5px 0;
 }
 
 .borderHorizontalDashed {
-    border: 1px dashed var(--orange);
+    border: 1px dashed var(--border);
     width: 100%;
     margin: 5px 0;
 }
@@ -51,7 +51,7 @@
 }
 
 .footer {
-    background-color: var(--brown);
+    background-color: var(--background);
 
     -webkit-box-shadow: var(--box-shadow);
     -moz-box-shadow: var(--box-shadow);
@@ -76,7 +76,7 @@
 
 .a:hover {
     transition: 0.3s all;
-    color: var(--orange);
+    color: var(--a);
 }
 
 .imgApple {
