@@ -104,6 +104,8 @@ h4 {
     font-weight: 600;
 }
 
+/************************ANT Design перенастройка цвета******************************/
+
 .css-var-root.ant-input-css-var {
     --ant-input-hover-border-color: #35312d;
     --ant-input-active-border-color: #35312d;
@@ -117,4 +119,8 @@ h4 {
 
 :where(.css-dev-only-do-not-override-xogyor).ant-checkbox-checked {
     background-color: #35312d !important;
+}
+
+:global(.ant-collapse .ant-collapse-header .ant-collapse-arrow) {
+    color: var(--colorTextDark) !important;
 }
