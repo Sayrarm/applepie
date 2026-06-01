@@ -46,7 +46,7 @@ function Home() {
                 <div className={styles.containerTitleTimer}>
                     <FlexibleTimer
                         startDateTime="2026-05-31T05:00:00+02:00"
-                        endDateTime="2026-06-07T04:59:00+02:00"
+                        endDateTime="2026-06-08T04:59:00+02:00"
                     />
                     <img className={styles.imgBanner} src="src/assets/main-page/rerun-banner.png"
                          alt="new-banner"/>
@@ -58,7 +58,7 @@ function Home() {
                 <div className={styles.containerTitleTimer}>
                     <FlexibleTimer
                         startDateTime="2026-05-31T05:00:00+02:00"
-                        endDateTime="2026-06-17T04:59:00+02:00"
+                        endDateTime="2026-06-18T04:59:00+02:00"
                     />
                     <img className={styles.imgBanner} src="src/assets/main-page/event-1.png" alt="event"/>
                 </div>
