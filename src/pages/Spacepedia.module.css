@@ -31,6 +31,10 @@
 
 }
 
+:global(.ant-collapse .ant-collapse-header .ant-collapse-arrow) {
+    color: var(--colorTextDark) !important;
+}
+
 @media (max-width: 450px) {
     .img {
         display: flex;
