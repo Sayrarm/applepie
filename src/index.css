@@ -24,6 +24,7 @@ body {
     background-color: var(--bg-primary);
     background-image: var(--bg-image);
     background-attachment: fixed;
+    background-size: cover;
 }
 
 .container {
@@ -55,11 +56,14 @@ body {
     --bg-primary: #ffe0c0;
     --bg-image: url('../src/assets/bg/x3_collection_bg_01.png');
     --box-shadow: 10px 10px 6px -5px rgba(148, 148, 148, 0.6);
+    --linear-gradient-webkit: -webkit-linear-gradient(270deg, black 0%, black 50%, transparent 100%);
+    --linear-gradient: linear-gradient(270deg, black 0%, black 50%, transparent 100%);
+
 
 /****************************************************************************/
 
     --dark: #202227;
-    --light-dark: #353840;
+    --light-dark: #313338;
     --brown: #35312d;
     --bg-brown: #ffcb90;
     --orange: #e68038;
@@ -80,11 +84,13 @@ html.dark {
     --a: #9C2007;
     --a-hover: #ff4444;
     --background: #202227;
-    --bg-glass: #202227;
+    --bg-glass:color-mix(in srgb, var(--dark) 80%, transparent);
 
-    --bg-primary: #313338;
-    --bg-image: none;
+    --bg-primary: black;
+    --bg-image: url('../src/assets/bg/Frame 37.png');
     --box-shadow: 10px 10px 6px -5px rgb(21 21 21 / 0.6);
+    --linear-gradient-webkit: -webkit-linear-gradient(270deg, black -10%, black 20%, transparent 100%);
+    --linear-gradient: linear-gradient(270deg, black -10%, black 20%, transparent 100%);
 
 
     color: var(--colorText);
