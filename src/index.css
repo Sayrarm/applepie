@@ -46,6 +46,7 @@ body {
     --colorTextDark: #35312d;
     --forSelect: #35312d;
     --border: #e68038;
+    --border-battle-page: #35312d;
     --a: #e68038;
     --a-hover: #9a5929;
     --background: #35312d;
@@ -75,12 +76,13 @@ html.dark {
     --colorTextDark: #D8DADF;
     --forSelect: #9C2007;
     --border: #9C2007;
+    --border-battle-page: #202227;
     --a: #9C2007;
     --a-hover: #ff4444;
     --background: #202227;
     --bg-glass: #202227;
 
-    --bg-primary: #353840;
+    --bg-primary: #313338;
     --bg-image: none;
     --box-shadow: 10px 10px 6px -5px rgb(21 21 21 / 0.6);
 

@@ -9,7 +9,7 @@
     height: 120px;
     margin: 10px 5px;
 
-    background-color: var(--bg-brown-light);
+    background-color: var(--bg-glass);
 
     -webkit-box-shadow: var(--box-shadow);
     -moz-box-shadow: var(--box-shadow);

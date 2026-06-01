@@ -13,7 +13,7 @@
 
 .article {
     backdrop-filter: blur(10px);
-    background: var(--bg-brown-light);
+    background: var(--bg-glass);
     margin: 10px 5px 5px 5px;
     padding: 10px;
 
