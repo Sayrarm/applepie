@@ -7,7 +7,7 @@ function CompanionBattleInfo() {
     return (
         <section className={styles.container}>
 
-            <AsideCompanionList className={styles.aside}/>
+
 
 
             <CompanionArticlePage
