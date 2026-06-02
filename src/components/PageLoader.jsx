@@ -1,4 +1,4 @@
-// src/components/PageLoader.jsx
+
 import { Spin } from 'antd';
 import { useState, useEffect } from 'react';
 

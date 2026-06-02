@@ -6,8 +6,14 @@
 
     object-fit: cover;
 
-    -webkit-mask-image: -webkit-linear-gradient(90deg, transparent 0%, black 40%, black 60%, transparent 100%);
-    mask-image: linear-gradient(90deg, transparent 0%, black 40%, black 60%, transparent 100%);
+    -webkit-mask-image:
+            linear-gradient(90deg, transparent 0%, black 40%, black 90%, transparent 100%),
+            linear-gradient(0deg, transparent 0%, black 40%, black 90%, transparent 100%);
+    -webkit-mask-composite: intersect;
+    mask-image:
+            linear-gradient(90deg, transparent 0%, black 40%, black 90%, transparent 100%),
+            linear-gradient(0deg, transparent 0%, black 40%, black 90%, transparent 100%);
+    mask-composite: intersect;
 }
 
 .portrait {
@@ -56,8 +62,8 @@
         object-fit: cover;
         object-position: 20% 20%;
 
-        -webkit-mask-image: -webkit-linear-gradient(180deg, black 0%, black 20%, transparent 100%);
-        mask-image: linear-gradient(180deg, black 0%, black 20%, transparent 100%);
+        -webkit-mask-image: -webkit-linear-gradient(180deg, transparent 0%, black 20%, black 40%, transparent 100%);
+        mask-image: linear-gradient(180deg, transparent 0%, black 20%, black 60%, transparent 100%);
     }
 
     .h1Title {
