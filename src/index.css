@@ -45,6 +45,7 @@ body {
 :root, html.light {
     --colorText: white;
     --colorTextDark: #35312d;
+    --colorTextSpecial: #e68038;
     --forSelect: #35312d;
     --border: #e68038;
     --border-battle-page: #35312d;
@@ -78,6 +79,7 @@ body {
 html.dark {
     --colorText: #D8DADF;
     --colorTextDark: #D8DADF;
+    --colorTextSpecial: #202227;
     --forSelect: #9C2007;
     --border: #9C2007;
     --border-battle-page: #202227;

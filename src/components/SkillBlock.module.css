@@ -30,7 +30,7 @@
 }
 
 .skillName {
-    color: var(--colorText);
+    color: var(--colorTextSpecial);
     font-size: 20px;
     font-weight: 500;
     text-transform: uppercase;
