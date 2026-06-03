@@ -3,6 +3,7 @@ import styles from "./CardArticle.module.css";
 import memoriesDataUrl from '../data/memories-data.json?url';
 import { Fragment, useEffect, useState } from "react";
 import {getImageUrl} from "../components/imageUtils.js";
+import CopyableText from "../components/CopyableText.jsx";
 
 function CardArticle() {
     const { cardId } = useParams(); // только id карточки
@@ -44,7 +45,12 @@ function CardArticle() {
                     />
                 </div>
                 <div className={styles.infoContainer}>
-                    <h1 className={styles.cardTitle}>{card.char}: {card.name}</h1>
+                    <CopyableText
+                        text={`${card.char}: ${card.name}`}
+                        className={styles.cardTitle}
+                    >
+                        {card.char}: {card.name}
+                    </CopyableText>
 
                     <div className={styles.parametrsContainer}>
                         <div className={styles.generalContainer}>
