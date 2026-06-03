@@ -51,7 +51,7 @@ function CardArticle() {
                             <span>Rarity:</span>
                             {[...Array(card.rarityStars)].map((_, i) => (
                                 <img
-                                    className={styles.stars}
+                                    className={styles.rarity}
                                     key={i}
                                     src={getImageUrl(card.rarity)}
                                     alt={card.rarityName}
@@ -66,6 +66,7 @@ function CardArticle() {
                         <div className={styles.generalContainer}>
                             <span>Stellactrum:</span>
                             <img
+                                className={styles.stella}
                                 src={getImageUrl(card.stella)}
                                 alt={card.stellaName}
                                 width={24}
@@ -78,6 +79,7 @@ function CardArticle() {
                         <div className={styles.generalContainer}>
                             <span>Placement:</span>
                             <img
+                                className={styles.placement}
                                 src={getImageUrl(card.placement)}
                                 alt={card.placementName}
                                 width={24}
@@ -90,6 +92,7 @@ function CardArticle() {
                         <div className={styles.generalContainer}>
                             <span>Talent:</span>
                             <img
+                                className={styles.talent}
                                 src={getImageUrl(card.talent)}
                                 alt={card.talentName}
                                 width={24}
