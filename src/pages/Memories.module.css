@@ -38,6 +38,12 @@
     gap: 18px;
 }
 
+.cardLink {
+    border: none;
+    background: none;
+    text-decoration: none;
+}
+
 .buttonSelectChar {
     border: none;
     background: none;

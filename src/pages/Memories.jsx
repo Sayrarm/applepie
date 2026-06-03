@@ -13,6 +13,7 @@ import {fetchData} from '../hooks/api.js';
 import {useContext, useEffect, useState} from "react";
 import PageLoader from '../components/PageLoader';
 import {CardContext} from "../components/CardContext.jsx";
+import {Link} from "react-router-dom";
 
 function Memories() {
 
@@ -48,7 +49,7 @@ function Memories() {
 
     return (
         <>
-            <PageLoader delay={1000}>
+            <PageLoader delay={200}>
                 <section className={styles.memories}>
                     <div className={styles.options}>
                         <nav className={styles.select}>
@@ -163,7 +164,13 @@ function Memories() {
                     </div>
                     <div className={styles.cardsGrid}>
                         {sortedMemories.map(memory => (
-                            <Card key={memory.id} data={memory}/>
+                            <Link
+                                key={memory.id}
+                                to={`/memories/${memory.id}`}
+                                className={styles.cardLink}
+                            >
+                                <Card key={memory.id} data={memory}/>
+                            </Link>
                         ))}
                     </div>
 

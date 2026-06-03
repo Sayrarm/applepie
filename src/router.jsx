@@ -14,6 +14,7 @@ import Anecdotes from "./pages/Anecdotes";
 import AnArticle from "./pages/AnArticle";
 import CompanionBattleInfo from "./pages/CompanionBattleInfo";
 import { CardProvider } from "./components/CardProvider";
+import CardArticle from "./components/CardArticle.jsx";
 
 export const router = createBrowserRouter([
     {
@@ -21,6 +22,7 @@ export const router = createBrowserRouter([
         element: <Layout />, // Layout будет содержать Header, Footer и ScrollRestoration
         children: [
             { index: true, element: <Home /> },
+            { path: "memories/:cardId", element: <CardArticle /> },
             {
                 path: "memories",
                 element: (
@@ -41,6 +43,7 @@ export const router = createBrowserRouter([
             { path: "main-story/:articleLink", element: <MsArticle /> },
             { path: "anecdotes", element: <Anecdotes /> },
             { path: "anecdotes/:articleLink", element: <AnArticle /> },
+
         ],
     },
 ]);
