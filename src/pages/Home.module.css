@@ -23,7 +23,8 @@
 .scheduleContainerGeneralButton,
 .containerTitleTimer,
 .containerActivityButton,
-.containerShopCardsButton {
+.containerShopCardsButton,
+.containerTitleTimerButton {
 
     background: var(--bg-glass);
 
@@ -34,7 +35,8 @@
 }
 
 
-.containerTitleTimer {
+.containerTitleTimer,
+.containerTitleTimerButton {
     margin-bottom: 5px;
     display: flex;
     align-items: center;
@@ -114,7 +116,8 @@
 
 .containerActivityButton,
 .containerShopCardsButton,
-.scheduleContainerGeneralButton {
+.scheduleContainerGeneralButton,
+.containerTitleTimerButton {
     text-decoration: none;
     border: none;
     font: inherit;
@@ -172,7 +175,8 @@
         width: 100%;
     }
 
-    .containerTitleTimer {
+    .containerTitleTimer,
+    .containerTitleTimerButton {
         display: flex;
         justify-content: space-between;
 
@@ -212,6 +216,7 @@
     .scheduleContainerGeneralButton,
     .container,
     .containerTitleTimer,
+    .containerTitleTimerButton,
     .containerActivityButton,
     .containerShopCardsButton,
     .containerResetActivity h3,

@@ -1,0 +1,11 @@
+.cardsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.cardLink {
+    text-decoration: none;
+    color: inherit;
+}
