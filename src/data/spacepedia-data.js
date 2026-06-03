@@ -22,7 +22,7 @@ export const spacepediaData = [
         id: 2,
         navigation: "guidance",
         title: "Protocore",
-        img: "/sp/protocores-spacepedia.png",
+        img: "../assets/sp/protocores-spacepedia.png",
         content: `
 <p>When Wanderers of a high threat level are eliminated, they drop Protocores. After years of research, the methods of extracting their energy have become very advanced. Protocore Energy is now used in various fields such as electronics, healthcare, and space. Utilized effectively, Protocores can enhance combat capabilities.</p>    
     `
@@ -49,7 +49,7 @@ export const spacepediaData = [
         id: 5,
         navigation: "guidance",
         title: "Hunter Equipment",
-        img: "/sp/hunter-equipment.png",
+        img: "../assets/sp/hunter-equipment.png",
         content: `
 <p>Developed by the Hunters Association and the Deepspace Society, this is a professional set of gear issued to hunters. Weapons, armor, detectors, support devices, etc. are included.</p>
 <br>
@@ -71,7 +71,7 @@ export const spacepediaData = [
         id: 6,
         navigation: "guidance",
         title: "Wanderers",
-        img: "/sp/wanderers.png",
+        img: "../assets/sp/wanderers.png",
         content: `
 <p>These monsters are made from Metaflux. They first appeared from the Deepspace Tunnel in various forms. While most species lack intelligence, they are formidable. They attack humans and animals and are not easy to defeat.</p>    
     `
@@ -94,7 +94,7 @@ export const spacepediaData = [
         id: 8,
         navigation: "guidance",
         title: "UNICORNS",
-        img: "/sp/unicorns.png",
+        img: "../assets/sp/unicorns.png",
         content: `
 <p>One of the teams under the Hunters Association. First established during the disaster 14 years ago, it is responsible for dealing with Wanderer-related incidents, especially those involving dangerous Wanderers. Its logo is that of a unicorn.</p>
 <br>
@@ -113,7 +113,7 @@ export const spacepediaData = [
         id: 9,
         navigation: "guidance",
         title: "No-Hunt Zone",
-        img: "/sp/no-hunt-zone.png",
+        img: "../assets/sp/no-hunt-zone.png",
         content: `
 <p>If there is a chaotic Protofield and frequent Wanderer appearances, the Hunters Association will designate the area as a no-hunt zone. Citizens are prohibited from entering. Hunters are also not allowed to enter without official authorization. Most of these areas were greatly affected by the Deepspace Tunnel during the Chronorift Catastrophe 14 years ago. The most hellish of battles took place in them, and the impact of the Catastrophe continues to this day. </p>
 <br>
@@ -166,7 +166,7 @@ export const spacepediaData = [
         id: 13,
         navigation: "message",
         title: "Skyhaven",
-        img: "/sp/skyhaven.png",
+        img: "../assets/sp/skyhaven.png",
         content: `
 <p>Skyhaven is an artificial floating island hovering near Linkon City. A Protocore serves as its primary energy source. It is home to the most cutting-edge research centers and advanced tech organizations such as the Deepspace Aviation Administration.</p>
 <br>
@@ -196,7 +196,7 @@ export const spacepediaData = [
         id: 15,
         navigation: "message",
         title: "The Arctic",
-        img: "/sp/arctic.png",
+        img: "../assets/sp/arctic.png",
         content: `
 <p>An area blanketed with ice and snow most of the year. It is a very popular tourist destination due to its stunning aurora and silvery, frost-covered ground.</p>
 <p>Simultaneously serving as the Earth's magnetic pole, it is frequented by Wanderers. Numerous research institutions and relevant military forces are stationed here.</p>
@@ -213,7 +213,7 @@ export const spacepediaData = [
         id: 16,
         navigation: "message",
         title: "EVER Group",
-        img: "/sp/ever.png",
+        img: "../assets/sp/ever.png",
         content: `
 <p>With its roots in biotechnology, Ever Group has become a large company in industries such as biotech, aerospace, Evol Energy, and international trade.</p>
 <br>
@@ -243,7 +243,7 @@ export const spacepediaData = [
         id: 18,
         navigation: "message",
         title: "Farspace Fleet",
-        img: "/sp/farspace-fleet.png",
+        img: "../assets/sp/farspace-fleet.png",
         content: `
 <p>The Farspace Fleet gained public recognition following its establishment in Skyhaven. It possesses formidable patrol and combat capabilities in the depths of the Deepspace Tunnel, carrying out missions of the highest security clearance.</p>
 <p>The Fleet maintains strict internal management and classified operations throughout its ranks, making it nearly impossible for outsiders to obtain any intelligence.</p>
@@ -278,7 +278,7 @@ export const spacepediaData = [
         id: 21,
         navigation: "message",
         title: "The Fountain of Atei",
-        img: "/sp/fountain-of-atei.png",
+        img: "../assets/sp/fountain-of-atei.png",
         content: `
 <p>A series of research initiatives launched by the EVER Group, touted as "a groundbreaking leap in human evolution" through the use of Protocore technology.</p>
 <p>The Val Sanatorium marked the first phase of this vision, but all subsequent press conferences were mysteriously canceled.</p>
@@ -307,7 +307,7 @@ export const spacepediaData = [
         id: 23,
         navigation: "life",
         title: "Linkon City",
-        img: "/sp/linkon-city.png",
+        img: "../assets/sp/linkon-city.png",
         content: `
 <p>Linkon was one of the cities that suffered from the initial Wanderer attacks during the Chronorift Catastrophe 14 years ago. It also served as the first line of defense in the battle against them.</p>
 <p>With the help of Protocore Energy, it has been rebuilt into a bustling metropolis, but many areas still maintain traditional ways of life. It is a city that embodies heroism and the liveliness of everyday life.</p>
@@ -320,7 +320,7 @@ export const spacepediaData = [
         id: 24,
         navigation: "life",
         title: "Azure Square",
-        img: "/sp/azure-square.png",
+        img: "../assets/sp/azure-square.png",
         content: `
 <p>A beautiful square in the heart of Linkon City.</p>    
     `
@@ -329,7 +329,7 @@ export const spacepediaData = [
         id: 25,
         navigation: "life",
         title: "OTTO",
-        img: "/sp/otto.png",
+        img: "../assets/sp/otto.png",
         content: `
 <p>The 5th-gen guide robot developed by Ever Group has a cute, spherical appearance. This adorable machine is available in various forms and designed for different scenarios. In addition to basic systems like navigation, sightseeing commentary, and a lost item tracker, these robots have new features such as weather alerts and a Metaflux monitor.</p>    
     `
@@ -347,7 +347,7 @@ export const spacepediaData = [
         id: 27,
         navigation: "life",
         title: "Hat Island",
-        img: "/sp/hat-island.png",
+        img: "../assets/sp/hat-island.png",
         content: `
 <p>A small island located near Linkon's coast. The mountains resemble a hat, hence its name. It was once a popular tourist site. Now, it is abandoned, for Wanderers have taken over.</p>   
     `
@@ -356,7 +356,7 @@ export const spacepediaData = [
         id: 28,
         navigation: "life",
         title: "Whitesand Bay",
-        img: "/sp/whitesand-bay.png",
+        img: "../assets/sp/whitesand-bay.png",
         content: `
 <p>Whitesand Bay is along the coast of Linkon City, where under sunlight, its sand shines a faint, silvery-white hue. The area is romantic and serene. It's a popular resort area and art center.</p>    
     `
@@ -365,7 +365,7 @@ export const spacepediaData = [
         id: 29,
         navigation: "life",
         title: "Akso Hospital",
-        img: "/sp/asko-hospital.png",
+        img: "../assets/sp/asko-hospital.png",
         content: `
 <p>Linkon's municipal hospital, located downtown. A facility focused on medicine, research, and education. Its divisions such as the Division of Cardiac Surgery and Division of General Surgery are widely respected. At the forefront of healthcare, it is a world-renowned medical institute.</p>    
     `
@@ -374,7 +374,7 @@ export const spacepediaData = [
         id: 30,
         navigation: "life",
         title: "Flux Arts",
-        img: "/sp/flux-arts.png",
+        img: "../assets/sp/flux-arts.png",
         content: `
 <p>This gallery in the city center is owned by a professional curator named Thomas. He is also the exclusive agent for an artist named Rafayel.</p>    
     `
@@ -392,7 +392,7 @@ export const spacepediaData = [
         id: 32,
         navigation: "life",
         title: "Mo Art Studio",
-        img: "/sp/mo-art-studio.png",
+        img: "../assets/sp/mo-art-studio.png",
         content: `
 <p>Situated on an island in Whitesand Bay, it is an art gallery and the private art studio of Rafayel, a famous painter. The first floor is the gallery, but it is usually closed to the public. The second floor is Rafayel's home and art studio.</p>    
     `
@@ -401,7 +401,7 @@ export const spacepediaData = [
         id: 33,
         navigation: "life",
         title: "Twinkle Toys",
-        img: "/sp/twinkle-toys.png",
+        img: "../assets/sp/twinkle-toys.png",
         content: `
 <p>Twinkle Toys is a brand inspired by "bringing joy." Its plushie collections are a worldwide hit. It often collabs with popular animes, games, idols, etc. for events and introduces limited-time products.</p>   
     `
@@ -410,7 +410,7 @@ export const spacepediaData = [
         id: 34,
         navigation: "life",
         title: "Meow's Cafe",
-        img: "/sp/meows-cafe.png",
+        img: "../assets/sp/meows-cafe.png",
         content: `
 <p>A mysterious cat cafe in Linkon City. Its founder invented a game called Kitty Cards, which has become popular among the younger generations. The Evol kitties in its coffee cups are the cafe's specialty.</p>    
     `
@@ -430,7 +430,7 @@ export const spacepediaData = [
         id: 36,
         navigation: "life",
         title: "Bloomshore District",
-        img: "/sp/bloomshore-district.png",
+        img: "../assets/sp/bloomshore-district.png",
         content: `
 <p>An administrative division in Linkon City. While it's right next to the city center, it's as if time has stopped. The architecture and streets have kept their look from two or three decades ago. It's a place with a very down-to-earth charm, where one can find tranquility.</p>    
     `
@@ -439,7 +439,7 @@ export const spacepediaData = [
         id: 37,
         navigation: "tale",
         title: "Lemuria",
-        img: "/sp/Lemuria.png",
+        img: "../assets/sp/Lemuria.png",
         content: `
 <p>An ancient, marine civilization recorded in legends Its unique, advanced technologies are difficult to use. Also, Lemurians had achieved great mastery over many art-related fields such as music, painting, literature, architecture, and carving.</p>
 <p>In 2034, the ruins of an underwater city were discovered to the southeast of Linkon City, proving the existence of Lemuria.  </p>
@@ -465,7 +465,7 @@ export const spacepediaData = [
         id: 39,
         navigation: "tale",
         title: "Lumiere",
-        img: "/sp/lumiere.png",
+        img: "../assets/sp/lumiere.png",
         content: `
 <p>In the midst of the 2034 Chronorift Catastrophe, a mysterious hunter emerged, taking down numerous formidable Wanderers and rescuing countless citizens in Linkon City. This enigmatic hunter played a crucial role in resolving the crisis. Their true identity remains shrouded in mystery, and after the catastrophe, they disappeared without a trace. They appeared again in the last two years, with rumors suggesting that they have already transformed into Tenebra.</p>    
     `
@@ -474,7 +474,7 @@ export const spacepediaData = [
         id: 40,
         navigation: "tale",
         title: "N109 Zone",
-        img: "/sp/n109-zone.png",
+        img: "../assets/sp/n109-zone.png",
         content: `
 <p>Once a bustling technology hub, it is now one of the most dangerous areas after the Catastrophe occurred. Surrounded by other no-hunt zones, it has evolved into a lawless land where danger and opportunity coexist. It is rife with violence and crime.</p>
 <p>With illicit trade and dangerous research, many of its activities are related to Protocores and Wanderers. Its many benefits have driven countless outlaws to risk their lives.</p>
@@ -507,7 +507,7 @@ export const spacepediaData = [
         id: 42,
         navigation: "tale",
         title: "Odd Workshop",
-        img: "/sp/odd-workshop.png",
+        img: "../assets/sp/odd-workshop.png",
         content: `
 <p>Before the Chronorift Catastrophe, the Odd Workshop was a humble robot company. It was abandoned when the area fell into ruin.</p>
 <p>After the disaster, individuals harboring secrets, including the workshop's owner, Philip, relocated to the N109 Zone to begin anew. With Philip's modifications, the Odd Workshop became a facility dedicated to researching Wanderers and Protocores.  </p>  
@@ -545,7 +545,7 @@ export const spacepediaData = [
         id: 46,
         navigation: "note",
         title: "Tara",
-        img: "/sp/tara.png",
+        img: "../assets/sp/tara.png",
         content: `
 <p>The first colleague I befriended after becoming a hunter. Young with a cute personality that suits her name. Aside from being in the know on interesting gossip and info, she really likes divination and the occult. Not only is she a true friend, but also a trustworthy teammate.</p>    
     `
@@ -554,7 +554,7 @@ export const spacepediaData = [
         id: 47,
         navigation: "note",
         title: "Jenna",
-        img: "/sp/jenna.png",
+        img: "../assets/sp/jenna.png",
         content: `
 <p>The leader of UNICORNS and my boss. She personally manages the Alpha Team. Cheerful and decisive, she is known for her hands-on approach She's one of the best in terms of combat.</p>    
     `
@@ -572,7 +572,7 @@ export const spacepediaData = [
         id: 49,
         navigation: "note",
         title: "Caleb",
-        img: "/sp/caleb-spacepedia.png",
+        img: "../assets/sp/caleb-spacepedia.png",
         content: `
 <p>My childhood friend and brother. Grandma took us in when we were young. Now he works as a fighter pilot for the Deepspace Aviation Administration. Ever since he went to Aerospace Academy in Skyhaven, we don't often see each other. But we always visit Grandma during the holidays. While he loves teasing me, he's actually a reliable person whom I trust.</p>
 <br>
@@ -592,7 +592,7 @@ export const spacepediaData = [
         id: 50,
         navigation: "note",
         title: "Nero",
-        img: "/sp/nero.png",
+        img: "../assets/sp/nero.png",
         content: `
 <p>Nero is a colleague from Data Analysis who suffers from severe social anxiety. His personal space has a circumference of two meters, and no outsiders are allowed inside it. Since Alpha Team's office is rarely crowded, he uses it to find some peace and quiet. That's why we're acquaintances. Whenever issues related to Wanderers are brought up, he becomes a chatterbox.</p>    
     `
@@ -601,7 +601,7 @@ export const spacepediaData = [
         id: 51,
         navigation: "note",
         title: "Thomas",
-        img: "/sp/thomas.png",
+        img: "../assets/sp/thomas.png",
         content: `
 <p>Rafayel's friend and the owner of Flux Arts. He works himself to the bone every day, planning Rafayel's exhibitions and scheduling appointments. In contrast to his friend's carefree spirit, he often sees himself as a "mature and professional businessman."</p>    
     `
@@ -619,7 +619,7 @@ export const spacepediaData = [
         id: 53,
         navigation: "note",
         title: "Flux Nexus",
-        img: "/sp/flux-nexus.png",
+        img: "../assets/sp/flux-nexus.png",
         content: `
 <p>A device resembling a rock sculpture. It's a totem embedded with diamonds. According to Xavier, it can capture Metaflux and even resurrect Wanderers.</p>    
     `
@@ -628,7 +628,7 @@ export const spacepediaData = [
         id: 54,
         navigation: "note",
         title: "Josephine",
-        img: "/sp/josephine.png",
+        img: "../assets/sp/josephine.png",
         content: `
 <p>When I was little, Grandma took me and Caleb in. She's my closest, dearest family member.</p>    
     `
@@ -637,7 +637,7 @@ export const spacepediaData = [
         id: 55,
         navigation: "note",
         title: "Greyson",
-        img: "/sp/greyson.png",
+        img: "../assets/sp/greyson.png",
         content: `
 <p>He's a cardiac surgeon at Akso Hospital and Zayne's assistant. Humorous and witty, he brings joy to everyone in his division. But he's still a professional. However, there's a rumor that no one knows his real age...</p>    
     `
@@ -658,7 +658,7 @@ export const spacepediaData = [
         id: 57,
         navigation: "note",
         title: "Aether Core",
-        img: "/sp/aether-core.png",
+        img: "../assets/sp/aether-core.png",
         content: `
 <p>For reasons unknown, the Protocore that resides within my heart is a secret known to only a select few.</p>
 <p>Aether Cores, their power surpassing that of a regular Protocore, attracts anyone aware of their existence. Maybe it has something to do with Grandma's past and what happened to my family.</p>
@@ -679,7 +679,7 @@ export const spacepediaData = [
         id: 58,
         navigation: "note",
         title: "Jeremiah",
-        img: "/sp/jeremiah.png",
+        img: "../assets/sp/jeremiah.png",
         content: `
 <p>The owner of Philo, a flower shop. He's also Xavier's friend. Aside from selling flowers, he has a lot of "skills" such as creating new identities and manipulating data so I could enter the N109 Zone... Where did Xavier meet such a friend?</p>    
     `
@@ -688,7 +688,7 @@ export const spacepediaData = [
         id: 59,
         navigation: "note",
         title: "Sylus",
-        img: "/sp/sylus.png",
+        img: "../assets/sp/sylus.png",
         content: `
 <p>The leader of Onychinus is said to have built his empire on illegal Evol weapons and Protocore deals. He's the most influential, dominant figure in the N109 Zone. However, he hasn't been seen for a while.</p>    
     `
@@ -697,7 +697,7 @@ export const spacepediaData = [
         id: 60,
         navigation: "note",
         title: "Luke & Kieran",
-        img: "/sp/luke-kieran.png",
+        img: "../assets/sp/luke-kieran.png",
         content: `
 <p>Eccentric, rule-breaking twins who enjoy playing pranks.</p>
 <p>They often wear masks that conceal their faces, so it's difficult to tell the two apart. However, upon closer inspection, one can discern the vivacious and unpredictable nature of the older brother, Luke. This contrasts with the comparatively calm and dependable personality of his younger brother, Kieran.    </p>
@@ -707,7 +707,7 @@ export const spacepediaData = [
         id: 61,
         navigation: "note",
         title: "Mephisto",
-        img: "/sp/mephisto.png",
+        img: "../assets/sp/mephisto.png",
         content: `
 <p>A mechanical crow that always accompanies Sylus. He's very skilled but has a temper. Sylus doesn't treat him as a pet.</p>    
     `
@@ -726,7 +726,7 @@ export const spacepediaData = [
         id: 63,
         navigation: "note",
         title: "Andrew",
-        img: "/sp/andrew.png",
+        img: "../assets/sp/andrew.png",
         content: `
 <p>The captain of Data Analysis and the direct supervisor of Nero and Tara, who is known for his logical rigor, meticulous thinking, and emotional stability.</p>
 <p>His Evol is Memory Alteration, but it only affects those with a lower Evol level than his and lasts no longer than 30 minutes.    </p>
@@ -736,7 +736,7 @@ export const spacepediaData = [
         id: 64,
         navigation: "note",
         title: "Simone",
-        img: "/sp/simone.png",
+        img: "../assets/sp/simone.png",
         content: `
 <p>A former colleague of the UNICORNs Armament Tech, whose Evol is Micromodification.</p>
 <p>True to her Evol, she excels at modifying weapons and equipment, though these modifications sometimes result in a slightly higher equipment wear rate.   </p> 

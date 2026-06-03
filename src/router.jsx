@@ -14,7 +14,7 @@ import Anecdotes from "./pages/Anecdotes";
 import AnArticle from "./pages/AnArticle";
 import CompanionBattleInfo from "./pages/CompanionBattleInfo";
 import { CardProvider } from "./components/CardProvider";
-import CardArticle from "./components/CardArticle.jsx";
+import CardArticle from "./pages/CardArticle.jsx";
 
 export const router = createBrowserRouter([
     {

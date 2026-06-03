@@ -49,7 +49,7 @@ function Memories() {
 
     return (
         <>
-            <PageLoader delay={200}>
+            <PageLoader delay={100}>
                 <section className={styles.memories}>
                     <div className={styles.options}>
                         <nav className={styles.select}>

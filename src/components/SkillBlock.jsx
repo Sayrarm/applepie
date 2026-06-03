@@ -1,5 +1,6 @@
 import styles from "./SkillBlock.module.css";
 import TipText from "./TipText.jsx";
+import {getImageUrl} from "./imageUtils.js";
 
 function SkillBlock({
                         skillImg,
@@ -15,7 +16,7 @@ function SkillBlock({
             <div className={styles.sectionTitle}>
                 {skillImg && (
                     <img
-                        src={skillImg}
+                        src={getImageUrl(skillImg)}
                         alt={skillName}
                         className={styles.skillImg}
                     />

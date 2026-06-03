@@ -3,6 +3,7 @@ import SpacepediaNavigation from "../components/SpacepediaNavigation.jsx";
 import styles from "./Spacepedia.module.css";
 import {Collapse} from 'antd';
 import {spacepediaData} from "../data/spacepedia-data.js";
+import {getImageUrl} from "../components/imageUtils.js";
 
 
 function Spacepedia() {
@@ -45,7 +46,7 @@ function Spacepedia() {
                     children: (
                         <>
                             {article.img && (
-                                <img className={styles.img} src={article.img} alt={article.title} />
+                                <img className={styles.img} src={getImageUrl(article.img)} alt={article.title} />
                             )}
                             <div className={styles.text} dangerouslySetInnerHTML={{__html: article.content}} />
                         </>

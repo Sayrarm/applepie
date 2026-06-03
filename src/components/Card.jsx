@@ -1,6 +1,7 @@
 import styles from './Card.module.css'
 import {useContext} from "react";
 import {CardContext} from "./CardContext.jsx";
+import {getImageUrl} from "./imageUtils.js";
 
 
 function Card({data}) {
@@ -12,7 +13,7 @@ function Card({data}) {
         <>
             <article className={styles.card}>
                 <img className={imageClass}
-                     src={data.imageSmall}
+                     src={getImageUrl(data.imageSmall)}
                      alt={data.name}/>
 
                 <div className={styles.imgInfo}>
@@ -22,17 +23,17 @@ function Card({data}) {
                             <img
                                 className={styles.stars}
                                 key={i}
-                                src={data.rarity}
+                                src={getImageUrl(data.rarity)}
                                 alt={data.rarityName}
                                 width={15}
                                 height={15}
                             />
                         ))}
                     </div>
-                    <img className={styles.stella} src={data.stella} alt={data.stellaName} width={22} height={22}/>
-                    <img className={styles.placement} src={data.placement} alt={data.placementName} width={22}
+                    <img className={styles.stella} src={getImageUrl(data.stella)} alt={data.stellaName} width={22} height={22}/>
+                    <img className={styles.placement} src={getImageUrl(data.placement)} alt={data.placementName} width={22}
                          height={22}/>
-                    <img className={styles.talent} src={data.talent} alt={data.talentName} width={22} height={22}/>
+                    <img className={styles.talent} src={getImageUrl(data.talent)} alt={data.talentName} width={22} height={22}/>
 
                     <div className={styles.parametrsBG}></div>
                 </div>

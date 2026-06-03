@@ -1,6 +1,7 @@
 import styles from "./Battle.module.css";
 import {compData} from "../data/comp-data.js";
 import {Link} from "react-router-dom";
+import {getImageUrl} from "../components/imageUtils.js";
 
 function Battle() {
 
@@ -13,7 +14,7 @@ function Battle() {
                     className={styles.link}
                     to={`/battle/${category.link}`}
                 >
-                    <img className={styles.img} src={category.img || category.imgWeapon} alt="image"/>
+                    <img className={styles.img} src={getImageUrl(category.img || category.imgWeapon)} alt="image"/>
                     <div className={styles.title}>{category.companionName || category.weaponName}</div>
                 </Link>
             ))}

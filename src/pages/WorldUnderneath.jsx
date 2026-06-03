@@ -5,7 +5,7 @@ import PageLoader from '../components/PageLoader';
 
 function WorldUnderneath() {
     return (
-        <PageLoader delay={1000}>
+        <PageLoader delay={300}>
         <nav className={styles.nav}>
             {wuCategories.map(category => (
                 <Link

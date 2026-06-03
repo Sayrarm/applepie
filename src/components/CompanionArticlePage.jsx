@@ -1,6 +1,7 @@
 import {useParams} from 'react-router-dom';
 import styles from "./CompanionArticlePage.module.css";
 import SkillBlock from "./SkillBlock.jsx";
+import {getImageUrl} from "./imageUtils.js";
 
 function CompanionArticlePage({data, linkField = "link"}) {
     const {articleLink} = useParams();
@@ -21,7 +22,7 @@ function CompanionArticlePage({data, linkField = "link"}) {
 
                     {companion.img && (
                         <img
-                            src={companion.img}
+                            src={getImageUrl(companion.img)}
                             alt={companion.companionName}
                             className={styles.portraitComp}
                         />
@@ -81,7 +82,7 @@ function CompanionArticlePage({data, linkField = "link"}) {
 
                     {companion.imgWeapon && (
                         <img
-                            src={companion.imgWeapon}
+                            src={getImageUrl(companion.imgWeapon)}
                             alt={companion.companionName}
                             className={styles.portraitMC}
                         />

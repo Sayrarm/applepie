@@ -2,7 +2,7 @@
 import { Spin } from 'antd';
 import { useState, useEffect } from 'react';
 
-function PageLoader({ children, delay = 500 }) {
+function PageLoader({ children, delay = 50 }) {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
