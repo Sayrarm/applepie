@@ -1,6 +1,7 @@
 import styles from "./Anecdotes.module.css";
 import { Link } from "react-router-dom";
 import {anCategories} from "../data/an-categories.js";
+import {getImageUrl} from "../components/imageUtils.js";
 
 function Anecdotes() {
     return (
@@ -12,7 +13,7 @@ function Anecdotes() {
                         className={styles.link}
                         to={`/anecdotes/${category.link}`}
                     >
-                        <img className={styles.img} src={category.image} alt="image"/>
+                        <img className={styles.img} src={getImageUrl(category.image)} alt="image"/>
                         <div className={styles.title}>{category.title}</div>
                     </Link>
                 ))}

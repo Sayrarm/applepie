@@ -2,6 +2,7 @@ import styles from "./WorldUnderneath.module.css";
 import { Link } from "react-router-dom";
 import { wuCategories } from "../data/wu-categories";
 import PageLoader from '../components/PageLoader';
+import {getImageUrl} from "../components/imageUtils.js";
 
 function WorldUnderneath() {
     return (
@@ -13,7 +14,7 @@ function WorldUnderneath() {
                     className={styles.link}
                     to={`/world-underneath/${category.link}`}
                 >
-                    <img src={category.image} alt="image"/>
+                    <img src={getImageUrl(category.image)} alt="image"/>
                     <div className={styles.title}>{category.id}. {category.title}</div>
                 </Link>
             ))}
