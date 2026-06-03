@@ -44,43 +44,61 @@ function CardArticle() {
                     />
                 </div>
                 <div className={styles.infoContainer}>
-                    <div className={styles.cardTitle}>{card.char}: {card.name}</div>
+                    <h1 className={styles.cardTitle}>{card.char}: {card.name}</h1>
 
-                    <div>Rarity:
-                        <img
-                            src={getImageUrl(card.rarity)}
-                            alt={card.rarityName}
-                            width={24}
-                            height={24}
-                        />
+                    <div className={styles.parametrsContainer}>
+                        <div className={styles.generalContainer}>
+                            <span>Rarity:</span>
+                            {[...Array(card.rarityStars)].map((_, i) => (
+                                <img
+                                    className={styles.stars}
+                                    key={i}
+                                    src={getImageUrl(card.rarity)}
+                                    alt={card.rarityName}
+                                    width={24}
+                                    height={24}
+                                />
+                            ))}
+                        </div>
+
+                        <div className={styles.borderVertical}></div>
+
+                        <div className={styles.generalContainer}>
+                            <span>Stellactrum:</span>
+                            <img
+                                src={getImageUrl(card.stella)}
+                                alt={card.stellaName}
+                                width={24}
+                                height={24}
+                            />
+                        </div>
+
+                        <div className={styles.borderVertical}></div>
+
+                        <div className={styles.generalContainer}>
+                            <span>Placement:</span>
+                            <img
+                                src={getImageUrl(card.placement)}
+                                alt={card.placementName}
+                                width={24}
+                                height={24}
+                            />
+                        </div>
+
+                        <div className={styles.borderVertical}></div>
+
+                        <div className={styles.generalContainer}>
+                            <span>Talent:</span>
+                            <img
+                                src={getImageUrl(card.talent)}
+                                alt={card.talentName}
+                                width={24}
+                                height={24}
+                            />
+                        </div>
                     </div>
 
-                    <div>Stella:
-                        <img
-                            src={getImageUrl(card.stella)}
-                            alt={card.stellaName}
-                            width={24}
-                            height={24}
-                        />
-                    </div>
 
-                    <div>Placement:
-                        <img
-                            src={getImageUrl(card.placement)}
-                            alt={card.placementName}
-                            width={24}
-                            height={24}
-                        />
-                    </div>
-
-                    <div>Talent:
-                        <img
-                            src={getImageUrl(card.talent)}
-                            alt={card.talentName}
-                            width={24}
-                            height={24}
-                        />
-                    </div>
                 </div>
             </article>
         </>
