@@ -1,15 +1,42 @@
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
+
+// Ключи для localStorage
+const STORAGE_KEYS = {
+    SELECTED_CHAR: 'memories_selected_char',
+    FILTERS: 'memories_filters'
+};
 
 export const useFilter = () => {
 
-    const [selectedChar, setSelectedChar] = useState('ALL');
+    // Загружаем начальные значения из localStorage
+    const getInitialSelectedChar = () => {
+        const saved = localStorage.getItem(STORAGE_KEYS.SELECTED_CHAR);
+        return saved || 'ALL';
+    };
+
+    const getInitialFilters = () => {
+        const saved = localStorage.getItem(STORAGE_KEYS.FILTERS);
+        return saved ? JSON.parse(saved) : {
+            rarity: [],
+            placement: [],
+            talent: [],
+            stella: []
+        };
+    };
+
+    const [selectedChar, setSelectedChar] = useState(getInitialSelectedChar);
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [filters, setFilters] = useState({
-        rarity: [],
-        placement: [],
-        talent: [],
-        stella: []
-    })
+    const [filters, setFilters] = useState(getInitialFilters);
+
+    // Сохраняем selectedChar в localStorage при изменении
+    useEffect(() => {
+        localStorage.setItem(STORAGE_KEYS.SELECTED_CHAR, selectedChar);
+    }, [selectedChar]);
+
+    // Сохраняем filters в localStorage при изменении
+    useEffect(() => {
+        localStorage.setItem(STORAGE_KEYS.FILTERS, JSON.stringify(filters));
+    }, [filters]);
 
     const applyFilters = (newFilters) => {
         setFilters(newFilters)

@@ -1,4 +1,7 @@
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
+
+// Ключ для localStorage
+const STORAGE_KEY_SORT = 'memories_sort_criteria';
 
 // Функции сравнения для каждого типа сортировки
 const compareFunctions = {
@@ -48,7 +51,20 @@ const multiSort = (memories, criteria) => {
 }
 
 export const useSort =() => {
-    const [sortCriteria, setSortCriteria] = useState([])
+
+    // Загружаем сохранённые критерии из localStorage
+    const getInitialSortCriteria = () => {
+        const saved = localStorage.getItem(STORAGE_KEY_SORT);
+        return saved ? JSON.parse(saved) : [];
+    };
+
+    const [sortCriteria, setSortCriteria] = useState(getInitialSortCriteria);
+
+
+    // Сохраняем sortCriteria в localStorage при изменении
+    useEffect(() => {
+        localStorage.setItem(STORAGE_KEY_SORT, JSON.stringify(sortCriteria));
+    }, [sortCriteria]);
 
     // Обработчик изменения сортировки (для mode="tags")
     const handleSortChange = (values) => {

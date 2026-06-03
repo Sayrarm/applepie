@@ -1,17 +1,27 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 
+const STORAGE_KEY_SEARCH = 'memories_search_query';
 
 export const useSearch = () => {
-    const [searchQuery, setSearchQuery] = useState('')
+    const getInitialSearchQuery = () => {
+        const saved = localStorage.getItem(STORAGE_KEY_SEARCH);
+        return saved || '';
+    };
 
-// Функция для обработки поиска из antd
+    const [searchQuery, setSearchQuery] = useState(getInitialSearchQuery);
+
+    // Сохраняем поисковый запрос
+    useEffect(() => {
+        localStorage.setItem(STORAGE_KEY_SEARCH, searchQuery);
+    }, [searchQuery]);
+
     const onSearch = (value) => {
-        setSearchQuery(value.toLowerCase()) // сохраняем запрос в нижнем регистре
-    }
+        setSearchQuery(value.toLowerCase());
+    };
 
     const clearSearch = () => {
         setSearchQuery('');
     };
 
-    return { searchQuery, onSearch, clearSearch }
-}
+    return { searchQuery, onSearch, clearSearch };
+};

@@ -4,6 +4,7 @@ import {Button, Input, Select} from 'antd';
 import myFilterIcon from '/src/assets/icons/filter.png';
 import myClearIcon from '/src/assets/icons/eraser_16863523.png';
 import myChangeIcon from '/src/assets/icons/icons8-change-64.png';
+import myResetIcon from '/src/assets/icons/reset.png';
 import FilterModalWindow from "../components/FilterModalWindow.jsx";
 import {useSearch} from '../hooks/useSearch';
 import {useSort} from '../hooks/useSort';
@@ -46,6 +47,14 @@ function Memories() {
 
     // Сортируем отфильтрованные данные
     const sortedMemories = sortMemories(filteredMemories);
+
+    // Функция сброса всех настроек
+    const resetAllSettings = () => {
+        setSelectedChar('ALL');
+        clearSorting();
+        onSearch(''); // или clearSearch()
+        clearFilters();
+    };
 
     return (
         <>
@@ -158,6 +167,13 @@ function Memories() {
                                     style={{width: 20, height: 20}}
                                     alt={'filter'}/>}
                                 title={"change size of Cards"}
+                                className={styles.colorBrown}
+                            />
+
+                            <Button
+                                onClick={resetAllSettings}
+                                icon={<img src={myResetIcon} style={{width: 20, height: 20}} alt="reset"/>}
+                                title="Reset all filters and sorting"
                                 className={styles.colorBrown}
                             />
                         </aside>
