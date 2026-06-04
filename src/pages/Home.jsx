@@ -8,9 +8,9 @@ import WeeklyTrial from "../components/WeeklyTrial.jsx";
 import ModalWindow from "../components/ModalWindow.jsx";
 import {useRef} from "react";
 import HunterBuffCard from "../components/HunterContestDescription.jsx";
-import CardList from "../components/CardList.jsx";
-import memoriesData from '../data/memories-data.json';
-import {CardProvider} from "../components/CardProvider.jsx";
+import bannersData from "../data/banners-data-full.json";
+import BannerList from "../components/BannerList.jsx";
+import BannerForHome from "../components/BannerForHome.jsx";
 
 function Home() {
 
@@ -22,7 +22,6 @@ function Home() {
     const missionModalRef = useRef();
     const wishWellModalRef = useRef();
     const scheduleModalRef = useRef();
-    const memoriesModalRef = useRef();
 
 
     const showDailyModal = () => {
@@ -41,9 +40,6 @@ function Home() {
         scheduleModalRef.current.showModal();
     };
 
-    const showMemoriesModal = () => {
-        memoriesModalRef.current.showModal();
-    };
 
     return (
         <section className={styles.containerMain}>
@@ -51,29 +47,9 @@ function Home() {
 
                 <h2 className={styles.h2}>Banners</h2>
 
-                <button
-                    onClick={showMemoriesModal}
-                    className={styles.containerTitleTimerButton}>
-                    <FlexibleTimer
-                        startDateTime="2026-05-31T05:00:00+02:00"
-                        endDateTime="2026-06-08T04:59:00+02:00"
-                    />
-                    <img className={styles.imgBanner} src="src/assets/main-page/rerun-banner.png"
-                         alt="new-banner"/>
-                </button>
+                <BannerForHome banner={bannersData.find(b => b.id === 76)} />
 
-                <ModalWindow
-                    ref={memoriesModalRef}
-                    title={'Memories from Banner'}
-                    tag={
-                        <>
-                            <CardProvider>
-                                <CardList
-                                    cards={memoriesData.filter(card => [176, 270, 365].includes(card.id))}
-                                />
-                            </CardProvider>
-                        </>
-                    }/>
+                <BannerForHome banner={bannersData.find(b => b.id === 78)} />
 
                 <h2 className={styles.h2}>Events</h2>
 

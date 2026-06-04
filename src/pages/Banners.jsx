@@ -5,7 +5,7 @@ function AllBannersPage() {
     return (
         <div>
             <h1>All banners</h1>
-            <BannerList banners={bannersData} showAll={true} />
+            <BannerList banners={bannersData} />
         </div>
     );
 }
