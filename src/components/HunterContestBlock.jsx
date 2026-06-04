@@ -5,7 +5,7 @@ import HunterBuffCard from "./HunterContestDescription.jsx";
 import {useRef} from "react";
 
 
-function HunterContest() {
+function HunterContestBlock() {
 
     const missionModalRef = useRef();
 
@@ -50,27 +50,26 @@ function HunterContest() {
                     <>
                         <HunterBuffCard
                             iconCount={5}
-                            iconSrc="/src/assets/icons/violet.png"
+                            iconSrc="/src/assets/icons/sapphire.png"
                             extraIconSrc="/src/assets/icons/ruby.png"
-                            title="Team A: Oath Amplification"
-                            description="After using the Ardent Oath, DMG dealt by you and Companion increases by 100% for 10s."
+                            title="Team A: Silverbay Division"
+                            description="Charged Attack Penetration: When Wanderer is hit by a Charged Attack, it receives increased DMG in a short period of time."
                         />
                         <br/>
                         <HunterBuffCard
                             iconCount={4}
-                            iconSrc="/src/assets/icons/ruby.png"
-                            extraIconSrc="/src/assets/icons/amber.png"
-                            title="Team B: Press On Stacks"
-                            description="After an Active Skill is used, Support Skill damage increases by 35% for 4s.
-                                    This effect can stack up to 3 times."
+                            iconSrc="/src/assets/icons/sapphire.png"
+                            extraIconSrc="/src/assets/icons/emerald.png"
+                            title="Team B: Goldbird Division"
+                            description="Collaborative Fusion: Enemies hit by Support Skills take 80% more Basic Attack DMG for 5s."
                         />
                         <br/>
                         <HunterBuffCard
                             iconCount={3}
-                            iconSrc="/src/assets/icons/emerald.png"
-                            extraIconSrc="/src/assets/icons/pearl.png"
-                            title="Team C: Empowerment"
-                            description="Increases ATK of all allied units."
+                            iconSrc="/src/assets/icons/pearl.png"
+                            extraIconSrc="/src/assets/icons/violet.png"
+                            title="Team C: Soaria Division"
+                            description="Overload: Increases CRIT rate of all allied units."
                         />
                     </>
                 }/>
@@ -79,4 +78,4 @@ function HunterContest() {
 
 }
 
-export default HunterContest
+export default HunterContestBlock

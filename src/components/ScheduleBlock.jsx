@@ -6,7 +6,7 @@ import WeeklyTrial from "./WeeklyTrial.jsx";
 import {useRecurringTimer} from "../hooks/resetTimer.js";
 import {useRef} from "react";
 
-function Schedule() {
+function ScheduleBlock() {
 
     const timeLeftDay = useRecurringTimer('day');
     const scheduleModalRef = useRef();
@@ -37,7 +37,7 @@ function Schedule() {
 
             <ModalWindow
                 ref={scheduleModalRef}
-                title={'Schedule of Protocores and Trials'}
+                title={'ScheduleBlock of Protocores and Trials'}
                 tag={
                     <>
                         <img
@@ -55,4 +55,4 @@ function Schedule() {
 
 }
 
-export default Schedule
+export default ScheduleBlock
