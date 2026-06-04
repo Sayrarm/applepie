@@ -31,16 +31,17 @@ function BannerList({ banners }) {
                         onClick={() => showMemoriesModal(banner)}
                         className={styles.bannerCard}
                     >
-                        <FlexibleTimer
-                            startDateTime={banner.startDate}
-                            endDateTime={banner.endDate}
-                        />
+
                         <img
                             className={styles.bannerImage}
                             src={getImageUrl(banner.image)}
                             alt={banner.name}
                         />
                         <div className={styles.bannerTitle}>{banner.name}</div>
+                        <FlexibleTimer
+                            startDateTime={banner.startDate}
+                            endDateTime={banner.endDate}
+                        />
                     </button>
                 ))}
             </div>

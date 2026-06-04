@@ -103,9 +103,7 @@ function FlexibleTimer({
                     ))}
                 </div>
             ) : (
-                <div>
-                    Ended
-                </div>
+                <div></div>
             )}
         </div>
     );

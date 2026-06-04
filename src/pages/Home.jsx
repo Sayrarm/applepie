@@ -9,7 +9,6 @@ import ModalWindow from "../components/ModalWindow.jsx";
 import {useRef} from "react";
 import HunterBuffCard from "../components/HunterContestDescription.jsx";
 import bannersData from "../data/banners-data-full.json";
-import BannerList from "../components/BannerList.jsx";
 import BannerForHome from "../components/BannerForHome.jsx";
 
 function Home() {
@@ -48,6 +47,8 @@ function Home() {
                 <h2 className={styles.h2}>Banners</h2>
 
                 <BannerForHome banner={bannersData.find(b => b.id === 76)} />
+
+                <BannerForHome banner={bannersData.find(b => b.id === 77)} />
 
                 <BannerForHome banner={bannersData.find(b => b.id === 78)} />
 

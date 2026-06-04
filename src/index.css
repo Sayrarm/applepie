@@ -88,7 +88,7 @@ html.dark {
     --a-hover: #ff4444;
     --background: #202227;
     --bg-glass:color-mix(in srgb, var(--dark) 80%, transparent);
-    --bg-modal: #202227;
+    --bg-modal: #686A6E;
 
     --bg-primary: black;
     --bg-image: url('../src/assets/bg/Frame 37.png');
