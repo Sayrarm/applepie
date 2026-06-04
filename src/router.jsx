@@ -15,6 +15,7 @@ import AnArticle from "./pages/AnArticle";
 import CompanionBattleInfo from "./pages/CompanionBattleInfo";
 import { CardProvider } from "./components/CardProvider";
 import CardArticle from "./pages/CardArticle.jsx";
+import Banners from "./pages/Banners.jsx";
 
 export const router = createBrowserRouter([
     {
@@ -33,6 +34,7 @@ export const router = createBrowserRouter([
             },
             { path: "characters", element: <Characters /> },
             { path: "battle", element: <Battle /> },
+            { path: "banners-history", element: <Banners /> },
             { path: "battle/:articleLink", element: <CompanionBattleInfo /> },
             { path: "lore", element: <Lore /> },
             { path: "spacepedia", element: <Spacepedia /> },

@@ -53,8 +53,9 @@ body {
     --a-hover: #9a5929;
     --background: #35312d;
     --bg-glass: color-mix(in srgb, var(--bg-brown) 10%, transparent);
+    --bg-modal: #ecdace;
 
-    --bg-primary: #ffe0c0;
+    --bg-primary: #ecdace;
     --bg-image: url('../src/assets/bg/x3_collection_bg_01.png');
     --box-shadow: 10px 10px 6px -5px rgba(148, 148, 148, 0.6);
     --linear-gradient-webkit: -webkit-linear-gradient(270deg, black 0%, black 50%, transparent 100%);
@@ -87,6 +88,7 @@ html.dark {
     --a-hover: #ff4444;
     --background: #202227;
     --bg-glass:color-mix(in srgb, var(--dark) 80%, transparent);
+    --bg-modal: #202227;
 
     --bg-primary: black;
     --bg-image: url('../src/assets/bg/Frame 37.png');

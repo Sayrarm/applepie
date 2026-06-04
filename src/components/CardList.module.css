@@ -1,11 +1,16 @@
-.cardsGrid {
+.container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: flex-start;
+    gap: 5px;
+    justify-content: center;
 }
 
 .cardLink {
     text-decoration: none;
-    color: inherit;
+}
+
+:global(.ant-modal .ant-modal-container) {
+    background-color: var(--bg-modal) !important;
+    padding: 20px !important;
+    border-radius: 16px !important;
 }

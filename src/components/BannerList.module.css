@@ -1,0 +1,52 @@
+.bannersGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.bannerCard {
+    position: relative;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+    transition: transform 0.2s ease;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.bannerCard:hover {
+    transform: translateY(-5px);
+}
+
+.bannerImage {
+    width: 275px;
+    height: 93px;
+    border-radius: 12px;
+    display: block;
+
+    object-fit: cover;
+    object-position: center 20%;
+    -webkit-box-shadow: var(--box-shadow);
+    -moz-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
+}
+
+.bannerTitle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    color: white;
+    padding: 30px 10px 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.noBanners {
+    text-align: center;
+    padding: 40px;
+    color: #999;
+}
