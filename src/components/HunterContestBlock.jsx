@@ -1,20 +1,78 @@
 import styles from "../pages/Home.module.css";
 import FlexibleTimer from "./FlexibleTimer.jsx";
 import ModalWindow from "./ModalWindow.jsx";
-import HunterBuffCard from "./HunterContestDescription.jsx";
-import {useRef} from "react";
-
+import HunterContestDescription from "./HunterContestDescription.jsx";
+import { useRef, useState, useEffect } from "react";
+import { getImageUrl } from "./imageUtils.js";
 
 function HunterContestBlock() {
-
+    const [buffsData, setBuffsData] = useState(null);
     const missionModalRef = useRef();
+
+    useEffect(() => {
+        fetch('/src/data/hunter-contest-buffs.json')
+            .then(res => res.json())
+            .then(data => {
+                const activeBuffs = data.find(item => item.active === true);
+                setBuffsData(activeBuffs);
+            })
+            .catch(error => console.error('Error:', error));
+    }, []);
 
     const showMissionModal = () => {
         missionModalRef.current.showModal();
     };
 
-    return (
+    if (!buffsData) {
+        return <div className={styles.loading}>Loading...</div>;
+    }
 
+    // Формируем данные для каждой команды
+    const teams = [
+        {
+            name: "Team A: Silverbay Division",
+            mainIconSrc: buffsData.teamAStella1,
+            mainIconCount: buffsData.teamAStella1Count,
+            extraIcons: [],
+            description: buffsData.teamA
+        },
+        {
+            name: "Team B: Goldbird Division",
+            mainIconSrc: buffsData.teamBStella1,
+            mainIconCount: buffsData.teamBStella1Count,
+            extraIcons: [],
+            description: buffsData.teamB
+        },
+        {
+            name: "Team C: Soaria Division",
+            mainIconSrc: buffsData.teamCStella1,
+            mainIconCount: buffsData.teamCStella1Count,
+            extraIcons: [],
+            description: buffsData.teamC
+        }
+    ];
+
+    // Добавляем вторые иконки, если они есть
+    if (buffsData.teamAStella2 && buffsData.teamAStella2Count) {
+        teams[0].extraIcons.push({
+            src: buffsData.teamAStella2,
+            count: buffsData.teamAStella2Count
+        });
+    }
+    if (buffsData.teamBStella2 && buffsData.teamBStella2Count) {
+        teams[1].extraIcons.push({
+            src: buffsData.teamBStella2,
+            count: buffsData.teamBStella2Count
+        });
+    }
+    if (buffsData.teamCStella2 && buffsData.teamCStella2Count) {
+        teams[2].extraIcons.push({
+            src: buffsData.teamCStella2,
+            count: buffsData.teamCStella2Count
+        });
+    }
+
+    return (
         <>
             <button onClick={showMissionModal} className={styles.containerActivityButton}>
                 <div className={styles.containerResetActivity}>
@@ -48,34 +106,26 @@ function HunterContestBlock() {
                 title={'Hunter Contest Buffs'}
                 tag={
                     <>
-                        <HunterBuffCard
-                            iconCount={5}
-                            iconSrc="/src/assets/icons/sapphire.png"
-                            extraIconSrc="/src/assets/icons/ruby.png"
-                            title="Team A: Silverbay Division"
-                            description="Charged Attack Penetration: When Wanderer is hit by a Charged Attack, it receives increased DMG in a short period of time."
-                        />
-                        <br/>
-                        <HunterBuffCard
-                            iconCount={4}
-                            iconSrc="/src/assets/icons/sapphire.png"
-                            extraIconSrc="/src/assets/icons/emerald.png"
-                            title="Team B: Goldbird Division"
-                            description="Collaborative Fusion: Enemies hit by Support Skills take 80% more Basic Attack DMG for 5s."
-                        />
-                        <br/>
-                        <HunterBuffCard
-                            iconCount={3}
-                            iconSrc="/src/assets/icons/pearl.png"
-                            extraIconSrc="/src/assets/icons/violet.png"
-                            title="Team C: Soaria Division"
-                            description="Overload: Increases CRIT rate of all allied units."
-                        />
+                        {teams.map((team, index) => (
+                            <div key={index}>
+                                <HunterContestDescription
+                                    mainIconSrc={getImageUrl(team.mainIconSrc)}
+                                    mainIconCount={team.mainIconCount}
+                                    extraIcons={team.extraIcons.map(icon => ({
+                                        ...icon,
+                                        src: getImageUrl(icon.src)
+                                    }))}
+                                    title={team.name}
+                                    description={team.description}
+                                />
+                                {index < teams.length - 1 && <br />}
+                            </div>
+                        ))}
                     </>
-                }/>
+                }
+            />
         </>
-    )
-
+    );
 }
 
-export default HunterContestBlock
+export default HunterContestBlock;
