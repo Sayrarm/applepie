@@ -2,6 +2,7 @@ import {Collapse} from "antd";
 import {createStaticStyles} from 'antd-style';
 import styles from "./AsideCompanionList.module.css";
 import {Link} from "react-router-dom";
+import {getImageUrl} from "./imageUtils.js";
 
 const classNames = createStaticStyles(({css}) => ({
     root: css`
@@ -25,7 +26,7 @@ function AsideCompanionList({className}) {
                     <Link className={styles.link} to="/battle/kod">
                         King of Darknight
                         <img
-                            src="/src/assets/companions/xavier-kod.png"
+                            src={getImageUrl("../assets/companions/xavier-kod.png")}
                             alt="kod"
                             className={styles.imgCompanion}
                         />
@@ -34,7 +35,7 @@ function AsideCompanionList({className}) {
                     <Link className={styles.link} to="/battle/lumiere">
                         Lumiere
                         <img
-                            src="/src/assets/companions/xavier-lumiere.png"
+                            src={getImageUrl("../assets/companions/xavier-lumiere.png")}
                             alt="lumiere"
                             className={styles.imgCompanion}
                         />
@@ -43,7 +44,7 @@ function AsideCompanionList({className}) {
                     <Link className={styles.link} to="/battle/lightseeker">
                         Lightseeker
                         <img
-                            src="/src/assets/companions/xavier-lightseeker.png"
+                            src={getImageUrl("../assets/companions/xavier-lightseeker.png")}
                             alt="lightseeker"
                             className={styles.imgCompanion}
                         />
@@ -52,7 +53,7 @@ function AsideCompanionList({className}) {
                     <Link className={styles.link} to="/battle/evol-police">
                         Evol Police
                         <img
-                            src="/src/assets/companions/xavier-police.png"
+                            src={getImageUrl("../assets/companions/xavier-police.png")}
                             alt="police"
                             className={styles.imgCompanion}
                         />
@@ -61,7 +62,7 @@ function AsideCompanionList({className}) {
                     <Link className={styles.link} to="/battle/distant-youth">
                         Distant Youth
                         <img
-                            src="/src/assets/companions/xavier-youth.png"
+                            src={getImageUrl("../assets/companions/xavier-youth.png")}
                             alt="youth"
                             className={styles.imgCompanion}
                         />
@@ -70,7 +71,7 @@ function AsideCompanionList({className}) {
                     <Link className={styles.link} to="/battle/hunter">
                         Deepspace Hunter
                         <img
-                            src="/src/assets/companions/xavier-hunter.png"
+                            src={getImageUrl("../assets/companions/xavier-hunter.png")}
                             alt="hunter"
                             className={styles.imgCompanion}
                         />
@@ -86,7 +87,7 @@ function AsideCompanionList({className}) {
                     <Link className={styles.link} to="/battle/goa">
                         God of Annihilation
                         <img
-                            src="/src/assets/companions/zayne-goa.png"
+                            src={getImageUrl("../assets/companions/zayne-goa.png")}
                             alt="goa"
                             className={styles.imgCompanion}
                         />
@@ -95,7 +96,7 @@ function AsideCompanionList({className}) {
                     <Link className={styles.link} to="/battle/mof">
                         Master of Fate
                         <img
-                            src="/src/assets/companions/zayne-mof.png"
+                            src={getImageUrl("../assets/companions/zayne-mof.png")}
                             alt="mof"
                             className={styles.imgCompanion}
                         />
@@ -104,7 +105,7 @@ function AsideCompanionList({className}) {
                     <Link className={styles.link} to="/battle/foreseer">
                         Foreseer
                         <img
-                            src="/src/assets/companions/zayne-foreseer.png"
+                            src={getImageUrl("../assets/companions/zayne-foreseer.png")}
                             alt="foreseer"
                             className={styles.imgCompanion}
                         />
@@ -113,7 +114,7 @@ function AsideCompanionList({className}) {
                     <Link className={styles.link} to="/battle/medic">
                         Medic of the Arctic
                         <img
-                            src="/src/assets/companions/zayne-medic.png"
+                            src={getImageUrl("../assets/companions/zayne-medic.png")}
                             alt="medic"
                             className={styles.imgCompanion}
                         />
@@ -122,7 +123,7 @@ function AsideCompanionList({className}) {
                     <Link className={styles.link} to="/battle/dawnbreaker">
                         Dawnbreaker
                         <img
-                            src="/src/assets/companions/zayne-dawnbreaker.png"
+                            src={getImageUrl("../assets/companions/zayne-dawnbreaker.png")}
                             alt="dawnbreaker"
                             className={styles.imgCompanion}
                         />
@@ -131,7 +132,7 @@ function AsideCompanionList({className}) {
                     <Link className={styles.link} to="/battle/doctor">
                         Linkon Doctor
                         <img
-                            src="/src/assets/companions/zayne-doctor.png"
+                            src={getImageUrl("../assets/companions/zayne-doctor.png")}
                             alt="doctor"
                             className={styles.imgCompanion}
                         />
@@ -147,7 +148,7 @@ function AsideCompanionList({className}) {
                     <Link className={styles.link} to="/battle/lsg">
                         Lemurian Sea God
                         <img
-                            src="/src/assets/companions/rafayel-lsg.png"
+                            src={getImageUrl("../assets/companions/rafayel-lsg.png")}
                             alt="lsg"
                             className={styles.imgCompanion}
                         />
@@ -156,7 +157,7 @@ function AsideCompanionList({className}) {
                     <Link className={styles.link} to="/battle/got">
                         God of the Tides
                         <img
-                            src="/src/assets/companions/rafayel-got.png"
+                            src={getImageUrl("../assets/companions/rafayel-got.png")}
                             alt="got"
                             className={styles.imgCompanion}
                         />
@@ -165,7 +166,7 @@ function AsideCompanionList({className}) {
                     <Link className={styles.link} to="/battle/abysswalker">
                         Abysswalker
                         <img
-                            src="/src/assets/companions/rafayel-abysswalker.png"
+                            src={getImageUrl("../assets/companions/rafayel-abysswalker.png")}
                             alt="abysswalker"
                             className={styles.imgCompanion}
                         />
@@ -174,7 +175,7 @@ function AsideCompanionList({className}) {
                     <Link className={styles.link} to="/battle/fresh-paint">
                         Fresh Paint
                         <img
-                            src="/src/assets/companions/rafayel-freshpaint.png"
+                            src={getImageUrl("../assets/companions/rafayel-freshpaint.png")}
                             alt="fresh-paint"
                             className={styles.imgCompanion}
                         />
@@ -183,7 +184,7 @@ function AsideCompanionList({className}) {
                     <Link className={styles.link} to="/battle/phantom">
                         Phantom of the Siren
                         <img
-                            src="/src/assets/companions/rafayel-phantom.png"
+                            src={getImageUrl("../assets/companions/rafayel-phantom.png")}
                             alt="phantom"
                             className={styles.imgCompanion}
                         />
@@ -192,7 +193,7 @@ function AsideCompanionList({className}) {
                     <Link className={styles.link} to="/battle/artist">
                         Artist
                         <img
-                            src="/src/assets/companions/rafayel-artist.png"
+                            src={getImageUrl("../assets/companions/rafayel-artist.png")}
                             alt="artist"
                             className={styles.imgCompanion}
                         />
@@ -209,7 +210,7 @@ function AsideCompanionList({className}) {
                     <Link className={styles.link} to="/battle/silverwing-fiend">
                         Silverwing Fiend
                         <img
-                            src="/src/assets/companions/sylus-fiend.png"
+                            src={getImageUrl("../assets/companions/sylus-fiend.png")}
                             alt="fiend"
                             className={styles.imgCompanion}
                         />
@@ -218,7 +219,7 @@ function AsideCompanionList({className}) {
                     <Link className={styles.link} to="/battle/sovereign">
                         Abysm Sovereign
                         <img
-                            src="/src/assets/companions/sylus-sovereign.png"
+                            src={getImageUrl("../assets/companions/sylus-sovereign.png")}
                             alt="sovereign"
                             className={styles.imgCompanion}
                         />
@@ -227,7 +228,7 @@ function AsideCompanionList({className}) {
                     <Link className={styles.link} to="/battle/conqueror">
                         Relentless Conqueror
                         <img
-                            src="/src/assets/companions/sylus-conqueror.png"
+                            src={getImageUrl("../assets/companions/sylus-conqueror.png")}
                             alt="conqueror"
                             className={styles.imgCompanion}
                         />
@@ -236,7 +237,7 @@ function AsideCompanionList({className}) {
                     <Link className={styles.link} to="/battle/visitor">
                         Otherworldly Visitor
                         <img
-                            src="/src/assets/companions/sylus-visitor.png"
+                            src={getImageUrl("../assets/companions/sylus-visitor.png")}
                             alt="visitor"
                             className={styles.imgCompanion}
                         />
@@ -252,7 +253,7 @@ function AsideCompanionList({className}) {
                     <Link className={styles.link} to="/battle/netherlord">
                         Netherlord
                         <img
-                            src="/src/assets/companions/caleb_netherlord.png"
+                            src={getImageUrl("../assets/companions/caleb_netherlord.png")}
                             alt="netherlord"
                             className={styles.imgCompanion}
                         />
@@ -261,7 +262,7 @@ function AsideCompanionList({className}) {
                     <Link className={styles.link} to="/battle/x02">
                         Ultimate Weapon X-02
                         <img
-                            src="/src/assets/companions/caleb_X02.png"
+                            src={getImageUrl("../assets/companions/caleb_X02.png")}
                             alt="x02"
                             className={styles.imgCompanion}
                         />
@@ -270,7 +271,7 @@ function AsideCompanionList({className}) {
                     <Link className={styles.link} to="/battle/colonel">
                         Farspace Colonel
                         <img
-                            src="/src/assets/companions/caleb_colonel.png"
+                            src={getImageUrl("../assets/companions/caleb_colonel.png")}
                             alt="colonel"
                             className={styles.imgCompanion}
                         />
@@ -279,7 +280,7 @@ function AsideCompanionList({className}) {
                     <Link className={styles.link} to="/battle/pilot">
                         Deepspace Pilot
                         <img
-                            src="/src/assets/companions/caleb_pilot.png"
+                            src={getImageUrl("../assets/companions/caleb_pilot.png")}
                             alt="pilot"
                             className={styles.imgCompanion}
                         />
@@ -295,7 +296,7 @@ function AsideCompanionList({className}) {
                     <Link className={styles.link} to="/battle/sword">
                         Hunter Sword
                         <img
-                            src="/src/assets/companions/sword.png"
+                            src={getImageUrl("../assets/companions/sword.png")}
                             alt="sword"
                             className={styles.imgCompanion}
                         />
@@ -304,7 +305,7 @@ function AsideCompanionList({className}) {
                     <Link className={styles.link} to="/battle/wand">
                         Hunter Wand
                         <img
-                            src="/src/assets/companions/wand.png"
+                            src={getImageUrl("../assets/companions/wand.png")}
                             alt="wand"
                             className={styles.imgCompanion}
                         />
@@ -313,7 +314,7 @@ function AsideCompanionList({className}) {
                     <Link className={styles.link} to="/battle/claymore">
                         Hunter Claymore
                         <img
-                            src="/src/assets/companions/claymore.png"
+                            src={getImageUrl("../assets/companions/claymore.png")}
                             alt="claymore"
                             className={styles.imgCompanion}
                         />
@@ -322,7 +323,7 @@ function AsideCompanionList({className}) {
                     <Link className={styles.link} to="/battle/firearm">
                         Hunter Firearm
                         <img
-                            src="/src/assets/companions/firearm.png"
+                            src={getImageUrl("../assets/companions/firearm.png")}
                             alt="firearm"
                             className={styles.imgCompanion}
                         />

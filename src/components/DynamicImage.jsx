@@ -1,5 +1,6 @@
 // DynamicImage.jsx
 import React, {useMemo} from 'react';
+import {getImageUrl} from "./imageUtils.js";
 
 /**
  * Универсальный компонент для динамической смены картинок
@@ -79,7 +80,7 @@ return (
         {matchingImages.map((image, index) => (
             <img
                 key={image.id}
-                src={image.src}
+                src={getImageUrl(image.src)}
                 alt={`${alt} ${index + 1}`}
                 className={className}
             />

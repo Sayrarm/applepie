@@ -24,7 +24,7 @@ const MonthImage = () => {
         <DynamicImage
             roster={roster}
             type="month"
-            basePath="src/assets/main-page/change-pic"
+            basePath="../assets/main-page/change-pic"
             alt="memories from wishing well"
             dayStartHour={5}
             className={styles.monthImg}

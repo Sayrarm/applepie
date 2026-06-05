@@ -4,6 +4,7 @@ import ModalWindow from "./ModalWindow.jsx";
 import MonthImage from "./MonthImage.jsx";
 import {useRef} from "react";
 import {useRecurringTimer} from "../hooks/resetTimer.js";
+import {getImageUrl} from "./imageUtils.js";
 
 
 function WishWellBlock() {
@@ -29,7 +30,7 @@ function WishWellBlock() {
                     <>
                         <img
                             className={styles.img}
-                            src={'src/assets/main-page/modal-window/shop-schedule.png'}
+                            src={getImageUrl('../assets/main-page/modal-window/shop-schedule.png')}
                             alt={'Battle page'}/>
                     </>
                 }/>

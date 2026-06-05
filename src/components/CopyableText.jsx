@@ -1,4 +1,4 @@
-// src/components/CopyableText.jsx
+
 import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
 import styles from './CopyableText.module.css'; // создадим стили
 

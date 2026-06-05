@@ -24,7 +24,7 @@ const WeeklyProtocore = () => {
         <DynamicImage
             roster={roster}
             type="weekday"
-            basePath="src/assets/main-page/change-pic"
+            basePath="../assets/main-page/change-pic"
             dayStartHour={5}
             className={styles.weeklyImgProtocore}
             containerClassName={styles.weeklyImgContainer}

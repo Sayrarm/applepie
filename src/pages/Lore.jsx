@@ -1,5 +1,6 @@
 import {Link} from "react-router-dom";
 import styles from './Lore.module.css'
+import {getImageUrl} from "../components/imageUtils.js";
 
 
 function Lore() {
@@ -17,15 +18,15 @@ function Lore() {
                 */}
                 <Link className={styles.link} to="/spacepedia">
                     <div className={styles.title}>Spacepedia</div>
-                    <img className={styles.img} src="src/assets/bg/b2_mainline_chapterbg_18.png" alt="spacepedia"/>
+                    <img className={styles.img} src={getImageUrl("../assets/bg/b2_mainline_chapterbg_18.png")} alt="spacepedia"/>
                 </Link>
                 <Link className={styles.link} to="/world-underneath">
                     <div className={styles.title}>World Underneath</div>
-                    <img className={styles.img} src="src/assets/bg/b2_mainline_chapterbg_09.png" alt="spacepedia"/>
+                    <img className={styles.img} src={getImageUrl("../assets/bg/b2_mainline_chapterbg_09.png")} alt="spacepedia"/>
                 </Link>
                 <Link className={styles.link} to="/anecdotes">
                     <div className={styles.title}>Anecdotes</div>
-                    <img className={styles.img} src="src/assets/bg/x3_radioplay_bg.png" alt="spacepedia"/>
+                    <img className={styles.img} src={getImageUrl("../assets/bg/x3_radioplay_bg.png")} alt="spacepedia"/>
                 </Link>
             </nav>
 

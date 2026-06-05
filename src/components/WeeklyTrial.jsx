@@ -34,7 +34,7 @@ const WeeklyTrial = () => {
         <DynamicImage
             roster={roster}
             type="weekday"
-            basePath="src/assets/main-page/change-pic"
+            basePath="../assets/main-page/change-pic"
             dayStartHour={5}
             className={styles.weeklyImg}
             containerClassName={styles.weeklyImgContainer}

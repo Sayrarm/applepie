@@ -1,6 +1,7 @@
 import styles from "./MainStory.module.css";
 import {msCategories} from "../data/ms-categories.js";
 import {Link} from "react-router-dom";
+import {getImageUrl} from "../components/imageUtils.js";
 
 
 function MainStory() {
@@ -13,7 +14,7 @@ function MainStory() {
                     className={styles.link}
                     to={`/main-story/${category.link}`}
                 >
-                    <img className={styles.img} src={category.image} alt="image"/>
+                    <img className={styles.img} src={getImageUrl(category.image)} alt="image"/>
                     <div className={styles.title}>{category.title}</div>
                 </Link>
             ))}

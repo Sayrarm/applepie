@@ -1,0 +1,69 @@
+.parametersContainer {
+    text-decoration: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--forSelect);
+    color: var(--colorText);
+    gap: 10px;
+    height: 50px;
+    width: 100%;
+    padding: 5px;
+
+    -webkit-box-shadow: var(--box-shadow);
+    -moz-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
+}
+
+.generalContainer {
+    display: flex;
+    align-items: center;
+}
+
+.generalContainer > span {
+    margin-right: 5px;
+}
+
+.borderVertical {
+    border-right: 2px solid var(--colorText);
+    height: 100%;
+    margin: 0;
+}
+
+@media screen and (max-width: 560px) {
+    .parametersContainer {
+        display: grid;
+        height: 100%;
+
+        grid-template-columns: 49% 49%;
+        grid-template-rows: auto 1fr;
+        justify-content: center;
+        grid-template-areas:
+        "rarity stella"
+        "placement talent";
+    }
+
+    .rarity {
+        grid-area: rarity;
+    }
+
+    .stella {
+        grid-area: stella;
+    }
+
+    .talent {
+        grid-area: talent;
+    }
+
+    .placement {
+        grid-area: placement;
+    }
+
+    .borderVertical {
+        display: none;
+    }
+}

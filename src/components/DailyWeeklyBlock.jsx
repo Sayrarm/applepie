@@ -3,6 +3,7 @@ import ModalWindow from "./ModalWindow.jsx";
 import DailyResetTimer from "./DailyResetTimer.jsx";
 import {useRecurringTimer} from "../hooks/resetTimer.js";
 import {useRef} from "react";
+import {getImageUrl} from "./imageUtils.js";
 
 
 function DailyWeeklyBlock() {
@@ -38,11 +39,11 @@ function DailyWeeklyBlock() {
                     <>
                         <div>Daily Awards</div>
                         <img className={styles.img}
-                             src={'src/assets/main-page/modal-window/daily-awards.png'}
+                             src={getImageUrl('../assets/main-page/modal-window/daily-awards.png')}
                              alt={'daily awards'}/>
                         <div>Weekly Awards</div>
                         <img className={styles.img}
-                             src={'src/assets/main-page/modal-window/weekly-awards.png'}
+                             src={getImageUrl('../assets/main-page/modal-window/weekly-awards.png')}
                              alt={'weekly awards'}/>
                     </>
                 }/>

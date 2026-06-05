@@ -53,9 +53,9 @@ function CardArticle() {
                         {card.char}: {card.name}
                     </CopyableText>
 
-                    <div className={styles.parametersContainer}>
+
                         <ParametersBlock card={card} />
-                    </div>
+
 
 
                 </div>

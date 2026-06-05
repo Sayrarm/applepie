@@ -5,6 +5,7 @@ import WeeklyProtocore from "./WeeklyProtocore.jsx";
 import WeeklyTrial from "./WeeklyTrial.jsx";
 import {useRecurringTimer} from "../hooks/resetTimer.js";
 import {useRef} from "react";
+import {getImageUrl} from "./imageUtils.js";
 
 function ScheduleBlock() {
 
@@ -42,11 +43,11 @@ function ScheduleBlock() {
                     <>
                         <img
                             className={styles.img}
-                            src={'src/assets/main-page/modal-window/protocore-schedule.png'}
+                            src={getImageUrl('../assets/main-page/modal-window/protocore-schedule.png')}
                             alt={'protocore schedule'}/>
                         <img
                             className={styles.img}
-                            src={'src/assets/main-page/modal-window/trial-schedule.png'}
+                            src={getImageUrl('../assets/main-page/modal-window/trial-schedule.png')}
                             alt={'trial schedule'}/>
                     </>
                 }/>
