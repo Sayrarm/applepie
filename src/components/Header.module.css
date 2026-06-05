@@ -48,6 +48,11 @@ header {
     text-transform: uppercase;
     color: var(--colorText);
     font-size: 20px;
+    transition: 0.3s ease;
+}
+
+.a:hover {
+    color: var(--a);
 }
 
 /*************************burger menu button****************/

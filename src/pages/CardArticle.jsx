@@ -4,6 +4,7 @@ import memoriesDataUrl from '../data/memories-data.json?url';
 import { Fragment, useEffect, useState } from "react";
 import {getImageUrl} from "../components/imageUtils.js";
 import CopyableText from "../components/CopyableText.jsx";
+import ParametersBlock from "../components/ParametersBlock.jsx";
 
 function CardArticle() {
     const { cardId } = useParams(); // только id карточки
@@ -52,59 +53,8 @@ function CardArticle() {
                         {card.char}: {card.name}
                     </CopyableText>
 
-                    <div className={styles.parametrsContainer}>
-                        <div className={styles.generalContainer}>
-                            <span>Rarity:</span>
-                            {[...Array(card.rarityStars)].map((_, i) => (
-                                <img
-                                    className={styles.rarity}
-                                    key={i}
-                                    src={getImageUrl(card.rarity)}
-                                    alt={card.rarityName}
-                                    width={24}
-                                    height={24}
-                                />
-                            ))}
-                        </div>
-
-                        <div className={styles.borderVertical}></div>
-
-                        <div className={styles.generalContainer}>
-                            <span>Stellactrum:</span>
-                            <img
-                                className={styles.stella}
-                                src={getImageUrl(card.stella)}
-                                alt={card.stellaName}
-                                width={24}
-                                height={24}
-                            />
-                        </div>
-
-                        <div className={styles.borderVertical}></div>
-
-                        <div className={styles.generalContainer}>
-                            <span>Placement:</span>
-                            <img
-                                className={styles.placement}
-                                src={getImageUrl(card.placement)}
-                                alt={card.placementName}
-                                width={24}
-                                height={24}
-                            />
-                        </div>
-
-                        <div className={styles.borderVertical}></div>
-
-                        <div className={styles.generalContainer}>
-                            <span>Talent:</span>
-                            <img
-                                className={styles.talent}
-                                src={getImageUrl(card.talent)}
-                                alt={card.talentName}
-                                width={24}
-                                height={24}
-                            />
-                        </div>
+                    <div className={styles.parametersContainer}>
+                        <ParametersBlock card={card} />
                     </div>
 
 
