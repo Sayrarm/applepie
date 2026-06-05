@@ -9,17 +9,43 @@ import EventsBlock from "../components/EventsBlock.jsx";
 
 function Home() {
 
+    // Баннеры с рераном (rerun: true) и активные
+    const rerunBanners = bannersData.filter(
+        banner => banner.active === true && banner.rerun === true
+    );
+
+    // Новые баннеры (rerun: false) и активные
+    const newBanners = bannersData.filter(
+        banner => banner.active === true && banner.rerun === false
+    );
+
     return (
         <section className={styles.containerMain}>
             <div className={styles.containerEvents}>
 
                 <h2 className={styles.h2}>Banners</h2>
 
-                <BannerForHome banner={bannersData.find(b => b.id === 76)}/>
+                {newBanners.length > 0 && (
+                    <section className={styles.section}>
+                        <h2>New</h2>
+                        <div className={styles.bannersGrid}>
+                            {newBanners.map(banner => (
+                                <BannerForHome key={banner.id} banner={banner} />
+                            ))}
+                        </div>
+                    </section>
+                )}
 
-                <BannerForHome banner={bannersData.find(b => b.id === 77)}/>
-
-                <BannerForHome banner={bannersData.find(b => b.id === 78)}/>
+                {rerunBanners.length > 0 && (
+                    <section className={styles.section}>
+                        <h2>Rerun</h2>
+                        <div className={styles.bannersGrid}>
+                            {rerunBanners.map(banner => (
+                                <BannerForHome key={banner.id} banner={banner} />
+                            ))}
+                        </div>
+                    </section>
+                )}
 
                 <h2 className={styles.h2}>Events</h2>
 

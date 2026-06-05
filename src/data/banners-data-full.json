@@ -6,7 +6,8 @@
     "cardIds": [168],
     "startDate": "2024-01-18T05:00:00+02:00",
     "endDate": "2024-01-26T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -16,7 +17,8 @@
     "cardIds": [360],
     "startDate": "2024-01-27T05:00:00+02:00",
     "endDate": "2024-02-04T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -26,7 +28,8 @@
     "cardIds": [362, 265, 174],
     "startDate": "2024-02-05T05:00:00+02:00",
     "endDate": "2024-02-19T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -36,7 +39,8 @@
     "cardIds": [266],
     "startDate": "2024-02-21T05:00:00+02:00",
     "endDate": "2024-02-29T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -46,7 +50,8 @@
     "cardIds": [366],
     "startDate": "2024-03-01T05:00:00+02:00",
     "endDate": "2024-03-08T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -56,7 +61,8 @@
     "cardIds": [172, 269, 363],
     "startDate": "2024-03-11T05:00:00+02:00",
     "endDate": "2024-03-23T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -66,7 +72,8 @@
     "cardIds": [387, 388],
     "startDate": "2024-04-03T05:00:00+02:00",
     "endDate": "2024-04-17T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -76,7 +83,8 @@
     "cardIds": [175],
     "startDate": "2024-04-19T05:00:00+02:00",
     "endDate": "2024-04-29T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -86,7 +94,8 @@
     "cardIds": [268],
     "startDate": "2024-04-30T05:00:00+02:00",
     "endDate": "2024-05-10T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -96,7 +105,8 @@
     "cardIds": [197, 198],
     "startDate": "2024-05-13T05:00:00+02:00",
     "endDate": "2024-05-27T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -106,7 +116,8 @@
     "cardIds": [364],
     "startDate": "2024-05-28T05:00:00+02:00",
     "endDate": "2024-06-07T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -116,7 +127,8 @@
     "cardIds": [291, 292],
     "startDate": "2024-06-07T05:00:00+02:00",
     "endDate": "2024-06-21T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -126,7 +138,8 @@
     "cardIds": [176, 270, 365],
     "startDate": "2024-06-25T05:00:00+02:00",
     "endDate": "2024-07-10T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -136,7 +149,8 @@
     "cardIds": [81],
     "startDate": "2024-07-15T05:00:00+02:00",
     "endDate": "2024-08-01T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -146,7 +160,8 @@
     "cardIds": [177, 271, 368, 83],
     "startDate": "2024-08-07T05:00:00+02:00",
     "endDate": "2024-08-27T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -156,7 +171,8 @@
     "cardIds": [272],
     "startDate": "2024-08-31T05:00:00+02:00",
     "endDate": "2024-09-07T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -166,7 +182,8 @@
     "cardIds": [369],
     "startDate": "2024-09-10T05:00:00+02:00",
     "endDate": "2024-09-20T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -176,7 +193,8 @@
     "cardIds": [370, 178, 273, 84],
     "startDate": "2024-09-23T05:00:00+02:00",
     "endDate": "2024-10-09T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -186,7 +204,8 @@
     "cardIds": [179],
     "startDate": "2024-10-11T05:00:00+02:00",
     "endDate": "2024-10-18T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -196,7 +215,8 @@
     "cardIds": [85],
     "startDate": "2024-10-20T05:00:00+02:00",
     "endDate": "2024-10-30T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -206,7 +226,8 @@
     "cardIds": [275],
     "startDate": "2024-10-31T05:00:00+02:00",
     "endDate": "2024-11-10T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -216,7 +237,8 @@
     "cardIds": [180, 276, 372, 86],
     "startDate": "2024-11-12T05:00:00+02:00",
     "endDate": "2024-11-30T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -226,7 +248,8 @@
     "cardIds": [100, 101],
     "startDate": "2024-12-02T05:00:00+02:00",
     "endDate": "2024-12-16T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -236,7 +259,8 @@
     "cardIds": [182],
     "startDate": "2024-12-18T05:00:00+02:00",
     "endDate": "2024-12-28T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -246,7 +270,8 @@
     "cardIds": [183, 278, 373, 87],
     "startDate": "2024-12-31T05:00:00+02:00",
     "endDate": "2025-01-20T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -256,7 +281,8 @@
     "cardIds": [43],
     "startDate": "2025-01-22T05:00:00+02:00",
     "endDate": "2025-02-08T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -266,7 +292,8 @@
     "cardIds": [42, 88, 374, 279, 184],
     "startDate": "2025-02-10T05:00:00+02:00",
     "endDate": "2025-02-27T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -276,7 +303,8 @@
     "cardIds": [375],
     "startDate": "2025-03-01T05:00:00+02:00",
     "endDate": "2025-03-08T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -286,7 +314,8 @@
     "cardIds": [366],
     "startDate": "2025-03-01T05:00:00+02:00",
     "endDate": "2025-03-08T04:59:00+02:00",
-    "rerun": true
+    "rerun": true,
+    "active": false
     
   },
   {
@@ -296,7 +325,8 @@
     "cardIds": [280],
     "startDate": "2025-03-09T05:00:00+02:00",
     "endDate": "2025-03-18T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -306,7 +336,8 @@
     "cardIds": [387, 388],
     "startDate": "2025-03-20T05:00:00+02:00",
     "endDate": "2025-03-27T04:59:00+02:00",
-    "rerun": true
+    "rerun": true,
+    "active": false
     
   },
   {
@@ -316,7 +347,8 @@
     "cardIds": [30, 29],
     "startDate": "2025-03-28T05:00:00+02:00",
     "endDate": "2025-04-11T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -326,8 +358,9 @@
     "cardIds": [90],
     "startDate": "2025-04-13T05:00:00+02:00",
     "endDate": "2025-04-20T04:59:00+02:00",
-    "rerun": false
-    
+    "rerun": false,
+    "active": false
+
   },
   {
     "id": 34,
@@ -336,7 +369,8 @@
     "cardIds": [197, 198],
     "startDate": "2025-04-21T05:00:00+02:00",
     "endDate": "2025-04-28T04:59:00+02:00",
-    "rerun": true
+    "rerun": true,
+    "active": false
     
   },
   {
@@ -346,7 +380,8 @@
     "cardIds": [185, 281, 376, 91, 41],
     "startDate": "2025-04-30T05:00:00+02:00",
     "endDate": "2025-05-18T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -356,7 +391,8 @@
     "cardIds": [291, 292],
     "startDate": "2025-05-19T05:00:00+02:00",
     "endDate": "2025-05-26T04:59:00+02:00",
-    "rerun": true
+    "rerun": true,
+    "active": false
     
   },
   {
@@ -366,7 +402,8 @@
     "cardIds": [186],
     "startDate": "2025-05-29T05:00:00+02:00",
     "endDate": "2025-06-07T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -376,7 +413,8 @@
     "cardIds": [40],
     "startDate": "2025-06-08T05:00:00+02:00",
     "endDate": "2025-06-15T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -386,7 +424,8 @@
     "cardIds": [390, 389],
     "startDate": "2025-06-17T05:00:00+02:00",
     "endDate": "2025-07-01T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -396,7 +435,8 @@
     "cardIds": [187, 282, 377, 92, 38],
     "startDate": "2025-07-03T05:00:00+02:00",
     "endDate": "2025-07-22T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -406,7 +446,8 @@
     "cardIds": [199, 200],
     "startDate": "2025-07-25T05:00:00+02:00",
     "endDate": "2025-08-08T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -416,7 +457,8 @@
     "cardIds": [188, 283, 378, 93, 37],
     "startDate": "2025-08-12T05:00:00+02:00",
     "endDate": "2025-08-31T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -426,7 +468,8 @@
     "cardIds": [284],
     "startDate": "2025-08-31T05:00:00+02:00",
     "endDate": "2025-09-07T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -436,7 +479,8 @@
     "cardIds": [272],
     "startDate": "2025-08-31T05:00:00+02:00",
     "endDate": "2025-09-07T04:59:00+02:00",
-    "rerun": true
+    "rerun": true,
+    "active": false
     
   },
   {
@@ -446,8 +490,9 @@
     "cardIds": [94],
     "startDate": "2025-09-09T05:00:00+02:00",
     "endDate": "2025-09-18T04:59:00+02:00",
-    "rerun": false
-    
+    "rerun": false,
+    "active": false
+
   },
   {
     "id": 46,
@@ -456,7 +501,8 @@
     "cardIds": [362, 265, 174],
     "startDate": "2025-09-19T05:00:00+02:00",
     "endDate": "2025-09-27T04:59:00+02:00",
-    "rerun": true
+    "rerun": true,
+    "active": false
     
   },
   {
@@ -466,7 +512,8 @@
     "cardIds": [293, 294],
     "startDate": "2025-09-25T05:00:00+02:00",
     "endDate": "2025-10-09T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -476,7 +523,8 @@
     "cardIds": [189],
     "startDate": "2025-10-11T05:00:00+02:00",
     "endDate": "2025-10-18T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -486,7 +534,8 @@
     "cardIds": [179],
     "startDate": "2025-10-11T05:00:00+02:00",
     "endDate": "2025-10-18T04:59:00+02:00",
-    "rerun": true
+    "rerun": true,
+    "active": false
     
   },
   {
@@ -496,7 +545,8 @@
     "cardIds": [100, 101],
     "startDate": "2025-10-20T05:00:00+02:00",
     "endDate": "2025-10-27T04:59:00+02:00",
-    "rerun": true
+    "rerun": true,
+    "active": false
     
   },
   {
@@ -506,7 +556,8 @@
     "cardIds": [190, 285, 379, 95, 36],
     "startDate": "2025-10-29T05:00:00+02:00",
     "endDate": "2025-11-18T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -516,7 +567,8 @@
     "cardIds": [168],
     "startDate": "2025-11-13T05:00:00+02:00",
     "endDate": "2025-11-20T04:59:00+02:00",
-    "rerun": true
+    "rerun": true,
+    "active": false
     
   },
   {
@@ -526,7 +578,8 @@
     "cardIds": [380],
     "startDate": "2025-11-21T05:00:00+02:00",
     "endDate": "2025-11-30T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -536,7 +589,8 @@
     "cardIds": [102, 103],
     "startDate": "2025-12-02T05:00:00+02:00",
     "endDate": "2025-12-16T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -546,7 +600,8 @@
     "cardIds": [360],
     "startDate": "2025-12-11T05:00:00+02:00",
     "endDate": "2025-12-18T04:59:00+02:00",
-    "rerun": true
+    "rerun": true,
+    "active": false
 
   },
   {
@@ -556,7 +611,8 @@
     "cardIds": [35],
     "startDate": "2025-12-18T05:00:00+02:00",
     "endDate": "2025-12-27T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -566,7 +622,8 @@
     "cardIds": [266],
     "startDate": "2025-12-24T05:00:00+02:00",
     "endDate": "2025-12-31T04:59:00+02:00",
-    "rerun": true
+    "rerun": true,
+    "active": false
     
   },
   {
@@ -576,7 +633,8 @@
     "cardIds": [192, 286, 381, 96, 34],
     "startDate": "2025-12-31T05:00:00+02:00",
     "endDate": "2026-01-21T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -586,7 +644,8 @@
     "cardIds": [287],
     "startDate": "2026-01-23T05:00:00+02:00",
     "endDate": "2026-02-01T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -596,7 +655,8 @@
     "cardIds": [30, 29],
     "startDate": "2026-02-02T05:00:00+02:00",
     "endDate": "2026-02-09T04:59:00+02:00",
-    "rerun": true
+    "rerun": true,
+    "active": false
     
   },
   {
@@ -606,7 +666,8 @@
     "cardIds": [193, 288, 382, 97, 33],
     "startDate": "2026-02-10T05:00:00+02:00",
     "endDate": "2026-02-27T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -616,7 +677,8 @@
     "cardIds": [383],
     "startDate": "2026-03-01T05:00:00+02:00",
     "endDate": "2026-03-08T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -626,7 +688,8 @@
     "cardIds": [366],
     "startDate": "2026-03-01T05:00:00+02:00",
     "endDate": "2026-03-08T04:59:00+02:00",
-    "rerun": true
+    "rerun": true,
+    "active": false
     
   },
   {
@@ -636,7 +699,8 @@
     "cardIds": [375],
     "startDate": "2026-03-01T05:00:00+02:00",
     "endDate": "2026-03-08T04:59:00+02:00",
-    "rerun": true
+    "rerun": true,
+    "active": false
     
   },
   {
@@ -646,7 +710,8 @@
     "cardIds": [194],
     "startDate": "2026-03-09T05:00:00+02:00",
     "endDate": "2026-03-18T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -656,7 +721,8 @@
     "cardIds": [172, 269, 363],
     "startDate": "2026-03-19T05:00:00+02:00",
     "endDate": "2026-03-27T04:59:00+02:00",
-    "rerun": true
+    "rerun": true,
+    "active": false
     
   },
   {
@@ -666,7 +732,8 @@
     "cardIds": [28, 27],
     "startDate": "2026-03-28T05:00:00+02:00",
     "endDate": "2026-04-11T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -676,7 +743,8 @@
     "cardIds": [175],
     "startDate": "2026-04-06T05:00:00+02:00",
     "endDate": "2026-04-13T04:59:00+02:00",
-    "rerun": true
+    "rerun": true,
+    "active": false
     
   },
   {
@@ -686,7 +754,8 @@
     "cardIds": [105],
     "startDate": "2026-04-13T05:00:00+02:00",
     "endDate": "2026-04-20T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -696,7 +765,8 @@
     "cardIds": [90],
     "startDate": "2026-04-13T05:00:00+02:00",
     "endDate": "2026-04-20T04:59:00+02:00",
-    "rerun": true
+    "rerun": true,
+    "active": false
     
   },
   {
@@ -706,7 +776,8 @@
     "cardIds": [390, 389],
     "startDate": "2026-04-21T05:00:00+02:00",
     "endDate": "2026-04-28T04:59:00+02:00",
-    "rerun": true
+    "rerun": true,
+    "active": false
     
   },
   {
@@ -716,7 +787,8 @@
     "cardIds": [393, 392, 391, 394, 395],
     "startDate": "2026-04-30T05:00:00+02:00",
     "endDate": "2026-05-15T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -726,7 +798,8 @@
     "cardIds": [268],
     "startDate": "2026-05-08T05:00:00+02:00",
     "endDate": "2026-05-15T04:59:00+02:00",
-    "rerun": true
+    "rerun": true,
+    "active": false
     
   },
   {
@@ -736,7 +809,8 @@
     "cardIds": [199, 200],
     "startDate": "2026-05-15T05:00:00+02:00",
     "endDate": "2026-05-22T04:59:00+02:00",
-    "rerun": true
+    "rerun": true,
+    "active": false
     
   },
   {
@@ -746,7 +820,8 @@
     "cardIds": [400],
     "startDate": "2026-05-22T05:00:00+02:00",
     "endDate": "2026-05-31T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": false
     
   },
   {
@@ -756,7 +831,8 @@
     "cardIds": [176, 270, 365],
     "startDate": "2026-05-31T05:00:00+02:00",
     "endDate": "2026-06-08T04:59:00+02:00",
-    "rerun": true
+    "rerun": true,
+    "active": true
     
   },
   {
@@ -766,7 +842,8 @@
     "cardIds": [],
     "startDate": "2026-06-08T05:00:00+02:00",
     "endDate": "2026-06-15T04:59:00+02:00",
-    "rerun": false
+    "rerun": false,
+    "active": true
     
   },
   {
@@ -776,7 +853,8 @@
     "cardIds": [40],
     "startDate": "2026-06-08T05:00:00+02:00",
     "endDate": "2026-06-15T04:59:00+02:00",
-    "rerun": true
+    "rerun": true,
+    "active": true
     
   }
 ]
