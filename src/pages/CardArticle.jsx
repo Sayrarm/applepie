@@ -5,6 +5,8 @@ import {Fragment, useEffect, useState} from "react";
 import {getImageUrl} from "../components/imageUtils.js";
 import CopyableText from "../components/CopyableText.jsx";
 import ParametersBlock from "../components/ParametersBlock.jsx";
+import BannerPeriod from "../components/BannerPeriod.jsx";
+import bannersData from '../data/banners-data-full.json';
 
 function CardArticle() {
     const {cardId} = useParams(); // только id карточки
@@ -20,6 +22,8 @@ function CardArticle() {
             })
             .catch(error => console.error('Ошибка загрузки:', error));
     }, [cardId]);
+
+    const banner = bannersData.find(b => b.cardIds.includes(Number(cardId)))
 
     if (!card) {
         return <div>Card not found ¯\_(ツ)_/¯</div>;
@@ -54,6 +58,8 @@ function CardArticle() {
                     </CopyableText>
 
                     <ParametersBlock card={card}/>
+
+                    <BannerPeriod banner={banner} />
 
                 </div>
             </article>

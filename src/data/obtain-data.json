@@ -1,0 +1,32 @@
+[
+  {
+    "obtain": "Xspace Echo",
+    "memories": [],
+    "description": "Can be obtain for Empyrean Wish (Standart Wish)"
+  },
+  {
+    "obtain": "Limited Banner",
+    "memories": [],
+    "description": "Can be obtain for Deepspace Wish (Event Banner)"
+  },
+  {
+    "obtain": "Wishing Well",
+    "memories": [],
+    "description": "Can be obtain from Shop -> Exchange -> Wishing Well"
+  },
+  {
+    "obtain": "Galaxy Explorer",
+    "memories": [],
+    "description": "Can be obtain from Wish -> Galaxy Explorer"
+  },
+  {
+    "obtain": "Promise",
+    "memories": [],
+    "description": "Can be obtain from Promise (check your Agenda). Promise is limited, can be rerun of memories from past Promises in Shop, check the news"
+  },
+  {
+    "obtain": "Limited Event",
+    "memories": [],
+    "description": "Memory from Events. Can be repeatable, check the news"
+  }
+]
