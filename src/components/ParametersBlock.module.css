@@ -34,6 +34,20 @@
     margin: 0;
 }
 
+.modalInfo {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.modalInfo > div {
+    margin-bottom: 20px;
+}
+
+.modalInfo p {
+    text-align: start !important;
+}
+
 @media screen and (max-width: 560px) {
     .parametersContainer {
         display: grid;

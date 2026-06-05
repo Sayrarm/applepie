@@ -76,16 +76,50 @@ function ParametersBlock({card}) {
                 ref={parametersModalRef}
                 title={'Hints for parameters'}
                 tag={
-                    <>
-                        <img
-                            className={styles.img}
-                            src={getImageUrl('../assets/main-page/modal-window/protocore-schedule.png')}
-                            alt={'protocore schedule'}/>
-                        <img
-                            className={styles.img}
-                            src={'src/assets/main-page/modal-window/trial-schedule.png'}
-                            alt={'trial schedule'}/>
-                    </>
+                    <div className={styles.modalInfo}>
+                        <div>
+                            <img
+                                className={styles.img}
+                                src={getImageUrl('../assets/main-page/modal-window/stella.png')}
+                                alt={'stellactrum'}/>
+
+                            <div>
+                                <h3>Stellactrum</h3>
+                                <p>When <strong>Memory Stellactrum</strong> and <strong>Protofield Stellactrum</strong> are aligned, double the number of <strong>Protocore Shield</strong> stacks destroyed.</p>
+                                <p>For every additionally matched Stellactrums, there’s an increase on <strong>DMG</strong> and <strong>DMG Reduction</strong>.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <img
+                                className={styles.img}
+                                src={getImageUrl('../assets/main-page/modal-window/placement.png')}
+                                alt={'stellactrum'}/>
+
+                            <div>
+                                <h3>Placement</h3>
+                                <p>There are Memory Slots: Solar & Lunar</p>
+                                <p><strong>Solar Slot:</strong> Only Solar Memories can form Memory Pairs to activate pair bonuses. Ranking up Solar Memories will enhance pair bonuses. Up to two can be equipped per team.</p>
+                                <p><strong>Lunar Slot:</strong> Provides stat bonuses to boost combat capabilities. Up to four can be equipped per team.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <img
+                                className={styles.img}
+                                src={getImageUrl('../assets/main-page/modal-window/talent.png')}
+                                alt={'stellactrum'}/>
+
+                            <div>
+                                <h3>Talent</h3>
+                                <p><strong>HP Buff:</strong> When HP is above 8 000, every 400 HP more boosts your weakness DMG by 0.2%</p>
+                                <p><strong>ATK Buff:</strong> When ATK is above 400, every 20 ATK more boosts your weakness DMG by 0.2%</p>
+                                <p><strong>DEF Buff:</strong> When DEF is above 200, every 10 DEF more boosts your weakness DMG by 0.2% </p>
+                            </div>
+                        </div>
+
+
+                    </div>
                 }/>
         </>
     )

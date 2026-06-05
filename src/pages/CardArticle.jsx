@@ -1,13 +1,13 @@
-import { Link, useParams } from 'react-router-dom';
+import {Link, useParams} from 'react-router-dom';
 import styles from "./CardArticle.module.css";
 import memoriesDataUrl from '../data/memories-data.json?url';
-import { Fragment, useEffect, useState } from "react";
+import {Fragment, useEffect, useState} from "react";
 import {getImageUrl} from "../components/imageUtils.js";
 import CopyableText from "../components/CopyableText.jsx";
 import ParametersBlock from "../components/ParametersBlock.jsx";
 
 function CardArticle() {
-    const { cardId } = useParams(); // только id карточки
+    const {cardId} = useParams(); // только id карточки
     const [card, setCard] = useState(null);
 
     // Загружаем JSON
@@ -53,10 +53,7 @@ function CardArticle() {
                         {card.char}: {card.name}
                     </CopyableText>
 
-
-                        <ParametersBlock card={card} />
-
-
+                    <ParametersBlock card={card}/>
 
                 </div>
             </article>
