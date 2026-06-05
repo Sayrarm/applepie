@@ -152,6 +152,10 @@
     font-size: 25px;
 }
 
+.h3 {
+    margin: 5px;
+}
+
 :global(.ant-modal .ant-modal-container) {
     background-color: var(--bg-modal) !important;
     padding: 20px !important;
@@ -244,6 +248,13 @@
 
     .h2 {
         font-size: 18px;
+    }
+
+    .bannerTitle {
+        color: var(--a);
+        font-size: 16px;
+        font-weight: 600;
+        padding-bottom: 0;
     }
 
     .scheduleContainerGeneralButton {

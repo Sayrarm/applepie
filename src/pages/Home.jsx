@@ -27,7 +27,7 @@ function Home() {
 
                 {newBanners.length > 0 && (
                     <section className={styles.section}>
-                        <h2>New</h2>
+                        <h3 className={styles.h3}>New</h3>
                         <div className={styles.bannersGrid}>
                             {newBanners.map(banner => (
                                 <BannerForHome key={banner.id} banner={banner} />
@@ -38,7 +38,7 @@ function Home() {
 
                 {rerunBanners.length > 0 && (
                     <section className={styles.section}>
-                        <h2>Rerun</h2>
+                        <h3 className={styles.h3}>Rerun</h3>
                         <div className={styles.bannersGrid}>
                             {rerunBanners.map(banner => (
                                 <BannerForHome key={banner.id} banner={banner} />
