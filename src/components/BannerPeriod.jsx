@@ -15,7 +15,7 @@ function BannerPeriod({ banners }) {
             <h3>From banners:</h3>
             {banners.map(banner => (
                 <div key={banner.id}>
-                    "{banner.name}" : {formatDate(banner.startDate)} - {formatDate(banner.endDate)}
+                    "{banner.name}" {banner.rerun === true && ' (Rerun)'}: {formatDate(banner.startDate)} - {formatDate(banner.endDate)}
                 </div>
             ))}
         </div>
