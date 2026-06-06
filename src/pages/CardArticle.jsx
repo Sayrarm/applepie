@@ -23,7 +23,8 @@ function CardArticle() {
             .catch(error => console.error('Ошибка загрузки:', error));
     }, [cardId]);
 
-    const banner = bannersData.find(b => b.cardIds.includes(Number(cardId)))
+    // Находим ВСЕ баннеры, где есть эта карточка
+    const banners = bannersData.filter(b => b.cardIds.includes(Number(cardId)));
 
     if (!card) {
         return <div>Card not found ¯\_(ツ)_/¯</div>;
@@ -59,7 +60,7 @@ function CardArticle() {
 
                     <ParametersBlock card={card}/>
 
-                    <BannerPeriod banner={banner} />
+                    <BannerPeriod banners={banners} />
 
                 </div>
             </article>

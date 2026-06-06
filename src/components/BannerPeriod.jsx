@@ -1,22 +1,23 @@
 import styles from './BannerPeriod.module.css';
 
-function BannerPeriod({ banner }) {
-    if (!banner || !banner.startDate || !banner.endDate) {
+function BannerPeriod({ banners }) {
+    // Если нет баннеров или пустой массив
+    if (!banners || banners.length === 0) {
         return null;
     }
 
-    // Форматируем дату из "2024-01-27T05:00:00+02:00" в "2024-01-27"
     const formatDate = (dateString) => {
-        return dateString.split('T')[0]; // берём только часть до T
+        return dateString.split('T')[0];
     };
-
-    const startDate = formatDate(banner.startDate);
-    const endDate = formatDate(banner.endDate);
 
     return (
         <div className={styles.period}>
             <h3>From banners:</h3>
-            <div>{banner.name}: {startDate} - {endDate}</div>
+            {banners.map(banner => (
+                <div key={banner.id}>
+                    "{banner.name}" : {formatDate(banner.startDate)} - {formatDate(banner.endDate)}
+                </div>
+            ))}
         </div>
     );
 }
