@@ -72,11 +72,11 @@ function FlexibleTimer({
     const getStatusConfig = () => {
         switch (status) {
             case 'waiting':
-                return {text: 'Upcoming (EU ser.):', emoji: '⏰'};
+                return {text: 'Upcoming (EU):', emoji: '⏰'};
             case 'active':
-                return {text: 'Time left (EU ser.):', emoji: '⚡'};
+                return {text: 'Time left (EU):', emoji: '⚡'};
             case 'finished':
-                return {text: 'Completed (EU ser.)', emoji: '🏁'};
+                return {text: 'Completed (EU)', emoji: '🏁'};
             default:
                 return {text: '', emoji: ''};
         }

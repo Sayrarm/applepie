@@ -12,7 +12,7 @@ function DailyResetTimer( {timeLeft} ) {
 
     return (
         <div className={styles.container}>
-            <h3>Time left (EU ser.):</h3>
+            <h3>Time left (EU):</h3>
 
             <div className={styles.timer}>
                 {Object.entries(timeLeft).map(([unit, value]) => (
