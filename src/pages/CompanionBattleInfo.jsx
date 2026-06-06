@@ -15,6 +15,8 @@ function CompanionBattleInfo() {
     return (
         <section className={styles.container}>
 
+            <AsideCompanionList className={styles.aside}/>
+
             <nav className={styles.nav}>
                 <Fragment>
                     <Link
@@ -24,7 +26,7 @@ function CompanionBattleInfo() {
                     </Link>
                     <span> &gt; </span>
                     {currentCategory && (
-                        <span>{currentCategory.companionName}</span>
+                        <span>{currentCategory.companionName || currentCategory.weaponName}</span>
                     )}
                 </Fragment>
             </nav>

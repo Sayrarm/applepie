@@ -3,7 +3,7 @@
 }
 
 .collapse :global(.ant-collapse-header) {
-    color: var(--brown) !important;
+    color: var(--colorTextDark) !important;
     font-size: 20px !important;
     font-weight: bold !important;
 
@@ -13,12 +13,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: var(--brown);
+    color: var(--colorTextDark);
     font-size: 20px;
     font-weight: 500;
     text-decoration: none;
     text-transform: uppercase;
-    height: 150px;
+    height: 50px;
     width: 100%;
     padding: 5px;
 }
@@ -29,16 +29,15 @@
     object-fit: cover;
     object-position: 20% 10%;
 
-    -webkit-mask-image: -webkit-linear-gradient(180deg, transparent 0%, black 40%, black 80%, transparent 100%);
-    mask-image: linear-gradient(180deg, transparent 0%, black 40%, black 80%, transparent 100%);
+    -webkit-mask-image: var(--linear-gradient-webkit);
+    mask-image: var(--linear-gradient);
 }
 
 .collapse :global(a:hover) {
-    color: var(--orange) !important;
-    background-color: var(--bg-brown-black);
-
+    color: var(--a) !important;
 }
 
 .title {
     margin: 10px;
+    font-size: 22px;
 }
