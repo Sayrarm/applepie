@@ -7,6 +7,8 @@ import CopyableText from "../components/CopyableText.jsx";
 import ParametersBlock from "../components/ParametersBlock.jsx";
 import BannerPeriod from "../components/BannerPeriod.jsx";
 import bannersData from '../data/banners-data-full.json';
+import ObtainInfo from "../components/ObtainInfo.jsx";
+import obtainData from '../data/obtain-data.json';
 
 function CardArticle() {
     const {cardId} = useParams(); // только id карточки
@@ -59,6 +61,8 @@ function CardArticle() {
                     </CopyableText>
 
                     <ParametersBlock card={card}/>
+
+                    <ObtainInfo cardId={cardId} obtainData={obtainData} />
 
                     <BannerPeriod banners={banners} />
 
