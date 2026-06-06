@@ -18,7 +18,7 @@ function BannerForHome({ banner }) {
                 onClick={() => memoriesModalRef.current.showModal()}
                 className={styles.containerTitleTimerButton}>
                 <div>
-                    <div className={styles.bannerTitle}>{banner.name}</div>
+                    <div className={styles.bannerTitle}>{banner.name} {banner.rerun === true && ' (Rerun)'}</div>
                     <FlexibleTimer
                         startDateTime={banner.startDate}
                         endDateTime={banner.endDate}

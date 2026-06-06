@@ -37,7 +37,7 @@ function BannerList({ banners }) {
                             src={getImageUrl(banner.image)}
                             alt={banner.name}
                         />
-                        <div className={styles.bannerTitle}>{banner.name}</div>
+                        <div className={styles.bannerTitle}>{banner.name}  {banner.rerun === true && ' (Rerun)'}</div>
                         <FlexibleTimer
                             startDateTime={banner.startDate}
                             endDateTime={banner.endDate}
