@@ -2,7 +2,6 @@ import { createBrowserRouter } from "react-router-dom";
 import Layout from "./Layout";
 import Home from "./pages/Home";
 import Memories from "./pages/Memories";
-import Characters from "./pages/Characters";
 import Battle from "./pages/Battle";
 import Lore from "./pages/Lore";
 import Spacepedia from "./pages/Spacepedia";
@@ -32,7 +31,6 @@ export const router = createBrowserRouter([
                     </CardProvider>
                 ),
             },
-            { path: "characters", element: <Characters /> },
             { path: "battle", element: <Battle /> },
             { path: "banners-history", element: <Banners /> },
             { path: "battle/:articleLink", element: <CompanionBattleInfo /> },

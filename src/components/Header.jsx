@@ -50,7 +50,6 @@ function Header() {
                 <div className={styles.link}>
                     <Link className={styles.a} to="/">Home</Link>
                     <Link className={styles.a} to="/memories">Memories</Link>
-                    <Link className={styles.a} to="/characters">Characters</Link>
                     <Link className={styles.a} to="/battle">Battle</Link>
                     <Link className={styles.a} to="/lore">Lore</Link>
                     <Link className={styles.a} to="/banners-history">Banners</Link>
@@ -79,9 +78,6 @@ function Header() {
                     </Link>
                     <Link className={styles.a} to="/memories" onClick={closeMenu}>
                         Memories
-                    </Link>
-                    <Link className={styles.a} to="/characters" onClick={closeMenu}>
-                        Characters
                     </Link>
                     <Link className={styles.a} to="/battle" onClick={closeMenu}>
                         Battle
