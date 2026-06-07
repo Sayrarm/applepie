@@ -14,3 +14,13 @@
     align-items: center;
     flex-direction: column;
 }
+
+@media screen and (max-width: 413px) {
+
+    .container {
+        font-size: 10px;
+    }
+    .container > h3 {
+        font-size: 12px;
+    }
+}
