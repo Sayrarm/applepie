@@ -15,6 +15,7 @@ import CompanionBattleInfo from "./pages/CompanionBattleInfo";
 import { CardProvider } from "./components/CardProvider";
 import CardArticle from "./pages/CardArticle.jsx";
 import Banners from "./pages/Banners.jsx";
+import Calculator from "./pages/Calculator.jsx";
 
 export const router = createBrowserRouter([
     {
@@ -43,6 +44,7 @@ export const router = createBrowserRouter([
             { path: "main-story/:articleLink", element: <MsArticle /> },
             { path: "anecdotes", element: <Anecdotes /> },
             { path: "anecdotes/:articleLink", element: <AnArticle /> },
+            { path: "сalculator", element: <Calculator /> },
 
         ],
     },

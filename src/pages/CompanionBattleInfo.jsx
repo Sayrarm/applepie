@@ -15,7 +15,7 @@ function CompanionBattleInfo() {
     return (
         <section className={styles.container}>
 
-            <AsideCompanionList className={styles.aside}/>
+            {/*<AsideCompanionList className={styles.aside}/>*/}
 
             <nav className={styles.nav}>
                 <Fragment>
