@@ -1,14 +1,43 @@
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
 import {Modal, Checkbox, Select, Tag, Button} from "antd";
 
+// Ключи для localStorage
+const STORAGE_KEYS = {
+    RARITY: 'filter_rarity',
+    PLACEMENT: 'filter_placement',
+    TALENT: 'filter_talent',
+    STELLA: 'filter_stella'
+};
 
+// Функции загрузки из localStorage
+const loadFromStorage = (key, defaultValue) => {
+    const saved = localStorage.getItem(key);
+    return saved ? JSON.parse(saved) : defaultValue;
+};
 
 function FilterModalWindow({ open, onClose, onFilter, onClearFilters }) {
-    // Состояния для каждого фильтра
-    const [rarity, setRarity] = useState([]);
-    const [placement, setPlacement] = useState([]);
-    const [talent, setTalent] = useState([]);
-    const [stella, setStella] = useState([]);
+    // Состояния для каждого фильтра с загрузкой из localStorage
+    const [rarity, setRarity] = useState(() => loadFromStorage(STORAGE_KEYS.RARITY, []));
+    const [placement, setPlacement] = useState(() => loadFromStorage(STORAGE_KEYS.PLACEMENT, []));
+    const [talent, setTalent] = useState(() => loadFromStorage(STORAGE_KEYS.TALENT, []));
+    const [stella, setStella] = useState(() => loadFromStorage(STORAGE_KEYS.STELLA, []));
+
+    // Сохраняем в localStorage при изменении
+    useEffect(() => {
+        localStorage.setItem(STORAGE_KEYS.RARITY, JSON.stringify(rarity));
+    }, [rarity]);
+
+    useEffect(() => {
+        localStorage.setItem(STORAGE_KEYS.PLACEMENT, JSON.stringify(placement));
+    }, [placement]);
+
+    useEffect(() => {
+        localStorage.setItem(STORAGE_KEYS.TALENT, JSON.stringify(talent));
+    }, [talent]);
+
+    useEffect(() => {
+        localStorage.setItem(STORAGE_KEYS.STELLA, JSON.stringify(stella));
+    }, [stella]);
 
 
     const optionsRarity = [
@@ -77,6 +106,12 @@ function FilterModalWindow({ open, onClose, onFilter, onClearFilters }) {
         setPlacement([]);
         setTalent([]);
         setStella([]);
+
+        // Очищаем localStorage
+        localStorage.removeItem(STORAGE_KEYS.RARITY);
+        localStorage.removeItem(STORAGE_KEYS.PLACEMENT);
+        localStorage.removeItem(STORAGE_KEYS.TALENT);
+        localStorage.removeItem(STORAGE_KEYS.STELLA);
 
         // Вызываем функцию очистки из родителя
         if (onClearFilters) {
