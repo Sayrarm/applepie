@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import {useState, useMemo} from 'react';
 import styles from './ProtocoreCalculator.module.css';
 import {
     protocoreTypes,
@@ -13,9 +13,14 @@ import {
     SUBSTAT_LEVELS
 } from '../data/protocore-data';
 
+// Функция для получения первого доступного мейн стата
+const getFirstMainStat = (type) => {
+    return protocoreTypes[type]?.mainStats[0]?.name || '';
+};
+
 function ProtocoreCalculator() {
     const [protocoreType, setProtocoreType] = useState('alpha');
-    const [mainStat, setMainStat] = useState('');
+    const [mainStat, setMainStat] = useState(getFirstMainStat('alpha'));
     const [currentLevel, setCurrentLevel] = useState(0);
     const [targetLevel, setTargetLevel] = useState(1);
     const [dungeonLevel, setDungeonLevel] = useState(10);
@@ -27,8 +32,7 @@ function ProtocoreCalculator() {
     // Устанавливаем первый доступный мейн стат при смене типа
     const handleTypeChange = (type) => {
         setProtocoreType(type);
-        const firstStat = protocoreTypes[type]?.mainStats[0]?.name || '';
-        setMainStat(firstStat);
+        setMainStat(getFirstMainStat(type)); // ← обновляем здесь
         setHasCalculated(false);
     };
 
