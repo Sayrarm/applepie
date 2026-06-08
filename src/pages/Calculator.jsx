@@ -6,7 +6,7 @@ function Calculator() {
 return (
 
     <>
-        <section className={styles.container}>
+        <section className={styles.containerCalculator}>
             <ProtocoreCalculator />
         </section>
     </>

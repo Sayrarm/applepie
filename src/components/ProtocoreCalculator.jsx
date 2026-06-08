@@ -12,6 +12,7 @@ import {
     dungeonData,
     SUBSTAT_LEVELS
 } from '../data/protocore-data';
+import {Collapse} from "antd";
 
 // Функция для получения первого доступного мейн стата
 const getFirstMainStat = (type) => {
@@ -100,7 +101,7 @@ function ProtocoreCalculator() {
             <h1 className={styles.title}>Protocore Calculator</h1>
 
             <div className={styles.formGroup}>
-                <label>Protocore Type</label>
+                <div>Protocore Type</div>
                 <div className={styles.buttonGroup}>
                     {Object.entries(protocoreTypes).map(([key, value]) => (
                         <button
@@ -115,8 +116,10 @@ function ProtocoreCalculator() {
             </div>
 
             <div className={styles.formGroup}>
-                <label>Main Stat</label>
+                <label htmlFor="main-stat-select">Main Stat</label>
                 <select
+                    id="main-stat-select"
+                    name="main-stat"
                     value={mainStat}
                     onChange={(e) => handleMainStatChange(e.target.value)}
                     className={styles.select}
@@ -131,8 +134,10 @@ function ProtocoreCalculator() {
 
             <div className={styles.row}>
                 <div className={styles.formGroup}>
-                    <label>Current Level</label>
+                    <label htmlFor="current-lvl-select">Current Level</label>
                     <select
+                        id="current-lvl-select"
+                        name="current-lvl"
                         value={currentLevel}
                         onChange={(e) => handleCurrentLevelChange(e.target.value)}
                         className={styles.select}
@@ -144,8 +149,10 @@ function ProtocoreCalculator() {
                 </div>
 
                 <div className={styles.formGroup}>
-                    <label>Target Level</label>
+                    <label htmlFor="target-lvl-select">Target Level</label>
                     <select
+                        id="target-lvl-select"
+                        name="target-lvl"
                         value={targetLevel}
                         onChange={(e) => handleTargetLevelChange(e.target.value)}
                         className={styles.select}
@@ -158,8 +165,10 @@ function ProtocoreCalculator() {
             </div>
 
             <div className={styles.formGroup}>
-                <label>Core Hunt Level</label>
+                <label htmlFor="core-hunt-lvl-select">Core Hunt Level</label>
                 <select
+                    id="core-hunt-lvl-select"
+                    name="core-hunt-lvl"
                     value={dungeonLevel}
                     onChange={(e) => handleDungeonLevelChange(e.target.value)}
                     className={styles.select}

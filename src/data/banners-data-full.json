@@ -832,13 +832,13 @@
     "startDate": "2026-05-31T05:00:00+02:00",
     "endDate": "2026-06-08T04:59:00+02:00",
     "rerun": true,
-    "active": true
+    "active": false
     
   },
   {
     "id": 77,
     "name": "Your Skyblue",
-    "image": "../assets/banners/your-skyblue.jpg",
+    "image": "../assets/banners/your-skyblue.png",
     "cardIds": [402],
     "startDate": "2026-06-08T05:00:00+02:00",
     "endDate": "2026-06-15T04:59:00+02:00",

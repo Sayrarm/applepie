@@ -23,15 +23,13 @@ function EventsBlock() {
                 <img className={styles.imgBanner} src={getImageUrl("../assets/main-page/event-2.png")}alt="event"/>
             </div>
 
-            {/*
             <div className={styles.containerTitleTimer}>
                 <FlexibleTimer
-                    startDateTime="2026-05-25T05:00:00+02:00"
-                    endDateTime="2026-06-01T04:59:00+02:00"
+                    startDateTime="2026-06-08T05:00:00+02:00"
+                    endDateTime="2026-06-21T04:59:00+02:00"
                 />
-                <img className={styles.imgBanner} src={getImageUrl("src/assets/main-page/event-3.png")} alt="event"/>
+                <img className={styles.imgBanner} src={getImageUrl("../assets/main-page/event-3.png")} alt="event"/>
             </div>
-            */}
 
             <h2 className={styles.h2}>Battle Pass</h2>
 

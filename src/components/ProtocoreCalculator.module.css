@@ -1,65 +1,74 @@
 .container {
     max-width: 600px;
-    margin: 0 auto;
-    padding: 24px;
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    padding: 20px;
+    background: var(--bg-glass);
+    box-shadow: var(--box-shadow);
+    font-size: 16px;
 }
 
 .title {
     font-size: 28px;
     font-weight: 600;
     text-align: center;
-    margin-bottom: 24px;
-    color: #1a1a1a;
+    margin-bottom: 20px;
+    color: var(--colorTextDark);
 }
 
 .formGroup {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .formGroup label {
     display: block;
     font-weight: 500;
-    margin-bottom: 8px;
-    color: #333;
+    margin-bottom: 10px;
+    color: var(--colorTextDark);
 }
 
 .buttonGroup {
     display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
+    gap: 5px;
 }
 
 .typeButton {
     padding: 8px 16px;
-    border: 1px solid #d9d9d9;
-    background: #fff;
-    border-radius: 8px;
+    background: none;
+    border: none;
+    color: var(--colorTextDark);
+    font-family: inherit;
+    font-size: 14px;
     cursor: pointer;
     transition: all 0.2s;
 }
 
 .typeButton:hover {
-    border-color: #1677ff;
-    color: #1677ff;
+    color: var(--a);
 }
 
 .typeButton.active {
-    background: #1677ff;
-    color: #fff;
-    border-color: #1677ff;
+    background: var(--forSelect);
+    color: var(--colorText);
+    box-shadow: var(--box-shadow);
 }
 
 .select {
     width: 100%;
     padding: 8px 12px;
-    border: 1px solid #d9d9d9;
-    border-radius: 8px;
+    border: 1px solid var(--colorText);
     font-size: 14px;
     cursor: pointer;
 }
+
+.select,
+.select:hover,
+.select:focus,
+.select:active,
+.select:visited {
+    border: none;
+    outline: none;
+}
+
 
 .row {
     display: flex;
