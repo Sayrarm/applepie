@@ -45,12 +45,14 @@ export const SUBSTAT_LEVELS = [3, 6, 9, 12, 15];
 export const protocoreTypes = {
     alpha: {
         name: "α (Alpha)",
+        image: "../assets/icons/alpha.png",
         mainStats: [
             { name: "HP", values: [1000, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3200, 3400, 3600, 3800, 4000] }
         ]
     },
     beta: {
         name: "β (Beta)",
+        image: "../assets/icons/beta.png",
         mainStats: [
             { name: "Oath Recovery Boost", values: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20] },
             { name: "Oath Strength", values: [3.5, 4.2, 4.9, 5.6, 6.3, 7, 7.7, 8.4, 9.1, 9.8, 10.5, 11.2, 11.9, 12.6, 13.3, 14] },
@@ -62,12 +64,14 @@ export const protocoreTypes = {
     },
     gamma: {
         name: "γ (Gamma)",
+        image: "../assets/icons/gamma.png",
         mainStats: [
             { name: "ATK", values: [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200] }
         ]
     },
     delta: {
         name: "δ (Delta)",
+        image: "../assets/icons/delta.png",
         mainStats: [
             { name: "CRIT Rate", values: [3.7, 4.2, 4.7, 5.2, 5.7, 6.2, 6.7, 7.2, 7.7, 8.2, 8.7, 9.2, 9.7, 10.2, 10.7, 11.2] },
             { name: "CRIT DMG", values: [7.4, 8.4, 9.4, 10.4, 11.4, 12.4, 13.4, 14.4, 15.4, 16.4, 17.4, 18.4, 19.4, 20.4, 21.4, 22.4] },

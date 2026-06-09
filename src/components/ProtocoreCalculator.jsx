@@ -13,6 +13,7 @@ import {
     SUBSTAT_LEVELS
 } from '../data/protocore-data';
 import {Collapse} from "antd";
+import {getImageUrl} from "./imageUtils.js";
 
 // Функция для получения первого доступного мейн стата
 const getFirstMainStat = (type) => {
@@ -109,7 +110,9 @@ function ProtocoreCalculator() {
                             className={`${styles.typeButton} ${protocoreType === key ? styles.active : ''}`}
                             onClick={() => handleTypeChange(key)}
                         >
+                            <img src={getImageUrl(value.image)} alt={value.name} width={30} height={30} />
                             {value.name}
+
                         </button>
                     ))}
                 </div>
