@@ -1,8 +1,9 @@
 import styles from './ObtainInfo.module.css';
-import { useRef, useState } from "react";
+import {useRef, useState} from "react";
 import ModalWindow from "./ModalWindow.jsx";
+import {getImageUrl} from "./imageUtils.js";
 
-function ObtainInfo({ cardId, obtainData }) {
+function ObtainInfo({cardId, obtainData}) {
     const obtainModalRef = useRef();
     const [selectedObtain, setSelectedObtain] = useState(null);
 
@@ -47,9 +48,12 @@ function ObtainInfo({ cardId, obtainData }) {
                 ref={obtainModalRef}
                 title={`How to get: ${selectedObtain?.obtain || ''}`}
                 tag={
-                    <div className={styles.modalInfo}>
-                        {selectedObtain?.description}
-                    </div>
+                    <>
+                        <div className={styles.modalInfo}>
+                            {selectedObtain?.description}
+                        </div>
+                        <img src={getImageUrl(selectedObtain?.image)} alt={selectedObtain?.obtain} width={'50%'} height={'50%'} />
+                    </>
                 }
             />
         </div>

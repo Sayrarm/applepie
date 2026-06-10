@@ -262,7 +262,7 @@ function ProtocoreCalculator() {
 
                         <div className={styles.resultRow}>
                             <span className={styles.resultLabel}>Core Hunt runs needed:</span>
-                            <span>{calculation.dungeonRuns} runs (Lvl {dungeonLevel})</span>
+                            <span>{calculation.dungeonRuns} run(s) (Lvl {dungeonLevel})</span>
                         </div>
 
                         <div className={styles.resultRow}>
