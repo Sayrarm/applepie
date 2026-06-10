@@ -8,11 +8,13 @@ import {
     getRequiredDungeonRuns,
     getRequiredStamina,
     getSubstatUpgradeInfo,
+    getRequiredCreditDungeonRuns,
     MAX_LEVEL,
     dungeonData,
-    SUBSTAT_LEVELS
+    SUBSTAT_LEVELS,
+    CREDIT_DUNGEON_REWARD,
+    getRequiredStaminaForCredits
 } from '../data/protocore-data';
-import {Collapse} from "antd";
 import {getImageUrl} from "./imageUtils.js";
 
 // Функция для получения первого доступного мейн стата
@@ -78,6 +80,11 @@ function ProtocoreCalculator() {
 
         const dungeonRuns = getRequiredDungeonRuns(expNeeded, dungeonLevel);
         const staminaNeeded = getRequiredStamina(expNeeded, dungeonLevel);
+
+        // Добавляем расчёты для кредитов
+        const creditDungeonRuns = getRequiredCreditDungeonRuns(creditsNeeded);
+        const staminaForCredits = getRequiredStaminaForCredits(creditsNeeded);
+
         const currentDungeonExp = dungeonData.find(d => d.level === dungeonLevel)?.exp || 0;
 
         return {
@@ -88,7 +95,9 @@ function ProtocoreCalculator() {
             substatUpgrades,
             dungeonRuns,
             staminaNeeded,
-            currentDungeonExp
+            creditDungeonRuns,
+            currentDungeonExp,
+            staminaForCredits
         };
     }, [hasCalculated, protocoreType, mainStat, currentLevel, targetLevel, dungeonLevel]);
 
@@ -203,6 +212,7 @@ function ProtocoreCalculator() {
                     <h2>Results</h2>
 
                     <div className={styles.resultCard}>
+                        {/*
                         <div className={styles.resultRow}>
                             <span className={styles.resultLabel}>Protocore:</span>
                             <span>{protocoreTypes[protocoreType]?.name}</span>
@@ -216,7 +226,9 @@ function ProtocoreCalculator() {
                             <span>Lvl {currentLevel} → Lvl {targetLevel}</span>
                         </div>
 
+
                         <div className={styles.divider}></div>
+                         */}
 
                         <div className={styles.resultRow}>
                             <span className={styles.resultLabel}>Stat growth:</span>
@@ -261,7 +273,7 @@ function ProtocoreCalculator() {
                         <div className={styles.divider}></div>
 
                         <div className={styles.resultRow}>
-                            <span className={styles.resultLabel}>Core Hunt runs needed:</span>
+                            <span className={styles.resultLabel}>"Core Hunt" runs needed:</span>
                             <span>{calculation.dungeonRuns} run(s) (Lvl {dungeonLevel})</span>
                         </div>
 
@@ -269,6 +281,17 @@ function ProtocoreCalculator() {
                             <span className={styles.resultLabel}>Stamina needed:</span>
                             <span>{calculation.staminaNeeded} stamina</span>
                         </div>
+
+                        <div className={styles.resultRow}>
+                            <span className={styles.resultLabel}>"Mr. Beanie" runs needed:</span>
+                            <span>{calculation.creditDungeonRuns} run(s) (lvl 10)</span>
+                        </div>
+
+                        <div className={styles.resultRow}>
+                            <span className={styles.resultLabel}>Stamina needed:</span>
+                            <span>{calculation.staminaForCredits} stamina</span>
+                        </div>
+
                     </div>
                 </div>
             )}

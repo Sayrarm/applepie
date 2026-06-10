@@ -108,8 +108,8 @@
 
 .resultCard {
     background: var(--colorText);
-    border-radius: 12px;
     padding: 16px;
+    box-shadow: var(--box-shadow);
 }
 
 .resultRow {
@@ -138,14 +138,12 @@
     padding: 12px;
     background: var(--colorText);
     border: 1px solid var(--a);
-    border-radius: 8px;
     color: var(--a);
     text-align: center;
 }
 
 .substatSection {
     background: #f9f9f9;
-    border-radius: 8px;
     padding: 12px;
     margin: 12px 0;
 }
@@ -183,9 +181,9 @@
     width: 100%;
     padding: 12px 24px;
     background: var(--forSelect);
+    box-shadow: var(--box-shadow);
     color: var(--colorText);
     border: none;
-    border-radius: 8px;
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;

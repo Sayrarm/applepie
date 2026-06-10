@@ -38,6 +38,10 @@ export const dungeonData = [
 // Стоимость входа в данж
 export const DUNGEON_COST = 20; // 20 топлива за вход
 
+// Данные для данжа за кредиты
+export const CREDIT_DUNGEON_COST = 8; // 8 топлива за вход
+export const CREDIT_DUNGEON_REWARD = 7600; // 7600 кредитов за проход
+
 // Уровни, на которых добавляется/усиливается саб-стат
 export const SUBSTAT_LEVELS = [3, 6, 9, 12, 15];
 
@@ -161,4 +165,15 @@ export const getRequiredStamina = (requiredExp, dungeonLevel) => {
     const runs = getRequiredDungeonRuns(requiredExp, dungeonLevel);
     if (!runs) return null;
     return runs * DUNGEON_COST;
+};
+
+// Получить количество проходов данжа для получения кредитов
+export const getRequiredCreditDungeonRuns = (requiredCredits) => {
+    return Math.ceil(requiredCredits / CREDIT_DUNGEON_REWARD);
+};
+
+// Получить количество топлива для фарма кредитов
+export const getRequiredStaminaForCredits = (requiredCredits) => {
+    const runs = getRequiredCreditDungeonRuns(requiredCredits);
+    return runs * CREDIT_DUNGEON_COST;
 };
