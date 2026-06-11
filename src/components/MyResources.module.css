@@ -1,0 +1,161 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 24px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 24px;
+    color: #1a1a1a;
+}
+
+.section {
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+.sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.section h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.totalExp {
+    font-size: 14px;
+    color: #1677ff;
+    font-weight: 500;
+    background: #e6f4ff;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.itemsGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.itemRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.itemIcon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.itemName {
+    flex: 1;
+    min-width: 180px;
+    font-size: 14px;
+    color: #333;
+}
+
+.itemInput {
+    width: 100px;
+    padding: 6px 10px;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.itemValue {
+    width: 80px;
+    font-size: 12px;
+    color: #888;
+}
+
+.crystalColorRow {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.label {
+    font-weight: 500;
+    color: #333;
+    min-width: 50px;
+}
+
+.colorButtons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.colorButton {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border: 1px solid #d9d9d9;
+    background: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 13px;
+}
+
+.colorButton:hover {
+    border-color: #1677ff;
+}
+
+.colorButton.active {
+    background: #1677ff;
+    color: #fff;
+    border-color: #1677ff;
+}
+
+.colorIcon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+    .container {
+        padding: 16px;
+    }
+
+    .itemRow {
+        flex-wrap: wrap;
+    }
+
+    .itemName {
+        min-width: 100%;
+        margin-bottom: 4px;
+    }
+
+    .sectionHeader {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

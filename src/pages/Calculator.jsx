@@ -2,14 +2,21 @@ import { useState } from 'react';
 import styles from './CalculatorPage.module.css';
 import ProtocoreCalculator from "../components/ProtocoreCalculator.jsx";
 import MemoryUpCalculator from "../components/MemoryUpCalculator.jsx";
+import MyResources from "../components/MyResources.jsx";
 
 function Calculator() {
-    const [activeTab, setActiveTab] = useState('protocore');
+    const [activeTab, setActiveTab] = useState('inventory');
 
     return (
         <section className={styles.containerCalculator}>
             {/* Навигация */}
             <div className={styles.tabs}>
+                <button
+                    className={`${styles.tabButton} ${activeTab === 'inventory' ? styles.active : ''}`}
+                    onClick={() => setActiveTab('inventory')}
+                >
+                    My Resources
+                </button>
                 <button
                     className={`${styles.tabButton} ${activeTab === 'protocore' ? styles.active : ''}`}
                     onClick={() => setActiveTab('protocore')}
@@ -26,6 +33,7 @@ function Calculator() {
 
             {/* Контент */}
             <div className={styles.tabContent}>
+                {activeTab === 'inventory' && <MyResources />}
                 {activeTab === 'protocore' && <ProtocoreCalculator />}
                 {activeTab === 'memory' && <MemoryUpCalculator />}
             </div>
