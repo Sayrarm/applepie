@@ -1,5 +1,5 @@
 import {useState, useMemo} from 'react';
-import styles from './ProtocoreCalculator.module.css';
+import styles from './Calculator.module.css';
 import {
     protocoreTypes,
     getMainStatValue,
