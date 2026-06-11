@@ -47,6 +47,7 @@ body {
     --colorTextDark: #35312d;
     --colorTextSpecial: #e68038;
     --colorTextSuperDark: #35312d;
+    --colorTextBright: #e68038;
     --forSelect: #35312d;
     --border: #e68038;
     --border-battle-page: #35312d;
@@ -83,6 +84,7 @@ html.dark {
     --colorTextDark: #D8DADF;
     --colorTextSpecial: #202227;
     --colorTextSuperDark: #202227;
+    --colorTextBright: #D8DADF;
     --forSelect: #9C2007;
     --border: #9C2007;
     --border-battle-page: #8e9093;

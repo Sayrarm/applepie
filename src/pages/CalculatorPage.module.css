@@ -5,10 +5,6 @@
     padding: 5px;
 }
 
-.tabs {
-
-}
-
 .tabContent {
     display: flex;
     align-self: center;
@@ -33,4 +29,16 @@
     background: var(--forSelect);
     color: var(--colorText);
     box-shadow: var(--box-shadow);
+}
+
+@media screen and (max-width: 1020px) {
+
+    .tabs {
+        display: flex;
+        justify-content: center;
+    }
+
+    .tabButton {
+        padding: 8px 8px;
+    }
 }
