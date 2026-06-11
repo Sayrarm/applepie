@@ -163,7 +163,7 @@ function MemoryUpCalculator() {
 
             {/* Данжи */}
             <div className={styles.formGroup}>
-                <label>EXP Dungeon Level (Bottle of Wishes)</label>
+                <label>Heartbreaker Level</label>
                 <select
                     value={expDungeonLevel}
                     onChange={(e) => handleExpDungeonChange(e.target.value)}
@@ -178,7 +178,7 @@ function MemoryUpCalculator() {
             </div>
 
             <div className={styles.formGroup}>
-                <label>Crystal Dungeon Level</label>
+                <label>Pumpkin Magus | Lemonette | Snoozer Level</label>
                 <select
                     value={crystalDungeonLevel}
                     onChange={(e) => handleCrystalDungeonChange(e.target.value)}
@@ -186,14 +186,14 @@ function MemoryUpCalculator() {
                 >
                     {crystalDungeonData.map(d => (
                         <option key={d.level} value={d.level}>
-                            Lvl {d.level}: N:{d.crystals.N} R:{d.crystals.R || 0} SR:{d.crystals.SR || 0} per run
+                            Lvl {d.level} (N:{d.crystals.N} R:{d.crystals.R || 0} SR:{d.crystals.SR || 0} per run)
                         </option>
                     ))}
                 </select>
             </div>
 
             <div className={styles.formGroup}>
-                <label>Credits Dungeon Level</label>
+                <label>Mr. Beanie Level</label>
                 <select
                     value={creditDungeonLevel}
                     onChange={(e) => handleCreditDungeonChange(e.target.value)}

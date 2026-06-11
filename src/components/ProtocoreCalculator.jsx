@@ -1,4 +1,4 @@
-import {useState, useMemo} from 'react';
+import {useState} from 'react';
 import styles from './Calculator.module.css';
 import {
     protocoreTypes,
@@ -8,14 +8,14 @@ import {
     getRequiredDungeonRuns,
     getRequiredStamina,
     getSubstatUpgradeInfo,
-    getRequiredCreditDungeonRuns,
     MAX_LEVEL,
     dungeonData,
     SUBSTAT_LEVELS,
-    CREDIT_DUNGEON_REWARD,
-    getRequiredStaminaForCredits
+    getCreditDungeonRuns,
+    getStaminaForCredits,
 } from '../data/protocore-data';
 import {getImageUrl} from "./imageUtils.js";
+import {creditDungeonData} from "../data/memory-up-data.js";
 
 // Функция для получения первого доступного мейн стата
 const getFirstMainStat = (type) => {
@@ -28,7 +28,9 @@ function ProtocoreCalculator() {
     const [currentLevel, setCurrentLevel] = useState(0);
     const [targetLevel, setTargetLevel] = useState(1);
     const [dungeonLevel, setDungeonLevel] = useState(10);
+    const [creditDungeonLevel, setCreditDungeonLevel] = useState(9);
     const [hasCalculated, setHasCalculated] = useState(false);
+    const [result, setResult] = useState(null);
 
     // Получаем доступные мейн статы для выбранного типа
     const availableStats = protocoreTypes[protocoreType]?.mainStats || [];
@@ -36,41 +38,45 @@ function ProtocoreCalculator() {
     // Устанавливаем первый доступный мейн стат при смене типа
     const handleTypeChange = (type) => {
         setProtocoreType(type);
-        setMainStat(getFirstMainStat(type)); // ← обновляем здесь
+        setMainStat(getFirstMainStat(type));
         setHasCalculated(false);
+        setResult(null);
     };
 
     // Обработчики изменения полей
     const handleCurrentLevelChange = (value) => {
         setCurrentLevel(Number(value));
         setHasCalculated(false);
+        setResult(null);
     };
 
     const handleTargetLevelChange = (value) => {
         setTargetLevel(Number(value));
         setHasCalculated(false);
+        setResult(null);
     };
 
     const handleDungeonLevelChange = (value) => {
         setDungeonLevel(Number(value));
         setHasCalculated(false);
+        setResult(null);
     };
 
     const handleMainStatChange = (value) => {
         setMainStat(value);
         setHasCalculated(false);
+        setResult(null);
+    };
+
+    const handleCreditDungeonChange = (value) => {
+        setCreditDungeonLevel(Number(value));
+        setHasCalculated(false);
+        setResult(null);
     };
 
     // Обработчик кнопки Calculate
     const handleCalculate = () => {
-        setHasCalculated(true);
-    };
-
-    // Расчёты (только если hasCalculated = true)
-    const calculation = useMemo(() => {
-        if (!hasCalculated || currentLevel >= targetLevel) {
-            return null;
-        }
+        if (currentLevel >= targetLevel) return;
 
         const expNeeded = getRequiredExp(currentLevel, targetLevel);
         const creditsNeeded = getRequiredCredits(currentLevel, targetLevel);
@@ -80,14 +86,11 @@ function ProtocoreCalculator() {
 
         const dungeonRuns = getRequiredDungeonRuns(expNeeded, dungeonLevel);
         const staminaNeeded = getRequiredStamina(expNeeded, dungeonLevel);
-
-        // Добавляем расчёты для кредитов
-        const creditDungeonRuns = getRequiredCreditDungeonRuns(creditsNeeded);
-        const staminaForCredits = getRequiredStaminaForCredits(creditsNeeded);
-
+        const creditRuns = getCreditDungeonRuns(creditsNeeded, creditDungeonLevel);
+        const staminaForCredits = getStaminaForCredits(creditsNeeded, creditDungeonLevel);
         const currentDungeonExp = dungeonData.find(d => d.level === dungeonLevel)?.exp || 0;
 
-        return {
+        setResult({
             expNeeded,
             creditsNeeded,
             currentStatValue,
@@ -95,11 +98,13 @@ function ProtocoreCalculator() {
             substatUpgrades,
             dungeonRuns,
             staminaNeeded,
-            creditDungeonRuns,
             currentDungeonExp,
+            creditRuns,
             staminaForCredits
-        };
-    }, [hasCalculated, protocoreType, mainStat, currentLevel, targetLevel, dungeonLevel]);
+        });
+
+        setHasCalculated(true);
+    };
 
     // Определяем, какие уровни саб-статов будут достигнуты
     const substatLevelsReached = SUBSTAT_LEVELS.filter(level =>
@@ -121,7 +126,6 @@ function ProtocoreCalculator() {
                         >
                             <img src={getImageUrl(value.image)} alt={value.name} width={30} height={30} />
                             {value.name}
-
                         </button>
                     ))}
                 </div>
@@ -193,6 +197,21 @@ function ProtocoreCalculator() {
                 </select>
             </div>
 
+            <div className={styles.formGroup}>
+                <label>Mr. Beanie Level</label>
+                <select
+                    value={creditDungeonLevel}
+                    onChange={(e) => handleCreditDungeonChange(e.target.value)}
+                    className={styles.select}
+                >
+                    {creditDungeonData.map(d => (
+                        <option key={d.level} value={d.level}>
+                            Lvl {d.level} (+{d.credits.toLocaleString()} Credits per run)
+                        </option>
+                    ))}
+                </select>
+            </div>
+
             <button
                 className={styles.calculateButton}
                 onClick={handleCalculate}
@@ -207,44 +226,27 @@ function ProtocoreCalculator() {
                 </div>
             )}
 
-            { hasCalculated && calculation && currentLevel < targetLevel && (
+            {hasCalculated && result && currentLevel < targetLevel && (
                 <div className={styles.results}>
                     <h2>Results</h2>
 
                     <div className={styles.resultCard}>
-                        {/*
-                        <div className={styles.resultRow}>
-                            <span className={styles.resultLabel}>Protocore:</span>
-                            <span>{protocoreTypes[protocoreType]?.name}</span>
-                        </div>
-                        <div className={styles.resultRow}>
-                            <span className={styles.resultLabel}>Main Stat:</span>
-                            <span>{mainStat}</span>
-                        </div>
-                        <div className={styles.resultRow}>
-                            <span className={styles.resultLabel}>Upgrade:</span>
-                            <span>Lvl {currentLevel} → Lvl {targetLevel}</span>
-                        </div>
-
-
-                        <div className={styles.divider}></div>
-                         */}
-
                         <div className={styles.resultRow}>
                             <span className={styles.resultLabel}>Stat growth:</span>
                             <span>
-                                {calculation.currentStatValue} → {calculation.targetStatValue}
-                                {typeof calculation.targetStatValue === 'number' &&
-                                    typeof calculation.currentStatValue === 'number' &&
-                                    ` (+${(calculation.targetStatValue - calculation.currentStatValue).toFixed(2)})`}  {mainStat === 'HP' || mainStat === 'ATK' ? ` ${mainStat}` : '%'}
+                                {result.currentStatValue} → {result.targetStatValue}
+                                {typeof result.targetStatValue === 'number' &&
+                                    typeof result.currentStatValue === 'number' &&
+                                    ` (+${(result.targetStatValue - result.currentStatValue).toFixed(2)})`}
+                                {mainStat === 'HP' || mainStat === 'ATK' ? ` ${mainStat}` : '%'}
                             </span>
                         </div>
 
                         {/* Информация о саб-статах */}
-                        {calculation.substatUpgrades.length > 0 && (
+                        {result.substatUpgrades.length > 0 && (
                             <div className={styles.substatSection}>
                                 <div className={styles.substatTitle}>Secondary Stats:</div>
-                                {calculation.substatUpgrades.map((upgrade, idx) => (
+                                {result.substatUpgrades.map((upgrade, idx) => (
                                     <div key={idx} className={styles.substatRow}>
                                         <span className={styles.substatIcon}>
                                             {upgrade.type === 'new' ? '✨' : '⬆️'}
@@ -262,40 +264,47 @@ function ProtocoreCalculator() {
 
                         <div className={styles.resultRow}>
                             <span className={styles.resultLabel}>EXP needed:</span>
-                            <span>{calculation.expNeeded.toLocaleString()} EXP</span>
+                            <span>{result.expNeeded.toLocaleString()} EXP</span>
                         </div>
 
                         <div className={styles.resultRow}>
                             <span className={styles.resultLabel}>Credits needed:</span>
-                            <span>{calculation.creditsNeeded.toLocaleString()} Credits</span>
+                            <span>{result.creditsNeeded.toLocaleString()} Credits</span>
                         </div>
 
                         <div className={styles.divider}></div>
 
                         <div className={styles.resultRow}>
                             <span className={styles.resultLabel}>"Core Hunt" runs needed:</span>
-                            <span>{calculation.dungeonRuns} run(s) (Lvl {dungeonLevel})</span>
+                            <span>{result.dungeonRuns} run(s) (Lvl {dungeonLevel})</span>
                         </div>
 
                         <div className={styles.resultRow}>
-                            <span className={styles.resultLabel}>Stamina needed:</span>
-                            <span>{calculation.staminaNeeded} stamina</span>
+                            <span className={styles.resultLabel}>Stamina for EXP:</span>
+                            <span>{result.staminaNeeded} stamina</span>
                         </div>
+
+                        <div className={styles.divider}></div>
 
                         <div className={styles.resultRow}>
                             <span className={styles.resultLabel}>"Mr. Beanie" runs needed:</span>
-                            <span>{calculation.creditDungeonRuns} run(s) (lvl 10)</span>
+                            <span>{result.creditRuns} run(s) (Lvl {creditDungeonLevel})</span>
                         </div>
 
                         <div className={styles.resultRow}>
-                            <span className={styles.resultLabel}>Stamina needed:</span>
-                            <span>{calculation.staminaForCredits} stamina</span>
+                            <span className={styles.resultLabel}>Stamina for Credits:</span>
+                            <span>{result.staminaForCredits} stamina</span>
                         </div>
 
+                        <div className={styles.divider}></div>
+
+                        <div className={styles.resultRow}>
+                            <span className={styles.resultLabel}>Total Stamina needed:</span>
+                            <span>{result.staminaNeeded + result.staminaForCredits} stamina</span>
+                        </div>
                     </div>
                 </div>
             )}
-
         </div>
     );
 }

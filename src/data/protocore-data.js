@@ -38,9 +38,21 @@ export const dungeonData = [
 // Стоимость входа в данж
 export const DUNGEON_COST = 20; // 20 топлива за вход
 
+// Данжи для кредитов
+export const creditDungeonData = [
+    { level: 1, credits: 4000 },
+    { level: 2, credits: 4600 },
+    { level: 3, credits: 5200 },
+    { level: 4, credits: 5600 },
+    { level: 5, credits: 6000 },
+    { level: 6, credits: 6400 },
+    { level: 7, credits: 6800 },
+    { level: 8, credits: 7200 },
+    { level: 9, credits: 7600 }
+];
+
 // Данные для данжа за кредиты
 export const CREDIT_DUNGEON_COST = 8; // 8 топлива за вход
-export const CREDIT_DUNGEON_REWARD = 7600; // 7600 кредитов за проход
 
 // Уровни, на которых добавляется/усиливается саб-стат
 export const SUBSTAT_LEVELS = [3, 6, 9, 12, 15];
@@ -167,13 +179,15 @@ export const getRequiredStamina = (requiredExp, dungeonLevel) => {
     return runs * DUNGEON_COST;
 };
 
-// Получить количество проходов данжа для получения кредитов
-export const getRequiredCreditDungeonRuns = (requiredCredits) => {
-    return Math.ceil(requiredCredits / CREDIT_DUNGEON_REWARD);
+// Получить количество проходов данжа для кредитов
+export const getCreditDungeonRuns = (creditsNeeded, dungeonLevel) => {
+    const dungeon = creditDungeonData.find(d => d.level === dungeonLevel);
+    if (!dungeon) return 0;
+    return Math.ceil(creditsNeeded / dungeon.credits);
 };
 
-// Получить количество топлива для фарма кредитов
-export const getRequiredStaminaForCredits = (requiredCredits) => {
-    const runs = getRequiredCreditDungeonRuns(requiredCredits);
+// Получить топливо для кредитов
+export const getStaminaForCredits = (creditsNeeded, dungeonLevel) => {
+    const runs = getCreditDungeonRuns(creditsNeeded, dungeonLevel);
     return runs * CREDIT_DUNGEON_COST;
 };
