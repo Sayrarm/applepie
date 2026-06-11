@@ -84,7 +84,7 @@ html.dark {
     --colorTextDark: #D8DADF;
     --colorTextSpecial: #202227;
     --colorTextSuperDark: #202227;
-    --colorTextBright: #D8DADF;
+    --colorTextBright: white;
     --forSelect: #9C2007;
     --border: #9C2007;
     --border-battle-page: #8e9093;
