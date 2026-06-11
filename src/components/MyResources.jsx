@@ -167,21 +167,26 @@ function MyResources() {
                 <div className={styles.itemsGrid}>
                     {bottles.map(item => (
                         <div key={item.id} className={styles.itemRow}>
-                            <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon} />
-                            <span className={styles.itemName}>{item.name}</span>
-                            <input
-                                type="number"
-                                min="0"
-                                value={bottlesState[item.id] || 0}
-                                onChange={(e) => updateCount(bottlesState, setBottlesState, item.id, e.target.value)}
-                                className={styles.itemInput}
-                                onFocus={(e) => {
-                                    if (e.target.value === '0') {
-                                        e.target.value = '';
-                                    }
-                                }}
-                            />
-                            <span className={styles.itemValue}>+{item.value} EXP</span>
+                            <div className={styles.itemDiv}>
+                                <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon} />
+                                <span className={styles.itemName}>{item.name}</span>
+                            </div>
+
+                            <div className={styles.itemDiv}>
+                                <span className={styles.itemValue}>+{item.value} EXP</span>
+                                <input
+                                    type="number"
+                                    min="0"
+                                    value={bottlesState[item.id] || 0}
+                                    onChange={(e) => updateCount(bottlesState, setBottlesState, item.id, e.target.value)}
+                                    className={styles.itemInput}
+                                    onFocus={(e) => {
+                                        if (e.target.value === '0') {
+                                            e.target.value = '';
+                                        }
+                                    }}
+                                />
+                            </div>
                         </div>
                     ))}
                 </div>
@@ -193,8 +198,11 @@ function MyResources() {
                 <div className={styles.itemsGrid}>
                     {heartSand.map(item => (
                         <div key={item.id} className={styles.itemRow}>
-                            <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon} />
-                            <span className={styles.itemName}>{item.name}</span>
+                            <div className={styles.itemDiv}>
+                                <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon} />
+                                <span className={styles.itemName}>{item.name}</span>
+                            </div>
+
                             <input
                                 type="number"
                                 min="0"
@@ -264,7 +272,6 @@ function MyResources() {
             <div className={styles.section}>
                 <h2>Crystals</h2>
                 <div className={styles.crystalColorRow}>
-                    <span className={styles.label}>Color:</span>
                     <div className={styles.colorButtons}>
                         {crystalColors.map(color => (
                             <button
@@ -310,7 +317,11 @@ function MyResources() {
                 <div className={styles.itemsGrid}>
                     {crystalBox.map(item => (
                         <div key={item.id} className={styles.itemRow}>
-                            <span className={styles.itemName}>{item.name}</span>
+                            <div className={styles.itemDiv}>
+                                <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon} />
+                                <span className={styles.itemName}>{item.name}</span>
+                            </div>
+
                             <input
                                 type="number"
                                 min="0"
@@ -370,8 +381,11 @@ function MyResources() {
                 <div className={styles.itemsGrid}>
                     {hearts.map(item => (
                         <div key={item.id} className={styles.itemRow}>
-                            <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon} />
-                            <span className={styles.itemName}>{item.name}</span>
+                            <div className={styles.itemDiv}>
+                                <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon} />
+                                <span className={styles.itemName}>{item.name}</span>
+                            </div>
+
                             <input
                                 type="number"
                                 min="0"
@@ -400,21 +414,28 @@ function MyResources() {
                 <div className={styles.itemsGrid}>
                     {coreEnergy.map(item => (
                         <div key={item.id} className={styles.itemRow}>
-                            <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon} />
-                            <span className={styles.itemName}>{item.name}</span>
-                            <input
-                                type="number"
-                                min="0"
-                                value={coreEnergyState[item.id] || 0}
-                                onChange={(e) => updateCount(coreEnergyState, setCoreEnergyState, item.id, e.target.value)}
-                                className={styles.itemInput}
-                                onFocus={(e) => {
-                                    if (e.target.value === '0') {
-                                        e.target.value = '';
-                                    }
-                                }}
-                            />
-                            <span className={styles.itemValue}>+{item.value} EXP</span>
+                            <div className={styles.itemDiv}>
+                                <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon} />
+                                <span className={styles.itemName}>{item.name}</span>
+                            </div>
+
+                            <div className={styles.itemDiv}>
+                                <span className={styles.itemValue}>+{item.value} EXP</span>
+                                <input
+                                    type="number"
+                                    min="0"
+                                    value={coreEnergyState[item.id] || 0}
+                                    onChange={(e) => updateCount(coreEnergyState, setCoreEnergyState, item.id, e.target.value)}
+                                    className={styles.itemInput}
+                                    onFocus={(e) => {
+                                        if (e.target.value === '0') {
+                                            e.target.value = '';
+                                        }
+                                    }}
+                                />
+
+                            </div>
+
                         </div>
                     ))}
                 </div>
@@ -426,8 +447,11 @@ function MyResources() {
                 <div className={styles.itemsGrid}>
                     {credits.map(item => (
                         <div key={item.id} className={styles.itemRow}>
-                            <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon} />
-                            <span className={styles.itemName}>{item.name}</span>
+                            <div className={styles.itemDiv}>
+                                <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon} />
+                                <span className={styles.itemName}>{item.name}</span>
+                            </div>
+
                             <input
                                 type="number"
                                 min="0"

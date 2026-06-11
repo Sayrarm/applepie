@@ -2,23 +2,23 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 24px;
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: var(--bg-glass);
+    box-shadow: var(--box-shadow);
+    font-family: TikTok Sans, monospace;
 }
 
 .title {
     font-size: 28px;
     font-weight: 600;
     text-align: center;
-    margin-bottom: 24px;
-    color: #1a1a1a;
+    margin-bottom: 20px;
+    color: var(--colorTextDark);
 }
 
 .section {
-    margin-bottom: 32px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid #e8e8e8;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-battle-page);
 }
 
 .section:last-child {
@@ -29,38 +29,42 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 16px;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
 }
 
 .section h2 {
     font-size: 20px;
     font-weight: 600;
-    color: #333;
-    margin: 0;
+    color: var(--colorTextDark);
 }
 
 .totalExp {
     font-size: 14px;
-    color: #1677ff;
-    font-weight: 500;
-    background: #e6f4ff;
-    padding: 4px 12px;
-    border-radius: 20px;
+    color: var(--a);
+    background: var(--forSelect);
+    box-shadow: var(--box-shadow);
+    padding: 6px 12px;
 }
 
 .itemsGrid {
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
 }
 
 .itemRow {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 12px;
+    gap: 5px;
     flex-wrap: wrap;
+}
+
+.itemDiv {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .itemIcon {
@@ -70,44 +74,39 @@
 }
 
 .itemName {
-    flex: 1;
-    min-width: 180px;
     font-size: 14px;
-    color: #333;
+    color: var(--colorTextDark);
 }
 
 .itemInput {
-    width: 100px;
+    width: 90px;
     padding: 6px 10px;
-    border: 1px solid #d9d9d9;
-    border-radius: 6px;
+    border: 1px solid var(--border-battle-page);
     font-size: 14px;
 }
 
 .itemValue {
-    width: 80px;
     font-size: 12px;
     color: #888;
 }
 
 .crystalColorRow {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 16px;
-    margin-bottom: 16px;
-    flex-wrap: wrap;
+    margin-bottom: 10px;
 }
 
 .label {
     font-weight: 500;
-    color: #333;
-    min-width: 50px;
+    color: var(--colorTextDark);
 }
 
 .colorButtons {
+    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 5px;
 }
 
 .colorButton {
@@ -115,109 +114,48 @@
     align-items: center;
     gap: 6px;
     padding: 6px 12px;
-    border: 1px solid #d9d9d9;
-    background: #fff;
-    border-radius: 20px;
+    color: var(--colorTextDark);
+    border: none;
+    background: none;
     cursor: pointer;
-    transition: all 0.2s;
-    font-size: 13px;
+    transition: all 0.3s;
+    font-size: 14px;
+    font-family: inherit;
 }
 
 .colorButton:hover {
-    border-color: #1677ff;
+    color: var(--a);
 }
 
 .colorButton.active {
-    background: #1677ff;
-    color: #fff;
-    border-color: #1677ff;
+    background: var(--forSelect);
+    color: var(--colorText);
+    box-shadow: var(--box-shadow);
 }
 
 .colorIcon {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     object-fit: contain;
 }
 
-/* Адаптивность */
-@media (max-width: 600px) {
-    .container {
-        padding: 16px;
-    }
-
-    .itemRow {
-        flex-wrap: wrap;
-    }
-
-    .itemName {
-        min-width: 100%;
-        margin-bottom: 4px;
-    }
-
-    .sectionHeader {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
-
 .exchangeSection {
-    margin-top: 20px;
-    padding: 16px;
-    background: #f5f5f5;
-    border-radius: 12px;
-}
-
-.exchangeTitle {
-    font-size: 14px;
-    font-weight: 500;
-    color: #333;
-    margin-bottom: 12px;
-}
-
-.exchangeContent {
+    border-top: 1px dashed var(--border-battle-page);
     display: flex;
     flex-direction: column;
-    gap: 8px;
+   padding-top: 10px;
+    margin-top: 10px;
 }
 
-.exchangeRow {
-    display: flex;
-    align-items: baseline;
-    gap: 16px;
-    flex-wrap: wrap;
-}
-
-.exchangeLabel {
+.exchangeSection h3 {
     font-weight: 500;
-    color: #666;
-    min-width: 110px;
 }
 
-.exchangeRewards {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-}
-
-.exchangeRewards span {
-    background: #e6f4ff;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-size: 13px;
-    color: #1677ff;
-}
-
-.exchangeEmpty {
-    color: #999;
-    font-size: 13px;
-    font-style: italic;
-}
-/******************************/
 .exchangeGrid {
     display: flex;
-    gap: 20px;
+    gap: 10px;
+    margin: 10px;
     flex-wrap: wrap;
-    margin-top: 8px;
 }
 
 .exchangeCard {
@@ -225,27 +163,25 @@
     flex-direction: column;
     align-items: center;
     gap: 6px;
-    padding: 12px 20px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    min-width: 140px;
+    justify-content: center;
+    padding: 10px;
+    background: var(--forSelect);
+    box-shadow: var(--box-shadow);
 }
 
 .exchangeValue {
-    font-size: 24px;
-    font-weight: 700;
-    color: #1677ff;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--a);
 }
 
 .exchangeItem {
     font-size: 12px;
-    color: #666;
+    color: var(--colorText);
     text-align: center;
 }
 
 .exchangeNote {
-    margin-top: 12px;
     font-size: 12px;
     color: #888;
     font-style: italic;
