@@ -38,13 +38,6 @@ export const crystalBox = [
     {id: 'box_general', name: "Ascension Crystal Box: General", value: 1, img: "../assets/icons/crystal-box-general.png"}
 ];
 
-//Ascension Crystal Box General может распределять кристаллы в соотношении N=5, R=2, SR=1
-export const crystalBoxGeneral = [
-    {id: 'box_n', name: "Ascension Crystal Box: N", value: 5},
-    {id: 'box_r', name: "Ascension Crystal Box: R", value: 2},
-    {id: 'box_sr', name: "Ascension Crystal Box: SR", value: 1},
-]
-
 //Awakening Heart
 export const hearts = [
     {id: 'heart_sr', name: "Awakening Heart: SR", value: 1, img: "../assets/icons/heart-sr.png"},

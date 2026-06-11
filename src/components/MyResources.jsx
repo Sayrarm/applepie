@@ -113,6 +113,45 @@ function MyResources() {
         return total;
     };
 
+    // Расчёт обмена Memory Heartsand
+    const getHeartsandExchange = () => {
+        const heartsandR = heartsandState['heartsand_r'] || 0;
+        const heartsandSR = heartsandState['heartsand_sr'] || 0;
+        const heartsandSSR = heartsandState['heartsand_ssr'] || 0;
+
+        return {
+            // Обмен на Bottles
+            bottles: {
+                R: Math.floor(heartsandR / 10) * 5,      // 10 R → 5 Bottle R
+                SR: Math.floor(heartsandSR / 5) * 5,     // 5 SR → 5 Bottle SR
+                SSR: Math.floor(heartsandSSR / 4) * 5,     // 4 SR → 5 Bottle SSR
+                hasAny: (Math.floor(heartsandR / 10) * 5) > 0 ||
+                    (Math.floor(heartsandSR / 5) * 5) > 0 ||
+                    (Math.floor(heartsandSR / 4) * 5) > 0
+            },
+            // Обмен на Credits
+            credits: {
+                R: Math.floor(heartsandR / 100) * 50000,      // 100 R → 50000
+                SR: Math.floor(heartsandSR / 10) * 50000,     // 10 SR → 50000
+                SSR: Math.floor(heartsandSSR / 2) * 50000,    // 2 SSR → 50000
+                total: (Math.floor(heartsandR / 100) * 50000) +
+                    (Math.floor(heartsandSR / 10) * 50000) +
+                    (Math.floor(heartsandSSR / 2) * 50000)
+            }
+        };
+    };
+
+    // Расчёт обмена Ascension Crystal Box General
+    const getCrystalBoxExchange = () => {
+        const generalBoxes = crystalBoxesState['box_general'] || 0;
+
+        return {
+            toN: generalBoxes * 5,   // 1 General → 5 N
+            toR: generalBoxes * 2,   // 1 General → 2 R
+            toSR: generalBoxes    // 1 General → 1 SR
+        };
+    };
+
     return (
         <div className={styles.container}>
             <h1 className={styles.title}>My Resources</h1>
@@ -161,16 +200,64 @@ function MyResources() {
                                 min="0"
                                 value={heartsandState[item.id] || 0}
                                 onChange={(e) => updateCount(heartsandState, setHeartsandState, item.id, e.target.value)}
-                                className={styles.itemInput}
                                 onFocus={(e) => {
                                     if (e.target.value === '0') {
                                         e.target.value = '';
                                     }
                                 }}
+                                onBlur={(e) => {
+                                    if (e.target.value === '') {
+                                        updateCount(heartsandState, setHeartsandState, item.id, 0);
+                                    }
+                                }}
+                                className={styles.itemInput}
                             />
                         </div>
                     ))}
                 </div>
+
+                {/* Информация об обмене Memory Heartsand */}
+                {(() => {
+                    const exchange = getHeartsandExchange();
+                    const hasBottles = exchange.bottles.hasAny;
+                    const hasCredits = exchange.credits.total > 0;
+
+                    if (!hasBottles && !hasCredits) return null;
+
+                    return (
+                        <div className={styles.exchangeSection}>
+                            <h3 className={styles.exchangeTitle}>Memory Heartsand can be exchanged for:</h3>
+                            <div className={styles.exchangeGrid}>
+                                {/* Карточка обмена на Bottles */}
+                                {hasBottles && (
+                                    <div className={styles.exchangeCard}>
+                                        <div className={styles.exchangeItem}>Bottle of Wishes</div>
+                                        <div className={styles.exchangeValue}>
+                                            {exchange.bottles.R > 0 && <div>R: {exchange.bottles.R}</div>}
+                                            {exchange.bottles.SR > 0 && <div>SR: {exchange.bottles.SR}</div>}
+                                            {exchange.bottles.SSR > 0 && <div>SSR: {exchange.bottles.SSR}</div>}
+                                        </div>
+                                    </div>
+                                )}
+
+                                {/* Карточка обмена на Credits */}
+                                {hasCredits && (
+                                    <div className={styles.exchangeCard}>
+                                        <div className={styles.exchangeItem}>Credits</div>
+                                        <div className={styles.exchangeValue}>
+                                            {exchange.credits.total.toLocaleString()}
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                            <div className={styles.exchangeNote}>
+                                * Exchange rates: 10 MH R → 5 Bottle R | 5 MH SR → 5 Bottle SR | 4 MH SSR → 5 Bottle SSR
+                                <br />
+                                100 MH R → 50,000 Credits | 10 MH SR → 50,000 Credits | 2 MH SSR → 50,000 Credits
+                            </div>
+                        </div>
+                    );
+                })()}
             </div>
 
             {/* Crystals - с выбором цвета */}
@@ -223,23 +310,58 @@ function MyResources() {
                 <div className={styles.itemsGrid}>
                     {crystalBox.map(item => (
                         <div key={item.id} className={styles.itemRow}>
-                            <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon} />
                             <span className={styles.itemName}>{item.name}</span>
                             <input
                                 type="number"
                                 min="0"
                                 value={crystalBoxesState[item.id] || 0}
                                 onChange={(e) => updateCount(crystalBoxesState, setCrystalBoxesState, item.id, e.target.value)}
-                                className={styles.itemInput}
                                 onFocus={(e) => {
                                     if (e.target.value === '0') {
                                         e.target.value = '';
                                     }
                                 }}
+                                onBlur={(e) => {
+                                    if (e.target.value === '') {
+                                        updateCount(crystalBoxesState, setCrystalBoxesState, item.id, 0);
+                                    }
+                                }}
+                                className={styles.itemInput}
                             />
                         </div>
                     ))}
                 </div>
+
+                {/* Информация об обмене General Box */}
+                {crystalBoxesState['box_general'] > 0 && (
+                    <div className={styles.exchangeSection}>
+                        <h3 className={styles.exchangeTitle}>Ascension Crystal Box: General can be exchanged for:</h3>
+                        <div className={styles.exchangeContent}>
+                            {(() => {
+                                const exchange = getCrystalBoxExchange();
+                                return (
+                                    <div className={styles.exchangeGrid}>
+                                        <div className={styles.exchangeCard}>
+                                            <span className={styles.exchangeValue}>{exchange.toN}</span>
+                                            <span className={styles.exchangeItem}>Ascension Crystal Box: N</span>
+                                        </div>
+                                        <div className={styles.exchangeCard}>
+                                            <span className={styles.exchangeValue}>{exchange.toR}</span>
+                                            <span className={styles.exchangeItem}>Ascension Crystal Box: R</span>
+                                        </div>
+                                        <div className={styles.exchangeCard}>
+                                            <span className={styles.exchangeValue}>{exchange.toSR}</span>
+                                            <span className={styles.exchangeItem}>Ascension Crystal Box: SR</span>
+                                        </div>
+                                    </div>
+                                );
+                            })()}
+                        </div>
+                        <div className={styles.exchangeNote}>
+                            * Exchange rates: 1 General Box for either 5 N, or 2 R, or 1 SR
+                        </div>
+                    </div>
+                )}
             </div>
 
             {/* Awakening Hearts */}
