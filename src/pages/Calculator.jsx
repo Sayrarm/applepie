@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from './Calculator.module.css';
+import styles from './CalculatorPage.module.css';
 import ProtocoreCalculator from "../components/ProtocoreCalculator.jsx";
 import MemoryUpCalculator from "../components/MemoryUpCalculator.jsx";
 

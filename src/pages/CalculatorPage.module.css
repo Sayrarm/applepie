@@ -1,0 +1,36 @@
+.containerCalculator {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    padding: 5px;
+}
+
+.tabs {
+
+}
+
+.tabContent {
+    display: flex;
+    align-self: center;
+}
+
+.tabButton {
+    padding: 8px 16px;
+    background: none;
+    border: none;
+    color: var(--colorTextDark);
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tabButton:hover {
+    color: var(--a);
+}
+
+.tabButton.active {
+    background: var(--forSelect);
+    color: var(--colorText);
+    box-shadow: var(--box-shadow);
+}
