@@ -17,6 +17,8 @@ import CardArticle from "./pages/CardArticle.jsx";
 import Banners from "./pages/Banners.jsx";
 import Calculator from "./pages/Calculator.jsx";
 
+const basename = import.meta.env.BASE_URL;
+
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -48,4 +50,8 @@ export const router = createBrowserRouter([
 
         ],
     },
-]);
+],
+{
+    basename: basename,
+}
+);

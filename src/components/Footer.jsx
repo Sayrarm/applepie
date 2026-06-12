@@ -62,7 +62,7 @@ function Footer() {
             </div>
 
             <div className={styles.footerTextContainer}>
-                <p>© 2026 applepie.github.io</p>
+                <p>© 2026 sayrarm.github.io</p>
                 <div className={styles.borderHorizontal}></div>
                 <p>All trademarks, characters, stories and images are the property of their respective owner, Infold
                     Games.</p>
