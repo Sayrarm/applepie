@@ -200,3 +200,16 @@
     background: var(--bg-modal);
     cursor: not-allowed;
 }
+
+@media screen and (max-width: 1020px) {
+
+    .resultCard,
+    .container {
+        padding: 10px;
+    }
+
+    .resultRow span {
+        font-size: 14px;
+    }
+
+}

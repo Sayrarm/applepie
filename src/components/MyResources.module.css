@@ -212,4 +212,7 @@
         gap: 10px;
     }
 
+    .container {
+        padding: 10px;
+    }
 }
