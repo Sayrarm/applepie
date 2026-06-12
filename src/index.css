@@ -38,6 +38,19 @@ body {
     z-index: -1;
 }
 
+.fixed-bg::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .container {
     max-width: 1115px;
     margin: 0 auto;
@@ -138,4 +151,14 @@ h4 {
 
 :where(.css-dev-only-do-not-override-xogyor).ant-checkbox-checked {
     background-color: #35312d !important;
+}
+
+/* Только для iOS — отключаем fixed */
+@supports (-webkit-touch-callout: none) {
+    .fixed-bg {
+        position: absolute;
+        min-height: 100vh;
+        height: auto;
+        bottom: auto;
+    }
 }
