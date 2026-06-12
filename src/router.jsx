@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "./Layout";
+import { RedirectHandler } from "./components/RedirectHandler";
 import Home from "./pages/Home";
 import Memories from "./pages/Memories";
 import Battle from "./pages/Battle";
@@ -22,7 +23,12 @@ const basename = import.meta.env.BASE_URL;
 export const router = createBrowserRouter([
     {
         path: "/",
-        element: <Layout />, // Layout будет содержать Header, Footer и ScrollRestoration
+        element: (
+            <>
+                <RedirectHandler />
+                <Layout />
+            </>
+        ),
         children: [
             { index: true, element: <Home /> },
             { path: "memories/:cardId", element: <CardArticle /> },
@@ -46,7 +52,7 @@ export const router = createBrowserRouter([
             { path: "main-story/:articleLink", element: <MsArticle /> },
             { path: "anecdotes", element: <Anecdotes /> },
             { path: "anecdotes/:articleLink", element: <AnArticle /> },
-            { path: "сalculator", element: <Calculator /> },
+            { path: "calculator", element: <Calculator /> },
 
         ],
     },

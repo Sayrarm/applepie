@@ -14,10 +14,11 @@
     <script>
         const fullPath = window.location.pathname;
         const cleanPath = fullPath.replace('/applepie', '');
-        window.location.href = `/applepie/index.html#${cleanPath}`;
+        sessionStorage.setItem('redirectPath', cleanPath);
+        window.location.href = '/applepie/';
     </script>
 </head>
 <body>
-<p>Перенаправление...</p>
+<p>Redirecting...</p>
 </body>
 </html>
