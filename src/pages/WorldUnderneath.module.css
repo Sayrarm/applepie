@@ -23,3 +23,11 @@
     color: var(--colorText);
 }
 
+.navigationTop {
+    margin: 10px 5px;
+}
+
+.navigationTop > a {
+    text-decoration: none;
+    color: var(--colorTextDark);
+}

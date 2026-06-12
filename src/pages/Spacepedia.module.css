@@ -31,6 +31,15 @@
 
 }
 
+.nav {
+    margin: 10px 5px;
+}
+
+.nav > a {
+    text-decoration: none;
+    color: var(--colorTextDark);
+}
+
 :global(.ant-collapse .ant-collapse-header .ant-collapse-arrow) {
     color: var(--colorTextDark) !important;
 }

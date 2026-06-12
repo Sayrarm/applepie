@@ -1,14 +1,14 @@
-import {Navigate, useParams} from 'react-router-dom';
+import {Link, Navigate, useParams} from 'react-router-dom';
 import SpacepediaNavigation from "../components/SpacepediaNavigation.jsx";
 import styles from "./Spacepedia.module.css";
 import {Collapse} from 'antd';
 import {spacepediaData} from "../data/spacepedia-data.js";
 import {getImageUrl} from "../components/imageUtils.js";
+import {Fragment} from "react";
 
 
 function Spacepedia() {
     const {navigation} = useParams(); // получаем "guidance", "message" и т.д.
-
 
     // Фильтруем статьи по navigation
     const articles = spacepediaData.filter(
@@ -34,6 +34,18 @@ function Spacepedia() {
 
     return (
         <>
+            <nav className={styles.nav}>
+                <Fragment>
+                    <Link
+                        className={styles.link}
+                        to="/lore">
+                        Lore
+                    </Link>
+                    <span> &gt; </span>
+                    <span>Spacepedia</span>
+                </Fragment>
+            </nav>
+
             <SpacepediaNavigation/>
 
             <Collapse

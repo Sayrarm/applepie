@@ -2,9 +2,22 @@ import styles from "./Anecdotes.module.css";
 import { Link } from "react-router-dom";
 import {anCategories} from "../data/an-categories.js";
 import {getImageUrl} from "../components/imageUtils.js";
+import {Fragment} from "react";
 
 function Anecdotes() {
     return (
+        <>
+            <nav className={styles.navigationTop}>
+                <Fragment>
+                    <Link
+                        className={styles.linkTop}
+                        to="/lore">
+                        Lore
+                    </Link>
+                    <span> &gt; </span>
+                    <span>Anecdotes</span>
+                </Fragment>
+            </nav>
 
             <nav className={styles.nav}>
                 {anCategories.map(category => (
@@ -18,7 +31,7 @@ function Anecdotes() {
                     </Link>
                 ))}
             </nav>
-
+        </>
     );
 }
 

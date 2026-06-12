@@ -33,6 +33,15 @@
     object-position: center 16%;
 }
 
+.navigationTop {
+    margin: 10px 5px;
+}
+
+.navigationTop > a {
+    text-decoration: none;
+    color: var(--colorTextDark);
+}
+
 @media screen and (max-width: 600px) {
     .link {
         display: flex;
