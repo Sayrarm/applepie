@@ -86,21 +86,29 @@ function FlexibleTimer({
 
     return (
         <div className={styles.container}>
-            <h3>{config.emoji} {config.text} {config.emoji}</h3>
+            <h3 className={styles.h3}>{config.emoji} {config.text} {config.emoji}</h3>
 
             {status !== 'finished' ? (
                 <div className={styles.timer}>
-                    {Object.entries(timeLeft).map(([unit, value]) => (
-                        <div key={unit}
-                             className={styles.time}>
-                            <div>
-                                {formatNumber(value || 0)}
-                            </div>
-                            <div>
-                                {unit === 'days' ? 'Days' : unit === 'hours' ? 'Hours' : unit === 'minutes' ? 'Minutes' : 'Seconds'}
-                            </div>
-                        </div>
-                    ))}
+                    <div className={styles.time}>
+                        <div>{formatNumber(timeLeft.days || 0)}</div>
+                        <div className={styles.tips}>Days</div>
+                    </div>
+                    <div className={styles.time}>:</div>
+                    <div className={styles.time}>
+                        <div>{formatNumber(timeLeft.hours || 0)}</div>
+                        <div className={styles.tips}>Hours</div>
+                    </div>
+                    <div className={styles.time}>:</div>
+                    <div className={styles.time}>
+                        <div>{formatNumber(timeLeft.minutes || 0)}</div>
+                        <div className={styles.tips}>Minutes</div>
+                    </div>
+                    <div className={styles.time}>:</div>
+                    <div className={styles.time}>
+                        <div>{formatNumber(timeLeft.seconds || 0)}</div>
+                        <div className={styles.tips}>Seconds</div>
+                    </div>
                 </div>
             ) : (
                 <div></div>

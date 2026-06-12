@@ -6,11 +6,33 @@
 
 .timer {
     display: flex;
-    gap: 10px;
+    gap: 5px;
 }
 
 .time {
     display: flex;
     align-items: center;
     flex-direction: column;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.h3 {
+    font-size: 16px;
+}
+
+.tips {
+    font-size: 10px;
+    color: gray;
+}
+
+.container > h3 {
+    font-weight: 500;
+}
+
+@media screen and (max-width: 500px) {
+
+    .h3 {
+        font-size: 12px;
+    }
 }
