@@ -1,10 +1,10 @@
 import styles from './Memories.module.css';
 import Card from "../components/Card.jsx";
 import {Button, Input, Select} from 'antd';
-import myFilterIcon from '/src/assets/icons/filter.png';
-import myClearIcon from '/src/assets/icons/eraser_16863523.png';
-import myChangeIcon from '/src/assets/icons/icons8-change-64.png';
-import myResetIcon from '/src/assets/icons/reset.png';
+import myFilterIcon from '/public/assets/icons/filter.png';
+import myClearIcon from '/public/assets/icons/eraser_16863523.png';
+import myChangeIcon from '/public/assets/icons/icons8-change-64.png';
+import myResetIcon from '/public/assets/icons/reset.png';
 import FilterModalWindow from "../components/FilterModalWindow.jsx";
 import {useSearch} from '../hooks/useSearch';
 import {useSort} from '../hooks/useSort';

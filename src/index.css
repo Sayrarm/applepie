@@ -58,7 +58,7 @@ body {
     --bg-modal: #ecdace;
 
     --bg-primary: #ecdace;
-    --bg-image: url('../src/assets/bg/x3_collection_bg_01.png');
+    --bg-image: url('../public/assets/bg/x3_collection_bg_01.png');
     --box-shadow: 10px 10px 6px -5px rgba(148, 148, 148, 0.6);
     --linear-gradient-webkit: -webkit-linear-gradient(270deg, black 0%, black 50%, transparent 100%);
     --linear-gradient: linear-gradient(270deg, black 0%, black 50%, transparent 100%);
@@ -95,7 +95,7 @@ html.dark {
     --bg-modal: #8e9093;
 
     --bg-primary: black;
-    --bg-image: url('../src/assets/bg/Frame 37.png');
+    --bg-image: url('../public/assets/bg/Frame 37.png');
     --box-shadow: 10px 10px 6px -5px rgb(21 21 21 / 0.6);
     --linear-gradient-webkit: -webkit-linear-gradient(270deg, black -10%, black 20%, transparent 100%);
     --linear-gradient: linear-gradient(270deg, black -10%, black 20%, transparent 100%);

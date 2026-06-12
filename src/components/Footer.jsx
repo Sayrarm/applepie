@@ -1,5 +1,5 @@
 import styles from './Footer.module.css'
-import logoApple from '../assets/icons/animated_20260516_191916.gif'
+import logoApple from '../../public/assets/icons/animated_20260516_191916.gif'
 
 
 

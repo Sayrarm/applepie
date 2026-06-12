@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "prebuild": "cp -r src/assets public/assets",
+    "prebuild": "cp -r public/assets public/assets",
     "predeploy": "npm run build"
   },
   "dependencies": {

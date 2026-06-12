@@ -1,8 +1,8 @@
 import React from 'react';
 import { useTheme } from './ThemeChange';
 import styles from './ThemeToggleButton.module.css';
-import light from '../assets/icons/sun_18764318.png'
-import dark from '../assets/icons/night-mode_18764409.png'
+import light from '../../public/assets/icons/sun_18764318.png'
+import dark from '../../public/assets/icons/night-mode_18764409.png'
 
 const ThemeToggleButton = () => {
     const { theme, toggleTheme } = useTheme();
