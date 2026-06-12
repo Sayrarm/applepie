@@ -1,5 +1,5 @@
 import styles from './Home.module.css'
-import bannersData from "../data/banners-data-full.json";
+import {bannersDataFull} from "../data/banners-data-full.js";
 import BannerForHome from "../components/BannerForHome.jsx";
 import WishWellBlock from "../components/WishWellBlock.jsx";
 import DailyWeeklyBlock from "../components/DailyWeeklyBlock.jsx";
@@ -10,12 +10,12 @@ import EventsBlock from "../components/EventsBlock.jsx";
 function Home() {
 
     // Баннеры с рераном (rerun: true) и активные
-    const rerunBanners = bannersData.filter(
+    const rerunBanners = bannersDataFull.filter(
         banner => banner.active === true && banner.rerun === true
     );
 
     // Новые баннеры (rerun: false) и активные
-    const newBanners = bannersData.filter(
+    const newBanners = bannersDataFull.filter(
         banner => banner.active === true && banner.rerun === false
     );
 

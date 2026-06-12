@@ -1,7 +1,7 @@
 import styles from '../pages/Home.module.css';
 import {useRef} from 'react';
 import CardList from './CardList.jsx';
-import memoriesData from '../data/memories-data.json';
+import {memoriesData} from '../data/memories-data.js';
 import { CardProvider } from "./CardProvider.jsx";
 import ModalWindow from "./ModalWindow.jsx";
 import { getImageUrl } from "./imageUtils.js";

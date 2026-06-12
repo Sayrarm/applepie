@@ -1,4 +1,4 @@
-[
+export const bannersDataFull = [
   {
     "id": 1,
     "name": "Heartstring Symphony",

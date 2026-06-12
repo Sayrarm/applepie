@@ -3,7 +3,7 @@ import { createStaticStyles } from 'antd-style';
 import styles from "./AsideCompanionList.module.css";
 import { Link } from "react-router-dom";
 import { getImageUrl } from "./imageUtils.js";
-import companionsData from '../data/aside-comp.json';
+import {asideComp} from '../data/aside-comp.js';
 
 const classNames = createStaticStyles(({ css }) => ({
     root: css`
@@ -18,7 +18,7 @@ const classNames = createStaticStyles(({ css }) => ({
 
 function AsideCompanionList({ className }) {
     // Формируем items для Collapse
-    const items = companionsData.map((charData, index) => {
+    const items = asideComp.map((charData, index) => {
         // Для MC используем weapons, для остальных companions
         const list = charData.weapons || charData.companions || [];
         const linkPath = charData.weapons ? "/battle/" : "/battle/";

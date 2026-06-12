@@ -1,4 +1,4 @@
-[
+export const memoriesData = [
   {
     "id": 26,
     "char": "Caleb",

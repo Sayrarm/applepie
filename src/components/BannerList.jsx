@@ -2,7 +2,7 @@ import styles from './BannerList.module.css';
 import FlexibleTimer from './FlexibleTimer.jsx';
 import { useRef, useState } from 'react';
 import CardList from './CardList.jsx';
-import memoriesData from '../data/memories-data.json';
+import {memoriesData} from '../data/memories-data.js';
 import { CardProvider } from "./CardProvider.jsx";
 import ModalWindow from "./ModalWindow.jsx";
 import { getImageUrl } from "./imageUtils.js";

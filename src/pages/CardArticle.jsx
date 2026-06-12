@@ -1,32 +1,23 @@
 import {Link, useParams} from 'react-router-dom';
 import styles from "./CardArticle.module.css";
-import memoriesDataUrl from '../data/memories-data.json?url';
-import {Fragment, useEffect, useState} from "react";
+import {memoriesData} from '../data/memories-data.js';
+import {Fragment} from "react";
 import {getImageUrl} from "../components/imageUtils.js";
 import CopyableText from "../components/CopyableText.jsx";
 import ParametersBlock from "../components/ParametersBlock.jsx";
 import BannerPeriod from "../components/BannerPeriod.jsx";
-import bannersData from '../data/banners-data-full.json';
+import {bannersDataFull} from '../data/banners-data-full.js';
 import ObtainInfo from "../components/ObtainInfo.jsx";
-import obtainData from '../data/obtain-data.json';
+import {obtainData} from '../data/obtain-data.js';
 
 function CardArticle() {
-    const {cardId} = useParams(); // только id карточки
-    const [card, setCard] = useState(null);
+    const {cardId} = useParams();
 
-    // Загружаем JSON
-    useEffect(() => {
-        fetch(memoriesDataUrl)
-            .then(res => res.json())
-            .then(data => {
-                const found = data.find(c => String(c.id) === cardId);
-                setCard(found);
-            })
-            .catch(error => console.error('Ошибка загрузки:', error));
-    }, [cardId]);
+    // Находим карточку напрямую в данных
+    const card = memoriesData.find(c => String(c.id) === cardId);
 
     // Находим ВСЕ баннеры, где есть эта карточка
-    const banners = bannersData.filter(b => b.cardIds.includes(Number(cardId)));
+    const banners = bannersDataFull.filter(b => b.cardIds.includes(Number(cardId)));
 
     if (!card) {
         return <div>Card not found ¯\_(ツ)_/¯</div>;

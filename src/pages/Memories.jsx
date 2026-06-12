@@ -1,20 +1,17 @@
 import styles from './Memories.module.css';
 import Card from "../components/Card.jsx";
 import {Button, Input, Select} from 'antd';
-import myFilterIcon from '/public/assets/icons/filter.png';
-import myClearIcon from '/public/assets/icons/eraser_16863523.png';
-import myChangeIcon from '/public/assets/icons/icons8-change-64.png';
-import myResetIcon from '/public/assets/icons/reset.png';
 import FilterModalWindow from "../components/FilterModalWindow.jsx";
 import {useSearch} from '../hooks/useSearch';
 import {useSort} from '../hooks/useSort';
 import {useFilter} from '../hooks/useFilter';
 import {stylesFnSearch} from "../components/stylesAntd.js";
-import {fetchData} from '../hooks/api.js';
 import {useContext, useEffect, useState} from "react";
 import PageLoader from '../components/PageLoader';
 import {CardContext} from "../components/CardContext.jsx";
 import {Link} from "react-router-dom";
+import {getImageUrl} from "../components/imageUtils.js";
+import { memoriesData as initialMemoriesData } from '../data/memories-data.js';
 
 function Memories() {
 
@@ -34,8 +31,9 @@ function Memories() {
         filterMemories
     } = useFilter();
 
+    // Загружаем данные напрямую из импорта
     useEffect(() => {
-        fetchData('memories-data').then(data => setMemoriesData(data));
+        setMemoriesData(initialMemoriesData);
     }, []);
 
     // Фильтруем данные
@@ -119,9 +117,9 @@ function Memories() {
                                 variant="outlined"
                                 icon={<img
                                     className={styles.imgIcon}
-                                    src={myClearIcon}
+                                    src={getImageUrl('../assets/icons/eraser_16863523.png')}
                                     style={{width: 22, height: 22}}
-                                    alt={'filter'}/>}
+                                    alt={'Clear sorting'}/>}
                                 title={"Clear sorting"}
                                 className={styles.colorBrown}
                             >
@@ -146,7 +144,7 @@ function Memories() {
                                 onClick={() => setIsModalOpen(true)}
                                 icon={<img
                                     className={styles.imgIcon}
-                                    src={myFilterIcon}
+                                    src={getImageUrl('../assets/icons/filter.png')}
                                     style={{width: 20, height: 20}}
                                     alt={'filter'}/>}
                                 title={"Filter"}
@@ -163,7 +161,7 @@ function Memories() {
                                 onClick={toggleImageSize}
                                 icon={<img
                                     className={styles.imgIcon}
-                                    src={myChangeIcon}
+                                    src={getImageUrl('../assets/icons/icons8-change-64.png')}
                                     style={{width: 20, height: 20}}
                                     alt={'filter'}/>}
                                 title={"change size of Cards"}
@@ -172,7 +170,7 @@ function Memories() {
 
                             <Button
                                 onClick={resetAllSettings}
-                                icon={<img src={myResetIcon} style={{width: 20, height: 20}} alt="reset"/>}
+                                icon={<img src={getImageUrl('../assets/icons/reset.png')} style={{width: 20, height: 20}} alt="reset"/>}
                                 title="Reset all filters and sorting"
                                 className={styles.colorBrown}
                             />

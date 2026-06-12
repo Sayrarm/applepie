@@ -2,22 +2,16 @@ import styles from "../pages/Home.module.css";
 import FlexibleTimer from "./FlexibleTimer.jsx";
 import ModalWindow from "./ModalWindow.jsx";
 import HunterContestDescription from "./HunterContestDescription.jsx";
-import { useRef, useState, useEffect } from "react";
+import { useRef } from "react";
 import { getImageUrl } from "./imageUtils.js";
+import { hunterContestBuffs } from "../data/hunter-contest-buffs.js";
 
 function HunterContestBlock() {
-    const [buffsData, setBuffsData] = useState(null);
     const missionModalRef = useRef();
 
-    useEffect(() => {
-        fetch('/src/data/hunter-contest-buffs.json')
-            .then(res => res.json())
-            .then(data => {
-                const activeBuffs = data.find(item => item.active === true);
-                setBuffsData(activeBuffs);
-            })
-            .catch(error => console.error('Error:', error));
-    }, []);
+    // Находим активные баффы сразу, без useEffect
+    const buffsData = hunterContestBuffs.find(item => item.active === true);
+
 
     const showMissionModal = () => {
         missionModalRef.current.showModal();

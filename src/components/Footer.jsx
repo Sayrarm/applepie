@@ -1,5 +1,5 @@
 import styles from './Footer.module.css'
-import logoApple from '../../public/assets/icons/animated_20260516_191916.gif'
+import {getImageUrl} from "./imageUtils.js";
 
 
 
@@ -75,7 +75,7 @@ function Footer() {
             <div className={styles.footerButtonContainer}>
 
                 <button className={styles.button}>
-                    <img className={styles.imgApple} src={logoApple}
+                    <img className={styles.imgApple} src={getImageUrl('../assets/icons/animated_20260516_191916.gif')}
                          alt="apple gif"/>
                 </button>
             </div>
