@@ -1,4 +1,5 @@
 export const getImageUrl = (relativePath) => {
+    if (!relativePath) return '';
     const cleanPath = relativePath.replace('../assets/', '');
-    return new URL(`/src/assets/${cleanPath}`, import.meta.url).href;
+    return `${import.meta.env.BASE_URL}src/assets/${cleanPath}`;
 };
