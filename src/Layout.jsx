@@ -5,15 +5,18 @@ import { FloatButton } from 'antd';
 
 function Layout() {
     return (
-        <div className="container">
-            <Header />
-            <ScrollRestoration />
-            <main className="main">
-                <Outlet /> {/* сюда подставляются страницы */}
-            </main>
-            <Footer />
-            <FloatButton.BackTop />
-        </div>
+        <>
+            <div className="fixed-bg"></div>
+            <div className="container">
+                <Header />
+                <ScrollRestoration />
+                <main className="main">
+                    <Outlet /> {/* сюда подставляются страницы */}
+                </main>
+                <Footer />
+                <FloatButton.BackTop />
+            </div>
+        </>
     );
 }
 

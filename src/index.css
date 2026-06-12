@@ -22,13 +22,9 @@ body {
     font-family: TikTok Sans, monospace !important;
     font-size: 14px;
 
-    background-color: var(--bg-primary);
-    background-image: var(--bg-image);
-    background-size: cover;
 }
 
-body::before {
-    content: '';
+.fixed-bg {
     position: fixed;
     top: 0;
     left: 0;
@@ -38,10 +34,8 @@ body::before {
     height: 100%;
     background-image: var(--bg-image);
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
     z-index: -1;
-    pointer-events: none;
 }
 
 .container {
@@ -52,8 +46,6 @@ body::before {
     flex: 1;
     display: flex;
     flex-direction: column;
-    position: relative;
-    z-index: 1;
 }
 
 .main {
