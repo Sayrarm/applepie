@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prebuild": "cp -r src/assets public/assets",
+    "predeploy": "npm run build"
   },
   "dependencies": {
     "@ant-design/colors": "^8.0.1",
