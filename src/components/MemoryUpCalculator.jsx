@@ -12,7 +12,6 @@ import {
     getCrystalDungeonRuns,
     getCreditDungeonRuns,
     getStaminaCost,
-    DUNGEON_COST
 } from '../data/memory-up-data';
 
 function MemoryUpCalculator() {
@@ -248,7 +247,7 @@ function MemoryUpCalculator() {
                         </div>
 
                         <div className={styles.resultRow}>
-                            <span className={styles.resultLabel}>EXP Dungeon runs:</span>
+                            <span className={styles.resultLabel}>"Heartbreaker" runs:</span>
                             <span>{result.expRuns} runs (Lvl {expDungeonLevel})</span>
                         </div>
 
@@ -269,7 +268,7 @@ function MemoryUpCalculator() {
                         </div>
 
                         <div className={styles.resultRow}>
-                            <span className={styles.resultLabel}>Crystal Dungeon runs:</span>
+                            <span className={styles.resultLabel}>Crystal "Bounty Hunt" runs:</span>
                             <span>{result.crystalRuns} runs (Lvl {crystalDungeonLevel})</span>
                         </div>
 
@@ -286,7 +285,7 @@ function MemoryUpCalculator() {
                         </div>
 
                         <div className={styles.resultRow}>
-                            <span className={styles.resultLabel}>Credits Dungeon runs:</span>
+                            <span className={styles.resultLabel}>"Mr. Beanie" runs:</span>
                             <span>{result.creditRuns} runs (Lvl {creditDungeonLevel})</span>
                         </div>
 

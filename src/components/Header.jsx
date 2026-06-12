@@ -43,6 +43,30 @@ function Header() {
         };
     }, [lastScroll]);
 
+    // Закрываем меню при клике вне области (для мобильных)
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            // Проверяем, что меню открыто
+            if (!isMenuOpen) return;
+
+            // Проверяем, был ли клик не по бургеру и не по меню
+            const isBurger = event.target.closest(`.${styles.burgerContainer}`);
+            const isModal = event.target.closest(`.${styles.modalNav}`);
+
+            if (!isBurger && !isModal) {
+                setIsMenuOpen(false);
+            }
+        };
+
+        // Добавляем обработчик
+        document.addEventListener('click', handleClickOutside);
+
+        // Убираем обработчик при размонтировании
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+        };
+    }, [isMenuOpen]);
+
     return (
 
         <header className={isHidden ? styles.headerHidden : ''}>
