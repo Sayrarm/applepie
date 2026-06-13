@@ -117,7 +117,7 @@ function MemoryUpCalculator() {
 
             {/* Редкость */}
             <div className={styles.formGroup}>
-                <label>Rarity</label>
+                <div>Rarity</div>
                 <div className={styles.buttonGroup}>
                     {Object.entries(rarityLevels).map(([key, value]) => (
                         <button
@@ -134,8 +134,10 @@ function MemoryUpCalculator() {
             {/* Уровни */}
             <div className={styles.row}>
                 <div className={styles.formGroup}>
-                    <label>Current Level</label>
+                    <label htmlFor="current-lvl-select">Current Level</label>
                     <select
+                        id="current-lvl-select"
+                        name="current-lvl"
                         value={currentLevel}
                         onChange={(e) => handleCurrentLevelChange(e.target.value)}
                         className={styles.select}
@@ -147,8 +149,10 @@ function MemoryUpCalculator() {
                 </div>
 
                 <div className={styles.formGroup}>
-                    <label>Target Level</label>
+                    <label htmlFor="target-lvl-select">Target Level</label>
                     <select
+                        id="target-lvl-select"
+                        name="target-lvl"
                         value={targetLevel}
                         onChange={(e) => handleTargetLevelChange(e.target.value)}
                         className={styles.select}
@@ -162,8 +166,10 @@ function MemoryUpCalculator() {
 
             {/* Данжи */}
             <div className={styles.formGroup}>
-                <label>Heartbreaker Level</label>
+                <label htmlFor="bottle-lvl-select">Heartbreaker Level</label>
                 <select
+                    id="bottle-lvl-select"
+                    name="bottle-lvl"
                     value={expDungeonLevel}
                     onChange={(e) => handleExpDungeonChange(e.target.value)}
                     className={styles.select}
@@ -177,8 +183,10 @@ function MemoryUpCalculator() {
             </div>
 
             <div className={styles.formGroup}>
-                <label>Pumpkin Magus | Lemonette | Snoozer Level</label>
+                <label htmlFor="crystal-lvl-select">Pumpkin Magus | Lemonette | Snoozer Level</label>
                 <select
+                    id="crystal-lvl-select"
+                    name="crystal-lvl"
                     value={crystalDungeonLevel}
                     onChange={(e) => handleCrystalDungeonChange(e.target.value)}
                     className={styles.select}
@@ -192,8 +200,10 @@ function MemoryUpCalculator() {
             </div>
 
             <div className={styles.formGroup}>
-                <label>Mr. Beanie Level</label>
+                <label htmlFor="credits-lvl-select">Mr. Beanie Level</label>
                 <select
+                    id="credits-lvl-select"
+                    name="credits-lvl"
                     value={creditDungeonLevel}
                     onChange={(e) => handleCreditDungeonChange(e.target.value)}
                     className={styles.select}

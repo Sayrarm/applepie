@@ -198,8 +198,10 @@ function ProtocoreCalculator() {
             </div>
 
             <div className={styles.formGroup}>
-                <label>Mr. Beanie Level</label>
+                <label htmlFor="credits-lvl-select">Mr. Beanie Level</label>
                 <select
+                    id="credits-lvl-select"
+                    name="credits-lvl"
                     value={creditDungeonLevel}
                     onChange={(e) => handleCreditDungeonChange(e.target.value)}
                     className={styles.select}
