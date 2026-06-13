@@ -169,12 +169,16 @@ function MyResources() {
                         <div key={item.id} className={styles.itemRow}>
                             <div className={styles.itemDiv}>
                                 <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon} />
-                                <span className={styles.itemName}>{item.name}</span>
+                                <label htmlFor={`input-${item.id}`} className={styles.itemName}>
+                                    {item.name}
+                                </label>
                             </div>
 
                             <div className={styles.itemDiv}>
                                 <span className={styles.itemValue}>+{item.value} EXP</span>
                                 <input
+                                    id={`input-${item.id}`}
+                                    name="item"
                                     type="number"
                                     min="0"
                                     value={bottlesState[item.id] || 0}
@@ -200,10 +204,12 @@ function MyResources() {
                         <div key={item.id} className={styles.itemRow}>
                             <div className={styles.itemDiv}>
                                 <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon} />
-                                <span className={styles.itemName}>{item.name}</span>
+                                <label htmlFor={`input-${item.id}`} className={styles.itemName}>{item.name}</label>
                             </div>
 
                             <input
+                                id={`input-${item.id}`}
+                                name="item"
                                 type="number"
                                 min="0"
                                 value={heartsandState[item.id] || 0}
@@ -288,8 +294,10 @@ function MyResources() {
                 <div className={styles.itemsGrid}>
                     {crystalTypes.map(item => (
                         <div key={item.id} className={styles.itemRow}>
-                            <span className={styles.itemName}>{item.name}</span>
+                            <label htmlFor={`input-${item.id}`} className={styles.itemName}>{item.name}</label>
                             <input
+                                id={`input-${item.id}`}
+                                name="item"
                                 type="number"
                                 min="0"
                                 value={crystalsState[`${selectedCrystalColor}_${item.id}`] || 0}
@@ -319,10 +327,12 @@ function MyResources() {
                         <div key={item.id} className={styles.itemRow}>
                             <div className={styles.itemDiv}>
                                 <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon} />
-                                <span className={styles.itemName}>{item.name}</span>
+                                <label htmlFor={`input-${item.id}`} className={styles.itemName}>{item.name}</label>
                             </div>
 
                             <input
+                                id={`input-${item.id}`}
+                                name="item"
                                 type="number"
                                 min="0"
                                 value={crystalBoxesState[item.id] || 0}
@@ -383,10 +393,12 @@ function MyResources() {
                         <div key={item.id} className={styles.itemRow}>
                             <div className={styles.itemDiv}>
                                 <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon} />
-                                <span className={styles.itemName}>{item.name}</span>
+                                <label htmlFor={`input-${item.id}`} className={styles.itemName}>{item.name}</label>
                             </div>
 
                             <input
+                                id={`input-${item.id}`}
+                                name="item"
                                 type="number"
                                 min="0"
                                 value={heartsState[item.id] || 0}
@@ -416,12 +428,14 @@ function MyResources() {
                         <div key={item.id} className={styles.itemRow}>
                             <div className={styles.itemDiv}>
                                 <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon} />
-                                <span className={styles.itemName}>{item.name}</span>
+                                <label htmlFor={`input-${item.id}`} className={styles.itemName}>{item.name}</label>
                             </div>
 
                             <div className={styles.itemDiv}>
                                 <span className={styles.itemValue}>+{item.value} EXP</span>
                                 <input
+                                    id={`input-${item.id}`}
+                                    name="item"
                                     type="number"
                                     min="0"
                                     value={coreEnergyState[item.id] || 0}
@@ -449,10 +463,12 @@ function MyResources() {
                         <div key={item.id} className={styles.itemRow}>
                             <div className={styles.itemDiv}>
                                 <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon} />
-                                <span className={styles.itemName}>{item.name}</span>
+                                <label htmlFor={`input-${item.id}`} className={styles.itemName}>{item.name}</label>
                             </div>
 
                             <input
+                                id={`input-${item.id}`}
+                                name="item"
                                 type="number"
                                 min="0"
                                 value={creditsState}
