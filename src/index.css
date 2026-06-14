@@ -80,6 +80,7 @@ body {
     --background: #35312d;
     --bg-glass: color-mix(in srgb, var(--bg-brown) 10%, transparent);
     --bg-modal: #ecdace;
+    --text-shadow: 0 0 5px #e68038, 0 0 10px #e68038;
 
     --bg-primary: #ecdace;
     --bg-image: url('../public/assets/bg/bg-light.png');
@@ -117,6 +118,7 @@ html.dark {
     --background: #202227;
     --bg-glass:color-mix(in srgb, var(--dark) 80%, transparent);
     --bg-modal: #8e9093;
+    --text-shadow: 0 0 5px #ff4444, 0 0 10px #ff4444;
 
     --bg-primary: black;
     --bg-image: url('../public/assets/bg/Frame 37.png');

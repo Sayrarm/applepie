@@ -59,9 +59,11 @@
 }
 
 .bannerTitle {
-    color: white;
     font-size: 25px;
-    font-weight: 400;
+    font-family: "DM Serif Text", serif;
+    color: var(--colorText);
+    text-shadow: var(--text-shadow);
+
 
     display: flex;
     justify-self: flex-end;
