@@ -27,8 +27,6 @@
 .containerTitleTimerButton {
 
     background: var(--bg-glass);
-
-
     -webkit-box-shadow: var(--box-shadow);
     -moz-box-shadow: var(--box-shadow);
     box-shadow: var(--box-shadow);
@@ -56,18 +54,25 @@
     padding: 0 5px;
 }
 
-
+.containerTitleTimerButton {
+    position: relative;
+}
 
 .bannerTitle {
-    color: var(--a);
-    font-size: 20px;
-    font-weight: 600;
-    padding-bottom: 10px;
+    color: white;
+    font-size: 25px;
+    font-weight: 400;
+
+    display: flex;
+    justify-self: flex-end;
+    position: absolute;
+    right: 1%;
+    bottom: 1%;
+    z-index: 999;
 }
 
 
 .imgBanner {
-
     width: 60%;
     height: 100%;
     -webkit-mask-image: var(--linear-gradient-webkit);
@@ -237,6 +242,19 @@
         align-self: start;
     }
 
+
+}
+
+@media screen and (max-width: 690px) {
+
+    .bannerTitle {
+        right: 1%;
+        bottom: 1%;
+    }
+
+    .bannerTitle {
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 590px) {
@@ -252,11 +270,6 @@
 
     .h2 {
         font-size: 18px;
-    }
-
-    .bannerTitle {
-        font-size: 16px;
-        padding-bottom: 0;
     }
 
     .scheduleContainerGeneralButton {
@@ -282,6 +295,6 @@
 @media screen and (max-width: 376px) {
 
     .bannerTitle {
-        font-size: 12px;
+        font-size: 14px;
     }
 }
