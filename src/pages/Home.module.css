@@ -54,12 +54,13 @@
     padding: 0 5px;
 }
 
-.containerTitleTimerButton {
+.containerTitleTimerButton,
+.containerTitleTimer {
     position: relative;
 }
 
 .bannerTitle {
-    font-size: 25px;
+    font-size: 23px;
     font-family: "DM Serif Text", serif;
     color: var(--colorText);
     text-shadow: var(--text-shadow);
@@ -71,6 +72,11 @@
     right: 1%;
     bottom: 1%;
     z-index: 999;
+}
+
+.noEvents {
+    font-size: 18px;
+    color: var(--colorTextDark);
 }
 
 

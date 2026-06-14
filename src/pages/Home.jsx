@@ -6,6 +6,9 @@ import DailyWeeklyBlock from "../components/DailyWeeklyBlock.jsx";
 import ScheduleBlock from "../components/ScheduleBlock.jsx";
 import HunterContestBlock from "../components/HunterContestBlock.jsx";
 import EventsBlock from "../components/EventsBlock.jsx";
+import {eventsData} from "../data/events-data.js";
+import {battlePassData} from "../data/battle-pass-data.js";
+import BattlePassBlock from "../components/BattlePassBlock.jsx";
 
 function Home() {
 
@@ -18,6 +21,12 @@ function Home() {
     const newBanners = bannersDataFull.filter(
         banner => banner.active === true && banner.rerun === false
     );
+
+    // Новые эвенты и активные
+    const newEvents = eventsData.filter(event => event.active === true);
+
+    // Новые эвенты и активные
+    const activeBattlePass = battlePassData.filter(bp => bp.active === true);
 
     return (
         <section className={styles.containerMain}>
@@ -49,7 +58,11 @@ function Home() {
 
                 <h2 className={styles.h2}>Events</h2>
 
-                <EventsBlock />
+                <EventsBlock events={newEvents} />
+
+                <h2 className={styles.h2}>Battle Pass</h2>
+
+                <BattlePassBlock battlePass={activeBattlePass} />
 
                 <h2 className={styles.h2}>Wishing Well Shop</h2>
 
