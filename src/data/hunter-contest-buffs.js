@@ -41,7 +41,29 @@ export const hunterContestBuffs = [
     "teamCStella2Count": 1,
     "teamC": "Overload: Increases CRIT rate of all allied units.",
 
+    "active": false
+  },
+  {
+    "id": 2,
+    "teamAStella1": "../assets/icons/emerald.png",
+    "teamAStella1Count": 5,
+    "teamAStella2": "../assets/icons/amber.png",
+    "teamAStella2Count": 1,
+    "teamA": "Surplus Resonance: In a certain time a Resonance Skill hits an enemy, increases the DMG of a Resonance Skill And Active Skill unleashed by allied units.",
+
+    "teamBStella1": "../assets/icons/ruby.png",
+    "teamBStella1Count": 4,
+    "teamBStella2": "../assets/icons/violet.png",
+    "teamBStella2Count": 1,
+    "teamB": "Resonant Pursuit: 8 seconds after being Weakened, enemies take 100% more DMG from all sources except Ardent Oath. This effect is removed when the Weakened effect ends.",
+
+    "teamCStella1": "../assets/icons/pearl.png",
+    "teamCStella1Count": 3,
+    "teamCStella2": "../assets/icons/emerald.png",
+    "teamCStella2Count": 1,
+    "teamC": "DMG increase: Increases DMG against vulnerable Boss for all allied units.",
+
     "active": true
-  }
+  },
 
 ]
