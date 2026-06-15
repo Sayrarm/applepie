@@ -26,7 +26,7 @@ function MemoryUpCalculator() {
     const [expDungeonLevel, setExpDungeonLevel] = useState(9);
     const [crystalDungeonLevel, setCrystalDungeonLevel] = useState(9);
     const [creditDungeonLevel, setCreditDungeonLevel] = useState(9);
-    const [selectedColor, setSelectedColor] = useState('emerald');
+    const [selectedColor, setSelectedColor] = useState('Emerald');
     const [hasCalculated, setHasCalculated] = useState(false);
     const [result, setResult] = useState(null);
     const modalGoalButton = useRef();
