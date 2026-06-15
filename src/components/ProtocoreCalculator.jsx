@@ -328,6 +328,8 @@ function ProtocoreCalculator() {
                                 targetLevel: targetLevel,
                                 neededExp: result.expNeeded,
                                 neededCredits: result.creditsNeeded,
+                                expDungeonLevel: dungeonLevel,
+                                creditDungeonLevel: creditDungeonLevel,
                                 neededCrystals: null,
                                 createdAt: new Date().toISOString(),
 

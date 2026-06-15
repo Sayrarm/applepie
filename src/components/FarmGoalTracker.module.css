@@ -114,6 +114,30 @@
     text-align: center;
 }
 
+.farmingSection {
+    background: var(--bg-modal);
+    padding: 10px;
+    width: 100%;
+}
+
+.farmingRow {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    color: var(--colorTextSuperDark);
+    font-size: 12px;
+}
+.farmingSection h4 {
+    margin-bottom: 5px;
+    color: var(--colorTextSuperDark);
+}
+
+.farmingList {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
 @media screen and (max-width: 1020px) {
 
     .container {

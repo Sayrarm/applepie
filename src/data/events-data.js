@@ -18,7 +18,7 @@ export const eventsData = [
     },
     {
         id: 3,
-        name: "Broccoo Bird (New plushie)",
+        name: "New plushie",
         image: "../assets/main-page/events/event-3.png",
         "startDate": "2026-06-08T05:00:00+02:00",
         "endDate": "2026-06-21T04:59:00+02:00",

@@ -1,5 +1,10 @@
-import { useState, useEffect } from 'react';
+import {useEffect, useState} from 'react';
 import styles from './FarmGoalTracker.module.css';
+import {creditDungeonData, crystalDungeonData, DUNGEON_COST, expDungeonData} from '../data/memory-up-data';
+import {CREDIT_DUNGEON_COST, dungeonData} from '../data/protocore-data';
+
+// Константы
+const DAILY_STAMINA = 390; // суточное топливо
 
 function FarmGoalTracker() {
     const [goals, setGoals] = useState([]);
@@ -39,7 +44,8 @@ function FarmGoalTracker() {
             const bottles = JSON.parse(localStorage.getItem('inventory_bottles') || '{}');
             const coreEnergy = JSON.parse(localStorage.getItem('inventory_core_energy') || '{}');
             const credits = JSON.parse(localStorage.getItem('inventory_credits') || '0');
-            setUserResources({ bottles, coreEnergy, credits });
+            const crystals = JSON.parse(localStorage.getItem('inventory_crystals') || '{}');
+            setUserResources({ bottles, coreEnergy, credits, crystals });
         };
 
         loadResources();
@@ -89,6 +95,88 @@ function FarmGoalTracker() {
         return total;
     };
 
+    // Подсчёт кристаллов пользователя
+    const getUserCrystals = (crystalType) => {
+        let total = 0;
+        Object.entries(userResources.crystals).forEach(([key, count]) => {
+            if (key.includes(crystalType)) {
+                total += count;
+            }
+        });
+        return total;
+    };
+
+    // Расчёт фарма для EXP (Memory)
+    const calculateExpFarmingMemory = (remainingExp, dungeonLevel) => {
+        if (remainingExp <= 0) return { runs: 0, stamina: 0, days: 0 };
+
+        const dungeon = expDungeonData.find(d => d.level === dungeonLevel);
+        const expPerRun = dungeon ? dungeon.exp : 380;
+        const runs = Math.ceil(remainingExp / expPerRun);
+        const stamina = runs * DUNGEON_COST;
+        const days = Math.ceil(stamina / DAILY_STAMINA);
+
+        return { runs, stamina, days, expPerRun };
+    };
+
+    // Расчёт фарма для EXP (Protocore)
+    const calculateExpFarmingProtocore = (remainingExp, dungeonLevel) => {
+        if (remainingExp <= 0) return { runs: 0, stamina: 0, days: 0 };
+
+        const dungeon = dungeonData.find(d => d.level === dungeonLevel);
+        const expPerRun = dungeon ? dungeon.exp : 1300;
+        const runs = Math.ceil(remainingExp / expPerRun);
+        const stamina = runs * DUNGEON_COST;
+        const days = Math.ceil(stamina / DAILY_STAMINA);
+
+        return { runs, stamina, days, expPerRun };
+    };
+
+    // Расчёт фарма для Credits
+    const calculateCreditsFarming = (remainingCredits, dungeonLevel, isProtocore = false) => {
+        if (remainingCredits <= 0) return { runs: 0, stamina: 0, days: 0 };
+
+        const dungeon = creditDungeonData.find(d => d.level === dungeonLevel);
+        const creditsPerRun = dungeon ? dungeon.credits : 7600;
+        const runs = Math.ceil(remainingCredits / creditsPerRun);
+        const stamina = runs * (isProtocore ? CREDIT_DUNGEON_COST : DUNGEON_COST);
+        const days = Math.ceil(stamina / DAILY_STAMINA);
+
+        return { runs, stamina, days, creditsPerRun };
+    };
+
+    // Расчёт фарма для кристаллов
+    const calculateCrystalsFarming = (neededCrystals, dungeonLevel) => {
+        if (!neededCrystals) return { runs: 0, stamina: 0, days: 0, details: {} };
+
+        const dungeon = crystalDungeonData.find(d => d.level === dungeonLevel);
+        if (!dungeon) return { runs: 0, stamina: 0, days: 0, details: {} };
+
+        let maxRuns = 0;
+        const details = {};
+
+        if (neededCrystals.N > 0 && dungeon.crystals.N > 0) {
+            const runsN = Math.ceil(neededCrystals.N / dungeon.crystals.N);
+            details.N = { needed: neededCrystals.N, runs: runsN, perRun: dungeon.crystals.N };
+            maxRuns = Math.max(maxRuns, runsN);
+        }
+        if (neededCrystals.R > 0 && dungeon.crystals.R > 0) {
+            const runsR = Math.ceil(neededCrystals.R / dungeon.crystals.R);
+            details.R = { needed: neededCrystals.R, runs: runsR, perRun: dungeon.crystals.R };
+            maxRuns = Math.max(maxRuns, runsR);
+        }
+        if (neededCrystals.SR > 0 && dungeon.crystals.SR > 0) {
+            const runsSR = Math.ceil(neededCrystals.SR / dungeon.crystals.SR);
+            details.SR = { needed: neededCrystals.SR, runs: runsSR, perRun: dungeon.crystals.SR };
+            maxRuns = Math.max(maxRuns, runsSR);
+        }
+
+        const stamina = maxRuns * DUNGEON_COST;
+        const days = Math.ceil(stamina / DAILY_STAMINA);
+
+        return { runs: maxRuns, stamina, days, details };
+    };
+
     // Завершить цель
     const completeGoal = (goalId) => {
         setGoals(prev => {
@@ -119,7 +207,22 @@ function FarmGoalTracker() {
 
         const remainingExp = Math.max(0, goal.neededExp - totalExp);
         const remainingCredits = Math.max(0, goal.neededCredits - (userResources.credits || 0));
-        return { exp: remainingExp, credits: remainingCredits };
+
+        // Расчёт остатка кристаллов
+        let remainingCrystals = null;
+        if (goal.type === 'memory' && (goal.neededCrystalsN > 0 || goal.neededCrystalsR > 0 || goal.neededCrystalsSR > 0)) {
+            const userCrystalsN = getUserCrystals('crystal_n');
+            const userCrystalsR = getUserCrystals('crystal_r');
+            const userCrystalsSR = getUserCrystals('crystal_sr');
+
+            remainingCrystals = {
+                N: Math.max(0, (goal.neededCrystalsN || 0) - userCrystalsN),
+                R: Math.max(0, (goal.neededCrystalsR || 0) - userCrystalsR),
+                SR: Math.max(0, (goal.neededCrystalsSR || 0) - userCrystalsSR)
+            };
+        }
+
+        return { exp: remainingExp, credits: remainingCredits, crystals: remainingCrystals };
     };
 
     const getGoalDescription = (goal) => {
@@ -135,6 +238,21 @@ function FarmGoalTracker() {
 
     const getExpLabel = (goal) => {
         return goal.type === 'memory' ? 'EXP (Bottles):' : 'EXP (Core Energy):';
+    };
+
+    // Получение уровня данжа для EXP из цели (если сохранён) или значение по умолчанию
+    const getExpDungeonLevel = (goal) => {
+        return goal.expDungeonLevel || (goal.type === 'memory' ? 9 : 10);
+    };
+
+    // Получение уровня данжа для Credits из цели (если сохранён) или значение по умолчанию
+    const getCreditDungeonLevel = (goal) => {
+        return goal.creditDungeonLevel || 9;
+    };
+
+    // Получение уровня данжа для кристаллов из цели (если сохранён) или значение по умолчанию
+    const getCrystalDungeonLevel = (goal) => {
+        return goal.crystalDungeonLevel || 9;
     };
 
     if (loading) {
@@ -165,6 +283,31 @@ function FarmGoalTracker() {
                     const expCompleted = remaining.exp <= 0;
                     const creditsCompleted = remaining.credits <= 0;
 
+                    // Проверка на кристаллы
+                    let crystalsCompleted = true;
+                    if (remaining.crystals) {
+                        crystalsCompleted = remaining.crystals.N <= 0 && remaining.crystals.R <= 0 && remaining.crystals.SR <= 0;
+                    }
+
+                    const expDungeonLvl = getExpDungeonLevel(goal);
+                    const creditDungeonLvl = getCreditDungeonLevel(goal);
+                    const crystalDungeonLvl = getCrystalDungeonLevel(goal);
+
+                    let expFarming;
+                    if (goal.type === 'memory') {
+                        expFarming = calculateExpFarmingMemory(remaining.exp, expDungeonLvl);
+                    } else {
+                        expFarming = calculateExpFarmingProtocore(remaining.exp, expDungeonLvl);
+                    }
+
+                    const creditsFarming = calculateCreditsFarming(remaining.credits, creditDungeonLvl, goal.type === 'protocore');
+                    const crystalsFarming = remaining.crystals ? calculateCrystalsFarming(remaining.crystals, crystalDungeonLvl) : null;
+
+                    // Суммарные дни фарма (максимальный из всех типов ресурсов)
+                    let totalDays = expFarming.days;
+                    totalDays = Math.max(totalDays, creditsFarming.days);
+                    if (crystalsFarming) totalDays = Math.max(totalDays, crystalsFarming.days);
+
                     return (
                         <div key={goal.id} className={styles.goalCard}>
                             <div className={styles.goalHeader}>
@@ -186,25 +329,77 @@ function FarmGoalTracker() {
                             </div>
 
                             <div className={styles.goalContent}>
+                                {/* Resources Needed */}
                                 <div className={styles.resourcesSection}>
                                     <h4>Resources Needed:</h4>
                                     <div className={styles.resourcesList}>
                                         <div>{getExpLabel(goal)} {goal.neededExp.toLocaleString()}</div>
+                                        {goal.type === 'memory' && (goal.neededCrystalsN > 0 || goal.neededCrystalsR > 0 || goal.neededCrystalsSR > 0) && (
+                                            <div>
+                                                Crystals:
+                                                {goal.neededCrystalsN > 0 && ` N: ${goal.neededCrystalsN}`}
+                                                {goal.neededCrystalsR > 0 && ` | R: ${goal.neededCrystalsR}`}
+                                                {goal.neededCrystalsSR > 0 && ` | SR: ${goal.neededCrystalsSR}`}
+                                            </div>
+                                        )}
                                         <div>Credits: {goal.neededCredits.toLocaleString()}</div>
                                     </div>
                                 </div>
 
+                                {/* Remaining to Farm */}
                                 <div className={styles.remainingSection}>
                                     <h4>Remaining to Farm:</h4>
                                     <div className={styles.remainingList}>
                                         <div className={expCompleted ? styles.completed : styles.notCompleted}>
                                             {getExpLabel(goal)} {remaining.exp.toLocaleString()}
                                         </div>
+                                        {remaining.crystals && (remaining.crystals.N > 0 || remaining.crystals.R > 0 || remaining.crystals.SR > 0) && (
+                                            <div className={crystalsCompleted ? styles.completed : styles.notCompleted}>
+                                                Crystals:
+                                                {remaining.crystals.N > 0 && ` N: ${remaining.crystals.N}`}
+                                                {remaining.crystals.R > 0 && ` | R: ${remaining.crystals.R}`}
+                                                {remaining.crystals.SR > 0 && ` | SR: ${remaining.crystals.SR}`}
+                                            </div>
+                                        )}
                                         <div className={creditsCompleted ? styles.completed : styles.notCompleted}>
                                             Credits: {remaining.credits.toLocaleString()}
                                         </div>
                                     </div>
                                 </div>
+
+                                {/* Farming Calculation */}
+                                {(remaining.exp > 0 || remaining.credits > 0 || (remaining.crystals && (remaining.crystals.N > 0 || remaining.crystals.R > 0 || remaining.crystals.SR > 0))) && (
+                                    <div className={styles.farmingSection}>
+                                        <h4>Farming Plan:</h4>
+                                        <div className={styles.farmingList}>
+                                            {remaining.exp > 0 && (
+                                                <div className={styles.farmingRow}>
+                                                    <span>🎯 {getExpLabel(goal)} </span>
+                                                    <span>{expFarming.runs} runs (Lvl {expDungeonLvl}) | </span>
+                                                    <span> {expFarming.stamina} stamina</span>
+                                                </div>
+                                            )}
+                                            {remaining.crystals && crystalsFarming && (remaining.crystals.N > 0 || remaining.crystals.R > 0 || remaining.crystals.SR > 0) && (
+                                                <div className={styles.farmingRow}>
+                                                    <span>💎 Crystals:</span>
+                                                    <span>{crystalsFarming.runs} runs (Lvl {crystalDungeonLvl})</span>
+                                                    <span>{crystalsFarming.stamina} stamina</span>
+                                                </div>
+                                            )}
+                                            {remaining.credits > 0 && (
+                                                <div className={styles.farmingRow}>
+                                                    <span>💰 Credits: </span>
+                                                    <span>{creditsFarming.runs} runs (Lvl {creditDungeonLvl}) | </span>
+                                                    <span>{creditsFarming.stamina} stamina</span>
+                                                </div>
+                                            )}
+                                            <div className={styles.farmingRow}>
+                                                ⏱️ Estimated: ~{totalDays} day{totalDays !== 1 ? 's' : ''} (based on {DAILY_STAMINA} stamina/day)
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                )}
                             </div>
                         </div>
                     );

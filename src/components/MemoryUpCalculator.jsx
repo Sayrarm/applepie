@@ -343,8 +343,15 @@ function MemoryUpCalculator() {
                             currentLevel: currentLevel,
                             targetLevel: targetLevel,
                             neededExp: result.expNeeded,
+                            neededCrystalsN: result.crystals.N,
+                            neededCrystalsR: result.crystals.R,
+                            neededCrystalsSR: result.crystals.SR,
                             neededCredits: result.credits,
-                            neededCrystals: result.crystals
+                            expDungeonLevel: expDungeonLevel,
+                            creditDungeonLevel: creditDungeonLevel,
+                            crystalDungeonLevel: crystalDungeonLevel,
+                            createdAt: new Date().toISOString()
+
                         };
                         // Добавляем к существующим целям
                         const existingGoals = JSON.parse(localStorage.getItem('farm_goals') || '[]');
