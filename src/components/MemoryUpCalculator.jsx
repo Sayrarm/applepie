@@ -187,8 +187,7 @@ function MemoryUpCalculator() {
 
             {/* Выбор цвета кристаллов */}
             <div className={styles.formGroup}>
-                <label>Crystal Color</label>
-
+                <div >Crystal Color</div>
                 <div className={styles.colorButtons}>
                     {crystalColors.map(color => (
                         <button
