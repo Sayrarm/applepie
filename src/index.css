@@ -72,6 +72,7 @@ body {
     --colorTextSpecial: #e68038;
     --colorTextSuperDark: #35312d;
     --colorTextBright: #e68038;
+    --colorTextGrayNote: #888;
     --forSelect: #35312d;
     --border: #e68038;
     --border-battle-page: #35312d;
@@ -97,6 +98,7 @@ body {
     --bg-brown: #ffcb90;
     --orange: #e68038;
     --red: #ff4444;
+    --redForText: #8e1111;
     --bg-brown-light: color-mix(in srgb, var(--bg-brown) 10%, transparent);
 
 /****************************************************************************/
@@ -125,6 +127,12 @@ html.dark {
     --box-shadow: 10px 10px 6px -5px rgb(21 21 21 / 0.6);
     --linear-gradient-webkit: -webkit-linear-gradient(270deg, black -10%, black 20%, transparent 100%);
     --linear-gradient: linear-gradient(270deg, black -10%, black 20%, transparent 100%);
+
+    /****************************************************************************/
+
+    --redForText: #ff7875;
+
+    /****************************************************************************/
 
 
     color: var(--colorText);

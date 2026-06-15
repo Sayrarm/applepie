@@ -1,0 +1,125 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+    background: var(--bg-glass);
+    box-shadow: var(--box-shadow);
+    color: var(--colorTextDark);
+    font-family: TikTok Sans, monospace;
+}
+
+.noGoals {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+    font-size: 12px;
+    text-align: center;
+
+    color: var(--colorTextDark);
+}
+
+.noGoals p:first-child {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: var(--a);
+}
+
+.goalCard {
+    padding: 15px;
+}
+
+.goalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+}
+
+.goalTitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--colorTextDark);
+}
+
+.goalActions {
+    display: flex;
+    gap: 5px;
+}
+
+.completeButton,
+.deleteButton {
+    white-space: nowrap;
+    padding: 4px;
+    color: var(--colorText);
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.completeButton {
+    background: #419716;
+}
+
+.completeButton:hover {
+    background: #73d13d;
+}
+
+.deleteButton {
+    background: #c63e3f;
+}
+
+.deleteButton:hover {
+    background: #ff7875;
+}
+
+.goalContent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.resourcesSection h4, .remainingSection h4 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--colorTextDark);
+}
+
+.resourcesList, .remainingList {
+    font-size: 12px;
+    color: var(--colorTextDark);
+    line-height: 1.8;
+}
+
+.completed {
+    color: #419716;
+}
+
+.notCompleted {
+    color: var(--redForText);
+}
+
+.completedBadge {
+    margin-top: 12px;
+    padding: 10px;
+    background: #e6f7e6;
+    border-radius: 8px;
+    color: #52c41a;
+    font-size: 13px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1020px) {
+
+    .container {
+        width: 100%;
+        padding: 5px;
+        margin: 5px;
+    }
+
+}

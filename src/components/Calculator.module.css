@@ -171,13 +171,14 @@
 
 .substatNote {
     font-size: 12px;
-    color: #888;
+    color: var(--colorTextGrayNote);
     margin-top: 8px;
     padding-top: 8px;
     border-top: 1px dashed #e0e0e0;
 }
 
-.calculateButton {
+.calculateButton,
+.goToFarmButton {
     width: 100%;
     padding: 12px 24px;
     background: var(--forSelect);
@@ -192,13 +193,19 @@
     margin-bottom: 16px;
 }
 
-.calculateButton:hover {
+.calculateButton:hover,
+.goToFarmButton:hover {
     background:var(--a-hover);
 }
 
 .calculateButton:disabled {
     background: var(--bg-modal);
     cursor: not-allowed;
+}
+
+.goToFarmSection {
+    margin-top: 16px;
+    text-align: center;
 }
 
 @media screen and (max-width: 1020px) {

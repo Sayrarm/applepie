@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import {useRef, useState} from 'react';
 import styles from './Calculator.module.css';
 import {
     rarityLevels,
@@ -13,6 +13,7 @@ import {
     getCreditDungeonRuns,
     getStaminaCost,
 } from '../data/memory-up-data';
+import ModalWindow from "./ModalWindow.jsx";
 
 function MemoryUpCalculator() {
     const [rarity, setRarity] = useState('5-star');
@@ -23,6 +24,11 @@ function MemoryUpCalculator() {
     const [creditDungeonLevel, setCreditDungeonLevel] = useState(9);
     const [hasCalculated, setHasCalculated] = useState(false);
     const [result, setResult] = useState(null);
+    const modalGoalButton = useRef();
+
+    const showModalGoalButton = () => {
+        modalGoalButton.current.showModal();
+    };
 
     const handleCalculate = () => {
         if (currentLevel >= targetLevel) return;
@@ -322,6 +328,42 @@ function MemoryUpCalculator() {
                         </div>
                     </div>
                 </div>
+            )}
+
+            {/* Кнопка Go to farm */}
+            {hasCalculated && result && currentLevel < targetLevel && (
+            <div className={styles.goToFarmSection}>
+                <button
+                    className={styles.goToFarmButton}
+                    onClick={() => {
+                        const goal = {
+                            id: Date.now(),
+                            type: 'memory',
+                            rarity: rarity,
+                            currentLevel: currentLevel,
+                            targetLevel: targetLevel,
+                            neededExp: result.expNeeded,
+                            neededCredits: result.credits,
+                            neededCrystals: result.crystals
+                        };
+                        // Добавляем к существующим целям
+                        const existingGoals = JSON.parse(localStorage.getItem('farm_goals') || '[]');
+                        existingGoals.push(goal);
+                        localStorage.setItem('farm_goals', JSON.stringify(existingGoals));
+                        showModalGoalButton();
+                    }}
+                >
+                    🎯 Add to Farm Goal Tracker
+                </button>
+
+                <ModalWindow
+                    ref={modalGoalButton}
+                    title={'Alert'}
+                    tag={
+                        <h2>Goal added to Farm Tracker on Home page!</h2>
+                    }
+                />
+            </div>
             )}
         </div>
     );

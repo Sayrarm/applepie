@@ -9,6 +9,7 @@ import EventsBlock from "../components/EventsBlock.jsx";
 import {eventsData} from "../data/events-data.js";
 import {battlePassData} from "../data/battle-pass-data.js";
 import BattlePassBlock from "../components/BattlePassBlock.jsx";
+import FarmGoalTracker from "../components/FarmGoalTracker.jsx";
 
 function Home() {
 
@@ -72,6 +73,10 @@ function Home() {
 
 
             <div className={styles.containerSchedule}>
+
+                <h2 className={styles.h2}>Farm Goal Tracker</h2>
+
+                <FarmGoalTracker />
 
                 <h2 className={styles.h2}>Reset</h2>
 

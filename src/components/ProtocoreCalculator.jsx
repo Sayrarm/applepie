@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useRef, useState} from 'react';
 import styles from './Calculator.module.css';
 import {
     protocoreTypes,
@@ -16,6 +16,7 @@ import {
 } from '../data/protocore-data';
 import {getImageUrl} from "./imageUtils.js";
 import {creditDungeonData} from "../data/memory-up-data.js";
+import ModalWindow from "./ModalWindow.jsx";
 
 // Функция для получения первого доступного мейн стата
 const getFirstMainStat = (type) => {
@@ -31,6 +32,11 @@ function ProtocoreCalculator() {
     const [creditDungeonLevel, setCreditDungeonLevel] = useState(9);
     const [hasCalculated, setHasCalculated] = useState(false);
     const [result, setResult] = useState(null);
+    const modalGoalButton = useRef();
+
+    const showModalGoalButton = () => {
+        modalGoalButton.current.showModal();
+    };
 
     // Получаем доступные мейн статы для выбранного типа
     const availableStats = protocoreTypes[protocoreType]?.mainStats || [];
@@ -305,6 +311,44 @@ function ProtocoreCalculator() {
                             <span>{result.staminaNeeded + result.staminaForCredits} stamina</span>
                         </div>
                     </div>
+                </div>
+            )}
+
+            {hasCalculated && result && currentLevel < targetLevel && (
+                <div className={styles.goToFarmSection}>
+                    <button
+                        className={styles.goToFarmButton}
+                        onClick={() => {
+                            const goal = {
+                                id: Date.now(),
+                                type: 'protocore',
+                                protocoreType: protocoreType,
+                                mainStat: mainStat,
+                                currentLevel: currentLevel,
+                                targetLevel: targetLevel,
+                                neededExp: result.expNeeded,
+                                neededCredits: result.creditsNeeded,
+                                neededCrystals: null,
+                                createdAt: new Date().toISOString(),
+
+                            };
+                            // Добавляем к существующим целям
+                            const existingGoals = JSON.parse(localStorage.getItem('farm_goals') || '[]');
+                            existingGoals.push(goal);
+                            localStorage.setItem('farm_goals', JSON.stringify(existingGoals));
+                            showModalGoalButton();
+                        }}
+                    >
+                        🎯 Add to Farm Goal Tracker
+                    </button>
+
+                    <ModalWindow
+                        ref={modalGoalButton}
+                        title={'Alert'}
+                        tag={
+                            <h2>Goal added to Farm Tracker on Home page!</h2>
+                        }
+                    />
                 </div>
             )}
         </div>

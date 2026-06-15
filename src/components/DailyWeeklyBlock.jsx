@@ -46,7 +46,8 @@ function DailyWeeklyBlock() {
                              src={getImageUrl('../assets/main-page/modal-window/weekly-awards.png')}
                              alt={'weekly awards'}/>
                     </>
-                }/>
+                }
+            />
         </>
     )
 
