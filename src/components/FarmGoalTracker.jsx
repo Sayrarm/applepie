@@ -95,15 +95,12 @@ function FarmGoalTracker() {
         return total;
     };
 
-    // Подсчёт кристаллов пользователя
-    const getUserCrystals = (crystalType) => {
-        let total = 0;
-        Object.entries(userResources.crystals).forEach(([key, count]) => {
-            if (key.includes(crystalType)) {
-                total += count;
-            }
-        });
-        return total;
+    // Подсчёт кристаллов пользователя с учётом цвета
+    const getUserCrystalsByColor = (crystalColor, crystalType) => {
+        // crystalColor: 'emerald', 'amber', 'ruby' и т.д.
+        // crystalType: 'crystal_n', 'crystal_r', 'crystal_sr'
+        const key = `${crystalColor}_${crystalType}`;
+        return userResources.crystals[key] || 0;
     };
 
     // Расчёт фарма для EXP (Memory)
@@ -208,12 +205,14 @@ function FarmGoalTracker() {
         const remainingExp = Math.max(0, goal.neededExp - totalExp);
         const remainingCredits = Math.max(0, goal.neededCredits - (userResources.credits || 0));
 
-        // Расчёт остатка кристаллов
+        // Расчёт остатка кристаллов с учётом цвета
         let remainingCrystals = null;
         if (goal.type === 'memory' && (goal.neededCrystalsN > 0 || goal.neededCrystalsR > 0 || goal.neededCrystalsSR > 0)) {
-            const userCrystalsN = getUserCrystals('crystal_n');
-            const userCrystalsR = getUserCrystals('crystal_r');
-            const userCrystalsSR = getUserCrystals('crystal_sr');
+            const crystalColor = goal.crystalColor || 'emerald'; // цвет кристаллов из цели
+
+            const userCrystalsN = getUserCrystalsByColor(crystalColor, 'crystal_n');
+            const userCrystalsR = getUserCrystalsByColor(crystalColor, 'crystal_r');
+            const userCrystalsSR = getUserCrystalsByColor(crystalColor, 'crystal_sr');
 
             remainingCrystals = {
                 N: Math.max(0, (goal.neededCrystalsN || 0) - userCrystalsN),
@@ -336,7 +335,7 @@ function FarmGoalTracker() {
                                         <div>{getExpLabel(goal)} {goal.neededExp.toLocaleString()}</div>
                                         {goal.type === 'memory' && (goal.neededCrystalsN > 0 || goal.neededCrystalsR > 0 || goal.neededCrystalsSR > 0) && (
                                             <div>
-                                                Crystals:
+                                                {goal.crystalColor} Crystals:
                                                 {goal.neededCrystalsN > 0 && ` N: ${goal.neededCrystalsN}`}
                                                 {goal.neededCrystalsR > 0 && ` | R: ${goal.neededCrystalsR}`}
                                                 {goal.neededCrystalsSR > 0 && ` | SR: ${goal.neededCrystalsSR}`}
@@ -355,7 +354,7 @@ function FarmGoalTracker() {
                                         </div>
                                         {remaining.crystals && (remaining.crystals.N > 0 || remaining.crystals.R > 0 || remaining.crystals.SR > 0) && (
                                             <div className={crystalsCompleted ? styles.completed : styles.notCompleted}>
-                                                Crystals:
+                                                {goal.crystalColor} Crystals:
                                                 {remaining.crystals.N > 0 && ` N: ${remaining.crystals.N}`}
                                                 {remaining.crystals.R > 0 && ` | R: ${remaining.crystals.R}`}
                                                 {remaining.crystals.SR > 0 && ` | SR: ${remaining.crystals.SR}`}

@@ -208,6 +208,45 @@
     text-align: center;
 }
 
+/*********************/
+.colorButtons {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.colorButton {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 9px;
+    color: var(--colorTextDark);
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.colorButton:hover {
+    color: var(--a);
+}
+
+.colorButton.active {
+    background: var(--forSelect);
+    color: var(--colorText);
+    box-shadow: var(--box-shadow);
+}
+
+.colorIcon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+/*****************************/
+
 @media screen and (max-width: 1020px) {
 
     .resultCard,

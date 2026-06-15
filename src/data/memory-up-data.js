@@ -100,6 +100,13 @@ export const crystalDungeonData = [
     { level: 9, crystals: { N: 10, R: 4, SR: 1 } }
 ];
 
+// Типы данжей кристаллов и соответствующие цвета
+export const crystalTypesDungeons = [
+    { id: 'lemonette', name: "Lemonette", colors: ['Emerald', 'Amber'] },
+    { id: 'snoozer', name: "Snoozer", colors: ['Violet', 'Pearl'] },
+    { id: 'pumpkin', name: "Pumpkin Magus", colors: ['Sapphire', 'Ruby'] }
+];
+
 // Данжи для кредитов
 export const creditDungeonData = [
     { level: 1, credits: 4000 },
@@ -117,6 +124,12 @@ export const creditDungeonData = [
 export const DUNGEON_COST = 8;
 
 // ========== ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ ==========
+
+// Получить тип данжа по цвету кристалла
+export const getCrystalDungeonByColor = (color) => {
+    const dungeon = crystalTypesDungeons.find(d => d.colors.includes(color));
+    return dungeon ? dungeon.id : 'lemonette';
+};
 
 // Получить EXP для прокачки между уровнями
 export const getExpNeeded = (rarity, currentLevel, targetLevel) => {

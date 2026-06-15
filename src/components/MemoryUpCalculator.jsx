@@ -11,9 +11,13 @@ import {
     getExpDungeonRuns,
     getCrystalDungeonRuns,
     getCreditDungeonRuns,
+    getCrystalDungeonByColor,
     getStaminaCost,
+    crystalTypesDungeons,
 } from '../data/memory-up-data';
 import ModalWindow from "./ModalWindow.jsx";
+import {crystalColors} from "../data/my-resources.js";
+import {getImageUrl} from "./imageUtils.js";
 
 function MemoryUpCalculator() {
     const [rarity, setRarity] = useState('5-star');
@@ -22,6 +26,7 @@ function MemoryUpCalculator() {
     const [expDungeonLevel, setExpDungeonLevel] = useState(9);
     const [crystalDungeonLevel, setCrystalDungeonLevel] = useState(9);
     const [creditDungeonLevel, setCreditDungeonLevel] = useState(9);
+    const [selectedColor, setSelectedColor] = useState('emerald');
     const [hasCalculated, setHasCalculated] = useState(false);
     const [result, setResult] = useState(null);
     const modalGoalButton = useRef();
@@ -29,6 +34,10 @@ function MemoryUpCalculator() {
     const showModalGoalButton = () => {
         modalGoalButton.current.showModal();
     };
+
+    // Получаем тип данжа для выбранного цвета
+    const crystalDungeonType = getCrystalDungeonByColor(selectedColor);
+    const crystalDungeonName = crystalTypesDungeons.find(d => d.id === crystalDungeonType)?.name || 'Lemonette';
 
     const handleCalculate = () => {
         if (currentLevel >= targetLevel) return;
@@ -115,6 +124,12 @@ function MemoryUpCalculator() {
         setResult(null);
     };
 
+    const handleColorChange = (colorId) => {
+        setSelectedColor(colorId);
+        setHasCalculated(false);
+        setResult(null);
+    };
+
     const availableLevels = [1, 10, 20, 30, 40, 50, 60, 70, 80];
 
     return (
@@ -170,6 +185,28 @@ function MemoryUpCalculator() {
                 </div>
             </div>
 
+            {/* Выбор цвета кристаллов */}
+            <div className={styles.formGroup}>
+                <label>Crystal Color</label>
+
+                <div className={styles.colorButtons}>
+                    {crystalColors.map(color => (
+                        <button
+                            key={color.id}
+                            className={`${styles.colorButton} ${selectedColor === color.id ? styles.active : ''}`}
+                            onClick={() => handleColorChange(color.id)}
+                        >
+                            <img
+                                src={getImageUrl(color.img)}
+                                alt={color.name}
+                                className={styles.colorIcon}
+                            />
+                            {color.name}
+                        </button>
+                    ))}
+                </div>
+            </div>
+
             {/* Данжи */}
             <div className={styles.formGroup}>
                 <label htmlFor="bottle-lvl-select">Heartbreaker Level</label>
@@ -189,7 +226,7 @@ function MemoryUpCalculator() {
             </div>
 
             <div className={styles.formGroup}>
-                <label htmlFor="crystal-lvl-select">Pumpkin Magus | Lemonette | Snoozer Level</label>
+                <label htmlFor="crystal-lvl-select">{crystalDungeonName} Level</label>
                 <select
                     id="crystal-lvl-select"
                     name="crystal-lvl"
@@ -346,6 +383,7 @@ function MemoryUpCalculator() {
                             neededCrystalsN: result.crystals.N,
                             neededCrystalsR: result.crystals.R,
                             neededCrystalsSR: result.crystals.SR,
+                            crystalColor: selectedColor,
                             neededCredits: result.credits,
                             expDungeonLevel: expDungeonLevel,
                             creditDungeonLevel: creditDungeonLevel,

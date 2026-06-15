@@ -15,12 +15,12 @@ export const heartSand = [
 
 //Crystals Type
 export const crystalColors = [
-    {id: 'violet', name: "Violet", value: 1, img: "../assets/icons/violet-sr.png"},
-    {id: 'amber', name: "Amber", value: 1, img: "../assets/icons/amber-sr.png"},
-    {id: 'ruby', name: "Ruby", value: 1, img: "../assets/icons/ruby-sr.png"},
-    {id: 'emerald', name: "Emerald", value: 1, img: "../assets/icons/emerald-sr.png"},
-    {id: 'pearl', name: "Pearl", value: 1, img: "../assets/icons/pearl-sr.png"},
-    {id: 'sapphire', name: "Sapphire", value: 1, img: "../assets/icons/sapphire-sr.png"},
+    {id: 'Violet', name: "Violet", value: 1, img: "../assets/icons/violet-sr.png"},
+    {id: 'Amber', name: "Amber", value: 1, img: "../assets/icons/amber-sr.png"},
+    {id: 'Ruby', name: "Ruby", value: 1, img: "../assets/icons/ruby-sr.png"},
+    {id: 'Emerald', name: "Emerald", value: 1, img: "../assets/icons/emerald-sr.png"},
+    {id: 'Pearl', name: "Pearl", value: 1, img: "../assets/icons/pearl-sr.png"},
+    {id: 'Sapphire', name: "Sapphire", value: 1, img: "../assets/icons/sapphire-sr.png"},
 ];
 
 //Crystals
