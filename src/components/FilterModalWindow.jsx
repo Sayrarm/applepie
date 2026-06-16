@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import {useEffect, useState, forwardRef, useImperativeHandle} from 'react';
 import {Modal, Checkbox, Select, Tag, Button} from "antd";
 
 // Ключи для localStorage
@@ -15,7 +15,7 @@ const loadFromStorage = (key, defaultValue) => {
     return saved ? JSON.parse(saved) : defaultValue;
 };
 
-function FilterModalWindow({ open, onClose, onFilter, onClearFilters }) {
+const FilterModalWindow = forwardRef(({ open, onClose, onFilter, onClearFilters }, ref) => {
     // Состояния для каждого фильтра с загрузкой из localStorage
     const [rarity, setRarity] = useState(() => loadFromStorage(STORAGE_KEYS.RARITY, []));
     const [placement, setPlacement] = useState(() => loadFromStorage(STORAGE_KEYS.PLACEMENT, []));
@@ -39,6 +39,27 @@ function FilterModalWindow({ open, onClose, onFilter, onClearFilters }) {
         localStorage.setItem(STORAGE_KEYS.STELLA, JSON.stringify(stella));
     }, [stella]);
 
+    // ЭКСПОРТИРУЕМ ФУНКЦИЮ ДЛЯ ВНЕШНЕГО ВЫЗОВА
+    useImperativeHandle(ref, () => ({
+        clearAll: () => {
+            // Очищаем локальные состояния
+            setRarity([]);
+            setPlacement([]);
+            setTalent([]);
+            setStella([]);
+
+            // Очищаем localStorage
+            localStorage.removeItem(STORAGE_KEYS.RARITY);
+            localStorage.removeItem(STORAGE_KEYS.PLACEMENT);
+            localStorage.removeItem(STORAGE_KEYS.TALENT);
+            localStorage.removeItem(STORAGE_KEYS.STELLA);
+
+            // Вызываем функцию очистки из родителя
+            if (onClearFilters) {
+                onClearFilters();
+            }
+        }
+    }));
 
     const optionsRarity = [
         { label: '5-star', value: '5-star' },
@@ -179,11 +200,11 @@ function FilterModalWindow({ open, onClose, onFilter, onClearFilters }) {
                 />
             </div>
 
-            <Button onClick={() => handleClear()}>
-            Clear
+            <Button onClick={handleClear}>
+                Clear
             </Button>
         </Modal>
     );
-}
+});
 
 export default FilterModalWindow;

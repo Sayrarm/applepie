@@ -6,7 +6,7 @@ import {useSearch} from '../hooks/useSearch';
 import {useSort} from '../hooks/useSort';
 import {useFilter} from '../hooks/useFilter';
 import {stylesFnSearch} from "../components/stylesAntd.js";
-import {useContext, useState} from "react";
+import {useContext, useState, useRef} from "react";
 import PageLoader from '../components/PageLoader';
 import {CardContext} from "../components/CardContext.jsx";
 import {Link} from "react-router-dom";
@@ -31,6 +31,8 @@ function Memories() {
         filterMemories
     } = useFilter();
 
+    // СОЗДАЁМ REF ДЛЯ МОДАЛКИ
+    const filterModalRef = useRef();
 
     // Фильтруем данные
     const filteredMemories = filterMemories(memoriesData).filter(memory => {
@@ -47,6 +49,11 @@ function Memories() {
         clearSorting();
         onSearch('');
         clearFilters();
+
+        // ВЫЗЫВАЕМ ОЧИСТКУ МОДАЛКИ
+        if (filterModalRef.current) {
+            filterModalRef.current.clearAll();
+        }
     };
 
     return (
@@ -144,7 +151,9 @@ function Memories() {
                                 title={"Filter"}
                                 className={styles.colorBrown}
                             />
+
                             <FilterModalWindow
+                                ref={filterModalRef}
                                 open={isModalOpen}
                                 onClose={() => setIsModalOpen(false)}
                                 onFilter={applyFilters}
