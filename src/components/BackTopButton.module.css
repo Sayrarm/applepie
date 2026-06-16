@@ -30,3 +30,11 @@
     width: 30px;
     height: 30px;
 }
+
+@media screen and (max-width: 1115px) {
+    .button {
+        box-shadow: none;
+    }
+
+
+}

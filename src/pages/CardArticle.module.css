@@ -41,17 +41,6 @@
     margin-bottom: 10px;
 }
 
-@media screen and (max-width: 860px) {
-    .card {
-        flex-direction: column;
-    }
-
-    .imgContainer {
-        align-self: center;
-    }
-}
-
-
 .navigation {
     display: flex;
     justify-content: center;
@@ -62,7 +51,8 @@
     border-top: 1px solid var(--border-battle-page);
 }
 
-.navButton {
+.navButtonLeft,
+.navButtonRight {
     display: flex;
     align-self: center;
     padding: 5px 6px;
@@ -70,13 +60,16 @@
     border: none;
     cursor: pointer;
     transition: all 0.3s;
+    box-shadow: var(--box-shadow);
 }
 
-.navButton:hover:not(:disabled) {
+.navButtonLeft:hover:not(:disabled),
+.navButtonRight:hover:not(:disabled) {
     background: var(--a-hover);
 }
 
-.navButton:disabled {
+.navButtonLeft:disabled,
+.navButtonRight:disabled {
     background: var(--bg-modal);
     cursor: not-allowed;
 }
@@ -93,3 +86,90 @@
     width: 25px;
     height: 25px;
 }
+
+.iconLeft,
+.iconRight {
+    color: var(--colorText);
+    width: 25px;
+    height: 25px;
+}
+
+@media screen and (max-width: 485px) {
+    .imgContainer {
+        position: relative;
+    }
+
+    .navButtonLeft,
+    .navButtonRight {
+        position: absolute;
+        z-index: 999;
+
+    }
+
+    .navButtonLeft,
+    .navButtonRight,
+    .navButtonLeft:hover:not(:disabled),
+    .navButtonRight:hover:not(:disabled) {
+        background: none;
+        box-shadow: none;
+    }
+
+    .navButtonLeft {
+        left: 0;
+        top: 50%;
+    }
+
+    .navButtonRight {
+        right: 0;
+        top: 50%;
+    }
+
+    @keyframes ghostPulse {
+        0%, 100% {
+            opacity: 0.3;
+            filter: drop-shadow(0 0 2px rgba(255,255,255,0.2))
+            drop-shadow(0 0 10px rgba(255,255,255,0.1));
+            transform: scale(1);
+        }
+        50% {
+            opacity: 0.6;
+            filter: drop-shadow(0 0 4px rgba(255,255,255,0.4))
+            drop-shadow(0 0 20px rgba(255,255,255,0.2));
+            transform: scale(1.05);
+        }
+    }
+
+    .iconLeft,
+    .iconRight {
+        color: white;
+        animation: ghostPulse 2s ease-in-out infinite;
+        width: 35px;
+        height: 35px;
+    }
+
+    .navButtonLeft:disabled,
+    .navButtonRight:disabled {
+        background: none;
+        opacity: 0;
+        animation: none;
+    }
+
+    .navButtonLeft:disabled .iconLeft,
+    .navButtonRight:disabled .iconRight {
+        color: red;
+        cursor: not-allowed;
+    }
+
+}
+
+@media screen and (max-width: 860px) {
+    .card {
+        flex-direction: column;
+    }
+
+    .imgContainer {
+        align-self: center;
+    }
+}
+
+
