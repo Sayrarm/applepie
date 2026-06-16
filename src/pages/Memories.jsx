@@ -6,7 +6,7 @@ import {useSearch} from '../hooks/useSearch';
 import {useSort} from '../hooks/useSort';
 import {useFilter} from '../hooks/useFilter';
 import {stylesFnSearch} from "../components/stylesAntd.js";
-import {useContext, useEffect, useState} from "react";
+import {useContext, useState} from "react";
 import PageLoader from '../components/PageLoader';
 import {CardContext} from "../components/CardContext.jsx";
 import {Link} from "react-router-dom";
@@ -14,12 +14,12 @@ import {getImageUrl} from "../components/imageUtils.js";
 import { memoriesData as initialMemoriesData } from '../data/memories-data.js';
 
 function Memories() {
-
     const {Search} = Input;
+
     // Используем хуки
     const {searchQuery, onSearch} = useSearch();
     const {sortCriteria, handleSortChange, clearSorting, sortMemories} = useSort();
-    const [memoriesData, setMemoriesData] = useState([]);
+    const [memoriesData, setMemoriesData] = useState(initialMemoriesData); // Загружаем данные напрямую из импорта
     const { toggleImageSize } = useContext(CardContext); // получаем функцию переключения
     const {
         selectedChar,
@@ -31,14 +31,9 @@ function Memories() {
         filterMemories
     } = useFilter();
 
-    // Загружаем данные напрямую из импорта
-    useEffect(() => {
-        setMemoriesData(initialMemoriesData);
-    }, []);
 
     // Фильтруем данные
     const filteredMemories = filterMemories(memoriesData).filter(memory => {
-        // Поиск по тексту
         return memory.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
             memory.char.toLowerCase().includes(searchQuery.toLowerCase());
     });
@@ -50,7 +45,7 @@ function Memories() {
     const resetAllSettings = () => {
         setSelectedChar('ALL');
         clearSorting();
-        onSearch(''); // или clearSearch()
+        onSearch('');
         clearFilters();
     };
 
@@ -92,38 +87,37 @@ function Memories() {
                             </div>
 
                             <div className={styles.sortBy}>
-                            <Select
-                                mode="tags"
-                                size="medium"
-                                value={sortCriteria}
-                                placeholder="Sorting by"
-                                onChange={handleSortChange}
-                                className={styles.colorBrown}
-                                style={{width: 250}}
-                                options={[
-                                    {value: 'char', label: 'Character'},
-                                    {value: 'name', label: 'Memory\'s name'},
-                                    {value: 'rarity', label: 'Rarity'},
-                                    {value: 'stella', label: 'Stellactrum'},
-                                    {value: 'placement', label: 'Placement'},
-                                    {value: 'talent', label: 'Talent'},
-                                ]}
+                                <Select
+                                    mode="tags"
+                                    size="medium"
+                                    value={sortCriteria}
+                                    placeholder="Sorting by"
+                                    onChange={handleSortChange}
+                                    className={styles.colorBrown}
+                                    style={{width: 250}}
+                                    options={[
+                                        {value: 'char', label: 'Character'},
+                                        {value: 'name', label: 'Memory\'s name'},
+                                        {value: 'rarity', label: 'Rarity'},
+                                        {value: 'stella', label: 'Stellactrum'},
+                                        {value: 'placement', label: 'Placement'},
+                                        {value: 'talent', label: 'Talent'},
+                                    ]}
+                                />
 
-                            />
-
-                            <Button
-                                onClick={clearSorting}
-                                color="default"
-                                variant="outlined"
-                                icon={<img
-                                    className={styles.imgIcon}
-                                    src={getImageUrl('../assets/icons/eraser_16863523.png')}
-                                    style={{width: 22, height: 22}}
-                                    alt={'Clear sorting'}/>}
-                                title={"Clear sorting"}
-                                className={styles.colorBrown}
-                            >
-                            </Button>
+                                <Button
+                                    onClick={clearSorting}
+                                    color="default"
+                                    variant="outlined"
+                                    icon={<img
+                                        className={styles.imgIcon}
+                                        src={getImageUrl('../assets/icons/eraser_16863523.png')}
+                                        style={{width: 22, height: 22}}
+                                        alt={'Clear sorting'}/>}
+                                    title={"Clear sorting"}
+                                    className={styles.colorBrown}
+                                >
+                                </Button>
                             </div>
 
                         </nav>
@@ -177,15 +171,24 @@ function Memories() {
                         </aside>
                     </div>
                     <div className={styles.cardsGrid}>
-                        {sortedMemories.map(memory => (
-                            <Link
-                                key={memory.id}
-                                to={`/memories/${memory.id}`}
-                                className={styles.cardLink}
-                            >
-                                <Card key={memory.id} data={memory}/>
-                            </Link>
-                        ))}
+                        {sortedMemories.map(memory => {
+                            // Находим индекс текущей карточки в отсортированном списке
+                            const currentIndex = sortedMemories.indexOf(memory);
+
+                            return (
+                                <Link
+                                    key={memory.id}
+                                    to={`/memories/${memory.id}`}
+                                    state={{
+                                        cards: sortedMemories,      // ← передаём весь список
+                                        currentIndex: currentIndex   // ← передаём индекс
+                                    }}
+                                    className={styles.cardLink}
+                                >
+                                    <Card key={memory.id} data={memory}/>
+                                </Link>
+                            );
+                        })}
                     </div>
 
                     {sortedMemories.length === 0 && (

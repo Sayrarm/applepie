@@ -22,6 +22,8 @@ body {
     font-family: TikTok Sans, monospace !important;
     font-size: 14px;
 
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .fixed-bg {

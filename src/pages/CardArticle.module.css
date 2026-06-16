@@ -51,3 +51,45 @@
     }
 }
 
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin-top: 24px;
+    padding: 16px 0;
+    border-top: 1px solid var(--border-battle-page);
+}
+
+.navButton {
+    display: flex;
+    align-self: center;
+    padding: 5px 6px;
+    background: var(--forSelect);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.navButton:hover:not(:disabled) {
+    background: var(--a-hover);
+}
+
+.navButton:disabled {
+    background: var(--bg-modal);
+    cursor: not-allowed;
+}
+
+.navCounter {
+    font-size: 14px;
+    color: var(--colorTextGrayNote);
+    font-weight: 500;
+    min-width: 80px;
+    text-align: center;
+}
+
+.arrowsButton {
+    width: 25px;
+    height: 25px;
+}
