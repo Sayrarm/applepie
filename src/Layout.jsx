@@ -1,7 +1,7 @@
 import {Outlet, ScrollRestoration} from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import {FloatButton} from 'antd';
+import BackTopButton from "./components/BackTopButton.jsx";
 
 function Layout() {
     return (
@@ -14,7 +14,7 @@ function Layout() {
                     <Outlet /> {/* сюда подставляются страницы */}
                 </main>
                 <Footer />
-                <FloatButton.BackTop />
+                <BackTopButton/>
             </div>
         </>
     );
