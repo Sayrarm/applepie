@@ -7,11 +7,10 @@ import {useSort} from '../hooks/useSort';
 import {useFilter} from '../hooks/useFilter';
 import {stylesFnSearch} from "../components/stylesAntd.js";
 import {useContext, useState, useRef} from "react";
-import PageLoader from '../components/PageLoader';
 import {CardContext} from "../components/CardContext.jsx";
 import {Link} from "react-router-dom";
 import {getImageUrl} from "../components/imageUtils.js";
-import { memoriesData as initialMemoriesData } from '../data/memories-data.js';
+import {memoriesData as initialMemoriesData} from '../data/memories-data.js';
 
 function Memories() {
     const {Search} = Input;
@@ -20,7 +19,7 @@ function Memories() {
     const {searchQuery, onSearch} = useSearch();
     const {sortCriteria, handleSortChange, clearSorting, sortMemories} = useSort();
     const [memoriesData, setMemoriesData] = useState(initialMemoriesData); // Загружаем данные напрямую из импорта
-    const { toggleImageSize } = useContext(CardContext); // получаем функцию переключения
+    const {toggleImageSize} = useContext(CardContext); // получаем функцию переключения
     const {
         selectedChar,
         setSelectedChar,
@@ -58,153 +57,152 @@ function Memories() {
 
     return (
         <>
-            <PageLoader delay={300}>
-                <section className={styles.memories}>
-                    <div className={styles.options}>
-                        <nav className={styles.select}>
-                            <div className={styles.selectChar}>
+            <section className={styles.memories}>
+                <div className={styles.options}>
+                    <nav className={styles.select}>
+                        <div className={styles.selectChar}>
+                            <button
+                                className={`${styles.buttonSelectChar} ${selectedChar === 'ALL' ? styles.active : ''}`}
+                                onClick={() => setSelectedChar('ALL')}>
+                                ALL
+                            </button>
+
+                            <div className={styles.characters}>
                                 <button
-                                    className={`${styles.buttonSelectChar} ${selectedChar === 'ALL' ? styles.active : ''}`}
-                                    onClick={() => setSelectedChar('ALL')}>
-                                    ALL
+                                    className={`${styles.buttonSelectChar} ${selectedChar === 'Xavier' ? styles.active : ''}`}
+                                    onClick={() => setSelectedChar('Xavier')}>Xavier
                                 </button>
-
-                                <div className={styles.characters}>
-                                    <button
-                                        className={`${styles.buttonSelectChar} ${selectedChar === 'Xavier' ? styles.active : ''}`}
-                                        onClick={() => setSelectedChar('Xavier')}>Xavier
-                                    </button>
-                                    <button
-                                        className={`${styles.buttonSelectChar} ${selectedChar === 'Zayne' ? styles.active : ''}`}
-                                        onClick={() => setSelectedChar('Zayne')}>Zayne
-                                    </button>
-                                    <button
-                                        className={`${styles.buttonSelectChar} ${selectedChar === 'Rafayel' ? styles.active : ''}`}
-                                        onClick={() => setSelectedChar('Rafayel')}>Rafayel
-                                    </button>
-                                    <button
-                                        className={`${styles.buttonSelectChar} ${selectedChar === 'Sylus' ? styles.active : ''}`}
-                                        onClick={() => setSelectedChar('Sylus')}>Sylus
-                                    </button>
-                                    <button
-                                        className={`${styles.buttonSelectChar} ${selectedChar === 'Caleb' ? styles.active : ''}`}
-                                        onClick={() => setSelectedChar('Caleb')}>Caleb
-                                    </button>
-                                </div>
+                                <button
+                                    className={`${styles.buttonSelectChar} ${selectedChar === 'Zayne' ? styles.active : ''}`}
+                                    onClick={() => setSelectedChar('Zayne')}>Zayne
+                                </button>
+                                <button
+                                    className={`${styles.buttonSelectChar} ${selectedChar === 'Rafayel' ? styles.active : ''}`}
+                                    onClick={() => setSelectedChar('Rafayel')}>Rafayel
+                                </button>
+                                <button
+                                    className={`${styles.buttonSelectChar} ${selectedChar === 'Sylus' ? styles.active : ''}`}
+                                    onClick={() => setSelectedChar('Sylus')}>Sylus
+                                </button>
+                                <button
+                                    className={`${styles.buttonSelectChar} ${selectedChar === 'Caleb' ? styles.active : ''}`}
+                                    onClick={() => setSelectedChar('Caleb')}>Caleb
+                                </button>
                             </div>
+                        </div>
 
-                            <div className={styles.sortBy}>
-                                <Select
-                                    mode="tags"
-                                    size="medium"
-                                    value={sortCriteria}
-                                    placeholder="Sorting by"
-                                    onChange={handleSortChange}
-                                    className={styles.colorBrown}
-                                    style={{width: 250}}
-                                    options={[
-                                        {value: 'char', label: 'Character'},
-                                        {value: 'name', label: 'Memory\'s name'},
-                                        {value: 'rarity', label: 'Rarity'},
-                                        {value: 'stella', label: 'Stellactrum'},
-                                        {value: 'placement', label: 'Placement'},
-                                        {value: 'talent', label: 'Talent'},
-                                    ]}
-                                />
-
-                                <Button
-                                    onClick={clearSorting}
-                                    color="default"
-                                    variant="outlined"
-                                    icon={<img
-                                        className={styles.imgIcon}
-                                        src={getImageUrl('../assets/icons/eraser_16863523.png')}
-                                        style={{width: 22, height: 22}}
-                                        alt={'Clear sorting'}/>}
-                                    title={"Clear sorting"}
-                                    className={styles.colorBrown}
-                                >
-                                </Button>
-                            </div>
-
-                        </nav>
-
-                        <aside className={styles.filterBy}>
-
-                            <Search
-                                placeholder="Search by memory name"
-                                allowClear
-                                onSearch={onSearch}
-                                style={{width: 215}}
-                                styles={stylesFnSearch}
-                                name="search-fn"
-                                size={"medium"}
+                        <div className={styles.sortBy}>
+                            <Select
+                                mode="tags"
+                                size="medium"
+                                value={sortCriteria}
+                                placeholder="Sorting by"
+                                onChange={handleSortChange}
+                                className={styles.colorBrown}
+                                style={{width: 250}}
+                                options={[
+                                    {value: 'char', label: 'Character'},
+                                    {value: 'name', label: 'Memory\'s name'},
+                                    {value: 'rarity', label: 'Rarity'},
+                                    {value: 'stella', label: 'Stellactrum'},
+                                    {value: 'placement', label: 'Placement'},
+                                    {value: 'talent', label: 'Talent'},
+                                ]}
                             />
 
                             <Button
-                                onClick={() => setIsModalOpen(true)}
+                                onClick={clearSorting}
+                                color="default"
+                                variant="outlined"
                                 icon={<img
                                     className={styles.imgIcon}
-                                    src={getImageUrl('../assets/icons/filter.png')}
-                                    style={{width: 20, height: 20}}
-                                    alt={'filter'}/>}
-                                title={"Filter"}
+                                    src={getImageUrl('../assets/icons/eraser_16863523.png')}
+                                    style={{width: 22, height: 22}}
+                                    alt={'Clear sorting'}/>}
+                                title={"Clear sorting"}
                                 className={styles.colorBrown}
-                            />
+                            >
+                            </Button>
+                        </div>
 
-                            <FilterModalWindow
-                                ref={filterModalRef}
-                                open={isModalOpen}
-                                onClose={() => setIsModalOpen(false)}
-                                onFilter={applyFilters}
-                                onClearFilters={clearFilters}
-                            />
+                    </nav>
 
-                            <Button
-                                onClick={toggleImageSize}
-                                icon={<img
-                                    className={styles.imgIcon}
-                                    src={getImageUrl('../assets/icons/icons8-change-64.png')}
-                                    style={{width: 20, height: 20}}
-                                    alt={'filter'}/>}
-                                title={"change size of Cards"}
-                                className={styles.colorBrown}
-                            />
+                    <aside className={styles.filterBy}>
 
-                            <Button
-                                onClick={resetAllSettings}
-                                icon={<img src={getImageUrl('../assets/icons/reset.png')} style={{width: 20, height: 20}} alt="reset"/>}
-                                title="Reset all filters and sorting"
-                                className={styles.colorBrown}
-                            />
-                        </aside>
-                    </div>
-                    <div className={styles.cardsGrid}>
-                        {sortedMemories.map(memory => {
-                            // Находим индекс текущей карточки в отсортированном списке
-                            const currentIndex = sortedMemories.indexOf(memory);
+                        <Search
+                            placeholder="Search by memory name"
+                            allowClear
+                            onSearch={onSearch}
+                            style={{width: 215}}
+                            styles={stylesFnSearch}
+                            name="search-fn"
+                            size={"medium"}
+                        />
 
-                            return (
-                                <Link
-                                    key={memory.id}
-                                    to={`/memories/${memory.id}`}
-                                    state={{
-                                        cards: sortedMemories,      // ← передаём весь список
-                                        currentIndex: currentIndex   // ← передаём индекс
-                                    }}
-                                    className={styles.cardLink}
-                                >
-                                    <Card key={memory.id} data={memory}/>
-                                </Link>
-                            );
-                        })}
-                    </div>
+                        <Button
+                            onClick={() => setIsModalOpen(true)}
+                            icon={<img
+                                className={styles.imgIcon}
+                                src={getImageUrl('../assets/icons/filter.png')}
+                                style={{width: 20, height: 20}}
+                                alt={'filter'}/>}
+                            title={"Filter"}
+                            className={styles.colorBrown}
+                        />
 
-                    {sortedMemories.length === 0 && (
-                        <p className={styles.noResults}>No memories found ¯\_(ツ)_/¯</p>
-                    )}
-                </section>
-            </PageLoader>
+                        <FilterModalWindow
+                            ref={filterModalRef}
+                            open={isModalOpen}
+                            onClose={() => setIsModalOpen(false)}
+                            onFilter={applyFilters}
+                            onClearFilters={clearFilters}
+                        />
+
+                        <Button
+                            onClick={toggleImageSize}
+                            icon={<img
+                                className={styles.imgIcon}
+                                src={getImageUrl('../assets/icons/icons8-change-64.png')}
+                                style={{width: 20, height: 20}}
+                                alt={'filter'}/>}
+                            title={"change size of Cards"}
+                            className={styles.colorBrown}
+                        />
+
+                        <Button
+                            onClick={resetAllSettings}
+                            icon={<img src={getImageUrl('../assets/icons/reset.png')} style={{width: 20, height: 20}}
+                                       alt="reset"/>}
+                            title="Reset all filters and sorting"
+                            className={styles.colorBrown}
+                        />
+                    </aside>
+                </div>
+                <div className={styles.cardsGrid}>
+                    {sortedMemories.map(memory => {
+                        // Находим индекс текущей карточки в отсортированном списке
+                        const currentIndex = sortedMemories.indexOf(memory);
+
+                        return (
+                            <Link
+                                key={memory.id}
+                                to={`/memories/${memory.id}`}
+                                state={{
+                                    cards: sortedMemories,      // ← передаём весь список
+                                    currentIndex: currentIndex   // ← передаём индекс
+                                }}
+                                className={styles.cardLink}
+                            >
+                                <Card key={memory.id} data={memory}/>
+                            </Link>
+                        );
+                    })}
+                </div>
+
+                {sortedMemories.length === 0 && (
+                    <p className={styles.noResults}>No memories found ¯\_(ツ)_/¯</p>
+                )}
+            </section>
         </>
     )
 }

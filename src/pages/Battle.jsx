@@ -2,13 +2,11 @@ import styles from "./Battle.module.css";
 import {compData} from "../data/comp-data.js";
 import {Link} from "react-router-dom";
 import {getImageUrl} from "../components/imageUtils.js";
-import PageLoader from "../components/PageLoader.jsx";
 
 function Battle() {
 
     return (
-
-        <PageLoader delay={300}>
+        <>
             <nav className={styles.nav}>
                 {compData.map(category => (
                     <Link
@@ -21,7 +19,7 @@ function Battle() {
                     </Link>
                 ))}
             </nav>
-        </PageLoader>
+        </>
     );
 }
 

@@ -1,13 +1,12 @@
 import styles from "./WorldUnderneath.module.css";
 import {Link} from "react-router-dom";
 import {wuCategories} from "../data/wu-categories";
-import PageLoader from '../components/PageLoader';
 import {getImageUrl} from "../components/imageUtils.js";
 import {Fragment} from "react";
 
 function WorldUnderneath() {
     return (
-        <PageLoader delay={300}>
+        <>
             <nav className={styles.navigationTop}>
                 <Fragment>
                     <Link
@@ -32,7 +31,7 @@ function WorldUnderneath() {
                     </Link>
                 ))}
             </nav>
-        </PageLoader>
+        </>
     );
 }
 
