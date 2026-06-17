@@ -36,6 +36,8 @@ function BannerList({ banners }) {
                             className={styles.bannerImage}
                             src={getImageUrl(banner.image)}
                             alt={banner.name}
+                            loading="lazy"
+                            decoding="async"
                         />
                         <div className={styles.bannerTitle}>{banner.name}  {banner.rerun === true && ' (Rerun)'}</div>
                         <FlexibleTimer

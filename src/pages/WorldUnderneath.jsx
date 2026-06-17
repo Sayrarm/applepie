@@ -26,7 +26,13 @@ function WorldUnderneath() {
                         className={styles.link}
                         to={`/world-underneath/${category.link}`}
                     >
-                        <img src={getImageUrl(category.image)} alt="image"/>
+                        <img
+                            className={styles.img}
+                            src={getImageUrl(category.image)}
+                            alt="image"
+                            loading="lazy"
+                            decoding="async"
+                        />
                         <div className={styles.title}>{category.id}. {category.title}</div>
                     </Link>
                 ))}

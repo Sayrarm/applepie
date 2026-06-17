@@ -62,9 +62,9 @@ Wield Final Resound and sing an elegy, dealing AoE DMG equal to 351+187% ATK+16.
 Hitting an enemy with the Active Skill for the first time recovers 0.45 Energy Charges. While casting your Active Skill, you become unstoppable and your damage taken is reduced by 10%. During [Darknight Reign], damage dealt is increased by 8%, and DMG Boost to Weakened is increased by 8%.
         `,
         eidolon0: `
-The team deals 8% more DMG and takes8%less DMG.
+The team deals 8% more DMG and takes 8% less DMG.
 The first hit of each Active Skill reduces Support Skill cooldown by 5s.
-When not in [Darknight Reign] hitting enemies with Charged Attacks grants [Pilgrim's Prayer], increasing the accumulation rate of [Last Words] for 10s.Gaining it again refreshes duration.
+When not in [Darknight Reign] hitting enemies with Charged Attacks grants [Pilgrim's Prayer], increasing the accumulation rate of [Last Words] for 10s. Gaining it again refreshes duration.
         `,
         eidolon1: `
 Increases Ardent Oath charge by 20%.

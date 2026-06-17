@@ -31,3 +31,13 @@
     text-decoration: none;
     color: var(--colorTextDark);
 }
+
+.img {
+    opacity: 0;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

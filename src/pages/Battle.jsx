@@ -14,7 +14,13 @@ function Battle() {
                         className={styles.link}
                         to={`/battle/${category.link}`}
                     >
-                        <img className={styles.img} src={getImageUrl(category.img || category.imgWeapon)} alt="image"/>
+                        <img
+                            className={styles.img}
+                            src={getImageUrl(category.img || category.imgWeapon)}
+                            alt="image"
+                            loading="lazy"
+                            decoding="async"
+                        />
                         <div className={styles.title}>{category.companionName || category.weaponName}</div>
                     </Link>
                 ))}

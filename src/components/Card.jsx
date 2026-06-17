@@ -14,7 +14,10 @@ function Card({data}) {
             <article className={styles.card}>
                 <img className={imageClass}
                      src={getImageUrl(data.imageSmall)}
-                     alt={data.name}/>
+                     alt={data.name}
+                     loading="lazy"
+                     decoding="async"
+                />
 
                 <div className={styles.imgInfo}>
 
