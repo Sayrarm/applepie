@@ -843,7 +843,7 @@ export const bannersDataFull = [
     "startDate": "2026-06-08T05:00:00+02:00",
     "endDate": "2026-06-15T04:59:00+02:00",
     "rerun": false,
-    "active": true
+    "active": false
     
   },
   {
@@ -854,7 +854,18 @@ export const bannersDataFull = [
     "startDate": "2026-06-08T05:00:00+02:00",
     "endDate": "2026-06-15T04:59:00+02:00",
     "rerun": true,
-    "active": true
+    "active": false
     
+  },
+  {
+    "id": 79,
+    "name": "Once Upon a Frame",
+    "image": "../assets/banners/once-upon-a-frame.png",
+    "cardIds": [404, 405, 406, 407, 408],
+    "startDate": "2026-06-17T05:00:00+02:00",
+    "endDate": "2026-07-02T04:59:00+02:00",
+    "rerun": false,
+    "active": true
+
   }
 ]

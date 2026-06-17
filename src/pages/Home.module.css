@@ -32,14 +32,19 @@
     box-shadow: var(--box-shadow);
 }
 
+.containerTitleTimerButton {
+    max-height: 198px;
+}
+
+.containerTitleTimer {
+    max-height: 132px;
+}
 
 .containerTitleTimer,
 .containerTitleTimerButton {
 
     width: 100%;
-    max-height: 132px;
     overflow: hidden;
-
     margin-bottom: 5px;
     display: flex;
     align-items: center;
@@ -70,7 +75,7 @@
     justify-self: flex-end;
     position: absolute;
     right: 1%;
-    bottom: 1%;
+    bottom: 1px;
     z-index: 999;
 }
 
@@ -212,12 +217,18 @@
         width: 100%;
     }
 
+    .containerTitleTimerButton {
+        max-height: 246px;
+    }
+
+    .containerTitleTimer {
+        max-height: 168px;
+    }
+
     .containerTitleTimer,
     .containerTitleTimerButton {
         display: flex;
         justify-content: space-between;
-
-        max-height: 168px;
     }
 
     .containerSchedule {
@@ -256,7 +267,7 @@
 
     .bannerTitle {
         right: 1%;
-        bottom: 1%;
+        bottom: -1px;
     }
 
     .bannerTitle {
