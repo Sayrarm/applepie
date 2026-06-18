@@ -1,15 +1,17 @@
 import { useState, useEffect } from 'react';
+import { useTimezone } from '../components/TimezoneContext';
 
-// Вспомогательная функция для получения текущего времени в UTC+2
-const getCurrentTimeInUTC2 = () => {
+// Вспомогательная функция для получения текущего времени с учётом часового пояса
+const getCurrentTimeWithTimezone = (timezoneOffset) => {
     const now = new Date();
-    // Получаем UTC время и добавляем 2 часа
+    // Получаем UTC время и добавляем смещение
     const utcTime = now.getTime() + (now.getTimezoneOffset() * 60000);
-    return new Date(utcTime + (2 * 60 * 60 * 1000));
+    const offsetHours = parseInt(timezoneOffset);
+    return new Date(utcTime + (offsetHours * 60 * 60 * 1000));
 };
 
-const getNextTriggerDate = (type) => {
-    const now = getCurrentTimeInUTC2();
+const getNextTriggerDate = (type, timezoneOffset) => {
+    const now = getCurrentTimeWithTimezone(timezoneOffset);
     const target = new Date(now);
     target.setHours(5, 0, 0, 0);
 
@@ -44,9 +46,9 @@ const getNextTriggerDate = (type) => {
     return target;
 };
 
-const calculateTimeLeft = (type) => {
-    const nextDate = getNextTriggerDate(type);
-    const now = getCurrentTimeInUTC2();
+const calculateTimeLeft = (type, timezoneOffset) => {
+    const nextDate = getNextTriggerDate(type, timezoneOffset);
+    const now = getCurrentTimeWithTimezone(timezoneOffset);
     const difference = nextDate - now;
 
     if (difference <= 0) {
@@ -62,15 +64,20 @@ const calculateTimeLeft = (type) => {
 };
 
 export const useRecurringTimer = (type) => {
-    const [timeLeft, setTimeLeft] = useState(() => calculateTimeLeft(type));
+    const { timezone } = useTimezone();
+    const [timeLeft, setTimeLeft] = useState(() => calculateTimeLeft(type, timezone));
+
+    useEffect(() => {
+        setTimeLeft(calculateTimeLeft(type, timezone));
+    }, [type, timezone]);
 
     useEffect(() => {
         const timer = setInterval(() => {
-            setTimeLeft(calculateTimeLeft(type));
-        }, 1000);
+            setTimeLeft(calculateTimeLeft(type, timezone));
+        }, 0);
 
         return () => clearInterval(timer);
-    }, [type]);
+    }, [type, timezone]);
 
     return timeLeft;
 };

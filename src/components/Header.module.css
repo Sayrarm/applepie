@@ -55,6 +55,11 @@ header {
     color: var(--a);
 }
 
+.buttonsChangers {
+    display: flex;
+    gap: 5px;
+}
+
 /*************************burger menu button****************/
 
 .burgerContainer {

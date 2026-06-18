@@ -6,7 +6,7 @@ export const eventsData = [
         image: "../assets/main-page/events/event-1.png",
         "startDate": "2026-05-31T05:00:00+02:00",
         "endDate": "2026-06-18T04:59:00+02:00",
-        "active": true
+        "active": false
     },
     {
         id: 2,
@@ -20,8 +20,8 @@ export const eventsData = [
         id: 3,
         name: "New plushie",
         image: "../assets/main-page/events/event-3.png",
-        "startDate": "2026-06-08T05:00:00+02:00",
-        "endDate": "2026-06-21T04:59:00+02:00",
+        "startDate": "2026-06-08T05:00:00",
+        "endDate": "2026-06-21T04:59:59",
         "active": true
     },
 

@@ -862,8 +862,8 @@ export const bannersDataFull = [
     "name": "Once Upon a Frame",
     "image": "../assets/banners/once-upon-a-frame.png",
     "cardIds": [404, 405, 406, 407, 408],
-    "startDate": "2026-06-17T05:00:00+02:00",
-    "endDate": "2026-07-02T04:59:00+02:00",
+    "startDate": "2026-06-17T05:00:00",
+    "endDate": "2026-07-02T04:59:59",
     "rerun": false,
     "active": true
 

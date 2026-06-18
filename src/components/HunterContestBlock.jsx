@@ -5,9 +5,11 @@ import HunterContestDescription from "./HunterContestDescription.jsx";
 import { useRef } from "react";
 import { getImageUrl } from "./imageUtils.js";
 import { hunterContestBuffs } from "../data/hunter-contest-buffs.js";
+import { useTimezone } from './TimezoneContext';
 
 function HunterContestBlock() {
     const missionModalRef = useRef();
+    const { timezone } = useTimezone();
 
     // Находим активные баффы сразу, без useEffect
     const buffsData = hunterContestBuffs.find(item => item.active === true);
@@ -72,24 +74,27 @@ function HunterContestBlock() {
                 <div className={styles.containerResetActivity}>
                     <h3>Hunter Contest</h3>
                     <FlexibleTimer
-                        startDateTime='2026-05-04T05:00:00+02:00'
-                        endDateTime='2026-05-17T23:59:59+02:00'
+                        key={timezone}
+                        startDateTime='2026-05-04T05:00:00'
+                        endDateTime='2026-05-17T23:59:59'
                         autoRefresh={true}
                     />
                 </div>
                 <div className={styles.containerResetActivity}>
                     <h3>UNICORNS Operation</h3>
                     <FlexibleTimer
-                        startDateTime='2026-05-11T05:00:00+02:00'
-                        endDateTime='2026-05-25T04:59:59+02:00'
+                        key={timezone}
+                        startDateTime='2026-05-11T05:00:00'
+                        endDateTime='2026-05-25T04:59:59'
                         autoRefresh={true}
                     />
                 </div>
                 <div className={styles.containerResetActivity}>
                     <h3>Abyssal Chaos</h3>
                     <FlexibleTimer
-                        startDateTime='2026-05-11T05:00:00+02:00'
-                        endDateTime='2026-05-25T04:59:59+02:00'
+                        key={timezone}
+                        startDateTime='2026-05-11T05:00:00'
+                        endDateTime='2026-05-25T04:59:59'
                         autoRefresh={true}
                     />
                 </div>

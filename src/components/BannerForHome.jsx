@@ -6,9 +6,11 @@ import { CardProvider } from "./CardProvider.jsx";
 import ModalWindow from "./ModalWindow.jsx";
 import { getImageUrl } from "./imageUtils.js";
 import FlexibleTimer from "./FlexibleTimer.jsx";
+import { useTimezone } from './TimezoneContext';
 
 function BannerForHome({ banner }) {
     const memoriesModalRef = useRef();
+    const { timezone } = useTimezone();
 
     const cards = memoriesData.filter(card => banner.cardIds.includes(card.id));
 
@@ -19,6 +21,7 @@ function BannerForHome({ banner }) {
                 className={styles.containerTitleTimerButton}>
                 <div className={styles.bannerTitle}>{banner.name} {banner.rerun === true && ' (Rerun)'}</div>
                     <FlexibleTimer
+                        key={timezone}
                         startDateTime={banner.startDate}
                         endDateTime={banner.endDate}
                     />

@@ -1,19 +1,32 @@
-import React, {useState, useEffect} from 'react';
-import styles from './FlexibleTimer.module.css'
+import React, { useState, useEffect } from 'react';
+import styles from './FlexibleTimer.module.css';
+import { useTimezone } from './TimezoneContext';
 
 function FlexibleTimer({
                            startDateTime = '2026-01-01T00:00:00',  // Формат: YYYY-MM-DDTHH:MM:SS
                            endDateTime = '2026-12-31T23:59:59',
                            autoRefresh = false,
                        }) {
+    const { timezone } = useTimezone();
+
+    // Добавляем часовой пояс к датам
+    const fullStart = startDateTime + timezone;
+    const fullEnd = endDateTime + timezone;
+
     const [timeLeft, setTimeLeft] = useState({});
     const [status, setStatus] = useState('waiting'); // waiting, active, finished
-    const [currentStart, setCurrentStart] = useState(startDateTime);
-    const [currentEnd, setCurrentEnd] = useState(endDateTime);
+    const [currentStart, setCurrentStart] = useState(fullStart);
+    const [currentEnd, setCurrentEnd] = useState(fullEnd);
+
+    // Обновляем даты при смене часового пояса
+    useEffect(() => {
+        setCurrentStart(startDateTime + timezone);
+        setCurrentEnd(endDateTime + timezone);
+    }, [timezone, startDateTime, endDateTime]);
 
     const calculateTimeLeft = (difference) => {
         if (difference <= 0) {
-            return {days: 0, hours: 0, minutes: 0, seconds: 0};
+            return { days: 0, hours: 0, minutes: 0, seconds: 0 };
         }
 
         return {
@@ -25,20 +38,43 @@ function FlexibleTimer({
     };
 
     const shiftDates = () => {
-        const start = new Date(currentStart);
-        const end = new Date(currentEnd);
+        try {
+            const start = new Date(currentStart);
+            const end = new Date(currentEnd);
 
-        // Сдвигаем на 14 дней
-        const newStart = new Date(start.getTime() + 14 * 24 * 60 * 60 * 1000);
-        const newEnd = new Date(end.getTime() + 14 * 24 * 60 * 60 * 1000);
+            // Проверка на валидность дат
+            if (isNaN(start.getTime()) || isNaN(end.getTime())) {
+                console.warn('Invalid dates in shiftDates:', { currentStart, currentEnd });
+                return;
+            }
 
-        setCurrentStart(newStart.toISOString());
-        setCurrentEnd(newEnd.toISOString());
+            // Сдвигаем на 14 дней
+            const newStart = new Date(start.getTime() + 14 * 24 * 60 * 60 * 1000);
+            const newEnd = new Date(end.getTime() + 14 * 24 * 60 * 60 * 1000);
+
+            // Проверка новых дат
+            if (isNaN(newStart.getTime()) || isNaN(newEnd.getTime())) {
+                console.warn('Invalid new dates in shiftDates');
+                return;
+            }
+
+            setCurrentStart(newStart.toISOString());
+            setCurrentEnd(newEnd.toISOString());
+            setStatus('waiting'); // Сбрасываем статус
+        } catch (error) {
+            console.error('Error in shiftDates:', error);
+        }
     };
 
     useEffect(() => {
         const startDate = new Date(currentStart);
         const endDate = new Date(currentEnd);
+
+        // Проверка на валидность дат
+        if (isNaN(startDate.getTime()) || isNaN(endDate.getTime())) {
+            console.warn('Invalid date in FlexibleTimer:', { currentStart, currentEnd });
+            return;
+        }
 
         const updateTimer = () => {
             const now = new Date();
@@ -48,15 +84,16 @@ function FlexibleTimer({
                 const diff = startDate - now;
                 setTimeLeft(calculateTimeLeft(diff));
             } else if (now >= startDate && now <= endDate) {
-                setStatus(prev => prev !== 'active' ? 'active' : prev)
+                setStatus(prev => prev !== 'active' ? 'active' : prev);
                 const diff = endDate - now;
                 setTimeLeft(calculateTimeLeft(diff));
             } else {
                 if (autoRefresh) {
+                    // Если таймер закончился и autoRefresh = true
                     shiftDates();
                 } else {
                     setStatus(prev => prev !== 'finished' ? 'finished' : prev);
-                    setTimeLeft({days: 0, hours: 0, minutes: 0, seconds: 0});
+                    setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
                 }
             }
         };
@@ -72,17 +109,22 @@ function FlexibleTimer({
     const getStatusConfig = () => {
         switch (status) {
             case 'waiting':
-                return {text: 'Upcoming (EU):', emoji: '⏰'};
+                return { text: `Upcoming:`, emoji: '⏰' };
             case 'active':
-                return {text: 'Time left (EU):', emoji: '⚡'};
+                return { text: `Time left:`, emoji: '⚡' };
             case 'finished':
-                return {text: 'Completed (EU)', emoji: '🏁'};
+                return { text: `Completed`, emoji: '🏁' };
             default:
-                return {text: '', emoji: ''};
+                return { text: '', emoji: '' };
         }
     };
 
     const config = getStatusConfig();
+
+    // Проверка на ошибку в датах
+    if (isNaN(new Date(currentStart).getTime()) || isNaN(new Date(currentEnd).getTime())) {
+        return <div className={styles.error}>Invalid date format</div>;
+    }
 
     return (
         <div className={styles.container}>

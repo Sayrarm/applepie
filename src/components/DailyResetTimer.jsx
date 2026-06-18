@@ -1,7 +1,6 @@
 import styles from "./DailyResetTimer.module.css";
 import React from "react";
 
-
 function DailyResetTimer({ timeLeft, status = 'active' }) {
 
     const formatNumber = (num) => num.toString().padStart(2, '0');
@@ -13,13 +12,13 @@ function DailyResetTimer({ timeLeft, status = 'active' }) {
     const getStatusConfig = () => {
         switch (status) {
             case 'waiting':
-                return {text: 'Upcoming (EU):', emoji: '⏰'};
+                return { text: `Upcoming:`, emoji: '⏰' };
             case 'active':
-                return {text: 'Time left (EU):', emoji: '⚡'};
+                return { text: `Time left:`, emoji: '⚡' };
             case 'finished':
-                return {text: 'Completed (EU)', emoji: '🏁'};
+                return { text: `Completed`, emoji: '🏁' };
             default:
-                return {text: 'Time left (EU):', emoji: '⚡'};
+                return { text: `Time left:`, emoji: '⚡' };
         }
     };
 
@@ -50,10 +49,8 @@ function DailyResetTimer({ timeLeft, status = 'active' }) {
                     <div className={styles.tips}>Seconds</div>
                 </div>
             </div>
-
         </div>
     );
-
 }
 
 export default DailyResetTimer;

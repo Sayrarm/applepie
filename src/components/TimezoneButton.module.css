@@ -1,0 +1,15 @@
+.button {
+    font-family: TikTok Sans, monospace;
+    width: 35px;
+    height: 35px;
+    background: var(--colorText);
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+    color: black;
+    transition: 0.3s;
+}
+
+.button:hover {
+    color: var(--a);
+}

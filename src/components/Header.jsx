@@ -2,6 +2,7 @@ import styles from './Header.module.css'
 import {Link} from "react-router-dom";
 import {useEffect, useState} from "react";
 import ThemeToggleButton from "./ThemeToggleButton.jsx";
+import TimezoneButton from "./TimezoneButton.jsx";
 
 
 function Header() {
@@ -92,7 +93,8 @@ function Header() {
                     </label>
                 </div>
 
-                <div>
+                <div className={styles.buttonsChangers}>
+                    <TimezoneButton />
                     <ThemeToggleButton/>
                 </div>
 
