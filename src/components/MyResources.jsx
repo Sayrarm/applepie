@@ -181,7 +181,7 @@ function MyResources() {
                                     name="item"
                                     type="number"
                                     min="0"
-                                    value={bottlesState[item.id] || 0}
+                                    value={bottlesState[item.id] || ""}
                                     onChange={(e) => updateCount(bottlesState, setBottlesState, item.id, e.target.value)}
                                     className={styles.itemInput}
                                     onFocus={(e) => {
@@ -212,7 +212,7 @@ function MyResources() {
                                 name="item"
                                 type="number"
                                 min="0"
-                                value={heartsandState[item.id] || 0}
+                                value={heartsandState[item.id] || ""}
                                 onChange={(e) => updateCount(heartsandState, setHeartsandState, item.id, e.target.value)}
                                 onFocus={(e) => {
                                     if (e.target.value === '0') {
@@ -300,7 +300,7 @@ function MyResources() {
                                 name="item"
                                 type="number"
                                 min="0"
-                                value={crystalsState[`${selectedCrystalColor}_${item.id}`] || 0}
+                                value={crystalsState[`${selectedCrystalColor}_${item.id}`] || ""}
                                 onChange={(e) => updateCount(
                                     crystalsState,
                                     setCrystalsState,
@@ -335,7 +335,7 @@ function MyResources() {
                                 name="item"
                                 type="number"
                                 min="0"
-                                value={crystalBoxesState[item.id] || 0}
+                                value={crystalBoxesState[item.id] || ""}
                                 onChange={(e) => updateCount(crystalBoxesState, setCrystalBoxesState, item.id, e.target.value)}
                                 onFocus={(e) => {
                                     if (e.target.value === '0') {
@@ -401,7 +401,7 @@ function MyResources() {
                                 name="item"
                                 type="number"
                                 min="0"
-                                value={heartsState[item.id] || 0}
+                                value={heartsState[item.id] || ""}
                                 onChange={(e) => updateCount(heartsState, setHeartsState, item.id, e.target.value)}
                                 className={styles.itemInput}
                                 onFocus={(e) => {
@@ -438,7 +438,7 @@ function MyResources() {
                                     name="item"
                                     type="number"
                                     min="0"
-                                    value={coreEnergyState[item.id] || 0}
+                                    value={coreEnergyState[item.id] || ""}
                                     onChange={(e) => updateCount(coreEnergyState, setCoreEnergyState, item.id, e.target.value)}
                                     className={styles.itemInput}
                                     onFocus={(e) => {
@@ -472,11 +472,26 @@ function MyResources() {
                                 type="number"
                                 min="0"
                                 value={creditsState}
-                                onChange={(e) => setCreditsState(Math.max(0, Number(e.target.value) || 0))}
+                                onChange={(e) => {
+                                    const value = e.target.value;
+                                    // Разрешаем пустую строку или числа >= 0
+                                    if (value === '' || Number(value) >= 0) {
+                                        setCreditsState(value);
+                                    }
+                                }}
                                 className={styles.itemInput}
                                 onFocus={(e) => {
                                     if (e.target.value === '0') {
                                         e.target.value = '';
+                                    }
+                                }}
+                                onBlur={(e) => {
+                                    // При потере фокуса преобразуем в число для отображения
+                                    const value = e.target.value;
+                                    if (value === '' || value === '0') {
+                                        setCreditsState('0');
+                                    } else {
+                                        setCreditsState(String(Number(value)));
                                     }
                                 }}
                             />

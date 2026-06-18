@@ -192,6 +192,18 @@
     font-style: italic;
 }
 
+.itemInput::-webkit-outer-spin-button,
+.itemInput::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Убираем стрелочки в Firefox */
+.itemInput {
+    -moz-appearance: textfield;
+    appearance: textfield; /* для современных браузеров */
+}
+
 @media screen and (max-width: 1020px) {
 
     .colorButtons {
