@@ -1,6 +1,5 @@
 .container  {
     position: relative;
-    height: 100%;
 }
 
 .asideContainer {
@@ -9,19 +8,22 @@
     justify-content: space-between;
 }
 
+.memoriesInfoBlock {
+    width: 377px;
+}
+
 .nav > a {
     text-decoration: none;
     color: var(--colorTextDark);
 }
 
-.aside {
+.asideCompanionList {
     display: block;
     position: absolute;
     top: 0;
     right: -23%;
 
     width: 250px;
-    height: 100%;
 }
 
 @media screen and (max-width: 1660px) {

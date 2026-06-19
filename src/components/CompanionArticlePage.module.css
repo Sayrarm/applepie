@@ -45,6 +45,11 @@
     margin: 10px 0;
 }
 
+.costImage {
+    width: 30px;
+    height: 20px;
+}
+
 @media screen and (max-width: 630px) {
 
     .companionContainer {

@@ -36,6 +36,13 @@
     text-transform: uppercase;
 }
 
+.costText {
+    padding: 0 5px;
+    display: flex;
+    align-items: flex-end;
+    white-space: pre-wrap;
+}
+
 .borderVertical {
     border-right: 2px solid var(--colorText);
     height: 80px;

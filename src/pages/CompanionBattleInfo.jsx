@@ -24,7 +24,7 @@ function CompanionBattleInfo() {
     return (
         <section className={styles.container}>
 
-            <AsideCompanionList className={styles.aside}/>
+            <AsideCompanionList className={styles.asideCompanionList}/>
 
             <aside className={styles.asideContainer}>
                 <nav className={styles.nav}>
@@ -44,7 +44,7 @@ function CompanionBattleInfo() {
                 {cards && cards.length > 0 && (
                     <AsideList
                         className={styles.memoriesInfoBlock}
-                        title="You need to get the necessary Memories to unlock this companion:"
+                        title="To unlock this Companion you need:"
                         items={[
                             {
                                 key: '1',
