@@ -9,6 +9,8 @@ import BannerPeriod from "../components/BannerPeriod.jsx";
 import {bannersDataFull} from '../data/banners-data-full.js';
 import ObtainInfo from "../components/ObtainInfo.jsx";
 import {obtainData} from '../data/obtain-data.js';
+import {compData} from "../data/comp-data.js";
+import PairBonusBlock from "../components/PairBonusBlock.jsx";
 
 //меняем цвет svg картинке
 const IconLeft = () => (
@@ -53,6 +55,11 @@ function CardArticle() {
 
     // Находим ВСЕ баннеры, где есть эта карточка
     const banners = bannersDataFull.filter(b => b.cardIds.includes(Number(cardId)));
+
+    // Находим компаньона для текущей карточки
+    const companion = compData.find(item =>
+        item.cardIds?.includes(Number(cardId))
+    );
 
     // Функции навигации
     const goToPrevious = useCallback(() => {
@@ -143,9 +150,19 @@ function CardArticle() {
 
                     <ParametersBlock card={card}/>
 
+                    {companion && (
+                        <PairBonusBlock
+                            cardId={cardId}
+                            currentCard={card}
+                            compData={compData}
+                            memoriesData={memoriesData}
+                        />
+                    )}
+
                     <ObtainInfo cardId={cardId} obtainData={obtainData}/>
 
                     <BannerPeriod banners={banners}/>
+
                 </div>
             </article>
 
