@@ -1,7 +1,7 @@
 import {Link, useParams, useLocation, useNavigate} from 'react-router-dom';
 import styles from "./CardArticle.module.css";
 import {memoriesData} from '../data/memories-data.js';
-import {Fragment} from "react";
+import {Fragment, useCallback, useEffect, useMemo} from "react";
 import {getImageUrl} from "../components/imageUtils.js";
 import CopyableText from "../components/CopyableText.jsx";
 import ParametersBlock from "../components/ParametersBlock.jsx";
@@ -33,13 +33,20 @@ function CardArticle() {
     const navigate = useNavigate();
 
     // Вычисляем значения напрямую
-    const cardsList = location.state?.cards && location.state?.cards.length > 0
-        ? location.state.cards
-        : (memoriesData.find(c => String(c.id) === cardId) ? [memoriesData.find(c => String(c.id) === cardId)] : []);
+    const cardsList = useMemo(() => {
+        if (location.state?.cards && location.state?.cards.length > 0) {
+            return location.state.cards;
+        }
+        const foundCard = memoriesData.find(c => String(c.id) === cardId);
+        return foundCard ? [foundCard] : [];
+    }, [location.state, cardId]);
 
-    const currentIndex = location.state?.cards && location.state?.cards.length > 0
-        ? location.state.currentIndex || 0
-        : 0;
+    const currentIndex = useMemo(() => {
+        if (location.state?.cards && location.state?.cards.length > 0) {
+            return location.state.currentIndex || 0;
+        }
+        return 0;
+    }, [location.state]);
 
     // Находим карточку напрямую в данных (для отображения)
     const card = memoriesData.find(c => String(c.id) === cardId);
@@ -48,7 +55,7 @@ function CardArticle() {
     const banners = bannersDataFull.filter(b => b.cardIds.includes(Number(cardId)));
 
     // Функции навигации
-    const goToPrevious = () => {
+    const goToPrevious = useCallback(() => {
         if (currentIndex > 0 && cardsList.length > 0) {
             const prevCard = cardsList[currentIndex - 1];
             if (prevCard) {
@@ -60,9 +67,9 @@ function CardArticle() {
                 });
             }
         }
-    };
+    }, [currentIndex, cardsList, navigate]);
 
-    const goToNext = () => {
+    const goToNext = useCallback(() => {
         if (currentIndex < cardsList.length - 1) {
             const nextCard = cardsList[currentIndex + 1];
             if (nextCard) {
@@ -74,7 +81,33 @@ function CardArticle() {
                 });
             }
         }
-    };
+    }, [currentIndex, cardsList, navigate]);
+
+    // ДОБАВЛЯЕМ ОБРАБОТЧИК КЛАВИШ
+    useEffect(() => {
+        const handleKeyDown = (event) => {
+            // Проверяем, что пользователь не печатает в поле ввода
+            const isInputFocused = ['INPUT', 'TEXTAREA'].includes(event.target.tagName);
+            if (isInputFocused) return;
+
+            if (event.key === 'ArrowLeft') {
+                event.preventDefault();
+                if (currentIndex > 0) {
+                    goToPrevious();
+                }
+            } else if (event.key === 'ArrowRight') {
+                event.preventDefault();
+                if (currentIndex < cardsList.length - 1) {
+                    goToNext();
+                }
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+        };
+    }, [currentIndex, cardsList.length, goToPrevious, goToNext]); // ВАЖНО: добавили зависимости
 
     if (!card) {
         return <div>Card not found ¯\_(ツ)_/¯</div>;

@@ -3947,7 +3947,7 @@ export const memoriesData = [
     "rarityName": "4-star",
     "rarity": "../assets/icons/4-star.png",
     "rarityStars": 4,
-    "stella": "../assets/icons/violet.png",
+    "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png"
   },
