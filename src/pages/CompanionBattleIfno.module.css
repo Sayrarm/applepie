@@ -1,10 +1,12 @@
 .container  {
     position: relative;
+    height: 100%;
 }
 
-.nav {
-    margin: 10px 5px;
-
+.asideContainer {
+    margin: 20px 5px 0 5px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .nav > a {
@@ -15,16 +17,28 @@
 .aside {
     display: block;
     position: absolute;
-    top: 4%;
-    left: -25%;
+    top: 0;
+    right: -23%;
 
     width: 250px;
+    height: 100%;
 }
 
-@media screen and (max-width: 1695px) {
+@media screen and (max-width: 1660px) {
 
     .aside {
         display: none;
+    }
+
+}
+
+@media screen and (max-width: 790px) {
+
+    .asideContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 20px 5px 20px 5px;
     }
 
 }

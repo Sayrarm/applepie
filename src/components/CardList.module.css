@@ -5,6 +5,10 @@
     justify-content: center;
 }
 
+.container > a {
+    text-decoration: none;
+}
+
 .cardLink {
     text-decoration: none;
 }

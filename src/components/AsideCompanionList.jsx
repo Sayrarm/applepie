@@ -1,25 +1,12 @@
-import { Collapse } from "antd";
-import { createStaticStyles } from 'antd-style';
+import AsideList from './AsideList';
 import styles from "./AsideCompanionList.module.css";
 import { Link } from "react-router-dom";
 import { getImageUrl } from "./imageUtils.js";
-import {asideComp} from '../data/aside-comp.js';
-
-const classNames = createStaticStyles(({ css }) => ({
-    root: css`
-        background-color: var(--bg-glass);
-        box-shadow: var(--box-shadow);
-        border-radius: 0;
-        text-decoration: none;
-        color: var(--colorTextDark);
-        padding: 0;
-    `,
-}));
+import { asideComp } from '../data/aside-comp.js';
 
 function AsideCompanionList({ className }) {
     // Формируем items для Collapse
     const items = asideComp.map((charData, index) => {
-        // Для MC используем weapons, для остальных companions
         const list = charData.weapons || charData.companions || [];
         const linkPath = charData.weapons ? "/battle/" : "/battle/";
 
@@ -49,21 +36,12 @@ function AsideCompanionList({ className }) {
         };
     });
 
-    const sharedProps = { classNames, items };
-
     return (
-        <aside className={className}>
-            <nav>
-                <h1 className={styles.title}>Companions and MC Weapons</h1>
-                <Collapse
-                    {...sharedProps}
-                    ghost
-                    className={styles.collapse}
-                    items={items}
-                    accordion
-                />
-            </nav>
-        </aside>
+        <AsideList
+            className={className}
+            title="Companions and MC Weapons"
+            items={items}
+        />
     );
 }
 

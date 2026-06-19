@@ -107,7 +107,7 @@ function CardArticle() {
         return () => {
             window.removeEventListener('keydown', handleKeyDown);
         };
-    }, [currentIndex, cardsList.length, goToPrevious, goToNext]); // ВАЖНО: добавили зависимости
+    }, [currentIndex, cardsList.length, goToPrevious, goToNext]);
 
     if (!card) {
         return <div>Card not found ¯\_(ツ)_/¯</div>;

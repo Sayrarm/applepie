@@ -2,6 +2,7 @@ export const compData = [
 
     {
         id: 11,
+        cardIds: [199, 200],
         link: "kod",
         img: "../assets/companions/xavier-kod.png",
         imgWeapon: "../assets/companions/final-resound.png",
@@ -82,6 +83,7 @@ While [Darknight Reign] is active, each time [Radiant Ripples] undulate, [Lumenf
     },
     {
         id: 12,
+        cardIds: [197, 198],
         link: "lumiere",
         img: "../assets/companions/xavier-lumiere.png",
         imgWeapon: "../assets/companions/moonchaser.png",
@@ -156,6 +158,7 @@ The team deals 8% more DMG. When your Active Skills and Charged Attacks hit the 
     },
     {
         id: 13,
+        cardIds: [195, 196],
         link: "lightseeker",
         img: "../assets/companions/xavier-lightseeker.png",
         imgWeapon: "../assets/companions/luminescence-blade.png",
@@ -330,6 +333,7 @@ Your and Xavier's CRIT Rate increases by 7%.
     },
     {
         id: 21,
+        cardIds: [293, 294],
         link: "goa",
         img: "../assets/companions/zayne-goa.png",
         imgWeapon: "../assets/companions/divine-grip.png",
@@ -419,6 +423,7 @@ Enemies hit by [Terminus Arrow] or [Divine Sever] take 30% more DMG for 4s. When
     },
     {
         id: 22,
+        cardIds: [291, 292],
         link: "mof",
         img: "../assets/companions/zayne-mof.png",
         imgWeapon: "../assets/companions/sacred-rainfall.png",
@@ -491,6 +496,7 @@ This effect can trigger only once per use of Piercing Rain.
     },
     {
         id: 23,
+        cardIds: [289, 290],
         link: "foreseer",
         img: "../assets/companions/zayne-foreseer.png",
         imgWeapon: "../assets/companions/everlasting-song.png",
@@ -663,6 +669,7 @@ When attacking Frozen enemies with Zayne, deal 20% more DMG.
     },
     {
         id: 31,
+        cardIds: [389, 390],
         link: "lsg",
         img: "../assets/companions/rafayel-lsg.png",
         imgWeapon: "../assets/companions/ballad-of-ebbs.png",
@@ -738,6 +745,7 @@ The team deals 8% more DMG. While [Divine Favor] is active, when your basic atta
     },
     {
         id: 32,
+        cardIds: [387, 388],
         link: "got",
         img: "../assets/companions/rafayel-got.png",
         imgWeapon: "../assets/companions/tidal-embrace.png",
@@ -810,6 +818,7 @@ The team deals 8% more DMG. [Surging Tides] restores 30% [Faith] for each enemy 
     },
     {
         id: 33,
+        cardIds: [385, 386],
         link: "abysswalker",
         img: "../assets/companions/rafayel-abysswalker.png",
         imgWeapon: "../assets/companions/phantasma-sands.png",
@@ -992,6 +1001,7 @@ Burn: Deals 20+26% ATK DMG every O.5s for 5s.
     },
     {
         id: 41,
+        cardIds: [102, 103],
         link: "silverwing-fiend",
         img: "../assets/companions/sylus-fiend.png",
         imgWeapon: "../assets/companions/crimson-malison.png",
@@ -1080,6 +1090,7 @@ When [Crimson Bond] ends, [Bloodrose Wreath] is removed.
     },
     {
         id: 42,
+        cardIds: [100, 101],
         link: "sovereign",
         img: "../assets/companions/sylus-sovereign.png",
         imgWeapon: "../assets/companions/fiend-reaper.png",
@@ -1140,7 +1151,7 @@ Fully Charged: Deal DMG equal to 632+337% ATK+30.3% of Max HP.
 [Abyssal Feast] provides more HP recovery.
         `,
         eidolon0: `
-The team deals 8% more DMG and takes 8%less DMG. After [Abyssal Fury] ends, you and Sylus recover 20% of Max HP.        
+The team deals 8% more DMG and takes 8% less DMG. After [Abyssal Fury] ends, you and Sylus recover 20% of Max HP.        
         `,
         eidolon1: `
 Increases Ardent Oath charge by 20%. After using [Fiendish Claw], your next 3 basic attacks on-hit deal DMG equal to 121+64.8% ATK+5.8% Max Hp to surrounding enemies centered on you.
@@ -1150,11 +1161,12 @@ While [Abyssal Fury] is active [Fiendish Claw] cooldown is reduced.
 Energy Charge limit is raised by 1. After using [Wrath Judgment] or [Wrath Judgment: Greed], your Energy Charge recovery speed is increased for 15s.
         `,
         eidolon3: `
-The team deals 8% more DMG. When using [Wrath Judgment: Greed], you and Sylus recover 5o% of Max HP. While [Abyssal Fury] is active, [Life Sacrifice] requires no charging and your Active Skills deal 30% increased DMG.
+The team deals 8% more DMG. When using [Wrath Judgment: Greed], you and Sylus recover 50% of Max HP. While [Abyssal Fury] is active, [Life Sacrifice] requires no charging and your Active Skills deal 30% increased DMG.
         `,
     },
     {
         id: 43,
+        cardIds: [98, 99],
         link: "conqueror",
         img: "../assets/companions/sylus-conqueror.png",
         imgWeapon: "../assets/companions/harrier-700.png",
@@ -1260,6 +1272,7 @@ After you stop dealing DMG for 3s. [Synergy] will start to decrease.
     },
     {
         id: 51,
+        cardIds: [27, 28],
         link: "netherlord",
         img: "../assets/companions/caleb_netherlord.png",
         imgWeapon: "../assets/companions/azuregaze.png",
@@ -1352,6 +1365,7 @@ DMG dealt by Ardent Oath [Fate Unforgotten] can trigger critical hits.
     },
     {
         id: 52,
+        cardIds: [29, 30],
         link: "x02",
         img: "../assets/companions/caleb_X02.png",
         imgWeapon: "../assets/companions/awakened-vitality.png",
@@ -1432,6 +1446,7 @@ The team deals 8% more DMG. When entering [Ultimate Synced State], immediately r
     },
     {
         id: 53,
+        cardIds: [31, 32],
         link: "colonel",
         img: "../assets/companions/caleb_colonel.png",
         imgWeapon: "../assets/companions/skybreaker-sn.png",

@@ -4,32 +4,61 @@ import AsideCompanionList from "../components/AsideCompanionList.jsx";
 import styles from "./CompanionBattleIfno.module.css"
 import {Link, useParams} from "react-router-dom";
 import {Fragment} from "react";
+import CardList from "../components/CardList.jsx";
+import {CardProvider} from "../components/CardProvider.jsx";
+import {memoriesData} from "../data/memories-data.js";
+import AsideList from "../components/AsideList.jsx";
 
 function CompanionBattleInfo() {
 
-    const { articleLink } = useParams();
+    const {articleLink} = useParams();
 
     // Находим текущую категорию
     const currentCategory = compData.find(cat => cat.link === articleLink);
 
+    // берём cardIds у найденного компаньона
+    const cards = memoriesData.filter(card =>
+        currentCategory?.cardIds?.includes(card.id)
+    );
+
     return (
         <section className={styles.container}>
 
-            {/*<AsideCompanionList className={styles.aside}/>*/}
+            <AsideCompanionList className={styles.aside}/>
 
-            <nav className={styles.nav}>
-                <Fragment>
-                    <Link
-                        className={styles.link}
-                        to="/battle">
-                        Battle
-                    </Link>
-                    <span> &gt; </span>
-                    {currentCategory && (
-                        <span>{currentCategory.companionName || currentCategory.weaponName}</span>
-                    )}
-                </Fragment>
-            </nav>
+            <aside className={styles.asideContainer}>
+                <nav className={styles.nav}>
+                    <Fragment>
+                        <Link
+                            className={styles.link}
+                            to="/battle">
+                            Battle
+                        </Link>
+                        <span> &gt; </span>
+                        {currentCategory && (
+                            <span>{currentCategory.companionName || currentCategory.weaponName}</span>
+                        )}
+                    </Fragment>
+                </nav>
+
+                {cards && cards.length > 0 && (
+                    <AsideList
+                        className={styles.memoriesInfoBlock}
+                        title="You need to get the necessary Memories to unlock this companion:"
+                        items={[
+                            {
+                                key: '1',
+                                label: 'Required Memories',
+                                children: (
+                                    <CardProvider>
+                                        <CardList cards={cards} />
+                                    </CardProvider>
+                                )
+                            }
+                        ]}
+                    />
+                )}
+            </aside>
 
             <CompanionArticlePage
                 data={compData}

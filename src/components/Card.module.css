@@ -13,6 +13,7 @@
     max-width: 100%;
     margin-top: 5px;
     color: var(--colorTextDark);
+    text-decoration: none;
 }
 
 .img,

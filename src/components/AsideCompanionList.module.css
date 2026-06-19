@@ -1,20 +1,9 @@
-.collapse :global(.ant-collapse-header) {
-    align-items: center !important;
-}
-
-.collapse :global(.ant-collapse-header) {
-    color: var(--colorTextDark) !important;
-    font-size: 20px !important;
-    font-weight: bold !important;
-
-}
-
 .link {
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: var(--colorTextDark);
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
     text-decoration: none;
     text-transform: uppercase;
@@ -35,9 +24,4 @@
 
 .collapse :global(a:hover) {
     color: var(--a) !important;
-}
-
-.title {
-    margin: 10px;
-    font-size: 22px;
 }
