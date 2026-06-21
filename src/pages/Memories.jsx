@@ -6,11 +6,11 @@ import {useSearch} from '../hooks/useSearch';
 import {useSort} from '../hooks/useSort';
 import {useFilter} from '../hooks/useFilter';
 import {stylesFnSearch} from "../components/stylesAntd.js";
-import {useContext, useState, useRef} from "react";
-import {CardContext} from "../components/CardContext.jsx";
+import { useState, useRef, useEffect} from "react";
 import {Link} from "react-router-dom";
 import {getImageUrl} from "../components/imageUtils.js";
 import {memoriesData as initialMemoriesData} from '../data/memories-data.js';
+import {CardProvider} from "../components/CardProvider.jsx";
 
 function Memories() {
     const {Search} = Input;
@@ -19,7 +19,6 @@ function Memories() {
     const {searchQuery, onSearch} = useSearch();
     const {sortCriteria, handleSortChange, clearSorting, sortMemories} = useSort();
     const [memoriesData, setMemoriesData] = useState(initialMemoriesData); // Загружаем данные напрямую из импорта
-    const {toggleImageSize} = useContext(CardContext); // получаем функцию переключения
     const {
         selectedChar,
         setSelectedChar,
@@ -32,6 +31,21 @@ function Memories() {
 
     // СОЗДАЁМ REF ДЛЯ МОДАЛКИ
     const filterModalRef = useRef();
+
+    // Локальное состояние для размера карточек
+    const [isImageSmall, setIsImageSmall] = useState(() => {
+        const saved = localStorage.getItem('card_image_size');
+        return saved === 'small';
+    });
+
+    // Сохраняем в localStorage
+    useEffect(() => {
+        localStorage.setItem('card_image_size', isImageSmall ? 'small' : 'big');
+    }, [isImageSmall]);
+
+    const toggleImageSize = () => {
+        setIsImageSmall(prev => !prev);
+    };
 
     // Фильтруем данные
     const filteredMemories = filterMemories(memoriesData).filter(memory => {
@@ -193,7 +207,9 @@ function Memories() {
                                 }}
                                 className={styles.cardLink}
                             >
-                                <Card key={memory.id} data={memory}/>
+                                <CardProvider>
+                                <Card key={memory.id} data={memory} isSmall={isImageSmall}/>
+                                </CardProvider>
                             </Link>
                         );
                     })}
