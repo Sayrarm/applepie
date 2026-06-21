@@ -1,11 +1,10 @@
 import CompanionArticlePage from '../components/CompanionArticlePage';
 import {compData} from '../data/comp-data.js';
 import AsideCompanionList from "../components/AsideCompanionList.jsx";
-import styles from "./CompanionBattleIfno.module.css"
+import styles from "./CompanionBattleInfo.module.css"
 import {Link, useParams} from "react-router-dom";
 import {Fragment} from "react";
 import CardList from "../components/CardList.jsx";
-import {CardProvider} from "../components/CardProvider.jsx";
 import {memoriesData} from "../data/memories-data.js";
 import AsideList from "../components/AsideList.jsx";
 
@@ -50,9 +49,7 @@ function CompanionBattleInfo() {
                                 key: '1',
                                 label: 'Required Memories',
                                 children: (
-                                    <CardProvider>
-                                        <CardList cards={cards} />
-                                    </CardProvider>
+                                    <CardList cards={cards}/>
                                 )
                             }
                         ]}

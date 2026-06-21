@@ -13,7 +13,6 @@ import MsArticle from "./pages/MsArticle";
 import Anecdotes from "./pages/Anecdotes";
 import AnArticle from "./pages/AnArticle";
 import CompanionBattleInfo from "./pages/CompanionBattleInfo";
-import { CardProvider } from "./components/CardProvider";
 import CardArticle from "./pages/CardArticle.jsx";
 import Banners from "./pages/Banners.jsx";
 import Calculator from "./pages/Calculator.jsx";
@@ -32,14 +31,7 @@ export const router = createBrowserRouter([
         children: [
             { index: true, element: <Home /> },
             { path: "memories/:cardId", element: <CardArticle /> },
-            {
-                path: "memories",
-                element: (
-                    <CardProvider>
-                        <Memories />
-                    </CardProvider>
-                ),
-            },
+            { path: "memories", element: <Memories /> },
             { path: "battle", element: <Battle /> },
             { path: "banners-history", element: <Banners /> },
             { path: "battle/:articleLink", element: <CompanionBattleInfo /> },

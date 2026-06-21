@@ -1,5 +1,4 @@
 import CardList from "./CardList.jsx";
-import {CardProvider} from "./CardProvider.jsx";
 import {Link} from "react-router-dom";
 import styles from "./PairBonusBlock.module.css";
 import AsideList from "./AsideList.jsx";
@@ -42,9 +41,7 @@ function PairBonusBlock({
                     label: 'Pair Bonus',
                     children: (
                         <>
-                            <CardProvider>
-                                <CardList cards={companionCards}/>
-                            </CardProvider>
+                            <CardList cards={companionCards}/>
 
                             <div className={styles.companionLink}>
                                 <p>Having a pair unlocks a Companion:</p>

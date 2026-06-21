@@ -73,7 +73,7 @@ When you create [Radiant Ripples], Support Skill cooldown is refreshed; [Radiant
         `,
         eidolon2: `
 Energy Charge limit is raised by 1.
-While [Darknight Reign] is active, you and Xavier ignore 12.5% of enemy DEF and restore HP equal to2% of Max HP per second.
+While [Darknight Reign] is active, you and Xavier ignore 12.5% of enemy DEF and restore HP equal to 2% of Max HP per second.
         `,
         eidolon3: `
 The team deals 8% more DMG.
@@ -153,7 +153,7 @@ Increases Ardent Oath charge by 20%. [Moonlight] deals 25% more DMG and applies 
 Energy Charge limit is raised by 1. When [Moonlight] is triggered, your Active Skill cooldown is reduced by 0.5s and a small amount of Energy Charge is restored.
         `,
         eidolon3: `
-The team deals 8% more DMG. When your Active Skills and Charged Attacks hit the first target inflicted with [Moonstruck], directly trigger [Moonlight]. When Moonlight scores a critical hit, it deals an additional 3O% CRIT DMG.
+The team deals 8% more DMG. When your Active Skills and Charged Attacks hit the first target inflicted with [Moonstruck], directly trigger [Moonlight]. When Moonlight scores a critical hit, it deals an additional 30% CRIT DMG.
         `,
     },
     {
@@ -348,7 +348,7 @@ Your and Xavier's CRIT Rate increases by 7%.
 Zayne fires a piercing arrow forward, dealing DMG equal to 98+52% ATK+4.7% of Max HP. The piercing arrow explodes upon hitting the first enemy, dealing total DMG equal to 272+143% ATK+13.1% of Max HP.
 [Empowered] Endbringer Arrow: Explosion damage is increased, dealing total DMG equal to 368+195% ATK+17.7% of Max HP. This skill cannot be triggered during the [Deity of Niava] state.
 During the [Deity of Niava] state, [Endbringer Arrow] will be replaced by [Divine Sever]
-[Divine Sever]: Fires multiple beams of energy that sever connections with the world, dealing total DMG equal to 852+456% ATK+40.8% of Max HP. This damage counts as Charged Attack damage. [Divine Sever] cannot be cast directly. You can refresh this skill by shattering an enemy's [Soul Rift].This skill is not considered a Support Skill and cannot be cast consecutively within a short period of time.
+[Divine Sever]: Fires multiple beams of energy that sever connections with the world, dealing total DMG equal to 852+456% ATK+40.8% of Max HP. This damage counts as Charged Attack damage. [Divine Sever] cannot be cast directly. You can refresh this skill by shattering an enemy's [Soul Rift]. This skill is not considered a Support Skill and cannot be cast consecutively within a short period of time.
         `,
         resonanceSkill: "Divinity Order",
         resonanceSkillCooldown: "15 sec.",
@@ -369,7 +369,7 @@ The deity knows neither birth nor death, bound to all that is set, until He deve
         passiveSkillText: `
 When entering battle, Zayne will be bound by 3 stacks of [Divine Shackles]. You can remove [Divine Shackles] using [Golden Arrows].
 When your Basic Attack hits an enemy, Zayne will load 1 [Golden Arrow] for you. This effect can trigger only once per Basic Attack. You can hold up to 4 [Golden Arrows] at once.
-When your Charged Attack hits the first enemy, all [Golden Arrows] will be fired at the target, with each [Golden Arrow] dealing DMG equal to 88+47% ATK+4.3% of Max HP Each [Golden Arrow] fired will leave behind a [Remnant Feather] that lasts for 5s. Obtaining a [Remnant Feather] refreshes the duration of all [Remnant Feathers]. [Remnant Feathers] share the same maximum capacity as [Golden Arrows]. When your Active Skill hits, all [Remnant Feathers] will convert into [Golden Arrows]. This effect can trigger only once per Active Skill cast.
+When your Charged Attack hits the first enemy, all [Golden Arrows] will be fired at the target, with each [Golden Arrow] dealing DMG equal to 88+47% ATK+4.3% of Max HP. Each [Golden Arrow] fired will leave behind a [Remnant Feather] that lasts for 5s. Obtaining a [Remnant Feather] refreshes the duration of all [Remnant Feathers]. [Remnant Feathers] share the same maximum capacity as [Golden Arrows]. When your Active Skill hits, all [Remnant Feathers] will convert into [Golden Arrows]. This effect can trigger only once per Active Skill cast.
 When [Golden Arrows] hit an enemy, they leave an [Arrow Mark]. [Arrow Mark] can stack up to 4 times. At maximum stacks, [Arrow Mark] will be consumed, removing 1 stack of [Divine Shackles] and restoring 0.35 [Energy Charge]. When [Arrow Mark] reaches maximum stacks, Zayne will also fire a [Terminus Arrow] as a follow-up attack, dealing DMG equal to 354+189% ATK+17% of Max HP and restoring HP equal to 5% of Max HP to both you and your Companion.
 When all [Divine Shackles] are removed, you can cast [Bind Gaze].
 [Bind Gaze]: You remove the Hidden Divinity covering Zayne's eyes. Zayne opens his divine eyes, clearing all [Golden Arrows], [Remnant Feathers], and [Arrow Marks].
@@ -490,7 +490,7 @@ Increases Ardent Oath charge by 20%. When fighting alongside Master of Fate, the
 Energy Charge limit is raised by 1. When triggering [Jadesunder], a small amount of Energy Charge is restored.
         `,
         eidolon3: `
-The team deals 8% IV more DMG. [Jadesunder] DMG is increased by 100%. During skill replacement, [Piercing Rain] can be used1 additional time. When Piercing Rain hits enemies, its cooldown is reduced by 0.5s.
+The team deals 8% IV more DMG. [Jadesunder] DMG is increased by 100%. During skill replacement, [Piercing Rain] can be used 1 additional time. When Piercing Rain hits enemies, its cooldown is reduced by 0.5s.
 This effect can trigger only once per use of Piercing Rain.
         `,
     },
@@ -618,6 +618,7 @@ Zayne creates an ice spear that quickly stretches forward, dealing 626+835% AoE 
         resonanceSkillText: `
 You and Zayne conjure ice spears to impale the enemy. After the spears explode, they deal 252 + 336% ATK.
 DMG to each enemy in the area, along with 1 point of [Protocore DMG]. Additionally, you and Zayne gain Reverberation of the departed souls allowing for immediate HP recovery.
+
 Reverberation:
 During Reverberation, Zayne will be empowered, bolstering his resilience to interruptions, but he will no longer dodge enemy attacks. He deals increased DMG as the target's HP decreases. The lower the HP, the greater the DMG.
 With Reverberation, your resilience to interruptions is strengthened, and the final hit of your basic combo inflicts increased DMG. The lower the target's HP, the greater your DMG.
@@ -701,7 +702,7 @@ You resonate with Rafayel's Evol, summoning tides and lightning to attack the en
         passiveSkill: "Deepfall Rite",
         passiveSkillImg: "../assets/battle-icons/a2_skill_ry_2507_01.png",
         passiveSkillText: `
-Upon entering the battle, Rafayel grants you [Sea God Mark]. When you perform a Charged Attack, it consumes [Sea God Mark] to empower that attack, increasing DMG by 50% and making you unstoppable throughout its duration. 8s after [Sea God Mark] has been consumed, Rafayel will grant [Sea God Mark] to you again. Using your Active Skill immediately refreshes [Sea God Mark].
+Upon entering the battle, Rafayel grants you [Sea God Mark]. When you perform a Charged Attack, it consumes [Sea God Mark] to empower that attack, increasing DMG by 50% and making you unstoppable throughout its duration. 8s after [Sea God Mark] has been consumed, Rafayel will grant [Sea God Mark] to you again.Using your Active Skill immediately refreshes [Sea God Mark].
 When Rafayel uses his Support Skill or [Empowered] Support Skill, he accumulates [Raging Tide]. When your Basic Attack or Charged Attack hits an enemy, you accumulate [Ripple Breath]. These effects can only be triggered once per attack. When both [Ripple Breath] and [Raging Tide] are fully charged, the skill [Ocean's Descent] is unlocked. Using it floods the battlefield, granting you [Divine Favor] and making you unstoppable throughout its duration. [Divine Favor] lasts for 11s.
 While [Divine Favor] is active, your Active Skill generates a [Lightning Crystal] when it hits an enemy. This effect can only be triggered once per skill use.
 While [Divine Favor] is active, your Dodge is empowered by waves, allowing you to activate [Lightning Crystals] along the path and deal DMG equal to 32+17% ATK+68% DEF. 
@@ -941,7 +942,7 @@ Active Skills, Resonance Skills, or Ardent Oaths that hit an enemy marked with T
         supportSkillCooldown: "10 sec.",
         supportSkillImg: "../assets/battle-icons/a2_skill_ry_2502_02.png",
         supportSkillText: `
-Rafayel thrusts forward, dealing AoE DMG of 218 + 291% ATK with his dagger. Additionally, it reduces enemy movement SPD by 3o% for 5s. 
+Rafayel thrusts forward, dealing AoE DMG of 218 + 291% ATK with his dagger. Additionally, it reduces enemy movement SPD by 30% for 5s. 
 Aria: Reprise: After the Aria concludes, it leaves behind Reprise which impacts enemies in a larger area, dealing a total DMG of 315 + 420% ATK. It also reduces enemy movement SPD by 50% for 5s.
         `,
         resonanceSkill: "Concerto",
@@ -996,7 +997,7 @@ Your and Rafayel's Evol work together to unleash a powerful slash, dealing massi
 When your and Rafayel's skills hit an enemy, Rafayel summons Flame Lilies to attack, dealing AoE DMG equal to 15+20% ATK every 2s.
 Up to 5 Flame Lilies can be on the field. When a total of 10 Flame Lilies have been summoned, Rafayel becomes Fervent, increasing his Basic Attack DMG and attack range. The Flame Lilies are active for 10s, after which they are replaced by newborn Lilies and trigger explosions, dealing DMG equal to 188+250% of his ATK to enemies in a small range around him while also inflicting Burn. This also happens when the max number of
 Flame Lilies on the battlefield is reached.
-Burn: Deals 20+26% ATK DMG every O.5s for 5s.
+Burn: Deals 20+26% ATK DMG every 0.5s for 5s.
         `,
     },
     {
@@ -1154,7 +1155,7 @@ Fully Charged: Deal DMG equal to 632+337% ATK+30.3% of Max HP.
 The team deals 8% more DMG and takes 8% less DMG. After [Abyssal Fury] ends, you and Sylus recover 20% of Max HP.        
         `,
         eidolon1: `
-Increases Ardent Oath charge by 20%. After using [Fiendish Claw], your next 3 basic attacks on-hit deal DMG equal to 121+64.8% ATK+5.8% Max Hp to surrounding enemies centered on you.
+Increases Ardent Oath charge by 20%. After using [Fiendish Claw], your next 3 basic attacks on-hit deal DMG equal to 121+64.8% ATK+5.8% Max HP to surrounding enemies centered on you.
 While [Abyssal Fury] is active [Fiendish Claw] cooldown is reduced.
         `,
         eidolon2: `
@@ -1471,7 +1472,7 @@ This attack creates a [Battlefront] across the combat zone. Caleb gradually cons
 Within the [Battlefront], [Deep Strike] is replaced by [Ground Breach]. The final hit of your basic attack applies 1 [Focus] marks, up to 3 marks. [Focus] increases the damage dealt by [Ground Breach]. Also, [Firepower] cannot be recovered while in the [Battlefront]. 
 
 [Ground Breach]:
-You and Caleb set up a sniping position, dealing DMG equal to 512+273% ATK+1082% DEF to enemies in range. The first [Focus] mark increases damage by 4o%; each subsequent mark increases damage by 20%.
+You and Caleb set up a sniping position, dealing DMG equal to 512+273% ATK+1082% DEF to enemies in range. The first [Focus] mark increases damage by 40%; each subsequent mark increases damage by 20%.
 After sniping, all [Firepower] is consumed and the [Battlefront] disappears.        
         `,
         ardentOath: "Total Blokade",
@@ -1519,14 +1520,14 @@ Dodging grants 10 stack(s) of [Zerom] every 5s. While you have [Zerom], each bas
 The team deals 8% more DMG and takes 8% less DMG. After using Charged Attacks or Active Skills within [Battlefront], you and Caleb's DMG is increased by 20% for 5s. This effect's duration can stack and is cleared when [Ground Breach] ends.        
         `,
         eidolon1: `
-Increases Ardent Oath charge by 20%. [Focus] mark limit +2. Within [Battlefront], your Active Skills on-hit grant1 Focus mark and reduce Active Skill cooldown by 6s.        
+Increases Ardent Oath charge by 20%. [Focus] mark limit +2. Within [Battlefront], your Active Skills on-hit grant 1 Focus mark and reduce Active Skill cooldown by 6s.        
         `,
         eidolon2: `
 Energy Charge limit is raised by 1. Using [Ground Breach] or [Deep Strike] restores 0.2 Energy Charge.
 When consuming Zerom, additionally restore 0.5 [Firepower].        
         `,
         eidolon3: `
-The team deals 8% more DMG. You and Caleb deal 5% increased DMG to enemies with Protocore Shield. Within [Battlefront], when the final hit of your basic attack lands, you gain an additional [Focus] mark When Focus marks exceed the limit, excess marks unleash a gravity vortex at the target location, dealing 225+120% ATK+476% DEF DMG to enemies in range.        
+The team deals 8% more DMG. You and Caleb deal 5% increased DMG to enemies with Protocore Shield. Within [Battlefront], when the final hit of your basic attack lands, you gain an additional [Focus] mark. When Focus marks exceed the limit, excess marks unleash a gravity vortex at the target location, dealing 225+120% ATK+476% DEF DMG to enemies in range.        
         `,
     },
     {

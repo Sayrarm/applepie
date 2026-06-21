@@ -28,7 +28,13 @@
     box-shadow: var(--box-shadow);
     color: var(--colorTextDark);
     padding: 5px;
+    white-space: pre-wrap;
 
+}
+
+.text > span {
+    color: var(--a);
+    font-weight: bold;
 }
 
 .nav {
