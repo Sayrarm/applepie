@@ -129,7 +129,7 @@ const glossary = {
     },
     "Zerom": {
         title: "Zerom",
-        description: "A Resonance Skill that you and Caleb can use when inside [Battlefront].",
+        description: "",
     },
     "Quantum Clusters": {
         title: "Quantum Clusters",
