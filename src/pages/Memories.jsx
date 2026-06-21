@@ -10,7 +10,6 @@ import { useState, useRef, useEffect} from "react";
 import {Link} from "react-router-dom";
 import {getImageUrl} from "../components/imageUtils.js";
 import {memoriesData as initialMemoriesData} from '../data/memories-data.js';
-import {CardProvider} from "../components/CardProvider.jsx";
 
 function Memories() {
     const {Search} = Input;
@@ -207,9 +206,7 @@ function Memories() {
                                 }}
                                 className={styles.cardLink}
                             >
-                                <CardProvider>
                                 <Card key={memory.id} data={memory} isSmall={isImageSmall}/>
-                                </CardProvider>
                             </Link>
                         );
                     })}
