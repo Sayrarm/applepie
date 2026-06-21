@@ -23,10 +23,10 @@ function Home() {
         banner => banner.active === true && banner.rerun === false
     );
 
-    // Новые эвенты и активные
+    // Активные эвенты
     const newEvents = eventsData.filter(event => event.active === true);
 
-    // Новые эвенты и активные
+    // Активный баттлпас
     const activeBattlePass = battlePassData.filter(bp => bp.active === true);
 
     return (
@@ -34,6 +34,10 @@ function Home() {
             <div className={styles.containerEvents}>
 
                 <h2 className={styles.h2}>Banners</h2>
+
+                {(newBanners.length === 0 && rerunBanners.length === 0) && (
+                    <div className={styles.h3}>No banners available</div>
+                )}
 
                 {newBanners.length > 0 && (
                     <section className={styles.section}>
