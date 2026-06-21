@@ -41,6 +41,8 @@
     margin-bottom: 10px;
 }
 
+/*********кнопки навигации (вправо-влево)***********/
+
 .navigation {
     display: flex;
     justify-content: center;
@@ -93,6 +95,8 @@
     width: 25px;
     height: 25px;
 }
+
+/*****************************************/
 
 @media screen and (max-width: 485px) {
     .imgContainer {
