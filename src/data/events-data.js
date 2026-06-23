@@ -22,6 +22,14 @@ export const eventsData = [
         image: "../assets/main-page/events/event-3.png",
         "startDate": "2026-06-08T05:00:00",
         "endDate": "2026-06-21T04:59:59",
+        "active": false
+    },
+    {
+        id: 4,
+        name: "Double Drop of Protocore",
+        image: "../assets/main-page/events/double-protocore.png",
+        "startDate": "2026-06-22T05:00:00",
+        "endDate": "2026-06-29T04:59:59",
         "active": true
     },
 

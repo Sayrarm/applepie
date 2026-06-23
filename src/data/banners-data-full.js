@@ -867,5 +867,16 @@ export const bannersDataFull = [
     "rerun": false,
     "active": true
 
-  }
+  },
+  {
+    "id": 11,
+    "name": "Private Trip",
+    "image": "../assets/banners/dawns-embrace.webp",
+    "cardIds": [364],
+    "startDate": "2026-06-25T05:00:00",
+    "endDate": "2026-07-02T04:59:59",
+    "rerun": true,
+    "active": true
+
+  },
 ]
