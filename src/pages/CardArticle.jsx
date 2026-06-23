@@ -12,6 +12,7 @@ import {obtainData} from '../data/obtain-data.js';
 import {compData} from "../data/comp-data.js";
 import PairBonusBlock from "../components/PairBonusBlock.jsx";
 import ButtonNavigationBlock from "../components/ButtonNavigationBlock.jsx";
+import LevelCardBlock from "../components/LevelCardBlock.jsx";
 
 function CardArticle() {
     const {cardId} = useParams();
@@ -73,6 +74,8 @@ function CardArticle() {
                     <ObtainInfo cardId={cardId} obtainData={obtainData}/>
 
                     <BannerPeriod banners={banners}/>
+
+                    <LevelCardBlock />
 
                 </div>
             </article>
