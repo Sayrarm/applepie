@@ -77,6 +77,7 @@ body {
     --colorTextGrayNote: #888;
     --forSelect: #35312d;
     --border: #e68038;
+    --border-table: #888;
     --border-battle-page: #35312d;
     --a: #e68038;
     --a-hover: #9a5929;
@@ -116,6 +117,7 @@ html.dark {
     --colorTextBright: white;
     --forSelect: #9C2007;
     --border: #9C2007;
+    --border-table: #8e9093;
     --border-battle-page: #8e9093;
     --a: #9C2007;
     --a-hover: #ff4444;
