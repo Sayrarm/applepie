@@ -13,7 +13,7 @@ const getCurrentTimeWithTimezone = (timezoneOffset) => {
 const getNextTriggerDate = (type, timezoneOffset) => {
     const now = getCurrentTimeWithTimezone(timezoneOffset);
     const target = new Date(now);
-    target.setHours(5, 0, 0, 0);
+    target.setHours(4, 59, 59, 59);
 
     if (type === 'day') {
         if (now >= target) target.setDate(target.getDate() + 1);
@@ -74,7 +74,7 @@ export const useRecurringTimer = (type) => {
     useEffect(() => {
         const timer = setInterval(() => {
             setTimeLeft(calculateTimeLeft(type, timezone));
-        }, 0);
+        }, 1000);
 
         return () => clearInterval(timer);
     }, [type, timezone]);

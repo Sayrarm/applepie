@@ -52,6 +52,7 @@ function Spacepedia() {
                 key={navigation}
                 className={styles.content}
                 ghost
+                accordion
                 items={articles.map(article => ({
                     key: article.id,
                     label: <div className={styles.title}>{article.title}</div>,

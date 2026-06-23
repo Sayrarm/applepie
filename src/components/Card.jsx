@@ -1,13 +1,10 @@
 import styles from './Card.module.css'
-import {useContext} from "react";
-import {CardContext} from "./CardContext.jsx";
 import {getImageUrl} from "./imageUtils.js";
 
 
-function Card({data}) {
+function Card({data, isSmall = false}) {
 
-    const { isImageSmall } = useContext(CardContext);
-    const imageClass = isImageSmall ? styles.imgSmall : styles.img;
+    const imageClass = isSmall ? styles.imgSmall : styles.img;
 
     return (
         <>

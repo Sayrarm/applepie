@@ -1,13 +1,12 @@
 import styles from './BannerList.module.css';
 import FlexibleTimer from './FlexibleTimer.jsx';
-import { useRef, useState } from 'react';
+import {useRef, useState} from 'react';
 import CardList from './CardList.jsx';
 import {memoriesData} from '../data/memories-data.js';
-import { CardProvider } from "./CardProvider.jsx";
 import ModalWindow from "./ModalWindow.jsx";
-import { getImageUrl } from "./imageUtils.js";
+import {getImageUrl} from "./imageUtils.js";
 
-function BannerList({ banners }) {
+function BannerList({banners}) {
     const [selectedBanner, setSelectedBanner] = useState(null);
     const memoriesModalRef = useRef();
 
@@ -39,7 +38,7 @@ function BannerList({ banners }) {
                             loading="lazy"
                             decoding="async"
                         />
-                        <div className={styles.bannerTitle}>{banner.name}  {banner.rerun === true && ' (Rerun)'}</div>
+                        <div className={styles.bannerTitle}>{banner.name} {banner.rerun === true && ' (Rerun)'}</div>
                         <FlexibleTimer
                             startDateTime={banner.startDate}
                             endDateTime={banner.endDate}
@@ -52,11 +51,7 @@ function BannerList({ banners }) {
                 ref={memoriesModalRef}
                 title={selectedBanner?.name}
                 tag={
-                    <CardProvider>
-                        <CardList
-                            cards={cards}
-                        />
-                    </CardProvider>
+                    <CardList cards={cards}/>
                 }
             />
         </>
