@@ -173,11 +173,22 @@
 @media screen and (max-width: 860px) {
     .card {
         flex-direction: column;
+        padding: 0px;
     }
 
     .imgContainer {
         align-self: center;
     }
+
+    .infoContainer {
+        width: 100%;
+    }
+
+    .cardTitle {
+        font-size: 25px;
+    }
+
+
 }
 
 

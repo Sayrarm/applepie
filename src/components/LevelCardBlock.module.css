@@ -146,3 +146,19 @@
 .selectRankContainer [class$="-singleValue"] {
     color: var(--colorText);
 }
+
+@media screen and (max-width: 860px) {
+
+    .container {
+        padding: 5px;
+    }
+
+    .statsTable {
+        font-size: 12px;
+    }
+
+    .selectRankContainer [class$="-indicatorContainer"] {
+        padding: 1px;
+    }
+
+}
