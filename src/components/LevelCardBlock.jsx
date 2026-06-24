@@ -131,8 +131,9 @@ function LevelCardBlock({ cardId: propCardId }) {
                         <div className={styles.rangeContainer}>
 
                             <div className={styles.levelContainer}>
-                                <h3>Level:</h3>
+                                <label className={styles.levelInput} htmlFor="input">Level:</label>
                                 <input
+                                    id="input"
                                     type="number"
                                     min="1"
                                     max={maxLevel}
@@ -180,18 +181,21 @@ function LevelCardBlock({ cardId: propCardId }) {
                                         {children}
                                     </div>
                                 )}
-                                renderThumb={({ props }) => (
-                                    <div
-                                        {...props}
-                                        className={styles.point}
-                                        onKeyDown={(e) => {
-                                            // Блокируем клавиши вверх/вниз
-                                            if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
-                                                e.preventDefault();
-                                            }
-                                        }}
-                                    />
-                                )}
+                                renderThumb={({ props }) => {
+                                    const { key, ...rest } = props;
+                                    return (
+                                        <div
+                                            key={key}
+                                            {...rest}
+                                            className={styles.point}
+                                            onKeyDown={(e) => {
+                                                if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+                                                    e.preventDefault();
+                                                }
+                                            }}
+                                        />
+                                    );
+                                }}
                             />
                         </div>
 
