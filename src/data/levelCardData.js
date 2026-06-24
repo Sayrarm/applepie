@@ -286,6 +286,17 @@ export const getStatsWithRank = (card, level, rank) => {
     if (!level || level < 1) return null;
     if (rank === undefined || rank === null || rank < 0) rank = 0;
 
+    // Определяем редкость
+    const is5Star = card.rarityName === '5-star';
+    const is4Star = card.rarityName === '4-star';
+    const is3Star = card.rarityName === '3-star';
+
+    // Проверяем, что карточка 5-star (только для них есть данные в Excel)
+    if (!is5Star) {
+        // Для 4-star и 3-star возвращаем null, так как данных нет
+        return null;
+    }
+
     // Определяем тип памяти
     let memoryType = '';
     if (card.talentName === 'hp') memoryType = 'HP Memory 0 Rank';
@@ -299,25 +310,10 @@ export const getStatsWithRank = (card, level, rank) => {
     const baseStats = memoryData.baseStats[level];
     if (!baseStats) return null;
 
-    // Определяем редкость
-    const is5Star = card.rarityName === '5-star';
-    const is4Star = card.rarityName === '4-star';
-    const is3Star = card.rarityName === '3-star';
-
-    // Коэффициенты для ранка
-    let statMultiplier = 1;
-    let critRatePerRank = 0;
-    let critDmgPerRank = 0;
-
-    if (is5Star) {
-        statMultiplier = 1 + rank * 0.12;
-        critRatePerRank = 1.5;
-        critDmgPerRank = 3.0;
-    } else if (is4Star || is3Star) {
-        statMultiplier = 1 + rank * 0.05;
-        critRatePerRank = 0.3;
-        critDmgPerRank = 0.6;
-    }
+    // Коэффициенты для ранка (только для 5-star)
+    let statMultiplier = 1 + rank * 0.12;
+    let critRatePerRank = 1.5;
+    let critDmgPerRank = 3.0;
 
     // Рассчитываем статы с учетом ранка
     const hp = Math.round(baseStats.hp * statMultiplier);

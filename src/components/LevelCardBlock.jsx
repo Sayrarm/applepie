@@ -14,14 +14,29 @@ const rankOptions = [
     { value: 3, label: 'Rank 3' },
 ];
 
+// Функции для загрузки из localStorage
+const getSavedLevel = (cardId) => {
+    if (!cardId) return 1;
+    const saved = localStorage.getItem(`cardLevel_${cardId}`);
+    return saved ? parseInt(saved) : 1;
+};
+
+const getSavedRank = (cardId) => {
+    if (!cardId) return 0;
+    const saved = localStorage.getItem(`cardRank_${cardId}`);
+    return saved ? parseInt(saved) : 0;
+};
+
+
 function LevelCardBlock({ cardId: propCardId }) {
     const { cardId: paramCardId } = useParams();
     const cardId = propCardId || paramCardId;
 
-    const [level, setLevel] = useState(1);
-    const [rank, setRank] = useState(0);
     const [stats, setStats] = useState(null);
     const [card, setCard] = useState(null);
+    // ✅ Ленивая инициализация - загружаем из localStorage ПРИ СОЗДАНИИ состояния
+    const [level, setLevel] = useState(() => getSavedLevel(cardId));
+    const [rank, setRank] = useState(() => getSavedRank(cardId));
 
     // Находим карточку
     useEffect(() => {
@@ -38,6 +53,20 @@ function LevelCardBlock({ cardId: propCardId }) {
             setStats(calculatedStats);
         }
     }, [card, level, rank]);
+
+    // Сохранение в localStorage при изменении уровня
+    useEffect(() => {
+        if (cardId) {
+            localStorage.setItem(`cardLevel_${cardId}`, String(level));
+        }
+    }, [level, cardId]);
+
+    // Сохранение в localStorage при изменении ранка
+    useEffect(() => {
+        if (cardId) {
+            localStorage.setItem(`cardRank_${cardId}`, String(rank));
+        }
+    }, [rank, cardId]);
 
     // Определяем доступные уровни для текущей памяти
     const getAvailableLevels = () => {
@@ -63,6 +92,7 @@ function LevelCardBlock({ cardId: propCardId }) {
 
     // Проверяем, доступен ли уровень
     const isLevelAvailable = availableLevels.includes(level);
+    const isFiveStar = card?.rarityName === '5-star';
 
     // Функция для форматирования чисел
     const formatNumber = (num) => {
@@ -135,6 +165,12 @@ function LevelCardBlock({ cardId: propCardId }) {
                                 <div
                                     {...props}
                                     className={styles.point}
+                                    onKeyDown={(e) => {
+                                        // Блокируем клавиши вверх/вниз
+                                        if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+                                            e.preventDefault();
+                                        }
+                                    }}
                                 />
                             )}
                         />
@@ -152,6 +188,14 @@ function LevelCardBlock({ cardId: propCardId }) {
                 {!isLevelAvailable && (
                     <div className={styles.warningMessage}>
                         ⚠️ Data not available for this level. Stats may not be accurate.
+                    </div>
+                )}
+
+                {!isFiveStar && (
+                    <div className={styles.warningMessage}>
+                        ⚠️ Stats data is currently only available for 5-star cards.
+                        <br />
+                        <small>Card rarity: {card?.rarityName}</small>
                     </div>
                 )}
 
