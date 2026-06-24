@@ -80,7 +80,37 @@ function LevelCardBlock({ cardId: propCardId }) {
             <div>
                 <div className={styles.selectContainer}>
                     <div className={styles.rangeContainer}>
-                        <h3>Level: {level}</h3>
+
+                        <div className={styles.levelContainer}>
+                            <h3>Level:</h3>
+                            <input
+                                type="number"
+                                min="1"
+                                max={maxLevel}
+                                value={level}
+                                onChange={(e) => {
+                                    const val = e.target.value;
+                                    if (val === '') {
+                                        setLevel('');
+                                    } else {
+                                        const numVal = parseInt(val);
+                                        if (!isNaN(numVal) && numVal >= 1 && numVal <= maxLevel) {
+                                            setLevel(numVal);
+                                        }
+                                    }
+                                }}
+                                onBlur={(e) => {
+                                    const val = parseInt(e.target.value);
+                                    if (isNaN(val) || val < 1) {
+                                        setLevel(1);
+                                    } else if (val > maxLevel) {
+                                        setLevel(maxLevel);
+                                    }
+                                }}
+                                className={styles.levelInput}
+                            />
+                        </div>
+
                         <Range
                             step={1}
                             min={1}
