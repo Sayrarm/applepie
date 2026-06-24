@@ -13,6 +13,7 @@
 .availableButtonContainer {
     display: flex;
     gap: 5px;
+    margin: 10px 0 0 0;
 }
 
 
@@ -40,7 +41,7 @@
     color: var(--colorTextDark);
 }
 
-.buttonAvailable:active {
+.buttonAvailable.active {
     background-color: var(--forSelect);
     box-shadow: var(--box-shadow);
     color: var(--colorText);
