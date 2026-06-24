@@ -75,7 +75,7 @@ function CardArticle() {
 
                     <BannerPeriod banners={banners}/>
 
-                    <LevelCardBlock />
+                    <LevelCardBlock cardId={cardId} />
 
                 </div>
             </article>

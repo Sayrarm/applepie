@@ -1,23 +1,77 @@
-import styles from "./LevelCardBlock.module.css"
-import {Range} from 'react-range';
-import {useState} from "react";
+import styles from "./LevelCardBlock.module.css";
+import { Range } from 'react-range';
+import { useState, useEffect } from "react";
 import React from 'react';
 import Select from 'react-select';
+import { useParams } from 'react-router-dom';
+import { getStatsWithRank, memoryStats } from '../data/levelCardData';
+import { memoriesData } from '../data/memories-data.js';
 
-const options = [
-    {value: 'rank-0', label: 'Rank 0'},
-    {value: 'rank-1', label: 'Rank 1'},
-    {value: 'rank-2', label: 'Rank 2'},
-    {value: 'rank-3', label: 'Rank 3'},
+const rankOptions = [
+    { value: 0, label: 'Rank 0' },
+    { value: 1, label: 'Rank 1' },
+    { value: 2, label: 'Rank 2' },
+    { value: 3, label: 'Rank 3' },
 ];
 
-function LevelCardBlock() {
+function LevelCardBlock({ cardId: propCardId }) {
+    const { cardId: paramCardId } = useParams();
+    const cardId = propCardId || paramCardId;
 
-    const [values, setValues] = useState([50]);
+    const [level, setLevel] = useState(1);
+    const [rank, setRank] = useState(0);
+    const [stats, setStats] = useState(null);
+    const [card, setCard] = useState(null);
+
+    // Находим карточку
+    useEffect(() => {
+        if (cardId) {
+            const foundCard = memoriesData.find(c => String(c.id) === cardId);
+            setCard(foundCard);
+        }
+    }, [cardId]);
+
+    // Пересчитываем статы при изменении уровня, ранка или карточки
+    useEffect(() => {
+        if (card) {
+            const calculatedStats = getStatsWithRank(card, level, rank);
+            setStats(calculatedStats);
+        }
+    }, [card, level, rank]);
+
+    // Определяем доступные уровни для текущей памяти
+    const getAvailableLevels = () => {
+        if (!card) return [];
+        let memoryType = '';
+        if (card.talentName === 'hp') memoryType = 'HP Memory 0 Rank';
+        else if (card.talentName === 'def') memoryType = 'DEF Memory 0 Rank';
+        else if (card.talentName === 'atk') memoryType = 'ATK Memory 0 Rank';
+        else return [];
+
+        const memoryData = memoryStats[memoryType];
+        if (!memoryData) return [];
+
+        return Object.keys(memoryData.baseStats).map(Number).sort((a, b) => a - b);
+    };
+
+    const availableLevels = getAvailableLevels();
+    const maxLevel = availableLevels.length > 0 ? Math.max(...availableLevels) : 80;
+
+    if (!card) {
+        return <div>Loading...</div>;
+    }
+
+    // Проверяем, доступен ли уровень
+    const isLevelAvailable = availableLevels.includes(level);
+
+    // Функция для форматирования чисел
+    const formatNumber = (num) => {
+        if (num === undefined || num === null || isNaN(num)) return '—';
+        return num;
+    };
 
     return (
         <section className={styles.container}>
-
             <div className={styles.availableButtonContainer}>
                 <button className={styles.buttonAvailable}>Available</button>
                 <button className={styles.buttonAvailable}>Not available</button>
@@ -25,17 +79,15 @@ function LevelCardBlock() {
 
             <div>
                 <div className={styles.selectContainer}>
-
                     <div className={styles.rangeContainer}>
-                        <h3>Level: {values[0]}</h3>
+                        <h3>Level: {level}</h3>
                         <Range
                             step={1}
                             min={1}
-                            max={80}
-                            values={values}
-                            onChange={(values) => setValues(values)}
-                            renderTrack={({props, children}) => (
-
+                            max={maxLevel}
+                            values={[level]}
+                            onChange={(values) => setLevel(values[0])}
+                            renderTrack={({ props, children }) => (
                                 <div
                                     {...props}
                                     className={styles.track}
@@ -43,29 +95,35 @@ function LevelCardBlock() {
                                     <div
                                         className={styles.trackFilled}
                                         style={{
-                                            width: `${((values[0] - 1) / (80 - 1)) * 100}%`
+                                            width: `${((level - 1) / (maxLevel - 1)) * 100}%`
                                         }}
                                     />
                                     {children}
                                 </div>
-
                             )}
-                            renderThumb={({props}) => (
+                            renderThumb={({ props }) => (
                                 <div
                                     {...props}
                                     className={styles.point}
-                                >
-                                </div>
+                                />
                             )}
                         />
                     </div>
 
                     <Select
-                        options={options}
+                        options={rankOptions}
+                        value={rankOptions.find(opt => opt.value === rank)}
+                        onChange={(option) => setRank(option ? option.value : 0)}
                         placeholder="Select Rank"
                         className={styles.selectRankContainer}
                     />
                 </div>
+
+                {!isLevelAvailable && (
+                    <div className={styles.warningMessage}>
+                        ⚠️ Data not available for this level. Stats may not be accurate.
+                    </div>
+                )}
 
                 <table className={styles.statsTable}>
                     <thead>
@@ -80,12 +138,12 @@ function LevelCardBlock() {
                     </thead>
                     <tbody>
                     <tr>
-                        <td>1000</td>
-                        <td>50</td>
-                        <td>40</td>
-                        <td>2.0%</td>
-                        <td>20%</td>
-                        <td>100%</td>
+                        <td>{stats ? formatNumber(stats.hp) : '—'}</td>
+                        <td>{stats ? formatNumber(stats.atk) : '—'}</td>
+                        <td>{stats ? formatNumber(stats.def) : '—'}</td>
+                        <td>{stats ? formatNumber(stats.critRate.toFixed(1)) + '%' : '—'}</td>
+                        <td>{stats ? formatNumber(stats.critDmg.toFixed(1)) + '%' : '—'}</td>
+                        <td>{stats ? formatNumber(stats.dmgBoost.toFixed(2)) + '%' : '—'}</td>
                     </tr>
                     </tbody>
                 </table>
@@ -100,18 +158,16 @@ function LevelCardBlock() {
                     </thead>
                     <tbody>
                     <tr>
-                        <td>30%</td>
-                        <td>12%</td>
-                        <td>23%</td>
+                        <td>{stats ? formatNumber(stats.oathStrength) + '%' : '—'}</td>
+                        <td>{stats ? formatNumber(stats.oathRecoveryBoost) + '%' : '—'}</td>
+                        <td>{stats ? formatNumber(stats.expeditedEnergyBoost) + '%' : '—'}</td>
                     </tr>
                     </tbody>
                 </table>
 
             </div>
-
-
         </section>
-    )
+    );
 }
 
 export default LevelCardBlock;
