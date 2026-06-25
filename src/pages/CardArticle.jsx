@@ -60,6 +60,8 @@ function CardArticle() {
                         {card.char}: {card.name}
                     </CopyableText>
 
+                    <ObtainInfo cardId={cardId} obtainData={obtainData}/>
+
                     <ParametersBlock card={card}/>
 
                     {companion && (
@@ -70,8 +72,6 @@ function CardArticle() {
                             memoriesData={memoriesData}
                         />
                     )}
-
-                    <ObtainInfo cardId={cardId} obtainData={obtainData}/>
 
                     <BannerPeriod banners={banners}/>
 

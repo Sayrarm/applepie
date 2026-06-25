@@ -37,10 +37,6 @@
     color: var(--colorTextDark);
 }
 
-.cardTitle {
-    margin-bottom: 10px;
-}
-
 .infoContainer {
     width: 50%;
 }
@@ -173,7 +169,7 @@
 @media screen and (max-width: 860px) {
     .card {
         flex-direction: column;
-        padding: 0px;
+        padding: 0;
     }
 
     .imgContainer {

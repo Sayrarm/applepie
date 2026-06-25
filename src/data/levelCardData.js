@@ -279,8 +279,42 @@ export const memoryStats = {
     }
 };
 
+export const ascendData = {
+    // Для каждого типа памяти и уровня возвышения
+    hp: {
+        10: { hp: 4356, atk: 198, def: 99, critRate: 2.9, critDmg: 5.8 },
+        20: { hp: 6204, atk: 282, def: 141, critRate: 3.2, critDmg: 6.4 },
+        30: { hp: 8052, atk: 366, def: 183, critRate: 3.5, critDmg: 7 },
+        40: { hp: 9900, atk: 450, def: 225, critRate: 3.8, critDmg: 7.6 },
+        50: { hp: 11748, atk: 534, def: 267, critRate: 4.1, critDmg: 8.2 },
+        60: { hp: 13596, atk: 618, def: 309, critRate: 4.4, critDmg: 8.8 },
+        70: { hp: 15444, atk: 702, def: 351, critRate: 4.7, critDmg: 9.4 },
+        80: { hp: 18084, atk: 822, def: 411, critRate: 5.5, critDmg: 11 } // Awaken
+    },
+    def: {
+        10: { hp: 3960, atk: 198, def: 108, critRate: 2.9, critDmg: 5.8 },
+        20: { hp: 5640, atk: 282, def: 155, critRate: 3.2, critDmg: 6.4 },
+        30: { hp: 7320, atk: 366, def: 201, critRate: 3.5, critDmg: 7 },
+        40: { hp: 9000, atk: 450, def: 247, critRate: 3.8, critDmg: 7.6 },
+        50: { hp: 10680, atk: 534, def: 293, critRate: 4.1, critDmg: 8.2 },
+        60: { hp: 12360, atk: 618, def: 339, critRate: 4.4, critDmg: 8.8 },
+        70: { hp: 14040, atk: 702, def: 386, critRate: 4.7, critDmg: 9.4 },
+        80: { hp: 16440, atk: 822, def: 452, critRate: 5.5, critDmg: 11 } // Awaken
+    },
+    atk: {
+        10: { hp: 3960, atk: 217, def: 99, critRate: 2.9, critDmg: 5.8 },
+        20: { hp: 5640, atk: 310, def: 141, critRate: 3.2, critDmg: 6.4 },
+        30: { hp: 7320, atk: 402, def: 183, critRate: 3.5, critDmg: 7 },
+        40: { hp: 9000, atk: 495, def: 225, critRate: 3.8, critDmg: 7.6 },
+        50: { hp: 10680, atk: 587, def: 267, critRate: 4.1, critDmg: 8.2 },
+        60: { hp: 12360, atk: 679, def: 309, critRate: 4.4, critDmg: 8.8 },
+        70: { hp: 14040, atk: 772, def: 351, critRate: 4.7, critDmg: 9.4 },
+        80: { hp: 16440, atk: 904, def: 411, critRate: 5.5, critDmg: 11 } // Awaken
+    }
+};
+
 // Функция для получения статов с учетом ранка
-export const getStatsWithRank = (card, level, rank) => {
+export const getStatsWithRank = (card, level, rank, isAscended = false) => {
     // Защита от undefined/null
     if (!card) return null;
     if (!level || level < 1) return null;
@@ -293,21 +327,43 @@ export const getStatsWithRank = (card, level, rank) => {
 
     // Проверяем, что карточка 5-star (только для них есть данные в Excel)
     if (!is5Star) {
-        // Для 4-star и 3-star возвращаем null, так как данных нет
         return null;
     }
 
     // Определяем тип памяти
     let memoryType = '';
-    if (card.talentName === 'hp') memoryType = 'HP Memory 0 Rank';
-    else if (card.talentName === 'def') memoryType = 'DEF Memory 0 Rank';
-    else if (card.talentName === 'atk') memoryType = 'ATK Memory 0 Rank';
-    else return null;
+    let talentKey = '';
+    if (card.talentName === 'hp') {
+        memoryType = 'HP Memory 0 Rank';
+        talentKey = 'hp';
+    } else if (card.talentName === 'def') {
+        memoryType = 'DEF Memory 0 Rank';
+        talentKey = 'def';
+    } else if (card.talentName === 'atk') {
+        memoryType = 'ATK Memory 0 Rank';
+        talentKey = 'atk';
+    } else return null;
 
     const memoryData = memoryStats[memoryType];
     if (!memoryData) return null;
 
-    const baseStats = memoryData.baseStats[level];
+    // Проверяем, нужно ли использовать статы Ascend/Awaken
+    let baseStats;
+    const isAscendableLevel = [10, 20, 30, 40, 50, 60, 70, 80].includes(level);
+
+    if (isAscended && isAscendableLevel) {
+        // Используем статы из ascendData
+        const ascendStats = ascendData[talentKey]?.[level];
+        if (ascendStats) {
+            baseStats = ascendStats;
+        } else {
+            baseStats = memoryData.baseStats[level];
+        }
+    } else {
+        // Используем обычные статы
+        baseStats = memoryData.baseStats[level];
+    }
+
     if (!baseStats) return null;
 
     // Коэффициенты для ранка (только для 5-star)
@@ -330,15 +386,15 @@ export const getStatsWithRank = (card, level, rank) => {
 
     // Рассчитываем DMG Boost to Weakened
     let dmgBoost = 0;
-    if (memoryData.type === 'hp') {
+    if (talentKey === 'hp') {
         if (hp > 8000) {
             dmgBoost = ((hp - 8000) / 400) * 0.2;
         }
-    } else if (memoryData.type === 'atk') {
+    } else if (talentKey === 'atk') {
         if (atk > 400) {
             dmgBoost = ((atk - 400) / 20) * 0.2;
         }
-    } else if (memoryData.type === 'def') {
+    } else if (talentKey === 'def') {
         if (def > 200) {
             dmgBoost = ((def - 200) / 10) * 0.2;
         }
@@ -351,6 +407,7 @@ export const getStatsWithRank = (card, level, rank) => {
         critRate: displayCritRate,
         critDmg: displayCritDmg,
         dmgBoost: Math.round(dmgBoost * 10000) / 10000,
+        isAscended,
         oathStrength: 0,
         oathRecoveryBoost: 0,
         expeditedEnergyBoost: 0,

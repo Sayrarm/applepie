@@ -1,5 +1,5 @@
 .container {
-    margin-top: 20px;
+    margin-top: 10px;
     gap: 5px;
     display: flex;
     flex-direction: column;
@@ -16,6 +16,15 @@
     margin: 10px 0 0 0;
 }
 
+.ascendButton {
+    border: none;
+    text-decoration: none;
+    font-family: inherit;
+    background-color: var(--forSelect);
+    width: 80px;
+    height: 30px;
+    color: var(--colorText);
+}
 
 .selectContainer {
     display: flex;
@@ -80,6 +89,7 @@
 
 .levelContainer {
     display: flex;
+    align-items: center;
     gap: 2px;
 }
 
