@@ -41,6 +41,10 @@
     width: 50%;
 }
 
+.protocoreSection {
+    background-color: var(--bg-glass);
+}
+
 /*********кнопки навигации (вправо-влево)***********/
 
 .navigation {

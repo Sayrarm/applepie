@@ -3,6 +3,7 @@ import styles from './CalculatorPage.module.css';
 import ProtocoreCalculator from "../components/ProtocoreCalculator.jsx";
 import MemoryUpCalculator from "../components/MemoryUpCalculator.jsx";
 import MyResources from "../components/MyResources.jsx";
+import Protocores from "../components/Protocores.jsx";
 
 function Calculator() {
     const [activeTab, setActiveTab] = useState('inventory');
@@ -12,20 +13,26 @@ function Calculator() {
             {/* Навигация */}
             <div className={styles.tabs}>
                 <button
+                    className={`${styles.tabButton} ${activeTab === 'allprotocores' ? styles.active : ''}`}
+                    onClick={() => setActiveTab('allprotocores')}
+                >
+                    My Protocores
+                </button>
+                <button
                     className={`${styles.tabButton} ${activeTab === 'inventory' ? styles.active : ''}`}
                     onClick={() => setActiveTab('inventory')}
                 >
                     My Resources
                 </button>
                 <button
-                    className={`${styles.tabButton} ${activeTab === 'protocore' ? styles.active : ''}`}
-                    onClick={() => setActiveTab('protocore')}
+                    className={`${styles.tabButton} ${activeTab === 'protocoreCalc' ? styles.active : ''}`}
+                    onClick={() => setActiveTab('protocoreCalc')}
                 >
                     Protocore Calculator
                 </button>
                 <button
-                    className={`${styles.tabButton} ${activeTab === 'memory' ? styles.active : ''}`}
-                    onClick={() => setActiveTab('memory')}
+                    className={`${styles.tabButton} ${activeTab === 'memoryCalc' ? styles.active : ''}`}
+                    onClick={() => setActiveTab('memoryCalc')}
                 >
                     Memory Calculator
                 </button>
@@ -33,9 +40,10 @@ function Calculator() {
 
             {/* Контент */}
             <div className={styles.tabContent}>
+                {activeTab === 'allprotocores' && <Protocores />}
                 {activeTab === 'inventory' && <MyResources />}
-                {activeTab === 'protocore' && <ProtocoreCalculator />}
-                {activeTab === 'memory' && <MemoryUpCalculator />}
+                {activeTab === 'protocoreCalc' && <ProtocoreCalculator />}
+                {activeTab === 'memoryCalc' && <MemoryUpCalculator />}
             </div>
         </section>
     );

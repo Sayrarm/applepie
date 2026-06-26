@@ -1,0 +1,452 @@
+.protocoreBlock {
+    background: #1a1a2e;
+    border: 2px solid #16213e;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    color: #e0e0e0;
+    transition: all 0.3s ease;
+    min-width: 250px;
+    position: relative;
+}
+
+/* Цвета для stellactrum */
+.stellactrumEmerald {
+    border-color: #50c878;
+}
+
+.stellactrumEmerald:hover {
+    box-shadow: 0 4px 15px rgba(80, 200, 120, 0.3);
+}
+
+.stellactrumAmber {
+    border-color: #ffbf00;
+}
+
+.stellactrumAmber:hover {
+    box-shadow: 0 4px 15px rgba(255, 191, 0, 0.3);
+}
+
+.stellactrumViolet {
+    border-color: #8b00ff;
+}
+
+.stellactrumViolet:hover {
+    box-shadow: 0 4px 15px rgba(139, 0, 255, 0.3);
+}
+
+.stellactrumPearl {
+    border-color: #f5f5f5;
+}
+
+.stellactrumPearl:hover {
+    box-shadow: 0 4px 15px rgba(245, 245, 245, 0.3);
+}
+
+.stellactrumSapphire {
+    border-color: #0f52ba;
+}
+
+.stellactrumSapphire:hover {
+    box-shadow: 0 4px 15px rgba(15, 82, 186, 0.3);
+}
+
+.stellactrumRuby {
+    border-color: #e0115f;
+}
+
+.stellactrumRuby:hover {
+    box-shadow: 0 4px 15px rgba(224, 17, 95, 0.3);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #2a2a4e;
+}
+
+.typeIcon {
+    width: 50px;
+    height: 50px;
+    margin-right: 12px;
+    background: #2a2a4e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.typeImage {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.typeInfo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.typeName {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #4a9eff;
+}
+
+.level {
+    font-size: 0.85rem;
+    color: #8a8aaa;
+}
+
+.stellactrumBadge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #1a1a2e;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+}
+
+.mainStat {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    background: #16213e;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.substatsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.subStat {
+    padding: 4px 12px;
+    background: #0f0f23;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.statLabel {
+    color: #8a8aaa;
+    font-weight: 500;
+}
+
+.statValue {
+    color: #e0e0e0;
+}
+
+/* Для темных цветов текста на светлых бейджах */
+.stellactrumBadge:has(span:contains("Pearl")) {
+    color: #333;
+}
+
+.protocoreBlock {
+    background: #1a1a2e;
+    border: 2px solid #16213e;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    color: #e0e0e0;
+    transition: all 0.3s ease;
+    min-width: 250px;
+    position: relative;
+}
+
+/* Добавляем стили для действий */
+.actions {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #2a2a4e;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.editButton {
+    background: linear-gradient(135deg, #4a9eff, #6c5ce7);
+    color: white;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.editButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 158, 255, 0.3);
+}
+
+.editButton:active {
+    transform: translateY(0);
+}
+
+.protocoreBlock {
+    background: #1a1a2e;
+    border: 2px solid #16213e;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    color: #e0e0e0;
+    transition: all 0.3s ease;
+    min-width: 250px;
+    position: relative;
+}
+
+/* Цвета для stellactrum */
+.stellactrumEmerald {
+    border-color: #50c878;
+}
+
+.stellactrumEmerald:hover {
+    box-shadow: 0 4px 15px rgba(80, 200, 120, 0.3);
+}
+
+.stellactrumAmber {
+    border-color: #ffbf00;
+}
+
+.stellactrumAmber:hover {
+    box-shadow: 0 4px 15px rgba(255, 191, 0, 0.3);
+}
+
+.stellactrumViolet {
+    border-color: #8b00ff;
+}
+
+.stellactrumViolet:hover {
+    box-shadow: 0 4px 15px rgba(139, 0, 255, 0.3);
+}
+
+.stellactrumPearl {
+    border-color: #f5f5f5;
+}
+
+.stellactrumPearl:hover {
+    box-shadow: 0 4px 15px rgba(245, 245, 245, 0.3);
+}
+
+.stellactrumSapphire {
+    border-color: #0f52ba;
+}
+
+.stellactrumSapphire:hover {
+    box-shadow: 0 4px 15px rgba(15, 82, 186, 0.3);
+}
+
+.stellactrumRuby {
+    border-color: #e0115f;
+}
+
+.stellactrumRuby:hover {
+    box-shadow: 0 4px 15px rgba(224, 17, 95, 0.3);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #2a2a4e;
+}
+
+.typeIcon {
+    width: 50px;
+    height: 50px;
+    margin-right: 12px;
+    background: #2a2a4e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.typeImage {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.typeInfo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.typeName {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #4a9eff;
+}
+
+.level {
+    font-size: 0.85rem;
+    color: #8a8aaa;
+}
+
+.stellactrumBadge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #1a1a2e;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+}
+
+.mainStat {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    background: #16213e;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.substatsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.subStat {
+    padding: 4px 12px;
+    background: #0f0f23;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.statLabel {
+    color: #8a8aaa;
+    font-weight: 500;
+}
+
+.statValue {
+    color: #e0e0e0;
+}
+
+/* Стили для действий */
+.actions {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #2a2a4e;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.editButton {
+    background: linear-gradient(135deg, #4a9eff, #6c5ce7);
+    color: white;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.editButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 158, 255, 0.3);
+}
+
+.editButton:active {
+    transform: translateY(0);
+}
+
+.deleteButton {
+    background: linear-gradient(135deg, #ff4d4f, #ff7875);
+    color: white;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.deleteButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 77, 79, 0.3);
+}
+
+.deleteButton:active {
+    transform: translateY(0);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .protocoreBlock {
+        min-width: 200px;
+    }
+
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .stellactrumBadge {
+        margin-top: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .editButton,
+    .deleteButton {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .protocoreBlock {
+        min-width: 200px;
+    }
+
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .stellactrumBadge {
+        margin-top: 8px;
+        width: 100%;
+        text-align: center;
+    }
+}

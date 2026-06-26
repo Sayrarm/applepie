@@ -1,0 +1,442 @@
+import React, { useState, useImperativeHandle, forwardRef } from 'react';
+import { Button, Modal, Select, InputNumber, Form, Space } from 'antd';
+import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
+import { protocoreTypes } from '../data/protocore-data';
+
+const { Option } = Select;
+
+const ModalWindowProtocore = forwardRef((props, ref) => {
+    const {
+        title = "Title",
+        tag = null,
+        onSave = () => {},
+        onUpdate = () => {},
+    } = props;
+
+    const [loading, setLoading] = useState(false);
+    const [open, setOpen] = useState(false);
+    const [form] = Form.useForm();
+    const [selectedType, setSelectedType] = useState(null);
+    const [editingProtocore, setEditingProtocore] = useState(null);
+
+    // Опции для выбора
+    const protocoreTypeKeys = Object.keys(protocoreTypes);
+    const stellactrumColors = ['emerald', 'amber', 'violet', 'pearl', 'sapphire', 'ruby'];
+
+    // Функция для получения доступных мейн статов для конкретного типа
+    const getAvailableMainStatsForType = (typeKey) => {
+        if (!typeKey) return [];
+        const typeData = protocoreTypes[typeKey];
+        if (!typeData) return [];
+        return typeData.mainStats.map(stat => stat.name);
+    };
+
+    // Сабстаты с указанием типа значения
+    const substats = [
+        { label: 'HP', type: 'flat' },
+        { label: 'ATK', type: 'flat' },
+        { label: 'DEF', type: 'flat' },
+        { label: 'ATK Bonus', type: 'percent' },
+        { label: 'HP Bonus', type: 'percent' },
+        { label: 'DEF Bonus', type: 'percent' },
+        { label: 'CRIT Rate', type: 'percent' },
+        { label: 'CRIT DMG', type: 'percent' },
+        { label: 'DMG Boost to Weakened', type: 'percent' },
+        { label: 'Oath Strenth', type: 'percent' },
+    ];
+
+    // Функция для получения цвета для stellactrum
+    const getStellactrumColor = (color) => {
+        const colors = {
+            emerald: '#50c878',
+            amber: '#ffbf00',
+            violet: '#8b00ff',
+            pearl: '#f5f5f5',
+            sapphire: '#0f52ba',
+            ruby: '#e0115f'
+        };
+        return colors[color] || '#ffffff';
+    };
+
+    // Функция для получения значения мейн стата из protocoreTypes
+    const getMainStatValue = (typeKey, level, statName) => {
+        if (!typeKey || !statName || level === undefined) return null;
+
+        const typeData = protocoreTypes[typeKey];
+        if (!typeData) return null;
+
+        const statData = typeData.mainStats.find(stat => stat.name === statName);
+        if (!statData) return null;
+
+        return statData.values[level] || null;
+    };
+
+    useImperativeHandle(ref, () => ({
+        showModal: (protocore = null) => {
+            setOpen(true);
+            setEditingProtocore(protocore);
+
+            if (protocore) {
+                // Режим редактирования - заполняем форму данными
+                setSelectedType(protocore.type);
+                form.setFieldsValue({
+                    type: protocore.type,
+                    stellactrum: protocore.stellactrum,
+                    level: protocore.level,
+                    mainStat: protocore.mainStat,
+                    mainStatValue: protocore.mainStatValue,
+                    substats: protocore.substats.map(s => ({
+                        stat: s.stat,
+                        value: s.value
+                    }))
+                });
+            } else {
+                // Режим создания
+                setSelectedType(null);
+                form.resetFields();
+                form.setFieldsValue({
+                    substats: [{ stat: null, value: null }]
+                });
+            }
+        }
+    }));
+
+    // Функция для автоматического заполнения значения мейн стата
+    const updateMainStatValue = () => {
+        const type = form.getFieldValue('type');
+        const level = form.getFieldValue('level');
+        const mainStat = form.getFieldValue('mainStat');
+
+        if (type && level !== undefined && mainStat) {
+            const value = getMainStatValue(type, level, mainStat);
+            if (value !== null) {
+                form.setFieldsValue({ mainStatValue: value });
+            }
+        }
+    };
+
+    // Функция для автоматического выбора мейн стата при смене типа
+    const handleTypeChange = (type) => {
+        setSelectedType(type);
+
+        if (!type) {
+            form.setFieldsValue({
+                mainStat: undefined,
+                mainStatValue: undefined
+            });
+            return;
+        }
+
+        const availableStats = getAvailableMainStatsForType(type);
+
+        if (availableStats.length > 0) {
+            if (availableStats.length === 1) {
+                const mainStat = availableStats[0];
+                const level = form.getFieldValue('level');
+
+                form.setFieldsValue({ mainStat: mainStat });
+
+                if (level !== undefined && level !== null) {
+                    const value = getMainStatValue(type, level, mainStat);
+                    if (value !== null) {
+                        form.setFieldsValue({ mainStatValue: value });
+                    }
+                }
+            } else {
+                form.setFieldsValue({
+                    mainStat: undefined,
+                    mainStatValue: undefined
+                });
+            }
+        }
+    };
+
+    const handleOk = async () => {
+        try {
+            setLoading(true);
+            const values = await form.validateFields();
+
+            // Формируем сабстаты с их значениями
+            const substatsWithValues = values.substats
+                .filter(item => item.stat !== null && item.stat !== undefined && item.stat !== '')
+                .map(item => {
+                    const statInfo = substats.find(s => s.label === item.stat);
+                    return {
+                        stat: item.stat,
+                        value: item.value,
+                        type: statInfo?.type || 'flat'
+                    };
+                });
+
+            const protocoreData = {
+                id: editingProtocore ? editingProtocore.id : Date.now(),
+                type: values.type,
+                stellactrum: values.stellactrum,
+                level: values.level,
+                mainStat: values.mainStat,
+                mainStatValue: values.mainStatValue,
+                substats: substatsWithValues,
+                createdAt: editingProtocore ? editingProtocore.createdAt : new Date().toISOString(),
+                updatedAt: new Date().toISOString()
+            };
+
+            if (editingProtocore) {
+                // Обновление существующего протокора
+                const existingProtocores = JSON.parse(localStorage.getItem('protocores') || '[]');
+                const index = existingProtocores.findIndex(p => p.id === editingProtocore.id);
+                if (index !== -1) {
+                    existingProtocores[index] = protocoreData;
+                    localStorage.setItem('protocores', JSON.stringify(existingProtocores));
+                }
+                onUpdate(protocoreData);
+            } else {
+                // Создание нового протокора
+                const existingProtocores = JSON.parse(localStorage.getItem('protocores') || '[]');
+                existingProtocores.push(protocoreData);
+                localStorage.setItem('protocores', JSON.stringify(existingProtocores));
+                onSave(protocoreData);
+            }
+
+            setOpen(false);
+            form.resetFields();
+            setSelectedType(null);
+            setEditingProtocore(null);
+        } catch (error) {
+            console.error('Validation failed:', error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const handleCancel = () => {
+        setOpen(false);
+        form.resetFields();
+        setSelectedType(null);
+        setEditingProtocore(null);
+    };
+
+    const availableMainStats = selectedType ? getAvailableMainStatsForType(selectedType) : [];
+    const currentMainStat = form.getFieldValue('mainStat');
+
+    return (
+        <Modal
+            open={open}
+            title={editingProtocore ? `Edit ${editingProtocore.type.charAt(0).toUpperCase() + editingProtocore.type.slice(1)} Protocore` : title}
+            onOk={handleOk}
+            onCancel={handleCancel}
+            confirmLoading={loading}
+            width={800}
+            footer={[
+                <Button key="cancel" onClick={handleCancel}>
+                    Cancel
+                </Button>,
+                <Button key="save" type="primary" loading={loading} onClick={handleOk}>
+                    {editingProtocore ? 'Update' : 'Save'}
+                </Button>
+            ]}
+        >
+            {tag && <div style={{ marginBottom: '20px', textAlign: 'center' }}>{tag}</div>}
+
+            <Form
+                form={form}
+                layout="vertical"
+                initialValues={{
+                    level: 0,
+                    substats: [{ stat: null, value: null }]
+                }}
+                onValuesChange={(changedValues) => {
+                    if (changedValues.type !== undefined) {
+                        handleTypeChange(changedValues.type);
+                    }
+                    if (changedValues.level !== undefined && selectedType) {
+                        updateMainStatValue();
+                    }
+                    if (changedValues.mainStat !== undefined && selectedType) {
+                        updateMainStatValue();
+                    }
+                }}
+            >
+                <Form.Item
+                    name="type"
+                    label="Protocore Type"
+                    rules={[{ required: true, message: 'Please select protocore type!' }]}
+                >
+                    <Select
+                        placeholder="Select protocore type"
+                        onChange={(value) => {
+                            form.setFieldsValue({ type: value });
+                            handleTypeChange(value);
+                        }}
+                    >
+                        {protocoreTypeKeys.map(key => (
+                            <Option key={key} value={key}>
+                                {protocoreTypes[key].name}
+                            </Option>
+                        ))}
+                    </Select>
+                </Form.Item>
+
+                <Form.Item
+                    name="stellactrum"
+                    label="Protocore Stellactrum (Color)"
+                    rules={[{ required: true, message: 'Please select stellactrum color!' }]}
+                >
+                    <Select placeholder="Select stellactrum color">
+                        {stellactrumColors.map(color => (
+                            <Option key={color} value={color}>
+                                <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                    <span style={{
+                                        display: 'inline-block',
+                                        width: '16px',
+                                        height: '16px',
+                                        borderRadius: '50%',
+                                        backgroundColor: getStellactrumColor(color),
+                                        border: '1px solid #d9d9d9'
+                                    }} />
+                                    {color.charAt(0).toUpperCase() + color.slice(1)}
+                                </span>
+                            </Option>
+                        ))}
+                    </Select>
+                </Form.Item>
+
+                <Form.Item
+                    name="level"
+                    label="Protocore Level"
+                    rules={[
+                        { required: true, message: 'Please select level!' },
+                        { type: 'number', min: 0, max: 15, message: 'Level must be between 0 and 15!' }
+                    ]}
+                >
+                    <InputNumber
+                        min={0}
+                        max={15}
+                        style={{ width: '100%' }}
+                        placeholder="Enter level (0-15)"
+                    />
+                </Form.Item>
+
+                <div style={{ display: 'flex', gap: '16px' }}>
+                    <Form.Item
+                        name="mainStat"
+                        label="Main Stat"
+                        rules={[
+                            { required: true, message: 'Please select main stat!' },
+                            ({ getFieldValue }) => ({
+                                validator(_, value) {
+                                    const type = getFieldValue('type');
+                                    if (!type) {
+                                        return Promise.reject(new Error('Please select protocore type first!'));
+                                    }
+                                    const availableStats = getAvailableMainStatsForType(type);
+                                    if (!availableStats.includes(value)) {
+                                        return Promise.reject(new Error(`This stat is not available for ${protocoreTypes[type]?.name || type}`));
+                                    }
+                                    return Promise.resolve();
+                                }
+                            })
+                        ]}
+                        style={{ flex: 1 }}
+                    >
+                        <Select
+                            key={`mainStat-${selectedType || 'empty'}`}
+                            placeholder={selectedType ? "Select main stat" : "Select protocore type first"}
+                            disabled={!selectedType}
+                            value={currentMainStat}
+                            onChange={(value) => {
+                                form.setFieldsValue({ mainStat: value });
+                                updateMainStatValue();
+                            }}
+                        >
+                            {availableMainStats.map(stat => (
+                                <Option key={stat} value={stat}>
+                                    {stat}
+                                </Option>
+                            ))}
+                        </Select>
+                    </Form.Item>
+
+                    <Form.Item
+                        name="mainStatValue"
+                        label="Main Stat Value"
+                        rules={[{ required: true, message: 'Please enter main stat value!' }]}
+                        style={{ flex: 1 }}
+                    >
+                        <InputNumber
+                            style={{ width: '100%' }}
+                            placeholder="Auto-filled from data"
+                            disabled
+                        />
+                    </Form.Item>
+                </div>
+
+                <Form.Item label="Substats (1-4)">
+                    <Form.List name="substats">
+                        {(fields, { add, remove }) => (
+                            <>
+                                {fields.map((field, index) => (
+                                    <Space key={field.key} style={{ display: 'flex', marginBottom: 8 }} align="baseline">
+                                        <Form.Item
+                                            name={[field.name, 'stat']}
+                                            rules={[
+                                                { required: true, message: 'Please select substat!' }
+                                            ]}
+                                            style={{ flex: 1, marginBottom: 0 }}
+                                        >
+                                            <Select
+                                                placeholder={`Substat ${index + 1}`}
+                                                style={{ width: '200px' }}
+                                            >
+                                                {substats.map(({ label, type }) => (
+                                                    <Option key={label} value={label}>
+                                                        {label} {type === 'flat' ? '(Flat)' : '(%)'}
+                                                    </Option>
+                                                ))}
+                                            </Select>
+                                        </Form.Item>
+
+                                        <Form.Item
+                                            name={[field.name, 'value']}
+                                            rules={[
+                                                { required: true, message: 'Please enter value!' }
+                                            ]}
+                                            style={{ marginBottom: 0 }}
+                                        >
+                                            <InputNumber
+                                                placeholder="Value"
+                                                style={{ width: '150px' }}
+                                                min={0}
+                                                step={0.1}
+                                            />
+                                        </Form.Item>
+
+                                        {fields.length > 1 && (
+                                            <MinusCircleOutlined
+                                                onClick={() => remove(field.name)}
+                                                style={{ color: '#ff4d4f' }}
+                                            />
+                                        )}
+                                    </Space>
+                                ))}
+                                {fields.length < 4 && (
+                                    <Form.Item>
+                                        <Button
+                                            type="dashed"
+                                            onClick={() => add({ stat: null, value: null })}
+                                            block
+                                            icon={<PlusOutlined />}
+                                        >
+                                            Add Substat
+                                        </Button>
+                                    </Form.Item>
+                                )}
+                            </>
+                        )}
+                    </Form.List>
+                </Form.Item>
+            </Form>
+        </Modal>
+    );
+});
+
+export default ModalWindowProtocore;

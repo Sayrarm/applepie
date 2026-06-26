@@ -13,6 +13,7 @@ import {compData} from "../data/comp-data.js";
 import PairBonusBlock from "../components/PairBonusBlock.jsx";
 import ButtonNavigationBlock from "../components/ButtonNavigationBlock.jsx";
 import LevelCardBlock from "../components/LevelCardBlock.jsx";
+import ProtocoreBlock from "../components/ProtocoreBlock.jsx";
 
 function CardArticle() {
     const {cardId} = useParams();
@@ -76,6 +77,10 @@ function CardArticle() {
                     <BannerPeriod banners={banners}/>
 
                     <LevelCardBlock key={cardId} cardId={cardId} />
+
+                    <section className={styles.protocoreSection}>
+                        <ProtocoreBlock />
+                    </section>
 
                 </div>
             </article>
