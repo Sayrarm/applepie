@@ -3,7 +3,7 @@ import styles from './ProtocoreBlock.module.css';
 import { getImageUrl } from './imageUtils.js';
 
 function ProtocoreBlock({ protocore, onEdit, onDelete }) {
-    const { id, type, stellactrum, level, mainStat, mainStatValue, substats } = protocore;
+    const { type, stellactrum, level, mainStat, mainStatValue, substats } = protocore;
 
     // Функция для получения цвета stellactrum
     const getStellactrumColor = (color) => {

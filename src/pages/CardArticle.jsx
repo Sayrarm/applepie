@@ -78,10 +78,6 @@ function CardArticle() {
 
                     <LevelCardBlock key={cardId} cardId={cardId} />
 
-                    <section className={styles.protocoreSection}>
-                        <ProtocoreBlock />
-                    </section>
-
                 </div>
             </article>
 

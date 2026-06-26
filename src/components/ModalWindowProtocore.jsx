@@ -1,9 +1,7 @@
-import React, { useState, useImperativeHandle, forwardRef } from 'react';
+import React, { useState, useImperativeHandle, forwardRef, useRef } from 'react';
 import { Button, Modal, Select, InputNumber, Form, Space } from 'antd';
 import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
 import { protocoreTypes } from '../data/protocore-data';
-
-const { Option } = Select;
 
 const ModalWindowProtocore = forwardRef((props, ref) => {
     const {
@@ -15,11 +13,12 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
 
     const [loading, setLoading] = useState(false);
     const [open, setOpen] = useState(false);
-    const [form] = Form.useForm();
     const [selectedType, setSelectedType] = useState(null);
     const [editingProtocore, setEditingProtocore] = useState(null);
 
-    // Опции для выбора
+    // Используем useRef для формы вместо useForm
+    const formRef = useRef(null);
+
     const protocoreTypeKeys = Object.keys(protocoreTypes);
     const stellactrumColors = ['emerald', 'amber', 'violet', 'pearl', 'sapphire', 'ruby'];
 
@@ -28,7 +27,7 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
         if (!typeKey) return [];
         const typeData = protocoreTypes[typeKey];
         if (!typeData) return [];
-        return typeData.mainStats.map(stat => stat.name);
+        return typeData.mainStats.map((stat) => stat.name);
     };
 
     // Сабстаты с указанием типа значения
@@ -45,7 +44,6 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
         { label: 'Oath Strenth', type: 'percent' },
     ];
 
-    // Функция для получения цвета для stellactrum
     const getStellactrumColor = (color) => {
         const colors = {
             emerald: '#50c878',
@@ -65,10 +63,15 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
         const typeData = protocoreTypes[typeKey];
         if (!typeData) return null;
 
-        const statData = typeData.mainStats.find(stat => stat.name === statName);
+        const statData = typeData.mainStats.find((stat) => stat.name === statName);
         if (!statData) return null;
 
         return statData.values[level] || null;
+    };
+
+    // Функция для получения формы
+    const getForm = () => {
+        return formRef.current;
     };
 
     useImperativeHandle(ref, () => ({
@@ -76,33 +79,40 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
             setOpen(true);
             setEditingProtocore(protocore);
 
-            if (protocore) {
-                // Режим редактирования - заполняем форму данными
-                setSelectedType(protocore.type);
-                form.setFieldsValue({
-                    type: protocore.type,
-                    stellactrum: protocore.stellactrum,
-                    level: protocore.level,
-                    mainStat: protocore.mainStat,
-                    mainStatValue: protocore.mainStatValue,
-                    substats: protocore.substats.map(s => ({
-                        stat: s.stat,
-                        value: s.value
-                    }))
-                });
-            } else {
-                // Режим создания
-                setSelectedType(null);
-                form.resetFields();
-                form.setFieldsValue({
-                    substats: [{ stat: null, value: null }]
-                });
-            }
+            // Используем setTimeout, чтобы дать время на рендер формы
+            setTimeout(() => {
+                const form = getForm();
+                if (!form) return;
+
+                if (protocore) {
+                    setSelectedType(protocore.type);
+                    form.setFieldsValue({
+                        type: protocore.type,
+                        stellactrum: protocore.stellactrum,
+                        level: protocore.level,
+                        mainStat: protocore.mainStat,
+                        mainStatValue: protocore.mainStatValue,
+                        substats: protocore.substats.map((s) => ({
+                            stat: s.stat,
+                            value: s.value
+                        }))
+                    });
+                } else {
+                    setSelectedType(null);
+                    form.resetFields();
+                    form.setFieldsValue({
+                        substats: [{ stat: null, value: null }]
+                    });
+                }
+            }, 0);
         }
     }));
 
     // Функция для автоматического заполнения значения мейн стата
     const updateMainStatValue = () => {
+        const form = getForm();
+        if (!form) return;
+
         const type = form.getFieldValue('type');
         const level = form.getFieldValue('level');
         const mainStat = form.getFieldValue('mainStat');
@@ -118,6 +128,8 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
     // Функция для автоматического выбора мейн стата при смене типа
     const handleTypeChange = (type) => {
         setSelectedType(type);
+        const form = getForm();
+        if (!form) return;
 
         if (!type) {
             form.setFieldsValue({
@@ -154,13 +166,20 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
     const handleOk = async () => {
         try {
             setLoading(true);
+            const form = getForm();
+            if (!form) {
+                console.error('Form not available');
+                setLoading(false);
+                return;
+            }
+
             const values = await form.validateFields();
 
             // Формируем сабстаты с их значениями
             const substatsWithValues = values.substats
-                .filter(item => item.stat !== null && item.stat !== undefined && item.stat !== '')
-                .map(item => {
-                    const statInfo = substats.find(s => s.label === item.stat);
+                .filter((item) => item.stat !== null && item.stat !== undefined && item.stat !== '')
+                .map((item) => {
+                    const statInfo = substats.find((s) => s.label === item.stat);
                     return {
                         stat: item.stat,
                         value: item.value,
@@ -183,7 +202,7 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
             if (editingProtocore) {
                 // Обновление существующего протокора
                 const existingProtocores = JSON.parse(localStorage.getItem('protocores') || '[]');
-                const index = existingProtocores.findIndex(p => p.id === editingProtocore.id);
+                const index = existingProtocores.findIndex((p) => p.id === editingProtocore.id);
                 if (index !== -1) {
                     existingProtocores[index] = protocoreData;
                     localStorage.setItem('protocores', JSON.stringify(existingProtocores));
@@ -210,13 +229,51 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
 
     const handleCancel = () => {
         setOpen(false);
-        form.resetFields();
+        const form = getForm();
+        if (form) {
+            form.resetFields();
+        }
         setSelectedType(null);
         setEditingProtocore(null);
     };
 
     const availableMainStats = selectedType ? getAvailableMainStatsForType(selectedType) : [];
-    const currentMainStat = form.getFieldValue('mainStat');
+    const currentMainStat = (() => {
+        const form = getForm();
+        return form ? form.getFieldValue('mainStat') : null;
+    })();
+
+    const typeOptions = protocoreTypeKeys.map((key) => ({
+        label: protocoreTypes[key].name,
+        value: key
+    }));
+
+    const stellactrumOptions = stellactrumColors.map((color) => ({
+        label: (
+            <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <span style={{
+                    display: 'inline-block',
+                    width: '16px',
+                    height: '16px',
+                    borderRadius: '50%',
+                    backgroundColor: getStellactrumColor(color),
+                    border: '1px solid #d9d9d9'
+                }} />
+                {color.charAt(0).toUpperCase() + color.slice(1)}
+            </span>
+        ),
+        value: color
+    }));
+
+    const mainStatOptions = availableMainStats.map((stat) => ({
+        label: stat,
+        value: stat
+    }));
+
+    const substatOptions = substats.map(({ label, type }) => ({
+        label: `${label} ${type === 'flat' ? '(Flat)' : '(%)'}`,
+        value: label
+    }));
 
     return (
         <Modal
@@ -238,7 +295,7 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
             {tag && <div style={{ marginBottom: '20px', textAlign: 'center' }}>{tag}</div>}
 
             <Form
-                form={form}
+                ref={formRef}
                 layout="vertical"
                 initialValues={{
                     level: 0,
@@ -263,17 +320,15 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
                 >
                     <Select
                         placeholder="Select protocore type"
+                        options={typeOptions}
                         onChange={(value) => {
-                            form.setFieldsValue({ type: value });
+                            const form = getForm();
+                            if (form) {
+                                form.setFieldsValue({ type: value });
+                            }
                             handleTypeChange(value);
                         }}
-                    >
-                        {protocoreTypeKeys.map(key => (
-                            <Option key={key} value={key}>
-                                {protocoreTypes[key].name}
-                            </Option>
-                        ))}
-                    </Select>
+                    />
                 </Form.Item>
 
                 <Form.Item
@@ -281,23 +336,10 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
                     label="Protocore Stellactrum (Color)"
                     rules={[{ required: true, message: 'Please select stellactrum color!' }]}
                 >
-                    <Select placeholder="Select stellactrum color">
-                        {stellactrumColors.map(color => (
-                            <Option key={color} value={color}>
-                                <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                                    <span style={{
-                                        display: 'inline-block',
-                                        width: '16px',
-                                        height: '16px',
-                                        borderRadius: '50%',
-                                        backgroundColor: getStellactrumColor(color),
-                                        border: '1px solid #d9d9d9'
-                                    }} />
-                                    {color.charAt(0).toUpperCase() + color.slice(1)}
-                                </span>
-                            </Option>
-                        ))}
-                    </Select>
+                    <Select
+                        placeholder="Select stellactrum color"
+                        options={stellactrumOptions}
+                    />
                 </Form.Item>
 
                 <Form.Item
@@ -322,9 +364,11 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
                         label="Main Stat"
                         rules={[
                             { required: true, message: 'Please select main stat!' },
-                            ({ getFieldValue }) => ({
-                                validator(_, value) {
-                                    const type = getFieldValue('type');
+                            {
+                                validator: (_, value) => {
+                                    const form = getForm();
+                                    if (!form) return Promise.resolve();
+                                    const type = form.getFieldValue('type');
                                     if (!type) {
                                         return Promise.reject(new Error('Please select protocore type first!'));
                                     }
@@ -334,26 +378,23 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
                                     }
                                     return Promise.resolve();
                                 }
-                            })
+                            }
                         ]}
                         style={{ flex: 1 }}
                     >
                         <Select
-                            key={`mainStat-${selectedType || 'empty'}`}
                             placeholder={selectedType ? "Select main stat" : "Select protocore type first"}
                             disabled={!selectedType}
                             value={currentMainStat}
+                            options={mainStatOptions}
                             onChange={(value) => {
-                                form.setFieldsValue({ mainStat: value });
+                                const form = getForm();
+                                if (form) {
+                                    form.setFieldsValue({ mainStat: value });
+                                }
                                 updateMainStatValue();
                             }}
-                        >
-                            {availableMainStats.map(stat => (
-                                <Option key={stat} value={stat}>
-                                    {stat}
-                                </Option>
-                            ))}
-                        </Select>
+                        />
                     </Form.Item>
 
                     <Form.Item
@@ -386,13 +427,8 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
                                             <Select
                                                 placeholder={`Substat ${index + 1}`}
                                                 style={{ width: '200px' }}
-                                            >
-                                                {substats.map(({ label, type }) => (
-                                                    <Option key={label} value={label}>
-                                                        {label} {type === 'flat' ? '(Flat)' : '(%)'}
-                                                    </Option>
-                                                ))}
-                                            </Select>
+                                                options={substatOptions}
+                                            />
                                         </Form.Item>
 
                                         <Form.Item
