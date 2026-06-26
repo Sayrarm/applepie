@@ -7,7 +7,6 @@
 
 .tabContent {
     display: flex;
-    align-self: center;
 }
 
 .tabButton {

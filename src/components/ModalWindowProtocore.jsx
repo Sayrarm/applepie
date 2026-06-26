@@ -49,9 +49,9 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
             emerald: '#50c878',
             amber: '#ffbf00',
             violet: '#8b00ff',
-            pearl: '#f5f5f5',
-            sapphire: '#0f52ba',
-            ruby: '#e0115f'
+            pearl: '#e379ff',
+            sapphire: '#5193fd',
+            ruby: '#8e1111'
         };
         return colors[color] || '#ffffff';
     };
@@ -282,7 +282,7 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
             onOk={handleOk}
             onCancel={handleCancel}
             confirmLoading={loading}
-            width={800}
+            width={412}
             footer={[
                 <Button key="cancel" onClick={handleCancel}>
                     Cancel
@@ -426,7 +426,7 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
                                         >
                                             <Select
                                                 placeholder={`Substat ${index + 1}`}
-                                                style={{ width: '200px' }}
+                                                style={{ width: '230px' }}
                                                 options={substatOptions}
                                             />
                                         </Form.Item>
@@ -440,7 +440,7 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
                                         >
                                             <InputNumber
                                                 placeholder="Value"
-                                                style={{ width: '150px' }}
+                                                style={{ width: '100px' }}
                                                 min={0}
                                                 step={0.1}
                                             />
@@ -449,7 +449,7 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
                                         {fields.length > 1 && (
                                             <MinusCircleOutlined
                                                 onClick={() => remove(field.name)}
-                                                style={{ color: '#ff4d4f' }}
+                                                style={{ color: '#8e1111' }}
                                             />
                                         )}
                                     </Space>

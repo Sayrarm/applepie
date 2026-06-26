@@ -60,14 +60,14 @@ export const SUBSTAT_LEVELS = [3, 6, 9, 12, 15];
 // Типы протокоров и их мейн статы
 export const protocoreTypes = {
     alpha: {
-        name: "α (Alpha)",
+        name: "Alpha (α)",
         image: "../assets/icons/alpha.png",
         mainStats: [
             { name: "HP", values: [1000, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3200, 3400, 3600, 3800, 4000] }
         ]
     },
     beta: {
-        name: "β (Beta)",
+        name: "Beta (β)",
         image: "../assets/icons/beta.png",
         mainStats: [
             { name: "Oath Recovery Boost", values: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20] },
@@ -79,14 +79,14 @@ export const protocoreTypes = {
         ]
     },
     gamma: {
-        name: "γ (Gamma)",
+        name: "Gamma (γ)",
         image: "../assets/icons/gamma.png",
         mainStats: [
             { name: "ATK", values: [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200] }
         ]
     },
     delta: {
-        name: "δ (Delta)",
+        name: "Delta (δ)",
         image: "../assets/icons/delta.png",
         mainStats: [
             { name: "CRIT Rate", values: [3.7, 4.2, 4.7, 5.2, 5.7, 6.2, 6.7, 7.2, 7.7, 8.2, 8.7, 9.2, 9.7, 10.2, 10.7, 11.2] },
@@ -98,6 +98,105 @@ export const protocoreTypes = {
         ]
     }
 };
+
+export const protocoreColor = [
+    {
+        id: 1,
+        img: "../assets/icons/amber-alpha.png"
+    },
+    {
+        id: 2,
+        img: "../assets/icons/amber-beta.png"
+    },
+    {
+        id: 3,
+        img: "../assets/icons/amber-delta.png"
+    },
+    {
+        id: 4,
+        img: "../assets/icons/amber-gamma.png"
+    },
+    {
+        id: 5,
+        img: "../assets/icons/emerald-alpha.png"
+    },
+    {
+        id: 6,
+        img: "../assets/icons/emerald-beta.png"
+    },
+    {
+        id: 7,
+        img: "../assets/icons/emerald-delta.png"
+    },
+    {
+        id: 8,
+        img: "../assets/icons/emerald-gamma.png"
+    },
+    {
+        id: 9,
+        img: "../assets/icons/pearl-alpha.png"
+    },
+    {
+        id: 10,
+        img: "../assets/icons/pearl-beta.png"
+    },
+    {
+        id: 11,
+        img: "../assets/icons/pearl-delta.png"
+    },
+    {
+        id: 12,
+        img: "../assets/icons/pearl-gamma.png"
+    },
+    {
+        id: 13,
+        img: "../assets/icons/ruby-alpha.png"
+    },
+    {
+        id: 14,
+        img: "../assets/icons/ruby-beta.png"
+    },
+    {
+        id: 15,
+        img: "../assets/icons/ruby-delta.png"
+    },
+    {
+        id: 16,
+        img: "../assets/icons/ruby-gamma.png"
+    },
+    {
+        id: 17,
+        img: "../assets/icons/sapphire-alpha.png"
+    },
+    {
+        id: 18,
+        img: "../assets/icons/sapphire-beta.png"
+    },
+    {
+        id: 19,
+        img: "../assets/icons/sapphire-delta.png"
+    },
+    {
+        id: 20,
+        img: "../assets/icons/sapphire-gamma.png"
+    },
+    {
+        id: 21,
+        img: "../assets/icons/violet-alpha.png"
+    },
+    {
+        id: 22,
+        img: "../assets/icons/violet-beta.png"
+    },
+    {
+        id: 23,
+        img: "../assets/icons/violet-delta.png"
+    },
+    {
+        id: 24,
+        img: "../assets/icons/violet-gamma.png"
+    },
+]
 
 // Получить значение мейн стата для указанного уровня
 export const getMainStatValue = (protocoreType, statName, level) => {

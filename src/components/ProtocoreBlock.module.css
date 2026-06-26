@@ -1,77 +1,29 @@
 .protocoreBlock {
-    background: #1a1a2e;
-    border: 2px solid #16213e;
-    border-radius: 12px;
-    padding: 16px;
-    margin-bottom: 16px;
-    color: #e0e0e0;
+    background: var(--bg-glass);
+    box-shadow: var(--box-shadow);
+    border: 2px solid;
+    padding: 10px;
+    color: var(--colorText);
     transition: all 0.3s ease;
-    min-width: 250px;
+    width: 250px;
     position: relative;
-}
-
-/* Цвета для stellactrum */
-.stellactrumEmerald {
-    border-color: #50c878;
-}
-
-.stellactrumEmerald:hover {
-    box-shadow: 0 4px 15px rgba(80, 200, 120, 0.3);
-}
-
-.stellactrumAmber {
-    border-color: #ffbf00;
-}
-
-.stellactrumAmber:hover {
-    box-shadow: 0 4px 15px rgba(255, 191, 0, 0.3);
-}
-
-.stellactrumViolet {
-    border-color: #8b00ff;
-}
-
-.stellactrumViolet:hover {
-    box-shadow: 0 4px 15px rgba(139, 0, 255, 0.3);
-}
-
-.stellactrumPearl {
-    border-color: #f5f5f5;
-}
-
-.stellactrumPearl:hover {
-    box-shadow: 0 4px 15px rgba(245, 245, 245, 0.3);
-}
-
-.stellactrumSapphire {
-    border-color: #0f52ba;
-}
-
-.stellactrumSapphire:hover {
-    box-shadow: 0 4px 15px rgba(15, 82, 186, 0.3);
-}
-
-.stellactrumRuby {
-    border-color: #e0115f;
-}
-
-.stellactrumRuby:hover {
-    box-shadow: 0 4px 15px rgba(224, 17, 95, 0.3);
+    font-family: TikTok Sans, monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .header {
     display: flex;
     align-items: center;
-    margin-bottom: 12px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid #2a2a4e;
+    padding-bottom: 10px;
 }
 
 .typeIcon {
     width: 50px;
     height: 50px;
     margin-right: 12px;
-    background: #2a2a4e;
+    background-color: gray;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -80,8 +32,8 @@
 }
 
 .typeImage {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
 }
 
@@ -94,93 +46,65 @@
 .typeName {
     font-weight: bold;
     font-size: 1.1rem;
-    color: #4a9eff;
+    color: var(--colorTextDark);
 }
 
 .level {
     font-size: 0.85rem;
-    color: #8a8aaa;
-}
-
-.stellactrumBadge {
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: #1a1a2e;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    flex-shrink: 0;
+    color: gray;
 }
 
 .mainStat {
-    margin-bottom: 10px;
-    padding: 8px 12px;
-    background: #16213e;
-    border-radius: 6px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.substatsContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+    text-shadow: var(--text-shadow);
+    background-color: color-mix(in srgb, var(--bg-brown) 50%, transparent);
+    font-size: 14px;
+    padding: 5px 5px;
 }
 
 .subStat {
-    padding: 4px 12px;
-    background: #0f0f23;
-    border-radius: 4px;
+    padding: 5px 5px;
+    font-size: 14px;
+}
+
+.mainStat,
+.subStat {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 0.9rem;
+    white-space: wrap;
+}
+
+.statLabelMain {
+    font-weight: 700;
+}
+
+.statLabelMain,
+.statValueMain {
+    color: var(--colorText);
 }
 
 .statLabel {
-    color: #8a8aaa;
-    font-weight: 500;
+    color: var(--colorTextDark);
+    font-weight: 700;
 }
 
 .statValue {
-    color: #e0e0e0;
+    color: var(--colorTextDark);
 }
 
-/* Для темных цветов текста на светлых бейджах */
-.stellactrumBadge:has(span:contains("Pearl")) {
-    color: #333;
-}
-
-.protocoreBlock {
-    background: #1a1a2e;
-    border: 2px solid #16213e;
-    border-radius: 12px;
-    padding: 16px;
-    margin-bottom: 16px;
-    color: #e0e0e0;
-    transition: all 0.3s ease;
-    min-width: 250px;
-    position: relative;
-}
-
-/* Добавляем стили для действий */
 .actions {
-    margin-top: 12px;
-    padding-top: 12px;
-    border-top: 1px solid #2a2a4e;
+    border-top: 1px solid var(--border-battle-page);
     display: flex;
     justify-content: flex-end;
     gap: 8px;
 }
 
-.editButton {
-    background: linear-gradient(135deg, #4a9eff, #6c5ce7);
+.editButton,
+.deleteButton {
+    margin-top: 10px;
     color: white;
     border: none;
-    padding: 6px 16px;
-    border-radius: 6px;
+    padding: 5px 8px;
     font-size: 14px;
     font-weight: 500;
     cursor: pointer;
@@ -188,265 +112,75 @@
     display: flex;
     align-items: center;
     gap: 6px;
-}
-
-.editButton:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(74, 158, 255, 0.3);
-}
-
-.editButton:active {
-    transform: translateY(0);
-}
-
-.protocoreBlock {
-    background: #1a1a2e;
-    border: 2px solid #16213e;
-    border-radius: 12px;
-    padding: 16px;
-    margin-bottom: 16px;
-    color: #e0e0e0;
-    transition: all 0.3s ease;
-    min-width: 250px;
-    position: relative;
-}
-
-/* Цвета для stellactrum */
-.stellactrumEmerald {
-    border-color: #50c878;
-}
-
-.stellactrumEmerald:hover {
-    box-shadow: 0 4px 15px rgba(80, 200, 120, 0.3);
-}
-
-.stellactrumAmber {
-    border-color: #ffbf00;
-}
-
-.stellactrumAmber:hover {
-    box-shadow: 0 4px 15px rgba(255, 191, 0, 0.3);
-}
-
-.stellactrumViolet {
-    border-color: #8b00ff;
-}
-
-.stellactrumViolet:hover {
-    box-shadow: 0 4px 15px rgba(139, 0, 255, 0.3);
-}
-
-.stellactrumPearl {
-    border-color: #f5f5f5;
-}
-
-.stellactrumPearl:hover {
-    box-shadow: 0 4px 15px rgba(245, 245, 245, 0.3);
-}
-
-.stellactrumSapphire {
-    border-color: #0f52ba;
-}
-
-.stellactrumSapphire:hover {
-    box-shadow: 0 4px 15px rgba(15, 82, 186, 0.3);
-}
-
-.stellactrumRuby {
-    border-color: #e0115f;
-}
-
-.stellactrumRuby:hover {
-    box-shadow: 0 4px 15px rgba(224, 17, 95, 0.3);
-}
-
-.header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 12px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid #2a2a4e;
-}
-
-.typeIcon {
-    width: 50px;
-    height: 50px;
-    margin-right: 12px;
-    background: #2a2a4e;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.typeImage {
-    width: 35px;
-    height: 35px;
-    object-fit: contain;
-}
-
-.typeInfo {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-.typeName {
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #4a9eff;
-}
-
-.level {
-    font-size: 0.85rem;
-    color: #8a8aaa;
-}
-
-.stellactrumBadge {
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: #1a1a2e;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    flex-shrink: 0;
-}
-
-.mainStat {
-    margin-bottom: 10px;
-    padding: 8px 12px;
-    background: #16213e;
-    border-radius: 6px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.substatsContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.subStat {
-    padding: 4px 12px;
-    background: #0f0f23;
-    border-radius: 4px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.9rem;
-}
-
-.statLabel {
-    color: #8a8aaa;
-    font-weight: 500;
-}
-
-.statValue {
-    color: #e0e0e0;
-}
-
-/* Стили для действий */
-.actions {
-    margin-top: 12px;
-    padding-top: 12px;
-    border-top: 1px solid #2a2a4e;
-    display: flex;
-    justify-content: flex-end;
-    gap: 8px;
+    font-family: inherit;
 }
 
 .editButton {
-    background: linear-gradient(135deg, #4a9eff, #6c5ce7);
-    color: white;
-    border: none;
-    padding: 6px 16px;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 6px;
+    background: var(--green-button);
 }
 
 .editButton:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(74, 158, 255, 0.3);
-}
-
-.editButton:active {
-    transform: translateY(0);
+    background: var(--light-green-button);
 }
 
 .deleteButton {
-    background: linear-gradient(135deg, #ff4d4f, #ff7875);
-    color: white;
-    border: none;
-    padding: 6px 16px;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 6px;
+    background: var(--red-button);
 }
 
 .deleteButton:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(255, 77, 79, 0.3);
+    background: var(--light-red-button);
 }
 
-.deleteButton:active {
-    transform: translateY(0);
+
+/* Цвета для stellactrum */
+.stellactrumEmerald {
+    border-color: #50c878;
 }
 
-/* Адаптивность */
+.stellactrumEmerald:hover {
+    box-shadow: 0 0 15px 8px rgba(80, 200, 120, 0.3);
+}
+
+.stellactrumAmber {
+    border-color: #ffbf00;
+}
+
+.stellactrumAmber:hover {
+    box-shadow: 0 0 15px 8px rgba(255, 191, 0, 0.3);
+}
+
+.stellactrumViolet {
+    border-color: #8b00ff;
+}
+
+.stellactrumViolet:hover {
+    box-shadow: 0 0 15px 8px rgba(139, 0, 255, 0.3);
+}
+
+.stellactrumPearl {
+    border-color: #e379ff;
+}
+
+.stellactrumPearl:hover {
+    box-shadow: 0 0 15px 8px rgb(118, 47, 140, 0.3);
+}
+
+.stellactrumSapphire {
+    border-color: #5193fd;
+}
+
+.stellactrumSapphire:hover {
+    box-shadow: 0 0 15px 8px rgba(15, 82, 186, 0.3);
+}
+
+.stellactrumRuby {
+    border-color: #8e1111;
+}
+
+.stellactrumRuby:hover {
+    box-shadow: 0 0 15px 8px rgba(224, 17, 95, 0.3);
+}
+
 @media (max-width: 768px) {
-    .protocoreBlock {
-        min-width: 200px;
-    }
 
-    .header {
-        flex-wrap: wrap;
-    }
-
-    .stellactrumBadge {
-        margin-top: 8px;
-        width: 100%;
-        text-align: center;
-    }
-
-    .actions {
-        flex-direction: column;
-    }
-
-    .editButton,
-    .deleteButton {
-        width: 100%;
-        justify-content: center;
-    }
-}
-
-/* Адаптивность */
-@media (max-width: 768px) {
-    .protocoreBlock {
-        min-width: 200px;
-    }
-
-    .header {
-        flex-wrap: wrap;
-    }
-
-    .stellactrumBadge {
-        margin-top: 8px;
-        width: 100%;
-        text-align: center;
-    }
 }

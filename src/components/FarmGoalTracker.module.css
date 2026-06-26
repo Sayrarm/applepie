@@ -62,19 +62,19 @@
 }
 
 .completeButton {
-    background: #419716;
+    background: var(--green-button);
 }
 
 .completeButton:hover {
-    background: #73d13d;
+    background: var(--light-green-button);
 }
 
 .deleteButton {
-    background: #c63e3f;
+    background: var(--red-button);
 }
 
 .deleteButton:hover {
-    background: #ff7875;
+    background: var(--light-red-button);
 }
 
 .goalContent {

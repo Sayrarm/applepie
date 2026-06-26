@@ -98,10 +98,14 @@ body {
     --dark: #202227;
     --light-dark: #313338;
     --brown: #35312d;
-    --bg-brown: #ffcb90;
+    --bg-brown: #121111;
     --orange: #e68038;
     --red: #ff4444;
     --redForText: #8e1111;
+    --green-button: #419716;
+    --light-green-button: #73d13d;
+    --red-button: #c63e3f;
+    --light-red-button: #ff7875;
     --bg-brown-light: color-mix(in srgb, var(--bg-brown) 10%, transparent);
 
 /****************************************************************************/
