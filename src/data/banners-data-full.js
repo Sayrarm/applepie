@@ -112,7 +112,7 @@ export const bannersDataFull = [
   {
     "id": 11,
     "name": "Dawn's Embrace",
-    "image": "../assets/banners/dawns-embrace.webp",
+    "image": "../assets/banners/dawns-embrace.png",
     "cardIds": [364],
     "startDate": "2024-05-28T05:00:00",
     "endDate": "2024-06-07T04:59:00",
@@ -870,8 +870,8 @@ export const bannersDataFull = [
   },
   {
     "id": 11,
-    "name": "Private Trip",
-    "image": "../assets/banners/dawns-embrace.webp",
+    "name": "Dawn's Embrace",
+    "image": "../assets/banners/dawns-embrace.png",
     "cardIds": [364],
     "startDate": "2026-06-25T05:00:00",
     "endDate": "2026-07-02T04:59:59",
