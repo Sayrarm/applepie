@@ -66,7 +66,7 @@ function MyMemories() {
                 <tr>
                     <th>Memory</th>
                     <th>Name</th>
-                    <th>Level</th>
+                    <th>Lvl</th>
                     <th>Rank</th>
                     <th>Rarity</th>
                     <th>Stella</th>

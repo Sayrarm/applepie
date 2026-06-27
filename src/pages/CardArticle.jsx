@@ -13,6 +13,7 @@ import {compData} from "../data/comp-data.js";
 import PairBonusBlock from "../components/PairBonusBlock.jsx";
 import ButtonNavigationBlock from "../components/ButtonNavigationBlock.jsx";
 import LevelCardBlock from "../components/LevelCardBlock.jsx";
+import CardProtocores from "../components/CardProtocores.jsx";
 
 function CardArticle() {
     const {cardId} = useParams();
@@ -76,6 +77,7 @@ function CardArticle() {
                     <BannerPeriod banners={banners}/>
 
                     <LevelCardBlock key={cardId} cardId={cardId} />
+                    <CardProtocores cardId={cardId} />
 
                 </div>
             </article>

@@ -1,0 +1,80 @@
+.container {
+    margin-top: 16px;
+    padding: 12px;
+    background: var(--bg-glass);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--colorTextDark);
+    margin: 0;
+}
+
+.addButton {
+    padding: 4px 12px;
+    background: #1677ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.addButton:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.dropdown {
+    position: absolute;
+    background: white;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 10;
+}
+
+.dropdownItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    font-size: 13px;
+}
+
+.dropdownItem:hover {
+    background: #f0f0f0;
+}
+
+.emptyState {
+    color: #999;
+    font-size: 13px;
+    padding: 8px 0;
+}
+
+.protocoreList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.protocoreWrapper {
+    /* можно добавить отступы если нужно */
+}

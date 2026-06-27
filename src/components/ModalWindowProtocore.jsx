@@ -41,7 +41,7 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
         { label: 'CRIT Rate', type: 'percent' },
         { label: 'CRIT DMG', type: 'percent' },
         { label: 'DMG Boost to Weakened', type: 'percent' },
-        { label: 'Oath Strenth', type: 'percent' },
+        { label: 'Oath Strength', type: 'percent' },
     ];
 
     const getStellactrumColor = (color) => {

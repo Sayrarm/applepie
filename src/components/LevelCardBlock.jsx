@@ -7,6 +7,96 @@ import {useParams} from 'react-router-dom';
 import {getStatsWithRank, memoryStats} from '../data/levelCardData';
 import {memoriesData} from '../data/memories-data.js';
 
+// Функция для расчёта статов протокоров
+const calculateProtocoreStats = (protocores, baseHp, baseAtk, baseDef) => {
+    const stats = {
+        hp: 0,
+        atk: 0,
+        def: 0,
+        critRate: 0,
+        critDmg: 0,
+        dmgBoost: 0,
+        oathStrength: 0,
+        oathRecoveryBoost: 0,
+        expeditedEnergyBoost: 0
+    };
+
+    if (!protocores || protocores.length === 0) return stats;
+
+    // Сначала собираем все бонусы отдельно
+    const bonuses = {
+        hpFlat: 0,
+        atkFlat: 0,
+        defFlat: 0,
+        hpPercent: 0,
+        atkPercent: 0,
+        defPercent: 0,
+        critRate: 0,
+        critDmg: 0,
+        dmgBoost: 0,
+        oathStrength: 0,
+        oathRecoveryBoost: 0,
+        expeditedEnergyBoost: 0
+    };
+
+    protocores.forEach(protocore => {
+        const statName = protocore.mainStat;
+        const statValue = protocore.mainStatValue || 0;
+
+        // Основные статы
+        switch (statName) {
+            case 'HP': bonuses.hpFlat += statValue; break;
+            case 'ATK': bonuses.atkFlat += statValue; break;
+            case 'DEF': bonuses.defFlat += statValue; break;
+            case 'HP Bonus': bonuses.hpPercent += statValue; break;
+            case 'ATK Bonus': bonuses.atkPercent += statValue; break;
+            case 'DEF Bonus': bonuses.defPercent += statValue; break;
+            case 'CRIT Rate': bonuses.critRate += statValue; break;
+            case 'CRIT DMG': bonuses.critDmg += statValue; break;
+            case 'DMG Boost to Weakened': bonuses.dmgBoost += statValue; break;
+            case 'Oath Strength': bonuses.oathStrength += statValue; break;
+            case 'Oath Recovery Boost': bonuses.oathRecoveryBoost += statValue; break;
+            case 'Expedited Energy Boost': bonuses.expeditedEnergyBoost += statValue; break;
+            default: break;
+        }
+
+        // Сабстаты
+        if (protocore.substats) {
+            protocore.substats.forEach(sub => {
+                switch (sub.stat) {
+                    case 'HP': bonuses.hpFlat += sub.value || 0; break;
+                    case 'ATK': bonuses.atkFlat += sub.value || 0; break;
+                    case 'DEF': bonuses.defFlat += sub.value || 0; break;
+                    case 'HP Bonus': bonuses.hpPercent += sub.value || 0; break;
+                    case 'ATK Bonus': bonuses.atkPercent += sub.value || 0; break;
+                    case 'DEF Bonus': bonuses.defPercent += sub.value || 0; break;
+                    case 'CRIT Rate': bonuses.critRate += sub.value || 0; break;
+                    case 'CRIT DMG': bonuses.critDmg += sub.value || 0; break;
+                    case 'DMG Boost to Weakened': bonuses.dmgBoost += sub.value || 0; break;
+                    case 'Oath Strength': bonuses.oathStrength += sub.value || 0; break;
+                    default: break;
+                }
+            });
+        }
+    });
+
+    // Вычисляем финальные статы
+    // HP: плоский бонус + процент от базового HP
+    stats.hp = bonuses.hpFlat + Math.round(baseHp * (bonuses.hpPercent / 100));
+    stats.atk = bonuses.atkFlat + Math.round(baseAtk * (bonuses.atkPercent / 100));
+    stats.def = bonuses.defFlat + Math.round(baseDef * (bonuses.defPercent / 100));
+
+    // Процентные статы просто суммируются
+    stats.critRate = bonuses.critRate;
+    stats.critDmg = bonuses.critDmg;
+    stats.dmgBoost = bonuses.dmgBoost;
+    stats.oathStrength = bonuses.oathStrength;
+    stats.oathRecoveryBoost = bonuses.oathRecoveryBoost;
+    stats.expeditedEnergyBoost = bonuses.expeditedEnergyBoost;
+
+    return stats;
+};
+
 const rankOptions = [
     {value: 0, label: 'Rank 0'},
     {value: 1, label: 'Rank 1'},
@@ -47,6 +137,7 @@ function LevelCardBlock({cardId: propCardId}) {
     const [rank, setRank] = useState(() => getSavedRank(cardId));
     const [isAvailable, setIsAvailable] = useState(() => getSavedAvailability(cardId));
     const [isAscended, setIsAscended] = useState(() => getSavedAscend(cardId));
+    const [equippedProtocores, setEquippedProtocores] = useState([]);
 
     // Находим карточку
     const card = useMemo(() => {
@@ -54,11 +145,40 @@ function LevelCardBlock({cardId: propCardId}) {
         return memoriesData.find(c => String(c.id) === cardId) || null;
     }, [cardId]);
 
+    // Загружаем прикреплённые протокоры
+    useEffect(() => {
+        if (!cardId) return;
+        const saved = JSON.parse(localStorage.getItem(`card_protocores_${cardId}`) || '[]');
+        setEquippedProtocores(saved);
+    }, [cardId]);
+
     // Пересчитываем статы
     const stats = useMemo(() => {
         if (!card) return null;
-        return getStatsWithRank(card, level, rank, isAscended);
-    }, [card, level, rank, isAscended]);
+        const baseStats = getStatsWithRank(card, level, rank, isAscended);
+        if (!baseStats) return null;
+
+        // Передаём базовые статы для расчёта процентов
+        const protocoreStats = calculateProtocoreStats(
+            equippedProtocores,
+            baseStats.hp || 0,
+            baseStats.atk || 0,
+            baseStats.def || 0
+        );
+
+        return {
+            hp: Math.round((baseStats.hp || 0) + protocoreStats.hp),
+            atk: Math.round((baseStats.atk || 0) + protocoreStats.atk),
+            def: Math.round((baseStats.def || 0) + protocoreStats.def),
+            critRate: (baseStats.critRate || 0) + protocoreStats.critRate,
+            critDmg: (baseStats.critDmg || 0) + protocoreStats.critDmg,
+            dmgBoost: (baseStats.dmgBoost || 0) + protocoreStats.dmgBoost,
+            oathStrength: (baseStats.oathStrength || 0) + protocoreStats.oathStrength,
+            oathRecoveryBoost: (baseStats.oathRecoveryBoost || 0) + protocoreStats.oathRecoveryBoost,
+            expeditedEnergyBoost: (baseStats.expeditedEnergyBoost || 0) + protocoreStats.expeditedEnergyBoost,
+            isAscended: baseStats.isAscended
+        };
+    }, [card, level, rank, isAscended, equippedProtocores]);
 
     // Сохранение в localStorage
     useEffect(() => {
@@ -85,6 +205,31 @@ function LevelCardBlock({cardId: propCardId}) {
             localStorage.setItem(`cardAscend_${cardId}`, JSON.stringify(isAscended));
         }
     }, [isAscended, cardId]);
+
+    useEffect(() => {
+        // Слушаем кастомное событие обновления протокоров
+        const handleProtocoresUpdate = (event) => {
+            if (event.detail.cardId === cardId) {
+                setEquippedProtocores(event.detail.protocores);
+            }
+        };
+
+        // Слушаем событие storage (для синхронизации между вкладками)
+        const handleStorageChange = (e) => {
+            if (e.key === `card_protocores_${cardId}`) {
+                const saved = JSON.parse(e.newValue || '[]');
+                setEquippedProtocores(saved);
+            }
+        };
+
+        window.addEventListener('protocoresUpdated', handleProtocoresUpdate);
+        window.addEventListener('storage', handleStorageChange);
+
+        return () => {
+            window.removeEventListener('protocoresUpdated', handleProtocoresUpdate);
+            window.removeEventListener('storage', handleStorageChange);
+        };
+    }, [cardId]);
 
     // Проверяем, доступно ли возвышение для текущего уровня
     const isAscendable = [10, 20, 30, 40, 50, 60, 70, 80].includes(level);

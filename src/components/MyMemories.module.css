@@ -32,7 +32,7 @@
     width: 70px;
     height: 70px;
     object-fit: cover;
-    object-position: top;
+    object-position: 20% 20%;
 }
 
 .cardLink {
