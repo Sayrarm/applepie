@@ -181,7 +181,7 @@
     box-shadow: 0 0 15px 8px rgba(224, 17, 95, 0.3);
 }
 
-@media (max-width: 376px) {
+@media (max-width: 550px) {
 
     .protocoreBlock {
         width: 180px;
