@@ -34,4 +34,12 @@
     color: var(--colorTextDark);
 }
 
-@media screen and (max-width: 1000px) {}
+@media (max-width: 376px) {
+
+    .protocoreList {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        padding: 0;
+    }
+}

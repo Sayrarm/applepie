@@ -56,7 +56,7 @@
 
 .mainStat {
     text-shadow: var(--text-shadow);
-    background-color: color-mix(in srgb, var(--bg-brown) 50%, transparent);
+    background-color: color-mix(in srgb, black 50%, transparent);
     font-size: 14px;
     padding: 5px 5px;
 }
@@ -181,6 +181,21 @@
     box-shadow: 0 0 15px 8px rgba(224, 17, 95, 0.3);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 376px) {
+
+    .protocoreBlock {
+        width: 180px;
+    }
+
+    .typeName {
+        font-size: 14px;
+    }
+
+    .mainStat,
+    .subStat,
+    .editButton,
+    .deleteButton {
+        font-size: 12px;
+    }
 
 }
