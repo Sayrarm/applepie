@@ -16,11 +16,12 @@
     cursor: pointer;
     transition: all 0.3s ease;
     margin-bottom: 20px;
+    margin-left: 5px;
     align-self: flex-start;
 }
 
 .addButton:hover {
-    transform: translateY(-2px);
+    transform: translateY(-5px);
 }
 
 .protocoreList {

@@ -1,0 +1,54 @@
+.container {
+    margin-top: 20px;
+}
+
+.statsTable {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.statsTable th {
+    padding: 8px 12px;
+}
+
+.statsTable td {
+    padding: 5px 6px;
+    background-color: var(--bg-glass);
+}
+
+.statsTable th,
+.statsTable td {
+    border: 1px solid var(--border-table);
+    text-align: center;
+}
+
+.statsTable th {
+    background-color: var(--forSelect);
+    color: var(--colorText);
+}
+
+.cardImage {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.cardLink {
+    text-decoration: none;
+    color: var(--colorTextDark);
+    transition: 0.3s;
+}
+
+.cardLink:hover {
+    text-decoration: none;
+    color: var(--a);
+}
+
+.stellaContainer *,
+.placementContainer *,
+.talentContainer * {
+    text-align: center;
+    vertical-align: middle;
+}

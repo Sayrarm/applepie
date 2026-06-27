@@ -4,6 +4,7 @@ import ProtocoreCalculator from "../components/ProtocoreCalculator.jsx";
 import MemoryUpCalculator from "../components/MemoryUpCalculator.jsx";
 import MyResources from "../components/MyResources.jsx";
 import Protocores from "../components/Protocores.jsx";
+import MyMemories from "../components/MyMemories.jsx";
 
 function Calculator() {
     const [activeTab, setActiveTab] = useState('inventory');
@@ -13,8 +14,14 @@ function Calculator() {
             {/* Навигация */}
             <div className={styles.tabs}>
                 <button
-                    className={`${styles.tabButton} ${activeTab === 'allprotocores' ? styles.active : ''}`}
-                    onClick={() => setActiveTab('allprotocores')}
+                    className={`${styles.tabButton} ${activeTab === 'myMemories' ? styles.active : ''}`}
+                    onClick={() => setActiveTab('myMemories')}
+                >
+                    My Memories
+                </button>
+                <button
+                    className={`${styles.tabButton} ${activeTab === 'allProtocores' ? styles.active : ''}`}
+                    onClick={() => setActiveTab('allProtocores')}
                 >
                     My Protocores
                 </button>
@@ -40,7 +47,8 @@ function Calculator() {
 
             {/* Контент */}
             <div className={styles.tabContent}>
-                {activeTab === 'allprotocores' && <Protocores />}
+                {activeTab === 'myMemories' && <MyMemories />}
+                {activeTab === 'allProtocores' && <Protocores />}
                 {activeTab === 'inventory' && <MyResources />}
                 {activeTab === 'protocoreCalc' && <ProtocoreCalculator />}
                 {activeTab === 'memoryCalc' && <MemoryUpCalculator />}
