@@ -13,7 +13,6 @@ import {compData} from "../data/comp-data.js";
 import PairBonusBlock from "../components/PairBonusBlock.jsx";
 import ButtonNavigationBlock from "../components/ButtonNavigationBlock.jsx";
 import LevelCardBlock from "../components/LevelCardBlock.jsx";
-import ProtocoreBlock from "../components/ProtocoreBlock.jsx";
 
 function CardArticle() {
     const {cardId} = useParams();
