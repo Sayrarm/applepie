@@ -125,7 +125,7 @@ function CardProtocores({ cardId }) {
 
         const placementLabel = cardPlacement.toUpperCase();
         const allowedTypes = cardPlacement === 'solar' ? 'Alpha, Beta' : 'Gamma, Delta';
-        return `${placementLabel} card — allowed: ${allowedTypes}`;
+        return `${placementLabel} allowed: ${allowedTypes}`;
     };
 
     return (
@@ -161,8 +161,8 @@ function CardProtocores({ cardId }) {
                                 >
                                     <ProtocoreBlock
                                         protocore={protocore}
-                                        onEdit={() => {}}
-                                        onDelete={() => {}}
+                                        hideChange={true}
+                                        hideDelete={true}
                                     />
                                 </button>
                             ))}
@@ -181,7 +181,7 @@ function CardProtocores({ cardId }) {
                         <div key={protocore.id} className={styles.protocoreWrapper}>
                             <ProtocoreBlock
                                 protocore={protocore}
-                                onEdit={() => {}}
+                                hideChange={true}
                                 onDelete={() => handleRemoveProtocore(protocore.id)}
                             />
                         </div>

@@ -3,7 +3,7 @@ import styles from './ProtocoreBlock.module.css';
 import { getImageUrl } from './imageUtils.js';
 import {protocoreColor, protocoreTypes} from '../data/protocore-data.js';
 
-function ProtocoreBlock({ protocore, onEdit, onDelete }) {
+function ProtocoreBlock({ protocore, onEdit, onDelete, hideChange = false, hideDelete = false }) {
     const { type, stellactrum, level, mainStat, mainStatValue, substats } = protocore;
 
     // Получаем данные типа из protocoreTypes
@@ -94,14 +94,20 @@ function ProtocoreBlock({ protocore, onEdit, onDelete }) {
             </div>
           </div>
 
-            <div className={styles.actions}>
-                <button className={styles.editButton} onClick={handleEdit}>
-                    Change
-                </button>
-                <button className={styles.deleteButton} onClick={handleDelete}>
-                    Delete
-                </button>
-            </div>
+
+                <div className={styles.actions}>
+                    {!hideChange && (
+                    <button className={styles.editButton} onClick={handleEdit}>
+                        Change
+                    </button>
+                    )}
+                    {!hideDelete && (
+                    <button className={styles.deleteButton} onClick={handleDelete}>
+                        Delete
+                    </button>
+                    )}
+                </div>
+
         </section>
     );
 }
