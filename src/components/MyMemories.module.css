@@ -9,11 +9,11 @@
 }
 
 .statsTable th {
-    padding: 8px 12px;
+    padding: 8px 5px;
 }
 
 .statsTable td {
-    padding: 5px 6px;
+    padding: 3px;
     background-color: var(--bg-glass);
 }
 
@@ -30,7 +30,7 @@
 
 .cardImage {
     width: 70px;
-    height: 70px;
+    height: 40px;
     object-fit: cover;
     object-position: 20% 20%;
 }
@@ -51,4 +51,11 @@
 .talentContainer * {
     text-align: center;
     vertical-align: middle;
+}
+
+.stellaIcon,
+.placementIcon,
+.talentIcon {
+    width: 25px;
+    height: 25px;
 }

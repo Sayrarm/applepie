@@ -313,6 +313,26 @@ export const ascendData = {
     }
 };
 
+export const calculateDmgBoost = (hp, atk, def, talentKey) => {
+    let dmgBoost = 0;
+
+    if (talentKey === 'hp') {
+        if (hp > 8000) {
+            dmgBoost = ((hp - 8000) / 400) * 0.2;
+        }
+    } else if (talentKey === 'atk') {
+        if (atk > 400) {
+            dmgBoost = ((atk - 400) / 20) * 0.2;
+        }
+    } else if (talentKey === 'def') {
+        if (def > 200) {
+            dmgBoost = ((def - 200) / 10) * 0.2;
+        }
+    }
+
+    return dmgBoost; // возвращаем в десятичном виде (например, 0.0725 для 7.25%)
+};
+
 // Функция для получения статов с учетом ранка
 export const getStatsWithRank = (card, level, rank, isAscended = false) => {
     // Защита от undefined/null
@@ -384,21 +404,7 @@ export const getStatsWithRank = (card, level, rank, isAscended = false) => {
     const displayCritRate = card.placementName === 'lunar' ? critRate : 0;
     const displayCritDmg = card.placementName === 'solar' ? critDmg : 0;
 
-    // Рассчитываем DMG Boost to Weakened
-    let dmgBoost = 0;
-    if (talentKey === 'hp') {
-        if (hp > 8000) {
-            dmgBoost = ((hp - 8000) / 400) * 0.2;
-        }
-    } else if (talentKey === 'atk') {
-        if (atk > 400) {
-            dmgBoost = ((atk - 400) / 20) * 0.2;
-        }
-    } else if (talentKey === 'def') {
-        if (def > 200) {
-            dmgBoost = ((def - 200) / 10) * 0.2;
-        }
-    }
+    let dmgBoost = calculateDmgBoost(hp, atk, def, talentKey);
 
     return {
         hp,
