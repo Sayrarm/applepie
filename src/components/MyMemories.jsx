@@ -172,7 +172,7 @@ function MyMemories() {
                                 </td>
                                 <td>
                                     <span className={styles.rankBadge}>
-                                        Rank {card.rank}
+                                       {card.rank}
                                     </span>
                                 </td>
                                 <td className={styles.stellaContainer}>

@@ -45,6 +45,7 @@ export const router = createBrowserRouter([
             { path: "anecdotes", element: <Anecdotes /> },
             { path: "anecdotes/:articleLink", element: <AnArticle /> },
             { path: "calculator", element: <Calculator /> },
+            { path: "calculator/:navigation", element: <Calculator /> },
 
         ],
     },
