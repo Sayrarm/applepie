@@ -1,34 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useMemo } from 'react';
 import styles from './CardProtocores.module.css';
 import ProtocoreBlock from './ProtocoreBlock.jsx';
 import { memoriesData } from '../data/memories-data.js';
 
 function CardProtocores({ cardId }) {
-    const [selectedProtocores, setSelectedProtocores] = useState([]);
-    const [allProtocores, setAllProtocores] = useState([]);
-    const [showDropdown, setShowDropdown] = useState(false);
-    const [cardPlacement, setCardPlacement] = useState(null);
-
-    // Загружаем карточку, чтобы узнать placementName
-    useEffect(() => {
-        if (!cardId) return;
-        const card = memoriesData.find(c => String(c.id) === cardId);
-        if (card) {
-            setCardPlacement(card.placementName);
-        }
-    }, [cardId]);
-
-    // Загружаем все протокоры из localStorage
-    useEffect(() => {
+    // Ленивая инициализация — загружаем данные сразу при создании состояния
+    const [allProtocores, setAllProtocores] = useState(() => {
         const saved = JSON.parse(localStorage.getItem('protocores') || '[]');
-        setAllProtocores(saved);
-    }, []);
+        return saved;
+    });
 
-    // Загружаем прикреплённые протокоры для этой карточки
-    useEffect(() => {
-        if (!cardId) return;
+    const [selectedProtocores, setSelectedProtocores] = useState(() => {
+        if (!cardId) return [];
         const saved = JSON.parse(localStorage.getItem(`card_protocores_${cardId}`) || '[]');
-        setSelectedProtocores(saved);
+        return saved;
+    });
+
+    const [showDropdown, setShowDropdown] = useState(false);
+
+    // Используем useMemo для placement
+    const cardPlacement = useMemo(() => {
+        if (!cardId) return null;
+        const card = memoriesData.find(c => String(c.id) === cardId);
+        return card ? card.placementName : null;
     }, [cardId]);
 
     // Функция для сохранения в localStorage
@@ -98,8 +92,8 @@ function CardProtocores({ cardId }) {
         saveProtocores(updatedProtocores);
     };
 
-    // Фильтруем доступные протокоры с учётом ограничений
-    const getAvailableProtocores = () => {
+    // Фильтруем доступные протокоры через useMemo
+    const availableProtocores = useMemo(() => {
         return allProtocores.filter(p => {
             // Уже добавленные — не показываем
             if (selectedProtocores.some(sp => sp.id === p.id)) return false;
@@ -120,12 +114,9 @@ function CardProtocores({ cardId }) {
                 // Для Lunar: только gamma и delta
                 return p.type === 'gamma' || p.type === 'delta';
             }
-
             return false;
         });
-    };
-
-    const availableProtocores = getAvailableProtocores();
+    }, [allProtocores, selectedProtocores, cardPlacement]);
 
     // Получаем сообщение о лимите
     const getLimitMessage = () => {
@@ -154,26 +145,26 @@ function CardProtocores({ cardId }) {
                     >
                         + Add Protocore
                     </button>
+
+                    {showDropdown && availableProtocores.length > 0 && (
+                        <div className={styles.dropdown}>
+                            {availableProtocores.map(protocore => (
+                                <button
+                                    key={protocore.id}
+                                    className={styles.dropdownItem}
+                                    onClick={() => handleAddProtocore(protocore.id)}
+                                >
+                                    {protocore.type.charAt(0).toUpperCase() + protocore.type.slice(1)} (Lv.{protocore.level})
+                                </button>
+                            ))}
+                        </div>
+                    )}
                 </div>
             </div>
 
             <div className={styles.placementInfo}>
                 {getLimitMessage()}
             </div>
-
-            {showDropdown && availableProtocores.length > 0 && (
-                <div className={styles.dropdown}>
-                    {availableProtocores.map(protocore => (
-                        <button
-                            key={protocore.id}
-                            className={styles.dropdownItem}
-                            onClick={() => handleAddProtocore(protocore.id)}
-                        >
-                            {protocore.type.charAt(0).toUpperCase() + protocore.type.slice(1)} (Lv.{protocore.level})
-                        </button>
-                    ))}
-                </div>
-            )}
 
             {selectedProtocores.length === 0 ? (
                 <div className={styles.emptyState}>

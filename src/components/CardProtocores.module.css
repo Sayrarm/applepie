@@ -1,9 +1,8 @@
 .container {
-    margin-top: 16px;
-    padding: 12px;
-    background: var(--bg-glass);
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
+    margin-top: 10px;
+    padding: 5px;
+    background-color: var(--bg-glass);
+    box-shadow: var(--box-shadow);
 }
 
 .header {
@@ -14,10 +13,10 @@
 }
 
 .title {
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: bold;
     color: var(--colorTextDark);
-    margin: 0;
+    margin-left: 5px;
 }
 
 .addButton {
@@ -71,10 +70,11 @@
 
 .protocoreList {
     display: flex;
-    flex-direction: column;
-    gap: 8px;
+    justify-content: center;
+    gap: 10px;
 }
 
-.protocoreWrapper {
-    /* можно добавить отступы если нужно */
+.limitInfo,
+.placementInfo {
+    margin: 10px;
 }
