@@ -130,7 +130,7 @@ function MyMemories() {
                         <th>Rarity</th>
                         <th>Placement</th>
                         <th>Talent</th>
-                        <th>Protocores</th>
+                        <th>Protocores lvl</th>
                         <th>HP</th>
                         <th>ATK</th>
                         <th>DEF</th>

@@ -128,5 +128,5 @@ export const getProtocoreLevelsString = (protocores) => {
     const levels = protocores
         .map(proto => proto.level || 0)
         .sort((a, b) => b - a);
-    return `(+${levels.join('/+')})`;
+    return `+${levels.join(' / +')}`;
 };
