@@ -1,7 +1,7 @@
 import {Link, useParams} from 'react-router-dom';
 import styles from "./CardArticle.module.css";
 import {memoriesData} from '../data/memories-data.js';
-import {Fragment} from "react";
+import {Fragment, useState} from "react";
 import {getImageUrl} from "../components/imageUtils.js";
 import CopyableText from "../components/CopyableText.jsx";
 import ParametersBlock from "../components/ParametersBlock.jsx";
@@ -17,6 +17,7 @@ import CardProtocores from "../components/CardProtocores.jsx";
 
 function CardArticle() {
     const {cardId} = useParams();
+    const [isCardAvailable, setIsCardAvailable] = useState(false);
 
     // Находим карточку напрямую в данных (для отображения)
     const card = memoriesData.find(c => String(c.id) === cardId);
@@ -76,8 +77,15 @@ function CardArticle() {
 
                     <BannerPeriod banners={banners}/>
 
-                    <LevelCardBlock key={cardId} cardId={cardId} />
-                    <CardProtocores cardId={cardId} />
+                    <LevelCardBlock
+                        key={cardId}
+                        cardId={cardId}
+                        onAvailabilityChange={setIsCardAvailable}
+                    />
+
+                    {isCardAvailable && (
+                        <CardProtocores cardId={cardId} />
+                    )}
 
                 </div>
             </article>

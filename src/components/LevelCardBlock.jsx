@@ -129,7 +129,7 @@ const getSavedAscend = (cardId) => {
     return saved ? JSON.parse(saved) : false;
 };
 
-function LevelCardBlock({cardId: propCardId}) {
+function LevelCardBlock({cardId: propCardId, onAvailabilityChange}) {
     const {cardId: paramCardId} = useParams();
     const cardId = propCardId || paramCardId;
 
@@ -151,6 +151,13 @@ function LevelCardBlock({cardId: propCardId}) {
         const saved = JSON.parse(localStorage.getItem(`card_protocores_${cardId}`) || '[]');
         setEquippedProtocores(saved);
     }, [cardId]);
+
+    // при изменении isAvailable, вызываем колбэк
+    useEffect(() => {
+        if (onAvailabilityChange) {
+            onAvailabilityChange(isAvailable);
+        }
+    }, [isAvailable, onAvailabilityChange]);
 
     // Пересчитываем статы
     const stats = useMemo(() => {
