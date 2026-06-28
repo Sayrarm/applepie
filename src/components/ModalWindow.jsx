@@ -32,7 +32,6 @@ const ModalWindow = forwardRef((props, ref) => {
             title={title}
             onOk={handleOk}
             onCancel={handleCancel}
-            getContainer={false}
             footer={[
                 <Button key="back" onClick={handleCancel}>
                     Return

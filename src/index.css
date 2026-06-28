@@ -26,6 +26,13 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
+html::-webkit-scrollbar {
+    display: none;
+}
+html {
+    scrollbar-width: none;
+}
+
 .fixed-bg {
     position: fixed;
     top: 0;
