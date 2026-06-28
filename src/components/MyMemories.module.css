@@ -1,10 +1,15 @@
 .container {
     margin-top: 20px;
+
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .statsTable {
     border-collapse: collapse;
     width: 100%;
+    min-width: 374px;
     margin: 5px 0;
 }
 
