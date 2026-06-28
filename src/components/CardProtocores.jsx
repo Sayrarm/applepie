@@ -1,19 +1,17 @@
-import React, {useState, useMemo} from 'react';
+import React, {useMemo, useState} from 'react';
 import styles from './CardProtocores.module.css';
 import ProtocoreBlock from './ProtocoreBlock.jsx';
-import { memoriesData } from '../data/memories-data.js';
+import {memoriesData} from '../data/memories-data.js';
 
 function CardProtocores({ cardId }) {
     // Ленивая инициализация — загружаем данные сразу при создании состояния
     const [allProtocores, setAllProtocores] = useState(() => {
-        const saved = JSON.parse(localStorage.getItem('protocores') || '[]');
-        return saved;
+        return JSON.parse(localStorage.getItem('protocores') || '[]');
     });
 
     const [selectedProtocores, setSelectedProtocores] = useState(() => {
         if (!cardId) return [];
-        const saved = JSON.parse(localStorage.getItem(`card_protocores_${cardId}`) || '[]');
-        return saved;
+        return JSON.parse(localStorage.getItem(`card_protocores_${cardId}`) || '[]');
     });
 
     const [showDropdown, setShowDropdown] = useState(false);
@@ -161,7 +159,11 @@ function CardProtocores({ cardId }) {
                                     className={styles.dropdownItem}
                                     onClick={() => handleAddProtocore(protocore.id)}
                                 >
-                                    {protocore.type.charAt(0).toUpperCase() + protocore.type.slice(1)} (Lv.{protocore.level})
+                                    <ProtocoreBlock
+                                        protocore={protocore}
+                                        onEdit={() => {}}
+                                        onDelete={() => {}}
+                                    />
                                 </button>
                             ))}
                         </div>

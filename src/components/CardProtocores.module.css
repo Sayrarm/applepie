@@ -37,12 +37,11 @@
 
 .dropdown {
     position: absolute;
+    display: flex;
     right: 5px;
     top: 40px;
     background-color: var(--bg-glass);
     box-shadow: var(--box-shadow);
-    max-height: 150px;
-    width: 125px;
     overflow-y: auto;
     z-index: 50;
 }
@@ -59,10 +58,6 @@
     width: 100%;
     text-align: left;
     font-size: 13px;
-}
-
-.dropdownItem:hover {
-    background: #f0f0f0;
 }
 
 .emptyState {
