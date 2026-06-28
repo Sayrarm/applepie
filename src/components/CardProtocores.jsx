@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, {useState, useMemo} from 'react';
 import styles from './CardProtocores.module.css';
 import ProtocoreBlock from './ProtocoreBlock.jsx';
 import { memoriesData } from '../data/memories-data.js';
@@ -121,19 +121,26 @@ function CardProtocores({ cardId }) {
     // Получаем сообщение о лимите
     const getLimitMessage = () => {
         if (selectedProtocores.length >= 2) {
-            return '⚠️ Maximum 2 protocores equipped';
+            return 'Maximum 2 protocores equipped';
         }
         if (!cardPlacement) return 'Loading...';
 
         const placementLabel = cardPlacement.toUpperCase();
         const allowedTypes = cardPlacement === 'solar' ? 'Alpha, Beta' : 'Gamma, Delta';
-        return `📌 ${placementLabel} card — allowed: ${allowedTypes}`;
+        return `${placementLabel} card — allowed: ${allowedTypes}`;
     };
 
     return (
         <div className={styles.container}>
             <div className={styles.header}>
-                <h4 className={styles.title}>Equipped Protocores</h4>
+                <div>
+                    <h4 className={styles.title}>Equipped Protocores</h4>
+                    <div className={styles.placementInfo}>
+                        {getLimitMessage()}
+                    </div>
+                </div>
+
+
                 <div className={styles.headerActions}>
                     <span className={styles.limitInfo}>
                         {selectedProtocores.length}/2
@@ -160,10 +167,6 @@ function CardProtocores({ cardId }) {
                         </div>
                     )}
                 </div>
-            </div>
-
-            <div className={styles.placementInfo}>
-                {getLimitMessage()}
             </div>
 
             {selectedProtocores.length === 0 ? (

@@ -46,7 +46,7 @@ function CardArticle() {
                 </Fragment>
             </nav>
 
-            <article className={styles.card}>
+            <article key={cardId} className={styles.card}>
                 <div className={styles.imgContainer}>
                     <img
                         className={styles.img}
@@ -78,13 +78,13 @@ function CardArticle() {
                     <BannerPeriod banners={banners}/>
 
                     <LevelCardBlock
-                        key={cardId}
                         cardId={cardId}
                         onAvailabilityChange={setIsCardAvailable}
                     />
 
                     {isCardAvailable && (
-                        <CardProtocores cardId={cardId} />
+                        <CardProtocores
+                            cardId={cardId} />
                     )}
 
                 </div>
