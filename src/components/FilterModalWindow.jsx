@@ -6,7 +6,8 @@ const STORAGE_KEYS = {
     RARITY: 'filter_rarity',
     PLACEMENT: 'filter_placement',
     TALENT: 'filter_talent',
-    STELLA: 'filter_stella'
+    STELLA: 'filter_stella',
+    AVAILABILITY: 'filter_availability'
 };
 
 // Функции загрузки из localStorage
@@ -21,6 +22,7 @@ const FilterModalWindow = forwardRef(({ open, onClose, onFilter, onClearFilters 
     const [placement, setPlacement] = useState(() => loadFromStorage(STORAGE_KEYS.PLACEMENT, []));
     const [talent, setTalent] = useState(() => loadFromStorage(STORAGE_KEYS.TALENT, []));
     const [stella, setStella] = useState(() => loadFromStorage(STORAGE_KEYS.STELLA, []));
+    const [availability, setAvailability] = useState(() => loadFromStorage(STORAGE_KEYS.AVAILABILITY, []));
 
     // Сохраняем в localStorage при изменении
     useEffect(() => {
@@ -39,6 +41,10 @@ const FilterModalWindow = forwardRef(({ open, onClose, onFilter, onClearFilters 
         localStorage.setItem(STORAGE_KEYS.STELLA, JSON.stringify(stella));
     }, [stella]);
 
+    useEffect(() => {
+        localStorage.setItem(STORAGE_KEYS.AVAILABILITY, JSON.stringify(availability));
+    }, [availability]);
+
     // ЭКСПОРТИРУЕМ ФУНКЦИЮ ДЛЯ ВНЕШНЕГО ВЫЗОВА
     useImperativeHandle(ref, () => ({
         clearAll: () => {
@@ -53,6 +59,7 @@ const FilterModalWindow = forwardRef(({ open, onClose, onFilter, onClearFilters 
             localStorage.removeItem(STORAGE_KEYS.PLACEMENT);
             localStorage.removeItem(STORAGE_KEYS.TALENT);
             localStorage.removeItem(STORAGE_KEYS.STELLA);
+            localStorage.removeItem(STORAGE_KEYS.AVAILABILITY);
 
             // Вызываем функцию очистки из родителя
             if (onClearFilters) {
@@ -83,6 +90,11 @@ const FilterModalWindow = forwardRef(({ open, onClose, onFilter, onClearFilters 
         { value: 'amber', label: 'amber', color: '#ff8711' },
         { value: 'ruby', label: 'ruby', color: '#ff1111' },
         { value: 'pearl', label: 'pearl', color: '#ff11f3'  },
+    ];
+
+    const optionsAvailability = [
+        { label: 'Available', value: 'available' },
+        { label: 'Not Available', value: 'notAvailable' },
     ];
 
     const tagRender = props => {
@@ -121,18 +133,24 @@ const FilterModalWindow = forwardRef(({ open, onClose, onFilter, onClearFilters 
         setTalent(checkedValues);
     };
 
+    const handleAvailabilityChange = (checkedValues) => {
+        setAvailability(checkedValues);
+    };
+
     const handleClear = () => {
         // Очищаем локальные состояния
         setRarity([]);
         setPlacement([]);
         setTalent([]);
         setStella([]);
+        setAvailability([]);
 
         // Очищаем localStorage
         localStorage.removeItem(STORAGE_KEYS.RARITY);
         localStorage.removeItem(STORAGE_KEYS.PLACEMENT);
         localStorage.removeItem(STORAGE_KEYS.TALENT);
         localStorage.removeItem(STORAGE_KEYS.STELLA);
+        localStorage.removeItem(STORAGE_KEYS.AVAILABILITY);
 
         // Вызываем функцию очистки из родителя
         if (onClearFilters) {
@@ -147,6 +165,7 @@ const FilterModalWindow = forwardRef(({ open, onClose, onFilter, onClearFilters 
             placement: placement,
             talent: talent,
             stella: stella,
+            availability: availability || [],
         };
 
         onFilter(filters); // отправляем родителю
@@ -185,6 +204,15 @@ const FilterModalWindow = forwardRef(({ open, onClose, onFilter, onClearFilters 
                     options={optionsTalent}
                     value={talent}
                     onChange={handleTalentChange}
+                />
+            </div>
+
+            <div style={{ marginBottom: 15 }}>
+                <span>Availability: </span>
+                <Checkbox.Group
+                    options={optionsAvailability}
+                    value={availability}
+                    onChange={handleAvailabilityChange}
                 />
             </div>
 

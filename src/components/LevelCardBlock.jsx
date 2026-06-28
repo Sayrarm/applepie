@@ -131,6 +131,16 @@ function LevelCardBlock({cardId: propCardId, onAvailabilityChange}) {
         };
     }, [cardId]);
 
+    useEffect(() => {
+        if (cardId) {
+            localStorage.setItem(`cardAvailable_${cardId}`, JSON.stringify(isAvailable));
+            // Отправляем событие для обновления списка в Memories
+            window.dispatchEvent(new CustomEvent('cardAvailabilityChanged', {
+                detail: { cardId, isAvailable }
+            }));
+        }
+    }, [isAvailable, cardId]);
+
     // Проверяем, доступно ли возвышение для текущего уровня
     const isAscendable = [10, 20, 30, 40, 50, 60, 70, 80].includes(level);
     const isAwaken = level === 80;

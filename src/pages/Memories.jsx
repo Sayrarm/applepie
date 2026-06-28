@@ -6,10 +6,11 @@ import {useSearch} from '../hooks/useSearch';
 import {useSort} from '../hooks/useSort';
 import {useFilter} from '../hooks/useFilter';
 import {stylesFnSearch} from "../components/stylesAntd.js";
-import { useState, useRef, useEffect} from "react";
+import {useEffect, useRef, useState} from "react";
 import {Link} from "react-router-dom";
 import {getImageUrl} from "../components/imageUtils.js";
 import {memoriesData as initialMemoriesData} from '../data/memories-data.js';
+import {enhanceMemoriesWithAvailability} from "../data/cardAvailability.js";
 
 function Memories() {
     const {Search} = Input;
@@ -17,7 +18,9 @@ function Memories() {
     // Используем хуки
     const {searchQuery, onSearch} = useSearch();
     const {sortCriteria, handleSortChange, clearSorting, sortMemories} = useSort();
-    const [memoriesData, setMemoriesData] = useState(initialMemoriesData); // Загружаем данные напрямую из импорта
+    const [memoriesData, setMemoriesData] = useState(() => {
+        return enhanceMemoriesWithAvailability(initialMemoriesData);
+    });
     const {
         selectedChar,
         setSelectedChar,
@@ -51,6 +54,29 @@ function Memories() {
         return memory.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
             memory.char.toLowerCase().includes(searchQuery.toLowerCase());
     });
+
+    useEffect(() => {
+        const handleStorageChange = (e) => {
+            if (e.key && e.key.startsWith('cardAvailable_')) {
+                const enhanced = enhanceMemoriesWithAvailability(initialMemoriesData);
+                setMemoriesData(enhanced);
+            }
+        };
+
+        window.addEventListener('storage', handleStorageChange);
+        return () => window.removeEventListener('storage', handleStorageChange);
+    }, []);
+
+    useEffect(() => {
+        const handleAvailabilityChange = () => {
+            const enhanced = enhanceMemoriesWithAvailability(initialMemoriesData);
+            setMemoriesData(enhanced);
+        };
+
+        window.addEventListener('cardAvailabilityChanged', handleAvailabilityChange);
+        return () => window.removeEventListener('cardAvailabilityChanged', handleAvailabilityChange);
+    }, []);
+
 
     // Сортируем отфильтрованные данные
     const sortedMemories = sortMemories(filteredMemories);
