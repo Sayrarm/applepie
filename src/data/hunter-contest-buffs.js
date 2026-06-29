@@ -44,7 +44,7 @@ export const hunterContestBuffs = [
     "active": false
   },
   {
-    "id": 2,
+    "id": 3,
     "teamAStella1": "../assets/icons/emerald.png",
     "teamAStella1Count": 5,
     "teamAStella2": "../assets/icons/amber.png",
@@ -62,6 +62,28 @@ export const hunterContestBuffs = [
     "teamCStella2": "../assets/icons/emerald.png",
     "teamCStella2Count": 1,
     "teamC": "DMG increase: Increases DMG against vulnerable Boss for all allied units.",
+
+    "active": false
+  },
+  {
+    "id": 4,
+    "teamAStella1": "../assets/icons/violet.png",
+    "teamAStella1Count": 5,
+    "teamAStella2": "../assets/icons/pearl.png",
+    "teamAStella2Count": 1,
+    "teamA": "Overflowing Energy: When companion's Energy is fully charged, he deals increased DMG in a short period of time.",
+
+    "teamBStella1": "../assets/icons/pearl.png",
+    "teamBStella1Count": 4,
+    "teamBStella2": "../assets/icons/ruby.png",
+    "teamBStella2Count": 1,
+    "teamB": "Weakness Anchorage: Weakened enemies take 100% more Charged Attack DMG",
+
+    "teamCStella1": "../assets/icons/emerald.png",
+    "teamCStella1Count": 3,
+    "teamCStella2": "../assets/icons/violet.png",
+    "teamCStella2Count": 1,
+    "teamC": "Advancement: Increases CRIT DMG of all allied units.",
 
     "active": true
   },

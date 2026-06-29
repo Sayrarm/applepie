@@ -869,12 +869,23 @@ export const bannersDataFull = [
 
   },
   {
-    "id": 11,
+    "id": 80,
     "name": "Dawn's Embrace",
     "image": "../assets/banners/dawns-embrace.png",
     "cardIds": [364],
     "startDate": "2026-06-25T05:00:00",
     "endDate": "2026-07-02T04:59:59",
+    "rerun": true,
+    "active": true
+
+  },
+  {
+    "id": 81,
+    "name": "Edge of Continuum",
+    "image": "../assets/banners/edge-of-continuum.png",
+    "cardIds": [293, 294],
+    "startDate": "2026-07-02T05:00:00",
+    "endDate": "2026-07-09T04:59:00",
     "rerun": true,
     "active": true
 
