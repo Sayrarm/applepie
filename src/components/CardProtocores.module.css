@@ -38,12 +38,15 @@
 .dropdown {
     position: absolute;
     display: flex;
+    flex-wrap: wrap;
     right: 5px;
     top: 40px;
-    background-color: var(--bg-glass);
+    background-color: var(--bg-modal);
     box-shadow: var(--box-shadow);
     overflow-y: auto;
     z-index: 50;
+    max-width: 280px;
+    max-height: 300px;
 }
 
 .dropdownItem {
@@ -75,4 +78,11 @@
 .limitInfo,
 .placementInfo {
     margin: 5px;
+}
+
+@media screen and (max-width: 380px) {
+    .dropdown {
+        right: 5px;
+        top: 60px;
+    }
 }
