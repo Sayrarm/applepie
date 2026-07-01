@@ -14,6 +14,8 @@ import PairBonusBlock from "../components/PairBonusBlock.jsx";
 import ButtonNavigationBlock from "../components/ButtonNavigationBlock.jsx";
 import LevelCardBlock from "../components/LevelCardBlock.jsx";
 import CardProtocores from "../components/CardProtocores.jsx";
+import SolarPairBonusBlock from "../components/SolarPairBonusBlock.jsx";
+import {solar4Stars} from "../data/solar-4-star-info.js";
 
 function CardArticle() {
     const {cardId} = useParams();
@@ -74,6 +76,12 @@ function CardArticle() {
                             memoriesData={memoriesData}
                         />
                     )}
+
+                    <SolarPairBonusBlock
+                        cardId={cardId}
+                        memoriesData={memoriesData}
+                        solarPairData={solar4Stars}
+                    />
 
                     <BannerPeriod banners={banners}/>
 
