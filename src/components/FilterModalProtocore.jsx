@@ -63,10 +63,41 @@ const FilterModalProtocore = forwardRef(({ open, onClose, onFilter, onClearFilte
     }));
 
     const protocoreTypeKeys = Object.keys(protocoreTypes);
-    const stellactrumColors = ['emerald', 'amber', 'violet', 'pearl', 'sapphire', 'ruby'];
+
+    const stellactrumColors = [
+        { value: 'emerald', label: 'Emerald', color: '#27650d' },
+        { value: 'sapphire', label: 'Sapphire', color: '#00b1ff' },
+        { value: 'violet', label: 'Violet', color: '#8141ff' },
+        { value: 'amber', label: 'Amber', color: '#ff8711' },
+        { value: 'ruby', label: 'Ruby', color: '#ff1111' },
+        { value: 'pearl', label: 'Pearl', color: '#ff11f3' },
+    ];
+
     const levelOptions = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
-    const mainStatOptions = ['HP', 'ATK', 'DEF', 'ATK Bonus', 'HP Bonus', 'DEF Bonus', 'CRIT Rate', 'CRIT DMG', 'DMG Boost to Weakened', 'Oath Strength'];
+    const mainStatOptions = ['HP', 'ATK', 'DEF', 'ATK Bonus', 'HP Bonus', 'DEF Bonus', 'CRIT Rate', 'CRIT DMG', 'DMG Boost to Weakened', 'Oath Strength', 'Oath Recovery Boost', 'Expedited Energy Boost'];
     const subStatOptions = ['HP', 'ATK', 'DEF', 'ATK Bonus', 'HP Bonus', 'DEF Bonus', 'CRIT Rate', 'CRIT DMG', 'DMG Boost to Weakened', 'Oath Strength'];
+
+    const tagRender = props => {
+        const { label, value, closable, onClose } = props;
+        const option = stellactrumColors.find(opt => opt.value === value);
+        const tagColor = option?.color || 'default';
+
+        const onPreventMouseDown = event => {
+            event.preventDefault();
+            event.stopPropagation();
+        };
+        return (
+            <Tag
+                color={tagColor}
+                onMouseDown={onPreventMouseDown}
+                closable={closable}
+                onClose={onClose}
+                style={{ marginInlineEnd: 4 }}
+            >
+                {label}
+            </Tag>
+        );
+    };
 
     const handleOk = () => {
         const filters = {
@@ -101,18 +132,6 @@ const FilterModalProtocore = forwardRef(({ open, onClose, onFilter, onClearFilte
             </div>
 
             <div style={{ marginBottom: 15 }}>
-                <span>Stellactrum: </span>
-                <Checkbox.Group
-                    options={stellactrumColors.map(color => ({
-                        label: color.charAt(0).toUpperCase() + color.slice(1),
-                        value: color
-                    }))}
-                    value={stellactrum}
-                    onChange={setStellactrum}
-                />
-            </div>
-
-            <div style={{ marginBottom: 15 }}>
                 <span>Level: </span>
                 <Checkbox.Group
                     options={levelOptions.map(l => ({
@@ -139,6 +158,19 @@ const FilterModalProtocore = forwardRef(({ open, onClose, onFilter, onClearFilte
                     options={subStatOptions.map(stat => ({ label: stat, value: stat }))}
                     value={subStats}
                     onChange={setSubStats}
+                />
+            </div>
+
+            <div style={{ marginBottom: 15 }}>
+                <span>Stella: </span>
+                <Select
+                    tagRender={tagRender}
+                    mode="multiple"
+                    value={stellactrum}
+                    onChange={setStellactrum}
+                    style={{ width: '100%' }}
+                    placeholder="Select stellactrum colors"
+                    options={stellactrumColors}
                 />
             </div>
 

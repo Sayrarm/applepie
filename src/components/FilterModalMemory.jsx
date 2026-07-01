@@ -16,7 +16,7 @@ const loadFromStorage = (key, defaultValue) => {
     return saved ? JSON.parse(saved) : defaultValue;
 };
 
-const FilterModalWindow = forwardRef(({ open, onClose, onFilter, onClearFilters }, ref) => {
+const FilterModalMemory = forwardRef(({ open, onClose, onFilter, onClearFilters }, ref) => {
     // Состояния для каждого фильтра с загрузкой из localStorage
     const [rarity, setRarity] = useState(() => loadFromStorage(STORAGE_KEYS.RARITY, []));
     const [placement, setPlacement] = useState(() => loadFromStorage(STORAGE_KEYS.PLACEMENT, []));
@@ -235,4 +235,4 @@ const FilterModalWindow = forwardRef(({ open, onClose, onFilter, onClearFilters 
     );
 });
 
-export default FilterModalWindow;
+export default FilterModalMemory;

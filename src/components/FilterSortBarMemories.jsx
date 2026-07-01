@@ -1,6 +1,6 @@
 import styles from './FilterSortBar.module.css';
 import { Button, Input, Select } from 'antd';
-import FilterModalWindow from './FilterModalWindow.jsx';
+import FilterModalMemory from './FilterModalMemory.jsx';
 import { getImageUrl } from './imageUtils.js';
 import { stylesFnSearch } from './stylesAntd.js';
 
@@ -119,7 +119,7 @@ function FilterSortBarMemories({
                     className={styles.colorBrown}
                 />
 
-                <FilterModalWindow
+                <FilterModalMemory
                     ref={filterModalRef}
                     open={isModalOpen}
                     onClose={() => setIsModalOpen(false)}
