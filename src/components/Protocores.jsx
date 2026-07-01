@@ -113,6 +113,7 @@ function Protocores() {
                             placeholder="Select sort"
                             value={sortCriteria}
                             onChange={handleSortChange}
+                            style={{ minWidth: '300px' }}
                             className={filterSortBar.colorBrown}
                             options={[
                                 {value: 'type', label: 'Type'},
