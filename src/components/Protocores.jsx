@@ -1,26 +1,20 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from './Protocores.module.css';
-import filterSortBar from './FilterSortBar.module.css'
 import ProtocoreBlock from './ProtocoreBlock';
 import ModalWindowProtocore from './ModalWindowProtocore';
-import {useProtocoreSearch} from '../hooks/useProtocoreSearch';
-import {useProtocoreFilter} from '../hooks/useProtocoreFilter';
-import {useProtocoreSort} from '../hooks/useProtocoreSort';
-import FilterModalProtocore from '../components/FilterModalProtocore';
-import {Button, Input, Select} from 'antd';
-import {getImageUrl} from './imageUtils';
-import {stylesFnSearch} from "./stylesAntd.js";
-
-const {Search} = Input;
+import { useProtocoreSearch } from '../hooks/useProtocoreSearch';
+import { useProtocoreFilter } from '../hooks/useProtocoreFilter';
+import { useProtocoreSort } from '../hooks/useProtocoreSort';
+import FilterSortBarProtocores from "../components/FilterSortBarProtocores.jsx";
 
 function Protocores() {
     const [protocores, setProtocores] = useState([]);
     const modalRef = useRef();
     const filterModalRef = useRef();
 
-    const {searchQuery, onSearch, clearSearch} = useProtocoreSearch();
-    const {filters, applyFilters, clearFilters, filterProtocores, isModalOpen, setIsModalOpen} = useProtocoreFilter();
-    const {sortCriteria, handleSortChange, clearSorting, sortProtocores} = useProtocoreSort();
+    const { searchQuery, onSearch, clearSearch } = useProtocoreSearch();
+    const { applyFilters, clearFilters, filterProtocores, isModalOpen, setIsModalOpen } = useProtocoreFilter();
+    const { sortCriteria, handleSortChange, clearSorting, sortProtocores } = useProtocoreSort();
 
     useEffect(() => {
         const savedProtocores = JSON.parse(localStorage.getItem('protocores') || '[]');
@@ -101,94 +95,19 @@ function Protocores() {
 
     return (
         <section className={styles.container}>
-            {/* Фильтры и сортировка */}
-            <div className={styles.controls}>
-                <div className={styles.searchSortRow}>
-
-
-                    <div className={styles.sortWrapper}>
-                        <Select
-                            mode="tags"
-                            size="medium"
-                            placeholder="Select sort"
-                            value={sortCriteria}
-                            onChange={handleSortChange}
-                            style={{ minWidth: '300px' }}
-                            className={filterSortBar.colorBrown}
-                            options={[
-                                {value: 'type', label: 'Type'},
-                                {value: 'stellactrum', label: 'Stellactrum'},
-                                {value: 'level', label: 'Level'},
-                                {value: 'mainStat', label: 'Main Stat'}
-                            ]}
-                        />
-                        <Button
-                            onClick={clearSorting}
-                            color="default"
-                            variant="outlined"
-                            icon={
-                                <img
-                                    className={filterSortBar.imgIcon}
-                                    src={getImageUrl('../assets/icons/eraser_16863523.png')}
-                                    style={{width: 22, height: 22}}
-                                    alt="Clear sorting"
-                                />
-                            }
-                            title="Clear sorting"
-                            className={filterSortBar.colorBrown}
-                        />
-                    </div>
-
-                    <div className={filterSortBar.filterBy}>
-                        <Search
-                            placeholder="Search protocores..."
-                            allowClear
-                            onSearch={onSearch}
-                            onChange={(e) => {
-                                if (e.target.value === '') {
-                                    clearSearch();
-                                }
-                            }}
-                            style={{width: 250}}
-                            styles={stylesFnSearch}
-                        />
-                        <Button
-                            onClick={() => setIsModalOpen(true)}
-                            title="Filter"
-                            className={filterSortBar.colorBrown}
-                            icon={
-                                <img
-                                    src={getImageUrl('../assets/icons/filter.png')}
-                                    style={{width: 20, height: 20}}
-                                    alt="Filter"
-                                />
-                            }
-                        >
-                        </Button>
-
-                        <Button
-                            onClick={resetAllSettings}
-                            title="Reset all filters and sorting"
-                            className={filterSortBar.colorBrown}
-                            icon={
-                                <img
-                                    src={getImageUrl('../assets/icons/reset.png')}
-                                    style={{width: 18, height: 18}}
-                                    alt="Reset"
-                                />
-                            }
-                        >
-                        </Button>
-                    </div>
-                </div>
-            </div>
-
-            <FilterModalProtocore
-                ref={filterModalRef}
-                open={isModalOpen}
-                onClose={() => setIsModalOpen(false)}
-                onFilter={applyFilters}
-                onClearFilters={clearFilters}
+            <FilterSortBarProtocores
+                searchQuery={searchQuery}
+                onSearch={onSearch}
+                clearSearch={clearSearch}
+                sortCriteria={sortCriteria}
+                handleSortChange={handleSortChange}
+                clearSorting={clearSorting}
+                isModalOpen={isModalOpen}
+                setIsModalOpen={setIsModalOpen}
+                applyFilters={applyFilters}
+                clearFilters={clearFilters}
+                filterModalRef={filterModalRef}
+                resetAllSettings={resetAllSettings}
             />
 
             <button

@@ -6,7 +6,7 @@ import { stylesFnSearch } from './stylesAntd.js';
 
 const { Search } = Input;
 
-function FilterSortBar({
+function FilterSortBarMemories({
                            // Поиск
                            onSearch,
 
@@ -165,4 +165,4 @@ function FilterSortBar({
     );
 }
 
-export default FilterSortBar;
+export default FilterSortBarMemories;

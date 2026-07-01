@@ -9,7 +9,7 @@ import { useSearch } from '../hooks/useSearch';
 import { useSort } from '../hooks/useSort';
 import { useFilter } from '../hooks/useFilter';
 import { enhanceMemoriesWithAvailability } from "../data/cardAvailability.js";
-import FilterSortBar from '../components/FilterSortBar.jsx';
+import FilterSortBarMemories from './FilterSortBarMemories.jsx';
 
 function MyMemories() {
     // Используем хуки
@@ -159,7 +159,7 @@ function MyMemories() {
 
     return (
         <section className={styles.container}>
-            <FilterSortBar
+            <FilterSortBarMemories
                 searchQuery={searchQuery}
                 onSearch={onSearch}
                 sortCriteria={sortCriteria}

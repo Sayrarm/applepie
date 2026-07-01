@@ -1,9 +1,17 @@
-import React, {useMemo, useState} from 'react';
+import React, {useMemo, useRef, useState} from 'react';
 import styles from './CardProtocores.module.css';
 import ProtocoreBlock from './ProtocoreBlock.jsx';
 import {memoriesData} from '../data/memories-data.js';
+import ModalWindow from "./ModalWindow.jsx";
+import FilterSortBarProtocores from "./FilterSortBarProtocores.jsx";
 
-function CardProtocores({ cardId }) {
+function CardProtocores({cardId}) {
+    const protocoreModalRef = useRef();
+
+    const showProtocoreModal = () => {
+        protocoreModalRef.current.showModal();
+    };
+
     // Ленивая инициализация — загружаем данные сразу при создании состояния
     const [allProtocores, setAllProtocores] = useState(() => {
         return JSON.parse(localStorage.getItem('protocores') || '[]');
@@ -28,7 +36,7 @@ function CardProtocores({ cardId }) {
         if (!cardId) return;
         localStorage.setItem(`card_protocores_${cardId}`, JSON.stringify(protocores));
         window.dispatchEvent(new CustomEvent('protocoresUpdated', {
-            detail: { cardId, protocores }
+            detail: {cardId, protocores}
         }));
     };
 
@@ -145,30 +153,43 @@ function CardProtocores({ cardId }) {
                     </span>
                     <button
                         className={styles.addButton}
-                        onClick={() => setShowDropdown(!showDropdown)}
+                        onClick={showProtocoreModal}
                         disabled={availableProtocores.length === 0 || selectedProtocores.length >= 2}
                     >
                         + Add Protocore
                     </button>
 
-                    {showDropdown && availableProtocores.length > 0 && (
-                        <div className={styles.dropdown}>
-                            {availableProtocores.map(protocore => (
-                                <button
-                                    key={protocore.id}
-                                    className={styles.dropdownItem}
-                                    onClick={() => handleAddProtocore(protocore.id)}
-                                >
-                                    <ProtocoreBlock
-                                        protocore={protocore}
-                                        hideChange={true}
-                                        hideDelete={true}
-                                    />
-                                </button>
-                            ))}
-                        </div>
-                    )}
                 </div>
+
+                <ModalWindow
+                    ref={protocoreModalRef}
+                    title={'Choose Protocores'}
+                    tag={
+                        <div className={styles.modalInfo}>
+                            <FilterSortBarProtocores/>
+                            {availableProtocores.length === 0 && (
+                                <div>There are no available protocores</div>
+                            )}
+
+                            <div className={styles.protocoreList}>
+                                {availableProtocores.map(protocore => (
+
+                                    <button
+                                        key={protocore.id}
+                                        className={styles.dropdownItem}
+                                        onClick={() => handleAddProtocore(protocore.id)}
+                                    >
+                                        <ProtocoreBlock
+                                            protocore={protocore}
+                                            hideChange={true}
+                                            hideDelete={true}
+                                        />
+                                    </button>
+
+                                ))}
+                            </div>
+                        </div>
+                    }/>
             </div>
 
             {selectedProtocores.length === 0 ? (

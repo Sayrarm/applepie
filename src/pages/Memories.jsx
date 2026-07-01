@@ -7,7 +7,7 @@ import { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { memoriesData as initialMemoriesData } from '../data/memories-data.js';
 import { enhanceMemoriesWithAvailability } from "../data/cardAvailability.js";
-import FilterSortBar from '../components/FilterSortBar.jsx';
+import FilterSortBarMemories from '../components/FilterSortBarMemories.jsx';
 
 function Memories() {
     // Используем хуки
@@ -91,7 +91,7 @@ function Memories() {
 
     return (
         <section className={styles.memories}>
-            <FilterSortBar
+            <FilterSortBarMemories
                 searchQuery={searchQuery}
                 onSearch={onSearch}
                 sortCriteria={sortCriteria}
