@@ -3,16 +3,20 @@ import styles from './CardProtocores.module.css';
 import ProtocoreBlock from './ProtocoreBlock.jsx';
 import {memoriesData} from '../data/memories-data.js';
 import ModalWindow from "./ModalWindow.jsx";
-import FilterSortBarProtocores from "./FilterSortBarProtocores.jsx";
+import FilterSortBarProtocore from "./FilterSortBarProtocores.jsx";
+import { useProtocoreSearch } from '../hooks/useProtocoreSearch';
+import { useProtocoreFilter } from '../hooks/useProtocoreFilter';
+import { useProtocoreSort } from '../hooks/useProtocoreSort';
 
 function CardProtocores({cardId}) {
     const protocoreModalRef = useRef();
 
-    const showProtocoreModal = () => {
-        protocoreModalRef.current.showModal();
-    };
+    // Хуки для фильтрации и сортировки протокоров
+    const { searchQuery, onSearch, clearSearch } = useProtocoreSearch();
+    const { filters, applyFilters, clearFilters, filterProtocores, isModalOpen, setIsModalOpen } = useProtocoreFilter();
+    const { sortCriteria, handleSortChange, clearSorting, sortProtocores } = useProtocoreSort();
 
-    // Ленивая инициализация — загружаем данные сразу при создании состояния
+    // Загружаем все протокоры
     const [allProtocores, setAllProtocores] = useState(() => {
         return JSON.parse(localStorage.getItem('protocores') || '[]');
     });
@@ -21,8 +25,6 @@ function CardProtocores({cardId}) {
         if (!cardId) return [];
         return JSON.parse(localStorage.getItem(`card_protocores_${cardId}`) || '[]');
     });
-
-    const [showDropdown, setShowDropdown] = useState(false);
 
     // Используем useMemo для placement
     const cardPlacement = useMemo(() => {
@@ -88,7 +90,9 @@ function CardProtocores({cardId}) {
         const updatedProtocores = [...selectedProtocores, protocore];
         setSelectedProtocores(updatedProtocores);
         saveProtocores(updatedProtocores);
-        setShowDropdown(false);
+
+        // Закрываем модалку после добавления
+        protocoreModalRef.current?.closeModal?.();
     };
 
     // Удалить протокор
@@ -98,10 +102,10 @@ function CardProtocores({cardId}) {
         saveProtocores(updatedProtocores);
     };
 
-    // Фильтруем доступные протокоры через useMemo
+    // Фильтруем и сортируем доступные протокоры
     const availableProtocores = useMemo(() => {
-        return allProtocores.filter(p => {
-            // Уже добавленные — не показываем
+        // Сначала фильтруем по совместимости с карточкой
+        const compatible = allProtocores.filter(p => {
             if (selectedProtocores.some(sp => sp.id === p.id)) return false;
 
             // Если уже 2 протокора — не показываем ничего
@@ -122,9 +126,38 @@ function CardProtocores({cardId}) {
             }
             return false;
         });
-    }, [allProtocores, selectedProtocores, cardPlacement]);
 
-    // Получаем сообщение о лимите
+        // Применяем фильтры от FilterSortBarProtocore
+        const filtered = filterProtocores(compatible);
+
+        // Применяем поиск
+        const searched = filtered.filter(protocore => {
+            if (!searchQuery) return true;
+            const searchLower = searchQuery.toLowerCase();
+            return protocore.type.toLowerCase().includes(searchLower) ||
+                protocore.mainStat.toLowerCase().includes(searchLower) ||
+                protocore.stellactrum.toLowerCase().includes(searchLower) ||
+                protocore.substats?.some(sub => sub.stat.toLowerCase().includes(searchLower));
+        });
+
+        // Сортируем
+        return sortProtocores(searched);
+    }, [allProtocores, selectedProtocores, cardPlacement, searchQuery, filters, sortCriteria]);
+
+    const showProtocoreModal = () => {
+        // Очищаем фильтры и поиск при открытии модалки
+        clearSearch();
+        clearFilters();
+        clearSorting();
+        protocoreModalRef.current.showModal();
+    };
+
+    const resetAllSettings = () => {
+        clearSearch();
+        clearFilters();
+        clearSorting();
+    };
+
     const getLimitMessage = () => {
         if (selectedProtocores.length >= 2) {
             return 'Maximum 2 protocores equipped';
@@ -146,7 +179,6 @@ function CardProtocores({cardId}) {
                     </div>
                 </div>
 
-
                 <div className={styles.headerActions}>
                     <span className={styles.limitInfo}>
                         {selectedProtocores.length}/2
@@ -154,11 +186,10 @@ function CardProtocores({cardId}) {
                     <button
                         className={styles.addButton}
                         onClick={showProtocoreModal}
-                        disabled={availableProtocores.length === 0 || selectedProtocores.length >= 2}
+                        disabled={allProtocores.length === 0 || selectedProtocores.length >= 2}
                     >
                         + Add Protocore
                     </button>
-
                 </div>
 
                 <ModalWindow
@@ -166,14 +197,28 @@ function CardProtocores({cardId}) {
                     title={'Choose Protocores'}
                     tag={
                         <div className={styles.modalInfo}>
-                            <FilterSortBarProtocores/>
+                            <FilterSortBarProtocore
+                                searchQuery={searchQuery}
+                                onSearch={onSearch}
+                                clearSearch={clearSearch}
+                                sortCriteria={sortCriteria}
+                                handleSortChange={handleSortChange}
+                                clearSorting={clearSorting}
+                                resetAllSettings={resetAllSettings}
+                                isModalOpen={isModalOpen}
+                                setIsModalOpen={setIsModalOpen}
+                                applyFilters={applyFilters}
+                                clearFilters={clearFilters}
+                            />
+
                             {availableProtocores.length === 0 && (
-                                <div>There are no available protocores</div>
+                                <div className={styles.noProtocores}>
+                                    No protocores available
+                                </div>
                             )}
 
                             <div className={styles.protocoreList}>
                                 {availableProtocores.map(protocore => (
-
                                     <button
                                         key={protocore.id}
                                         className={styles.dropdownItem}
@@ -185,11 +230,11 @@ function CardProtocores({cardId}) {
                                             hideDelete={true}
                                         />
                                     </button>
-
                                 ))}
                             </div>
                         </div>
-                    }/>
+                    }
+                />
             </div>
 
             {selectedProtocores.length === 0 ? (
