@@ -72,7 +72,7 @@ export const useFilter = () => {
             const matchesTalent = filters.talent.length === 0 ||
                 filters.talent.includes(memory.talentName);
 
-            // Фильтр по стилле (цвету)
+            // Фильтр по стелле (цвету)
             const matchesStella = filters.stella.length === 0 ||
                 filters.stella.includes(memory.stellaName);
 

@@ -64,7 +64,7 @@ function FilterSortBar({
                         placeholder="Sorting by"
                         onChange={handleSortChange}
                         className={styles.colorBrown}
-                        style={{ width: 250, overflow: 'auto' }}
+                        style={{ width: 250 }}
 
                         options={[
                             { value: 'char', label: 'Character' },

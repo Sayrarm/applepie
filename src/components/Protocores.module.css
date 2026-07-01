@@ -24,10 +24,30 @@
     transform: translateY(-5px);
 }
 
-.protocoreList {
+.searchSortRow {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 10px;
+    margin-bottom: 10px;
+}
+
+.sortWrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.filterSortBar {
+    width: 370px;
+}
+
+.protocoreList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    gap: 20px;
     padding: 5px;
 }
 
@@ -39,8 +59,18 @@
 
     .protocoreList {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         gap: 5px;
         padding: 0;
+    }
+}
+
+@media (min-width: 551px) and (max-width: 1080px) {
+
+    .protocoreList {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
     }
 }
