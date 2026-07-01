@@ -1,4 +1,4 @@
-import React, {useMemo, useRef, useState} from 'react';
+import React, {useCallback, useMemo, useRef, useState} from 'react';
 import styles from './CardProtocores.module.css';
 import ProtocoreBlock from './ProtocoreBlock.jsx';
 import {memoriesData} from '../data/memories-data.js';
@@ -13,11 +13,11 @@ function CardProtocores({cardId}) {
 
     // Хуки для фильтрации и сортировки протокоров
     const { searchQuery, onSearch, clearSearch } = useProtocoreSearch();
-    const { filters, applyFilters, clearFilters, filterProtocores, isModalOpen, setIsModalOpen } = useProtocoreFilter();
+    const { applyFilters, clearFilters, filterProtocores, isModalOpen, setIsModalOpen } = useProtocoreFilter();
     const { sortCriteria, handleSortChange, clearSorting, sortProtocores } = useProtocoreSort();
 
     // Загружаем все протокоры
-    const [allProtocores, setAllProtocores] = useState(() => {
+    const [allProtocores] = useState(() => {
         return JSON.parse(localStorage.getItem('protocores') || '[]');
     });
 
@@ -102,10 +102,9 @@ function CardProtocores({cardId}) {
         saveProtocores(updatedProtocores);
     };
 
-    // Фильтруем и сортируем доступные протокоры
-    const availableProtocores = useMemo(() => {
-        // Сначала фильтруем по совместимости с карточкой
-        const compatible = allProtocores.filter(p => {
+    // Используем useCallback для стабильности функций, Фильтруем и сортируем доступные протокоры
+    const filterCompatible = useCallback((protocores) => {
+        return protocores.filter(p => {
             if (selectedProtocores.some(sp => sp.id === p.id)) return false;
 
             // Если уже 2 протокора — не показываем ничего
@@ -126,23 +125,34 @@ function CardProtocores({cardId}) {
             }
             return false;
         });
+    }, [selectedProtocores, cardPlacement]);
 
-        // Применяем фильтры от FilterSortBarProtocore
-        const filtered = filterProtocores(compatible);
-
-        // Применяем поиск
-        const searched = filtered.filter(protocore => {
-            if (!searchQuery) return true;
-            const searchLower = searchQuery.toLowerCase();
+    const filterBySearch = useCallback((protocores) => {
+        if (!searchQuery) return protocores;
+        const searchLower = searchQuery.toLowerCase();
+        return protocores.filter(protocore => {
             return protocore.type.toLowerCase().includes(searchLower) ||
                 protocore.mainStat.toLowerCase().includes(searchLower) ||
                 protocore.stellactrum.toLowerCase().includes(searchLower) ||
                 protocore.substats?.some(sub => sub.stat.toLowerCase().includes(searchLower));
         });
+    }, [searchQuery]);
 
-        // Сортируем
+    // ✅ Используем useMemo без filterProtocores и sortProtocores в зависимостях
+    const availableProtocores = useMemo(() => {
+        // 1. Фильтруем по совместимости с карточкой
+        const compatible = filterCompatible(allProtocores);
+
+        // 2. Применяем фильтры (используем filterProtocores напрямую)
+        const filtered = filterProtocores(compatible);
+
+        // 3. Применяем поиск
+        const searched = filterBySearch(filtered);
+
+        // 4. Сортируем
         return sortProtocores(searched);
-    }, [allProtocores, selectedProtocores, cardPlacement, searchQuery, filters, sortCriteria]);
+        // ✅ Добавляем все зависимости, но функции filterProtocores и sortProtocores должны быть стабильными
+    }, [allProtocores, filterCompatible, filterBySearch, filterProtocores, sortProtocores]);
 
     const showProtocoreModal = () => {
         // Очищаем фильтры и поиск при открытии модалки

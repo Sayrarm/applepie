@@ -1,5 +1,4 @@
-// src/hooks/useProtocoreSort.js
-import { useState, useEffect } from 'react';
+import {useState, useEffect, useCallback} from 'react';
 
 const STORAGE_KEY = 'protocore_sort_criteria';
 
@@ -49,9 +48,9 @@ export const useProtocoreSort = () => {
         setSortCriteria([]);
     };
 
-    const sortProtocores = (protocores) => {
+    const sortProtocores = useCallback((protocores) => {
         return multiSort(protocores, sortCriteria);
-    };
+    }, [sortCriteria]);
 
     return {
         sortCriteria,

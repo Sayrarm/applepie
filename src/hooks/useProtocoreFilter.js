@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import {useState, useEffect, useCallback} from 'react';
 
 const STORAGE_KEYS = {
     FILTERS: 'protocore_filters'
@@ -37,7 +37,7 @@ export const useProtocoreFilter = () => {
         });
     };
 
-    const filterProtocores = (protocores) => {
+    const filterProtocores = useCallback((protocores) => {
         return protocores.filter(protocore => {
             // Фильтр по типу
             const matchesType = filters.types.length === 0 ||
@@ -64,7 +64,7 @@ export const useProtocoreFilter = () => {
             return matchesType && matchesStellactrum &&
                 matchesLevel && matchesMainStat && matchesSubStat;
         });
-    };
+    }, [filters]);
 
     return {
         filters,
