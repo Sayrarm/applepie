@@ -1,8 +1,6 @@
 import styles from "./MyMemories.module.css";
-import filterStyles from '../pages/Memories.module.css'
-import React, {useState, useEffect, useRef} from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from 'react-router-dom';
-import { Button, Input, Select } from 'antd';
 import { memoriesData } from '../data/memories-data.js';
 import { getStatsWithRank } from '../data/levelCardData.js';
 import { calculateFinalStats, getProtocoreLevelsString } from '../data/protocoreUtils.js';
@@ -10,13 +8,10 @@ import { getImageUrl } from "./imageUtils.js";
 import { useSearch } from '../hooks/useSearch';
 import { useSort } from '../hooks/useSort';
 import { useFilter } from '../hooks/useFilter';
-import FilterModalWindow from "../components/FilterModalWindow.jsx";
-import { stylesFnSearch } from "./stylesAntd.js";
 import { enhanceMemoriesWithAvailability } from "../data/cardAvailability.js";
+import FilterSortBar from '../components/FilterSortBar.jsx';
 
 function MyMemories() {
-    const { Search } = Input;
-
     // Используем хуки
     const { searchQuery, onSearch } = useSearch();
     const { sortCriteria, handleSortChange, clearSorting, sortMemories } = useSort();
@@ -92,7 +87,6 @@ function MyMemories() {
                     };
                 }
 
-                // Используем новую функцию для расчета финальных статов
                 const finalStats = calculateFinalStats(card, baseStats, protocores);
 
                 return {
@@ -165,114 +159,22 @@ function MyMemories() {
 
     return (
         <section className={styles.container}>
-            {/* Фильтры, сортировка и поиск */}
-            <div className={filterStyles.options}>
-                <nav className={filterStyles.select}>
-                    <div className={filterStyles.selectChar}>
-                        <button
-                            className={`${filterStyles.buttonSelectChar} ${selectedChar === 'ALL' ? filterStyles.active : ''}`}
-                            onClick={() => setSelectedChar('ALL')}>
-                            ALL
-                        </button>
+            <FilterSortBar
+                searchQuery={searchQuery}
+                onSearch={onSearch}
+                sortCriteria={sortCriteria}
+                handleSortChange={handleSortChange}
+                clearSorting={clearSorting}
+                selectedChar={selectedChar}
+                setSelectedChar={setSelectedChar}
+                isModalOpen={isModalOpen}
+                setIsModalOpen={setIsModalOpen}
+                applyFilters={applyFilters}
+                clearFilters={clearFilters}
+                filterModalRef={filterModalRef}
+                resetAllSettings={resetAllSettings}
+            />
 
-                        <div className={filterStyles.characters}>
-                            <button
-                                className={`${filterStyles.buttonSelectChar} ${selectedChar === 'Xavier' ? filterStyles.active : ''}`}
-                                onClick={() => setSelectedChar('Xavier')}>Xavier
-                            </button>
-                            <button
-                                className={`${filterStyles.buttonSelectChar} ${selectedChar === 'Zayne' ? filterStyles.active : ''}`}
-                                onClick={() => setSelectedChar('Zayne')}>Zayne
-                            </button>
-                            <button
-                                className={`${filterStyles.buttonSelectChar} ${selectedChar === 'Rafayel' ? filterStyles.active : ''}`}
-                                onClick={() => setSelectedChar('Rafayel')}>Rafayel
-                            </button>
-                            <button
-                                className={`${filterStyles.buttonSelectChar} ${selectedChar === 'Sylus' ? filterStyles.active : ''}`}
-                                onClick={() => setSelectedChar('Sylus')}>Sylus
-                            </button>
-                            <button
-                                className={`${filterStyles.buttonSelectChar} ${selectedChar === 'Caleb' ? filterStyles.active : ''}`}
-                                onClick={() => setSelectedChar('Caleb')}>Caleb
-                            </button>
-                        </div>
-                    </div>
-
-                    <div className={filterStyles.sortBy}>
-                        <Select
-                            mode="tags"
-                            size="medium"
-                            value={sortCriteria}
-                            placeholder="Sorting by"
-                            onChange={handleSortChange}
-                            className={filterStyles.colorBrown}
-                            style={{ width: 250 }}
-                            options={[
-                                { value: 'char', label: 'Character' },
-                                { value: 'name', label: 'Memory\'s name' },
-                                { value: 'rarity', label: 'Rarity' },
-                                { value: 'stella', label: 'Stellactrum' },
-                                { value: 'placement', label: 'Placement' },
-                                { value: 'talent', label: 'Talent' },
-                            ]}
-                        />
-
-                        <Button
-                            onClick={clearSorting}
-                            color="default"
-                            variant="outlined"
-                            icon={<img
-                                className={filterStyles.imgIcon}
-                                src={getImageUrl('../assets/icons/eraser_16863523.png')}
-                                style={{ width: 22, height: 22 }}
-                                alt={'Clear sorting'} />}
-                            title={"Clear sorting"}
-                            className={filterStyles.colorBrown}
-                        />
-                    </div>
-                </nav>
-
-                <aside className={filterStyles.filterBy}>
-                    <Search
-                        placeholder="Search by memory name"
-                        allowClear
-                        onSearch={onSearch}
-                        style={{ width: 215 }}
-                        styles={stylesFnSearch}
-                        name="search-fn"
-                        size={"medium"}
-                    />
-
-                    <Button
-                        onClick={() => setIsModalOpen(true)}
-                        icon={<img
-                            className={filterStyles.imgIcon}
-                            src={getImageUrl('../assets/icons/filter.png')}
-                            style={{ width: 20, height: 20 }}
-                            alt={'filter'} />}
-                        title={"Filter"}
-                        className={filterStyles.colorBrown}
-                    />
-
-                    <FilterModalWindow
-                        ref={filterModalRef}
-                        open={isModalOpen}
-                        onClose={() => setIsModalOpen(false)}
-                        onFilter={applyFilters}
-                        onClearFilters={clearFilters}
-                    />
-
-                    <Button
-                        onClick={resetAllSettings}
-                        icon={<img src={getImageUrl('../assets/icons/reset.png')} style={{ width: 20, height: 20 }} alt="reset" />}
-                        title="Reset all filters and sorting"
-                        className={filterStyles.colorBrown}
-                    />
-                </aside>
-            </div>
-
-            {/* Таблица с карточками */}
             <div className={styles.tableWrapper}>
                 <table className={styles.statsTable}>
                     <thead>
@@ -307,6 +209,7 @@ function MyMemories() {
                     ) : (
                         sortedCards.map(card => (
                             <tr key={card.id}>
+                                {/* строки таблицы */}
                                 <td>
                                     <img
                                         src={getImageUrl(card.imageSmall)}
