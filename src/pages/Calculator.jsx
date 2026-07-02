@@ -5,19 +5,26 @@ import MemoryUpCalculator from "../components/MemoryUpCalculator.jsx";
 import MyResources from "../components/MyResources.jsx";
 import Protocores from "../components/Protocores.jsx";
 import MyMemories from "../components/MyMemories.jsx";
+import Showcase from "../components/Showcase.jsx";
 
 function Calculator() {
     const { navigation } = useParams(); // получаем "my-memories", "inventory" и т.д.
 
-    // Если нет параметра — редиректим на my-memories
+    // Если нет параметра — редиректим на showcase
     if (!navigation) {
-        return <Navigate to="/calculator/my-memories" replace />;
+        return <Navigate to="/calculator/showcase" replace />;
     }
 
     return (
         <section className={styles.containerCalculator}>
             {/* Навигация */}
             <div className={styles.tabs}>
+                <NavLink
+                    className={({ isActive }) => `${styles.tabButton} ${isActive ? styles.active : ''}`}
+                    to="/calculator/showcase"
+                >
+                    Showcase
+                </NavLink>
                 <NavLink
                     className={({ isActive }) => `${styles.tabButton} ${isActive ? styles.active : ''}`}
                     to="/calculator/my-memories"
@@ -52,6 +59,7 @@ function Calculator() {
 
             {/* Контент */}
             <div className={styles.tabContent}>
+                {navigation === 'showcase' && <Showcase />}
                 {navigation === 'my-memories' && <MyMemories />}
                 {navigation === 'my-protocores' && <Protocores />}
                 {navigation === 'inventory' && <MyResources />}

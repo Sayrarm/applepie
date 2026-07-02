@@ -23,6 +23,7 @@
 
 .statsTable td {
     padding: 3px;
+    letter-spacing: -0.5px;
     background-color: var(--bg-glass);
 }
 
@@ -75,7 +76,7 @@
     transition: background-color 0.2s;
 
     vertical-align: top;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .sortable:hover {
