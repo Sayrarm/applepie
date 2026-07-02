@@ -68,3 +68,26 @@
     width: 25px;
     height: 25px;
 }
+
+.sortable {
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s;
+
+    vertical-align: top;
+    font-size: 12px;
+}
+
+.sortable:hover {
+    background-color: var(--a-hover);
+}
+
+.sortAsc::after {
+    content: ' ↑';
+    color: var(--green-button);
+}
+
+.sortDesc::after {
+    content: ' ↓';
+    color: var(--redForText);
+}
