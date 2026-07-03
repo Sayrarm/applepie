@@ -1,0 +1,115 @@
+.container {
+    margin-top: 20px;
+
+    font-family: TikTok Sans, monospace;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.addCompanionBtn,
+.companionItem,
+.cardItem,
+.emptyLabel {
+    text-decoration: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.addCompanionBtn {
+    background-color: var(--bg-glass);
+    box-shadow: var(--box-shadow);
+    padding: 5px;
+    width: 250px;
+}
+
+.companionImage {
+    width: 250px;
+    height: 700px;
+    object-fit: cover;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 40%, black 90%, transparent 100%), linear-gradient(0deg, transparent 0%, black 40%, black 90%, transparent 100%);
+    -webkit-mask-composite: intersect;
+    mask-image: linear-gradient(90deg, transparent 0%, black 40%, black 90%, transparent 100%), linear-gradient(0deg, transparent 0%, black 40%, black 90%, transparent 100%);
+    mask-composite: intersect;
+}
+
+.companionName {
+    font-size: 20px;
+    color: var(--colorTextDark);
+}
+
+.companionGrid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+
+}
+
+.companionImg {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    object-position: top center;
+    background-color: var(--bg-glass);
+}
+
+.companionItem {
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 150px;
+}
+
+.cardsSection {
+    display: flex;
+}
+
+.cardSlot {
+    border: 1px dashed var(--border-battle-page);
+    padding: 5px;
+    margin: 5px;
+    min-height: 426px;
+
+    display: flex;
+    align-items: center;
+}
+
+.protocoresContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 5px;
+}
+
+.companionImage {
+    position: relative;
+}
+
+.cardInfo {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.noProtocores {
+    padding: 10px;
+}
+
+.lunarCardsRow {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.solarCardsRow {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
