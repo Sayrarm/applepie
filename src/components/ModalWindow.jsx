@@ -11,7 +11,8 @@ const ModalWindow = forwardRef((props, ref) => {
     const [open, setOpen] = useState(false);
 
     useImperativeHandle(ref, () => ({
-        showModal: () => setOpen(true)
+        showModal: () => setOpen(true),
+        closeModal: () => setOpen(false),
     }));
 
     const handleOk = () => {
