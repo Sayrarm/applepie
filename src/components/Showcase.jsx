@@ -204,24 +204,26 @@ function Showcase() {
                 width={600}
                 tag={
                     <div className={styles.companionGrid}>
-                        {compData.map(companion => (
-                            <button
-                                key={companion.id}
-                                className={styles.companionItem}
-                                onClick={() => handleSelectCompanion(companion)}
-                            >
-                                <img
-                                    className={styles.companionImg}
-                                    src={getImageUrl(companion.img || companion.imgWeapon)}
-                                    alt={companion.companionName || companion.weaponName}
-                                    loading="lazy"
-                                    decoding="async"
-                                />
-                                <div className={styles.companionTitle}>
-                                    {companion.companionName || companion.weaponName}
-                                </div>
-                            </button>
-                        ))}
+                        {compData
+                            .filter(companion => companion.img && companion.companionName)
+                            .map(companion => (
+                                <button
+                                    key={companion.id}
+                                    className={styles.companionItem}
+                                    onClick={() => handleSelectCompanion(companion)}
+                                >
+                                    <img
+                                        className={styles.companionImg}
+                                        src={getImageUrl(companion.img)}
+                                        alt={companion.companionName}
+                                        loading="lazy"
+                                        decoding="async"
+                                    />
+                                    <div className={styles.companionTitle}>
+                                        {companion.companionName}
+                                    </div>
+                                </button>
+                            ))}
                     </div>
                 }
             />
@@ -233,24 +235,26 @@ function Showcase() {
                 width={600}
                 tag={
                     <div className={styles.companionGrid}>
-                        {compData.map(companion => (
-                            <button
-                                key={companion.id}
-                                className={styles.companionItem}
-                                onClick={() => handleSelectMCWeapon(companion)}
-                            >
-                                <img
-                                    className={styles.companionImg}
-                                    src={getImageUrl(companion.imgWeapon)}
-                                    alt={companion.weaponName}
-                                    loading="lazy"
-                                    decoding="async"
-                                />
-                                <div className={styles.companionTitle}>
-                                    {companion.weaponName}
-                                </div>
-                            </button>
-                        ))}
+                        {compData
+                            .filter(companion => companion.imgWeapon && companion.weaponName)
+                            .map(companion => (
+                                <button
+                                    key={companion.id}
+                                    className={styles.companionItem}
+                                    onClick={() => handleSelectMCWeapon(companion)}
+                                >
+                                    <img
+                                        className={styles.companionImg}
+                                        src={getImageUrl(companion.imgWeapon)}
+                                        alt={companion.weaponName}
+                                        loading="lazy"
+                                        decoding="async"
+                                    />
+                                    <div className={styles.companionTitle}>
+                                        {companion.weaponName}
+                                    </div>
+                                </button>
+                            ))}
                     </div>
                 }
             />
