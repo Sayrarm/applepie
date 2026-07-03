@@ -119,24 +119,36 @@ function Showcase() {
     return (
         <section className={styles.container}>
             {/* Левая часть — компаньон */}
-            <div className={styles.companionSection}>
+            <>
                 <button className={styles.addCompanionBtn} onClick={showCompanionModal}>
                     {selectedCompanion ? (
-                        <>
-                            <img
-                                className={styles.companionImage}
-                                src={getImageUrl(selectedCompanion.img || selectedCompanion.imgWeapon)}
-                                alt={selectedCompanion.companionName || selectedCompanion.weaponName}
-                            />
-                            <div className={styles.companionName}>
-                                {selectedCompanion.companionName || selectedCompanion.weaponName}
+                        <div className={styles.companionSection}>
+                            <div className={styles.companionChar}>
+                                <img
+                                    className={styles.companionImage}
+                                    src={getImageUrl(selectedCompanion.img || selectedCompanion.imgWeapon)}
+                                    alt={selectedCompanion.companionName || selectedCompanion.weaponName}
+                                />
+                                <div className={styles.companionName}>
+                                    {selectedCompanion.companionName || selectedCompanion.weaponName}
+                                </div>
                             </div>
-                        </>
+                            <div className={styles.companionMC}>
+                                <img
+                                    className={styles.companionImage}
+                                    src={getImageUrl(selectedCompanion.imgWeapon || selectedCompanion.imgWeapon)}
+                                    alt={selectedCompanion.companionName || selectedCompanion.weaponName}
+                                />
+                                <div className={styles.companionName}>
+                                    {selectedCompanion.weaponName || selectedCompanion.weaponName}
+                                </div>
+                            </div>
+                        </div>
                     ) : (
                         <span className={styles.addCompanionText}>+ Add Companion</span>
                     )}
                 </button>
-            </div>
+            </>
 
             {/* Правая часть — карточки */}
             <div className={styles.cardsSection}>
