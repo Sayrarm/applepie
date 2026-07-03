@@ -26,8 +26,6 @@
 }
 
 .addCompanionBtn {
-    padding: 5px;
-    margin: 5px;
     align-self: start;
 }
 
@@ -35,6 +33,7 @@
     background-color: var(--forSelect);
     box-shadow: var(--box-shadow);
     padding: 5px;
+    margin: 10px 5px;
     color: var(--colorText);
     font-size: 18px;
 }
@@ -43,7 +42,7 @@
     width: 350px;
     height: 100px;
     object-fit: cover;
-    object-position: 50% 15%;
+    object-position: 50% 20%;
     -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 40%, black 90%, transparent 100%), linear-gradient(0deg, transparent 0%, black 40%, black 90%, transparent 100%);
     -webkit-mask-composite: intersect;
     mask-image: linear-gradient(90deg, transparent 0%, black 40%, black 90%, transparent 100%), linear-gradient(0deg, transparent 0%, black 40%, black 90%, transparent 100%);
@@ -54,6 +53,7 @@
     font-size: 20px;
     color: var(--colorTextDark);
     text-align: start;
+    padding: 0 10px;
 }
 
 .companionChar,
@@ -111,8 +111,7 @@
 }
 
 .rowLabel {
-    margin: 5px;
-    padding: 5px;
+    padding: 5px 10px;
     font-size: 20px;
     font-weight: bold;
     color: var(--a);
