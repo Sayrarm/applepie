@@ -1,0 +1,72 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 20px auto 0;
+}
+
+.addButton {
+    background-color: var(--forSelect);
+    box-shadow: var(--box-shadow);
+    color: var(--colorText);
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    align-self: flex-start;
+}
+
+.addButton:hover {
+    transform: translateY(-5px);
+}
+
+.searchSortRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.sortWrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.protocoreList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    gap: 20px;
+    padding: 5px;
+}
+
+.emptyState {
+    color: var(--colorTextDark);
+}
+
+@media (max-width: 550px) {
+
+    .protocoreList {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+        padding: 0;
+    }
+}
+
+@media (min-width: 551px) and (max-width: 1080px) {
+
+    .protocoreList {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}

@@ -24,6 +24,14 @@ body {
 
     outline: none;
     -webkit-tap-highlight-color: transparent;
+    background-color: var(--bg-primary);
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+html {
+    scrollbar-width: none;
 }
 
 .fixed-bg {
@@ -54,7 +62,7 @@ body {
 }
 
 .container {
-    max-width: 1115px;
+    max-width: 1215px;
     margin: 0 auto;
     min-height: 100vh;
     width: 100%;
@@ -77,6 +85,7 @@ body {
     --colorTextGrayNote: #888;
     --forSelect: #35312d;
     --border: #e68038;
+    --border-table: #888;
     --border-battle-page: #35312d;
     --a: #e68038;
     --a-hover: #9a5929;
@@ -101,6 +110,10 @@ body {
     --orange: #e68038;
     --red: #ff4444;
     --redForText: #8e1111;
+    --green-button: #419716;
+    --light-green-button: #73d13d;
+    --red-button: #c63e3f;
+    --light-red-button: #ff7875;
     --bg-brown-light: color-mix(in srgb, var(--bg-brown) 10%, transparent);
 
 /****************************************************************************/
@@ -116,6 +129,7 @@ html.dark {
     --colorTextBright: white;
     --forSelect: #9C2007;
     --border: #9C2007;
+    --border-table: #8e9093;
     --border-battle-page: #8e9093;
     --a: #9C2007;
     --a-hover: #ff4444;
@@ -124,7 +138,7 @@ html.dark {
     --bg-modal: #8e9093;
     --text-shadow: 0 0 5px #ff4444, 0 0 10px #ff4444;
 
-    --bg-primary: black;
+    --bg-primary: #202227;
     --bg-image: url('../public/assets/bg/Frame 37.png');
     --box-shadow: 10px 10px 6px -5px rgb(21 21 21 / 0.6);
     --linear-gradient-webkit: -webkit-linear-gradient(270deg, black -10%, black 20%, transparent 100%);

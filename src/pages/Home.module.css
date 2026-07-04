@@ -178,7 +178,7 @@
 }
 
 .h3 {
-    margin: 5px;
+    font-size: 18px;
 }
 
 :global(.ant-modal .ant-modal-container) {

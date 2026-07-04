@@ -1,41 +1,70 @@
-import { useState } from 'react';
+import { Navigate, NavLink, useParams } from 'react-router-dom';
 import styles from './CalculatorPage.module.css';
 import ProtocoreCalculator from "../components/ProtocoreCalculator.jsx";
 import MemoryUpCalculator from "../components/MemoryUpCalculator.jsx";
 import MyResources from "../components/MyResources.jsx";
+import Protocores from "../components/Protocores.jsx";
+import MyMemories from "../components/MyMemories.jsx";
+import Showcase from "../components/Showcase.jsx";
 
 function Calculator() {
-    const [activeTab, setActiveTab] = useState('inventory');
+    const { navigation } = useParams(); // получаем "my-memories", "inventory" и т.д.
+
+    // Если нет параметра — редиректим на showcase
+    if (!navigation) {
+        return <Navigate to="/calculator/showcase" replace />;
+    }
 
     return (
         <section className={styles.containerCalculator}>
             {/* Навигация */}
             <div className={styles.tabs}>
-                <button
-                    className={`${styles.tabButton} ${activeTab === 'inventory' ? styles.active : ''}`}
-                    onClick={() => setActiveTab('inventory')}
+                <NavLink
+                    className={({ isActive }) => `${styles.tabButton} ${isActive ? styles.active : ''}`}
+                    to="/calculator/showcase"
+                >
+                    Showcase
+                </NavLink>
+                <NavLink
+                    className={({ isActive }) => `${styles.tabButton} ${isActive ? styles.active : ''}`}
+                    to="/calculator/my-memories"
+                >
+                    My Memories
+                </NavLink>
+                <NavLink
+                    className={({ isActive }) => `${styles.tabButton} ${isActive ? styles.active : ''}`}
+                    to="/calculator/my-protocores"
+                >
+                    My Protocores
+                </NavLink>
+                <NavLink
+                    className={({ isActive }) => `${styles.tabButton} ${isActive ? styles.active : ''}`}
+                    to="/calculator/inventory"
                 >
                     My Resources
-                </button>
-                <button
-                    className={`${styles.tabButton} ${activeTab === 'protocore' ? styles.active : ''}`}
-                    onClick={() => setActiveTab('protocore')}
+                </NavLink>
+                <NavLink
+                    className={({ isActive }) => `${styles.tabButton} ${isActive ? styles.active : ''}`}
+                    to="/calculator/protocore-calculator"
                 >
                     Protocore Calculator
-                </button>
-                <button
-                    className={`${styles.tabButton} ${activeTab === 'memory' ? styles.active : ''}`}
-                    onClick={() => setActiveTab('memory')}
+                </NavLink>
+                <NavLink
+                    className={({ isActive }) => `${styles.tabButton} ${isActive ? styles.active : ''}`}
+                    to="/calculator/memory-calculator"
                 >
                     Memory Calculator
-                </button>
+                </NavLink>
             </div>
 
             {/* Контент */}
             <div className={styles.tabContent}>
-                {activeTab === 'inventory' && <MyResources />}
-                {activeTab === 'protocore' && <ProtocoreCalculator />}
-                {activeTab === 'memory' && <MemoryUpCalculator />}
+                {navigation === 'showcase' && <Showcase />}
+                {navigation === 'my-memories' && <MyMemories />}
+                {navigation === 'my-protocores' && <Protocores />}
+                {navigation === 'inventory' && <MyResources />}
+                {navigation === 'protocore-calculator' && <ProtocoreCalculator />}
+                {navigation === 'memory-calculator' && <MemoryUpCalculator />}
             </div>
         </section>
     );

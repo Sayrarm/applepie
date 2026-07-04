@@ -4,33 +4,6 @@
     align-items: center;
 }
 
-.options {
-    margin-bottom: 10px;
-}
-
-.select {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5px;
-}
-
-.filterBy {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.sortBy {
-    display: flex;
-    gap: 5px;
-}
-
-.selectChar{
-    display: flex;
-}
-
 .cardsGrid {
     display: flex;
     justify-content: center;
@@ -44,49 +17,8 @@
     text-decoration: none;
 }
 
-.buttonSelectChar {
-    border: none;
-    background: none;
-    font-size: 19px;
-    color: var(--colorTextDark);
-    padding: 4px 8px;
-}
-
-.active {
-    color: var(--colorText);
-    background-color: var(--forSelect);
-    padding: 4px 8px;
-
-    -webkit-box-shadow: var(--box-shadow);
-    -moz-box-shadow: var(--box-shadow);
-    box-shadow: var(--box-shadow);
-}
-
-.characters {
-    display: flex;
-    gap: 5px;
-}
-
-.options {
-    width: 100%;
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.imgIcon {
-    margin-top: 4px;
-}
-
 .noResults {
     font-size: 20px;
-}
-
-.colorBrown {
-    border-color: #2b1611 !important;
 }
 
 @media screen and (max-width: 1114px) {
@@ -102,7 +34,4 @@
         gap: 5px;
     }
 
-    .buttonSelectChar {
-        font-size: 16px;
-    }
 }

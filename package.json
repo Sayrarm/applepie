@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@ant-design/colors": "^8.0.1",
+    "@ant-design/icons": "^6.2.5",
     "@mantine/core": "^9.0.2",
     "@mantine/hooks": "^9.0.2",
     "@tailwindcss/vite": "^4.2.2",
@@ -19,9 +20,12 @@
     "antd-style": "^4.1.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.38.0",
+    "html-to-image": "^1.11.13",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
+    "react-range": "^1.10.0",
     "react-router-dom": "^7.14.0",
+    "react-select": "^5.10.2",
     "react-transition-group": "^4.4.5",
     "tailwindcss": "^4.2.2"
   },

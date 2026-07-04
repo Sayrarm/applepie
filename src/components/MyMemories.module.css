@@ -1,0 +1,94 @@
+.container {
+    margin-top: 20px;
+
+    width: 100%;
+}
+
+.tableWrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.statsTable {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 374px;
+    margin: 5px 0;
+}
+
+.statsTable th {
+    padding: 8px 5px;
+}
+
+.statsTable td {
+    padding: 3px;
+    letter-spacing: -0.5px;
+    background-color: var(--bg-glass);
+}
+
+.statsTable th,
+.statsTable td {
+    border: 1px solid var(--border-table);
+    text-align: center;
+}
+
+.statsTable th {
+    background-color: var(--forSelect);
+    color: var(--colorText);
+}
+
+.cardImage {
+    width: 70px;
+    height: 40px;
+    object-fit: cover;
+    object-position: 20% 20%;
+}
+
+.cardLink {
+    text-decoration: none;
+    color: var(--colorTextDark);
+    transition: 0.3s;
+}
+
+.cardLink:hover {
+    text-decoration: none;
+    color: var(--a);
+}
+
+.stellaContainer *,
+.placementContainer *,
+.talentContainer * {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.stellaIcon,
+.placementIcon,
+.talentIcon {
+    width: 25px;
+    height: 25px;
+}
+
+.sortable {
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s;
+
+    vertical-align: top;
+    font-size: 13px;
+}
+
+.sortable:hover {
+    background-color: var(--a-hover);
+}
+
+.sortAsc::after {
+    content: ' ↑';
+    color: var(--green-button);
+}
+
+.sortDesc::after {
+    content: ' ↓';
+    color: var(--redForText);
+}

@@ -14,7 +14,8 @@
 }
 
 .img {
-    width: 450px;
+    margin-top: 5px;
+    width: 500px;
     max-width: 100%;
     object-fit: cover;
     object-position: center 20%;
@@ -37,9 +38,15 @@
     color: var(--colorTextDark);
 }
 
-.cardTitle {
-    margin-bottom: 10px;
+.infoContainer {
+    width: 50%;
 }
+
+.protocoreSection {
+    background-color: var(--bg-glass);
+}
+
+/*********кнопки навигации (вправо-влево)***********/
 
 .navigation {
     display: flex;
@@ -93,6 +100,8 @@
     width: 25px;
     height: 25px;
 }
+
+/*****************************************/
 
 @media screen and (max-width: 485px) {
     .imgContainer {
@@ -162,14 +171,25 @@
 
 }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 1053px) {
     .card {
         flex-direction: column;
+        padding: 0;
     }
 
     .imgContainer {
         align-self: center;
     }
+
+    .infoContainer {
+        width: 100%;
+    }
+
+    .cardTitle {
+        font-size: 25px;
+    }
+
+
 }
 
 

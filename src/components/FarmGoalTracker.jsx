@@ -45,7 +45,7 @@ function FarmGoalTracker() {
             const coreEnergy = JSON.parse(localStorage.getItem('inventory_core_energy') || '{}');
             const credits = JSON.parse(localStorage.getItem('inventory_credits') || '0');
             const crystals = JSON.parse(localStorage.getItem('inventory_crystals') || '{}');
-            setUserResources({ bottles, coreEnergy, credits, crystals });
+            setUserResources({bottles, coreEnergy, credits, crystals});
         };
 
         loadResources();
@@ -105,7 +105,7 @@ function FarmGoalTracker() {
 
     // Расчёт фарма для EXP (Memory)
     const calculateExpFarmingMemory = (remainingExp, dungeonLevel) => {
-        if (remainingExp <= 0) return { runs: 0, stamina: 0, days: 0 };
+        if (remainingExp <= 0) return {runs: 0, stamina: 0, days: 0};
 
         const dungeon = expDungeonData.find(d => d.level === dungeonLevel);
         const expPerRun = dungeon ? dungeon.exp : 380;
@@ -113,12 +113,12 @@ function FarmGoalTracker() {
         const stamina = runs * DUNGEON_COST;
         const days = Math.ceil(stamina / DAILY_STAMINA);
 
-        return { runs, stamina, days, expPerRun };
+        return {runs, stamina, days, expPerRun};
     };
 
     // Расчёт фарма для EXP (Protocore)
     const calculateExpFarmingProtocore = (remainingExp, dungeonLevel) => {
-        if (remainingExp <= 0) return { runs: 0, stamina: 0, days: 0 };
+        if (remainingExp <= 0) return {runs: 0, stamina: 0, days: 0};
 
         const dungeon = dungeonData.find(d => d.level === dungeonLevel);
         const expPerRun = dungeon ? dungeon.exp : 1300;
@@ -126,12 +126,12 @@ function FarmGoalTracker() {
         const stamina = runs * DUNGEON_COST;
         const days = Math.ceil(stamina / DAILY_STAMINA);
 
-        return { runs, stamina, days, expPerRun };
+        return {runs, stamina, days, expPerRun};
     };
 
     // Расчёт фарма для Credits
     const calculateCreditsFarming = (remainingCredits, dungeonLevel, isProtocore = false) => {
-        if (remainingCredits <= 0) return { runs: 0, stamina: 0, days: 0 };
+        if (remainingCredits <= 0) return {runs: 0, stamina: 0, days: 0};
 
         const dungeon = creditDungeonData.find(d => d.level === dungeonLevel);
         const creditsPerRun = dungeon ? dungeon.credits : 7600;
@@ -139,39 +139,39 @@ function FarmGoalTracker() {
         const stamina = runs * (isProtocore ? CREDIT_DUNGEON_COST : DUNGEON_COST);
         const days = Math.ceil(stamina / DAILY_STAMINA);
 
-        return { runs, stamina, days, creditsPerRun };
+        return {runs, stamina, days, creditsPerRun};
     };
 
     // Расчёт фарма для кристаллов
     const calculateCrystalsFarming = (neededCrystals, dungeonLevel) => {
-        if (!neededCrystals) return { runs: 0, stamina: 0, days: 0, details: {} };
+        if (!neededCrystals) return {runs: 0, stamina: 0, days: 0, details: {}};
 
         const dungeon = crystalDungeonData.find(d => d.level === dungeonLevel);
-        if (!dungeon) return { runs: 0, stamina: 0, days: 0, details: {} };
+        if (!dungeon) return {runs: 0, stamina: 0, days: 0, details: {}};
 
         let maxRuns = 0;
         const details = {};
 
         if (neededCrystals.N > 0 && dungeon.crystals.N > 0) {
             const runsN = Math.ceil(neededCrystals.N / dungeon.crystals.N);
-            details.N = { needed: neededCrystals.N, runs: runsN, perRun: dungeon.crystals.N };
+            details.N = {needed: neededCrystals.N, runs: runsN, perRun: dungeon.crystals.N};
             maxRuns = Math.max(maxRuns, runsN);
         }
         if (neededCrystals.R > 0 && dungeon.crystals.R > 0) {
             const runsR = Math.ceil(neededCrystals.R / dungeon.crystals.R);
-            details.R = { needed: neededCrystals.R, runs: runsR, perRun: dungeon.crystals.R };
+            details.R = {needed: neededCrystals.R, runs: runsR, perRun: dungeon.crystals.R};
             maxRuns = Math.max(maxRuns, runsR);
         }
         if (neededCrystals.SR > 0 && dungeon.crystals.SR > 0) {
             const runsSR = Math.ceil(neededCrystals.SR / dungeon.crystals.SR);
-            details.SR = { needed: neededCrystals.SR, runs: runsSR, perRun: dungeon.crystals.SR };
+            details.SR = {needed: neededCrystals.SR, runs: runsSR, perRun: dungeon.crystals.SR};
             maxRuns = Math.max(maxRuns, runsSR);
         }
 
         const stamina = maxRuns * DUNGEON_COST;
         const days = Math.ceil(stamina / DAILY_STAMINA);
 
-        return { runs: maxRuns, stamina, days, details };
+        return {runs: maxRuns, stamina, days, details};
     };
 
     // Завершить цель
@@ -221,15 +221,15 @@ function FarmGoalTracker() {
             };
         }
 
-        return { exp: remainingExp, credits: remainingCredits, crystals: remainingCrystals };
+        return {exp: remainingExp, credits: remainingCredits, crystals: remainingCrystals};
     };
 
     const getGoalDescription = (goal) => {
         if (goal.type === 'memory') {
-            const rarityMap = { '3-star': '3★', '4-star': '4★', '5-star': '5★' };
+            const rarityMap = {'3-star': '3★', '4-star': '4★', '5-star': '5★'};
             return `${rarityMap[goal.rarity]} Memory: Lvl ${goal.currentLevel} → ${goal.targetLevel}`;
         } else if (goal.type === 'protocore') {
-            const typeMap = { alpha: 'α', beta: 'β', gamma: 'γ', delta: 'δ' };
+            const typeMap = {alpha: 'α', beta: 'β', gamma: 'γ', delta: 'δ'};
             return `${typeMap[goal.protocoreType]} Protocore (${goal.mainStat}): Lvl ${goal.currentLevel} → ${goal.targetLevel}`;
         }
         return 'Unknown goal';
@@ -267,7 +267,8 @@ function FarmGoalTracker() {
             <div className={styles.container}>
                 <div className={styles.noGoals}>
                     <p>No active goals</p>
-                    <p>Go to Protocore Calculator or Memory Up Calculator, calculate resources, and click "Add to Farm Goal Tracker".</p>
+                    <p>Go to Protocore Calculator or Memory Up Calculator, calculate resources, and click "Add to Farm
+                        Goal Tracker".</p>
                 </div>
             </div>
         );
@@ -302,10 +303,27 @@ function FarmGoalTracker() {
                     const creditsFarming = calculateCreditsFarming(remaining.credits, creditDungeonLvl, goal.type === 'protocore');
                     const crystalsFarming = remaining.crystals ? calculateCrystalsFarming(remaining.crystals, crystalDungeonLvl) : null;
 
-                    // Суммарные дни фарма (максимальный из всех типов ресурсов)
-                    let totalDays = expFarming.days;
-                    totalDays = Math.max(totalDays, creditsFarming.days);
-                    if (crystalsFarming) totalDays = Math.max(totalDays, crystalsFarming.days);
+                    // Суммарные дни фарма (правильный расчет)
+                    let totalStamina = 0;
+
+                    // Добавляем стамину для EXP
+                    if (remaining.exp > 0) {
+                        totalStamina += expFarming.stamina;
+                    }
+
+                    // Добавляем стамину для Credits
+                    if (remaining.credits > 0) {
+                        totalStamina += creditsFarming.stamina;
+                    }
+
+                    // Добавляем стамину для Crystal
+                    if (remaining.crystals && crystalsFarming &&
+                        (remaining.crystals.N > 0 || remaining.crystals.R > 0 || remaining.crystals.SR > 0)) {
+                        totalStamina += crystalsFarming.stamina;
+                    }
+
+                    const totalDays = Math.ceil(totalStamina / DAILY_STAMINA);
+
 
                     return (
                         <div key={goal.id} className={styles.goalCard}>
@@ -393,7 +411,8 @@ function FarmGoalTracker() {
                                                 </div>
                                             )}
                                             <div className={styles.farmingRow}>
-                                                ⏱️ Estimated: ~{totalDays} day{totalDays !== 1 ? 's' : ''} (based on {DAILY_STAMINA} stamina/day)
+                                                ⏱️ Estimated: ~{totalDays} day{totalDays !== 1 ? 's' : ''} (based
+                                                on {DAILY_STAMINA} stamina/day)
                                             </div>
                                         </div>
 

@@ -20,7 +20,8 @@ export const useFilter = () => {
             rarity: [],
             placement: [],
             talent: [],
-            stella: []
+            stella: [],
+            availability: []
         };
     };
 
@@ -47,7 +48,8 @@ export const useFilter = () => {
             rarity: [],
             placement: [],
             talent: [],
-            stella: []
+            stella: [],
+            availability: []
         })
     }
 
@@ -70,12 +72,16 @@ export const useFilter = () => {
             const matchesTalent = filters.talent.length === 0 ||
                 filters.talent.includes(memory.talentName);
 
-            // Фильтр по стилле (цвету)
+            // Фильтр по стелле (цвету)
             const matchesStella = filters.stella.length === 0 ||
                 filters.stella.includes(memory.stellaName);
 
-            return matchesChar && matchesRarity &&
-                matchesPlacement && matchesTalent && matchesStella;
+            //фильтр по наличию
+            const matchesAvailability = filters.availability.length === 0 ||
+                filters.availability.includes(memory.isAvailable ? 'available' : 'notAvailable');
+
+            return matchesChar && matchesRarity && matchesPlacement &&
+                matchesTalent && matchesStella && matchesAvailability;
         });
     };
 

@@ -1,0 +1,199 @@
+.protocoreBlock {
+    background: var(--background);
+    box-shadow: var(--box-shadow);
+    border: 2px solid;
+    padding: 5px;
+    color: var(--colorText);
+    transition: all 0.3s ease;
+    width: 200px;
+    min-height: 200px;
+    position: relative;
+    font-family: TikTok Sans, monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+.typeIcon {
+    margin-left: 5px;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.typeImage {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.typeInfo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.typeName {
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--colorText);
+}
+
+.level {
+    font-size: 12px;
+    color: gray;
+}
+
+.mainStat {
+    text-shadow: var(--text-shadow);
+    background-color: color-mix(in srgb, black 50%, transparent);
+    font-size: 12px;
+    padding: 5px 5px;
+}
+
+.subStat {
+    padding: 5px 5px;
+    font-size: 12px;
+}
+
+.mainStat,
+.subStat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    white-space: wrap;
+}
+
+.statLabelMain {
+    font-weight: 700;
+}
+
+.statLabelMain,
+.statValueMain {
+    color: var(--colorText);
+}
+
+.statLabel {
+    color: var(--colorText);
+}
+
+.statValue {
+    color: var(--colorText);
+}
+
+.actions {
+    border-top: 1px solid gray;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.editButton,
+.deleteButton {
+    margin-top: 5px;
+    color: white;
+    border: none;
+    padding: 3px 8px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: inherit;
+}
+
+.editButton {
+    background: var(--green-button);
+}
+
+.editButton:hover {
+    background: var(--light-green-button);
+}
+
+.deleteButton {
+    background: var(--red-button);
+}
+
+.deleteButton:hover {
+    background: var(--light-red-button);
+}
+
+
+/* Цвета для stellactrum */
+.stellactrumEmerald {
+    border-color: #50c878;
+}
+
+.stellactrumEmerald:hover {
+    box-shadow: 0 0 15px 8px rgba(80, 200, 120, 0.3);
+}
+
+.stellactrumAmber {
+    border-color: #ffbf00;
+}
+
+.stellactrumAmber:hover {
+    box-shadow: 0 0 15px 8px rgba(255, 191, 0, 0.3);
+}
+
+.stellactrumViolet {
+    border-color: #8b00ff;
+}
+
+.stellactrumViolet:hover {
+    box-shadow: 0 0 15px 8px rgba(139, 0, 255, 0.3);
+}
+
+.stellactrumPearl {
+    border-color: #e379ff;
+}
+
+.stellactrumPearl:hover {
+    box-shadow: 0 0 15px 8px rgb(118, 47, 140, 0.3);
+}
+
+.stellactrumSapphire {
+    border-color: #5193fd;
+}
+
+.stellactrumSapphire:hover {
+    box-shadow: 0 0 15px 8px rgba(15, 82, 186, 0.3);
+}
+
+.stellactrumRuby {
+    border-color: #8e1111;
+}
+
+.stellactrumRuby:hover {
+    box-shadow: 0 0 15px 8px rgba(224, 17, 95, 0.3);
+}
+
+@media (max-width: 550px) {
+
+    .protocoreBlock {
+        width: 180px;
+    }
+
+    .typeName {
+        font-size: 12px;
+    }
+
+    .mainStat,
+    .subStat,
+    .editButton,
+    .deleteButton {
+        font-size: 12px;
+    }
+
+}
