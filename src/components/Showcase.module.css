@@ -1,7 +1,8 @@
 .wrapper {
     display: flex;
     flex-direction: column;
-    margin: 20px auto 0;
+    margin: 20px 0;
+    width: 100%;
 }
 
 .captureRef {
@@ -19,9 +20,10 @@
     background-color: var(--bg-glass);
     box-shadow: var(--box-shadow);
 
-    /*width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;*/
+    width: 1205px;      /* фиксированная ширина десктопной версии */
+    transform: scale(1);
+    transform-origin: top left;
+
 }
 
 .topContainer {
@@ -273,4 +275,20 @@
 
 .selectAffinityContainer [class$="-singleValue"] {
     color: var(--colorText);
+}
+
+@media screen and (max-width: 768px) {
+
+    .wrapper {
+        height: 500px;
+    }
+
+    .container {
+        /* Уменьшаем контейнер до размеров экрана */
+        transform: scale(0.30);   /* 30% от оригинального размера */
+        transform-origin: top left;
+        width: 1210px;            /* оригинальная ширина (десктопная) */
+        margin: 0 auto;
+    }
+
 }
