@@ -865,7 +865,7 @@ export const bannersDataFull = [
     "startDate": "2026-06-17T05:00:00",
     "endDate": "2026-07-02T04:59:59",
     "rerun": false,
-    "active": true
+    "active": false
 
   },
   {
@@ -876,7 +876,7 @@ export const bannersDataFull = [
     "startDate": "2026-06-25T05:00:00",
     "endDate": "2026-07-02T04:59:59",
     "rerun": true,
-    "active": true
+    "active": false
 
   },
   {
