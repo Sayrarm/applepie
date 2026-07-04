@@ -248,7 +248,7 @@ function Showcase() {
                         {selectedMCWeapon ? (
                             <div className={styles.companionChar}>
                                 <img
-                                    className={styles.companionImage}
+                                    className={styles.mcWeaponImage}
                                     src={getImageUrl(selectedMCWeapon.imgWeapon)}
                                     alt={selectedMCWeapon.weaponName}
                                 />
