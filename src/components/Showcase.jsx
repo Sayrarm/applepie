@@ -350,7 +350,7 @@ function Showcase() {
                 {isCapturing ? '📸 Capturing...' : '📸 Save as Image'}
             </button>
 
-            <div ref={captureRef}>
+            <div ref={captureRef} className={styles.captureRef}>
             <section
                 ref={showcaseRef}
                 className={styles.container}
