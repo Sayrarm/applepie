@@ -8,6 +8,10 @@
     gap: 5px;
     background-color: var(--bg-glass);
     box-shadow: var(--box-shadow);
+
+    /*width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;*/
 }
 
 .topContainer {
@@ -47,7 +51,7 @@
     width: 350px;
     height: 100px;
     object-fit: cover;
-    object-position: 50% 20%;
+    object-position: 50% 15%;
     -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 40%, black 90%, transparent 100%), linear-gradient(0deg, transparent 0%, black 40%, black 90%, transparent 100%);
     -webkit-mask-composite: intersect;
     mask-image: linear-gradient(90deg, transparent 0%, black 40%, black 90%, transparent 100%), linear-gradient(0deg, transparent 0%, black 40%, black 90%, transparent 100%);
@@ -59,11 +63,6 @@
     color: var(--colorTextDark);
     text-align: start;
     padding: 0 10px;
-}
-
-.companionChar,
-.companionMC {
-
 }
 
 .companionGrid {
@@ -175,9 +174,67 @@
 }
 
 .statsTable th {
-    color: var(--colorText);
+    color: var(--colorTextDark);
+    padding: 0 2px;
 }
 
 .statsTable td {
-    width: 50px;
+    width: 80px;
+}
+
+.bonuses {
+    padding: 0 5px;
+    gap: 5px;
+    display: flex;
+}
+
+.affinity {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.selectAffinityContainer {
+    width: 150px;
+}
+
+.selectAffinityContainer [class$="-control"] {
+    background-color: var(--forSelect);
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+.selectAffinityContainer [class$="-control"]:hover {
+    border-color: var(--colorText);
+}
+
+.selectAffinityContainer [class$="-placeholder"] {
+    color: var(--colorTextGrayNote);
+    font-size: 12px;
+}
+
+.selectAffinityContainer [class$="-menu"] {
+    background-color: var(--forSelect);
+    border: none;
+    border-radius: 0;
+    margin: 1px;
+}
+
+.selectAffinityContainer [class$="-option"] {
+    background-color: var(--forSelect);
+    color: var(--colorText);
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+.selectAffinityContainer [class$="-option"]:hover {
+    background-color: var(--a-hover);
+    color: var(--colorText);
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+.selectAffinityContainer [class$="-singleValue"] {
+    color: var(--colorText);
 }

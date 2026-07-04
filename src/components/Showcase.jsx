@@ -1,5 +1,5 @@
 import styles from "./Showcase.module.css";
-import {useState, useRef} from "react";
+import {useState, useRef, useMemo} from "react";
 import ModalWindow from "./ModalWindow.jsx";
 import Card from "./Card.jsx";
 import {getImageUrl} from "./imageUtils.js";
@@ -10,18 +10,30 @@ import ProtocoreBlock from "./ProtocoreBlock.jsx";
 import {compData} from "../data/comp-data.js";
 import {memoriesData} from '../data/memories-data.js';
 import {enhanceMemoriesWithAvailability} from "../data/cardAvailability.js";
+import {affinityData} from "../data/affinity-data.js";
+import Select from 'react-select';
 
 function Showcase() {
     const [selectedCompanion, setSelectedCompanion] = useState(null);
     const [selectedMCWeapon, setSelectedMCWeapon] = useState(null);
     const [solarCards, setSolarCards] = useState([null, null]);
     const [lunarCards, setLunarCards] = useState([null, null, null, null]);
+    const [affinityLevel, setAffinityLevel] = useState(0);
 
     const companionModalRef = useRef();
     const mcWeaponModalRef = useRef();
     const cardModalRef = useRef();
     const [modalPlacement, setModalPlacement] = useState(null);
     const [modalIndex, setModalIndex] = useState(null);
+
+    // Опции для affinity
+    const affinityOptions = useMemo(() => {
+        const levels = affinityData[0]?.affinityLVL || [];
+        return levels.map(lvl => ({
+            value: lvl,
+            label: `${lvl} LVL`
+        }));
+    }, []);
 
     const showCompanionModal = () => {
         companionModalRef.current?.showModal();
@@ -60,7 +72,7 @@ function Showcase() {
         cardModalRef.current?.closeModal();
     };
 
-    // Функция для получения данных карточки
+    // Функция для получения данных карточки с пересчетом статов
     const getCardData = (card) => {
         if (!card) return null;
         const level = getCardLevel(card.id);
@@ -68,9 +80,89 @@ function Showcase() {
         const isAscended = getCardAscend(card.id);
         const protocores = getCardProtocores(card.id);
         const baseStats = getStatsWithRank(card, level, rank, isAscended);
+
+        // Используем calculateFinalStats для корректного расчета всех статов
         const stats = baseStats ? calculateFinalStats(card, baseStats, protocores) : null;
+
         return {level, rank, isAscended, protocores, stats};
     };
+
+    // Функция для подсчета суммы статов со всех карточек
+    const calculateTotalStats = useMemo(() => {
+        const allCards = [...solarCards, ...lunarCards].filter(card => card !== null);
+
+        const total = {
+            hp: 0,
+            atk: 0,
+            def: 0,
+            critRate: 0,
+            critDmg: 0,
+            dmgBoost: 0,
+            oathStrength: 0,
+            oathRecoveryBoost: 0,
+            expeditedEnergyBoost: 0,
+        };
+
+        allCards.forEach(card => {
+            const cardData = getCardData(card);
+            if (cardData?.stats) {
+                const stats = cardData.stats;
+                total.hp += stats.hp || 0;
+                total.atk += stats.atk || 0;
+                total.def += stats.def || 0;
+                total.critRate += stats.critRate || 0;
+                total.critDmg += stats.critDmg || 0;
+                total.dmgBoost += stats.dmgBoost || 0;
+                total.oathStrength += stats.oathStrength || 0;
+                total.oathRecoveryBoost += stats.oathRecoveryBoost || 0;
+                total.expeditedEnergyBoost += stats.expeditedEnergyBoost || 0;
+            }
+        });
+
+        return total;
+    }, [solarCards, lunarCards]);
+
+    // Функция для подсчета affinity бонусов
+    const calculateAffinityBonus = useMemo(() => {
+        if (affinityLevel === 0 || !affinityData.length) {
+            return { hp: 0, atk: 0, def: 0 };
+        }
+
+        const affinityEntry = affinityData[0];
+        const levels = affinityEntry.affinityLVL;
+        const index = levels.indexOf(affinityLevel);
+
+        if (index === -1) {
+            return { hp: 0, atk: 0, def: 0 };
+        }
+
+        const hpPerLevel = affinityEntry.hp || 0;
+        const atkPerLevel = affinityEntry.atk || 0;
+        const defPerLevel = affinityEntry.def || 0;
+        const levelCount = index + 1;
+
+        return {
+            hp: hpPerLevel * levelCount,
+            atk: atkPerLevel * levelCount,
+            def: defPerLevel * levelCount,
+        };
+    }, [affinityLevel]);
+
+    // Финальные статы с учетом affinity
+    const finalStats = useMemo(() => {
+        const affinityBonus = calculateAffinityBonus;
+        return {
+            hp: calculateTotalStats.hp + affinityBonus.hp,
+            atk: calculateTotalStats.atk + affinityBonus.atk,
+            def: calculateTotalStats.def + affinityBonus.def,
+            critRate: calculateTotalStats.critRate,
+            critDmg: calculateTotalStats.critDmg + 150,
+            dmgBoost: calculateTotalStats.dmgBoost,
+            oathStrength: calculateTotalStats.oathStrength,
+            oathRecoveryBoost: calculateTotalStats.oathRecoveryBoost,
+            expeditedEnergyBoost: calculateTotalStats.expeditedEnergyBoost,
+        };
+    }, [calculateTotalStats, calculateAffinityBonus]);
 
     // Функция для отображения слота карточки с протокорами
     const renderCardSlot = (card, placement, index) => {
@@ -172,36 +264,49 @@ function Showcase() {
                 </div>
 
                 <div>
-                <table className={styles.statsTable}>
-                    <tbody>
-                    <tr>
-                        <th>HP</th>
-                        <td></td>
-                        <th>Crit Rate</th>
-                        <td></td>
-                        <th>Oath Strength</th>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>ATK</th>
-                        <td></td>
-                        <th>Crit DMG</th>
-                        <td></td>
-                        <th>Oath Recovery Boost</th>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>DEF</th>
-                        <td></td>
-                        <th>DMG Boost to Weakened</th>
-                        <td></td>
-                        <th>Expedited Energy Boost</th>
-                        <td></td>
-                    </tr>
-                    </tbody>
-                </table>
-                    <div>
-                        Affinity Bonus:
+                    <table className={styles.statsTable}>
+                        <tbody>
+                        <tr>
+                            <th>HP</th>
+                            <td>{Math.round(finalStats.hp)}</td>
+                            <th>Crit Rate</th>
+                            <td>{finalStats.critRate.toFixed(2)}%</td>
+                            <th>Oath Strength</th>
+                            <td>{finalStats.oathStrength.toFixed(2)}%</td>
+                        </tr>
+                        <tr>
+                            <th>ATK</th>
+                            <td>{Math.round(finalStats.atk)}</td>
+                            <th>Crit DMG</th>
+                            <td>{finalStats.critDmg.toFixed(2)}%</td>
+                            <th>Oath Recovery Boost</th>
+                            <td>{finalStats.oathRecoveryBoost.toFixed(2)}%</td>
+                        </tr>
+                        <tr>
+                            <th>DEF</th>
+                            <td>{Math.round(finalStats.def)}</td>
+                            <th>DMG Boost to Weakened</th>
+                            <td>{finalStats.dmgBoost.toFixed(2)}%</td>
+                            <th>Expedited Energy Boost</th>
+                            <td>{finalStats.expeditedEnergyBoost.toFixed(2)}%</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <div className={styles.bonuses}>
+                        <div className={styles.affinity}>
+                            <Select
+                                options={affinityOptions}
+                                value={affinityOptions.find(opt => opt.value === affinityLevel)}
+                                onChange={(option) => setAffinityLevel(option ? option.value : 0)}
+                                placeholder="Select Affinity LVL"
+                                className={styles.selectAffinityContainer}
+                                isClearable
+                            />
+                            <div className={styles.affinityBonus}>
+                                Affinity Bonus: +{calculateAffinityBonus.hp} HP, +{calculateAffinityBonus.atk} ATK, +{calculateAffinityBonus.def} DEF
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
