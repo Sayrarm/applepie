@@ -6,7 +6,7 @@
     color: var(--colorText);
     transition: all 0.3s ease;
     width: 200px;
-    min-height: 210px;
+    min-height: 200px;
     position: relative;
     font-family: TikTok Sans, monospace;
     display: flex;

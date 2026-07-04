@@ -129,48 +129,84 @@ function Showcase() {
 
     return (
         <section className={styles.container}>
-            {/* Левая часть — компаньон и MC Weapon */}
-            <div className={styles.companionSection}>
-                {/* Кнопка выбора компаньона */}
-                <button className={styles.addCompanionBtn} onClick={showCompanionModal}>
-                    {selectedCompanion ? (
-                        <div className={styles.companionChar}>
-                            <img
-                                className={styles.companionImage}
-                                src={getImageUrl(selectedCompanion.img)}
-                                alt={selectedCompanion.companionName}
-                            />
-                            <div className={styles.companionName}>
-                                {selectedCompanion.companionName}
+            {/* компаньон и MC Weapon */}
+            <div className={styles.topContainer}>
+                <div className={styles.companionSection}>
+                    {/* Кнопка выбора компаньона */}
+                    <button className={styles.addCompanionBtn} onClick={showCompanionModal}>
+                        {selectedCompanion ? (
+                            <div className={styles.companionChar}>
+                                <img
+                                    className={styles.companionImage}
+                                    src={getImageUrl(selectedCompanion.img)}
+                                    alt={selectedCompanion.companionName}
+                                />
+                                <div className={styles.companionName}>
+                                    {selectedCompanion.companionName}
+                                </div>
                             </div>
-                        </div>
 
-                    ) : (
-                        <div className={styles.addCompanionText}>+ Add Companion</div>
-                    )}
-                </button>
+                        ) : (
+                            <div className={styles.addCompanionText}>+ Add Companion</div>
+                        )}
+                    </button>
 
-                {/* Кнопка выбора MC Weapon */}
-                <button className={styles.addCompanionBtn} onClick={showMCWeaponModal}>
-                    {selectedMCWeapon ? (
-                        <div className={styles.companionChar}>
-                            <img
-                                className={styles.companionImage}
-                                src={getImageUrl(selectedMCWeapon.imgWeapon)}
-                                alt={selectedMCWeapon.weaponName}
-                            />
-                            <div className={styles.companionName}>
-                                MC Weapon: {selectedMCWeapon.weaponName}
+                    {/* Кнопка выбора MC Weapon */}
+                    <button className={styles.addCompanionBtn} onClick={showMCWeaponModal}>
+                        {selectedMCWeapon ? (
+                            <div className={styles.companionChar}>
+                                <img
+                                    className={styles.companionImage}
+                                    src={getImageUrl(selectedMCWeapon.imgWeapon)}
+                                    alt={selectedMCWeapon.weaponName}
+                                />
+                                <div className={styles.companionName}>
+                                    MC Weapon: {selectedMCWeapon.weaponName}
+                                </div>
                             </div>
-                        </div>
 
-                    ) : (
-                        <div className={styles.addCompanionText}>+ Add MC Weapon</div>
-                    )}
-                </button>
+                        ) : (
+                            <div className={styles.addCompanionText}>+ Add MC Weapon</div>
+                        )}
+                    </button>
+                </div>
+
+                <div>
+                <table className={styles.statsTable}>
+                    <tbody>
+                    <tr>
+                        <th>HP</th>
+                        <td></td>
+                        <th>Crit Rate</th>
+                        <td></td>
+                        <th>Oath Strength</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>ATK</th>
+                        <td></td>
+                        <th>Crit DMG</th>
+                        <td></td>
+                        <th>Oath Recovery Boost</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>DEF</th>
+                        <td></td>
+                        <th>DMG Boost to Weakened</th>
+                        <td></td>
+                        <th>Expedited Energy Boost</th>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+                    <div>
+                        Affinity Bonus:
+                    </div>
+                </div>
             </div>
 
-            {/* Правая часть — карточки */}
+            {/* карточки */}
             <div className={styles.cardsSection}>
                 {/* Solar карточки */}
                 <div className={styles.solarRow}>

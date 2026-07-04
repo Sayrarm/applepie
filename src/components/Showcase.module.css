@@ -10,6 +10,12 @@
     box-shadow: var(--box-shadow);
 }
 
+.topContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .addCompanionBtn,
 .companionItem,
 .cardItem,
@@ -22,7 +28,6 @@
 
 .companionSection {
     display: flex;
-    width: 100%;
 }
 
 .addCompanionBtn {
@@ -93,9 +98,8 @@
 
 .cardSlot {
     border: 1px solid var(--border-battle-page);
-    padding: 5px;
     margin: 5px;
-    min-height: 437px;
+    min-height: 416px;
     min-width: 392px;
 
     display: flex;
@@ -155,3 +159,25 @@
     margin-bottom: 5px;
 }
 
+.statsTable {
+    border-collapse: collapse;
+    display: flex;
+    margin: 5px;
+    height: 50%;
+    min-height: 107px;
+}
+
+.statsTable th,
+.statsTable td {
+    border: 1px solid var(--border-table);
+    text-align: center;
+    padding: 5px 2px;
+}
+
+.statsTable th {
+    color: var(--colorText);
+}
+
+.statsTable td {
+    width: 50px;
+}

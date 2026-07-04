@@ -40,6 +40,10 @@
     flex-wrap: wrap;
 }
 
+.protocoreWrapper {
+    display: flex;
+}
+
 .dropdownItem {
     color: var(--colorTextDark);
     display: flex;
