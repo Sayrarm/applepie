@@ -270,8 +270,9 @@ function Showcase() {
 
         const affinityEntry = affinityData[0];
         const levels = affinityEntry.affinityLVL;
-        const index = levels.indexOf(affinityLevel);
 
+        // Проверяем, есть ли такой уровень в массиве
+        const index = levels.indexOf(affinityLevel);
         if (index === -1) {
             return { hp: 0, atk: 0, def: 0 };
         }
@@ -279,7 +280,10 @@ function Showcase() {
         const hpPerLevel = affinityEntry.hp || 0;
         const atkPerLevel = affinityEntry.atk || 0;
         const defPerLevel = affinityEntry.def || 0;
-        const levelCount = index + 1;
+
+        // Используем сам уровень, деленный на шаг (5)
+        // Например: 5/5 = 1, 10/5 = 2, 15/5 = 3, и т.д.
+        const levelCount = affinityLevel / 5;
 
         return {
             hp: hpPerLevel * levelCount,
@@ -466,6 +470,7 @@ function Showcase() {
                                     placeholder="Select Affinity LVL"
                                     className={styles.selectAffinityContainer}
                                     isClearable
+                                    isSearchable={false}
                                 />
                                 <div className={styles.affinityBonus}>
                                     Affinity Bonus: +{calculateAffinityBonus.hp} HP, +{calculateAffinityBonus.atk} ATK, +{calculateAffinityBonus.def} DEF

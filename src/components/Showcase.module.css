@@ -57,7 +57,7 @@
 .clearButton {
     background-color: var(--forSelect);
     box-shadow: var(--box-shadow);
-    padding: 5px;
+    padding: 10px;
     color: var(--colorText);
     font-size: 18px;
 }

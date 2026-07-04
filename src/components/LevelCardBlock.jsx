@@ -295,6 +295,7 @@ function LevelCardBlock({cardId: propCardId, onAvailabilityChange}) {
                                 onChange={(option) => setRank(option ? option.value : 0)}
                                 placeholder="Select Rank"
                                 className={styles.selectRankContainer}
+                                isSearchable={false}
                             />
                         </div>
 
