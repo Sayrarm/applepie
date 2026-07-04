@@ -42,12 +42,10 @@
     background-color: var(--forSelect);
     box-shadow: var(--box-shadow);
     padding: 5px;
-    margin: 10px 5px;
+    margin: 10px;
     color: var(--colorText);
     font-size: 18px;
 }
-
-
 
 .companionImage,
 .mcWeaponImage {

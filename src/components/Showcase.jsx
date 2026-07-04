@@ -1,5 +1,5 @@
 import styles from "./Showcase.module.css";
-import {useState, useRef, useMemo} from "react";
+import {useState, useRef, useMemo, useEffect} from "react";
 import ModalWindow from "./ModalWindow.jsx";
 import Card from "./Card.jsx";
 import {getImageUrl} from "./imageUtils.js";
@@ -13,12 +13,70 @@ import {enhanceMemoriesWithAvailability} from "../data/cardAvailability.js";
 import {affinityData} from "../data/affinity-data.js";
 import Select from 'react-select';
 
+// Функции для работы с localStorage
+const STORAGE_KEY = 'showcase_data';
+
+const loadFromStorage = () => {
+    try {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+            return JSON.parse(saved);
+        }
+    } catch (e) {
+        console.error('Error loading from localStorage:', e);
+    }
+    return null;
+};
+
+const saveToStorage = (data) => {
+    try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    } catch (e) {
+        console.error('Error saving to localStorage:', e);
+    }
+};
+
 function Showcase() {
-    const [selectedCompanion, setSelectedCompanion] = useState(null);
-    const [selectedMCWeapon, setSelectedMCWeapon] = useState(null);
-    const [solarCards, setSolarCards] = useState([null, null]);
-    const [lunarCards, setLunarCards] = useState([null, null, null, null]);
-    const [affinityLevel, setAffinityLevel] = useState(0);
+    // Загружаем сохраненные данные или используем значения по умолчанию
+    const savedData = loadFromStorage();
+
+    const [selectedCompanion, setSelectedCompanion] = useState(() => {
+        if (savedData?.selectedCompanion) {
+            return compData.find(c => c.id === savedData.selectedCompanion.id) || null;
+        }
+        return null;
+    });
+
+    const [selectedMCWeapon, setSelectedMCWeapon] = useState(() => {
+        if (savedData?.selectedMCWeapon) {
+            return compData.find(c => c.id === savedData.selectedMCWeapon.id) || null;
+        }
+        return null;
+    });
+
+    const [solarCards, setSolarCards] = useState(() => {
+        if (savedData?.solarCards) {
+            return savedData.solarCards.map(cardId => {
+                if (cardId === null) return null;
+                return memoriesData.find(c => c.id === cardId) || null;
+            });
+        }
+        return [null, null];
+    });
+
+    const [lunarCards, setLunarCards] = useState(() => {
+        if (savedData?.lunarCards) {
+            return savedData.lunarCards.map(cardId => {
+                if (cardId === null) return null;
+                return memoriesData.find(c => c.id === cardId) || null;
+            });
+        }
+        return [null, null, null, null];
+    });
+
+    const [affinityLevel, setAffinityLevel] = useState(() => {
+        return savedData?.affinityLevel || 0;
+    });
 
     const companionModalRef = useRef();
     const mcWeaponModalRef = useRef();
@@ -34,6 +92,18 @@ function Showcase() {
             label: `${lvl} LVL`
         }));
     }, []);
+
+    // Сохраняем все данные при изменении
+    useEffect(() => {
+        const dataToSave = {
+            selectedCompanion: selectedCompanion ? { id: selectedCompanion.id } : null,
+            selectedMCWeapon: selectedMCWeapon ? { id: selectedMCWeapon.id } : null,
+            solarCards: solarCards.map(card => card ? card.id : null),
+            lunarCards: lunarCards.map(card => card ? card.id : null),
+            affinityLevel: affinityLevel,
+        };
+        saveToStorage(dataToSave);
+    }, [selectedCompanion, selectedMCWeapon, solarCards, lunarCards, affinityLevel]);
 
     const showCompanionModal = () => {
         companionModalRef.current?.showModal();
