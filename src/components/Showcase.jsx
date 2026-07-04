@@ -37,6 +37,14 @@ const saveToStorage = (data) => {
     }
 };
 
+const clearStorage = () => {
+    try {
+        localStorage.removeItem(STORAGE_KEY);
+    } catch (e) {
+        console.error('Error clearing localStorage:', e);
+    }
+};
+
 function Showcase() {
     // Загружаем сохраненные данные или используем значения по умолчанию
     const savedData = loadFromStorage();
@@ -109,6 +117,18 @@ function Showcase() {
         };
         saveToStorage(dataToSave);
     }, [selectedCompanion, selectedMCWeapon, solarCards, lunarCards, affinityLevel]);
+
+    // Функция для очистки всех данных
+    const clearAll = () => {
+        if (window.confirm('Are you sure you want to clear all data?')) {
+            setSelectedCompanion(null);
+            setSelectedMCWeapon(null);
+            setSolarCards([null, null]);
+            setLunarCards([null, null, null, null]);
+            setAffinityLevel(0);
+            clearStorage();
+        }
+    };
 
     // Функция для создания скриншота
     const captureScreenshot = async () => {
@@ -342,13 +362,22 @@ function Showcase() {
     return (
         <div className={styles.wrapper}>
             {/* Кнопка для скриншота */}
-            <button
-                className={styles.screenshotButton}
-                onClick={captureScreenshot}
-                disabled={isCapturing}
-            >
-                {isCapturing ? '📸 Capturing...' : '📸 Save as Image'}
-            </button>
+            <div className={styles.utilButtons}>
+                <button
+                    className={styles.screenshotButton}
+                    onClick={captureScreenshot}
+                    disabled={isCapturing}
+                >
+                    {isCapturing ? '📸 Capturing...' : '📸 Save as Image'}
+                </button>
+
+                <button
+                    className={styles.clearButton}
+                    onClick={clearAll}
+                >
+                    🗑️ Clear All
+                </button>
+            </div>
 
             <div ref={captureRef} className={styles.captureRef}>
             <section

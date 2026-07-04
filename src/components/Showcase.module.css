@@ -34,7 +34,8 @@
 .companionItem,
 .cardItem,
 .emptyLabel,
-.screenshotButton {
+.screenshotButton,
+.clearButton {
     text-decoration: none;
     border: none;
     background: none;
@@ -50,7 +51,8 @@
 }
 
 .screenshotButton,
-.addCompanionText {
+.addCompanionText,
+.clearButton {
     background-color: var(--forSelect);
     box-shadow: var(--box-shadow);
     padding: 5px;
@@ -62,11 +64,16 @@
     margin: 10px;
 }
 
-.screenshotButton {
+.utilButtons {
+    display: flex;
+    gap: 10px;
+}
+
+.screenshotButton,
+.clearButton {
     width: 140px;
     margin: 5px 0 10px 0;
     font-size: 14px;
-    padding: 5px;
 }
 
 .companionImage,
