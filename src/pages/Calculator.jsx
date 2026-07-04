@@ -6,6 +6,7 @@ import MyResources from "../components/MyResources.jsx";
 import Protocores from "../components/Protocores.jsx";
 import MyMemories from "../components/MyMemories.jsx";
 import Showcase from "../components/Showcase.jsx";
+import ExportImport from "../components/ExportImport.jsx";
 
 function Calculator() {
     const { navigation } = useParams(); // получаем "my-memories", "inventory" и т.д.
@@ -55,6 +56,12 @@ function Calculator() {
                 >
                     Memory Calculator
                 </NavLink>
+                <NavLink
+                    className={({ isActive }) => `${styles.tabButton} ${isActive ? styles.active : ''}`}
+                    to="/calculator/export-import"
+                >
+                    Export/Import data
+                </NavLink>
             </div>
 
             {/* Контент */}
@@ -65,6 +72,7 @@ function Calculator() {
                 {navigation === 'inventory' && <MyResources />}
                 {navigation === 'protocore-calculator' && <ProtocoreCalculator />}
                 {navigation === 'memory-calculator' && <MemoryUpCalculator />}
+                {navigation === 'export-import' && <ExportImport />}
             </div>
         </section>
     );
