@@ -12,6 +12,7 @@ import {memoriesData} from '../data/memories-data.js';
 import {enhanceMemoriesWithAvailability} from "../data/cardAvailability.js";
 import {affinityData} from "../data/affinity-data.js";
 import Select from 'react-select';
+import { toPng } from 'html-to-image';
 
 // Функции для работы с localStorage
 const STORAGE_KEY = 'showcase_data';
@@ -78,6 +79,10 @@ function Showcase() {
         return savedData?.affinityLevel || 0;
     });
 
+    const [isCapturing, setIsCapturing] = useState(false);
+    const showcaseRef = useRef();
+    const captureRef = useRef();
+
     const companionModalRef = useRef();
     const mcWeaponModalRef = useRef();
     const cardModalRef = useRef();
@@ -104,6 +109,51 @@ function Showcase() {
         };
         saveToStorage(dataToSave);
     }, [selectedCompanion, selectedMCWeapon, solarCards, lunarCards, affinityLevel]);
+
+    // Функция для создания скриншота
+    const captureScreenshot = async () => {
+        if (!captureRef.current) return; // Используем captureRef вместо showcaseRef
+
+        setIsCapturing(true);
+
+        try {
+            const element = captureRef.current;
+
+            // Добавляем padding для отступов при скриншоте
+            element.style.padding = '1px';
+
+            const dataUrl = await toPng(element, {
+                quality: 1,
+                pixelRatio: 2,
+                backgroundColor: 'var(--bg-primary)',
+                cacheBust: true,
+                width: element.scrollWidth,
+                height: element.scrollHeight,
+                filter: (node) => {
+                    return !node.classList?.contains('modal') &&
+                        !node.closest?.('.modal');
+                }
+            });
+
+            // Убираем временный padding
+            element.style.padding = '0';
+
+            const link = document.createElement('a');
+            link.download = `showcase_${new Date().toISOString().slice(0, 10)}.png`;
+            link.href = dataUrl;
+            link.click();
+
+        } catch (error) {
+            console.error('Error capturing screenshot:', error);
+            alert('Failed to capture screenshot. Please try again.');
+            // Убираем padding в случае ошибки
+            if (captureRef.current) {
+                captureRef.current.style.padding = '0';
+            }
+        } finally {
+            setIsCapturing(false);
+        }
+    };
 
     const showCompanionModal = () => {
         companionModalRef.current?.showModal();
@@ -290,122 +340,139 @@ function Showcase() {
     };
 
     return (
-        <section className={styles.container}>
-            {/* компаньон и MC Weapon */}
-            <div className={styles.topContainer}>
-                <div className={styles.companionSection}>
-                    {/* Кнопка выбора компаньона */}
-                    <button className={styles.addCompanionBtn} onClick={showCompanionModal}>
-                        {selectedCompanion ? (
-                            <div className={styles.companionChar}>
-                                <img
-                                    className={styles.companionImage}
-                                    src={getImageUrl(selectedCompanion.img)}
-                                    alt={selectedCompanion.companionName}
-                                />
-                                <div className={styles.companionName}>
-                                    {selectedCompanion.companionName}
+        <div className={styles.wrapper}>
+            {/* Кнопка для скриншота */}
+            <button
+                className={styles.screenshotButton}
+                onClick={captureScreenshot}
+                disabled={isCapturing}
+            >
+                {isCapturing ? '📸 Capturing...' : '📸 Save as Image'}
+            </button>
+
+            <div ref={captureRef}>
+            <section
+                ref={showcaseRef}
+                className={styles.container}
+                id="showcase-container"
+            >
+                {/* компаньон и MC Weapon */}
+                <div className={styles.topContainer}>
+                    <div className={styles.companionSection}>
+                        {/* Кнопка выбора компаньона */}
+                        <button className={styles.addCompanionBtn} onClick={showCompanionModal}>
+                            {selectedCompanion ? (
+                                <div className={styles.companionChar}>
+                                    <img
+                                        className={styles.companionImage}
+                                        src={getImageUrl(selectedCompanion.img)}
+                                        alt={selectedCompanion.companionName}
+                                    />
+                                    <div className={styles.companionName}>
+                                        {selectedCompanion.companionName}
+                                    </div>
                                 </div>
-                            </div>
 
-                        ) : (
-                            <div className={styles.addCompanionText}>+ Add Companion</div>
-                        )}
-                    </button>
+                            ) : (
+                                <div className={styles.addCompanionText}>+ Add Companion</div>
+                            )}
+                        </button>
 
-                    {/* Кнопка выбора MC Weapon */}
-                    <button className={styles.addCompanionBtn} onClick={showMCWeaponModal}>
-                        {selectedMCWeapon ? (
-                            <div className={styles.companionChar}>
-                                <img
-                                    className={styles.mcWeaponImage}
-                                    src={getImageUrl(selectedMCWeapon.imgWeapon)}
-                                    alt={selectedMCWeapon.weaponName}
-                                />
-                                <div className={styles.companionName}>
-                                    MC Weapon: {selectedMCWeapon.weaponName}
+                        {/* Кнопка выбора MC Weapon */}
+                        <button className={styles.addCompanionBtn} onClick={showMCWeaponModal}>
+                            {selectedMCWeapon ? (
+                                <div className={styles.companionChar}>
+                                    <img
+                                        className={styles.mcWeaponImage}
+                                        src={getImageUrl(selectedMCWeapon.imgWeapon)}
+                                        alt={selectedMCWeapon.weaponName}
+                                    />
+                                    <div className={styles.companionName}>
+                                        MC Weapon: {selectedMCWeapon.weaponName}
+                                    </div>
                                 </div>
-                            </div>
 
-                        ) : (
-                            <div className={styles.addCompanionText}>+ Add MC Weapon</div>
-                        )}
-                    </button>
-                </div>
+                            ) : (
+                                <div className={styles.addCompanionText}>+ Add MC Weapon</div>
+                            )}
+                        </button>
+                    </div>
 
-                <div>
-                    <table className={styles.statsTable}>
-                        <tbody>
-                        <tr>
-                            <th>HP</th>
-                            <td>{Math.round(finalStats.hp)}</td>
-                            <th>Crit Rate</th>
-                            <td>{finalStats.critRate.toFixed(2)}%</td>
-                            <th>Oath Strength</th>
-                            <td>{finalStats.oathStrength.toFixed(2)}%</td>
-                        </tr>
-                        <tr>
-                            <th>ATK</th>
-                            <td>{Math.round(finalStats.atk)}</td>
-                            <th>Crit DMG</th>
-                            <td>{finalStats.critDmg.toFixed(2)}%</td>
-                            <th>Oath Recovery Boost</th>
-                            <td>{finalStats.oathRecoveryBoost.toFixed(2)}%</td>
-                        </tr>
-                        <tr>
-                            <th>DEF</th>
-                            <td>{Math.round(finalStats.def)}</td>
-                            <th>DMG Boost to Weakened</th>
-                            <td>{finalStats.dmgBoost.toFixed(2)}%</td>
-                            <th>Expedited Energy Boost</th>
-                            <td>{finalStats.expeditedEnergyBoost.toFixed(2)}%</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <div>
+                        <table className={styles.statsTable}>
+                            <tbody>
+                            <tr>
+                                <th>HP</th>
+                                <td>{Math.round(finalStats.hp)}</td>
+                                <th>Crit Rate</th>
+                                <td>{finalStats.critRate.toFixed(2)}%</td>
+                                <th>Oath Strength</th>
+                                <td>{finalStats.oathStrength.toFixed(2)}%</td>
+                            </tr>
+                            <tr>
+                                <th>ATK</th>
+                                <td>{Math.round(finalStats.atk)}</td>
+                                <th>Crit DMG</th>
+                                <td>{finalStats.critDmg.toFixed(2)}%</td>
+                                <th>Oath Recovery Boost</th>
+                                <td>{finalStats.oathRecoveryBoost.toFixed(2)}%</td>
+                            </tr>
+                            <tr>
+                                <th>DEF</th>
+                                <td>{Math.round(finalStats.def)}</td>
+                                <th>DMG Boost to Weakened</th>
+                                <td>{finalStats.dmgBoost.toFixed(2)}%</td>
+                                <th>Expedited Energy Boost</th>
+                                <td>{finalStats.expeditedEnergyBoost.toFixed(2)}%</td>
+                            </tr>
+                            </tbody>
+                        </table>
 
-                    <div className={styles.bonuses}>
-                        <div className={styles.affinity}>
-                            <Select
-                                options={affinityOptions}
-                                value={affinityOptions.find(opt => opt.value === affinityLevel)}
-                                onChange={(option) => setAffinityLevel(option ? option.value : 0)}
-                                placeholder="Select Affinity LVL"
-                                className={styles.selectAffinityContainer}
-                                isClearable
-                            />
-                            <div className={styles.affinityBonus}>
-                                Affinity Bonus: +{calculateAffinityBonus.hp} HP, +{calculateAffinityBonus.atk} ATK, +{calculateAffinityBonus.def} DEF
+                        <div className={styles.bonuses}>
+                            <div className={styles.affinity}>
+                                <Select
+                                    options={affinityOptions}
+                                    value={affinityOptions.find(opt => opt.value === affinityLevel)}
+                                    onChange={(option) => setAffinityLevel(option ? option.value : 0)}
+                                    placeholder="Select Affinity LVL"
+                                    className={styles.selectAffinityContainer}
+                                    isClearable
+                                />
+                                <div className={styles.affinityBonus}>
+                                    Affinity Bonus: +{calculateAffinityBonus.hp} HP, +{calculateAffinityBonus.atk} ATK, +{calculateAffinityBonus.def} DEF
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            {/* карточки */}
-            <div className={styles.cardsSection}>
-                {/* Solar карточки */}
-                <div className={styles.solarRow}>
-                    <div className={styles.rowLabel}>SOLAR</div>
-                    <div className={styles.solarCardsRow}>
-                        {solarCards.map((card, index) => (
-                            <div key={`solar-${index}`} className={styles.cardWrapperSlot}>
-                                {renderCardSlot(card, 'solar', index)}
-                            </div>
-                        ))}
+                {/* карточки */}
+                <div className={styles.cardsSection}>
+                    {/* Solar карточки */}
+                    <div className={styles.solarRow}>
+                        <div className={styles.rowLabel}>SOLAR</div>
+                        <div className={styles.solarCardsRow}>
+                            {solarCards.map((card, index) => (
+                                <div key={`solar-${index}`} className={styles.cardWrapperSlot}>
+                                    {renderCardSlot(card, 'solar', index)}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Lunar карточки */}
+                    <div className={styles.lunarRow}>
+                        <div className={styles.rowLabel}>LUNAR</div>
+                        <div className={styles.lunarCardsRow}>
+                            {lunarCards.map((card, index) => (
+                                <div key={`lunar-${index}`} className={styles.cardWrapperSlot}>
+                                    {renderCardSlot(card, 'lunar', index)}
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
-
-                {/* Lunar карточки */}
-                <div className={styles.lunarRow}>
-                    <div className={styles.rowLabel}>LUNAR</div>
-                    <div className={styles.lunarCardsRow}>
-                        {lunarCards.map((card, index) => (
-                            <div key={`lunar-${index}`} className={styles.cardWrapperSlot}>
-                                {renderCardSlot(card, 'lunar', index)}
-                            </div>
-                        ))}
-                    </div>
-                </div>
+            </section>
             </div>
 
             {/* Модалка выбора компаньона */}
@@ -494,7 +561,7 @@ function Showcase() {
                     </div>
                 }
             />
-        </section>
+        </div>
     );
 }
 

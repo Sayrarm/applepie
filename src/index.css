@@ -24,6 +24,7 @@ body {
 
     outline: none;
     -webkit-tap-highlight-color: transparent;
+    background-color: var(--bg-primary);
 }
 
 html::-webkit-scrollbar {
@@ -137,7 +138,7 @@ html.dark {
     --bg-modal: #8e9093;
     --text-shadow: 0 0 5px #ff4444, 0 0 10px #ff4444;
 
-    --bg-primary: black;
+    --bg-primary: #202227;
     --bg-image: url('../public/assets/bg/Frame 37.png');
     --box-shadow: 10px 10px 6px -5px rgb(21 21 21 / 0.6);
     --linear-gradient-webkit: -webkit-linear-gradient(270deg, black -10%, black 20%, transparent 100%);
