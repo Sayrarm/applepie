@@ -41,7 +41,7 @@ function SolarPairBonusBlock ({
                         <>
                             <CardList cards={pairCards} />
 
-                            <div className={styles.companionLink}>
+                            <div className={styles.companionLink4Star}>
                                 <p><strong>Duo Rank 0:</strong>  increases team DMG by 5%</p>
                                 <p><strong>Duo Rank 1:</strong>  boosts Ardent Oath charge by 10%</p>
                                 <p><strong>Duo Rank 2:</strong>  reduces team DMG taken by 5%</p>
