@@ -48,8 +48,16 @@
     display: flex;
 }
 
+.companionChar {
+    display: flex;
+    flex-direction: column;
+}
+
 .addCompanionBtn {
-    align-self: start;
+    display: flex;
+    align-items: flex-start;
+    align-content: space-between;
+    flex-wrap: wrap;
 }
 
 .screenshotButton,
