@@ -33,6 +33,13 @@ function CardProtocores({cardId}) {
         return card ? card.placementName : null;
     }, [cardId]);
 
+    // Получаем стеллактум текущей карточки
+    const cardStella = useMemo(() => {
+        if (!cardId) return null;
+        const card = memoriesData.find(c => String(c.id) === cardId);
+        return card ? card.stellaName : null;
+    }, [cardId]);
+
     // Картинка текущей карточки
     const currentCardImage = useMemo(() => {
         if (!cardId) return null;
@@ -96,6 +103,12 @@ function CardProtocores({cardId}) {
             return false;
         }
 
+        // 4. Проверка: совместимость по стеллактуму
+        if (cardStella && protocore.stellactrum !== cardStella) {
+            alert(`This protocore has ${protocore.stellactrum} stellactrum, but the card requires ${cardStella}.`);
+            return false;
+        }
+
         return true;
     };
 
@@ -121,7 +134,7 @@ function CardProtocores({cardId}) {
         saveProtocores(updatedProtocores);
     };
 
-    // Используем useCallback для стабильности функций, Фильтруем и сортируем доступные протокоры
+    // Фильтруем протокоры по совместимости с карточкой
     const filterCompatible = useCallback((protocores) => {
         return protocores.filter(p => {
             if (selectedProtocores.some(sp => sp.id === p.id)) return false;
@@ -137,14 +150,18 @@ function CardProtocores({cardId}) {
 
             if (isSolar) {
                 // Для Solar: только alpha и beta
-                return p.type === 'alpha' || p.type === 'beta';
+                if (p.type !== 'alpha' && p.type !== 'beta') return false;
             } else if (isLunar) {
                 // Для Lunar: только gamma и delta
-                return p.type === 'gamma' || p.type === 'delta';
+                if (p.type !== 'gamma' && p.type !== 'delta') return false;
             }
-            return false;
+
+            // Проверка совместимости по стеллактуму
+            if (cardStella && p.stellactrum !== cardStella) return false;
+
+            return true;
         });
-    }, [selectedProtocores, cardPlacement]);
+    }, [selectedProtocores, cardPlacement, cardStella]);
 
     const filterBySearch = useCallback((protocores) => {
         if (!searchQuery) return protocores;
@@ -157,12 +174,12 @@ function CardProtocores({cardId}) {
         });
     }, [searchQuery]);
 
-    // ✅ Используем useMemo без filterProtocores и sortProtocores в зависимостях
+    // Используем useMemo
     const availableProtocores = useMemo(() => {
-        // 1. Фильтруем по совместимости с карточкой
+        // 1. Фильтруем по совместимости с карточкой (placement + stellactrum)
         const compatible = filterCompatible(allProtocores);
 
-        // 2. Применяем фильтры (используем filterProtocores напрямую)
+        // 2. Применяем фильтры
         const filtered = filterProtocores(compatible);
 
         // 3. Применяем поиск
@@ -194,7 +211,8 @@ function CardProtocores({cardId}) {
 
         const placementLabel = cardPlacement.toUpperCase();
         const allowedTypes = cardPlacement === 'solar' ? 'Alpha, Beta' : 'Gamma, Delta';
-        return `${placementLabel} allowed: ${allowedTypes}`;
+        const stellaText = cardStella ? ` (${cardStella.charAt(0).toUpperCase() + cardStella.slice(1)})` : '';
+        return `${placementLabel} allowed: ${allowedTypes}${stellaText}`;
     };
 
     return (
