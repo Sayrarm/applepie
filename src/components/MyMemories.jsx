@@ -240,6 +240,7 @@ function MyMemories() {
                 clearFilters={clearFilters}
                 filterModalRef={filterModalRef}
                 resetAllSettings={resetAllSettings}
+                storagePrefix="mymemories"
             />
 
             <div className={styles.tableWrapper}>

@@ -105,6 +105,7 @@ function Memories() {
                 clearFilters={clearFilters}
                 filterModalRef={filterModalRef}
                 resetAllSettings={resetAllSettings}
+                storagePrefix="memories"
                 extraButtons={[
                     {
                         onClick: toggleImageSize,

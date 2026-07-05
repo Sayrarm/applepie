@@ -20,7 +20,7 @@ function FilterSortBarMemories({
                                    filterModalRef,
                                    extraButtons = [],
                                    resetAllSettings,
-                                   storagePrefix = '', // <-- префикс для разделения
+                                   storagePrefix = '',
                                }) {
     const characters = ['Xavier', 'Zayne', 'Rafayel', 'Sylus', 'Caleb'];
 
