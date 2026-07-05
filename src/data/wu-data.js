@@ -829,7 +829,7 @@ Entry No. 1
 After her resurrection, her cognition and memory of her previous "life" were erased. To reassess her abilities, I gave her picture books and cards with words. She quickly passed my tests with flying colors, performing better than children at her age. She absorbed and understood information faster and more thoroughly.
 If she were in school, she could easily be a fifth-grade student. 
 Entry No. 2
-In terms of the Evol experiment, we could only hypothesize from a numerical perspective Before she used Evol of her own accord, no one could be sure how the Resonance Evol would manifest.
+In terms of the Evol experiment, we could only hypothesize from a numerical perspective. Before she used Evol of her own accord, no one could be sure how the Resonance Evol would manifest.
 Only once did she use Resonance unconsciously. The target and range were unclear. Phil has the Acoustic Transmission Evol. That day, everyone heard him talking on the phone with his girlfriend as if he were a broadcaster. 
 Entry No. 3
 Following the voting results, we began our experiment to kill Unicorn in an observation unit yesterday. We also prepared emergency measures.
@@ -1262,7 +1262,8 @@ Ding! The elevator bell rings. Yvonne, understanding the situation, pushes the h
 "The medical examination briefing for the Hunters Association is about to start."
 "Being a couple of minutes late won't hurt."
 "Dr. Zayne's already there."
-"What?! Why didn't you tell me sooner... Why would Dr. Zayne be at this meeting... Greyson quickly turns and rushes to the elevator. His body is already inside, but his eyes are fixed on the Arctic Hunter, desperate for an answer. He doesn't even care if he's blocking the elevator door in a way that almost screams "Don't try this stunt at home, kids."
+"What?! Why didn't you tell me sooner... Why would Dr. Zayne be at this meeting..."
+Greyson quickly turns and rushes to the elevator. His body is already inside, but his eyes are fixed on the Arctic Hunter, desperate for an answer. He doesn't even care if he's blocking the elevator door in a way that almost screams "Don't try this stunt at home, kids."
 "...Punching Wanderers!"
 Greyson's heart sinks. He purses his lips in disappointment and lets out a sigh as the elevator door closes.
 
@@ -4672,7 +4673,7 @@ Isaiah
 Record Keeper 
 Soren
 -------------------------------------------------------------
-[Test Record A-0731]
+[Test Record A]
 Trial Subject Status: Excellent, Compliance: High
 After administering the Beta-type Adaptation Serum, the subject's native Philosian vital signs and physiological markers remain stable No acute rejection from the immune system or organ dysfunction was observed as initially anticipated. Note: The subject's royal bloodline demonstrates significant environmental tolerance with no signs of physical aging. The data surpasses all previous samples. The subject shares a blood relation with X. Early observational data show partial alignment with X.
 This phase has verified the viability of using a comparable high-quality bloodline as a substitute model to study the unique physiological mechanisms of X. Data will be applied to optimize development of the next serum. The application target is still X. 
