@@ -148,13 +148,25 @@ function LevelCardBlock({cardId: propCardId, onAvailabilityChange}) {
     // Определяем доступные уровни
     const getAvailableLevels = () => {
         if (!card) return [];
-        let memoryType = '';
-        if (card.talentName === 'hp') memoryType = 'HP Memory 0 Rank';
-        else if (card.talentName === 'def') memoryType = 'DEF Memory 0 Rank';
-        else if (card.talentName === 'atk') memoryType = 'ATK Memory 0 Rank';
-        else return [];
 
-        const memoryData = memoryStats[memoryType];
+        const rarity = card.rarityName;
+        const talent = card.talentName;
+        let memoryKey = '';
+
+        if (rarity === '5-star') {
+            if (talent === 'hp') memoryKey = 'HP Memory 0 Rank 5-star';
+            else if (talent === 'def') memoryKey = 'DEF Memory 0 Rank 5-star';
+            else if (talent === 'atk') memoryKey = 'ATK Memory 0 Rank 5-star';
+        } else if (rarity === '4-star') {
+            if (talent === 'atk') memoryKey = 'ATK Memory 0 Rank 4-star';
+        } else if (rarity === '3-star') {
+            if (talent === 'hp') memoryKey = 'HP Memory 0 Rank 3-star';
+            else if (talent === 'atk') memoryKey = 'ATK Memory 0 Rank 3-star';
+        }
+
+        if (!memoryKey) return [];
+
+        const memoryData = memoryStats[memoryKey];
         if (!memoryData) return [];
 
         return Object.keys(memoryData.baseStats).map(Number).sort((a, b) => a - b);
@@ -169,7 +181,6 @@ function LevelCardBlock({cardId: propCardId, onAvailabilityChange}) {
 
     // Проверяем, доступен ли уровень
     const isLevelAvailable = availableLevels.includes(level);
-    const isFiveStar = card?.rarityName === '5-star';
 
     // Функция для форматирования чисел
     const formatNumber = (num) => {
@@ -302,14 +313,6 @@ function LevelCardBlock({cardId: propCardId, onAvailabilityChange}) {
                         {!isLevelAvailable && (
                             <div className={styles.warningMessage}>
                                 ⚠️ Data not available for this level. Stats may not be accurate.
-                            </div>
-                        )}
-
-                        {!isFiveStar && (
-                            <div className={styles.warningMessage}>
-                                ⚠️ Stats data is currently only available for 5-star cards.
-                                <br/>
-                                <small>Card rarity: {card?.rarityName}</small>
                             </div>
                         )}
 
