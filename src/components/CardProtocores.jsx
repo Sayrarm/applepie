@@ -33,6 +33,25 @@ function CardProtocores({cardId}) {
         return card ? card.placementName : null;
     }, [cardId]);
 
+    // Картинка текущей карточки
+    const currentCardImage = useMemo(() => {
+        if (!cardId) return null;
+        const card = memoriesData.find(c => String(c.id) === cardId);
+        return card ? card.imageSmall : null;
+    }, [cardId]);
+
+    // Функция для поиска карточки, к которой прикреплен протокор
+    const findCardForProtocore = useCallback((protocoreId) => {
+        // Проходим по всем карточкам в memoriesData
+        for (const card of memoriesData) {
+            const cardProtocores = JSON.parse(localStorage.getItem(`card_protocores_${card.id}`) || '[]');
+            if (cardProtocores.some(p => p.id === protocoreId)) {
+                return card.imageSmall;
+            }
+        }
+        return null;
+    }, []);
+
     // Функция для сохранения в localStorage
     const saveProtocores = (protocores) => {
         if (!cardId) return;
@@ -151,7 +170,6 @@ function CardProtocores({cardId}) {
 
         // 4. Сортируем
         return sortProtocores(searched);
-        // ✅ Добавляем все зависимости, но функции filterProtocores и sortProtocores должны быть стабильными
     }, [allProtocores, filterCompatible, filterBySearch, filterProtocores, sortProtocores]);
 
     const showProtocoreModal = () => {
@@ -228,19 +246,25 @@ function CardProtocores({cardId}) {
                             )}
 
                             <div className={styles.protocoreList}>
-                                {availableProtocores.map(protocore => (
-                                    <button
-                                        key={protocore.id}
-                                        className={styles.dropdownItem}
-                                        onClick={() => handleAddProtocore(protocore.id)}
-                                    >
-                                        <ProtocoreBlock
-                                            protocore={protocore}
-                                            hideChange={true}
-                                            hideDelete={true}
-                                        />
-                                    </button>
-                                ))}
+                                {availableProtocores.map(protocore => {
+                                    // Находим карточку для этого протокора
+                                    const cardImage = findCardForProtocore(protocore.id);
+
+                                    return (
+                                        <button
+                                            key={protocore.id}
+                                            className={styles.dropdownItem}
+                                            onClick={() => handleAddProtocore(protocore.id)}
+                                        >
+                                            <ProtocoreBlock
+                                                protocore={protocore}
+                                                hideChange={true}
+                                                hideDelete={true}
+                                                cardImage={cardImage} // Передаем найденную картинку или null
+                                            />
+                                        </button>
+                                    );
+                                })}
                             </div>
                         </div>
                     }
@@ -253,15 +277,19 @@ function CardProtocores({cardId}) {
                 </div>
             ) : (
                 <div className={styles.protocoreList}>
-                    {selectedProtocores.map(protocore => (
-                        <div key={protocore.id} className={styles.protocoreWrapper}>
-                            <ProtocoreBlock
-                                protocore={protocore}
-                                hideChange={true}
-                                onDelete={() => handleRemoveProtocore(protocore.id)}
-                            />
-                        </div>
-                    ))}
+                    {selectedProtocores.map(protocore => {
+                        // Для уже прикрепленных протокоров показываем картинку текущей карточки
+                        return (
+                            <div key={protocore.id} className={styles.protocoreWrapper}>
+                                <ProtocoreBlock
+                                    protocore={protocore}
+                                    hideChange={true}
+                                    onDelete={() => handleRemoveProtocore(protocore.id)}
+                                    cardImage={currentCardImage}
+                                />
+                            </div>
+                        );
+                    })}
                 </div>
             )}
         </div>

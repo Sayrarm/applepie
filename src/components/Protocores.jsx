@@ -6,6 +6,7 @@ import { useProtocoreSearch } from '../hooks/useProtocoreSearch';
 import { useProtocoreFilter } from '../hooks/useProtocoreFilter';
 import { useProtocoreSort } from '../hooks/useProtocoreSort';
 import FilterSortBarProtocores from "../components/FilterSortBarProtocores.jsx";
+import {memoriesData} from "../data/memories-data.js";
 
 function Protocores() {
     const [protocores, setProtocores] = useState([]);
@@ -93,6 +94,17 @@ function Protocores() {
         }
     };
 
+    const findCardForProtocore = (protocoreId) => {
+        // Ищем во всех карточках
+        for (const card of memoriesData) {
+            const cardProtocores = JSON.parse(localStorage.getItem(`card_protocores_${card.id}`) || '[]');
+            if (cardProtocores.some(p => p.id === protocoreId)) {
+                return card.imageSmall;
+            }
+        }
+        return null;
+    };
+
     return (
         <section className={styles.container}>
             <FilterSortBarProtocores
@@ -123,14 +135,18 @@ function Protocores() {
                         No protocores added yet. Click "Add protocore" to create one!
                     </div>
                 ) : (
-                    sortedProtocores.map(protocore => (
-                        <ProtocoreBlock
-                            key={protocore.id}
-                            protocore={protocore}
-                            onEdit={handleEditProtocore}
-                            onDelete={handleDeleteProtocore}
-                        />
-                    ))
+                    sortedProtocores.map(protocore => {
+                        const cardImage = findCardForProtocore(protocore.id);
+                        return (
+                            <ProtocoreBlock
+                                key={protocore.id}
+                                protocore={protocore}
+                                onEdit={handleEditProtocore}
+                                onDelete={handleDeleteProtocore}
+                                cardImage={cardImage}
+                            />
+                        );
+                    })
                 )}
             </section>
 

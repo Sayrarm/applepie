@@ -1,10 +1,17 @@
 import React from 'react';
 import styles from './ProtocoreBlock.module.css';
-import { getImageUrl } from './imageUtils.js';
+import {getImageUrl} from './imageUtils.js';
 import {protocoreColor, protocoreTypes} from '../data/protocore-data.js';
 
-function ProtocoreBlock({ protocore, onEdit, onDelete, hideChange = false, hideDelete = false }) {
-    const { type, stellactrum, level, mainStat, mainStatValue, substats } = protocore;
+function ProtocoreBlock({
+                            protocore,
+                            onEdit,
+                            onDelete,
+                            hideChange = false,
+                            hideDelete = false,
+                            cardImage
+                        }) {
+    const {type, stellactrum, level, mainStat, mainStatValue, substats} = protocore;
 
     // Получаем данные типа из protocoreTypes
     const typeData = protocoreTypes[type];
@@ -21,14 +28,12 @@ function ProtocoreBlock({ protocore, onEdit, onDelete, hideChange = false, hideD
             const nameWithoutExt = fileName.split('.')[0];
             return nameWithoutExt === imageName;
         });
-
         return found ? found.img : null;
     };
 
     // Функция для форматирования значения стата
     const formatStatValue = (stat, value) => {
         if (value === null || value === undefined) return 'N/A';
-
         const flatStats = ['HP', 'ATK', 'DEF'];
         if (flatStats.includes(stat)) {
             return `+${value}`;
@@ -53,61 +58,67 @@ function ProtocoreBlock({ protocore, onEdit, onDelete, hideChange = false, hideD
     const imagePath = getProtocoreImage(type, stellactrum);
 
     return (
-        <section className={`${styles.protocoreBlock} ${styles[`stellactrum${stellactrum.charAt(0).toUpperCase() + stellactrum.slice(1)}`] || ''}`}>
+        <section
+            className={`${styles.protocoreBlock} ${styles[`stellactrum${stellactrum.charAt(0).toUpperCase() + stellactrum.slice(1)}`] || ''}`}>
+            {/* Картинка карточки, если есть */}
+            {cardImage && (
+                <img
+                    src={getImageUrl(cardImage)}
+                    alt="Card"
+                    className={styles.cardImage}
+                />
+            )}
 
-          <div>
-            <div className={styles.header}>
-                <div className={styles.typeIcon}>
-                    <img
-                        src={getImageUrl(imagePath)}
-                        alt={typeDisplayName}
-                        className={styles.typeImage}
-                    />
+            <div className={styles.protocoreInfo}>
+                <div className={styles.header}>
+                    <div className={styles.typeIcon}>
+                        <img
+                            src={getImageUrl(imagePath)}
+                            alt={typeDisplayName}
+                            className={styles.typeImage}
+                        />
+                    </div>
+                    <div className={styles.typeInfo}>
+                        <span className={styles.typeName}>{typeDisplayName}</span>
+                        <span className={styles.level}>Lv. {level}</span>
+                    </div>
                 </div>
-                <div className={styles.typeInfo}>
-                    <span className={styles.typeName}>{typeDisplayName}</span>
-                    <span className={styles.level}>Lv. {level}</span>
+
+                <div className={styles.mainStat}>
+                    <span className={styles.statLabelMain}>{mainStat}</span>
+                    <span className={styles.statValueMain}>
+                            {formatStatValue(mainStat, mainStatValue)}
+                        </span>
+                </div>
+
+                <div className={styles.substatsContainer}>
+                    {substats && substats.map((substat, index) => {
+                        const statName = typeof substat === 'object' ? substat.stat : substat;
+                        const statValue = typeof substat === 'object' ? substat.value : null;
+                        return (
+                            <div key={index} className={styles.subStat}>
+                                <span className={styles.statLabel}>{statName}</span>
+                                <span className={styles.statValue}>
+                                        {formatStatValue(statName, statValue)}
+                                    </span>
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
 
-            <div className={styles.mainStat}>
-                <span className={styles.statLabelMain}>{mainStat}</span>
-                <span className={styles.statValueMain}>
-                     {formatStatValue(mainStat, mainStatValue)}
-                </span>
-            </div>
-
-            <div className={styles.substatsContainer}>
-                {substats && substats.map((substat, index) => {
-                    const statName = typeof substat === 'object' ? substat.stat : substat;
-                    const statValue = typeof substat === 'object' ? substat.value : null;
-
-                    return (
-                        <div key={index} className={styles.subStat}>
-                            <span className={styles.statLabel}>{statName}</span>
-                            <span className={styles.statValue}>
-                                 {formatStatValue(statName, statValue)}
-                            </span>
-                        </div>
-                    );
-                })}
-            </div>
-          </div>
-
-
-                <div className={styles.actions}>
-                    {!hideChange && (
+            <div className={styles.actions}>
+                {!hideChange && (
                     <button className={styles.editButton} onClick={handleEdit}>
                         Change
                     </button>
-                    )}
-                    {!hideDelete && (
+                )}
+                {!hideDelete && (
                     <button className={styles.deleteButton} onClick={handleDelete}>
                         Delete
                     </button>
-                    )}
-                </div>
-
+                )}
+            </div>
         </section>
     );
 }
