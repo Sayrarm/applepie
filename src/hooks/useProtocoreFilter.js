@@ -1,34 +1,31 @@
-import {useState, useEffect, useCallback} from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
-const STORAGE_KEYS = {
-    FILTERS: 'protocore_filters'
+// Функция для получения ключей с префиксом
+const getStorageKeys = (prefix = '') => ({
+    FILTERS: prefix ? `${prefix}_protocore_filters` : 'protocore_filters'
+});
+
+// Функция для загрузки из localStorage с обработкой ошибок
+const loadFromStorage = (key, defaultValue) => {
+    try {
+        const saved = localStorage.getItem(key);
+        if (saved === null) return defaultValue;
+        try {
+            return JSON.parse(saved);
+        } catch {
+            return saved;
+        }
+    } catch (e) {
+        console.error('Error loading from storage:', e);
+        return defaultValue;
+    }
 };
 
-export const useProtocoreFilter = () => {
+export const useProtocoreFilter = (prefix = '') => {
+    const storageKeys = getStorageKeys(prefix);
+
     const getInitialFilters = () => {
-        const saved = localStorage.getItem(STORAGE_KEYS.FILTERS);
-        return saved ? JSON.parse(saved) : {
-            types: [],
-            stellactrum: [],
-            levels: [],
-            mainStats: [],
-            subStats: []
-        };
-    };
-
-    const [filters, setFilters] = useState(getInitialFilters);
-    const [isModalOpen, setIsModalOpen] = useState(false);
-
-    useEffect(() => {
-        localStorage.setItem(STORAGE_KEYS.FILTERS, JSON.stringify(filters));
-    }, [filters]);
-
-    const applyFilters = (newFilters) => {
-        setFilters(newFilters);
-    };
-
-    const clearFilters = () => {
-        setFilters({
+        return loadFromStorage(storageKeys.FILTERS, {
             types: [],
             stellactrum: [],
             levels: [],
@@ -36,6 +33,27 @@ export const useProtocoreFilter = () => {
             subStats: []
         });
     };
+
+    const [filters, setFilters] = useState(getInitialFilters);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    useEffect(() => {
+        localStorage.setItem(storageKeys.FILTERS, JSON.stringify(filters));
+    }, [filters, storageKeys.FILTERS]);
+
+    const applyFilters = useCallback((newFilters) => {
+        setFilters(newFilters);
+    }, []);
+
+    const clearFilters = useCallback(() => {
+        setFilters({
+            types: [],
+            stellactrum: [],
+            levels: [],
+            mainStats: [],
+            subStats: []
+        });
+    }, []);
 
     const filterProtocores = useCallback((protocores) => {
         return protocores.filter(protocore => {

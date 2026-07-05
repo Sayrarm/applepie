@@ -1,6 +1,9 @@
-import {useState, useEffect, useCallback} from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
-const STORAGE_KEY = 'protocore_sort_criteria';
+// Функция для получения ключа с префиксом
+const getStorageKey = (prefix = '') => {
+    return prefix ? `${prefix}_protocore_sort_criteria` : 'protocore_sort_criteria';
+};
 
 // Функции сравнения для каждого типа сортировки
 const compareFunctions = {
@@ -28,25 +31,27 @@ const multiSort = (protocores, criteria) => {
     });
 };
 
-export const useProtocoreSort = () => {
+export const useProtocoreSort = (prefix = '') => {
+    const storageKey = getStorageKey(prefix);
+
     const getInitialSort = () => {
-        const saved = localStorage.getItem(STORAGE_KEY);
+        const saved = localStorage.getItem(storageKey);
         return saved ? JSON.parse(saved) : [];
     };
 
     const [sortCriteria, setSortCriteria] = useState(getInitialSort);
 
     useEffect(() => {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(sortCriteria));
-    }, [sortCriteria]);
+        localStorage.setItem(storageKey, JSON.stringify(sortCriteria));
+    }, [sortCriteria, storageKey]);
 
-    const handleSortChange = (values) => {
+    const handleSortChange = useCallback((values) => {
         setSortCriteria(values || []);
-    };
+    }, []);
 
-    const clearSorting = () => {
+    const clearSorting = useCallback(() => {
         setSortCriteria([]);
-    };
+    }, []);
 
     const sortProtocores = useCallback((protocores) => {
         return multiSort(protocores, sortCriteria);

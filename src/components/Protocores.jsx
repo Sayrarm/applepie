@@ -13,9 +13,9 @@ function Protocores() {
     const modalRef = useRef();
     const filterModalRef = useRef();
 
-    const { searchQuery, onSearch, clearSearch } = useProtocoreSearch();
-    const { applyFilters, clearFilters, filterProtocores, isModalOpen, setIsModalOpen } = useProtocoreFilter();
-    const { sortCriteria, handleSortChange, clearSorting, sortProtocores } = useProtocoreSort();
+    const { searchQuery, onSearch, clearSearch } = useProtocoreSearch('protocores');
+    const { applyFilters, clearFilters, filterProtocores, isModalOpen, setIsModalOpen } = useProtocoreFilter('protocores');
+    const { sortCriteria, handleSortChange, clearSorting, sortProtocores } = useProtocoreSort('protocores');
 
     useEffect(() => {
         const savedProtocores = JSON.parse(localStorage.getItem('protocores') || '[]');
@@ -120,6 +120,7 @@ function Protocores() {
                 clearFilters={clearFilters}
                 filterModalRef={filterModalRef}
                 resetAllSettings={resetAllSettings}
+                storagePrefix="protocores"
             />
 
             <button

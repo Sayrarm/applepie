@@ -1,30 +1,24 @@
 import styles from './FilterSortBar.module.css';
-import {Button, Input, Select} from 'antd';
+import { Button, Input, Select } from 'antd';
 import FilterModalProtocore from './FilterModalProtocore';
-import {getImageUrl} from './imageUtils';
-import {stylesFnSearch} from "./stylesAntd.js";
+import { getImageUrl } from './imageUtils';
+import { stylesFnSearch } from "./stylesAntd.js";
 
-const {Search} = Input;
+const { Search } = Input;
 
 function FilterSortBarProtocores({
-                                     // Поиск
                                      onSearch,
                                      clearSearch,
-
-                                     // Сортировка
                                      sortCriteria,
                                      handleSortChange,
                                      clearSorting,
-
-                                     // Фильтр
                                      isModalOpen,
                                      setIsModalOpen,
                                      applyFilters,
                                      clearFilters,
                                      filterModalRef,
-
-                                     // Сброс всех настроек
                                      resetAllSettings,
+                                     storagePrefix = '',
                                  }) {
     return (
         <div className={styles.options}>
@@ -36,14 +30,14 @@ function FilterSortBarProtocores({
                         placeholder="Select sort"
                         value={sortCriteria}
                         onChange={handleSortChange}
-                        style={{width: 250}}
+                        style={{ width: 250 }}
                         className={styles.colorBrown}
                         allowClear
                         options={[
-                            {value: 'type', label: 'Type'},
-                            {value: 'stellactrum', label: 'Stellactrum'},
-                            {value: 'level', label: 'Level'},
-                            {value: 'mainStat', label: 'Main Stat'}
+                            { value: 'type', label: 'Type' },
+                            { value: 'stellactrum', label: 'Stellactrum' },
+                            { value: 'level', label: 'Level' },
+                            { value: 'mainStat', label: 'Main Stat' }
                         ]}
                     />
                     <Button
@@ -53,7 +47,7 @@ function FilterSortBarProtocores({
                         icon={
                             <img
                                 src={getImageUrl('../assets/icons/eraser_16863523.png')}
-                                style={{width: 22, height: 22}}
+                                style={{ width: 22, height: 22 }}
                                 alt="Clear sorting"
                             />
                         }
@@ -74,7 +68,7 @@ function FilterSortBarProtocores({
                                 clearSearch();
                             }
                         }}
-                        style={{width: 215}}
+                        style={{ width: 215 }}
                         styles={stylesFnSearch}
                     />
 
@@ -84,7 +78,7 @@ function FilterSortBarProtocores({
                         icon={
                             <img
                                 src={getImageUrl('../assets/icons/filter.png')}
-                                style={{width: 20, height: 20}}
+                                style={{ width: 20, height: 20 }}
                                 alt="Filter"
                             />
                         }
@@ -98,7 +92,7 @@ function FilterSortBarProtocores({
                         icon={
                             <img
                                 src={getImageUrl('../assets/icons/reset.png')}
-                                style={{width: 20, height: 20}}
+                                style={{ width: 20, height: 20 }}
                                 alt="Reset"
                             />
                         }
@@ -113,6 +107,7 @@ function FilterSortBarProtocores({
                 onClose={() => setIsModalOpen(false)}
                 onFilter={applyFilters}
                 onClearFilters={clearFilters}
+                storagePrefix={storagePrefix}
             />
         </div>
     );

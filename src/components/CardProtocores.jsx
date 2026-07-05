@@ -12,9 +12,9 @@ function CardProtocores({cardId}) {
     const protocoreModalRef = useRef();
 
     // Хуки для фильтрации и сортировки протокоров
-    const { searchQuery, onSearch, clearSearch } = useProtocoreSearch();
-    const { applyFilters, clearFilters, filterProtocores, isModalOpen, setIsModalOpen } = useProtocoreFilter();
-    const { sortCriteria, handleSortChange, clearSorting, sortProtocores } = useProtocoreSort();
+    const { searchQuery, onSearch, clearSearch } = useProtocoreSearch('card');
+    const { applyFilters, clearFilters, filterProtocores, isModalOpen, setIsModalOpen } = useProtocoreFilter('card');
+    const { sortCriteria, handleSortChange, clearSorting, sortProtocores } = useProtocoreSort('card');
 
     // Загружаем все протокоры
     const [allProtocores] = useState(() => {
@@ -254,6 +254,7 @@ function CardProtocores({cardId}) {
                                 setIsModalOpen={setIsModalOpen}
                                 applyFilters={applyFilters}
                                 clearFilters={clearFilters}
+                                storagePrefix="card"
                             />
 
                             {availableProtocores.length === 0 && (
