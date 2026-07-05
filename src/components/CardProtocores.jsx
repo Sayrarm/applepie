@@ -157,9 +157,8 @@ function CardProtocores({cardId}) {
             }
 
             // Проверка совместимости по стеллактуму
-            if (cardStella && p.stellactrum !== cardStella) return false;
+            return !(cardStella && p.stellactrum !== cardStella);
 
-            return true;
         });
     }, [selectedProtocores, cardPlacement, cardStella]);
 

@@ -11,8 +11,8 @@ import FilterSortBarMemories from '../components/FilterSortBarMemories.jsx';
 
 function Memories() {
     // Используем хуки
-    const { searchQuery, onSearch } = useSearch();
-    const { sortCriteria, handleSortChange, clearSorting, sortMemories } = useSort();
+    const { searchQuery, onSearch } = useSearch('memories');
+    const { sortCriteria, handleSortChange, clearSorting, sortMemories } = useSort('memories');
     const {
         selectedChar,
         setSelectedChar,
@@ -21,7 +21,7 @@ function Memories() {
         applyFilters,
         clearFilters,
         filterMemories
-    } = useFilter();
+    } = useFilter('memories');
 
     const filterModalRef = useRef();
 

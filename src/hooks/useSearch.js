@@ -1,27 +1,43 @@
-import {useEffect, useState} from 'react';
+import { useEffect, useState, useCallback } from 'react';
 
-const STORAGE_KEY_SEARCH = 'memories_search_query';
+// Функция для получения ключа с префиксом
+const getStorageKey = (prefix = '') => {
+    return prefix ? `${prefix}_search_query` : 'memories_search_query';
+};
 
-export const useSearch = () => {
+// Функция для загрузки из localStorage
+const loadFromStorage = (key, defaultValue) => {
+    try {
+        const saved = localStorage.getItem(key);
+        if (saved === null) return defaultValue;
+        return saved;
+    } catch (e) {
+        console.error('Error loading from storage:', e);
+        return defaultValue;
+    }
+};
+
+export const useSearch = (prefix = '') => {
+    const storageKey = getStorageKey(prefix);
+
     const getInitialSearchQuery = () => {
-        const saved = localStorage.getItem(STORAGE_KEY_SEARCH);
-        return saved || '';
+        return loadFromStorage(storageKey, '');
     };
 
     const [searchQuery, setSearchQuery] = useState(getInitialSearchQuery);
 
     // Сохраняем поисковый запрос
     useEffect(() => {
-        localStorage.setItem(STORAGE_KEY_SEARCH, searchQuery);
-    }, [searchQuery]);
+        localStorage.setItem(storageKey, searchQuery);
+    }, [searchQuery, storageKey]);
 
-    const onSearch = (value) => {
+    const onSearch = useCallback((value) => {
         setSearchQuery(value.toLowerCase());
-    };
+    }, []);
 
-    const clearSearch = () => {
+    const clearSearch = useCallback(() => {
         setSearchQuery('');
-    };
+    }, []);
 
     return { searchQuery, onSearch, clearSearch };
 };

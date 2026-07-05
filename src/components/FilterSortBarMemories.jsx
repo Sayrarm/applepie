@@ -7,29 +7,21 @@ import { stylesFnSearch } from './stylesAntd.js';
 const { Search } = Input;
 
 function FilterSortBarMemories({
-                           // Поиск
-                           onSearch,
-
-                           // Сортировка
-                           sortCriteria,
-                           handleSortChange,
-                           clearSorting,
-
-                           // Фильтр
-                           selectedChar,
-                           setSelectedChar,
-                           isModalOpen,
-                           setIsModalOpen,
-                           applyFilters,
-                           clearFilters,
-                           filterModalRef,
-
-                           // Дополнительные кнопки
-                           extraButtons = [],
-
-                           // Сброс всех настроек
-                           resetAllSettings,
-                       }) {
+                                   onSearch,
+                                   sortCriteria,
+                                   handleSortChange,
+                                   clearSorting,
+                                   selectedChar,
+                                   setSelectedChar,
+                                   isModalOpen,
+                                   setIsModalOpen,
+                                   applyFilters,
+                                   clearFilters,
+                                   filterModalRef,
+                                   extraButtons = [],
+                                   resetAllSettings,
+                                   storagePrefix = '', // <-- префикс для разделения
+                               }) {
     const characters = ['Xavier', 'Zayne', 'Rafayel', 'Sylus', 'Caleb'];
 
     return (
@@ -65,7 +57,6 @@ function FilterSortBarMemories({
                         onChange={handleSortChange}
                         className={styles.colorBrown}
                         style={{ width: 250 }}
-
                         options={[
                             { value: 'char', label: 'Character' },
                             { value: 'name', label: "Memory's name" },
@@ -125,6 +116,7 @@ function FilterSortBarMemories({
                     onClose={() => setIsModalOpen(false)}
                     onFilter={applyFilters}
                     onClearFilters={clearFilters}
+                    storagePrefix={storagePrefix}
                 />
 
                 {extraButtons.map((button, index) => (

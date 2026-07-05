@@ -50,8 +50,8 @@ const sortTableData = (data, sortConfig) => {
 
 function MyMemories() {
     // Используем хуки
-    const { searchQuery, onSearch } = useSearch();
-    const { sortCriteria, handleSortChange, clearSorting, sortMemories } = useSort();
+    const { searchQuery, onSearch } = useSearch('mymemories');
+    const { sortCriteria, handleSortChange, clearSorting, sortMemories } = useSort('mymemories');
     const {
         selectedChar,
         setSelectedChar,
@@ -60,7 +60,7 @@ function MyMemories() {
         applyFilters,
         clearFilters,
         filterMemories
-    } = useFilter();
+    } = useFilter('mymemories');
 
     const filterModalRef = useRef();
     const [availableCards, setAvailableCards] = useState([]);
