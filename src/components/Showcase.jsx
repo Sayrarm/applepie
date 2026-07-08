@@ -13,6 +13,10 @@ import {enhanceMemoriesWithAvailability} from "../data/cardAvailability.js";
 import {affinityData} from "../data/affinity-data.js";
 import Select from 'react-select';
 import { toPng } from 'html-to-image';
+import FilterSortBarMemories from './FilterSortBarMemories.jsx';
+import { useSearch } from '../hooks/useSearch';
+import { useSort } from '../hooks/useSort';
+import { useFilter } from '../hooks/useFilter';
 
 // Функции для работы с localStorage
 const STORAGE_KEY = 'showcase_data';
@@ -97,6 +101,20 @@ function Showcase() {
     const [modalPlacement, setModalPlacement] = useState(null);
     const [modalIndex, setModalIndex] = useState(null);
 
+    // Хуки для фильтрации и сортировки карточек в модалке Showcase
+    const filterModalRef = useRef();
+    const { searchQuery, onSearch, clearSearch } = useSearch('showcaseCardSelect');
+    const { sortCriteria, handleSortChange, clearSorting, sortMemories } = useSort('showcaseCardSelect');
+    const {
+        selectedChar,
+        setSelectedChar,
+        isModalOpen,
+        setIsModalOpen,
+        applyFilters,
+        clearFilters,
+        filterMemories
+    } = useFilter('showcaseCardSelect');
+
     // Опции для affinity
     const affinityOptions = useMemo(() => {
         const levels = affinityData[0]?.affinityLVL || [];
@@ -118,6 +136,15 @@ function Showcase() {
         saveToStorage(dataToSave);
     }, [selectedCompanion, selectedMCWeapon, solarCards, lunarCards, affinityLevel]);
 
+    useEffect(() => {
+        if (modalPlacement) {
+            // Очищаем только при смене типа карточки
+            clearSearch();
+            clearFilters();
+            clearSorting();
+        }
+    }, [clearFilters, clearSearch, clearSorting, modalPlacement]);
+
     // Функция для очистки всех данных
     const clearAll = () => {
         if (window.confirm('Are you sure you want to clear all data?')) {
@@ -132,7 +159,7 @@ function Showcase() {
 
     // Функция для создания скриншота
     const captureScreenshot = async () => {
-        if (!captureRef.current) return; // Используем captureRef вместо showcaseRef
+        if (!captureRef.current) return;
 
         setIsCapturing(true);
 
@@ -308,6 +335,25 @@ function Showcase() {
         };
     }, [calculateTotalStats, calculateAffinityBonus]);
 
+    // Получаем доступные карточки с фильтрацией и сортировкой
+    const getAvailableCards = (placement) => {
+        // Сначала получаем все доступные карточки
+        const available = enhanceMemoriesWithAvailability(memoriesData)
+            .filter(card => card.isAvailable === true && card.placementName === placement);
+
+        // Применяем фильтры
+        const filtered = filterMemories(available);
+
+        // Применяем поиск
+        const searched = filtered.filter(card => {
+            return card.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                card.char.toLowerCase().includes(searchQuery.toLowerCase());
+        });
+
+        // Применяем сортировку
+        return sortMemories(searched);
+    };
+
     // Функция для отображения слота карточки с протокорами
     const renderCardSlot = (card, placement, index) => {
         const cardData = card ? getCardData(card) : null;
@@ -357,10 +403,14 @@ function Showcase() {
         );
     };
 
-    // Доступные карточки для выбора
-    const getAvailableCards = (placement) => {
-        return enhanceMemoriesWithAvailability(memoriesData)
-            .filter(card => card.isAvailable === true && card.placementName === placement);
+    const resetAllSettings = () => {
+        setSelectedChar('ALL');
+        clearSorting();
+        clearSearch();
+        clearFilters();
+        if (filterModalRef.current) {
+            filterModalRef.current.clearAll();
+        }
     };
 
     return (
@@ -384,136 +434,133 @@ function Showcase() {
             </div>
 
             <div ref={captureRef} className={styles.captureRef}>
-            <section
-                ref={showcaseRef}
-                className={styles.container}
-                id="showcase-container"
-            >
-                {/* компаньон и MC Weapon */}
-                <div className={styles.topContainer}>
-                    <div className={styles.companionSection}>
+                <section
+                    ref={showcaseRef}
+                    className={styles.container}
+                    id="showcase-container"
+                >
+                    {/* компаньон и MC Weapon */}
+                    <div className={styles.topContainer}>
                         {/* Кнопка выбора компаньона */}
-                        <button className={styles.addCompanionBtn} onClick={showCompanionModal}>
-                            {selectedCompanion ? (
-                                <div className={styles.companionChar}>
-                                    <img
-                                        className={styles.companionImage}
-                                        src={getImageUrl(selectedCompanion.img)}
-                                        alt={selectedCompanion.companionName}
-                                    />
-                                    <div className={styles.companionName}>
-                                        {selectedCompanion.companionName}
+                        <div className={styles.companionSection}>
+                            <button className={styles.addCompanionBtn} onClick={showCompanionModal}>
+                                {selectedCompanion ? (
+                                    <div className={styles.companionChar}>
+                                        <img
+                                            className={styles.companionImage}
+                                            src={getImageUrl(selectedCompanion.img)}
+                                            alt={selectedCompanion.companionName}
+                                        />
+                                        <div className={styles.companionName}>
+                                            {selectedCompanion.companionName}
+                                        </div>
                                     </div>
-                                </div>
-
-                            ) : (
-                                <div className={styles.addCompanionText}>+ Add Companion</div>
-                            )}
-                        </button>
-
-                        {/* Кнопка выбора MC Weapon */}
-                        <button className={styles.addCompanionBtn} onClick={showMCWeaponModal}>
-                            {selectedMCWeapon ? (
-                                <div className={styles.companionChar}>
-                                    <img
-                                        className={styles.mcWeaponImage}
-                                        src={getImageUrl(selectedMCWeapon.imgWeapon)}
-                                        alt={selectedMCWeapon.weaponName}
-                                    />
-                                    <div className={styles.companionName}>
-                                        MC Weapon: {selectedMCWeapon.weaponName}
+                                ) : (
+                                    <div className={styles.addCompanionText}>+ Add Companion</div>
+                                )}
+                            </button>
+                            {/* Кнопка выбора MC Weapon */}
+                            <button className={styles.addCompanionBtn} onClick={showMCWeaponModal}>
+                                {selectedMCWeapon ? (
+                                    <div className={styles.companionChar}>
+                                        <img
+                                            className={styles.mcWeaponImage}
+                                            src={getImageUrl(selectedMCWeapon.imgWeapon)}
+                                            alt={selectedMCWeapon.weaponName}
+                                        />
+                                        <div className={styles.companionName}>
+                                            MC Weapon: {selectedMCWeapon.weaponName}
+                                        </div>
                                     </div>
-                                </div>
+                                ) : (
+                                    <div className={styles.addCompanionText}>+ Add MC Weapon</div>
+                                )}
+                            </button>
+                        </div>
 
-                            ) : (
-                                <div className={styles.addCompanionText}>+ Add MC Weapon</div>
-                            )}
-                        </button>
-                    </div>
+                        <div>
+                            <table className={styles.statsTable}>
+                                <tbody>
+                                <tr>
+                                    <th>HP</th>
+                                    <td>{Math.round(finalStats.hp)}</td>
+                                    <th>Crit Rate</th>
+                                    <td>{finalStats.critRate.toFixed(2)}%</td>
+                                    <th>Oath Strength</th>
+                                    <td>{finalStats.oathStrength.toFixed(2)}%</td>
+                                </tr>
+                                <tr>
+                                    <th>ATK</th>
+                                    <td>{Math.round(finalStats.atk)}</td>
+                                    <th>Crit DMG</th>
+                                    <td>{finalStats.critDmg.toFixed(2)}%</td>
+                                    <th>Oath Recovery Boost</th>
+                                    <td>{finalStats.oathRecoveryBoost.toFixed(2)}%</td>
+                                </tr>
+                                <tr>
+                                    <th>DEF</th>
+                                    <td>{Math.round(finalStats.def)}</td>
+                                    <th>DMG Boost to Weakened</th>
+                                    <td>{finalStats.dmgBoost.toFixed(2)}%</td>
+                                    <th>Expedited Energy Boost</th>
+                                    <td>{finalStats.expeditedEnergyBoost.toFixed(2)}%</td>
+                                </tr>
+                                </tbody>
+                            </table>
 
-                    <div>
-                        <table className={styles.statsTable}>
-                            <tbody>
-                            <tr>
-                                <th>HP</th>
-                                <td>{Math.round(finalStats.hp)}</td>
-                                <th>Crit Rate</th>
-                                <td>{finalStats.critRate.toFixed(2)}%</td>
-                                <th>Oath Strength</th>
-                                <td>{finalStats.oathStrength.toFixed(2)}%</td>
-                            </tr>
-                            <tr>
-                                <th>ATK</th>
-                                <td>{Math.round(finalStats.atk)}</td>
-                                <th>Crit DMG</th>
-                                <td>{finalStats.critDmg.toFixed(2)}%</td>
-                                <th>Oath Recovery Boost</th>
-                                <td>{finalStats.oathRecoveryBoost.toFixed(2)}%</td>
-                            </tr>
-                            <tr>
-                                <th>DEF</th>
-                                <td>{Math.round(finalStats.def)}</td>
-                                <th>DMG Boost to Weakened</th>
-                                <td>{finalStats.dmgBoost.toFixed(2)}%</td>
-                                <th>Expedited Energy Boost</th>
-                                <td>{finalStats.expeditedEnergyBoost.toFixed(2)}%</td>
-                            </tr>
-                            </tbody>
-                        </table>
-
-                        <div className={styles.bonuses}>
-                            <div className={styles.affinity}>
-                                <Select
-                                    options={affinityOptions}
-                                    value={affinityOptions.find(opt => opt.value === affinityLevel)}
-                                    onChange={(option) => setAffinityLevel(option ? option.value : 0)}
-                                    placeholder="Select Affinity LVL"
-                                    className={styles.selectAffinityContainer}
-                                    isClearable
-                                    isSearchable={false}
-                                />
-                                <div className={styles.affinityBonus}>
-                                    Affinity Bonus: +{calculateAffinityBonus.hp} HP, +{calculateAffinityBonus.atk} ATK, +{calculateAffinityBonus.def} DEF
+                            <div className={styles.bonuses}>
+                                <div className={styles.affinity}>
+                                    <Select
+                                        options={affinityOptions}
+                                        value={affinityOptions.find(opt => opt.value === affinityLevel)}
+                                        onChange={(option) => setAffinityLevel(option ? option.value : 0)}
+                                        placeholder="Select Affinity LVL"
+                                        className={styles.selectAffinityContainer}
+                                        isClearable
+                                        isSearchable={false}
+                                    />
+                                    <div className={styles.affinityBonus}>
+                                        Affinity Bonus: +{calculateAffinityBonus.hp} HP, +{calculateAffinityBonus.atk} ATK, +{calculateAffinityBonus.def} DEF
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                {/* карточки */}
-                <div className={styles.cardsSection}>
-                    {/* Solar карточки */}
-                    <div className={styles.solarRow}>
-                        <div className={styles.rowLabel}>SOLAR</div>
-                        <div className={styles.solarCardsRow}>
-                            {solarCards.map((card, index) => (
-                                <div key={`solar-${index}`} className={styles.cardWrapperSlot}>
-                                    {renderCardSlot(card, 'solar', index)}
-                                </div>
-                            ))}
+                    {/* карточки */}
+                    <div className={styles.cardsSection}>
+                        {/* Solar карточки */}
+                        <div className={styles.solarRow}>
+                            <div className={styles.rowLabel}>SOLAR</div>
+                            <div className={styles.solarCardsRow}>
+                                {solarCards.map((card, index) => (
+                                    <div key={`solar-${index}`} className={styles.cardWrapperSlot}>
+                                        {renderCardSlot(card, 'solar', index)}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Lunar карточки */}
+                        <div className={styles.lunarRow}>
+                            <div className={styles.rowLabel}>LUNAR</div>
+                            <div className={styles.lunarCardsRow}>
+                                {lunarCards.map((card, index) => (
+                                    <div key={`lunar-${index}`} className={styles.cardWrapperSlot}>
+                                        {renderCardSlot(card, 'lunar', index)}
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
-
-                    {/* Lunar карточки */}
-                    <div className={styles.lunarRow}>
-                        <div className={styles.rowLabel}>LUNAR</div>
-                        <div className={styles.lunarCardsRow}>
-                            {lunarCards.map((card, index) => (
-                                <div key={`lunar-${index}`} className={styles.cardWrapperSlot}>
-                                    {renderCardSlot(card, 'lunar', index)}
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </section>
+                </section>
             </div>
 
             {/* Модалка выбора компаньона */}
             <ModalWindow
                 ref={companionModalRef}
                 title="Select Companion"
-                width={600}
+                width={720}
                 tag={
                     <div className={styles.companionGrid}>
                         {compData
@@ -544,7 +591,7 @@ function Showcase() {
             <ModalWindow
                 ref={mcWeaponModalRef}
                 title="Select MC Weapon"
-                width={600}
+                width={720}
                 tag={
                     <div className={styles.companionGrid}>
                         {compData
@@ -571,27 +618,46 @@ function Showcase() {
                 }
             />
 
-            {/* Модалка выбора карточки */}
+            {/* Модалка выбора карточки с фильтрами */}
             <ModalWindow
                 ref={cardModalRef}
                 title={`Select ${modalPlacement?.toUpperCase()} Card`}
-                width={600}
+                width={950}
                 tag={
-                    <div className={styles.cardGrid}>
-                        {getAvailableCards(modalPlacement).map(card => (
-                            <button
-                                key={card.id}
-                                className={styles.cardItem}
-                                onClick={() => handleSelectCard(card)}
-                            >
-                                <Card data={card} isSmall={true}/>
-                            </button>
-                        ))}
-                        {getAvailableCards(modalPlacement).length === 0 && (
-                            <div className={styles.emptyCards}>
-                                No available {modalPlacement} cards
-                            </div>
-                        )}
+                    <div className={styles.cardSelectModal}>
+                        <FilterSortBarMemories
+                            searchQuery={searchQuery}
+                            onSearch={onSearch}
+                            sortCriteria={sortCriteria}
+                            handleSortChange={handleSortChange}
+                            clearSorting={clearSorting}
+                            selectedChar={selectedChar}
+                            setSelectedChar={setSelectedChar}
+                            isModalOpen={isModalOpen}
+                            setIsModalOpen={setIsModalOpen}
+                            applyFilters={applyFilters}
+                            clearFilters={clearFilters}
+                            filterModalRef={filterModalRef}
+                            resetAllSettings={resetAllSettings}
+                            storagePrefix="showcaseCardSelect"
+                        />
+
+                        <div className={styles.cardGrid}>
+                            {getAvailableCards(modalPlacement).map(card => (
+                                <button
+                                    key={card.id}
+                                    className={styles.cardItem}
+                                    onClick={() => handleSelectCard(card)}
+                                >
+                                    <Card data={card} isSmall={true}/>
+                                </button>
+                            ))}
+                            {getAvailableCards(modalPlacement).length === 0 && (
+                                <div className={styles.emptyCards}>
+                                    No available {modalPlacement} cards found
+                                </div>
+                            )}
+                        </div>
                     </div>
                 }
             />
