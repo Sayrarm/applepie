@@ -159,6 +159,7 @@ function LevelCardBlock({cardId: propCardId, onAvailabilityChange}) {
             else if (talent === 'atk') memoryKey = 'ATK Memory 0 Rank 5-star';
         } else if (rarity === '4-star') {
             if (talent === 'atk') memoryKey = 'ATK Memory 0 Rank 4-star';
+            else if (talent === 'def') memoryKey = 'DEF Memory 0 Rank 4-star';
         } else if (rarity === '3-star') {
             if (talent === 'hp') memoryKey = 'HP Memory 0 Rank 3-star';
             else if (talent === 'atk') memoryKey = 'ATK Memory 0 Rank 3-star';

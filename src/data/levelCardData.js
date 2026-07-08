@@ -373,6 +373,99 @@ export const memoryStats = {
             80: { hp: 10210, atk: 561, def: 255, critRate: 3.1, critDmg: 6.2 },
         }
     },
+    'DEF Memory 0 Rank 4-star': {
+        type: 'def',
+        rarity: '4-star',
+        baseStats: {
+            1: { hp: 1608, atk: 80, def: 44, critRate: 1.7, critDmg: 3.4 },
+            2: { hp: 1688, atk: 84, def: 46, critRate: 1.7, critDmg: 3.4 },
+            3: { hp: 1768, atk: 88, def: 48, critRate: 1.7, critDmg: 3.4 },
+            4: { hp: 1849, atk: 92, def: 50, critRate: 1.7, critDmg: 3.4 },
+            5: { hp: 1929, atk: 96, def: 53, critRate: 1.7, critDmg: 3.4 },
+            6: { hp: 2010, atk: 100, def: 55, critRate: 1.7, critDmg: 3.4 },
+            7: { hp: 2090, atk: 104, def: 57, critRate: 1.7, critDmg: 3.4 },
+            8: { hp: 2170, atk: 108, def: 59, critRate: 1.7, critDmg: 3.4 },
+            9: { hp: 2251, atk: 112, def: 61, critRate: 1.7, critDmg: 3.4 },
+            10: { hp: 2331, atk: 116, def: 64, critRate: 1.7, critDmg: 3.4 },
+            // Ascend 1
+            11: { hp: 2733, atk: 136, def: 75, critRate: 1.9, critDmg: 3.8 },
+            12: { hp: 2814, atk: 140, def: 77, critRate: 1.9, critDmg: 3.8 },
+            13: { hp: 2894, atk: 144, def: 79, critRate: 1.9, critDmg: 3.8 },
+            14: { hp: 2974, atk: 148, def: 81, critRate: 1.9, critDmg: 3.8 },
+            15: { hp: 3055, atk: 152, def: 84, critRate: 1.9, critDmg: 3.8 },
+            16: { hp: 3135, atk: 156, def: 86, critRate: 1.9, critDmg: 3.8 },
+            17: { hp: 3216, atk: 160, def: 88, critRate: 1.9, critDmg: 3.8 },
+            18: { hp: 3296, atk: 164, def: 90, critRate: 1.9, critDmg: 3.8 },
+            19: { hp: 3376, atk: 168, def: 92, critRate: 1.9, critDmg: 3.8 },
+            20: { hp: 3457, atk: 172, def: 95, critRate: 1.9, critDmg: 3.8 },
+            // Ascend 2
+            21: { hp: 3859, atk: 192, def: 106, critRate: 2.1, critDmg: 4.2 },
+            22: { hp: 3939, atk: 196, def: 108, critRate: 2.1, critDmg: 4.2 },
+            23: { hp: 4020, atk: 201, def: 110, critRate: 2.1, critDmg: 4.2 },
+            24: { hp: 4100, atk: 205, def: 112, critRate: 2.1, critDmg: 4.2 },
+            25: { hp: 4180, atk: 209, def: 114, critRate: 2.1, critDmg: 4.2 },
+            26: { hp: 4261, atk: 213, def: 117, critRate: 2.1, critDmg: 4.2 },
+            27: { hp: 4341, atk: 217, def: 119, critRate: 2.1, critDmg: 4.2 },
+            28: { hp: 4422, atk: 221, def: 121, critRate: 2.1, critDmg: 4.2 },
+            29: { hp: 4502, atk: 225, def: 123, critRate: 2.1, critDmg: 4.2 },
+            30: { hp: 4582, atk: 229, def: 126, critRate: 2.1, critDmg: 4.2 },
+            // Ascend 3
+            31: { hp: 4984, atk: 249, def: 137, critRate: 2.3, critDmg: 4.6 },
+            32: { hp: 5065, atk: 253, def: 139, critRate: 2.3, critDmg: 4.6 },
+            33: { hp: 5145, atk: 257, def: 141, critRate: 2.3, critDmg: 4.6 },
+            34: { hp: 5226, atk: 261, def: 143, critRate: 2.3, critDmg: 4.6 },
+            35: { hp: 5306, atk: 265, def: 145, critRate: 2.3, critDmg: 4.6 },
+            36: { hp: 5386, atk: 269, def: 148, critRate: 2.3, critDmg: 4.6 },
+            37: { hp: 5467, atk: 273, def: 150, critRate: 2.3, critDmg: 4.6 },
+            38: { hp: 5547, atk: 277, def: 152, critRate: 2.3, critDmg: 4.6 },
+            39: { hp: 5628, atk: 281, def: 154, critRate: 2.3, critDmg: 4.6 },
+            40: { hp: 5708, atk: 285, def: 156, critRate: 2.3, critDmg: 4.6 },
+            // Ascend 4
+            41: { hp: 6110, atk: 305, def: 168, critRate: 2.5, critDmg: 5.0 },
+            42: { hp: 6190, atk: 309, def: 170, critRate: 2.5, critDmg: 5.0 },
+            43: { hp: 6271, atk: 313, def: 172, critRate: 2.5, critDmg: 5.0 },
+            44: { hp: 6351, atk: 317, def: 174, critRate: 2.5, critDmg: 5.0 },
+            45: { hp: 6432, atk: 321, def: 176, critRate: 2.5, critDmg: 5.0 },
+            46: { hp: 6512, atk: 325, def: 179, critRate: 2.5, critDmg: 5.0 },
+            47: { hp: 6592, atk: 329, def: 181, critRate: 2.5, critDmg: 5.0 },
+            48: { hp: 6673, atk: 333, def: 183, critRate: 2.5, critDmg: 5.0 },
+            49: { hp: 6753, atk: 337, def: 185, critRate: 2.5, critDmg: 5.0 },
+            50: { hp: 6834, atk: 341, def: 187, critRate: 2.5, critDmg: 5.0 },
+            // Ascend 5
+            51: { hp: 7236, atk: 361, def: 198, critRate: 2.7, critDmg: 5.4 },
+            52: { hp: 7316, atk: 365, def: 201, critRate: 2.7, critDmg: 5.4 },
+            53: { hp: 7396, atk: 369, def: 203, critRate: 2.7, critDmg: 5.4 },
+            54: { hp: 7477, atk: 373, def: 205, critRate: 2.7, critDmg: 5.4 },
+            55: { hp: 7557, atk: 377, def: 207, critRate: 2.7, critDmg: 5.4 },
+            56: { hp: 7638, atk: 381, def: 210, critRate: 2.7, critDmg: 5.4 },
+            57: { hp: 7718, atk: 385, def: 212, critRate: 2.7, critDmg: 5.4 },
+            58: { hp: 7798, atk: 389, def: 214, critRate: 2.7, critDmg: 5.4 },
+            59: { hp: 7879, atk: 393, def: 216, critRate: 2.7, critDmg: 5.4 },
+            60: { hp: 7959, atk: 397, def: 218, critRate: 2.7, critDmg: 5.4 },
+            // Ascend 6
+            61: { hp: 8361, atk: 418, def: 229, critRate: 2.9, critDmg: 5.8 },
+            62: { hp: 8442, atk: 422, def: 232, critRate: 2.9, critDmg: 5.8 },
+            63: { hp: 8522, atk: 426, def: 234, critRate: 2.9, critDmg: 5.8 },
+            64: { hp: 8602, atk: 430, def: 236, critRate: 2.9, critDmg: 5.8 },
+            65: { hp: 8683, atk: 434, def: 238, critRate: 2.9, critDmg: 5.8 },
+            66: { hp: 8763, atk: 438, def: 240, critRate: 2.9, critDmg: 5.8 },
+            67: { hp: 8844, atk: 442, def: 243, critRate: 2.9, critDmg: 5.8 },
+            68: { hp: 8924, atk: 446, def: 245, critRate: 2.9, critDmg: 5.8 },
+            69: { hp: 9004, atk: 450, def: 247, critRate: 2.9, critDmg: 5.8 },
+            70: { hp: 9085, atk: 454, def: 249, critRate: 2.9, critDmg: 5.8 },
+            // Ascend 7
+            71: { hp: 9487, atk: 474, def: 260, critRate: 3.1, critDmg: 6.2 },
+            72: { hp: 9567, atk: 478, def: 263, critRate: 3.1, critDmg: 6.2 },
+            73: { hp: 9648, atk: 482, def: 265, critRate: 3.1, critDmg: 6.2 },
+            74: { hp: 9728, atk: 486, def: 267, critRate: 3.1, critDmg: 6.2 },
+            75: { hp: 9808, atk: 490, def: 269, critRate: 3.1, critDmg: 6.2 },
+            76: { hp: 9889, atk: 494, def: 271, critRate: 3.1, critDmg: 6.2 },
+            77: { hp: 9969, atk: 498, def: 274, critRate: 3.1, critDmg: 6.2 },
+            78: { hp: 10050, atk: 502, def: 276, critRate: 3.1, critDmg: 6.2 },
+            79: { hp: 10130, atk: 506, def: 278, critRate: 3.1, critDmg: 6.2 },
+            80: { hp: 10210, atk: 510, def: 280, critRate: 3.1, critDmg: 6.2 }
+        }
+    },
     'HP Memory 0 Rank 3-star': {
         type: 'hp',
         rarity: '3-star',
@@ -591,6 +684,16 @@ export const ascendData4star = {
         60: { hp: 8281, atk: 455, def: 207, critRate: 2.9, critDmg: 5.8 },
         70: { hp: 9406, atk: 517, def: 235, critRate: 3.1, critDmg: 6.2 },
         80: { hp: 11014, atk: 605, def: 275, critRate: 3.6, critDmg: 7.3 }
+    },
+    def: {
+        10: { hp: 2653, atk: 132, def: 72, critRate: 1.9, critDmg: 3.8 },
+        20: { hp: 3778, atk: 188, def: 103, critRate: 2.1, critDmg: 4.2 },
+        30: { hp: 4904, atk: 245, def: 134, critRate: 2.3, critDmg: 4.6 },
+        40: { hp: 6030, atk: 301, def: 165, critRate: 2.5, critDmg: 5.0 },
+        50: { hp: 7155, atk: 357, def: 196, critRate: 2.7, critDmg: 5.4 },
+        60: { hp: 8281, atk: 414, def: 227, critRate: 2.9, critDmg: 5.8 },
+        70: { hp: 9406, atk: 470, def: 258, critRate: 3.1, critDmg: 6.2 },
+        80: { hp: 11014, atk: 550, def: 302, critRate: 3.6, critDmg: 7.3 }
     }
 };
 
@@ -658,8 +761,8 @@ export const getStatsWithRank = (card, level, rank, isAscended = false) => {
         talentKey = talent;
     } else if (rarity === '4-star') {
         if (talent === 'atk') memoryKey = 'ATK Memory 0 Rank 4-star';
-        talentKey = 'atk';
-        // Пока только ATK для 4-star
+        else if (talent === 'def') memoryKey = 'DEF Memory 0 Rank 4-star';
+        talentKey = talent;
     } else if (rarity === '3-star') {
         if (talent === 'hp') memoryKey = 'HP Memory 0 Rank 3-star';
         else if (talent === 'atk') memoryKey = 'ATK Memory 0 Rank 3-star';
