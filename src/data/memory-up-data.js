@@ -2,75 +2,96 @@
 export const rarityLevels = {
     '3-star': {
         name: '3★',
-        ascend: [
-            { level: 10, crystals: { N: 24, R: 0, SR: 0 }, credits: 9000 },
-            { level: 20, crystals: { N: 48, R: 0, SR: 0 }, credits: 15000 },
-            { level: 30, crystals: { N: 96, R: 0, SR: 0 }, credits: 30000 },
-            { level: 40, crystals: { N: 192, R: 90, SR: 0 }, credits: 48000 },
-            { level: 50, crystals: { N: 384, R: 180, SR: 0 }, credits: 90000 },
-            { level: 60, crystals: { N: 720, R: 306, SR: 144 }, credits: 150000 },
-            { level: 70, crystals: { N: 1440, R: 600, SR: 299 }, credits: 240000 }
-        ],
-        awaken: { level: 80, crystals: { N: 720, R: 288, SR: 108 }, credits: 150000, heart: null },
-
-        expRanges: [
-            { level: "1-10", exp: 1030 },
-            { level: "10-20", exp: 1710 },
-            { level: "20-30", exp: 2820 },
-            { level: "30-40", exp: 5640 },
-            { level: "40-50", exp: 11250 },
-            { level: "50-60", exp: 22500 },
-            { level: "60-70", exp: 45000 },
-            { level: "70-80", exp: 90050 }
-        ]
+        ascend: {
+            'Ascend 10+': { crystals: { N: 24, R: 0, SR: 0 }, credits: 9000 },
+            'Ascend 20+': { crystals: { N: 48, R: 0, SR: 0 }, credits: 15000 },
+            'Ascend 30+': { crystals: { N: 96, R: 0, SR: 0 }, credits: 30000 },
+            'Ascend 40+': { crystals: { N: 192, R: 90, SR: 0 }, credits: 48000 },
+            'Ascend 50+': { crystals: { N: 384, R: 180, SR: 0 }, credits: 90000 },
+            'Ascend 60+': { crystals: { N: 720, R: 306, SR: 144 }, credits: 150000 },
+            'Ascend 70+': { crystals: { N: 1440, R: 600, SR: 299 }, credits: 240000 }
+        },
+        awaken: { 'Awaken 80': { crystals: { N: 720, R: 288, SR: 108 }, credits: 150000, heart: null } },
+        expRanges: {
+            '1': 0, '2': 90, '3': 100, '4': 100, '5': 110,
+            '6': 110, '7': 120, '8': 130, '9': 130, '10': 140,
+            '11': 140, '12': 150, '13': 160, '14': 160, '15': 170,
+            '16': 170, '17': 180, '18': 190, '19': 190, '20': 200,
+            '21': 220, '22': 230, '23': 250, '24': 260, '25': 280,
+            '26': 290, '27': 300, '28': 320, '29': 330, '30': 340,
+            '31': 440, '32': 460, '33': 490, '34': 520, '35': 550,
+            '36': 580, '37': 610, '38': 640, '39': 660, '40': 690,
+            '41': 870, '42': 930, '43': 980, '44': 1040, '45': 1100,
+            '46': 1150, '47': 1210, '48': 1270, '49': 1320, '50': 1380,
+            '51': 1750, '52': 1850, '53': 1970, '54': 2080, '55': 2200,
+            '56': 2300, '57': 2420, '58': 2530, '59': 2650, '60': 2750,
+            '61': 3490, '62': 3710, '63': 3940, '64': 4160, '65': 4390,
+            '66': 4610, '67': 4840, '68': 5060, '69': 5290, '70': 5510,
+            '71': 6170, '72': 6800, '73': 7430, '74': 8060, '75': 8690,
+            '76': 9320, '77': 9950, '78': 10580, '79': 11210, '80': 11840
+        }
     },
     '4-star': {
         name: '4★',
-        ascend: [
-            { level: 10, crystals: { N: 32, R: 0, SR: 0 }, credits: 12000 },
-            { level: 20, crystals: { N: 64, R: 0, SR: 0 }, credits: 20000 },
-            { level: 30, crystals: { N: 128, R: 0, SR: 0 }, credits: 40000 },
-            { level: 40, crystals: { N: 256, R: 120, SR: 0 }, credits: 64000 },
-            { level: 50, crystals: { N: 512, R: 240, SR: 0 }, credits: 120000 },
-            { level: 60, crystals: { N: 960, R: 408, SR: 192 }, credits: 200000 },
-            { level: 70, crystals: { N: 1920, R: 800, SR: 398 }, credits: 320000 },
-        ],
-        awaken: { level: 80, crystals: { N: 960, R: 384, SR: 144 }, credits: 200000, heart: 'Heart SR' },
-
-        expRanges: [
-            { level: "1-10", exp: 1370 },
-            { level: "10-20", exp: 2280 },
-            { level: "20-30", exp: 3740 },
-            { level: "30-40", exp: 7520 },
-            { level: "40-50", exp: 15010 },
-            { level: "50-60", exp: 30000 },
-            { level: "60-70", exp: 60000 },
-            { level: "70-80", exp: 119900 }
-        ]
+        ascend: {
+            'Ascend 10+': { crystals: { N: 32, R: 0, SR: 0 }, credits: 12000 },
+            'Ascend 20+': { crystals: { N: 64, R: 0, SR: 0 }, credits: 20000 },
+            'Ascend 30+': { crystals: { N: 128, R: 0, SR: 0 }, credits: 40000 },
+            'Ascend 40+': { crystals: { N: 256, R: 120, SR: 0 }, credits: 64000 },
+            'Ascend 50+': { crystals: { N: 512, R: 240, SR: 0 }, credits: 120000 },
+            'Ascend 60+': { crystals: { N: 960, R: 408, SR: 192 }, credits: 200000 },
+            'Ascend 70+': { crystals: { N: 1920, R: 800, SR: 398 }, credits: 320000 }
+        },
+        awaken: { 'Awaken 80': { crystals: { N: 960, R: 384, SR: 144 }, credits: 200000, heart: 'Heart SR' } },
+        expRanges: {
+            '1': 0, '2': 20, '3': 30, '4': 40, '5': 40,
+            '6': 50, '7': 60, '8': 70, '9': 80, '10': 180,
+            '11': 190, '12': 200, '13': 210, '14': 220, '15': 220,
+            '16': 230, '17': 240, '18': 250, '19': 260, '20': 260,
+            '21': 290, '22': 310, '23': 330, '24': 340, '25': 370,
+            '26': 380, '27': 400, '28': 420, '29': 440, '30': 460,
+            '31': 580, '32': 620, '33': 660, '34': 700, '35': 730,
+            '36': 770, '37': 810, '38': 850, '39': 880, '40': 920,
+            '41': 1160, '42': 1240, '43': 1310, '44': 1390, '45': 1460,
+            '46': 1540, '47': 1620, '48': 1690, '49': 1760, '50': 1840,
+            '51': 2330, '52': 2470, '53': 2620, '54': 2780, '55': 2930,
+            '56': 3070, '57': 3220, '58': 3380, '59': 3530, '60': 3670,
+            '61': 4650, '62': 4950, '63': 5250, '64': 5550, '65': 5850,
+            '66': 6150, '67': 6450, '68': 6750, '69': 7050, '70': 7350,
+            '71': 8220, '72': 9060, '73': 9900, '74': 10740, '75': 11580,
+            '76': 12420, '77': 13260, '78': 14100, '79': 14940, '80': 15780
+        }
     },
     '5-star': {
         name: '5★',
-        ascend: [
-            { level: 10, crystals: { N: 40, R: 0, SR: 0 }, credits: 15000 },
-            { level: 20, crystals: { N: 80, R: 0, SR: 0 }, credits: 25000 },
-            { level: 30, crystals: { N: 160, R: 0, SR: 0 }, credits: 50000 },
-            { level: 40, crystals: { N: 320, R: 150, SR: 0 }, credits: 80000 },
-            { level: 50, crystals: { N: 640, R: 300, SR: 0 }, credits: 150000 },
-            { level: 60, crystals: { N: 1200, R: 510, SR: 240 }, credits: 250000 },
-            { level: 70, crystals: { N: 2400, R: 1000, SR: 498 }, credits: 400000 },
-        ],
-        awaken: { level: 80, crystals: { N: 1200, R: 480, SR: 180 },  credits: 250000, heart: 'Heart SSR' },
-
-        expRanges: [
-            { level: "1-10", exp: 1710 },
-            { level: "10-20", exp: 2850 },
-            { level: "20-30", exp: 4680 },
-            { level: "30-40", exp: 9380 },
-            { level: "40-50", exp: 18760 },
-            { level: "50-60", exp: 37500 },
-            { level: "60-70", exp: 75000 },
-            { level: "70-80", exp: 150050 }
-        ]
+        ascend: {
+            'Ascend 10+': { crystals: { N: 40, R: 0, SR: 0 }, credits: 15000 },
+            'Ascend 20+': { crystals: { N: 80, R: 0, SR: 0 }, credits: 25000 },
+            'Ascend 30+': { crystals: { N: 160, R: 0, SR: 0 }, credits: 50000 },
+            'Ascend 40+': { crystals: { N: 320, R: 150, SR: 0 }, credits: 80000 },
+            'Ascend 50+': { crystals: { N: 640, R: 300, SR: 0 }, credits: 150000 },
+            'Ascend 60+': { crystals: { N: 1200, R: 510, SR: 240 }, credits: 250000 },
+            'Ascend 70+': { crystals: { N: 2400, R: 1000, SR: 498 }, credits: 400000 }
+        },
+        awaken: { 'Awaken 80': { crystals: { N: 1200, R: 480, SR: 180 }, credits: 250000, heart: 'Heart SSR' } },
+        expRanges: {
+            '1': 0, '2': 150, '3': 160, '4': 170, '5': 180,
+            '6': 190, '7': 200, '8': 210, '9': 220, '10': 230,
+            '11': 240, '12': 250, '13': 260, '14': 270, '15': 280,
+            '16': 290, '17': 300, '18': 310, '19': 320, '20': 330,
+            '21': 360, '22': 390, '23': 410, '24': 430, '25': 460,
+            '26': 480, '27': 500, '28': 530, '29': 550, '30': 570,
+            '31': 730, '32': 770, '33': 820, '34': 870, '35': 910,
+            '36': 960, '37': 1010, '38': 1060, '39': 1100, '40': 1150,
+            '41': 1450, '42': 1550, '43': 1640, '44': 1740, '45': 1830,
+            '46': 1920, '47': 2020, '48': 2110, '49': 2200, '50': 2300,
+            '51': 2910, '52': 3090, '53': 3280, '54': 3470, '55': 3660,
+            '56': 3840, '57': 4030, '58': 4220, '59': 4410, '60': 4590,
+            '61': 5810, '62': 6190, '63': 6560, '64': 6940, '65': 7310,
+            '66': 7690, '67': 8060, '68': 8440, '69': 8810, '70': 9190,
+            '71': 10280, '72': 11330, '73': 12380, '74': 13430, '75': 14480,
+            '76': 15530, '77': 16580, '78': 17630, '79': 18680, '80': 19730
+        }
     }
 };
 
@@ -123,98 +144,59 @@ export const creditDungeonData = [
 // Стоимость входа в данж
 export const DUNGEON_COST = 8;
 
-// ========== ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ ==========
-
 // Получить тип данжа по цвету кристалла
 export const getCrystalDungeonByColor = (color) => {
     const dungeon = crystalTypesDungeons.find(d => d.colors.includes(color));
     return dungeon ? dungeon.id : 'lemonette';
 };
 
-// Получить EXP для прокачки между уровнями
-export const getExpNeeded = (rarity, currentLevel, targetLevel) => {
+// Получить EXP для прокачки между уровнями (только числовые уровни)
+export const getExpNeeded = (rarity, fromLevel, toLevel) => {
     const rarityData = rarityLevels[rarity];
     if (!rarityData) return 0;
 
     let totalExp = 0;
-
-    // 1-10
-    if (currentLevel < 10 && targetLevel > 1) {
-        const expData = rarityData.expRanges.find(e => e.level === "1-10");
-        if (expData) totalExp += expData.exp;
+    for (let level = fromLevel + 1; level <= toLevel; level++) {
+        const exp = rarityData.expRanges[String(level)];
+        if (exp) totalExp += exp;
     }
-    // 10-20
-    if (currentLevel < 20 && targetLevel > 10) {
-        const expData = rarityData.expRanges.find(e => e.level === "10-20");
-        if (expData) totalExp += expData.exp;
-    }
-    // 20-30
-    if (currentLevel < 30 && targetLevel > 20) {
-        const expData = rarityData.expRanges.find(e => e.level === "20-30");
-        if (expData) totalExp += expData.exp;
-    }
-    // 30-40
-    if (currentLevel < 40 && targetLevel > 30) {
-        const expData = rarityData.expRanges.find(e => e.level === "30-40");
-        if (expData) totalExp += expData.exp;
-    }
-    // 40-50
-    if (currentLevel < 50 && targetLevel > 40) {
-        const expData = rarityData.expRanges.find(e => e.level === "40-50");
-        if (expData) totalExp += expData.exp;
-    }
-    // 50-60
-    if (currentLevel < 60 && targetLevel > 50) {
-        const expData = rarityData.expRanges.find(e => e.level === "50-60");
-        if (expData) totalExp += expData.exp;
-    }
-    // 60-70
-    if (currentLevel < 70 && targetLevel > 60) {
-        const expData = rarityData.expRanges.find(e => e.level === "60-70");
-        if (expData) totalExp += expData.exp;
-    }
-    // 70-80
-    if (currentLevel < 80 && targetLevel > 70) {
-        const expData = rarityData.expRanges.find(e => e.level === "70-80");
-        if (expData) totalExp += expData.exp;
-    }
-
     return totalExp;
 };
 
-// Получить ресурсы для Ascend
-export const getAscendResources = (rarity, currentLevel, targetLevel) => {
+// Получить ресурсы для Ascend и Awaken
+export const getUpgradeResources = (rarity, allLevels, startIndex, endIndex) => {
     const rarityData = rarityLevels[rarity];
-    if (!rarityData) return { crystals: { N: 0, R: 0, SR: 0 }, credits: 0 };
+    if (!rarityData) return { crystals: { N: 0, R: 0, SR: 0 }, credits: 0, heart: null };
 
     let totalCrystals = { N: 0, R: 0, SR: 0 };
     let totalCredits = 0;
+    let heart = null;
 
-    for (const ascend of rarityData.ascend) {
-        if (ascend.level > currentLevel && ascend.level <= targetLevel) {
+    // Проходим по всем уровням от startIndex до endIndex
+    for (let i = startIndex + 1; i <= endIndex; i++) {
+        const level = allLevels[i];
+
+        // Проверяем, является ли уровень Ascend
+        if (rarityData.ascend[level]) {
+            const ascend = rarityData.ascend[level];
             totalCrystals.N += ascend.crystals.N || 0;
             totalCrystals.R += ascend.crystals.R || 0;
             totalCrystals.SR += ascend.crystals.SR || 0;
             totalCredits += ascend.credits || 0;
         }
+
+        // Проверяем, является ли уровень Awaken
+        if (rarityData.awaken[level]) {
+            const awaken = rarityData.awaken[level];
+            totalCrystals.N += awaken.crystals.N || 0;
+            totalCrystals.R += awaken.crystals.R || 0;
+            totalCrystals.SR += awaken.crystals.SR || 0;
+            totalCredits += awaken.credits || 0;
+            heart = awaken.heart || null;
+        }
     }
 
-    return { crystals: totalCrystals, credits: totalCredits };
-};
-
-// Получить ресурсы для Awaken
-export const getAwakenResources = (rarity, currentLevel, targetLevel) => {
-    const rarityData = rarityLevels[rarity];
-    if (!rarityData || !rarityData.awaken) return null;
-
-    if (targetLevel >= 80 && currentLevel < 80) {
-        return {
-            crystals: { ...rarityData.awaken.crystals },
-            credits: rarityData.awaken.credits,
-            heart: rarityData.awaken.heart
-        };
-    }
-    return null;
+    return { crystals: totalCrystals, credits: totalCredits, heart };
 };
 
 // Получить количество проходов данжа для EXP
@@ -254,55 +236,3 @@ export const getCreditDungeonRuns = (creditsNeeded, dungeonLevel) => {
 
 // Получить топливо
 export const getStaminaCost = (runs) => runs * DUNGEON_COST;
-
-// Основная функция расчёта
-export const calculateMemoryUpgrade = (options) => {
-    const {
-        rarity,
-        currentLevel,
-        targetLevel,
-        expDungeonLevel,
-        crystalDungeonLevel,
-        creditDungeonLevel
-    } = options;
-
-    if (currentLevel >= targetLevel) return null;
-
-    const expNeeded = getExpNeeded(rarity, currentLevel, targetLevel);
-    const ascendResources = getAscendResources(rarity, currentLevel, targetLevel);
-    const awakenResources = getAwakenResources(rarity, currentLevel, targetLevel);
-
-    let totalCrystals = { ...ascendResources.crystals };
-    let totalCredits = ascendResources.credits;
-    let heart = null;
-
-    if (awakenResources) {
-        totalCrystals.N += awakenResources.crystals.N;
-        totalCrystals.R += awakenResources.crystals.R;
-        totalCrystals.SR += awakenResources.crystals.SR;
-        totalCredits += awakenResources.credits;
-        heart = awakenResources.heart;
-    }
-
-    const expRuns = getExpDungeonRuns(expNeeded, expDungeonLevel);
-    const crystalRuns = getCrystalDungeonRuns(totalCrystals, crystalDungeonLevel);
-    const creditRuns = getCreditDungeonRuns(totalCredits, creditDungeonLevel);
-
-    const staminaForExp = getStaminaCost(expRuns);
-    const staminaForCrystals = getStaminaCost(crystalRuns);
-    const staminaForCredits = getStaminaCost(creditRuns);
-
-    return {
-        expNeeded,
-        crystals: totalCrystals,
-        credits: totalCredits,
-        heart,
-        expRuns,
-        crystalRuns,
-        creditRuns,
-        staminaForExp,
-        staminaForCrystals,
-        staminaForCredits,
-        totalStamina: staminaForExp + staminaForCrystals + staminaForCredits
-    };
-};

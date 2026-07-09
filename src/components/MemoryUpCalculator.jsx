@@ -6,8 +6,7 @@ import {
     crystalDungeonData,
     creditDungeonData,
     getExpNeeded,
-    getAscendResources,
-    getAwakenResources,
+    getUpgradeResources,
     getExpDungeonRuns,
     getCrystalDungeonRuns,
     getCreditDungeonRuns,
@@ -21,8 +20,8 @@ import {getImageUrl} from "./imageUtils.js";
 
 function MemoryUpCalculator() {
     const [rarity, setRarity] = useState('5-star');
-    const [currentLevel, setCurrentLevel] = useState(1);
-    const [targetLevel, setTargetLevel] = useState(80);
+    const [currentLevel, setCurrentLevel] = useState('1');
+    const [targetLevel, setTargetLevel] = useState('80');
     const [expDungeonLevel, setExpDungeonLevel] = useState(9);
     const [crystalDungeonLevel, setCrystalDungeonLevel] = useState(9);
     const [creditDungeonLevel, setCreditDungeonLevel] = useState(9);
@@ -35,36 +34,50 @@ function MemoryUpCalculator() {
         modalGoalButton.current.showModal();
     };
 
-    // Получаем тип данжа для выбранного цвета
     const crystalDungeonType = getCrystalDungeonByColor(selectedColor);
     const crystalDungeonName = crystalTypesDungeons.find(d => d.id === crystalDungeonType)?.name || 'Lemonette';
 
+    // Создаем полный список уровней по порядку
+    const allLevels = [];
+    for (let i = 1; i <= 80; i++) {
+        allLevels.push(String(i));
+        if (i === 10) allLevels.push('Ascend 10+');
+        else if (i === 20) allLevels.push('Ascend 20+');
+        else if (i === 30) allLevels.push('Ascend 30+');
+        else if (i === 40) allLevels.push('Ascend 40+');
+        else if (i === 50) allLevels.push('Ascend 50+');
+        else if (i === 60) allLevels.push('Ascend 60+');
+        else if (i === 70) allLevels.push('Ascend 70+');
+    }
+    allLevels.push('Awaken 80');
+
+    const getDisplayLevel = (level) => {
+        if (level.includes('Ascend')) return level;
+        if (level === 'Awaken 80') return 'Awaken 80';
+        return `${level} lvl`;
+    };
+
+    const getLevelNumber = (level) => {
+        if (typeof level === 'number') return level;
+        const match = String(level).match(/\d+/);
+        return match ? parseInt(match[0]) : 0;
+    };
+
     const handleCalculate = () => {
-        if (currentLevel >= targetLevel) return;
+        const currentIndex = allLevels.indexOf(String(currentLevel));
+        const targetIndex = allLevels.indexOf(String(targetLevel));
 
-        const expNeeded = getExpNeeded(rarity, currentLevel, targetLevel);
-        const ascendResources = getAscendResources(rarity, currentLevel, targetLevel);
-        const awakenResources = getAwakenResources(rarity, currentLevel, targetLevel);
+        // EXP считаем по числам
+        const currentNum = getLevelNumber(currentLevel);
+        const targetNum = getLevelNumber(targetLevel);
+        const expNeeded = getExpNeeded(rarity, currentNum, targetNum);
 
-        let totalCrystals = {
-            N: ascendResources.crystals.N,
-            R: ascendResources.crystals.R,
-            SR: ascendResources.crystals.SR
-        };
-        let totalCredits = ascendResources.credits;
-        let heart = null;
-
-        if (awakenResources) {
-            totalCrystals.N += awakenResources.crystals.N;
-            totalCrystals.R += awakenResources.crystals.R;
-            totalCrystals.SR += awakenResources.crystals.SR;
-            totalCredits += awakenResources.credits;
-            heart = awakenResources.heart;
-        }
+        // Ресурсы считаем по индексам
+        const resources = getUpgradeResources(rarity, allLevels, currentIndex, targetIndex);
 
         const expRuns = getExpDungeonRuns(expNeeded, expDungeonLevel);
-        const crystalRuns = getCrystalDungeonRuns(totalCrystals, crystalDungeonLevel);
-        const creditRuns = getCreditDungeonRuns(totalCredits, creditDungeonLevel);
+        const crystalRuns = getCrystalDungeonRuns(resources.crystals, crystalDungeonLevel);
+        const creditRuns = getCreditDungeonRuns(resources.credits, creditDungeonLevel);
 
         const staminaForExp = getStaminaCost(expRuns);
         const staminaForCrystals = getStaminaCost(crystalRuns);
@@ -72,9 +85,9 @@ function MemoryUpCalculator() {
 
         setResult({
             expNeeded,
-            crystals: totalCrystals,
-            credits: totalCredits,
-            heart,
+            crystals: resources.crystals,
+            credits: resources.credits,
+            heart: resources.heart,
             expRuns,
             crystalRuns,
             creditRuns,
@@ -87,7 +100,6 @@ function MemoryUpCalculator() {
         setHasCalculated(true);
     };
 
-    // Сбрасываем результат при изменении любых параметров
     const handleRarityChange = (newRarity) => {
         setRarity(newRarity);
         setHasCalculated(false);
@@ -95,13 +107,13 @@ function MemoryUpCalculator() {
     };
 
     const handleCurrentLevelChange = (value) => {
-        setCurrentLevel(Number(value));
+        setCurrentLevel(value);
         setHasCalculated(false);
         setResult(null);
     };
 
     const handleTargetLevelChange = (value) => {
-        setTargetLevel(Number(value));
+        setTargetLevel(value);
         setHasCalculated(false);
         setResult(null);
     };
@@ -130,13 +142,10 @@ function MemoryUpCalculator() {
         setResult(null);
     };
 
-    const availableLevels = [1, 10, 20, 30, 40, 50, 60, 70, 80];
-
     return (
         <div className={styles.container}>
             <h1 className={styles.title}>Memory Upgrade Calculator</h1>
 
-            {/* Редкость */}
             <div className={styles.formGroup}>
                 <div>Rarity</div>
                 <div className={styles.buttonGroup}>
@@ -152,7 +161,6 @@ function MemoryUpCalculator() {
                 </div>
             </div>
 
-            {/* Уровни */}
             <div className={styles.row}>
                 <div className={styles.formGroup}>
                     <label htmlFor="current-lvl-select">Current Level</label>
@@ -163,9 +171,14 @@ function MemoryUpCalculator() {
                         onChange={(e) => handleCurrentLevelChange(e.target.value)}
                         className={styles.select}
                     >
-                        {availableLevels.filter(l => l < 80).map(level => (
-                            <option key={level} value={level}>Lvl {level}</option>
-                        ))}
+                        {allLevels.map(level => {
+                            if (level === 'Awaken 80') return null;
+                            return (
+                                <option key={level} value={level}>
+                                    {getDisplayLevel(level)}
+                                </option>
+                            );
+                        })}
                     </select>
                 </div>
 
@@ -178,16 +191,22 @@ function MemoryUpCalculator() {
                         onChange={(e) => handleTargetLevelChange(e.target.value)}
                         className={styles.select}
                     >
-                        {availableLevels.map(level => (
-                            <option key={level} value={level}>Lvl {level}</option>
-                        ))}
+                        {allLevels.map(level => {
+                            const currentIndex = allLevels.indexOf(String(currentLevel));
+                            const levelIndex = allLevels.indexOf(String(level));
+                            if (levelIndex < currentIndex) return null;
+                            return (
+                                <option key={level} value={level}>
+                                    {getDisplayLevel(level)}
+                                </option>
+                            );
+                        })}
                     </select>
                 </div>
             </div>
 
-            {/* Выбор цвета кристаллов */}
             <div className={styles.formGroup}>
-                <div >Crystal Color</div>
+                <div>Crystal Color</div>
                 <div className={styles.colorButtons}>
                     {crystalColors.map(color => (
                         <button
@@ -195,18 +214,13 @@ function MemoryUpCalculator() {
                             className={`${styles.colorButton} ${selectedColor === color.id ? styles.active : ''}`}
                             onClick={() => handleColorChange(color.id)}
                         >
-                            <img
-                                src={getImageUrl(color.img)}
-                                alt={color.name}
-                                className={styles.colorIcon}
-                            />
+                            <img src={getImageUrl(color.img)} alt={color.name} className={styles.colorIcon} />
                             {color.name}
                         </button>
                     ))}
                 </div>
             </div>
 
-            {/* Данжи */}
             <div className={styles.formGroup}>
                 <label htmlFor="bottle-lvl-select">Heartbreaker Level</label>
                 <select
@@ -260,8 +274,8 @@ function MemoryUpCalculator() {
 
             <button
                 className={styles.calculateButton}
-                onClick={handleCalculate}
-                disabled={currentLevel >= targetLevel}
+                    onClick={handleCalculate}
+                    disabled={currentLevel === targetLevel}
             >
                 Calculate
             </button>
@@ -272,26 +286,16 @@ function MemoryUpCalculator() {
                 </div>
             )}
 
-            {/* Результаты показываются только после нажатия Calculate */}
-            {hasCalculated && result && currentLevel < targetLevel && (
+            {hasCalculated && result && (
                 <div className={styles.results}>
                     <h2>Results</h2>
-
-
                     <div className={styles.resultCard}>
-                        {/*
-                        <div className={styles.resultRow}>
-                            <span className={styles.resultLabel}>Rarity:</span>
-                            <span>{rarityLevels[rarity]?.name}</span>
-                        </div>
                         <div className={styles.resultRow}>
                             <span className={styles.resultLabel}>Upgrade:</span>
-                            <span>Lvl {currentLevel} → Lvl {targetLevel}</span>
+                            <span>{getDisplayLevel(currentLevel)} → {getDisplayLevel(targetLevel)}</span>
                         </div>
 
-
                         <div className={styles.divider}></div>
-                         */}
 
                         <div className={styles.resultRow}>
                             <span className={styles.resultLabel}>EXP needed:</span>
@@ -366,48 +370,39 @@ function MemoryUpCalculator() {
                 </div>
             )}
 
-            {/* Кнопка Go to farm */}
-            {hasCalculated && result && currentLevel < targetLevel && (
-            <div className={styles.goToFarmSection}>
-                <button
-                    className={styles.goToFarmButton}
-                    onClick={() => {
-                        const goal = {
-                            id: Date.now(),
-                            type: 'memory',
-                            rarity: rarity,
-                            currentLevel: currentLevel,
-                            targetLevel: targetLevel,
-                            neededExp: result.expNeeded,
-                            neededCrystalsN: result.crystals.N,
-                            neededCrystalsR: result.crystals.R,
-                            neededCrystalsSR: result.crystals.SR,
-                            crystalColor: selectedColor,
-                            neededCredits: result.credits,
-                            expDungeonLevel: expDungeonLevel,
-                            creditDungeonLevel: creditDungeonLevel,
-                            crystalDungeonLevel: crystalDungeonLevel,
-                            createdAt: new Date().toISOString()
+            {hasCalculated && result && (
+                <div className={styles.goToFarmSection}>
+                    <button
+                        className={styles.goToFarmButton}
+                        onClick={() => {
+                            const goal = {
+                                id: Date.now(),
+                                type: 'memory',
+                                rarity: rarity,
+                                currentLevel: currentLevel,
+                                targetLevel: targetLevel,
+                                neededExp: result.expNeeded,
+                                neededCrystalsN: result.crystals.N,
+                                neededCrystalsR: result.crystals.R,
+                                neededCrystalsSR: result.crystals.SR,
+                                crystalColor: selectedColor,
+                                neededCredits: result.credits,
+                                expDungeonLevel: expDungeonLevel,
+                                creditDungeonLevel: creditDungeonLevel,
+                                crystalDungeonLevel: crystalDungeonLevel,
+                                createdAt: new Date().toISOString()
+                            };
+                            const existingGoals = JSON.parse(localStorage.getItem('farm_goals') || '[]');
+                            existingGoals.push(goal);
+                            localStorage.setItem('farm_goals', JSON.stringify(existingGoals));
+                            showModalGoalButton();
+                        }}
+                    >
+                        🎯 Add to Farm Goal Tracker
+                    </button>
 
-                        };
-                        // Добавляем к существующим целям
-                        const existingGoals = JSON.parse(localStorage.getItem('farm_goals') || '[]');
-                        existingGoals.push(goal);
-                        localStorage.setItem('farm_goals', JSON.stringify(existingGoals));
-                        showModalGoalButton();
-                    }}
-                >
-                    🎯 Add to Farm Goal Tracker
-                </button>
-
-                <ModalWindow
-                    ref={modalGoalButton}
-                    title={'Alert'}
-                    tag={
-                        <h2>Goal added to Farm Tracker on Home page!</h2>
-                    }
-                />
-            </div>
+                    <ModalWindow ref={modalGoalButton} title={'Alert'} tag={<h2>Goal added to Farm Tracker on Home page!</h2>} />
+                </div>
             )}
         </div>
     );
