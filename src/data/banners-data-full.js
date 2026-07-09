@@ -887,6 +887,28 @@ export const bannersDataFull = [
     "startDate": "2026-07-02T05:00:00",
     "endDate": "2026-07-09T04:59:00",
     "rerun": true,
+    "active": false
+
+  },
+  {
+    "id": 82,
+    "name": "Wander in Wonder",
+    "image": "../assets/banners/wander-in-wonder-rerun.png",
+    "cardIds": [370, 178, 273, 84],
+    "startDate": "2026-07-09T05:00:00",
+    "endDate": "2026-07-16T04:59:00",
+    "rerun": true,
+    "active": true
+
+  },
+  {
+    "id": 83,
+    "name": "Radiant Fantasia",
+    "image": "../assets/banners/radiant-fantasia.png",
+    "cardIds": [32, 31, 98, 99, 195, 196, 289, 290, 385, 386, 46, 45, 44, 169, 170, 171, 263, 264, 267, 358, 359, 361, 79, 80, 82],
+    "startDate": "2026-07-09T05:00:00",
+    "endDate": "2026-07-23T04:59:00",
+    "rerun": false,
     "active": true
 
   },

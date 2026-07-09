@@ -32,5 +32,29 @@ export const eventsData = [
         "endDate": "2026-06-29T04:59:59",
         "active": false
     },
+    {
+        id: 5,
+        name: "Myth Story Free Unlock",
+        image: "../assets/main-page/events/myth-free.png",
+        "startDate": "2026-07-09T05:00:00",
+        "endDate": "2026-07-23T04:59:59",
+        "active": true
+    },
+    {
+        id: 6,
+        name: "Illusio",
+        image: "../assets/main-page/events/illusio.png",
+        "startDate": "2026-07-09T05:00:00",
+        "endDate": "2026-07-23T04:59:59",
+        "active": true
+    },
+    {
+        id: 5,
+        name: "Double Drop of Bounty Hunt",
+        image: "../assets/sp/unicorns.png",
+        "startDate": "2026-07-20T05:00:00",
+        "endDate": "2026-07-27T04:59:59",
+        "active": true
+    },
 
 ]
