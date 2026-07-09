@@ -1,8 +1,20 @@
 import { useState, useEffect, useCallback } from 'react';
+import { memoriesData } from '../data/memories-data.js';
 
 // Функция для получения ключа с префиксом
 const getStorageKey = (prefix = '') => {
     return prefix ? `${prefix}_protocore_sort_criteria` : 'protocore_sort_criteria';
+};
+
+// Функция для проверки, одет ли протокор на карточку
+const isProtocoreEquipped = (protocoreId) => {
+    for (const card of memoriesData) {
+        const cardProtocores = JSON.parse(localStorage.getItem(`card_protocores_${card.id}`) || '[]');
+        if (cardProtocores.some(p => p.id === protocoreId)) {
+            return true;
+        }
+    }
+    return false;
 };
 
 // Функции сравнения для каждого типа сортировки
@@ -10,7 +22,15 @@ const compareFunctions = {
     type: (a, b) => a.type.localeCompare(b.type),
     stellactrum: (a, b) => a.stellactrum.localeCompare(b.stellactrum),
     level: (a, b) => b.level - a.level,
-    mainStat: (a, b) => a.mainStat.localeCompare(b.mainStat)
+    mainStat: (a, b) => a.mainStat.localeCompare(b.mainStat),
+    status: (a, b) => {
+        const aEquipped = isProtocoreEquipped(a.id);
+        const bEquipped = isProtocoreEquipped(b.id);
+        // Equipped (true) идут первыми, Free (false) вторыми
+        if (aEquipped && !bEquipped) return -1;
+        if (!aEquipped && bEquipped) return 1;
+        return 0;
+    }
 };
 
 // Функция для многоуровневой сортировки

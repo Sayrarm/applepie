@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
+import { memoriesData } from '../data/memories-data.js';
 
 // Функция для получения ключей с префиксом
 const getStorageKeys = (prefix = '') => ({
@@ -21,6 +22,17 @@ const loadFromStorage = (key, defaultValue) => {
     }
 };
 
+// Функция для проверки, одет ли протокор на карточку
+const isProtocoreEquipped = (protocoreId) => {
+    for (const card of memoriesData) {
+        const cardProtocores = JSON.parse(localStorage.getItem(`card_protocores_${card.id}`) || '[]');
+        if (cardProtocores.some(p => p.id === protocoreId)) {
+            return true;
+        }
+    }
+    return false;
+};
+
 export const useProtocoreFilter = (prefix = '') => {
     const storageKeys = getStorageKeys(prefix);
 
@@ -30,7 +42,8 @@ export const useProtocoreFilter = (prefix = '') => {
             stellactrum: [],
             levels: [],
             mainStats: [],
-            subStats: []
+            subStats: [],
+            status: []
         });
     };
 
@@ -51,7 +64,8 @@ export const useProtocoreFilter = (prefix = '') => {
             stellactrum: [],
             levels: [],
             mainStats: [],
-            subStats: []
+            subStats: [],
+            status: []
         });
     }, []);
 
@@ -73,14 +87,31 @@ export const useProtocoreFilter = (prefix = '') => {
             const matchesMainStat = filters.mainStats.length === 0 ||
                 filters.mainStats.includes(protocore.mainStat);
 
-            // Фильтр по сабстатам (ищем, есть ли хотя бы один совпадающий)
+            // Фильтр по сабстатам
             const matchesSubStat = filters.subStats.length === 0 ||
                 (protocore.substats && protocore.substats.some(sub =>
                     filters.subStats.includes(sub.stat)
                 ));
 
+            // Фильтр по статусу (Equipped/Free)
+            let matchesStatus = true;
+            if (filters.status && filters.status.length > 0) {
+                const isEquipped = isProtocoreEquipped(protocore.id);
+                const isEquippedFilter = filters.status.includes('equipped');
+                const isFreeFilter = filters.status.includes('free');
+
+                if (isEquippedFilter && isFreeFilter) {
+                    matchesStatus = true;
+                } else if (isEquippedFilter) {
+                    matchesStatus = isEquipped === true;
+                } else if (isFreeFilter) {
+                    matchesStatus = isEquipped === false;
+                }
+            }
+
             return matchesType && matchesStellactrum &&
-                matchesLevel && matchesMainStat && matchesSubStat;
+                matchesLevel && matchesMainStat && matchesSubStat &&
+                matchesStatus;
         });
     }, [filters]);
 

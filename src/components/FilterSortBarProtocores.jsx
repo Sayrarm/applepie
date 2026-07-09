@@ -37,7 +37,8 @@ function FilterSortBarProtocores({
                             { value: 'type', label: 'Type' },
                             { value: 'stellactrum', label: 'Stellactrum' },
                             { value: 'level', label: 'Level' },
-                            { value: 'mainStat', label: 'Main Stat' }
+                            { value: 'mainStat', label: 'Main Stat' },
+                            { value: 'status', label: 'Status' }
                         ]}
                     />
                     <Button

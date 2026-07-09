@@ -8,7 +8,8 @@ const getStorageKeys = (prefix = '') => ({
     STELLACTRUM: prefix ? `${prefix}_protocore_filter_stellactrum` : 'protocore_filter_stellactrum',
     LEVELS: prefix ? `${prefix}_protocore_filter_levels` : 'protocore_filter_levels',
     MAIN_STATS: prefix ? `${prefix}_protocore_filter_mainStats` : 'protocore_filter_mainStats',
-    SUB_STATS: prefix ? `${prefix}_protocore_filter_subStats` : 'protocore_filter_subStats'
+    SUB_STATS: prefix ? `${prefix}_protocore_filter_subStats` : 'protocore_filter_subStats',
+    STATUS: prefix ? `${prefix}_protocore_filter_status` : 'protocore_filter_status'
 });
 
 const loadFromStorage = (key, defaultValue) => {
@@ -40,6 +41,7 @@ const FilterModalProtocore = forwardRef(({
     const [levels, setLevels] = useState(() => loadFromStorage(storageKeys.LEVELS, []));
     const [mainStats, setMainStats] = useState(() => loadFromStorage(storageKeys.MAIN_STATS, []));
     const [subStats, setSubStats] = useState(() => loadFromStorage(storageKeys.SUB_STATS, []));
+    const [status, setStatus] = useState(() => loadFromStorage(storageKeys.STATUS, []));
 
     useEffect(() => {
         localStorage.setItem(storageKeys.TYPES, JSON.stringify(types));
@@ -61,12 +63,17 @@ const FilterModalProtocore = forwardRef(({
         localStorage.setItem(storageKeys.SUB_STATS, JSON.stringify(subStats));
     }, [subStats, storageKeys.SUB_STATS]);
 
+    useEffect(() => {
+        localStorage.setItem(storageKeys.STATUS, JSON.stringify(status));
+    }, [status, storageKeys.STATUS]);
+
     useImperativeHandle(ref, () => ({
         clearAll: () => {
             setTypes([]);
             setStellactrum([]);
             setLevels([]);
             setMainStats([]);
+            setStatus([]);
             setSubStats([]);
 
             Object.values(storageKeys).forEach(key => {
@@ -93,6 +100,10 @@ const FilterModalProtocore = forwardRef(({
     const levelOptions = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
     const mainStatOptions = ['HP', 'ATK', 'DEF', 'ATK Bonus', 'HP Bonus', 'DEF Bonus', 'CRIT Rate', 'CRIT DMG', 'DMG Boost to Weakened', 'Oath Strength', 'Oath Recovery Boost', 'Expedited Energy Boost'];
     const subStatOptions = ['HP', 'ATK', 'DEF', 'ATK Bonus', 'HP Bonus', 'DEF Bonus', 'CRIT Rate', 'CRIT DMG', 'DMG Boost to Weakened', 'Oath Strength'];
+    const statusOptions = [
+        { label: 'Equipped', value: 'equipped' },
+        { label: 'Free', value: 'free' },
+    ];
 
     const tagRender = props => {
         const { label, value, closable, onClose } = props;
@@ -122,7 +133,8 @@ const FilterModalProtocore = forwardRef(({
             stellactrum: stellactrum,
             levels: levels,
             mainStats: mainStats,
-            subStats: subStats
+            subStats: subStats,
+            status: status || []
         };
         onFilter(filters);
         onClose();
@@ -134,6 +146,7 @@ const FilterModalProtocore = forwardRef(({
         setLevels([]);
         setMainStats([]);
         setSubStats([]);
+        setStatus([]);
 
         Object.values(storageKeys).forEach(key => {
             localStorage.removeItem(key);
@@ -191,6 +204,15 @@ const FilterModalProtocore = forwardRef(({
                     options={subStatOptions.map(stat => ({ label: stat, value: stat }))}
                     value={subStats}
                     onChange={setSubStats}
+                />
+            </div>
+
+            <div style={{ marginBottom: 15 }}>
+                <span>Status: </span>
+                <Checkbox.Group
+                    options={statusOptions}
+                    value={status}
+                    onChange={setStatus}
                 />
             </div>
 
