@@ -17,14 +17,14 @@ const STORAGE_KEYS = [
     'protocores',
 
     // Данные ресурсов
-    'myResources_bottles',
-    'myResources_heartsand',
-    'myResources_crystals',
-    'myResources_crystalBoxes',
-    'myResources_hearts',
-    'myResources_coreEnergy',
-    'myResources_credits',
-    'myResources_selectedCrystalColor',
+    'inventory_bottles',
+    'inventory_heartsand',
+    'inventory_crystals',
+    'inventory_crystal_boxes',
+    'inventory_hearts',
+    'inventory_core_energy',
+    'inventory_credits',
+    'inventory_selected_crystal_color',
 ];
 
 function DataManager() {
