@@ -36,7 +36,7 @@ export const dungeonData = [
 ];
 
 // Стоимость входа в данж
-export const DUNGEON_COST = 20; // 20 топлива за вход
+export const DUNGEON_COST_PROTOCORE = 20; // 20 топлива за вход
 
 // Данжи для кредитов
 export const creditDungeonData = [

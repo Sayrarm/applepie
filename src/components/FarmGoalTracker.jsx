@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 import styles from './FarmGoalTracker.module.css';
 import {creditDungeonData, crystalDungeonData, DUNGEON_COST, expDungeonData} from '../data/memory-up-data';
-import {CREDIT_DUNGEON_COST, dungeonData} from '../data/protocore-data';
+import {CREDIT_DUNGEON_COST, DUNGEON_COST_PROTOCORE, dungeonData} from '../data/protocore-data';
 
 // Константы
 const DAILY_STAMINA = 390; // суточное топливо
@@ -123,7 +123,7 @@ function FarmGoalTracker() {
         const dungeon = dungeonData.find(d => d.level === dungeonLevel);
         const expPerRun = dungeon ? dungeon.exp : 1300;
         const runs = Math.ceil(remainingExp / expPerRun);
-        const stamina = runs * DUNGEON_COST;
+        const stamina = runs * DUNGEON_COST_PROTOCORE;
         const days = Math.ceil(stamina / DAILY_STAMINA);
 
         return {runs, stamina, days, expPerRun};
