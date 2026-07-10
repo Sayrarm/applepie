@@ -274,13 +274,13 @@ function MemoryUpCalculator() {
 
             <button
                 className={styles.calculateButton}
-                    onClick={handleCalculate}
-                    disabled={currentLevel === targetLevel}
+                onClick={handleCalculate}
+                disabled={allLevels.indexOf(String(currentLevel)) >= allLevels.indexOf(String(targetLevel))}
             >
                 Calculate
             </button>
 
-            {currentLevel >= targetLevel && (
+            {allLevels.indexOf(String(currentLevel)) >= allLevels.indexOf(String(targetLevel)) && (
                 <div className={styles.warning}>
                     Target level must be higher than current level!
                 </div>
