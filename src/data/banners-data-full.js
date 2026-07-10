@@ -1,7 +1,18 @@
 export const bannersDataFull = [
   {
     "id": 1,
-    "name": "Heartstring Symphony",
+    "name": "Xspace Echo",
+    "image": "../assets/banners/xspace-exho.png",
+    "cardIds": [32, 31, 98, 99, 195, 196, 289, 290, 385, 386, 46, 45, 44, 169, 170, 171, 263, 264, 267, 358, 359, 361, 79, 80, 82],
+    "startDate": "2024-01-18T05:00:00",
+    "endDate": "permanently",
+    "rerun": false,
+    "active": false
+
+  },
+  {
+    "id": 2,
+    "name": "Everlasting Dream",
     "image": "../assets/banners/heartstring-symphony.jpg",
     "cardIds": [168],
     "startDate": "2024-01-18T05:00:00",
@@ -11,7 +22,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 2,
+    "id": 3,
     "name": "Twilight Serenity",
     "image": "../assets/banners/twilight-serenity.jpg",
     "cardIds": [360],
@@ -22,7 +33,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 3,
+    "id": 4,
     "name": "Veiled Whispers",
     "image": "../assets/banners/veiled-whispers.jpg",
     "cardIds": [362, 265, 174],
@@ -33,7 +44,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 4,
+    "id": 5,
     "name": "Before Dawn",
     "image": "../assets/banners/before-dawn.webp",
     "cardIds": [266],
@@ -44,9 +55,9 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 5,
-    "name": "Unforgettable Adventure",
-    "image": "../assets/banners/unforgettable-adventure.jpg",
+    "id": 6,
+    "name": "Special Embrace",
+    "image": "../assets/banners/special-embrace.png",
     "cardIds": [366],
     "startDate": "2024-03-01T05:00:00",
     "endDate": "2024-03-08T04:59:00",
@@ -55,7 +66,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 6,
+    "id": 7,
     "name": "Lingering Gaze",
     "image": "../assets/banners/lingering-gaze.png",
     "cardIds": [172, 269, 363],
@@ -66,7 +77,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 7,
+    "id": 8,
     "name": "When Tides Echo",
     "image": "../assets/banners/when-tides-echo.png",
     "cardIds": [387, 388],
@@ -77,7 +88,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 8,
+    "id": 9,
     "name": "Heating Up",
     "image": "../assets/banners/heating-up.png",
     "cardIds": [175],
@@ -88,7 +99,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 9,
+    "id": 10,
     "name": "Double Kiss",
     "image": "../assets/banners/double-kiss.png",
     "cardIds": [268],
@@ -99,7 +110,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 10,
+    "id": 11,
     "name": "Shimmering Moonlight",
     "image": "../assets/banners/shimmering-moonlight.png",
     "cardIds": [197, 198],
@@ -110,7 +121,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 11,
+    "id": 12,
     "name": "Dawn's Embrace",
     "image": "../assets/banners/dawns-embrace.png",
     "cardIds": [364],
@@ -121,7 +132,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 12,
+    "id": 13,
     "name": "Trace of Divinity",
     "image": "../assets/banners/trace-of-divinity.png",
     "cardIds": [291, 292],
@@ -132,7 +143,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 13,
+    "id": 14,
     "name": "Entwined Shadows",
     "image": "../assets/banners/entwined-shadows.png",
     "cardIds": [176, 270, 365],
@@ -143,7 +154,18 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 14,
+    "id": 15,
+    "name": "Pulse Hunter",
+    "image": "../assets/banners/pulse-hunter.png",
+    "cardIds": [98, 99, 195, 196, 289, 290, 385, 386, 169, 170, 171, 263, 264, 267, 358, 359, 361, 79, 80, 82],
+    "startDate": "2024-07-15T05:00:00",
+    "endDate": "2024-08-01T04:59:00",
+    "rerun": false,
+    "active": false
+
+  },
+  {
+    "id": 16,
     "name": "No Defense Zone",
     "image": "../assets/banners/no-defense-zone.png",
     "cardIds": [81],
@@ -154,7 +176,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 15,
+    "id": 17,
     "name": "Misty Invasion",
     "image": "../assets/banners/misty-invasion.png",
     "cardIds": [177, 271, 368, 83],
@@ -165,9 +187,9 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 16,
-    "name": "Eternal Attachment",
-    "image": "../assets/banners/eternal-attachment.png",
+    "id": 18,
+    "name": "Destined Reunion",
+    "image": "../assets/banners/destined-Reunion.png",
     "cardIds": [272],
     "startDate": "2024-08-31T05:00:00",
     "endDate": "2024-09-07T04:59:00",
@@ -176,7 +198,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 17,
+    "id": 19,
     "name": "Into the Canvas",
     "image": "../assets/banners/into-the-canvas.png",
     "cardIds": [369],
@@ -187,7 +209,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 18,
+    "id": 20,
     "name": "Wander in Wonder",
     "image": "../assets/banners/wander-in-wonder.png",
     "cardIds": [370, 178, 273, 84],
@@ -198,9 +220,9 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 19,
-    "name": "Celestial Message",
-    "image": "../assets/banners/celestial-message.png",
+    "id": 21,
+    "name": "Galaxy Dance",
+    "image": "../assets/banners/galaxy-dance.png",
     "cardIds": [179],
     "startDate": "2024-10-11T05:00:00",
     "endDate": "2024-10-18T04:59:00",
@@ -209,7 +231,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 20,
+    "id": 22,
     "name": "Radiant Brilliance",
     "image": "../assets/banners/radiant-brilliance.png",
     "cardIds": [85],
@@ -220,7 +242,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 21,
+    "id": 23,
     "name": "Heartstring Notes",
     "image": "../assets/banners/heartstring-notes.png",
     "cardIds": [275],
@@ -231,7 +253,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 22,
+    "id": 24,
     "name": "Yes, Cat Caretaker",
     "image": "../assets/banners/yes-cat-caretaker.png",
     "cardIds": [180, 276, 372, 86],
@@ -242,7 +264,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 23,
+    "id": 25,
     "name": "Where Drakeshadows Fall",
     "image": "../assets/banners/where-drakeshadows-fall.png",
     "cardIds": [100, 101],
@@ -253,7 +275,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 24,
+    "id": 26,
     "name": "Silvery Polyphony",
     "image": "../assets/banners/silvery-polyphony.png",
     "cardIds": [182],
@@ -264,7 +286,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 25,
+    "id": 27,
     "name": "Nightly Rendezvous",
     "image": "../assets/banners/nightly-rendezvous.png",
     "cardIds": [183, 278, 373, 87],
@@ -275,7 +297,18 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 26,
+    "id": 28,
+    "name": "Sky's Embrace",
+    "image": "../assets/banners/sky-embrace.png",
+    "cardIds": [32, 31, 98, 99, 195, 196, 289, 290, 385, 386, 46, 45, 44, 169, 170, 171, 263, 264, 267, 358, 359, 361, 79, 80, 82],
+    "startDate": "2025-01-22T05:00:00",
+    "endDate": "2025-02-08T04:59:00",
+    "rerun": false,
+    "active": false
+
+  },
+  {
+    "id": 29,
     "name": "Painful Signal",
     "image": "../assets/banners/painful-signal.png",
     "cardIds": [43],
@@ -286,7 +319,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 27,
+    "id": 30,
     "name": "Tomorrow's Catch-22",
     "image": "../assets/banners/tomorrow-catch-22.png",
     "cardIds": [42, 88, 374, 279, 184],
@@ -297,7 +330,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 28,
+    "id": 31,
     "name": "Boundless Seas",
     "image": "../assets/banners/boundless-seas.png",
     "cardIds": [375],
@@ -308,9 +341,9 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 29,
-    "name": "Unforgettable Adventure",
-    "image": "../assets/banners/unforgettable-adventure.jpg",
+    "id": 32,
+    "name": "Special Embrace",
+    "image": "../assets/banners/special-embrace.png",
     "cardIds": [366],
     "startDate": "2025-03-01T05:00:00",
     "endDate": "2025-03-08T04:59:00",
@@ -319,7 +352,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 30,
+    "id": 33,
     "name": "Everlasting Wish",
     "image": "../assets/banners/everlasting-wish.png",
     "cardIds": [280],
@@ -330,7 +363,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 31,
+    "id": 34,
     "name": "When Tides Echo",
     "image": "../assets/banners/when-tides-echo.png",
     "cardIds": [387, 388],
@@ -341,7 +374,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 32,
+    "id": 35,
     "name": "Fallen Cosmos",
     "image": "../assets/banners/fallen-cosmos.png",
     "cardIds": [30, 29],
@@ -352,7 +385,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 33,
+    "id": 36,
     "name": "Where Hearts Live",
     "image": "../assets/banners/where-hearts-live.png",
     "cardIds": [90],
@@ -363,7 +396,7 @@ export const bannersDataFull = [
 
   },
   {
-    "id": 34,
+    "id": 37,
     "name": "Shimmering Moonlight",
     "image": "../assets/banners/shimmering-moonlight.png",
     "cardIds": [197, 198],
@@ -374,7 +407,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 35,
+    "id": 38,
     "name": "Spring and Flowers",
     "image": "../assets/banners/spring-and-flowers.png",
     "cardIds": [185, 281, 376, 91, 41],
@@ -385,7 +418,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 36,
+    "id": 39,
     "name": "Trace of Divinity",
     "image": "../assets/banners/trace-of-divinity.png",
     "cardIds": [291, 292],
@@ -396,7 +429,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 37,
+    "id": 40,
     "name": "Feverish Attempts",
     "image": "../assets/banners/feverish-attempts.png",
     "cardIds": [186],
@@ -407,7 +440,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 38,
+    "id": 41,
     "name": "No-Return Night",
     "image": "../assets/banners/no-return-night.png",
     "cardIds": [40],
@@ -418,7 +451,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 39,
+    "id": 42,
     "name": "Submerged Eclipse",
     "image": "../assets/banners/submerged-eclipse.png",
     "cardIds": [390, 389],
@@ -429,7 +462,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 40,
+    "id": 43,
     "name": "Witnessed by Deepspace",
     "image": "../assets/banners/witnessed-by-deepspace.png",
     "cardIds": [187, 282, 377, 92, 38],
@@ -440,7 +473,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 41,
+    "id": 44,
     "name": "Fallen Crown",
     "image": "../assets/banners/fallen-crown.png",
     "cardIds": [199, 200],
@@ -451,7 +484,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 42,
+    "id": 45,
     "name": "You And Midsummer",
     "image": "../assets/banners/you-and-midsummer.png",
     "cardIds": [188, 283, 378, 93, 37],
@@ -462,7 +495,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 43,
+    "id": 46,
     "name": "Dawnbreak Promise",
     "image": "../assets/banners/dawnbreak-promise.png",
     "cardIds": [284],
@@ -473,9 +506,9 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 44,
-    "name": "Eternal Attachment",
-    "image": "../assets/banners/eternal-attachment.png",
+    "id": 47,
+    "name": "Destined Reunion",
+    "image": "../assets/banners/destined-Reunion.png",
     "cardIds": [272],
     "startDate": "2025-08-31T05:00:00",
     "endDate": "2025-09-07T04:59:00",
@@ -484,7 +517,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 45,
+    "id": 48,
     "name": "Passionate Appraisal",
     "image": "../assets/banners/passionate-appraisal.png",
     "cardIds": [94],
@@ -495,7 +528,7 @@ export const bannersDataFull = [
 
   },
   {
-    "id": 46,
+    "id": 49,
     "name": "Veiled Whispers",
     "image": "../assets/banners/veiled-whispers.jpg",
     "cardIds": [362, 265, 174],
@@ -506,7 +539,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 47,
+    "id": 50,
     "name": "Edge of Continuum",
     "image": "../assets/banners/edge-of-continuum.png",
     "cardIds": [293, 294],
@@ -517,7 +550,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 48,
+    "id": 51,
     "name": "Between Stars",
     "image": "../assets/banners/between-stars.webp",
     "cardIds": [189],
@@ -528,8 +561,8 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 49,
-    "name": "Celestial Message",
+    "id": 52,
+    "name": "Galaxy Dance",
     "image": "../assets/banners/celestial-message.png",
     "cardIds": [179],
     "startDate": "2025-10-11T05:00:00",
@@ -539,7 +572,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 50,
+    "id": 53,
     "name": "Where Drakeshadows Fall",
     "image": "../assets/banners/where-drakeshadows-fall.png",
     "cardIds": [100, 101],
@@ -550,7 +583,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 51,
+    "id": 54,
     "name": "Heartbeats Ablaze",
     "image": "../assets/banners/heartbeats-ablaze.png",
     "cardIds": [190, 285, 379, 95, 36],
@@ -561,8 +594,8 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 52,
-    "name": "Heartstring Symphony",
+    "id": 55,
+    "name": "Everlasting Dream",
     "image": "../assets/banners/heartstring-symphony.jpg",
     "cardIds": [168],
     "startDate": "2025-11-13T05:00:00",
@@ -572,7 +605,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 53,
+    "id": 56,
     "name": "Sweet Overdrive",
     "image": "../assets/banners/sweet-overdrive.png",
     "cardIds": [380],
@@ -583,7 +616,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 54,
+    "id": 57,
     "name": "Where Silverwings Rest",
     "image": "../assets/banners/where-silverwings-rest.png",
     "cardIds": [102, 103],
@@ -594,7 +627,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 55,
+    "id": 58,
     "name": "Twilight Serenity",
     "image": "../assets/banners/twilight-serenity.jpg",
     "cardIds": [360],
@@ -605,7 +638,7 @@ export const bannersDataFull = [
 
   },
   {
-    "id": 56,
+    "id": 59,
     "name": "Indulgent Scheme",
     "image": "../assets/banners/indulgent-scheme.png",
     "cardIds": [35],
@@ -616,7 +649,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 57,
+    "id": 60,
     "name": "Before Dawn",
     "image": "../assets/banners/before-dawn.webp",
     "cardIds": [266],
@@ -627,7 +660,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 58,
+    "id": 61,
     "name": "Throne of Eros",
     "image": "../assets/banners/throne-of-eros.png",
     "cardIds": [192, 286, 381, 96, 34],
@@ -638,7 +671,18 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 59,
+    "id": 62,
+    "name": "Heart Compass",
+    "image": "../assets/banners/heart-compass.webp",
+    "cardIds": [32, 31, 98, 99, 195, 196, 289, 290, 385, 386, 46, 45, 44, 169, 170, 171, 263, 264, 267, 358, 359, 361, 79, 80, 82],
+    "startDate": "2025-12-31T05:00:00",
+    "endDate": "2026-01-21T04:59:00",
+    "rerun": false,
+    "active": false
+
+  },
+  {
+    "id": 63,
     "name": "Secret's Kiss",
     "image": "../assets/banners/secret-kiss.png",
     "cardIds": [287],
@@ -649,7 +693,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 60,
+    "id": 64,
     "name": "Fallen Cosmos",
     "image": "../assets/banners/fallen-cosmos.png",
     "cardIds": [30, 29],
@@ -660,7 +704,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 61,
+    "id": 65,
     "name": "Mortality's Tenderness",
     "image": "../assets/banners/mortality-tenderness.png",
     "cardIds": [193, 288, 382, 97, 33],
@@ -671,7 +715,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 62,
+    "id": 66,
     "name": "Duskbright Steps",
     "image": "../assets/banners/duskbright-steps.png",
     "cardIds": [383],
@@ -682,9 +726,9 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 63,
-    "name": "Unforgettable Adventure",
-    "image": "../assets/banners/unforgettable-adventure.jpg",
+    "id": 67,
+    "name": "Special Embrace",
+    "image": "../assets/banners/special-embrace.png",
     "cardIds": [366],
     "startDate": "2026-03-01T05:00:00",
     "endDate": "2026-03-08T04:59:00",
@@ -693,7 +737,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 64,
+    "id": 68,
     "name": "Boundless Seas",
     "image": "../assets/banners/boundless-seas.png",
     "cardIds": [375],
@@ -704,7 +748,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 65,
+    "id": 69,
     "name": "Tranquil Moments",
     "image": "../assets/banners/tranquil-moments.png",
     "cardIds": [194],
@@ -715,7 +759,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 66,
+    "id": 70,
     "name": "Lingering Gaze",
     "image": "../assets/banners/lingering-gaze.png",
     "cardIds": [172, 269, 363],
@@ -726,7 +770,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 67,
+    "id": 71,
     "name": "Ghosts' Final March",
     "image": "../assets/banners/ghosts-final-march.png",
     "cardIds": [28, 27],
@@ -737,7 +781,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 68,
+    "id": 72,
     "name": "Heating Up",
     "image": "../assets/banners/heating-up.png",
     "cardIds": [175],
@@ -748,7 +792,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 69,
+    "id": 73,
     "name": "Rainlit Night",
     "image": "../assets/banners/rainlit-night.png",
     "cardIds": [105],
@@ -759,7 +803,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 70,
+    "id": 74,
     "name": "Where Hearts Live",
     "image": "../assets/banners/where-hearts-live.png",
     "cardIds": [90],
@@ -770,7 +814,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 71,
+    "id": 75,
     "name": "Submerged Eclipse",
     "image": "../assets/banners/submerged-eclipse.png",
     "cardIds": [390, 389],
@@ -781,7 +825,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 72,
+    "id": 76,
     "name": "Lingering Lust",
     "image": "../assets/banners/lingering-lust.png",
     "cardIds": [393, 392, 391, 394, 395],
@@ -792,7 +836,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 73,
+    "id": 77,
     "name": "Double Kiss",
     "image": "../assets/banners/double-kiss.png",
     "cardIds": [268],
@@ -803,7 +847,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 74,
+    "id": 78,
     "name": "Fallen Crown",
     "image": "../assets/banners/fallen-crown.png",
     "cardIds": [199, 200],
@@ -814,7 +858,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 75,
+    "id": 79,
     "name": "Kitten Included",
     "image": "../assets/banners/kitten-included.png",
     "cardIds": [400],
@@ -825,7 +869,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 76,
+    "id": 80,
     "name": "Entwined Shadows",
     "image": "../assets/banners/entwined-shadows.png",
     "cardIds": [176, 270, 365],
@@ -836,7 +880,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 77,
+    "id": 81,
     "name": "Your Skyblue",
     "image": "../assets/banners/your-skyblue.png",
     "cardIds": [402],
@@ -847,7 +891,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 78,
+    "id": 82,
     "name": "No-Return Night",
     "image": "../assets/banners/no-return-night.png",
     "cardIds": [40],
@@ -858,7 +902,7 @@ export const bannersDataFull = [
     
   },
   {
-    "id": 79,
+    "id": 83,
     "name": "Once Upon a Frame",
     "image": "../assets/banners/once-upon-a-frame.png",
     "cardIds": [404, 405, 406, 407, 408],
@@ -869,7 +913,7 @@ export const bannersDataFull = [
 
   },
   {
-    "id": 80,
+    "id": 84,
     "name": "Dawn's Embrace",
     "image": "../assets/banners/dawns-embrace.png",
     "cardIds": [364],
@@ -880,7 +924,7 @@ export const bannersDataFull = [
 
   },
   {
-    "id": 81,
+    "id": 85,
     "name": "Edge of Continuum",
     "image": "../assets/banners/edge-of-continuum.png",
     "cardIds": [293, 294],
@@ -891,7 +935,7 @@ export const bannersDataFull = [
 
   },
   {
-    "id": 82,
+    "id": 86,
     "name": "Wander in Wonder",
     "image": "../assets/banners/wander-in-wonder-rerun.png",
     "cardIds": [370, 178, 273, 84],
@@ -902,7 +946,7 @@ export const bannersDataFull = [
 
   },
   {
-    "id": 83,
+    "id": 87,
     "name": "Radiant Fantasia",
     "image": "../assets/banners/radiant-fantasia.png",
     "cardIds": [32, 31, 98, 99, 195, 196, 289, 290, 385, 386, 46, 45, 44, 169, 170, 171, 263, 264, 267, 358, 359, 361, 79, 80, 82],
