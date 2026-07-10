@@ -358,10 +358,16 @@
 
     .container {
         /* Уменьшаем контейнер до размеров экрана */
-        transform: scale(0.30);   /* 30% от оригинального размера */
+        transform: scale(0.32);   /* 32% от оригинального размера */
         transform-origin: top left;
         width: 1210px;            /* оригинальная ширина (десктопная) */
         margin: 0 auto;
+    }
+
+    .teamNameButton,
+    .addTeamButton {
+        font-size: 14px;
+        padding: 5px 15px 5px 5px;
     }
 
 }
