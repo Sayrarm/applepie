@@ -412,7 +412,7 @@ function Showcase() {
             >
                 {card ? (
                     <>
-                        <div>
+                        <div className={styles.cardSlotEquipped}>
                             {/* Информация о карточке — уровень и ранг */}
                             <div className={styles.cardInfo}>
                                 <span className={styles.cardLevel}>Lv.{cardData?.level || 1} </span>

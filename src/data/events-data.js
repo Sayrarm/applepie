@@ -49,7 +49,7 @@ export const eventsData = [
         "active": true
     },
     {
-        id: 5,
+        id: 7,
         name: "Double Drop of Bounty Hunt",
         image: "../assets/sp/unicorns.png",
         "startDate": "2026-07-20T05:00:00",

@@ -358,10 +358,26 @@
 
     .container {
         /* Уменьшаем контейнер до размеров экрана */
-        transform: scale(0.32);   /* 32% от оригинального размера */
+        transform: scale(0.305);   /* 32% от оригинального размера */
         transform-origin: top left;
         width: 1210px;            /* оригинальная ширина (десктопная) */
         margin: 0 auto;
+    }
+
+    .cardSlot {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 5px;
+    }
+
+    .cardSlotEquipped {
+        transform: scale(1.6);
+        transform-origin: -12% 56%;
+    }
+
+    .protocoreWrapper {
+        transform: scale(1.0);
+        transform-origin: 5% 5%;
     }
 
     .teamNameButton,
