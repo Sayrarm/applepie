@@ -3,8 +3,10 @@ import styles from './DataManager.module.css';
 
 // Список всех ключей localStorage, которые нужно сохранять
 const STORAGE_KEYS = [
-    // Данные Showcase
+    // Данные Showcase (старый ключ)
     'showcase_data',
+    // Данные команд Showcase (новый ключ)
+    'showcase_teams',
 
     // Данные карточек (уровни, ранги, доступность, возвышение)
     /^cardLevel_\d+$/,
@@ -226,7 +228,7 @@ function DataManager() {
 
             <div className={styles.info}>
                 <small>
-                    💡 Exports all your data (My Memories, My Protocores, My Resources, Showcase) to a JSON file.
+                    💡 Exports all your data (My Memories, My Protocores, My Resources, Showcase Teams) to a JSON file.
                     <br />
                     Import will overwrite ALL existing data. Make sure to backup first!
                 </small>
