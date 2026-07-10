@@ -12,85 +12,61 @@ import {memoriesData} from '../data/memories-data.js';
 import {enhanceMemoriesWithAvailability} from "../data/cardAvailability.js";
 import {affinityData} from "../data/affinity-data.js";
 import Select from 'react-select';
-import { toPng } from 'html-to-image';
+import {toPng} from 'html-to-image';
 import FilterSortBarMemories from './FilterSortBarMemories.jsx';
-import { useSearch } from '../hooks/useSearch';
-import { useSort } from '../hooks/useSort';
-import { useFilter } from '../hooks/useFilter';
+import {useSearch} from '../hooks/useSearch';
+import {useSort} from '../hooks/useSort';
+import {useFilter} from '../hooks/useFilter';
+import {Button} from "antd";
+
+// Ключ для localStorage
+const STORAGE_KEY = 'showcase_teams';
 
 // Функции для работы с localStorage
-const STORAGE_KEY = 'showcase_data';
-
-const loadFromStorage = () => {
+const loadTeamsFromStorage = () => {
     try {
         const saved = localStorage.getItem(STORAGE_KEY);
         if (saved) {
             return JSON.parse(saved);
         }
     } catch (e) {
-        console.error('Error loading from localStorage:', e);
+        console.error('Error loading teams from localStorage:', e);
     }
     return null;
 };
 
-const saveToStorage = (data) => {
+const saveTeamsToStorage = (teams) => {
     try {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(teams));
     } catch (e) {
-        console.error('Error saving to localStorage:', e);
-    }
-};
-
-const clearStorage = () => {
-    try {
-        localStorage.removeItem(STORAGE_KEY);
-    } catch (e) {
-        console.error('Error clearing localStorage:', e);
+        console.error('Error saving teams to localStorage:', e);
     }
 };
 
 function Showcase() {
-    // Загружаем сохраненные данные или используем значения по умолчанию
-    const savedData = loadFromStorage();
+    // Загружаем сохраненные команды
+    const savedTeams = loadTeamsFromStorage();
 
-    const [selectedCompanion, setSelectedCompanion] = useState(() => {
-        if (savedData?.selectedCompanion) {
-            return compData.find(c => c.id === savedData.selectedCompanion.id) || null;
+    // Состояние для всех команд
+    const [teams, setTeams] = useState(() => {
+        if (savedTeams && savedTeams.length > 0) {
+            return savedTeams;
         }
-        return null;
+        // Дефолтная команда
+        return [{
+            id: Date.now(),
+            name: 'Team 1',
+            selectedCompanion: null,
+            selectedMCWeapon: null,
+            solarCards: [null, null],
+            lunarCards: [null, null, null, null],
+            affinityLevel: 0
+        }];
     });
 
-    const [selectedMCWeapon, setSelectedMCWeapon] = useState(() => {
-        if (savedData?.selectedMCWeapon) {
-            return compData.find(c => c.id === savedData.selectedMCWeapon.id) || null;
-        }
-        return null;
-    });
-
-    const [solarCards, setSolarCards] = useState(() => {
-        if (savedData?.solarCards) {
-            return savedData.solarCards.map(cardId => {
-                if (cardId === null) return null;
-                return memoriesData.find(c => c.id === cardId) || null;
-            });
-        }
-        return [null, null];
-    });
-
-    const [lunarCards, setLunarCards] = useState(() => {
-        if (savedData?.lunarCards) {
-            return savedData.lunarCards.map(cardId => {
-                if (cardId === null) return null;
-                return memoriesData.find(c => c.id === cardId) || null;
-            });
-        }
-        return [null, null, null, null];
-    });
-
-    const [affinityLevel, setAffinityLevel] = useState(() => {
-        return savedData?.affinityLevel || 0;
-    });
-
+    const [activeTeamIndex, setActiveTeamIndex] = useState(0);
+    const [isEditingName, setIsEditingName] = useState(false);
+    const [editingName, setEditingName] = useState('');
     const [isCapturing, setIsCapturing] = useState(false);
     const showcaseRef = useRef();
     const captureRef = useRef();
@@ -98,13 +74,15 @@ function Showcase() {
     const companionModalRef = useRef();
     const mcWeaponModalRef = useRef();
     const cardModalRef = useRef();
+    const renameModalRef = useRef();
     const [modalPlacement, setModalPlacement] = useState(null);
     const [modalIndex, setModalIndex] = useState(null);
+    const [longPressTimer, setLongPressTimer] = useState(null);
 
     // Хуки для фильтрации и сортировки карточек в модалке Showcase
     const filterModalRef = useRef();
-    const { searchQuery, onSearch, clearSearch } = useSearch('showcaseCardSelect');
-    const { sortCriteria, handleSortChange, clearSorting, sortMemories } = useSort('showcaseCardSelect');
+    const {searchQuery, onSearch, clearSearch} = useSearch('showcaseCardSelect');
+    const {sortCriteria, handleSortChange, clearSorting, sortMemories} = useSort('showcaseCardSelect');
     const {
         selectedChar,
         setSelectedChar,
@@ -115,6 +93,9 @@ function Showcase() {
         filterMemories
     } = useFilter('showcaseCardSelect');
 
+    // Получаем текущую активную команду
+    const currentTeam = teams[activeTeamIndex] || teams[0];
+
     // Опции для affinity
     const affinityOptions = useMemo(() => {
         const levels = affinityData[0]?.affinityLVL || [];
@@ -124,36 +105,100 @@ function Showcase() {
         }));
     }, []);
 
-    // Сохраняем все данные при изменении
-    useEffect(() => {
-        const dataToSave = {
-            selectedCompanion: selectedCompanion ? { id: selectedCompanion.id } : null,
-            selectedMCWeapon: selectedMCWeapon ? { id: selectedMCWeapon.id } : null,
-            solarCards: solarCards.map(card => card ? card.id : null),
-            lunarCards: lunarCards.map(card => card ? card.id : null),
-            affinityLevel: affinityLevel,
-        };
-        saveToStorage(dataToSave);
-    }, [selectedCompanion, selectedMCWeapon, solarCards, lunarCards, affinityLevel]);
+    // Обработчики для переименования
+    const handleTabContextMenu = (e, team) => {
+        e.preventDefault();
+        startEditingName(team.name);
+    };
 
-    useEffect(() => {
-        if (modalPlacement) {
-            // Очищаем только при смене типа карточки
-            clearSearch();
-            clearFilters();
-            clearSorting();
+    const handleTabTouchStart = (e, team) => {
+        const timer = setTimeout(() => {
+            startEditingName(team.name);
+        }, 800);
+        setLongPressTimer(timer);
+    };
+
+    const handleTabTouchEnd = () => {
+        if (longPressTimer) {
+            clearTimeout(longPressTimer);
+            setLongPressTimer(null);
         }
-    }, [clearFilters, clearSearch, clearSorting, modalPlacement]);
+    };
+
+    // Сохраняем команды при изменении
+    useEffect(() => {
+        saveTeamsToStorage(teams);
+    }, [teams]);
+
+    // Обновляем текущую команду
+    const updateCurrentTeam = (updates) => {
+        const updatedTeams = [...teams];
+        updatedTeams[activeTeamIndex] = {
+            ...updatedTeams[activeTeamIndex],
+            ...updates
+        };
+        setTeams(updatedTeams);
+    };
+
+    // Добавление новой команды
+    const addNewTeam = () => {
+        const newTeam = {
+            id: Date.now(),
+            name: `Team ${teams.length + 1}`,
+            selectedCompanion: null,
+            selectedMCWeapon: null,
+            solarCards: [null, null],
+            lunarCards: [null, null, null, null],
+            affinityLevel: 0
+        };
+        setTeams([...teams, newTeam]);
+        setActiveTeamIndex(teams.length);
+    };
+
+    // Удаление команды
+    const deleteTeam = (index) => {
+        if (teams.length <= 1) {
+            alert('Cannot delete the last team!');
+            return;
+        }
+        if (window.confirm(`Are you sure you want to delete "${teams[index].name}"?`)) {
+            const updatedTeams = teams.filter((_, i) => i !== index);
+            setTeams(updatedTeams);
+            if (activeTeamIndex >= updatedTeams.length) {
+                setActiveTeamIndex(updatedTeams.length - 1);
+            } else if (activeTeamIndex === index) {
+                setActiveTeamIndex(Math.max(0, index - 1));
+            }
+        }
+    };
+
+    // Изменение названия команды
+    const startEditingName = (name) => {
+        setEditingName(name);
+        renameModalRef.current?.showModal();
+    };
+
+    const saveTeamName = () => {
+        if (editingName.trim()) {
+            updateCurrentTeam({name: editingName.trim()});
+        }
+        setIsEditingName(false);
+        renameModalRef.current?.closeModal();
+    };
 
     // Функция для очистки всех данных
-    const clearAll = () => {
-        if (window.confirm('Are you sure you want to clear all data?')) {
-            setSelectedCompanion(null);
-            setSelectedMCWeapon(null);
-            setSolarCards([null, null]);
-            setLunarCards([null, null, null, null]);
-            setAffinityLevel(0);
-            clearStorage();
+    const clearCurrentTeam = () => {
+        if (window.confirm(`Are you sure you want to clear all data for "${currentTeam.name}"?`)) {
+            const updatedTeams = [...teams];
+            updatedTeams[activeTeamIndex] = {
+                ...updatedTeams[activeTeamIndex],
+                selectedCompanion: null,
+                selectedMCWeapon: null,
+                solarCards: [null, null],
+                lunarCards: [null, null, null, null],
+                affinityLevel: 0
+            };
+            setTeams(updatedTeams);
         }
     };
 
@@ -186,7 +231,7 @@ function Showcase() {
             element.style.padding = '0';
 
             const link = document.createElement('a');
-            link.download = `showcase_${new Date().toISOString().slice(0, 10)}.png`;
+            link.download = `showcase_${currentTeam.name}_${new Date().toISOString().slice(0, 10)}.png`;
             link.href = dataUrl;
             link.click();
 
@@ -217,24 +262,25 @@ function Showcase() {
     };
 
     const handleSelectCompanion = (companion) => {
-        setSelectedCompanion(companion);
+        updateCurrentTeam({selectedCompanion: companion});
         companionModalRef.current?.closeModal();
     };
 
     const handleSelectMCWeapon = (companion) => {
-        setSelectedMCWeapon(companion);
+        updateCurrentTeam({selectedMCWeapon: companion});
         mcWeaponModalRef.current?.closeModal();
     };
 
     const handleSelectCard = (card) => {
+        const newSolar = [...currentTeam.solarCards];
+        const newLunar = [...currentTeam.lunarCards];
+
         if (modalPlacement === 'solar') {
-            const newSolar = [...solarCards];
             newSolar[modalIndex] = card;
-            setSolarCards(newSolar);
+            updateCurrentTeam({solarCards: newSolar});
         } else if (modalPlacement === 'lunar') {
-            const newLunar = [...lunarCards];
             newLunar[modalIndex] = card;
-            setLunarCards(newLunar);
+            updateCurrentTeam({lunarCards: newLunar});
         }
         cardModalRef.current?.closeModal();
     };
@@ -256,7 +302,7 @@ function Showcase() {
 
     // Функция для подсчета суммы статов со всех карточек
     const calculateTotalStats = useMemo(() => {
-        const allCards = [...solarCards, ...lunarCards].filter(card => card !== null);
+        const allCards = [...currentTeam.solarCards, ...currentTeam.lunarCards].filter(card => card !== null);
 
         const total = {
             hp: 0,
@@ -287,12 +333,13 @@ function Showcase() {
         });
 
         return total;
-    }, [solarCards, lunarCards]);
+    }, [currentTeam.solarCards, currentTeam.lunarCards]);
 
     // Функция для подсчета affinity бонусов
     const calculateAffinityBonus = useMemo(() => {
+        const affinityLevel = currentTeam.affinityLevel || 0;
         if (affinityLevel === 0 || !affinityData.length) {
-            return { hp: 0, atk: 0, def: 0 };
+            return {hp: 0, atk: 0, def: 0};
         }
 
         const affinityEntry = affinityData[0];
@@ -301,7 +348,7 @@ function Showcase() {
         // Проверяем, есть ли такой уровень в массиве
         const index = levels.indexOf(affinityLevel);
         if (index === -1) {
-            return { hp: 0, atk: 0, def: 0 };
+            return {hp: 0, atk: 0, def: 0};
         }
 
         const hpPerLevel = affinityEntry.hp || 0;
@@ -317,7 +364,7 @@ function Showcase() {
             atk: atkPerLevel * levelCount,
             def: defPerLevel * levelCount,
         };
-    }, [affinityLevel]);
+    }, [currentTeam.affinityLevel]);
 
     // Финальные статы с учетом affinity
     const finalStats = useMemo(() => {
@@ -415,7 +462,11 @@ function Showcase() {
 
     return (
         <div className={styles.wrapper}>
-            {/* Кнопка для скриншота */}
+            {/* Вкладки команд */}
+            <div className={styles.tabsContainer}>
+
+            </div>
+            {/* Кнопки для скриншота и очистки */}
             <div className={styles.utilButtons}>
                 <button
                     className={styles.screenshotButton}
@@ -427,13 +478,70 @@ function Showcase() {
 
                 <button
                     className={styles.clearButton}
-                    onClick={clearAll}
+                    onClick={clearCurrentTeam}
                 >
                     🗑️ Clear All
                 </button>
             </div>
 
+            {/* Кнопки управления */}
+            <div className={styles.teamControls}>
+                {teams.map((team, index) => (
+                    <div key={team.id} className={styles.tabWrapper}>
+                        <button
+                            className={`${styles.teamNameButton} ${activeTeamIndex === index ? styles.activeTab : ''}`}
+                            onClick={() => setActiveTeamIndex(index)}
+                            onContextMenu={(e) => handleTabContextMenu(e, team)}
+                            onTouchStart={(e) => handleTabTouchStart(e, team)}
+                            onTouchEnd={handleTabTouchEnd}
+                            onTouchCancel={handleTabTouchEnd}
+                        >
+                            {team.name}
+                        </button>
+                        <button
+                            className={styles.deleteTab}
+                            onClick={() => deleteTeam(index)}
+                            title="Delete team"
+                        >
+                            ×
+                        </button>
+                    </div>
+                ))}
+                <button className={styles.addTeamButton} onClick={addNewTeam}>
+                    + Add Team
+                </button>
+
+                <ModalWindow
+                    ref={renameModalRef}
+                    title="Rename Team"
+                    width={400}
+                    tag={
+                        <div className={styles.renameModal}>
+                            <input
+                                className={styles.nameInputModal}
+                                value={editingName}
+                                onChange={(e) => setEditingName(e.target.value)}
+                                onKeyDown={(e) => {
+                                    if (e.key === 'Enter') {
+                                        saveTeamName();
+                                    } else if (e.key === 'Escape') {
+                                        renameModalRef.current?.closeModal();
+                                    }
+                                }}
+                                autoFocus
+                            />
+                            <div className={styles.renameButtons}>
+                                <Button className={styles.saveButton} onClick={saveTeamName}>
+                                    Save
+                                </Button>
+                            </div>
+                        </div>
+                    }
+                />
+            </div>
+
             <div ref={captureRef} className={styles.captureRef}>
+
                 <section
                     ref={showcaseRef}
                     className={styles.container}
@@ -444,15 +552,15 @@ function Showcase() {
                         {/* Кнопка выбора компаньона */}
                         <div className={styles.companionSection}>
                             <button className={styles.addCompanionBtn} onClick={showCompanionModal}>
-                                {selectedCompanion ? (
+                                {currentTeam.selectedCompanion ? (
                                     <div className={styles.companionChar}>
                                         <img
                                             className={styles.companionImage}
-                                            src={getImageUrl(selectedCompanion.img)}
-                                            alt={selectedCompanion.companionName}
+                                            src={getImageUrl(currentTeam.selectedCompanion.img)}
+                                            alt={currentTeam.selectedCompanion.companionName}
                                         />
                                         <div className={styles.companionName}>
-                                            {selectedCompanion.companionName}
+                                            {currentTeam.selectedCompanion.companionName}
                                         </div>
                                     </div>
                                 ) : (
@@ -461,15 +569,15 @@ function Showcase() {
                             </button>
                             {/* Кнопка выбора MC Weapon */}
                             <button className={styles.addCompanionBtn} onClick={showMCWeaponModal}>
-                                {selectedMCWeapon ? (
+                                {currentTeam.selectedMCWeapon ? (
                                     <div className={styles.companionChar}>
                                         <img
                                             className={styles.mcWeaponImage}
-                                            src={getImageUrl(selectedMCWeapon.imgWeapon)}
-                                            alt={selectedMCWeapon.weaponName}
+                                            src={getImageUrl(currentTeam.selectedMCWeapon.imgWeapon)}
+                                            alt={currentTeam.selectedMCWeapon.weaponName}
                                         />
                                         <div className={styles.companionName}>
-                                            MC Weapon: {selectedMCWeapon.weaponName}
+                                            MC Weapon: {currentTeam.selectedMCWeapon.weaponName}
                                         </div>
                                     </div>
                                 ) : (
@@ -512,15 +620,16 @@ function Showcase() {
                                 <div className={styles.affinity}>
                                     <Select
                                         options={affinityOptions}
-                                        value={affinityOptions.find(opt => opt.value === affinityLevel)}
-                                        onChange={(option) => setAffinityLevel(option ? option.value : 0)}
+                                        value={affinityOptions.find(opt => opt.value === currentTeam.affinityLevel)}
+                                        onChange={(option) => updateCurrentTeam({affinityLevel: option ? option.value : 0})}
                                         placeholder="Select Affinity LVL"
                                         className={styles.selectAffinityContainer}
                                         isClearable
                                         isSearchable={false}
                                     />
                                     <div className={styles.affinityBonus}>
-                                        Affinity Bonus: +{calculateAffinityBonus.hp} HP, +{calculateAffinityBonus.atk} ATK, +{calculateAffinityBonus.def} DEF
+                                        Affinity Bonus: +{calculateAffinityBonus.hp} HP,
+                                        +{calculateAffinityBonus.atk} ATK, +{calculateAffinityBonus.def} DEF
                                     </div>
                                 </div>
                             </div>
@@ -533,7 +642,7 @@ function Showcase() {
                         <div className={styles.solarRow}>
                             <div className={styles.rowLabel}>SOLAR</div>
                             <div className={styles.solarCardsRow}>
-                                {solarCards.map((card, index) => (
+                                {currentTeam.solarCards.map((card, index) => (
                                     <div key={`solar-${index}`} className={styles.cardWrapperSlot}>
                                         {renderCardSlot(card, 'solar', index)}
                                     </div>
@@ -545,7 +654,7 @@ function Showcase() {
                         <div className={styles.lunarRow}>
                             <div className={styles.rowLabel}>LUNAR</div>
                             <div className={styles.lunarCardsRow}>
-                                {lunarCards.map((card, index) => (
+                                {currentTeam.lunarCards.map((card, index) => (
                                     <div key={`lunar-${index}`} className={styles.cardWrapperSlot}>
                                         {renderCardSlot(card, 'lunar', index)}
                                     </div>

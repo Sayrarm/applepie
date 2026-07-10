@@ -7,6 +7,65 @@
 
 .captureRef {
     display: flex;
+    flex-direction: column;
+}
+
+.teamControls {
+    display: flex;
+    gap: 3px;
+}
+
+.deleteTab,
+.teamNameButton,
+.addTeamButton {
+    font-size: 16px;
+    color: var(--colorTextDark);
+}
+
+.teamNameButton,
+.addTeamButton {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px 10px 10px;
+    background-color: var(--bg-glass-dark) !important;
+    border-radius: 5px 5px 0 0;
+    transition: color 0.3s;
+}
+
+.tabWrapper {
+    position: relative;
+}
+
+.deleteTab {
+    position: absolute;
+    top: 0;
+    right: 5%;
+}
+
+.teamNameButton:hover,
+.addTeamButton:hover {
+    color: var(--a);
+}
+
+.activeTab {
+    color: var(--a);
+}
+
+.nameInputModal {
+    height: 30px;
+    padding: 5px;
+    font-family: TikTok Sans, monospace;
+}
+
+.renameModal {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.renameButtons {
+    display: flex;
+    gap: 3px;
 }
 
 .container {
@@ -17,7 +76,7 @@
     flex-direction: column;
     align-items: center;
     gap: 5px;
-    background-color: var(--bg-glass);
+    background-color: var(--bg-glass-dark);
     box-shadow: var(--box-shadow);
 
     width: 1205px;      /* фиксированная ширина десктопной версии */
@@ -37,11 +96,16 @@
 .cardItem,
 .emptyLabel,
 .screenshotButton,
-.clearButton {
+.clearButton,
+.teamNameButton,
+.renameButton,
+.deleteTab,
+.addTeamButton {
     text-decoration: none;
     border: none;
     background: none;
     cursor: pointer;
+    font-family: TikTok Sans, monospace;
 }
 
 .companionSection {
