@@ -1,8 +1,8 @@
 export const bannersDataFull = [
   {
     "id": 1,
-    "name": "Xspace Echo",
-    "image": "../assets/banners/xspace-exho.png",
+    "name": "Xspace Echo (Standart Banner)",
+    "image": "../assets/banners/xspace-echo.png",
     "cardIds": [32, 31, 98, 99, 195, 196, 289, 290, 385, 386, 46, 45, 44, 169, 170, 171, 263, 264, 267, 358, 359, 361, 79, 80, 82],
     "startDate": "2024-01-18T05:00:00",
     "endDate": "permanently",
