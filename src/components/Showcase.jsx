@@ -216,7 +216,7 @@ function Showcase() {
 
             const dataUrl = await toPng(element, {
                 quality: 1,
-                pixelRatio: 2,
+                pixelRatio: 3,
                 backgroundColor: 'var(--bg-primary)',
                 cacheBust: true,
                 width: element.scrollWidth,

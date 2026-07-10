@@ -353,7 +353,54 @@
 @media screen and (max-width: 768px) {
 
     .wrapper {
+        height: 700px;
+    }
+
+    .captureRef {
+        height: 0.5%;
+    }
+
+    .container {
+        /* Уменьшаем контейнер до размеров экрана */
+        transform: scale(0.5);   /* 32% от оригинального размера */
+        transform-origin: top left;
+        width: 1210px;            /* оригинальная ширина (десктопная) */
+        margin: 0 auto;
+    }
+
+    .cardSlot {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 5px;
+    }
+
+
+    .teamNameButton,
+    .addTeamButton {
+        font-size: 14px;
+        padding: 5px 15px 5px 5px;
+    }
+
+}
+
+@media screen and (max-width: 767px) and (min-width: 615px) {
+    .container {
+        /* Уменьшаем контейнер до размеров экрана */
+        transform: scale(0.6);   /* 32% от оригинального размера */
+        transform-origin: top left;
+        width: 1210px;            /* оригинальная ширина (десктопная) */
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 510px) {
+
+    .wrapper {
         height: 500px;
+    }
+
+    .captureRef {
+        height: 0.3%;
     }
 
     .container {
