@@ -73,11 +73,11 @@ function Header() {
         <header className={isHidden ? styles.headerHidden : ''}>
             <nav className={styles.nav}>
                 <div className={styles.link}>
-                    <Link className={styles.a} to="/">Home</Link>
+                    <Link className={styles.a} to="/">Main</Link>
+                    <Link className={styles.a} to="/banners-history">Banners</Link>
+                    <Link className={styles.a} to="/lore">Lore</Link>
                     <Link className={styles.a} to="/memories">Memories</Link>
                     <Link className={styles.a} to="/battle">Battle</Link>
-                    <Link className={styles.a} to="/lore">Lore</Link>
-                    <Link className={styles.a} to="/banners-history">Banners</Link>
                     <Link className={styles.a} to="/calculator">Calculator</Link>
                 </div>
 
@@ -101,19 +101,19 @@ function Header() {
                 <div className={`${styles.modalNav} ${isMenuOpen ? styles.active : ''}`}>
                     <div className={styles.border}></div>
                     <Link className={styles.a} to="/" onClick={closeMenu}>
-                        Home
+                        Main
+                    </Link>
+                    <Link className={styles.a} to="/banners-history" onClick={closeMenu}>
+                        Banners
+                    </Link>
+                    <Link className={styles.a} to="/lore" onClick={closeMenu}>
+                        Lore
                     </Link>
                     <Link className={styles.a} to="/memories" onClick={closeMenu}>
                         Memories
                     </Link>
                     <Link className={styles.a} to="/battle" onClick={closeMenu}>
                         Battle
-                    </Link>
-                    <Link className={styles.a} to="/lore" onClick={closeMenu}>
-                        Lore
-                    </Link>
-                    <Link className={styles.a} to="/banners-history" onClick={closeMenu}>
-                        Banners
                     </Link>
                     <Link className={styles.a} to="/calculator" onClick={closeMenu}>
                         Calculator
