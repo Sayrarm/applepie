@@ -123,7 +123,7 @@ function FlexibleTimer({
 
     // Проверка на ошибку в датах
     if (isNaN(new Date(currentStart).getTime()) || isNaN(new Date(currentEnd).getTime())) {
-        return <div className={styles.error}>Invalid date format</div>;
+        return <div className={styles.error}>permanently</div>;
     }
 
     return (

@@ -5,8 +5,7 @@ import {Fragment, useState} from "react";
 import {getImageUrl} from "../components/imageUtils.js";
 import CopyableText from "../components/CopyableText.jsx";
 import ParametersBlock from "../components/ParametersBlock.jsx";
-import BannerPeriod from "../components/BannerPeriod.jsx";
-import {bannersDataFull} from '../data/banners-data-full.js';
+
 import ObtainInfo from "../components/ObtainInfo.jsx";
 import {obtainData} from '../data/obtain-data.js';
 import {compData} from "../data/comp-data.js";
@@ -24,8 +23,7 @@ function CardArticle() {
     // Находим карточку напрямую в данных (для отображения)
     const card = memoriesData.find(c => String(c.id) === cardId);
 
-    // Находим ВСЕ баннеры, где есть эта карточка
-    const banners = bannersDataFull.filter(b => b.cardIds.includes(Number(cardId)));
+
 
     // Находим компаньона для текущей карточки
     const companion = compData.find(item =>
@@ -83,7 +81,7 @@ function CardArticle() {
                         solarPairData={solar4Stars}
                     />
 
-                    <BannerPeriod banners={banners}/>
+
 
                     <LevelCardBlock
                         cardId={cardId}

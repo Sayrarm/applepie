@@ -2,6 +2,9 @@ import styles from './ObtainInfo.module.css';
 import {useRef, useState} from "react";
 import ModalWindow from "./ModalWindow.jsx";
 import {getImageUrl} from "./imageUtils.js";
+import BannerPeriod from "./BannerPeriod.jsx";
+import {bannersDataFull} from "../data/banners-data-full.js";
+import BannerList from "./BannerList.jsx";
 
 function ObtainInfo({cardId, obtainData}) {
     const obtainModalRef = useRef();
@@ -11,6 +14,12 @@ function ObtainInfo({cardId, obtainData}) {
         setSelectedObtain(obtainItem);
         obtainModalRef.current.showModal();
     };
+
+    // Находим ВСЕ баннеры, где есть эта карточка
+    const banners = bannersDataFull.filter(b => b.cardIds.includes(Number(cardId)));
+
+    // Список способов получения, для которых показываем баннеры
+    const BANNER_OBTAIN_TYPES = ['Xspace Echo', 'Limited Banner'];
 
     if (!obtainData || !cardId) {
         return null;
@@ -45,15 +54,25 @@ function ObtainInfo({cardId, obtainData}) {
             </div>
 
             <ModalWindow
+                width={600}
                 ref={obtainModalRef}
                 title={`How to get: ${selectedObtain?.obtain || ''}`}
                 tag={
-                    <>
+                    <div className={styles.modalInfo}>
                         <div className={styles.modalInfo}>
                             {selectedObtain?.description}
+                            <img src={getImageUrl(selectedObtain?.image)} alt={selectedObtain?.obtain} width={'50%'} height={'50%'} />
                         </div>
-                        <img src={getImageUrl(selectedObtain?.image)} alt={selectedObtain?.obtain} width={'50%'} height={'50%'} />
-                    </>
+
+                        {/* Показываем баннеры только для Xspace Echo и Limited Banner */}
+                        {selectedObtain && BANNER_OBTAIN_TYPES.includes(selectedObtain.obtain) && banners.length > 0 && (
+                            <>
+                                <BannerPeriod banners={banners}/>
+                                <BannerList banners={banners}/>
+                            </>
+                        )}
+
+                    </div>
                 }
             />
         </div>
