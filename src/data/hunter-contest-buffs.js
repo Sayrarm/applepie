@@ -85,6 +85,28 @@ export const hunterContestBuffs = [
     "teamCStella2Count": 1,
     "teamC": "Advancement: Increases CRIT DMG of all allied units.",
 
+    "active": false
+  },
+  {
+    "id": 5,
+    "teamAStella1": "../assets/icons/emerald.png",
+    "teamAStella1Count": 5,
+    "teamAStella2": "../assets/icons/pearl.png",
+    "teamAStella2Count": 1,
+    "teamA": "Life Stimulation: When restoring HP, you gain a stack of Life Stimulation, increasing allied units' DMG by 5% for 8s, up to 6 stack(s). Lose 1 stack when the duration ends.",
+
+    "teamBStella1": "../assets/icons/amber.png",
+    "teamBStella1Count": 4,
+    "teamBStella2": "../assets/icons/pearl.png",
+    "teamBStella2Count": 1,
+    "teamB": "Stress Anchorage: Increases Active Skill DMG by 60%. Within 3s after using an Active Skill, your next Charged Attack DMG increases by 120%.",
+
+    "teamCStella1": "../assets/icons/ruby.png",
+    "teamCStella1Count": 3,
+    "teamCStella2": "../assets/icons/sapphire.png",
+    "teamCStella2Count": 1,
+    "teamC": "Empowerment: Increases ATK of all allied units.",
+
     "active": true
   },
 
