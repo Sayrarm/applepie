@@ -2,6 +2,7 @@ import {useEffect, useState} from 'react';
 import styles from './FarmGoalTracker.module.css';
 import {creditDungeonData, crystalDungeonData, DUNGEON_COST, expDungeonData} from '../data/memory-up-data';
 import {CREDIT_DUNGEON_COST, DUNGEON_COST_PROTOCORE, dungeonData} from '../data/protocore-data';
+import {Link} from "react-router-dom";
 
 // Константы
 const DAILY_STAMINA = 390; // суточное топливо
@@ -267,8 +268,12 @@ function FarmGoalTracker() {
             <div className={styles.container}>
                 <div className={styles.noGoals}>
                     <p>No active goals</p>
-                    <p>Go to Protocore Calculator or Memory Up Calculator, calculate resources, and click "Add to Farm
+                    <p>Go to Protocore Calculator or Memory Upgrade Calculator, calculate resources, and click "Add to Farm
                         Goal Tracker".</p>
+                    <p className={styles.linkContainer}>
+                        <Link className={styles.link} to="calculator/protocore-calculator">Protocore Calculator</Link>
+                        <Link className={styles.link} to="calculator/memory-calculator">Memory Upgrade Calculator</Link>
+                    </p>
                 </div>
             </div>
         );

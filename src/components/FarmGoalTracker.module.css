@@ -20,6 +20,23 @@
     color: var(--colorTextDark);
 }
 
+.linkContainer {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.link {
+    text-decoration: none;
+    color: var(--a);
+    transition: color 0.3s;
+    font-size: 14px;
+}
+
+.link:hover {
+    color: var(--a-hover);
+}
+
 .noGoals p:first-child {
     font-size: 20px;
     margin-bottom: 8px;
