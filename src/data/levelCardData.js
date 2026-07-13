@@ -649,7 +649,7 @@ export const memoryStats = {
         type: 'atk',
         rarity: '3-star',
         baseStats: {
-            1: {hp: 1008, atk: 50, def: 27, critRate: 1.0, critDmg: 2.1},
+            1: {hp: 1008, atk: 55, def: 25, critRate: 1.0, critDmg: 2.1},
             2: {hp: 1058, atk: 58, def: 26, critRate: 1.0, critDmg: 2.1},
             3: {hp: 1108, atk: 60, def: 27, critRate: 1.0, critDmg: 2.1},
             4: {hp: 1159, atk: 63, def: 28, critRate: 1.0, critDmg: 2.1},

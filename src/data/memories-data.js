@@ -119,13 +119,13 @@ export const memoriesData = [
     "imageSmall": "../assets/pictures/card-middle/Caleb_19.png",
     "stellaName": "ruby",
     "placementName": "solar",
-    "talentName": "atk",
+    "talentName": "hp",
     "rarityName": "3-star",
     "rarity": "../assets/icons/3-star.png",
     "rarityStars": 3,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/hp.png"
   },
   {
     "id": 18,
