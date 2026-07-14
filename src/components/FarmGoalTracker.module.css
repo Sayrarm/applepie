@@ -194,6 +194,7 @@
     padding: 10px;
     background: var(--forSelect);
     box-shadow: var(--box-shadow);
+    color: var(--colorText);
 }
 
 .farmingItem {

@@ -238,7 +238,7 @@ function FarmGoalTracker() {
             const rarityMap = {'3-star': '3★', '4-star': '4★', '5-star': '5★'};
             return `${rarityMap[goal.rarity]} Memory: Lvl ${goal.currentLevel} → ${goal.targetLevel}`;
         } else if (goal.type === 'protocore') {
-            const typeMap = {alpha: 'α', beta: 'β', gamma: 'γ', delta: 'δ'};
+            const typeMap = {alpha: 'Alpha (α)', beta: 'Beta (β)', gamma: 'Gamma (γ)', delta: 'Delta (δ)'};
             return `${typeMap[goal.protocoreType]} Protocore (${goal.mainStat}): Lvl ${goal.currentLevel} → ${goal.targetLevel}`;
         }
         return 'Unknown goal';
