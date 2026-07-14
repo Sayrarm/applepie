@@ -217,9 +217,21 @@
 @media screen and (max-width: 1020px) {
 
     .container {
+        padding: 5px;
+    }
+
+    .goalCard {
         width: 100%;
         padding: 10px;
         margin: 5px;
+    }
+
+    .farmingCard {
+        padding: 5px;
+    }
+
+    .goalActions {
+        flex-direction: column;
     }
 
 }
