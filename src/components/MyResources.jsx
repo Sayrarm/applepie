@@ -245,14 +245,14 @@ function MyResources() {
                                 {/* Карточка обмена на Bottles */}
                                 {hasBottles && (
 
-                                    <div className={styles.exchangeValue}>
+                                    <div className={styles.exchangeGridBottles}>
                                         {exchange.bottles.R > 0 &&
                                             (
                                                 <div className={styles.exchangeCard}>
                                                     <div className={styles.exchangeItem}>Bottle of Wishes</div>
                                                     <img src={getImageUrl(bottles[1].img)} alt="Bottle R"
                                                          className={styles.itemIconGray}/>
-                                                    <div>R: {exchange.bottles.R}</div>
+                                                    <div className={styles.exchangeValue}>R: {exchange.bottles.R}</div>
                                                 </div>
                                             )
                                         }
@@ -262,7 +262,7 @@ function MyResources() {
                                                     <div className={styles.exchangeItem}>Bottle of Wishes</div>
                                                     <img src={getImageUrl(bottles[2].img)} alt="Bottle SR"
                                                          className={styles.itemIconGray}/>
-                                                    <div>SR: {exchange.bottles.SR}</div>
+                                                    <div className={styles.exchangeValue}>SR: {exchange.bottles.SR}</div>
                                                 </div>
                                             )
                                         }
@@ -272,7 +272,7 @@ function MyResources() {
                                                     <div className={styles.exchangeItem}>Bottle of Wishes</div>
                                                     <img src={getImageUrl(bottles[3].img)} alt="Bottle SSR"
                                                          className={styles.itemIconGray}/>
-                                                    <div>SR: {exchange.bottles.SSR}</div>
+                                                    <div className={styles.exchangeValue}>SR: {exchange.bottles.SSR}</div>
                                                 </div>
                                             )
                                         }
@@ -398,22 +398,22 @@ function MyResources() {
                                         <div className={styles.exchangeCard}>
                                             <img src={getImageUrl("../assets/icons/gray-n.png")} alt="Crystal N"
                                                  className={styles.itemIconGray}/>
-                                            <span className={styles.exchangeItem}>Crystal: N</span>
-                                            <span className={styles.exchangeValue}>{exchange.toN}</span>
+                                            <span className={styles.exchangeItem}>Crystal</span>
+                                            <span className={styles.exchangeValue}>N: {exchange.toN}</span>
                                         </div>
                                         or
                                         <div className={styles.exchangeCard}>
                                             <img src={getImageUrl("../assets/icons/gray-r.png")} alt="Crystal R"
                                                  className={styles.itemIconGray}/>
-                                            <span className={styles.exchangeItem}>Crystal: R</span>
-                                            <span className={styles.exchangeValue}>{exchange.toR}</span>
+                                            <span className={styles.exchangeItem}>Crystal</span>
+                                            <span className={styles.exchangeValue}>R: {exchange.toR}</span>
                                         </div>
                                         or
                                         <div className={styles.exchangeCard}>
                                             <img src={getImageUrl("../assets/icons/gray-sr.png")} alt="Crystal SR"
                                                  className={styles.itemIconGray}/>
-                                            <span className={styles.exchangeItem}>Crystal: SR</span>
-                                            <span className={styles.exchangeValue}>{exchange.toSR}</span>
+                                            <span className={styles.exchangeItem}>Crystal</span>
+                                            <span className={styles.exchangeValue}>SR: {exchange.toSR}</span>
                                         </div>
                                     </div>
                                 );
@@ -424,36 +424,6 @@ function MyResources() {
                         </div>
                     </div>
                 )}
-            </div>
-
-            {/* Awakening Hearts */}
-            <div className={styles.section}>
-                <h2>Awakening Hearts</h2>
-                <div className={styles.itemsGrid}>
-                    {hearts.map(item => (
-                        <div key={item.id} className={styles.itemRow}>
-                            <div className={styles.itemDiv}>
-                                <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon}/>
-                                <label htmlFor={`input-${item.id}`} className={styles.itemName}>{item.name}</label>
-                            </div>
-
-                            <input
-                                id={`input-${item.id}`}
-                                name="item"
-                                type="number"
-                                min="0"
-                                value={heartsState[item.id] || ""}
-                                onChange={(e) => updateCount(heartsState, setHeartsState, item.id, e.target.value)}
-                                className={styles.itemInput}
-                                onFocus={(e) => {
-                                    if (e.target.value === '0') {
-                                        e.target.value = '';
-                                    }
-                                }}
-                            />
-                        </div>
-                    ))}
-                </div>
             </div>
 
             {/* Core Energy */}
@@ -491,6 +461,36 @@ function MyResources() {
 
                             </div>
 
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Awakening Hearts */}
+            <div className={styles.section}>
+                <h2>Awakening Hearts</h2>
+                <div className={styles.itemsGrid}>
+                    {hearts.map(item => (
+                        <div key={item.id} className={styles.itemRow}>
+                            <div className={styles.itemDiv}>
+                                <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon}/>
+                                <label htmlFor={`input-${item.id}`} className={styles.itemName}>{item.name}</label>
+                            </div>
+
+                            <input
+                                id={`input-${item.id}`}
+                                name="item"
+                                type="number"
+                                min="0"
+                                value={heartsState[item.id] || ""}
+                                onChange={(e) => updateCount(heartsState, setHeartsState, item.id, e.target.value)}
+                                className={styles.itemInput}
+                                onFocus={(e) => {
+                                    if (e.target.value === '0') {
+                                        e.target.value = '';
+                                    }
+                                }}
+                            />
                         </div>
                     ))}
                 </div>

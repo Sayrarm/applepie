@@ -181,9 +181,12 @@
     box-shadow: var(--box-shadow);
 }
 
-.exchangeValue {
+.exchangeGridBottles {
     display: flex;
     gap: 5px;
+}
+
+.exchangeValue {
     font-size: 16px;
     font-weight: 500;
     color: var(--colorTextBright);

@@ -34,7 +34,7 @@ export const crystalTypes = [
 export const crystalBox = [
     {id: 'box_n', name: "Ascension Crystal Box: N", value: 1, img: "../assets/icons/crystal-box-n.png"},
     {id: 'box_r', name: "Ascension Crystal Box: R", value: 1, img: "../assets/icons/crystal-box-r.png"},
-    {id: 'box_sr', name: "Ascension Crystal : SR", value: 1, img: "../assets/icons/crystal-box-sr.png"},
+    {id: 'box_sr', name: "Ascension Crystal: SR", value: 1, img: "../assets/icons/crystal-box-sr.png"},
     {id: 'box_general', name: "Ascension Crystal Box: General", value: 1, img: "../assets/icons/crystal-box-general.png"}
 ];
 
