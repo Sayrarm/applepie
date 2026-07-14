@@ -30,6 +30,39 @@ export const crystalTypes = [
     {id: 'crystal_sr', name: "Crystal: SR", value: 1, img: "../assets/icons/gray-sr.png"}
 ];
 
+export const crystalIcons = {
+    'Violet': {
+        'crystal_n': '../assets/icons/violet-n.png',
+        'crystal_r': '../assets/icons/violet-r.png',
+        'crystal_sr': '../assets/icons/violet-sr.png'
+    },
+    'Amber': {
+        'crystal_n': '../assets/icons/amber-n.png',
+        'crystal_r': '../assets/icons/amber-r.png',
+        'crystal_sr': '../assets/icons/amber-sr.png'
+    },
+    'Ruby': {
+        'crystal_n': '../assets/icons/ruby-n.png',
+        'crystal_r': '../assets/icons/ruby-r.png',
+        'crystal_sr': '../assets/icons/ruby-sr.png'
+    },
+    'Emerald': {
+        'crystal_n': '../assets/icons/emerald-n.png',
+        'crystal_r': '../assets/icons/emerald-r.png',
+        'crystal_sr': '../assets/icons/emerald-sr.png'
+    },
+    'Pearl': {
+        'crystal_n': '../assets/icons/pearl-n.png',
+        'crystal_r': '../assets/icons/pearl-r.png',
+        'crystal_sr': '../assets/icons/pearl-sr.png'
+    },
+    'Sapphire': {
+        'crystal_n': '../assets/icons/sapphire-n.png',
+        'crystal_r': '../assets/icons/sapphire-r.png',
+        'crystal_sr': '../assets/icons/sapphire-sr.png'
+    }
+};
+
 //Ascension Crystal Box
 export const crystalBox = [
     {id: 'box_n', name: "Ascension Crystal Box: N", value: 1, img: "../assets/icons/crystal-box-n.png"},

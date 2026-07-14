@@ -5,6 +5,7 @@ import {
     heartSand,
     crystalColors,
     crystalTypes,
+    crystalIcons,
     crystalBox,
     hearts,
     coreEnergy,
@@ -139,6 +140,14 @@ function MyResources() {
                     (Math.floor(heartsandSSR / 2) * 50000)
             }
         };
+    };
+
+    // Функция для получения иконки кристалла по цвету и типу
+    const getCrystalIcon = (color, typeId) => {
+        if (!color || !typeId) return null;
+        const colorIcons = crystalIcons[color];
+        if (!colorIcons) return null;
+        return colorIcons[typeId] || null;
     };
 
     // Расчёт обмена Ascension Crystal Box General
@@ -315,40 +324,52 @@ function MyResources() {
                                 className={`${styles.colorButton} ${selectedCrystalColor === color.id ? styles.active : ''}`}
                                 onClick={() => setSelectedCrystalColor(color.id)}
                             >
-                                <img src={getImageUrl(color.img)} alt={color.name} className={styles.colorIcon}/>
+                                <img src={getImageUrl(color.img)} alt={color.name} className={styles.colorIcon} />
                                 {color.name}
                             </button>
                         ))}
                     </div>
                 </div>
                 <div className={styles.itemsGrid}>
-                    {crystalTypes.map(item => (
-                        <div key={item.id} className={styles.itemRow}>
-                            <div className={styles.itemDiv}>
-                                <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon}/>
-                                <label htmlFor={`input-${item.id}`} className={styles.itemName}>{item.name}</label>
+                    {crystalTypes.map(item => {
+                        // Получаем иконку для выбранного цвета и текущего типа
+                        const iconPath = getCrystalIcon(selectedCrystalColor, item.id);
+                        return (
+                            <div key={item.id} className={styles.itemRow}>
+                                <div className={styles.itemDiv}>
+                                    {iconPath && (
+                                        <img
+                                            src={getImageUrl(iconPath)}
+                                            alt={`${selectedCrystalColor} ${item.name}`}
+                                            className={styles.itemIcon}
+                                        />
+                                    )}
+                                    <label htmlFor={`input-${item.id}`} className={styles.itemName}>
+                                        {selectedCrystalColor} {item.name}
+                                    </label>
+                                </div>
+                                <input
+                                    id={`input-${item.id}`}
+                                    name="item"
+                                    type="number"
+                                    min="0"
+                                    value={crystalsState[`${selectedCrystalColor}_${item.id}`] || ""}
+                                    onChange={(e) => updateCount(
+                                        crystalsState,
+                                        setCrystalsState,
+                                        `${selectedCrystalColor}_${item.id}`,
+                                        e.target.value
+                                    )}
+                                    className={styles.itemInput}
+                                    onFocus={(e) => {
+                                        if (e.target.value === '0') {
+                                            e.target.value = '';
+                                        }
+                                    }}
+                                />
                             </div>
-                            <input
-                                id={`input-${item.id}`}
-                                name="item"
-                                type="number"
-                                min="0"
-                                value={crystalsState[`${selectedCrystalColor}_${item.id}`] || ""}
-                                onChange={(e) => updateCount(
-                                    crystalsState,
-                                    setCrystalsState,
-                                    `${selectedCrystalColor}_${item.id}`,
-                                    e.target.value
-                                )}
-                                className={styles.itemInput}
-                                onFocus={(e) => {
-                                    if (e.target.value === '0') {
-                                        e.target.value = '';
-                                    }
-                                }}
-                            />
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
             </div>
 
