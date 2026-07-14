@@ -30,6 +30,15 @@ export const crystalTypes = [
     {id: 'crystal_sr', name: "Crystal: SR", value: 1, img: "../assets/icons/gray-sr.png"}
 ];
 
+//Boss
+export const bossImg = [
+    {id: 'Heartbreaker', img: "../assets/icons/heartbreaker.png"},
+    {id: 'Core_Hunt', img: "../assets/icons/core-hunt.png"},
+    {id: 'Lemonette', img: "../assets/icons/lemonette.png"},
+    {id: 'Snoozer', img: "../assets/icons/snoozer.png"},
+    {id: 'Pumpkin_Magus', img: "../assets/icons/magus.png"},
+];
+
 export const crystalIcons = {
     'Violet': {
         'crystal_n': '../assets/icons/violet-n.png',
