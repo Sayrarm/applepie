@@ -275,7 +275,7 @@ export const getRequiredDungeonRuns = (requiredExp, dungeonLevel) => {
 export const getRequiredStamina = (requiredExp, dungeonLevel) => {
     const runs = getRequiredDungeonRuns(requiredExp, dungeonLevel);
     if (!runs) return null;
-    return runs * DUNGEON_COST;
+    return runs * DUNGEON_COST_PROTOCORE;
 };
 
 // Получить количество проходов данжа для кредитов
