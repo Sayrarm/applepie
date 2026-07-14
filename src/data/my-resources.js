@@ -25,9 +25,9 @@ export const crystalColors = [
 
 //Crystals
 export const crystalTypes = [
-    {id: 'crystal_n', name: "Crystal: N", value: 1},
-    {id: 'crystal_r', name: "Crystal: R", value: 1},
-    {id: 'crystal_sr', name: "Crystal: SR", value: 1}
+    {id: 'crystal_n', name: "Crystal: N", value: 1, img: "../assets/icons/gray-n.png"},
+    {id: 'crystal_r', name: "Crystal: R", value: 1, img: "../assets/icons/gray-r.png"},
+    {id: 'crystal_sr', name: "Crystal: SR", value: 1, img: "../assets/icons/gray-sr.png"}
 ];
 
 //Ascension Crystal Box

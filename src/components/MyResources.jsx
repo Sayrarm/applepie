@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import {useState, useEffect} from 'react';
 import styles from './MyResources.module.css';
 import {
     bottles,
@@ -11,7 +11,7 @@ import {
     credits,
     STORAGE_KEYS
 } from '../data/my-resources';
-import { getImageUrl } from './imageUtils';
+import {getImageUrl} from './imageUtils';
 
 function MyResources() {
     // Состояния для каждого типа ресурсов
@@ -90,7 +90,7 @@ function MyResources() {
 
     // Функции для обновления количества
     const updateCount = (state, setState, id, value) => {
-        setState(prev => ({ ...prev, [id]: Math.max(0, Number(value) || 0) }));
+        setState(prev => ({...prev, [id]: Math.max(0, Number(value) || 0)}));
     };
 
     // Подсчёт общего EXP для Bottles
@@ -127,7 +127,7 @@ function MyResources() {
                 SSR: Math.floor(heartsandSSR / 4) * 5,     // 4 SR → 5 Bottle SSR
                 hasAny: (Math.floor(heartsandR / 10) * 5) > 0 ||
                     (Math.floor(heartsandSR / 5) * 5) > 0 ||
-                    (Math.floor(heartsandSR / 4) * 5) > 0
+                    (Math.floor(heartsandSSR / 4) * 5) > 0
             },
             // Обмен на Credits
             credits: {
@@ -168,7 +168,7 @@ function MyResources() {
                     {bottles.map(item => (
                         <div key={item.id} className={styles.itemRow}>
                             <div className={styles.itemDiv}>
-                                <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon} />
+                                <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon}/>
                                 <label htmlFor={`input-${item.id}`} className={styles.itemName}>
                                     {item.name}
                                 </label>
@@ -203,7 +203,7 @@ function MyResources() {
                     {heartSand.map(item => (
                         <div key={item.id} className={styles.itemRow}>
                             <div className={styles.itemDiv}>
-                                <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon} />
+                                <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon}/>
                                 <label htmlFor={`input-${item.id}`} className={styles.itemName}>{item.name}</label>
                             </div>
 
@@ -244,21 +244,51 @@ function MyResources() {
                             <div className={styles.exchangeGrid}>
                                 {/* Карточка обмена на Bottles */}
                                 {hasBottles && (
-                                    <div className={styles.exchangeCard}>
-                                        <div className={styles.exchangeItem}>Bottle of Wishes</div>
-                                        <div className={styles.exchangeValue}>
-                                            {exchange.bottles.R > 0 && <div>R: {exchange.bottles.R}</div>}
-                                            {exchange.bottles.SR > 0 && <div>SR: {exchange.bottles.SR}</div>}
-                                            {exchange.bottles.SSR > 0 && <div>SSR: {exchange.bottles.SSR}</div>}
-                                        </div>
+
+                                    <div className={styles.exchangeValue}>
+                                        {exchange.bottles.R > 0 &&
+                                            (
+                                                <div className={styles.exchangeCard}>
+                                                    <div className={styles.exchangeItem}>Bottle of Wishes</div>
+                                                    <img src={getImageUrl(bottles[1].img)} alt="Bottle R"
+                                                         className={styles.itemIconGray}/>
+                                                    <div>R: {exchange.bottles.R}</div>
+                                                </div>
+                                            )
+                                        }
+                                        {exchange.bottles.SR > 0 &&
+                                            (
+                                                <div className={styles.exchangeCard}>
+                                                    <div className={styles.exchangeItem}>Bottle of Wishes</div>
+                                                    <img src={getImageUrl(bottles[2].img)} alt="Bottle SR"
+                                                         className={styles.itemIconGray}/>
+                                                    <div>SR: {exchange.bottles.SR}</div>
+                                                </div>
+                                            )
+                                        }
+                                        {exchange.bottles.SSR > 0 &&
+                                            (
+                                                <div className={styles.exchangeCard}>
+                                                    <div className={styles.exchangeItem}>Bottle of Wishes</div>
+                                                    <img src={getImageUrl(bottles[3].img)} alt="Bottle SSR"
+                                                         className={styles.itemIconGray}/>
+                                                    <div>SR: {exchange.bottles.SSR}</div>
+                                                </div>
+                                            )
+                                        }
                                     </div>
+
                                 )}
+
+                                or
 
                                 {/* Карточка обмена на Credits */}
                                 {hasCredits && (
-                                    <div className={styles.exchangeCard}>
-                                        <div className={styles.exchangeItem}>Credits</div>
-                                        <div className={styles.exchangeValue}>
+                                    <div className={styles.exchangeValue}>
+                                        <div className={styles.exchangeCard}>
+                                            <div className={styles.exchangeItem}>Credits</div>
+                                            <img src={getImageUrl(credits[0].img)} alt="Credits"
+                                                 className={styles.itemIconGray}/>
                                             {exchange.credits.total.toLocaleString()}
                                         </div>
                                     </div>
@@ -266,7 +296,7 @@ function MyResources() {
                             </div>
                             <div className={styles.exchangeNote}>
                                 * Exchange rates: 10 MH R → 5 Bottle R | 5 MH SR → 5 Bottle SR | 4 MH SSR → 5 Bottle SSR
-                                <br />
+                                <br/>
                                 100 MH R → 50,000 Credits | 10 MH SR → 50,000 Credits | 2 MH SSR → 50,000 Credits
                             </div>
                         </div>
@@ -285,7 +315,7 @@ function MyResources() {
                                 className={`${styles.colorButton} ${selectedCrystalColor === color.id ? styles.active : ''}`}
                                 onClick={() => setSelectedCrystalColor(color.id)}
                             >
-                                <img src={getImageUrl(color.img)} alt={color.name} className={styles.colorIcon} />
+                                <img src={getImageUrl(color.img)} alt={color.name} className={styles.colorIcon}/>
                                 {color.name}
                             </button>
                         ))}
@@ -294,7 +324,10 @@ function MyResources() {
                 <div className={styles.itemsGrid}>
                     {crystalTypes.map(item => (
                         <div key={item.id} className={styles.itemRow}>
-                            <label htmlFor={`input-${item.id}`} className={styles.itemName}>{item.name}</label>
+                            <div className={styles.itemDiv}>
+                                <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon}/>
+                                <label htmlFor={`input-${item.id}`} className={styles.itemName}>{item.name}</label>
+                            </div>
                             <input
                                 id={`input-${item.id}`}
                                 name="item"
@@ -326,7 +359,7 @@ function MyResources() {
                     {crystalBox.map(item => (
                         <div key={item.id} className={styles.itemRow}>
                             <div className={styles.itemDiv}>
-                                <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon} />
+                                <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon}/>
                                 <label htmlFor={`input-${item.id}`} className={styles.itemName}>{item.name}</label>
                             </div>
 
@@ -363,16 +396,24 @@ function MyResources() {
                                 return (
                                     <div className={styles.exchangeGrid}>
                                         <div className={styles.exchangeCard}>
+                                            <img src={getImageUrl("../assets/icons/gray-n.png")} alt="Crystal N"
+                                                 className={styles.itemIconGray}/>
+                                            <span className={styles.exchangeItem}>Crystal: N</span>
                                             <span className={styles.exchangeValue}>{exchange.toN}</span>
-                                            <span className={styles.exchangeItem}>Ascension Crystal Box: N</span>
                                         </div>
+                                        or
                                         <div className={styles.exchangeCard}>
+                                            <img src={getImageUrl("../assets/icons/gray-r.png")} alt="Crystal R"
+                                                 className={styles.itemIconGray}/>
+                                            <span className={styles.exchangeItem}>Crystal: R</span>
                                             <span className={styles.exchangeValue}>{exchange.toR}</span>
-                                            <span className={styles.exchangeItem}>Ascension Crystal Box: R</span>
                                         </div>
+                                        or
                                         <div className={styles.exchangeCard}>
+                                            <img src={getImageUrl("../assets/icons/gray-sr.png")} alt="Crystal SR"
+                                                 className={styles.itemIconGray}/>
+                                            <span className={styles.exchangeItem}>Crystal: SR</span>
                                             <span className={styles.exchangeValue}>{exchange.toSR}</span>
-                                            <span className={styles.exchangeItem}>Ascension Crystal Box: SR</span>
                                         </div>
                                     </div>
                                 );
@@ -392,7 +433,7 @@ function MyResources() {
                     {hearts.map(item => (
                         <div key={item.id} className={styles.itemRow}>
                             <div className={styles.itemDiv}>
-                                <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon} />
+                                <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon}/>
                                 <label htmlFor={`input-${item.id}`} className={styles.itemName}>{item.name}</label>
                             </div>
 
@@ -427,7 +468,7 @@ function MyResources() {
                     {coreEnergy.map(item => (
                         <div key={item.id} className={styles.itemRow}>
                             <div className={styles.itemDiv}>
-                                <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon} />
+                                <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon}/>
                                 <label htmlFor={`input-${item.id}`} className={styles.itemName}>{item.name}</label>
                             </div>
 
@@ -462,7 +503,7 @@ function MyResources() {
                     {credits.map(item => (
                         <div key={item.id} className={styles.itemRow}>
                             <div className={styles.itemDiv}>
-                                <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon} />
+                                <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon}/>
                                 <label htmlFor={`input-${item.id}`} className={styles.itemName}>{item.name}</label>
                             </div>
 

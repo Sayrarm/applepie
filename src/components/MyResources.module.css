@@ -73,6 +73,12 @@
     object-fit: contain;
 }
 
+.itemIconGray {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
 .itemName {
     font-size: 14px;
     color: var(--colorTextDark);
@@ -158,6 +164,7 @@
 .exchangeGrid {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 10px;
     margin: 10px;
     flex-wrap: wrap;
@@ -175,6 +182,8 @@
 }
 
 .exchangeValue {
+    display: flex;
+    gap: 5px;
     font-size: 16px;
     font-weight: 500;
     color: var(--colorTextBright);
@@ -222,6 +231,10 @@
     .exchangeValue {
         display: flex;
         gap: 10px;
+    }
+
+    .exchangeGrid {
+        flex-direction: column;
     }
 
     .container {
