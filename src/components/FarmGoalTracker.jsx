@@ -2,6 +2,8 @@ import {useEffect, useState} from 'react';
 import styles from './FarmGoalTracker.module.css';
 import {creditDungeonData, crystalDungeonData, DUNGEON_COST, expDungeonData} from '../data/memory-up-data';
 import {CREDIT_DUNGEON_COST, DUNGEON_COST_PROTOCORE, dungeonData} from '../data/protocore-data';
+import {crystalColors} from '../data/my-resources'; // <-- импорт crystalColors
+import {getImageUrl} from './imageUtils';
 import {Link} from "react-router-dom";
 
 // Константы
@@ -102,6 +104,12 @@ function FarmGoalTracker() {
         // crystalType: 'crystal_n', 'crystal_r', 'crystal_sr'
         const key = `${crystalColor}_${crystalType}`;
         return userResources.crystals[key] || 0;
+    };
+
+    // Функция для получения иконки цвета кристалла
+    const getCrystalColorIcon = (colorName) => {
+        const color = crystalColors.find(c => c.id === colorName);
+        return color ? color.img : null;
     };
 
     // Расчёт фарма для EXP (Memory)
@@ -357,7 +365,12 @@ function FarmGoalTracker() {
                                     <div className={styles.resourcesList}>
                                         <div>{getExpLabel(goal)} {goal.neededExp.toLocaleString()}</div>
                                         {goal.type === 'memory' && (goal.neededCrystalsN > 0 || goal.neededCrystalsR > 0 || goal.neededCrystalsSR > 0) && (
-                                            <div>
+                                            <div className={styles.crystalRow}>
+                                                <img
+                                                    src={getImageUrl(getCrystalColorIcon(goal.crystalColor))}
+                                                    alt={goal.crystalColor}
+                                                    className={styles.crystalColorIcon}
+                                                />
                                                 {goal.crystalColor} Crystals:
                                                 {goal.neededCrystalsN > 0 && ` N: ${goal.neededCrystalsN}`}
                                                 {goal.neededCrystalsR > 0 && ` | R: ${goal.neededCrystalsR}`}
@@ -376,7 +389,12 @@ function FarmGoalTracker() {
                                             {getExpLabel(goal)} {remaining.exp.toLocaleString()}
                                         </div>
                                         {remaining.crystals && (remaining.crystals.N > 0 || remaining.crystals.R > 0 || remaining.crystals.SR > 0) && (
-                                            <div className={crystalsCompleted ? styles.completed : styles.notCompleted}>
+                                            <div className={`${crystalsCompleted ? styles.completed : styles.notCompleted} ${styles.crystalRow}`}>
+                                                <img
+                                                    src={getImageUrl(getCrystalColorIcon(goal.crystalColor))}
+                                                    alt={goal.crystalColor}
+                                                    className={styles.crystalColorIcon}
+                                                />
                                                 {goal.crystalColor} Crystals:
                                                 {remaining.crystals.N > 0 && ` N: ${remaining.crystals.N}`}
                                                 {remaining.crystals.R > 0 && ` | R: ${remaining.crystals.R}`}

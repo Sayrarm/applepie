@@ -43,8 +43,6 @@
     color: var(--a);
 }
 
-
-
 .goalHeader {
     display: flex;
     justify-content: space-between;
@@ -127,6 +125,18 @@
     color: #52c41a;
     font-size: 13px;
     text-align: center;
+}
+
+.crystalRow {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.crystalColorIcon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
 }
 
 .farmingSection {
