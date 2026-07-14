@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react';
 import styles from './FarmGoalTracker.module.css';
 import {creditDungeonData, crystalDungeonData, DUNGEON_COST, expDungeonData} from '../data/memory-up-data';
 import {CREDIT_DUNGEON_COST, DUNGEON_COST_PROTOCORE, dungeonData} from '../data/protocore-data';
-import {crystalColors} from '../data/my-resources'; // <-- импорт crystalColors
+import {bottles, crystalColors} from '../data/my-resources'; // <-- импорт crystalColors
 import {getImageUrl} from './imageUtils';
 import {Link} from "react-router-dom";
 
@@ -276,7 +276,8 @@ function FarmGoalTracker() {
             <div className={styles.container}>
                 <div className={styles.noGoals}>
                     <p>No active goals</p>
-                    <p>Go to Protocore Calculator or Memory Upgrade Calculator, calculate resources, and click "Add to Farm
+                    <p>Go to Protocore Calculator or Memory Upgrade Calculator, calculate resources, and click "Add to
+                        Farm
                         Goal Tracker".</p>
                     <p className={styles.linkContainer}>
                         <Link className={styles.link} to="calculator/protocore-calculator">Protocore Calculator</Link>
@@ -389,7 +390,8 @@ function FarmGoalTracker() {
                                             {getExpLabel(goal)} {remaining.exp.toLocaleString()}
                                         </div>
                                         {remaining.crystals && (remaining.crystals.N > 0 || remaining.crystals.R > 0 || remaining.crystals.SR > 0) && (
-                                            <div className={`${crystalsCompleted ? styles.completed : styles.notCompleted} ${styles.crystalRow}`}>
+                                            <div
+                                                className={`${crystalsCompleted ? styles.completed : styles.notCompleted} ${styles.crystalRow}`}>
                                                 <img
                                                     src={getImageUrl(getCrystalColorIcon(goal.crystalColor))}
                                                     alt={goal.crystalColor}
@@ -412,29 +414,45 @@ function FarmGoalTracker() {
                                     <div className={styles.farmingSection}>
                                         <h4>Farming Plan:</h4>
                                         <div className={styles.farmingList}>
-                                            {remaining.exp > 0 && (
-                                                <div className={styles.farmingRow}>
-                                                    <span>🎯 {getExpLabel(goal)} </span>
-                                                    <span>{expFarming.runs} runs (Lvl {expDungeonLvl}) | </span>
-                                                    <span> {expFarming.stamina} stamina</span>
-                                                </div>
-                                            )}
-                                            {remaining.crystals && crystalsFarming && (remaining.crystals.N > 0 || remaining.crystals.R > 0 || remaining.crystals.SR > 0) && (
-                                                <div className={styles.farmingRow}>
-                                                    <span>💎 Crystals:</span>
-                                                    <span>{crystalsFarming.runs} runs (Lvl {crystalDungeonLvl})</span>
-                                                    <span>{crystalsFarming.stamina} stamina</span>
-                                                </div>
-                                            )}
-                                            {remaining.credits > 0 && (
-                                                <div className={styles.farmingRow}>
-                                                    <span>💰 Credits: </span>
-                                                    <span>{creditsFarming.runs} runs (Lvl {creditDungeonLvl}) | </span>
-                                                    <span>{creditsFarming.stamina} stamina</span>
-                                                </div>
-                                            )}
+                                            <div className={styles.farmingDungeons}>
+                                                {remaining.exp > 0 && (
+                                                    <div className={styles.farmingCard}>
+                                                        <div className={styles.farmingItem}>{getExpLabel(goal)}</div>
+                                                        <img src={getImageUrl('../assets/icons/heartbreaker.png')}
+                                                             alt="exp dungeon"
+                                                             className={styles.itemIcon}/>
+                                                        <span className={styles.farmingItem}>{expFarming.runs} runs (Lvl {expDungeonLvl})</span>
+                                                        <span
+                                                            className={styles.farmingValue}> {expFarming.stamina} stamina</span>
+                                                    </div>
+                                                )}
+                                                {remaining.crystals && crystalsFarming && (remaining.crystals.N > 0 || remaining.crystals.R > 0 || remaining.crystals.SR > 0) && (
+                                                    <div className={styles.farmingCard}>
+                                                        <div className={styles.farmingItem}>Crystals:</div>
+                                                        <img src={getImageUrl('../assets/icons/lemonette.png')}
+                                                             alt="crystals dungeon"
+                                                             className={styles.itemIcon}/>
+                                                        <span
+                                                            className={styles.farmingItem}>{crystalsFarming.runs} runs (Lvl {crystalDungeonLvl})</span>
+                                                        <span
+                                                            className={styles.farmingValue}>{crystalsFarming.stamina} stamina</span>
+                                                    </div>
+                                                )}
+                                                {remaining.credits > 0 && (
+                                                    <div className={styles.farmingCard}>
+                                                        <div className={styles.farmingItem}>Credits:</div>
+                                                        <img src={getImageUrl('../assets/icons/beanie.png')}
+                                                             alt="credits dungeon"
+                                                             className={styles.itemIcon}/>
+                                                        <span
+                                                            className={styles.farmingItem}>{creditsFarming.runs} runs (Lvl {creditDungeonLvl})</span>
+                                                        <span
+                                                            className={styles.farmingValue}>{creditsFarming.stamina} stamina</span>
+                                                    </div>
+                                                )}
+                                            </div>
                                             <div className={styles.farmingRow}>
-                                                ⏱️ Estimated: ~{totalDays} day{totalDays !== 1 ? 's' : ''} (based
+                                                ⏱️ Estimated: <strong>~{totalDays} day{totalDays !== 1 ? 's' : ''}</strong> (based
                                                 on {DAILY_STAMINA} stamina/day)
                                             </div>
                                         </div>
