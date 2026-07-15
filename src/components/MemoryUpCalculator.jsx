@@ -17,6 +17,7 @@ import {
 import ModalWindow from "./ModalWindow.jsx";
 import {crystalColors} from "../data/my-resources.js";
 import {getImageUrl} from "./imageUtils.js";
+import {Link} from "react-router-dom";
 
 function MemoryUpCalculator() {
     const [rarity, setRarity] = useState('5-star');
@@ -401,7 +402,16 @@ function MemoryUpCalculator() {
                         🎯 Add to Farm Goal Tracker
                     </button>
 
-                    <ModalWindow ref={modalGoalButton} title={'Alert'} tag={<h2>Goal added to Farm Tracker on Home page!</h2>} />
+                    <ModalWindow
+                        ref={modalGoalButton}
+                        title={'Alert'}
+                        tag={
+                            <>
+                                <h2>Goal added to Farm Tracker on Home page!</h2>
+                                <Link className={styles.link} to='/'>Go to Main Page</Link>
+                            </>
+                        }
+                    />
                 </div>
             )}
         </div>

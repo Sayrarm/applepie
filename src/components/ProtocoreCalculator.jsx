@@ -17,6 +17,7 @@ import {
 import {getImageUrl} from "./imageUtils.js";
 import {creditDungeonData} from "../data/memory-up-data.js";
 import ModalWindow from "./ModalWindow.jsx";
+import {Link} from "react-router-dom";
 
 // Функция для получения первого доступного мейн стата
 const getFirstMainStat = (type) => {
@@ -348,7 +349,10 @@ function ProtocoreCalculator() {
                         ref={modalGoalButton}
                         title={'Alert'}
                         tag={
+                        <>
                             <h2>Goal added to Farm Tracker on Home page!</h2>
+                            <Link className={styles.link} to='/'>Go to Main Page</Link>
+                        </>
                         }
                     />
                 </div>
