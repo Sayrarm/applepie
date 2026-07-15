@@ -2,7 +2,13 @@ import {useEffect, useState} from 'react';
 import styles from './FarmGoalTracker.module.css';
 import {creditDungeonData, crystalDungeonData, DUNGEON_COST, expDungeonData} from '../data/memory-up-data';
 import {CREDIT_DUNGEON_COST, DUNGEON_COST_PROTOCORE, dungeonData} from '../data/protocore-data';
-import {crystalColors, bossImg} from '../data/my-resources';
+import {
+    crystalColors,
+    bossImg,
+    getHeartsandExchange,
+    getCrystalBoxExchange,
+    STORAGE_KEYS
+} from '../data/my-resources';
 import {getImageUrl} from './imageUtils';
 import {Link} from "react-router-dom";
 
@@ -451,6 +457,101 @@ function FarmGoalTracker() {
                                         </div>
                                     </div>
                                 </div>
+
+                                {/* Replaceable Resources */}
+                                {goal.type === 'memory' && (() => {
+                                    const heartsandState = JSON.parse(localStorage.getItem(STORAGE_KEYS.HEARTSAND) || '{}');
+                                    const crystalBoxesState = JSON.parse(localStorage.getItem(STORAGE_KEYS.CRYSTAL_BOXES) || '{}');
+
+                                    const heartsandExchange = getHeartsandExchange(heartsandState);
+                                    const crystalBoxExchange = getCrystalBoxExchange(crystalBoxesState);
+                                    const hasHeartsand = heartsandExchange.bottles.hasAny || heartsandExchange.credits.total > 0;
+                                    const hasCrystalBox = crystalBoxExchange.hasAny;
+
+                                    if (!hasHeartsand && !hasCrystalBox) return null;
+
+                                    return (
+                                        <div className={styles.replaceableSection}>
+                                            <h4>You have replaceable resources:</h4>
+                                            <div className={styles.replaceableGrid}>
+
+                                                {/* Memory Heartsand */}
+                                                {hasHeartsand && (
+                                                    <div className={styles.replaceableCard}>
+                                                        <h4>For Memory Heartsand:</h4>
+                                                        <div className={styles.replaceableItems}>
+                                                            {heartsandExchange.bottles.R > 0 && (
+                                                                <div className={styles.replaceableItem}>
+                                                                    <img src={getImageUrl('../assets/icons/bottle-r.png')} alt="Bottle R" className={styles.smallIcon} />
+                                                                    <span>R: {heartsandExchange.bottles.R}</span>
+                                                                </div>
+                                                            )}
+                                                            {heartsandExchange.bottles.SR > 0 && (
+                                                                <div className={styles.replaceableItem}>
+                                                                    <img src={getImageUrl('../assets/icons/bottle-sr.png')} alt="Bottle SR" className={styles.smallIcon} />
+                                                                    <span>SR: {heartsandExchange.bottles.SR}</span>
+                                                                </div>
+                                                            )}
+                                                            {heartsandExchange.bottles.SSR > 0 && (
+                                                                <div className={styles.replaceableItem}>
+                                                                    <img src={getImageUrl('../assets/icons/bottle-ssr.png')} alt="Bottle SSR" className={styles.smallIcon} />
+                                                                    <span>SSR: {heartsandExchange.bottles.SSR}</span>
+                                                                </div>
+                                                            )}
+                                                            <span className={styles.span}> or </span>
+                                                            {heartsandExchange.credits.total > 0 && (
+                                                                <div className={styles.replaceableItemlast}>
+                                                                    <img src={getImageUrl('../assets/icons/credits.png')} alt="Credits" className={styles.smallIcon} />
+                                                                    <span>Credits: {heartsandExchange.credits.total.toLocaleString()}</span>
+                                                                </div>
+                                                            )}
+                                                        </div>
+                                                    </div>
+                                                )}
+
+                                                {/* Ascension Crystal Box - все типы */}
+                                                {hasCrystalBox && (
+                                                    <div className={styles.replaceableCard}>
+                                                        <h4>For Ascension Crystal Box:</h4>
+                                                        <div className={styles.replaceableItems}>
+                                                            {crystalBoxExchange.box_n > 0 && (
+                                                                <div className={styles.replaceableItem}>
+                                                                    <img src={getImageUrl('../assets/icons/crystal-box-n.png')} alt="Box N" className={styles.smallIcon} />
+                                                                    <span>{crystalBoxExchange.box_n} Crystal N</span>
+                                                                </div>
+                                                            )}
+                                                            {crystalBoxExchange.box_r > 0 && (
+                                                                <div className={styles.replaceableItem}>
+                                                                    <img src={getImageUrl('../assets/icons/crystal-box-r.png')} alt="Box R" className={styles.smallIcon} />
+                                                                    <span>{crystalBoxExchange.box_r} Crystal R</span>
+                                                                </div>
+                                                            )}
+                                                            {crystalBoxExchange.box_sr > 0 && (
+                                                                <div className={styles.replaceableItem}>
+                                                                    <img src={getImageUrl('../assets/icons/crystal-box-sr.png')} alt="Box SR" className={styles.smallIcon} />
+                                                                    <span>{crystalBoxExchange.box_sr} Crystal SR</span>
+                                                                </div>
+                                                            )}
+                                                            {crystalBoxExchange.box_general > 0 && (
+                                                                <>
+                                                                    <div className={styles.replaceableItem}>
+                                                                        <img src={getImageUrl('../assets/icons/crystal-box-general.png')} alt="Box General" className={styles.smallIcon} />
+                                                                        <span>General Box → N: {crystalBoxExchange.box_general_to_n}</span>
+                                                                        <span className={styles.span}> or </span>
+                                                                        <span>R: {crystalBoxExchange.box_general_to_r}</span>
+                                                                        <span className={styles.span}> or </span>
+                                                                        <span>SR: {crystalBoxExchange.box_general_to_sr}</span>
+                                                                    </div>
+                                                                </>
+                                                            )}
+                                                        </div>
+                                                    </div>
+                                                )}
+
+                                            </div>
+                                        </div>
+                                    );
+                                })()}
 
                                 {/* Farming Calculation */}
                                 {(remaining.exp > 0 || remaining.credits > 0 || (remaining.crystals && (remaining.crystals.N > 0 || remaining.crystals.R > 0 || remaining.crystals.SR > 0))) && (

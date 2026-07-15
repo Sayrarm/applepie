@@ -10,7 +10,9 @@ import {
     hearts,
     coreEnergy,
     credits,
-    STORAGE_KEYS
+    STORAGE_KEYS,
+    getHeartsandExchange,
+    getCrystalBoxExchange
 } from '../data/my-resources';
 import {getImageUrl} from './imageUtils';
 
@@ -114,51 +116,12 @@ function MyResources() {
         return total;
     };
 
-    // Расчёт обмена Memory Heartsand
-    const getHeartsandExchange = () => {
-        const heartsandR = heartsandState['heartsand_r'] || 0;
-        const heartsandSR = heartsandState['heartsand_sr'] || 0;
-        const heartsandSSR = heartsandState['heartsand_ssr'] || 0;
-
-        return {
-            // Обмен на Bottles
-            bottles: {
-                R: Math.floor(heartsandR / 10) * 5,      // 10 R → 5 Bottle R
-                SR: Math.floor(heartsandSR / 5) * 5,     // 5 SR → 5 Bottle SR
-                SSR: Math.floor(heartsandSSR / 4) * 5,     // 4 SR → 5 Bottle SSR
-                hasAny: (Math.floor(heartsandR / 10) * 5) > 0 ||
-                    (Math.floor(heartsandSR / 5) * 5) > 0 ||
-                    (Math.floor(heartsandSSR / 4) * 5) > 0
-            },
-            // Обмен на Credits
-            credits: {
-                R: Math.floor(heartsandR / 100) * 50000,      // 100 R → 50000
-                SR: Math.floor(heartsandSR / 10) * 50000,     // 10 SR → 50000
-                SSR: Math.floor(heartsandSSR / 2) * 50000,    // 2 SSR → 50000
-                total: (Math.floor(heartsandR / 100) * 50000) +
-                    (Math.floor(heartsandSR / 10) * 50000) +
-                    (Math.floor(heartsandSSR / 2) * 50000)
-            }
-        };
-    };
-
     // Функция для получения иконки кристалла по цвету и типу
     const getCrystalIcon = (color, typeId) => {
         if (!color || !typeId) return null;
         const colorIcons = crystalIcons[color];
         if (!colorIcons) return null;
         return colorIcons[typeId] || null;
-    };
-
-    // Расчёт обмена Ascension Crystal Box General
-    const getCrystalBoxExchange = () => {
-        const generalBoxes = crystalBoxesState['box_general'] || 0;
-
-        return {
-            toN: generalBoxes * 5,   // 1 General → 5 N
-            toR: generalBoxes * 2,   // 1 General → 2 R
-            toSR: generalBoxes    // 1 General → 1 SR
-        };
     };
 
     return (
@@ -241,7 +204,7 @@ function MyResources() {
 
                 {/* Информация об обмене Memory Heartsand */}
                 {(() => {
-                    const exchange = getHeartsandExchange();
+                    const exchange = getHeartsandExchange(heartsandState);
                     const hasBottles = exchange.bottles.hasAny;
                     const hasCredits = exchange.credits.total > 0;
 
@@ -281,7 +244,7 @@ function MyResources() {
                                                     <div className={styles.exchangeItem}>Bottle of Wishes</div>
                                                     <img src={getImageUrl(bottles[3].img)} alt="Bottle SSR"
                                                          className={styles.itemIconGray}/>
-                                                    <div className={styles.exchangeValue}>SR: {exchange.bottles.SSR}</div>
+                                                    <div className={styles.exchangeValue}>SSR: {exchange.bottles.SSR}</div>
                                                 </div>
                                             )
                                         }
@@ -413,7 +376,7 @@ function MyResources() {
                         <h3 className={styles.exchangeTitle}>Ascension Crystal Box: General can be exchanged for:</h3>
                         <div className={styles.exchangeContent}>
                             {(() => {
-                                const exchange = getCrystalBoxExchange();
+                                const exchange = getCrystalBoxExchange(crystalBoxesState);
                                 return (
                                     <div className={styles.exchangeGrid}>
                                         <div className={styles.exchangeCard}>

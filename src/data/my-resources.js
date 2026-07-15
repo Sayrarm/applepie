@@ -99,6 +99,68 @@ export const credits = [
     {id: 'credits', name: "Credits", value: 1, img: "../assets/icons/credits.png"},
 ];
 
+// Расчёт обмена Memory Heartsand (принимает состояние)
+export const getHeartsandExchange = (heartsandState) => {
+    const heartsandR = heartsandState['heartsand_r'] || 0;
+    const heartsandSR = heartsandState['heartsand_sr'] || 0;
+    const heartsandSSR = heartsandState['heartsand_ssr'] || 0;
+
+    return {
+        bottles: {
+            R: Math.floor(heartsandR / 10) * 5,
+            SR: Math.floor(heartsandSR / 5) * 5,
+            SSR: Math.floor(heartsandSSR / 4) * 5,
+            hasAny: (Math.floor(heartsandR / 10) * 5) > 0 ||
+                (Math.floor(heartsandSR / 5) * 5) > 0 ||
+                (Math.floor(heartsandSSR / 4) * 5) > 0
+        },
+        credits: {
+            R: Math.floor(heartsandR / 100) * 50000,
+            SR: Math.floor(heartsandSR / 10) * 50000,
+            SSR: Math.floor(heartsandSSR / 2) * 50000,
+            total: (Math.floor(heartsandR / 100) * 50000) +
+                (Math.floor(heartsandSR / 10) * 50000) +
+                (Math.floor(heartsandSSR / 2) * 50000)
+        }
+    };
+};
+
+// Расчёт обмена Ascension Crystal Box (принимает состояние)
+export const getCrystalBoxExchange = (crystalBoxesState) => {
+    const exchange = {
+        box_n: crystalBoxesState['box_n'] || 0,
+        box_r: crystalBoxesState['box_r'] || 0,
+        box_sr: crystalBoxesState['box_sr'] || 0,
+        box_general: crystalBoxesState['box_general'] || 0
+    };
+
+    return {
+        box_n: exchange.box_n,
+        box_r: exchange.box_r,
+        box_sr: exchange.box_sr,
+        box_general: exchange.box_general,
+        toN: exchange.box_general * 5,
+        toR: exchange.box_general * 2,
+        toSR: exchange.box_general,
+        box_general_to_n: exchange.box_general * 5,
+        box_general_to_r: exchange.box_general * 2,
+        box_general_to_sr: exchange.box_general,
+        hasAny: exchange.box_n > 0 || exchange.box_r > 0 || exchange.box_sr > 0 || exchange.box_general > 0
+    };
+};
+
+// Получение иконки Memory Heartsand по id
+export const getHeartSandIcon = (id) => {
+    const item = heartSand.find(h => h.id === id);
+    return item ? item.img : null;
+};
+
+// Получение иконки Crystal Box по id
+export const getCrystalBoxIcon = (id) => {
+    const item = crystalBox.find(c => c.id === id);
+    return item ? item.img : null;
+};
+
 // Ключи для localStorage
 export const STORAGE_KEYS = {
     BOTTLES: 'inventory_bottles',
