@@ -4,11 +4,9 @@ import { getImageUrl } from './imageUtils';
 import { STORAGE_KEYS, getHeartsandExchange, getCrystalBoxExchange } from '../data/my-resources';
 import AsideList from './AsideList';
 
-function ReplaceableResources({ goal }) {
+function ReplaceableResources({ goal, remaining }) {
     const [heartsandExchange, setHeartsandExchange] = useState(null);
     const [crystalBoxExchange, setCrystalBoxExchange] = useState(null);
-    const [hasHeartsand, setHasHeartsand] = useState(false);
-    const [hasCrystalBox, setHasCrystalBox] = useState(false);
 
     // Функция для обновления данных
     const updateData = () => {
@@ -20,8 +18,6 @@ function ReplaceableResources({ goal }) {
 
         setHeartsandExchange(heartsand);
         setCrystalBoxExchange(crystalBox);
-        setHasHeartsand(heartsand.bottles.hasAny || heartsand.credits.total > 0);
-        setHasCrystalBox(crystalBox.hasAny);
     };
 
     // Загружаем данные при монтировании
@@ -39,7 +35,6 @@ function ReplaceableResources({ goal }) {
 
         window.addEventListener('storage', handleStorageChange);
 
-        // Также слушаем кастомное событие для обновления из той же вкладки
         const handleCustomUpdate = () => updateData();
         window.addEventListener('resourcesUpdated', handleCustomUpdate);
 
@@ -49,40 +44,65 @@ function ReplaceableResources({ goal }) {
         };
     }, []);
 
-    if (!hasHeartsand && !hasCrystalBox) return null;
+    // Проверяем, осталось ли что-то фармить
+    // Для memory нужны Bottles, для protocore - нет
+    const needsBottles = goal.type === 'memory' && remaining.exp > 0;
+    const needsCredits = remaining.credits > 0;
+    const needsCrystals = goal.type === 'memory' && // <-- кристаллы только для memory
+        remaining.crystals &&
+        (remaining.crystals.N > 0 || remaining.crystals.R > 0 || remaining.crystals.SR > 0);
+
+    // Проверяем, есть ли подходящие Heartsand для замены
+    const hasRelevantHeartsand =
+        (needsBottles && heartsandExchange?.bottles.hasAny) ||
+        (needsCredits && heartsandExchange?.credits.total > 0);
+
+    // Проверяем, есть ли подходящие Crystal Box для замены
+    const hasRelevantCrystalBox =
+        needsCrystals && crystalBoxExchange?.hasAny;
+
+    // Если нет подходящих ресурсов - не показываем блок
+    if (!hasRelevantHeartsand && !hasRelevantCrystalBox) return null;
 
     // Формируем items для AsideList
     const asideItems = [];
 
-    // Memory Heartsand
-    if (hasHeartsand && heartsandExchange) {
+    // Memory Heartsand - только если нужны Bottles или Credits
+    if (hasRelevantHeartsand && heartsandExchange) {
         const heartsandContent = (
             <div className={styles.replaceableItems}>
-                {heartsandExchange.bottles.R > 0 && (
+                {/* Показываем Bottles только если они нужны (remaining.exp > 0) и есть */}
+                {needsBottles && heartsandExchange.bottles.R > 0 && (
                     <div className={styles.replaceableItem}>
                         <span className={styles.itemTitle}>Bottle of Wishes</span>
                         <img src={getImageUrl('../assets/icons/bottle-r.png')} alt="Bottle R" className={styles.smallIcon} />
                         <span>R: {heartsandExchange.bottles.R}</span>
                     </div>
                 )}
-                {heartsandExchange.bottles.SR > 0 && (
+                {needsBottles && heartsandExchange.bottles.SR > 0 && (
                     <div className={styles.replaceableItem}>
                         <span className={styles.itemTitle}>Bottle of Wishes</span>
                         <img src={getImageUrl('../assets/icons/bottle-sr.png')} alt="Bottle SR" className={styles.smallIcon} />
                         <span>SR: {heartsandExchange.bottles.SR}</span>
                     </div>
                 )}
-                {heartsandExchange.bottles.SSR > 0 && (
+                {needsBottles && heartsandExchange.bottles.SSR > 0 && (
                     <div className={styles.replaceableItem}>
                         <span className={styles.itemTitle}>Bottle of Wishes</span>
                         <img src={getImageUrl('../assets/icons/bottle-ssr.png')} alt="Bottle SSR" className={styles.smallIcon} />
                         <span>SSR: {heartsandExchange.bottles.SSR}</span>
                     </div>
                 )}
-                {heartsandExchange.bottles.hasAny && heartsandExchange.credits.total > 0 && (
-                    <span className={styles.span}> or </span>
-                )}
-                {heartsandExchange.credits.total > 0 && (
+
+                {/* Разделитель "or" если показываем и Bottles, и Credits */}
+                {needsBottles && needsCredits &&
+                    heartsandExchange.bottles.hasAny &&
+                    heartsandExchange.credits.total > 0 && (
+                        <span className={styles.span}> or </span>
+                    )}
+
+                {/* Показываем Credits только если они нужны (remaining.credits > 0) и есть */}
+                {needsCredits && heartsandExchange.credits.total > 0 && (
                     <div className={styles.replaceableItem}>
                         <span className={styles.itemTitle}>Credits</span>
                         <img src={getImageUrl('../assets/icons/credits.png')} alt="Credits" className={styles.smallIcon} />
@@ -99,26 +119,29 @@ function ReplaceableResources({ goal }) {
         });
     }
 
-    // Ascension Crystal Box
-    if (hasCrystalBox && crystalBoxExchange) {
+    // Ascension Crystal Box - только если нужны Crystals
+    if (hasRelevantCrystalBox && crystalBoxExchange) {
         const crystalBoxContent = (
             <div className={styles.replaceableItemsCrystal}>
                 <div className={styles.replaceableItems}>
-                    {crystalBoxExchange.box_n > 0 && (
+                    {/* Показываем Crystal N только если нужен N (remaining.crystals.N > 0) */}
+                    {needsCrystals && remaining.crystals.N > 0 && crystalBoxExchange.box_n > 0 && (
                         <div className={styles.replaceableItem}>
                             <span className={styles.itemTitle}>Crystal</span>
                             <img src={getImageUrl('../assets/icons/crystal-box-n.png')} alt="Box N" className={styles.smallIcon} />
                             <span>N: {crystalBoxExchange.box_n}</span>
                         </div>
                     )}
-                    {crystalBoxExchange.box_r > 0 && (
+                    {/* Показываем Crystal R только если нужен R (remaining.crystals.R > 0) */}
+                    {needsCrystals && remaining.crystals.R > 0 && crystalBoxExchange.box_r > 0 && (
                         <div className={styles.replaceableItem}>
                             <span className={styles.itemTitle}>Crystal</span>
                             <img src={getImageUrl('../assets/icons/crystal-box-r.png')} alt="Box R" className={styles.smallIcon} />
                             <span>R: {crystalBoxExchange.box_r}</span>
                         </div>
                     )}
-                    {crystalBoxExchange.box_sr > 0 && (
+                    {/* Показываем Crystal SR только если нужен SR (remaining.crystals.SR > 0) */}
+                    {needsCrystals && remaining.crystals.SR > 0 && crystalBoxExchange.box_sr > 0 && (
                         <div className={styles.replaceableItem}>
                             <span className={styles.itemTitle}>Crystal</span>
                             <img src={getImageUrl('../assets/icons/crystal-box-sr.png')} alt="Box SR" className={styles.smallIcon} />
@@ -127,7 +150,8 @@ function ReplaceableResources({ goal }) {
                     )}
                 </div>
 
-                {crystalBoxExchange.box_general > 0 && (
+                {/* General Box показываем если нужны любые кристаллы и есть General Box */}
+                {needsCrystals && crystalBoxExchange.box_general > 0 && (
                     <div className={styles.replaceableItemGeneralBox}>
                         <span className={styles.itemTitle}>
                             General Box
@@ -135,11 +159,24 @@ function ReplaceableResources({ goal }) {
                         </span>
 
                         <div className={styles.boxesContainer}>
-                            <span>N: {crystalBoxExchange.box_general_to_n}</span>
-                            <span className={styles.span}> or </span>
-                            <span>R: {crystalBoxExchange.box_general_to_r}</span>
-                            <span className={styles.span}> or </span>
-                            <span>SR: {crystalBoxExchange.box_general_to_sr}</span>
+                            {/* Показываем N только если нужен N */}
+                            {remaining.crystals.N > 0 && (
+                                <span>N: {crystalBoxExchange.box_general_to_n}</span>
+                            )}
+                            {remaining.crystals.N > 0 && (remaining.crystals.R > 0 || remaining.crystals.SR > 0) && (
+                                <span className={styles.span}> or </span>
+                            )}
+                            {/* Показываем R только если нужен R */}
+                            {remaining.crystals.R > 0 && (
+                                <span>R: {crystalBoxExchange.box_general_to_r}</span>
+                            )}
+                            {remaining.crystals.R > 0 && remaining.crystals.SR > 0 && (
+                                <span className={styles.span}> or </span>
+                            )}
+                            {/* Показываем SR только если нужен SR */}
+                            {remaining.crystals.SR > 0 && (
+                                <span>SR: {crystalBoxExchange.box_general_to_sr}</span>
+                            )}
                         </div>
                     </div>
                 )}
@@ -152,6 +189,9 @@ function ReplaceableResources({ goal }) {
             children: crystalBoxContent,
         });
     }
+
+    // Если после фильтрации нет items - не показываем
+    if (asideItems.length === 0) return null;
 
     return (
         <AsideList

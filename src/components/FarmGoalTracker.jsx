@@ -460,7 +460,7 @@ function FarmGoalTracker() {
                                     </div>
                                 </div>
 
-                                <ReplaceableResources goal={goal} />
+                                <ReplaceableResources goal={goal} remaining={remaining} />
 
                                 {/* Farming Calculation */}
                                 {(remaining.exp > 0 || remaining.credits > 0 || (remaining.crystals && (remaining.crystals.N > 0 || remaining.crystals.R > 0 || remaining.crystals.SR > 0))) && (
