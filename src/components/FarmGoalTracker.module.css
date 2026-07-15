@@ -110,8 +110,7 @@
 }
 
 .resourcesSection h4,
-.remainingSection h4,
-.replaceableSection h4 {
+.remainingSection h4 {
     font-size: 14px;
     font-weight: 500;
     margin-bottom: 5px;
@@ -218,41 +217,6 @@
     color: var(--colorTextBright);
 }
 
-.replaceableSection {
-    width: 100%;
-}
-
-.replaceableItems {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-}
-
-.replaceableItem,
-.replaceableItemlast {
-    display: flex;
-    align-items: center;
-    gap: 2px;
-    color: var(--colorTextSuperDark);
-}
-
-.replaceableItemlast {
-    border-bottom: 1px dashed var(--border);
-    margin-bottom: 5px;
-    padding-bottom: 5px;
-}
-
-.smallIcon {
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
-}
-
-.span {
-    font-size: 10px;
-    color: gray;
-    padding: 0 5px;
-}
 
 @media screen and (max-width: 1020px) {
 
