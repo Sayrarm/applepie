@@ -5,13 +5,11 @@ import {CREDIT_DUNGEON_COST, DUNGEON_COST_PROTOCORE, dungeonData} from '../data/
 import {
     crystalColors,
     bossImg,
-    getHeartsandExchange,
-    getCrystalBoxExchange,
-    STORAGE_KEYS
+    getHeartCount,
+    getHeartInfo
 } from '../data/my-resources';
 import {getImageUrl} from './imageUtils';
 import {Link} from "react-router-dom";
-import AsideList from "./AsideList.jsx";
 import ReplaceableResources from "./AsideReplaceableResources.jsx";
 
 // Константы
@@ -238,7 +236,15 @@ function FarmGoalTracker() {
             };
         }
 
-        return {exp: remainingExp, credits: remainingCredits, crystals: remainingCrystals};
+        // Расчёт остатка Heart
+        let remainingHeart = null;
+        if (goal.type === 'memory' && goal.heart) {
+            const userHeartCount = getHeartCount(goal.heart);
+            // Для Awaken нужно 1 Heart
+            remainingHeart = Math.max(0, 1 - userHeartCount);
+        }
+
+        return {exp: remainingExp, credits: remainingCredits, crystals: remainingCrystals, heart: remainingHeart};
     };
 
     const getGoalDescription = (goal) => {
@@ -429,6 +435,20 @@ function FarmGoalTracker() {
                                                 {goal.neededCrystalsSR > 0 && ` | SR: ${goal.neededCrystalsSR}`}
                                             </div>
                                         )}
+                                        {goal.type === 'memory' && goal.heart && (() => {
+                                            const heartInfo = getHeartInfo(goal.heart);
+                                            if (!heartInfo) return null;
+                                            return (
+                                                <div className={styles.heartRow}>
+                                                    <img
+                                                        src={getImageUrl(heartInfo.img)}
+                                                        alt={heartInfo.name}
+                                                        className={styles.heartIconSmall}
+                                                    />
+                                                    {heartInfo.name}: x1
+                                                </div>
+                                            );
+                                        })()}
                                         <div>Credits: {goal.neededCredits.toLocaleString()}</div>
                                     </div>
                                 </div>
@@ -441,8 +461,7 @@ function FarmGoalTracker() {
                                             {getExpLabel(goal)} {remaining.exp.toLocaleString()}
                                         </div>
                                         {remaining.crystals && (remaining.crystals.N > 0 || remaining.crystals.R > 0 || remaining.crystals.SR > 0) && (
-                                            <div
-                                                className={`${crystalsCompleted ? styles.completed : styles.notCompleted} ${styles.crystalRow}`}>
+                                            <div className={`${crystalsCompleted ? styles.completed : styles.notCompleted} ${styles.crystalRow}`}>
                                                 <img
                                                     src={getImageUrl(getCrystalColorIcon(goal.crystalColor))}
                                                     alt={goal.crystalColor}
@@ -454,6 +473,22 @@ function FarmGoalTracker() {
                                                 {remaining.crystals.SR > 0 && ` | SR: ${remaining.crystals.SR}`}
                                             </div>
                                         )}
+                                        {goal.type === 'memory' && goal.heart && (() => {
+                                            const heartInfo = getHeartInfo(goal.heart);
+                                            if (!heartInfo) return null;
+                                            const heartRemaining = remaining.heart ?? 1;
+                                            const heartCompleted = heartRemaining <= 0;
+                                            return (
+                                                <div className={`${heartCompleted ? styles.completed : styles.notCompleted} ${styles.heartRow}`}>
+                                                    <img
+                                                        src={getImageUrl(heartInfo.img)}
+                                                        alt={heartInfo.name}
+                                                        className={styles.heartIconSmall}
+                                                    />
+                                                    {heartInfo.name}: x{heartRemaining}
+                                                </div>
+                                            );
+                                        })()}
                                         <div className={creditsCompleted ? styles.completed : styles.notCompleted}>
                                             Credits: {remaining.credits.toLocaleString()}
                                         </div>

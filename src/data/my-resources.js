@@ -149,18 +149,6 @@ export const getCrystalBoxExchange = (crystalBoxesState) => {
     };
 };
 
-// Получение иконки Memory Heartsand по id
-export const getHeartSandIcon = (id) => {
-    const item = heartSand.find(h => h.id === id);
-    return item ? item.img : null;
-};
-
-// Получение иконки Crystal Box по id
-export const getCrystalBoxIcon = (id) => {
-    const item = crystalBox.find(c => c.id === id);
-    return item ? item.img : null;
-};
-
 // Получение информации о Heart по id
 export const getHeartInfo = (heartName) => {
     // heartName может быть 'Heart SR' или 'Heart SSR'
@@ -178,6 +166,27 @@ export const STORAGE_KEYS = {
     CORE_ENERGY: 'inventory_core_energy',
     CREDITS: 'inventory_credits',
     SELECTED_CRYSTAL_COLOR: 'inventory_selected_crystal_color'
+};
+
+// Получение количества Heart из localStorage
+export const getHeartCount = (heartName) => {
+    try {
+        const saved = localStorage.getItem(STORAGE_KEYS.HEARTS);
+        const heartsState = saved ? JSON.parse(saved) : {};
+
+        // heartName: 'Awakening Heart: SR' или 'Awakening Heart: SSR'
+        // Находим соответствующий id
+        let heartId = null;
+        if (heartName.includes('SR') && !heartName.includes('SSR')) {
+            heartId = 'heart_sr';
+        } else if (heartName.includes('SSR')) {
+            heartId = 'heart_ssr';
+        }
+        return heartId ? (heartsState[heartId] || 0) : 0;
+    } catch (e) {
+        console.error('Error loading heart count:', e);
+        return 0;
+    }
 };
 
 

@@ -141,13 +141,15 @@
     text-align: center;
 }
 
-.crystalRow {
+.crystalRow,
+.heartRow {
     display: flex;
     align-items: center;
     gap: 2px;
 }
 
-.crystalColorIcon {
+.crystalColorIcon,
+.heartIconSmall {
     width: 20px;
     height: 20px;
     object-fit: contain;

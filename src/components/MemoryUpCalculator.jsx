@@ -403,6 +403,7 @@ function MemoryUpCalculator() {
                                 expDungeonLevel: expDungeonLevel,
                                 creditDungeonLevel: creditDungeonLevel,
                                 crystalDungeonLevel: crystalDungeonLevel,
+                                heart: result.heart || null,
                                 createdAt: new Date().toISOString()
                             };
                             const existingGoals = JSON.parse(localStorage.getItem('farm_goals') || '[]');
