@@ -161,6 +161,13 @@ export const getCrystalBoxIcon = (id) => {
     return item ? item.img : null;
 };
 
+// Получение информации о Heart по id
+export const getHeartInfo = (heartName) => {
+    // heartName может быть 'Heart SR' или 'Heart SSR'
+    const heart = hearts.find(h => h.name === heartName);
+    return heart || null;
+};
+
 // Ключи для localStorage
 export const STORAGE_KEYS = {
     BOTTLES: 'inventory_bottles',

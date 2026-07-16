@@ -42,7 +42,7 @@ export const rarityLevels = {
             'Ascend 60+': { crystals: { N: 960, R: 408, SR: 192 }, credits: 200000 },
             'Ascend 70+': { crystals: { N: 1920, R: 800, SR: 398 }, credits: 320000 }
         },
-        awaken: { 'Awaken 80': { crystals: { N: 960, R: 384, SR: 144 }, credits: 200000, heart: 'Heart SR' } },
+        awaken: { 'Awaken 80': { crystals: { N: 960, R: 384, SR: 144 }, credits: 200000, heart: 'Awakening Heart: SR' } },
         expRanges: {
             '1': 0, '2': 20, '3': 30, '4': 40, '5': 40,
             '6': 50, '7': 60, '8': 70, '9': 80, '10': 180,
@@ -73,7 +73,7 @@ export const rarityLevels = {
             'Ascend 60+': { crystals: { N: 1200, R: 510, SR: 240 }, credits: 250000 },
             'Ascend 70+': { crystals: { N: 2400, R: 1000, SR: 498 }, credits: 400000 }
         },
-        awaken: { 'Awaken 80': { crystals: { N: 1200, R: 480, SR: 180 }, credits: 250000, heart: 'Heart SSR' } },
+        awaken: { 'Awaken 80': { crystals: { N: 1200, R: 480, SR: 180 }, credits: 250000, heart: 'Awakening Heart: SSR' } },
         expRanges: {
             '1': 0, '2': 150, '3': 160, '4': 170, '5': 180,
             '6': 190, '7': 200, '8': 210, '9': 220, '10': 230,

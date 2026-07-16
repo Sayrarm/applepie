@@ -15,7 +15,7 @@ import {
     crystalTypesDungeons,
 } from '../data/memory-up-data';
 import ModalWindow from "./ModalWindow.jsx";
-import {crystalColors} from "../data/my-resources.js";
+import {crystalColors, getHeartInfo} from "../data/my-resources.js";
 import {getImageUrl} from "./imageUtils.js";
 import {Link} from "react-router-dom";
 
@@ -215,7 +215,7 @@ function MemoryUpCalculator() {
                             className={`${styles.colorButton} ${selectedColor === color.id ? styles.active : ''}`}
                             onClick={() => handleColorChange(color.id)}
                         >
-                            <img src={getImageUrl(color.img)} alt={color.name} className={styles.colorIcon} />
+                            <img src={getImageUrl(color.img)} alt={color.name} className={styles.colorIcon}/>
                             {color.name}
                         </button>
                     ))}
@@ -291,77 +291,89 @@ function MemoryUpCalculator() {
                 <div className={styles.results}>
                     <h2>Results</h2>
                     <div className={styles.resultCard}>
-                        <div className={styles.resultRow}>
+                        <div className={styles.resultRowUpgrade}>
                             <span className={styles.resultLabel}>Upgrade:</span>
                             <span>{getDisplayLevel(currentLevel)} → {getDisplayLevel(targetLevel)}</span>
                         </div>
 
-                        <div className={styles.divider}></div>
+                        <div className={styles.resultContainer}>
+                            <div className={styles.resultRow}>
+                                <span className={styles.resultLabel}>EXP needed:</span>
+                                <span>{result.expNeeded.toLocaleString()} EXP</span>
+                            </div>
 
-                        <div className={styles.resultRow}>
-                            <span className={styles.resultLabel}>EXP needed:</span>
-                            <span>{result.expNeeded.toLocaleString()} EXP</span>
+                            <div className={styles.resultRow}>
+                                <span className={styles.resultLabel}>"Heartbreaker" runs needed:</span>
+                                <span>{result.expRuns} runs (Lvl {expDungeonLevel})</span>
+                            </div>
+
+                            <div className={styles.resultRow}>
+                                <span className={styles.resultLabel}>Stamina needed:</span>
+                                <span>{result.staminaForExp} stamina</span>
+                            </div>
                         </div>
 
-                        <div className={styles.resultRow}>
-                            <span className={styles.resultLabel}>"Heartbreaker" runs:</span>
-                            <span>{result.expRuns} runs (Lvl {expDungeonLevel})</span>
-                        </div>
-
-                        <div className={styles.resultRow}>
-                            <span className={styles.resultLabel}>Stamina for EXP:</span>
-                            <span>{result.staminaForExp} stamina</span>
-                        </div>
-
-                        <div className={styles.divider}></div>
-
-                        <div className={styles.resultRow}>
-                            <span className={styles.resultLabel}>Crystals needed:</span>
-                            <span>
+                        <div className={styles.resultContainer}>
+                            <div className={styles.resultRow}>
+                                <span className={styles.resultLabel}>Crystals needed:</span>
+                                <span>
                                 N: {result.crystals.N}
-                                {result.crystals.R > 0 && ` | R: ${result.crystals.R}`}
-                                {result.crystals.SR > 0 && ` | SR: ${result.crystals.SR}`}
+                                    {result.crystals.R > 0 && ` | R: ${result.crystals.R}`}
+                                    {result.crystals.SR > 0 && ` | SR: ${result.crystals.SR}`}
                             </span>
+                            </div>
+
+                            <div className={styles.resultRow}>
+                                <span className={styles.resultLabel}>"{crystalDungeonName}" runs needed:</span>
+                                <span>{result.crystalRuns} runs (Lvl {crystalDungeonLevel})</span>
+                            </div>
+
+                            <div className={styles.resultRow}>
+                                <span className={styles.resultLabel}>Stamina needed:</span>
+                                <span>{result.staminaForCrystals} stamina</span>
+                            </div>
                         </div>
 
-                        <div className={styles.resultRow}>
-                            <span className={styles.resultLabel}>Crystal "Bounty Hunt" runs:</span>
-                            <span>{result.crystalRuns} runs (Lvl {crystalDungeonLevel})</span>
+
+                        <div className={styles.resultContainer}>
+                            <div className={styles.resultRow}>
+                                <span className={styles.resultLabel}>Credits needed:</span>
+                                <span>{result.credits.toLocaleString()} Credits</span>
+                            </div>
+
+                            <div className={styles.resultRow}>
+                                <span className={styles.resultLabel}>"Mr. Beanie" runs needed:</span>
+                                <span>{result.creditRuns} runs (Lvl {creditDungeonLevel})</span>
+                            </div>
+
+                            <div className={styles.resultRow}>
+                                <span className={styles.resultLabel}>Stamina needed:</span>
+                                <span>{result.staminaForCredits} stamina</span>
+                            </div>
                         </div>
 
-                        <div className={styles.resultRow}>
-                            <span className={styles.resultLabel}>Stamina for Crystals:</span>
-                            <span>{result.staminaForCrystals} stamina</span>
-                        </div>
+                        {result.heart && (() => {
+                            const heartInfo = getHeartInfo(result.heart);
+                            if (!heartInfo) return null;
 
-                        <div className={styles.divider}></div>
-
-                        <div className={styles.resultRow}>
-                            <span className={styles.resultLabel}>Credits needed:</span>
-                            <span>{result.credits.toLocaleString()} Credits</span>
-                        </div>
-
-                        <div className={styles.resultRow}>
-                            <span className={styles.resultLabel}>"Mr. Beanie" runs:</span>
-                            <span>{result.creditRuns} runs (Lvl {creditDungeonLevel})</span>
-                        </div>
-
-                        <div className={styles.resultRow}>
-                            <span className={styles.resultLabel}>Stamina for Credits:</span>
-                            <span>{result.staminaForCredits} stamina</span>
-                        </div>
-
-                        {result.heart && (
-                            <>
-                                <div className={styles.divider}></div>
-                                <div className={styles.resultRow}>
-                                    <span className={styles.resultLabel}>Special Item needed:</span>
-                                    <span className={styles.heartRequired}>✨ {result.heart}</span>
+                            return (
+                                <div className={styles.resultContainer}>
+                                    <div className={styles.resultRow}>
+                                        <span className={styles.resultLabel}>Special Item needed:</span>
+                                        <div className={styles.heartContainer}>
+                                            <img
+                                                src={getImageUrl(heartInfo.img)}
+                                                alt={heartInfo.name}
+                                                className={styles.heartIcon}
+                                            />
+                                            <span className={styles.heartRequired}>
+                                                {heartInfo.name}
+                                            </span> x1
+                                        </div>
+                                    </div>
                                 </div>
-                            </>
-                        )}
-
-                        <div className={styles.divider}></div>
+                            );
+                        })()}
 
                         <div className={styles.resultRow}>
                             <span className={styles.resultLabel}>Total Stamina needed:</span>

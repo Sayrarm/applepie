@@ -240,7 +240,7 @@ function ProtocoreCalculator() {
                     <h2>Results</h2>
 
                     <div className={styles.resultCard}>
-                        <div className={styles.resultRow}>
+                        <div className={styles.resultRowUpgrade}>
                             <span className={styles.resultLabel}>Stat growth:</span>
                             <span>
                                 {result.currentStatValue} → {result.targetStatValue}
@@ -269,43 +269,39 @@ function ProtocoreCalculator() {
                             </div>
                         )}
 
-                        <div className={styles.divider}></div>
+                        <div className={styles.resultContainer}>
+                            <div className={styles.resultRow}>
+                                <span className={styles.resultLabel}>EXP needed:</span>
+                                <span>{result.expNeeded.toLocaleString()} EXP</span>
+                            </div>
 
-                        <div className={styles.resultRow}>
-                            <span className={styles.resultLabel}>EXP needed:</span>
-                            <span>{result.expNeeded.toLocaleString()} EXP</span>
+                            <div className={styles.resultRow}>
+                                <span className={styles.resultLabel}>"Core Hunt" runs needed:</span>
+                                <span>{result.dungeonRuns} run(s) (Lvl {dungeonLevel})</span>
+                            </div>
+
+                            <div className={styles.resultRow}>
+                                <span className={styles.resultLabel}>Stamina for EXP:</span>
+                                <span>{result.staminaNeeded} stamina</span>
+                            </div>
                         </div>
 
-                        <div className={styles.resultRow}>
-                            <span className={styles.resultLabel}>Credits needed:</span>
-                            <span>{result.creditsNeeded.toLocaleString()} Credits</span>
+                        <div className={styles.resultContainer}>
+                            <div className={styles.resultRow}>
+                                <span className={styles.resultLabel}>Credits needed:</span>
+                                <span>{result.creditsNeeded.toLocaleString()} Credits</span>
+                            </div>
+
+                            <div className={styles.resultRow}>
+                                <span className={styles.resultLabel}>"Mr. Beanie" runs needed:</span>
+                                <span>{result.creditRuns} run(s) (Lvl {creditDungeonLevel})</span>
+                            </div>
+
+                            <div className={styles.resultRow}>
+                                <span className={styles.resultLabel}>Stamina for Credits:</span>
+                                <span>{result.staminaForCredits} stamina</span>
+                            </div>
                         </div>
-
-                        <div className={styles.divider}></div>
-
-                        <div className={styles.resultRow}>
-                            <span className={styles.resultLabel}>"Core Hunt" runs needed:</span>
-                            <span>{result.dungeonRuns} run(s) (Lvl {dungeonLevel})</span>
-                        </div>
-
-                        <div className={styles.resultRow}>
-                            <span className={styles.resultLabel}>Stamina for EXP:</span>
-                            <span>{result.staminaNeeded} stamina</span>
-                        </div>
-
-                        <div className={styles.divider}></div>
-
-                        <div className={styles.resultRow}>
-                            <span className={styles.resultLabel}>"Mr. Beanie" runs needed:</span>
-                            <span>{result.creditRuns} run(s) (Lvl {creditDungeonLevel})</span>
-                        </div>
-
-                        <div className={styles.resultRow}>
-                            <span className={styles.resultLabel}>Stamina for Credits:</span>
-                            <span>{result.staminaForCredits} stamina</span>
-                        </div>
-
-                        <div className={styles.divider}></div>
 
                         <div className={styles.resultRow}>
                             <span className={styles.resultLabel}>Total Stamina needed:</span>
