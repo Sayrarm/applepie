@@ -302,30 +302,34 @@ function FarmGoalTracker() {
         return null;
     };
 
-    const getExpLabel = (goal) => {
+    const getExpLabel = (goal, showIcon = false) => {
         if (goal.type === 'memory') {
-        return (
-            <div className={styles.expRow}>
-                <img
-                    src={getImageUrl(bottles[3].img)}
-                    alt='bottles'
-                    className={styles.heartIconSmall}
-                />
-                EXP (Bottles):
-            </div>
-        )}
-        else {
             return (
                 <div className={styles.expRow}>
-                    <img
-                        src={getImageUrl(coreEnergy[3].img)}
-                        alt='core energy'
-                        className={styles.heartIconSmall}
-                    />
+                    {showIcon && (
+                        <img
+                            src={getImageUrl(bottles[3].img)}
+                            alt='bottles'
+                            className={styles.heartIconSmall}
+                        />
+                    )}
+                    EXP (Bottles):
+                </div>
+            );
+        } else {
+            return (
+                <div className={styles.expRow}>
+                    {showIcon && (
+                        <img
+                            src={getImageUrl(coreEnergy[3].img)}
+                            alt='core energy'
+                            className={styles.heartIconSmall}
+                        />
+                    )}
                     EXP (Core Energy):
                 </div>
-            )
-            }
+            );
+        }
     };
 
     // Получение уровня данжа для EXP из цели (если сохранён) или значение по умолчанию
@@ -444,7 +448,7 @@ function FarmGoalTracker() {
                                 <div className={styles.resourcesSection}>
                                     <h4>Resources Needed:</h4>
                                     <div className={styles.resourcesList}>
-                                        <div className={styles.expRow}>{getExpLabel(goal)} {goal.neededExp.toLocaleString()}</div>
+                                        <div className={styles.expRow}>{getExpLabel(goal, true)} {goal.neededExp.toLocaleString()}</div>
                                         {goal.type === 'memory' && (goal.neededCrystalsN > 0 || goal.neededCrystalsR > 0 || goal.neededCrystalsSR > 0) && (
                                             <div className={styles.crystalRow}>
                                                 <img
@@ -488,7 +492,7 @@ function FarmGoalTracker() {
                                     <h4>Remaining to Farm:</h4>
                                     <div className={styles.remainingList}>
                                         <div className={`${expCompleted ? styles.completed : styles.notCompleted} ${styles.expRow}`}>
-                                            {getExpLabel(goal)} {remaining.exp.toLocaleString()}
+                                            {getExpLabel(goal, true)} {remaining.exp.toLocaleString()}
                                         </div>
                                         {remaining.crystals && (remaining.crystals.N > 0 || remaining.crystals.R > 0 || remaining.crystals.SR > 0) && (
                                             <div className={`${crystalsCompleted ? styles.completed : styles.notCompleted} ${styles.crystalRow}`}>
@@ -540,7 +544,7 @@ function FarmGoalTracker() {
                                             <div className={styles.farmingDungeons}>
                                                 {remaining.exp > 0 && (
                                                     <div className={styles.farmingCard}>
-                                                        <div className={styles.farmingItem}>{getExpLabel(goal)}</div>
+                                                        <div className={styles.farmingItem}>{getExpLabel(goal, false)}</div>
                                                         <img
                                                             src={getImageUrl(getDungeonIcon(goal))}
                                                             alt="exp dungeon"
