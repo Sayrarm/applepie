@@ -142,14 +142,18 @@
 }
 
 .crystalRow,
-.heartRow {
+.heartRow,
+.creditRow,
+.expRow {
     display: flex;
     align-items: center;
-    gap: 2px;
+    gap: 3px;
+    margin: 1px 0;
 }
 
 .crystalColorIcon,
-.heartIconSmall {
+.heartIconSmall,
+.creditIconSmall {
     width: 20px;
     height: 20px;
     object-fit: contain;
