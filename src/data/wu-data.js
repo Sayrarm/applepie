@@ -4778,6 +4778,303 @@ The candy's sweetness still lingers on Isaiah's tongue. A long time passes befor
             `,
     },
     {
+        id: 257,
+        link: "little-prince-gift",
+        serialNumber: "01",
+        subtitle: "Gift",
+        content: `
+In the royal capital of Philos, there's a morning that captured the attention of the entire planet. Every bell tower in the city rings in unison, and silvery-white lights flicker to life along the palace's gardens. The whole capital offers its blessings to the newborn prince. They say he'll inherit the most brilliant civilization of the age and carry the future of Philos upon his shoulders.
+Starting from the moment he opens his eyes, he's surrounded by people.
+"Why isn't he crying?" the king asks the royal physician, a note of worry in his voice. The physician examines the infant, then shakes his head. He's equally puzzled. "His Highness is perfectly healthy. He just... doesn't want to cry."
+He doesn't want to cry? The king blinks before laughing. His finger brushes against the baby's cheek. The infant doesn't turn his head to chase it the way most children would: He accepts the touch in silence and slowly blinks.
+Thus, the little prince of Philos grows up under the watchful eyes of the planet.
+When he turns one month old, the royal press official issues a monthly briefing on the young prince's development. How many teeth he's grown, his first word, the time he tried to walk on his own, tripped, and decided to take a nap right there on the floor... These trivial updates never fail to dominate the planet's headlines for days on end.
+Postcards and mugs printed with the prince's photo appear in marketplaces. Bakeries release milk bread called "The Prince's Favorite." One remote town even names its newly built main road "Xavier Road." Their reason is that the prince will walk down this street someday.
+The king finds the planet-wide fervor rather annoying, but the Chief Ceremonialist assures him it's a good thing. "It shows the people feel connected to the royal family. A sense of belonging. A sense of—" He pauses, searching for the right word. Then he settles on one that carries considerable weight. "Hope." The king concedes but still issues a decree banning all Prince's Favorite merchandise.
+"A three-year-old child doesn't need to endorse bread," he writes in the official notice.
+There is one thing, however, that the king did not and could not ban even if he'd tried Gifts.
+After the prince was born, gifts from every corner of Philos poured into the palace like snowflakes in a blizzard. From ministers, nobles, civilian trade guilds, and even ordinary folk no one had ever heard of. They sent parcels with baby clothes knit by hand homemade cookies, and a letters' worth of blessings they spent a year writing.
+There are too many gifts. Xavier only manages to open a small fraction of them each time. On his third birthday, he spends an entire
+afternoon unwrapping presents, the discarded wrapping paper piling into a small mountain range around him. A maid leans in and whispers, ."Your Highness, there are still over three hundred left."
+Xavier stares at the colorful mountain before him and suddenly feels tired. The queen seems to find the scene rather amusing and offers a suggestion. From now on, he can keep just one gift he liked each birthday.
+"You've already received the thoughts behind them. The gifts themselves can carry warmth to someone who needs it more."
+She looks down at her son. "Give the rest to those in need or who'd treasure them more.' Xavier thinks about it carefully, then nods. 
+"Okay."
+And so he issues the first command of his life He doesn't need any of these gifts. The rest will be donated in the original senders' names to those who need them more.
+The little prince rises from the pile of presents, brushes off the scraps of paper from his knees, and heads for the door.
+"Where are you going, Your Highness?"
+"The garden," Xavier says without looking back. "I want to watch the ants move."
+The maid freezes for a moment, glancing back at the mountain of unopened gifts. Then she sees the prince's figure disappearing through the doorway. She's unsure if she should chase after him or stay behind to clean up.
+            `,
+    },
+    {
+        id: 258,
+        link: "little-prince-gift",
+        serialNumber: "02",
+        subtitle: "Wooden Sword",
+        content: `
+As the prince passes through the corridor, a tall figure approaches from the opposite direction.
+The man wears a crisp white training uniform with a knight's cloak draped over his shoulders, yet he has no sword at his side. He stops and looks down at the child who barely reaches his waist.
+"Are you the birthday boy, little prince?"
+Xavier nods. Without another word, the man tosses a wooden sword his way.
+"Catch."
+The weight of the wooden sword lands in Xavier's arms. It sends him stumbling until the back of his head hits the stone floor.
+The maid gasps and rushes to help, but the man raises a hand to stop her.
+"Don't." The middle-aged man regards the child calmly. "I'm your swordsmanship instructor starting today."
+He reaches out and taps the wooden sword.
+"Hold the sword and get up without anyone's help."
+The prince says nothing. He stares at the sword before him, grips the hilt, and pushes himself up from the ground. His knees tremble with pain.
+"You can stand." The instructor sizes him up. 
+"Good. Now let's see if you can hold on to it." He extends a single finger: "I'll only use one hand."
+…
+That day, Celki, Captain of the Royal Guard, loses count of how many times the little prince is knocked down by that single hand Whenever he falls, his instructor stands there and waits for the boy to pick himself up, grip the wooden sword that's still a little too heavy for him, and raise it again. Then with that same finger, he forces him back down with a flick, a lift, or a press.
+At sunset, the man announces the lesson is over and bends down to pull the sword from the boy's hands. He tugs once, but it doesn't budge. He looks down. The child's fingers are still locked around the hilt. His knuckles are white even though every last ounce of strength has left his body.
+The man quietly laughs. "Do you like your gift?"
+The child is gasping for breath. He doesn't answer, but his grip on the sword tightens. The man laughs louder, leaves the sword where it is, and walks away.
+That evening, the queen finishes her affairs of state and pushes open the door to her son's room. She stops in her tracks at the sight before her.
+He lies in bed, the blanket seemingly kicked away. The sword—taller than he is—cradled in his arms.
+When the maid arrives with tea, the queen raises a finger to her lips. She takes the cup herself, carries it to her son's bedside, and sets it on the nightstand. Then she bends down and draws the blanket back up, tucking it over the sword and the child.
+"The first gift little Xavier ever chose for himself...was a sword."
+She gazes at her sleeping child and smiles.
+            `,
+    },
+    {
+        id: 259,
+        link: "little-prince-gift",
+        serialNumber: "03",
+        subtitle: "Meaning of Expectation",
+        content: `
+The days pass and another birthday draws near.
+Gifts fill the palace as always. This year, the prince still hasn't found a single one he truly likes. So he has the ceremonialists catalog every gift and send them under each giver's name to orphanages, schools, and neighborhoods beyond the capital walls.
+Once the presents are carried away, the vast palace feels empty. The maid turns away for a moment to pour a glass of water. When she turns back, the window seat is empty.
+An open book sits quietly on the window sill its pages stirring in the breeze. The window has been flung wide open, but no one is in the room.
+"Oh no! The prince is gone!"
+Within moments, the entire palace descends into chaos.
+Guards pour out in full force, combing every corridor and chamber. Celki breaks into a run, her face growing paler by the second, her mind already racing through every worst-case scenario.
+She's practically sprinting by the time she reaches the garden.
+The queen, on the other hand, isn't in a hurry. She sets down her botanical encyclopedia and gazes toward the tallest tree at the center of the courtyard.
+"Try looking up there."
+The attendants freeze, then crane their necks.
+Sure enough, a wisp of light-colored hair peeks through the dense canopy and sways gently in the evening breeze.
+The little prince is curled in a cradle of interlocking branches, the wooden sword—its length greater than his height—clutched to his chest. He's fast asleep.
+His head droops and bumps gently against the hilt, bobs back up, and then he continues sleeping.
+The queen laughs. She waves the attendants away, takes off her shoes, and climbs the trunk with practiced ease. She was once a knight in her youth, and her agility hasn't dulled one bit. Within moments, she's seated beside her child. She gently pokes his cheek.
+"Xavier... Xavier, it's time to wake up."
+The boy opens his eyes slowly. When he sees who it is, there isn't a trace of surprise in his eyes. There's only the drowsiness of someone just roused from sleep. 
+"How did you find me?"
+"I heard your head bumping against a sword hilt in your sleep."
+Xavier considers this seriously. "...This tree isn't very comfortable to lean against. I'll pick a different one next time."
+His perfectly irrelevant answer makes her laugh. She picks him and the sword up and carries him down from the tree.
+Relieved, Celki exhales at the base of the trunk and turns to report to the king; but the queen stops her with a look. She holds the featherlight child in her arms and drapes her own cloak over his shoulders. He doesn't refuse. He nestles his small face into her collar, breathes in her scent, and closes his eyes again.
+
+But wrongdoing still calls for an apology.
+The next day, Xavier stands before the guards who spent almost all of their yesterday searching for him and bows deeply and sincerely.
+Yet afterward, he can't help but look to his mother, the confusion in his eyes undiminished.
+"Why did everyone try to look for me?"
+"Why do they always have to follow me?"
+"And..." He pauses, glancing back at the mountain of gifts behind him, his expression growing even more puzzled. "Why does everyone keep sending me so many gifts?"
+He hasn't done anything special.
+The queen closes the book in her hands, rests it on her lap, and thinks before meeting her child's gaze.
+"You're the prince of Philos." She doesn't offer some patronizing comment such as" everyone likes you." "People need to place their blessings and their hopes on someone, and you happen to be the person they chose." 
+"So they're sending expectations?" he asks earnestly.
+The queen smiles and reaches over to ruffle his hair. "What they're sending is whatever they believe to be the best they have to offer. It's just that the best things in their eyes aren't necessarily what you need."
+The prince is quiet for a while. Then he says,
+"Can I just not accept them?"
+"Of course," the queen replies. "But there's something you need to understand. It's easy to refuse gifts. But that can't be said about expectations. Right now, those are still blessings. When you grow up, they'll become responsibilities. When that day comes, you'll understand why some people choose to follow you because they need you."
+"Do you dislike having expectations, Xavier?" He doesn't shake his head, but he doesn't nod either. At his age, grasping the full weight and meaning of the word "expectation" is still beyond reach.
+Outside, the lights of the royal capital flicker to life. Xavier leans against his mother, his eyelids growing heavy. The sword is still held firmly in his arms.
+The queen looks down at his sleeping face and recalls the astrologer's words. "This child is destined to bear the future of Philos." As a mother, she never cared for the prophecies and praises heaped upon her son, but she also knew this was an inescapable part of his fate, something he'll have to face and choose for himself. She pats his back gently and says a single, silent sentence.
+"No matter what anyone else thinks, your mother hopes you'll take your time growing up."
+The words are so quiet that even she can't hear them. Only the evening breeze outside the window carries them away into the encroaching darkness.
+For Philos, a world that lives on the border of immortality, time has long since lost its marks. One year, two years, three... The rise and fall of suns and moons, the passing of seasons, are all but the briefest of instants in this planet's endless span.
+In his final swordsmanship lesson, the little prince who once couldn't stand as tall as his wooden sword has grown into a striking young man.
+The lesson his instructor wants to teach him today is how to "put down the sword."
+He learned how to hold it, so why must he learn to let go? Xavier doesn't understand. He spent a long time learning to keep the sword from being knocked away. Why would he set it down?
+"A knight must learn to grip his sword, but to become a king, you must learn to lay it down. For courage, duty, and freedom. You won't understand this yet, so consider it your teacher's parting advice."
+Xavier looks down at the wooden sword in his palm. He knows that once the lesson ends, his instructor will leave the capital to journey elsewhere.
+As the sun sets, the queen takes Xavier's hand They stand together at the city gates and watch the distant figure grow smaller until it disappears.
+"Will you miss him?"
+"...A little."
+"Will I see him again?"
+"Maybe."
+The queen smiles.
+"But from now on, the people you meet will be up to you."
+"Your mother could bring you a teacher, but you'll have to find the friends, mentors, and rivals that come after. They won't appear at your door like birthday presents." She looks into her son's clear, bright gaze. For a reason she can't quite name, a pang of sadness passes, but she forces a smile. "Isn't that a little more exciting than unwrapping gifts?"
+            `,
+    },
+    {
+        id: 2599,
+        link: "little-prince-gift",
+        serialNumber: "04",
+        subtitle: "Finding the Way",
+        content: `
+After Xavier grows up, a half-serious saying begins to circulate in the teachers' lounge.
+"Teaching His Highness is the least and most rewarding thing you'll ever do. It's because there's almost nothing you need to explain twice, and at least you survived without being stumped by his questions."
+The prince completes every important course in the royal curriculum at a pace that leaves his tutors speechless. Star cartography, history, literature, philosophy, military theory, diplomatic etiquette... One after another are passed with the highest scores. His bearing is impeccable. His speech is measured and graceful. He treats others with a warmth that never oversteps its bounds Even the diplomats sing his praises in the royal court.
+In other words, he's becoming the perfect qualified heir.
+Another birthday arrives. The royal capital blazes with light as it always does. Gifts from across the planet line the path from the palace gates to the banquet hall just as they do every year. Ceremonialists log each one. Guards arrange them in careful rows. No one expects this year to be any different.
+Except someone is missing. Celki sighs. No one will be smiling at the young prince's side starting this year. No one will watch him unwrap gifts and ask, "Which one will you keep this year, Xavier?"
+Since the official announcement of the queen's "passing," everyone has tacitly avoided the subject.
+And perhaps because of this, the distance between the crown prince and the king grows wider by the day. Xavier ignores his father's expectation for him to deal with the affairs of state as soon as possible. Instead, he enrolls at the Astria Knyght Academy, the same school his mother once attended. He even leads squads on his own to purge Wanderers entrenched in the forests located at the border. He ventures alone into lands that grow more remote, more dangerous...
+Celki sees it clearly. The Protocore Energy sustaining the planet is fading. Wanderers multiply unchecked. More bad news flows from every corner of the planet into the capital.
+And the worse things get, the grander the prince's birthday celebrations become, as if the brilliant lights could keep the planet just as it always was-forever young, forever flourishing.
+
+After returning from a campaign, Xavier doesn't return to his quarters. He follows an old mountain trail into a forest where no one will disturb him. He picks a tree, jumps onto its branches, leans against the rough bark with his sword in his arms, and slowly closes his eyes.
+"Your Highness wins a battle and immediately runs off to slack?" The first to find him is Celki, Captain of the Royal Guard. "Most people rush home to claim their honors. You climb a tree and take a nap.”
+"I'm not slacking. It's just quieter up here." Celki has already heard from the guards.
+When the prince returned, he went straight to the king's private hall. The doors stayed shut for the entire afternoon. No one needs to guess. It was another argument.
+Their ideals are fundamentally at odds. The prince refuses to walk the path his father has laid out for him
+"Celki, I fought a battle, and I watched people pave the road with their lives." The prince opens his eyes. It's unclear whether he's speaking to her or to himself.
+"...I might not be able to feel what troubles you, Your Highness. But sometimes, the first thing a crown prince must learn is to shoulder responsibility. I know it's hard. Sometimes it's a choice that must be made."
+Xavier opens his eyes and looks quietly at the Captain of the Royal Guard, who has watched over him since childhood. "Does following Philos's predetermined path mean it can never be wrong? What if that path was paved with lies from the very beginning? Should I keep walking it all the same?"
+Celki finds herself at a loss for words. Seconds pass in silence before she speaks. Her voice is low.
+“…Your Highness. Walking a road no one has tread before is a hundred times harder than following in someone else's footsteps. If you choose that, you must be prepared to be torn apart along the way."
+            `,
+    },
+    {
+        id: 25999,
+        link: "little-prince-gift",
+        serialNumber: "05",
+        subtitle: "Walking Together",
+        content: `
+It's the annual season for forming clubs at Astria Academy.
+Now in his second year, Jeremiah is finally in the glorious position of being able to lord his seniority over the incoming freshmen.
+There's just one problem. When trying to form a club, his booth is as deserted as ever. On the table before him sits a battered old signal spectrum analyzer. A wooden sign hangs in the most prominent spot: Unknown Cosmic Civilizations Club.
+He accosts every passerby with boundless enthusiasm. "It's interesting, right? They say this is an actual artifact from Earth's era!" To a crowd of young freshmen, the words "Earth's history has long held the uncontested top spot on the academy's list of courses most likely to put you to sleep. Slapping a new label on it doesn't change its soporific nature.
+As the season nears its end, Jeremiah slumps over the table in the club room. He stares at a stack of application forms that remain stubbornly blank.
+"You couldn't get a single person?"
+Jeremiah looks up, spots Xavier, and his eyes light up for a split second. But his mouth keeps up its bravado. "What do you mean? Are you and I not people?"
+"I'm just passing through.”
+"That still counts as showing up. "Jeremiah springs up from his folding chair, grabs Xavier's sleeve, and launches into a rapid-fire pitch. "Think about it. Is there any club in this entire school better suited for you? Nobody joins, which means nobody bothers you. The whole room is yours. There's honey milk tea in the fridge, too. I bought it yesterday."
+Xavier doesn't answer right away. His gaze drifts past Jeremiah's shoulder to the half-dead pothos wilting on the window sill.
+"Oh, I ran into that girl! She agreed to help me fill the roster."
+"...When did you talk to her?"
+"It's none of your business! Guess who I saw her chatting with today—"
+The moment Xavier's brow furrows, Jeremiah knows it's now or never. He whips out a crisp, blank application form, slaps it down in front of Xavier, and shoves a pen into his hand.
+"Now you two won't just have swordsmanship practice together. You'll have club stuff to talk about too. And as club leader, I solemnly swear there won't be mandatory attendance or any forced group activities. What do you say?"
+Xavier lowers his head and starts filling out the form and mutters, "...Fine." When he reaches the field labeled "Reason for Joining," he pauses. Jeremiah expects something token like "interested in unsolved cosmic mysteries" or "want to look into unknown signals." Instead, Xavier writes, "Peace and quiet." At least it's one person regardless of the reason.
+So Jeremiah spends his entire lunch break redesigning the club's recruitment poster. To call it "redesigning" is generous. There's only one change: Xavier's name, blown up in large font, with a line of small print underneath that reads, "Current member: Xavier."
+When the poster goes up, the results are immediate. By evening, Jeremiah has collected over eighty new applications.
+"What's this?" Xavier asks when he stops by after class to seek his peace and quiet.
+Jeremiah glances at it without batting an eye. 
+"A recruitment poster."
+"My name is on it," Xavier says.
+"You're a member. Putting members' names on the poster is normal, right?" Jeremiah replies, utterly shameless.
+Xavier continues to look at him with the same calm expression. Jeremiah holds his ground for approximately three seconds before averting his gaze.
+"How do I write a withdrawal request?"
+"No!" Jeremiah latches onto Xavier's arm. "I'm sorry! I'm sorry! Whatever you say goes, just don't quit—"
+"Recruit the minimum number. Don't go over that."
+And so, when the season ends, the Unknown Cosmic Civilizations Club proudly retains its title as the least popular club in the entire academy.
+Not counting Jeremiah himself, the official roster is as follows: Xavier, who wants peace and quiet; Xavier's junior, who did this purely out of kindness and to help pad the numbers; Sullivan, a hometown acquaintance Jeremiah doesn't know that well; and Hal, a boy who's supposedly interested in all kinds of interstellar plants. A handful of extra applications that Jeremiah didn't manage to destroy in time are quietly stuffed into a drawer.
+
+For his birthday this year, Xavier skips the grand banquet at the royal capital once again and walks out of the city alone. His mother's tombstone stands on the hillside east of the capital walls, surrounded by the flowers she loved most when she was alive. Xavier stands before it for a long time, despite knowing there's nothing beneath it. When he finally leaves, the sun is sinking inch by inch below the horizon at the edge of the capital. By the time he returns to the academy, night has fallen. The corridors are oddly, unusually quiet.
+He pushes open the door to the club room. And—
+"Happy Birthday!"
+Party poppers burst with a bang and send colorful confetti drifting down from the ceiling. Jeremiah stands at the front holding a cake. The room is packed with people behind him, every face broadcasting the same triumphant message: "We got him." Then the air goes perfectly still.
+Xavier is standing in the doorway, his expression unchanged without so much as a flinch.
+With party poppers still in hand, the people in the room exchange bewildered glances Jeremiah's grin freezes. He looks down at the cake, then at Xavier, who's unsurprised. His expression shifts gradually from smug to confused.
+Xavier thinks. Then he takes a step back and gently closes the door.
+"Ready?"
+The people inside are stunned.
+"What?"
+"Do it again."
+A second passes. Then there's a flurry of frantic scrambling. Party poppers are raised into position. People shuffle into new spots, and someone whispers about moving the cake forward a little. Another steps on someone else's foot and yelps in pain.
+Xavier smiles and leans against the wall to wait. Outside the window, the moonlight is bright. Inside, the commotion continues until the door swings open once more. 
+"Happy Birthday!"
+He lifts his head and looks at the faces before him. These are the people he chose to meet on his own. For the first time in a long while, he remembers what his mother once told him. "Thank you," he says. "I really like this gift."
+            `,
+    },
+    {
+        id: 25999,
+        link: "little-prince-gift",
+        serialNumber: "06",
+        subtitle: "The Last Gift",
+        content: `
+The royal capital blazes with light. Music from the banquet drifts on the night wind in broken segments. They're filled with the faint sound of laughter and the crisp clinking of glasses The first time Jeremiah is invited inside the palace is for Xavier's coming-of-age ceremony He learns a great deal along the way.
+Starchart murals painted across the vaulted ceilings, relief-carved pillars lining every corridor, and even an unassuming vase tucked around a corner could fuel several cultural research papers on its own. As the prince's classmate and friend, he's afforded no small amount of courtesy. A ceremonialist guides him, intentionally slowing down to accommodate Jeremiah's curious glances.
+The waiting room is quiet, a world apart from the clamor beyond the palace walls. Xavier stands before a full-length mirror and ignores the ceremonial cloak with golden threads. It's being held aloft by the attendant behind him.
+According to protocol, it should be draped over his shoulders at the ceremony's conclusion. Instead, he raises his hands and fastens the last button of his formal attire with meticulous precision.
+Jeremiah is momentarily stunned. His classmate, who dresses so plainly on any given day, is radiant at this moment.
+And yet his expression is the same as the first time Jeremiah saw him in the club room. An attendant steps forward and tucks a golden flower into his lapel.
+Jeremiah's eyes drift from the flower to a red velvet tray nearby. On it sits a crown.
+It isn't the official crown for a coronation ceremony. Even so, this coming-of-age circlet is breathtaking. The silver band is set with stellarite, a gem unique to Philos. It refracts sharp, prismatic light beneath the lamps. Jeremiah stares at it for a few seconds.
+Something unnamed swells in his chest. He still can't tell what his calm friend is thinking. He only feels, without quite knowing why, that after today, his friend won't be quite as free. Jeremiah pushes the feeling down and whispers. "Change of plans. The teacher found the secret base under the library. Damn it, we'll have to meet at the capital's back gate tonight instead. You can slip out, right?"
+"Here. Your birthday present."
+Xavier catches it. It's a small badge that's handmade based on its rough finish. Around the edge, the words "Unknown Cosmic Civilizations Club" are written in small, crooked letters. He turns it over. On the back is a smaller line of text: Vice Captain.
+Xavier looks at the badge, then slips it into the inner pocket of his formal attire. 
+"Thanks."
+Jeremiah waves him off. Seeing more ceremonial officials filing in and afraid of blowing their cover, he makes his exit.
+
+That night, the prince vanishes without a trace. Guards mobilize on command. The entire palace is thrown into high alert in an instant. Every gate, corridor, and entrance is sealed tight. Patrols fan out, searching for the figure who shouldn't have disappeared.
+Xavier changes out of his formal attire. He dodges a patrol and pushes open the garden door when he runs into Celki.
+"Celki. Are you going to stop me tonight, too?"
+Celki doesn't answer. She looks up at him. 
+"Your Highness, you know that once this choice is made, there's no turning back, right?"
+Then she sheathes her sword and produces a small, finely crafted wooden box from behind her. She's been waiting for this day.
+"This was left for you by Her Majesty the Queen. Before she... Before she passed, she prepared this gift herself. She asked that it be delivered to you in person on the day of your coming-of-age ceremony.”
+Upon hearing the word "queen," something in his expression finally shifts if only slightly Xavier takes the box.
+Celki watches him, bows, and leaves the young prince.
+Xavier unclasps the copper latch and lifts the lid. Against the dark velvet lining lies a small brass key that glows with a warm, muted luster in the dim light. Beside it is a letter.
+The handwriting on the envelope is his mother's.
+He picks it up and unfolds it.
+
+Dear Xavier, 
+My darling boy.
+By the time you read this, you'll be an adult.
+Taller than your father, I imagine?
+Have you finally put on the uniform meant for the crown prince? Or. perhaps you'll be wearing that heavy crown.
+Regardless, you're still the little boy who hugged his training sword and snuck up into the trees to sleep in your mother's heart.
+Sometimes I think it'd be nice if I could still be there with you.
+I want to watch you grow little by little. To hear what you learned today, what questions you asked your teachers... I want to hold you when you're tired and tell you that you don't have to carry everything alone.
+But life doesn't always give us what we wish for. So I left all the words I never got to say in this letter.
+Over the years, you must've received many gifts. But the present I want to give you today isn't an "expectation." It's "freedom."
+Starting today, the observatory on the west side of the capital belongs to you. The key is in the envelope. You don't have to tell anyone. When you're happy, you can go there. When you're in pain, you can go there too. Even if you don't want to do anything at all, you can sit and watch the stars there. That's perfectly fine.
+ It'll be a place that belongs only to "Xavier." I hope you become a wonderful person. I believe you'll be a wonderful king. But before any of that, you must become someone who knows how to love himself.
+I hope no one will lose faith in you because you paused to rest.
+From now on, whenever night falls and you look up at the sky, if one star happens to shine a little brighter than the rest... Pretend it's your mother watching over you.
+And I hope you'll always know that there's someone in this world who loved you without reservation.
+<strong>I'll always love you. Sincerely, Mother.</strong>
+
+Xavier stares at the letter for a long time before folding it along its original creases and tucking it back into the envelope.
+Outside the door, the lights beyond the palace walls burn at their peak. The entire corridor is as bright as day. Guests' chatter, the orchestra's music, and the ceremonialists' loud announcements blur together into an overly grand symphony.
+Xavier grips the sword in his hand and looks at the Captain of the Royal Guard.
+Celki meets the gaze of the crown prince she watched grow up. Then, without a word, she takes a step back and turns to the side to clear a path.
+"I still believe you can forge a path different from your father's, Your Highness."
+"Philos will have a better future because of you."
+"...Thank you, Celki."
+Celki watches his retreating figure and, for a fleeting moment, thinks he looks no different from-the little prince who used to walk out of the classroom with a book in his arms or out of the training grounds with a sword.
+Only this time, the direction has changed He turns away from the brightly lit corridor and slips into a darker path.
+There are no street lamps on this road. No guests are lined up and waiting. There are no ceremonialists calling out titles. There's only the night wind, the stars growing clearer overhead, and him. Xavier walks faster.
+The hem of his knight's coat lifts in the wind. Behind him, the blazing palace shrinks inch by inch. The symphonic clamor fades into a faraway hum.
+The footsteps of the patrols surge toward every corner of the palace from all directions and merge into a low, continuous tremor. Xavier doesn't stop. He moves through familiar corridors, climbs the stone steps, and arrives at a silent observatory on the western side of the palace. He passes through the quiet archive room, ascends the spiral staircase, and reaches the old iron door at the back.
+He takes the key from his pocket, slides it into the lock, and gently turns it. It opens with a click.
+The hinges let out a low, drawn-out groan.  Night air rushes in, carrying the scent of trees, earth, and fresh grass.
+Xavier looks up. Here, the capital's towering walls break apart at one corner. This is a path few people know about, and it winds from behind the observatory and disappears into the forest.
+He watches it quietly for a few seconds. Then he takes the first step.
+
+In the forest beyond the walls, Jeremiah and the others are starting to get anxious.
+"Where is he? Don't tell me His Majesty actually arrested him."
+"I told you we should've come up with a backup plan."
+"Now what?"
+“...I don't know."
+"You don't have a backup plan, Jeremiah?"
+"Adventure is all about throwing caution to the wind!"
+Then they turn, and there's Xavier. Every face lights up.
+"Everyone's here? Then I hereby declare that the Backtrackers—ahem, formerly known as the Unknown Cosmic Civilizations Club, founded by yours truly-officially begins its first cosmic adventure!"
+"Jeremiah, can you keep your voice down? Are you trying to summon the guards?"
+"Do you not understand the concept of ceremony?"
+"All right, everyone shut up."
+"Captain, when do we leave?"
+Xavier looks at them. The lanterns' light plays across faces barely containing their excitement. Jeremiah holds up a crumpled little banner with the word "Backtracker' scrawled across it in uneven handwriting. It was clearly thrown together at the last minute.
+They don't know what lies ahead. Neither does he.
+Xavier smiles. He has to admit this is the birthday on which he's received the most gifts.
+"Right now," he says.
+And so the group pushes open the door and runs into the night.
+The path is still dark and long. There's only starlight, each other, and a road whose end they can't yet see.
+But not a single one of them looks back.
+            `,
+    },
+    {
         id: 261,
         link: "good-night-frostmere",
         serialNumber: "01",
