@@ -4561,7 +4561,7 @@ Gideon navigates with his trainer aircraft, his gaze fixed on the warship at the
 `,
     },
     {
-        id: 251,
+        id: 25.11,
         link: "light-into-dust",
         serialNumber: "01",
         subtitle: "Invitation",
@@ -4597,7 +4597,7 @@ Isaiah remains rooted in place, the rejected invitation crumpling in his grip.
             `,
     },
     {
-        id: 252,
+        id: 25.12,
         link: "light-into-dust",
         serialNumber: "02",
         subtitle: "Choice",
@@ -4624,7 +4624,7 @@ The pride on Isaiah's face freezes. The shadow of the Holy Sword slants across t
             `,
     },
     {
-        id: 253,
+        id: 25.13,
         link: "light-into-dust",
         serialNumber: "03",
         subtitle: "Backtracker's Diary",
@@ -4663,7 +4663,7 @@ Someone has to take the first step to save Philos, and it can only be you," Sore
             `,
     },
     {
-        id: 254,
+        id: 25.14,
         link: "light-into-dust",
         serialNumber: "04",
         subtitle: "Test Records",
@@ -4720,7 +4720,7 @@ Dialogue Recording:
             `,
     },
     {
-        id: 255,
+        id: 25.15,
         link: "light-into-dust",
         serialNumber: "05",
         subtitle: "Salvation",
@@ -4744,7 +4744,7 @@ But Jeremiah smirks. He takes back Isaiah's utensil and replaces it with a spoon
             `,
     },
     {
-        id: 256,
+        id: 25.16,
         link: "light-into-dust",
         serialNumber: "06",
         subtitle: "Isaiah vs. the World",
@@ -4778,7 +4778,7 @@ The candy's sweetness still lingers on Isaiah's tongue. A long time passes befor
             `,
     },
     {
-        id: 257,
+        id: 25.21,
         link: "little-prince-gift",
         serialNumber: "01",
         subtitle: "Gift",
@@ -4808,7 +4808,7 @@ The maid freezes for a moment, glancing back at the mountain of unopened gifts. 
             `,
     },
     {
-        id: 258,
+        id: 25.22,
         link: "little-prince-gift",
         serialNumber: "02",
         subtitle: "Wooden Sword",
@@ -4839,7 +4839,7 @@ She gazes at her sleeping child and smiles.
             `,
     },
     {
-        id: 259,
+        id: 25.23,
         link: "little-prince-gift",
         serialNumber: "03",
         subtitle: "Meaning of Expectation",
@@ -4903,7 +4903,7 @@ The queen smiles.
             `,
     },
     {
-        id: 2599,
+        id: 25.24,
         link: "little-prince-gift",
         serialNumber: "04",
         subtitle: "Finding the Way",
@@ -4932,7 +4932,7 @@ Celki finds herself at a loss for words. Seconds pass in silence before she spea
             `,
     },
     {
-        id: 25999,
+        id: 25.25,
         link: "little-prince-gift",
         serialNumber: "05",
         subtitle: "Walking Together",
@@ -4985,7 +4985,7 @@ He lifts his head and looks at the faces before him. These are the people he cho
             `,
     },
     {
-        id: 25999,
+        id: 25.26,
         link: "little-prince-gift",
         serialNumber: "06",
         subtitle: "The Last Gift",
