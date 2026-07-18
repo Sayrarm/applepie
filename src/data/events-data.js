@@ -58,12 +58,11 @@ export const eventsData = [
     },
     {
         id: 8,
-        name: "Heartfelt gift: Free 5 star memory",
-        image: "../assets/banners/framed-dusk.png",
+        name: "Heartfelt gift",
+        image: "../assets/main-page/events/gift-zayne.png",
         "startDate": "2026-07-18T05:00:00",
         "endDate": "2026-08-02T04:59:59",
         "active": true
     },
-
 
 ]
