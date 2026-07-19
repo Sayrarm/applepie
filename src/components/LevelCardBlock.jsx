@@ -186,8 +186,12 @@ function LevelCardBlock({cardId: propCardId, onAvailabilityChange}) {
     const isLevelAvailable = availableLevels.includes(level);
 
     // Функция для форматирования чисел
-    const formatNumber = (num) => {
+    const formatNumber = (num, decimals = 2) => {
         if (num === undefined || num === null || isNaN(num)) return '—';
+        // Округляем число до указанного количества знаков после запятой
+        if (typeof num === 'number' && !Number.isInteger(num)) {
+            return Number(num.toFixed(decimals));
+        }
         return num;
     };
 
