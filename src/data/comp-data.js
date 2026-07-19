@@ -80,27 +80,6 @@ The team deals 8% more DMG.
 When you create [Radiant Ripples], Xavier will also create [Radiant Ripples].
 While [Darknight Reign] is active, each time [Radiant Ripples] undulate, [Lumenflora]'s damage increases by 6%, up to 36%. This damage boost effect is cleared when [Darknight Reign] ends.
         `,
-        supportSkillFormula: "364 + 194% ATK + 17% of Max HP",
-        empoweredSupportSkillFormula: "216 + 115% ATK + 10% of Max HP",
-        resonanceSkillFormula: "1767 + 942% ATK + 84% of Max HP",
-        ardentOathFormula: "1800 + 960% ATK + 86% of Max HP",
-        darknightReignSupportSkillFormula: "720 + 384 % ATK + 35 % of Max HP",
-        darknightReignActiveSkillFormula: "520 + 277 % ATK + 25 % of Max HP",
-        basicAttackFormula: `
-        First Strike: 98 + 52% ATK + 4.7% of Max HP
-        Second Strike: 88 + 46% ATK + 4.2% of Max HP 
-        Third Strike: 122 + 65% ATK + 5.9% of Max HP 
-        Fourth Strike: 147 + 78% ATK + 7.1% of Max HP
-        Charged Attack: 165 + 88% ATK + 7.9% of Max HP
-        `,
-        activeSkillFormula: "351 + 187% ATK + 16.8% of Max HP",
-        activeSkillSecondFormula: "376 + 200% ATK + 18% of Max HP",
-        buffPassiveSkillFormula: "+ 8% damage dealt + 8% DMG Boost to Weakened",
-        buffEidolon0Formula: "+ 8% team DMG",
-        buffEidolon1Formula: "+ 20% Ardent Oath charge + 40% Active Skill damage under Darknight Reign",
-        buffEidolon2Formula: "+ 1 Energy Charge limit + 12.5% DEF ignore under Darknight Reign",
-        buffEidolon3Formula: "+ 8% team DMG + SupportSkill damage under Darknight Reign increases by 6%, up to 36%",
-
     },
     {
         id: 12,
