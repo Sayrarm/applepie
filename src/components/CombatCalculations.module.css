@@ -1,3 +1,7 @@
+.container {
+    margin: 20px 5px 5px 5px;
+}
+
 .statsTable {
     border-collapse: collapse;
     width: 100%;
@@ -15,4 +19,37 @@
 .statsTable th {
     background-color: var(--forSelect);
     color: var(--colorText);
+}
+
+.titleSkill {
+    background: none !important;
+    color: var(--colorTextDark) !important;
+}
+
+
+.track {
+    height: 6px;
+    width: 100%;
+    background: var(--colorTextBright);
+    cursor: pointer;
+}
+
+.point {
+    height: 20px;
+    width: 20px;
+    background: var(--forSelect);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 8px 0 rgba(34, 60, 80, 0.6);
+    cursor: pointer;
+}
+
+.trackFilled {
+    position: absolute;
+    height: 100%;
+    background: var(--forSelect);
+    left: 0;
+    top: 0;
+    pointer-events: none;
 }

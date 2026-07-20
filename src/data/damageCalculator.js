@@ -24,7 +24,5 @@ export const createDamageCalculator = (formulaStats, defaultMultiplier = 1) => {
     };
 };
 
-const perfectMatch = 100; //100% к DMG Boost to Weakened за совпадение всех стелл
-const stellaMatch = 5; //5% к team DMG Boost за каждое совпадение стеллы, макс до 6 раз может стакаться
-const teamDMG = compDataShowcaseDefault.buffEidolon0Stats.teamDMG + compDataShowcaseDefault.buffEidolon3Stats.teamDMG + stellaMatch
+const teamDMG = compDataShowcaseDefault.buffEidolon0Stats.teamDMG + compDataShowcaseDefault.buffEidolon3Stats.teamDMG
 
