@@ -1,4 +1,4 @@
-export const compDataShowcaseDefault = {
+export const compDataShowcaseDefault5star = {
     eidolon0: "+ 8% team DMG",
     buffEidolon0Stats: {
         teamDMG: 8,
@@ -11,6 +11,22 @@ export const compDataShowcaseDefault = {
     eidolon3: "+ 8% team DMG",
     buffEidolon3Stats: {
         teamDMG: 8,
+    },
+}
+
+export const compDataShowcaseDefault4star = {
+    eidolon0: "+ 5% team DMG",
+    buffEidolon0Stats: {
+        teamDMG: 5,
+    },
+    eidolon1: "+ 10% Ardent Oath charge",
+    buffEidolon1Stats: {
+        ardentOathCharge: 10,
+    },
+    eidolon2: "reduces team DMG taken by 5%",
+    eidolon3: "+ 5% team DMG",
+    buffEidolon3Stats: {
+        teamDMG: 5,
     },
 }
 

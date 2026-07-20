@@ -1,4 +1,7 @@
-import {compDataShowcaseDefault, compDataShowcaseSpecific} from "../data/comp-data-showcase.js";
+import {
+    compDataShowcaseDefault5star,
+    compDataShowcaseSpecific
+} from "../data/comp-data-showcase.js";
 import {Range} from 'react-range';
 import styles from "./CombatCalculations.module.css";
 import React, {useState} from "react";
@@ -107,22 +110,22 @@ function CombatCalculations({ stats }) {
                 <tbody>
                 <tr>
                     <th>Starring Effect</th>
-                    <td>{compDataShowcaseDefault.eidolon0}</td>
+                    <td>{compDataShowcaseDefault5star.eidolon0}</td>
                     <td>{specificData.buffEidolon0Formula}</td>
                 </tr>
                 <tr>
                     <th>Duo Rank 1</th>
-                    <td>{compDataShowcaseDefault.eidolon1}</td>
+                    <td>{compDataShowcaseDefault5star.eidolon1}</td>
                     <td>{specificData.buffEidolon1Formula}</td>
                 </tr>
                 <tr>
                     <th>Duo Rank 2</th>
-                    <td>{compDataShowcaseDefault.eidolon2}</td>
+                    <td>{compDataShowcaseDefault5star.eidolon2}</td>
                     <td>{specificData.buffEidolon2Formula}</td>
                 </tr>
                 <tr>
                     <th>Duo Rank 3</th>
-                    <td>{compDataShowcaseDefault.eidolon3}</td>
+                    <td>{compDataShowcaseDefault5star.eidolon3}</td>
                     <td>{specificData.buffEidolon3Formula}</td>
                 </tr>
                 </tbody>
