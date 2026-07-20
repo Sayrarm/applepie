@@ -18,6 +18,7 @@ import {useSearch} from '../hooks/useSearch';
 import {useSort} from '../hooks/useSort';
 import {useFilter} from '../hooks/useFilter';
 import {Button} from "antd";
+import CombatCalculations from "./CombatCalculations.jsx";
 
 // Ключ для localStorage
 const STORAGE_KEY = 'showcase_teams';
@@ -664,6 +665,8 @@ function Showcase() {
                     </div>
                 </section>
             </div>
+
+            <CombatCalculations />
 
             {/* Модалка выбора компаньона */}
             <ModalWindow
