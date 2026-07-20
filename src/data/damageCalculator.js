@@ -4,21 +4,18 @@ export const calculateDamage = (stats, formulaStats) => {
     const { hp = 0, atk = 0, def = 0 } = stats;
     const { base = 0, atk: atkPercent = 0, hp: hpPercent = 0, def: defPercent = 0 } = formulaStats;
 
-    // Вычисляем урон
-    const damage = base
+    return base
         + (atk * atkPercent / 100)
         + (hp * hpPercent / 100)
         + (def * defPercent / 100);
-
-    return Math.round(damage);
 };
 
 export const calculateWeakenedDamage = (baseDamage, dmgBoostToWeakened = 0, perfectMatch = 0) => {
-    return Math.round(baseDamage * (1 + (dmgBoostToWeakened + perfectMatch) / 100));
+    return baseDamage * (1 + (dmgBoostToWeakened + perfectMatch) / 100);
 };
 
 export const calculateCritDamage = (baseDamage, critDmg = 0) => {
-    return Math.round(baseDamage * (1 + critDmg / 100));
+    return baseDamage * (1 + critDmg / 100);
 };
 
 export const createDamageCalculator = (formulaStats, defaultMultiplier = 1) => {

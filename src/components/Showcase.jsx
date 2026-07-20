@@ -667,7 +667,7 @@ function Showcase() {
                 </section>
             </div>
 
-            <CombatCalculations />
+            <CombatCalculations stats={finalStats}/>
 
             {/* Модалка выбора компаньона */}
             <ModalWindow

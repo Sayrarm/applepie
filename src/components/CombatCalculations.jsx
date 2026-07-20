@@ -1,70 +1,75 @@
 import {compDataShowcaseDefault, compDataShowcaseSpecific} from "../data/comp-data-showcase.js";
-import {calculateCritDamage, calculateWeakenedDamage, createDamageCalculator} from "../data/damageCalculator.js";
+
 import styles from "./CombatCalculations.module.css";
 import React from "react";
+import {calculateCritDamage, calculateWeakenedDamage, createDamageCalculator} from "../data/damageCalculator.js";
 
-function CombatCalculations() {
+function CombatCalculations({ stats }) {
     const specificData = compDataShowcaseSpecific[0] || {};
 
-    // Пример статов (можно взять из вашего приложения)
-    const exampleStats = {
-        hp: 1,
-        atk: 1,
-        def: 1
+    // Используем переданные статы из Showcase
+    const companionStats = {
+        hp: stats?.hp || 1,
+        atk: stats?.atk || 1,
+        def: stats?.def || 1
     };
 
-    // Параметры для расчетов
-    const dmgBoostToWeakened = 50; // 50% DMG Boost to Weakened
-    const critDmg = 150; // 150% критический урон
+    // Используем переданные статы из Showcase для расчетов
+    const dmgBoostToWeakened = stats?.dmgBoost || 0;
+    const critDmg = stats?.critDmg || 0;
+    const oathStrength = stats?.oathStrength || 0;
 
-    const damage = {
-        support: createDamageCalculator(specificData.supportSkillStats)(exampleStats),
-        empoweredSupport: createDamageCalculator(specificData.empoweredSupportSkillStats)(exampleStats),
-        resonance: createDamageCalculator(specificData.resonanceSkillStats)(exampleStats),
-        ardentOath: createDamageCalculator(specificData.ardentOathStats)(exampleStats),
-        passive1: createDamageCalculator(specificData.passiveSkillStats1)(exampleStats),
-        passive2: createDamageCalculator(specificData.passiveSkillStats2)(exampleStats),
-        basic1: createDamageCalculator(specificData.basicFirstStrikeStats)(exampleStats),
-        basic2: createDamageCalculator(specificData.basicSecondStrikeStats)(exampleStats),
-        basic3: createDamageCalculator(specificData.basicThirdStrikeStats)(exampleStats),
-        basic4: createDamageCalculator(specificData.basicFourthStrikeStats)(exampleStats),
-        basicCharged: createDamageCalculator(specificData.basicChargedAttackStats)(exampleStats),
-        active1: createDamageCalculator(specificData.activeSkillStats)(exampleStats),
-        active2: createDamageCalculator(specificData.activeSkillSecondStats)(exampleStats),
+    const baseDamage = {
+        support: createDamageCalculator(specificData.supportSkillStats)(companionStats),
+        empoweredSupport: createDamageCalculator(specificData.empoweredSupportSkillStats)(companionStats),
+        resonance: createDamageCalculator(specificData.resonanceSkillStats)(companionStats),
+        ardentOath: createDamageCalculator(specificData.ardentOathStats)(companionStats) * (1 + oathStrength / 100),
+        passive1: createDamageCalculator(specificData.passiveSkillStats1)(companionStats),
+        passive2: createDamageCalculator(specificData.passiveSkillStats2)(companionStats),
+        basic1: createDamageCalculator(specificData.basicFirstStrikeStats)(companionStats),
+        basic2: createDamageCalculator(specificData.basicSecondStrikeStats)(companionStats),
+        basic3: createDamageCalculator(specificData.basicThirdStrikeStats)(companionStats),
+        basic4: createDamageCalculator(specificData.basicFourthStrikeStats)(companionStats),
+        basicCharged: createDamageCalculator(specificData.basicChargedAttackStats)(companionStats),
+        active1: createDamageCalculator(specificData.activeSkillStats)(companionStats),
+        active2: createDamageCalculator(specificData.activeSkillSecondStats)(companionStats),
     };
+
     // Рассчитываем Weakened DMG для каждой способности
     const weakenedDamage = {
-        support: calculateWeakenedDamage(damage.support, dmgBoostToWeakened),
-        empoweredSupport: calculateWeakenedDamage(damage.empoweredSupport, dmgBoostToWeakened),
-        resonance: calculateWeakenedDamage(damage.resonance, dmgBoostToWeakened),
-        ardentOath: calculateWeakenedDamage(damage.ardentOath, dmgBoostToWeakened),
-        passive1: calculateWeakenedDamage(damage.passive1, dmgBoostToWeakened),
-        passive2: calculateWeakenedDamage(damage.passive2, dmgBoostToWeakened),
-        basic1: calculateWeakenedDamage(damage.basic1, dmgBoostToWeakened),
-        basic2: calculateWeakenedDamage(damage.basic2, dmgBoostToWeakened),
-        basic3: calculateWeakenedDamage(damage.basic3, dmgBoostToWeakened),
-        basic4: calculateWeakenedDamage(damage.basic4, dmgBoostToWeakened),
-        basicCharged: calculateWeakenedDamage(damage.basicCharged, dmgBoostToWeakened),
-        active1: calculateWeakenedDamage(damage.active1, dmgBoostToWeakened),
-        active2: calculateWeakenedDamage(damage.active2, dmgBoostToWeakened),
+        support: calculateWeakenedDamage(baseDamage.support, dmgBoostToWeakened),
+        empoweredSupport: calculateWeakenedDamage(baseDamage.empoweredSupport, dmgBoostToWeakened),
+        resonance: calculateWeakenedDamage(baseDamage.resonance, dmgBoostToWeakened),
+        ardentOath: calculateWeakenedDamage(baseDamage.ardentOath, dmgBoostToWeakened),
+        passive1: calculateWeakenedDamage(baseDamage.passive1, dmgBoostToWeakened),
+        passive2: calculateWeakenedDamage(baseDamage.passive2, dmgBoostToWeakened),
+        basic1: calculateWeakenedDamage(baseDamage.basic1, dmgBoostToWeakened),
+        basic2: calculateWeakenedDamage(baseDamage.basic2, dmgBoostToWeakened),
+        basic3: calculateWeakenedDamage(baseDamage.basic3, dmgBoostToWeakened),
+        basic4: calculateWeakenedDamage(baseDamage.basic4, dmgBoostToWeakened),
+        basicCharged: calculateWeakenedDamage(baseDamage.basicCharged, dmgBoostToWeakened),
+        active1: calculateWeakenedDamage(baseDamage.active1, dmgBoostToWeakened),
+        active2: calculateWeakenedDamage(baseDamage.active2, dmgBoostToWeakened),
     };
 
     const critDamage = {
-        support: calculateCritDamage(damage.support, critDmg),
-        empoweredSupport: calculateCritDamage(damage.empoweredSupport, critDmg),
-        resonance: calculateCritDamage(damage.resonance, critDmg),
-        ardentOath: calculateCritDamage(damage.ardentOath, critDmg),
-        passive1: calculateCritDamage(damage.passive1, critDmg),
-        passive2: calculateCritDamage(damage.passive2, critDmg),
-        basic1: calculateCritDamage(damage.basic1, critDmg),
-        basic2: calculateCritDamage(damage.basic2, critDmg),
-        basic3: calculateCritDamage(damage.basic3, critDmg),
-        basic4: calculateCritDamage(damage.basic4, critDmg),
-        basicCharged: calculateCritDamage(damage.basicCharged, critDmg),
-        active1: calculateCritDamage(damage.active1, critDmg),
-        active2: calculateCritDamage(damage.active2, critDmg),
+        support: calculateCritDamage(baseDamage.support, critDmg),
+        empoweredSupport: calculateCritDamage(baseDamage.empoweredSupport, critDmg),
+        resonance: calculateCritDamage(baseDamage.resonance, critDmg),
+        ardentOath: calculateCritDamage(baseDamage.ardentOath, critDmg),
+        passive1: calculateCritDamage(baseDamage.passive1, critDmg),
+        passive2: calculateCritDamage(baseDamage.passive2, critDmg),
+        basic1: calculateCritDamage(baseDamage.basic1, critDmg),
+        basic2: calculateCritDamage(baseDamage.basic2, critDmg),
+        basic3: calculateCritDamage(baseDamage.basic3, critDmg),
+        basic4: calculateCritDamage(baseDamage.basic4, critDmg),
+        basicCharged: calculateCritDamage(baseDamage.basicCharged, critDmg),
+        active1: calculateCritDamage(baseDamage.active1, critDmg),
+        active2: calculateCritDamage(baseDamage.active2, critDmg),
     };
 
+    // Вспомогательная функция для округления при отображении
+    const roundDisplay = (value) => Math.round(value);
 
     return (
         <section>
@@ -116,52 +121,52 @@ function CombatCalculations() {
                 <tbody>
                 <tr>
                     <th>Support Skill</th>
-                    <td>{damage.support}</td>
-                    <td>{weakenedDamage.support}</td>
-                    <td>{critDamage.support}</td>
+                    <td>{roundDisplay(baseDamage.support)}</td>
+                    <td>{roundDisplay(weakenedDamage.support)}</td>
+                    <td>{roundDisplay(critDamage.support)}</td>
                     <td>{specificData.supportSkillFormula}</td>
                     <td></td>
                 </tr>
                 <tr>
                     <th>Empowered Support Skill</th>
-                    <td>{damage.empoweredSupport}</td>
-                    <td>{weakenedDamage.empoweredSupport}</td>
-                    <td>{critDamage.empoweredSupport}</td>
+                    <td>{roundDisplay(baseDamage.empoweredSupport)}</td>
+                    <td>{roundDisplay(weakenedDamage.empoweredSupport)}</td>
+                    <td>{roundDisplay(critDamage.empoweredSupport)}</td>
                     <td>{specificData.empoweredSupportSkillFormula}</td>
                     <td></td>
                 </tr>
                 <tr>
                     <th>Resonance Skill</th>
-                    <td>{damage.resonance}</td>
-                    <td>{weakenedDamage.resonance}</td>
-                    <td>{critDamage.resonance}</td>
+                    <td>{roundDisplay(baseDamage.resonance)}</td>
+                    <td>{roundDisplay(weakenedDamage.resonance)}</td>
+                    <td>{roundDisplay(critDamage.resonance)}</td>
                     <td>{specificData.resonanceSkillFormula}</td>
                     <td></td>
                 </tr>
                 <tr>
                     <th>Ardent Oath</th>
-                    <td>{damage.ardentOath}</td>
-                    <td>{weakenedDamage.ardentOath}</td>
-                    <td>{critDamage.ardentOath}</td>
+                    <td>{roundDisplay(baseDamage.ardentOath)}</td>
+                    <td>{roundDisplay(weakenedDamage.ardentOath)}</td>
+                    <td>{roundDisplay(critDamage.ardentOath)}</td>
                     <td>{specificData.ardentOathFormula}</td>
-                    <td></td>
+                    <td>+{oathStrength}% Oath Strength</td>
                 </tr>
                 <tr>
                     <th>Passive Skill (Companion):</th>
                 </tr>
                 <tr>
                     <th>Companion Passive Skill</th>
-                    <td>{damage.passive1}</td>
-                    <td>{weakenedDamage.passive1}</td>
-                    <td>{critDamage.passive1}</td>
+                    <td>{roundDisplay(baseDamage.passive1)}</td>
+                    <td>{roundDisplay(weakenedDamage.passive1)}</td>
+                    <td>{roundDisplay(critDamage.passive1)}</td>
                     <td>{specificData.passiveSkillFormula1}</td>
                     <td></td>
                 </tr>
                 <tr>
                     <th>MC Passive Skill</th>
-                    <td>{damage.passive2}</td>
-                    <td>{weakenedDamage.passive2}</td>
-                    <td>{critDamage.passive2}</td>
+                    <td>{roundDisplay(baseDamage.passive2)}</td>
+                    <td>{roundDisplay(weakenedDamage.passive2)}</td>
+                    <td>{roundDisplay(critDamage.passive2)}</td>
                     <td>{specificData.passiveSkillFormula2}</td>
                     <td>{specificData.buffPassiveSkillFormula}</td>
                 </tr>
@@ -170,17 +175,17 @@ function CombatCalculations() {
                 </tr>
                 <tr>
                     <th>Active Skill First Attack</th>
-                    <td>{damage.active1}</td>
-                    <td>{weakenedDamage.active1}</td>
-                    <td>{critDamage.active1}</td>
+                    <td>{roundDisplay(baseDamage.active1)}</td>
+                    <td>{roundDisplay(weakenedDamage.active1)}</td>
+                    <td>{roundDisplay(critDamage.active1)}</td>
                     <td>{specificData.activeSkillFormula}</td>
                     <td></td>
                 </tr>
                 <tr>
                     <th>Active Skill Second Attack</th>
-                    <td>{damage.active2}</td>
-                    <td>{weakenedDamage.active2}</td>
-                    <td>{critDamage.active2}</td>
+                    <td>{roundDisplay(baseDamage.active2)}</td>
+                    <td>{roundDisplay(weakenedDamage.active2)}</td>
+                    <td>{roundDisplay(critDamage.active2)}</td>
                     <td>{specificData.activeSkillSecondFormula}</td>
                     <td></td>
                 </tr>
@@ -189,41 +194,41 @@ function CombatCalculations() {
                 </tr>
                 <tr>
                     <th>First Strike</th>
-                    <td>{damage.basic1}</td>
-                    <td>{weakenedDamage.basic1}</td>
-                    <td>{critDamage.basic1}</td>
+                    <td>{roundDisplay(baseDamage.basic1)}</td>
+                    <td>{roundDisplay(weakenedDamage.basic1)}</td>
+                    <td>{roundDisplay(critDamage.basic1)}</td>
                     <td>{specificData.basicFirstStrike}</td>
                     <td></td>
                 </tr>
                 <tr>
                     <th>Second Strike</th>
-                    <td>{damage.basic2}</td>
-                    <td>{weakenedDamage.basic2}</td>
-                    <td>{critDamage.basic2}</td>
+                    <td>{roundDisplay(baseDamage.basic2)}</td>
+                    <td>{roundDisplay(weakenedDamage.basic2)}</td>
+                    <td>{roundDisplay(critDamage.basic2)}</td>
                     <td>{specificData.basicSecondStrike}</td>
                     <td></td>
                 </tr>
                 <tr>
                     <th>Third Strike</th>
-                    <td>{damage.basic3}</td>
-                    <td>{weakenedDamage.basic3}</td>
-                    <td>{critDamage.basic3}</td>
+                    <td>{roundDisplay(baseDamage.basic3)}</td>
+                    <td>{roundDisplay(weakenedDamage.basic3)}</td>
+                    <td>{roundDisplay(critDamage.basic3)}</td>
                     <td>{specificData.basicThirdStrike}</td>
                     <td></td>
                 </tr>
                 <tr>
                     <th>Fourth Strike</th>
-                    <td>{damage.basic4}</td>
-                    <td>{weakenedDamage.basic4}</td>
-                    <td>{critDamage.basic4}</td>
+                    <td>{roundDisplay(baseDamage.basic4)}</td>
+                    <td>{roundDisplay(weakenedDamage.basic4)}</td>
+                    <td>{roundDisplay(critDamage.basic4)}</td>
                     <td>{specificData.basicFourthStrike}</td>
                     <td></td>
                 </tr>
                 <tr>
                     <th>Charged Attack</th>
-                    <td>{damage.basicCharged}</td>
-                    <td>{weakenedDamage.basicCharged}</td>
-                    <td>{critDamage.basicCharged}</td>
+                    <td>{roundDisplay(baseDamage.basicCharged)}</td>
+                    <td>{roundDisplay(weakenedDamage.basicCharged)}</td>
+                    <td>{roundDisplay(critDamage.basicCharged)}</td>
                     <td>{specificData.basicChargedAttack}</td>
                     <td></td>
                 </tr>
