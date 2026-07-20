@@ -46,14 +46,16 @@ export const compDataShowcaseSpecific = [
             hp: 86,
             def: 0
         },
-        passiveSkillFormula1: "Support Skill under Darknight Reign: 720 + 384 % ATK + 35 % of Max HP",
+        passiveSkillFormula1: `Support Skill under Darknight Reign: 
+720 + 384 % ATK + 35 % of Max HP`,
         passiveSkillStats1: {
             base: 720 ,
             atk: 384,
             hp: 35,
             def: 0
         },
-        passiveSkillFormula2: "Active Skill under Darknight Reign: 520 + 277 % ATK + 25 % of Max HP",
+        passiveSkillFormula2: `Active Skill under Darknight Reign: 
+520 + 277 % ATK + 25 % of Max HP`,
         passiveSkillStats2: {
             base: 520 ,
             atk: 277,
@@ -110,7 +112,8 @@ export const compDataShowcaseSpecific = [
             hp: 18,
             def: 0
         },
-        buffPassiveSkillFormula: "under Darknight Reign + 8% damage dealt + 8% DMG Boost to Weakened",
+        buffPassiveSkillFormula: `Under Darknight Reign 
++ 8% damage dealt + 8% DMG Boost to Weakened`,
         buffPassiveSkillStats: {
             DMGBoost: 8,
             WeakenedBoost: 8,
