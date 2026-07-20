@@ -416,8 +416,9 @@ function Showcase() {
                         <div className={styles.cardSlotEquipped}>
                             {/* Информация о карточке — уровень и ранг */}
                             <div className={styles.cardInfo}>
-                                <span className={styles.cardLevel}>Lv.{cardData?.level || 1} </span>
+                                <span className={styles.cardLevel}>Lv.{cardData?.level || 1} {cardData?.isAscended && <span className={styles.ascendMark}>✦</span>}</span>
                                 <span className={styles.cardRank}>Rank {cardData?.rank || 0} </span>
+
                             </div>
 
                             <div className={styles.cardWrapper}>

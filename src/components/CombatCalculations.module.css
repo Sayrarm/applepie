@@ -1,0 +1,17 @@
+.statsTable {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.statsTable th,
+.statsTable td {
+    border: 1px solid var(--border-table);
+    padding: 8px 12px;
+    text-align: center;
+}
+
+.statsTable th {
+    background-color: var(--forSelect);
+    color: var(--colorText);
+}
