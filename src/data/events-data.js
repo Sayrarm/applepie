@@ -51,7 +51,7 @@ export const eventsData = [
     {
         id: 7,
         name: "Double Drop of Bounty Hunt",
-        image: "../assets/sp/unicorns.png",
+        image: "../assets/main-page/events/bounty-hunt.png",
         "startDate": "2026-07-20T05:00:00",
         "endDate": "2026-07-27T04:59:59",
         "active": true
@@ -62,6 +62,14 @@ export const eventsData = [
         image: "../assets/main-page/events/gift-zayne.png",
         "startDate": "2026-07-18T05:00:00",
         "endDate": "2026-08-02T04:59:59",
+        "active": true
+    },
+    {
+        id: 9,
+        name: "New Kitty Tokens",
+        image: "../assets/main-page/events/kitty-extra.png",
+        "startDate": "2026-07-27T05:00:00",
+        "endDate": "2026-08-17T04:59:59",
         "active": true
     },
 
