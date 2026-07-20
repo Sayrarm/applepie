@@ -1,4 +1,4 @@
-import {compDataShowcaseDefault} from "./comp-data-showcase.js";
+import {compDataShowcaseDefault5star} from "./comp-data-showcase.js";
 
 export const calculateDamage = (stats, formulaStats) => {
     const { hp = 0, atk = 0, def = 0 } = stats;
@@ -24,5 +24,5 @@ export const createDamageCalculator = (formulaStats, defaultMultiplier = 1) => {
     };
 };
 
-const teamDMG = compDataShowcaseDefault.buffEidolon0Stats.teamDMG + compDataShowcaseDefault.buffEidolon3Stats.teamDMG
+const teamDMG = compDataShowcaseDefault5star.buffEidolon0Stats.teamDMG + compDataShowcaseDefault5star.buffEidolon3Stats.teamDMG
 
