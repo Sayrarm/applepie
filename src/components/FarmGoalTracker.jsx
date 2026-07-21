@@ -449,7 +449,8 @@ function FarmGoalTracker() {
                                     <h4>Resources Needed:</h4>
                                     <div className={styles.resourcesList}>
                                         {goal.neededExp > 0 && (
-                                            <div className={styles.expRow}>{getExpLabel(goal, true)} {goal.neededExp.toLocaleString()}</div>
+                                            <div
+                                                className={styles.expRow}>{getExpLabel(goal, true)} {goal.neededExp.toLocaleString()}</div>
                                         )}
                                         {goal.type === 'memory' && (goal.neededCrystalsN > 0 || goal.neededCrystalsR > 0 || goal.neededCrystalsSR > 0) && (
                                             <div className={styles.crystalRow}>
@@ -496,21 +497,24 @@ function FarmGoalTracker() {
                                     <h4>Remaining to Farm:</h4>
                                     <div className={styles.remainingList}>
                                         {goal.neededExp > 0 && (
-                                            <div className={`${expCompleted ? styles.completed : styles.notCompleted} ${styles.expRow}`}>
+                                            <div
+                                                className={`${expCompleted ? styles.completed : styles.notCompleted} ${styles.expRow}`}>
                                                 {getExpLabel(goal, true)} {remaining.exp.toLocaleString()}
                                             </div>
                                         )}
-                                        {remaining.crystals && (remaining.crystals.N > 0 || remaining.crystals.R > 0 || remaining.crystals.SR > 0) && (
-                                            <div className={`${crystalsCompleted ? styles.completed : styles.notCompleted} ${styles.crystalRow}`}>
+                                        {goal.type === 'memory' && (goal.neededCrystalsN > 0 || goal.neededCrystalsR > 0 || goal.neededCrystalsSR > 0) && (
+                                            <div
+                                                className={`${crystalsCompleted ? styles.completed : styles.notCompleted} ${styles.crystalRow}`}>
                                                 <img
                                                     src={getImageUrl(getCrystalColorIcon(goal.crystalColor))}
                                                     alt={goal.crystalColor}
                                                     className={styles.crystalColorIcon}
                                                 />
                                                 {goal.crystalColor} Crystals:
-                                                {remaining.crystals.N > 0 && ` N: ${remaining.crystals.N}`}
-                                                {remaining.crystals.R > 0 && ` | R: ${remaining.crystals.R}`}
-                                                {remaining.crystals.SR > 0 && ` | SR: ${remaining.crystals.SR}`}
+                                                {/* Показываем все типы кристаллов, даже если их 0 */}
+                                                {` N: ${remaining.crystals?.N ?? 0}`}
+                                                {` | R: ${remaining.crystals?.R ?? 0}`}
+                                                {` | SR: ${remaining.crystals?.SR ?? 0}`}
                                             </div>
                                         )}
                                         {goal.type === 'memory' && goal.heart && (() => {
@@ -519,7 +523,8 @@ function FarmGoalTracker() {
                                             const heartRemaining = remaining.heart ?? 1;
                                             const heartCompleted = heartRemaining <= 0;
                                             return (
-                                                <div className={`${heartCompleted ? styles.completed : styles.notCompleted} ${styles.heartRow}`}>
+                                                <div
+                                                    className={`${heartCompleted ? styles.completed : styles.notCompleted} ${styles.heartRow}`}>
                                                     <img
                                                         src={getImageUrl(heartInfo.img)}
                                                         alt={heartInfo.name}
@@ -530,7 +535,8 @@ function FarmGoalTracker() {
                                             );
                                         })()}
                                         {goal.neededCredits > 0 && (
-                                            <div className={`${creditsCompleted ? styles.completed : styles.notCompleted} ${styles.creditRow}`}>
+                                            <div
+                                                className={`${creditsCompleted ? styles.completed : styles.notCompleted} ${styles.creditRow}`}>
                                                 <img
                                                     src={getImageUrl(credits[0].img)}
                                                     alt="Credits"
@@ -552,7 +558,8 @@ function FarmGoalTracker() {
                                             <div className={styles.farmingDungeons}>
                                                 {remaining.exp > 0 && (
                                                     <div className={styles.farmingCard}>
-                                                        <div className={styles.farmingItem}>{getExpLabel(goal, false)}</div>
+                                                        <div
+                                                            className={styles.farmingItem}>{getExpLabel(goal, false)}</div>
                                                         <img
                                                             src={getImageUrl(getDungeonIcon(goal))}
                                                             alt="exp dungeon"
