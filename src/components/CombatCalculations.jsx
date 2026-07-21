@@ -105,6 +105,9 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
         basic4: weaponData.basicFourthStrikeStats
             ? createDamageCalculator(weaponData.basicFourthStrikeStats)(companionStats) * (1 + attributeBonus / 100)
             : 0,
+        basic5: weaponData.basicFifthStrikeStats
+            ? createDamageCalculator(weaponData.basicFifthStrikeStats)(companionStats) * (1 + attributeBonus / 100)
+            : 0,
         basicCharged: weaponData.basicChargedAttackStats
             ? createDamageCalculator(weaponData.basicChargedAttackStats)(companionStats) * (1 + attributeBonus / 100)
             : 0,
@@ -128,6 +131,7 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
         basic2: calculateWeakenedDamage(baseDamage.basic2, totalDmgBoostToWeakened),
         basic3: calculateWeakenedDamage(baseDamage.basic3, totalDmgBoostToWeakened),
         basic4: calculateWeakenedDamage(baseDamage.basic4, totalDmgBoostToWeakened),
+        basic5: calculateWeakenedDamage(baseDamage.basic5, totalDmgBoostToWeakened),
         basicCharged: calculateWeakenedDamage(baseDamage.basicCharged, totalDmgBoostToWeakened),
         active1: calculateWeakenedDamage(baseDamage.active1, totalDmgBoostToWeakened),
         active2: calculateWeakenedDamage(baseDamage.active2, totalDmgBoostToWeakened),
@@ -144,6 +148,7 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
         basic2: calculateCritDamage(baseDamage.basic2, critDmg),
         basic3: calculateCritDamage(baseDamage.basic3, critDmg),
         basic4: calculateCritDamage(baseDamage.basic4, critDmg),
+        basic5: calculateCritDamage(baseDamage.basic5, critDmg),
         basicCharged: calculateCritDamage(baseDamage.basicCharged, critDmg),
         active1: calculateCritDamage(baseDamage.active1, critDmg),
         active2: calculateCritDamage(baseDamage.active2, critDmg),
@@ -377,6 +382,14 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
                     <td>{roundDisplay(weakenedDamage.basic4)}</td>
                     <td>{roundDisplay(critDamage.basic4)}</td>
                     <td>{weaponData.basicFourthStrike || '—'}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Fifth Strike</th>
+                    <td>{roundDisplay(baseDamage.basic5)}</td>
+                    <td>{roundDisplay(weakenedDamage.basic5)}</td>
+                    <td>{roundDisplay(critDamage.basic5)}</td>
+                    <td>{weaponData.basicFifthStrike || '—'}</td>
                     <td></td>
                 </tr>
                 <tr>

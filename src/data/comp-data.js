@@ -117,7 +117,7 @@ The shining moonlight of those sealed memories is the light that always leads hi
         passiveSkill: "Moonfall",
         passiveSkillImg: "../assets/battle-icons/a2_skill_st_2106_01.png",
         passiveSkillText: `
-When you and Xavier release basic attacks and skills, a stack of [Phasing Moon] is added upon hitting the enemy. In particular,1 stack of [Phasing Moon] is added every time Xavier scores a hit. After reaching 4 stacks of [Phasing Moon], a beam of Moonlight will fall on the enemy, dealing 92+49% ATK+194% DEF DMG within a small area, and reducing the movement speed of enemies within the area by 25%.
+When you and Xavier release basic attacks and skills, a stack of [Phasing Moon] is added upon hitting the enemy. In particular, 1 stack of [Phasing Moon] is added every time Xavier scores a hit. After reaching 4 stacks of [Phasing Moon], a beam of Moonlight will fall on the enemy, dealing 92+49% ATK+194% DEF DMG within a small area, and reducing the movement speed of enemies within the area by 25%.
         `,
         basicAttack: "Moonburn",
         basicAttackImg: "../assets/battle-icons/a2_skill_pl_1901_02_ST_2106.png",

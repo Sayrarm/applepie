@@ -448,7 +448,9 @@ function FarmGoalTracker() {
                                 <div className={styles.resourcesSection}>
                                     <h4>Resources Needed:</h4>
                                     <div className={styles.resourcesList}>
-                                        <div className={styles.expRow}>{getExpLabel(goal, true)} {goal.neededExp.toLocaleString()}</div>
+                                        {goal.neededExp > 0 && (
+                                            <div className={styles.expRow}>{getExpLabel(goal, true)} {goal.neededExp.toLocaleString()}</div>
+                                        )}
                                         {goal.type === 'memory' && (goal.neededCrystalsN > 0 || goal.neededCrystalsR > 0 || goal.neededCrystalsSR > 0) && (
                                             <div className={styles.crystalRow}>
                                                 <img
@@ -476,14 +478,16 @@ function FarmGoalTracker() {
                                                 </div>
                                             );
                                         })()}
-                                        <div className={styles.creditRow}>
-                                            <img
-                                                src={getImageUrl(credits[0].img)}
-                                                alt="Credits"
-                                                className={styles.creditIconSmall}
-                                            />
-                                            Credits: {goal.neededCredits.toLocaleString()}
-                                        </div>
+                                        {goal.neededCredits > 0 && (
+                                            <div className={styles.creditRow}>
+                                                <img
+                                                    src={getImageUrl(credits[0].img)}
+                                                    alt="Credits"
+                                                    className={styles.creditIconSmall}
+                                                />
+                                                Credits: {goal.neededCredits.toLocaleString()}
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
 
@@ -491,9 +495,11 @@ function FarmGoalTracker() {
                                 <div className={styles.remainingSection}>
                                     <h4>Remaining to Farm:</h4>
                                     <div className={styles.remainingList}>
-                                        <div className={`${expCompleted ? styles.completed : styles.notCompleted} ${styles.expRow}`}>
-                                            {getExpLabel(goal, true)} {remaining.exp.toLocaleString()}
-                                        </div>
+                                        {goal.neededExp > 0 && (
+                                            <div className={`${expCompleted ? styles.completed : styles.notCompleted} ${styles.expRow}`}>
+                                                {getExpLabel(goal, true)} {remaining.exp.toLocaleString()}
+                                            </div>
+                                        )}
                                         {remaining.crystals && (remaining.crystals.N > 0 || remaining.crystals.R > 0 || remaining.crystals.SR > 0) && (
                                             <div className={`${crystalsCompleted ? styles.completed : styles.notCompleted} ${styles.crystalRow}`}>
                                                 <img
@@ -523,14 +529,16 @@ function FarmGoalTracker() {
                                                 </div>
                                             );
                                         })()}
-                                        <div className={`${creditsCompleted ? styles.completed : styles.notCompleted} ${styles.creditRow}`}>
-                                            <img
-                                                src={getImageUrl(credits[0].img)}
-                                                alt="Credits"
-                                                className={styles.creditIconSmall}
-                                            />
-                                            Credits: {remaining.credits.toLocaleString()}
-                                        </div>
+                                        {goal.neededCredits > 0 && (
+                                            <div className={`${creditsCompleted ? styles.completed : styles.notCompleted} ${styles.creditRow}`}>
+                                                <img
+                                                    src={getImageUrl(credits[0].img)}
+                                                    alt="Credits"
+                                                    className={styles.creditIconSmall}
+                                                />
+                                                Credits: {remaining.credits.toLocaleString()}
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
 
