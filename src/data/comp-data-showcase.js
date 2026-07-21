@@ -95,20 +95,6 @@ export const compDataShowcaseSpecific = [
     {
         companionName: "Xavier: Lumiere",
         cardIds: [197, 198],
-        supportSkillFormula: "",
-        supportSkillStats: {
-            base: 0,
-            atk: 0,
-            hp: 0,
-            def: 0
-        },
-        empoweredSupportSkillFormula: "",
-        empoweredSupportSkillStats: {
-            base: 0,
-            atk: 0,
-            hp: 0,
-            def: 0
-        },
         resonanceSkillFormula: "686 + 366% ATK + 1450% DEF",
         resonanceSkillStats: {
             base: 686,
@@ -130,28 +116,157 @@ export const compDataShowcaseSpecific = [
             hp: 0,
             def: 194
         },
-        passiveSkillFormula2: ``,
-        passiveSkillStats2: {
-            base: 0,
-            atk: 0,
-            hp: 0,
-            def: 0
-        },
-        buffEidolon0Formula: "",
         buffEidolon1Formula: "+ 25% DMG and for Moonlight",
         buffEidolon1Stats: {
             additionalBuff: 25,
-        },
-        buffEidolon2Formula: "",
-        buffEidolon2Stats: {
-            defIgnore: 0,
         },
         buffEidolon3Formula: "+ 30 Crit DMG for crit hit of Moonlight",
         buffEidolon3Stats: {
             critDMG: 30,
         },
     },
-
+    {
+        companionName: "Xavier: Lightseeker",
+        cardIds: [195, 196],
+        supportSkillFormula: "300 + 400% ATK",
+        supportSkillStats: {
+            base: 300,
+            atk: 400,
+            hp: 0,
+            def: 0
+        },
+        empoweredSupportSkillFormula: "347 + 462%",
+        empoweredSupportSkillStats: {
+            base: 347,
+            atk: 462,
+            hp: 0,
+            def: 0
+        },
+        resonanceSkillFormula: "641 + 854% ATK",
+        resonanceSkillStats: {
+            base: 686,
+            atk: 366,
+            hp: 0,
+            def: 0
+        },
+        resonanceSkillBuff: "Under Luminescent Field +10% ATK bonus +20% to weakened enemies",
+        ardentOathFormula: "1440 + 1920% ATK",
+        ardentOathStats: {
+            base: 1440,
+            atk: 1920,
+            hp: 0,
+            def: 0
+        },
+        passiveSkillFormula1: `150 + 200% ATK`,
+        passiveSkillStats1: {
+            base: 150,
+            atk: 200,
+            hp: 0,
+            def: 0
+        },
+        buffEidolon0Formula: "+ 25% Active Skill DMG",
+        buffEidolon1Stats: {
+            additionalBuff: 25,
+        },
+    },
+    {
+        companionName: "Xavier: Evol Police",
+        supportSkillFormula: "306 + 408% ATK",
+        supportSkillStats: {
+            base: 306,
+            atk: 408,
+            hp: 0,
+            def: 0
+        },
+        empoweredSupportSkillFormula: "396 + 528% ATK",
+        empoweredSupportSkillStats: {
+            base: 396,
+            atk: 528,
+            hp: 0,
+            def: 0
+        },
+        resonanceSkillFormula: "726 + 968% ATK",
+        resonanceSkillStats: {
+            base: 726,
+            atk: 968,
+            hp: 0,
+            def: 0
+        },
+        ardentOathFormula: "1200 + 1600% ATK",
+        ardentOathStats: {
+            base: 1200,
+            atk: 1600,
+            hp: 0,
+            def: 0
+        },
+    },
+    {
+        companionName: "Xavier: Distant Youth",
+        supportSkillFormula: "340 + 453% ATK",
+        supportSkillStats: {
+            base: 340,
+            atk: 453,
+            hp: 0,
+            def: 0
+        },
+        empoweredSupportSkillFormula: "90 + 120% ATK",
+        empoweredSupportSkillStats: {
+            base: 90,
+            atk: 120,
+            hp: 0,
+            def: 0
+        },
+        resonanceSkillFormula: "739 + 986% ATK",
+        resonanceSkillStats: {
+            base: 739,
+            atk: 986,
+            hp: 0,
+            def: 0
+        },
+        ardentOathFormula: "1200 + 1600% ATK",
+        ardentOathStats: {
+            base: 1200,
+            atk: 1600,
+            hp: 0,
+            def: 0
+        },
+    },
+    {
+        companionName: "Xavier: Deepspace Hunter",
+        supportSkillFormula: "330 + 440% ATK",
+        supportSkillStats: {
+            base: 330,
+            atk: 440,
+            hp: 0,
+            def: 0
+        },
+        empoweredSupportSkillFormula: "420 + 560% ATK",
+        empoweredSupportSkillStats: {
+            base: 420,
+            atk: 560,
+            hp: 0,
+            def: 0
+        },
+        resonanceSkillFormula: "318 + 424% ATK",
+        resonanceSkillStats: {
+            base: 318,
+            atk: 424,
+            hp: 0,
+            def: 0
+        },
+        resonanceSkillBuff: "Under Resonance Skill +20% ATK",
+        ardentOathFormula: "1200 + 1600% ATK",
+        ardentOathStats: {
+            base: 1200,
+            atk: 1600,
+            hp: 0,
+            def: 0
+        },
+        passiveSkillFormula1: "+7% Crit Rate",
+        passiveSkillStats1: {
+            critRate: 7,
+        }
+    },
 ]
 
 export const weaponDataShowcaseSpecific = [
@@ -277,6 +392,52 @@ export const weaponDataShowcaseSpecific = [
         buffPassiveSkillStats: {
             DMGBoost: 0,
             WeakenedBoost: 0,
+        },
+    },
+    {
+        weaponName: "Luminescence Blade",
+        basicAttackFormula: "",
+        basicFirstStrike: "60 + 80% ATK DMG ",
+        basicFirstStrikeStats: {
+            base: 60 ,
+            atk: 80,
+            hp: 0,
+            def: 0
+        },
+        basicSecondStrike: "60 + 80% ATK DMG ",
+        basicSecondStrikeStats: {
+            base: 60,
+            atk: 80,
+            hp: 0,
+            def: 0
+        },
+        basicThirdStrike: "72 + 96% ATK DMG ",
+        basicThirdStrikeStats: {
+            base: 72,
+            atk: 96,
+            hp: 0,
+            def: 0
+        },
+        basicFourthStrike: "96 + 129% ATK DMG",
+        basicFourthStrikeStats: {
+            base: 96,
+            atk: 129,
+            hp: 0,
+            def: 0
+        },
+        basicChargedAttack: "118 + 157% ATK",
+        basicChargedAttackStats: {
+            base: 118,
+            atk: 157,
+            hp: 0,
+            def: 0
+        },
+        activeSkillFormula: "341 + 455% ATK",
+        activeSkillStats: {
+            base: 341,
+            atk: 455,
+            hp: 0,
+            def: 0
         },
     },
 ]

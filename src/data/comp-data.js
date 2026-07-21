@@ -191,8 +191,8 @@ You and Xavier brandish a blade and attack together, dealing massive DMG equal t
         passiveSkill: "Radiant Star",
         passiveSkillImg: "../assets/battle-icons/a2_skill_st_2103_01.png",
         passiveSkillText: `
-When you use an Active Skill to score a hit while inside
-[Luminescent Field], [Luminescent Resonance] is triggered. [Luminescent Resonance]: Resonate with light and unleash an attack around yourself, dealing AoE DMG equal to 150+200% ATK.
+When you use an Active Skill to score a hit while inside [Luminescent Field], [Luminescent Resonance] is triggered. 
+[Luminescent Resonance]: Resonate with light and unleash an attack around yourself, dealing AoE DMG equal to 150+200% ATK.
         `,
         basicAttack: "Slicing Light",
         basicAttackImg: "../assets/battle-icons/a2_skill_pl_1904_02_ST_2103.png",
@@ -200,7 +200,7 @@ When you use an Active Skill to score a hit while inside
 Wield the Sword for a multi-hit combo.
 First Strike: 60+80% ATK DMG 
 Second Strike: 60+80% ATK DMG 
-Third Strike:72+96% ATK DMG 
+Third Strike: 72+96% ATK DMG 
 Fourth Strike: 96+129% ATK DMG
 
 Charged Attack will unleash a single forward slash, inflicting AoE DMG equal to 118+157% ATK.
@@ -218,16 +218,20 @@ After a brief charge-up, lunge forward and unleash a slashing attack on the enem
 [Luminescent Resonance] recovers 0.35 [Energy Charge] for each enemy hit.
         `,
         eidolon0: `
-The team deals 8% more DMG and takes 8% less DMG. When fighting together with Lightseeker, your Active Skill DMG is increased by 25%.        
+The team deals 8% more DMG and takes 8% less DMG. 
+When fighting together with Lightseeker, your Active Skill DMG is increased by 25%.        
         `,
         eidolon1: `
-Increases Ardent Oath charge by 20%. When fighting alongside Lightseeker, each time [Luminescent Resonance] triggers, [Radiant Blade]'s duration is extended by 2s.
+Increases Ardent Oath charge by 20%. 
+When fighting alongside Lightseeker, each time [Luminescent Resonance] triggers, [Radiant Blade]'s duration is extended by 2s.
         `,
         eidolon2: `
-Energy Charge limit is raised by 1. When you and Lightseeker are in [Luminescent Field], take 10% less DMG and gain increased Interruption Resistance.
+Energy Charge limit is raised by 1. 
+When you and Lightseeker are in [Luminescent Field], take 10% less DMG and gain increased Interruption Resistance.
         `,
         eidolon3: `
-Increases team DMG by 8%. When fighting together with Lightseeker in the [Luminescent Field] and hitting enemies with a Charged Attack, the cooldown of your Active Skill will be reduced by 2s.
+Increases team DMG by 8%. 
+When fighting together with Lightseeker in the [Luminescent Field] and hitting enemies with a Charged Attack, the cooldown of your Active Skill will be reduced by 2s.
         `,
     },
     {
@@ -254,7 +258,7 @@ You quickly attack the enemy, dealing 1 [Protocore DMG]. Xavier then chases down
         ardentOathCost: "100% Oath Energy",
         ardentOathImg: "../assets/battle-icons/a2_skill_st_2104_04.png",
         ardentOathText: `
-Your Evol resonates with Xavier's. You gather the energy from the Protofield and work together to perform a powerful slash that deals DMG equal to 1200+1600 ATK DMG. 
+Your Evol resonates with Xavier's. You gather the energy from the Protofield and work together to perform a powerful slash that deals DMG equal to 1200+1600% ATK DMG. 
         `,
         passiveSkill: "Light Amplification",
         passiveSkillImg: "../assets/battle-icons/a2_skill_st_2104_01.png",
