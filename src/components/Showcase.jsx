@@ -667,7 +667,12 @@ function Showcase() {
                 </section>
             </div>
 
-            <CombatCalculations stats={finalStats}/>
+            <CombatCalculations
+                stats={finalStats}
+                selectedCompanion={currentTeam.selectedCompanion}
+                selectedMCWeapon={currentTeam.selectedMCWeapon}
+                solarCards={currentTeam.solarCards}
+            />
 
             {/* Модалка выбора компаньона */}
             <ModalWindow

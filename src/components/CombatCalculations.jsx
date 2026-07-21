@@ -1,14 +1,48 @@
 import {
     compDataShowcaseDefault5star,
-    compDataShowcaseSpecific
+    compDataShowcaseDefault4star,
+    compDataShowcaseSpecific,
+    weaponDataShowcaseSpecific
 } from "../data/comp-data-showcase.js";
 import {Range} from 'react-range';
 import styles from "./CombatCalculations.module.css";
-import React, {useState} from "react";
+import React, {useState, useMemo} from "react";
 import {calculateCritDamage, calculateWeakenedDamage, createDamageCalculator} from "../data/damageCalculator.js";
 
-function CombatCalculations({ stats }) {
-    const specificData = compDataShowcaseSpecific[0] || {};
+function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarCards }) {
+    // Находим данные для выбранного компаньона по companionName
+    const companionData = useMemo(() => {
+        if (!selectedCompanion?.companionName) return {};
+        return compDataShowcaseSpecific.find(
+            item => item.companionName === selectedCompanion.companionName
+        ) || {};
+    }, [selectedCompanion]);
+
+    // Находим данные для выбранного оружия по weaponName
+    const weaponData = useMemo(() => {
+        if (!selectedMCWeapon?.weaponName) return {};
+        return weaponDataShowcaseSpecific.find(
+            item => item.weaponName === selectedMCWeapon.weaponName
+        ) || {};
+    }, [selectedMCWeapon]);
+
+    // Проверяем, есть ли у нас полный набор Solar карточек (2 карточки с нужными cardIds)
+    const hasSolarPair = useMemo(() => {
+        if (!companionData.cardIds || solarCards.length < 2) return false;
+
+        const requiredCardIds = companionData.cardIds || [];
+        if (requiredCardIds.length === 0) return false;
+
+        const solarCardIds = solarCards
+            .filter(card => card !== null)
+            .map(card => card.id);
+
+        const sortedRequired = [...requiredCardIds].sort();
+        const sortedSolar = [...solarCardIds].sort();
+
+        return sortedRequired.length === sortedSolar.length &&
+            sortedRequired.every((id, index) => id === sortedSolar[index]);
+    }, [companionData.cardIds, solarCards]);
 
     // Состояния для Additional Bonus
     const [isAttributeBonus, setIsAttributeBonus] = useState(false);
@@ -36,27 +70,50 @@ function CombatCalculations({ stats }) {
     // Добавляем бонусы к DMG Boost to Weakened
     const totalDmgBoostToWeakened = dmgBoostToWeakened + perfectMatchBonus;
 
-    //для теста
-    console.log('ATK:', companionStats.atk);
-    console.log('HP:', companionStats.hp);
-    console.log('Ardent Oath base:', createDamageCalculator(specificData.ardentOathStats)(companionStats));
-    console.log('DMG Boost to Weakened:', dmgBoostToWeakened);
-    console.log('Oath Strength:', oathStrength);
-
+    // Базовый урон для всех способностей
     const baseDamage = {
-        support: createDamageCalculator(specificData.supportSkillStats)(companionStats) * (1 + attributeBonus / 100),
-        empoweredSupport: createDamageCalculator(specificData.empoweredSupportSkillStats)(companionStats) * (1 + attributeBonus / 100),
-        resonance: createDamageCalculator(specificData.resonanceSkillStats)(companionStats) * (1 + attributeBonus / 100),
-        ardentOath: createDamageCalculator(specificData.ardentOathStats)(companionStats) * (1 + oathStrength / 100) * (1 + attributeBonus / 100),
-        passive1: createDamageCalculator(specificData.passiveSkillStats1)(companionStats) * (1 + attributeBonus / 100),
-        passive2: createDamageCalculator(specificData.passiveSkillStats2)(companionStats) * (1 + attributeBonus / 100),
-        basic1: createDamageCalculator(specificData.basicFirstStrikeStats)(companionStats) * (1 + attributeBonus / 100),
-        basic2: createDamageCalculator(specificData.basicSecondStrikeStats)(companionStats) * (1 + attributeBonus / 100),
-        basic3: createDamageCalculator(specificData.basicThirdStrikeStats)(companionStats) * (1 + attributeBonus / 100),
-        basic4: createDamageCalculator(specificData.basicFourthStrikeStats)(companionStats) * (1 + attributeBonus / 100),
-        basicCharged: createDamageCalculator(specificData.basicChargedAttackStats)(companionStats) * (1 + attributeBonus / 100),
-        active1: createDamageCalculator(specificData.activeSkillStats)(companionStats) * (1 + attributeBonus / 100),
-        active2: createDamageCalculator(specificData.activeSkillSecondStats)(companionStats) * (1 + attributeBonus / 100),
+        // Companion skills (из companionData)
+        support: companionData.supportSkillStats
+            ? createDamageCalculator(companionData.supportSkillStats)(companionStats) * (1 + attributeBonus / 100)
+            : 0,
+        empoweredSupport: companionData.empoweredSupportSkillStats
+            ? createDamageCalculator(companionData.empoweredSupportSkillStats)(companionStats) * (1 + attributeBonus / 100)
+            : 0,
+        resonance: companionData.resonanceSkillStats
+            ? createDamageCalculator(companionData.resonanceSkillStats)(companionStats) * (1 + attributeBonus / 100)
+            : 0,
+        ardentOath: companionData.ardentOathStats
+            ? createDamageCalculator(companionData.ardentOathStats)(companionStats) * (1 + oathStrength / 100) * (1 + attributeBonus / 100)
+            : 0,
+        passive1: companionData.passiveSkillStats1
+            ? createDamageCalculator(companionData.passiveSkillStats1)(companionStats) * (1 + attributeBonus / 100)
+            : 0,
+        passive2: companionData.passiveSkillStats2
+            ? createDamageCalculator(companionData.passiveSkillStats2)(companionStats) * (1 + attributeBonus / 100)
+            : 0,
+
+        // MC Weapon skills (из weaponData)
+        basic1: weaponData.basicFirstStrikeStats
+            ? createDamageCalculator(weaponData.basicFirstStrikeStats)(companionStats) * (1 + attributeBonus / 100)
+            : 0,
+        basic2: weaponData.basicSecondStrikeStats
+            ? createDamageCalculator(weaponData.basicSecondStrikeStats)(companionStats) * (1 + attributeBonus / 100)
+            : 0,
+        basic3: weaponData.basicThirdStrikeStats
+            ? createDamageCalculator(weaponData.basicThirdStrikeStats)(companionStats) * (1 + attributeBonus / 100)
+            : 0,
+        basic4: weaponData.basicFourthStrikeStats
+            ? createDamageCalculator(weaponData.basicFourthStrikeStats)(companionStats) * (1 + attributeBonus / 100)
+            : 0,
+        basicCharged: weaponData.basicChargedAttackStats
+            ? createDamageCalculator(weaponData.basicChargedAttackStats)(companionStats) * (1 + attributeBonus / 100)
+            : 0,
+        active1: weaponData.activeSkillStats
+            ? createDamageCalculator(weaponData.activeSkillStats)(companionStats) * (1 + attributeBonus / 100)
+            : 0,
+        active2: weaponData.activeSkillSecondStats
+            ? createDamageCalculator(weaponData.activeSkillSecondStats)(companionStats) * (1 + attributeBonus / 100)
+            : 0,
     };
 
     // Рассчитываем Weakened DMG для каждой способности
@@ -95,6 +152,12 @@ function CombatCalculations({ stats }) {
     // Вспомогательная функция для округления при отображении
     const roundDisplay = (value) => Math.round(value);
 
+    // Определяем, какие default бонусы показывать (5-star или 4-star)
+    const defaultBuffs = hasSolarPair ? compDataShowcaseDefault5star : compDataShowcaseDefault4star;
+
+    // BuffPassiveSkillFormula берем из weaponData (если есть), иначе из companionData
+    const buffPassiveSkillFormula = weaponData.buffPassiveSkillFormula || companionData.buffPassiveSkillFormula || '—';
+
     return (
         <section className={styles.container}>
             <h2>Combat Calculations:</h2>
@@ -110,23 +173,23 @@ function CombatCalculations({ stats }) {
                 <tbody>
                 <tr>
                     <th>Starring Effect</th>
-                    <td>{compDataShowcaseDefault5star.eidolon0}</td>
-                    <td>{specificData.buffEidolon0Formula}</td>
+                    <td>{defaultBuffs.eidolon0}</td>
+                    <td>{hasSolarPair ? companionData.buffEidolon0Formula : '—'}</td>
                 </tr>
                 <tr>
                     <th>Duo Rank 1</th>
-                    <td>{compDataShowcaseDefault5star.eidolon1}</td>
-                    <td>{specificData.buffEidolon1Formula}</td>
+                    <td>{defaultBuffs.eidolon1}</td>
+                    <td>{hasSolarPair ? companionData.buffEidolon1Formula : '—'}</td>
                 </tr>
                 <tr>
                     <th>Duo Rank 2</th>
-                    <td>{compDataShowcaseDefault5star.eidolon2}</td>
-                    <td>{specificData.buffEidolon2Formula}</td>
+                    <td>{defaultBuffs.eidolon2}</td>
+                    <td>{hasSolarPair ? companionData.buffEidolon2Formula : '—'}</td>
                 </tr>
                 <tr>
                     <th>Duo Rank 3</th>
-                    <td>{compDataShowcaseDefault5star.eidolon3}</td>
-                    <td>{specificData.buffEidolon3Formula}</td>
+                    <td>{defaultBuffs.eidolon3}</td>
+                    <td>{hasSolarPair ? companionData.buffEidolon3Formula : '—'}</td>
                 </tr>
                 </tbody>
             </table>
@@ -216,7 +279,7 @@ function CombatCalculations({ stats }) {
                     <td>{roundDisplay(baseDamage.support)}</td>
                     <td>{roundDisplay(weakenedDamage.support)}</td>
                     <td>{roundDisplay(critDamage.support)}</td>
-                    <td>{specificData.supportSkillFormula}</td>
+                    <td>{companionData.supportSkillFormula || '—'}</td>
                     <td></td>
                 </tr>
                 <tr>
@@ -224,7 +287,7 @@ function CombatCalculations({ stats }) {
                     <td>{roundDisplay(baseDamage.empoweredSupport)}</td>
                     <td>{roundDisplay(weakenedDamage.empoweredSupport)}</td>
                     <td>{roundDisplay(critDamage.empoweredSupport)}</td>
-                    <td>{specificData.empoweredSupportSkillFormula}</td>
+                    <td>{companionData.empoweredSupportSkillFormula || '—'}</td>
                     <td></td>
                 </tr>
                 <tr>
@@ -232,7 +295,7 @@ function CombatCalculations({ stats }) {
                     <td>{roundDisplay(baseDamage.resonance)}</td>
                     <td>{roundDisplay(weakenedDamage.resonance)}</td>
                     <td>{roundDisplay(critDamage.resonance)}</td>
-                    <td>{specificData.resonanceSkillFormula}</td>
+                    <td>{companionData.resonanceSkillFormula || '—'}</td>
                     <td></td>
                 </tr>
                 <tr>
@@ -240,7 +303,7 @@ function CombatCalculations({ stats }) {
                     <td>{roundDisplay(baseDamage.ardentOath)}</td>
                     <td>{roundDisplay(weakenedDamage.ardentOath)}</td>
                     <td>{roundDisplay(critDamage.ardentOath)}</td>
-                    <td>{specificData.ardentOathFormula}</td>
+                    <td>{companionData.ardentOathFormula || '—'}</td>
                     <td></td>
                 </tr>
                 <tr>
@@ -251,7 +314,7 @@ function CombatCalculations({ stats }) {
                     <td>{roundDisplay(baseDamage.passive1)}</td>
                     <td>{roundDisplay(weakenedDamage.passive1)}</td>
                     <td>{roundDisplay(critDamage.passive1)}</td>
-                    <td>{specificData.passiveSkillFormula1}</td>
+                    <td>{companionData.passiveSkillFormula1 || '—'}</td>
                     <td></td>
                 </tr>
                 <tr>
@@ -259,8 +322,8 @@ function CombatCalculations({ stats }) {
                     <td>{roundDisplay(baseDamage.passive2)}</td>
                     <td>{roundDisplay(weakenedDamage.passive2)}</td>
                     <td>{roundDisplay(critDamage.passive2)}</td>
-                    <td>{specificData.passiveSkillFormula2}</td>
-                    <td>{specificData.buffPassiveSkillFormula}</td>
+                    <td>{companionData.passiveSkillFormula2 || '—'}</td>
+                    <td>{buffPassiveSkillFormula}</td>
                 </tr>
                 <tr>
                     <th className={styles.titleSkill}>Active Skill:</th>
@@ -270,7 +333,7 @@ function CombatCalculations({ stats }) {
                     <td>{roundDisplay(baseDamage.active1)}</td>
                     <td>{roundDisplay(weakenedDamage.active1)}</td>
                     <td>{roundDisplay(critDamage.active1)}</td>
-                    <td>{specificData.activeSkillFormula}</td>
+                    <td>{weaponData.activeSkillFormula || '—'}</td>
                     <td></td>
                 </tr>
                 <tr>
@@ -278,7 +341,7 @@ function CombatCalculations({ stats }) {
                     <td>{roundDisplay(baseDamage.active2)}</td>
                     <td>{roundDisplay(weakenedDamage.active2)}</td>
                     <td>{roundDisplay(critDamage.active2)}</td>
-                    <td>{specificData.activeSkillSecondFormula}</td>
+                    <td>{weaponData.activeSkillSecondFormula || '—'}</td>
                     <td></td>
                 </tr>
                 <tr>
@@ -289,7 +352,7 @@ function CombatCalculations({ stats }) {
                     <td>{roundDisplay(baseDamage.basic1)}</td>
                     <td>{roundDisplay(weakenedDamage.basic1)}</td>
                     <td>{roundDisplay(critDamage.basic1)}</td>
-                    <td>{specificData.basicFirstStrike}</td>
+                    <td>{weaponData.basicFirstStrike || '—'}</td>
                     <td></td>
                 </tr>
                 <tr>
@@ -297,7 +360,7 @@ function CombatCalculations({ stats }) {
                     <td>{roundDisplay(baseDamage.basic2)}</td>
                     <td>{roundDisplay(weakenedDamage.basic2)}</td>
                     <td>{roundDisplay(critDamage.basic2)}</td>
-                    <td>{specificData.basicSecondStrike}</td>
+                    <td>{weaponData.basicSecondStrike || '—'}</td>
                     <td></td>
                 </tr>
                 <tr>
@@ -305,7 +368,7 @@ function CombatCalculations({ stats }) {
                     <td>{roundDisplay(baseDamage.basic3)}</td>
                     <td>{roundDisplay(weakenedDamage.basic3)}</td>
                     <td>{roundDisplay(critDamage.basic3)}</td>
-                    <td>{specificData.basicThirdStrike}</td>
+                    <td>{weaponData.basicThirdStrike || '—'}</td>
                     <td></td>
                 </tr>
                 <tr>
@@ -313,7 +376,7 @@ function CombatCalculations({ stats }) {
                     <td>{roundDisplay(baseDamage.basic4)}</td>
                     <td>{roundDisplay(weakenedDamage.basic4)}</td>
                     <td>{roundDisplay(critDamage.basic4)}</td>
-                    <td>{specificData.basicFourthStrike}</td>
+                    <td>{weaponData.basicFourthStrike || '—'}</td>
                     <td></td>
                 </tr>
                 <tr>
@@ -321,12 +384,11 @@ function CombatCalculations({ stats }) {
                     <td>{roundDisplay(baseDamage.basicCharged)}</td>
                     <td>{roundDisplay(weakenedDamage.basicCharged)}</td>
                     <td>{roundDisplay(critDamage.basicCharged)}</td>
-                    <td>{specificData.basicChargedAttack}</td>
+                    <td>{weaponData.basicChargedAttack || '—'}</td>
                     <td></td>
                 </tr>
                 </tbody>
             </table>
-
         </section>
     )
 }

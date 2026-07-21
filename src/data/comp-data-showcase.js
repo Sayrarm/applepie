@@ -150,3 +150,65 @@ export const compDataShowcaseSpecific = [
     },
 
 ]
+
+export const weaponDataShowcaseSpecific = [
+    {
+        weaponName: "Final Resound",
+        basicAttackFormula: "",
+        basicFirstStrike: "98 + 52% ATK + 4.7% of Max HP",
+        basicFirstStrikeStats: {
+            base: 98 ,
+            atk: 52,
+            hp: 4.7,
+            def: 0
+        },
+        basicSecondStrike: "88 + 46% ATK + 4.2% of Max HP",
+        basicSecondStrikeStats: {
+            base: 88 ,
+            atk: 46,
+            hp: 4.2,
+            def: 0
+        },
+        basicThirdStrike: "122 + 65% ATK + 5.9% of Max HP",
+        basicThirdStrikeStats: {
+            base: 122 ,
+            atk: 65,
+            hp: 5.9,
+            def: 0
+        },
+        basicFourthStrike: "147 + 78% ATK + 7.1% of Max HP",
+        basicFourthStrikeStats: {
+            base: 147 ,
+            atk: 78,
+            hp: 7.1,
+            def: 0
+        },
+        basicChargedAttack: "165 + 88% ATK + 7.9% of Max HP",
+        basicChargedAttackStats: {
+            base: 165 ,
+            atk: 88,
+            hp: 7.9,
+            def: 0
+        },
+        activeSkillFormula: "351 + 187% ATK + 16.8% of Max HP",
+        activeSkillStats: {
+            base: 351 ,
+            atk: 187,
+            hp: 16.8,
+            def: 0
+        },
+        activeSkillSecondFormula: "376 + 200% ATK + 18% of Max HP",
+        activeSkillSecondStats: {
+            base: 376 ,
+            atk: 200,
+            hp: 18,
+            def: 0
+        },
+        buffPassiveSkillFormula: `Under Darknight Reign 
++ 8% damage dealt + 8% DMG Boost to Weakened`,
+        buffPassiveSkillStats: {
+            DMGBoost: 8,
+            WeakenedBoost: 8,
+        },
+    },
+]
