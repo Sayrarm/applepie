@@ -510,6 +510,70 @@ export const compDataShowcaseSpecific = [
             def: 0
         },
     },
+    {
+        companionName: "Rafayel: Lemurian Sea God",
+        cardIds: [389, 390],
+        supportSkillFormula: "360 + 192% ATK + 761% DEF",
+        supportSkillStats: {
+            base: 360,
+            atk: 192,
+            hp: 0,
+            def: 761
+        },
+        empoweredSupportSkillFormula: "468 + 249% ATK + 989% DEF",
+        empoweredSupportSkillStats: {
+            base: 468,
+            atk: 249,
+            hp: 0,
+            def: 989
+        },
+        resonanceSkillFormula: "1311 + 699% ATK + 2773% DEF",
+        resonanceSkillStats: {
+            base: 1311,
+            atk: 699,
+            hp: 0,
+            def: 2773
+        },
+        ardentOathFormula: "1800 + 960% ATK + 3820% DEF",
+        ardentOathStats: {
+            base: 1800,
+            atk: 960,
+            hp: 0,
+            def: 3820
+        },
+        passiveSkillFormula2: `Lightning Tide under Divine Favor:
+450 + 240% ATK + 951% DEF`,
+        passiveSkillStats2: {
+            base: 450,
+            atk: 240,
+            hp: 0,
+            def: 951
+        },
+        passiveSkillFormula3: `Dodge under Divine Favor:
+32 + 17% ATK + 68% DEF`,
+        passiveSkillStats3: {
+            base: 32,
+            atk: 17,
+            hp: 0,
+            def: 68
+        },
+        buffEidolon1Formula: `Under Divine Favor random DMG:
+270 + 144% ATK + 571% DEF`,
+        buffEidolon1Stats: {
+            base: 270,
+            atk: 144,
+            hp: 0,
+            def: 571
+        },
+        buffEidolon2Formula: "+50% Charge Attack DMG",
+        buffEidolon2Stats: {
+            additionalBuff: 50,
+        },
+        buffEidolon3Formula: "+70% Lightning Tide DMG",
+        buffEidolon3Stats: {
+            additionalBuff: 70,
+        },
+    },
 ]
 
 export const weaponDataShowcaseSpecific = [
@@ -818,6 +882,63 @@ export const weaponDataShowcaseSpecific = [
             atk: 28,
             hp: 0,
             def: 111
+        },
+    },
+    {
+        weaponName: "Ballad of Ebbs",
+        basicAttackFormula: "",
+        basicFirstStrike: "49 + 26% ATK + 104% DEF",
+        basicFirstStrikeStats: {
+            base: 49,
+            atk: 26,
+            hp: 0,
+            def: 104
+        },
+        basicSecondStrike: "53 + 28% ATK + 112% DEF ",
+        basicSecondStrikeStats: {
+            base: 53,
+            atk: 28,
+            hp: 0,
+            def: 112
+        },
+        basicThirdStrike: "83 + 44% ATK + 175% DEF",
+        basicThirdStrikeStats: {
+            base: 83,
+            atk: 44,
+            hp: 0,
+            def: 175
+        },
+        basicFourthStrike: "137 + 73% ATK + 290% DEF",
+        basicFourthStrikeStats: {
+            base: 137,
+            atk: 73,
+            hp: 0,
+            def: 290
+        },
+        basicChargedAttack: "174 + 93% ATK + 368% DEF",
+        basicChargedAttackStats: {
+            base: 174,
+            atk: 93,
+            hp: 0,
+            def: 368
+        },
+        buffBasicChargedAttackFormula: "+50% Charge Attack DMG",
+        buffBasicChargedAttackStats: {
+            addtionalDMG: 50,
+        },
+        activeSkillFormula: "265 + 141% ATK + 560% DEF",
+        activeSkillStats: {
+            base: 265,
+            atk: 141,
+            hp: 0,
+            def: 560
+        },
+        passiveSkillMCFormula: "312 + 166% ATK + 660% DEF",
+        passiveSkillMCStats: {
+            base: 312,
+            atk: 166,
+            hp: 0,
+            def: 660
         },
     },
 ]

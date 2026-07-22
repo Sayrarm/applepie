@@ -714,7 +714,7 @@ You resonate with Rafayel's Evol, summoning tides and lightning to attack the en
         passiveSkill: "Deepfall Rite",
         passiveSkillImg: "../assets/battle-icons/a2_skill_ry_2507_01.png",
         passiveSkillText: `
-Upon entering the battle, Rafayel grants you [Sea God Mark]. When you perform a Charged Attack, it consumes [Sea God Mark] to empower that attack, increasing DMG by 50% and making you unstoppable throughout its duration. 8s after [Sea God Mark] has been consumed, Rafayel will grant [Sea God Mark] to you again.Using your Active Skill immediately refreshes [Sea God Mark].
+Upon entering the battle, Rafayel grants you [Sea God Mark]. When you perform a Charged Attack, it consumes [Sea God Mark] to empower that attack, increasing DMG by 50% and making you unstoppable throughout its duration. 8s after [Sea God Mark] has been consumed, Rafayel will grant [Sea God Mark] to you again. Using your Active Skill immediately refreshes [Sea God Mark].
 When Rafayel uses his Support Skill or [Empowered] Support Skill, he accumulates [Raging Tide]. When your Basic Attack or Charged Attack hits an enemy, you accumulate [Ripple Breath]. These effects can only be triggered once per attack. When both [Ripple Breath] and [Raging Tide] are fully charged, the skill [Ocean's Descent] is unlocked. Using it floods the battlefield, granting you [Divine Favor] and making you unstoppable throughout its duration. [Divine Favor] lasts for 11s.
 While [Divine Favor] is active, your Active Skill generates a [Lightning Crystal] when it hits an enemy. This effect can only be triggered once per skill use.
 While [Divine Favor] is active, your Dodge is empowered by waves, allowing you to activate [Lightning Crystals] along the path and deal DMG equal to 32+17% ATK+68% DEF. 
@@ -724,10 +724,10 @@ While [Divine Favor] is active, your Dodge is empowered by waves, allowing you t
         basicAttackImg: "../assets/battle-icons/a2_skill_pl_1904_01_RY_2507.png",
         basicAttackText: `
 Wield Ballad of Ebbs to perform a combo up to 4 hits
-First Strike:49+26% ATK+104% DEF 
-Second Strike:53+28% ATK+112% DEF 
+First Strike: 49+26% ATK+104% DEF 
+Second Strike: 53+28% ATK+112% DEF 
 Third Strike: 83+44% ATK+175% DEF 
-Fourth Strike:137+73% ATK+290% DEF
+Fourth Strike: 137+73% ATK+290% DEF
 
 Charged Attack summons a wave that envelops your sword for a powerful slash, dealing DMG equal to 174+93% ATK+368% DEF.
         `,
@@ -744,16 +744,20 @@ Your Charged Attack is empowered by [Sea God Mark] to become a forward thrust, d
 Dash forward with a swimming motion, dealing DMG equal to 312+166% ATK+660% DEF to enemies hit. You are invincible while using this Active Skill.
         `,
         eidolon0: `
-The team deals 8% more DMG and takes 8% less DMG. When your basic attack hits, [Sea God Mark] cooldown is reduced by o.8s.This effect can trigger once per attack. When [Lightning Tide] hits Weakened enemies, extends the Weakened duration by 0.5s. This effect can trigger up to 2 times per enemy.       
+The team deals 8% more DMG and takes 8% less DMG. 
+When your basic attack hits, [Sea God Mark] cooldown is reduced by 0.8s. This effect can trigger once per attack. When [Lightning Tide] hits Weakened enemies, extends the Weakened duration by 0.5s. This effect can trigger up to 2 times per enemy.       
         `,
         eidolon1: `
-Increases Ardent Oath charge by 20%. While [Divine Favor] is active, when Rafayel throws his Tidebreaker Trident, it generates an additional vortex that continuously pulls nearby enemies toward its center. While [Divine Favor] is active, lightning will randomly strike the battlefield to assist you in battle, dealing DMG equal to 270+144% ATK+571% DEF with each hit.
+Increases Ardent Oath charge by 20%. 
+While [Divine Favor] is active, when Rafayel throws his Tidebreaker Trident, it generates an additional vortex that continuously pulls nearby enemies toward its center. While [Divine Favor] is active, lightning will randomly strike the battlefield to assist you in battle, dealing DMG equal to 270+144% ATK+571% DEF with each hit.
         `,
         eidolon2: `
-Energy Charge limit is raised by 1. DMG boost from [Sea God Mark] is increased by 50%. While [Divine Favor] is active, you gain 40% DMG Reduction.
+Energy Charge limit is raised by 1. 
+DMG boost from [Sea God Mark] is increased by 50%. While [Divine Favor] is active, you gain 40% DMG Reduction.
         `,
         eidolon3: `
-The team deals 8% more DMG. While [Divine Favor] is active, when your basic attack hits, Active Skill cooldown is reduced by 0.5s. While [Divine Favor] is active, when Charged Attacks empowered by [Sea God Mark] hit, [Lightning Tide] is triggered for 70% DMG. These effects can trigger once per attack.
+The team deals 8% more DMG. 
+While [Divine Favor] is active, when your basic attack hits, Active Skill cooldown is reduced by 0.5s. While [Divine Favor] is active, when Charged Attacks empowered by [Sea God Mark] hit, [Lightning Tide] is triggered for 70% DMG. These effects can trigger once per attack.
         `,
     },
     {

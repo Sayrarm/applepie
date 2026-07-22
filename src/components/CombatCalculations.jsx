@@ -91,6 +91,9 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
         passive2: companionData.passiveSkillStats2
             ? createDamageCalculator(companionData.passiveSkillStats2)(companionStats) * (1 + attributeBonus / 100)
             : 0,
+        passive3: companionData.passiveSkillStats3
+            ? createDamageCalculator(companionData.passiveSkillStats3)(companionStats) * (1 + attributeBonus / 100)
+            : 0,
 
         // MC Weapon skills (из weaponData)
         basicTotal: weaponData.basicAttackFormula
@@ -133,6 +136,7 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
         ardentOath: calculateWeakenedDamage(baseDamage.ardentOath, totalDmgBoostToWeakened),
         passive1: calculateWeakenedDamage(baseDamage.passive1, totalDmgBoostToWeakened),
         passive2: calculateWeakenedDamage(baseDamage.passive2, totalDmgBoostToWeakened),
+        passive3: calculateWeakenedDamage(baseDamage.passive3, totalDmgBoostToWeakened),
         basicTotal: calculateWeakenedDamage(baseDamage.basicTotal, totalDmgBoostToWeakened),
         basic1: calculateWeakenedDamage(baseDamage.basic1, totalDmgBoostToWeakened),
         basic2: calculateWeakenedDamage(baseDamage.basic2, totalDmgBoostToWeakened),
@@ -152,6 +156,7 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
         ardentOath: calculateCritDamage(baseDamage.ardentOath, critDmg),
         passive1: calculateCritDamage(baseDamage.passive1, critDmg),
         passive2: calculateCritDamage(baseDamage.passive2, critDmg),
+        passive3: calculateCritDamage(baseDamage.passive3, critDmg),
         basicTotal: calculateCritDamage(baseDamage.basicTotal, critDmg),
         basic1: calculateCritDamage(baseDamage.basic1, critDmg),
         basic2: calculateCritDamage(baseDamage.basic2, critDmg),
@@ -341,6 +346,14 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
                     <td>{buffPassiveSkillFormula}</td>
                 </tr>
                 <tr>
+                    <th>MC Passive Skill</th>
+                    <td>{roundDisplay(baseDamage.passive3)}</td>
+                    <td>{roundDisplay(weakenedDamage.passive3)}</td>
+                    <td>{roundDisplay(critDamage.passive3)}</td>
+                    <td>{companionData.passiveSkillFormula3 || '—'}</td>
+                    <td>{buffPassiveSkillFormula}</td>
+                </tr>
+                <tr>
                     <th className={styles.titleSkill}>Active Skill:</th>
                 </tr>
                 <tr>
@@ -415,7 +428,7 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
                     <td>{roundDisplay(baseDamage.basicCharged)}</td>
                     <td>{roundDisplay(weakenedDamage.basicCharged)}</td>
                     <td>{roundDisplay(critDamage.basicCharged)}</td>
-                    <td>{weaponData.basicChargedAttack || '—'}</td>
+                    <td>{weaponData.buffBasicChargedAttackFormula || '—'}</td>
                     <td></td>
                 </tr>
                 <tr>
