@@ -683,6 +683,170 @@ DMG is increased by 25%`,
             additionalBuff: 150,
         },
     },
+    {
+        companionName: "Rafayel: Frash Paint",
+        supportSkillFormula: "194 + 258% ATK",
+        supportSkillStats: {
+            base: 194,
+            atk: 258,
+            hp: 0,
+            def: 0
+        },
+        empoweredSupportSkillFormula: "259 + 345% ATK",
+        empoweredSupportSkillStats: {
+            base: 259,
+            atk: 345,
+            hp: 0,
+            def: 0
+        },
+        resonanceSkillFormula: "922 + 1229% ATK",
+        resonanceSkillStats: {
+            base: 922,
+            atk: 1229,
+            hp: 0,
+            def: 0
+        },
+        ardentOathFormula: "1200 + 1600% ATK",
+        ardentOathStats: {
+            base: 1200,
+            atk: 1600,
+            hp: 0,
+            def: 0
+        },
+        passiveSkillFormula1: "23 + 30% ATK",
+        passiveSkillStats1: {
+            base: 23,
+            atk: 30,
+            hp: 0,
+            def: 0
+        },
+        passiveSkillFormula2: "60 + 80% ATK",
+        passiveSkillStats2: {
+            base: 60,
+            atk: 80,
+            hp: 0,
+            def: 0
+        },
+        passiveSkillFormula3: "113 + 150% ATK",
+        passiveSkillStats3: {
+            base: 113,
+            atk: 150,
+            hp: 0,
+            def: 0
+        },
+        passiveSkillFormula4: "150 + 200% ATK",
+        passiveSkillStats4: {
+            base: 150,
+            atk: 200,
+            hp: 0,
+            def: 0
+        },
+        passiveSkillFormula5: "188 + 250% ATK",
+        passiveSkillStats5: {
+            base: 188,
+            atk: 250,
+            hp: 0,
+            def: 0
+        },
+        buffPassiveSkillFormula: "+20 DEF Ignore",
+        buffPassiveSkillStats: {
+            base: 0,
+            atk: 0,
+            hp: 0,
+            def: 0
+        },
+    },
+    {
+        companionName: "Rafayel: Phantom of the Siren",
+        supportSkillFormula: "218 + 291% ATK",
+        supportSkillStats: {
+            base: 218,
+            atk: 291,
+            hp: 0,
+            def: 0
+        },
+        empoweredSupportSkillFormula: "315 + 420% ATK",
+        empoweredSupportSkillStats: {
+            base: 315,
+            atk: 420,
+            hp: 0,
+            def: 0
+        },
+        resonanceSkillFormula: "508 + 678% ATK",
+        resonanceSkillStats: {
+            base: 508,
+            atk: 678,
+            hp: 0,
+            def: 0
+        },
+        resonanceSkillFormula2: "254 + 339% ATK",
+        resonanceSkillStats2: {
+            base: 254,
+            atk: 339,
+            hp: 0,
+            def: 0
+        },
+        ardentOathFormula: "1200 + 1600% ATK",
+        ardentOathStats: {
+            base: 1200,
+            atk: 1600,
+            hp: 0,
+            def: 0
+        },
+        buffPassiveSkillFormula: "+10% DMG under Echo",
+        buffPassiveSkillStats: {
+            additionalDMG: 10,
+        }
+    },
+    {
+        companionName: "Rafayel: Artist",
+        supportSkillFormula: "84 + 112%",
+        supportSkillStats: {
+            base: 84,
+            atk: 112,
+            hp: 0,
+            def: 0
+        },
+        resonanceSkillFormula: "188 + 250%",
+        resonanceSkillStats: {
+            base: 188,
+            atk: 250,
+            hp: 0,
+            def: 0
+        },
+        buffResonanceSkillFormula: "+5% ATK",
+        buffResonanceSkillStats: {
+            buffATK: 5,
+        },
+        ardentOathFormula: "1200 + 1600% ATK",
+        ardentOathStats: {
+            base: 1200,
+            atk: 1600,
+            hp: 0,
+            def: 0
+        },
+        passiveSkillFormula1: "15 + 20% ATK",
+        passiveSkillStats1: {
+            base: 15,
+            atk: 20,
+            hp: 0,
+            def: 0
+        },
+        passiveSkillFormula2: "188 + 250% ATK",
+        passiveSkillStats2: {
+            base: 188,
+            atk: 250,
+            hp: 0,
+            def: 0
+        },
+        passiveSkillFormula3: "20 + 26% ATK",
+        passiveSkillStats3: {
+            base: 20,
+            atk: 26,
+            hp: 0,
+            def: 0
+        },
+    },
 
 ]
 

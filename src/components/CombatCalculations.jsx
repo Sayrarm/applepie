@@ -85,6 +85,9 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
         resonance: companionData.resonanceSkillStats
             ? createDamageCalculator(companionData.resonanceSkillStats)(companionStats) * (1 + attributeBonus / 100)
             : 0,
+        resonance2: companionData.resonanceSkillStats2
+            ? createDamageCalculator(companionData.resonanceSkillStats2)(companionStats) * (1 + attributeBonus / 100)
+            : 0,
         ardentOath: companionData.ardentOathStats
             ? createDamageCalculator(companionData.ardentOathStats)(companionStats) * (1 + oathStrength / 100) * (1 + attributeBonus / 100)
             : 0,
@@ -96,6 +99,12 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
             : 0,
         passive3: companionData.passiveSkillStats3
             ? createDamageCalculator(companionData.passiveSkillStats3)(companionStats) * (1 + attributeBonus / 100)
+            : 0,
+        passive4: companionData.passiveSkillStats4
+            ? createDamageCalculator(companionData.passiveSkillStats4)(companionStats) * (1 + attributeBonus / 100)
+            : 0,
+        passive5: companionData.passiveSkillStats5
+            ? createDamageCalculator(companionData.passiveSkillStats5)(companionStats) * (1 + attributeBonus / 100)
             : 0,
 
         // MC Weapon skills (из weaponData)
@@ -137,10 +146,13 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
         empoweredSupport: calculateWeakenedDamage(baseDamage.empoweredSupport, totalDmgBoostToWeakened),
         empoweredSupport2: calculateWeakenedDamage(baseDamage.empoweredSupport2, totalDmgBoostToWeakened),
         resonance: calculateWeakenedDamage(baseDamage.resonance, totalDmgBoostToWeakened),
+        resonance2: calculateWeakenedDamage(baseDamage.resonance2, totalDmgBoostToWeakened),
         ardentOath: calculateWeakenedDamage(baseDamage.ardentOath, totalDmgBoostToWeakened),
         passive1: calculateWeakenedDamage(baseDamage.passive1, totalDmgBoostToWeakened),
         passive2: calculateWeakenedDamage(baseDamage.passive2, totalDmgBoostToWeakened),
         passive3: calculateWeakenedDamage(baseDamage.passive3, totalDmgBoostToWeakened),
+        passive4: calculateWeakenedDamage(baseDamage.passive4, totalDmgBoostToWeakened),
+        passive5: calculateWeakenedDamage(baseDamage.passive5, totalDmgBoostToWeakened),
         basicTotal: calculateWeakenedDamage(baseDamage.basicTotal, totalDmgBoostToWeakened),
         basic1: calculateWeakenedDamage(baseDamage.basic1, totalDmgBoostToWeakened),
         basic2: calculateWeakenedDamage(baseDamage.basic2, totalDmgBoostToWeakened),
@@ -158,10 +170,13 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
         empoweredSupport: calculateCritDamage(baseDamage.empoweredSupport, critDmg),
         empoweredSupport2: calculateCritDamage(baseDamage.empoweredSupport2, critDmg),
         resonance: calculateCritDamage(baseDamage.resonance, critDmg),
+        resonance2: calculateCritDamage(baseDamage.resonance2, critDmg),
         ardentOath: calculateCritDamage(baseDamage.ardentOath, critDmg),
         passive1: calculateCritDamage(baseDamage.passive1, critDmg),
         passive2: calculateCritDamage(baseDamage.passive2, critDmg),
         passive3: calculateCritDamage(baseDamage.passive3, critDmg),
+        passive4: calculateCritDamage(baseDamage.passive4, critDmg),
+        passive5: calculateCritDamage(baseDamage.passive5, critDmg),
         basicTotal: calculateCritDamage(baseDamage.basicTotal, critDmg),
         basic1: calculateCritDamage(baseDamage.basic1, critDmg),
         basic2: calculateCritDamage(baseDamage.basic2, critDmg),
@@ -332,6 +347,14 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
                     <td></td>
                 </tr>
                 <tr>
+                    <th>Resonance Skill Additional</th>
+                    <td>{roundDisplay(baseDamage.resonance2)}</td>
+                    <td>{roundDisplay(weakenedDamage.resonance2)}</td>
+                    <td>{roundDisplay(critDamage.resonance2)}</td>
+                    <td>{companionData.resonanceSkillFormula2 || '—'}</td>
+                    <td></td>
+                </tr>
+                <tr>
                     <th>Ardent Oath</th>
                     <td>{roundDisplay(baseDamage.ardentOath)}</td>
                     <td>{roundDisplay(weakenedDamage.ardentOath)}</td>
@@ -340,58 +363,44 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
                     <td></td>
                 </tr>
                 <tr>
-                    <th className={styles.titleSkill}>Passive Skill (Companion):</th>
-                </tr>
-                <tr>
-                    <th>Companion Passive Skill</th>
+                    <th>Passive Skill (Companion)</th>
                     <td>{roundDisplay(baseDamage.passive1)}</td>
                     <td>{roundDisplay(weakenedDamage.passive1)}</td>
                     <td>{roundDisplay(critDamage.passive1)}</td>
                     <td>{companionData.passiveSkillFormula1 || '—'}</td>
-                    <td>{companionData.buffPassiveSkillFormula1 || '—'}</td>
+                    <td>{companionData.buffPassiveSkillFormula || '—'}</td>
                 </tr>
                 <tr>
-                    <th>MC Passive Skill</th>
+                    <th>Passive Skill Additional (Companion)</th>
                     <td>{roundDisplay(baseDamage.passive2)}</td>
                     <td>{roundDisplay(weakenedDamage.passive2)}</td>
                     <td>{roundDisplay(critDamage.passive2)}</td>
                     <td>{companionData.passiveSkillFormula2 || '—'}</td>
-                    <td>{buffPassiveSkillFormula}</td>
+                    <td>{companionData.buffPassiveSkillFormula2 || '—'}</td>
                 </tr>
                 <tr>
-                    <th>MC Passive Skill Additional</th>
+                    <th>Passive Skill Additional (Companion)</th>
                     <td>{roundDisplay(baseDamage.passive3)}</td>
                     <td>{roundDisplay(weakenedDamage.passive3)}</td>
                     <td>{roundDisplay(critDamage.passive3)}</td>
                     <td>{companionData.passiveSkillFormula3 || '—'}</td>
-                    <td>{buffPassiveSkillFormula}</td>
+                    <td>{companionData.buffPassiveSkillFormula3 || '—'}</td>
                 </tr>
                 <tr>
-                    <th className={styles.titleSkill}>Active Skill:</th>
+                    <th>Passive Skill Additional (Companion)</th>
+                    <td>{roundDisplay(baseDamage.passive4)}</td>
+                    <td>{roundDisplay(weakenedDamage.passive4)}</td>
+                    <td>{roundDisplay(critDamage.passive4)}</td>
+                    <td>{companionData.passiveSkillFormula4 || '—'}</td>
+                    <td>{companionData.buffPassiveSkillFormula4 || '—'}</td>
                 </tr>
                 <tr>
-                    <th>Active Skill</th>
-                    <td>{roundDisplay(baseDamage.active1)}</td>
-                    <td>{roundDisplay(weakenedDamage.active1)}</td>
-                    <td>{roundDisplay(critDamage.active1)}</td>
-                    <td>{weaponData.activeSkillFormula || '—'}</td>
-                    <td>{weaponData.buffActiveSkillFormula || '—'}</td>
-                </tr>
-                <tr>
-                    <th>Active Skill additional</th>
-                    <td>{roundDisplay(baseDamage.active2)}</td>
-                    <td>{roundDisplay(weakenedDamage.active2)}</td>
-                    <td>{roundDisplay(critDamage.active2)}</td>
-                    <td>{weaponData.activeSkillSecondFormula || '—'}</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>Basic Attack (Total DMG)</th>
-                    <td>{roundDisplay(baseDamage.basicTotal)}</td>
-                    <td>{roundDisplay(weakenedDamage.basicTotal)}</td>
-                    <td>{roundDisplay(critDamage.basicTotal)}</td>
-                    <td>{weaponData.basicAttackFormula || '—'}</td>
-                    <td></td>
+                    <th>Passive Skill Additional (Companion)</th>
+                    <td>{roundDisplay(baseDamage.passive5)}</td>
+                    <td>{roundDisplay(weakenedDamage.passive5)}</td>
+                    <td>{roundDisplay(critDamage.passive5)}</td>
+                    <td>{companionData.passiveSkillFormula5 || '—'}</td>
+                    <td>{companionData.buffPassiveSkillFormula5 || '—'}</td>
                 </tr>
                 <tr>
                     <th className={styles.titleSkill}>Basic Attack:</th>
@@ -437,11 +446,38 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
                     <td></td>
                 </tr>
                 <tr>
+                    <th>Basic Attack (Total DMG)</th>
+                    <td>{roundDisplay(baseDamage.basicTotal)}</td>
+                    <td>{roundDisplay(weakenedDamage.basicTotal)}</td>
+                    <td>{roundDisplay(critDamage.basicTotal)}</td>
+                    <td>{weaponData.basicAttackFormula || '—'}</td>
+                    <td></td>
+                </tr>
+                <tr>
                     <th>Charged Attack</th>
                     <td>{roundDisplay(baseDamage.basicCharged)}</td>
                     <td>{roundDisplay(weakenedDamage.basicCharged)}</td>
                     <td>{roundDisplay(critDamage.basicCharged)}</td>
                     <td>{weaponData.buffBasicChargedAttackFormula || '—'}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th className={styles.titleSkill}>Active Skill:</th>
+                </tr>
+                <tr>
+                    <th>Active Skill</th>
+                    <td>{roundDisplay(baseDamage.active1)}</td>
+                    <td>{roundDisplay(weakenedDamage.active1)}</td>
+                    <td>{roundDisplay(critDamage.active1)}</td>
+                    <td>{weaponData.activeSkillFormula || '—'}</td>
+                    <td>{weaponData.buffActiveSkillFormula || '—'}</td>
+                </tr>
+                <tr>
+                    <th>Active Skill additional</th>
+                    <td>{roundDisplay(baseDamage.active2)}</td>
+                    <td>{roundDisplay(weakenedDamage.active2)}</td>
+                    <td>{roundDisplay(critDamage.active2)}</td>
+                    <td>{weaponData.activeSkillSecondFormula || '—'}</td>
                     <td></td>
                 </tr>
                 <tr>
