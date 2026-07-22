@@ -300,7 +300,7 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
                     <td>{roundDisplay(weakenedDamage.support)}</td>
                     <td>{roundDisplay(critDamage.support)}</td>
                     <td>{companionData.supportSkillFormula || '—'}</td>
-                    <td></td>
+                    <td>{companionData.buffsupportSkillFormula || '—'}</td>
                 </tr>
                 <tr>
                     <th>Empowered Support Skill</th>
@@ -335,7 +335,7 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
                     <td>{roundDisplay(weakenedDamage.passive1)}</td>
                     <td>{roundDisplay(critDamage.passive1)}</td>
                     <td>{companionData.passiveSkillFormula1 || '—'}</td>
-                    <td></td>
+                    <td>{companionData.buffPassiveSkillFormula1 || '—'}</td>
                 </tr>
                 <tr>
                     <th>MC Passive Skill</th>
@@ -357,15 +357,15 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
                     <th className={styles.titleSkill}>Active Skill:</th>
                 </tr>
                 <tr>
-                    <th>Active Skill First Attack</th>
+                    <th>Active Skill</th>
                     <td>{roundDisplay(baseDamage.active1)}</td>
                     <td>{roundDisplay(weakenedDamage.active1)}</td>
                     <td>{roundDisplay(critDamage.active1)}</td>
                     <td>{weaponData.activeSkillFormula || '—'}</td>
-                    <td></td>
+                    <td>{weaponData.buffActiveSkillFormula || '—'}</td>
                 </tr>
                 <tr>
-                    <th>Active Skill Second Attack</th>
+                    <th>Active Skill additional</th>
                     <td>{roundDisplay(baseDamage.active2)}</td>
                     <td>{roundDisplay(weakenedDamage.active2)}</td>
                     <td>{roundDisplay(critDamage.active2)}</td>

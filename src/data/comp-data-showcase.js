@@ -574,6 +574,51 @@ export const compDataShowcaseSpecific = [
             additionalBuff: 70,
         },
     },
+    {
+        companionName: "Rafayel: God of the Tides",
+        cardIds: [387, 388],
+        supportSkillFormula: "47 + 25% ATK + 2.2% of Max HP",
+        supportSkillStats: {
+            base: 47,
+            atk: 25,
+            hp: 2.2,
+            def: 0
+        },
+        buffsupportSkillFormula: `ATK SPD is increased by 20%
+DMG is increased by 25%`,
+        buffsupportSkillStats: {
+            additionalDMG: 25,
+        },
+        resonanceSkillFormula: "995 + 531% ATK + 47.8% of Max HP",
+        resonanceSkillStats: {
+            base: 995,
+            atk: 531,
+            hp: 47.8,
+            def: 0
+        },
+        ardentOathFormula: "1440 + 780% ATK + 69.4% of Max HP",
+        ardentOathStats: {
+            base: 1440,
+            atk: 780,
+            hp: 69.4,
+            def: 0
+        },
+        passiveSkillFormula1: ``,
+        passiveSkillStats1: {
+            base: 0,
+            atk: 0,
+            hp: 0,
+            def: 0
+        },
+        buffPassiveSkillFormula1: "+30% DMG to your and Companion DMG",
+        buffPassiveSkillStats: {
+            additionalDMG: 30,
+        },
+        buffEidolon0Formula: "+10 Crit DMG",
+        buffEidolon0Stats: {
+            critDMG: 10,
+        },
+    },
 ]
 
 export const weaponDataShowcaseSpecific = [
@@ -941,4 +986,33 @@ export const weaponDataShowcaseSpecific = [
             def: 660
         },
     },
+    {
+        weaponName: "Tidal Embrace",
+        basicAttackFormula: "398 + 211% ATK + 19% of Max HP",
+        basicAttackStats: {
+            base: 398,
+            atk: 211,
+            hp: 19,
+            def: 0
+        },
+        basicChargedAttack: "182 + 97% ATK + 9% of Max HP",
+        basicChargedAttackStats: {
+            base: 182,
+            atk: 97,
+            hp: 9,
+            def: 0
+        },
+        activeSkillFormula: "73 + 39% ATK + 3.5% of Max HP",
+        activeSkillStats: {
+            base: 73,
+            atk: 39,
+            hp: 3.5,
+            def: 0
+        },
+        buffActiveSkillFormula: "+10% CRIT Rate to your and Companion DMG",
+        buffActiveSkillStats: {
+           critRate: 10,
+        },
+    },
+
 ]

@@ -821,16 +821,20 @@ After reciting a short incantation, you create waves that push back nearby enemi
 When using [Tides], summon a [Sea Spirit] in front of you.
         `,
         eidolon0: `
-The team deals 8% more DMG and takes 8% less DMG. When fighting near a [Sea Spirit], CRIT DMG is increased by 10%.        
+The team deals 8% more DMG and takes 8% less DMG. 
+When fighting near a [Sea Spirit], CRIT DMG is increased by 10%.        
         `,
         eidolon1: `
-Increases Ardent Oath charge by 20%. The [Sea Spirit] starts at Lv. 2 and its duration is extended by 5 seconds.
+Increases Ardent Oath charge by 20%. 
+The [Sea Spirit] starts at Lv. 2 and its duration is extended by 5 seconds.
         `,
         eidolon2: `
-Energy Charge limit is raised by 1. During [Heavenly Rain], Energy Charge recovery speed is increased by 30%.
+Energy Charge limit is raised by 1. 
+During [Heavenly Rain], Energy Charge recovery speed is increased by 30%.
         `,
         eidolon3: `
-The team deals 8% more DMG. [Surging Tides] restores 30% [Faith] for each enemy hit. This effect can trigger at most 3 times during Surging Tides.
+The team deals 8% more DMG. 
+[Surging Tides] restores 30% [Faith] for each enemy hit. This effect can trigger at most 3 times during Surging Tides.
         `,
     },
     {
