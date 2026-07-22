@@ -73,11 +73,14 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
     // Базовый урон для всех способностей
     const baseDamage = {
         // Companion skills (из companionData)
-        support: companionData.supportSkillStats
-            ? createDamageCalculator(companionData.supportSkillStats)(companionStats) * (1 + attributeBonus / 100)
+        support: companionData.empoweredSupportSkillFormula2
+            ? createDamageCalculator(companionData.empoweredSupportSkillFormula2)(companionStats) * (1 + attributeBonus / 100)
             : 0,
         empoweredSupport: companionData.empoweredSupportSkillStats
             ? createDamageCalculator(companionData.empoweredSupportSkillStats)(companionStats) * (1 + attributeBonus / 100)
+            : 0,
+        empoweredSupport2: companionData.empoweredSupportSkillStats2
+            ? createDamageCalculator(companionData.empoweredSupportSkillStats2)(companionStats) * (1 + attributeBonus / 100)
             : 0,
         resonance: companionData.resonanceSkillStats
             ? createDamageCalculator(companionData.resonanceSkillStats)(companionStats) * (1 + attributeBonus / 100)
@@ -132,6 +135,7 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
     const weakenedDamage = {
         support: calculateWeakenedDamage(baseDamage.support, totalDmgBoostToWeakened),
         empoweredSupport: calculateWeakenedDamage(baseDamage.empoweredSupport, totalDmgBoostToWeakened),
+        empoweredSupport2: calculateWeakenedDamage(baseDamage.empoweredSupport2, totalDmgBoostToWeakened),
         resonance: calculateWeakenedDamage(baseDamage.resonance, totalDmgBoostToWeakened),
         ardentOath: calculateWeakenedDamage(baseDamage.ardentOath, totalDmgBoostToWeakened),
         passive1: calculateWeakenedDamage(baseDamage.passive1, totalDmgBoostToWeakened),
@@ -152,6 +156,7 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
     const critDamage = {
         support: calculateCritDamage(baseDamage.support, critDmg),
         empoweredSupport: calculateCritDamage(baseDamage.empoweredSupport, critDmg),
+        empoweredSupport2: calculateCritDamage(baseDamage.empoweredSupport2, critDmg),
         resonance: calculateCritDamage(baseDamage.resonance, critDmg),
         ardentOath: calculateCritDamage(baseDamage.ardentOath, critDmg),
         passive1: calculateCritDamage(baseDamage.passive1, critDmg),
@@ -311,6 +316,14 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
                     <td></td>
                 </tr>
                 <tr>
+                    <th>Empowered Support Skill Additional</th>
+                    <td>{roundDisplay(baseDamage.empoweredSupport2)}</td>
+                    <td>{roundDisplay(weakenedDamage.empoweredSupport2)}</td>
+                    <td>{roundDisplay(critDamage.empoweredSupport2)}</td>
+                    <td>{companionData.empoweredSupportSkillFormula2 || '—'}</td>
+                    <td>{companionData.buffsupportSkillFormula2 || '—'}</td>
+                </tr>
+                <tr>
                     <th>Resonance Skill</th>
                     <td>{roundDisplay(baseDamage.resonance)}</td>
                     <td>{roundDisplay(weakenedDamage.resonance)}</td>
@@ -346,7 +359,7 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
                     <td>{buffPassiveSkillFormula}</td>
                 </tr>
                 <tr>
-                    <th>MC Passive Skill</th>
+                    <th>MC Passive Skill Additional</th>
                     <td>{roundDisplay(baseDamage.passive3)}</td>
                     <td>{roundDisplay(weakenedDamage.passive3)}</td>
                     <td>{roundDisplay(critDamage.passive3)}</td>
@@ -432,15 +445,12 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
                     <td></td>
                 </tr>
                 <tr>
-                    <th className={styles.titleSkill}>Passive Skill (MC):</th>
-                </tr>
-                <tr>
-                    <th>Passive Skill</th>
+                    <th>Passive Skill (MC)</th>
                     <td>{roundDisplay(baseDamage.passiveMC)}</td>
                     <td>{roundDisplay(weakenedDamage.passiveMC)}</td>
                     <td>{roundDisplay(critDamage.passiveMC)}</td>
                     <td>{weaponData.passiveSkillMCFormula || '—'}</td>
-                    <td></td>
+                    <td>{weaponData.buffPassiveSkillMCFormula || '—'}</td>
                 </tr>
                 </tbody>
             </table>

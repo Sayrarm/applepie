@@ -619,6 +619,71 @@ DMG is increased by 25%`,
             critDMG: 10,
         },
     },
+    {
+        companionName: "Rafayel: Abysswalker",
+        cardIds: [385, 386],
+        empoweredSupportSkillFormula: "306 + 408% ATK",
+        empoweredSupportSkillStats: {
+            base: 306,
+            atk: 408,
+            hp: 0,
+            def: 0
+        },
+        empoweredSupportSkillFormula2: "23 + 31% ATK",
+        empoweredSupportSkillStats2: {
+            base: 23,
+            atk: 31,
+            hp: 0,
+            def: 0
+        },
+        resonanceSkillFormula: "785 + 1047% ATK",
+        resonanceSkillStats: {
+            base: 785,
+            atk: 1047,
+            hp: 0,
+            def: 0
+        },
+        ardentOathFormula: "1440 + 1920%",
+        ardentOathStats: {
+            base: 1440,
+            atk: 1920,
+            hp: 0,
+            def: 0
+        },
+        passiveSkillFormula1: "540 + 720% ATK",
+        passiveSkillStats1: {
+            base: 540,
+            atk: 720,
+            hp: 0,
+            def: 0
+        },
+        passiveSkillFormula2: ``,
+        passiveSkillStats2: {
+            base: 0,
+            atk: 0,
+            hp: 0,
+            def: 0
+        },
+        buffPassiveSkillFormula1: `+8% ATK to your and Companion DMG
++15% Crit Rate`,
+        buffPassiveSkillStats: {
+            additionalDMG: 8,
+            critRate: 15
+        },
+        buffEidolon0Formula: "+30 Crit DMG under Deepsea Pursuit",
+        buffEidolon0Stats: {
+            critDMG: 30,
+        },
+        buffEidolon1Formula: "+20% Burn DMG",
+        buffEidolon1Stats: {
+            additionalBuff: 20,
+        },
+        buffEidolon3Formula: "+150% Searing Slash DMG",
+        buffEidolon3Stats: {
+            additionalBuff: 150,
+        },
+    },
+
 ]
 
 export const weaponDataShowcaseSpecific = [
@@ -674,7 +739,7 @@ export const weaponDataShowcaseSpecific = [
             hp: 18,
             def: 0
         },
-        buffPassiveSkillFormula: `Under Darknight Reign 
+        buffPassiveSkillMCFormula: `Under Darknight Reign 
 + 8% damage dealt + 8% DMG Boost to Weakened`,
         buffPassiveSkillStats: {
             DMGBoost: 8,
@@ -1014,5 +1079,61 @@ export const weaponDataShowcaseSpecific = [
            critRate: 10,
         },
     },
-
+    {
+        weaponName: "Phantasma Sands",
+        basicAttackFormula: "",
+        basicFirstStrike: "53 + 71% ATK",
+        basicFirstStrikeStats: {
+            base: 53,
+            atk: 71,
+            hp: 0,
+            def: 0
+        },
+        basicSecondStrike: "48 + 64% ATK",
+        basicSecondStrikeStats: {
+            base: 48,
+            atk: 64,
+            hp: 0,
+            def: 0
+        },
+        basicThirdStrike: "64 + 85% ATK",
+        basicThirdStrikeStats: {
+            base: 64,
+            atk: 85,
+            hp: 0,
+            def: 0
+        },
+        basicFourthStrike: "69 + 92% ATK",
+        basicFourthStrikeStats: {
+            base: 69,
+            atk: 92,
+            hp: 0,
+            def: 0
+        },
+        basicFifthStrike: "74 + 99% ATK ",
+        basicFifthStrikeStats: {
+            base: 74,
+            atk: 99,
+            hp: 0,
+            def: 0
+        },
+        basicChargedAttack: "144% + 192% ATK",
+        basicChargedAttackStats: {
+            base: 144,
+            atk: 192,
+            hp: 0,
+            def: 0
+        },
+        activeSkillFormula: "309 + 412% ATK",
+        activeSkillStats: {
+            base: 309,
+            atk: 412,
+            hp: 0,
+            def: 0
+        },
+        buffPassiveSkillMCFormula: "+10% Crit Rate",
+        buffPassiveSkillMCStats: {
+            critRate: 10,
+        },
+    },
 ]

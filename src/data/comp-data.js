@@ -881,11 +881,11 @@ Searing Slash: After charging, Rafayel lunges forward, inflicting 540 + 720% ATK
         basicAttackImg: "../assets/battle-icons/a2_skill_pl_1901_02_RY_2503.png",
         basicAttackText: `
 Wield dual guns for a combo up to 5 hits, The final Basic Attack inflicts multiple instances of DMG. 
-First Strike:53+71% ATK DMG
-Second Strike:48+64% ATK DMG 
-Third Strike:64+85% ATK DMG 
-Fourth Strike:69+92% ATK DMG 
-Fifth Strike:74+99% ATK DMG
+First Strike: 53+71% ATK DMG
+Second Strike: 48+64% ATK DMG 
+Third Strike: 64+85% ATK DMG 
+Fourth Strike: 69+92% ATK DMG 
+Fifth Strike: 74+99% ATK DMG
 
 Charged Attack will knock back nearby enemies, dealing AoE DMG equal to 144%+192% ATK.
         `,
@@ -902,16 +902,20 @@ Perform an enhanced linear attack, dealing 309+412% ATK DMG.
 Basic attacks generate a stack of Pursuit, increasing your ATK SPD by 4% and CRIT Rate by 2%, up to 5 stacks. If attacks stop, the stacks will quickly disappear. Active Skills will inflict [Burn] on enemies.
         `,
         eidolon0: `
-The team deals 8% more DMG and takes 8% less DMG. Abysswalker's [Deepsea Pursuit] gains 30% additional CRIT DMG.        
+The team deals 8% more DMG and takes 8% less DMG. 
+Abysswalker's [Deepsea Pursuit] gains 30% additional CRIT DMG.        
         `,
         eidolon1: `
-Increases Ardent Oath charge by 20%. When fighting together with Abysswalker, increases DMG taken of enemies inflicted with [Burn] by 20%.
+Increases Ardent Oath charge by 20%. 
+When fighting together with Abysswalker, increases DMG taken of enemies inflicted with [Burn] by 20%.
         `,
         eidolon2: `
-Energy Charge limit is raised by 1. When triggering [Potential] recovery, Energy Charge recovery speed is increased by 50% for 4s.
+Energy Charge limit is raised by 1. 
+When triggering [Potential] recovery, Energy Charge recovery speed is increased by 50% for 4s.
         `,
         eidolon3: `
-The team deals 8% more DMG. Abysswalker's [Searing Slash] deals 150% more DMG. When triggering [Beacon] additionally restore 1 [Potential].
+The team deals 8% more DMG. 
+Abysswalker's [Searing Slash] deals 150% more DMG. When triggering [Beacon] additionally restore 1 [Potential].
         `,
     },
     {
