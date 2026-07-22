@@ -267,6 +267,249 @@ export const compDataShowcaseSpecific = [
             critRate: 7,
         }
     },
+    {
+        companionName: "Zayne: God of Annihilation",
+        cardIds: [293, 294],
+        supportSkillFormula: "272 + 143% ATK + 13.1% of Max HP",
+        supportSkillStats: {
+            base: 272,
+            atk: 143,
+            hp: 13.1,
+            def: 0
+        },
+        empoweredSupportSkillFormula: "368 + 195% ATK + 17.7% of Max HP",
+        empoweredSupportSkillStats: {
+            base: 368,
+            atk: 195,
+            hp: 17.7,
+            def: 0
+        },
+        resonanceSkillFormula: "1262 + 674% ATK + 60.6% of Max HP",
+        resonanceSkillStats: {
+            base: 1262,
+            atk: 674,
+            hp: 60.6,
+            def: 0
+        },
+        ardentOathFormula: "1800 + 960% ATK + 86%",
+        ardentOathStats: {
+            base: 1800,
+            atk: 960,
+            hp: 86,
+            def: 0
+        },
+        passiveSkillFormula1: "ЗАПОЛНИТЬ",
+        passiveSkillStats1: {
+            base: 0,
+            atk: 0,
+            hp: 0,
+            def: 0
+        },
+        passiveSkillFormula2: "ЗАПОЛНИТЬ",
+        passiveSkillStats2: {
+            base: 0,
+            atk: 0,
+            hp: 0,
+            def: 0
+        },
+        buffEidolon0Formula: "While awakened as [Deity of Niava], you and Zayne deal 8% additional DMG",
+        buffEidolon0Stats: {
+            additionalBuff: 8,
+        },
+        buffEidolon1Formula: "During the [Deity of Niava] state deals AoE DMG equal to 242 + 129% ATK + 11.6% of Max HP",
+        buffEidolon1Stats: {
+            additionalBuff: 0,
+        },
+        buffEidolon2Formula: "+20% Active Skill DMG",
+        buffEidolon2Stats: {
+            additionalBuff: 20,
+        },
+        buffEidolon3Formula: "Enemies hit by [Terminus Arrow] or [Divine Sever] take 30% more DMG for 4s",
+        buffEidolon3Stats: {
+            additionalBuff: 30,
+        },
+    },
+    {
+        companionName: "Zayne: Master of Fate",
+        cardIds: [291, 292],
+        supportSkillFormula: "260 + 348% ATK DMG",
+        supportSkillStats: {
+            base: 260,
+            atk: 348,
+            hp: 0,
+            def: 0
+        },
+        empoweredSupportSkillFormula: "372 + 492% ATK DMG",
+        empoweredSupportSkillStats: {
+            base: 372,
+            atk: 492,
+            hp: 0,
+            def: 0
+        },
+        resonanceSkillFormula: "632 + 842% ATK DMG",
+        resonanceSkillStats: {
+            base: 632,
+            atk: 842,
+            hp: 0,
+            def: 0
+        },
+        ardentOathFormula: "1440 + 1920% ATK DMG",
+        ardentOathStats: {
+            base: 1440,
+            atk: 1920,
+            hp: 0,
+            def: 0
+        },
+        passiveSkillFormula1: "233 + 310% ATK DMG",
+        passiveSkillStats1: {
+            base: 233,
+            atk: 310,
+            hp: 0,
+            def: 0
+        },
+        buffEidolon0Formula: "Enemies inflicted with [Shattered Jade] have their DEF reduced by 10%.",
+        buffEidolon0Stats: {
+            defIgnore: 10,
+        },
+        buffEidolon1Formula: "+0.5-10% DMG to Weakness enemies",
+        buffEidolon1Stats: {
+            additionalBuff: 10,
+        },
+        buffEidolon3Formula: "+100% Companion Passive Skill DMG",
+        buffEidolon3Stats: {
+            additionalBuff: 0,
+        },
+    },
+    {
+        companionName: "Zayne: Foreseer",
+        cardIds: [289, 290],
+        resonanceSkillFormula: "790 + 421% ATK + 1670% DEF",
+        resonanceSkillStats: {
+            base: 790,
+            atk: 421,
+            hp: 0,
+            def: 1670
+        },
+        ardentOathFormula: "1440 + 780% ATK + 3060% combined DEF",
+        ardentOathStats: {
+            base: 1440,
+            atk: 780,
+            hp: 0,
+            def: 3060
+        },
+        passiveSkillFormula1: "192 +  102% ATK + 406% DEF",
+        passiveSkillStats1: {
+            base: 192,
+            atk: 102,
+            hp: 0,
+            def: 406
+        },
+        buffEidolon0Formula: "+25% Companion Passive Skill DMG",
+        buffEidolon0Stats: {
+            additionalBuff: 25,
+        },
+        buffEidolon1Formula: "+12% under [Ward of Curses]",
+        buffEidolon1Stats: {
+            additionalBuff: 12,
+        },
+        buffEidolon2Formula: "+10% DMG after using Resonance Skill",
+        buffEidolon2Stats: {
+            additionalBuff: 10,
+        },
+    },
+    {
+        companionName: "Zayne: Medic of the Arctic",
+        supportSkillFormula: "208 + 275% ATK",
+        supportSkillStats: {
+            base: 208,
+            atk: 275,
+            hp: 0,
+            def: 0
+        },
+        resonanceSkillFormula: "362 + 482% ATK",
+        resonanceSkillStats: {
+            base: 362,
+            atk: 482,
+            hp: 0,
+            def: 0
+        },
+        ardentOathFormula: "1200 + 1600% ATK",
+        ardentOathStats: {
+            base: 1200,
+            atk: 1600,
+            hp: 0,
+            def: 0
+        },
+    },
+    {
+        companionName: "Zayne: Dawnbreaker",
+        supportSkillFormula: "626 + 835% ATK",
+        supportSkillStats: {
+            base: 626,
+            atk: 835,
+            hp: 0,
+            def: 0
+        },
+        empoweredSupportSkillFormula: "54 + 72% ATK",
+        empoweredSupportSkillStats: {
+            base: 54,
+            atk: 72,
+            hp: 0,
+            def: 0
+        },
+        resonanceSkillFormula: "252 + 336% ATK",
+        resonanceSkillStats: {
+            base: 252,
+            atk: 336,
+            hp: 0,
+            def: 0
+        },
+        ardentOathFormula: "1200 + 1600% ATK",
+        ardentOathStats: {
+            base: 1200,
+            atk: 1600,
+            hp: 0,
+            def: 0
+        },
+    },
+    {
+        companionName: "Zayne: Linkon doctor",
+        supportSkillFormula: "75 + 100% ATK",
+        supportSkillStats: {
+            base: 75,
+            atk: 100,
+            hp: 0,
+            def: 0
+        },
+        empoweredSupportSkillFormula: "",
+        empoweredSupportSkillStats: {
+            base: 0,
+            atk: 0,
+            hp: 0,
+            def: 0
+        },
+        resonanceSkillFormula: "296 + 394% ATK",
+        resonanceSkillStats: {
+            base: 296,
+            atk: 394,
+            hp: 0,
+            def: 0
+        },
+        ardentOathFormula: "1200 + 1600% ATK",
+        ardentOathStats: {
+            base: 1200,
+            atk: 1600,
+            hp: 0,
+            def: 0
+        },
+        passiveSkillFormula1: "+20% DMG to Frozen enemies",
+        passiveSkillStats1: {
+            base: 0,
+            atk: 0,
+            hp: 0,
+            def: 0
+        },
+    },
 ]
 
 export const weaponDataShowcaseSpecific = [
@@ -438,6 +681,143 @@ export const weaponDataShowcaseSpecific = [
             atk: 455,
             hp: 0,
             def: 0
+        },
+    },
+    {
+        weaponName: "Divine Grip",
+        basicAttackFormula: "",
+        basicFirstStrike: "105 + 56% ATK + 5.1% of Max HP",
+        basicFirstStrikeStats: {
+            base: 105,
+            atk: 56,
+            hp: 5.1,
+            def: 0
+        },
+        basicSecondStrike: "116 + 62% ATK + 5.6% of Max HP",
+        basicSecondStrikeStats: {
+            base: 116,
+            atk: 62,
+            hp: 5.6,
+            def: 0
+        },
+        basicThirdStrike: "116 + 62% ATK + 5.6% of Max HP",
+        basicThirdStrikeStats: {
+            base: 116,
+            atk: 62,
+            hp: 5.6,
+            def: 0
+        },
+        basicFourthStrike: "147 + 78% ATK + 7.1% of Max HP",
+        basicFourthStrikeStats: {
+            base: 147,
+            atk: 78,
+            hp: 7.1,
+            def: 0
+        },
+        basicChargedAttack: "",
+        basicChargedAttackStats: {
+            base: 0,
+            atk: 0,
+            hp: 0,
+            def: 0
+        },
+        activeSkillFormula: "338 + 180% ATK + 16.2% of Max HP",
+        activeSkillStats: {
+            base: 338,
+            atk: 180,
+            hp: 16.2,
+            def: 0
+        },
+        activeSkillSecondFormula: "",
+        activeSkillSecondStats: {
+            base: 0,
+            atk: 0,
+            hp: 0,
+            def: 0
+        },
+        passiveSkillMCFormula: "389 + 207% ATK + 18.7% of Max HP",
+        passiveSkillMCStats: {
+            base: 389,
+            atk: 207,
+            hp: 18.7,
+            def: 0
+        },
+    },
+    {
+        weaponName: "Sacred Rainfall",
+        basicAttackFormula: "",
+        basicFirstStrike: "75 + 100% ATK",
+        basicFirstStrikeStats: {
+            base: 75,
+            atk: 100,
+            hp: 0,
+            def: 0
+        },
+        basicSecondStrike: "75 + 100% ATK",
+        basicSecondStrikeStats: {
+            base: 75,
+            atk: 100,
+            hp: 0,
+            def: 0
+        },
+        basicThirdStrike: "90 + 121% ATK",
+        basicThirdStrikeStats: {
+            base: 90,
+            atk: 121,
+            hp: 0,
+            def: 0
+        },
+        basicFourthStrike: "121 + 161% ATK",
+        basicFourthStrikeStats: {
+            base: 121,
+            atk: 161,
+            hp: 0,
+            def: 0
+        },
+        basicChargedAttack: "141 + 188% ATK",
+        basicChargedAttackStats: {
+            base: 141,
+            atk: 188,
+            hp: 0,
+            def: 0
+        },
+        activeSkillFormula: "404 + 539% ATK",
+        activeSkillStats: {
+            base: 404,
+            atk: 539,
+            hp: 0,
+            def: 0
+        },
+        passiveSkillMCFormula: "205 + 273% ATK",
+        passiveSkillMCStats: {
+            base: 205,
+            atk: 273,
+            hp: 0,
+            def: 0
+        },
+    },
+    {
+        weaponName: "Everlasting Song",
+        basicAttackFormula: "288 + 154% ATK + 609% DEF",
+        basicAttackStats: {
+            base: 288,
+            atk: 154,
+            hp: 0,
+            def: 609
+        },
+        basicChargedAttack: "167 + 89% ATK + 353% DEF",
+        basicChargedAttackStats: {
+            base: 167,
+            atk: 89,
+            hp: 0,
+            def: 353
+        },
+        activeSkillFormula: "52 + 28% ATK + 111% DEF ",
+        activeSkillStats: {
+            base: 52,
+            atk: 28,
+            hp: 0,
+            def: 111
         },
     },
 ]

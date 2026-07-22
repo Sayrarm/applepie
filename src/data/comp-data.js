@@ -386,9 +386,9 @@ After [Deity of Niava] ends, Zayne will once again have 3 stacks of [Divine Shac
         basicAttackImg: "../assets/battle-icons/a2_skill_pl_1902_01_YS_2207.png",
         basicAttackText: `
 Wield [Divine Grip] to perform up to four consecutive attacks.
-First Strike:105+56% ATK+5.1% of Max HP 
-Second Strike:116+62% ATK+5.6% of Max HP 
-Third Strike:116+62% ATK+5.6% of Max HP 
+First Strike: 105+56% ATK+5.1% of Max HP 
+Second Strike: 116+62% ATK+5.6% of Max HP 
+Third Strike: 116+62% ATK+5.6% of Max HP 
 Fourth Strike: 147+78% ATK+7.1% of Max HP
 
 Charged Attack delivers two consecutive slashes, dealing total DMG equal to 112+60% ATK+5.3% of Max HP. The second slash on hit applies [Rupture Mark] to the enemy. This effect cannot stack.
@@ -464,10 +464,10 @@ When you and Zayne strike an enemy in [Shattered Jade] state, [Jadesunder Intent
         basicAttackImg: "../assets/battle-icons/a2_skill_pl_1904_02_YS_2204.png",
         basicAttackText: `
 Wield a sword for a multi-hit combo to deal DMG. 
-First Strike:75+100% ATK DMG
-Second Strike:75+100% ATK DMG 
-Third Strike:90+121% ATK DMG 
-Fourth Strike:121+161% ATK DMG
+First Strike: 75+100% ATK DMG
+Second Strike: 75+100% ATK DMG 
+Third Strike: 90+121% ATK DMG 
+Fourth Strike: 121+161% ATK DMG
 
 Charged Attack will unleash a single slash, inflicting AoE DMG equal to 141+188% ATK.
         `,
@@ -485,16 +485,20 @@ Within 13s after using [Orchid Metamorphosis], [Orchid Metamorphosis] will be re
 [Piercing Rain]: Use a sword to perform two consecutive attacks, dealing 205+273% ATK DMG in total. The damage dealt will be counted as Resonance Skill DMG.
         `,
         eidolon0: `
-The team deals 8% more DMG and takes 8% less DMG. Enemies inflicted with [Shattered Jade] have their DEF reduced by 10%.        
+The team deals 8% more DMG and takes 8% less DMG. 
+Enemies inflicted with [Shattered Jade] have their DEF reduced by 10%.        
         `,
         eidolon1: `
-Increases Ardent Oath charge by 20%. When fighting alongside Master of Fate, the enemy's weakened state is extended by 2 seconds Each time an enemy in weakened state is hit, the damage it sustains increases by 0.5%, up to a maximum of 10%.
+Increases Ardent Oath charge by 20%. 
+When fighting alongside Master of Fate, the enemy's weakened state is extended by 2 seconds Each time an enemy in weakened state is hit, the damage it sustains increases by 0.5%, up to a maximum of 10%.
         `,
         eidolon2: `
-Energy Charge limit is raised by 1. When triggering [Jadesunder], a small amount of Energy Charge is restored.
+Energy Charge limit is raised by 1. 
+When triggering [Jadesunder], a small amount of Energy Charge is restored.
         `,
         eidolon3: `
-The team deals 8% IV more DMG. [Jadesunder] DMG is increased by 100%. During skill replacement, [Piercing Rain] can be used 1 additional time. When Piercing Rain hits enemies, its cooldown is reduced by 0.5s.
+The team deals 8% more DMG. 
+[Jadesunder] DMG is increased by 100%. During skill replacement, [Piercing Rain] can be used 1 additional time. When Piercing Rain hits enemies, its cooldown is reduced by 0.5s.
 This effect can trigger only once per use of Piercing Rain.
         `,
     },
@@ -556,16 +560,20 @@ Create a Sacred Sign at the target location that inflicts 6 instances of DMG on 
 During a Dodge, you can use your basic attack. When you use an Active Skill, Zayne gains 1 stack of [Divine Prayer] restoring both of your HP equal to 1000+2.5% of your Max HP in 5s.
         `,
         eidolon0: `
-The team deals 8% more DMG and takes 8% less DMG. When fighting alongside Foreseer, [Eternal Sin] DMG is increased by 25%.        
+The team deals 8% more DMG and takes 8% less DMG. 
+When fighting alongside Foreseer, [Eternal Sin] DMG is increased by 25%.        
         `,
         eidolon1: `
-Increases Ardent Oath charge by 20%. When you and Foreseer are under [Ward of Curses], DMG dealt is increased by 12%.
+Increases Ardent Oath charge by 20%. 
+When you and Foreseer are under [Ward of Curses], DMG dealt is increased by 12%.
         `,
         eidolon2: `
-Energy Charge limit is raised by 1. When using a Resonance Skill, Foreseer additionally gains 1 stack of [Divine Prayer], and your DMG is increased by 10% for 10s.
+Energy Charge limit is raised by 1. 
+When using a Resonance Skill, Foreseer additionally gains 1 stack of [Divine Prayer], and your DMG is increased by 10% for 10s.
         `,
         eidolon3: `
-The team deals 8% more DMG. Every 6 seconds Foreseer gains 1 stack of [Divine Prayer].
+The team deals 8% more DMG. 
+Every 6 seconds Foreseer gains 1 stack of [Divine Prayer].
         `,
     },
     {
