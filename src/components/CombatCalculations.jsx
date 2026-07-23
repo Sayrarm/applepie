@@ -32,27 +32,32 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
         return solarCards
             .filter(card => card !== null)
             .map(card => card.id)
-            .sort();
+            .sort((a, b) => a - b); // Сортировка чисел
     }, [solarCards]);
 
-    // Проверяем, есть ли 5-star пара
-    const hasSolarPair5Star = useMemo(() => {
-        if (!companionData.cardIds || solarCards.length < 2) return false;
-        const requiredCardIds = companionData.cardIds || [];
-        if (requiredCardIds.length === 0) return false;
+    // Находим компаньона с совпадающими cardIds (если есть)
+    const matchingCompanion = useMemo(() => {
+        if (solarCardIds.length < 2) return null;
 
-        const sortedRequired = [...requiredCardIds].sort();
-        return sortedRequired.length === solarCardIds.length &&
-            sortedRequired.every((id, index) => id === solarCardIds[index]);
-    }, [companionData.cardIds, solarCardIds, solarCards.length]);
+        return compDataShowcaseSpecific.find(item => {
+            if (!item.cardIds || item.cardIds.length === 0) return false;
+            const sortedItemIds = [...item.cardIds].sort((a, b) => a - b);
+            return sortedItemIds.length === solarCardIds.length &&
+                sortedItemIds.every((id, index) => id === solarCardIds[index]);
+        }) || null;
+    }, [solarCardIds]);
+
+    /// Проверяем, есть ли 5-star пара
+    const hasSolarPair5Star = useMemo(() => {
+        return matchingCompanion !== null;
+    }, [matchingCompanion]);
 
     // Проверяем, есть ли 4-star пара
     const hasSolarPair4Star = useMemo(() => {
         if (solarCardIds.length < 2) return false;
 
-        // Ищем совпадение в solar4Stars
         return solar4Stars.some(pair => {
-            const sortedPairIds = [...pair.cardIds].sort();
+            const sortedPairIds = [...pair.cardIds].sort((a, b) => a - b);
             return sortedPairIds.length === solarCardIds.length &&
                 sortedPairIds.every((id, index) => id === solarCardIds[index]);
         });
@@ -67,6 +72,12 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
         : hasSolarPair4Star
             ? compDataShowcaseDefault4star
             : null;
+
+    // Проверяем, совпадает ли выбранный компаньон с найденной парой
+    const isCompanionMatching = useMemo(() => {
+        if (!selectedCompanion?.companionName || !matchingCompanion) return false;
+        return matchingCompanion.companionName === selectedCompanion.companionName;
+    }, [selectedCompanion, matchingCompanion]);
 
     // Состояния для Additional Bonus
     const [isAttributeBonus, setIsAttributeBonus] = useState(false);
@@ -233,22 +244,22 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
                 <tr>
                     <th>Starring Effect</th>
                     <td>{defaultBuffs.eidolon0}</td>
-                    <td>{hasAnySolarPair ? companionData.buffEidolon0Formula : '—'}</td>
+                    <td>{isCompanionMatching && companionData.buffEidolon0Formula ? companionData.buffEidolon0Formula : '—'}</td>
                 </tr>
                 <tr>
                     <th>Duo Rank 1</th>
                     <td>{defaultBuffs.eidolon1}</td>
-                    <td>{hasAnySolarPair ? companionData.buffEidolon1Formula : '—'}</td>
+                    <td>{isCompanionMatching && companionData.buffEidolon1Formula ? companionData.buffEidolon1Formula : '—'}</td>
                 </tr>
                 <tr>
                     <th>Duo Rank 2</th>
                     <td>{defaultBuffs.eidolon2}</td>
-                    <td>{hasAnySolarPair ? companionData.buffEidolon2Formula : '—'}</td>
+                    <td>{isCompanionMatching && companionData.buffEidolon2Formula ? companionData.buffEidolon2Formula : '—'}</td>
                 </tr>
                 <tr>
                     <th>Duo Rank 3</th>
                     <td>{defaultBuffs.eidolon3}</td>
-                    <td>{hasAnySolarPair ? companionData.buffEidolon3Formula : '—'}</td>
+                    <td>{isCompanionMatching && companionData.buffEidolon3Formula ? companionData.buffEidolon3Formula : '—'}</td>
                 </tr>
                 </tbody>
             </table>
