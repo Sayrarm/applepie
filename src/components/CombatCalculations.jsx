@@ -8,6 +8,7 @@ import {Range} from 'react-range';
 import styles from "./CombatCalculations.module.css";
 import React, {useState, useMemo} from "react";
 import {calculateCritDamage, calculateWeakenedDamage, createDamageCalculator} from "../data/damageCalculator.js";
+import {solar4Stars} from "../data/solar-4-star-info.js";
 
 function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarCards }) {
     // Находим данные для выбранного компаньона по companionName
@@ -26,23 +27,46 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
         ) || {};
     }, [selectedMCWeapon]);
 
-    // Проверяем, есть ли у нас полный набор Solar карточек (2 карточки с нужными cardIds)
-    const hasSolarPair = useMemo(() => {
-        if (!companionData.cardIds || solarCards.length < 2) return false;
+    // Получаем ID выбранных solar карточек
+    const solarCardIds = useMemo(() => {
+        return solarCards
+            .filter(card => card !== null)
+            .map(card => card.id)
+            .sort();
+    }, [solarCards]);
 
+    // Проверяем, есть ли 5-star пара
+    const hasSolarPair5Star = useMemo(() => {
+        if (!companionData.cardIds || solarCards.length < 2) return false;
         const requiredCardIds = companionData.cardIds || [];
         if (requiredCardIds.length === 0) return false;
 
-        const solarCardIds = solarCards
-            .filter(card => card !== null)
-            .map(card => card.id);
-
         const sortedRequired = [...requiredCardIds].sort();
-        const sortedSolar = [...solarCardIds].sort();
+        return sortedRequired.length === solarCardIds.length &&
+            sortedRequired.every((id, index) => id === solarCardIds[index]);
+    }, [companionData.cardIds, solarCardIds, solarCards.length]);
 
-        return sortedRequired.length === sortedSolar.length &&
-            sortedRequired.every((id, index) => id === sortedSolar[index]);
-    }, [companionData.cardIds, solarCards]);
+    // Проверяем, есть ли 4-star пара
+    const hasSolarPair4Star = useMemo(() => {
+        if (solarCardIds.length < 2) return false;
+
+        // Ищем совпадение в solar4Stars
+        return solar4Stars.some(pair => {
+            const sortedPairIds = [...pair.cardIds].sort();
+            return sortedPairIds.length === solarCardIds.length &&
+                sortedPairIds.every((id, index) => id === solarCardIds[index]);
+        });
+    }, [solarCardIds]);
+
+    // Определяем, есть ли вообще какая-либо пара
+    const hasAnySolarPair = hasSolarPair5Star || hasSolarPair4Star;
+
+    // Определяем, какие default бонусы показывать
+    const defaultBuffs = hasSolarPair5Star
+        ? compDataShowcaseDefault5star
+        : hasSolarPair4Star
+            ? compDataShowcaseDefault4star
+            : null;
 
     // Состояния для Additional Bonus
     const [isAttributeBonus, setIsAttributeBonus] = useState(false);
@@ -192,16 +216,11 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
     // Вспомогательная функция для округления при отображении
     const roundDisplay = (value) => Math.round(value);
 
-    // Определяем, какие default бонусы показывать (5-star или 4-star)
-    const defaultBuffs = hasSolarPair ? compDataShowcaseDefault5star : compDataShowcaseDefault4star;
-
-    // BuffPassiveSkillFormula берем из weaponData (если есть), иначе из companionData
-    const buffPassiveSkillFormula = weaponData.buffPassiveSkillFormula || companionData.buffPassiveSkillFormula || '—';
-
     return (
         <section className={styles.container}>
             <h2>Combat Calculations:</h2>
 
+            {hasAnySolarPair && defaultBuffs && (
             <table className={styles.statsTable}>
                 <thead>
                 <tr>
@@ -214,25 +233,26 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
                 <tr>
                     <th>Starring Effect</th>
                     <td>{defaultBuffs.eidolon0}</td>
-                    <td>{hasSolarPair ? companionData.buffEidolon0Formula : '—'}</td>
+                    <td>{hasAnySolarPair ? companionData.buffEidolon0Formula : '—'}</td>
                 </tr>
                 <tr>
                     <th>Duo Rank 1</th>
                     <td>{defaultBuffs.eidolon1}</td>
-                    <td>{hasSolarPair ? companionData.buffEidolon1Formula : '—'}</td>
+                    <td>{hasAnySolarPair ? companionData.buffEidolon1Formula : '—'}</td>
                 </tr>
                 <tr>
                     <th>Duo Rank 2</th>
                     <td>{defaultBuffs.eidolon2}</td>
-                    <td>{hasSolarPair ? companionData.buffEidolon2Formula : '—'}</td>
+                    <td>{hasAnySolarPair ? companionData.buffEidolon2Formula : '—'}</td>
                 </tr>
                 <tr>
                     <th>Duo Rank 3</th>
                     <td>{defaultBuffs.eidolon3}</td>
-                    <td>{hasSolarPair ? companionData.buffEidolon3Formula : '—'}</td>
+                    <td>{hasAnySolarPair ? companionData.buffEidolon3Formula : '—'}</td>
                 </tr>
                 </tbody>
             </table>
+            )}
 
             {/* Additional Bonus Section */}
             <div className={styles.additionalBonus}>
