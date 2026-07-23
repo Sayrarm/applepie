@@ -123,11 +123,11 @@ When you and Xavier release basic attacks and skills, a stack of [Phasing Moon] 
         basicAttackImg: "../assets/battle-icons/a2_skill_pl_1901_02_ST_2106.png",
         basicAttackText: `
 Wield dual guns for a combo up to 5 hits. The final Basic Attack inflicts multiple instances of DMG. 
-First Strike:55+29% ATK+117% DEF.
+First Strike: 55+29% ATK+117% DEF.
 Second Strike: 50+26% ATK+105% DEF 
 Third Strike: 66+35% ATK+140% DEF 
-Fourth Strike:72+38% ATK+152% DEF 
-Fifth Strike:77+41% ATK+163% DEF
+Fourth Strike: 72+38% ATK+152% DEF 
+Fifth Strike: 77+41% ATK+163% DEF
 
 Charged Attack will knock back nearby enemies, dealing AoE DMG equal to 150+80% ATK+317% DEF.
         `,
@@ -144,16 +144,20 @@ Attack the target with a 4-hit combo, dealing DMG equal to 403+215% ATK +852% DE
 [Moontide] triggers [Moonfall] with each successful hit.
         `,
         eidolon0: `
-The team deals 8% more DMG and takes 8% less DMG. The enemy's [Moonstruck] state duration is extended by 3s.        
+The team deals 8% more DMG and takes 8% less DMG. 
+The enemy's [Moonstruck] state duration is extended by 3s.        
         `,
         eidolon1: `
-Increases Ardent Oath charge by 20%. [Moonlight] deals 25% more DMG and applies 1 stack of [Phasing Moon] to the target.
+Increases Ardent Oath charge by 20%. 
+[Moonlight] deals 25% more DMG and applies 1 stack of [Phasing Moon] to the target.
         `,
         eidolon2: `
-Energy Charge limit is raised by 1. When [Moonlight] is triggered, your Active Skill cooldown is reduced by 0.5s and a small amount of Energy Charge is restored.
+Energy Charge limit is raised by 1. 
+When [Moonlight] is triggered, your Active Skill cooldown is reduced by 0.5s and a small amount of Energy Charge is restored.
         `,
         eidolon3: `
-The team deals 8% more DMG. When your Active Skills and Charged Attacks hit the first target inflicted with [Moonstruck], directly trigger [Moonlight]. When Moonlight scores a critical hit, it deals an additional 30% CRIT DMG.
+The team deals 8% more DMG. 
+When your Active Skills and Charged Attacks hit the first target inflicted with [Moonstruck], directly trigger [Moonlight]. When Moonlight scores a critical hit, it deals an additional 30% CRIT DMG.
         `,
     },
     {
@@ -378,8 +382,7 @@ When [Golden Arrows] hit an enemy, they leave an [Arrow Mark]. [Arrow Mark] can 
 When all [Divine Shackles] are removed, you can cast [Bind Gaze].
 [Bind Gaze]: You remove the Hidden Divinity covering Zayne's eyes. Zayne opens his divine eyes, clearing all [Golden Arrows], [Remnant Feathers], and [Arrow Marks].
 You and Zayne awaken as the [Deity of Niava] for 10s During this time, enemies' [Soul Rifts] are revealed.
-[Soul Rift]: Your Charged Attack will shatter an enemy's [Soul Rift] on hit, dealing DMG equal to 315+168%
-ATK+15.1% of Max HP. During the [Deity of Niava] state, enemies' [Soul Rifts] will be revealed again 6s after being shattered. Additionally, when your Active Skill hits an enemy for the first time, if that enemy has no [Soul Rift], the interval before its [Soul Rift] is revealed again will be reduced by 0.5s.
+[Soul Rift]: Your Charged Attack will shatter an enemy's [Soul Rift] on hit, dealing DMG equal to 315+168% ATK+15.1% of Max HP. During the [Deity of Niava] state, enemies' [Soul Rifts] will be revealed again 6s after being shattered. Additionally, when your Active Skill hits an enemy for the first time, if that enemy has no [Soul Rift], the interval before its [Soul Rift] is revealed again will be reduced by 0.5s.
 After [Deity of Niava] ends, Zayne will once again have 3 stacks of [Divine Shackles], and all [Soul Rifts] will be cleared.
         `,
         basicAttack: "Order Rupture",

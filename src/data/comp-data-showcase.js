@@ -62,35 +62,26 @@ export const compDataShowcaseSpecific = [
             hp: 86,
             def: 0
         },
-        passiveSkillFormula1: `Support Skill under Darknight Reign: 
-720 + 384 % ATK + 35 % of Max HP`,
+        passiveSkillFormula1: `720 + 384 % ATK + 35 % of Max HP`,
         passiveSkillStats1: {
             base: 720,
             atk: 384,
             hp: 35,
             def: 0
         },
-        passiveSkillFormula2: `Active Skill under Darknight Reign: 
-520 + 277 % ATK + 25 % of Max HP`,
+        passiveSkillFormula2: `520 + 277 % ATK + 25 % of Max HP`,
         passiveSkillStats2: {
             base: 520,
             atk: 277,
             hp: 25,
             def: 0
         },
-        eidolon0: "",
-        eidolon1: "+ 40% Active Skill damage under Darknight Reign",
-        buffEidolon1Stats: {
-            additionalBuff: 40,
-        },
-        eidolon2: "+ 12.5% DEF ignore under Darknight Reign",
-        buffEidolon2Stats: {
-            defIgnore: 12.5,
-        },
-        eidolon3: "+ Support Skill damage under Darknight Reign increases by 6%, up to 36%",
-        buffEidolon3Stats: {
-            additionalBuff: 6,
-        },
+        eidolon0: `The first hit of each Active Skill reduces Support Skill cooldown by 5s.
+When not in [Darknight Reign] hitting enemies with Charged Attacks grants [Pilgrim's Prayer], increasing the accumulation rate of [Last Words] for 10s. Gaining it again refreshes duration.`,
+        eidolon1: "When you create [Radiant Ripples], Support Skill cooldown is refreshed; [Radiant Ripples] damage increases by 40% When not in the [Darknight Reign] state, casting Resonance Skills grants you [Pilgrim's Prayer]. While [Darknight Reign] is active, you become unstoppable.",
+        eidolon2: "While [Darknight Reign] is active, you and Xavier ignore 12.5% of enemy DEF and restore HP equal to 2% of Max HP per second.",
+        eidolon3: `When you create [Radiant Ripples], Xavier will also create [Radiant Ripples].
+While [Darknight Reign] is active, each time [Radiant Ripples] undulate, [Lumenflora]'s damage increases by 6%, up to 36%. This damage boost effect is cleared when [Darknight Reign] ends.`,
     },
     {
         companionName: "Xavier: Lumiere",
@@ -116,14 +107,10 @@ export const compDataShowcaseSpecific = [
             hp: 0,
             def: 194
         },
-        eidolon1: "+ 25% DMG and for Moonlight",
-        buffEidolon1Stats: {
-            additionalBuff: 25,
-        },
-        eidolon3: "+ 30 Crit DMG for crit hit of Moonlight",
-        buffEidolon3Stats: {
-            critDMG: 30,
-        },
+        eidolon0: "The enemy's [Moonstruck] state duration is extended by 3s.",
+        eidolon1: "[Moonlight] deals 25% more DMG and applies 1 stack of [Phasing Moon] to the target.",
+        eidolon2: "When [Moonlight] is triggered, your Active Skill cooldown is reduced by 0.5s and a small amount of Energy Charge is restored.",
+        eidolon3: "When your Active Skills and Charged Attacks hit the first target inflicted with [Moonstruck], directly trigger [Moonlight]. When Moonlight scores a critical hit, it deals an additional 30% CRIT DMG.",
     },
     {
         companionName: "Xavier: Lightseeker",
@@ -149,7 +136,6 @@ export const compDataShowcaseSpecific = [
             hp: 0,
             def: 0
         },
-        resonanceSkillBuff: "Under Luminescent Field +10% ATK bonus +20% to weakened enemies",
         ardentOathFormula: "1440 + 1920% ATK",
         ardentOathStats: {
             base: 1440,
@@ -164,10 +150,10 @@ export const compDataShowcaseSpecific = [
             hp: 0,
             def: 0
         },
-        eidolon0: "+ 25% Active Skill DMG",
-        buffEidolon1Stats: {
-            additionalBuff: 25,
-        },
+        eidolon0: "When fighting together with Lightseeker, your Active Skill DMG is increased by 25%.",
+        eidolon1: "When fighting alongside Lightseeker, each time [Luminescent Resonance] triggers, [Radiant Blade]'s duration is extended by 2s.",
+        eidolon2: "When you and Lightseeker are in [Luminescent Field], take 10% less DMG and gain increased Interruption Resistance.",
+        eidolon3: "When fighting together with Lightseeker in the [Luminescent Field] and hitting enemies with a Charged Attack, the cooldown of your Active Skill will be reduced by 2s.",
     },
     {
         companionName: "Xavier: Evol Police",
@@ -254,7 +240,6 @@ export const compDataShowcaseSpecific = [
             hp: 0,
             def: 0
         },
-        resonanceSkillBuff: "Under Resonance Skill +20% ATK",
         ardentOathFormula: "1200 + 1600% ATK",
         ardentOathStats: {
             base: 1200,
@@ -262,10 +247,6 @@ export const compDataShowcaseSpecific = [
             hp: 0,
             def: 0
         },
-        passiveSkillFormula1: "+7% Crit Rate",
-        passiveSkillStats1: {
-            critRate: 7,
-        }
     },
     {
         companionName: "Zayne: God of Annihilation",
@@ -298,36 +279,32 @@ export const compDataShowcaseSpecific = [
             hp: 86,
             def: 0
         },
-        passiveSkillFormula1: "ЗАПОЛНИТЬ",
+        passiveSkillFormula1: "88 + 47% ATK + 4.3% of Max HP",
         passiveSkillStats1: {
-            base: 0,
-            atk: 0,
-            hp: 0,
+            base: 88,
+            atk: 47,
+            hp: 4.3,
             def: 0
         },
-        passiveSkillFormula2: "ЗАПОЛНИТЬ",
+        passiveSkillFormula2: "354 + 189% ATK + 17% of Max HP",
         passiveSkillStats2: {
-            base: 0,
-            atk: 0,
-            hp: 0,
+            base: 354,
+            atk: 189,
+            hp: 17,
             def: 0
         },
-        eidolon0: "While awakened as [Deity of Niava], you and Zayne deal 8% additional DMG",
-        buffEidolon0Stats: {
-            additionalBuff: 8,
+        passiveSkillFormula3: "315 + 168% ATK + 15.1% of Max HP",
+        passiveSkillStats3: {
+            base: 315,
+            atk: 168,
+            hp: 15.1,
+            def: 0
         },
-        eidolon1: "During the [Deity of Niava] state deals AoE DMG equal to 242 + 129% ATK + 11.6% of Max HP",
-        buffEidolon1Stats: {
-            additionalBuff: 0,
-        },
-        eidolon2: "+20% Active Skill DMG",
-        buffEidolon2Stats: {
-            additionalBuff: 20,
-        },
-        eidolon3: "Enemies hit by [Terminus Arrow] or [Divine Sever] take 30% more DMG for 4s",
-        buffEidolon3Stats: {
-            additionalBuff: 30,
-        },
+        eidolon0: `When fighting alongside God of Annihilation, you become unstoppable during Charged Attacks and take 40% less DMG.
+While awakened as [Deity of Niava], you and Zayne deal 8% additional DMG.`,
+        eidolon1: "During the [Deity of Niava] state, your Basic Attacks can also shatter enemies' [Soul Rifts] on hit. Additionally, when your Active Skill hits an enemy for the first time, if that enemy has no [Soul Rift], their [Soul Rift] will be revealed again. [Divine Sever] creates an additional array that continuously pulls in nearby enemies. After a period of time, the array explodes, dealing AoE DMG equal to 242+129% ATK+11.6% of Max HP.",
+        eidolon2: "When fighting alongside God of Annihilation, your Active Skill DMG is increased by 20%. When you shatter [Soul Rifts], you and Zayne each restore HP equal to 5% of Max HP.",
+        eidolon3: "Enemies hit by [Terminus Arrow] or [Divine Sever] take 30% more DMG for 4s. When you load [Golden Arrows] with Basic Attacks, you will gain 1 additional [Golden Arrow].",
     },
     {
         companionName: "Zayne: Master of Fate",
@@ -368,17 +345,10 @@ export const compDataShowcaseSpecific = [
             def: 0
         },
         eidolon0: "Enemies inflicted with [Shattered Jade] have their DEF reduced by 10%.",
-        buffEidolon0Stats: {
-            defIgnore: 10,
-        },
-        eidolon1: "+0.5-10% DMG to Weakness enemies",
-        buffEidolon1Stats: {
-            additionalBuff: 10,
-        },
-        eidolon3: "+100% Companion Passive Skill DMG",
-        buffEidolon3Stats: {
-            additionalBuff: 0,
-        },
+        eidolon1: "When fighting alongside Master of Fate, the enemy's weakened state is extended by 2 seconds Each time an enemy in weakened state is hit, the damage it sustains increases by 0.5%, up to a maximum of 10%.",
+        eidolon2: "When triggering [Jadesunder], a small amount of Energy Charge is restored.",
+        eidolon3: `[Jadesunder] DMG is increased by 100%. During skill replacement, [Piercing Rain] can be used 1 additional time. When Piercing Rain hits enemies, its cooldown is reduced by 0.5s.
+This effect can trigger only once per use of Piercing Rain.`,
     },
     {
         companionName: "Zayne: Foreseer",
@@ -404,18 +374,10 @@ export const compDataShowcaseSpecific = [
             hp: 0,
             def: 406
         },
-        eidolon0: "+25% Companion Passive Skill DMG",
-        buffEidolon0Stats: {
-            additionalBuff: 25,
-        },
-        eidolon1: "+12% under [Ward of Curses]",
-        buffEidolon1Stats: {
-            additionalBuff: 12,
-        },
-        eidolon2: "+10% DMG after using Resonance Skill",
-        buffEidolon2Stats: {
-            additionalBuff: 10,
-        },
+        eidolon0: "When fighting alongside Foreseer, [Eternal Sin] DMG is increased by 25%.",
+        eidolon1: "When you and Foreseer are under [Ward of Curses], DMG dealt is increased by 12%.",
+        eidolon2: "When using a Resonance Skill, Foreseer additionally gains 1 stack of [Divine Prayer], and your DMG is increased by 10% for 10s.",
+        eidolon3: "Every 6 seconds Foreseer gains 1 stack of [Divine Prayer].",
     },
     {
         companionName: "Zayne: Medic of the Arctic",
@@ -502,13 +464,6 @@ export const compDataShowcaseSpecific = [
             hp: 0,
             def: 0
         },
-        passiveSkillFormula1: "+20% DMG to Frozen enemies",
-        passiveSkillStats1: {
-            base: 0,
-            atk: 0,
-            hp: 0,
-            def: 0
-        },
     },
     {
         companionName: "Rafayel: Lemurian Sea God",
@@ -541,38 +496,24 @@ export const compDataShowcaseSpecific = [
             hp: 0,
             def: 3820
         },
-        passiveSkillFormula2: `Lightning Tide under Divine Favor:
-450 + 240% ATK + 951% DEF`,
+        passiveSkillFormula2: "450 + 240% ATK + 951% DEF",
         passiveSkillStats2: {
             base: 450,
             atk: 240,
             hp: 0,
             def: 951
         },
-        passiveSkillFormula3: `Dodge under Divine Favor:
-32 + 17% ATK + 68% DEF`,
+        passiveSkillFormula3: "32 + 17% ATK + 68% DEF",
         passiveSkillStats3: {
             base: 32,
             atk: 17,
             hp: 0,
             def: 68
         },
-        eidolon1: `Under Divine Favor random DMG:
-270 + 144% ATK + 571% DEF`,
-        buffEidolon1Stats: {
-            base: 270,
-            atk: 144,
-            hp: 0,
-            def: 571
-        },
-        eidolon2: "+50% Charge Attack DMG",
-        buffEidolon2Stats: {
-            additionalBuff: 50,
-        },
-        eidolon3: "+70% Lightning Tide DMG",
-        buffEidolon3Stats: {
-            additionalBuff: 70,
-        },
+        eidolon0: "When your basic attack hits, [Sea God Mark] cooldown is reduced by 0.8s. This effect can trigger once per attack. When [Lightning Tide] hits Weakened enemies, extends the Weakened duration by 0.5s. This effect can trigger up to 2 times per enemy.",
+        eidolon1: "While [Divine Favor] is active, when Rafayel throws his Tidebreaker Trident, it generates an additional vortex that continuously pulls nearby enemies toward its center. While [Divine Favor] is active, lightning will randomly strike the battlefield to assist you in battle, dealing DMG equal to 270+144% ATK+571% DEF with each hit.",
+        eidolon2: "DMG boost from [Sea God Mark] is increased by 50%. While [Divine Favor] is active, you gain 40% DMG Reduction.",
+        eidolon3: "While [Divine Favor] is active, when your basic attack hits, Active Skill cooldown is reduced by 0.5s. While [Divine Favor] is active, when Charged Attacks empowered by [Sea God Mark] hit, [Lightning Tide] is triggered for 70% DMG. These effects can trigger once per attack.",
     },
     {
         companionName: "Rafayel: God of the Tides",
@@ -583,11 +524,6 @@ export const compDataShowcaseSpecific = [
             atk: 25,
             hp: 2.2,
             def: 0
-        },
-        buffsupportSkillFormula: `ATK SPD is increased by 20%
-DMG is increased by 25%`,
-        buffsupportSkillStats: {
-            additionalDMG: 25,
         },
         resonanceSkillFormula: "995 + 531% ATK + 47.8% of Max HP",
         resonanceSkillStats: {
@@ -603,21 +539,10 @@ DMG is increased by 25%`,
             hp: 69.4,
             def: 0
         },
-        passiveSkillFormula1: ``,
-        passiveSkillStats1: {
-            base: 0,
-            atk: 0,
-            hp: 0,
-            def: 0
-        },
-        buffPassiveSkillFormula1: "+30% DMG to your and Companion DMG",
-        buffPassiveSkillStats: {
-            additionalDMG: 30,
-        },
-        eidolon0: "+10 Crit DMG",
-        buffEidolon0Stats: {
-            critDMG: 10,
-        },
+        eidolon0: "When fighting near a [Sea Spirit], CRIT DMG is increased by 10%.",
+        eidolon1: "The [Sea Spirit] starts at Lv. 2 and its duration is extended by 5 seconds.",
+        eidolon2: "During [Heavenly Rain], Energy Charge recovery speed is increased by 30%.",
+        eidolon3: "[Surging Tides] restores 30% [Faith] for each enemy hit. This effect can trigger at most 3 times during Surging Tides.",
     },
     {
         companionName: "Rafayel: Abysswalker",
@@ -657,31 +582,10 @@ DMG is increased by 25%`,
             hp: 0,
             def: 0
         },
-        passiveSkillFormula2: ``,
-        passiveSkillStats2: {
-            base: 0,
-            atk: 0,
-            hp: 0,
-            def: 0
-        },
-        buffPassiveSkillFormula1: `+8% ATK to your and Companion DMG
-+15% Crit Rate`,
-        buffPassiveSkillStats: {
-            additionalDMG: 8,
-            critRate: 15
-        },
-        eidolon0: "+30 Crit DMG under Deepsea Pursuit",
-        buffEidolon0Stats: {
-            critDMG: 30,
-        },
-        eidolon1: "+20% Burn DMG",
-        buffEidolon1Stats: {
-            additionalBuff: 20,
-        },
-        eidolon3: "+150% Searing Slash DMG",
-        buffEidolon3Stats: {
-            additionalBuff: 150,
-        },
+        eidolon0: "Abysswalker's [Deepsea Pursuit] gains 30% additional CRIT DMG.",
+        eidolon1: "When fighting together with Abysswalker, increases DMG taken of enemies inflicted with [Burn] by 20%.",
+        eidolon2: "When triggering [Potential] recovery, Energy Charge recovery speed is increased by 50% for 4s.",
+        eidolon3: "Abysswalker's [Searing Slash] deals 150% more DMG. When triggering [Beacon] additionally restore 1 [Potential].",
     },
     {
         companionName: "Rafayel: Frash Paint",
@@ -748,13 +652,6 @@ DMG is increased by 25%`,
             hp: 0,
             def: 0
         },
-        buffPassiveSkillFormula: "+20 DEF Ignore",
-        buffPassiveSkillStats: {
-            base: 0,
-            atk: 0,
-            hp: 0,
-            def: 0
-        },
     },
     {
         companionName: "Rafayel: Phantom of the Siren",
@@ -793,30 +690,22 @@ DMG is increased by 25%`,
             hp: 0,
             def: 0
         },
-        buffPassiveSkillFormula: "+10% DMG under Echo",
-        buffPassiveSkillStats: {
-            additionalDMG: 10,
-        }
     },
     {
         companionName: "Rafayel: Artist",
-        supportSkillFormula: "84 + 112%",
+        supportSkillFormula: "84 + 112% ATK",
         supportSkillStats: {
             base: 84,
             atk: 112,
             hp: 0,
             def: 0
         },
-        resonanceSkillFormula: "188 + 250%",
+        resonanceSkillFormula: "188 + 250% ATK",
         resonanceSkillStats: {
             base: 188,
             atk: 250,
             hp: 0,
             def: 0
-        },
-        buffResonanceSkillFormula: "+5% ATK",
-        buffResonanceSkillStats: {
-            buffATK: 5,
         },
         ardentOathFormula: "1200 + 1600% ATK",
         ardentOathStats: {
@@ -908,20 +797,10 @@ DMG is increased by 25%`,
         },
         eidolon0: "When you consume [Rose Mark] you recover an additional 0.5 Energy Charge.",
         eidolon1: "[Rose Thorns] damage increases by 10% and additionally pulls in enemies within range. Casting [Blood Pact] immediately refreshes your Active Skill cooldown and reduces the cooldown of your next Active Skill cast by 4s. This effect cannot stack.",
-        buffEidolon1Stats: {
-            additionalBuff: 10,
-        },
         eidolon2: "When [Crimson Void] hits, it additionally applies [Blood Spell] to enemies, increasing their DMG taken by 8% for 6s. [Blood Spell] is removed when [Crimson Bond] ends. When [Bloodrose Seed] blooms, you and Sylus each recover HP equal to 5% of max HP.",
-        buffEidolon2Stats: {
-            additionalBuff: 8,
-        },
         eidolon3: `During [Crimson Bond], Sylus deals 10% more DMG. When Sylus applies [Bloodrose Seed] he also stimulates [Bloodrose Seed] to grow.
 During [Crimson Bond], casting Active Skill grants you [Bloodrose Wreath], increasing your DMG by 10% for 8s. When your Basic Attacks or Charged Attacks hit enemies, [Bloodrose Wreath] fires additional bullets at them, dealing damage equal to 79+42% ATK+168% DEF and stimulating [Bloodrose Seed]. This damage counts as Basic Attack damage and this effect can trigger once per attack. When you gain [Bloodrose Wreath], any [Bloodrose Scent you have is removed, and you gain all its effects.
 When [Crimson Bond] ends, [Bloodrose Wreath] is removed.`,
-        buffEidolon3Stats: {
-            additionalBuff: 10,
-            additionalBuff2: 10,
-        },
     },
     {
         companionName: "Sylus: Abysm Sovereign",
@@ -1228,7 +1107,6 @@ When consuming Zerom, additionally restore 0.5 [Firepower].        `,
 export const weaponDataShowcaseSpecific = [
     {
         weaponName: "Final Resound",
-        basicAttackFormula: "",
         basicFirstStrike: "98 + 52% ATK + 4.7% of Max HP",
         basicFirstStrikeStats: {
             base: 98 ,
@@ -1278,16 +1156,9 @@ export const weaponDataShowcaseSpecific = [
             hp: 18,
             def: 0
         },
-        buffPassiveSkillMCFormula: `Under Darknight Reign 
-+ 8% damage dealt + 8% DMG Boost to Weakened`,
-        buffPassiveSkillStats: {
-            DMGBoost: 8,
-            WeakenedBoost: 8,
-        },
     },
     {
         weaponName: "Moonchaser",
-        basicAttackFormula: "",
         basicFirstStrike: "55 + 29% ATK + 117% DEF",
         basicFirstStrikeStats: {
             base: 55 ,
@@ -1337,22 +1208,9 @@ export const weaponDataShowcaseSpecific = [
             hp: 0,
             def: 852
         },
-        activeSkillSecondFormula: "",
-        activeSkillSecondStats: {
-            base: 0,
-            atk: 0,
-            hp: 0,
-            def: 0
-        },
-        buffPassiveSkillFormula: ``,
-        buffPassiveSkillStats: {
-            DMGBoost: 0,
-            WeakenedBoost: 0,
-        },
     },
     {
         weaponName: "Luminescence Blade",
-        basicAttackFormula: "",
         basicFirstStrike: "60 + 80% ATK DMG ",
         basicFirstStrikeStats: {
             base: 60 ,
@@ -1398,7 +1256,6 @@ export const weaponDataShowcaseSpecific = [
     },
     {
         weaponName: "Divine Grip",
-        basicAttackFormula: "",
         basicFirstStrike: "105 + 56% ATK + 5.1% of Max HP",
         basicFirstStrikeStats: {
             base: 105,
@@ -1427,11 +1284,11 @@ export const weaponDataShowcaseSpecific = [
             hp: 7.1,
             def: 0
         },
-        basicChargedAttack: "",
+        basicChargedAttack: "112 + 60% ATK + 5.3% of Max HP",
         basicChargedAttackStats: {
-            base: 0,
-            atk: 0,
-            hp: 0,
+            base: 112,
+            atk: 60,
+            hp: 5.3,
             def: 0
         },
         activeSkillFormula: "338 + 180% ATK + 16.2% of Max HP",
@@ -1439,13 +1296,6 @@ export const weaponDataShowcaseSpecific = [
             base: 338,
             atk: 180,
             hp: 16.2,
-            def: 0
-        },
-        activeSkillSecondFormula: "",
-        activeSkillSecondStats: {
-            base: 0,
-            atk: 0,
-            hp: 0,
             def: 0
         },
         passiveSkillMCFormula: "389 + 207% ATK + 18.7% of Max HP",
@@ -1458,7 +1308,6 @@ export const weaponDataShowcaseSpecific = [
     },
     {
         weaponName: "Sacred Rainfall",
-        basicAttackFormula: "",
         basicFirstStrike: "75 + 100% ATK",
         basicFirstStrikeStats: {
             base: 75,
@@ -1535,7 +1384,6 @@ export const weaponDataShowcaseSpecific = [
     },
     {
         weaponName: "Ballad of Ebbs",
-        basicAttackFormula: "",
         basicFirstStrike: "49 + 26% ATK + 104% DEF",
         basicFirstStrikeStats: {
             base: 49,
@@ -1570,10 +1418,6 @@ export const weaponDataShowcaseSpecific = [
             atk: 93,
             hp: 0,
             def: 368
-        },
-        buffBasicChargedAttackFormula: "+50% Charge Attack DMG",
-        buffBasicChargedAttackStats: {
-            addtionalDMG: 50,
         },
         activeSkillFormula: "265 + 141% ATK + 560% DEF",
         activeSkillStats: {
@@ -1613,14 +1457,9 @@ export const weaponDataShowcaseSpecific = [
             hp: 3.5,
             def: 0
         },
-        buffActiveSkillFormula: "+10% CRIT Rate to your and Companion DMG",
-        buffActiveSkillStats: {
-           critRate: 10,
-        },
     },
     {
         weaponName: "Phantasma Sands",
-        basicAttackFormula: "",
         basicFirstStrike: "53 + 71% ATK",
         basicFirstStrikeStats: {
             base: 53,
@@ -1670,14 +1509,9 @@ export const weaponDataShowcaseSpecific = [
             hp: 0,
             def: 0
         },
-        buffPassiveSkillMCFormula: "+10% Crit Rate",
-        buffPassiveSkillMCStats: {
-            critRate: 10,
-        },
     },
     {
         weaponName: "Crimson Malison",
-        basicAttackFormula: "",
         basicFirstStrike: "49 + 26% ATK + 103% DEF",
         basicFirstStrikeStats: {
             base: 49,
@@ -1712,10 +1546,6 @@ export const weaponDataShowcaseSpecific = [
             atk: 96,
             hp: 0,
             def: 381
-        },
-        buffActiveSkillFormula: "+15% to all your damage",
-        buffActiveSkillStats: {
-            additionalDMG: 15,
         },
         passiveSkillMCFormula: "45 + 24% ATK + 95% DEF",
         passiveSkillMCStats: {
@@ -1758,7 +1588,6 @@ export const weaponDataShowcaseSpecific = [
     },
     {
         weaponName: "Harrier 700",
-        basicAttackFormula: "",
         basicFirstStrike: "59 + 79% ATK",
         basicFirstStrikeStats: {
             base: 59,
@@ -1804,7 +1633,6 @@ export const weaponDataShowcaseSpecific = [
     },
     {
         weaponName: "Azuregaze",
-        basicAttackFormula: "",
         basicFirstStrike: "74 + 39% ATK + 3.5% of Max HP",
         basicFirstStrikeStats: {
             base: 74,
@@ -1850,7 +1678,6 @@ export const weaponDataShowcaseSpecific = [
     },
     {
         weaponName: "Awakened Vitality",
-        basicAttackFormula: "",
         basicFirstStrike: "77 + 103% ATK",
         basicFirstStrikeStats: {
             base: 77,
@@ -1896,7 +1723,6 @@ export const weaponDataShowcaseSpecific = [
     },
     {
         weaponName: "Skybreaker-SN",
-        basicAttackFormula: "",
         basicFirstStrike: "47 + 25% ATK + 99% DEF",
         basicFirstStrikeStats: {
             base: 47,
@@ -1949,7 +1775,6 @@ export const weaponDataShowcaseSpecific = [
     },
     {
         weaponName: "Hunter: Sword",
-        basicAttackFormula: "",
         basicFirstStrike: "60 + 80% ATK",
         basicFirstStrikeStats: {
             base: 60,
@@ -2002,7 +1827,6 @@ export const weaponDataShowcaseSpecific = [
     },
     {
         weaponName: "Hunter: Wand",
-        basicAttackFormula: "",
         basicFirstStrike: "72 + 96% ATK",
         basicFirstStrikeStats: {
             base: 72,
@@ -2055,7 +1879,6 @@ export const weaponDataShowcaseSpecific = [
     },
     {
         weaponName: "Hunter: Claymore",
-        basicAttackFormula: "",
         basicFirstStrike: "112 + 150% ATK",
         basicFirstStrikeStats: {
             base: 112,
@@ -2108,7 +1931,6 @@ export const weaponDataShowcaseSpecific = [
     },
     {
         weaponName: "Hunter: Firearm",
-        basicAttackFormula: "",
         basicFirstStrike: "44 + 59% ATK",
         basicFirstStrikeStats: {
             base: 44,
