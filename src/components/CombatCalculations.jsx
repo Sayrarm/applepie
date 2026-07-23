@@ -9,12 +9,21 @@ import styles from "./CombatCalculations.module.css";
 import React, {useState, useMemo} from "react";
 import {calculateCritDamage, calculateWeakenedDamage, createDamageCalculator} from "../data/damageCalculator.js";
 import {solar4Stars} from "../data/solar-4-star-info.js";
+import { compData } from "../data/comp-data.js";
 
 function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarCards }) {
     // Находим данные для выбранного компаньона по companionName
     const companionData = useMemo(() => {
         if (!selectedCompanion?.companionName) return {};
         return compDataShowcaseSpecific.find(
+            item => item.companionName === selectedCompanion.companionName
+        ) || {};
+    }, [selectedCompanion]);
+
+    // Находим данные для Eidolon бонусов из compData
+    const companionEidolonData = useMemo(() => {
+        if (!selectedCompanion?.companionName) return {};
+        return compData.find(
             item => item.companionName === selectedCompanion.companionName
         ) || {};
     }, [selectedCompanion]);
@@ -244,22 +253,22 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
                 <tr>
                     <th>Starring Effect</th>
                     <td>{defaultBuffs.eidolon0}</td>
-                    <td>{isCompanionMatching && companionData.buffEidolon0Formula ? companionData.buffEidolon0Formula : '—'}</td>
+                    <td>{isCompanionMatching && companionEidolonData.eidolon0 ? companionEidolonData.eidolon0 : '—'}</td>
                 </tr>
                 <tr>
                     <th>Duo Rank 1</th>
                     <td>{defaultBuffs.eidolon1}</td>
-                    <td>{isCompanionMatching && companionData.buffEidolon1Formula ? companionData.buffEidolon1Formula : '—'}</td>
+                    <td>{isCompanionMatching && companionEidolonData.eidolon1 ? companionEidolonData.eidolon1 : '—'}</td>
                 </tr>
                 <tr>
                     <th>Duo Rank 2</th>
                     <td>{defaultBuffs.eidolon2}</td>
-                    <td>{isCompanionMatching && companionData.buffEidolon2Formula ? companionData.buffEidolon2Formula : '—'}</td>
+                    <td>{isCompanionMatching && companionEidolonData.eidolon2 ? companionEidolonData.eidolon2 : '—'}</td>
                 </tr>
                 <tr>
                     <th>Duo Rank 3</th>
                     <td>{defaultBuffs.eidolon3}</td>
-                    <td>{isCompanionMatching && companionData.buffEidolon3Formula ? companionData.buffEidolon3Formula : '—'}</td>
+                    <td>{isCompanionMatching && companionEidolonData.eidolon3 ? companionEidolonData.eidolon3 : '—'}</td>
                 </tr>
                 </tbody>
             </table>
