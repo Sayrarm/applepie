@@ -847,7 +847,119 @@ DMG is increased by 25%`,
             def: 0
         },
     },
-
+    {
+        companionName: "Sylus: Silverwing Fiend",
+        cardIds: [102, 103],
+        supportSkillFormula: "584 + 311% ATK + 1244% DEF",
+        supportSkillStats: {
+            base: 584,
+            atk: 311,
+            hp: 0,
+            def: 1244
+        },
+        empoweredSupportSkillFormula: "684 + 365% ATK + 1446% DEF",
+        empoweredSupportSkillStats: {
+            base: 684,
+            atk: 365,
+            hp: 0,
+            def: 1446
+        },
+        supportSkillFormula2: "628 + 335% ATK + 1327% DEF",
+        supportSkillStats2: {
+            base: 628,
+            atk: 335,
+            hp: 0,
+            def: 1327
+        },
+        supportSkillFormula3: "675 + 360% ATK + 1427% DEF",
+        supportSkillStats3: {
+            base: 675,
+            atk: 360,
+            hp: 0,
+            def: 1427
+        },
+        resonanceSkillFormula: "1663 + 887% ATK + 3515% DEF",
+        resonanceSkillStats: {
+            base: 1663,
+            atk: 887,
+            hp: 0,
+            def: 3515
+        },
+        resonanceSkillFormula2: "1458 + 778% ATK + 3084% DEF",
+        resonanceSkillStats2: {
+            base: 1458,
+            atk: 778,
+            hp: 0,
+            def: 3084
+        },
+        ardentOathFormula: "1800 + 960% ATK + 3820% DEF",
+        ardentOathStats: {
+            base: 1800,
+            atk: 960,
+            hp: 0,
+            def: 3820
+        },
+        passiveSkillFormula1: "675 + 360% ATK + 1427% DEF",
+        passiveSkillStats1: {
+            base: 675,
+            atk: 360,
+            hp: 0,
+            def: 1427
+        },
+        buffEidolon0Formula: "When you consume [Rose Mark] you recover an additional 0.5 Energy Charge.",
+        buffEidolon1Formula: "[Rose Thorns] damage increases by 10% and additionally pulls in enemies within range. Casting [Blood Pact] immediately refreshes your Active Skill cooldown and reduces the cooldown of your next Active Skill cast by 4s. This effect cannot stack.",
+        buffEidolon1Stats: {
+            additionalBuff: 10,
+        },
+        buffEidolon2Formula: "When [Crimson Void] hits, it additionally applies [Blood Spell] to enemies, increasing their DMG taken by 8% for 6s. [Blood Spell] is removed when [Crimson Bond] ends. When [Bloodrose Seed] blooms, you and Sylus each recover HP equal to 5% of max HP.",
+        buffEidolon2Stats: {
+            additionalBuff: 8,
+        },
+        buffEidolon3Formula: `During [Crimson Bond], Sylus deals 10% more DMG. When Sylus applies [Bloodrose Seed] he also stimulates [Bloodrose Seed] to grow.
+During [Crimson Bond], casting Active Skill grants you [Bloodrose Wreath], increasing your DMG by 10% for 8s. When your Basic Attacks or Charged Attacks hit enemies, [Bloodrose Wreath] fires additional bullets at them, dealing damage equal to 79+42% ATK+168% DEF and stimulating [Bloodrose Seed]. This damage counts as Basic Attack damage and this effect can trigger once per attack. When you gain [Bloodrose Wreath], any [Bloodrose Scent you have is removed, and you gain all its effects.
+When [Crimson Bond] ends, [Bloodrose Wreath] is removed.`,
+        buffEidolon3Stats: {
+            additionalBuff: 10,
+            additionalBuff2: 10,
+        },
+    },
+    {
+        companionName: "Sylus: Abysm Sovereign",
+        cardIds: [100, 101],
+        supportSkillFormula: "508 + 271% ATK + 24.4% of Max HP",
+        supportSkillStats: {
+            base: 508,
+            atk: 271,
+            hp: 24.4,
+            def: 0
+        },
+        empoweredSupportSkillFormula: "705 + 376% ATK + 33.9% of Max HP",
+        empoweredSupportSkillStats: {
+            base: 705,
+            atk: 376,
+            hp: 33.9,
+            def: 0
+        },
+        resonanceSkillFormula: "1024 + 546% ATK + 49.2% of Max HP",
+        resonanceSkillStats: {
+            base: 1024,
+            atk: 546,
+            hp: 49.2,
+            def: 0
+        },
+        ardentOathFormula: "1440 + 780% ATK + 69.4% of Max HP",
+        ardentOathStats: {
+            base: 1440,
+            atk: 780,
+            hp: 69.4,
+            def: 0
+        },
+        buffEidolon0Formula: "After [Abyssal Fury] ends, you and Sylus recover 20% of Max HP.",
+        buffEidolon1Formula: `After using [Fiendish Claw], your next 3 basic attacks on-hit deal DMG equal to 121+64.8% ATK+5.8% Max HP to surrounding enemies centered on you.
+While [Abyssal Fury] is active [Fiendish Claw] cooldown is reduced.`,
+        buffEidolon2Formula: "After using [Wrath Judgment] or [Wrath Judgment: Greed], your Energy Charge recovery speed is increased for 15s.",
+        buffEidolon3Formula: "When using [Wrath Judgment: Greed], you and Sylus recover 50% of Max HP. While [Abyssal Fury] is active, [Life Sacrifice] requires no charging and your Active Skills deal 30% increased DMG.",
+    },
 ]
 
 export const weaponDataShowcaseSpecific = [
@@ -1298,6 +1410,87 @@ export const weaponDataShowcaseSpecific = [
         buffPassiveSkillMCFormula: "+10% Crit Rate",
         buffPassiveSkillMCStats: {
             critRate: 10,
+        },
+    },
+    {
+        weaponName: "Crimson Malison",
+        basicAttackFormula: "",
+        basicFirstStrike: "49 + 26% ATK + 103% DEF",
+        basicFirstStrikeStats: {
+            base: 49,
+            atk: 26,
+            hp: 0,
+            def: 103
+        },
+        basicSecondStrike: "49 + 26% ATK + 103% DEF",
+        basicSecondStrikeStats: {
+            base: 49,
+            atk: 26,
+            hp: 0,
+            def: 103
+        },
+        basicThirdStrike: "94 + 50% ATK + 198% DEF",
+        basicThirdStrikeStats: {
+            base: 94,
+            atk: 50,
+            hp: 0,
+            def: 198
+        },
+        basicFourthStrike: "146 + 78% ATK + 309% DEF",
+        basicFourthStrikeStats: {
+            base: 146,
+            atk: 78,
+            hp: 0,
+            def: 309
+        },
+        basicChargedAttack: "180 + 96% ATK + 381% DEF",
+        basicChargedAttackStats: {
+            base: 180,
+            atk: 96,
+            hp: 0,
+            def: 381
+        },
+        buffActiveSkillFormula: "+15% to all your damage",
+        buffActiveSkillStats: {
+            additionalDMG: 15,
+        },
+        passiveSkillMCFormula: "45 + 24% ATK + 95% DEF",
+        passiveSkillMCStats: {
+            base: 45,
+            atk: 24,
+            hp: 0,
+            def: 95
+        }
+    },
+    {
+        weaponName: "Fiend Reaper",
+        basicAttackFormula: "647 + 346% ATK + 31.1% of Max HP",
+        basicAttackStats: {
+            base: 647,
+            atk: 346,
+            hp: 31.1,
+            def: 0
+        },
+        basicChargedAttack: "204 + 109% ATK + 9.8% of Max HP",
+        basicChargedAttackStats: {
+            base: 204,
+            atk: 109,
+            hp: 9.8,
+            def: 0
+        },
+        activeSkillFormula: "397 + 212% ATK + 19.1% of Max HP",
+        activeSkillStats: {
+            base: 397,
+            atk: 212,
+            hp: 19.1,
+            def: 0
+        },
+        activeSkillSecondFormula: "632 + 337% ATK + 30.3% of Max HP",
+        activeSkillSecondStats: {
+            base: 632,
+            atk: 337,
+            hp: 30.3,
+            def: 0
         },
     },
 ]

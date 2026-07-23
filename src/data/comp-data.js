@@ -1077,7 +1077,7 @@ Wield [Crimson Malison] to perform a combo up to 4 hits, dealing damage to enemi
 First Strike: 49+26% ATK+103% DEF 
 Second Strike: 49+26% ATK+103% DEF 
 Third Strike: 94+50% ATK+198% DEF 
-Fourth Strike:146+78% ATK+309% DEF
+Fourth Strike: 146+78% ATK+309% DEF
 
 Charged Attack summons a magical array beneath enemies, dealing DMG equal to 180+96% ATK+381% DEF.
         `,
@@ -1107,7 +1107,7 @@ Energy Charge limit is raised by 1.
 When [Crimson Void] hits, it additionally applies [Blood Spell] to enemies, increasing their DMG taken by 8% for 6s. [Blood Spell] is removed when [Crimson Bond] ends. When [Bloodrose Seed] blooms, you and Sylus each recover HP equal to 5% of max HP.
         `,
         eidolon3: `
-The team deals 8% IV more DMG.
+The team deals 8% more DMG.
 During [Crimson Bond], Sylus deals 10% more DMG. When Sylus applies [Bloodrose Seed] he also stimulates [Bloodrose Seed] to grow.
 During [Crimson Bond], casting Active Skill grants you [Bloodrose Wreath], increasing your DMG by 10% for 8s. When your Basic Attacks or Charged Attacks hit enemies, [Bloodrose Wreath] fires additional bullets at them, dealing damage equal to 79+42% ATK+168% DEF and stimulating [Bloodrose Seed]. This damage counts as Basic Attack damage and this effect can trigger once per attack. When you gain [Bloodrose Wreath], any [Bloodrose Scent you have is removed, and you gain all its effects.
 When [Crimson Bond] ends, [Bloodrose Wreath] is removed.
@@ -1176,17 +1176,21 @@ Fully Charged: Deal DMG equal to 632+337% ATK+30.3% of Max HP.
 [Abyssal Feast] provides more HP recovery.
         `,
         eidolon0: `
-The team deals 8% more DMG and takes 8% less DMG. After [Abyssal Fury] ends, you and Sylus recover 20% of Max HP.        
+The team deals 8% more DMG and takes 8% less DMG. 
+After [Abyssal Fury] ends, you and Sylus recover 20% of Max HP.        
         `,
         eidolon1: `
-Increases Ardent Oath charge by 20%. After using [Fiendish Claw], your next 3 basic attacks on-hit deal DMG equal to 121+64.8% ATK+5.8% Max HP to surrounding enemies centered on you.
+Increases Ardent Oath charge by 20%. 
+After using [Fiendish Claw], your next 3 basic attacks on-hit deal DMG equal to 121+64.8% ATK+5.8% Max HP to surrounding enemies centered on you.
 While [Abyssal Fury] is active [Fiendish Claw] cooldown is reduced.
         `,
         eidolon2: `
-Energy Charge limit is raised by 1. After using [Wrath Judgment] or [Wrath Judgment: Greed], your Energy Charge recovery speed is increased for 15s.
+Energy Charge limit is raised by 1. 
+After using [Wrath Judgment] or [Wrath Judgment: Greed], your Energy Charge recovery speed is increased for 15s.
         `,
         eidolon3: `
-The team deals 8% more DMG. When using [Wrath Judgment: Greed], you and Sylus recover 50% of Max HP. While [Abyssal Fury] is active, [Life Sacrifice] requires no charging and your Active Skills deal 30% increased DMG.
+The team deals 8% more DMG. 
+When using [Wrath Judgment: Greed], you and Sylus recover 50% of Max HP. While [Abyssal Fury] is active, [Life Sacrifice] requires no charging and your Active Skills deal 30% increased DMG.
         `,
     },
     {

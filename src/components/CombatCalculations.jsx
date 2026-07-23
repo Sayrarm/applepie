@@ -9,21 +9,12 @@ import styles from "./CombatCalculations.module.css";
 import React, {useState, useMemo} from "react";
 import {calculateCritDamage, calculateWeakenedDamage, createDamageCalculator} from "../data/damageCalculator.js";
 import {solar4Stars} from "../data/solar-4-star-info.js";
-import { compData } from "../data/comp-data.js";
 
 function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarCards }) {
     // Находим данные для выбранного компаньона по companionName
     const companionData = useMemo(() => {
         if (!selectedCompanion?.companionName) return {};
         return compDataShowcaseSpecific.find(
-            item => item.companionName === selectedCompanion.companionName
-        ) || {};
-    }, [selectedCompanion]);
-
-    // Находим данные для Eidolon бонусов из compData
-    const companionEidolonData = useMemo(() => {
-        if (!selectedCompanion?.companionName) return {};
-        return compData.find(
             item => item.companionName === selectedCompanion.companionName
         ) || {};
     }, [selectedCompanion]);
@@ -117,8 +108,14 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
     // Базовый урон для всех способностей
     const baseDamage = {
         // Companion skills (из companionData)
-        support: companionData.empoweredSupportSkillFormula2
-            ? createDamageCalculator(companionData.empoweredSupportSkillFormula2)(companionStats) * (1 + attributeBonus / 100)
+        support: companionData.supportSkillStats
+            ? createDamageCalculator(companionData.supportSkillStats)(companionStats) * (1 + attributeBonus / 100)
+            : 0,
+        support2: companionData.supportSkillStats2
+            ? createDamageCalculator(companionData.supportSkillStats2)(companionStats) * (1 + attributeBonus / 100)
+            : 0,
+        support3: companionData.supportSkillStats3
+            ? createDamageCalculator(companionData.supportSkillStats3)(companionStats) * (1 + attributeBonus / 100)
             : 0,
         empoweredSupport: companionData.empoweredSupportSkillStats
             ? createDamageCalculator(companionData.empoweredSupportSkillStats)(companionStats) * (1 + attributeBonus / 100)
@@ -187,6 +184,8 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
     // Рассчитываем Weakened DMG для каждой способности
     const weakenedDamage = {
         support: calculateWeakenedDamage(baseDamage.support, totalDmgBoostToWeakened),
+        support2: calculateWeakenedDamage(baseDamage.support2, totalDmgBoostToWeakened),
+        support3: calculateWeakenedDamage(baseDamage.support3, totalDmgBoostToWeakened),
         empoweredSupport: calculateWeakenedDamage(baseDamage.empoweredSupport, totalDmgBoostToWeakened),
         empoweredSupport2: calculateWeakenedDamage(baseDamage.empoweredSupport2, totalDmgBoostToWeakened),
         resonance: calculateWeakenedDamage(baseDamage.resonance, totalDmgBoostToWeakened),
@@ -211,6 +210,8 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
 
     const critDamage = {
         support: calculateCritDamage(baseDamage.support, critDmg),
+        support2: calculateCritDamage(baseDamage.support2, critDmg),
+        support3: calculateCritDamage(baseDamage.support3, critDmg),
         empoweredSupport: calculateCritDamage(baseDamage.empoweredSupport, critDmg),
         empoweredSupport2: calculateCritDamage(baseDamage.empoweredSupport2, critDmg),
         resonance: calculateCritDamage(baseDamage.resonance, critDmg),
@@ -253,22 +254,22 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
                 <tr>
                     <th>Starring Effect</th>
                     <td>{defaultBuffs.eidolon0}</td>
-                    <td>{isCompanionMatching && companionEidolonData.eidolon0 ? companionEidolonData.eidolon0 : '—'}</td>
+                    <td>{isCompanionMatching && companionData.eidolon0 ? companionData.eidolon0 : '—'}</td>
                 </tr>
                 <tr>
                     <th>Duo Rank 1</th>
                     <td>{defaultBuffs.eidolon1}</td>
-                    <td>{isCompanionMatching && companionEidolonData.eidolon1 ? companionEidolonData.eidolon1 : '—'}</td>
+                    <td>{isCompanionMatching && companionData.eidolon1 ? companionData.eidolon1 : '—'}</td>
                 </tr>
                 <tr>
                     <th>Duo Rank 2</th>
                     <td>{defaultBuffs.eidolon2}</td>
-                    <td>{isCompanionMatching && companionEidolonData.eidolon2 ? companionEidolonData.eidolon2 : '—'}</td>
+                    <td>{isCompanionMatching && companionData.eidolon2 ? companionData.eidolon2 : '—'}</td>
                 </tr>
                 <tr>
                     <th>Duo Rank 3</th>
                     <td>{defaultBuffs.eidolon3}</td>
-                    <td>{isCompanionMatching && companionEidolonData.eidolon3 ? companionEidolonData.eidolon3 : '—'}</td>
+                    <td>{isCompanionMatching && companionData.eidolon3 ? companionData.eidolon3 : '—'}</td>
                 </tr>
                 </tbody>
             </table>
@@ -377,6 +378,22 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
                     <td>{roundDisplay(critDamage.empoweredSupport2)}</td>
                     <td>{companionData.empoweredSupportSkillFormula2 || '—'}</td>
                     <td>{companionData.buffsupportSkillFormula2 || '—'}</td>
+                </tr>
+                <tr>
+                    <th>Support Skill Additional</th>
+                    <td>{roundDisplay(baseDamage.support2)}</td>
+                    <td>{roundDisplay(weakenedDamage.support2)}</td>
+                    <td>{roundDisplay(critDamage.support2)}</td>
+                    <td>{companionData.supportSkillFormula2 || '—'}</td>
+                    <td>{companionData.buffsupportSkillFormula2 || '—'}</td>
+                </tr>
+                <tr>
+                    <th>Support Skill Additional</th>
+                    <td>{roundDisplay(baseDamage.support3)}</td>
+                    <td>{roundDisplay(weakenedDamage.support3)}</td>
+                    <td>{roundDisplay(critDamage.support3)}</td>
+                    <td>{companionData.supportSkillFormula3 || '—'}</td>
+                    <td>{companionData.buffsupportSkillFormula3 || '—'}</td>
                 </tr>
                 <tr>
                     <th>Resonance Skill</th>
