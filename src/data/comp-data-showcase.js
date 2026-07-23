@@ -78,16 +78,16 @@ export const compDataShowcaseSpecific = [
             hp: 25,
             def: 0
         },
-        buffEidolon0Formula: "",
-        buffEidolon1Formula: "+ 40% Active Skill damage under Darknight Reign",
+        eidolon0: "",
+        eidolon1: "+ 40% Active Skill damage under Darknight Reign",
         buffEidolon1Stats: {
             additionalBuff: 40,
         },
-        buffEidolon2Formula: "+ 12.5% DEF ignore under Darknight Reign",
+        eidolon2: "+ 12.5% DEF ignore under Darknight Reign",
         buffEidolon2Stats: {
             defIgnore: 12.5,
         },
-        buffEidolon3Formula: "+ Support Skill damage under Darknight Reign increases by 6%, up to 36%",
+        eidolon3: "+ Support Skill damage under Darknight Reign increases by 6%, up to 36%",
         buffEidolon3Stats: {
             additionalBuff: 6,
         },
@@ -116,11 +116,11 @@ export const compDataShowcaseSpecific = [
             hp: 0,
             def: 194
         },
-        buffEidolon1Formula: "+ 25% DMG and for Moonlight",
+        eidolon1: "+ 25% DMG and for Moonlight",
         buffEidolon1Stats: {
             additionalBuff: 25,
         },
-        buffEidolon3Formula: "+ 30 Crit DMG for crit hit of Moonlight",
+        eidolon3: "+ 30 Crit DMG for crit hit of Moonlight",
         buffEidolon3Stats: {
             critDMG: 30,
         },
@@ -164,7 +164,7 @@ export const compDataShowcaseSpecific = [
             hp: 0,
             def: 0
         },
-        buffEidolon0Formula: "+ 25% Active Skill DMG",
+        eidolon0: "+ 25% Active Skill DMG",
         buffEidolon1Stats: {
             additionalBuff: 25,
         },
@@ -312,19 +312,19 @@ export const compDataShowcaseSpecific = [
             hp: 0,
             def: 0
         },
-        buffEidolon0Formula: "While awakened as [Deity of Niava], you and Zayne deal 8% additional DMG",
+        eidolon0: "While awakened as [Deity of Niava], you and Zayne deal 8% additional DMG",
         buffEidolon0Stats: {
             additionalBuff: 8,
         },
-        buffEidolon1Formula: "During the [Deity of Niava] state deals AoE DMG equal to 242 + 129% ATK + 11.6% of Max HP",
+        eidolon1: "During the [Deity of Niava] state deals AoE DMG equal to 242 + 129% ATK + 11.6% of Max HP",
         buffEidolon1Stats: {
             additionalBuff: 0,
         },
-        buffEidolon2Formula: "+20% Active Skill DMG",
+        eidolon2: "+20% Active Skill DMG",
         buffEidolon2Stats: {
             additionalBuff: 20,
         },
-        buffEidolon3Formula: "Enemies hit by [Terminus Arrow] or [Divine Sever] take 30% more DMG for 4s",
+        eidolon3: "Enemies hit by [Terminus Arrow] or [Divine Sever] take 30% more DMG for 4s",
         buffEidolon3Stats: {
             additionalBuff: 30,
         },
@@ -367,15 +367,15 @@ export const compDataShowcaseSpecific = [
             hp: 0,
             def: 0
         },
-        buffEidolon0Formula: "Enemies inflicted with [Shattered Jade] have their DEF reduced by 10%.",
+        eidolon0: "Enemies inflicted with [Shattered Jade] have their DEF reduced by 10%.",
         buffEidolon0Stats: {
             defIgnore: 10,
         },
-        buffEidolon1Formula: "+0.5-10% DMG to Weakness enemies",
+        eidolon1: "+0.5-10% DMG to Weakness enemies",
         buffEidolon1Stats: {
             additionalBuff: 10,
         },
-        buffEidolon3Formula: "+100% Companion Passive Skill DMG",
+        eidolon3: "+100% Companion Passive Skill DMG",
         buffEidolon3Stats: {
             additionalBuff: 0,
         },
@@ -404,15 +404,15 @@ export const compDataShowcaseSpecific = [
             hp: 0,
             def: 406
         },
-        buffEidolon0Formula: "+25% Companion Passive Skill DMG",
+        eidolon0: "+25% Companion Passive Skill DMG",
         buffEidolon0Stats: {
             additionalBuff: 25,
         },
-        buffEidolon1Formula: "+12% under [Ward of Curses]",
+        eidolon1: "+12% under [Ward of Curses]",
         buffEidolon1Stats: {
             additionalBuff: 12,
         },
-        buffEidolon2Formula: "+10% DMG after using Resonance Skill",
+        eidolon2: "+10% DMG after using Resonance Skill",
         buffEidolon2Stats: {
             additionalBuff: 10,
         },
@@ -557,7 +557,7 @@ export const compDataShowcaseSpecific = [
             hp: 0,
             def: 68
         },
-        buffEidolon1Formula: `Under Divine Favor random DMG:
+        eidolon1: `Under Divine Favor random DMG:
 270 + 144% ATK + 571% DEF`,
         buffEidolon1Stats: {
             base: 270,
@@ -565,11 +565,11 @@ export const compDataShowcaseSpecific = [
             hp: 0,
             def: 571
         },
-        buffEidolon2Formula: "+50% Charge Attack DMG",
+        eidolon2: "+50% Charge Attack DMG",
         buffEidolon2Stats: {
             additionalBuff: 50,
         },
-        buffEidolon3Formula: "+70% Lightning Tide DMG",
+        eidolon3: "+70% Lightning Tide DMG",
         buffEidolon3Stats: {
             additionalBuff: 70,
         },
@@ -614,7 +614,7 @@ DMG is increased by 25%`,
         buffPassiveSkillStats: {
             additionalDMG: 30,
         },
-        buffEidolon0Formula: "+10 Crit DMG",
+        eidolon0: "+10 Crit DMG",
         buffEidolon0Stats: {
             critDMG: 10,
         },
@@ -670,15 +670,15 @@ DMG is increased by 25%`,
             additionalDMG: 8,
             critRate: 15
         },
-        buffEidolon0Formula: "+30 Crit DMG under Deepsea Pursuit",
+        eidolon0: "+30 Crit DMG under Deepsea Pursuit",
         buffEidolon0Stats: {
             critDMG: 30,
         },
-        buffEidolon1Formula: "+20% Burn DMG",
+        eidolon1: "+20% Burn DMG",
         buffEidolon1Stats: {
             additionalBuff: 20,
         },
-        buffEidolon3Formula: "+150% Searing Slash DMG",
+        eidolon3: "+150% Searing Slash DMG",
         buffEidolon3Stats: {
             additionalBuff: 150,
         },
@@ -906,16 +906,16 @@ DMG is increased by 25%`,
             hp: 0,
             def: 1427
         },
-        buffEidolon0Formula: "When you consume [Rose Mark] you recover an additional 0.5 Energy Charge.",
-        buffEidolon1Formula: "[Rose Thorns] damage increases by 10% and additionally pulls in enemies within range. Casting [Blood Pact] immediately refreshes your Active Skill cooldown and reduces the cooldown of your next Active Skill cast by 4s. This effect cannot stack.",
+        eidolon0: "When you consume [Rose Mark] you recover an additional 0.5 Energy Charge.",
+        eidolon1: "[Rose Thorns] damage increases by 10% and additionally pulls in enemies within range. Casting [Blood Pact] immediately refreshes your Active Skill cooldown and reduces the cooldown of your next Active Skill cast by 4s. This effect cannot stack.",
         buffEidolon1Stats: {
             additionalBuff: 10,
         },
-        buffEidolon2Formula: "When [Crimson Void] hits, it additionally applies [Blood Spell] to enemies, increasing their DMG taken by 8% for 6s. [Blood Spell] is removed when [Crimson Bond] ends. When [Bloodrose Seed] blooms, you and Sylus each recover HP equal to 5% of max HP.",
+        eidolon2: "When [Crimson Void] hits, it additionally applies [Blood Spell] to enemies, increasing their DMG taken by 8% for 6s. [Blood Spell] is removed when [Crimson Bond] ends. When [Bloodrose Seed] blooms, you and Sylus each recover HP equal to 5% of max HP.",
         buffEidolon2Stats: {
             additionalBuff: 8,
         },
-        buffEidolon3Formula: `During [Crimson Bond], Sylus deals 10% more DMG. When Sylus applies [Bloodrose Seed] he also stimulates [Bloodrose Seed] to grow.
+        eidolon3: `During [Crimson Bond], Sylus deals 10% more DMG. When Sylus applies [Bloodrose Seed] he also stimulates [Bloodrose Seed] to grow.
 During [Crimson Bond], casting Active Skill grants you [Bloodrose Wreath], increasing your DMG by 10% for 8s. When your Basic Attacks or Charged Attacks hit enemies, [Bloodrose Wreath] fires additional bullets at them, dealing damage equal to 79+42% ATK+168% DEF and stimulating [Bloodrose Seed]. This damage counts as Basic Attack damage and this effect can trigger once per attack. When you gain [Bloodrose Wreath], any [Bloodrose Scent you have is removed, and you gain all its effects.
 When [Crimson Bond] ends, [Bloodrose Wreath] is removed.`,
         buffEidolon3Stats: {
@@ -954,11 +954,274 @@ When [Crimson Bond] ends, [Bloodrose Wreath] is removed.`,
             hp: 69.4,
             def: 0
         },
-        buffEidolon0Formula: "After [Abyssal Fury] ends, you and Sylus recover 20% of Max HP.",
-        buffEidolon1Formula: `After using [Fiendish Claw], your next 3 basic attacks on-hit deal DMG equal to 121+64.8% ATK+5.8% Max HP to surrounding enemies centered on you.
+        eidolon0: "After [Abyssal Fury] ends, you and Sylus recover 20% of Max HP.",
+        eidolon1: `After using [Fiendish Claw], your next 3 basic attacks on-hit deal DMG equal to 121+64.8% ATK+5.8% Max HP to surrounding enemies centered on you.
 While [Abyssal Fury] is active [Fiendish Claw] cooldown is reduced.`,
-        buffEidolon2Formula: "After using [Wrath Judgment] or [Wrath Judgment: Greed], your Energy Charge recovery speed is increased for 15s.",
-        buffEidolon3Formula: "When using [Wrath Judgment: Greed], you and Sylus recover 50% of Max HP. While [Abyssal Fury] is active, [Life Sacrifice] requires no charging and your Active Skills deal 30% increased DMG.",
+        eidolon2: "After using [Wrath Judgment] or [Wrath Judgment: Greed], your Energy Charge recovery speed is increased for 15s.",
+        eidolon3: "When using [Wrath Judgment: Greed], you and Sylus recover 50% of Max HP. While [Abyssal Fury] is active, [Life Sacrifice] requires no charging and your Active Skills deal 30% increased DMG.",
+    },
+    {
+        companionName: "Sylus: Relentless Conqueror",
+        cardIds: [98, 99],
+        supportSkillFormula: "239 + 318% ATK",
+        supportSkillStats: {
+            base: 239,
+            atk: 318,
+            hp: 0,
+            def: 0
+        },
+        empoweredSupportSkillFormula: "72 + 95% ATK",
+        empoweredSupportSkillStats: {
+            base: 72,
+            atk: 95,
+            hp: 0,
+            def: 0
+        },
+        resonanceSkillFormula: "1094 + 1458% ATK",
+        resonanceSkillStats: {
+            base: 1094,
+            atk: 1458,
+            hp: 0,
+            def: 0
+        },
+        ardentOathFormula: "1440 + 1920% ATK",
+        ardentOathStats: {
+            base: 1440,
+            atk: 1920,
+            hp: 0,
+            def: 0
+        },
+        eidolon0: "When picking up [Dark Energy], your ATK is increased by 3.5% for 5s. This effect can stack up to 3 times.",
+        eidolon1: "When you pick up [Dark Energy], you gain an additional effect that applies [Devour Mark] to the next enemy you damage.",
+        eidolon2: "When you pick up [Dark Energy], a small amount of Energy Charge is restored.",
+        eidolon3: "When applying [Devour Mark] to an enemy that already has a [Devour Mark], directly deal 60+80% ATK DMG.",
+    },
+    {
+        companionName: "Sylus: Visitor",
+        supportSkillFormula: "228 + 304% ATK",
+        supportSkillStats: {
+            base: 228,
+            atk: 304,
+            hp: 0,
+            def: 0
+        },
+        empoweredSupportSkillFormula: "321 + 429% ATK",
+        empoweredSupportSkillStats: {
+            base: 321,
+            atk: 429,
+            hp: 0,
+            def: 0
+        },
+        resonanceSkillFormula: "950 + 1266% ATK",
+        resonanceSkillStats: {
+            base: 950,
+            atk: 1266,
+            hp: 0,
+            def: 0
+        },
+        ardentOathFormula: "1200 + 1600% ATK",
+        ardentOathStats: {
+            base: 1200,
+            atk: 1600,
+            hp: 0,
+            def: 0
+        },
+    },
+    {
+        companionName: "Caleb: Netherlord",
+        cardIds: [27, 28],
+        supportSkillFormula: "336 + 179% ATK + 16.2% of Max HP",
+        supportSkillStats: {
+            base: 336,
+            atk: 179,
+            hp: 16.2,
+            def: 0
+        },
+        empoweredSupportSkillFormula: "585 + 312% ATK + 28.1% of Max HP",
+        empoweredSupportSkillStats: {
+            base: 585,
+            atk: 312,
+            hp: 28.1,
+            def: 0
+        },
+        supportSkillFormula2: "296 + 158% ATK + 14.2% of Max HP",
+        supportSkillStats2: {
+            base: 296,
+            atk: 158,
+            hp: 14.2,
+            def: 0
+        },
+        resonanceSkillFormula: "1361 + 725% ATK + 65.3% of Max HP",
+        resonanceSkillStats: {
+            base: 1361,
+            atk: 725,
+            hp: 65.3,
+            def: 0
+        },
+        ardentOathFormula: "1800 + 960% ATK + 86% of Max HP",
+        ardentOathStats: {
+            base: 1800,
+            atk: 960,
+            hp: 86,
+            def: 0
+        },
+        passiveSkillFormula1: "645 + 344% ATK + 31% of Max HP",
+        passiveSkillStats1: {
+            base: 645,
+            atk: 344,
+            hp: 31,
+            def: 0
+        },
+        passiveSkillFormula2: "671 + 358% ATK + 32.2% of Max HP",
+        passiveSkillStats2: {
+            base: 671,
+            atk: 358,
+            hp: 32.2,
+            def: 0
+        },
+        passiveSkillFormula3: "491 + 262% ATK + 23.6% of Max HP",
+        passiveSkillStats3: {
+            base: 491,
+            atk: 262,
+            hp: 23.6,
+            def: 0
+        },
+        eidolon0: "When you apply [Bingdi Lotus] to an enemy that already has the same half, you gain [Lotus Seed]. When [Yin-Yang Rift] is active, you restore 0.3 Energy Charge, and both you and Caleb restore 5% of Max HP.",
+        eidolon1: `Outside [Yin-Yang Union]:
+When you consume [Lotus Seed], Caleb performs an additional [Netherseal Slash]. This attack does not affect [Netherseal Slash]'s original cooldown.
+During [Yin-Yang Union]: When the spectral hand summoned by [Yin-Yang Rift] attacks, it unleashes an additional shockwave, dealing AoE DMG equal to 327+175% ATK+15.7% of Max HP. If the shockwave hits during [Yin-Yang Union], enemies struck are marked as [Ghost]
+[Ghost]: If the target is marked again while already marked, the target takes DMG equal to 251+134% ATK+12.1% of Max HP When [Yin-Yang Rift] is activated, enemies marked as [Ghost] are marked again. When [Yin-Yang Union] ends, the mark is removed.`,
+        eidolon2: "When fighting alongside Netherlord, you start with 42% Oath Energy, and the duration of the enemy's weakened state is extended by 1 second. DMG dealt when [Ghost] is marked again is increased by 10%.",
+        eidolon3: `During [Yin-Yang Union], when your Active Skill hits, you gain [Lotus Seed]. This effect can trigger only once per Active Skill. When your Charged Attack hits an enemy, it consumes [Lotus Seed] to unleash an additional shockwave at the target's location, dealing AoE DMG equal to 327+175% ATK+15.7% of Max HP. If the shockwave hits during [Yin-Yang Union], enemies struck are marked as [Ghost]. This effect can trigger only once per Charged Attack.
+When [Yin-Yang Rift] appears, you restore an additional 11% Oath Energy. This effect is not affected by Oath Recovery Boost.
+DMG dealt by Ardent Oath [Fate Unforgotten] can trigger critical hits.`,
+    },
+    {
+        companionName: "Caleb: Ultimate Weapon X-02",
+        cardIds: [29, 30],
+        supportSkillFormula: "461 + 615% ATK",
+        supportSkillStats: {
+            base: 461,
+            atk: 615,
+            hp: 0,
+            def: 0
+        },
+        empoweredSupportSkillFormula: "685 + 913% ATK",
+        empoweredSupportSkillStats: {
+            base: 685,
+            atk: 913,
+            hp: 0,
+            def: 0
+        },
+        resonanceSkillFormula: "990 + 1322% ATK",
+        resonanceSkillStats: {
+            base: 990,
+            atk: 1322,
+            hp: 0,
+            def: 0
+        },
+        ardentOathFormula: "380 + 500% ATK",
+        ardentOathStats: {
+            base: 380,
+            atk: 500,
+            hp: 0,
+            def: 0
+        },
+        eidolon0: "When fighting alongside Ultimate Weapon X-02, Ardent Oath DMG increases by 20%. When you use [Nulledge Field] or [Empowered Nulledge Field] immediately restore 1 [Stasis Particles].",
+        eidolon1: `Extends [Quantum Stasis] duration by 2.5s and increases DMG taken by affected enemies by 10%.
+Hitting enemies with [Nulledge Field] and [Empowered Nulledge Field] also applies [Quantum Stasis].
+When fighting alongside  Ultimate Weapon X-02, you become unstoppable while using Active Skills. `,
+        eidolon2: "When fighting alongside Ultimate Weapon X-02, using Active Skills increases ATK for both of you by 8% for 10s. Whenever your Active Skills deal DMG, you both recover a small amount of HP. ",
+        eidolon3: "When entering [Ultimate Synced State], immediately restore 80% [Synced Particles] and increase [Synced Particles] acquisition efficiency by 30%. When using [Synced Strike], he will also summon multiple Floating Blades at the target location to assist in the attack, dealing a total of 122+164% ATK DMG.",
+    },
+    {
+        companionName: "Caleb: Farspace Colonel",
+        cardIds: [31, 32],
+        supportSkillFormula: "284 + 151% ATK + 599% DEF",
+        supportSkillStats: {
+            base: 284,
+            atk: 151,
+            hp: 0,
+            def: 599
+        },
+        empoweredSupportSkillFormula: "392 + 209% ATK + 828% DEF",
+        empoweredSupportSkillStats: {
+            base: 392,
+            atk: 209,
+            hp: 0,
+            def: 828
+        },
+        resonanceSkillFormula: "245 + 131% ATK + 519% DEF",
+        resonanceSkillStats: {
+            base: 245,
+            atk: 131,
+            hp: 0,
+            def: 519
+        },
+        resonanceSkillFormula2: "512 + 273% ATK + 1082% DEF",
+        resonanceSkillStats2: {
+            base: 512,
+            atk: 273,
+            hp: 0,
+            def: 1082
+        },
+        ardentOathFormula: "1440 + 780% ATK + 3060% DEF",
+        ardentOathStats: {
+            base: 1440,
+            atk: 780,
+            hp: 0,
+            def: 3060
+        },
+        eidolon0: "After using Charged Attacks or Active Skills within [Battlefront], you and Caleb's DMG is increased by 20% for 5s. This effect's duration can stack and is cleared when [Ground Breach] ends.",
+        eidolon1: "[Focus] mark limit +2. Within [Battlefront], your Active Skills on-hit grant 1 Focus mark and reduce Active Skill cooldown by 6s. ",
+        eidolon2: `Using [Ground Breach] or [Deep Strike] restores 0.2 Energy Charge.
+When consuming Zerom, additionally restore 0.5 [Firepower].        `,
+        eidolon3: "You and Caleb deal 5% increased DMG to enemies with Protocore Shield. Within [Battlefront], when the final hit of your basic attack lands, you gain an additional [Focus] mark. When Focus marks exceed the limit, excess marks unleash a gravity vortex at the target location, dealing 225+120% ATK+476% DEF DMG to enemies in range.",
+    },
+    {
+        companionName: "Caleb: Pilot",
+        supportSkillFormula: "285 + 381% ATK",
+        supportSkillStats: {
+            base: 285,
+            atk: 381,
+            hp: 0,
+            def: 0
+        },
+        empoweredSupportSkillFormula: "318 + 423% ATK",
+        empoweredSupportSkillStats: {
+            base: 318,
+            atk: 423,
+            hp: 0,
+            def: 0
+        },
+        resonanceSkillFormula: "867 + 1156% ATK",
+        resonanceSkillStats: {
+            base: 867,
+            atk: 1156,
+            hp: 0,
+            def: 0
+        },
+        ardentOathFormula: "1200 + 1600% ATK",
+        ardentOathStats: {
+            base: 1200,
+            atk: 1600,
+            hp: 0,
+            def: 0
+        },
+        passiveSkillFormula1: "53 + 70% ATK",
+        passiveSkillStats1: {
+            base: 53,
+            atk: 70,
+            hp: 0,
+            def: 0
+        },
+        passiveSkillFormula2: "113 + 150% ATK",
+        passiveSkillStats2: {
+            base: 113,
+            atk: 150,
+            hp: 0,
+            def: 0
+        },
     },
 ]
 
@@ -1490,6 +1753,409 @@ export const weaponDataShowcaseSpecific = [
             base: 632,
             atk: 337,
             hp: 30.3,
+            def: 0
+        },
+    },
+    {
+        weaponName: "Harrier 700",
+        basicAttackFormula: "",
+        basicFirstStrike: "59 + 79% ATK",
+        basicFirstStrikeStats: {
+            base: 59,
+            atk: 79,
+            hp: 0,
+            def: 0
+        },
+        basicSecondStrike: "67 + 89% ATK",
+        basicSecondStrikeStats: {
+            base: 67,
+            atk: 89,
+            hp: 0,
+            def: 0
+        },
+        basicThirdStrike: "89 + 119% ATK",
+        basicThirdStrikeStats: {
+            base: 89,
+            atk: 119,
+            hp: 0,
+            def: 0
+        },
+        basicFourthStrike: "107 + 143% ATK",
+        basicFourthStrikeStats: {
+            base: 107,
+            atk: 143,
+            hp: 0,
+            def: 0
+        },
+        basicChargedAttack: "160 + 213% ATK",
+        basicChargedAttackStats: {
+            base: 160,
+            atk: 213,
+            hp: 0,
+            def: 0
+        },
+        activeSkillFormula: "342 + 456% ATK",
+        activeSkillStats: {
+            base: 342,
+            atk: 456,
+            hp: 0,
+            def: 0
+        },
+    },
+    {
+        weaponName: "Azuregaze",
+        basicAttackFormula: "",
+        basicFirstStrike: "74 + 39% ATK + 3.5% of Max HP",
+        basicFirstStrikeStats: {
+            base: 74,
+            atk: 39,
+            hp: 3.5,
+            def: 0
+        },
+        basicSecondStrike: "66 + 34% ATK + 3.2% of Max HP",
+        basicSecondStrikeStats: {
+            base: 66,
+            atk: 34,
+            hp: 3.2,
+            def: 0
+        },
+        basicThirdStrike: "135 + 72% ATK + 6.5% of Max HP",
+        basicThirdStrikeStats: {
+            base: 135,
+            atk: 72,
+            hp: 6.5,
+            def: 0
+        },
+        basicChargedAttack: "174 + 93% ATK + 8.4% of Max HP",
+        basicChargedAttackStats: {
+            base: 174,
+            atk: 93,
+            hp: 8.4,
+            def: 0
+        },
+        activeSkillFormula: "358 + 190% ATK + 17.2% of Max HP",
+        activeSkillStats: {
+            base: 358,
+            atk: 190,
+            hp: 17.2,
+            def: 0
+        },
+        passiveSkillMCFormula: "135 + 72% ATK + 6.5% of Max HP",
+        passiveSkillMCStats2: {
+            base: 135,
+            atk: 72,
+            hp: 6.5,
+            def: 0
+        },
+    },
+    {
+        weaponName: "Awakened Vitality",
+        basicAttackFormula: "",
+        basicFirstStrike: "77 + 103% ATK",
+        basicFirstStrikeStats: {
+            base: 77,
+            atk: 103,
+            hp: 0,
+            def: 0
+        },
+        basicSecondStrike: "74 + 99% ATK",
+        basicSecondStrikeStats: {
+            base: 74,
+            atk: 99,
+            hp: 0,
+            def: 0
+        },
+        basicThirdStrike: "109 + 145% ATK",
+        basicThirdStrikeStats: {
+            base: 109,
+            atk: 145,
+            hp: 0,
+            def: 0
+        },
+        basicFourthStrike: "137 + 182% ATK",
+        basicFourthStrikeStats: {
+            base: 137,
+            atk: 182,
+            hp: 0,
+            def: 0
+        },
+        basicChargedAttack: "252 + 336% ATK",
+        basicChargedAttackStats: {
+            base: 252,
+            atk: 336,
+            hp: 0,
+            def: 0
+        },
+        activeSkillFormula: "72 + 96% ATK",
+        activeSkillStats: {
+            base: 72,
+            atk: 96,
+            hp: 0,
+            def: 0
+        },
+    },
+    {
+        weaponName: "Skybreaker-SN",
+        basicAttackFormula: "",
+        basicFirstStrike: "47 + 25% ATK + 99% DEF",
+        basicFirstStrikeStats: {
+            base: 47,
+            atk: 25,
+            hp: 0,
+            def: 99
+        },
+        basicSecondStrike: "70 + 37% ATK + 148% DEF",
+        basicSecondStrikeStats: {
+            base: 70,
+            atk: 37,
+            hp: 0,
+            def: 148
+        },
+        basicThirdStrike: "68 + 36% ATK + 144% DEF",
+        basicThirdStrikeStats: {
+            base: 68,
+            atk: 36,
+            hp: 0,
+            def: 144
+        },
+        basicFourthStrike: "85 + 45% ATK + 180% DEF",
+        basicFourthStrikeStats: {
+            base: 85,
+            atk: 45,
+            hp: 0,
+            def: 180
+        },
+        basicChargedAttack: "133 + 71% ATK + 281% DEF",
+        basicChargedAttackStats: {
+            base: 133,
+            atk: 71,
+            hp: 0,
+            def: 281
+        },
+        activeSkillFormula: "200 + 105% ATK + 420% DEF",
+        activeSkillStats: {
+            base: 200,
+            atk: 105,
+            hp: 0,
+            def: 420
+        },
+        activeSkillSecondFormula: "185 + 100% ATK + 395% DEF",
+        activeSkillSecondStats: {
+            base: 185,
+            atk: 100,
+            hp: 0,
+            def: 395
+        },
+    },
+    {
+        weaponName: "Hunter: Sword",
+        basicAttackFormula: "",
+        basicFirstStrike: "60 + 80% ATK",
+        basicFirstStrikeStats: {
+            base: 60,
+            atk: 80,
+            hp: 0,
+            def: 0
+        },
+        basicSecondStrike: "60 + 80% ATK",
+        basicSecondStrikeStats: {
+            base: 60,
+            atk: 80,
+            hp: 0,
+            def: 0
+        },
+        basicThirdStrike: "72 + 96% ATK",
+        basicThirdStrikeStats: {
+            base: 72,
+            atk: 96,
+            hp: 0,
+            def: 0
+        },
+        basicFourthStrike: "96 + 129% ATK",
+        basicFourthStrikeStats: {
+            base: 96,
+            atk: 129,
+            hp: 0,
+            def: 0
+        },
+        basicChargedAttack: "118 + 157% ATK",
+        basicChargedAttackStats: {
+            base: 118,
+            atk: 157,
+            hp: 0,
+            def: 0
+        },
+        basicChargedAttack2: "250 + 333% ATK",
+        basicChargedAttackStats2: {
+            base: 250,
+            atk: 333,
+            hp: 0,
+            def: 0
+        },
+        activeSkillFormula: "341 + 455% ATK",
+        activeSkillStats: {
+            base: 341,
+            atk: 455,
+            hp: 0,
+            def: 0
+        },
+    },
+    {
+        weaponName: "Hunter: Wand",
+        basicAttackFormula: "",
+        basicFirstStrike: "72 + 96% ATK",
+        basicFirstStrikeStats: {
+            base: 72,
+            atk: 96,
+            hp: 0,
+            def: 0
+        },
+        basicSecondStrike: "79 + 106% ATK",
+        basicSecondStrikeStats: {
+            base: 79,
+            atk: 106,
+            hp: 0,
+            def: 0
+        },
+        basicThirdStrike: "85 + 115% ATK",
+        basicThirdStrikeStats: {
+            base: 85,
+            atk: 115,
+            hp: 0,
+            def: 0
+        },
+        basicFourthStrike: "94 + 125% ATK",
+        basicFourthStrikeStats: {
+            base: 94,
+            atk: 125,
+            hp: 0,
+            def: 0
+        },
+        basicChargedAttack: "122 + 162% ATK",
+        basicChargedAttackStats: {
+            base: 122,
+            atk: 162,
+            hp: 0,
+            def: 0
+        },
+        activeSkillFormula: "34 + 45% ATK",
+        activeSkillStats: {
+            base: 34,
+            atk: 45,
+            hp: 0,
+            def: 0
+        },
+        passiveSkillMCFormula: "265 + 353% ATK",
+        passiveSkillMCStats: {
+            base: 265,
+            atk: 353,
+            hp: 0,
+            def: 0
+        },
+    },
+    {
+        weaponName: "Hunter: Claymore",
+        basicAttackFormula: "",
+        basicFirstStrike: "112 + 150% ATK",
+        basicFirstStrikeStats: {
+            base: 112,
+            atk: 150,
+            hp: 0,
+            def: 0
+        },
+        basicSecondStrike: "112 + 150% ATK",
+        basicSecondStrikeStats: {
+            base: 112,
+            atk: 150,
+            hp: 0,
+            def: 0
+        },
+        basicThirdStrike: "124 + 165% ATK",
+        basicThirdStrikeStats: {
+            base: 124,
+            atk: 165,
+            hp: 0,
+            def: 0
+        },
+        basicFourthStrike: "135 + 180% ATK",
+        basicFourthStrikeStats: {
+            base: 135,
+            atk: 180,
+            hp: 0,
+            def: 0
+        },
+        basicChargedAttack: "337 + 449% ATK",
+        basicChargedAttackStats: {
+            base: 337,
+            atk: 449,
+            hp: 0,
+            def: 0
+        },
+        activeSkillFormula: "410 + 547% ATK",
+        activeSkillStats: {
+            base: 410,
+            atk: 547,
+            hp: 0,
+            def: 0
+        },
+        activeSkillSecondFormula: "621 + 829% ATK",
+        activeSkillSecondStats: {
+            base: 621,
+            atk: 829,
+            hp: 0,
+            def: 0
+        },
+    },
+    {
+        weaponName: "Hunter: Firearm",
+        basicAttackFormula: "",
+        basicFirstStrike: "44 + 59% ATK",
+        basicFirstStrikeStats: {
+            base: 44,
+            atk: 59,
+            hp: 0,
+            def: 0
+        },
+        basicSecondStrike: "40 + 53% ATK",
+        basicSecondStrikeStats: {
+            base: 40,
+            atk: 53,
+            hp: 0,
+            def: 0
+        },
+        basicThirdStrike: "53 + 71% ATK",
+        basicThirdStrikeStats: {
+            base: 53,
+            atk: 71,
+            hp: 0,
+            def: 0
+        },
+        basicFourthStrike: "57 + 77% ATK",
+        basicFourthStrikeStats: {
+            base: 57,
+            atk: 77,
+            hp: 0,
+            def: 0
+        },
+        basicFifthStrike: "62 + 82% ATK",
+        basicFifthStrikeStats: {
+            base: 62,
+            atk: 82,
+            hp: 0,
+            def: 0
+        },
+        basicChargedAttack: "120% + 160% ATK",
+        basicChargedAttackStats: {
+            base: 120,
+            atk: 160,
+            hp: 0,
+            def: 0
+        },
+        activeSkillFormula: "160 + 213% ATK",
+        activeSkillStats: {
+            base: 160,
+            atk: 213,
+            hp: 0,
             def: 0
         },
     },

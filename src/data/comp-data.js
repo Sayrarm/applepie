@@ -1215,7 +1215,7 @@ Sylus releases Boundless Energy to deal 239+318% ATK DMG to the target. The targ
         resonanceSkillCost: "2 energy charges",
         resonanceSkillImg: "../assets/battle-icons/a2_skill_yg_2301_03.png",
         resonanceSkillText: `
-You shoot enemies with 3 instances of damage while Sylus stands before you to release Boundless Energy, dealing 1094+1458% ATK DMG and1 [Protocore DMG].
+You shoot enemies with 3 instances of damage while Sylus stands before you to release Boundless Energy, dealing 1094+1458% ATK DMG and 1 [Protocore DMG].
         `,
         ardentOath: "Doomsday Trial",
         ardentOathCost: "100% Oath Energy",
@@ -1233,10 +1233,10 @@ Your Resonance Skill and Support Skill apply [Devour Mark] to enemies, which las
         basicAttackImg: "../assets/battle-icons/a2_skill_pl_1901_02_yg_2301.png",
         basicAttackText: `
 Wield the Harrier 700 to start a 4-hit combo to deal DMG. 
-First Strike:59+79% ATK DMG
-Second Strike:67+89% ATK DMG 
-Third Strike:89+119% ATK DMG 
-Fourth Strike:107+143% ATK DMG
+First Strike: 59+79% ATK DMG
+Second Strike: 67+89% ATK DMG 
+Third Strike: 89+119% ATK DMG 
+Fourth Strike: 107+143% ATK DMG
 
 Charged Attacks will unleash a [Dark Energy] Bullet, which explodes upon hitting the target and deals 160+213% ATK DMG.
         `,
@@ -1253,16 +1253,20 @@ Move the joystick to sprint and quickly spin, dealing a total of 342+456% ATK DM
 When an Active Skill hits a target with [Devour Mark], there is a 50% chance to reduce Active Skill cooldown by 1s and recover a small amount of Energy Charge.
         `,
         eidolon0: `
-The team deals 8% more DMG and takes 8% less DMG. When picking up [Dark Energy], your ATK is increased by 3.5% for 5s. This effect can stack up to 3 times.        
+The team deals 8% more DMG and takes 8% less DMG. 
+When picking up [Dark Energy], your ATK is increased by 3.5% for 5s. This effect can stack up to 3 times.        
         `,
         eidolon1: `
-Increases Ardent Oath charge by 20%. When you pick up [Dark Energy], you gain an additional effect that applies [Devour Mark] to the next enemy you damage.
+Increases Ardent Oath charge by 20%. 
+When you pick up [Dark Energy], you gain an additional effect that applies [Devour Mark] to the next enemy you damage.
         `,
         eidolon2: `
-Energy Charge limit raised by 1. When you pick up [Dark Energy], a small amount of Energy Charge is restored.
+Energy Charge limit raised by 1. 
+When you pick up [Dark Energy], a small amount of Energy Charge is restored.
         `,
         eidolon3: `
-The team deals 8% more DMG. When applying [Devour Mark] to an enemy that already has a [Devour Mark], directly deal 60+80% ATK DMG.
+The team deals 8% more DMG. 
+When applying [Devour Mark] to an enemy that already has a [Devour Mark], directly deal 60+80% ATK DMG.
         `,
     },
     {
@@ -1351,7 +1355,7 @@ When [Yin-Yang Union] ends, any inactive [Yin-Yang Rift] closes immediately, and
         basicAttackImg: "../assets/battle-icons/basic-attack.png",
         basicAttackText: `
 Wield Azuregaze to attack enemies.
-First Strike: 74+39% ATK+3.5% of Max HP DMG
+First Strike: 74+39% ATK+3.5% of Max HP DMG.
 Second Strike: 66+34% ATK+3.2% of Max HP DMG.
 Third Strike: Thrust Azuregaze upward, dealing DMG equal to 135+72% ATK+6.5% of Max HP. This attack is not considered the final hit of Basic Attack. After the upward strike, you enter [Sword Stance]. While in [Sword Stance], different attacks can be derived based on [Paired Knot].
 Charged Attack slashes forward, dealing DMG equal to 174+93% ATK+8.4% of Max HP.
@@ -1459,18 +1463,22 @@ Each time you perform [Quantum Clustering], consume 1 [Stasis Particle] to trigg
 While using Active Skills, you gain 50% DMG Reduction.        
         `,
         eidolon0: `
-The team deals 8% more DMG and takes 8% Iess DMG. When fighting alongside Ultimate Weapon X-02, Ardent Oath DMG increases by 20%. When you use [Nulledge Field] or [Empowered Nulledge Field] immediately restore 1 [Stasis Particles].        
+The team deals 8% more DMG and takes 8% Iess DMG. 
+When fighting alongside Ultimate Weapon X-02, Ardent Oath DMG increases by 20%. When you use [Nulledge Field] or [Empowered Nulledge Field] immediately restore 1 [Stasis Particles].        
         `,
         eidolon1: `
-Increases Ardent Oath charge by 20%. Extends [Quantum Stasis] duration by 2.5s and increases DMG taken by affected enemies by 10%.
+Increases Ardent Oath charge by 20%. 
+Extends [Quantum Stasis] duration by 2.5s and increases DMG taken by affected enemies by 10%.
 Hitting enemies with [Nulledge Field] and [Empowered Nulledge Field] also applies [Quantum Stasis].
 When fighting alongside  Ultimate Weapon X-02, you become unstoppable while using Active Skills.        
         `,
         eidolon2: `
-Increases Energy Charge cap by 1. When fighting alongside Ultimate Weapon X-02, using Active Skills increases ATK for both of you by 8% for 10s. Whenever your Active Skills deal DMG, you both recover a small amount of HP.        
+Increases Energy Charge cap by 1. 
+When fighting alongside Ultimate Weapon X-02, using Active Skills increases ATK for both of you by 8% for 10s. Whenever your Active Skills deal DMG, you both recover a small amount of HP.        
         `,
         eidolon3: `
-The team deals 8% more DMG. When entering [Ultimate Synced State], immediately restore 80% [Synced Particles] and increase [Synced Particles] acquisition efficiency by 30%. When using [Synced Strike], he will also summon multiple Floating Blades at the target location to assist in the attack, dealing a total of 122+164% ATK DMG.        
+The team deals 8% more DMG. 
+When entering [Ultimate Synced State], immediately restore 80% [Synced Particles] and increase [Synced Particles] acquisition efficiency by 30%. When using [Synced Strike], he will also summon multiple Floating Blades at the target location to assist in the attack, dealing a total of 122+164% ATK DMG.        
         `,
     },
     {
@@ -1522,7 +1530,7 @@ Enemy Weakened status duration is extended by 2s.
 Wield Skybreaker-SN to perform a combo up to 4 hits. 
 First Strike: 47+25% ATK+99% DEF
 Second Strike: 70+37% ATK+148% DEF 
-Third Strike:68+36% ATK+144% DEF 
+Third Strike: 68+36% ATK+144% DEF 
 Fourth Strike: 85+45% ATK+180% DEF
 
 Charged Attack pierces through enemies in a fan-shaped area, dealing DMG equal to 133+71% ATK+281% DEF.        
@@ -1545,17 +1553,21 @@ While outside the [Battlefront]:
 Dodging grants 10 stack(s) of [Zerom] every 5s. While you have [Zerom], each basic attack consumes 1 stack(s) of [Zerom] to restore 1 [Firepower].        
         `,
         eidolon0: `
-The team deals 8% more DMG and takes 8% less DMG. After using Charged Attacks or Active Skills within [Battlefront], you and Caleb's DMG is increased by 20% for 5s. This effect's duration can stack and is cleared when [Ground Breach] ends.        
+The team deals 8% more DMG and takes 8% less DMG. 
+After using Charged Attacks or Active Skills within [Battlefront], you and Caleb's DMG is increased by 20% for 5s. This effect's duration can stack and is cleared when [Ground Breach] ends.        
         `,
         eidolon1: `
-Increases Ardent Oath charge by 20%. [Focus] mark limit +2. Within [Battlefront], your Active Skills on-hit grant 1 Focus mark and reduce Active Skill cooldown by 6s.        
+Increases Ardent Oath charge by 20%. 
+[Focus] mark limit +2. Within [Battlefront], your Active Skills on-hit grant 1 Focus mark and reduce Active Skill cooldown by 6s.        
         `,
         eidolon2: `
-Energy Charge limit is raised by 1. Using [Ground Breach] or [Deep Strike] restores 0.2 Energy Charge.
+Energy Charge limit is raised by 1. 
+Using [Ground Breach] or [Deep Strike] restores 0.2 Energy Charge.
 When consuming Zerom, additionally restore 0.5 [Firepower].        
         `,
         eidolon3: `
-The team deals 8% more DMG. You and Caleb deal 5% increased DMG to enemies with Protocore Shield. Within [Battlefront], when the final hit of your basic attack lands, you gain an additional [Focus] mark. When Focus marks exceed the limit, excess marks unleash a gravity vortex at the target location, dealing 225+120% ATK+476% DEF DMG to enemies in range.        
+The team deals 8% more DMG. 
+You and Caleb deal 5% increased DMG to enemies with Protocore Shield. Within [Battlefront], when the final hit of your basic attack lands, you gain an additional [Focus] mark. When Focus marks exceed the limit, excess marks unleash a gravity vortex at the target location, dealing 225+120% ATK+476% DEF DMG to enemies in range.        
         `,
     },
     {
@@ -1665,13 +1677,12 @@ Your Charged Attack is Empowered with an increased attack range every 15s, deali
         basicAttackImg: "../assets/battle-icons/a2_skill_pl_1902_02.png",
         basicAttackText: `
 Wield a claymore to start a combo up to 4 hits.
-First Strike:112+150% ATK DMG
-Second Strike:112+150% ATK DMG 
+First Strike: 112+150% ATK DMG
+Second Strike: 112+150% ATK DMG 
 Third Strike: 124+165% ATK DMG 
 Fourth Strike: 135+180% ATK DMG
 
 Charged Attack will cause you to leap forward and smash the ground, dealing 337+449% ATK AoE DMG.
-      
         `,
         activeSkill: "Frangere Slash",
         activeSkillCooldown: "7 sec.",

@@ -170,6 +170,9 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
         basicCharged: weaponData.basicChargedAttackStats
             ? createDamageCalculator(weaponData.basicChargedAttackStats)(companionStats) * (1 + attributeBonus / 100)
             : 0,
+        basicCharged2: weaponData.basicChargedAttackStats2
+            ? createDamageCalculator(weaponData.basicChargedAttackStats2)(companionStats) * (1 + attributeBonus / 100)
+            : 0,
         active1: weaponData.activeSkillStats
             ? createDamageCalculator(weaponData.activeSkillStats)(companionStats) * (1 + attributeBonus / 100)
             : 0,
@@ -203,6 +206,7 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
         basic4: calculateWeakenedDamage(baseDamage.basic4, totalDmgBoostToWeakened),
         basic5: calculateWeakenedDamage(baseDamage.basic5, totalDmgBoostToWeakened),
         basicCharged: calculateWeakenedDamage(baseDamage.basicCharged, totalDmgBoostToWeakened),
+        basicCharged2: calculateWeakenedDamage(baseDamage.basicCharged2, totalDmgBoostToWeakened),
         active1: calculateWeakenedDamage(baseDamage.active1, totalDmgBoostToWeakened),
         active2: calculateWeakenedDamage(baseDamage.active2, totalDmgBoostToWeakened),
         passiveMC: calculateWeakenedDamage(baseDamage.passiveMC, totalDmgBoostToWeakened),
@@ -229,6 +233,7 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
         basic4: calculateCritDamage(baseDamage.basic4, critDmg),
         basic5: calculateCritDamage(baseDamage.basic5, critDmg),
         basicCharged: calculateCritDamage(baseDamage.basicCharged, critDmg),
+        basicCharged2: calculateCritDamage(baseDamage.basicCharged2, critDmg),
         active1: calculateCritDamage(baseDamage.active1, critDmg),
         active2: calculateCritDamage(baseDamage.active2, critDmg),
         passiveMC: calculateWeakenedDamage(baseDamage.passiveMC, critDmg),
@@ -516,6 +521,14 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
                     <td>{roundDisplay(weakenedDamage.basicCharged)}</td>
                     <td>{roundDisplay(critDamage.basicCharged)}</td>
                     <td>{weaponData.buffBasicChargedAttackFormula || '—'}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Charged Attack Additional</th>
+                    <td>{roundDisplay(baseDamage.basicCharged2)}</td>
+                    <td>{roundDisplay(weakenedDamage.basicCharged2)}</td>
+                    <td>{roundDisplay(critDamage.basicCharged2)}</td>
+                    <td>{weaponData.buffBasicChargedAttackFormula2 || '—'}</td>
                     <td></td>
                 </tr>
                 <tr>
