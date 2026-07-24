@@ -10,7 +10,7 @@ import React, {useState, useMemo} from "react";
 import {calculateCritDamage, calculateWeakenedDamage, createDamageCalculator} from "../data/damageCalculator.js";
 import {solar4Stars} from "../data/solar-4-star-info.js";
 
-function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarCards }) {
+function CombatCalculations({stats, selectedCompanion, selectedMCWeapon, solarCards}) {
     // Находим данные для выбранного компаньона по companionName
     const companionData = useMemo(() => {
         if (!selectedCompanion?.companionName) return {};
@@ -247,37 +247,37 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
             <h2>Combat Calculations:</h2>
 
             {hasAnySolarPair && defaultBuffs && (
-            <table className={styles.statsTable}>
-                <thead>
-                <tr>
-                    <th>Pair Bonus: </th>
-                    <th>Default Buffs</th>
-                    <th>Companion Buffs</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th>Starring Effect</th>
-                    <td>{defaultBuffs.eidolon0}</td>
-                    <td>{isCompanionMatching && companionData.eidolon0 ? companionData.eidolon0 : '—'}</td>
-                </tr>
-                <tr>
-                    <th>Duo Rank 1</th>
-                    <td>{defaultBuffs.eidolon1}</td>
-                    <td>{isCompanionMatching && companionData.eidolon1 ? companionData.eidolon1 : '—'}</td>
-                </tr>
-                <tr>
-                    <th>Duo Rank 2</th>
-                    <td>{defaultBuffs.eidolon2}</td>
-                    <td>{isCompanionMatching && companionData.eidolon2 ? companionData.eidolon2 : '—'}</td>
-                </tr>
-                <tr>
-                    <th>Duo Rank 3</th>
-                    <td>{defaultBuffs.eidolon3}</td>
-                    <td>{isCompanionMatching && companionData.eidolon3 ? companionData.eidolon3 : '—'}</td>
-                </tr>
-                </tbody>
-            </table>
+                <table className={styles.statsTable}>
+                    <thead>
+                    <tr>
+                        <th>Pair Bonus:</th>
+                        <th>Default Buffs</th>
+                        <th>Companion Buffs</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>Starring Effect</th>
+                        <td>{defaultBuffs.eidolon0}</td>
+                        <td>{isCompanionMatching && companionData.eidolon0 ? companionData.eidolon0 : '—'}</td>
+                    </tr>
+                    <tr>
+                        <th>Duo Rank 1</th>
+                        <td>{defaultBuffs.eidolon1}</td>
+                        <td>{isCompanionMatching && companionData.eidolon1 ? companionData.eidolon1 : '—'}</td>
+                    </tr>
+                    <tr>
+                        <th>Duo Rank 2</th>
+                        <td>{defaultBuffs.eidolon2}</td>
+                        <td>{isCompanionMatching && companionData.eidolon2 ? companionData.eidolon2 : '—'}</td>
+                    </tr>
+                    <tr>
+                        <th>Duo Rank 3</th>
+                        <td>{defaultBuffs.eidolon3}</td>
+                        <td>{isCompanionMatching && companionData.eidolon3 ? companionData.eidolon3 : '—'}</td>
+                    </tr>
+                    </tbody>
+                </table>
             )}
 
             {/* Additional Bonus Section */}
@@ -351,7 +351,7 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
             <table className={styles.statsTable}>
                 <thead>
                 <tr>
-                    <th> </th>
+                    <th></th>
                     <th>Base</th>
                     <th>Weakened DMG</th>
                     <th>Crit DMG</th>
@@ -359,180 +359,267 @@ function CombatCalculations({ stats, selectedCompanion, selectedMCWeapon, solarC
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <th>Support Skill</th>
-                    <td>{roundDisplay(baseDamage.support)}</td>
-                    <td>{roundDisplay(weakenedDamage.support)}</td>
-                    <td>{roundDisplay(critDamage.support)}</td>
-                    <td>{companionData.supportSkillFormula || '—'}</td>
-                </tr>
-                <tr>
-                    <th>Empowered Support Skill</th>
-                    <td>{roundDisplay(baseDamage.empoweredSupport)}</td>
-                    <td>{roundDisplay(weakenedDamage.empoweredSupport)}</td>
-                    <td>{roundDisplay(critDamage.empoweredSupport)}</td>
-                    <td>{companionData.empoweredSupportSkillFormula || '—'}</td>
-                </tr>
-                <tr>
-                    <th>Empowered Support Skill Additional</th>
-                    <td>{roundDisplay(baseDamage.empoweredSupport2)}</td>
-                    <td>{roundDisplay(weakenedDamage.empoweredSupport2)}</td>
-                    <td>{roundDisplay(critDamage.empoweredSupport2)}</td>
-                    <td>{companionData.empoweredSupportSkillFormula2 || '—'}</td>
-                </tr>
-                <tr>
-                    <th>Support Skill Additional</th>
-                    <td>{roundDisplay(baseDamage.support2)}</td>
-                    <td>{roundDisplay(weakenedDamage.support2)}</td>
-                    <td>{roundDisplay(critDamage.support2)}</td>
-                    <td>{companionData.supportSkillFormula2 || '—'}</td>
-                </tr>
-                <tr>
-                    <th>Support Skill Additional</th>
-                    <td>{roundDisplay(baseDamage.support3)}</td>
-                    <td>{roundDisplay(weakenedDamage.support3)}</td>
-                    <td>{roundDisplay(critDamage.support3)}</td>
-                    <td>{companionData.supportSkillFormula3 || '—'}</td>
-                </tr>
-                <tr>
-                    <th>Resonance Skill</th>
-                    <td>{roundDisplay(baseDamage.resonance)}</td>
-                    <td>{roundDisplay(weakenedDamage.resonance)}</td>
-                    <td>{roundDisplay(critDamage.resonance)}</td>
-                    <td>{companionData.resonanceSkillFormula || '—'}</td>
-                </tr>
-                <tr>
-                    <th>Resonance Skill Additional</th>
-                    <td>{roundDisplay(baseDamage.resonance2)}</td>
-                    <td>{roundDisplay(weakenedDamage.resonance2)}</td>
-                    <td>{roundDisplay(critDamage.resonance2)}</td>
-                    <td>{companionData.resonanceSkillFormula2 || '—'}</td>
-                </tr>
-                <tr>
-                    <th>Ardent Oath</th>
-                    <td>{roundDisplay(baseDamage.ardentOath)}</td>
-                    <td>{roundDisplay(weakenedDamage.ardentOath)}</td>
-                    <td>{roundDisplay(critDamage.ardentOath)}</td>
-                    <td>{companionData.ardentOathFormula || '—'}</td>
-                </tr>
-                <tr>
-                    <th>Passive Skill (Companion)</th>
-                    <td>{roundDisplay(baseDamage.passive1)}</td>
-                    <td>{roundDisplay(weakenedDamage.passive1)}</td>
-                    <td>{roundDisplay(critDamage.passive1)}</td>
-                    <td>{companionData.passiveSkillFormula1 || '—'}</td>
-                </tr>
-                <tr>
-                    <th>Passive Skill Additional (Companion)</th>
-                    <td>{roundDisplay(baseDamage.passive2)}</td>
-                    <td>{roundDisplay(weakenedDamage.passive2)}</td>
-                    <td>{roundDisplay(critDamage.passive2)}</td>
-                    <td>{companionData.passiveSkillFormula2 || '—'}</td>
-                </tr>
-                <tr>
-                    <th>Passive Skill Additional (Companion)</th>
-                    <td>{roundDisplay(baseDamage.passive3)}</td>
-                    <td>{roundDisplay(weakenedDamage.passive3)}</td>
-                    <td>{roundDisplay(critDamage.passive3)}</td>
-                    <td>{companionData.passiveSkillFormula3 || '—'}</td>
-                </tr>
-                <tr>
-                    <th>Passive Skill Additional (Companion)</th>
-                    <td>{roundDisplay(baseDamage.passive4)}</td>
-                    <td>{roundDisplay(weakenedDamage.passive4)}</td>
-                    <td>{roundDisplay(critDamage.passive4)}</td>
-                    <td>{companionData.passiveSkillFormula4 || '—'}</td>
-                </tr>
-                <tr>
-                    <th>Passive Skill Additional (Companion)</th>
-                    <td>{roundDisplay(baseDamage.passive5)}</td>
-                    <td>{roundDisplay(weakenedDamage.passive5)}</td>
-                    <td>{roundDisplay(critDamage.passive5)}</td>
-                    <td>{companionData.passiveSkillFormula5 || '—'}</td>
-                </tr>
-                <tr>
-                    <th className={styles.titleSkill}>Basic Attack:</th>
-                </tr>
-                <tr>
-                    <th>First Strike</th>
-                    <td>{roundDisplay(baseDamage.basic1)}</td>
-                    <td>{roundDisplay(weakenedDamage.basic1)}</td>
-                    <td>{roundDisplay(critDamage.basic1)}</td>
-                    <td>{weaponData.basicFirstStrike || '—'}</td>
-                </tr>
-                <tr>
-                    <th>Second Strike</th>
-                    <td>{roundDisplay(baseDamage.basic2)}</td>
-                    <td>{roundDisplay(weakenedDamage.basic2)}</td>
-                    <td>{roundDisplay(critDamage.basic2)}</td>
-                    <td>{weaponData.basicSecondStrike || '—'}</td>
-                </tr>
-                <tr>
-                    <th>Third Strike</th>
-                    <td>{roundDisplay(baseDamage.basic3)}</td>
-                    <td>{roundDisplay(weakenedDamage.basic3)}</td>
-                    <td>{roundDisplay(critDamage.basic3)}</td>
-                    <td>{weaponData.basicThirdStrike || '—'}</td>
-                </tr>
-                <tr>
-                    <th>Fourth Strike</th>
-                    <td>{roundDisplay(baseDamage.basic4)}</td>
-                    <td>{roundDisplay(weakenedDamage.basic4)}</td>
-                    <td>{roundDisplay(critDamage.basic4)}</td>
-                    <td>{weaponData.basicFourthStrike || '—'}</td>
-                </tr>
-                <tr>
-                    <th>Fifth Strike</th>
-                    <td>{roundDisplay(baseDamage.basic5)}</td>
-                    <td>{roundDisplay(weakenedDamage.basic5)}</td>
-                    <td>{roundDisplay(critDamage.basic5)}</td>
-                    <td>{weaponData.basicFifthStrike || '—'}</td>
-                </tr>
-                <tr>
-                    <th>Basic Attack (Total DMG)</th>
-                    <td>{roundDisplay(baseDamage.basicTotal)}</td>
-                    <td>{roundDisplay(weakenedDamage.basicTotal)}</td>
-                    <td>{roundDisplay(critDamage.basicTotal)}</td>
-                    <td>{weaponData.basicAttackFormula || '—'}</td>
-                </tr>
-                <tr>
-                    <th>Charged Attack</th>
-                    <td>{roundDisplay(baseDamage.basicCharged)}</td>
-                    <td>{roundDisplay(weakenedDamage.basicCharged)}</td>
-                    <td>{roundDisplay(critDamage.basicCharged)}</td>
-                    <td>{weaponData.buffBasicChargedAttackFormula || '—'}</td>
-                </tr>
-                <tr>
-                    <th>Charged Attack Additional</th>
-                    <td>{roundDisplay(baseDamage.basicCharged2)}</td>
-                    <td>{roundDisplay(weakenedDamage.basicCharged2)}</td>
-                    <td>{roundDisplay(critDamage.basicCharged2)}</td>
-                    <td>{weaponData.buffBasicChargedAttackFormula2 || '—'}</td>
-                </tr>
-                <tr>
-                    <th className={styles.titleSkill}>Active Skill:</th>
-                </tr>
-                <tr>
-                    <th>Active Skill</th>
-                    <td>{roundDisplay(baseDamage.active1)}</td>
-                    <td>{roundDisplay(weakenedDamage.active1)}</td>
-                    <td>{roundDisplay(critDamage.active1)}</td>
-                    <td>{weaponData.activeSkillFormula || '—'}</td>
-                </tr>
-                <tr>
-                    <th>Active Skill additional</th>
-                    <td>{roundDisplay(baseDamage.active2)}</td>
-                    <td>{roundDisplay(weakenedDamage.active2)}</td>
-                    <td>{roundDisplay(critDamage.active2)}</td>
-                    <td>{weaponData.activeSkillSecondFormula || '—'}</td>
-                </tr>
-                <tr>
-                    <th>Passive Skill (MC)</th>
-                    <td>{roundDisplay(baseDamage.passiveMC)}</td>
-                    <td>{roundDisplay(weakenedDamage.passiveMC)}</td>
-                    <td>{roundDisplay(critDamage.passiveMC)}</td>
-                    <td>{weaponData.passiveSkillMCFormula || '—'}</td>
-                </tr>
+                {/* Support Skill */}
+                {(baseDamage.support > 0 || companionData.supportSkillFormula) && (
+                    <tr>
+                        <th>Support Skill</th>
+                        <td>{roundDisplay(baseDamage.support)}</td>
+                        <td>{roundDisplay(weakenedDamage.support)}</td>
+                        <td>{roundDisplay(critDamage.support)}</td>
+                        <td>{companionData.supportSkillFormula || '—'}</td>
+                    </tr>
+                )}
+
+                {/* Empowered Support Skill */}
+                {(baseDamage.empoweredSupport > 0 || companionData.empoweredSupportSkillFormula) && (
+                    <tr>
+                        <th>Empowered Support Skill</th>
+                        <td>{roundDisplay(baseDamage.empoweredSupport)}</td>
+                        <td>{roundDisplay(weakenedDamage.empoweredSupport)}</td>
+                        <td>{roundDisplay(critDamage.empoweredSupport)}</td>
+                        <td>{companionData.empoweredSupportSkillFormula || '—'}</td>
+                    </tr>
+                )}
+
+                {/* Empowered Support Skill Additional */}
+                {(baseDamage.empoweredSupport2 > 0 || companionData.empoweredSupportSkillFormula2) && (
+                    <tr>
+                        <th>Empowered Support Skill Additional</th>
+                        <td>{roundDisplay(baseDamage.empoweredSupport2)}</td>
+                        <td>{roundDisplay(weakenedDamage.empoweredSupport2)}</td>
+                        <td>{roundDisplay(critDamage.empoweredSupport2)}</td>
+                        <td>{companionData.empoweredSupportSkillFormula2 || '—'}</td>
+                    </tr>
+                )}
+
+                {/* Support Skill Additional */}
+                {(baseDamage.support2 > 0 || companionData.supportSkillFormula2) && (
+                    <tr>
+                        <th>Support Skill Additional</th>
+                        <td>{roundDisplay(baseDamage.support2)}</td>
+                        <td>{roundDisplay(weakenedDamage.support2)}</td>
+                        <td>{roundDisplay(critDamage.support2)}</td>
+                        <td>{companionData.supportSkillFormula2 || '—'}</td>
+                    </tr>
+                )}
+
+                {/* Support Skill Additional 3 */}
+                {(baseDamage.support3 > 0 || companionData.supportSkillFormula3) && (
+                    <tr>
+                        <th>Support Skill Additional</th>
+                        <td>{roundDisplay(baseDamage.support3)}</td>
+                        <td>{roundDisplay(weakenedDamage.support3)}</td>
+                        <td>{roundDisplay(critDamage.support3)}</td>
+                        <td>{companionData.supportSkillFormula3 || '—'}</td>
+                    </tr>
+                )}
+
+                {/* Resonance Skill */}
+                {(baseDamage.resonance > 0 || companionData.resonanceSkillFormula) && (
+                    <tr>
+                        <th>Resonance Skill</th>
+                        <td>{roundDisplay(baseDamage.resonance)}</td>
+                        <td>{roundDisplay(weakenedDamage.resonance)}</td>
+                        <td>{roundDisplay(critDamage.resonance)}</td>
+                        <td>{companionData.resonanceSkillFormula || '—'}</td>
+                    </tr>
+                )}
+
+                {/* Resonance Skill Additional */}
+                {(baseDamage.resonance2 > 0 || companionData.resonanceSkillFormula2) && (
+                    <tr>
+                        <th>Resonance Skill Additional</th>
+                        <td>{roundDisplay(baseDamage.resonance2)}</td>
+                        <td>{roundDisplay(weakenedDamage.resonance2)}</td>
+                        <td>{roundDisplay(critDamage.resonance2)}</td>
+                        <td>{companionData.resonanceSkillFormula2 || '—'}</td>
+                    </tr>
+                )}
+
+                {/* Ardent Oath */}
+                {(baseDamage.ardentOath > 0 || companionData.ardentOathFormula) && (
+                    <tr>
+                        <th>Ardent Oath</th>
+                        <td>{roundDisplay(baseDamage.ardentOath)}</td>
+                        <td>{roundDisplay(weakenedDamage.ardentOath)}</td>
+                        <td>{roundDisplay(critDamage.ardentOath)}</td>
+                        <td>{companionData.ardentOathFormula || '—'}</td>
+                    </tr>
+                )}
+
+                {/* Passive Skills */}
+                {(baseDamage.passive1 > 0 || companionData.passiveSkillFormula1) && (
+                    <tr>
+                        <th>Passive Skill (Companion)</th>
+                        <td>{roundDisplay(baseDamage.passive1)}</td>
+                        <td>{roundDisplay(weakenedDamage.passive1)}</td>
+                        <td>{roundDisplay(critDamage.passive1)}</td>
+                        <td>{companionData.passiveSkillFormula1 || '—'}</td>
+                    </tr>
+                )}
+
+                {(baseDamage.passive2 > 0 || companionData.passiveSkillFormula2) && (
+                    <tr>
+                        <th>Passive Skill Additional (Companion)</th>
+                        <td>{roundDisplay(baseDamage.passive2)}</td>
+                        <td>{roundDisplay(weakenedDamage.passive2)}</td>
+                        <td>{roundDisplay(critDamage.passive2)}</td>
+                        <td>{companionData.passiveSkillFormula2 || '—'}</td>
+                    </tr>
+                )}
+
+                {(baseDamage.passive3 > 0 || companionData.passiveSkillFormula3) && (
+                    <tr>
+                        <th>Passive Skill Additional (Companion)</th>
+                        <td>{roundDisplay(baseDamage.passive3)}</td>
+                        <td>{roundDisplay(weakenedDamage.passive3)}</td>
+                        <td>{roundDisplay(critDamage.passive3)}</td>
+                        <td>{companionData.passiveSkillFormula3 || '—'}</td>
+                    </tr>
+                )}
+
+                {(baseDamage.passive4 > 0 || companionData.passiveSkillFormula4) && (
+                    <tr>
+                        <th>Passive Skill Additional (Companion)</th>
+                        <td>{roundDisplay(baseDamage.passive4)}</td>
+                        <td>{roundDisplay(weakenedDamage.passive4)}</td>
+                        <td>{roundDisplay(critDamage.passive4)}</td>
+                        <td>{companionData.passiveSkillFormula4 || '—'}</td>
+                    </tr>
+                )}
+
+                {(baseDamage.passive5 > 0 || companionData.passiveSkillFormula5) && (
+                    <tr>
+                        <th>Passive Skill Additional (Companion)</th>
+                        <td>{roundDisplay(baseDamage.passive5)}</td>
+                        <td>{roundDisplay(weakenedDamage.passive5)}</td>
+                        <td>{roundDisplay(critDamage.passive5)}</td>
+                        <td>{companionData.passiveSkillFormula5 || '—'}</td>
+                    </tr>
+                )}
+
+                {/* Basic Attack - всегда показываем заголовок, если есть оружие */}
+                {selectedMCWeapon && (
+                    <>
+                        <tr>
+                            <th className={styles.titleSkill}>Basic Attack:</th>
+                        </tr>
+
+                        {(baseDamage.basic1 > 0 || weaponData.basicFirstStrike) && (
+                            <tr>
+                                <th>First Strike</th>
+                                <td>{roundDisplay(baseDamage.basic1)}</td>
+                                <td>{roundDisplay(weakenedDamage.basic1)}</td>
+                                <td>{roundDisplay(critDamage.basic1)}</td>
+                                <td>{weaponData.basicFirstStrike || '—'}</td>
+                            </tr>
+                        )}
+
+                        {(baseDamage.basic2 > 0 || weaponData.basicSecondStrike) && (
+                            <tr>
+                                <th>Second Strike</th>
+                                <td>{roundDisplay(baseDamage.basic2)}</td>
+                                <td>{roundDisplay(weakenedDamage.basic2)}</td>
+                                <td>{roundDisplay(critDamage.basic2)}</td>
+                                <td>{weaponData.basicSecondStrike || '—'}</td>
+                            </tr>
+                        )}
+
+                        {(baseDamage.basic3 > 0 || weaponData.basicThirdStrike) && (
+                            <tr>
+                                <th>Third Strike</th>
+                                <td>{roundDisplay(baseDamage.basic3)}</td>
+                                <td>{roundDisplay(weakenedDamage.basic3)}</td>
+                                <td>{roundDisplay(critDamage.basic3)}</td>
+                                <td>{weaponData.basicThirdStrike || '—'}</td>
+                            </tr>
+                        )}
+
+                        {(baseDamage.basic4 > 0 || weaponData.basicFourthStrike) && (
+                            <tr>
+                                <th>Fourth Strike</th>
+                                <td>{roundDisplay(baseDamage.basic4)}</td>
+                                <td>{roundDisplay(weakenedDamage.basic4)}</td>
+                                <td>{roundDisplay(critDamage.basic4)}</td>
+                                <td>{weaponData.basicFourthStrike || '—'}</td>
+                            </tr>
+                        )}
+
+                        {(baseDamage.basic5 > 0 || weaponData.basicFifthStrike) && (
+                            <tr>
+                                <th>Fifth Strike</th>
+                                <td>{roundDisplay(baseDamage.basic5)}</td>
+                                <td>{roundDisplay(weakenedDamage.basic5)}</td>
+                                <td>{roundDisplay(critDamage.basic5)}</td>
+                                <td>{weaponData.basicFifthStrike || '—'}</td>
+                            </tr>
+                        )}
+
+                        {(baseDamage.basicTotal > 0 || weaponData.basicAttackFormula) && (
+                            <tr>
+                                <th>Basic Attack (Total DMG)</th>
+                                <td>{roundDisplay(baseDamage.basicTotal)}</td>
+                                <td>{roundDisplay(weakenedDamage.basicTotal)}</td>
+                                <td>{roundDisplay(critDamage.basicTotal)}</td>
+                                <td>{weaponData.basicAttackFormula || '—'}</td>
+                            </tr>
+                        )}
+
+                        {(baseDamage.basicCharged > 0 || weaponData.basicChargedAttack) && (
+                            <tr>
+                                <th>Charged Attack</th>
+                                <td>{roundDisplay(baseDamage.basicCharged)}</td>
+                                <td>{roundDisplay(weakenedDamage.basicCharged)}</td>
+                                <td>{roundDisplay(critDamage.basicCharged)}</td>
+                                <td>{weaponData.basicChargedAttack || '—'}</td>
+                            </tr>
+                        )}
+
+                        {(baseDamage.basicCharged2 > 0 || weaponData.basicChargedAttack2) && (
+                            <tr>
+                                <th>Charged Attack Additional</th>
+                                <td>{roundDisplay(baseDamage.basicCharged2)}</td>
+                                <td>{roundDisplay(weakenedDamage.basicCharged2)}</td>
+                                <td>{roundDisplay(critDamage.basicCharged2)}</td>
+                                <td>{weaponData.basicChargedAttack2 || '—'}</td>
+                            </tr>
+                        )}
+
+                        <tr>
+                            <th className={styles.titleSkill}>Active Skill:</th>
+                        </tr>
+
+                        {(baseDamage.active1 > 0 || weaponData.activeSkillFormula) && (
+                            <tr>
+                                <th>Active Skill</th>
+                                <td>{roundDisplay(baseDamage.active1)}</td>
+                                <td>{roundDisplay(weakenedDamage.active1)}</td>
+                                <td>{roundDisplay(critDamage.active1)}</td>
+                                <td>{weaponData.activeSkillFormula || '—'}</td>
+                            </tr>
+                        )}
+
+                        {(baseDamage.active2 > 0 || weaponData.activeSkillSecondFormula) && (
+                            <tr>
+                                <th>Active Skill Additional</th>
+                                <td>{roundDisplay(baseDamage.active2)}</td>
+                                <td>{roundDisplay(weakenedDamage.active2)}</td>
+                                <td>{roundDisplay(critDamage.active2)}</td>
+                                <td>{weaponData.activeSkillSecondFormula || '—'}</td>
+                            </tr>
+                        )}
+
+                        {(baseDamage.passiveMC > 0 || weaponData.passiveSkillMCFormula) && (
+                            <tr>
+                                <th>Passive Skill (MC)</th>
+                                <td>{roundDisplay(baseDamage.passiveMC)}</td>
+                                <td>{roundDisplay(weakenedDamage.passiveMC)}</td>
+                                <td>{roundDisplay(critDamage.passiveMC)}</td>
+                                <td>{weaponData.passiveSkillMCFormula || '—'}</td>
+                            </tr>
+                        )}
+                    </>
+                )}
                 </tbody>
             </table>
         </section>

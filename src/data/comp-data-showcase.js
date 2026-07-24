@@ -309,35 +309,35 @@ While awakened as [Deity of Niava], you and Zayne deal 8% additional DMG.`,
     {
         companionName: "Zayne: Master of Fate",
         cardIds: [291, 292],
-        supportSkillFormula: "260 + 348% ATK DMG",
+        supportSkillFormula: "260 + 348% ATK",
         supportSkillStats: {
             base: 260,
             atk: 348,
             hp: 0,
             def: 0
         },
-        empoweredSupportSkillFormula: "372 + 492% ATK DMG",
+        empoweredSupportSkillFormula: "372 + 492% ATK",
         empoweredSupportSkillStats: {
             base: 372,
             atk: 492,
             hp: 0,
             def: 0
         },
-        resonanceSkillFormula: "632 + 842% ATK DMG",
+        resonanceSkillFormula: "632 + 842% ATK",
         resonanceSkillStats: {
             base: 632,
             atk: 842,
             hp: 0,
             def: 0
         },
-        ardentOathFormula: "1440 + 1920% ATK DMG",
+        ardentOathFormula: "1440 + 1920% ATK",
         ardentOathStats: {
             base: 1440,
             atk: 1920,
             hp: 0,
             def: 0
         },
-        passiveSkillFormula1: "233 + 310% ATK DMG",
+        passiveSkillFormula1: "233 + 310% ATK",
         passiveSkillStats1: {
             base: 233,
             atk: 310,
@@ -568,7 +568,7 @@ This effect can trigger only once per use of Piercing Rain.`,
             hp: 0,
             def: 0
         },
-        ardentOathFormula: "1440 + 1920%",
+        ardentOathFormula: "1440 + 1920% ATK",
         ardentOathStats: {
             base: 1440,
             atk: 1920,
@@ -1669,7 +1669,7 @@ export const weaponDataShowcaseSpecific = [
             def: 0
         },
         passiveSkillMCFormula: "135 + 72% ATK + 6.5% of Max HP",
-        passiveSkillMCStats2: {
+        passiveSkillMCStats: {
             base: 135,
             atk: 72,
             hp: 6.5,
