@@ -15,9 +15,9 @@ function TimezoneButton() {
     const nextTimezone = timezones[nextIndex];
 
     const getCurrentLabel = () => {
-        return timezone === '+02:00' ? 'EU' :
-            timezone === '+08:00' ? 'Asia' :
-                'NA';
+        return timezone === '+02:00' ? 'EU time' :
+            timezone === '+08:00' ? 'Asia time' :
+                'NA time';
     };
 
     return (

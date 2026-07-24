@@ -29,21 +29,35 @@ const STORAGE_KEYS = [
     'inventory_selected_crystal_color',
 ];
 
+// Функция для проверки, соответствует ли ключ паттерну
+const matchesPattern = (key, pattern) => {
+    if (typeof pattern === 'string') {
+        return key === pattern;
+    }
+    if (pattern instanceof RegExp) {
+        return pattern.test(key);
+    }
+    return false;
+};
+
+// Функция для получения всех ключей, которые нужно очистить
+const getKeysToClear = () => {
+    const keysToClear = [];
+    for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        const shouldClear = STORAGE_KEYS.some(pattern => matchesPattern(key, pattern));
+        if (shouldClear) {
+            keysToClear.push(key);
+        }
+    }
+    return keysToClear;
+};
+
 function DataManager() {
     const [isExporting, setIsExporting] = useState(false);
     const [isImporting, setIsImporting] = useState(false);
+    const [isClearing, setIsClearing] = useState(false);
     const fileInputRef = React.useRef();
-
-    // Функция для проверки, соответствует ли ключ паттерну
-    const matchesPattern = (key, pattern) => {
-        if (typeof pattern === 'string') {
-            return key === pattern;
-        }
-        if (pattern instanceof RegExp) {
-            return pattern.test(key);
-        }
-        return false;
-    };
 
     // Экспорт данных
     const exportData = () => {
@@ -192,6 +206,60 @@ function DataManager() {
         reader.readAsText(file);
     };
 
+    // Очистка всех данных
+    const clearAllData = () => {
+        const keysToClear = getKeysToClear();
+
+        if (keysToClear.length === 0) {
+            alert('ℹ️ No data found to clear.');
+            return;
+        }
+
+        const confirmMessage =
+            `⚠️ WARNING: This will permanently delete ALL your saved data!\n\n` +
+            `📦 Found ${keysToClear.length} items to delete:\n` +
+            keysToClear.slice(0, 10).join('\n') +
+            (keysToClear.length > 10 ? `\n... and ${keysToClear.length - 10} more` : '') +
+            `\n\nThis includes:\n` +
+            `• All My Memories data (levels, ranks, availability, ascension)\n` +
+            `• All My Protocores\n` +
+            `• All My Resources\n` +
+            `• All Showcase Teams\n\n` +
+            `Are you absolutely sure you want to continue?`;
+
+        if (!window.confirm(confirmMessage)) {
+            return;
+        }
+
+        // Второе подтверждение для безопасности
+        if (!window.confirm('⚠️ FINAL WARNING: This action cannot be undone! Are you sure?')) {
+            return;
+        }
+
+        setIsClearing(true);
+
+        try {
+            let clearedCount = 0;
+            for (const key of keysToClear) {
+                localStorage.removeItem(key);
+                clearedCount++;
+            }
+
+            alert(`✅ Successfully cleared ${clearedCount} items!\n\n🔄 Refreshing page to apply changes...`);
+
+            // Перезагружаем страницу через 1 секунду
+            setTimeout(() => {
+                window.location.reload();
+            }, 1000);
+
+        } catch (error) {
+            console.error('Clear error:', error);
+            alert('❌ Failed to clear data. See console for details.');
+        } finally {
+            setIsClearing(false);
+        }
+    };
+
     const triggerFileInput = () => {
         fileInputRef.current?.click();
     };
@@ -224,6 +292,14 @@ function DataManager() {
                     onChange={importData}
                     className={styles.fileInput}
                 />
+
+                <button
+                    className={`${styles.button} ${styles.clearButton}`}
+                    onClick={clearAllData}
+                    disabled={isClearing}
+                >
+                    {isClearing ? '⏳ Clearing...' : '🗑️ Clear All Data'}
+                </button>
             </div>
 
             <div className={styles.info}>
@@ -231,6 +307,8 @@ function DataManager() {
                     💡 Exports all your data (My Memories, My Protocores, My Resources, Showcase Teams) to a JSON file.
                     <br />
                     Import will overwrite ALL existing data. Make sure to backup first!
+                    <br />
+                    ⚠️ Clear All Data will permanently delete ALL your saved data. This cannot be undone!
                 </small>
             </div>
         </div>
