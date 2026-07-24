@@ -8,18 +8,63 @@ export const calculateDamage = (stats, formulaStats) => {
         + (def * defPercent / 100);
 };
 
-export const calculateWeakenedDamage = (baseDamage, dmgBoostToWeakened = 0, perfectMatch = 0) => {
-    return baseDamage * (1 + (dmgBoostToWeakened + perfectMatch) / 100);
-};
-
-export const calculateCritDamage = (baseDamage, critDmg = 0) => {
-    return baseDamage * (1 + critDmg / 100);
-};
-
-export const createDamageCalculator = (formulaStats, defaultMultiplier = 1) => {
-    return (stats, multiplier = defaultMultiplier) => {
-        return calculateDamage(stats, formulaStats, multiplier);
+export const createDamageCalculator = (formulaStats) => {
+    return (stats) => {
+        return calculateDamage(stats, formulaStats);
     };
 };
 
+export const calculateDamageWithBonuses = (rawDamage, bonuses = {}, isArdentOath = false) => {
+    const {
+        attributeBonus = 0,
+        teamDmgBonus = 0,
+        oathStrength = 0,
+        critDmg = 0,
+        weakenedDmg = 0,
+    } = bonuses;
 
+    // Базовый множитель (без крита и weakened)
+    let baseMultiplier = 1 + (attributeBonus + teamDmgBonus) / 100;
+
+    // Для Ardent Oath добавляем oathStrength
+    if (isArdentOath) {
+        baseMultiplier += oathStrength / 100;
+    }
+
+    // Множитель для Weakened DMG
+    const weakenedMultiplier = baseMultiplier + weakenedDmg / 100;
+
+    // Множитель для Crit DMG
+    const critMultiplier = baseMultiplier + critDmg / 100;
+
+    return {
+        base: rawDamage * baseMultiplier,
+        weakened: rawDamage * weakenedMultiplier,
+        crit: rawDamage * critMultiplier,
+    };
+};
+
+export const calculateAllDamageTypes = (rawDamageMap, bonuses = {}, ardentOathSkills = []) => {
+    const baseDamage = {};
+    const weakenedDamage = {};
+    const critDamage = {};
+
+    Object.keys(rawDamageMap).forEach(skillName => {
+        const rawDamage = rawDamageMap[skillName];
+        if (rawDamage === 0) {
+            baseDamage[skillName] = 0;
+            weakenedDamage[skillName] = 0;
+            critDamage[skillName] = 0;
+            return;
+        }
+
+        const isArdentOath = ardentOathSkills.includes(skillName);
+        const result = calculateDamageWithBonuses(rawDamage, bonuses, isArdentOath);
+
+        baseDamage[skillName] = result.base;
+        weakenedDamage[skillName] = result.weakened;
+        critDamage[skillName] = result.crit;
+    });
+
+    return { baseDamage, weakenedDamage, critDamage };
+};

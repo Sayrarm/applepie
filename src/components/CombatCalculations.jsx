@@ -7,7 +7,10 @@ import {
 import {Range} from 'react-range';
 import styles from "./CombatCalculations.module.css";
 import React, {useState, useMemo} from "react";
-import {calculateCritDamage, calculateWeakenedDamage, createDamageCalculator} from "../data/damageCalculator.js";
+import {
+    calculateAllDamageTypes,
+    createDamageCalculator
+} from "../data/damageCalculator.js";
 import {solar4Stars} from "../data/solar-4-star-info.js";
 import { getCardRank } from "../data/cardUtils.js";
 
@@ -117,139 +120,121 @@ function CombatCalculations({stats, selectedCompanion, selectedMCWeapon, solarCa
     // Добавляем бонусы к DMG Boost to Weakened
     const totalDmgBoostToWeakened = dmgBoostToWeakened + perfectMatchBonus;
 
-    // Базовый урон для всех способностей
-    const baseDamage = {
+    // Вычисляем team DMG бонус от Default Buffs
+    const teamDmgBonus = useMemo(() => {
+        if (!hasAnySolarPair || !defaultBuffs) return 0;
+
+        let bonus = 0;
+
+        // eidolon0 - всегда активен (Starring Effect)
+        bonus += defaultBuffs.buffEidolon0Stats?.teamDMG || 0;
+
+        // eidolon3 - активен только если solarRank >= 3
+        if (solarRank >= 3) {
+            bonus += defaultBuffs.buffEidolon3Stats?.teamDMG || 0;
+        }
+
+        return bonus;
+    }, [hasAnySolarPair, defaultBuffs, solarRank]);
+
+    // Базовый урон (сырой, без бонусов)
+    const rawDamage = {
         // Companion skills (из companionData)
         support: companionData.supportSkillStats
-            ? createDamageCalculator(companionData.supportSkillStats)(companionStats) * (1 + attributeBonus / 100)
+            ? createDamageCalculator(companionData.supportSkillStats)(companionStats)
             : 0,
         support2: companionData.supportSkillStats2
-            ? createDamageCalculator(companionData.supportSkillStats2)(companionStats) * (1 + attributeBonus / 100)
+            ? createDamageCalculator(companionData.supportSkillStats2)(companionStats)
             : 0,
         support3: companionData.supportSkillStats3
-            ? createDamageCalculator(companionData.supportSkillStats3)(companionStats) * (1 + attributeBonus / 100)
+            ? createDamageCalculator(companionData.supportSkillStats3)(companionStats)
             : 0,
         empoweredSupport: companionData.empoweredSupportSkillStats
-            ? createDamageCalculator(companionData.empoweredSupportSkillStats)(companionStats) * (1 + attributeBonus / 100)
+            ? createDamageCalculator(companionData.empoweredSupportSkillStats)(companionStats)
             : 0,
         empoweredSupport2: companionData.empoweredSupportSkillStats2
-            ? createDamageCalculator(companionData.empoweredSupportSkillStats2)(companionStats) * (1 + attributeBonus / 100)
+            ? createDamageCalculator(companionData.empoweredSupportSkillStats2)(companionStats)
             : 0,
         resonance: companionData.resonanceSkillStats
-            ? createDamageCalculator(companionData.resonanceSkillStats)(companionStats) * (1 + attributeBonus / 100)
+            ? createDamageCalculator(companionData.resonanceSkillStats)(companionStats)
             : 0,
         resonance2: companionData.resonanceSkillStats2
-            ? createDamageCalculator(companionData.resonanceSkillStats2)(companionStats) * (1 + attributeBonus / 100)
+            ? createDamageCalculator(companionData.resonanceSkillStats2)(companionStats)
             : 0,
         ardentOath: companionData.ardentOathStats
-            ? createDamageCalculator(companionData.ardentOathStats)(companionStats) * (1 + oathStrength / 100) * (1 + attributeBonus / 100)
+            ? createDamageCalculator(companionData.ardentOathStats)(companionStats)
             : 0,
         passive1: companionData.passiveSkillStats1
-            ? createDamageCalculator(companionData.passiveSkillStats1)(companionStats) * (1 + attributeBonus / 100)
+            ? createDamageCalculator(companionData.passiveSkillStats1)(companionStats)
             : 0,
         passive2: companionData.passiveSkillStats2
-            ? createDamageCalculator(companionData.passiveSkillStats2)(companionStats) * (1 + attributeBonus / 100)
+            ? createDamageCalculator(companionData.passiveSkillStats2)(companionStats)
             : 0,
         passive3: companionData.passiveSkillStats3
-            ? createDamageCalculator(companionData.passiveSkillStats3)(companionStats) * (1 + attributeBonus / 100)
+            ? createDamageCalculator(companionData.passiveSkillStats3)(companionStats)
             : 0,
         passive4: companionData.passiveSkillStats4
-            ? createDamageCalculator(companionData.passiveSkillStats4)(companionStats) * (1 + attributeBonus / 100)
+            ? createDamageCalculator(companionData.passiveSkillStats4)(companionStats)
             : 0,
         passive5: companionData.passiveSkillStats5
-            ? createDamageCalculator(companionData.passiveSkillStats5)(companionStats) * (1 + attributeBonus / 100)
+            ? createDamageCalculator(companionData.passiveSkillStats5)(companionStats)
             : 0,
 
         // MC Weapon skills (из weaponData)
         basicTotal: weaponData.basicAttackFormula
-            ? createDamageCalculator(weaponData.basicAttackStats)(companionStats) * (1 + attributeBonus / 100)
+            ? createDamageCalculator(weaponData.basicAttackStats)(companionStats)
             : 0,
         basic1: weaponData.basicFirstStrikeStats
-            ? createDamageCalculator(weaponData.basicFirstStrikeStats)(companionStats) * (1 + attributeBonus / 100)
+            ? createDamageCalculator(weaponData.basicFirstStrikeStats)(companionStats)
             : 0,
         basic2: weaponData.basicSecondStrikeStats
-            ? createDamageCalculator(weaponData.basicSecondStrikeStats)(companionStats) * (1 + attributeBonus / 100)
+            ? createDamageCalculator(weaponData.basicSecondStrikeStats)(companionStats)
             : 0,
         basic3: weaponData.basicThirdStrikeStats
-            ? createDamageCalculator(weaponData.basicThirdStrikeStats)(companionStats) * (1 + attributeBonus / 100)
+            ? createDamageCalculator(weaponData.basicThirdStrikeStats)(companionStats)
             : 0,
         basic4: weaponData.basicFourthStrikeStats
-            ? createDamageCalculator(weaponData.basicFourthStrikeStats)(companionStats) * (1 + attributeBonus / 100)
+            ? createDamageCalculator(weaponData.basicFourthStrikeStats)(companionStats)
             : 0,
         basic5: weaponData.basicFifthStrikeStats
-            ? createDamageCalculator(weaponData.basicFifthStrikeStats)(companionStats) * (1 + attributeBonus / 100)
+            ? createDamageCalculator(weaponData.basicFifthStrikeStats)(companionStats)
             : 0,
         basicCharged: weaponData.basicChargedAttackStats
-            ? createDamageCalculator(weaponData.basicChargedAttackStats)(companionStats) * (1 + attributeBonus / 100)
+            ? createDamageCalculator(weaponData.basicChargedAttackStats)(companionStats)
             : 0,
         basicCharged2: weaponData.basicChargedAttackStats2
-            ? createDamageCalculator(weaponData.basicChargedAttackStats2)(companionStats) * (1 + attributeBonus / 100)
+            ? createDamageCalculator(weaponData.basicChargedAttackStats2)(companionStats)
             : 0,
         active1: weaponData.activeSkillStats
-            ? createDamageCalculator(weaponData.activeSkillStats)(companionStats) * (1 + attributeBonus / 100)
+            ? createDamageCalculator(weaponData.activeSkillStats)(companionStats)
             : 0,
         active2: weaponData.activeSkillSecondStats
-            ? createDamageCalculator(weaponData.activeSkillSecondStats)(companionStats) * (1 + attributeBonus / 100)
+            ? createDamageCalculator(weaponData.activeSkillSecondStats)(companionStats)
             : 0,
         passiveMC: weaponData.passiveSkillMCStats
-            ? createDamageCalculator(weaponData.passiveSkillMCStats)(companionStats) * (1 + attributeBonus / 100)
+            ? createDamageCalculator(weaponData.passiveSkillMCStats)(companionStats)
             : 0,
     };
 
-    // Рассчитываем Weakened DMG для каждой способности
-    const weakenedDamage = {
-        support: calculateWeakenedDamage(baseDamage.support, totalDmgBoostToWeakened),
-        support2: calculateWeakenedDamage(baseDamage.support2, totalDmgBoostToWeakened),
-        support3: calculateWeakenedDamage(baseDamage.support3, totalDmgBoostToWeakened),
-        empoweredSupport: calculateWeakenedDamage(baseDamage.empoweredSupport, totalDmgBoostToWeakened),
-        empoweredSupport2: calculateWeakenedDamage(baseDamage.empoweredSupport2, totalDmgBoostToWeakened),
-        resonance: calculateWeakenedDamage(baseDamage.resonance, totalDmgBoostToWeakened),
-        resonance2: calculateWeakenedDamage(baseDamage.resonance2, totalDmgBoostToWeakened),
-        ardentOath: calculateWeakenedDamage(baseDamage.ardentOath, totalDmgBoostToWeakened),
-        passive1: calculateWeakenedDamage(baseDamage.passive1, totalDmgBoostToWeakened),
-        passive2: calculateWeakenedDamage(baseDamage.passive2, totalDmgBoostToWeakened),
-        passive3: calculateWeakenedDamage(baseDamage.passive3, totalDmgBoostToWeakened),
-        passive4: calculateWeakenedDamage(baseDamage.passive4, totalDmgBoostToWeakened),
-        passive5: calculateWeakenedDamage(baseDamage.passive5, totalDmgBoostToWeakened),
-        basicTotal: calculateWeakenedDamage(baseDamage.basicTotal, totalDmgBoostToWeakened),
-        basic1: calculateWeakenedDamage(baseDamage.basic1, totalDmgBoostToWeakened),
-        basic2: calculateWeakenedDamage(baseDamage.basic2, totalDmgBoostToWeakened),
-        basic3: calculateWeakenedDamage(baseDamage.basic3, totalDmgBoostToWeakened),
-        basic4: calculateWeakenedDamage(baseDamage.basic4, totalDmgBoostToWeakened),
-        basic5: calculateWeakenedDamage(baseDamage.basic5, totalDmgBoostToWeakened),
-        basicCharged: calculateWeakenedDamage(baseDamage.basicCharged, totalDmgBoostToWeakened),
-        basicCharged2: calculateWeakenedDamage(baseDamage.basicCharged2, totalDmgBoostToWeakened),
-        active1: calculateWeakenedDamage(baseDamage.active1, totalDmgBoostToWeakened),
-        active2: calculateWeakenedDamage(baseDamage.active2, totalDmgBoostToWeakened),
-        passiveMC: calculateWeakenedDamage(baseDamage.passiveMC, totalDmgBoostToWeakened),
+
+// Собираем все бонусы в один объект
+    const bonuses = {
+        attributeBonus,
+        teamDmgBonus,
+        oathStrength,
+        critDmg,
+        weakenedDmg: totalDmgBoostToWeakened,
     };
 
-    const critDamage = {
-        support: calculateCritDamage(baseDamage.support, critDmg),
-        support2: calculateCritDamage(baseDamage.support2, critDmg),
-        support3: calculateCritDamage(baseDamage.support3, critDmg),
-        empoweredSupport: calculateCritDamage(baseDamage.empoweredSupport, critDmg),
-        empoweredSupport2: calculateCritDamage(baseDamage.empoweredSupport2, critDmg),
-        resonance: calculateCritDamage(baseDamage.resonance, critDmg),
-        resonance2: calculateCritDamage(baseDamage.resonance2, critDmg),
-        ardentOath: calculateCritDamage(baseDamage.ardentOath, critDmg),
-        passive1: calculateCritDamage(baseDamage.passive1, critDmg),
-        passive2: calculateCritDamage(baseDamage.passive2, critDmg),
-        passive3: calculateCritDamage(baseDamage.passive3, critDmg),
-        passive4: calculateCritDamage(baseDamage.passive4, critDmg),
-        passive5: calculateCritDamage(baseDamage.passive5, critDmg),
-        basicTotal: calculateCritDamage(baseDamage.basicTotal, critDmg),
-        basic1: calculateCritDamage(baseDamage.basic1, critDmg),
-        basic2: calculateCritDamage(baseDamage.basic2, critDmg),
-        basic3: calculateCritDamage(baseDamage.basic3, critDmg),
-        basic4: calculateCritDamage(baseDamage.basic4, critDmg),
-        basic5: calculateCritDamage(baseDamage.basic5, critDmg),
-        basicCharged: calculateCritDamage(baseDamage.basicCharged, critDmg),
-        basicCharged2: calculateCritDamage(baseDamage.basicCharged2, critDmg),
-        active1: calculateCritDamage(baseDamage.active1, critDmg),
-        active2: calculateCritDamage(baseDamage.active2, critDmg),
-        passiveMC: calculateWeakenedDamage(baseDamage.passiveMC, critDmg),
-    };
+// Навыки, которые являются Ardent Oath (для них добавляется oathStrength)
+    const ardentOathSkills = ['ardentOath'];
+
+// Рассчитываем все типы урона одной функцией
+    const { baseDamage, weakenedDamage, critDamage } = calculateAllDamageTypes(
+        rawDamage,
+        bonuses,
+        ardentOathSkills
+    );
 
     // Вспомогательная функция для округления при отображении
     const roundDisplay = (value) => Math.round(value);
