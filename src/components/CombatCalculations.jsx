@@ -297,6 +297,7 @@ function CombatCalculations({stats, selectedCompanion, selectedMCWeapon, solarCa
                 <div className={styles.bonusRow}>
                     <label className={styles.checkboxLabel}>
                         <input
+                            className={styles.checkbox}
                             type="checkbox"
                             checked={isAttributeBonus}
                             onChange={(e) => setIsAttributeBonus(e.target.checked)}
@@ -349,6 +350,7 @@ function CombatCalculations({stats, selectedCompanion, selectedMCWeapon, solarCa
                 <div className={styles.bonusRow}>
                     <label className={styles.checkboxLabel}>
                         <input
+                            className={styles.checkbox}
                             type="checkbox"
                             checked={isPerfectMatch}
                             onChange={(e) => setIsPerfectMatch(e.target.checked)}
