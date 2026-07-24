@@ -59,17 +59,36 @@ function CardProtocores({cardId}) {
         return null;
     }, []);
 
+    // Функция для удаления протокора со всех карточек
+    const removeProtocoreFromAllCards = useCallback((protocoreId) => {
+        // Проходим по всем карточкам в memoriesData
+        for (const card of memoriesData) {
+            const cardProtocores = JSON.parse(localStorage.getItem(`card_protocores_${card.id}`) || '[]');
+            const filtered = cardProtocores.filter(p => p.id !== protocoreId);
+
+            if (filtered.length !== cardProtocores.length) {
+                // Если протокор был найден и удален, сохраняем изменения
+                localStorage.setItem(`card_protocores_${card.id}`, JSON.stringify(filtered));
+
+                // Отправляем событие об обновлении
+                window.dispatchEvent(new CustomEvent('protocoresUpdated', {
+                    detail: {cardId: card.id, protocores: filtered}
+                }));
+            }
+        }
+    }, []);
+
     // Функция для сохранения в localStorage
-    const saveProtocores = (protocores) => {
+    const saveProtocores = useCallback((protocores) => {
         if (!cardId) return;
         localStorage.setItem(`card_protocores_${cardId}`, JSON.stringify(protocores));
         window.dispatchEvent(new CustomEvent('protocoresUpdated', {
             detail: {cardId, protocores}
         }));
-    };
+    }, [cardId]);
 
     // Проверка, можно ли добавить протокор
-    const canAddProtocore = (protocore) => {
+    const canAddProtocore = useCallback((protocore) => {
         // 1. Проверка: максимум 2 протокора
         if (selectedProtocores.length >= 2) {
             alert('Maximum 2 protocores per card');
@@ -110,29 +129,33 @@ function CardProtocores({cardId}) {
         }
 
         return true;
-    };
+    }, [selectedProtocores, cardPlacement, cardStella]);
 
     // Добавить протокор
-    const handleAddProtocore = (protocoreId) => {
+    const handleAddProtocore = useCallback((protocoreId) => {
         const protocore = allProtocores.find(p => p.id === protocoreId);
         if (!protocore) return;
 
         if (!canAddProtocore(protocore)) return;
 
+        // Сначала удаляем протокор со всех карточек (если он где-то есть)
+        removeProtocoreFromAllCards(protocoreId);
+
+        // Затем добавляем на текущую карточку
         const updatedProtocores = [...selectedProtocores, protocore];
         setSelectedProtocores(updatedProtocores);
         saveProtocores(updatedProtocores);
 
         // Закрываем модалку после добавления
         protocoreModalRef.current?.closeModal?.();
-    };
+    }, [allProtocores, canAddProtocore, removeProtocoreFromAllCards, selectedProtocores, saveProtocores]);
 
     // Удалить протокор
-    const handleRemoveProtocore = (protocoreId) => {
+    const handleRemoveProtocore = useCallback((protocoreId) => {
         const updatedProtocores = selectedProtocores.filter(p => p.id !== protocoreId);
         setSelectedProtocores(updatedProtocores);
         saveProtocores(updatedProtocores);
-    };
+    }, [selectedProtocores, saveProtocores]);
 
     // Фильтруем протокоры по совместимости с карточкой
     const filterCompatible = useCallback((protocores) => {
