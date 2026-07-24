@@ -18,6 +18,7 @@ import {useSearch} from '../hooks/useSearch';
 import {useSort} from '../hooks/useSort';
 import {useFilter} from '../hooks/useFilter';
 import {Button} from "antd";
+import CombatCalculations from "./CombatCalculations.jsx";
 
 // Ключ для localStorage
 const STORAGE_KEY = 'showcase_teams';
@@ -415,8 +416,9 @@ function Showcase() {
                         <div className={styles.cardSlotEquipped}>
                             {/* Информация о карточке — уровень и ранг */}
                             <div className={styles.cardInfo}>
-                                <span className={styles.cardLevel}>Lv.{cardData?.level || 1} </span>
+                                <span className={styles.cardLevel}>Lv.{cardData?.level || 1} {cardData?.isAscended && <span className={styles.ascendMark}>✦</span>}</span>
                                 <span className={styles.cardRank}>Rank {cardData?.rank || 0} </span>
+
                             </div>
 
                             <div className={styles.cardWrapper}>
@@ -663,7 +665,16 @@ function Showcase() {
                         </div>
                     </div>
                 </section>
+
+
             </div>
+
+            <CombatCalculations
+                stats={finalStats}
+                selectedCompanion={currentTeam.selectedCompanion}
+                selectedMCWeapon={currentTeam.selectedMCWeapon}
+                solarCards={currentTeam.solarCards}
+            />
 
             {/* Модалка выбора компаньона */}
             <ModalWindow

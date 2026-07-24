@@ -117,17 +117,17 @@ The shining moonlight of those sealed memories is the light that always leads hi
         passiveSkill: "Moonfall",
         passiveSkillImg: "../assets/battle-icons/a2_skill_st_2106_01.png",
         passiveSkillText: `
-When you and Xavier release basic attacks and skills, a stack of [Phasing Moon] is added upon hitting the enemy. In particular,1 stack of [Phasing Moon] is added every time Xavier scores a hit. After reaching 4 stacks of [Phasing Moon], a beam of Moonlight will fall on the enemy, dealing 92+49% ATK+194% DEF DMG within a small area, and reducing the movement speed of enemies within the area by 25%.
+When you and Xavier release basic attacks and skills, a stack of [Phasing Moon] is added upon hitting the enemy. In particular, 1 stack of [Phasing Moon] is added every time Xavier scores a hit. After reaching 4 stacks of [Phasing Moon], a beam of Moonlight will fall on the enemy, dealing 92+49% ATK+194% DEF DMG within a small area, and reducing the movement speed of enemies within the area by 25%.
         `,
         basicAttack: "Moonburn",
         basicAttackImg: "../assets/battle-icons/a2_skill_pl_1901_02_ST_2106.png",
         basicAttackText: `
 Wield dual guns for a combo up to 5 hits. The final Basic Attack inflicts multiple instances of DMG. 
-First Strike:55+29% ATK+117% DEF.
+First Strike: 55+29% ATK+117% DEF.
 Second Strike: 50+26% ATK+105% DEF 
 Third Strike: 66+35% ATK+140% DEF 
-Fourth Strike:72+38% ATK+152% DEF 
-Fifth Strike:77+41% ATK+163% DEF
+Fourth Strike: 72+38% ATK+152% DEF 
+Fifth Strike: 77+41% ATK+163% DEF
 
 Charged Attack will knock back nearby enemies, dealing AoE DMG equal to 150+80% ATK+317% DEF.
         `,
@@ -144,16 +144,20 @@ Attack the target with a 4-hit combo, dealing DMG equal to 403+215% ATK +852% DE
 [Moontide] triggers [Moonfall] with each successful hit.
         `,
         eidolon0: `
-The team deals 8% more DMG and takes 8% less DMG. The enemy's [Moonstruck] state duration is extended by 3s.        
+The team deals 8% more DMG and takes 8% less DMG. 
+The enemy's [Moonstruck] state duration is extended by 3s.        
         `,
         eidolon1: `
-Increases Ardent Oath charge by 20%. [Moonlight] deals 25% more DMG and applies 1 stack of [Phasing Moon] to the target.
+Increases Ardent Oath charge by 20%. 
+[Moonlight] deals 25% more DMG and applies 1 stack of [Phasing Moon] to the target.
         `,
         eidolon2: `
-Energy Charge limit is raised by 1. When [Moonlight] is triggered, your Active Skill cooldown is reduced by 0.5s and a small amount of Energy Charge is restored.
+Energy Charge limit is raised by 1. 
+When [Moonlight] is triggered, your Active Skill cooldown is reduced by 0.5s and a small amount of Energy Charge is restored.
         `,
         eidolon3: `
-The team deals 8% more DMG. When your Active Skills and Charged Attacks hit the first target inflicted with [Moonstruck], directly trigger [Moonlight]. When Moonlight scores a critical hit, it deals an additional 30% CRIT DMG.
+The team deals 8% more DMG. 
+When your Active Skills and Charged Attacks hit the first target inflicted with [Moonstruck], directly trigger [Moonlight]. When Moonlight scores a critical hit, it deals an additional 30% CRIT DMG.
         `,
     },
     {
@@ -191,8 +195,8 @@ You and Xavier brandish a blade and attack together, dealing massive DMG equal t
         passiveSkill: "Radiant Star",
         passiveSkillImg: "../assets/battle-icons/a2_skill_st_2103_01.png",
         passiveSkillText: `
-When you use an Active Skill to score a hit while inside
-[Luminescent Field], [Luminescent Resonance] is triggered. [Luminescent Resonance]: Resonate with light and unleash an attack around yourself, dealing AoE DMG equal to 150+200% ATK.
+When you use an Active Skill to score a hit while inside [Luminescent Field], [Luminescent Resonance] is triggered. 
+[Luminescent Resonance]: Resonate with light and unleash an attack around yourself, dealing AoE DMG equal to 150+200% ATK.
         `,
         basicAttack: "Slicing Light",
         basicAttackImg: "../assets/battle-icons/a2_skill_pl_1904_02_ST_2103.png",
@@ -200,7 +204,7 @@ When you use an Active Skill to score a hit while inside
 Wield the Sword for a multi-hit combo.
 First Strike: 60+80% ATK DMG 
 Second Strike: 60+80% ATK DMG 
-Third Strike:72+96% ATK DMG 
+Third Strike: 72+96% ATK DMG 
 Fourth Strike: 96+129% ATK DMG
 
 Charged Attack will unleash a single forward slash, inflicting AoE DMG equal to 118+157% ATK.
@@ -218,16 +222,20 @@ After a brief charge-up, lunge forward and unleash a slashing attack on the enem
 [Luminescent Resonance] recovers 0.35 [Energy Charge] for each enemy hit.
         `,
         eidolon0: `
-The team deals 8% more DMG and takes 8% less DMG. When fighting together with Lightseeker, your Active Skill DMG is increased by 25%.        
+The team deals 8% more DMG and takes 8% less DMG. 
+When fighting together with Lightseeker, your Active Skill DMG is increased by 25%.        
         `,
         eidolon1: `
-Increases Ardent Oath charge by 20%. When fighting alongside Lightseeker, each time [Luminescent Resonance] triggers, [Radiant Blade]'s duration is extended by 2s.
+Increases Ardent Oath charge by 20%. 
+When fighting alongside Lightseeker, each time [Luminescent Resonance] triggers, [Radiant Blade]'s duration is extended by 2s.
         `,
         eidolon2: `
-Energy Charge limit is raised by 1. When you and Lightseeker are in [Luminescent Field], take 10% less DMG and gain increased Interruption Resistance.
+Energy Charge limit is raised by 1. 
+When you and Lightseeker are in [Luminescent Field], take 10% less DMG and gain increased Interruption Resistance.
         `,
         eidolon3: `
-Increases team DMG by 8%. When fighting together with Lightseeker in the [Luminescent Field] and hitting enemies with a Charged Attack, the cooldown of your Active Skill will be reduced by 2s.
+Increases team DMG by 8%. 
+When fighting together with Lightseeker in the [Luminescent Field] and hitting enemies with a Charged Attack, the cooldown of your Active Skill will be reduced by 2s.
         `,
     },
     {
@@ -254,7 +262,7 @@ You quickly attack the enemy, dealing 1 [Protocore DMG]. Xavier then chases down
         ardentOathCost: "100% Oath Energy",
         ardentOathImg: "../assets/battle-icons/a2_skill_st_2104_04.png",
         ardentOathText: `
-Your Evol resonates with Xavier's. You gather the energy from the Protofield and work together to perform a powerful slash that deals DMG equal to 1200+1600 ATK DMG. 
+Your Evol resonates with Xavier's. You gather the energy from the Protofield and work together to perform a powerful slash that deals DMG equal to 1200+1600% ATK DMG. 
         `,
         passiveSkill: "Light Amplification",
         passiveSkillImg: "../assets/battle-icons/a2_skill_st_2104_01.png",
@@ -374,17 +382,16 @@ When [Golden Arrows] hit an enemy, they leave an [Arrow Mark]. [Arrow Mark] can 
 When all [Divine Shackles] are removed, you can cast [Bind Gaze].
 [Bind Gaze]: You remove the Hidden Divinity covering Zayne's eyes. Zayne opens his divine eyes, clearing all [Golden Arrows], [Remnant Feathers], and [Arrow Marks].
 You and Zayne awaken as the [Deity of Niava] for 10s During this time, enemies' [Soul Rifts] are revealed.
-[Soul Rift]: Your Charged Attack will shatter an enemy's [Soul Rift] on hit, dealing DMG equal to 315+168%
-ATK+15.1% of Max HP. During the [Deity of Niava] state, enemies' [Soul Rifts] will be revealed again 6s after being shattered. Additionally, when your Active Skill hits an enemy for the first time, if that enemy has no [Soul Rift], the interval before its [Soul Rift] is revealed again will be reduced by 0.5s.
+[Soul Rift]: Your Charged Attack will shatter an enemy's [Soul Rift] on hit, dealing DMG equal to 315+168% ATK+15.1% of Max HP. During the [Deity of Niava] state, enemies' [Soul Rifts] will be revealed again 6s after being shattered. Additionally, when your Active Skill hits an enemy for the first time, if that enemy has no [Soul Rift], the interval before its [Soul Rift] is revealed again will be reduced by 0.5s.
 After [Deity of Niava] ends, Zayne will once again have 3 stacks of [Divine Shackles], and all [Soul Rifts] will be cleared.
         `,
         basicAttack: "Order Rupture",
         basicAttackImg: "../assets/battle-icons/a2_skill_pl_1902_01_YS_2207.png",
         basicAttackText: `
 Wield [Divine Grip] to perform up to four consecutive attacks.
-First Strike:105+56% ATK+5.1% of Max HP 
-Second Strike:116+62% ATK+5.6% of Max HP 
-Third Strike:116+62% ATK+5.6% of Max HP 
+First Strike: 105+56% ATK+5.1% of Max HP 
+Second Strike: 116+62% ATK+5.6% of Max HP 
+Third Strike: 116+62% ATK+5.6% of Max HP 
 Fourth Strike: 147+78% ATK+7.1% of Max HP
 
 Charged Attack delivers two consecutive slashes, dealing total DMG equal to 112+60% ATK+5.3% of Max HP. The second slash on hit applies [Rupture Mark] to the enemy. This effect cannot stack.
@@ -460,10 +467,10 @@ When you and Zayne strike an enemy in [Shattered Jade] state, [Jadesunder Intent
         basicAttackImg: "../assets/battle-icons/a2_skill_pl_1904_02_YS_2204.png",
         basicAttackText: `
 Wield a sword for a multi-hit combo to deal DMG. 
-First Strike:75+100% ATK DMG
-Second Strike:75+100% ATK DMG 
-Third Strike:90+121% ATK DMG 
-Fourth Strike:121+161% ATK DMG
+First Strike: 75+100% ATK DMG
+Second Strike: 75+100% ATK DMG 
+Third Strike: 90+121% ATK DMG 
+Fourth Strike: 121+161% ATK DMG
 
 Charged Attack will unleash a single slash, inflicting AoE DMG equal to 141+188% ATK.
         `,
@@ -481,16 +488,20 @@ Within 13s after using [Orchid Metamorphosis], [Orchid Metamorphosis] will be re
 [Piercing Rain]: Use a sword to perform two consecutive attacks, dealing 205+273% ATK DMG in total. The damage dealt will be counted as Resonance Skill DMG.
         `,
         eidolon0: `
-The team deals 8% more DMG and takes 8% less DMG. Enemies inflicted with [Shattered Jade] have their DEF reduced by 10%.        
+The team deals 8% more DMG and takes 8% less DMG. 
+Enemies inflicted with [Shattered Jade] have their DEF reduced by 10%.        
         `,
         eidolon1: `
-Increases Ardent Oath charge by 20%. When fighting alongside Master of Fate, the enemy's weakened state is extended by 2 seconds Each time an enemy in weakened state is hit, the damage it sustains increases by 0.5%, up to a maximum of 10%.
+Increases Ardent Oath charge by 20%. 
+When fighting alongside Master of Fate, the enemy's weakened state is extended by 2 seconds Each time an enemy in weakened state is hit, the damage it sustains increases by 0.5%, up to a maximum of 10%.
         `,
         eidolon2: `
-Energy Charge limit is raised by 1. When triggering [Jadesunder], a small amount of Energy Charge is restored.
+Energy Charge limit is raised by 1. 
+When triggering [Jadesunder], a small amount of Energy Charge is restored.
         `,
         eidolon3: `
-The team deals 8% IV more DMG. [Jadesunder] DMG is increased by 100%. During skill replacement, [Piercing Rain] can be used 1 additional time. When Piercing Rain hits enemies, its cooldown is reduced by 0.5s.
+The team deals 8% more DMG. 
+[Jadesunder] DMG is increased by 100%. During skill replacement, [Piercing Rain] can be used 1 additional time. When Piercing Rain hits enemies, its cooldown is reduced by 0.5s.
 This effect can trigger only once per use of Piercing Rain.
         `,
     },
@@ -552,16 +563,20 @@ Create a Sacred Sign at the target location that inflicts 6 instances of DMG on 
 During a Dodge, you can use your basic attack. When you use an Active Skill, Zayne gains 1 stack of [Divine Prayer] restoring both of your HP equal to 1000+2.5% of your Max HP in 5s.
         `,
         eidolon0: `
-The team deals 8% more DMG and takes 8% less DMG. When fighting alongside Foreseer, [Eternal Sin] DMG is increased by 25%.        
+The team deals 8% more DMG and takes 8% less DMG. 
+When fighting alongside Foreseer, [Eternal Sin] DMG is increased by 25%.        
         `,
         eidolon1: `
-Increases Ardent Oath charge by 20%. When you and Foreseer are under [Ward of Curses], DMG dealt is increased by 12%.
+Increases Ardent Oath charge by 20%. 
+When you and Foreseer are under [Ward of Curses], DMG dealt is increased by 12%.
         `,
         eidolon2: `
-Energy Charge limit is raised by 1. When using a Resonance Skill, Foreseer additionally gains 1 stack of [Divine Prayer], and your DMG is increased by 10% for 10s.
+Energy Charge limit is raised by 1. 
+When using a Resonance Skill, Foreseer additionally gains 1 stack of [Divine Prayer], and your DMG is increased by 10% for 10s.
         `,
         eidolon3: `
-The team deals 8% more DMG. Every 6 seconds Foreseer gains 1 stack of [Divine Prayer].
+The team deals 8% more DMG. 
+Every 6 seconds Foreseer gains 1 stack of [Divine Prayer].
         `,
     },
     {
@@ -702,7 +717,7 @@ You resonate with Rafayel's Evol, summoning tides and lightning to attack the en
         passiveSkill: "Deepfall Rite",
         passiveSkillImg: "../assets/battle-icons/a2_skill_ry_2507_01.png",
         passiveSkillText: `
-Upon entering the battle, Rafayel grants you [Sea God Mark]. When you perform a Charged Attack, it consumes [Sea God Mark] to empower that attack, increasing DMG by 50% and making you unstoppable throughout its duration. 8s after [Sea God Mark] has been consumed, Rafayel will grant [Sea God Mark] to you again.Using your Active Skill immediately refreshes [Sea God Mark].
+Upon entering the battle, Rafayel grants you [Sea God Mark]. When you perform a Charged Attack, it consumes [Sea God Mark] to empower that attack, increasing DMG by 50% and making you unstoppable throughout its duration. 8s after [Sea God Mark] has been consumed, Rafayel will grant [Sea God Mark] to you again. Using your Active Skill immediately refreshes [Sea God Mark].
 When Rafayel uses his Support Skill or [Empowered] Support Skill, he accumulates [Raging Tide]. When your Basic Attack or Charged Attack hits an enemy, you accumulate [Ripple Breath]. These effects can only be triggered once per attack. When both [Ripple Breath] and [Raging Tide] are fully charged, the skill [Ocean's Descent] is unlocked. Using it floods the battlefield, granting you [Divine Favor] and making you unstoppable throughout its duration. [Divine Favor] lasts for 11s.
 While [Divine Favor] is active, your Active Skill generates a [Lightning Crystal] when it hits an enemy. This effect can only be triggered once per skill use.
 While [Divine Favor] is active, your Dodge is empowered by waves, allowing you to activate [Lightning Crystals] along the path and deal DMG equal to 32+17% ATK+68% DEF. 
@@ -712,10 +727,10 @@ While [Divine Favor] is active, your Dodge is empowered by waves, allowing you t
         basicAttackImg: "../assets/battle-icons/a2_skill_pl_1904_01_RY_2507.png",
         basicAttackText: `
 Wield Ballad of Ebbs to perform a combo up to 4 hits
-First Strike:49+26% ATK+104% DEF 
-Second Strike:53+28% ATK+112% DEF 
+First Strike: 49+26% ATK+104% DEF 
+Second Strike: 53+28% ATK+112% DEF 
 Third Strike: 83+44% ATK+175% DEF 
-Fourth Strike:137+73% ATK+290% DEF
+Fourth Strike: 137+73% ATK+290% DEF
 
 Charged Attack summons a wave that envelops your sword for a powerful slash, dealing DMG equal to 174+93% ATK+368% DEF.
         `,
@@ -732,16 +747,20 @@ Your Charged Attack is empowered by [Sea God Mark] to become a forward thrust, d
 Dash forward with a swimming motion, dealing DMG equal to 312+166% ATK+660% DEF to enemies hit. You are invincible while using this Active Skill.
         `,
         eidolon0: `
-The team deals 8% more DMG and takes 8% less DMG. When your basic attack hits, [Sea God Mark] cooldown is reduced by o.8s.This effect can trigger once per attack. When [Lightning Tide] hits Weakened enemies, extends the Weakened duration by 0.5s. This effect can trigger up to 2 times per enemy.       
+The team deals 8% more DMG and takes 8% less DMG. 
+When your basic attack hits, [Sea God Mark] cooldown is reduced by 0.8s. This effect can trigger once per attack. When [Lightning Tide] hits Weakened enemies, extends the Weakened duration by 0.5s. This effect can trigger up to 2 times per enemy.       
         `,
         eidolon1: `
-Increases Ardent Oath charge by 20%. While [Divine Favor] is active, when Rafayel throws his Tidebreaker Trident, it generates an additional vortex that continuously pulls nearby enemies toward its center. While [Divine Favor] is active, lightning will randomly strike the battlefield to assist you in battle, dealing DMG equal to 270+144% ATK+571% DEF with each hit.
+Increases Ardent Oath charge by 20%. 
+While [Divine Favor] is active, when Rafayel throws his Tidebreaker Trident, it generates an additional vortex that continuously pulls nearby enemies toward its center. While [Divine Favor] is active, lightning will randomly strike the battlefield to assist you in battle, dealing DMG equal to 270+144% ATK+571% DEF with each hit.
         `,
         eidolon2: `
-Energy Charge limit is raised by 1. DMG boost from [Sea God Mark] is increased by 50%. While [Divine Favor] is active, you gain 40% DMG Reduction.
+Energy Charge limit is raised by 1. 
+DMG boost from [Sea God Mark] is increased by 50%. While [Divine Favor] is active, you gain 40% DMG Reduction.
         `,
         eidolon3: `
-The team deals 8% more DMG. While [Divine Favor] is active, when your basic attack hits, Active Skill cooldown is reduced by 0.5s. While [Divine Favor] is active, when Charged Attacks empowered by [Sea God Mark] hit, [Lightning Tide] is triggered for 70% DMG. These effects can trigger once per attack.
+The team deals 8% more DMG. 
+While [Divine Favor] is active, when your basic attack hits, Active Skill cooldown is reduced by 0.5s. While [Divine Favor] is active, when Charged Attacks empowered by [Sea God Mark] hit, [Lightning Tide] is triggered for 70% DMG. These effects can trigger once per attack.
         `,
     },
     {
@@ -805,16 +824,20 @@ After reciting a short incantation, you create waves that push back nearby enemi
 When using [Tides], summon a [Sea Spirit] in front of you.
         `,
         eidolon0: `
-The team deals 8% more DMG and takes 8% less DMG. When fighting near a [Sea Spirit], CRIT DMG is increased by 10%.        
+The team deals 8% more DMG and takes 8% less DMG. 
+When fighting near a [Sea Spirit], CRIT DMG is increased by 10%.        
         `,
         eidolon1: `
-Increases Ardent Oath charge by 20%. The [Sea Spirit] starts at Lv. 2 and its duration is extended by 5 seconds.
+Increases Ardent Oath charge by 20%. 
+The [Sea Spirit] starts at Lv. 2 and its duration is extended by 5 seconds.
         `,
         eidolon2: `
-Energy Charge limit is raised by 1. During [Heavenly Rain], Energy Charge recovery speed is increased by 30%.
+Energy Charge limit is raised by 1. 
+During [Heavenly Rain], Energy Charge recovery speed is increased by 30%.
         `,
         eidolon3: `
-The team deals 8% more DMG. [Surging Tides] restores 30% [Faith] for each enemy hit. This effect can trigger at most 3 times during Surging Tides.
+The team deals 8% more DMG. 
+[Surging Tides] restores 30% [Faith] for each enemy hit. This effect can trigger at most 3 times during Surging Tides.
         `,
     },
     {
@@ -861,11 +884,11 @@ Searing Slash: After charging, Rafayel lunges forward, inflicting 540 + 720% ATK
         basicAttackImg: "../assets/battle-icons/a2_skill_pl_1901_02_RY_2503.png",
         basicAttackText: `
 Wield dual guns for a combo up to 5 hits, The final Basic Attack inflicts multiple instances of DMG. 
-First Strike:53+71% ATK DMG
-Second Strike:48+64% ATK DMG 
-Third Strike:64+85% ATK DMG 
-Fourth Strike:69+92% ATK DMG 
-Fifth Strike:74+99% ATK DMG
+First Strike: 53+71% ATK DMG
+Second Strike: 48+64% ATK DMG 
+Third Strike: 64+85% ATK DMG 
+Fourth Strike: 69+92% ATK DMG 
+Fifth Strike: 74+99% ATK DMG
 
 Charged Attack will knock back nearby enemies, dealing AoE DMG equal to 144%+192% ATK.
         `,
@@ -882,16 +905,20 @@ Perform an enhanced linear attack, dealing 309+412% ATK DMG.
 Basic attacks generate a stack of Pursuit, increasing your ATK SPD by 4% and CRIT Rate by 2%, up to 5 stacks. If attacks stop, the stacks will quickly disappear. Active Skills will inflict [Burn] on enemies.
         `,
         eidolon0: `
-The team deals 8% more DMG and takes 8% less DMG. Abysswalker's [Deepsea Pursuit] gains 30% additional CRIT DMG.        
+The team deals 8% more DMG and takes 8% less DMG. 
+Abysswalker's [Deepsea Pursuit] gains 30% additional CRIT DMG.        
         `,
         eidolon1: `
-Increases Ardent Oath charge by 20%. When fighting together with Abysswalker, increases DMG taken of enemies inflicted with [Burn] by 20%.
+Increases Ardent Oath charge by 20%. 
+When fighting together with Abysswalker, increases DMG taken of enemies inflicted with [Burn] by 20%.
         `,
         eidolon2: `
-Energy Charge limit is raised by 1. When triggering [Potential] recovery, Energy Charge recovery speed is increased by 50% for 4s.
+Energy Charge limit is raised by 1. 
+When triggering [Potential] recovery, Energy Charge recovery speed is increased by 50% for 4s.
         `,
         eidolon3: `
-The team deals 8% more DMG. Abysswalker's [Searing Slash] deals 150% more DMG. When triggering [Beacon] additionally restore 1 [Potential].
+The team deals 8% more DMG. 
+Abysswalker's [Searing Slash] deals 150% more DMG. When triggering [Beacon] additionally restore 1 [Potential].
         `,
     },
     {
@@ -1053,7 +1080,7 @@ Wield [Crimson Malison] to perform a combo up to 4 hits, dealing damage to enemi
 First Strike: 49+26% ATK+103% DEF 
 Second Strike: 49+26% ATK+103% DEF 
 Third Strike: 94+50% ATK+198% DEF 
-Fourth Strike:146+78% ATK+309% DEF
+Fourth Strike: 146+78% ATK+309% DEF
 
 Charged Attack summons a magical array beneath enemies, dealing DMG equal to 180+96% ATK+381% DEF.
         `,
@@ -1083,7 +1110,7 @@ Energy Charge limit is raised by 1.
 When [Crimson Void] hits, it additionally applies [Blood Spell] to enemies, increasing their DMG taken by 8% for 6s. [Blood Spell] is removed when [Crimson Bond] ends. When [Bloodrose Seed] blooms, you and Sylus each recover HP equal to 5% of max HP.
         `,
         eidolon3: `
-The team deals 8% IV more DMG.
+The team deals 8% more DMG.
 During [Crimson Bond], Sylus deals 10% more DMG. When Sylus applies [Bloodrose Seed] he also stimulates [Bloodrose Seed] to grow.
 During [Crimson Bond], casting Active Skill grants you [Bloodrose Wreath], increasing your DMG by 10% for 8s. When your Basic Attacks or Charged Attacks hit enemies, [Bloodrose Wreath] fires additional bullets at them, dealing damage equal to 79+42% ATK+168% DEF and stimulating [Bloodrose Seed]. This damage counts as Basic Attack damage and this effect can trigger once per attack. When you gain [Bloodrose Wreath], any [Bloodrose Scent you have is removed, and you gain all its effects.
 When [Crimson Bond] ends, [Bloodrose Wreath] is removed.
@@ -1152,17 +1179,21 @@ Fully Charged: Deal DMG equal to 632+337% ATK+30.3% of Max HP.
 [Abyssal Feast] provides more HP recovery.
         `,
         eidolon0: `
-The team deals 8% more DMG and takes 8% less DMG. After [Abyssal Fury] ends, you and Sylus recover 20% of Max HP.        
+The team deals 8% more DMG and takes 8% less DMG. 
+After [Abyssal Fury] ends, you and Sylus recover 20% of Max HP.        
         `,
         eidolon1: `
-Increases Ardent Oath charge by 20%. After using [Fiendish Claw], your next 3 basic attacks on-hit deal DMG equal to 121+64.8% ATK+5.8% Max HP to surrounding enemies centered on you.
+Increases Ardent Oath charge by 20%. 
+After using [Fiendish Claw], your next 3 basic attacks on-hit deal DMG equal to 121+64.8% ATK+5.8% Max HP to surrounding enemies centered on you.
 While [Abyssal Fury] is active [Fiendish Claw] cooldown is reduced.
         `,
         eidolon2: `
-Energy Charge limit is raised by 1. After using [Wrath Judgment] or [Wrath Judgment: Greed], your Energy Charge recovery speed is increased for 15s.
+Energy Charge limit is raised by 1. 
+After using [Wrath Judgment] or [Wrath Judgment: Greed], your Energy Charge recovery speed is increased for 15s.
         `,
         eidolon3: `
-The team deals 8% more DMG. When using [Wrath Judgment: Greed], you and Sylus recover 50% of Max HP. While [Abyssal Fury] is active, [Life Sacrifice] requires no charging and your Active Skills deal 30% increased DMG.
+The team deals 8% more DMG. 
+When using [Wrath Judgment: Greed], you and Sylus recover 50% of Max HP. While [Abyssal Fury] is active, [Life Sacrifice] requires no charging and your Active Skills deal 30% increased DMG.
         `,
     },
     {
@@ -1187,7 +1218,7 @@ Sylus releases Boundless Energy to deal 239+318% ATK DMG to the target. The targ
         resonanceSkillCost: "2 energy charges",
         resonanceSkillImg: "../assets/battle-icons/a2_skill_yg_2301_03.png",
         resonanceSkillText: `
-You shoot enemies with 3 instances of damage while Sylus stands before you to release Boundless Energy, dealing 1094+1458% ATK DMG and1 [Protocore DMG].
+You shoot enemies with 3 instances of damage while Sylus stands before you to release Boundless Energy, dealing 1094+1458% ATK DMG and 1 [Protocore DMG].
         `,
         ardentOath: "Doomsday Trial",
         ardentOathCost: "100% Oath Energy",
@@ -1205,10 +1236,10 @@ Your Resonance Skill and Support Skill apply [Devour Mark] to enemies, which las
         basicAttackImg: "../assets/battle-icons/a2_skill_pl_1901_02_yg_2301.png",
         basicAttackText: `
 Wield the Harrier 700 to start a 4-hit combo to deal DMG. 
-First Strike:59+79% ATK DMG
-Second Strike:67+89% ATK DMG 
-Third Strike:89+119% ATK DMG 
-Fourth Strike:107+143% ATK DMG
+First Strike: 59+79% ATK DMG
+Second Strike: 67+89% ATK DMG 
+Third Strike: 89+119% ATK DMG 
+Fourth Strike: 107+143% ATK DMG
 
 Charged Attacks will unleash a [Dark Energy] Bullet, which explodes upon hitting the target and deals 160+213% ATK DMG.
         `,
@@ -1225,16 +1256,20 @@ Move the joystick to sprint and quickly spin, dealing a total of 342+456% ATK DM
 When an Active Skill hits a target with [Devour Mark], there is a 50% chance to reduce Active Skill cooldown by 1s and recover a small amount of Energy Charge.
         `,
         eidolon0: `
-The team deals 8% more DMG and takes 8% less DMG. When picking up [Dark Energy], your ATK is increased by 3.5% for 5s. This effect can stack up to 3 times.        
+The team deals 8% more DMG and takes 8% less DMG. 
+When picking up [Dark Energy], your ATK is increased by 3.5% for 5s. This effect can stack up to 3 times.        
         `,
         eidolon1: `
-Increases Ardent Oath charge by 20%. When you pick up [Dark Energy], you gain an additional effect that applies [Devour Mark] to the next enemy you damage.
+Increases Ardent Oath charge by 20%. 
+When you pick up [Dark Energy], you gain an additional effect that applies [Devour Mark] to the next enemy you damage.
         `,
         eidolon2: `
-Energy Charge limit raised by 1. When you pick up [Dark Energy], a small amount of Energy Charge is restored.
+Energy Charge limit raised by 1. 
+When you pick up [Dark Energy], a small amount of Energy Charge is restored.
         `,
         eidolon3: `
-The team deals 8% more DMG. When applying [Devour Mark] to an enemy that already has a [Devour Mark], directly deal 60+80% ATK DMG.
+The team deals 8% more DMG. 
+When applying [Devour Mark] to an enemy that already has a [Devour Mark], directly deal 60+80% ATK DMG.
         `,
     },
     {
@@ -1323,7 +1358,7 @@ When [Yin-Yang Union] ends, any inactive [Yin-Yang Rift] closes immediately, and
         basicAttackImg: "../assets/battle-icons/basic-attack.png",
         basicAttackText: `
 Wield Azuregaze to attack enemies.
-First Strike: 74+39% ATK+3.5% of Max HP DMG
+First Strike: 74+39% ATK+3.5% of Max HP DMG.
 Second Strike: 66+34% ATK+3.2% of Max HP DMG.
 Third Strike: Thrust Azuregaze upward, dealing DMG equal to 135+72% ATK+6.5% of Max HP. This attack is not considered the final hit of Basic Attack. After the upward strike, you enter [Sword Stance]. While in [Sword Stance], different attacks can be derived based on [Paired Knot].
 Charged Attack slashes forward, dealing DMG equal to 174+93% ATK+8.4% of Max HP.
@@ -1431,18 +1466,22 @@ Each time you perform [Quantum Clustering], consume 1 [Stasis Particle] to trigg
 While using Active Skills, you gain 50% DMG Reduction.        
         `,
         eidolon0: `
-The team deals 8% more DMG and takes 8% Iess DMG. When fighting alongside Ultimate Weapon X-02, Ardent Oath DMG increases by 20%. When you use [Nulledge Field] or [Empowered Nulledge Field] immediately restore 1 [Stasis Particles].        
+The team deals 8% more DMG and takes 8% Iess DMG. 
+When fighting alongside Ultimate Weapon X-02, Ardent Oath DMG increases by 20%. When you use [Nulledge Field] or [Empowered Nulledge Field] immediately restore 1 [Stasis Particles].        
         `,
         eidolon1: `
-Increases Ardent Oath charge by 20%. Extends [Quantum Stasis] duration by 2.5s and increases DMG taken by affected enemies by 10%.
+Increases Ardent Oath charge by 20%. 
+Extends [Quantum Stasis] duration by 2.5s and increases DMG taken by affected enemies by 10%.
 Hitting enemies with [Nulledge Field] and [Empowered Nulledge Field] also applies [Quantum Stasis].
 When fighting alongside  Ultimate Weapon X-02, you become unstoppable while using Active Skills.        
         `,
         eidolon2: `
-Increases Energy Charge cap by 1. When fighting alongside Ultimate Weapon X-02, using Active Skills increases ATK for both of you by 8% for 10s. Whenever your Active Skills deal DMG, you both recover a small amount of HP.        
+Increases Energy Charge cap by 1. 
+When fighting alongside Ultimate Weapon X-02, using Active Skills increases ATK for both of you by 8% for 10s. Whenever your Active Skills deal DMG, you both recover a small amount of HP.        
         `,
         eidolon3: `
-The team deals 8% more DMG. When entering [Ultimate Synced State], immediately restore 80% [Synced Particles] and increase [Synced Particles] acquisition efficiency by 30%. When using [Synced Strike], he will also summon multiple Floating Blades at the target location to assist in the attack, dealing a total of 122+164% ATK DMG.        
+The team deals 8% more DMG. 
+When entering [Ultimate Synced State], immediately restore 80% [Synced Particles] and increase [Synced Particles] acquisition efficiency by 30%. When using [Synced Strike], he will also summon multiple Floating Blades at the target location to assist in the attack, dealing a total of 122+164% ATK DMG.        
         `,
     },
     {
@@ -1494,7 +1533,7 @@ Enemy Weakened status duration is extended by 2s.
 Wield Skybreaker-SN to perform a combo up to 4 hits. 
 First Strike: 47+25% ATK+99% DEF
 Second Strike: 70+37% ATK+148% DEF 
-Third Strike:68+36% ATK+144% DEF 
+Third Strike: 68+36% ATK+144% DEF 
 Fourth Strike: 85+45% ATK+180% DEF
 
 Charged Attack pierces through enemies in a fan-shaped area, dealing DMG equal to 133+71% ATK+281% DEF.        
@@ -1517,17 +1556,21 @@ While outside the [Battlefront]:
 Dodging grants 10 stack(s) of [Zerom] every 5s. While you have [Zerom], each basic attack consumes 1 stack(s) of [Zerom] to restore 1 [Firepower].        
         `,
         eidolon0: `
-The team deals 8% more DMG and takes 8% less DMG. After using Charged Attacks or Active Skills within [Battlefront], you and Caleb's DMG is increased by 20% for 5s. This effect's duration can stack and is cleared when [Ground Breach] ends.        
+The team deals 8% more DMG and takes 8% less DMG. 
+After using Charged Attacks or Active Skills within [Battlefront], you and Caleb's DMG is increased by 20% for 5s. This effect's duration can stack and is cleared when [Ground Breach] ends.        
         `,
         eidolon1: `
-Increases Ardent Oath charge by 20%. [Focus] mark limit +2. Within [Battlefront], your Active Skills on-hit grant 1 Focus mark and reduce Active Skill cooldown by 6s.        
+Increases Ardent Oath charge by 20%. 
+[Focus] mark limit +2. Within [Battlefront], your Active Skills on-hit grant 1 Focus mark and reduce Active Skill cooldown by 6s.        
         `,
         eidolon2: `
-Energy Charge limit is raised by 1. Using [Ground Breach] or [Deep Strike] restores 0.2 Energy Charge.
+Energy Charge limit is raised by 1. 
+Using [Ground Breach] or [Deep Strike] restores 0.2 Energy Charge.
 When consuming Zerom, additionally restore 0.5 [Firepower].        
         `,
         eidolon3: `
-The team deals 8% more DMG. You and Caleb deal 5% increased DMG to enemies with Protocore Shield. Within [Battlefront], when the final hit of your basic attack lands, you gain an additional [Focus] mark. When Focus marks exceed the limit, excess marks unleash a gravity vortex at the target location, dealing 225+120% ATK+476% DEF DMG to enemies in range.        
+The team deals 8% more DMG. 
+You and Caleb deal 5% increased DMG to enemies with Protocore Shield. Within [Battlefront], when the final hit of your basic attack lands, you gain an additional [Focus] mark. When Focus marks exceed the limit, excess marks unleash a gravity vortex at the target location, dealing 225+120% ATK+476% DEF DMG to enemies in range.        
         `,
     },
     {
@@ -1637,13 +1680,12 @@ Your Charged Attack is Empowered with an increased attack range every 15s, deali
         basicAttackImg: "../assets/battle-icons/a2_skill_pl_1902_02.png",
         basicAttackText: `
 Wield a claymore to start a combo up to 4 hits.
-First Strike:112+150% ATK DMG
-Second Strike:112+150% ATK DMG 
+First Strike: 112+150% ATK DMG
+Second Strike: 112+150% ATK DMG 
 Third Strike: 124+165% ATK DMG 
 Fourth Strike: 135+180% ATK DMG
 
 Charged Attack will cause you to leap forward and smash the ground, dealing 337+449% ATK AoE DMG.
-      
         `,
         activeSkill: "Frangere Slash",
         activeSkillCooldown: "7 sec.",

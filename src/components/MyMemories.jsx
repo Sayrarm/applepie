@@ -446,13 +446,13 @@ function MyMemories() {
                                     {typeof card.stats.dmgBoost === 'number' ? formatNumber(card.stats.dmgBoost.toFixed(2)) + '%' : '—'}
                                 </td>
                                 <td className={styles.statValue}>
-                                    {typeof card.stats.oathStrength === 'number' ? formatNumber(card.stats.oathStrength) + '%' : '—'}
+                                    {typeof card.stats.oathStrength === 'number' ? formatNumber(card.stats.oathStrength.toFixed(2)) + '%' : '—'}
                                 </td>
                                 <td className={styles.statValue}>
-                                    {typeof card.stats.oathRecoveryBoost === 'number' ? formatNumber(card.stats.oathRecoveryBoost) + '%' : '—'}
+                                    {typeof card.stats.oathRecoveryBoost === 'number' ? formatNumber(card.stats.oathRecoveryBoost.toFixed(2)) + '%' : '—'}
                                 </td>
                                 <td className={styles.statValue}>
-                                    {typeof card.stats.expeditedEnergyBoost === 'number' ? formatNumber(card.stats.expeditedEnergyBoost) + '%' : '—'}
+                                    {typeof card.stats.expeditedEnergyBoost === 'number' ? formatNumber(card.stats.expeditedEnergyBoost.toFixed(2)) + '%' : '—'}
                                 </td>
                             </tr>
                         ))
