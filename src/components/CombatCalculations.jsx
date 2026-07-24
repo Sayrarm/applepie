@@ -9,6 +9,7 @@ import styles from "./CombatCalculations.module.css";
 import React, {useState, useMemo} from "react";
 import {calculateCritDamage, calculateWeakenedDamage, createDamageCalculator} from "../data/damageCalculator.js";
 import {solar4Stars} from "../data/solar-4-star-info.js";
+import { getCardRank } from "../data/cardUtils.js";
 
 function CombatCalculations({stats, selectedCompanion, selectedMCWeapon, solarCards}) {
     // Находим данные для выбранного компаньона по companionName
@@ -33,6 +34,17 @@ function CombatCalculations({stats, selectedCompanion, selectedMCWeapon, solarCa
             .filter(card => card !== null)
             .map(card => card.id)
             .sort((a, b) => a - b); // Сортировка чисел
+    }, [solarCards]);
+
+    // Получаем минимальный ранг среди solar карточек (для Pair Bonus)
+    const solarRank = useMemo(() => {
+        const nonNullCards = solarCards.filter(card => card !== null);
+        if (nonNullCards.length < 2) return 0;
+
+        // Получаем ранги всех solar карточек
+        const ranks = nonNullCards.map(card => getCardRank(card.id) || 0);
+        // Возвращаем минимальный ранг
+        return Math.min(...ranks);
     }, [solarCards]);
 
     // Находим компаньона с совпадающими cardIds (если есть)
@@ -256,26 +268,39 @@ function CombatCalculations({stats, selectedCompanion, selectedMCWeapon, solarCa
                     </tr>
                     </thead>
                     <tbody>
+                    {/* Starring Effect - всегда показываем */}
                     <tr>
                         <th className={styles.titleTD}>Starring Effect</th>
                         <td className={styles.titleTD}>{defaultBuffs.eidolon0}</td>
                         <td>{isCompanionMatching && companionData.eidolon0 ? companionData.eidolon0 : '—'}</td>
                     </tr>
-                    <tr>
-                        <th className={styles.titleTD}>Duo Rank 1</th>
-                        <td className={styles.titleTD}>{defaultBuffs.eidolon1}</td>
-                        <td>{isCompanionMatching && companionData.eidolon1 ? companionData.eidolon1 : '—'}</td>
-                    </tr>
-                    <tr>
-                        <th className={styles.titleTD}>Duo Rank 2</th>
-                        <td className={styles.titleTD}>{defaultBuffs.eidolon2}</td>
-                        <td>{isCompanionMatching && companionData.eidolon2 ? companionData.eidolon2 : '—'}</td>
-                    </tr>
-                    <tr>
-                        <th className={styles.titleTD}>Duo Rank 3</th>
-                        <td className={styles.titleTD}>{defaultBuffs.eidolon3}</td>
-                        <td>{isCompanionMatching && companionData.eidolon3 ? companionData.eidolon3 : '—'}</td>
-                    </tr>
+
+                    {/* Duo Rank 1 - показываем если solarRank >= 1 */}
+                    {solarRank >= 1 && (
+                        <tr>
+                            <th className={styles.titleTD}>Duo Rank 1</th>
+                            <td className={styles.titleTD}>{defaultBuffs.eidolon1}</td>
+                            <td>{isCompanionMatching && companionData.eidolon1 ? companionData.eidolon1 : '—'}</td>
+                        </tr>
+                    )}
+
+                    {/* Duo Rank 2 - показываем если solarRank >= 2 */}
+                    {solarRank >= 2 && (
+                        <tr>
+                            <th className={styles.titleTD}>Duo Rank 2</th>
+                            <td className={styles.titleTD}>{defaultBuffs.eidolon2}</td>
+                            <td>{isCompanionMatching && companionData.eidolon2 ? companionData.eidolon2 : '—'}</td>
+                        </tr>
+                    )}
+
+                    {/* Duo Rank 3 - показываем если solarRank >= 3 */}
+                    {solarRank >= 3 && (
+                        <tr>
+                            <th className={styles.titleTD}>Duo Rank 3</th>
+                            <td className={styles.titleTD}>{defaultBuffs.eidolon3}</td>
+                            <td>{isCompanionMatching && companionData.eidolon3 ? companionData.eidolon3 : '—'}</td>
+                        </tr>
+                    )}
                     </tbody>
                 </table>
             )}
