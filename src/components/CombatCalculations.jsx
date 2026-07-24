@@ -244,36 +244,36 @@ function CombatCalculations({stats, selectedCompanion, selectedMCWeapon, solarCa
 
     return (
         <section className={styles.container}>
-            <h2>Combat Calculations:</h2>
+            <h2 className={styles.title}>Combat Calculations:</h2>
 
             {hasAnySolarPair && defaultBuffs && (
-                <table className={styles.statsTable}>
+                <table className={styles.statsTablePairBonus}>
                     <thead>
                     <tr>
-                        <th>Pair Bonus:</th>
-                        <th>Default Buffs</th>
-                        <th>Companion Buffs</th>
+                        <th className={styles.titleTD}>Pair Bonus:</th>
+                        <th className={styles.titleTD}>Default Buffs</th>
+                        <th className={styles.titleTD}>Companion Buffs</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <th>Starring Effect</th>
-                        <td>{defaultBuffs.eidolon0}</td>
+                        <th className={styles.titleTD}>Starring Effect</th>
+                        <td className={styles.titleTD}>{defaultBuffs.eidolon0}</td>
                         <td>{isCompanionMatching && companionData.eidolon0 ? companionData.eidolon0 : '—'}</td>
                     </tr>
                     <tr>
-                        <th>Duo Rank 1</th>
-                        <td>{defaultBuffs.eidolon1}</td>
+                        <th className={styles.titleTD}>Duo Rank 1</th>
+                        <td className={styles.titleTD}>{defaultBuffs.eidolon1}</td>
                         <td>{isCompanionMatching && companionData.eidolon1 ? companionData.eidolon1 : '—'}</td>
                     </tr>
                     <tr>
-                        <th>Duo Rank 2</th>
-                        <td>{defaultBuffs.eidolon2}</td>
+                        <th className={styles.titleTD}>Duo Rank 2</th>
+                        <td className={styles.titleTD}>{defaultBuffs.eidolon2}</td>
                         <td>{isCompanionMatching && companionData.eidolon2 ? companionData.eidolon2 : '—'}</td>
                     </tr>
                     <tr>
-                        <th>Duo Rank 3</th>
-                        <td>{defaultBuffs.eidolon3}</td>
+                        <th className={styles.titleTD}>Duo Rank 3</th>
+                        <td className={styles.titleTD}>{defaultBuffs.eidolon3}</td>
                         <td>{isCompanionMatching && companionData.eidolon3 ? companionData.eidolon3 : '—'}</td>
                     </tr>
                     </tbody>
@@ -282,7 +282,7 @@ function CombatCalculations({stats, selectedCompanion, selectedMCWeapon, solarCa
 
             {/* Additional Bonus Section */}
             <div className={styles.additionalBonus}>
-                <h3>Additional Bonus:</h3>
+                <h3 className={styles.title}>Additional Bonus:</h3>
 
                 <div className={styles.bonusRow}>
                     <label className={styles.checkboxLabel}>
@@ -295,7 +295,7 @@ function CombatCalculations({stats, selectedCompanion, selectedMCWeapon, solarCa
                     </label>
                     {isAttributeBonus && (
                         <div className={styles.rangeContainer}>
-                            <span className={styles.rangeLabel}>Stellactrum count: {stellactrumCount}</span>
+                            <div className={styles.rangeLabel}>Stellactrum count: {stellactrumCount}</div>
                             <Range
                                 step={1}
                                 min={0}
@@ -310,7 +310,7 @@ function CombatCalculations({stats, selectedCompanion, selectedMCWeapon, solarCa
                                         <div
                                             className={styles.trackFilled}
                                             style={{
-                                                width: `${((stellactrumCount - 1) / 5) * 100}%`
+                                                width: `${(stellactrumCount / 6) * 100}%`
                                             }}
                                         />
                                         {children}

@@ -2,13 +2,50 @@
     margin: 20px 5px 5px 5px;
 }
 
-.statsTable {
+.title {
+    margin-bottom: 10px;
+}
+
+.statsTable,
+.statsTablePairBonus {
     border-collapse: collapse;
     width: 100%;
     margin: 5px 0;
+}
+
+.titleTD {
+    white-space: nowrap;
+}
+
+.additionalBonus {
+    margin: 10px 0;
+}
+
+.bonusRow {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+.checkboxLabel,
+.rangeLabel {
+    margin: 5px 0;
+}
+
+.rangeContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.statsTable {
     white-space: pre-wrap;
 }
 
+.statsTablePairBonus th,
+.statsTablePairBonus td,
 .statsTable th,
 .statsTable td {
     border: 1px solid var(--border-table);
@@ -16,6 +53,7 @@
     text-align: center;
 }
 
+.statsTablePairBonus th,
 .statsTable th {
     background-color: var(--forSelect);
     color: var(--colorText);
@@ -29,9 +67,11 @@
 
 .track {
     height: 6px;
-    width: 100%;
+    width: 300px;
     background: var(--colorTextBright);
     cursor: pointer;
+
+    margin: 5px;
 }
 
 .point {
