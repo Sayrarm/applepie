@@ -6,6 +6,11 @@
     margin-bottom: 10px;
 }
 
+.titleAndDisclaimer {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .statsTable,
 .statsTablePairBonus {
     border-collapse: collapse;
@@ -111,6 +116,13 @@
     top: 0;
     pointer-events: none;
 }
+
+.disclaimerContent {
+    text-align: center;
+    color: var(--colorTextDark);
+    font-size: 16px;
+}
+
 
 @media screen and (max-width: 860px) {
 
