@@ -93,3 +93,25 @@
     top: 0;
     pointer-events: none;
 }
+
+@media screen and (max-width: 860px) {
+
+.container {
+    font-size: 12px;
+}
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .titleTD,
+    .statsTable td,
+    .statsTable th {
+        white-space: wrap;
+    }
+
+    .statsTable th,
+    .statsTable td {
+        padding: 5px 2px;
+    }
+}

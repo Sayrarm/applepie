@@ -352,12 +352,8 @@
 
 @media screen and (max-width: 768px) {
 
-    .wrapper {
-        height: 700px;
-    }
-
     .captureRef {
-        height: 0.5%;
+        height: 25%;
     }
 
     .container {
@@ -384,6 +380,7 @@
 }
 
 @media screen and (max-width: 767px) and (min-width: 615px) {
+
     .container {
         /* Уменьшаем контейнер до размеров экрана */
         transform: scale(0.6);   /* 32% от оригинального размера */
@@ -393,14 +390,16 @@
     }
 }
 
+@media screen and (max-width: 614px) and (min-width: 511px) {
+    .captureRef {
+        height: 18%;
+    }
+}
+
 @media screen and (max-width: 510px) {
 
-    .wrapper {
-        height: 500px;
-    }
-
     .captureRef {
-        height: 0.3%;
+        height: 10%;
     }
 
     .container {

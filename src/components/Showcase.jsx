@@ -665,6 +665,8 @@ function Showcase() {
                         </div>
                     </div>
                 </section>
+
+
             </div>
 
             <CombatCalculations
