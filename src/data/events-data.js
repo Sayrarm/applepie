@@ -38,7 +38,7 @@ export const eventsData = [
         image: "../assets/main-page/events/myth-free.png",
         "startDate": "2026-07-09T05:00:00",
         "endDate": "2026-07-23T04:59:59",
-        "active": true
+        "active": false
     },
     {
         id: 6,
@@ -46,7 +46,7 @@ export const eventsData = [
         image: "../assets/main-page/events/illusio.png",
         "startDate": "2026-07-09T05:00:00",
         "endDate": "2026-07-23T04:59:59",
-        "active": true
+        "active": false
     },
     {
         id: 7,
