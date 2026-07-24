@@ -3,7 +3,8 @@
 }
 
 .title {
-    margin-bottom: 10px;
+    text-align: center;
+    font-size: 25px;
 }
 
 .titleAndDisclaimer {

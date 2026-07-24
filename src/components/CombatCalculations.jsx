@@ -269,7 +269,7 @@ function CombatCalculations({stats, selectedCompanion, selectedMCWeapon, solarCa
 
     return (
         <section className={styles.container}>
-            <h2 className={styles.title}>Combat Calculations:</h2>
+            <h2 className={styles.title}>Combat Calculations</h2>
 
             <div className={styles.titleAndDisclaimer}>
                 <AsideList
@@ -326,7 +326,7 @@ function CombatCalculations({stats, selectedCompanion, selectedMCWeapon, solarCa
 
             {/* Additional Bonus Section */}
             <div className={styles.additionalBonus}>
-                <h3 className={styles.title}>Additional Bonus:</h3>
+                <h3>Additional Bonus:</h3>
 
                 <div className={styles.bonusRow}>
                     <label className={styles.checkboxLabel}>
