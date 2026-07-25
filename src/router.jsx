@@ -16,6 +16,8 @@ import CompanionBattleInfo from "./pages/CompanionBattleInfo";
 import CardArticle from "./pages/CardArticle.jsx";
 import Banners from "./pages/Banners.jsx";
 import Calculator from "./pages/Calculator.jsx";
+import About from "./pages/About.jsx";
+import FAQ from "./pages/FAQ.jsx";
 
 const basename = import.meta.env.BASE_URL;
 
@@ -46,6 +48,8 @@ export const router = createBrowserRouter([
             { path: "anecdotes/:articleLink", element: <AnArticle /> },
             { path: "calculator", element: <Calculator /> },
             { path: "calculator/:navigation", element: <Calculator /> },
+            { path: "about", element: <About /> },
+            { path: "faq", element: <FAQ /> },
 
         ],
     },

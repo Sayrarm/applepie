@@ -82,15 +82,15 @@ function Home() {
 
                 <FarmGoalTracker />
 
+                <h2 className={styles.h2}>Schedule</h2>
+
+                <ScheduleBlock/>
+
                 <h2 className={styles.h2}>Reset</h2>
 
                 <DailyWeeklyBlock/>
 
                 <HunterContestBlock/>
-
-                <h2 className={styles.h2}>Schedule</h2>
-
-                <ScheduleBlock/>
 
             </div>
 

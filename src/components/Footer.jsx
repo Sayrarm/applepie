@@ -1,5 +1,6 @@
 import styles from './Footer.module.css'
 import {getImageUrl} from "./imageUtils.js";
+import {Link} from "react-router-dom";
 
 
 
@@ -10,54 +11,15 @@ function Footer() {
         <footer className={styles.footer}>
 
             <div className={styles.footerMediaContainer}>
-                Official links:
+                General information:
                 <div className={styles.borderHorizontal}></div>
-                <p>Download the game on the website</p>
-                <a className={styles.a}
-                   href={'https://play.google.com/store/apps/details?id=com.papegames.lysk.en'}
-                   target="_blank">
-                    play.google.com
-                </a>
-                <a className={styles.a}
-                   href={'https://apps.apple.com/us/app/love-and-deepspace/id6443467666'}
-                   target="_blank">
-                    apps.apple.com
-                </a>
+                <Link className={styles.a} to="/about">About Project</Link>
+                <Link className={styles.a} to="/faq">FAQ</Link>
                 <div className={styles.borderHorizontalDashed}></div>
                 <a className={styles.a}
-                   href={'https://loveanddeepspace.infoldgames.com/'}
+                   href={'https://t.me/+Ime0QDgmW05kZmIy'}
                    target="_blank">
-                    loveanddeepspace.infoldgames.com
-                </a>
-                <a className={styles.a}
-                   href={'https://www.facebook.com/LoveandDeepspaceEN'}
-                   target="_blank">
-                    facebook.com
-                </a>
-                <a className={styles.a}
-                   href={'https://www.tiktok.com/@loveanddeepspace'}
-                   target="_blank">
-                    tiktok.com
-                </a>
-                <a className={styles.a}
-                   href={'https://www.instagram.com/loveanddeepspace/#'}
-                   target="_blank">
-                    instagram.com
-                </a>
-                <a className={styles.a}
-                   href={'https://discord.gg/loveanddeepspace'}
-                   target="_blank">
-                    discord.gg
-                </a>
-                <a className={styles.a}
-                   href={'https://www.reddit.com/r/LoveAndDeepspace/'}
-                   target="_blank">
-                    reddit.com
-                </a>
-                <a className={styles.a}
-                   href={'https://www.youtube.com/@LoveandDeepspace'}
-                   target="_blank">
-                    youtube.com
+                    Telegram Group
                 </a>
             </div>
 
@@ -68,8 +30,7 @@ function Footer() {
                     Games.</p>
                 <br className={styles.br}/>
                 <p>The site was created for informational purposes only.  For non-commercial use.</p>
-                <div className={styles.borderHorizontalDashed}></div>
-                <a className={styles.a} href="https://t.me/+Ime0QDgmW05kZmIy" target="_blank">Contact the developer and find out the latest news</a>
+
             </div>
 
             <div className={styles.footerButtonContainer}>
