@@ -13,13 +13,19 @@ function Calculator() {
 
     // Если нет параметра — редиректим на showcase
     if (!navigation) {
-        return <Navigate to="/calculator/showcase" replace />;
+        return <Navigate to="/calculator/inventory" replace />;
     }
 
     return (
         <section className={styles.containerCalculator}>
             {/* Навигация */}
             <div className={styles.tabs}>
+                <NavLink
+                    className={({ isActive }) => `${styles.tabButton} ${isActive ? styles.active : ''}`}
+                    to="/calculator/inventory"
+                >
+                    My Resources
+                </NavLink>
                 <NavLink
                     className={({ isActive }) => `${styles.tabButton} ${isActive ? styles.active : ''}`}
                     to="/calculator/showcase"
@@ -37,12 +43,6 @@ function Calculator() {
                     to="/calculator/my-protocores"
                 >
                     My Protocores
-                </NavLink>
-                <NavLink
-                    className={({ isActive }) => `${styles.tabButton} ${isActive ? styles.active : ''}`}
-                    to="/calculator/inventory"
-                >
-                    My Resources
                 </NavLink>
                 <NavLink
                     className={({ isActive }) => `${styles.tabButton} ${isActive ? styles.active : ''}`}
