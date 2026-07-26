@@ -355,6 +355,8 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
                         max={15}
                         style={{ width: '100%' }}
                         placeholder="Enter level (0-15)"
+                        inputMode="numeric"
+                        pattern="[0-9]*"
                     />
                 </Form.Item>
 
@@ -407,6 +409,8 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
                             style={{ width: '100%' }}
                             placeholder="Auto-filled from data"
                             disabled
+                            inputMode="numeric"
+                            pattern="[0-9]*"
                         />
                     </Form.Item>
                 </div>
@@ -443,6 +447,8 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
                                                 style={{ width: '100px' }}
                                                 min={0}
                                                 step={0.1}
+                                                inputMode="decimal"
+                                                pattern="[0-9.]*"
                                             />
                                         </Form.Item>
 
