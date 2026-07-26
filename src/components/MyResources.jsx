@@ -11,8 +11,11 @@ import {
     coreEnergy,
     credits,
     STORAGE_KEYS,
+    wish,
+    diamond,
     getHeartsandExchange,
-    getCrystalBoxExchange
+    getCrystalBoxExchange,
+    getWishExchange
 } from '../data/my-resources';
 import {getImageUrl} from './imageUtils';
 
@@ -58,6 +61,16 @@ function MyResources() {
         return saved || 'violet';
     });
 
+    const [diamondsState, setDiamondsState] = useState(() => {
+        const saved = localStorage.getItem(STORAGE_KEYS.DIAMONDS);
+        return saved ? JSON.parse(saved) : 0;
+    });
+
+    const [wishState, setWishState] = useState(() => {
+        const saved = localStorage.getItem(STORAGE_KEYS.WISH);
+        return saved ? JSON.parse(saved) : {};
+    });
+
     // Сохранение в localStorage
     useEffect(() => {
         localStorage.setItem(STORAGE_KEYS.BOTTLES, JSON.stringify(bottlesState));
@@ -90,6 +103,14 @@ function MyResources() {
     useEffect(() => {
         localStorage.setItem(STORAGE_KEYS.SELECTED_CRYSTAL_COLOR, selectedCrystalColor);
     }, [selectedCrystalColor]);
+
+    useEffect(() => {
+        localStorage.setItem(STORAGE_KEYS.DIAMONDS, JSON.stringify(diamondsState));
+    }, [diamondsState]);
+
+    useEffect(() => {
+        localStorage.setItem(STORAGE_KEYS.WISH, JSON.stringify(wishState));
+    }, [wishState]);
 
     // Функции для обновления количества
     const updateCount = (state, setState, id, value) => {
@@ -166,6 +187,255 @@ function MyResources() {
                         </div>
                     ))}
                 </div>
+            </div>
+
+            {/* Crystals - с выбором цвета */}
+            <div className={styles.section}>
+                <h2>Crystals</h2>
+                <div className={styles.crystalColorRow}>
+                    <div className={styles.colorButtons}>
+                        {crystalColors.map(color => (
+                            <button
+                                key={color.id}
+                                className={`${styles.colorButton} ${selectedCrystalColor === color.id ? styles.active : ''}`}
+                                onClick={() => setSelectedCrystalColor(color.id)}
+                            >
+                                <img src={getImageUrl(color.img)} alt={color.name} className={styles.colorIcon} />
+                                {color.name}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+                <div className={styles.itemsGrid}>
+                    {crystalTypes.map(item => {
+                        // Получаем иконку для выбранного цвета и текущего типа
+                        const iconPath = getCrystalIcon(selectedCrystalColor, item.id);
+                        return (
+                            <div key={item.id} className={styles.itemRow}>
+                                <div className={styles.itemDiv}>
+                                    {iconPath && (
+                                        <img
+                                            src={getImageUrl(iconPath)}
+                                            alt={`${selectedCrystalColor} ${item.name}`}
+                                            className={styles.itemIcon}
+                                        />
+                                    )}
+                                    <label htmlFor={`input-${item.id}`} className={styles.itemName}>
+                                        {selectedCrystalColor} {item.name}
+                                    </label>
+                                </div>
+                                <input
+                                    id={`input-${item.id}`}
+                                    name="item"
+                                    type="number"
+                                    min="0"
+                                    value={crystalsState[`${selectedCrystalColor}_${item.id}`] || ""}
+                                    onChange={(e) => updateCount(
+                                        crystalsState,
+                                        setCrystalsState,
+                                        `${selectedCrystalColor}_${item.id}`,
+                                        e.target.value
+                                    )}
+                                    className={styles.itemInput}
+                                    onFocus={(e) => {
+                                        if (e.target.value === '0') {
+                                            e.target.value = '';
+                                        }
+                                    }}
+                                />
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
+
+            {/* Core Energy */}
+            <div className={styles.section}>
+                <div className={styles.sectionHeader}>
+                    <h2>Core Energy</h2>
+                    <div className={styles.totalExp}>
+                        Total EXP: {getTotalCoreEnergyExp().toLocaleString()} EXP
+                    </div>
+                </div>
+                <div className={styles.itemsGrid}>
+                    {coreEnergy.map(item => (
+                        <div key={item.id} className={styles.itemRow}>
+                            <div className={styles.itemDiv}>
+                                <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon}/>
+                                <label htmlFor={`input-${item.id}`} className={styles.itemName}>{item.name}</label>
+                            </div>
+
+                            <div className={styles.itemDiv}>
+                                <span className={styles.itemValue}>+{item.value} EXP</span>
+                                <input
+                                    id={`input-${item.id}`}
+                                    name="item"
+                                    type="number"
+                                    min="0"
+                                    value={coreEnergyState[item.id] || ""}
+                                    onChange={(e) => updateCount(coreEnergyState, setCoreEnergyState, item.id, e.target.value)}
+                                    className={styles.itemInput}
+                                    onFocus={(e) => {
+                                        if (e.target.value === '0') {
+                                            e.target.value = '';
+                                        }
+                                    }}
+                                />
+
+                            </div>
+
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Credits */}
+            <div className={styles.section}>
+                <h2>Credits</h2>
+                <div className={styles.itemsGrid}>
+                    {credits.map(item => (
+                        <div key={item.id} className={styles.itemRow}>
+                            <div className={styles.itemDiv}>
+                                <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon}/>
+                                <label htmlFor={`input-${item.id}`} className={styles.itemName}>{item.name}</label>
+                            </div>
+
+                            <input
+                                id={`input-${item.id}`}
+                                name="item"
+                                type="number"
+                                min="0"
+                                value={creditsState}
+                                onChange={(e) => {
+                                    const value = e.target.value;
+                                    // Разрешаем пустую строку или числа >= 0
+                                    if (value === '' || Number(value) >= 0) {
+                                        setCreditsState(value);
+                                    }
+                                }}
+                                className={styles.itemInput}
+                                onFocus={(e) => {
+                                    if (e.target.value === '0') {
+                                        e.target.value = '';
+                                    }
+                                }}
+                                onBlur={(e) => {
+                                    // При потере фокуса преобразуем в число для отображения
+                                    const value = e.target.value;
+                                    if (value === '' || value === '0') {
+                                        setCreditsState('0');
+                                    } else {
+                                        setCreditsState(String(Number(value)));
+                                    }
+                                }}
+                            />
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Awakening Hearts */}
+            <div className={styles.section}>
+                <h2>Awakening Hearts</h2>
+                <div className={styles.itemsGrid}>
+                    {hearts.map(item => (
+                        <div key={item.id} className={styles.itemRow}>
+                            <div className={styles.itemDiv}>
+                                <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon}/>
+                                <label htmlFor={`input-${item.id}`} className={styles.itemName}>{item.name}</label>
+                            </div>
+
+                            <input
+                                id={`input-${item.id}`}
+                                name="item"
+                                type="number"
+                                min="0"
+                                value={heartsState[item.id] || ""}
+                                onChange={(e) => updateCount(heartsState, setHeartsState, item.id, e.target.value)}
+                                className={styles.itemInput}
+                                onFocus={(e) => {
+                                    if (e.target.value === '0') {
+                                        e.target.value = '';
+                                    }
+                                }}
+                            />
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Ascension Crystal Box */}
+            <div className={styles.section}>
+                <h2>Ascension Crystal Box</h2>
+                <div className={styles.itemsGrid}>
+                    {crystalBox.map(item => (
+                        <div key={item.id} className={styles.itemRow}>
+                            <div className={styles.itemDiv}>
+                                <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon}/>
+                                <label htmlFor={`input-${item.id}`} className={styles.itemName}>{item.name}</label>
+                            </div>
+
+                            <input
+                                id={`input-${item.id}`}
+                                name="item"
+                                type="number"
+                                min="0"
+                                value={crystalBoxesState[item.id] || ""}
+                                onChange={(e) => updateCount(crystalBoxesState, setCrystalBoxesState, item.id, e.target.value)}
+                                onFocus={(e) => {
+                                    if (e.target.value === '0') {
+                                        e.target.value = '';
+                                    }
+                                }}
+                                onBlur={(e) => {
+                                    if (e.target.value === '') {
+                                        updateCount(crystalBoxesState, setCrystalBoxesState, item.id, 0);
+                                    }
+                                }}
+                                className={styles.itemInput}
+                            />
+                        </div>
+                    ))}
+                </div>
+
+                {/* Информация об обмене General Box */}
+                {crystalBoxesState['box_general'] > 0 && (
+                    <div className={styles.exchangeSection}>
+                        <h3 className={styles.exchangeTitle}>Ascension Crystal Box: General can be exchanged for:</h3>
+                        <div className={styles.exchangeContent}>
+                            {(() => {
+                                const exchange = getCrystalBoxExchange(crystalBoxesState);
+                                return (
+                                    <div className={styles.exchangeGrid}>
+                                        <div className={styles.exchangeCard}>
+                                            <img src={getImageUrl("../assets/icons/gray-n.png")} alt="Crystal N"
+                                                 className={styles.itemIconGray}/>
+                                            <span className={styles.exchangeItem}>Crystal</span>
+                                            <span className={styles.exchangeValue}>N: {exchange.toN}</span>
+                                        </div>
+                                        or
+                                        <div className={styles.exchangeCard}>
+                                            <img src={getImageUrl("../assets/icons/gray-r.png")} alt="Crystal R"
+                                                 className={styles.itemIconGray}/>
+                                            <span className={styles.exchangeItem}>Crystal</span>
+                                            <span className={styles.exchangeValue}>R: {exchange.toR}</span>
+                                        </div>
+                                        or
+                                        <div className={styles.exchangeCard}>
+                                            <img src={getImageUrl("../assets/icons/gray-sr.png")} alt="Crystal SR"
+                                                 className={styles.itemIconGray}/>
+                                            <span className={styles.exchangeItem}>Crystal</span>
+                                            <span className={styles.exchangeValue}>SR: {exchange.toSR}</span>
+                                        </div>
+                                    </div>
+                                );
+                            })()}
+                        </div>
+                        <div className={styles.exchangeNote}>
+                            * Exchange rates: 1 General Box for either 5 N, or 2 R, or 1 SR
+                        </div>
+                    </div>
+                )}
             </div>
 
             {/* Memory Heartsand */}
@@ -276,71 +546,11 @@ function MyResources() {
                 })()}
             </div>
 
-            {/* Crystals - с выбором цвета */}
+            {/* Diamonds */}
             <div className={styles.section}>
-                <h2>Crystals</h2>
-                <div className={styles.crystalColorRow}>
-                    <div className={styles.colorButtons}>
-                        {crystalColors.map(color => (
-                            <button
-                                key={color.id}
-                                className={`${styles.colorButton} ${selectedCrystalColor === color.id ? styles.active : ''}`}
-                                onClick={() => setSelectedCrystalColor(color.id)}
-                            >
-                                <img src={getImageUrl(color.img)} alt={color.name} className={styles.colorIcon} />
-                                {color.name}
-                            </button>
-                        ))}
-                    </div>
-                </div>
+                <h2>Diamonds</h2>
                 <div className={styles.itemsGrid}>
-                    {crystalTypes.map(item => {
-                        // Получаем иконку для выбранного цвета и текущего типа
-                        const iconPath = getCrystalIcon(selectedCrystalColor, item.id);
-                        return (
-                            <div key={item.id} className={styles.itemRow}>
-                                <div className={styles.itemDiv}>
-                                    {iconPath && (
-                                        <img
-                                            src={getImageUrl(iconPath)}
-                                            alt={`${selectedCrystalColor} ${item.name}`}
-                                            className={styles.itemIcon}
-                                        />
-                                    )}
-                                    <label htmlFor={`input-${item.id}`} className={styles.itemName}>
-                                        {selectedCrystalColor} {item.name}
-                                    </label>
-                                </div>
-                                <input
-                                    id={`input-${item.id}`}
-                                    name="item"
-                                    type="number"
-                                    min="0"
-                                    value={crystalsState[`${selectedCrystalColor}_${item.id}`] || ""}
-                                    onChange={(e) => updateCount(
-                                        crystalsState,
-                                        setCrystalsState,
-                                        `${selectedCrystalColor}_${item.id}`,
-                                        e.target.value
-                                    )}
-                                    className={styles.itemInput}
-                                    onFocus={(e) => {
-                                        if (e.target.value === '0') {
-                                            e.target.value = '';
-                                        }
-                                    }}
-                                />
-                            </div>
-                        );
-                    })}
-                </div>
-            </div>
-
-            {/* Ascension Crystal Box */}
-            <div className={styles.section}>
-                <h2>Ascension Crystal Box</h2>
-                <div className={styles.itemsGrid}>
-                    {crystalBox.map(item => (
+                    {diamond.map(item => (
                         <div key={item.id} className={styles.itemRow}>
                             <div className={styles.itemDiv}>
                                 <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon}/>
@@ -352,8 +562,94 @@ function MyResources() {
                                 name="item"
                                 type="number"
                                 min="0"
-                                value={crystalBoxesState[item.id] || ""}
-                                onChange={(e) => updateCount(crystalBoxesState, setCrystalBoxesState, item.id, e.target.value)}
+                                value={diamondsState}
+                                onChange={(e) => {
+                                    const value = e.target.value;
+                                    if (value === '' || Number(value) >= 0) {
+                                        setDiamondsState(value);
+                                    }
+                                }}
+                                className={styles.itemInput}
+                                onFocus={(e) => {
+                                    if (e.target.value === '0') {
+                                        e.target.value = '';
+                                    }
+                                }}
+                                onBlur={(e) => {
+                                    const value = e.target.value;
+                                    if (value === '' || value === '0') {
+                                        setDiamondsState('0');
+                                    } else {
+                                        setDiamondsState(String(Number(value)));
+                                    }
+                                }}
+                            />
+                        </div>
+                    ))}
+                </div>
+
+                {/* Информация об обмене Diamonds на Wishes */}
+                {(() => {
+                    const exchange = getWishExchange(diamondsState);
+                    const hasWishes = exchange.wishes.standart > 0 || exchange.wishes.limited > 0 || exchange.wishes.rerun > 0;
+
+                    if (!hasWishes) return null;
+
+                    return (
+                        <div className={styles.exchangeSection}>
+                            <h3 className={styles.exchangeTitle}>Diamonds can be exchanged for:</h3>
+                            <div className={styles.exchangeGrid}>
+                                {exchange.wishes.standart > 0 && (
+                                    <div className={styles.exchangeCard}>
+                                        <div className={styles.exchangeItem}>Empyrean Wish</div>
+                                        <img src={getImageUrl(wish[0].img)} alt="Empyrean Wish" className={styles.itemIconGray}/>
+                                        <div className={styles.exchangeValue}>{exchange.wishes.standart}</div>
+                                    </div>
+                                )}
+                                or
+                                {exchange.wishes.rerun > 0 && (
+                                    <div className={styles.exchangeCard}>
+                                        <div className={styles.exchangeItem}>Time Wish</div>
+                                        <img src={getImageUrl(wish[2].img)} alt="Time Wish" className={styles.itemIconGray}/>
+                                        <div className={styles.exchangeValue}>{exchange.wishes.rerun}</div>
+                                    </div>
+                                )}
+                                or
+                                {exchange.wishes.limited > 0 && (
+                                    <div className={styles.exchangeCard}>
+                                        <div className={styles.exchangeItem}>Deepspace Wish</div>
+                                        <img src={getImageUrl(wish[1].img)} alt="Deepspace Wish" className={styles.itemIconGray}/>
+                                        <div className={styles.exchangeValue}>{exchange.wishes.limited}</div>
+                                    </div>
+                                )}
+                            </div>
+                            <div className={styles.exchangeNote}>
+                                * Exchange rate: 1 Wish = 150 Diamonds
+                            </div>
+                        </div>
+                    );
+                })()}
+            </div>
+
+            {/* Wish */}
+            <div className={styles.section}>
+                <h2>Wishes</h2>
+                <div className={styles.itemsGrid}>
+                    {wish.map(item => (
+                        <div key={item.id} className={styles.itemRow}>
+                            <div className={styles.itemDiv}>
+                                <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon}/>
+                                <label htmlFor={`input-${item.id}`} className={styles.itemName}>{item.name}</label>
+                            </div>
+
+                            <input
+                                id={`input-${item.id}`}
+                                name="item"
+                                type="number"
+                                min="0"
+                                value={wishState[item.id] || ""}
+                                onChange={(e) => updateCount(wishState, setWishState, item.id, e.target.value)}
+                                className={styles.itemInput}
                                 onFocus={(e) => {
                                     if (e.target.value === '0') {
                                         e.target.value = '';
@@ -361,169 +657,16 @@ function MyResources() {
                                 }}
                                 onBlur={(e) => {
                                     if (e.target.value === '') {
-                                        updateCount(crystalBoxesState, setCrystalBoxesState, item.id, 0);
-                                    }
-                                }}
-                                className={styles.itemInput}
-                            />
-                        </div>
-                    ))}
-                </div>
-
-                {/* Информация об обмене General Box */}
-                {crystalBoxesState['box_general'] > 0 && (
-                    <div className={styles.exchangeSection}>
-                        <h3 className={styles.exchangeTitle}>Ascension Crystal Box: General can be exchanged for:</h3>
-                        <div className={styles.exchangeContent}>
-                            {(() => {
-                                const exchange = getCrystalBoxExchange(crystalBoxesState);
-                                return (
-                                    <div className={styles.exchangeGrid}>
-                                        <div className={styles.exchangeCard}>
-                                            <img src={getImageUrl("../assets/icons/gray-n.png")} alt="Crystal N"
-                                                 className={styles.itemIconGray}/>
-                                            <span className={styles.exchangeItem}>Crystal</span>
-                                            <span className={styles.exchangeValue}>N: {exchange.toN}</span>
-                                        </div>
-                                        or
-                                        <div className={styles.exchangeCard}>
-                                            <img src={getImageUrl("../assets/icons/gray-r.png")} alt="Crystal R"
-                                                 className={styles.itemIconGray}/>
-                                            <span className={styles.exchangeItem}>Crystal</span>
-                                            <span className={styles.exchangeValue}>R: {exchange.toR}</span>
-                                        </div>
-                                        or
-                                        <div className={styles.exchangeCard}>
-                                            <img src={getImageUrl("../assets/icons/gray-sr.png")} alt="Crystal SR"
-                                                 className={styles.itemIconGray}/>
-                                            <span className={styles.exchangeItem}>Crystal</span>
-                                            <span className={styles.exchangeValue}>SR: {exchange.toSR}</span>
-                                        </div>
-                                    </div>
-                                );
-                            })()}
-                        </div>
-                        <div className={styles.exchangeNote}>
-                            * Exchange rates: 1 General Box for either 5 N, or 2 R, or 1 SR
-                        </div>
-                    </div>
-                )}
-            </div>
-
-            {/* Core Energy */}
-            <div className={styles.section}>
-                <div className={styles.sectionHeader}>
-                    <h2>Core Energy</h2>
-                    <div className={styles.totalExp}>
-                        Total EXP: {getTotalCoreEnergyExp().toLocaleString()} EXP
-                    </div>
-                </div>
-                <div className={styles.itemsGrid}>
-                    {coreEnergy.map(item => (
-                        <div key={item.id} className={styles.itemRow}>
-                            <div className={styles.itemDiv}>
-                                <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon}/>
-                                <label htmlFor={`input-${item.id}`} className={styles.itemName}>{item.name}</label>
-                            </div>
-
-                            <div className={styles.itemDiv}>
-                                <span className={styles.itemValue}>+{item.value} EXP</span>
-                                <input
-                                    id={`input-${item.id}`}
-                                    name="item"
-                                    type="number"
-                                    min="0"
-                                    value={coreEnergyState[item.id] || ""}
-                                    onChange={(e) => updateCount(coreEnergyState, setCoreEnergyState, item.id, e.target.value)}
-                                    className={styles.itemInput}
-                                    onFocus={(e) => {
-                                        if (e.target.value === '0') {
-                                            e.target.value = '';
-                                        }
-                                    }}
-                                />
-
-                            </div>
-
-                        </div>
-                    ))}
-                </div>
-            </div>
-
-            {/* Awakening Hearts */}
-            <div className={styles.section}>
-                <h2>Awakening Hearts</h2>
-                <div className={styles.itemsGrid}>
-                    {hearts.map(item => (
-                        <div key={item.id} className={styles.itemRow}>
-                            <div className={styles.itemDiv}>
-                                <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon}/>
-                                <label htmlFor={`input-${item.id}`} className={styles.itemName}>{item.name}</label>
-                            </div>
-
-                            <input
-                                id={`input-${item.id}`}
-                                name="item"
-                                type="number"
-                                min="0"
-                                value={heartsState[item.id] || ""}
-                                onChange={(e) => updateCount(heartsState, setHeartsState, item.id, e.target.value)}
-                                className={styles.itemInput}
-                                onFocus={(e) => {
-                                    if (e.target.value === '0') {
-                                        e.target.value = '';
+                                        updateCount(wishState, setWishState, item.id, 0);
                                     }
                                 }}
                             />
                         </div>
                     ))}
                 </div>
+
             </div>
 
-            {/* Credits */}
-            <div className={styles.section}>
-                <h2>Credits</h2>
-                <div className={styles.itemsGrid}>
-                    {credits.map(item => (
-                        <div key={item.id} className={styles.itemRow}>
-                            <div className={styles.itemDiv}>
-                                <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon}/>
-                                <label htmlFor={`input-${item.id}`} className={styles.itemName}>{item.name}</label>
-                            </div>
-
-                            <input
-                                id={`input-${item.id}`}
-                                name="item"
-                                type="number"
-                                min="0"
-                                value={creditsState}
-                                onChange={(e) => {
-                                    const value = e.target.value;
-                                    // Разрешаем пустую строку или числа >= 0
-                                    if (value === '' || Number(value) >= 0) {
-                                        setCreditsState(value);
-                                    }
-                                }}
-                                className={styles.itemInput}
-                                onFocus={(e) => {
-                                    if (e.target.value === '0') {
-                                        e.target.value = '';
-                                    }
-                                }}
-                                onBlur={(e) => {
-                                    // При потере фокуса преобразуем в число для отображения
-                                    const value = e.target.value;
-                                    if (value === '' || value === '0') {
-                                        setCreditsState('0');
-                                    } else {
-                                        setCreditsState(String(Number(value)));
-                                    }
-                                }}
-                            />
-                        </div>
-                    ))}
-                </div>
-            </div>
         </div>
     );
 }

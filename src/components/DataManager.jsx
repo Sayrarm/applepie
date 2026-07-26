@@ -27,6 +27,8 @@ const STORAGE_KEYS = [
     'inventory_core_energy',
     'inventory_credits',
     'inventory_selected_crystal_color',
+    'inventory_diamonds',
+    'inventory_wish'
 ];
 
 // Функция для проверки, соответствует ли ключ паттерну

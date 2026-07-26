@@ -6,6 +6,17 @@ export const bottles = [
     {id: 'bottle_ssr', name: "Bottle of Wishes: SSR", value: 1000, img: "../assets/icons/bottle-ssr.png"}
 ];
 
+//Wish
+export const wish = [
+    {id: 'standart_wish', name: "Empyrean Wish", value: 150, img: "../assets/icons/standart-wish.png"},
+    {id: 'limited_wish', name: "Deepspace Wish", value: 150, img: "../assets/icons/limited-wish.png"},
+    {id: 'rerun_wish', name: "Time Wish", value: 150, img: "../assets/icons/rerun-wish.png"},
+];
+
+export const diamond = [
+    {id: 'diamond_red', name: "Diamonds", value: 1, img: "../assets/icons/diamond.png"},
+]
+
 //Memory Heartsand
 export const heartSand = [
     {id: 'heartsand_r', name: "Memory Heartsand: R", value: 1, img: "../assets/icons/heartsand-r.png"},
@@ -165,7 +176,9 @@ export const STORAGE_KEYS = {
     HEARTS: 'inventory_hearts',
     CORE_ENERGY: 'inventory_core_energy',
     CREDITS: 'inventory_credits',
-    SELECTED_CRYSTAL_COLOR: 'inventory_selected_crystal_color'
+    SELECTED_CRYSTAL_COLOR: 'inventory_selected_crystal_color',
+    DIAMONDS: 'inventory_diamonds',
+    WISH: 'inventory_wish'
 };
 
 // Получение количества Heart из localStorage
@@ -189,6 +202,18 @@ export const getHeartCount = (heartName) => {
     }
 };
 
+// Расчёт обмена Diamonds на Wishes
+export const getWishExchange = (diamondsState) => {
+    const diamonds = Number(diamondsState) || 0;
+    const wishPrice = 150;
 
+    return {
+        wishes: {
+            standart: Math.floor(diamonds / wishPrice),
+            limited: Math.floor(diamonds / wishPrice),
+            rerun: Math.floor(diamonds / wishPrice),
+        }
+    };
+};
 
 
