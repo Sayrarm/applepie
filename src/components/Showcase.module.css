@@ -248,6 +248,7 @@
 .cardInfo {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 5px;
     margin: 5px 0;
     font-size: 18px;
@@ -379,7 +380,7 @@
 
 }
 
-@media screen and (max-width: 767px) and (min-width: 615px) {
+@media screen and (max-width: 766px) and (min-width: 615px) {
 
     .container {
         /* Уменьшаем контейнер до размеров экрана */
@@ -432,4 +433,8 @@
         padding: 5px 15px 5px 5px;
     }
 
+    .cardInfo {
+        font-size: 14px;
+        align-items: center;
+    }
 }

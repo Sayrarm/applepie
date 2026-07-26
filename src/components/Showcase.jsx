@@ -669,12 +669,19 @@ function Showcase() {
 
             </div>
 
-            <CombatCalculations
-                stats={finalStats}
-                selectedCompanion={currentTeam.selectedCompanion}
-                selectedMCWeapon={currentTeam.selectedMCWeapon}
-                solarCards={currentTeam.solarCards}
-            />
+            <br/>
+            <br/>
+
+
+            {/* CombatCalculations - показываем только если есть Компаньон и MC Weapon */}
+            {currentTeam.selectedCompanion && currentTeam.selectedMCWeapon && (
+                <CombatCalculations
+                    stats={finalStats}
+                    selectedCompanion={currentTeam.selectedCompanion}
+                    selectedMCWeapon={currentTeam.selectedMCWeapon}
+                    solarCards={currentTeam.solarCards}
+                />
+            )}
 
             {/* Модалка выбора компаньона */}
             <ModalWindow
