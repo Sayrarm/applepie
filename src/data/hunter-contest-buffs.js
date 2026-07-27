@@ -107,6 +107,28 @@ export const hunterContestBuffs = [
     "teamCStella2Count": 1,
     "teamC": "Empowerment: Increases ATK of all allied units.",
 
+    "active": false
+  },
+  {
+    "id": 6,
+    "teamAStella1": "../assets/icons/ruby.png",
+    "teamAStella1Count": 5,
+    "teamAStella2": "../assets/icons/sapphire.png",
+    "teamAStella2Count": 1,
+    "teamA": "Weakened Boost: Resonance Skill's damage dealt to Wanderers under the weakened state will be increased by 80%.",
+
+    "teamBStella1": "../assets/icons/violet.png",
+    "teamBStella1Count": 4,
+    "teamBStella2": "../assets/icons/ruby.png",
+    "teamBStella2Count": 1,
+    "teamB": "Oath Amplification: After using the Ardent Oath, DMG dealt by you and Companion increases by 100% for 10s.",
+
+    "teamCStella1": "../assets/icons/amber.png",
+    "teamCStella1Count": 3,
+    "teamCStella2": "../assets/icons/emerald.png",
+    "teamCStella2Count": 1,
+    "teamC": "Overload: Increases CRIT rate of all allied units.",
+
     "active": true
   },
 
