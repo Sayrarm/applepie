@@ -17,7 +17,7 @@ function Footer() {
                 <Link className={styles.a} to="/faq">FAQ</Link>
                 <div className={styles.borderHorizontalDashed}></div>
                 <a className={styles.a}
-                   href={'https://t.me/+Ime0QDgmW05kZmIy'}
+                   href={'https://t.me/applepie_lads'}
                    target="_blank">
                     Telegram Group
                 </a>
