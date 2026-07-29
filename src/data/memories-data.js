@@ -6543,4 +6543,20 @@ export const memoriesData = [
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png"
   },
+  {
+    "id": 411,
+    "char": "Zayne",
+    "name": "Framed Dusk",
+    "image": "../assets/pictures/Zayne/Zayne_411.png",
+    "imageSmall": "../assets/pictures/card-middle/Zayne_411.png",
+    "stellaName": "amber",
+    "placementName": "lunar",
+    "talentName": "hp",
+    "rarityName": "4-star",
+    "rarity": "../assets/icons/4-star.png",
+    "rarityStars": 4,
+    "stella": "../assets/icons/amber.png",
+    "placement": "../assets/icons/lunar.png",
+    "talent": "../assets/icons/hp.png"
+  },
 ]
