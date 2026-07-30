@@ -10,6 +10,10 @@ function Lore() {
         <>
 
             <nav className={styles.nav}>
+                <Link className={styles.link} to="/characters">
+                    <div className={styles.title}>Characters</div>
+                    <img className={styles.img} src={getImageUrl("../assets/bg/bg-characters.jpg")} alt="characters"/>
+                </Link>
                 {/*
                 <Link className={styles.link} to="/main-story">
                     <div className={styles.title}>Main Story</div>
