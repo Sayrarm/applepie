@@ -157,7 +157,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 2,
@@ -173,7 +174,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 5,
@@ -189,7 +191,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 3,
@@ -205,7 +208,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 11,
@@ -221,7 +225,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 12,
@@ -237,7 +242,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 13,
@@ -253,7 +259,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 14,
@@ -269,7 +276,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 15,
@@ -285,7 +293,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 16,
@@ -301,7 +310,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 10,
@@ -317,7 +327,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 6,
@@ -333,7 +344,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 1,
@@ -349,7 +361,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 9,
@@ -365,7 +378,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 17,
@@ -381,7 +395,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 8,
@@ -397,7 +412,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 7,
@@ -413,7 +429,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 46,
@@ -429,7 +446,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 45,
@@ -445,7 +463,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 44,
@@ -461,7 +480,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 43,
@@ -477,7 +497,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 42,
@@ -493,7 +514,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 41,
@@ -509,7 +531,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 40,
@@ -525,7 +548,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 39,
@@ -541,7 +565,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 38,
@@ -557,7 +582,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 37,
@@ -573,7 +599,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 36,
@@ -589,7 +616,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 35,
@@ -605,7 +633,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 34,
@@ -621,7 +650,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 33,
@@ -637,7 +667,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 32,
@@ -653,7 +684,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 31,
@@ -669,7 +701,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 30,
@@ -685,7 +718,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 29,
@@ -701,7 +735,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 28,
@@ -717,7 +752,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 27,
@@ -733,7 +769,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 47,
@@ -909,7 +946,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 58,
@@ -925,7 +963,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 59,
@@ -941,7 +980,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 60,
@@ -957,7 +997,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 61,
@@ -973,7 +1014,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 62,
@@ -989,7 +1031,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 63,
@@ -1005,7 +1048,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 64,
@@ -1021,7 +1065,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 65,
@@ -1037,7 +1082,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 66,
@@ -1053,7 +1099,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 67,
@@ -1069,7 +1116,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 68,
@@ -1085,7 +1133,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 69,
@@ -1101,7 +1150,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 70,
@@ -1117,7 +1167,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 71,
@@ -1133,7 +1184,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 72,
@@ -1149,7 +1201,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 73,
@@ -1165,7 +1218,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 74,
@@ -1181,7 +1235,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 75,
@@ -1197,7 +1252,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 76,
@@ -1213,7 +1269,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 77,
@@ -1229,7 +1286,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 78,
@@ -1245,7 +1303,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 79,
@@ -1261,7 +1320,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 80,
@@ -1277,7 +1337,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 81,
@@ -1293,7 +1354,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 82,
@@ -1309,7 +1371,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 83,
@@ -1325,7 +1388,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 84,
@@ -1341,7 +1405,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 85,
@@ -1357,7 +1422,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 86,
@@ -1373,7 +1439,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 87,
@@ -1389,7 +1456,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 88,
@@ -1405,7 +1473,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 89,
@@ -1421,7 +1490,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 90,
@@ -1437,7 +1507,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 91,
@@ -1453,7 +1524,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 92,
@@ -1469,7 +1541,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 93,
@@ -1485,7 +1558,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 94,
@@ -1501,7 +1575,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 95,
@@ -1517,7 +1592,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 96,
@@ -1533,7 +1609,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 97,
@@ -1549,7 +1626,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 98,
@@ -1565,7 +1643,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 99,
@@ -1581,7 +1660,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 100,
@@ -1597,7 +1677,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 101,
@@ -1613,7 +1694,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 102,
@@ -1629,7 +1711,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 103,
@@ -1645,7 +1728,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 104,
@@ -1677,7 +1761,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 106,
@@ -2061,7 +2146,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 130,
@@ -2077,7 +2163,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 131,
@@ -2093,7 +2180,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 132,
@@ -2109,7 +2197,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 133,
@@ -2125,7 +2214,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 134,
@@ -2141,7 +2231,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 135,
@@ -2157,7 +2248,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 136,
@@ -2173,7 +2265,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 137,
@@ -2189,7 +2282,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 138,
@@ -2205,7 +2299,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 139,
@@ -2221,7 +2316,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 140,
@@ -2237,7 +2333,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 141,
@@ -2253,7 +2350,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 142,
@@ -2269,7 +2367,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 143,
@@ -2285,7 +2384,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 144,
@@ -2301,7 +2401,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 145,
@@ -2317,7 +2418,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 146,
@@ -2333,7 +2435,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 147,
@@ -2349,7 +2452,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 148,
@@ -2365,7 +2469,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 149,
@@ -2381,7 +2486,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 150,
@@ -2397,7 +2503,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 151,
@@ -2413,7 +2520,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 152,
@@ -2429,7 +2537,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 153,
@@ -2445,7 +2554,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 154,
@@ -2461,7 +2571,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 155,
@@ -2477,7 +2588,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 156,
@@ -2493,7 +2605,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 157,
@@ -2509,7 +2622,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 158,
@@ -2525,7 +2639,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 159,
@@ -2541,7 +2656,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 160,
@@ -2557,7 +2673,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 161,
@@ -2573,7 +2690,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 162,
@@ -2589,7 +2707,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 163,
@@ -2605,7 +2724,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 164,
@@ -2621,7 +2741,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 165,
@@ -2637,7 +2758,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 166,
@@ -2653,7 +2775,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 167,
@@ -2669,7 +2792,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 168,
@@ -2685,7 +2809,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 169,
@@ -2701,7 +2826,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 170,
@@ -2717,7 +2843,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 171,
@@ -2733,7 +2860,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 172,
@@ -2749,7 +2877,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 173,
@@ -2765,7 +2894,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 174,
@@ -2781,7 +2911,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 175,
@@ -2797,7 +2928,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 176,
@@ -2813,7 +2945,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 177,
@@ -2829,7 +2962,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 178,
@@ -2845,7 +2979,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 179,
@@ -2861,7 +2996,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 180,
@@ -2877,7 +3013,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 181,
@@ -2893,7 +3030,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 182,
@@ -2909,7 +3047,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 183,
@@ -2925,7 +3064,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 184,
@@ -2941,7 +3081,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 185,
@@ -2957,7 +3098,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 186,
@@ -2973,7 +3115,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 187,
@@ -2989,7 +3132,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 188,
@@ -3005,7 +3149,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 189,
@@ -3021,7 +3166,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 190,
@@ -3037,7 +3183,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 191,
@@ -3053,7 +3200,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 192,
@@ -3069,7 +3217,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 193,
@@ -3085,7 +3234,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 194,
@@ -3101,7 +3251,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 195,
@@ -3117,7 +3268,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 196,
@@ -3133,7 +3285,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 197,
@@ -3149,7 +3302,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 198,
@@ -3165,7 +3319,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 199,
@@ -3181,7 +3336,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 200,
@@ -3197,7 +3353,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 201,
@@ -3581,7 +3738,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 225,
@@ -3597,7 +3755,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 226,
@@ -3613,7 +3772,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 227,
@@ -3629,7 +3789,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 228,
@@ -3645,7 +3806,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 229,
@@ -3661,7 +3823,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 230,
@@ -3677,7 +3840,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 231,
@@ -3693,7 +3857,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 232,
@@ -3709,7 +3874,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 233,
@@ -3725,7 +3891,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 234,
@@ -3741,7 +3908,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 235,
@@ -3757,7 +3925,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 236,
@@ -3773,7 +3942,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 237,
@@ -3789,7 +3959,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 238,
@@ -3805,7 +3976,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 239,
@@ -3821,7 +3993,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 240,
@@ -3837,7 +4010,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 241,
@@ -3853,7 +4027,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 242,
@@ -3869,7 +4044,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 243,
@@ -3885,7 +4061,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 244,
@@ -3901,7 +4078,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 245,
@@ -3917,7 +4095,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 246,
@@ -3933,7 +4112,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 247,
@@ -3949,7 +4129,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 248,
@@ -3965,7 +4146,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 249,
@@ -3981,7 +4163,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 250,
@@ -3997,7 +4180,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 251,
@@ -4013,7 +4197,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 252,
@@ -4029,7 +4214,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 253,
@@ -4045,7 +4231,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 254,
@@ -4061,7 +4248,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 255,
@@ -4077,7 +4265,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 256,
@@ -4093,7 +4282,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 257,
@@ -4109,7 +4299,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 258,
@@ -4125,7 +4316,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 259,
@@ -4141,7 +4333,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 260,
@@ -4157,7 +4350,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 261,
@@ -4173,7 +4367,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 262,
@@ -4189,7 +4384,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 263,
@@ -4205,7 +4401,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 264,
@@ -4221,7 +4418,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 265,
@@ -4237,7 +4435,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 266,
@@ -4253,7 +4452,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 267,
@@ -4269,7 +4469,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 268,
@@ -4285,7 +4486,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 269,
@@ -4301,7 +4503,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 270,
@@ -4317,7 +4520,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 271,
@@ -4333,7 +4537,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 272,
@@ -4349,7 +4554,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 273,
@@ -4365,7 +4571,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 274,
@@ -4381,7 +4588,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 275,
@@ -4397,7 +4605,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 276,
@@ -4413,7 +4622,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 277,
@@ -4429,7 +4639,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 278,
@@ -4445,7 +4656,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 279,
@@ -4461,7 +4673,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 280,
@@ -4477,7 +4690,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 281,
@@ -4493,7 +4707,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 282,
@@ -4509,7 +4724,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 283,
@@ -4525,7 +4741,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 284,
@@ -4541,7 +4758,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 285,
@@ -4557,7 +4775,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 286,
@@ -4573,7 +4792,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 287,
@@ -4589,7 +4809,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 288,
@@ -4605,7 +4826,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 289,
@@ -4621,7 +4843,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 290,
@@ -4637,7 +4860,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 291,
@@ -4653,7 +4877,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 292,
@@ -4669,7 +4894,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 293,
@@ -4685,7 +4911,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 294,
@@ -4701,7 +4928,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 295,
@@ -5101,7 +5329,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 320,
@@ -5117,7 +5346,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 321,
@@ -5133,7 +5363,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 322,
@@ -5149,7 +5380,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 323,
@@ -5165,7 +5397,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 324,
@@ -5181,7 +5414,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 325,
@@ -5197,7 +5431,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 326,
@@ -5213,7 +5448,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 327,
@@ -5229,7 +5465,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 328,
@@ -5245,7 +5482,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 329,
@@ -5261,7 +5499,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 330,
@@ -5277,7 +5516,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 331,
@@ -5293,7 +5533,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 332,
@@ -5309,7 +5550,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 333,
@@ -5325,7 +5567,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 334,
@@ -5341,7 +5584,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 335,
@@ -5357,7 +5601,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 336,
@@ -5373,7 +5618,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 337,
@@ -5389,7 +5635,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 338,
@@ -5405,7 +5652,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 339,
@@ -5421,7 +5669,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 340,
@@ -5437,7 +5686,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 341,
@@ -5453,7 +5703,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 342,
@@ -5469,7 +5720,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 343,
@@ -5485,7 +5737,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 344,
@@ -5501,7 +5754,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 345,
@@ -5517,7 +5771,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 346,
@@ -5533,7 +5788,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 347,
@@ -5549,7 +5805,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 348,
@@ -5565,7 +5822,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 349,
@@ -5581,7 +5839,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 350,
@@ -5597,7 +5856,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 351,
@@ -5613,7 +5873,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 352,
@@ -5629,7 +5890,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 353,
@@ -5645,7 +5907,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 354,
@@ -5661,7 +5924,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 355,
@@ -5677,7 +5941,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 356,
@@ -5693,7 +5958,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 357,
@@ -5709,7 +5975,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 358,
@@ -5725,7 +5992,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 359,
@@ -5741,7 +6009,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 360,
@@ -5757,7 +6026,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 361,
@@ -5773,7 +6043,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 362,
@@ -5789,7 +6060,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 363,
@@ -5805,7 +6077,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 364,
@@ -5821,7 +6094,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 365,
@@ -5837,7 +6111,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 366,
@@ -5853,7 +6128,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 367,
@@ -5869,7 +6145,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 368,
@@ -5885,7 +6162,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 369,
@@ -5901,7 +6179,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 370,
@@ -5917,7 +6196,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 371,
@@ -5933,7 +6213,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 372,
@@ -5949,7 +6230,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 373,
@@ -5965,7 +6247,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 374,
@@ -5981,7 +6264,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 375,
@@ -5997,7 +6281,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 376,
@@ -6013,7 +6298,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 377,
@@ -6029,7 +6315,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 378,
@@ -6045,7 +6332,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 379,
@@ -6061,7 +6349,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 380,
@@ -6077,7 +6366,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 381,
@@ -6093,7 +6383,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 382,
@@ -6109,7 +6400,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 383,
@@ -6125,7 +6417,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 384,
@@ -6141,7 +6434,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 385,
@@ -6157,7 +6451,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 386,
@@ -6173,7 +6468,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 387,
@@ -6189,7 +6485,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 388,
@@ -6205,7 +6502,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 389,
@@ -6221,7 +6519,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 390,
@@ -6237,7 +6536,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 391,
@@ -6253,7 +6553,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 392,
@@ -6269,7 +6570,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 393,
@@ -6285,7 +6587,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 394,
@@ -6301,7 +6604,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 395,
@@ -6317,7 +6621,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 397,
@@ -6333,7 +6638,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 398,
@@ -6349,7 +6655,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 399,
@@ -6365,7 +6672,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 400,
@@ -6381,7 +6689,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 401,
@@ -6397,7 +6706,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 402,
@@ -6413,7 +6723,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 403,
@@ -6445,7 +6756,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 405,
@@ -6461,7 +6773,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "link": ""
   },
   {
     "id": 406,
@@ -6477,7 +6790,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 407,
@@ -6493,7 +6807,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 408,
@@ -6509,7 +6824,8 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
   {
     "id": 409,
@@ -6525,7 +6841,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 410,
@@ -6541,7 +6858,8 @@ export const memoriesData = [
     "rarityStars": 4,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "link": ""
   },
   {
     "id": 411,
@@ -6557,6 +6875,7 @@ export const memoriesData = [
     "rarityStars": 5,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "link": ""
   },
 ]
