@@ -6552,9 +6552,9 @@ export const memoriesData = [
     "stellaName": "amber",
     "placementName": "lunar",
     "talentName": "hp",
-    "rarityName": "4-star",
-    "rarity": "../assets/icons/4-star.png",
-    "rarityStars": 4,
+    "rarityName": "5-star",
+    "rarity": "../assets/icons/5-star.png",
+    "rarityStars": 5,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png"
