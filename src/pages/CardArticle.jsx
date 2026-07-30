@@ -15,6 +15,7 @@ import LevelCardBlock from "../components/LevelCardBlock.jsx";
 import CardProtocores from "../components/CardProtocores.jsx";
 import SolarPairBonusBlock from "../components/SolarPairBonusBlock.jsx";
 import {solar4Stars} from "../data/solar-4-star-info.js";
+import StoryInfo from "../components/StoryInfo.jsx";
 
 function CardArticle() {
     const {cardId} = useParams();
@@ -63,6 +64,8 @@ function CardArticle() {
                     </CopyableText>
 
                     <ObtainInfo cardId={cardId} obtainData={obtainData}/>
+                    <StoryInfo cardId={cardId}/>
+
 
                     <ParametersBlock card={card}/>
 
