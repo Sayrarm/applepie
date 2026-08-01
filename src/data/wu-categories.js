@@ -13,7 +13,7 @@ export const wuCategories = [
     { id: 12, link: "fractal-library-q&a", title: "Fractal Library Q&A", image: "../assets/wu/12.png", },
     { id: 13, link: "high-&-low-culture", title: "High & Low Culture", image: "../assets/wu/13.png", },
     { id: 14, link: "elysium", title: "Elysium", image: "../assets/wu/14.png", },
-    { id: 15, link: "skethes-vol.13", title: "Skethes Vol.13", image: "../assets/wu/15.png", },
+    { id: 15, link: "skethes-vol.13", title: "Sketches Vol. 13", image: "../assets/wu/15.png", },
     { id: 16, link: "utopian-roamer", title: "Utopian Roamer", image: "../assets/wu/16.png", },
     { id: 17, link: "linkon-online", title: "Linkon Online", image: "../assets/wu/17.png", },
     { id: 18, link: "depths-of-chaos", title: "Depths of Chaos", image: "../assets/wu/18.png", },

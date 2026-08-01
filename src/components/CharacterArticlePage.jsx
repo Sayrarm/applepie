@@ -7,6 +7,7 @@ import {wuCategories} from '../data/wu-categories.js';
 import {anCategories} from '../data/an-categories.js';
 import {msData} from '../data/ms-data.js';
 import {getImageUrl} from './imageUtils.js';
+import CardList from './CardList.jsx';
 
 function CharacterArticlePage() {
     const {articleLink} = useParams();
@@ -18,13 +19,29 @@ function CharacterArticlePage() {
         return <div className={styles.notFound}>Character not found</div>;
     }
 
-    // Находим все истории, в которых есть карточки этого персонажа
-    const characterStories = storyCardInfo.filter(story => {
-        return story.memories.some(memoryId => {
-            const memory = memoriesData.find(m => String(m.id) === String(memoryId));
-            return memory && memory.char === character.char;
-        });
-    });
+    // Функция для получения карточек персонажа по истории
+    const getCharacterCardsForStory = (storyName) => {
+        const story = storyCardInfo.find(s => s.story === storyName);
+        if (!story) return [];
+
+        // Получаем ID карточек из story, фильтруем по персонажу
+        const characterCardIds = story.memories
+            .filter(memoryId => {
+                const memory = memoriesData.find(m => String(m.id) === String(memoryId));
+                return memory && memory.char === character.char;
+            });
+
+        // Возвращаем полные данные карточек
+        return memoriesData.filter(m =>
+            characterCardIds.includes(m.id) && m.char === character.char
+        );
+    };
+
+    // Получаем карточки для каждой истории
+    const mythsCards = getCharacterCardsForStory('Myths');
+    const memoriaCards = getCharacterCardsForStory('Memoria');
+    const secretTimesCards = getCharacterCardsForStory('Secret Times');
+    const tenderMomentsCards = getCharacterCardsForStory('Tender Moments');
 
     // Функция для поиска ссылки по названию World Underneath
     const getWuLink = (title) => {
@@ -53,7 +70,7 @@ function CharacterArticlePage() {
         if (link && (link.startsWith('http://') || link.startsWith('https://'))) {
             return link;
         }
-        return null; // или '#' если хочешь, чтобы ссылка никуда не вела
+        return null;
     };
 
     // Функция для рендера Main Story
@@ -234,19 +251,51 @@ function CharacterArticlePage() {
                     </div>
                 </div>
 
-                {/* Related Lore Stories */}
-                {characterStories.length > 0 && (
+                {/* Myths */}
+                {mythsCards.length > 0 && (
                     <div className={styles.section}>
-                        <h2 className={styles.sectionTitle}>Related Lore Stories</h2>
+                        <h2 className={styles.sectionTitle}>Myths</h2>
                         <div className={styles.sectionContent}>
-                            <ul className={styles.list}>
-                                {characterStories.map((story, index) => (
-                                    <li key={index} className={styles.listItem}>{story.story}</li>
-                                ))}
-                            </ul>
+                            <CardList cards={mythsCards} isSmall={true}/>
                         </div>
                     </div>
                 )}
+
+                {/* Memoria */}
+                {memoriaCards.length > 0 && (
+                    <div className={styles.section}>
+                        <h2 className={styles.sectionTitle}>Memoria</h2>
+                        <div className={styles.sectionContent}>
+                            <CardList cards={memoriaCards} isSmall={true}/>
+                        </div>
+                    </div>
+                )}
+
+                {/* Tender Moments */}
+                {tenderMomentsCards.length > 0 && (
+                    <div className={styles.section}>
+                        <h2 className={styles.sectionTitle}>Tender Moments</h2>
+                        <div className={styles.sectionContent}>
+                            <CardList cards={tenderMomentsCards} isSmall={true}/>
+                        </div>
+                    </div>
+                )}
+
+                {/* Secret Times */}
+                {secretTimesCards.length > 0 && (
+                    <div className={styles.section}>
+                        <h2 className={styles.sectionTitle}>Secret Times</h2>
+                        <div className={styles.sectionContent}>
+                            <CardList cards={secretTimesCards} isSmall={true}/>
+                        </div>
+                    </div>
+                )}
+
+                {mythsCards.length === 0 && memoriaCards.length === 0 &&
+                    secretTimesCards.length === 0 && tenderMomentsCards.length === 0 && (
+                        <div className={styles.noData}>No lore stories available</div>
+                    )}
+
             </div>
         </div>
     );
