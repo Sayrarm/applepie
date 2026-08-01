@@ -44,7 +44,7 @@ function CharacterArticlePage() {
     // Функция для рендера ссылки с заголовком и картинкой
     const renderLinkWithTitle = (linkObj) => {
         if (!linkObj || !linkObj.link || linkObj.link === '' || linkObj.link === 'ссылка') {
-            return <span className={styles.noData}>No data available</span>;
+            return <div className={styles.noData}>No data available</div>;
         }
         return (
             <a
@@ -61,7 +61,7 @@ function CharacterArticlePage() {
     // Функция для рендера Bond с картинкой
     const renderBondItem = (bond) => {
         if (!bond || !bond.link || bond.link === '' || bond.link === 'ссылка') {
-            return <span className={styles.noData}>No data available</span>;
+            return <div className={styles.noData}>No data available</div>;
         }
         return (
             <a
@@ -83,7 +83,7 @@ function CharacterArticlePage() {
     // Функция для рендера списка World Underneath с ссылками
     const renderWuList = (items) => {
         if (!items || items.length === 0) {
-            return <span className={styles.noData}>No data available</span>;
+            return <div className={styles.noData}>No data available</div>;
         }
         return (
             <ul className={styles.list}>
@@ -96,7 +96,7 @@ function CharacterArticlePage() {
                                     {item}
                                 </Link>
                             ) : (
-                                <span className={styles.noLink}>{item}</span>
+                                <div className={styles.noLink}>{item}</div>
                             )}
                         </li>
                     );
@@ -108,7 +108,7 @@ function CharacterArticlePage() {
     // Функция для рендера списка Anecdotes с ссылками
     const renderAnList = (items) => {
         if (!items || items.length === 0) {
-            return <span className={styles.noData}>No data available</span>;
+            return <div className={styles.noData}>No data available</div>;
         }
         return (
             <ul className={styles.list}>
@@ -121,7 +121,7 @@ function CharacterArticlePage() {
                                     {item}
                                 </Link>
                             ) : (
-                                <span className={styles.noLink}>{item}</span>
+                                <div className={styles.noLink}>{item}</div>
                             )}
                         </li>
                     );
@@ -170,23 +170,25 @@ function CharacterArticlePage() {
                             ))}
                         </div>
                     ) : (
-                        <span className={styles.noData}>No data available</span>
+                        <div className={styles.noData}>No data available</div>
                     )}
                 </div>
 
-                {/* World Underneath */}
-                <div className={styles.section}>
-                    <h2 className={styles.sectionTitle}>World Underneath</h2>
-                    <div className={styles.sectionContent}>
-                        {renderWuList(character.wu)}
+                <div className={styles.storyContainer}>
+                    {/* World Underneath */}
+                    <div className={styles.section}>
+                        <h2 className={styles.sectionTitle}>World Underneath</h2>
+                        <div className={styles.sectionContent}>
+                            {renderWuList(character.wu)}
+                        </div>
                     </div>
-                </div>
 
-                {/* Anecdotes */}
-                <div className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Anecdotes</h2>
-                    <div className={styles.sectionContent}>
-                        {renderAnList(character.anecdotes)}
+                    {/* Anecdotes */}
+                    <div className={styles.section}>
+                        <h2 className={styles.sectionTitle}>Anecdotes</h2>
+                        <div className={styles.sectionContent}>
+                            {renderAnList(character.anecdotes)}
+                        </div>
                     </div>
                 </div>
 

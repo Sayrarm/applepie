@@ -57,3 +57,22 @@
 .bondList {
     display: flex;
 }
+
+.storyContainer {
+    display: flex;
+    gap: 40px;
+}
+
+li {
+    list-style-position: inside;
+}
+
+.sectionTitle {
+    border-bottom: 1px dashed var(--border);
+    width: 100%;
+    padding: 5px 0;
+}
+
+.sectionContent {
+    padding: 10px 0;
+}

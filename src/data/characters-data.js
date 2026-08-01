@@ -4,8 +4,8 @@ export const charactersData = [
         char: "Xavier",
         img: "../assets/companions/xavier-youth.png",
         mainStory: "ссылка",
-        bond_1: {link: "", title: "", image:""},
-        bond_2: {link: "", title: "", image:""},
+        bond_1: {link: "https://youtu.be/y3ltG0mIC2U", title: "Plushie Go Go", image:"../assets/bond/Plushie-Go-Go.png"},
+        bond_2: {link: "https://youtu.be/q8zM_y58Iks", title: "A Night of Warmth", image:"../assets/bond/A-Night-of-Warmth.png"},
         wu: ["From The Stars", "Sealed In Dust", "With Light", "Frontline Hunter", "The Lucky Loop", "Light Into Dust", "The Little Prince's Gift"],
         anecdotes: ["A Special Vacation", "Passing By", "When Shooting Stars Fall"]
     },
