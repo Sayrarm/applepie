@@ -1,9 +1,9 @@
 export const msCategories = [
-    { id: 10,  link: "ud", title: "Under Deepspace", image: "src/assets/bg/a2_mainline_sectionbg01.png", },
-    { id: 20,  link: "lab", title: "Long-Awaited Bevelry", image: "src/assets/bg/a2_mainline_sectionbgsmall_02.png", },
-    { id: 30,  link: "ptt", title: "Prologue To Tomorrow", image: "src/assets/bg/a2_mainline_sectionbgsmall_03.png", },
-    { id: 40,  link: "hw", title: "Homecoming Wings", image: "src/assets/bg/a2_mainline_sectionbgsmall_04.png", },
-    { id: 50,  link: "dar", title: "Death And Rebirth", image: "src/assets/bg/a2_mainline_sectionbgsmall_05.png", },
-    { id: 60,  link: "toy", title: "To Our Yesterday", image: "src/assets/bg/a2_mainline_sectionbgsmall_06.png", },
+    { id: 10,  link: "under-deepspace", title: "Under Deepspace", image: "../assets/bg/1.png", },
+    { id: 20,  link: "long-awaited-beverly", title: "Long-Awaited Bevelry", image: "../assets/bg/2.png", },
+    { id: 30,  link: "prologue-to-tomorrow", title: "Prologue To Tomorrow", image: "../assets/bg/3.png", },
+    { id: 40,  link: "homecoming-wings", title: "Homecoming Wings", image: "../assets/bg/4.png", },
+    { id: 50,  link: "death-and-rebirth", title: "Death And Rebirth", image: "../assets/bg/5.png", },
+    { id: 60,  link: "to-our-yesterday", title: "To Our Yesterday", image: "../assets/bg/6.png", },
 
 ];

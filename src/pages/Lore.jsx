@@ -14,12 +14,12 @@ function Lore() {
                     <div className={styles.title}>Characters</div>
                     <img className={styles.img} src={getImageUrl("../assets/bg/bg-characters.jpg")} alt="characters"/>
                 </Link>
-                {/*
+
                 <Link className={styles.link} to="/main-story">
                     <div className={styles.title}>Main Story</div>
-                    <img className={styles.img} src="src/assets/bg/b2_mainline_chapterbg_08.png" alt="spacepedia"/>
+                    <img className={styles.img} src={getImageUrl("../assets/bg/bg-main-story.png")} alt="main story"/>
                 </Link>
-                */}
+
                 <Link className={styles.link} to="/spacepedia">
                     <div className={styles.title}>Spacepedia</div>
                     <img className={styles.img} src={getImageUrl("../assets/bg/bg-city.png")} alt="spacepedia"/>

@@ -30,6 +30,7 @@
     width: 100%;
     padding: 5px 0;
     border-bottom: 1px solid var(--border);
+    margin-bottom: 10px;
 }
 
 .bondLink {
@@ -42,6 +43,7 @@
     width: 200px;
 }
 
+.link,
 .bondLink,
 .linkInternal {
     text-decoration: none;
@@ -49,6 +51,7 @@
     transition: 0.3s;
 }
 
+.link:hover,
 .bondLink:hover,
 .linkInternal:hover {
     color: var(--a);
@@ -73,6 +76,26 @@ li {
     padding: 5px 0;
 }
 
+.sectionTitle:first-child {
+    padding-top: 0;
+}
+
 .sectionContent {
     padding: 10px 0;
+}
+
+.mainStoryGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.mainStorytitlesContainer {
+    display: flex;
+    gap: 5px;
+}
+
+.mainStoryTitle {
+    margin: 15px 0 5px 0;
+    color: var(--a);
 }

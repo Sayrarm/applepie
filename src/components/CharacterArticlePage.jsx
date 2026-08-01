@@ -5,6 +5,7 @@ import {storyCardInfo} from '../data/story-card-info.js';
 import {memoriesData} from '../data/memories-data.js';
 import {wuCategories} from '../data/wu-categories.js';
 import {anCategories} from '../data/an-categories.js';
+import {msData} from '../data/ms-data.js';
 import {getImageUrl} from './imageUtils.js';
 
 function CharacterArticlePage() {
@@ -41,20 +42,63 @@ function CharacterArticlePage() {
         return category ? `/anecdotes/${category.link}` : null;
     };
 
-    // Функция для рендера ссылки с заголовком и картинкой
-    const renderLinkWithTitle = (linkObj) => {
-        if (!linkObj || !linkObj.link || linkObj.link === '' || linkObj.link === 'ссылка') {
+    // Функция для поиска ссылки по тайтлу и серийному номеру
+    const getMsLink = (title, serialNumber) => {
+        const msEntry = msData.find(item =>
+            item.link.toLowerCase().replace(/-/g, ' ') === title.toLowerCase() &&
+            item.serialNumber === serialNumber
+        );
+        // Проверяем, что ссылка существует и начинается с http
+        const link = msEntry?.content;
+        if (link && (link.startsWith('http://') || link.startsWith('https://'))) {
+            return link;
+        }
+        return null; // или '#' если хочешь, чтобы ссылка никуда не вела
+    };
+
+    // Функция для рендера Main Story
+    const renderMainStory = (mainStoryArray) => {
+        if (!mainStoryArray || mainStoryArray.length === 0) {
             return <div className={styles.noData}>No data available</div>;
         }
+
+        // Группируем по тайтлу
+        const grouped = {};
+        mainStoryArray.forEach(item => {
+            if (!grouped[item.title]) {
+                grouped[item.title] = [];
+            }
+            grouped[item.title].push(item);
+        });
+
         return (
-            <a
-                href={linkObj.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.link}
-            >
-                {linkObj.title || linkObj.link}
-            </a>
+            <div className={styles.mainStoryList}>
+                {Object.keys(grouped).map((title, index) => (
+                    <div key={index} className={styles.mainStoryGroup}>
+                        <h3 className={styles.mainStoryTitle}>{title}</h3>
+                        {grouped[title].map((item, idx) => {
+                            const link = getMsLink(item.title, item.serialNumber);
+                            return (
+                                <div key={idx} className={styles.mainStorytitlesContainer}>
+                                    <span className={styles.serialNumber}>{item.serialNumber}.</span>
+                                    {link ? (
+                                        <a
+                                            href={link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className={styles.link}
+                                        >
+                                            {item.subtitle}
+                                        </a>
+                                    ) : (
+                                        <span className={styles.noLink}>{item.subtitle}</span>
+                                    )}
+                                </div>
+                            );
+                        })}
+                    </div>
+                ))}
+            </div>
         );
     };
 
@@ -150,10 +194,8 @@ function CharacterArticlePage() {
                 {/* Main Story */}
                 <div className={styles.section}>
                     <h2 className={styles.sectionTitle}>Main Story</h2>
-                    <div className={styles.sectionContent}>
-                        {renderLinkWithTitle(
-                            {link: character.mainStory, title: 'Watch on YouTube'}
-                        )}
+                    <div>
+                        {renderMainStory(character.mainStory)}
                     </div>
                 </div>
 
