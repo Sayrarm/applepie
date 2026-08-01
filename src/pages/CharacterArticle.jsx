@@ -2,6 +2,7 @@ import {Link, useParams} from "react-router-dom";
 import {Fragment} from "react";
 import styles from "./Article.module.css";
 import {charactersCategories} from "../data/characters-categories.js";
+import CharacterArticlePage from "../components/CharacterArticlePage.jsx";
 
 
 
@@ -29,7 +30,7 @@ function CharacterArticle() {
                 </Fragment>
             </nav>
 
-            {/*надо компонент CharacterArticle сделать*/}
+            <CharacterArticlePage />
         </>
     );
 }

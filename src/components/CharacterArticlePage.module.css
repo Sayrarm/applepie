@@ -1,0 +1,59 @@
+.container {
+    display: flex;
+    gap: 150px;
+    margin: 20px;
+}
+
+.characterImage {
+    width: 250px;
+    height: 700px;
+
+    object-fit: cover;
+
+    -webkit-mask-image:
+            linear-gradient(90deg, transparent 0%, black 40%, black 90%, transparent 100%),
+            linear-gradient(0deg, transparent 0%, black 40%, black 90%, transparent 100%);
+    -webkit-mask-composite: intersect;
+    mask-image:
+            linear-gradient(90deg, transparent 0%, black 40%, black 90%, transparent 100%),
+            linear-gradient(0deg, transparent 0%, black 40%, black 90%, transparent 100%);
+    mask-composite: intersect;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.characterName {
+    width: 100%;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.bondLink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bondImage {
+    width: 200px;
+}
+
+.bondLink,
+.linkInternal {
+    text-decoration: none;
+    color: var(--colorTextDark);
+    transition: 0.3s;
+}
+
+.bondLink:hover,
+.linkInternal:hover {
+    color: var(--a);
+}
+
+.bondList {
+    display: flex;
+}
