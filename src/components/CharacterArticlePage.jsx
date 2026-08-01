@@ -199,104 +199,116 @@ function CharacterArticlePage() {
     return (
         <div className={styles.container}>
 
-            <img
-                src={getImageUrl(character.img)}
-                alt={character.char}
-                className={styles.characterImage}
-            />
+            <div className={styles.freeStory}>
+                <img
+                    src={getImageUrl(character.img)}
+                    alt={character.char}
+                    className={styles.characterImage}
+                />
 
-            <div className={styles.content}>
-                <h1 className={styles.characterName}>{character.char}</h1>
+                <div className={styles.content}>
 
-                {/* Main Story */}
-                <div className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Main Story</h2>
-                    <div>
-                        {renderMainStory(character.mainStory)}
-                    </div>
-                </div>
+                    <h1 className={styles.characterName}>{character.char}</h1>
 
-                {/* Bond */}
-                <div className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Bond</h2>
+                    <div className={styles.commonContent}>
 
-                    {bonds.length > 0 ? (
-                        <div className={styles.bondList}>
-                            {bonds.map((bond, index) => (
-                                <div key={index} className={styles.bondItem}>
-                                    {renderBondItem(bond)}
+                        <div className={styles.content1}>
+                            {/* Main Story */}
+                            <div className={styles.section}>
+                                <h2 className={styles.sectionTitle}>Main Story</h2>
+                                <div>
+                                    {renderMainStory(character.mainStory)}
                                 </div>
-                            ))}
+                            </div>
                         </div>
-                    ) : (
-                        <div className={styles.noData}>No data available</div>
-                    )}
+
+                        <div className={styles.content2}>
+                            {/* Bond */}
+                            <div className={styles.section}>
+                                <h2 className={styles.sectionTitle}>Bond</h2>
+
+                                {bonds.length > 0 ? (
+                                    <div className={styles.bondList}>
+                                        {bonds.map((bond, index) => (
+                                            <div key={index} className={styles.bondItem}>
+                                                {renderBondItem(bond)}
+                                            </div>
+                                        ))}
+                                    </div>
+                                ) : (
+                                    <div className={styles.noData}>No data available</div>
+                                )}
+                            </div>
+
+                            <div className={styles.storyContainer}>
+                                {/* World Underneath */}
+                                <div className={styles.section}>
+                                    <h2 className={styles.sectionTitle}>World Underneath</h2>
+                                    <div className={styles.sectionContent}>
+                                        {renderWuList(character.wu)}
+                                    </div>
+                                </div>
+
+                                {/* Anecdotes */}
+                                <div className={styles.section}>
+                                    <h2 className={styles.sectionTitle}>Anecdotes</h2>
+                                    <div className={styles.sectionContent}>
+                                        {renderAnList(character.anecdotes)}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
-
-                <div className={styles.storyContainer}>
-                    {/* World Underneath */}
-                    <div className={styles.section}>
-                        <h2 className={styles.sectionTitle}>World Underneath</h2>
-                        <div className={styles.sectionContent}>
-                            {renderWuList(character.wu)}
-                        </div>
-                    </div>
-
-                    {/* Anecdotes */}
-                    <div className={styles.section}>
-                        <h2 className={styles.sectionTitle}>Anecdotes</h2>
-                        <div className={styles.sectionContent}>
-                            {renderAnList(character.anecdotes)}
-                        </div>
-                    </div>
-                </div>
-
-                {/* Myths */}
-                {mythsCards.length > 0 && (
-                    <div className={styles.section}>
-                        <h2 className={styles.sectionTitle}>Myths</h2>
-                        <div className={styles.sectionContent}>
-                            <CardList cards={mythsCards} isSmall={true}/>
-                        </div>
-                    </div>
-                )}
-
-                {/* Memoria */}
-                {memoriaCards.length > 0 && (
-                    <div className={styles.section}>
-                        <h2 className={styles.sectionTitle}>Memoria</h2>
-                        <div className={styles.sectionContent}>
-                            <CardList cards={memoriaCards} isSmall={true}/>
-                        </div>
-                    </div>
-                )}
-
-                {/* Tender Moments */}
-                {tenderMomentsCards.length > 0 && (
-                    <div className={styles.section}>
-                        <h2 className={styles.sectionTitle}>Tender Moments</h2>
-                        <div className={styles.sectionContent}>
-                            <CardList cards={tenderMomentsCards} isSmall={true}/>
-                        </div>
-                    </div>
-                )}
-
-                {/* Secret Times */}
-                {secretTimesCards.length > 0 && (
-                    <div className={styles.section}>
-                        <h2 className={styles.sectionTitle}>Secret Times</h2>
-                        <div className={styles.sectionContent}>
-                            <CardList cards={secretTimesCards} isSmall={true}/>
-                        </div>
-                    </div>
-                )}
-
-                {mythsCards.length === 0 && memoriaCards.length === 0 &&
-                    secretTimesCards.length === 0 && tenderMomentsCards.length === 0 && (
-                        <div className={styles.noData}>No lore stories available</div>
-                    )}
-
             </div>
+
+            {/* Myths */}
+            {mythsCards.length > 0 && (
+                <div className={styles.section}>
+                    <h2 className={styles.sectionTitle}>Myths</h2>
+                    <div className={styles.sectionContent}>
+                        <CardList cards={mythsCards} isSmall={true}/>
+                    </div>
+                </div>
+            )}
+
+            {/* Memoria */}
+            {memoriaCards.length > 0 && (
+                <div className={styles.section}>
+                    <h2 className={styles.sectionTitle}>Memoria</h2>
+                    <div className={styles.sectionContent}>
+                        <CardList cards={memoriaCards} isSmall={true}/>
+                    </div>
+                </div>
+            )}
+
+            {/* Tender Moments */}
+            {tenderMomentsCards.length > 0 && (
+                <div className={styles.section}>
+                    <h2 className={styles.sectionTitle}>Tender Moments</h2>
+                    <div className={styles.sectionContent}>
+                        <CardList cards={tenderMomentsCards} isSmall={true}/>
+                    </div>
+                </div>
+            )}
+
+            {/* Secret Times */}
+            {secretTimesCards.length > 0 && (
+                <div className={styles.section}>
+                    <h2 className={styles.sectionTitle}>Secret Times</h2>
+                    <div className={styles.sectionContent}>
+                        <CardList cards={secretTimesCards} isSmall={true}/>
+                    </div>
+                </div>
+            )}
+
+            {mythsCards.length === 0 && memoriaCards.length === 0 &&
+                secretTimesCards.length === 0 && tenderMomentsCards.length === 0 && (
+                    <div className={styles.noData}>No lore stories available</div>
+                )}
+
         </div>
     );
 }
