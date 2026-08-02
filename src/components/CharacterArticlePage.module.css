@@ -176,4 +176,8 @@ li {
     .sectionCardsTitle {
         margin: 10px;
     }
+
+    .bondList {
+        flex-direction: column;
+    }
 }
