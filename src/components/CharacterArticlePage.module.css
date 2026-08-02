@@ -98,7 +98,8 @@ li {
     list-style-position: inside;
 }
 
-.sectionTitle {
+.sectionTitle,
+.sectionCardsTitle {
     border-bottom: 1px dashed var(--border);
     width: 100%;
     padding: 5px 0;
@@ -126,4 +127,53 @@ li {
 .mainStoryTitle {
     margin: 15px 0 5px 0;
     color: var(--a);
+}
+
+@media screen and (max-width: 955px) {
+
+    .commonContent {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .freeStory {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .characterImage {
+        margin-top: 0;
+
+        width: 100%;
+        height: 200px;
+
+        object-fit: cover;
+        object-position: 20% 14%;
+
+        -webkit-mask-image: -webkit-linear-gradient(180deg, transparent 0%, black 20%, black 40%, transparent 100%);
+        mask-image: linear-gradient(180deg, transparent 0%, black 20%, black 60%, transparent 100%);
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .storyContainer {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .container {
+        margin: 0;
+    }
+
+    .content {
+        margin: 10px;
+    }
+
+    .sectionCardsTitle {
+        margin: 10px;
+    }
 }

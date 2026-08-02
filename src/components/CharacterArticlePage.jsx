@@ -267,7 +267,7 @@ function CharacterArticlePage() {
             {/* Myths */}
             {mythsCards.length > 0 && (
                 <div className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Myths</h2>
+                    <h2 className={styles.sectionCardsTitle}>Myths</h2>
                     <div className={styles.sectionContent}>
                         <CardList cards={mythsCards} isSmall={true}/>
                     </div>
@@ -277,7 +277,7 @@ function CharacterArticlePage() {
             {/* Memoria */}
             {memoriaCards.length > 0 && (
                 <div className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Memoria</h2>
+                    <h2 className={styles.sectionCardsTitle}>Memoria</h2>
                     <div className={styles.sectionContent}>
                         <CardList cards={memoriaCards} isSmall={true}/>
                     </div>
@@ -287,7 +287,7 @@ function CharacterArticlePage() {
             {/* Tender Moments */}
             {tenderMomentsCards.length > 0 && (
                 <div className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Tender Moments</h2>
+                    <h2 className={styles.sectionCardsTitle}>Tender Moments</h2>
                     <div className={styles.sectionContent}>
                         <CardList cards={tenderMomentsCards} isSmall={true}/>
                     </div>
@@ -297,7 +297,7 @@ function CharacterArticlePage() {
             {/* Secret Times */}
             {secretTimesCards.length > 0 && (
                 <div className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Secret Times</h2>
+                    <h2 className={styles.sectionCardsTitle}>Secret Times</h2>
                     <div className={styles.sectionContent}>
                         <CardList cards={secretTimesCards} isSmall={true}/>
                     </div>
