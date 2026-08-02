@@ -13,7 +13,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "release": "2025-01-22"
   },
   {
     "id": 25,
@@ -29,7 +30,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "release": "2025-01-22"
   },
   {
     "id": 24,
@@ -45,7 +47,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "release": "2025-01-22"
   },
   {
     "id": 23,
@@ -61,7 +64,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "release": "2025-01-22"
   },
   {
     "id": 22,
@@ -77,7 +81,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "release": "2025-03-28"
   },
   {
     "id": 21,
@@ -93,7 +98,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "release": "2025-06-08"
   },
   {
     "id": 20,
@@ -109,7 +115,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "release": "2026-03-28"
   },
   {
     "id": 19,
@@ -125,7 +132,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "release": "2025-01-22"
   },
   {
     "id": 18,
@@ -141,7 +149,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "release": "2025-01-22 "
   },
   {
     "id": 4,
@@ -158,7 +167,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 2,
@@ -175,7 +185,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 5,
@@ -192,7 +203,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 3,
@@ -209,7 +221,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 11,
@@ -226,7 +239,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2025-01-22"
   },
   {
     "id": 12,
@@ -243,7 +257,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2025-01-22"
   },
   {
     "id": 13,
@@ -260,7 +275,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2025-03-09"
   },
   {
     "id": 14,
@@ -277,7 +293,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2025-08-31"
   },
   {
     "id": 15,
@@ -294,7 +311,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-09-13"
   },
   {
     "id": 16,
@@ -311,7 +329,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-12-31"
   },
   {
     "id": 10,
@@ -328,7 +347,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2025-12-31"
   },
   {
     "id": 6,
@@ -345,7 +365,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-01-22"
   },
   {
     "id": 1,
@@ -362,7 +383,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-01-22"
   },
   {
     "id": 9,
@@ -379,7 +401,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2025-03-28"
   },
   {
     "id": 17,
@@ -396,7 +419,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2025-03-28"
   },
   {
     "id": 8,
@@ -413,7 +437,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2026-03-28"
   },
   {
     "id": 7,
@@ -430,7 +455,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2026-03-28"
   },
   {
     "id": 46,
@@ -447,7 +473,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-01-22"
   },
   {
     "id": 45,
@@ -464,7 +491,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2025-01-22"
   },
   {
     "id": 44,
@@ -481,7 +509,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2025-01-22"
   },
   {
     "id": 43,
@@ -498,7 +527,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-01-22"
   },
   {
     "id": 42,
@@ -515,7 +545,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-02-10"
   },
   {
     "id": 41,
@@ -532,7 +563,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-04-30"
   },
   {
     "id": 40,
@@ -549,7 +581,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-06-08"
   },
   {
     "id": 39,
@@ -566,7 +599,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2025-07-12"
   },
   {
     "id": 38,
@@ -583,7 +617,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2025-07-03"
   },
   {
     "id": 37,
@@ -600,7 +635,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2025-08-12"
   },
   {
     "id": 36,
@@ -617,7 +653,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-10-29"
   },
   {
     "id": 35,
@@ -634,7 +671,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2025-12-18"
   },
   {
     "id": 34,
@@ -651,7 +689,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2025-12-31"
   },
   {
     "id": 33,
@@ -668,7 +707,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2026-02-10"
   },
   {
     "id": 32,
@@ -685,7 +725,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-01-22"
   },
   {
     "id": 31,
@@ -702,7 +743,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-01-22"
   },
   {
     "id": 30,
@@ -719,7 +761,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2025-03-28"
   },
   {
     "id": 29,
@@ -736,7 +779,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2025-03-28"
   },
   {
     "id": 28,
@@ -753,7 +797,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2026-03-28"
   },
   {
     "id": 27,
@@ -770,7 +815,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2026-03-28"
   },
   {
     "id": 47,
@@ -786,7 +832,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "release": "2024-07-15"
   },
   {
     "id": 48,
@@ -802,7 +849,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "release": "2024-07-15"
   },
   {
     "id": 49,
@@ -818,7 +866,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "release": "2024-07-15"
   },
   {
     "id": 50,
@@ -834,7 +883,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "release": "2024-07-15"
   },
   {
     "id": 51,
@@ -850,7 +900,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "release": "2024-08-07"
   },
   {
     "id": 52,
@@ -866,7 +917,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "release": "2024-12-02"
   },
   {
     "id": 53,
@@ -882,7 +934,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "release": "2025-04-13"
   },
   {
     "id": 54,
@@ -898,7 +951,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "release": "2025-12-02"
   },
   {
     "id": 55,
@@ -914,7 +968,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "release": "2024-07-15"
   },
   {
     "id": 56,
@@ -930,7 +985,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "release": "2024-07-15"
   },
   {
     "id": 57,
@@ -947,7 +1003,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 58,
@@ -964,7 +1021,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 59,
@@ -981,7 +1039,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 60,
@@ -998,7 +1057,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 61,
@@ -1015,7 +1075,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-07-15"
   },
   {
     "id": 62,
@@ -1032,7 +1093,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-07-15"
   },
   {
     "id": 63,
@@ -1049,7 +1111,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-11-12"
   },
   {
     "id": 64,
@@ -1066,7 +1129,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-12-31"
   },
   {
     "id": 65,
@@ -1083,7 +1147,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-12-31"
   },
   {
     "id": 66,
@@ -1100,7 +1165,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2025-01-22"
   },
   {
     "id": 67,
@@ -1117,7 +1183,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2025-04-03"
   },
   {
     "id": 68,
@@ -1134,7 +1201,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2025-05-06"
   },
   {
     "id": 69,
@@ -1151,7 +1219,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2025-08-31"
   },
   {
     "id": 70,
@@ -1168,7 +1237,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2025-10-23"
   },
   {
     "id": 71,
@@ -1185,7 +1255,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2025-12-31"
   },
   {
     "id": 72,
@@ -1202,7 +1273,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2026-03-01"
   },
   {
     "id": 73,
@@ -1219,7 +1291,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-07-15"
   },
   {
     "id": 74,
@@ -1236,7 +1309,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-07-15"
   },
   {
     "id": 75,
@@ -1253,7 +1327,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-12-02"
   },
   {
     "id": 76,
@@ -1270,7 +1345,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-12-02"
   },
   {
     "id": 77,
@@ -1287,12 +1363,13 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-12-02"
   },
   {
     "id": 78,
     "char": "Sylus",
-    "name": "Ivory Thrist",
+    "name": "Ivory Thirst",
     "image": "../assets/pictures/Sylus/Sylus_78.jpg",
     "imageSmall": "../assets/pictures/card-middle/Sylus_78.png",
     "stellaName": "violet",
@@ -1304,7 +1381,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-12-02"
   },
   {
     "id": 79,
@@ -1321,7 +1399,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-07-15"
   },
   {
     "id": 80,
@@ -1338,12 +1417,13 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-07-15"
   },
   {
     "id": 81,
     "char": "Sylus",
-    "name": "No defence Zone",
+    "name": "No Defense Zone",
     "image": "../assets/pictures/Sylus/Sylus_81.jpg",
     "imageSmall": "../assets/pictures/card-middle/Sylus_81.png",
     "stellaName": "emerald",
@@ -1355,7 +1435,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-07-15"
   },
   {
     "id": 82,
@@ -1372,7 +1453,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-07-15"
   },
   {
     "id": 83,
@@ -1389,7 +1471,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-08-07"
   },
   {
     "id": 84,
@@ -1406,7 +1489,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-09-23"
   },
   {
     "id": 85,
@@ -1423,7 +1507,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-10-20"
   },
   {
     "id": 86,
@@ -1440,7 +1525,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-11-12"
   },
   {
     "id": 87,
@@ -1457,7 +1543,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-08-07"
   },
   {
     "id": 88,
@@ -1474,7 +1561,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2025-02-10"
   },
   {
     "id": 89,
@@ -1491,7 +1579,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2025-03-12"
   },
   {
     "id": 90,
@@ -1508,7 +1597,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2025-04-13"
   },
   {
     "id": 91,
@@ -1525,7 +1615,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2025-04-30"
   },
   {
     "id": 92,
@@ -1542,7 +1633,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-07-03"
   },
   {
     "id": 93,
@@ -1559,12 +1651,13 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-08-12"
   },
   {
     "id": 94,
     "char": "Sylus",
-    "name": "Passionate Apprasial",
+    "name": "Passionate Appraisal",
     "image": "../assets/pictures/Sylus/Sylus_94.jpg",
     "imageSmall": "../assets/pictures/card-middle/Sylus_94.png",
     "stellaName": "violet",
@@ -1576,7 +1669,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-09-18"
   },
   {
     "id": 95,
@@ -1593,7 +1687,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2025-10-29"
   },
   {
     "id": 96,
@@ -1610,7 +1705,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2025-12-31"
   },
   {
     "id": 97,
@@ -1627,7 +1723,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2026-02-10"
   },
   {
     "id": 98,
@@ -1644,7 +1741,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-07-15"
   },
   {
     "id": 99,
@@ -1661,7 +1759,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-07-15"
   },
   {
     "id": 100,
@@ -1678,7 +1777,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-12-02"
   },
   {
     "id": 101,
@@ -1695,7 +1795,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-12-02"
   },
   {
     "id": 102,
@@ -1712,7 +1813,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-12-02"
   },
   {
     "id": 103,
@@ -1729,7 +1831,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-12-02"
   },
   {
     "id": 104,
@@ -1745,7 +1848,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "release": "2026-04-13"
   },
   {
     "id": 105,
@@ -1762,7 +1866,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2026-04-13"
   },
   {
     "id": 106,
@@ -1778,7 +1883,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "release": "2024-01-18"
   },
   {
     "id": 107,
@@ -1794,7 +1900,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "release": "2024-01-18"
   },
   {
     "id": 108,
@@ -1810,7 +1917,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "release": "2024-01-18"
   },
   {
     "id": 109,
@@ -1826,7 +1934,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "release": "2024-01-18"
   },
   {
     "id": 110,
@@ -1842,7 +1951,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "release": "2024-01-18"
   },
   {
     "id": 111,
@@ -1858,7 +1968,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "release": "2024-01-18"
   },
   {
     "id": 112,
@@ -1874,7 +1985,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "release": "2024-01-18"
   },
   {
     "id": 113,
@@ -1890,7 +2002,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "release": "2024-01-18"
   },
   {
     "id": 114,
@@ -1906,7 +2019,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "release": "2024-01-18"
   },
   {
     "id": 115,
@@ -1922,7 +2036,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "release": "2024-01-18"
   },
   {
     "id": 116,
@@ -1938,7 +2053,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "release": "2024-01-18"
   },
   {
     "id": 117,
@@ -1954,7 +2070,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "release": "2024-01-18"
   },
   {
     "id": 118,
@@ -1970,7 +2087,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "release": "2024-05-13"
   },
   {
     "id": 119,
@@ -1986,7 +2104,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "release": "2024-08-07"
   },
   {
     "id": 120,
@@ -2002,7 +2121,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "release": "2024-10-11"
   },
   {
     "id": 121,
@@ -2018,7 +2138,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "release": "2025-07-25"
   },
   {
     "id": 122,
@@ -2034,7 +2155,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "release": "2025-10-11"
   },
   {
     "id": 123,
@@ -2050,7 +2172,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "release": "2024-01-18"
   },
   {
     "id": 124,
@@ -2066,7 +2189,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "release": "2024-01-18"
   },
   {
     "id": 125,
@@ -2082,7 +2206,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "release": "2024-01-18"
   },
   {
     "id": 126,
@@ -2098,7 +2223,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "release": "2024-01-18"
   },
   {
     "id": 127,
@@ -2114,7 +2240,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "release": "2024-01-18"
   },
   {
     "id": 128,
@@ -2130,7 +2257,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "release": "2024-01-18"
   },
   {
     "id": 129,
@@ -2147,7 +2275,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 130,
@@ -2164,7 +2293,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-03-17"
   },
   {
     "id": 131,
@@ -2181,7 +2311,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 132,
@@ -2198,7 +2329,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 133,
@@ -2215,7 +2347,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-06-13"
   },
   {
     "id": 134,
@@ -2232,7 +2365,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 135,
@@ -2249,7 +2383,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 136,
@@ -2266,7 +2401,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 137,
@@ -2283,7 +2419,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 138,
@@ -2300,7 +2437,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 139,
@@ -2317,7 +2455,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 140,
@@ -2334,7 +2473,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 141,
@@ -2351,7 +2491,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 142,
@@ -2368,7 +2509,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 143,
@@ -2385,7 +2527,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 144,
@@ -2402,7 +2545,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 145,
@@ -2419,12 +2563,13 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 146,
     "char": "Xavier",
-    "name": "Winters's Sun",
+    "name": "Winter's Sun",
     "image": "../assets/pictures/Xavier/Xavier_146.jpg",
     "imageSmall": "../assets/pictures/card-middle/Xavier_146.png",
     "stellaName": "emerald",
@@ -2436,7 +2581,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-09-14"
   },
   {
     "id": 147,
@@ -2453,7 +2599,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-11-20"
   },
   {
     "id": 148,
@@ -2470,7 +2617,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-12-31"
   },
   {
     "id": 149,
@@ -2487,7 +2635,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2025-01-10"
   },
   {
     "id": 150,
@@ -2504,7 +2653,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-12-31"
   },
   {
     "id": 151,
@@ -2521,7 +2671,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2025-01-22"
   },
   {
     "id": 152,
@@ -2538,7 +2689,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2025-03-09"
   },
   {
     "id": 153,
@@ -2555,7 +2707,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2025-05-24"
   },
   {
     "id": 154,
@@ -2572,7 +2725,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2025-07-03"
   },
   {
     "id": 155,
@@ -2589,7 +2743,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2025-12-31"
   },
   {
     "id": 156,
@@ -2606,7 +2761,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-12-31"
   },
   {
     "id": 157,
@@ -2623,7 +2779,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-02-21"
   },
   {
     "id": 158,
@@ -2640,7 +2797,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 159,
@@ -2657,7 +2815,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 160,
@@ -2674,7 +2833,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 161,
@@ -2691,7 +2851,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 162,
@@ -2708,7 +2869,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 163,
@@ -2725,7 +2887,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 164,
@@ -2742,7 +2905,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-05-13"
   },
   {
     "id": 165,
@@ -2759,7 +2923,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-05-13"
   },
   {
     "id": 166,
@@ -2776,7 +2941,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-07-25"
   },
   {
     "id": 167,
@@ -2793,7 +2959,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-07-25"
   },
   {
     "id": 168,
@@ -2810,7 +2977,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 169,
@@ -2827,7 +2995,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 170,
@@ -2844,7 +3013,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 171,
@@ -2861,7 +3031,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 172,
@@ -2878,7 +3049,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-03-11"
   },
   {
     "id": 173,
@@ -2895,7 +3067,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-03-20"
   },
   {
     "id": 174,
@@ -2912,7 +3085,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-02-05"
   },
   {
     "id": 175,
@@ -2929,7 +3103,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-04-19"
   },
   {
     "id": 176,
@@ -2946,7 +3121,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-06-25"
   },
   {
     "id": 177,
@@ -2963,7 +3139,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-08-07"
   },
   {
     "id": 178,
@@ -2980,7 +3157,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-09-23"
   },
   {
     "id": 179,
@@ -2997,7 +3175,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-10-11"
   },
   {
     "id": 180,
@@ -3014,7 +3193,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-11-12"
   },
   {
     "id": 181,
@@ -3031,7 +3211,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-12-07"
   },
   {
     "id": 182,
@@ -3048,7 +3229,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-12-18"
   },
   {
     "id": 183,
@@ -3065,7 +3247,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-12-31"
   },
   {
     "id": 184,
@@ -3082,7 +3265,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-02-10"
   },
   {
     "id": 185,
@@ -3099,7 +3283,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2025-04-30"
   },
   {
     "id": 186,
@@ -3116,7 +3301,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-05-29"
   },
   {
     "id": 187,
@@ -3133,7 +3319,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2025-07-03"
   },
   {
     "id": 188,
@@ -3150,7 +3337,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2025-08-12"
   },
   {
     "id": 189,
@@ -3167,7 +3355,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2025-10-11"
   },
   {
     "id": 190,
@@ -3184,7 +3373,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2025-10-29"
   },
   {
     "id": 191,
@@ -3201,7 +3391,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2025-12-18"
   },
   {
     "id": 192,
@@ -3218,7 +3409,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-12-31"
   },
   {
     "id": 193,
@@ -3235,7 +3427,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2026-02-10"
   },
   {
     "id": 194,
@@ -3252,7 +3445,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2026-03-09"
   },
   {
     "id": 195,
@@ -3269,7 +3463,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 196,
@@ -3286,7 +3481,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 197,
@@ -3303,7 +3499,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-05-13"
   },
   {
     "id": 198,
@@ -3320,7 +3517,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-05-13"
   },
   {
     "id": 199,
@@ -3337,7 +3535,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2025-07-25"
   },
   {
     "id": 200,
@@ -3354,7 +3553,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2025-07-25"
   },
   {
     "id": 201,
@@ -3370,7 +3570,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "release": "2024-01-18"
   },
   {
     "id": 202,
@@ -3386,7 +3587,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "release": "2024-01-18"
   },
   {
     "id": 203,
@@ -3402,7 +3604,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "release": "2024-01-18"
   },
   {
     "id": 204,
@@ -3418,7 +3621,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "release": "2024-01-18"
   },
   {
     "id": 205,
@@ -3434,7 +3638,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "release": "2024-01-18"
   },
   {
     "id": 206,
@@ -3450,7 +3655,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "release": "2024-01-18"
   },
   {
     "id": 207,
@@ -3466,7 +3672,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "release": "2024-01-18"
   },
   {
     "id": 208,
@@ -3482,7 +3689,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "release": "2024-01-18"
   },
   {
     "id": 209,
@@ -3498,7 +3706,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "release": "2024-01-18"
   },
   {
     "id": 210,
@@ -3514,7 +3723,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "release": "2024-01-18"
   },
   {
     "id": 211,
@@ -3530,7 +3740,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "release": "2024-01-18"
   },
   {
     "id": 212,
@@ -3546,7 +3757,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "release": "2024-01-18"
   },
   {
     "id": 213,
@@ -3562,7 +3774,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "release": "2024-06-07"
   },
   {
     "id": 214,
@@ -3578,7 +3791,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "release": "2024-08-07"
   },
   {
     "id": 215,
@@ -3594,7 +3808,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "release": "2024-09-07"
   },
   {
     "id": 216,
@@ -3610,7 +3825,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "release": "2025-08-31"
   },
   {
     "id": 217,
@@ -3626,7 +3842,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "release": "2025-09-25"
   },
   {
     "id": 218,
@@ -3642,7 +3859,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "release": "2024-01-18"
   },
   {
     "id": 219,
@@ -3658,7 +3876,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "release": "2024-01-18"
   },
   {
     "id": 220,
@@ -3674,7 +3893,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "release": "2024-01-18"
   },
   {
     "id": 221,
@@ -3690,7 +3910,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "release": "2024-01-18"
   },
   {
     "id": 222,
@@ -3706,7 +3927,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "release": "2024-01-18"
   },
   {
     "id": 223,
@@ -3722,7 +3944,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "release": "2024-01-18"
   },
   {
     "id": 224,
@@ -3739,7 +3962,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-02-05"
   },
   {
     "id": 225,
@@ -3756,7 +3980,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 226,
@@ -3773,7 +3998,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 227,
@@ -3790,7 +4016,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-05-14"
   },
   {
     "id": 228,
@@ -3807,7 +4034,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 229,
@@ -3824,7 +4052,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 230,
@@ -3841,7 +4070,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 231,
@@ -3858,7 +4088,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 232,
@@ -3875,7 +4106,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 233,
@@ -3892,7 +4124,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 234,
@@ -3909,7 +4142,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 235,
@@ -3926,7 +4160,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 236,
@@ -3943,7 +4178,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 237,
@@ -3960,7 +4196,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 238,
@@ -3977,7 +4214,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 239,
@@ -3994,7 +4232,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 240,
@@ -4011,7 +4250,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 241,
@@ -4028,7 +4268,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-08-23"
   },
   {
     "id": 242,
@@ -4045,7 +4286,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-09-14"
   },
   {
     "id": 243,
@@ -4062,7 +4304,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-12-31"
   },
   {
     "id": 244,
@@ -4079,7 +4322,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2025-01-10"
   },
   {
     "id": 245,
@@ -4096,7 +4340,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-12-31"
   },
   {
     "id": 246,
@@ -4113,7 +4358,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2025-01-22"
   },
   {
     "id": 247,
@@ -4130,7 +4376,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2025-06-24"
   },
   {
     "id": 248,
@@ -4147,7 +4394,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2025-07-03"
   },
   {
     "id": 249,
@@ -4164,7 +4412,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2025-10-29"
   },
   {
     "id": 250,
@@ -4181,7 +4430,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-12-31"
   },
   {
     "id": 251,
@@ -4198,7 +4448,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2026-03-01"
   },
   {
     "id": 252,
@@ -4215,7 +4466,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-02-21"
   },
   {
     "id": 253,
@@ -4232,7 +4484,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 254,
@@ -4249,7 +4502,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 255,
@@ -4266,7 +4520,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 256,
@@ -4283,7 +4538,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 257,
@@ -4300,7 +4556,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 258,
@@ -4317,7 +4574,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 259,
@@ -4334,7 +4592,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-06-07"
   },
   {
     "id": 260,
@@ -4351,7 +4610,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-06-07"
   },
   {
     "id": 261,
@@ -4368,7 +4628,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-09-25"
   },
   {
     "id": 262,
@@ -4385,7 +4646,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-09-25"
   },
   {
     "id": 263,
@@ -4402,7 +4664,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 264,
@@ -4419,7 +4682,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 265,
@@ -4436,7 +4700,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-02-05"
   },
   {
     "id": 266,
@@ -4453,7 +4718,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-02-21"
   },
   {
     "id": 267,
@@ -4470,7 +4736,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 268,
@@ -4487,7 +4754,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-04-30"
   },
   {
     "id": 269,
@@ -4504,7 +4772,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-03-11"
   },
   {
     "id": 270,
@@ -4521,7 +4790,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-06-25"
   },
   {
     "id": 271,
@@ -4538,7 +4808,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-08-07"
   },
   {
     "id": 272,
@@ -4555,12 +4826,13 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-09-07"
   },
   {
     "id": 273,
     "char": "Zayne",
-    "name": "Moonlight Dream",
+    "name": "Moonlit Dream",
     "image": "../assets/pictures/Zayne/Zayne_273.jpg",
     "imageSmall": "../assets/pictures/card-middle/Zayne_273.png",
     "stellaName": "amber",
@@ -4572,7 +4844,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-09-23"
   },
   {
     "id": 274,
@@ -4589,7 +4862,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-09-30"
   },
   {
     "id": 275,
@@ -4606,7 +4880,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-10-31"
   },
   {
     "id": 276,
@@ -4623,7 +4898,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-11-12"
   },
   {
     "id": 277,
@@ -4640,7 +4916,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-12-18"
   },
   {
     "id": 278,
@@ -4657,7 +4934,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-12-31"
   },
   {
     "id": 279,
@@ -4674,7 +4952,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2025-02-10"
   },
   {
     "id": 280,
@@ -4691,7 +4970,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-03-09"
   },
   {
     "id": 281,
@@ -4708,7 +4988,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2025-04-30"
   },
   {
     "id": 282,
@@ -4725,7 +5006,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-07-03"
   },
   {
     "id": 283,
@@ -4742,7 +5024,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2025-08-12"
   },
   {
     "id": 284,
@@ -4759,7 +5042,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2025-08-31"
   },
   {
     "id": 285,
@@ -4776,7 +5060,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-10-29"
   },
   {
     "id": 286,
@@ -4793,7 +5078,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-12-31"
   },
   {
     "id": 287,
@@ -4810,7 +5096,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2026-01-23"
   },
   {
     "id": 288,
@@ -4827,7 +5114,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2026-02-10"
   },
   {
     "id": 289,
@@ -4844,7 +5132,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 290,
@@ -4861,7 +5150,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 291,
@@ -4878,7 +5168,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-06-07"
   },
   {
     "id": 292,
@@ -4895,7 +5186,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-06-07"
   },
   {
     "id": 293,
@@ -4912,12 +5204,13 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2025-09-25"
   },
   {
     "id": 294,
     "char": "Zayne",
-    "name": "Diviner's Stilness",
+    "name": "Diviner's Stillness",
     "image": "../assets/pictures/Zayne/Zayne_294.jpg",
     "imageSmall": "../assets/pictures/card-middle/Zayne_294.png",
     "stellaName": "pearl",
@@ -4929,7 +5222,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2025-09-25"
   },
   {
     "id": 295,
@@ -4945,7 +5239,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "release": "2024-01-18"
   },
   {
     "id": 296,
@@ -4961,7 +5256,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "release": "2024-01-18"
   },
   {
     "id": 297,
@@ -4977,7 +5273,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "release": "2024-01-18"
   },
   {
     "id": 298,
@@ -4993,7 +5290,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "release": "2024-01-18"
   },
   {
     "id": 299,
@@ -5009,7 +5307,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "release": "2024-01-18"
   },
   {
     "id": 300,
@@ -5025,7 +5324,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "release": "2024-01-18"
   },
   {
     "id": 301,
@@ -5041,7 +5341,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "release": "2024-01-18"
   },
   {
     "id": 302,
@@ -5057,7 +5358,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "release": "2024-01-18"
   },
   {
     "id": 303,
@@ -5073,7 +5375,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "release": "2024-01-18"
   },
   {
     "id": 304,
@@ -5089,7 +5392,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "release": "2024-01-18"
   },
   {
     "id": 305,
@@ -5105,7 +5409,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "release": "2024-01-18"
   },
   {
     "id": 306,
@@ -5121,7 +5426,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "release": "2024-01-18"
   },
   {
     "id": 307,
@@ -5137,7 +5443,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "release": "2024-04-03"
   },
   {
     "id": 308,
@@ -5153,7 +5460,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "release": "2024-03-01"
   },
   {
     "id": 309,
@@ -5169,7 +5477,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "release": "2024-08-07"
   },
   {
     "id": 310,
@@ -5185,7 +5494,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "release": "2025-03-01"
   },
   {
     "id": 311,
@@ -5201,7 +5511,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "release": "2025-06-17"
   },
   {
     "id": 312,
@@ -5217,7 +5528,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "release": "2026-03-01"
   },
   {
     "id": 313,
@@ -5233,7 +5545,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "release": "2024-01-18"
   },
   {
     "id": 314,
@@ -5249,7 +5562,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "release": "2024-01-18"
   },
   {
     "id": 315,
@@ -5265,7 +5579,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/def.png"
+    "talent": "../assets/icons/def.png",
+    "release": "2024-01-18"
   },
   {
     "id": 316,
@@ -5281,7 +5596,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/atk.png"
+    "talent": "../assets/icons/atk.png",
+    "release": "2024-01-18"
   },
   {
     "id": 317,
@@ -5297,7 +5613,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "release": "2024-01-18"
   },
   {
     "id": 318,
@@ -5313,7 +5630,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/solar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "release": "2024-01-18"
   },
   {
     "id": 319,
@@ -5330,7 +5648,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-04-19"
   },
   {
     "id": 320,
@@ -5347,7 +5666,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 321,
@@ -5364,7 +5684,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 322,
@@ -5381,7 +5702,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 323,
@@ -5398,7 +5720,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 324,
@@ -5415,7 +5738,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 325,
@@ -5432,7 +5756,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 326,
@@ -5449,7 +5774,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 327,
@@ -5466,7 +5792,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 328,
@@ -5483,7 +5810,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 329,
@@ -5500,7 +5828,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 330,
@@ -5517,7 +5846,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 331,
@@ -5534,7 +5864,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 332,
@@ -5551,7 +5882,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 333,
@@ -5568,7 +5900,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 334,
@@ -5585,7 +5918,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 335,
@@ -5602,7 +5936,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 336,
@@ -5619,7 +5954,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-07-15"
   },
   {
     "id": 337,
@@ -5636,7 +5972,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": " 2024-10-20"
   },
   {
     "id": 338,
@@ -5653,7 +5990,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-11-12"
   },
   {
     "id": 339,
@@ -5670,7 +6008,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-12-31"
   },
   {
     "id": 340,
@@ -5687,7 +6026,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-12-31"
   },
   {
     "id": 341,
@@ -5704,7 +6044,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2025-01-22"
   },
   {
     "id": 342,
@@ -5721,7 +6062,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2025-05-06"
   },
   {
     "id": 343,
@@ -5738,7 +6080,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2025-08-05"
   },
   {
     "id": 344,
@@ -5755,7 +6098,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2025-10-29"
   },
   {
     "id": 345,
@@ -5772,7 +6116,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-12-31"
   },
   {
     "id": 346,
@@ -5789,7 +6134,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2026-02-02"
   },
   {
     "id": 347,
@@ -5806,7 +6152,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-02-21"
   },
   {
     "id": 348,
@@ -5823,7 +6170,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 349,
@@ -5840,7 +6188,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 350,
@@ -5857,7 +6206,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 351,
@@ -5874,7 +6224,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 352,
@@ -5891,7 +6242,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 353,
@@ -5908,7 +6260,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 354,
@@ -5925,7 +6278,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-04-03"
   },
   {
     "id": 355,
@@ -5942,7 +6296,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-04-03"
   },
   {
     "id": 356,
@@ -5959,7 +6314,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2025-06-17"
   },
   {
     "id": 357,
@@ -5976,7 +6332,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2025-06-17"
   },
   {
     "id": 358,
@@ -5993,7 +6350,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 359,
@@ -6010,7 +6368,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 360,
@@ -6027,7 +6386,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-27"
   },
   {
     "id": 361,
@@ -6044,7 +6404,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 362,
@@ -6061,7 +6422,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-02-05"
   },
   {
     "id": 363,
@@ -6078,7 +6440,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-03-11"
   },
   {
     "id": 364,
@@ -6095,7 +6458,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-05-28"
   },
   {
     "id": 365,
@@ -6112,7 +6476,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-06-25"
   },
   {
     "id": 366,
@@ -6129,7 +6494,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-03-01"
   },
   {
     "id": 367,
@@ -6146,7 +6512,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-07-29"
   },
   {
     "id": 368,
@@ -6163,7 +6530,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-08-07"
   },
   {
     "id": 369,
@@ -6180,7 +6548,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-09-10"
   },
   {
     "id": 370,
@@ -6197,7 +6566,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-09-23"
   },
   {
     "id": 371,
@@ -6214,7 +6584,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-11-08"
   },
   {
     "id": 372,
@@ -6231,7 +6602,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-11-12"
   },
   {
     "id": 373,
@@ -6248,7 +6620,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2024-12-31"
   },
   {
     "id": 374,
@@ -6265,7 +6638,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2025-02-10"
   },
   {
     "id": 375,
@@ -6282,7 +6656,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2025-03-01"
   },
   {
     "id": 376,
@@ -6299,7 +6674,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2025-04-30"
   },
   {
     "id": 377,
@@ -6316,7 +6692,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2025-07-03"
   },
   {
     "id": 378,
@@ -6333,7 +6710,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2025-08-12"
   },
   {
     "id": 379,
@@ -6350,7 +6728,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-10-29"
   },
   {
     "id": 380,
@@ -6367,7 +6746,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-11-21"
   },
   {
     "id": 381,
@@ -6384,7 +6764,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2025-12-31"
   },
   {
     "id": 382,
@@ -6401,7 +6782,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2026-02-10"
   },
   {
     "id": 383,
@@ -6418,7 +6800,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2026-03-01"
   },
   {
     "id": 384,
@@ -6435,7 +6818,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2026-03-19"
   },
   {
     "id": 385,
@@ -6452,7 +6836,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 386,
@@ -6469,7 +6854,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2024-01-18"
   },
   {
     "id": 387,
@@ -6486,7 +6872,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-04-03"
   },
   {
     "id": 388,
@@ -6503,7 +6890,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2024-04-03"
   },
   {
     "id": 389,
@@ -6520,7 +6908,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-06-17"
   },
   {
     "id": 390,
@@ -6537,7 +6926,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/solar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2025-06-17"
   },
   {
     "id": 391,
@@ -6554,7 +6944,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2026-04-30"
   },
   {
     "id": 392,
@@ -6571,7 +6962,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2026-04-30"
   },
   {
     "id": 393,
@@ -6588,7 +6980,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2026-04-30"
   },
   {
     "id": 394,
@@ -6605,7 +6998,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2026-04-30"
   },
   {
     "id": 395,
@@ -6622,7 +7016,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2026-04-30"
   },
   {
     "id": 397,
@@ -6639,7 +7034,8 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2026-04-30"
   },
   {
     "id": 398,
@@ -6656,7 +7052,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2026-04-30"
   },
   {
     "id": 399,
@@ -6673,7 +7070,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2026-05-10"
   },
   {
     "id": 400,
@@ -6690,7 +7088,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2026-05-22"
   },
   {
     "id": 401,
@@ -6707,7 +7106,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2026-05-31"
   },
   {
     "id": 402,
@@ -6724,7 +7124,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2026-06-08"
   },
   {
     "id": 403,
@@ -6740,7 +7141,8 @@ export const memoriesData = [
     "rarityStars": 3,
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
-    "talent": "../assets/icons/hp.png"
+    "talent": "../assets/icons/hp.png",
+    "release": "2026-06-08"
   },
   {
     "id": 404,
@@ -6757,7 +7159,8 @@ export const memoriesData = [
     "stella": "../assets/icons/pearl.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2026-06-17"
   },
   {
     "id": 405,
@@ -6774,7 +7177,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/def.png",
-    "link": ""
+    "link": "",
+    "release": "2026-06-17"
   },
   {
     "id": 406,
@@ -6791,7 +7195,8 @@ export const memoriesData = [
     "stella": "../assets/icons/sapphire.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2026-06-17"
   },
   {
     "id": 407,
@@ -6808,7 +7213,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2026-06-17"
   },
   {
     "id": 408,
@@ -6825,7 +7231,8 @@ export const memoriesData = [
     "stella": "../assets/icons/ruby.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2026-06-17"
   },
   {
     "id": 409,
@@ -6842,7 +7249,8 @@ export const memoriesData = [
     "stella": "../assets/icons/emerald.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2026-06-27"
   },
   {
     "id": 410,
@@ -6859,7 +7267,8 @@ export const memoriesData = [
     "stella": "../assets/icons/violet.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/atk.png",
-    "link": ""
+    "link": "",
+    "release": "2026-06-27"
   },
   {
     "id": 411,
@@ -6876,6 +7285,7 @@ export const memoriesData = [
     "stella": "../assets/icons/amber.png",
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
-    "link": ""
+    "link": "",
+    "release": "2026-07-18"
   },
 ]
