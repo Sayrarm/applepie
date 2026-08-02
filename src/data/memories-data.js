@@ -1544,7 +1544,7 @@ export const memoriesData = [
     "placement": "../assets/icons/lunar.png",
     "talent": "../assets/icons/hp.png",
     "link": "",
-    "release": "2024-08-07"
+    "release": "2024-12-31"
   },
   {
     "id": 88,

@@ -1,5 +1,5 @@
 import styles from './CharacterArticlePage.module.css';
-import {useParams, Link} from 'react-router-dom';
+import {Link, useParams} from 'react-router-dom';
 import {charactersData} from '../data/characters-data.js';
 import {storyCardInfo} from '../data/story-card-info.js';
 import {memoriesData} from '../data/memories-data.js';
@@ -19,7 +19,7 @@ function CharacterArticlePage() {
         return <div className={styles.notFound}>Character not found</div>;
     }
 
-    // Функция для получения карточек персонажа по истории
+    // Функция для получения карточек персонажа по истории с сортировкой по дате release
     const getCharacterCardsForStory = (storyName) => {
         const story = storyCardInfo.find(s => s.story === storyName);
         if (!story) return [];
@@ -31,10 +31,15 @@ function CharacterArticlePage() {
                 return memory && memory.char === character.char;
             });
 
-        // Возвращаем полные данные карточек
-        return memoriesData.filter(m =>
-            characterCardIds.includes(m.id) && m.char === character.char
-        );
+        // Получаем полные данные карточек и сортируем по дате release (от старых к новым)
+        return memoriesData
+            .filter(m => characterCardIds.includes(m.id) && m.char === character.char)
+            .sort((a, b) => {
+                // Если у одной из карточек нет даты release, она идет в конец
+                if (!a.release) return 1;
+                if (!b.release) return -1;
+                return new Date(a.release) - new Date(b.release);
+            });
     };
 
     // Получаем карточки для каждой истории
