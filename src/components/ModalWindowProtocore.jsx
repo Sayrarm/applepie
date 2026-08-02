@@ -2,6 +2,7 @@ import React, { useState, useImperativeHandle, forwardRef, useRef } from 'react'
 import { Button, Modal, Select, InputNumber, Form, Space } from 'antd';
 import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
 import { protocoreTypes } from '../data/protocore-data';
+import { memoriesData } from '../data/memories-data';
 
 const ModalWindowProtocore = forwardRef((props, ref) => {
     const {
@@ -16,13 +17,11 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
     const [selectedType, setSelectedType] = useState(null);
     const [editingProtocore, setEditingProtocore] = useState(null);
 
-    // Используем useRef для формы вместо useForm
     const formRef = useRef(null);
 
     const protocoreTypeKeys = Object.keys(protocoreTypes);
     const stellactrumColors = ['emerald', 'amber', 'violet', 'pearl', 'sapphire', 'ruby'];
 
-    // Функция для получения доступных мейн статов для конкретного типа
     const getAvailableMainStatsForType = (typeKey) => {
         if (!typeKey) return [];
         const typeData = protocoreTypes[typeKey];
@@ -30,7 +29,6 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
         return typeData.mainStats.map((stat) => stat.name);
     };
 
-    // Сабстаты с указанием типа значения
     const substats = [
         { label: 'HP', type: 'flat' },
         { label: 'ATK', type: 'flat' },
@@ -56,22 +54,44 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
         return colors[color] || '#ffffff';
     };
 
-    // Функция для получения значения мейн стата из protocoreTypes
     const getMainStatValue = (typeKey, level, statName) => {
         if (!typeKey || !statName || level === undefined) return null;
-
         const typeData = protocoreTypes[typeKey];
         if (!typeData) return null;
-
         const statData = typeData.mainStats.find((stat) => stat.name === statName);
         if (!statData) return null;
-
         return statData.values[level] || null;
     };
 
-    // Функция для получения формы
     const getForm = () => {
         return formRef.current;
+    };
+
+    // НОВАЯ ФУНКЦИЯ: Обновление протокора во всех карточках
+    const updateProtocoreInAllCards = (updatedProtocore) => {
+        // Проходим по всем карточкам
+        for (const card of memoriesData) {
+            const key = `card_protocores_${card.id}`;
+            const cardProtocores = JSON.parse(localStorage.getItem(key) || '[]');
+
+            // Проверяем, есть ли этот протокор в карточке
+            const index = cardProtocores.findIndex(p => p.id === updatedProtocore.id);
+            if (index !== -1) {
+                // Обновляем данные протокора в карточке
+                cardProtocores[index] = {
+                    ...updatedProtocore
+                };
+                localStorage.setItem(key, JSON.stringify(cardProtocores));
+
+                // Отправляем событие для этой карточки
+                window.dispatchEvent(new CustomEvent('protocoresUpdated', {
+                    detail: {
+                        cardId: card.id,
+                        protocores: cardProtocores
+                    }
+                }));
+            }
+        }
     };
 
     useImperativeHandle(ref, () => ({
@@ -79,7 +99,6 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
             setOpen(true);
             setEditingProtocore(protocore);
 
-            // Используем setTimeout, чтобы дать время на рендер формы
             setTimeout(() => {
                 const form = getForm();
                 if (!form) return;
@@ -108,15 +127,12 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
         }
     }));
 
-    // Функция для автоматического заполнения значения мейн стата
     const updateMainStatValue = () => {
         const form = getForm();
         if (!form) return;
-
         const type = form.getFieldValue('type');
         const level = form.getFieldValue('level');
         const mainStat = form.getFieldValue('mainStat');
-
         if (type && level !== undefined && mainStat) {
             const value = getMainStatValue(type, level, mainStat);
             if (value !== null) {
@@ -125,29 +141,20 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
         }
     };
 
-    // Функция для автоматического выбора мейн стата при смене типа
     const handleTypeChange = (type) => {
         setSelectedType(type);
         const form = getForm();
         if (!form) return;
-
         if (!type) {
-            form.setFieldsValue({
-                mainStat: undefined,
-                mainStatValue: undefined
-            });
+            form.setFieldsValue({ mainStat: undefined, mainStatValue: undefined });
             return;
         }
-
         const availableStats = getAvailableMainStatsForType(type);
-
         if (availableStats.length > 0) {
             if (availableStats.length === 1) {
                 const mainStat = availableStats[0];
                 const level = form.getFieldValue('level');
-
                 form.setFieldsValue({ mainStat: mainStat });
-
                 if (level !== undefined && level !== null) {
                     const value = getMainStatValue(type, level, mainStat);
                     if (value !== null) {
@@ -155,10 +162,7 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
                     }
                 }
             } else {
-                form.setFieldsValue({
-                    mainStat: undefined,
-                    mainStatValue: undefined
-                });
+                form.setFieldsValue({ mainStat: undefined, mainStatValue: undefined });
             }
         }
     };
@@ -175,7 +179,6 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
 
             const values = await form.validateFields();
 
-            // Формируем сабстаты с их значениями
             const substatsWithValues = values.substats
                 .filter((item) => item.stat !== null && item.stat !== undefined && item.stat !== '')
                 .map((item) => {
@@ -208,6 +211,10 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
                     localStorage.setItem('protocores', JSON.stringify(existingProtocores));
                 }
                 onUpdate(protocoreData);
+
+                // НОВОЕ: Обновляем протокор во всех карточках
+                updateProtocoreInAllCards(protocoreData);
+
             } else {
                 // Создание нового протокора
                 const existingProtocores = JSON.parse(localStorage.getItem('protocores') || '[]');
@@ -215,6 +222,9 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
                 localStorage.setItem('protocores', JSON.stringify(existingProtocores));
                 onSave(protocoreData);
             }
+
+            // Отправляем глобальное событие
+            window.dispatchEvent(new CustomEvent('protocoresUpdated'));
 
             setOpen(false);
             form.resetFields();

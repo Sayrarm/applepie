@@ -89,8 +89,23 @@ function Protocores() {
             );
             localStorage.setItem('protocores', JSON.stringify(updatedProtocores));
 
-            // Обновляем состояние
+            // НОВОЕ: Удаляем протокор из всех карточек
+            for (const card of memoriesData) {
+                const key = `card_protocores_${card.id}`;
+                const cardProtocores = JSON.parse(localStorage.getItem(key) || '[]');
+                const filtered = cardProtocores.filter(p => p.id !== protocoreToDelete.id);
+                if (filtered.length !== cardProtocores.length) {
+                    localStorage.setItem(key, JSON.stringify(filtered));
+                    window.dispatchEvent(new CustomEvent('protocoresUpdated', {
+                        detail: { cardId: card.id, protocores: filtered }
+                    }));
+                }
+            }
+
             setProtocores(prev => prev.filter(p => p.id !== protocoreToDelete.id));
+
+            // Отправляем глобальное событие
+            window.dispatchEvent(new CustomEvent('protocoresUpdated'));
         }
     };
 
