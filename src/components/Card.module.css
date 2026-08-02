@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     width: 170px;
+    font-family: TikTok Sans, monospace;
 }
 
 .cardName {
