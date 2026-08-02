@@ -7,12 +7,19 @@ function BannerPeriod({ banners }) {
     }
 
     const formatDate = (dateString) => {
-        return dateString.split('T')[0];
+        if (dateString === 'permanently') {
+            return 'Permanently';
+        }
+        // Разбиваем строку по T и берем первую часть
+        const datePart = dateString.split('T')[0];
+        // Разбиваем по '-' и меняем порядок на день.месяц.год
+        const parts = datePart.split('-');
+        return `${parts[2]}.${parts[1]}.${parts[0]}`;
     };
 
     return (
         <div className={styles.period}>
-            <h3>From banners:</h3>
+            <h3>From banner:</h3>
             {banners.map(banner => (
                 <div key={banner.id}>
                     "{banner.name}" {banner.rerun === true && ' (Rerun)'}: {formatDate(banner.startDate)} - {formatDate(banner.endDate)}

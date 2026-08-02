@@ -5,6 +5,7 @@ import CardList from './CardList.jsx';
 import {memoriesData} from '../data/memories-data.js';
 import ModalWindow from "./ModalWindow.jsx";
 import {getImageUrl} from "./imageUtils.js";
+import BannerPeriod from "./BannerPeriod.jsx";
 
 function BannerList({banners}) {
     const [selectedBanner, setSelectedBanner] = useState(null);
@@ -30,7 +31,6 @@ function BannerList({banners}) {
                         onClick={() => showMemoriesModal(banner)}
                         className={styles.bannerCard}
                     >
-
                         <img
                             className={styles.bannerImage}
                             src={getImageUrl(banner.image)}
@@ -51,7 +51,13 @@ function BannerList({banners}) {
                 ref={memoriesModalRef}
                 title={selectedBanner?.name}
                 tag={
-                    <CardList cards={cards}/>
+                    <>
+                        <CardList cards={cards} />
+                        {/* BannerPeriod внутри модального окна */}
+                        {selectedBanner && (
+                            <BannerPeriod banners={[selectedBanner]} />
+                        )}
+                    </>
                 }
             />
         </>

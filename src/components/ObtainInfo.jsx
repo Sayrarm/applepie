@@ -67,7 +67,6 @@ function ObtainInfo({cardId, obtainData}) {
                         {/* Показываем баннеры только для Xspace Echo и Limited Banner */}
                         {selectedObtain && BANNER_OBTAIN_TYPES.includes(selectedObtain.obtain) && banners.length > 0 && (
                             <>
-                                <BannerPeriod banners={banners}/>
                                 <BannerList banners={banners}/>
                             </>
                         )}
