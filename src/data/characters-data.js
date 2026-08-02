@@ -22,7 +22,7 @@ export const charactersData = [
     {
         link: "zayne",
         char: "Zayne",
-        img: "../assets/companions/zayne-dawnbreaker.png",
+        img: "../assets/companions/zayne-doctor.png",
         mainStory: [
             {title: "Under Deepspace", serialNumber: "01", subtitle: "To Begin"},
             {title: "Under Deepspace", serialNumber: "02", subtitle: "The First Mission"},
