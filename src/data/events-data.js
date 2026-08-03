@@ -72,5 +72,13 @@ export const eventsData = [
         "endDate": "2026-08-17T04:59:59",
         "active": true
     },
+    {
+        id: 10,
+        name: "New plushie",
+        image: "../assets/main-page/events/plushie-23.png",
+        "startDate": "2026-08-03T05:00:00",
+        "endDate": "2026-08-17T04:59:59",
+        "active": true
+    },
 
 ]

@@ -956,4 +956,15 @@ export const bannersDataFull = [
     "active": false
 
   },
+  {
+    "id": 88,
+    "name": "Summer Surge",
+    "image": "../assets/banners/summer-surge.jpg",
+    "cardIds": [32, 31, 98, 99, 195, 196, 289, 290, 385, 386, 46, 45, 44, 169, 170, 171, 263, 264, 267, 358, 359, 361, 79, 80, 82],
+    "startDate": "2026-08-05T05:00:00",
+    "endDate": "2026-08-15T04:59:59",
+    "rerun": false,
+    "active": true
+
+  },
 ]
