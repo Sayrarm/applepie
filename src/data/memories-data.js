@@ -7274,7 +7274,7 @@ export const memoriesData = [
     "id": 411,
     "char": "Zayne",
     "name": "Framed Dusk",
-    "image": "../assets/pictures/Zayne/Zayne_411.png",
+    "image": "../assets/pictures/Zayne/Zayne_411.jpg",
     "imageSmall": "../assets/pictures/card-middle/Zayne_411.png",
     "stellaName": "amber",
     "placementName": "lunar",
@@ -7287,5 +7287,23 @@ export const memoriesData = [
     "talent": "../assets/icons/hp.png",
     "link": "",
     "release": "2026-07-18"
+  },
+  {
+    "id": 396,
+    "char": "Caleb",
+    "name": "Summer Surge",
+    "image": "../assets/pictures/Caleb/Caleb_396.jpg",
+    "imageSmall": "../assets/pictures/card-middle/Caleb_396.png",
+    "stellaName": "amber",
+    "placementName": "lunar",
+    "talentName": "def",
+    "rarityName": "5-star",
+    "rarity": "../assets/icons/5-star.png",
+    "rarityStars": 5,
+    "stella": "../assets/icons/amber.png",
+    "placement": "../assets/icons/lunar.png",
+    "talent": "../assets/icons/def.png",
+    "link": "",
+    "release": "2026-08-05"
   },
 ]

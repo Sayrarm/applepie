@@ -24,7 +24,7 @@ export const wuCategories = [
     { id: 23, link: "beyond-survival", title: "Beyond Survival", image: "../assets/wu/23.png", },
     { id: 24, link: "crease", title: "Crease", image: "../assets/wu/24.png", },
     { id: 25.1, link: "light-into-dust", title: "Light into Dust", image: "../assets/wu/25.png", },
-    { id: 25.2, link: "little-prince-gift", title: "The Little Prince's Gift", image: "../assets/wu/25.png", },
+    { id: 25.2, link: "little-prince-gift", title: "The Little Prince's Gift", image: "../assets/wu/25.2.png", },
     { id: 26, link: "good-night-frostmere", title: "Good Night, Frostmere", image: "../assets/wu/26.png", },
     { id: 27, link: "a-fairy-tale", title: "A Fairy Tale", image: "../assets/wu/27.png", },
     { id: 28, link: "onychinus-aesthetics", title: "Onychinus Aesthetics", image: "../assets/wu/28.png", },
