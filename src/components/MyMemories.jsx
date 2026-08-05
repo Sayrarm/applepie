@@ -19,6 +19,29 @@ const sortTableData = (data, sortConfig) => {
     const sorted = [...data];
 
     sorted.sort((a, b) => {
+        // Специальная обработка для уровня
+        if (key === 'level') {
+            // Сначала сравниваем уровень
+            if (a.level !== b.level) {
+                return direction === 'asc' ? a.level - b.level : b.level - a.level;
+            }
+            // При равном уровне - возвышенные выше
+            const aAscend = a.isAscended ? 1 : 0;
+            const bAscend = b.isAscended ? 1 : 0;
+            return direction === 'asc' ? aAscend - bAscend : bAscend - aAscend;
+        }
+
+        // Специальная обработка для ранга
+        if (key === 'rank') {
+            if (a.rank !== b.rank) {
+                return direction === 'asc' ? a.rank - b.rank : b.rank - a.rank;
+            }
+            const aAscend = a.isAscended ? 1 : 0;
+            const bAscend = b.isAscended ? 1 : 0;
+            return direction === 'asc' ? aAscend - bAscend : bAscend - aAscend;
+        }
+
+        // Для остальных полей
         let aValue, bValue;
 
         // Для статов берём из stats
