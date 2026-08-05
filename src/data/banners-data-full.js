@@ -959,7 +959,7 @@ export const bannersDataFull = [
   {
     "id": 88,
     "name": "Summer Surge",
-    "image": "../assets/banners/summer-surge.jpg",
+    "image": "../assets/banners/summer-surge.png",
     "cardIds": [396],
     "startDate": "2026-08-05T05:00:00",
     "endDate": "2026-08-15T04:59:59",
