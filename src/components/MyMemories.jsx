@@ -71,6 +71,9 @@ const sortTableData = (data, sortConfig) => {
     return sorted;
 };
 
+// Ключ для localStorage
+const TABLE_SORT_KEY = 'mymemories_table_sort';
+
 function MyMemories() {
     // Используем хуки
     const { searchQuery, onSearch } = useSearch('mymemories');
@@ -87,7 +90,28 @@ function MyMemories() {
 
     const filterModalRef = useRef();
     const [availableCards, setAvailableCards] = useState([]);
-    const [tableSort, setTableSort] = useState({ key: null, direction: 'desc' });
+
+    // Загружаем сохраненную сортировку таблицы из localStorage
+    const [tableSort, setTableSort] = useState(() => {
+        try {
+            const saved = localStorage.getItem(TABLE_SORT_KEY);
+            if (saved) {
+                return JSON.parse(saved);
+            }
+        } catch (e) {
+            console.error('Error loading table sort from localStorage:', e);
+        }
+        return { key: null, direction: 'desc' };
+    });
+
+    // Сохраняем сортировку таблицы в localStorage при изменении
+    useEffect(() => {
+        try {
+            localStorage.setItem(TABLE_SORT_KEY, JSON.stringify(tableSort));
+        } catch (e) {
+            console.error('Error saving table sort to localStorage:', e);
+        }
+    }, [tableSort]);
 
     const getCardLevel = (cardId) => {
         const saved = localStorage.getItem(`cardLevel_${cardId}`);
@@ -223,6 +247,13 @@ function MyMemories() {
         onSearch('');
         clearFilters();
         setTableSort({ key: null, direction: 'asc' });
+
+        // Очищаем localStorage
+        try {
+            localStorage.removeItem(TABLE_SORT_KEY);
+        } catch (e) {
+            console.error('Error clearing table sort from localStorage:', e);
+        }
 
         if (filterModalRef.current) {
             filterModalRef.current.clearAll();
