@@ -1,23 +1,16 @@
 import styles from "./Showcase.module.css";
 import {useState, useRef, useMemo, useEffect} from "react";
 import ModalWindow from "./ModalWindow.jsx";
-import Card from "./Card.jsx";
 import {getCardLevel, getCardRank, getCardAscend, getCardProtocores} from "../data/cardUtils.js";
 import {calculateFinalStats} from "../data/protocoreUtils.js";
 import {getStatsWithRank} from "../data/levelCardData.js";
-import ProtocoreBlock from "./ProtocoreBlock.jsx";
-import {memoriesData} from '../data/memories-data.js';
-import {enhanceMemoriesWithAvailability} from "../data/cardAvailability.js";
 import {affinityData} from "../data/affinity-data.js";
 import Select from 'react-select';
 import {toPng} from 'html-to-image';
-import FilterSortBarMemories from './FilterSortBarMemories.jsx';
-import {useSearch} from '../hooks/useSearch';
-import {useSort} from '../hooks/useSort';
-import {useFilter} from '../hooks/useFilter';
 import {Button} from "antd";
 import CombatCalculations from "./CombatCalculations.jsx";
 import ChooseCompanionAndWeapon from "./ChooseCompanionAndWeapon.jsx";
+import ChooseTeamCards from "./ChooseTeamCards.jsx";
 
 // Ключ для localStorage
 const STORAGE_KEY = 'showcase_teams';
@@ -70,26 +63,8 @@ function Showcase() {
     const [isCapturing, setIsCapturing] = useState(false);
     const showcaseRef = useRef();
     const captureRef = useRef();
-
-    const cardModalRef = useRef();
     const renameModalRef = useRef();
-    const [modalPlacement, setModalPlacement] = useState(null);
-    const [modalIndex, setModalIndex] = useState(null);
     const [longPressTimer, setLongPressTimer] = useState(null);
-
-    // Хуки для фильтрации и сортировки карточек в модалке Showcase
-    const filterModalRef = useRef();
-    const {searchQuery, onSearch, clearSearch} = useSearch('showcaseCardSelect');
-    const {sortCriteria, handleSortChange, clearSorting, sortMemories} = useSort('showcaseCardSelect');
-    const {
-        selectedChar,
-        setSelectedChar,
-        isModalOpen,
-        setIsModalOpen,
-        applyFilters,
-        clearFilters,
-        filterMemories
-    } = useFilter('showcaseCardSelect');
 
     // Получаем текущую активную команду
     const currentTeam = teams[activeTeamIndex] || teams[0];
@@ -246,29 +221,6 @@ function Showcase() {
     };
 
 
-
-    const showCardModal = (placement, index) => {
-        setModalPlacement(placement);
-        setModalIndex(index);
-        cardModalRef.current?.showModal();
-    };
-
-
-
-    const handleSelectCard = (card) => {
-        const newSolar = [...currentTeam.solarCards];
-        const newLunar = [...currentTeam.lunarCards];
-
-        if (modalPlacement === 'solar') {
-            newSolar[modalIndex] = card;
-            updateCurrentTeam({solarCards: newSolar});
-        } else if (modalPlacement === 'lunar') {
-            newLunar[modalIndex] = card;
-            updateCurrentTeam({lunarCards: newLunar});
-        }
-        cardModalRef.current?.closeModal();
-    };
-
     // Функция для получения данных карточки с пересчетом статов
     const getCardData = (card) => {
         if (!card) return null;
@@ -365,85 +317,6 @@ function Showcase() {
             expeditedEnergyBoost: calculateTotalStats.expeditedEnergyBoost,
         };
     }, [calculateTotalStats, calculateAffinityBonus]);
-
-    // Получаем доступные карточки с фильтрацией и сортировкой
-    const getAvailableCards = (placement) => {
-        // Сначала получаем все доступные карточки
-        const available = enhanceMemoriesWithAvailability(memoriesData)
-            .filter(card => card.isAvailable === true && card.placementName === placement);
-
-        // Применяем фильтры
-        const filtered = filterMemories(available);
-
-        // Применяем поиск
-        const searched = filtered.filter(card => {
-            return card.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                card.char.toLowerCase().includes(searchQuery.toLowerCase());
-        });
-
-        // Применяем сортировку
-        return sortMemories(searched);
-    };
-
-    // Функция для отображения слота карточки с протокорами
-    const renderCardSlot = (card, placement, index) => {
-        const cardData = card ? getCardData(card) : null;
-
-        return (
-            <div
-                className={`${styles.cardSlot} ${!card ? styles.emptySlot : ''}`}
-                onClick={() => showCardModal(placement, index)}
-            >
-                {card ? (
-                    <>
-                        <div className={styles.cardSlotEquipped}>
-                            {/* Информация о карточке — уровень и ранг */}
-                            <div className={styles.cardInfo}>
-                                <span className={styles.cardLevel}>Lv.{cardData?.level || 1} {cardData?.isAscended && <span className={styles.ascendMark}>✦</span>}</span>
-                                <span className={styles.cardRank}>Rank {cardData?.rank || 0} </span>
-
-                            </div>
-
-                            <div className={styles.cardWrapper}>
-                                <Card data={card} isSmall={false}/>
-                            </div>
-                        </div>
-
-                        <div className={styles.protocoresContainer}>
-                            {cardData?.protocores && cardData.protocores.length > 0 ? (
-                                cardData.protocores.map(protocore => (
-                                    <div key={protocore.id} className={styles.protocoreWrapper}>
-                                        <ProtocoreBlock
-                                            protocore={protocore}
-                                            hideChange={true}
-                                            hideDelete={true}
-                                        />
-                                    </div>
-                                ))
-                            ) : (
-                                <div className={styles.noProtocores}>No protocores</div>
-                            )}
-                        </div>
-                    </>
-                ) : (
-                    <div className={styles.emptySlotContent}>
-                        <span>+</span>
-                        <span className={styles.emptyLabel}>Add {placement} card</span>
-                    </div>
-                )}
-            </div>
-        );
-    };
-
-    const resetAllSettings = () => {
-        setSelectedChar('ALL');
-        clearSorting();
-        clearSearch();
-        clearFilters();
-        if (filterModalRef.current) {
-            filterModalRef.current.clearAll();
-        }
-    };
 
     return (
         <div className={styles.wrapper}>
@@ -593,39 +466,29 @@ function Showcase() {
                     </div>
 
                     {/* карточки */}
-                    <div className={styles.cardsSection}>
-                        {/* Solar карточки */}
-                        <div className={styles.solarRow}>
-                            <div className={styles.rowLabel}>SOLAR</div>
-                            <div className={styles.solarCardsRow}>
-                                {currentTeam.solarCards.map((card, index) => (
-                                    <div key={`solar-${index}`} className={styles.cardWrapperSlot}>
-                                        {renderCardSlot(card, 'solar', index)}
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
+                    <ChooseTeamCards
+                        solarCards={currentTeam.solarCards}
+                        lunarCards={currentTeam.lunarCards}
+                        onSelectCard={(placement, index, card) => {
+                            const newSolar = [...currentTeam.solarCards];
+                            const newLunar = [...currentTeam.lunarCards];
 
-                        {/* Lunar карточки */}
-                        <div className={styles.lunarRow}>
-                            <div className={styles.rowLabel}>LUNAR</div>
-                            <div className={styles.lunarCardsRow}>
-                                {currentTeam.lunarCards.map((card, index) => (
-                                    <div key={`lunar-${index}`} className={styles.cardWrapperSlot}>
-                                        {renderCardSlot(card, 'lunar', index)}
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
+                            if (placement === 'solar') {
+                                newSolar[index] = card;
+                                updateCurrentTeam({solarCards: newSolar});
+                            } else if (placement === 'lunar') {
+                                newLunar[index] = card;
+                                updateCurrentTeam({lunarCards: newLunar});
+                            }
+                        }}
+                        getCardData={getCardData}
+                    />
                 </section>
-
 
             </div>
 
             <br/>
             <br/>
-
 
             {/* CombatCalculations - показываем только если есть Компаньон и MC Weapon */}
             {currentTeam.selectedCompanion && currentTeam.selectedMCWeapon && (
@@ -637,53 +500,6 @@ function Showcase() {
                 />
             )}
 
-
-
-
-
-            {/* Модалка выбора карточки с фильтрами */}
-            <ModalWindow
-                ref={cardModalRef}
-                title={`Select ${modalPlacement?.toUpperCase()} Card`}
-                width={950}
-                tag={
-                    <div className={styles.cardSelectModal}>
-                        <FilterSortBarMemories
-                            searchQuery={searchQuery}
-                            onSearch={onSearch}
-                            sortCriteria={sortCriteria}
-                            handleSortChange={handleSortChange}
-                            clearSorting={clearSorting}
-                            selectedChar={selectedChar}
-                            setSelectedChar={setSelectedChar}
-                            isModalOpen={isModalOpen}
-                            setIsModalOpen={setIsModalOpen}
-                            applyFilters={applyFilters}
-                            clearFilters={clearFilters}
-                            filterModalRef={filterModalRef}
-                            resetAllSettings={resetAllSettings}
-                            storagePrefix="showcaseCardSelect"
-                        />
-
-                        <div className={styles.cardGrid}>
-                            {getAvailableCards(modalPlacement).map(card => (
-                                <button
-                                    key={card.id}
-                                    className={styles.cardItem}
-                                    onClick={() => handleSelectCard(card)}
-                                >
-                                    <Card data={card} isSmall={true}/>
-                                </button>
-                            ))}
-                            {getAvailableCards(modalPlacement).length === 0 && (
-                                <div className={styles.emptyCards}>
-                                    No available {modalPlacement} cards found
-                                </div>
-                            )}
-                        </div>
-                    </div>
-                }
-            />
         </div>
     );
 }
