@@ -7,6 +7,7 @@ import Protocores from "../components/Protocores.jsx";
 import MyMemories from "../components/MyMemories.jsx";
 import Showcase from "../components/Showcase.jsx";
 import ExportImport from "../components/ExportImport.jsx";
+import Optimizer from "../components/Optimizer.jsx";
 
 function Calculator() {
     const { navigation } = useParams(); // получаем "my-memories", "inventory" и т.д.
@@ -31,6 +32,12 @@ function Calculator() {
                     to="/calculator/showcase"
                 >
                     Showcase
+                </NavLink>
+                <NavLink
+                    className={({ isActive }) => `${styles.tabButton} ${isActive ? styles.active : ''}`}
+                    to="/calculator/optimizer"
+                >
+                    Optimizer
                 </NavLink>
                 <NavLink
                     className={({ isActive }) => `${styles.tabButton} ${isActive ? styles.active : ''}`}
@@ -67,6 +74,7 @@ function Calculator() {
             {/* Контент */}
             <div className={styles.tabContent}>
                 {navigation === 'showcase' && <Showcase />}
+                {navigation === 'optimizer' && <Optimizer />}
                 {navigation === 'my-memories' && <MyMemories />}
                 {navigation === 'my-protocores' && <Protocores />}
                 {navigation === 'inventory' && <MyResources />}

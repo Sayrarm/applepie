@@ -2,12 +2,10 @@ import styles from "./Showcase.module.css";
 import {useState, useRef, useMemo, useEffect} from "react";
 import ModalWindow from "./ModalWindow.jsx";
 import Card from "./Card.jsx";
-import {getImageUrl} from "./imageUtils.js";
 import {getCardLevel, getCardRank, getCardAscend, getCardProtocores} from "../data/cardUtils.js";
 import {calculateFinalStats} from "../data/protocoreUtils.js";
 import {getStatsWithRank} from "../data/levelCardData.js";
 import ProtocoreBlock from "./ProtocoreBlock.jsx";
-import {compData} from "../data/comp-data.js";
 import {memoriesData} from '../data/memories-data.js';
 import {enhanceMemoriesWithAvailability} from "../data/cardAvailability.js";
 import {affinityData} from "../data/affinity-data.js";
@@ -19,6 +17,7 @@ import {useSort} from '../hooks/useSort';
 import {useFilter} from '../hooks/useFilter';
 import {Button} from "antd";
 import CombatCalculations from "./CombatCalculations.jsx";
+import ChooseCompanionAndWeapon from "./ChooseCompanionAndWeapon.jsx";
 
 // Ключ для localStorage
 const STORAGE_KEY = 'showcase_teams';
@@ -72,8 +71,6 @@ function Showcase() {
     const showcaseRef = useRef();
     const captureRef = useRef();
 
-    const companionModalRef = useRef();
-    const mcWeaponModalRef = useRef();
     const cardModalRef = useRef();
     const renameModalRef = useRef();
     const [modalPlacement, setModalPlacement] = useState(null);
@@ -248,13 +245,7 @@ function Showcase() {
         }
     };
 
-    const showCompanionModal = () => {
-        companionModalRef.current?.showModal();
-    };
 
-    const showMCWeaponModal = () => {
-        mcWeaponModalRef.current?.showModal();
-    };
 
     const showCardModal = (placement, index) => {
         setModalPlacement(placement);
@@ -262,15 +253,7 @@ function Showcase() {
         cardModalRef.current?.showModal();
     };
 
-    const handleSelectCompanion = (companion) => {
-        updateCurrentTeam({selectedCompanion: companion});
-        companionModalRef.current?.closeModal();
-    };
 
-    const handleSelectMCWeapon = (companion) => {
-        updateCurrentTeam({selectedMCWeapon: companion});
-        mcWeaponModalRef.current?.closeModal();
-    };
 
     const handleSelectCard = (card) => {
         const newSolar = [...currentTeam.solarCards];
@@ -551,42 +534,13 @@ function Showcase() {
                 >
                     {/* компаньон и MC Weapon */}
                     <div className={styles.topContainer}>
-                        {/* Кнопка выбора компаньона */}
-                        <div className={styles.companionSection}>
-                            <button className={styles.addCompanionBtn} onClick={showCompanionModal}>
-                                {currentTeam.selectedCompanion ? (
-                                    <div className={styles.companionChar}>
-                                        <img
-                                            className={styles.companionImage}
-                                            src={getImageUrl(currentTeam.selectedCompanion.img)}
-                                            alt={currentTeam.selectedCompanion.companionName}
-                                        />
-                                        <div className={styles.companionName}>
-                                            {currentTeam.selectedCompanion.companionName}
-                                        </div>
-                                    </div>
-                                ) : (
-                                    <div className={styles.addCompanionText}>+ Add Companion</div>
-                                )}
-                            </button>
-                            {/* Кнопка выбора MC Weapon */}
-                            <button className={styles.addCompanionBtn} onClick={showMCWeaponModal}>
-                                {currentTeam.selectedMCWeapon ? (
-                                    <div className={styles.companionChar}>
-                                        <img
-                                            className={styles.mcWeaponImage}
-                                            src={getImageUrl(currentTeam.selectedMCWeapon.imgWeapon)}
-                                            alt={currentTeam.selectedMCWeapon.weaponName}
-                                        />
-                                        <div className={styles.companionName}>
-                                            MC Weapon: {currentTeam.selectedMCWeapon.weaponName}
-                                        </div>
-                                    </div>
-                                ) : (
-                                    <div className={styles.addCompanionText}>+ Add MC Weapon</div>
-                                )}
-                            </button>
-                        </div>
+
+                        <ChooseCompanionAndWeapon
+                            selectedCompanion={currentTeam.selectedCompanion}
+                            selectedMCWeapon={currentTeam.selectedMCWeapon}
+                            onSelectCompanion={(companion) => updateCurrentTeam({selectedCompanion: companion})}
+                            onSelectMCWeapon={(companion) => updateCurrentTeam({selectedMCWeapon: companion})}
+                        />
 
                         <div>
                             <table className={styles.statsTable}>
@@ -683,67 +637,9 @@ function Showcase() {
                 />
             )}
 
-            {/* Модалка выбора компаньона */}
-            <ModalWindow
-                ref={companionModalRef}
-                title="Select Companion"
-                width={720}
-                tag={
-                    <div className={styles.companionGrid}>
-                        {compData
-                            .filter(companion => companion.img && companion.companionName)
-                            .map(companion => (
-                                <button
-                                    key={companion.id}
-                                    className={styles.companionItem}
-                                    onClick={() => handleSelectCompanion(companion)}
-                                >
-                                    <img
-                                        className={styles.companionImg}
-                                        src={getImageUrl(companion.img)}
-                                        alt={companion.companionName}
-                                        loading="lazy"
-                                        decoding="async"
-                                    />
-                                    <div className={styles.companionTitle}>
-                                        {companion.companionName}
-                                    </div>
-                                </button>
-                            ))}
-                    </div>
-                }
-            />
 
-            {/* Модалка выбора MC Weapon */}
-            <ModalWindow
-                ref={mcWeaponModalRef}
-                title="Select MC Weapon"
-                width={720}
-                tag={
-                    <div className={styles.companionGrid}>
-                        {compData
-                            .filter(companion => companion.imgWeapon && companion.weaponName)
-                            .map(companion => (
-                                <button
-                                    key={companion.id}
-                                    className={styles.companionItem}
-                                    onClick={() => handleSelectMCWeapon(companion)}
-                                >
-                                    <img
-                                        className={styles.companionImg}
-                                        src={getImageUrl(companion.imgWeapon)}
-                                        alt={companion.weaponName}
-                                        loading="lazy"
-                                        decoding="async"
-                                    />
-                                    <div className={styles.companionTitle}>
-                                        {companion.weaponName}
-                                    </div>
-                                </button>
-                            ))}
-                    </div>
-                }
-            />
+
+
 
             {/* Модалка выбора карточки с фильтрами */}
             <ModalWindow
