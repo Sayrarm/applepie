@@ -74,9 +74,9 @@ export const calculateProtocoreStats = (protocores, baseStats) => {
     });
 
     // Рассчитываем статы с учетом процентов от базовых значений
-    stats.hp = bonuses.hpFlat + Math.round((baseStats.hp || 0) * (bonuses.hpPercent / 100));
-    stats.atk = bonuses.atkFlat + Math.round((baseStats.atk || 0) * (bonuses.atkPercent / 100));
-    stats.def = bonuses.defFlat + Math.round((baseStats.def || 0) * (bonuses.defPercent / 100));
+    stats.hp = bonuses.hpFlat + (baseStats.hp || 0) * (bonuses.hpPercent / 100);
+    stats.atk = bonuses.atkFlat + (baseStats.atk || 0) * (bonuses.atkPercent / 100);
+    stats.def = bonuses.defFlat + (baseStats.def || 0) * (bonuses.defPercent / 100);
     stats.critRate = bonuses.critRate;
     stats.critDmg = bonuses.critDmg;
     stats.dmgBoost = bonuses.dmgBoostPercent;
@@ -98,9 +98,9 @@ export const calculateFinalStats = (card, baseStats, protocores) => {
     const protocoreStats = calculateProtocoreStats(protocores, baseStats);
 
     // Считаем финальные HP, ATK, DEF
-    const finalHp = Math.round((baseStats.hp || 0) + (protocoreStats.hp || 0));
-    const finalAtk = Math.round((baseStats.atk || 0) + (protocoreStats.atk || 0));
-    const finalDef = Math.round((baseStats.def || 0) + (protocoreStats.def || 0));
+    const finalHp = (baseStats.hp || 0) + (protocoreStats.hp || 0);
+    const finalAtk = (baseStats.atk || 0) + (protocoreStats.atk || 0);
+    const finalDef = (baseStats.def || 0) + (protocoreStats.def || 0);
 
     // Пересчитываем DMG Boost на основе финальных статов
     const talentKey = card.talentName;

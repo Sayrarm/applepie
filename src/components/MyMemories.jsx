@@ -263,7 +263,8 @@ function MyMemories() {
     const formatNumber = (num) => {
         if (num === undefined || num === null || isNaN(num)) return '—';
         if (typeof num === 'string') return num;
-        return num;
+
+        return num.toFixed(2);
     };
 
     // Получить класс для заголовка сортировки

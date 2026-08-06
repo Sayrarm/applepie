@@ -1027,9 +1027,9 @@ export const getStatsWithRank = (card, level, rank, isAscended = false) => {
     }
 
     // Рассчитываем статы с учетом ранка
-    const hp = Math.round(baseStats.hp * statMultiplier);
-    const atk = Math.round(baseStats.atk * statMultiplier);
-    const def = Math.round(baseStats.def * statMultiplier);
+    const hp = baseStats.hp * statMultiplier;
+    const atk = baseStats.atk * statMultiplier;
+    const def = baseStats.def * statMultiplier;
 
     // Crit Rate и Crit DMG с учетом ранка
     let critRate = baseStats.critRate + (rank * critRatePerRank);
@@ -1047,7 +1047,7 @@ export const getStatsWithRank = (card, level, rank, isAscended = false) => {
         def,
         critRate: displayCritRate,
         critDmg: displayCritDmg,
-        dmgBoost: Math.round(dmgBoost * 10000) / 10000,
+        dmgBoost: (dmgBoost * 10000) / 10000,
         isAscended,
         oathStrength: 0,
         oathRecoveryBoost: 0,

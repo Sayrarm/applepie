@@ -593,7 +593,7 @@ function Showcase() {
                                 <tbody>
                                 <tr>
                                     <th>HP</th>
-                                    <td>{Math.round(finalStats.hp)}</td>
+                                    <td>{finalStats.hp.toFixed(2)}</td>
                                     <th>Crit Rate</th>
                                     <td>{finalStats.critRate.toFixed(2)}%</td>
                                     <th>Oath Strength</th>
@@ -601,7 +601,7 @@ function Showcase() {
                                 </tr>
                                 <tr>
                                     <th>ATK</th>
-                                    <td>{Math.round(finalStats.atk)}</td>
+                                    <td>{finalStats.atk.toFixed(2)}</td>
                                     <th>Crit DMG</th>
                                     <td>{finalStats.critDmg.toFixed(2)}%</td>
                                     <th>Oath Recovery Boost</th>
@@ -609,7 +609,7 @@ function Showcase() {
                                 </tr>
                                 <tr>
                                     <th>DEF</th>
-                                    <td>{Math.round(finalStats.def)}</td>
+                                    <td>{finalStats.def.toFixed(2)}</td>
                                     <th>DMG Boost to Weakened</th>
                                     <td>{finalStats.dmgBoost.toFixed(2)}%</td>
                                     <th>Expedited Energy Boost</th>
