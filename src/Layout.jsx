@@ -1,7 +1,7 @@
 import {Outlet, ScrollRestoration} from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import BackTopButton from "./components/BackTopButton.jsx";
+import Header from '@components/header/Header.jsx';
+import Footer from '@components/footer/Footer.jsx';
+import BackTopButton from "@components/ui/BackTopButton.jsx";
 
 function Layout() {
     return (

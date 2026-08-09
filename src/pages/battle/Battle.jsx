@@ -1,0 +1,32 @@
+import styles from "./Battle.module.css";
+import {compData} from "../../data/companion-battle-data/comp-data.js";
+import {Link} from "react-router-dom";
+import {getImageUrl} from "../../hooks/imageUtils.js";
+
+function Battle() {
+
+    return (
+        <>
+            <nav className={styles.nav}>
+                {compData.map(category => (
+                    <Link
+                        key={category.id}
+                        className={styles.link}
+                        to={`/battle/${category.link}`}
+                    >
+                        <img
+                            className={styles.img}
+                            src={getImageUrl(category.img || category.imgWeapon)}
+                            alt="image"
+                            loading="lazy"
+                            decoding="async"
+                        />
+                        <div className={styles.title}>{category.companionName || category.weaponName}</div>
+                    </Link>
+                ))}
+            </nav>
+        </>
+    );
+}
+
+export default Battle

@@ -89,7 +89,7 @@
 [33mf2d370a[m feat: add saving multiple commands to DataManager
 [33m5b379f9[m feat: add saving multiple commands to the Showcase
 [33mb54856a[m fix: now warning text displayed correctly
-[33m741b5ec[m feat: add filter and sort for Protocores (Equipped/Free)
+[33m741b5ec[m feat: add filter and sort for MyProtocores (Equipped/Free)
 [33m3d2b888[m feat: change some pictures
 [33mba1bee3[m feat: add new events and banners info to Home page
 [33m12cfa16[m fix: fix the calculation of stamina for protocors in FarmGoalTracker
@@ -98,7 +98,7 @@
 [33m5fe25fe[m feat: change memory calculator - Now you can calculate resources up to a specific level
 [33m2baa896[m feat: add filter for modal window in Showcase section
 [33me32ef99[m feat: add stats for DEF 4 star cards
-[33m4cae795[m fix: filtering and sorting for My Protocores and Card Protocores is now separate
+[33m4cae795[m fix: filtering and sorting for My MyProtocores and Card MyProtocores is now separate
 [33m49aec16[m fix: checkbox and select are now separated in the filters of the Memories and MyMemories pages
 [33m0c10cb8[m fix: filtering and sorting for Memories and My Memories is now separate
 [33m6c26f68[m feat: add the stella filter to the protocol selection for the card
@@ -132,9 +132,9 @@
 [33m0def7a9[m feat: add main stat for filters, change options for stella from checkbox to select in filter
 [33me1cdeda[m refactor: refactor code
 [33m90841e6[m fix: fix sorting and filter for modal window
-[33maf889aa[m feat: refactor code for Protocores.jsx (sorting, searching, and filtering are separated into a separate component); add modal window with protocores to CardProtocores Instead of dropdown list
+[33maf889aa[m feat: refactor code for MyProtocores.jsx (sorting, searching, and filtering are separated into a separate component); add modal window with protocores to CardProtocores Instead of dropdown list
 [33m1f1e361[m fix: fix some styles for protocores sorting
-[33mbbbcb28[m feat: add sort, search, filter for My Protocores
+[33mbbbcb28[m feat: add sort, search, filter for My MyProtocores
 [33m3510ba4[m refactor: sorting, filter and search now a separate component for memories and my memories
 [33m2d62043[m feat: add sort and filter to MyMemories
 [33mdac4f8c[m fix: now farm goal tracker show approximate number of days total for all resources, not just the largest
