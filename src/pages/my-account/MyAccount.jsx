@@ -1,9 +1,9 @@
 import { Navigate, NavLink, useParams } from 'react-router-dom';
 import styles from '@pages/CalculatorAndAccountPage.module.css';
-import MyResources from "@components/calculator-components/MyResources.jsx";
-import MyProtocores from "@components/calculator-components/protocore-page/MyProtocores.jsx";
-import MyMemories from "@components/calculator-components/MyMemories.jsx";
-import ExportImport from "@components/calculator-components/import-export/ExportImport.jsx";
+import MyResources from "@components/my-account-components/MyResources.jsx";
+import MyProtocores from "@components/my-account-components/my-protocores-page/MyProtocores.jsx";
+import MyMemories from "@components/my-account-components/MyMemories.jsx";
+import ExportImport from "@components/my-account-components/import-export/ExportImport.jsx";
 
 
 function MyAccount() {

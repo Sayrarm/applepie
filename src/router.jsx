@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "./Layout";
-import { RedirectHandler } from "./hooks/RedirectHandler.jsx";
+import { RedirectHandler } from "@hooks";
 import Home from "./pages/main/Home.jsx";
 import Memories from "./pages/memories/Memories.jsx";
 import Battle from "./pages/battle/Battle.jsx";

@@ -128,19 +128,6 @@ export const crystalTypesDungeons = [
     { id: 'pumpkin', name: "Pumpkin Magus", colors: ['Sapphire', 'Ruby'] }
 ];
 
-// Данжи для кредитов
-export const creditDungeonData = [
-    { level: 1, credits: 4000 },
-    { level: 2, credits: 4600 },
-    { level: 3, credits: 5200 },
-    { level: 4, credits: 5600 },
-    { level: 5, credits: 6000 },
-    { level: 6, credits: 6400 },
-    { level: 7, credits: 6800 },
-    { level: 8, credits: 7200 },
-    { level: 9, credits: 7600 }
-];
-
 // Стоимость входа в данж
 export const DUNGEON_COST = 8;
 
@@ -225,13 +212,6 @@ export const getCrystalDungeonRuns = (crystalsNeeded, dungeonLevel) => {
     }
 
     return runsNeeded;
-};
-
-// Получить количество проходов данжа для кредитов
-export const getCreditDungeonRuns = (creditsNeeded, dungeonLevel) => {
-    const dungeon = creditDungeonData.find(d => d.level === dungeonLevel);
-    if (!dungeon) return 0;
-    return Math.ceil(creditsNeeded / dungeon.credits);
 };
 
 // Получить топливо

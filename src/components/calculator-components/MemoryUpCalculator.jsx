@@ -4,16 +4,15 @@ import {
     rarityLevels,
     expDungeonData,
     crystalDungeonData,
-    creditDungeonData,
     getExpNeeded,
     getUpgradeResources,
     getExpDungeonRuns,
     getCrystalDungeonRuns,
-    getCreditDungeonRuns,
     getCrystalDungeonByColor,
     getStaminaCost,
     crystalTypesDungeons,
 } from '@data/memory-up-data.js';
+import {creditDungeonData, getCreditDungeonRuns} from '@data/protocore-data.js'
 import ModalWindow from "../ui/ModalWindow.jsx";
 import {crystalColors, getHeartInfo} from "@data/my-resources.js";
 import {getImageUrl} from "@hooks/imageUtils.js";

@@ -1,20 +1,28 @@
+import {Fragment, useState} from "react";
 import {Link, useParams} from 'react-router-dom';
 import styles from "./CardArticle.module.css";
-import {memoriesData} from '@data/card-article-data/memories-data.js';
-import {Fragment, useState} from "react";
-import {getImageUrl} from "@hooks/imageUtils.js";
-import CopyableText from "@components/card-article-components/CopyableText.jsx";
-import ParametersBlock from "@components/card-article-components/ParametersBlock.jsx";
-import ObtainInfo from "@components/card-article-components/ObtainInfo.jsx";
-import {obtainData} from '@data/card-article-data/obtain-data.js';
-import {compData} from "@data/companion-battle-data/comp-data.js";
-import PairBonusBlock from "@components/card-article-components/PairBonusBlock.jsx";
-import ButtonNavigationBlock from "@components/card-article-components/ButtonNavigationBlock.jsx";
-import LevelCardBlock from "@components/card-article-components/LevelCardBlock.jsx";
-import CardProtocores from "@components/card-article-components/CardProtocores.jsx";
-import SolarPairBonusBlock from "@components/card-article-components/SolarPairBonusBlock.jsx";
-import {solar4Stars} from "@data/card-article-data/solar-4-star-info.js";
-import StoryInfo from "@components/card-article-components/StoryInfo.jsx";
+
+import {
+    CopyableText,
+    ParametersBlock,
+    ObtainInfo,
+    PairBonusBlock,
+    ButtonNavigationBlock,
+    LevelCardBlock,
+    CardProtocores,
+    SolarPairBonusBlock,
+    StoryInfo,
+} from '@components';
+
+import { getImageUrl } from '@hooks';
+
+import {
+    memoriesData,
+    obtainData,
+    solar4Stars
+} from '@data';
+
+import {compData} from "@data";
 
 function CardArticle() {
     const {cardId} = useParams();

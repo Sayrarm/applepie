@@ -1,13 +1,13 @@
 import styles from './Memories.module.css';
 import Card from "@components/common/Card.jsx";
-import { useSearch } from '@components/common/filter-and-sort/folter-sorter-memories/useSearch.js';
-import { useSort } from '@components/common/filter-and-sort/folter-sorter-memories/useSort.js';
-import { useFilter } from '@components/common/filter-and-sort/folter-sorter-memories/useFilter.js';
+import { useSearch } from '@components/common/filter-and-sort/filter-sorter-memories/useSearch.js';
+import { useSort } from '@components/common/filter-and-sort/filter-sorter-memories/useSort.js';
+import { useFilter } from '@components/common/filter-and-sort/filter-sorter-memories/useFilter.js';
 import { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { memoriesData as initialMemoriesData } from '../../data/card-article-data/memories-data.js';
 import { enhanceMemoriesWithAvailability } from "@data/card-article-data/cardAvailability.js";
-import FilterSortBarMemories from '@components/common/filter-and-sort/folter-sorter-memories/FilterSortBarMemories.jsx';
+import FilterSortBarMemories from '@components/common/filter-and-sort/filter-sorter-memories/FilterSortBarMemories.jsx';
 
 function Memories() {
     // Используем хуки

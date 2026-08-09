@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
-import styles from '../Protocores.module.css';
+import styles from '../../calculator-components/Protocores.module.css';
 import ProtocoreBlock from '../../common/ProtocoreBlock.jsx';
 import ModalWindowProtocore from './ModalWindowProtocore.jsx';
 import { useProtocoreSearch } from '../../common/filter-and-sort/filter-sorter-protocores/useProtocoreSearch.js';
 import { useProtocoreFilter } from '../../common/filter-and-sort/filter-sorter-protocores/useProtocoreFilter.js';
 import { useProtocoreSort } from '../../common/filter-and-sort/filter-sorter-protocores/useProtocoreSort.js';
 import FilterSortBarProtocores from "../../common/filter-and-sort/filter-sorter-protocores/FilterSortBarProtocores.jsx";
-import {memoriesData} from "../../../data/card-article-data/memories-data.js";
+import {memoriesData} from "@data";
 
 function MyProtocores() {
     const [protocores, setProtocores] = useState([]);
