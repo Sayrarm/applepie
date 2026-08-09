@@ -1,7 +1,7 @@
 import styles from "../../pages/memories/CardArticle.module.css";
 import {Fragment, useCallback, useEffect, useMemo} from "react";
 import {useLocation, useNavigate, useParams} from "react-router-dom";
-import {memoriesData} from "../../data/card-article-data/memories-data.js";
+import {memoriesData} from "@data/card-article-data/memories-data.js";
 
 //меняем цвет svg картинке
 const IconLeft = () => (

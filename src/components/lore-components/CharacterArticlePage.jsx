@@ -1,12 +1,12 @@
 import styles from './CharacterArticlePage.module.css';
 import {Link, useParams} from 'react-router-dom';
-import {charactersData} from '../../data/lore-data/characters-data.js';
-import {storyCardInfo} from '../../data/card-article-data/story-card-info.js';
-import {memoriesData} from '../../data/card-article-data/memories-data.js';
-import {wuCategories} from '../../data/lore-data/wu-categories.js';
-import {anCategories} from '../../data/lore-data/an-categories.js';
-import {msData} from '../../data/lore-data/ms-data.js';
-import {getImageUrl} from '../../hooks/imageUtils.js';
+import {charactersData} from '@data/lore-data/characters-data.js';
+import {storyCardInfo} from '@data/card-article-data/story-card-info.js';
+import {memoriesData} from '@data/card-article-data/memories-data.js';
+import {wuCategories} from '@data/lore-data/wu-categories.js';
+import {anCategories} from '@data/lore-data/an-categories.js';
+import {msData} from '@data/lore-data/ms-data.js';
+import {getImageUrl} from '@hooks/imageUtils.js';
 import CardList from '../common/CardList.jsx';
 
 function CharacterArticlePage() {

@@ -13,10 +13,10 @@ import {
     getCrystalDungeonByColor,
     getStaminaCost,
     crystalTypesDungeons,
-} from '../../data/memory-up-data.js';
+} from '@data/memory-up-data.js';
 import ModalWindow from "../ui/ModalWindow.jsx";
-import {crystalColors, getHeartInfo} from "../../data/my-resources.js";
-import {getImageUrl} from "../../hooks/imageUtils.js";
+import {crystalColors, getHeartInfo} from "@data/my-resources.js";
+import {getImageUrl} from "@hooks/imageUtils.js";
 import {Link} from "react-router-dom";
 
 function MemoryUpCalculator() {

@@ -1,14 +1,14 @@
 import styles from "./MyMemories.module.css";
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from 'react-router-dom';
-import { memoriesData } from '../../data/card-article-data/memories-data.js';
-import { getStatsWithRank } from '../../data/card-article-data/levelCardData.js';
-import { calculateFinalStats, getProtocoreLevelsString } from '../../data/card-article-data/protocoreUtils.js';
-import { getImageUrl } from "../../hooks/imageUtils.js";
+import { memoriesData } from '@data/card-article-data/memories-data.js';
+import { getStatsWithRank } from '@data/card-article-data/levelCardData.js';
+import { calculateFinalStats, getProtocoreLevelsString } from '@data/card-article-data/protocoreUtils.js';
+import { getImageUrl } from "@hooks/imageUtils.js";
 import { useSearch } from '../common/filter-and-sort/folter-sorter-memories/useSearch.js';
 import { useSort } from '../common/filter-and-sort/folter-sorter-memories/useSort.js';
 import { useFilter } from '../common/filter-and-sort/folter-sorter-memories/useFilter.js';
-import { enhanceMemoriesWithAvailability } from "../../data/card-article-data/cardAvailability.js";
+import { enhanceMemoriesWithAvailability } from "@data/card-article-data/cardAvailability.js";
 import FilterSortBarMemories from '../common/filter-and-sort/folter-sorter-memories/FilterSortBarMemories.jsx';
 
 // Функция сортировки для таблицы

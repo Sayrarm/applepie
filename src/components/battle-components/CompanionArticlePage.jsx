@@ -1,7 +1,7 @@
 import {useParams} from 'react-router-dom';
 import styles from "./CompanionArticlePage.module.css";
 import SkillBlock from "./SkillBlock.jsx";
-import {getImageUrl} from "../../hooks/imageUtils.js";
+import {getImageUrl} from "@hooks/imageUtils.js";
 
 function CompanionArticlePage({data, linkField = "link"}) {
     const {articleLink} = useParams();

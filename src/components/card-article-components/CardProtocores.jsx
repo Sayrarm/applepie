@@ -1,7 +1,7 @@
 import React, {useCallback, useMemo, useRef, useState} from 'react';
 import styles from './CardProtocores.module.css';
 import ProtocoreBlock from '../common/ProtocoreBlock.jsx';
-import {memoriesData} from '../../data/card-article-data/memories-data.js';
+import {memoriesData} from '@data/card-article-data/memories-data.js';
 import ModalWindow from "../ui/ModalWindow.jsx";
 import FilterSortBarProtocore from "../common/filter-and-sort/filter-sorter-protocores/FilterSortBarProtocores.jsx";
 import { useProtocoreSearch } from '../common/filter-and-sort/filter-sorter-protocores/useProtocoreSearch.js';

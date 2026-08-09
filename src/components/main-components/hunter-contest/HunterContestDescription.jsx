@@ -1,4 +1,4 @@
-import styles from '/src/pages/main/Home.module.css'
+import styles from '@pages/main/Home.module.css'
 
 const HunterContestDescription = ({
                                       mainIconSrc = '',

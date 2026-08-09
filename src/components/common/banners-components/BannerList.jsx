@@ -2,9 +2,9 @@ import styles from './BannerList.module.css';
 import FlexibleTimer from '../FlexibleTimer.jsx';
 import {useRef, useState} from 'react';
 import CardList from '../CardList.jsx';
-import {memoriesData} from '../../../data/card-article-data/memories-data.js';
+import {memoriesData} from '@data/card-article-data/memories-data.js';
 import ModalWindow from "../../ui/ModalWindow.jsx";
-import {getImageUrl} from "../../../hooks/imageUtils.js";
+import {getImageUrl} from "@hooks/imageUtils.js";
 import BannerPeriod from "./BannerPeriod.jsx";
 
 function BannerList({banners}) {

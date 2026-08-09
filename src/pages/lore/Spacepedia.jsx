@@ -2,8 +2,8 @@ import {Link, Navigate, useParams} from 'react-router-dom';
 import SpacepediaNavigation from "@components/lore-components/SpacepediaNavigation.jsx";
 import styles from "./Spacepedia.module.css";
 import {Collapse} from 'antd';
-import {spacepediaData} from "../../data/lore-data/spacepedia-data.js";
-import {getImageUrl} from "../../hooks/imageUtils.js";
+import {spacepediaData} from "@data/lore-data/spacepedia-data.js";
+import {getImageUrl} from "@hooks/imageUtils.js";
 import {Fragment} from "react";
 
 

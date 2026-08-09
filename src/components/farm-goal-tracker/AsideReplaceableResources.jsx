@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import styles from './AsideReplacableResources.module.css';
-import { getImageUrl } from '../../hooks/imageUtils.js';
-import { STORAGE_KEYS, getHeartsandExchange, getCrystalBoxExchange } from '../../data/my-resources.js';
+import { getImageUrl } from '@hooks/imageUtils.js';
+import { STORAGE_KEYS, getHeartsandExchange, getCrystalBoxExchange } from '@data/my-resources.js';
 import AsideList from '../ui/AsideList.jsx';
 
 function ReplaceableResources({ goal, remaining }) {

@@ -13,9 +13,9 @@ import {
     SUBSTAT_LEVELS,
     getCreditDungeonRuns,
     getStaminaForCredits,
-} from '../../data/protocore-data.js';
-import {getImageUrl} from "../../hooks/imageUtils.js";
-import {creditDungeonData} from "../../data/memory-up-data.js";
+} from '@data/protocore-data.js';
+import {getImageUrl} from "@hooks/imageUtils.js";
+import {creditDungeonData} from "@data/memory-up-data.js";
 import ModalWindow from "../ui/ModalWindow.jsx";
 import {Link} from "react-router-dom";
 

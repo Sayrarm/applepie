@@ -193,3 +193,10 @@
     }
 
 }
+
+@media screen and (max-width: 440px) {
+    .statsTable th,
+    .statsTable td {
+        padding: 5px 2px;
+    }
+}

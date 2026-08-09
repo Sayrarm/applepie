@@ -1,5 +1,5 @@
 import BannerList from '@components/common/banners-components/BannerList.jsx';
-import {bannersDataFull} from '../../data/banners-data-full.js';
+import {bannersDataFull} from '@data/banners-data-full.js';
 import styles from './Banners.module.css'
 
 function AllBannersPage() {

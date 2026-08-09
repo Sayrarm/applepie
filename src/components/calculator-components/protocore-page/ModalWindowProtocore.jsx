@@ -1,8 +1,8 @@
 import React, { useState, useImperativeHandle, forwardRef, useRef } from 'react';
 import { Button, Modal, Select, InputNumber, Form, Space } from 'antd';
 import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
-import { protocoreTypes } from '../../../data/protocore-data.js';
-import { memoriesData } from '../../../data/card-article-data/memories-data.js';
+import { protocoreTypes } from '@data/protocore-data.js';
+import { memoriesData } from '@data/card-article-data/memories-data.js';
 
 const ModalWindowProtocore = forwardRef((props, ref) => {
     const {

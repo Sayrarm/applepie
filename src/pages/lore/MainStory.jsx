@@ -1,7 +1,7 @@
 import styles from "./MainStory.module.css";
-import {msCategories} from "../../data/lore-data/ms-categories.js";
+import {msCategories} from "@data/lore-data/ms-categories.js";
 import {Link} from "react-router-dom";
-import {getImageUrl} from "../../hooks/imageUtils.js";
+import {getImageUrl} from "@hooks/imageUtils.js";
 
 
 function MainStory() {

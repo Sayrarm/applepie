@@ -1,5 +1,5 @@
 import styles from './Card.module.css'
-import {getImageUrl} from "../../hooks/imageUtils.js";
+import {getImageUrl} from "@hooks/imageUtils.js";
 
 
 function Card({data, isSmall = false}) {

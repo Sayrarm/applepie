@@ -1,10 +1,10 @@
 import styles from "./Showcase.module.css";
 import {useState, useRef, useMemo, useEffect} from "react";
-import ModalWindow from "../../ui/ModalWindow.jsx";
-import {getCardLevel, getCardRank, getCardAscend, getCardProtocores} from "../../../data/card-article-data/cardUtils.js";
-import {calculateFinalStats} from "../../../data/card-article-data/protocoreUtils.js";
-import {getStatsWithRank} from "../../../data/card-article-data/levelCardData.js";
-import {affinityData} from "../../../data/showcase-data/affinity-data.js";
+import ModalWindow from "@components/ui/ModalWindow.jsx";
+import {getCardLevel, getCardRank, getCardAscend, getCardProtocores} from "@data/card-article-data/cardUtils.js";
+import {calculateFinalStats} from "@data/card-article-data/protocoreUtils.js";
+import {getStatsWithRank} from "@data/card-article-data/levelCardData.js";
+import {affinityData} from "@data/showcase-data/affinity-data.js";
 import Select from 'react-select';
 import {toPng} from 'html-to-image';
 import {Button} from "antd";

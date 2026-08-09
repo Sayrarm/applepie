@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { memoriesData } from '../../../../data/card-article-data/memories-data.js';
+import { memoriesData } from '@data/card-article-data/memories-data.js';
 
 // Функция для получения ключа с префиксом
 const getStorageKey = (prefix = '') => {

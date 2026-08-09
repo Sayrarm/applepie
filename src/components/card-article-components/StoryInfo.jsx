@@ -1,6 +1,6 @@
 import styles from './StoryInfo.module.css';
-import { storyCardInfo } from '../../data/card-article-data/story-card-info.js';
-import { memoriesData } from '../../data/card-article-data/memories-data.js';
+import { storyCardInfo } from '@data/card-article-data/story-card-info.js';
+import { memoriesData } from '@data/card-article-data/memories-data.js';
 
 function StoryInfo({ cardId }) {
     // Находим информацию о карточке в memoriesData

@@ -1,9 +1,8 @@
 import styles from './ObtainInfo.module.css';
 import {useRef, useState} from "react";
 import ModalWindow from "../ui/ModalWindow.jsx";
-import {getImageUrl} from "../../hooks/imageUtils.js";
-import BannerPeriod from "../common/banners-components/BannerPeriod.jsx";
-import {bannersDataFull} from "../../data/banners-data-full.js";
+import {getImageUrl} from "@hooks/imageUtils.js";
+import {bannersDataFull} from "@data/banners-data-full.js";
 import BannerList from "../common/banners-components/BannerList.jsx";
 
 function ObtainInfo({cardId, obtainData}) {

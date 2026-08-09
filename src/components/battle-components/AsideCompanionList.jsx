@@ -1,8 +1,8 @@
 import AsideList from '../ui/AsideList.jsx';
 import styles from "./AsideCompanionList.module.css";
 import { Link } from "react-router-dom";
-import { getImageUrl } from "../../hooks/imageUtils.js";
-import { asideComp } from '../../data/companion-battle-data/aside-comp.js';
+import { getImageUrl } from "@hooks/imageUtils.js";
+import { asideComp } from '@data/companion-battle-data/aside-comp.js';
 
 function AsideCompanionList({ className }) {
     // Формируем items для Collapse

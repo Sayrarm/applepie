@@ -1,11 +1,11 @@
 import CompanionArticlePage from '@components/battle-components/CompanionArticlePage.jsx';
-import {compData} from '../../data/companion-battle-data/comp-data.js';
+import {compData} from '@data/companion-battle-data/comp-data.js';
 import AsideCompanionList from "@components/battle-components/AsideCompanionList.jsx";
 import styles from "./CompanionBattleInfo.module.css"
 import {Link, useParams} from "react-router-dom";
 import {Fragment} from "react";
 import CardList from "@components/common/CardList.jsx";
-import {memoriesData} from "../../data/card-article-data/memories-data.js";
+import {memoriesData} from "@data/card-article-data/memories-data.js";
 import AsideList from "@components/ui/AsideList.jsx";
 
 function CompanionBattleInfo() {

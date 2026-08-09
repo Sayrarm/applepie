@@ -2,8 +2,8 @@ import GenericArticlePage from "@components/lore-components/GenericArticlePage.j
 import {Link, useParams} from "react-router-dom";
 import {Fragment} from "react";
 import styles from "./Article.module.css";
-import {anCategories} from "../../data/lore-data/an-categories.js";
-import {anData} from "../../data/lore-data/an-data.js";
+import {anCategories} from "@data/lore-data/an-categories.js";
+import {anData} from "@data/lore-data/an-data.js";
 
 
 function AnArticle() {

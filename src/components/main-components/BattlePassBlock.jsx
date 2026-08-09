@@ -1,6 +1,6 @@
-import styles from "../../pages/main/Home.module.css";
+import styles from "@pages/main/Home.module.css";
 import FlexibleTimer from "../common/FlexibleTimer.jsx";
-import {getImageUrl} from "../../hooks/imageUtils.js";
+import {getImageUrl} from "@hooks/imageUtils.js";
 
 
 function BattlePassBlock( {battlePass} ) {

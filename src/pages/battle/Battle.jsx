@@ -1,7 +1,7 @@
 import styles from "./Battle.module.css";
-import {compData} from "../../data/companion-battle-data/comp-data.js";
+import {compData} from "@data/companion-battle-data/comp-data.js";
 import {Link} from "react-router-dom";
-import {getImageUrl} from "../../hooks/imageUtils.js";
+import {getImageUrl} from "@hooks/imageUtils.js";
 
 function Battle() {
 

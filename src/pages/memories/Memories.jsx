@@ -6,7 +6,7 @@ import { useFilter } from '@components/common/filter-and-sort/folter-sorter-memo
 import { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { memoriesData as initialMemoriesData } from '../../data/card-article-data/memories-data.js';
-import { enhanceMemoriesWithAvailability } from "../../data/card-article-data/cardAvailability.js";
+import { enhanceMemoriesWithAvailability } from "@data/card-article-data/cardAvailability.js";
 import FilterSortBarMemories from '@components/common/filter-and-sort/folter-sorter-memories/FilterSortBarMemories.jsx';
 
 function Memories() {

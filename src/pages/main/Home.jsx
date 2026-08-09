@@ -1,13 +1,13 @@
 import styles from './Home.module.css'
-import {bannersDataFull} from "../../data/banners-data-full.js";
+import {bannersDataFull} from "@data/banners-data-full.js";
 import BannerForHome from "@components/main-components/BannerForHome.jsx";
 import WishWellBlock from "@components/main-components/wishwellshop/WishWellBlock.jsx";
 import DailyWeeklyBlock from "@components/main-components/DailyWeeklyBlock.jsx";
 import ScheduleBlock from "@components/main-components/schedule/ScheduleBlock.jsx";
 import HunterContestBlock from "@components/main-components/hunter-contest/HunterContestBlock.jsx";
 import EventsBlock from "@components/main-components/EventsBlock.jsx";
-import {eventsData} from "../../data/main-page-data/events-data.js";
-import {battlePassData} from "../../data/main-page-data/battle-pass-data.js";
+import {eventsData} from "@data/main-page-data/events-data.js";
+import {battlePassData} from "@data/main-page-data/battle-pass-data.js";
 import BattlePassBlock from "@components/main-components/BattlePassBlock.jsx";
 import FarmGoalTracker from "@components/farm-goal-tracker/FarmGoalTracker.jsx";
 

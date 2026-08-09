@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 import styles from './FarmGoalTracker.module.css';
-import {creditDungeonData, crystalDungeonData, DUNGEON_COST, expDungeonData} from '../../data/memory-up-data.js';
-import {CREDIT_DUNGEON_COST, DUNGEON_COST_PROTOCORE, dungeonData} from '../../data/protocore-data.js';
+import {creditDungeonData, crystalDungeonData, DUNGEON_COST, expDungeonData} from '@data/memory-up-data.js';
+import {CREDIT_DUNGEON_COST, DUNGEON_COST_PROTOCORE, dungeonData} from '@data/protocore-data.js';
 import {
     crystalColors,
     bossImg,

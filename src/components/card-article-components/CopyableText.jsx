@@ -1,5 +1,5 @@
 
-import { useCopyToClipboard } from '../../hooks/useCopyToClipboard.js';
+import { useCopyToClipboard } from '@hooks/useCopyToClipboard.js';
 import styles from './CopyableText.module.css'; // создадим стили
 
 function CopyableText({ text, className, children }) {

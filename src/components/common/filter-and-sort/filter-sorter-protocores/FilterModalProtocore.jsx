@@ -1,6 +1,6 @@
 import { useEffect, useState, forwardRef, useImperativeHandle } from 'react';
 import { Modal, Checkbox, Select, Tag, Button } from 'antd';
-import { protocoreTypes } from '../../../../data/protocore-data.js';
+import { protocoreTypes } from '@data/protocore-data.js';
 
 // Функция для получения ключей с префиксом
 const getStorageKeys = (prefix = '') => ({

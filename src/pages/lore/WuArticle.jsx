@@ -1,5 +1,5 @@
-import {wuData} from '../../data/lore-data/wu-data.js';
-import {wuCategories} from '../../data/lore-data/wu-categories.js'
+import {wuData} from '@data/lore-data/wu-data.js';
+import {wuCategories} from '@data/lore-data/wu-categories.js'
 import GenericArticlePage from "@components/lore-components/GenericArticlePage.jsx";
 import {Link, useParams} from "react-router-dom";
 import {Fragment} from "react";

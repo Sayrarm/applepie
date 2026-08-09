@@ -1,7 +1,7 @@
 import {Link, useParams} from "react-router-dom";
 import React, {Fragment} from "react";
 import styles from "./CharacterArticle.module.css";
-import {charactersCategories} from "../../data/lore-data/characters-categories.js";
+import {charactersCategories} from "@data/lore-data/characters-categories.js";
 import CharacterArticlePage from "@components/lore-components/CharacterArticlePage.jsx";
 import AsideList from "@components/ui/AsideList.jsx";
 

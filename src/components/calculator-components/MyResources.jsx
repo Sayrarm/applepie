@@ -16,8 +16,8 @@ import {
     getHeartsandExchange,
     getCrystalBoxExchange,
     getWishExchange
-} from '../../data/my-resources.js';
-import {getImageUrl} from '../../hooks/imageUtils.js';
+} from '@data/my-resources.js';
+import {getImageUrl} from '@hooks/imageUtils.js';
 
 function MyResources() {
     // Состояния для каждого типа ресурсов

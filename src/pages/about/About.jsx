@@ -1,6 +1,6 @@
 import styles from './About.module.css';
-import { aboutData } from '../../data/about-data.js';
-import { getImageUrl } from '../../hooks/imageUtils.js';
+import { aboutData } from '@data/about-data.js';
+import { getImageUrl } from '@hooks/imageUtils.js';
 
 function About() {
     return (

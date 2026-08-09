@@ -1,11 +1,11 @@
-import ModalWindow from "../../ui/ModalWindow.jsx";
-import styles from "../../../pages/main/Home.module.css";
-import DailyResetTimer from "../../common/DailyResetTimer.jsx";
+import ModalWindow from "@components/ui/ModalWindow.jsx";
+import styles from "@pages/main/Home.module.css";
+import DailyResetTimer from "@components/common/DailyResetTimer.jsx";
 import WeeklyProtocore from "./WeeklyProtocore.jsx";
 import WeeklyTrial from "./WeeklyTrial.jsx";
-import {useRecurringTimer} from "../../common/resetTimer.js";
+import {useRecurringTimer} from "@components/common/resetTimer.js";
 import {useRef} from "react";
-import {getImageUrl} from "../../../hooks/imageUtils.js";
+import {getImageUrl} from "@hooks/imageUtils.js";
 
 function ScheduleBlock() {
 

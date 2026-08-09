@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTheme } from './ThemeChange.jsx';
 import styles from './ThemeToggleButton.module.css';
-import {getImageUrl} from "../../hooks/imageUtils.js";
+import {getImageUrl} from "@hooks/imageUtils.js";
 
 const ThemeToggleButton = () => {
     const { theme, toggleTheme } = useTheme();

@@ -11,10 +11,10 @@ export default defineConfig({
   base: '/applepie/',
   resolve: {
     alias: {
-      '@features': path.resolve(__dirname, 'src/features'),
-      '@ui': path.resolve(__dirname, 'src/ui'),
       '@components': path.resolve(__dirname, 'src/components'),
-      '@utils': path.resolve(__dirname, 'src/utils'),
+      '@data': path.resolve(__dirname, 'src/data'),
+      '@hooks': path.resolve(__dirname, 'src/hooks'),
+      '@pages': path.resolve(__dirname, 'src/pages'),
     },
   },
 });

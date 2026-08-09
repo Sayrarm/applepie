@@ -1,7 +1,7 @@
 import styles from "./Anecdotes.module.css";
 import { Link } from "react-router-dom";
-import {charactersCategories} from "../../data/lore-data/characters-categories.js";
-import {getImageUrl} from "../../hooks/imageUtils.js";
+import {charactersCategories} from "@data/lore-data/characters-categories.js";
+import {getImageUrl} from "@hooks/imageUtils.js";
 import {Fragment} from "react";
 
 function Characters() {
