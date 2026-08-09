@@ -20,6 +20,7 @@ import About from "./pages/about/About.jsx";
 import FAQ from "./pages/faq/FAQ.jsx";
 import CharacterArticle from "./pages/lore/CharacterArticle.jsx";
 import Characters from "./pages/lore/Characters.jsx";
+import MyAccount from "@pages/my-account/MyAccount.jsx";
 
 const basename = import.meta.env.BASE_URL;
 
@@ -52,6 +53,8 @@ export const router = createBrowserRouter([
             { path: "anecdotes/:articleLink", element: <AnArticle /> },
             { path: "calculator", element: <Calculator /> },
             { path: "calculator/:navigation", element: <Calculator /> },
+            { path: "my-account", element: <MyAccount /> },
+            { path: "my-account/:navigation", element: <MyAccount /> },
             { path: "about", element: <About /> },
             { path: "faq", element: <FAQ /> },
 

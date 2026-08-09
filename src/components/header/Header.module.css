@@ -186,14 +186,14 @@ header {
 
 /*MOBILE*/
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 755px) {
     .burgerContainer {
         display: none;
     }
 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 754px) {
     .link {
         display: none;
     }

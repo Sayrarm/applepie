@@ -79,6 +79,7 @@ function Header() {
                     <Link className={styles.a} to="/memories">Memories</Link>
                     <Link className={styles.a} to="/battle">Battle</Link>
                     <Link className={styles.a} to="/calculator">Calculator</Link>
+                    <Link className={styles.a} to="/my-account">Account</Link>
                 </div>
 
                 <div className={styles.burgerContainer}>
@@ -117,6 +118,9 @@ function Header() {
                     </Link>
                     <Link className={styles.a} to="/calculator" onClick={closeMenu}>
                         Calculator
+                    </Link>
+                    <Link className={styles.a} to="/my-account" onClick={closeMenu}>
+                        Account
                     </Link>
                 </div>
             </nav>

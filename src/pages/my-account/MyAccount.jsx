@@ -1,16 +1,17 @@
 import { Navigate, NavLink, useParams } from 'react-router-dom';
 import styles from '@pages/CalculatorAndAccountPage.module.css';
-import ProtocoreCalculator from "@components/calculator-components/ProtocoreCalculator.jsx";
-import MemoryUpCalculator from "@components/calculator-components/MemoryUpCalculator.jsx";
-import Showcase from "@components/calculator-components/showcase/Showcase.jsx";
-import Optimizer from "@components/calculator-components/Optimizer.jsx";
+import MyResources from "@components/calculator-components/MyResources.jsx";
+import MyProtocores from "@components/calculator-components/protocore-page/MyProtocores.jsx";
+import MyMemories from "@components/calculator-components/MyMemories.jsx";
+import ExportImport from "@components/calculator-components/import-export/ExportImport.jsx";
 
-function Calculator() {
-    const { navigation } = useParams(); // получаем "my-memories", "inventory" и т.д.
+
+function MyAccount() {
+    const { navigation } = useParams();
 
     // Если нет параметра — редиректим на showcase
     if (!navigation) {
-        return <Navigate to="/calculator/showcase" replace />;
+        return <Navigate to="/my-account/inventory" replace />;
     }
 
     return (
@@ -19,39 +20,39 @@ function Calculator() {
             <div className={styles.tabs}>
                 <NavLink
                     className={({ isActive }) => `${styles.tabButton} ${isActive ? styles.active : ''}`}
-                    to="/calculator/showcase"
+                    to="/my-account/inventory"
                 >
-                    Showcase
+                    Resources
                 </NavLink>
                 <NavLink
                     className={({ isActive }) => `${styles.tabButton} ${isActive ? styles.active : ''}`}
-                    to="/calculator/optimizer"
+                    to="/my-account/my-memories"
                 >
-                    Optimizer
+                    Memories
                 </NavLink>
                 <NavLink
                     className={({ isActive }) => `${styles.tabButton} ${isActive ? styles.active : ''}`}
-                    to="/calculator/protocore-calculator"
+                    to="/my-account/my-protocores"
                 >
-                    Protocore Calculator
+                    Protocores
                 </NavLink>
                 <NavLink
                     className={({ isActive }) => `${styles.tabButton} ${isActive ? styles.active : ''}`}
-                    to="/calculator/memory-calculator"
+                    to="/my-account/export-import"
                 >
-                    Memory Calculator
+                    Export/Import data
                 </NavLink>
             </div>
 
             {/* Контент */}
             <div className={styles.tabContent}>
-                {navigation === 'showcase' && <Showcase />}
-                {navigation === 'optimizer' && <Optimizer />}
-                {navigation === 'protocore-calculator' && <ProtocoreCalculator />}
-                {navigation === 'memory-calculator' && <MemoryUpCalculator />}
+                {navigation === 'my-memories' && <MyMemories />}
+                {navigation === 'my-protocores' && <MyProtocores />}
+                {navigation === 'inventory' && <MyResources />}
+                {navigation === 'export-import' && <ExportImport />}
             </div>
         </section>
     );
 }
 
-export default Calculator;
+export default MyAccount;
