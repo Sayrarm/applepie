@@ -129,6 +129,28 @@ export const hunterContestBuffs = [
     "teamCStella2Count": 1,
     "teamC": "Overload: Increases CRIT rate of all allied units.",
 
+    "active": false
+  },
+  {
+    "id": 7,
+    "teamAStella1": "../assets/icons/emerald.png",
+    "teamAStella1Count": 5,
+    "teamAStella2": "../assets/icons/violet.png",
+    "teamAStella2Count": 1,
+    "teamA": "Press On Coupling: After using the Support Skill, enemies take 30% increased damage from non-Basic Attacks for 3s.",
+
+    "teamBStella1": "../assets/icons/amber.png",
+    "teamBStella1Count": 4,
+    "teamBStella2": "../assets/icons/emerald.png",
+    "teamBStella2Count": 1,
+    "teamB": "Restrained: Deals 30% more DMG to Wanderers that are restrained from moving",
+
+    "teamCStella1": "../assets/icons/pearl.png",
+    "teamCStella1Count": 3,
+    "teamCStella2": "../assets/icons/ruby.png",
+    "teamCStella2Count": 1,
+    "teamC": "DMG increase: Increases DMG against vulnerable Boss for all allied units.",
+
     "active": true
   },
 
