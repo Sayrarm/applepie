@@ -1,14 +1,18 @@
-import styles from "./Showcase.module.css";
-import ProtocoreBlock from "@components/common/ProtocoreBlock.jsx";
-import Card from "@components/common/Card.jsx";
-import ModalWindow from "@components/ui/ModalWindow.jsx";
-import FilterSortBarMemories from "@components/common/filter-and-sort/filter-sorter-memories/FilterSortBarMemories.jsx";
-import {memoriesData} from "@data/card-article-data/memories-data.js";
-import {enhanceMemoriesWithAvailability} from "@data/card-article-data/cardAvailability.js";
 import {useRef, useState} from "react";
-import { useSearch } from '@components/common/filter-and-sort/filter-sorter-memories/useSearch.js';
-import { useSort } from '@components/common/filter-and-sort/filter-sorter-memories/useSort.js';
-import { useFilter } from '@components/common/filter-and-sort/filter-sorter-memories/useFilter.js';
+import styles from "./Showcase.module.css";
+import {
+    ProtocoreBlock,
+    Card,
+    ModalWindow,
+    FilterSortBarMemories,
+    useSearch,
+    useSort,
+    useFilter
+} from '@components';
+import {
+    memoriesData,
+    enhanceMemoriesWithAvailability
+} from "@data";
 
 function ChooseTeamCards({
                              solarCards,

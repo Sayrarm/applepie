@@ -1,6 +1,6 @@
 import styles from "./SkillBlock.module.css";
 import TipText from "./TipText.jsx";
-import {getImageUrl} from "@hooks/imageUtils.js";
+import {getImageUrl} from "@hooks";
 
 function SkillBlock({
                         skillImg,

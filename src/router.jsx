@@ -1,26 +1,28 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "./Layout";
+import {
+    Home,
+    Memories,
+    Battle,
+    Lore,
+    Spacepedia,
+    WorldUnderneath,
+    MainStory,
+    WuArticle,
+    MsArticle,
+    Anecdotes,
+    AnArticle,
+    CompanionBattleInfo,
+    CardArticle,
+    Banners,
+    Calculator,
+    About,
+    FAQ,
+    CharacterArticle,
+    Characters,
+    MyAccount
+} from '@pages'
 import { RedirectHandler } from "@hooks";
-import Home from "./pages/main/Home.jsx";
-import Memories from "./pages/memories/Memories.jsx";
-import Battle from "./pages/battle/Battle.jsx";
-import Lore from "./pages/lore/Lore.jsx";
-import Spacepedia from "./pages/lore/Spacepedia.jsx";
-import WorldUnderneath from "./pages/lore/WorldUnderneath.jsx";
-import MainStory from "./pages/lore/MainStory.jsx";
-import WuArticle from "./pages/lore/WuArticle.jsx";
-import MsArticle from "./pages/lore/MsArticle.jsx";
-import Anecdotes from "./pages/lore/Anecdotes.jsx";
-import AnArticle from "./pages/lore/AnArticle.jsx";
-import CompanionBattleInfo from "./pages/battle/CompanionBattleInfo.jsx";
-import CardArticle from "./pages/memories/CardArticle.jsx";
-import Banners from "./pages/banners/Banners.jsx";
-import Calculator from "./pages/calculator/Calculator.jsx";
-import About from "./pages/about/About.jsx";
-import FAQ from "./pages/faq/FAQ.jsx";
-import CharacterArticle from "./pages/lore/CharacterArticle.jsx";
-import Characters from "./pages/lore/Characters.jsx";
-import MyAccount from "@pages/my-account/MyAccount.jsx";
 
 const basename = import.meta.env.BASE_URL;
 

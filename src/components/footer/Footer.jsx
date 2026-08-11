@@ -1,8 +1,6 @@
-import styles from './Footer.module.css'
-import {getImageUrl} from "@hooks/imageUtils.js";
 import {Link} from "react-router-dom";
-
-
+import styles from './Footer.module.css'
+import {getImageUrl} from "@hooks";
 
 function Footer() {
 

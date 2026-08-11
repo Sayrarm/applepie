@@ -1,10 +1,11 @@
-import {wuData} from '@data/lore-data/wu-data.js';
-import {wuCategories} from '@data/lore-data/wu-categories.js'
-import GenericArticlePage from "@components/lore-components/GenericArticlePage.jsx";
-import {Link, useParams} from "react-router-dom";
 import {Fragment} from "react";
+import {Link, useParams} from "react-router-dom";
 import styles from "./Article.module.css";
-
+import {
+    wuData,
+    wuCategories
+} from '@data';
+import {GenericArticlePage} from "@components";
 
 function WuArticle() {
 

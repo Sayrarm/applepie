@@ -1,10 +1,11 @@
 import { Navigate, NavLink, useParams } from 'react-router-dom';
 import styles from '@pages/CalculatorAndAccountPage.module.css';
-import MyResources from "@components/my-account-components/MyResources.jsx";
-import MyProtocores from "@components/my-account-components/my-protocores-page/MyProtocores.jsx";
-import MyMemories from "@components/my-account-components/MyMemories.jsx";
-import ExportImport from "@components/my-account-components/import-export/ExportImport.jsx";
-
+import {
+    MyResources,
+    MyProtocores,
+    MyMemories,
+    ExportImport
+} from '@components'
 
 function MyAccount() {
     const { navigation } = useParams();

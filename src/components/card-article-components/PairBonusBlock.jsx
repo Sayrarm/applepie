@@ -1,7 +1,9 @@
-import CardList from "../common/CardList.jsx";
 import {Link} from "react-router-dom";
 import styles from "./PairBonusBlock.module.css";
-import AsideList from "../ui/AsideList.jsx";
+import {
+    CardList,
+    AsideList
+} from "@components";
 
 function PairBonusBlock({
                             cardId,           // ID текущей карточки

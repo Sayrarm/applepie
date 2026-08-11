@@ -1,4 +1,5 @@
 import {useRef, useState} from 'react';
+import {Link} from "react-router-dom";
 import styles from './Calculator.module.css';
 import {
     protocoreTypes,
@@ -14,10 +15,9 @@ import {
     getCreditDungeonRuns,
     getStaminaForCredits,
     creditDungeonData
-} from '@data/protocore-data.js';
-import {getImageUrl} from "@hooks/imageUtils.js";
-import ModalWindow from "../ui/ModalWindow.jsx";
-import {Link} from "react-router-dom";
+} from '@data';
+import {getImageUrl} from "@hooks";
+import {ModalWindow} from "@components";
 
 // Функция для получения первого доступного мейн стата
 const getFirstMainStat = (type) => {

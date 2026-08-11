@@ -1,11 +1,10 @@
-import {Link, Navigate, useParams} from 'react-router-dom';
-import SpacepediaNavigation from "@components/lore-components/SpacepediaNavigation.jsx";
-import styles from "./Spacepedia.module.css";
-import {Collapse} from 'antd';
-import {spacepediaData} from "@data/lore-data/spacepedia-data.js";
-import {getImageUrl} from "@hooks/imageUtils.js";
 import {Fragment} from "react";
-
+import {Link, Navigate, useParams} from 'react-router-dom';
+import {Collapse} from 'antd';
+import styles from "./Spacepedia.module.css";
+import {SpacepediaNavigation} from "@components";
+import {spacepediaData} from "@data";
+import {getImageUrl} from "@hooks";
 
 function Spacepedia() {
     const {navigation} = useParams(); // получаем "guidance", "message" и т.д.

@@ -1,4 +1,4 @@
-import {calculateDmgBoost} from './levelCardData.js';
+import {calculateDmgBoost} from '@data';
 
 // Функция для расчёта статов протокоров
 export const calculateProtocoreStats = (protocores, baseStats) => {

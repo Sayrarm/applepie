@@ -1,8 +1,8 @@
-import styles from "./WorldUnderneath.module.css";
-import {Link} from "react-router-dom";
-import {wuCategories} from "@data/lore-data/wu-categories.js";
-import {getImageUrl} from "@hooks/imageUtils.js";
 import {Fragment} from "react";
+import {Link} from "react-router-dom";
+import styles from "./WorldUnderneath.module.css";
+import {wuCategories} from "@data";
+import {getImageUrl} from "@hooks";
 
 function WorldUnderneath() {
     return (

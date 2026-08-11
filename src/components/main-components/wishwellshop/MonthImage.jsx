@@ -1,5 +1,5 @@
-import DynamicImage from '../DynamicImage.jsx';
-import styles from '/src/pages/main/Home.module.css'
+import {DynamicImage} from '@components';
+import styles from '@pages/main/Home.module.css'
 
 const MonthImage = () => {
     const roster = [

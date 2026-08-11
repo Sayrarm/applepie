@@ -1,5 +1,5 @@
 //card-article-data
-export {setCardAvailability, getCardAvailability, getAllCardAvailability} from './card-article-data/cardAvailability.js'
+export {setCardAvailability, getCardAvailability, getAllCardAvailability, enhanceMemoriesWithAvailability} from './card-article-data/cardAvailability.js'
 export {getCardLevel, getCardRank, getCardAscend, getCardProtocores} from './card-article-data/cardUtils.js'
 export {memoryStats, ascendData3star, ascendData4star, ascendData5star, calculateDmgBoost, getStatsWithRank, useCardStats} from './card-article-data/levelCardData.js'
 export {memoriesData} from './card-article-data/memories-data.js'

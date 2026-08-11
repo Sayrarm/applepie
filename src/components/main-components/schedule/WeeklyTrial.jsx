@@ -1,4 +1,4 @@
-import DynamicImage from "../DynamicImage.jsx";
+import {DynamicImage} from "@components";
 import styles from '/src/pages/main/Home.module.css'
 
 const WeeklyTrial = () => {

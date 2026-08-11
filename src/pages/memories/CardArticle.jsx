@@ -1,7 +1,6 @@
 import {Fragment, useState} from "react";
 import {Link, useParams} from 'react-router-dom';
 import styles from "./CardArticle.module.css";
-
 import {
     CopyableText,
     ParametersBlock,
@@ -13,16 +12,13 @@ import {
     SolarPairBonusBlock,
     StoryInfo,
 } from '@components';
-
 import { getImageUrl } from '@hooks';
-
 import {
     memoriesData,
     obtainData,
-    solar4Stars
+    solar4Stars,
+    compData
 } from '@data';
-
-import {compData} from "@data";
 
 function CardArticle() {
     const {cardId} = useParams();

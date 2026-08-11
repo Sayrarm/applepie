@@ -1,11 +1,13 @@
-import styles from '@pages/main/Home.module.css';
 import {useRef} from 'react';
-import CardList from '@components/common/CardList.jsx';
-import {memoriesData} from '@data/card-article-data/memories-data.js';
-import ModalWindow from "@components/ui/ModalWindow.jsx";
-import {getImageUrl} from "@hooks/imageUtils.js";
-import FlexibleTimer from "@components/common/FlexibleTimer.jsx";
-import {useTimezone} from '@components/header/TimezoneContext.jsx';
+import styles from '@pages/main/Home.module.css';
+import {
+    CardList,
+    ModalWindow,
+    FlexibleTimer,
+    useTimezone
+} from '@components'
+import {memoriesData} from '@data';
+import {getImageUrl} from '@hooks';
 
 function BannerForHome({banner}) {
     const memoriesModalRef = useRef();

@@ -1,12 +1,14 @@
 import React, {useCallback, useMemo, useRef, useState} from 'react';
 import styles from './CardProtocores.module.css';
-import ProtocoreBlock from '../common/ProtocoreBlock.jsx';
-import {memoriesData} from '@data/card-article-data/memories-data.js';
-import ModalWindow from "../ui/ModalWindow.jsx";
-import FilterSortBarProtocore from "../common/filter-and-sort/filter-sorter-protocores/FilterSortBarProtocores.jsx";
-import { useProtocoreSearch } from '../common/filter-and-sort/filter-sorter-protocores/useProtocoreSearch.js';
-import { useProtocoreFilter } from '../common/filter-and-sort/filter-sorter-protocores/useProtocoreFilter.js';
-import { useProtocoreSort } from '../common/filter-and-sort/filter-sorter-protocores/useProtocoreSort.js';
+import {
+    ProtocoreBlock,
+    ModalWindow,
+    FilterSortBarProtocores,
+    useProtocoreSearch,
+    useProtocoreFilter,
+    useProtocoreSort
+} from '@components'
+import {memoriesData} from '@data';
 
 function CardProtocores({cardId}) {
     const protocoreModalRef = useRef();
@@ -263,7 +265,7 @@ function CardProtocores({cardId}) {
                     title={'Choose MyProtocores'}
                     tag={
                         <div className={styles.modalInfo}>
-                            <FilterSortBarProtocore
+                            <FilterSortBarProtocores
                                 searchQuery={searchQuery}
                                 onSearch={onSearch}
                                 clearSearch={clearSearch}

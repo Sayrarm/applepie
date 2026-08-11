@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './FlexibleTimer.module.css';
-import { useTimezone } from '../header/TimezoneContext.jsx';
+import { useTimezone } from '@components';
 
 function FlexibleTimer({
                            startDateTime = '2026-01-01T00:00:00',  // Формат: YYYY-MM-DDTHH:MM:SS

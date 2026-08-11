@@ -1,6 +1,6 @@
-import styles from './Header.module.css'
-import {Link} from "react-router-dom";
 import {useEffect, useState} from "react";
+import {Link} from "react-router-dom";
+import styles from './Header.module.css'
 import ThemeToggleButton from "./ThemeToggleButton.jsx";
 import TimezoneButton from "./TimezoneButton.jsx";
 

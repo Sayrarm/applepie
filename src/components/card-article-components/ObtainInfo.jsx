@@ -1,9 +1,11 @@
-import styles from './ObtainInfo.module.css';
 import {useRef, useState} from "react";
-import ModalWindow from "../ui/ModalWindow.jsx";
-import {getImageUrl} from "@hooks/imageUtils.js";
-import {bannersDataFull} from "@data/banners-data-full.js";
-import BannerList from "../common/banners-components/BannerList.jsx";
+import styles from './ObtainInfo.module.css';
+import {
+    ModalWindow,
+    BannerList
+} from '@components'
+import {getImageUrl} from "@hooks";
+import {bannersDataFull} from "@data";
 
 function ObtainInfo({cardId, obtainData}) {
     const obtainModalRef = useRef();

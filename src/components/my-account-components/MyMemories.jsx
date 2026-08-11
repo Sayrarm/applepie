@@ -1,15 +1,20 @@
-import styles from "./MyMemories.module.css";
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from 'react-router-dom';
-import { memoriesData } from '@data/card-article-data/memories-data.js';
-import { getStatsWithRank } from '@data/card-article-data/levelCardData.js';
-import { calculateFinalStats, getProtocoreLevelsString } from '@data/card-article-data/protocoreUtils.js';
-import { getImageUrl } from "@hooks/imageUtils.js";
-import { useSearch } from '../common/filter-and-sort/filter-sorter-memories/useSearch.js';
-import { useSort } from '../common/filter-and-sort/filter-sorter-memories/useSort.js';
-import { useFilter } from '../common/filter-and-sort/filter-sorter-memories/useFilter.js';
-import { enhanceMemoriesWithAvailability } from "@data/card-article-data/cardAvailability.js";
-import FilterSortBarMemories from '../common/filter-and-sort/filter-sorter-memories/FilterSortBarMemories.jsx';
+import styles from "./MyMemories.module.css";
+import {
+    useSearch,
+    useSort,
+    useFilter,
+    FilterSortBarMemories
+} from '@components'
+import {
+    memoriesData,
+    getStatsWithRank,
+    calculateFinalStats,
+    getProtocoreLevelsString,
+    enhanceMemoriesWithAvailability
+} from '@data'
+import { getImageUrl } from "@hooks";
 
 // Функция сортировки для таблицы
 const sortTableData = (data, sortConfig) => {

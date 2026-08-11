@@ -1,8 +1,8 @@
-import styles from '../FilterSortBar.module.css';
 import { Button, Input, Select } from 'antd';
+import styles from '../FilterSortBar.module.css';
 import FilterModalProtocore from './FilterModalProtocore.jsx';
-import { getImageUrl } from '@hooks/imageUtils.js';
-import { stylesFnSearch } from "@components/ui/stylesAntd.js";
+import { getImageUrl } from '@hooks';
+import { stylesFnSearch } from "@components";
 
 const { Search } = Input;
 

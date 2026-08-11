@@ -1,5 +1,8 @@
 import {useRef, useState} from 'react';
+import {Link} from "react-router-dom";
 import styles from './Calculator.module.css';
+import {ModalWindow} from "@components";
+import {getImageUrl} from "@hooks";
 import {
     rarityLevels,
     expDungeonData,
@@ -11,12 +14,11 @@ import {
     getCrystalDungeonByColor,
     getStaminaCost,
     crystalTypesDungeons,
-} from '@data/memory-up-data.js';
-import {creditDungeonData, getCreditDungeonRuns} from '@data/protocore-data.js'
-import ModalWindow from "../ui/ModalWindow.jsx";
-import {crystalColors, getHeartInfo} from "@data/my-resources.js";
-import {getImageUrl} from "@hooks/imageUtils.js";
-import {Link} from "react-router-dom";
+    creditDungeonData,
+    getCreditDungeonRuns,
+    crystalColors,
+    getHeartInfo
+} from '@data';
 
 function MemoryUpCalculator() {
     const [rarity, setRarity] = useState('5-star');

@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import styles from './BackTopButton.module.css'
-import {getImageUrl} from "@hooks/imageUtils.js";
+import {getImageUrl} from "@hooks";
 
 
 function BackTopButton() {

@@ -1,8 +1,8 @@
-import styles from "./Showcase.module.css";
-import {getImageUrl} from "@hooks/imageUtils.js";
 import {useRef} from "react";
-import ModalWindow from "@components/ui/ModalWindow.jsx";
-import {compData} from "@data/companion-battle-data/comp-data.js";
+import styles from "./Showcase.module.css";
+import {getImageUrl} from "@hooks";
+import {ModalWindow} from "@components";
+import {compData} from "@data";
 
 function ChooseCompanionAndWeapon({
                                       selectedCompanion,

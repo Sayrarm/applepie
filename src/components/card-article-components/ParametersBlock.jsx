@@ -1,7 +1,7 @@
-import styles from "./ParametersBlock.module.css";
-import {getImageUrl} from "@hooks/imageUtils.js";
 import {useRef} from "react";
-import ModalWindow from "../ui/ModalWindow.jsx";
+import styles from "./ParametersBlock.module.css";
+import {getImageUrl} from "@hooks";
+import {ModalWindow} from "@components";
 
 function ParametersBlock({card}) {
 

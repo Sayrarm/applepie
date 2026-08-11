@@ -1,5 +1,5 @@
 import React, {useMemo} from 'react';
-import {getImageUrl} from "@hooks/imageUtils.js";
+import {getImageUrl} from '@hooks';
 
 /**
  * Универсальный компонент для динамической смены картинок

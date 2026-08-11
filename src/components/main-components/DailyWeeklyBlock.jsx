@@ -1,10 +1,11 @@
-import styles from "@pages/main/Home.module.css";
-import ModalWindow from "@components/ui/ModalWindow.jsx";
-import DailyResetTimer from "@components/common/DailyResetTimer.jsx";
-import {useRecurringTimer} from "@components/common/resetTimer.js";
 import {useRef} from "react";
-import {getImageUrl} from "@hooks/imageUtils.js";
-
+import styles from "@pages/main/Home.module.css";
+import {
+    ModalWindow,
+    DailyResetTimer,
+    useRecurringTimer
+} from '@components'
+import {getImageUrl} from '@hooks';
 
 function DailyWeeklyBlock() {
 

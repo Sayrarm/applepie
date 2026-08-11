@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import styles from './AsideReplacableResources.module.css';
-import { getImageUrl } from '@hooks/imageUtils.js';
-import { STORAGE_KEYS, getHeartsandExchange, getCrystalBoxExchange } from '@data/my-resources.js';
-import AsideList from '../ui/AsideList.jsx';
+import { getImageUrl } from '@hooks';
+import { STORAGE_KEYS, getHeartsandExchange, getCrystalBoxExchange } from '@data';
+import {AsideList} from '@components';
 
-function ReplaceableResources({ goal, remaining }) {
+function AsideReplaceableResources({ goal, remaining }) {
     const [heartsandExchange, setHeartsandExchange] = useState(null);
     const [crystalBoxExchange, setCrystalBoxExchange] = useState(null);
 
@@ -202,4 +202,4 @@ function ReplaceableResources({ goal, remaining }) {
     );
 }
 
-export default ReplaceableResources;
+export default AsideReplaceableResources;

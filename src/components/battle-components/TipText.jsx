@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import glossary from '@data/companion-battle-data/glossary.js';
+import {glossary} from '@data';
 import styles from './TipText.module.css'
 
 const TipText = ({ text }) => {

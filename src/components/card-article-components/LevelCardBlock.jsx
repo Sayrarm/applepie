@@ -1,11 +1,14 @@
-import styles from "./LevelCardBlock.module.css";
-import {Range} from 'react-range';
 import React, {useEffect, useMemo, useState} from "react";
-import Select from 'react-select';
 import {useParams} from 'react-router-dom';
-import {getStatsWithRank, memoryStats} from '@data/card-article-data/levelCardData.js';
-import {memoriesData} from '@data/card-article-data/memories-data.js';
-import {calculateFinalStats} from '@data/card-article-data/protocoreUtils.js';
+import {Range} from 'react-range';
+import Select from 'react-select';
+import styles from "./LevelCardBlock.module.css";
+import {
+    getStatsWithRank,
+    memoryStats,
+    memoriesData,
+    calculateFinalStats
+} from '@data';
 
 const rankOptions = [
     {value: 0, label: 'Rank 0'},

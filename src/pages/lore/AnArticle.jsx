@@ -1,10 +1,11 @@
-import GenericArticlePage from "@components/lore-components/GenericArticlePage.jsx";
-import {Link, useParams} from "react-router-dom";
 import {Fragment} from "react";
+import {Link, useParams} from "react-router-dom";
 import styles from "./Article.module.css";
-import {anCategories} from "@data/lore-data/an-categories.js";
-import {anData} from "@data/lore-data/an-data.js";
-
+import {GenericArticlePage} from "@components";
+import {
+    anCategories,
+    anData
+} from '@data'
 
 function AnArticle() {
 

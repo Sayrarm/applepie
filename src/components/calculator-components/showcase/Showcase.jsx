@@ -1,16 +1,21 @@
-import styles from "./Showcase.module.css";
 import {useState, useRef, useMemo, useEffect} from "react";
-import ModalWindow from "@components/ui/ModalWindow.jsx";
-import {getCardLevel, getCardRank, getCardAscend, getCardProtocores} from "@data/card-article-data/cardUtils.js";
-import {calculateFinalStats} from "@data/card-article-data/protocoreUtils.js";
-import {getStatsWithRank} from "@data/card-article-data/levelCardData.js";
-import {affinityData} from "@data/showcase-data/affinity-data.js";
+import styles from "./Showcase.module.css";
 import Select from 'react-select';
 import {toPng} from 'html-to-image';
 import {Button} from "antd";
 import CombatCalculations from "./CombatCalculations.jsx";
 import ChooseCompanionAndWeapon from "./ChooseCompanionAndWeapon.jsx";
 import ChooseTeamCards from "./ChooseTeamCards.jsx";
+import ModalWindow from "@components/ui/ModalWindow.jsx";
+import {
+    getCardLevel,
+    getCardRank,
+    getCardAscend,
+    getCardProtocores,
+    calculateFinalStats,
+    getStatsWithRank,
+    affinityData
+} from "@data";
 
 // Ключ для localStorage
 const STORAGE_KEY = 'showcase_teams';

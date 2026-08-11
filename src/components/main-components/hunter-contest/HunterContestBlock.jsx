@@ -1,11 +1,13 @@
-import styles from "@pages/main/Home.module.css";
-import FlexibleTimer from "@components/common/FlexibleTimer.jsx";
-import ModalWindow from "@components/ui/ModalWindow.jsx";
-import HunterContestDescription from "./HunterContestDescription.jsx";
 import { useRef } from "react";
-import { getImageUrl } from "@hooks/imageUtils.js";
-import { hunterContestBuffs } from "@data/main-page-data/hunter-contest-buffs.js";
-import { useTimezone } from '@components/header/TimezoneContext.jsx';
+import styles from "@pages/main/Home.module.css";
+import {
+    FlexibleTimer,
+    ModalWindow,
+    useTimezone
+} from '@components'
+import { getImageUrl } from "@hooks";
+import { hunterContestBuffs } from "@data";
+import HunterContestDescription from "./HunterContestDescription.jsx";
 
 function HunterContestBlock() {
     const missionModalRef = useRef();

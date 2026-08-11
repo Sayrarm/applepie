@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useTimezone } from '@components/header/TimezoneContext.jsx';
+import { useTimezone } from '@components';
 
 // Вспомогательная функция для получения текущего времени с учётом часового пояса
 const getCurrentTimeWithTimezone = (timezoneOffset) => {

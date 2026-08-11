@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './ProtocoreBlock.module.css';
-import {getImageUrl} from '@hooks/imageUtils.js';
-import {protocoreColor, protocoreTypes} from '@data/protocore-data.js';
+import {getImageUrl} from '@hooks';
+import {protocoreColor, protocoreTypes} from '@data';
 
 function ProtocoreBlock({
                             protocore,

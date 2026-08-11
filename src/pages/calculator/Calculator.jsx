@@ -1,9 +1,11 @@
 import { Navigate, NavLink, useParams } from 'react-router-dom';
 import styles from '@pages/CalculatorAndAccountPage.module.css';
-import ProtocoreCalculator from "@components/calculator-components/ProtocoreCalculator.jsx";
-import MemoryUpCalculator from "@components/calculator-components/MemoryUpCalculator.jsx";
-import Showcase from "@components/calculator-components/showcase/Showcase.jsx";
-import Optimizer from "@components/calculator-components/Optimizer.jsx";
+import {
+    ProtocoreCalculator,
+    MemoryUpCalculator,
+    Showcase,
+    Optimizer
+} from '@components'
 
 function Calculator() {
     const { navigation } = useParams(); // получаем "my-memories", "inventory" и т.д.

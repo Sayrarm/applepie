@@ -1,4 +1,4 @@
-import {memoriesData} from './memories-data.js';
+import {memoriesData} from '@data';
 
 export const memoryStats = {
     'HP Memory 0 Rank 5-star': {

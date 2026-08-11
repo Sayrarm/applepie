@@ -1,19 +1,17 @@
+import {Range} from 'react-range';
+import React, {useState, useMemo} from "react";
+import styles from "./CombatCalculations.module.css";
 import {
     compDataShowcaseDefault5star,
     compDataShowcaseDefault4star,
     compDataShowcaseSpecific,
-    weaponDataShowcaseSpecific
-} from "@data/showcase-data/comp-data-showcase.js";
-import {Range} from 'react-range';
-import styles from "./CombatCalculations.module.css";
-import React, {useState, useMemo} from "react";
-import {
+    weaponDataShowcaseSpecific,
     calculateAllDamageTypes,
-    createDamageCalculator
-} from "@data/showcase-data/damageCalculator.js";
-import {solar4Stars} from "@data/card-article-data/solar-4-star-info.js";
-import { getCardRank } from "@data/card-article-data/cardUtils.js";
-import AsideList from "@components/ui/AsideList.jsx";
+    createDamageCalculator,
+    solar4Stars,
+    getCardRank
+} from "@data";
+import {AsideList} from "@components";
 
 function CombatCalculations({stats, selectedCompanion, selectedMCWeapon, solarCards}) {
     // Находим данные для выбранного компаньона по companionName

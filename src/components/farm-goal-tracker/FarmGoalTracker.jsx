@@ -1,17 +1,24 @@
+import {Link} from "react-router-dom";
 import {useEffect, useState} from 'react';
 import styles from './FarmGoalTracker.module.css';
-import { crystalDungeonData, DUNGEON_COST, expDungeonData} from '@data/memory-up-data.js';
-import {CREDIT_DUNGEON_COST, DUNGEON_COST_PROTOCORE, dungeonData, creditDungeonData} from '@data/protocore-data.js';
 import {
+    crystalDungeonData,
+    DUNGEON_COST,
+    expDungeonData,
+    CREDIT_DUNGEON_COST,
+    DUNGEON_COST_PROTOCORE,
+    dungeonData,
+    creditDungeonData,
     crystalColors,
     bossImg,
     getHeartCount,
     getHeartInfo,
-    credits, bottles, coreEnergy
+    credits,
+    bottles,
+    coreEnergy
 } from '@data';
 import {getImageUrl} from '@hooks';
-import {Link} from "react-router-dom";
-import ReplaceableResources from "./AsideReplaceableResources.jsx";
+import AsideReplaceableResources from "./AsideReplaceableResources.jsx";
 
 // Константы
 const DAILY_STAMINA = 390; // суточное топливо
@@ -548,7 +555,7 @@ function FarmGoalTracker() {
                                     </div>
                                 </div>
 
-                                <ReplaceableResources goal={goal} remaining={remaining}/>
+                                <AsideReplaceableResources goal={goal} remaining={remaining}/>
 
                                 {/* Farming Calculation */}
                                 {(remaining.exp > 0 || remaining.credits > 0 || (remaining.crystals && (remaining.crystals.N > 0 || remaining.crystals.R > 0 || remaining.crystals.SR > 0))) && (

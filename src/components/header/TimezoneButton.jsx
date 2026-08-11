@@ -1,4 +1,4 @@
-import { useTimezone } from './TimezoneContext.jsx';
+import { useTimezone } from '@components';
 import styles from './TimezoneButton.module.css';
 
 function TimezoneButton() {
