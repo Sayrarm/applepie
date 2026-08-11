@@ -24,7 +24,6 @@ export { default as StoryInfo } from './card-article-components/StoryInfo.jsx';
 //common
 export { default as BannerList } from './common/banners-components/BannerList.jsx';
 
-export { default as FilterModalProtocore } from './common/filter-and-sort/filter-sorter-protocores/FilterModalProtocore.jsx';
 export { default as FilterSortBarProtocores } from './common/filter-and-sort/filter-sorter-protocores/FilterSortBarProtocores.jsx';
 export { useProtocoreFilter } from './common/filter-and-sort/filter-sorter-protocores/useProtocoreFilter.js';
 export { useProtocoreSearch } from './common/filter-and-sort/filter-sorter-protocores/useProtocoreSearch.js';

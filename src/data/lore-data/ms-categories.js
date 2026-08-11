@@ -5,5 +5,4 @@ export const msCategories = [
     { id: 40,  link: "homecoming-wings", title: "Homecoming Wings", image: "../assets/bg/4.png", },
     { id: 50,  link: "death-and-rebirth", title: "Death And Rebirth", image: "../assets/bg/5.png", },
     { id: 60,  link: "to-our-yesterday", title: "To Our Yesterday", image: "../assets/bg/6.png", },
-
 ];

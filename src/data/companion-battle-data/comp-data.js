@@ -1,5 +1,4 @@
 export const compData = [
-
     {
         id: 11,
         cardIds: [199, 200],

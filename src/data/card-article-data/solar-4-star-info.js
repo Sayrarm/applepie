@@ -1,5 +1,4 @@
 export const solar4Stars = [
-
     {
         id: 1,
         cardIds: [1, 6],

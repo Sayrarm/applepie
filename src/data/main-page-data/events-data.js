@@ -1,5 +1,4 @@
 export const eventsData = [
-
     {
         id: 1,
         name: "10 Days with you",

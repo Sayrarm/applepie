@@ -1,5 +1,4 @@
 export const anData = [
-
     {
         id: 11,
         link: "special-vacation",

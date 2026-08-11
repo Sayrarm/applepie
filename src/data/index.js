@@ -1,7 +1,8 @@
 //card-article-data
 export {setCardAvailability, getCardAvailability, getAllCardAvailability, enhanceMemoriesWithAvailability} from './card-article-data/cardAvailability.js'
 export {getCardLevel, getCardRank, getCardAscend, getCardProtocores} from './card-article-data/cardUtils.js'
-export {memoryStats, ascendData3star, ascendData4star, ascendData5star, calculateDmgBoost, getStatsWithRank, useCardStats} from './card-article-data/levelCardData.js'
+export {memoryStats, ascendData3star, ascendData4star, ascendData5star} from './card-article-data/levelCardData.js'
+export {calculateDmgBoost, getStatsWithRank} from './card-article-data/levelCardFunctions.js'
 export {memoriesData} from './card-article-data/memories-data.js'
 export {obtainData} from './card-article-data/obtain-data.js'
 export {calculateProtocoreStats, calculateFinalStats, getProtocoreLevelsString} from './card-article-data/protocoreUtils.js'
@@ -42,14 +43,16 @@ export {
     expDungeonData,
     crystalDungeonData,
     crystalTypesDungeons,
-    DUNGEON_COST,
+    DUNGEON_COST
+} from './calculator-data/memory-up-data.js'
+export {
     getCrystalDungeonByColor,
     getExpNeeded,
     getUpgradeResources,
     getExpDungeonRuns,
     getCrystalDungeonRuns,
     getStaminaCost
-} from './memory-up-data.js'
+} from './calculator-data/memory-up-functions.js'
 export {
     bottles,
     wish,
@@ -62,14 +65,16 @@ export {
     crystalBox,
     hearts,
     coreEnergy,
-    credits,
+    credits
+} from './calculator-data/my-resources.js'
+export {
     getHeartsandExchange,
     getCrystalBoxExchange,
     getHeartInfo,
     STORAGE_KEYS,
     getHeartCount,
     getWishExchange
-} from './my-resources.js'
+} from './calculator-data/my-resources-functions.js'
 export {
     levelUpData,
     MAX_LEVEL,
@@ -79,7 +84,9 @@ export {
     CREDIT_DUNGEON_COST,
     SUBSTAT_LEVELS,
     protocoreTypes,
-    protocoreColor,
+    protocoreColor
+} from './calculator-data/protocore-data.js'
+export {
     getMainStatValue,
     getSubstatUpgradeInfo,
     getRequiredExp,
@@ -88,5 +95,5 @@ export {
     getRequiredStamina,
     getCreditDungeonRuns,
     getStaminaForCredits
-} from './protocore-data.js'
+} from './calculator-data/protocore-functions.js'
 

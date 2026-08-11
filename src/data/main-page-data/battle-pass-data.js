@@ -1,5 +1,4 @@
 export const battlePassData = [
-
     {
         id: 1,
         name: "Promise",
