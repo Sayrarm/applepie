@@ -42,7 +42,7 @@ export { default as ProtocoreBlock } from './common/ProtocoreBlock.jsx';
 export { useRecurringTimer } from './common/resetTimer.js';
 
 //farm-goal-tracker
-export { default as FarmGoalTracker } from './farm-goal-tracker/FarmGoalTracker.jsx';
+export { default as FarmGoalTracker } from './main-components/farm-goal-tracker/FarmGoalTracker.jsx';
 
 //footer
 export { default as Footer } from './footer/Footer.jsx';
