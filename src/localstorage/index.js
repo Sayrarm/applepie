@@ -28,7 +28,5 @@ export {
     completeFarmGoal,
     deleteFarmGoal
 } from './calculator-storage.js';
-export {
-    getTheme,
-    saveTheme
-} from './theme-storage.js';
+export {getTheme, saveTheme} from './theme-storage.js';
+export {getTimezone, saveTimezone} from './timezone-storage.js';

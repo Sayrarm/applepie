@@ -1,17 +1,13 @@
 import { createContext, useContext, useState, useEffect } from 'react';
+import { getTimezone, saveTimezone } from '@localstorage';
 
 const TimezoneContext = createContext();
 
 export const TimezoneProvider = ({ children }) => {
-    const getInitialTimezone = () => {
-        const saved = localStorage.getItem('app_timezone');
-        return saved || '+02:00';
-    };
-
-    const [timezone, setTimezone] = useState(getInitialTimezone);
+    const [timezone, setTimezone] = useState(getTimezone);
 
     useEffect(() => {
-        localStorage.setItem('app_timezone', timezone);
+        saveTimezone(timezone);
     }, [timezone]);
 
     return (
