@@ -11,10 +11,19 @@ import {
     memoriesData,
     getStatsWithRank,
     calculateFinalStats,
-    getProtocoreLevelsString,
-    enhanceMemoriesWithAvailability
+    getProtocoreLevelsString
 } from '@data'
 import { getImageUrl } from "@hooks";
+import {
+    getCardLevel,
+    getCardRank,
+    getCardAscend,
+    getCardProtocores,
+    enhanceMemoriesWithAvailability,
+} from '@localstorage';
+
+// Ключ для localStorage
+const TABLE_SORT_KEY = 'mymemories_table_sort';
 
 // Функция сортировки для таблицы
 const sortTableData = (data, sortConfig) => {
@@ -76,9 +85,6 @@ const sortTableData = (data, sortConfig) => {
     return sorted;
 };
 
-// Ключ для localStorage
-const TABLE_SORT_KEY = 'mymemories_table_sort';
-
 function MyMemories() {
     // Используем хуки
     const { searchQuery, onSearch } = useSearch('mymemories');
@@ -118,38 +124,22 @@ function MyMemories() {
         }
     }, [tableSort]);
 
-    const getCardLevel = (cardId) => {
-        const saved = localStorage.getItem(`cardLevel_${cardId}`);
-        return saved ? parseInt(saved) : 1;
-    };
-
-    const getCardRank = (cardId) => {
-        const saved = localStorage.getItem(`cardRank_${cardId}`);
-        return saved ? parseInt(saved) : 0;
-    };
-
-    const getCardAscend = (cardId) => {
-        const saved = localStorage.getItem(`cardAscend_${cardId}`);
-        return saved ? JSON.parse(saved) : false;
-    };
-
-    const getCardProtocores = (cardId) => {
-        const saved = localStorage.getItem(`card_protocores_${cardId}`);
-        return saved ? JSON.parse(saved) : [];
-    };
-
+    // Функция обновления доступных карточек (используем card-storage)
     const refreshAvailableCards = () => {
-        // Получаем все карточки с обогащённым статусом доступности
+        // Получаем все карточки со статусом доступности
         const allCards = enhanceMemoriesWithAvailability(memoriesData);
 
         // Фильтруем только доступные карточки
         const available = allCards
             .filter(card => card.isAvailable === true)
             .map(card => {
-                const level = getCardLevel(card.id);
-                const rank = getCardRank(card.id);
-                const isAscended = getCardAscend(card.id);
-                const protocores = getCardProtocores(card.id);
+                const cardId = String(card.id);
+
+                // Используем функции из card-storage
+                const level = getCardLevel(cardId);
+                const rank = getCardRank(cardId);
+                const isAscended = getCardAscend(cardId);
+                const protocores = getCardProtocores(cardId);
                 const protocoreLevels = getProtocoreLevelsString(protocores);
 
                 const baseStats = getStatsWithRank(card, level, rank, isAscended);
@@ -188,6 +178,7 @@ function MyMemories() {
                     stats: finalStats
                 };
             });
+
         setAvailableCards(available);
     };
 
@@ -210,12 +201,18 @@ function MyMemories() {
             refreshAvailableCards();
         };
 
+        const handleCardAvailabilityChange = () => {
+            refreshAvailableCards();
+        };
+
         window.addEventListener('storage', handleStorageChange);
         window.addEventListener('protocoresUpdated', handleProtocoresUpdate);
+        window.addEventListener('cardAvailabilityChanged', handleCardAvailabilityChange);
 
         return () => {
             window.removeEventListener('storage', handleStorageChange);
             window.removeEventListener('protocoresUpdated', handleProtocoresUpdate);
+            window.removeEventListener('cardAvailabilityChanged', handleCardAvailabilityChange);
         };
     }, []);
 
@@ -435,15 +432,15 @@ function MyMemories() {
                                     </Link>
                                 </td>
                                 <td>
-                                        <span className={styles.levelBadge}>
-                                            {card.level}
-                                            {card.isAscended && <span className={styles.ascendMark}>✦</span>}
-                                        </span>
+                                    <span className={styles.levelBadge}>
+                                        {card.level}
+                                        {card.isAscended && <span className={styles.ascendMark}>✦</span>}
+                                    </span>
                                 </td>
                                 <td>
-                                        <span className={styles.rankBadge}>
-                                            {card.rank}
-                                        </span>
+                                    <span className={styles.rankBadge}>
+                                        {card.rank}
+                                    </span>
                                 </td>
                                 <td className={styles.stellaContainer}>
                                     <img
@@ -457,9 +454,9 @@ function MyMemories() {
                                 </td>
                                 <td>
                                     <div className={styles.rarityContainer}>
-                                            <span className={styles.rarityStars}>
-                                                {card.rarityName}
-                                            </span>
+                                        <span className={styles.rarityStars}>
+                                            {card.rarityName}
+                                        </span>
                                     </div>
                                 </td>
                                 <td className={styles.placementContainer}>
@@ -483,36 +480,36 @@ function MyMemories() {
                                     </div>
                                 </td>
                                 <td>
-                                        <span className={styles.protocoreLevel}>
-                                            {card.protocoreLevels}
-                                        </span>
+                                    <span className={styles.protocoreLevel}>
+                                        {card.protocoreLevels}
+                                    </span>
                                 </td>
                                 <td className={styles.statValue}>
-                                    {typeof card.stats.hp === 'number' ? formatNumber(card.stats.hp) : '—'}
+                                    {typeof card.stats?.hp === 'number' ? formatNumber(card.stats.hp) : '—'}
                                 </td>
                                 <td className={styles.statValue}>
-                                    {typeof card.stats.atk === 'number' ? formatNumber(card.stats.atk) : '—'}
+                                    {typeof card.stats?.atk === 'number' ? formatNumber(card.stats.atk) : '—'}
                                 </td>
                                 <td className={styles.statValue}>
-                                    {typeof card.stats.def === 'number' ? formatNumber(card.stats.def) : '—'}
+                                    {typeof card.stats?.def === 'number' ? formatNumber(card.stats.def) : '—'}
                                 </td>
                                 <td className={styles.statValue}>
-                                    {typeof card.stats.critRate === 'number' ? formatNumber(card.stats.critRate.toFixed(1)) + '%' : '—'}
+                                    {typeof card.stats?.critRate === 'number' ? formatNumber(card.stats.critRate.toFixed(1)) + '%' : '—'}
                                 </td>
                                 <td className={styles.statValue}>
-                                    {typeof card.stats.critDmg === 'number' ? formatNumber(card.stats.critDmg.toFixed(1)) + '%' : '—'}
+                                    {typeof card.stats?.critDmg === 'number' ? formatNumber(card.stats.critDmg.toFixed(1)) + '%' : '—'}
                                 </td>
                                 <td className={styles.statValue}>
-                                    {typeof card.stats.dmgBoost === 'number' ? formatNumber(card.stats.dmgBoost.toFixed(2)) + '%' : '—'}
+                                    {typeof card.stats?.dmgBoost === 'number' ? formatNumber(card.stats.dmgBoost.toFixed(2)) + '%' : '—'}
                                 </td>
                                 <td className={styles.statValue}>
-                                    {typeof card.stats.oathStrength === 'number' ? formatNumber(card.stats.oathStrength.toFixed(2)) + '%' : '—'}
+                                    {typeof card.stats?.oathStrength === 'number' ? formatNumber(card.stats.oathStrength.toFixed(2)) + '%' : '—'}
                                 </td>
                                 <td className={styles.statValue}>
-                                    {typeof card.stats.oathRecoveryBoost === 'number' ? formatNumber(card.stats.oathRecoveryBoost.toFixed(2)) + '%' : '—'}
+                                    {typeof card.stats?.oathRecoveryBoost === 'number' ? formatNumber(card.stats.oathRecoveryBoost.toFixed(2)) + '%' : '—'}
                                 </td>
                                 <td className={styles.statValue}>
-                                    {typeof card.stats.expeditedEnergyBoost === 'number' ? formatNumber(card.stats.expeditedEnergyBoost.toFixed(2)) + '%' : '—'}
+                                    {typeof card.stats?.expeditedEnergyBoost === 'number' ? formatNumber(card.stats.expeditedEnergyBoost.toFixed(2)) + '%' : '—'}
                                 </td>
                             </tr>
                         ))

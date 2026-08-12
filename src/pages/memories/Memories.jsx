@@ -8,10 +8,8 @@ import {
     useFilter,
     FilterSortBarMemories
 } from '@components'
-import {
-    memoriesData as initialMemoriesData,
-    enhanceMemoriesWithAvailability
-} from '@data';
+import {memoriesData as initialMemoriesData} from '@data';
+import { enhanceMemoriesWithAvailability } from "@localstorage"
 
 function Memories() {
     // Используем хуки

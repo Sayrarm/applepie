@@ -10,9 +10,9 @@ import {
     useFilter
 } from '@components';
 import {
-    memoriesData,
-    enhanceMemoriesWithAvailability
+    memoriesData
 } from "@data";
+import {enhanceMemoriesWithAvailability} from '@localstorage'
 
 function ChooseTeamCards({
                              solarCards,

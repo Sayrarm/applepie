@@ -1,6 +1,6 @@
-import React, {useEffect, useMemo, useState} from "react";
-import {useParams} from 'react-router-dom';
-import {Range} from 'react-range';
+import React, { useEffect, useMemo, useState } from "react";
+import { useParams } from 'react-router-dom';
+import { Range } from 'react-range';
 import Select from 'react-select';
 import styles from "./LevelCardBlock.module.css";
 import {
@@ -9,48 +9,35 @@ import {
     memoriesData,
     calculateFinalStats
 } from '@data';
+import {
+    getCardLevel,
+    saveCardLevel,
+    getCardRank,
+    saveCardRank,
+    getCardAvailability,
+    saveCardAvailability,
+    getCardAscend,
+    saveCardAscend,
+    getCardProtocores,
+    saveCardProtocores,
+} from '@localstorage';
 
 const rankOptions = [
-    {value: 0, label: 'Rank 0'},
-    {value: 1, label: 'Rank 1'},
-    {value: 2, label: 'Rank 2'},
-    {value: 3, label: 'Rank 3'},
+    { value: 0, label: 'Rank 0' },
+    { value: 1, label: 'Rank 1' },
+    { value: 2, label: 'Rank 2' },
+    { value: 3, label: 'Rank 3' },
 ];
 
-// Функции для загрузки из localStorage
-const getSavedLevel = (cardId) => {
-    if (!cardId) return 1;
-    const saved = localStorage.getItem(`cardLevel_${cardId}`);
-    return saved ? parseInt(saved) : 1;
-};
-
-const getSavedRank = (cardId) => {
-    if (!cardId) return 0;
-    const saved = localStorage.getItem(`cardRank_${cardId}`);
-    return saved ? parseInt(saved) : 0;
-};
-
-const getSavedAvailability = (cardId) => {
-    if (!cardId) return false;
-    const saved = localStorage.getItem(`cardAvailable_${cardId}`);
-    return saved ? JSON.parse(saved) : false;
-};
-
-const getSavedAscend = (cardId) => {
-    if (!cardId) return false;
-    const saved = localStorage.getItem(`cardAscend_${cardId}`);
-    return saved ? JSON.parse(saved) : false;
-};
-
-function LevelCardBlock({cardId: propCardId, onAvailabilityChange}) {
-    const {cardId: paramCardId} = useParams();
+function LevelCardBlock({ cardId: propCardId, onAvailabilityChange }) {
+    const { cardId: paramCardId } = useParams();
     const cardId = propCardId || paramCardId;
 
-    const [level, setLevel] = useState(() => getSavedLevel(cardId));
-    const [rank, setRank] = useState(() => getSavedRank(cardId));
-    const [isAvailable, setIsAvailable] = useState(() => getSavedAvailability(cardId));
-    const [isAscended, setIsAscended] = useState(() => getSavedAscend(cardId));
-    const [equippedProtocores, setEquippedProtocores] = useState([]);
+    const [level, setLevel] = useState(() => getCardLevel(cardId));
+    const [rank, setRank] = useState(() => getCardRank(cardId));
+    const [isAvailable, setIsAvailable] = useState(() => getCardAvailability(cardId));
+    const [isAscended, setIsAscended] = useState(() => getCardAscend(cardId));
+    const [equippedProtocores, setEquippedProtocores] = useState(() => getCardProtocores(cardId));
 
     // Находим карточку
     const card = useMemo(() => {
@@ -58,13 +45,48 @@ function LevelCardBlock({cardId: propCardId, onAvailabilityChange}) {
         return memoriesData.find(c => String(c.id) === cardId) || null;
     }, [cardId]);
 
-    // Загружаем прикреплённые протокоры
-    useEffect(() => {
-        if (!cardId) return;
-        const saved = JSON.parse(localStorage.getItem(`card_protocores_${cardId}`) || '[]');
-        setEquippedProtocores(saved);
-    }, [cardId]);
+    // Пересчитываем статы
+    const stats = useMemo(() => {
+        if (!card) return null;
+        const baseStats = getStatsWithRank(card, level, rank, isAscended);
+        if (!baseStats) return null;
+        return calculateFinalStats(card, baseStats, equippedProtocores);
+    }, [card, level, rank, isAscended, equippedProtocores]);
 
+    // ===== СОХРАНЕНИЕ В LOCALSTORAGE =====
+    useEffect(() => {
+        if (cardId) {
+            saveCardLevel(cardId, level);
+        }
+    }, [level, cardId]);
+
+    // Сохранение в localStorage при изменении ранка
+    useEffect(() => {
+        if (cardId) {
+            saveCardRank(cardId, rank);
+        }
+    }, [rank, cardId]);
+
+    useEffect(() => {
+        if (cardId) {
+            saveCardAvailability(cardId, isAvailable);
+        }
+    }, [isAvailable, cardId]);
+
+    useEffect(() => {
+        if (cardId) {
+            saveCardAscend(cardId, isAscended);
+        }
+    }, [isAscended, cardId]);
+
+    // Сохранение протокоров при их изменении
+    useEffect(() => {
+        if (cardId) {
+            saveCardProtocores(cardId, equippedProtocores);
+        }
+    }, [equippedProtocores, cardId]);
+
+    // ===== ОБРАБОТЧИКИ СОБЫТИЙ =====
     // при изменении isAvailable, вызываем колбэк
     useEffect(() => {
         if (onAvailabilityChange) {
@@ -72,45 +94,8 @@ function LevelCardBlock({cardId: propCardId, onAvailabilityChange}) {
         }
     }, [isAvailable, onAvailabilityChange]);
 
-    // Пересчитываем статы
-    const stats = useMemo(() => {
-        if (!card) return null;
-        const baseStats = getStatsWithRank(card, level, rank, isAscended);
-        if (!baseStats) return null;
-
-        // Используем новую функцию calculateFinalStats
-        // Передаем card, baseStats и equippedProtocores
-        return calculateFinalStats(card, baseStats, equippedProtocores);
-    }, [card, level, rank, isAscended, equippedProtocores]);
-
-    // Сохранение в localStorage
+    // Слушаем кастомное событие обновления протокоров
     useEffect(() => {
-        if (cardId) {
-            localStorage.setItem(`cardLevel_${cardId}`, String(level));
-        }
-    }, [level, cardId]);
-
-    // Сохранение в localStorage при изменении ранка
-    useEffect(() => {
-        if (cardId) {
-            localStorage.setItem(`cardRank_${cardId}`, String(rank));
-        }
-    }, [rank, cardId]);
-
-    useEffect(() => {
-        if (cardId) {
-            localStorage.setItem(`cardAvailable_${cardId}`, JSON.stringify(isAvailable));
-        }
-    }, [isAvailable, cardId]);
-
-    useEffect(() => {
-        if (cardId) {
-            localStorage.setItem(`cardAscend_${cardId}`, JSON.stringify(isAscended));
-        }
-    }, [isAscended, cardId]);
-
-    useEffect(() => {
-        // Слушаем кастомное событие обновления протокоров
         const handleProtocoresUpdate = (event) => {
             if (event.detail.cardId === cardId) {
                 setEquippedProtocores(event.detail.protocores);
@@ -134,17 +119,17 @@ function LevelCardBlock({cardId: propCardId, onAvailabilityChange}) {
         };
     }, [cardId]);
 
+    // Отправляем событие при изменении доступности
     useEffect(() => {
         if (cardId) {
-            localStorage.setItem(`cardAvailable_${cardId}`, JSON.stringify(isAvailable));
-            // Отправляем событие для обновления списка в Memories
+            saveCardAvailability(cardId, isAvailable);
             window.dispatchEvent(new CustomEvent('cardAvailabilityChanged', {
                 detail: { cardId, isAvailable }
             }));
         }
     }, [isAvailable, cardId]);
 
-    // Проверяем, доступно ли возвышение для текущего уровня
+    // ===== ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ =====
     const isAscendable = [10, 20, 30, 40, 50, 60, 70, 80].includes(level);
     const isAwaken = level === 80;
 
@@ -181,22 +166,19 @@ function LevelCardBlock({cardId: propCardId, onAvailabilityChange}) {
     const availableLevels = getAvailableLevels();
     const maxLevel = availableLevels.length > 0 ? Math.max(...availableLevels) : 80;
 
-    if (!card) {
-        return <div>Loading...</div>;
-    }
-
-    // Проверяем, доступен ли уровень
-    const isLevelAvailable = availableLevels.includes(level);
-
-    // Функция для форматирования чисел
     const formatNumber = (num, decimals = 2) => {
         if (num === undefined || num === null || isNaN(num)) return '—';
-        // Округляем число до указанного количества знаков после запятой
         if (typeof num === 'number' && !Number.isInteger(num)) {
             return Number(num.toFixed(decimals));
         }
         return num;
     };
+
+    if (!card) {
+        return <div>Loading...</div>;
+    }
+
+    const isLevelAvailable = availableLevels.includes(level);
 
     return (
         <>
@@ -278,7 +260,7 @@ function LevelCardBlock({cardId: propCardId, onAvailabilityChange}) {
                                             setIsAscended(false);
                                         }
                                     }}
-                                    renderTrack={({props, children}) => (
+                                    renderTrack={({ props, children }) => (
                                         <div
                                             {...props}
                                             className={styles.track}
@@ -292,8 +274,8 @@ function LevelCardBlock({cardId: propCardId, onAvailabilityChange}) {
                                             {children}
                                         </div>
                                     )}
-                                    renderThumb={({props}) => {
-                                        const {key, ...rest} = props;
+                                    renderThumb={({ props }) => {
+                                        const { key, ...rest } = props;
                                         return (
                                             <div
                                                 key={key}

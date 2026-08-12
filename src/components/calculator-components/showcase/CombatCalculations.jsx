@@ -8,10 +8,10 @@ import {
     weaponDataShowcaseSpecific,
     calculateAllDamageTypes,
     createDamageCalculator,
-    solar4Stars,
-    getCardRank
+    solar4Stars
 } from "@data";
 import {AsideList} from "@components";
+import {getCardRank} from '@localstorage'
 
 function CombatCalculations({stats, selectedCompanion, selectedMCWeapon, solarCards}) {
     // Находим данные для выбранного компаньона по companionName

@@ -27,8 +27,6 @@ function CardArticle() {
     // Находим карточку напрямую в данных (для отображения)
     const card = memoriesData.find(c => String(c.id) === cardId);
 
-
-
     // Находим компаньона для текущей карточки
     const companion = compData.find(item =>
         item.cardIds?.includes(Number(cardId))
@@ -69,7 +67,6 @@ function CardArticle() {
                     <ObtainInfo cardId={cardId} obtainData={obtainData}/>
                     <StoryInfo cardId={cardId}/>
 
-
                     <ParametersBlock card={card}/>
 
                     {companion && (
@@ -86,8 +83,6 @@ function CardArticle() {
                         memoriesData={memoriesData}
                         solarPairData={solar4Stars}
                     />
-
-
 
                     <LevelCardBlock
                         cardId={cardId}

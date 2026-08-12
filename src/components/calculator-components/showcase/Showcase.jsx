@@ -8,14 +8,16 @@ import ChooseCompanionAndWeapon from "./ChooseCompanionAndWeapon.jsx";
 import ChooseTeamCards from "./ChooseTeamCards.jsx";
 import ModalWindow from "@components/ui/ModalWindow.jsx";
 import {
-    getCardLevel,
-    getCardRank,
-    getCardAscend,
-    getCardProtocores,
     calculateFinalStats,
     getStatsWithRank,
     affinityData
 } from "@data";
+import {
+    getCardLevel,
+    getCardRank,
+    getCardAscend,
+    getCardProtocores
+} from '@localstorage';
 
 // Ключ для localStorage
 const STORAGE_KEY = 'showcase_teams';
