@@ -1,4 +1,4 @@
-export { KEYS } from './localStorageKeys.js'
+export { KEYS } from './localStorageKeys.js';
 export {
     getBottles,
     saveBottles,
@@ -20,4 +20,7 @@ export {
     saveDiamonds,
     getWish,
     saveWish
-} from './my-resources-storage.js'
+} from './my-resources-storage.js';
+export {
+    addFarmGoal
+} from './calculator-storage.js';

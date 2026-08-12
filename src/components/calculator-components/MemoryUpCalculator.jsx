@@ -19,6 +19,7 @@ import {
     crystalColors,
     getHeartInfo
 } from '@data';
+import {addFarmGoal} from "@localstorage";
 
 function MemoryUpCalculator() {
     const [rarity, setRarity] = useState('5-star');
@@ -142,6 +143,30 @@ function MemoryUpCalculator() {
         setSelectedColor(colorId);
         setHasCalculated(false);
         setResult(null);
+    };
+
+    const handleAddToFarm = () => {
+        const goal = {
+            id: Date.now(),
+            type: 'memory',
+            rarity: rarity,
+            currentLevel: currentLevel,
+            targetLevel: targetLevel,
+            neededExp: result.expNeeded,
+            neededCrystalsN: result.crystals.N,
+            neededCrystalsR: result.crystals.R,
+            neededCrystalsSR: result.crystals.SR,
+            crystalColor: selectedColor,
+            neededCredits: result.credits,
+            expDungeonLevel: expDungeonLevel,
+            creditDungeonLevel: creditDungeonLevel,
+            crystalDungeonLevel: crystalDungeonLevel,
+            heart: result.heart || null,
+            createdAt: new Date().toISOString()
+        };
+
+        addFarmGoal(goal);
+        showModalGoalButton();
     };
 
     return (
@@ -388,30 +413,7 @@ function MemoryUpCalculator() {
                 <div className={styles.goToFarmSection}>
                     <button
                         className={styles.goToFarmButton}
-                        onClick={() => {
-                            const goal = {
-                                id: Date.now(),
-                                type: 'memory',
-                                rarity: rarity,
-                                currentLevel: currentLevel,
-                                targetLevel: targetLevel,
-                                neededExp: result.expNeeded,
-                                neededCrystalsN: result.crystals.N,
-                                neededCrystalsR: result.crystals.R,
-                                neededCrystalsSR: result.crystals.SR,
-                                crystalColor: selectedColor,
-                                neededCredits: result.credits,
-                                expDungeonLevel: expDungeonLevel,
-                                creditDungeonLevel: creditDungeonLevel,
-                                crystalDungeonLevel: crystalDungeonLevel,
-                                heart: result.heart || null,
-                                createdAt: new Date().toISOString()
-                            };
-                            const existingGoals = JSON.parse(localStorage.getItem('farm_goals') || '[]');
-                            existingGoals.push(goal);
-                            localStorage.setItem('farm_goals', JSON.stringify(existingGoals));
-                            showModalGoalButton();
-                        }}
+                        onClick={handleAddToFarm}
                     >
                         🎯 Add to Farm Goal Tracker
                     </button>

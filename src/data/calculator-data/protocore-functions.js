@@ -1,4 +1,3 @@
-// Получить значение мейн стата для указанного уровня
 import {
     CREDIT_DUNGEON_COST,
     creditDungeonData,
@@ -9,6 +8,7 @@ import {
     SUBSTAT_LEVELS
 } from "@data";
 
+// Получить значение мейн стата для указанного уровня
 export const getMainStatValue = (protocoreType, statName, level) => {
     const typeData = protocoreTypes[protocoreType];
     if (!typeData) return null;

@@ -1,6 +1,7 @@
-// Получить тип данжа по цвету кристалла
 import {crystalDungeonData, crystalTypesDungeons, DUNGEON_COST, expDungeonData, rarityLevels} from "@data";
 
+
+// Получить тип данжа по цвету кристалла
 export const getCrystalDungeonByColor = (color) => {
     const dungeon = crystalTypesDungeons.find(d => d.colors.includes(color));
     return dungeon ? dungeon.id : 'lemonette';

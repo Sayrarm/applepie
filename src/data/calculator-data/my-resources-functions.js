@@ -1,4 +1,3 @@
-// Ключи для localStorage
 import {hearts} from "@data";
 import { KEYS } from '@localstorage'
 

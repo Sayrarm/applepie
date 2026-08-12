@@ -18,6 +18,7 @@ import {
 } from '@data';
 import {getImageUrl} from "@hooks";
 import {ModalWindow} from "@components";
+import { addFarmGoal } from '@localstorage';
 
 // Функция для получения первого доступного мейн стата
 const getFirstMainStat = (type) => {
@@ -117,6 +118,26 @@ function ProtocoreCalculator() {
     const substatLevelsReached = SUBSTAT_LEVELS.filter(level =>
         level > currentLevel && level <= targetLevel
     );
+
+    const handleAddToFarm = () => {
+        const goal = {
+            id: Date.now(),
+            type: 'protocore',
+            protocoreType: protocoreType,
+            mainStat: mainStat,
+            currentLevel: currentLevel,
+            targetLevel: targetLevel,
+            neededExp: result.expNeeded,
+            neededCredits: result.creditsNeeded,
+            expDungeonLevel: dungeonLevel,
+            creditDungeonLevel: creditDungeonLevel,
+            neededCrystals: null,
+            createdAt: new Date().toISOString(),
+        };
+
+        addFarmGoal(goal);
+        showModalGoalButton();
+    };
 
     return (
         <div className={styles.container}>
@@ -315,28 +336,7 @@ function ProtocoreCalculator() {
                 <div className={styles.goToFarmSection}>
                     <button
                         className={styles.goToFarmButton}
-                        onClick={() => {
-                            const goal = {
-                                id: Date.now(),
-                                type: 'protocore',
-                                protocoreType: protocoreType,
-                                mainStat: mainStat,
-                                currentLevel: currentLevel,
-                                targetLevel: targetLevel,
-                                neededExp: result.expNeeded,
-                                neededCredits: result.creditsNeeded,
-                                expDungeonLevel: dungeonLevel,
-                                creditDungeonLevel: creditDungeonLevel,
-                                neededCrystals: null,
-                                createdAt: new Date().toISOString(),
-
-                            };
-                            // Добавляем к существующим целям
-                            const existingGoals = JSON.parse(localStorage.getItem('farm_goals') || '[]');
-                            existingGoals.push(goal);
-                            localStorage.setItem('farm_goals', JSON.stringify(existingGoals));
-                            showModalGoalButton();
-                        }}
+                        onClick={handleAddToFarm}
                     >
                         🎯 Add to Farm Goal Tracker
                     </button>
