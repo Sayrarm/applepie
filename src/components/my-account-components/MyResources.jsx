@@ -1,4 +1,3 @@
-import {useState, useEffect} from 'react';
 import styles from './MyResources.module.css';
 import {
     bottles,
@@ -10,114 +9,42 @@ import {
     hearts,
     coreEnergy,
     credits,
-    STORAGE_KEYS,
     wish,
     diamond,
     getHeartsandExchange,
     getCrystalBoxExchange,
     getWishExchange
 } from '@data';
-import {getImageUrl} from '@hooks';
+import { getImageUrl } from '@hooks';
+import { useResources } from '@hooks';
 
 function MyResources() {
-    // Состояния для каждого типа ресурсов
-    const [bottlesState, setBottlesState] = useState(() => {
-        const saved = localStorage.getItem(STORAGE_KEYS.BOTTLES);
-        return saved ? JSON.parse(saved) : {};
-    });
+    // ===== ИСПОЛЬЗУЕМ ХУК =====
+    const {
+        bottles: bottlesState,
+        heartsand: heartsandState,
+        crystals: crystalsState,
+        crystalBoxes: crystalBoxesState,
+        hearts: heartsState,
+        coreEnergy: coreEnergyState,
+        credits: creditsState,
+        selectedCrystalColor,
+        setSelectedCrystalColor,
+        diamonds: diamondsState,
+        wish: wishState,
+        setBottles,
+        setHeartsand,
+        setCrystals,
+        setCrystalBoxes,
+        setHearts,
+        setCoreEnergy,
+        setCredits,
+        setDiamonds,
+        setWish,
+        updateCount,
+    } = useResources();
 
-    const [heartsandState, setHeartsandState] = useState(() => {
-        const saved = localStorage.getItem(STORAGE_KEYS.HEARTSAND);
-        return saved ? JSON.parse(saved) : {};
-    });
-
-    const [crystalsState, setCrystalsState] = useState(() => {
-        const saved = localStorage.getItem(STORAGE_KEYS.CRYSTALS);
-        return saved ? JSON.parse(saved) : {};
-    });
-
-    const [crystalBoxesState, setCrystalBoxesState] = useState(() => {
-        const saved = localStorage.getItem(STORAGE_KEYS.CRYSTAL_BOXES);
-        return saved ? JSON.parse(saved) : {};
-    });
-
-    const [heartsState, setHeartsState] = useState(() => {
-        const saved = localStorage.getItem(STORAGE_KEYS.HEARTS);
-        return saved ? JSON.parse(saved) : {};
-    });
-
-    const [coreEnergyState, setCoreEnergyState] = useState(() => {
-        const saved = localStorage.getItem(STORAGE_KEYS.CORE_ENERGY);
-        return saved ? JSON.parse(saved) : {};
-    });
-
-    const [creditsState, setCreditsState] = useState(() => {
-        const saved = localStorage.getItem(STORAGE_KEYS.CREDITS);
-        return saved ? JSON.parse(saved) : 0;
-    });
-
-    const [selectedCrystalColor, setSelectedCrystalColor] = useState(() => {
-        const saved = localStorage.getItem(STORAGE_KEYS.SELECTED_CRYSTAL_COLOR);
-        return saved || 'violet';
-    });
-
-    const [diamondsState, setDiamondsState] = useState(() => {
-        const saved = localStorage.getItem(STORAGE_KEYS.DIAMONDS);
-        return saved ? JSON.parse(saved) : 0;
-    });
-
-    const [wishState, setWishState] = useState(() => {
-        const saved = localStorage.getItem(STORAGE_KEYS.WISH);
-        return saved ? JSON.parse(saved) : {};
-    });
-
-    // Сохранение в localStorage
-    useEffect(() => {
-        localStorage.setItem(STORAGE_KEYS.BOTTLES, JSON.stringify(bottlesState));
-    }, [bottlesState]);
-
-    useEffect(() => {
-        localStorage.setItem(STORAGE_KEYS.HEARTSAND, JSON.stringify(heartsandState));
-    }, [heartsandState]);
-
-    useEffect(() => {
-        localStorage.setItem(STORAGE_KEYS.CRYSTALS, JSON.stringify(crystalsState));
-    }, [crystalsState]);
-
-    useEffect(() => {
-        localStorage.setItem(STORAGE_KEYS.CRYSTAL_BOXES, JSON.stringify(crystalBoxesState));
-    }, [crystalBoxesState]);
-
-    useEffect(() => {
-        localStorage.setItem(STORAGE_KEYS.HEARTS, JSON.stringify(heartsState));
-    }, [heartsState]);
-
-    useEffect(() => {
-        localStorage.setItem(STORAGE_KEYS.CORE_ENERGY, JSON.stringify(coreEnergyState));
-    }, [coreEnergyState]);
-
-    useEffect(() => {
-        localStorage.setItem(STORAGE_KEYS.CREDITS, JSON.stringify(creditsState));
-    }, [creditsState]);
-
-    useEffect(() => {
-        localStorage.setItem(STORAGE_KEYS.SELECTED_CRYSTAL_COLOR, selectedCrystalColor);
-    }, [selectedCrystalColor]);
-
-    useEffect(() => {
-        localStorage.setItem(STORAGE_KEYS.DIAMONDS, JSON.stringify(diamondsState));
-    }, [diamondsState]);
-
-    useEffect(() => {
-        localStorage.setItem(STORAGE_KEYS.WISH, JSON.stringify(wishState));
-    }, [wishState]);
-
-    // Функции для обновления количества
-    const updateCount = (state, setState, id, value) => {
-        setState(prev => ({...prev, [id]: Math.max(0, Number(value) || 0)}));
-    };
-
-    // Подсчёт общего EXP для Bottles
+    // ===== ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ ДЛЯ ПОДСЧЁТОВ =====
     const getTotalBottleExp = () => {
         let total = 0;
         bottles.forEach(bottle => {
@@ -145,6 +72,42 @@ function MyResources() {
         return colorIcons[typeId] || null;
     };
 
+    // ===== ОБРАБОТЧИКИ ИЗМЕНЕНИЙ =====
+    const handleCrystalChange = (color, typeId, value) => {
+        const key = `${color}_${typeId}`;
+        const newState = { ...crystalsState };
+        newState[key] = Math.max(0, Number(value) || 0);
+        setCrystals(newState);
+    };
+
+    const handleCreditsChange = (value) => {
+        if (value === '' || Number(value) >= 0) {
+            setCredits(value);
+        }
+    };
+
+    const handleCreditsBlur = (value) => {
+        if (value === '' || value === '0') {
+            setCredits('0');
+        } else {
+            setCredits(String(Number(value)));
+        }
+    };
+
+    const handleDiamondsChange = (value) => {
+        if (value === '' || Number(value) >= 0) {
+            setDiamonds(value);
+        }
+    };
+
+    const handleDiamondsBlur = (value) => {
+        if (value === '' || value === '0') {
+            setDiamonds('0');
+        } else {
+            setDiamonds(String(Number(value)));
+        }
+    };
+
     return (
         <div className={styles.container}>
             <h1 className={styles.title}>My Resources</h1>
@@ -166,7 +129,6 @@ function MyResources() {
                                     {item.name}
                                 </label>
                             </div>
-
                             <div className={styles.itemDiv}>
                                 <span className={styles.itemValue}>+{item.value} EXP</span>
                                 <input
@@ -175,7 +137,7 @@ function MyResources() {
                                     type="number"
                                     min="0"
                                     value={bottlesState[item.id] || ""}
-                                    onChange={(e) => updateCount(bottlesState, setBottlesState, item.id, e.target.value)}
+                                    onChange={(e) => updateCount(bottlesState, setBottles, item.id, e.target.value)}
                                     className={styles.itemInput}
                                     onFocus={(e) => {
                                         if (e.target.value === '0') {
@@ -230,12 +192,7 @@ function MyResources() {
                                     type="number"
                                     min="0"
                                     value={crystalsState[`${selectedCrystalColor}_${item.id}`] || ""}
-                                    onChange={(e) => updateCount(
-                                        crystalsState,
-                                        setCrystalsState,
-                                        `${selectedCrystalColor}_${item.id}`,
-                                        e.target.value
-                                    )}
+                                    onChange={(e) => handleCrystalChange(selectedCrystalColor, item.id, e.target.value)}
                                     className={styles.itemInput}
                                     onFocus={(e) => {
                                         if (e.target.value === '0') {
@@ -264,7 +221,6 @@ function MyResources() {
                                 <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon}/>
                                 <label htmlFor={`input-${item.id}`} className={styles.itemName}>{item.name}</label>
                             </div>
-
                             <div className={styles.itemDiv}>
                                 <span className={styles.itemValue}>+{item.value} EXP</span>
                                 <input
@@ -273,7 +229,7 @@ function MyResources() {
                                     type="number"
                                     min="0"
                                     value={coreEnergyState[item.id] || ""}
-                                    onChange={(e) => updateCount(coreEnergyState, setCoreEnergyState, item.id, e.target.value)}
+                                    onChange={(e) => updateCount(coreEnergyState, setCoreEnergy, item.id, e.target.value)}
                                     className={styles.itemInput}
                                     onFocus={(e) => {
                                         if (e.target.value === '0') {
@@ -281,9 +237,7 @@ function MyResources() {
                                         }
                                     }}
                                 />
-
                             </div>
-
                         </div>
                     ))}
                 </div>
@@ -299,35 +253,20 @@ function MyResources() {
                                 <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon}/>
                                 <label htmlFor={`input-${item.id}`} className={styles.itemName}>{item.name}</label>
                             </div>
-
                             <input
                                 id={`input-${item.id}`}
                                 name="item"
                                 type="number"
                                 min="0"
                                 value={creditsState}
-                                onChange={(e) => {
-                                    const value = e.target.value;
-                                    // Разрешаем пустую строку или числа >= 0
-                                    if (value === '' || Number(value) >= 0) {
-                                        setCreditsState(value);
-                                    }
-                                }}
+                                onChange={(e) => handleCreditsChange(e.target.value)}
                                 className={styles.itemInput}
                                 onFocus={(e) => {
                                     if (e.target.value === '0') {
                                         e.target.value = '';
                                     }
                                 }}
-                                onBlur={(e) => {
-                                    // При потере фокуса преобразуем в число для отображения
-                                    const value = e.target.value;
-                                    if (value === '' || value === '0') {
-                                        setCreditsState('0');
-                                    } else {
-                                        setCreditsState(String(Number(value)));
-                                    }
-                                }}
+                                onBlur={(e) => handleCreditsBlur(e.target.value)}
                             />
                         </div>
                     ))}
@@ -344,14 +283,13 @@ function MyResources() {
                                 <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon}/>
                                 <label htmlFor={`input-${item.id}`} className={styles.itemName}>{item.name}</label>
                             </div>
-
                             <input
                                 id={`input-${item.id}`}
                                 name="item"
                                 type="number"
                                 min="0"
                                 value={heartsState[item.id] || ""}
-                                onChange={(e) => updateCount(heartsState, setHeartsState, item.id, e.target.value)}
+                                onChange={(e) => updateCount(heartsState, setHearts, item.id, e.target.value)}
                                 className={styles.itemInput}
                                 onFocus={(e) => {
                                     if (e.target.value === '0') {
@@ -374,14 +312,13 @@ function MyResources() {
                                 <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon}/>
                                 <label htmlFor={`input-${item.id}`} className={styles.itemName}>{item.name}</label>
                             </div>
-
                             <input
                                 id={`input-${item.id}`}
                                 name="item"
                                 type="number"
                                 min="0"
                                 value={crystalBoxesState[item.id] || ""}
-                                onChange={(e) => updateCount(crystalBoxesState, setCrystalBoxesState, item.id, e.target.value)}
+                                onChange={(e) => updateCount(crystalBoxesState, setCrystalBoxes, item.id, e.target.value)}
                                 onFocus={(e) => {
                                     if (e.target.value === '0') {
                                         e.target.value = '';
@@ -389,7 +326,7 @@ function MyResources() {
                                 }}
                                 onBlur={(e) => {
                                     if (e.target.value === '') {
-                                        updateCount(crystalBoxesState, setCrystalBoxesState, item.id, 0);
+                                        updateCount(crystalBoxesState, setCrystalBoxes, item.id, 0);
                                     }
                                 }}
                                 className={styles.itemInput}
@@ -448,14 +385,13 @@ function MyResources() {
                                 <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon}/>
                                 <label htmlFor={`input-${item.id}`} className={styles.itemName}>{item.name}</label>
                             </div>
-
                             <input
                                 id={`input-${item.id}`}
                                 name="item"
                                 type="number"
                                 min="0"
                                 value={heartsandState[item.id] || ""}
-                                onChange={(e) => updateCount(heartsandState, setHeartsandState, item.id, e.target.value)}
+                                onChange={(e) => updateCount(heartsandState, setHeartsand, item.id, e.target.value)}
                                 onFocus={(e) => {
                                     if (e.target.value === '0') {
                                         e.target.value = '';
@@ -463,7 +399,7 @@ function MyResources() {
                                 }}
                                 onBlur={(e) => {
                                     if (e.target.value === '') {
-                                        updateCount(heartsandState, setHeartsandState, item.id, 0);
+                                        updateCount(heartsandState, setHeartsand, item.id, 0);
                                     }
                                 }}
                                 className={styles.itemInput}
@@ -486,44 +422,34 @@ function MyResources() {
                             <div className={styles.exchangeGrid}>
                                 {/* Карточка обмена на Bottles */}
                                 {hasBottles && (
-
                                     <div className={styles.exchangeGridBottles}>
-                                        {exchange.bottles.R > 0 &&
-                                            (
-                                                <div className={styles.exchangeCard}>
-                                                    <div className={styles.exchangeItem}>Bottle of Wishes</div>
-                                                    <img src={getImageUrl(bottles[1].img)} alt="Bottle R"
-                                                         className={styles.itemIconGray}/>
-                                                    <div className={styles.exchangeValue}>R: {exchange.bottles.R}</div>
-                                                </div>
-                                            )
-                                        }
-                                        {exchange.bottles.SR > 0 &&
-                                            (
-                                                <div className={styles.exchangeCard}>
-                                                    <div className={styles.exchangeItem}>Bottle of Wishes</div>
-                                                    <img src={getImageUrl(bottles[2].img)} alt="Bottle SR"
-                                                         className={styles.itemIconGray}/>
-                                                    <div className={styles.exchangeValue}>SR: {exchange.bottles.SR}</div>
-                                                </div>
-                                            )
-                                        }
-                                        {exchange.bottles.SSR > 0 &&
-                                            (
-                                                <div className={styles.exchangeCard}>
-                                                    <div className={styles.exchangeItem}>Bottle of Wishes</div>
-                                                    <img src={getImageUrl(bottles[3].img)} alt="Bottle SSR"
-                                                         className={styles.itemIconGray}/>
-                                                    <div className={styles.exchangeValue}>SSR: {exchange.bottles.SSR}</div>
-                                                </div>
-                                            )
-                                        }
+                                        {exchange.bottles.R > 0 && (
+                                            <div className={styles.exchangeCard}>
+                                                <div className={styles.exchangeItem}>Bottle of Wishes</div>
+                                                <img src={getImageUrl(bottles[1].img)} alt="Bottle R"
+                                                     className={styles.itemIconGray}/>
+                                                <div className={styles.exchangeValue}>R: {exchange.bottles.R}</div>
+                                            </div>
+                                        )}
+                                        {exchange.bottles.SR > 0 && (
+                                            <div className={styles.exchangeCard}>
+                                                <div className={styles.exchangeItem}>Bottle of Wishes</div>
+                                                <img src={getImageUrl(bottles[2].img)} alt="Bottle SR"
+                                                     className={styles.itemIconGray}/>
+                                                <div className={styles.exchangeValue}>SR: {exchange.bottles.SR}</div>
+                                            </div>
+                                        )}
+                                        {exchange.bottles.SSR > 0 && (
+                                            <div className={styles.exchangeCard}>
+                                                <div className={styles.exchangeItem}>Bottle of Wishes</div>
+                                                <img src={getImageUrl(bottles[3].img)} alt="Bottle SSR"
+                                                     className={styles.itemIconGray}/>
+                                                <div className={styles.exchangeValue}>SSR: {exchange.bottles.SSR}</div>
+                                            </div>
+                                        )}
                                     </div>
-
                                 )}
-
                                 or
-
                                 {/* Карточка обмена на Credits */}
                                 {hasCredits && (
                                     <div className={styles.exchangeValue}>
@@ -556,33 +482,20 @@ function MyResources() {
                                 <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon}/>
                                 <label htmlFor={`input-${item.id}`} className={styles.itemName}>{item.name}</label>
                             </div>
-
                             <input
                                 id={`input-${item.id}`}
                                 name="item"
                                 type="number"
                                 min="0"
                                 value={diamondsState}
-                                onChange={(e) => {
-                                    const value = e.target.value;
-                                    if (value === '' || Number(value) >= 0) {
-                                        setDiamondsState(value);
-                                    }
-                                }}
+                                onChange={(e) => handleDiamondsChange(e.target.value)}
                                 className={styles.itemInput}
                                 onFocus={(e) => {
                                     if (e.target.value === '0') {
                                         e.target.value = '';
                                     }
                                 }}
-                                onBlur={(e) => {
-                                    const value = e.target.value;
-                                    if (value === '' || value === '0') {
-                                        setDiamondsState('0');
-                                    } else {
-                                        setDiamondsState(String(Number(value)));
-                                    }
-                                }}
+                                onBlur={(e) => handleDiamondsBlur(e.target.value)}
                             />
                         </div>
                     ))}
@@ -641,14 +554,13 @@ function MyResources() {
                                 <img src={getImageUrl(item.img)} alt={item.name} className={styles.itemIcon}/>
                                 <label htmlFor={`input-${item.id}`} className={styles.itemName}>{item.name}</label>
                             </div>
-
                             <input
                                 id={`input-${item.id}`}
                                 name="item"
                                 type="number"
                                 min="0"
                                 value={wishState[item.id] || ""}
-                                onChange={(e) => updateCount(wishState, setWishState, item.id, e.target.value)}
+                                onChange={(e) => updateCount(wishState, setWish, item.id, e.target.value)}
                                 className={styles.itemInput}
                                 onFocus={(e) => {
                                     if (e.target.value === '0') {
@@ -657,16 +569,14 @@ function MyResources() {
                                 }}
                                 onBlur={(e) => {
                                     if (e.target.value === '') {
-                                        updateCount(wishState, setWishState, item.id, 0);
+                                        updateCount(wishState, setWish, item.id, 0);
                                     }
                                 }}
                             />
                         </div>
                     ))}
                 </div>
-
             </div>
-
         </div>
     );
 }

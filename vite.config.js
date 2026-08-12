@@ -14,6 +14,7 @@ export default defineConfig({
       '@components': path.resolve(__dirname, 'src/components'),
       '@data': path.resolve(__dirname, 'src/data'),
       '@hooks': path.resolve(__dirname, 'src/hooks'),
+      '@localstorage': path.resolve(__dirname, 'src/localstorage'),
       '@pages': path.resolve(__dirname, 'src/pages'),
     },
   },
