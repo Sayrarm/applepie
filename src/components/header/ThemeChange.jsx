@@ -1,4 +1,5 @@
-import React, {createContext, useContext, useEffect, useState} from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
+import { getTheme, saveTheme } from '@localstorage';
 
 const ThemeChange = createContext();
 
@@ -11,9 +12,7 @@ export const useTheme = () => {
 export const ThemeProvider = ({ children }) => {
     // Состояние: 'light', 'dark' или 'system'
     const [theme, setTheme] = useState(() => {
-        const saved = localStorage.getItem('theme');
-        // Приоритет: сохраненные настройки > системные > 'light'
-        return saved ? saved : 'system';
+        return getTheme();
     });
 
     const [resolvedTheme, setResolvedTheme] = useState('light');
@@ -27,22 +26,21 @@ export const ThemeProvider = ({ children }) => {
             }
         };
 
-        handleChange(); // Установить при монтировании
+        handleChange();
         mediaQuery.addEventListener('change', handleChange);
         return () => mediaQuery.removeEventListener('change', handleChange);
     }, [theme]);
 
     // Эффект для применения класса и сохранения в localStorage
     useEffect(() => {
-        const root = document.documentElement; // Работаем с <html>
+        const root = document.documentElement;
         const newTheme = theme === 'system' ? resolvedTheme : theme;
 
         // Удаляем старый класс и добавляем новый
         root.classList.remove('light', 'dark');
         root.classList.add(newTheme);
 
-        // Сохраняем выбор пользователя, НО не сохраняем 'system' как строку, мы сохраняем сам выбор
-        localStorage.setItem('theme', theme);
+        saveTheme(theme);
     }, [theme, resolvedTheme]);
 
     const toggleTheme = () => {
@@ -51,7 +49,6 @@ export const ThemeProvider = ({ children }) => {
         });
     };
 
-    // Полезная функция, чтобы узнать, какая тема сейчас активна для отображения иконки
     const currentTheme = theme === 'system' ? resolvedTheme : theme;
 
     return (
