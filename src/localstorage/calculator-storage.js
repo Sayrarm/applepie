@@ -27,3 +27,16 @@ export const addFarmGoal = (goal) => {
     return goals;
 };
 
+export const completeFarmGoal = (goalId) => {
+    const goals = getFarmGoals();
+    const newGoals = goals.filter(goal => goal.id !== goalId);
+    saveFarmGoals(newGoals);
+    return newGoals;
+};
+
+export const deleteFarmGoal = (goalId) => {
+    const goals = getFarmGoals();
+    const newGoals = goals.filter(goal => goal.id !== goalId);
+    saveFarmGoals(newGoals);
+    return newGoals;
+};

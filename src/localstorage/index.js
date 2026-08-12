@@ -22,5 +22,9 @@ export {
     saveWish
 } from './my-resources-storage.js';
 export {
-    addFarmGoal
+    addFarmGoal,
+    getFarmGoals,
+    saveFarmGoals,
+    completeFarmGoal,
+    deleteFarmGoal
 } from './calculator-storage.js';

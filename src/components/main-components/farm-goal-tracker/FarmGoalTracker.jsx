@@ -1,5 +1,4 @@
-import {Link} from "react-router-dom";
-import {useEffect, useState} from 'react';
+import { Link } from "react-router-dom";
 import styles from './FarmGoalTracker.module.css';
 import {
     crystalDungeonData,
@@ -11,72 +10,28 @@ import {
     creditDungeonData,
     crystalColors,
     bossImg,
-    getHeartCount,
     getHeartInfo,
     credits,
     bottles,
     coreEnergy
 } from '@data';
-import {getImageUrl} from '@hooks';
+import { getImageUrl, useFarmGoals } from '@hooks';
 import AsideReplaceableResources from "./AsideReplaceableResources.jsx";
 
 // Константы
-const DAILY_STAMINA = 390; // суточное топливо
+const DAILY_STAMINA = 390;
 
 function FarmGoalTracker() {
-    const [goals, setGoals] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [userResources, setUserResources] = useState({
-        bottles: {},
-        coreEnergy: {},
-        credits: 0
-    });
-
-    // Загрузка целей из localStorage
-    useEffect(() => {
-        const loadGoals = () => {
-            const savedGoals = JSON.parse(localStorage.getItem('farm_goals') || '[]');
-            setGoals(savedGoals);
-            setLoading(false);
-        };
-
-        loadGoals();
-
-        const handleStorageChange = (e) => {
-            if (e.key === 'farm_goals') {
-                loadGoals();
-            }
-        };
-
-        window.addEventListener('storage', handleStorageChange);
-
-        return () => {
-            window.removeEventListener('storage', handleStorageChange);
-        };
-    }, []);
-
-    // Загрузка ресурсов пользователя
-    useEffect(() => {
-        const loadResources = () => {
-            const bottles = JSON.parse(localStorage.getItem('inventory_bottles') || '{}');
-            const coreEnergy = JSON.parse(localStorage.getItem('inventory_core_energy') || '{}');
-            const credits = JSON.parse(localStorage.getItem('inventory_credits') || '0');
-            const crystals = JSON.parse(localStorage.getItem('inventory_crystals') || '{}');
-            setUserResources({bottles, coreEnergy, credits, crystals});
-        };
-
-        loadResources();
-
-        const handleStorageChange = () => loadResources();
-        window.addEventListener('storage', handleStorageChange);
-
-        const interval = setInterval(loadResources, 2000);
-
-        return () => {
-            window.removeEventListener('storage', handleStorageChange);
-            clearInterval(interval);
-        };
-    }, []);
+    // ===== ИСПОЛЬЗУЕМ ХУК =====
+    const {
+        goals,
+        userResources,
+        loading,
+        completeGoal,
+        deleteGoal,
+        getCrystalCount,
+        getHeartCount,
+    } = useFarmGoals();
 
     // Подсчёт EXP из Bottles of Wishes (для карточек)
     const getTotalBottleExp = () => {
@@ -114,10 +69,7 @@ function FarmGoalTracker() {
 
     // Подсчёт кристаллов пользователя с учётом цвета
     const getUserCrystalsByColor = (crystalColor, crystalType) => {
-        // crystalColor: 'emerald', 'amber', 'ruby' и т.д.
-        // crystalType: 'crystal_n', 'crystal_r', 'crystal_sr'
-        const key = `${crystalColor}_${crystalType}`;
-        return userResources.crystals[key] || 0;
+        return getCrystalCount(crystalColor, crystalType);
     };
 
     // Функция для получения иконки цвета кристалла
@@ -128,7 +80,7 @@ function FarmGoalTracker() {
 
     // Расчёт фарма для EXP (Memory)
     const calculateExpFarmingMemory = (remainingExp, dungeonLevel) => {
-        if (remainingExp <= 0) return {runs: 0, stamina: 0, days: 0};
+        if (remainingExp <= 0) return { runs: 0, stamina: 0, days: 0 };
 
         const dungeon = expDungeonData.find(d => d.level === dungeonLevel);
         const expPerRun = dungeon ? dungeon.exp : 380;
@@ -136,12 +88,12 @@ function FarmGoalTracker() {
         const stamina = runs * DUNGEON_COST;
         const days = Math.ceil(stamina / DAILY_STAMINA);
 
-        return {runs, stamina, days, expPerRun};
+        return { runs, stamina, days, expPerRun };
     };
 
     // Расчёт фарма для EXP (Protocore)
     const calculateExpFarmingProtocore = (remainingExp, dungeonLevel) => {
-        if (remainingExp <= 0) return {runs: 0, stamina: 0, days: 0};
+        if (remainingExp <= 0) return { runs: 0, stamina: 0, days: 0 };
 
         const dungeon = dungeonData.find(d => d.level === dungeonLevel);
         const expPerRun = dungeon ? dungeon.exp : 1300;
@@ -149,12 +101,12 @@ function FarmGoalTracker() {
         const stamina = runs * DUNGEON_COST_PROTOCORE;
         const days = Math.ceil(stamina / DAILY_STAMINA);
 
-        return {runs, stamina, days, expPerRun};
+        return { runs, stamina, days, expPerRun };
     };
 
     // Расчёт фарма для Credits
     const calculateCreditsFarming = (remainingCredits, dungeonLevel, isProtocore = false) => {
-        if (remainingCredits <= 0) return {runs: 0, stamina: 0, days: 0};
+        if (remainingCredits <= 0) return { runs: 0, stamina: 0, days: 0 };
 
         const dungeon = creditDungeonData.find(d => d.level === dungeonLevel);
         const creditsPerRun = dungeon ? dungeon.credits : 7600;
@@ -162,57 +114,39 @@ function FarmGoalTracker() {
         const stamina = runs * (isProtocore ? CREDIT_DUNGEON_COST : DUNGEON_COST);
         const days = Math.ceil(stamina / DAILY_STAMINA);
 
-        return {runs, stamina, days, creditsPerRun};
+        return { runs, stamina, days, creditsPerRun };
     };
 
     // Расчёт фарма для кристаллов
     const calculateCrystalsFarming = (neededCrystals, dungeonLevel) => {
-        if (!neededCrystals) return {runs: 0, stamina: 0, days: 0, details: {}};
+        if (!neededCrystals) return { runs: 0, stamina: 0, days: 0, details: {} };
 
         const dungeon = crystalDungeonData.find(d => d.level === dungeonLevel);
-        if (!dungeon) return {runs: 0, stamina: 0, days: 0, details: {}};
+        if (!dungeon) return { runs: 0, stamina: 0, days: 0, details: {} };
 
         let maxRuns = 0;
         const details = {};
 
         if (neededCrystals.N > 0 && dungeon.crystals.N > 0) {
             const runsN = Math.ceil(neededCrystals.N / dungeon.crystals.N);
-            details.N = {needed: neededCrystals.N, runs: runsN, perRun: dungeon.crystals.N};
+            details.N = { needed: neededCrystals.N, runs: runsN, perRun: dungeon.crystals.N };
             maxRuns = Math.max(maxRuns, runsN);
         }
         if (neededCrystals.R > 0 && dungeon.crystals.R > 0) {
             const runsR = Math.ceil(neededCrystals.R / dungeon.crystals.R);
-            details.R = {needed: neededCrystals.R, runs: runsR, perRun: dungeon.crystals.R};
+            details.R = { needed: neededCrystals.R, runs: runsR, perRun: dungeon.crystals.R };
             maxRuns = Math.max(maxRuns, runsR);
         }
         if (neededCrystals.SR > 0 && dungeon.crystals.SR > 0) {
             const runsSR = Math.ceil(neededCrystals.SR / dungeon.crystals.SR);
-            details.SR = {needed: neededCrystals.SR, runs: runsSR, perRun: dungeon.crystals.SR};
+            details.SR = { needed: neededCrystals.SR, runs: runsSR, perRun: dungeon.crystals.SR };
             maxRuns = Math.max(maxRuns, runsSR);
         }
 
         const stamina = maxRuns * DUNGEON_COST;
         const days = Math.ceil(stamina / DAILY_STAMINA);
 
-        return {runs: maxRuns, stamina, days, details};
-    };
-
-    // Завершить цель
-    const completeGoal = (goalId) => {
-        setGoals(prev => {
-            const newGoals = prev.filter(goal => goal.id !== goalId);
-            localStorage.setItem('farm_goals', JSON.stringify(newGoals));
-            return newGoals;
-        });
-    };
-
-    // Удалить цель
-    const deleteGoal = (goalId) => {
-        setGoals(prev => {
-            const newGoals = prev.filter(goal => goal.id !== goalId);
-            localStorage.setItem('farm_goals', JSON.stringify(newGoals));
-            return newGoals;
-        });
+        return { runs: maxRuns, stamina, days, details };
     };
 
     // Расчёт остатка в зависимости от типа цели
@@ -231,7 +165,7 @@ function FarmGoalTracker() {
         // Расчёт остатка кристаллов с учётом цвета
         let remainingCrystals = null;
         if (goal.type === 'memory' && (goal.neededCrystalsN > 0 || goal.neededCrystalsR > 0 || goal.neededCrystalsSR > 0)) {
-            const crystalColor = goal.crystalColor || 'emerald'; // цвет кристаллов из цели
+            const crystalColor = goal.crystalColor || 'emerald';
 
             const userCrystalsN = getUserCrystalsByColor(crystalColor, 'crystal_n');
             const userCrystalsR = getUserCrystalsByColor(crystalColor, 'crystal_r');
@@ -252,15 +186,15 @@ function FarmGoalTracker() {
             remainingHeart = Math.max(0, 1 - userHeartCount);
         }
 
-        return {exp: remainingExp, credits: remainingCredits, crystals: remainingCrystals, heart: remainingHeart};
+        return { exp: remainingExp, credits: remainingCredits, crystals: remainingCrystals, heart: remainingHeart };
     };
 
     const getGoalDescription = (goal) => {
         if (goal.type === 'memory') {
-            const rarityMap = {'3-star': '3★', '4-star': '4★', '5-star': '5★'};
+            const rarityMap = { '3-star': '3★', '4-star': '4★', '5-star': '5★' };
             return `${rarityMap[goal.rarity]} Memory: Lvl ${goal.currentLevel} → ${goal.targetLevel}`;
         } else if (goal.type === 'protocore') {
-            const typeMap = {alpha: 'Alpha (α)', beta: 'Beta (β)', gamma: 'Gamma (γ)', delta: 'Delta (δ)'};
+            const typeMap = { alpha: 'Alpha (α)', beta: 'Beta (β)', gamma: 'Gamma (γ)', delta: 'Delta (δ)' };
             return `${typeMap[goal.protocoreType]} Protocore (${goal.mainStat}): Lvl ${goal.currentLevel} → ${goal.targetLevel}`;
         }
         return 'Unknown goal';
@@ -368,8 +302,7 @@ function FarmGoalTracker() {
                 <div className={styles.noGoals}>
                     <p>No active goals</p>
                     <p>Go to Protocore Calculator or Memory Upgrade Calculator, calculate resources, and click "Add to
-                        Farm
-                        Goal Tracker".</p>
+                        Farm Goal Tracker".</p>
                     <p className={styles.linkContainer}>
                         <Link className={styles.link} to="calculator/protocore-calculator">Protocore Calculator</Link>
                         <Link className={styles.link} to="calculator/memory-calculator">Memory Upgrade Calculator</Link>
@@ -381,7 +314,6 @@ function FarmGoalTracker() {
 
     return (
         <div className={styles.container}>
-
             <div className={styles.goalsList}>
                 {goals.map(goal => {
                     const remaining = calculateRemaining(goal);
@@ -429,7 +361,6 @@ function FarmGoalTracker() {
 
                     const totalDays = Math.ceil(totalStamina / DAILY_STAMINA);
 
-
                     return (
                         <div key={goal.id} className={styles.goalCard}>
                             <div className={styles.goalHeader}>
@@ -456,8 +387,9 @@ function FarmGoalTracker() {
                                     <h4>Resources Needed:</h4>
                                     <div className={styles.resourcesList}>
                                         {goal.neededExp > 0 && (
-                                            <div
-                                                className={styles.expRow}>{getExpLabel(goal, true)} {goal.neededExp.toLocaleString()}</div>
+                                            <div className={styles.expRow}>
+                                                {getExpLabel(goal, true)} {goal.neededExp.toLocaleString()}
+                                            </div>
                                         )}
                                         {goal.type === 'memory' && (goal.neededCrystalsN > 0 || goal.neededCrystalsR > 0 || goal.neededCrystalsSR > 0) && (
                                             <div className={styles.crystalRow}>
@@ -504,14 +436,12 @@ function FarmGoalTracker() {
                                     <h4>Remaining to Farm:</h4>
                                     <div className={styles.remainingList}>
                                         {goal.neededExp > 0 && (
-                                            <div
-                                                className={`${expCompleted ? styles.completed : styles.notCompleted} ${styles.expRow}`}>
+                                            <div className={`${expCompleted ? styles.completed : styles.notCompleted} ${styles.expRow}`}>
                                                 {getExpLabel(goal, true)} {remaining.exp.toLocaleString()}
                                             </div>
                                         )}
                                         {goal.type === 'memory' && (goal.neededCrystalsN > 0 || goal.neededCrystalsR > 0 || goal.neededCrystalsSR > 0) && (
-                                            <div
-                                                className={`${crystalsCompleted ? styles.completed : styles.notCompleted} ${styles.crystalRow}`}>
+                                            <div className={`${crystalsCompleted ? styles.completed : styles.notCompleted} ${styles.crystalRow}`}>
                                                 <img
                                                     src={getImageUrl(getCrystalColorIcon(goal.crystalColor))}
                                                     alt={goal.crystalColor}
@@ -530,8 +460,7 @@ function FarmGoalTracker() {
                                             const heartRemaining = remaining.heart ?? 1;
                                             const heartCompleted = heartRemaining <= 0;
                                             return (
-                                                <div
-                                                    className={`${heartCompleted ? styles.completed : styles.notCompleted} ${styles.heartRow}`}>
+                                                <div className={`${heartCompleted ? styles.completed : styles.notCompleted} ${styles.heartRow}`}>
                                                     <img
                                                         src={getImageUrl(heartInfo.img)}
                                                         alt={heartInfo.name}
@@ -542,8 +471,7 @@ function FarmGoalTracker() {
                                             );
                                         })()}
                                         {goal.neededCredits > 0 && (
-                                            <div
-                                                className={`${creditsCompleted ? styles.completed : styles.notCompleted} ${styles.creditRow}`}>
+                                            <div className={`${creditsCompleted ? styles.completed : styles.notCompleted} ${styles.creditRow}`}>
                                                 <img
                                                     src={getImageUrl(credits[0].img)}
                                                     alt="Credits"
@@ -555,7 +483,7 @@ function FarmGoalTracker() {
                                     </div>
                                 </div>
 
-                                <AsideReplaceableResources goal={goal} remaining={remaining}/>
+                                <AsideReplaceableResources goal={goal} remaining={remaining} />
 
                                 {/* Farming Calculation */}
                                 {(remaining.exp > 0 || remaining.credits > 0 || (remaining.crystals && (remaining.crystals.N > 0 || remaining.crystals.R > 0 || remaining.crystals.SR > 0))) && (
@@ -565,17 +493,14 @@ function FarmGoalTracker() {
                                             <div className={styles.farmingDungeons}>
                                                 {remaining.exp > 0 && (
                                                     <div className={styles.farmingCard}>
-                                                        <div
-                                                            className={styles.farmingItem}>{getExpLabel(goal, false)}</div>
+                                                        <div className={styles.farmingItem}>{getExpLabel(goal, false)}</div>
                                                         <img
                                                             src={getImageUrl(getDungeonIcon(goal))}
                                                             alt="exp dungeon"
                                                             className={styles.itemIcon}
                                                         />
-                                                        <span
-                                                            className={styles.farmingItem}>{expFarming.runs} runs (Lvl {expDungeonLvl})</span>
-                                                        <span
-                                                            className={styles.farmingValue}> {expFarming.stamina} stamina</span>
+                                                        <span className={styles.farmingItem}>{expFarming.runs} runs (Lvl {expDungeonLvl})</span>
+                                                        <span className={styles.farmingValue}> {expFarming.stamina} stamina</span>
                                                     </div>
                                                 )}
 
@@ -588,8 +513,7 @@ function FarmGoalTracker() {
                                                             className={styles.itemIcon}
                                                         />
                                                         <span className={styles.farmingItem}>{crystalsFarming.runs} runs (Lvl {crystalDungeonLvl})</span>
-                                                        <span
-                                                            className={styles.farmingValue}>{crystalsFarming.stamina} stamina</span>
+                                                        <span className={styles.farmingValue}>{crystalsFarming.stamina} stamina</span>
                                                     </div>
                                                 )}
 
@@ -602,8 +526,7 @@ function FarmGoalTracker() {
                                                             className={styles.itemIcon}
                                                         />
                                                         <span className={styles.farmingItem}>{creditsFarming.runs} runs (Lvl {creditDungeonLvl})</span>
-                                                        <span
-                                                            className={styles.farmingValue}>{creditsFarming.stamina} stamina</span>
+                                                        <span className={styles.farmingValue}>{creditsFarming.stamina} stamina</span>
                                                     </div>
                                                 )}
                                             </div>
