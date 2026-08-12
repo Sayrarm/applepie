@@ -1,18 +1,6 @@
 // Ключи для localStorage
 import {hearts} from "@data";
-
-export const STORAGE_KEYS = {
-    BOTTLES: 'inventory_bottles',
-    HEARTSAND: 'inventory_heartsand',
-    CRYSTALS: 'inventory_crystals',
-    CRYSTAL_BOXES: 'inventory_crystal_boxes',
-    HEARTS: 'inventory_hearts',
-    CORE_ENERGY: 'inventory_core_energy',
-    CREDITS: 'inventory_credits',
-    SELECTED_CRYSTAL_COLOR: 'inventory_selected_crystal_color',
-    DIAMONDS: 'inventory_diamonds',
-    WISH: 'inventory_wish'
-};
+import { KEYS } from '@localstorage'
 
 // Расчёт обмена Memory Heartsand (принимает состояние)
 export const getHeartsandExchange = (heartsandState) => {
@@ -74,7 +62,7 @@ export const getHeartInfo = (heartName) => {
 // Получение количества Heart из localStorage
 export const getHeartCount = (heartName) => {
     try {
-        const saved = localStorage.getItem(STORAGE_KEYS.HEARTS);
+        const saved = localStorage.getItem(KEYS.INVENTORY_HEARTS);
         const heartsState = saved ? JSON.parse(saved) : {};
 
         // heartName: 'Awakening Heart: SR' или 'Awakening Heart: SSR'

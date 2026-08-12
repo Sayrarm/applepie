@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import styles from './AsideReplacableResources.module.css';
 import { getImageUrl } from '@hooks';
-import { STORAGE_KEYS, getHeartsandExchange, getCrystalBoxExchange } from '@data';
+import { getHeartsandExchange, getCrystalBoxExchange } from '@data';
+import { KEYS } from '@localstorage'
 import {AsideList} from '@components';
 
 function AsideReplaceableResources({ goal, remaining }) {
@@ -10,8 +11,8 @@ function AsideReplaceableResources({ goal, remaining }) {
 
     // Функция для обновления данных
     const updateData = () => {
-        const heartsandState = JSON.parse(localStorage.getItem(STORAGE_KEYS.HEARTSAND) || '{}');
-        const crystalBoxesState = JSON.parse(localStorage.getItem(STORAGE_KEYS.CRYSTAL_BOXES) || '{}');
+        const heartsandState = JSON.parse(localStorage.getItem(KEYS.INVENTORY_HEARTSAND) || '{}');
+        const crystalBoxesState = JSON.parse(localStorage.getItem(KEYS.INVENTORY_CRYSTAL_BOXES) || '{}');
 
         const heartsand = getHeartsandExchange(heartsandState);
         const crystalBox = getCrystalBoxExchange(crystalBoxesState);
@@ -28,7 +29,7 @@ function AsideReplaceableResources({ goal, remaining }) {
     // Слушаем изменения в localStorage
     useEffect(() => {
         const handleStorageChange = (e) => {
-            if (e.key === STORAGE_KEYS.HEARTSAND || e.key === STORAGE_KEYS.CRYSTAL_BOXES) {
+            if (e.key === KEYS.INVENTORY_HEARTSAND || e.key === KEYS.INVENTORY_CRYSTAL_BOXES) {
                 updateData();
             }
         };

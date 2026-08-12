@@ -66,12 +66,11 @@ export {
     hearts,
     coreEnergy,
     credits
-} from './calculator-data/my-resources.js'
+} from './calculator-data/my-resources-data.js'
 export {
     getHeartsandExchange,
     getCrystalBoxExchange,
     getHeartInfo,
-    STORAGE_KEYS,
     getHeartCount,
     getWishExchange
 } from './calculator-data/my-resources-functions.js'
