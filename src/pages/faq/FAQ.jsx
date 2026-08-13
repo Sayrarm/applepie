@@ -1,13 +1,5 @@
 function FAQ() {
-
-
-    return (
-        <>
-
-
-
-        </>
-    )
+  return <></>;
 }
 
-export default FAQ
+export default FAQ;

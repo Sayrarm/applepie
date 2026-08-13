@@ -1,29 +1,29 @@
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
 }
 
 .label {
-    font-weight: 600;
-    color: var(--a);
-    min-width: 45px;
+  font-weight: 600;
+  color: var(--a);
+  min-width: 45px;
 }
 
 .values {
-    line-height: 1.4;
+  line-height: 1.4;
 }
 
 .value {
-    text-decoration: none;
-    border: none;
-    font: inherit;
-    cursor: pointer;
-    background: none;
-    color: var(--colorTextDark);
-    transition: 0.3s ease;
+  text-decoration: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  background: none;
+  color: var(--colorTextDark);
+  transition: 0.3s ease;
 }
 
 .value:hover {
-    color: var(--a)
+  color: var(--a);
 }

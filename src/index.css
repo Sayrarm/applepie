@@ -1,192 +1,215 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
 /*************************BODY*******************************/
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    max-width: 100%;
-    width: 100%;
-    position: relative;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
 
-    font-family: TikTok Sans, monospace !important;
-    font-size: 14px;
+  font-family:
+    TikTok Sans,
+    monospace !important;
+  font-size: 14px;
 
-    outline: none;
-    -webkit-tap-highlight-color: transparent;
-    background-color: var(--bg-primary);
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  background-color: var(--bg-primary);
 }
 
 html::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 html {
-    scrollbar-width: none;
+  scrollbar-width: none;
 }
 
 .fixed-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-image: var(--bg-image);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1;
-    transform: scale(1.0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  transform: scale(1);
 }
 
 .fixed-bg::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: var(--bg-image);
-    background-size: cover;
-    background-repeat: no-repeat;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .container {
-    max-width: 1215px;
-    margin: 0 auto;
-    min-height: 100vh;
-    width: 100%;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+  max-width: 1215px;
+  margin: 0 auto;
+  min-height: 100vh;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .main {
-    flex: 1;
-    padding-top: 80px;
+  flex: 1;
+  padding-top: 80px;
 }
 
-:root, html.light {
-    --colorText: white;
-    --colorTextDark: #35312d;
-    --colorTextSpecial: #e68038;
-    --colorTextSuperDark: #35312d;
-    --colorTextBright: #e68038;
-    --colorTextGrayNote: #888;
-    --forSelect: #35312d;
-    --border: #e68038;
-    --border-table: #888;
-    --border-battle-page: #35312d;
-    --a: #e68038;
-    --a-hover: #9a5929;
-    --background: #35312d;
-    --bg-glass: color-mix(in srgb, var(--bg-brown) 10%, transparent);
-    --bg-glass-dark: color-mix(in srgb, var(--orange) 10%, transparent);
-    --bg-modal: #ecdace;
-    --text-shadow: 0 0 5px #e68038, 0 0 10px #e68038;
+:root,
+html.light {
+  --colorText: white;
+  --colorTextDark: #35312d;
+  --colorTextSpecial: #e68038;
+  --colorTextSuperDark: #35312d;
+  --colorTextBright: #e68038;
+  --colorTextGrayNote: #888;
+  --forSelect: #35312d;
+  --border: #e68038;
+  --border-table: #888;
+  --border-battle-page: #35312d;
+  --a: #e68038;
+  --a-hover: #9a5929;
+  --background: #35312d;
+  --bg-glass: color-mix(in srgb, var(--bg-brown) 10%, transparent);
+  --bg-glass-dark: color-mix(in srgb, var(--orange) 10%, transparent);
+  --bg-modal: #ecdace;
+  --text-shadow: 0 0 5px #e68038, 0 0 10px #e68038;
 
-    --bg-primary: #ecdace;
-    --bg-image: url('../public/assets/bg/bg-light.png');
-    --box-shadow: 10px 10px 6px -5px rgba(148, 148, 148, 0.6);
-    --linear-gradient-webkit: -webkit-linear-gradient(270deg, black 0%, black 50%, transparent 100%);
-    --linear-gradient: linear-gradient(270deg, black 0%, black 50%, transparent 100%);
+  --bg-primary: #ecdace;
+  --bg-image: url("../public/assets/bg/bg-light.png");
+  --box-shadow: 10px 10px 6px -5px rgba(148, 148, 148, 0.6);
+  --linear-gradient-webkit: -webkit-linear-gradient(
+    270deg,
+    black 0%,
+    black 50%,
+    transparent 100%
+  );
+  --linear-gradient: linear-gradient(
+    270deg,
+    black 0%,
+    black 50%,
+    transparent 100%
+  );
 
+  /****************************************************************************/
 
-/****************************************************************************/
+  --dark: #202227;
+  --light-dark: #313338;
+  --brown: #35312d;
+  --bg-brown: #ffcb90;
+  --orange: #e68038;
+  --red: #ff4444;
+  --redForText: #8e1111;
+  --green-button: #419716;
+  --light-green-button: #73d13d;
+  --red-button: #c63e3f;
+  --light-red-button: #ff7875;
+  --bg-brown-light: color-mix(in srgb, var(--bg-brown) 10%, transparent);
 
-    --dark: #202227;
-    --light-dark: #313338;
-    --brown: #35312d;
-    --bg-brown: #ffcb90;
-    --orange: #e68038;
-    --red: #ff4444;
-    --redForText: #8e1111;
-    --green-button: #419716;
-    --light-green-button: #73d13d;
-    --red-button: #c63e3f;
-    --light-red-button: #ff7875;
-    --bg-brown-light: color-mix(in srgb, var(--bg-brown) 10%, transparent);
+  /****************************************************************************/
 
-/****************************************************************************/
-
-    color: var(--colorTextDark);
+  color: var(--colorTextDark);
 }
 
 html.dark {
-    --colorText: #D8DADF;
-    --colorTextDark: #D8DADF;
-    --colorTextSpecial: #202227;
-    --colorTextSuperDark: #202227;
-    --colorTextBright: white;
-    --forSelect: #9C2007;
-    --border: #9C2007;
-    --border-table: #8e9093;
-    --border-battle-page: #8e9093;
-    --a: #9C2007;
-    --a-hover: #ff4444;
-    --background: #202227;
-    --bg-glass:color-mix(in srgb, var(--dark) 80%, transparent);
-    --bg-glass-dark: color-mix(in srgb, var(--dark) 80%, transparent);
-    --bg-modal: #8e9093;
-    --text-shadow: 0 0 5px #ff4444, 0 0 10px #ff4444;
+  --colorText: #d8dadf;
+  --colorTextDark: #d8dadf;
+  --colorTextSpecial: #202227;
+  --colorTextSuperDark: #202227;
+  --colorTextBright: white;
+  --forSelect: #9c2007;
+  --border: #9c2007;
+  --border-table: #8e9093;
+  --border-battle-page: #8e9093;
+  --a: #9c2007;
+  --a-hover: #ff4444;
+  --background: #202227;
+  --bg-glass: color-mix(in srgb, var(--dark) 80%, transparent);
+  --bg-glass-dark: color-mix(in srgb, var(--dark) 80%, transparent);
+  --bg-modal: #8e9093;
+  --text-shadow: 0 0 5px #ff4444, 0 0 10px #ff4444;
 
-    --bg-primary: #202227;
-    --bg-image: url('../public/assets/bg/Frame 37.png');
-    --box-shadow: 10px 10px 6px -5px rgb(21 21 21 / 0.6);
-    --linear-gradient-webkit: -webkit-linear-gradient(270deg, black -10%, black 20%, transparent 100%);
-    --linear-gradient: linear-gradient(270deg, black -10%, black 20%, transparent 100%);
+  --bg-primary: #202227;
+  --bg-image: url("../public/assets/bg/Frame 37.png");
+  --box-shadow: 10px 10px 6px -5px rgb(21 21 21 / 0.6);
+  --linear-gradient-webkit: -webkit-linear-gradient(
+    270deg,
+    black -10%,
+    black 20%,
+    transparent 100%
+  );
+  --linear-gradient: linear-gradient(
+    270deg,
+    black -10%,
+    black 20%,
+    transparent 100%
+  );
 
-    /****************************************************************************/
+  /****************************************************************************/
 
-    --redForText: #ff7875;
+  --redForText: #ff7875;
 
-    /****************************************************************************/
+  /****************************************************************************/
 
-
-    color: var(--colorText);
+  color: var(--colorText);
 }
 
-a, button {
-    cursor: pointer;
+a,
+button {
+  cursor: pointer;
 }
 
 h4 {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 /************************ANT Design перенастройка цвета******************************/
 
 .css-var-root.ant-input-css-var {
-    --ant-input-hover-border-color: #35312d;
-    --ant-input-active-border-color: #35312d;
-    --ant-btn-color-base: #35312d;
+  --ant-input-hover-border-color: #35312d;
+  --ant-input-active-border-color: #35312d;
+  --ant-btn-color-base: #35312d;
 }
 .ant-btn.ant-btn-color-primary {
-    --ant-btn-color-base: #35312d !important;
-    --ant-btn-color-hover: rgba(43, 22, 17, 0.44) !important;
-    --ant-btn-color-active: #35312d !important;
+  --ant-btn-color-base: #35312d !important;
+  --ant-btn-color-hover: rgba(43, 22, 17, 0.44) !important;
+  --ant-btn-color-active: #35312d !important;
 }
 
 :where(.css-dev-only-do-not-override-xogyor).ant-checkbox-checked {
-    background-color: #35312d !important;
+  background-color: #35312d !important;
 }
 
 /* Только для iOS — отключаем fixed */
 @supports (-webkit-touch-callout: none) {
-    .fixed-bg {
-        position: absolute;
-        min-height: 100vh;
-        height: auto;
-        bottom: auto;
-    }
+  .fixed-bg {
+    position: absolute;
+    min-height: 100vh;
+    height: auto;
+    bottom: auto;
+  }
 }

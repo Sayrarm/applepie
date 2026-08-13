@@ -1,10 +1,10 @@
 export const anData = [
-    {
-        id: 11,
-        link: "special-vacation",
-        serialNumber: "01",
-        subtitle: "Frank's Summer Homework",
-        content: `
+  {
+    id: 11,
+    link: "special-vacation",
+    serialNumber: "01",
+    subtitle: "Frank's Summer Homework",
+    content: `
 "Write an essay titled 'When I Grow Up, I Want to Be a ___' to understand the kind of job you want to do..."
 After reading his son's homework assignment for summer vacation, Ulysses asks, "What do you want to be when you grow up, Frankie?"
 Seven-year-old Frank's eyes sparkle. "I want to be a Deepspace Hunter!" He jumps up and down. "I'm gonna defeat Wanderers like this! Swish, swish, swish, swish! They're so awesome!"
@@ -25,13 +25,13 @@ But looking at Xavier's face, he's unsure.
 "Uncle?"
 Xavier lowers his head, scratching his neck. "...Xavier is good enough."
 `,
-    },
-    {
-        id: 12,
-        link: "special-vacation",
-        serialNumber: "02",
-        subtitle: "A Deepspace Hunter's Home",
-        content: `
+  },
+  {
+    id: 12,
+    link: "special-vacation",
+    serialNumber: "02",
+    subtitle: "A Deepspace Hunter's Home",
+    content: `
 Dad drives away not long after, leaving Frank alone with Xavier. Xavier closes the door and takes Frank's tiny suitcase inside Frank hurries after him, curiously looking around.
 This is the house of a Deepspace Hunter! Would he have an entire wall filled with weapons and bombs? What about tiny
 robots that fly around everywhere? Would there be a sleeping pod as big as a room? After walking around, Frank realizes that...
@@ -52,13 +52,13 @@ As a guest, Frank has to be polite. He forces himself to swallow the liquid in h
 Xavier thinks for a moment before saying, "Their stuff comes with their base. Mine is simpler, so it doesn't have as much." Seeing Frank's cup remain untouched, Xavier picks it up. "Do you not like juice?" Frank's eyes widen. That was juice?!
 
 `,
-    },
-    {
-        id: 13,
-        link: "special-vacation",
-        serialNumber: "03",
-        subtitle: "A Hunter's Free Time",
-        content: `
+  },
+  {
+    id: 13,
+    link: "special-vacation",
+    serialNumber: "03",
+    subtitle: "A Hunter's Free Time",
+    content: `
 Everyone in Hunters Unite is so strong. You can find them on the Top Ten Hunters list. Xavier probably wasn't picked to join them. No matter what kind of hunter he is, he should be going out every day to defeat Wanderers and save the world, right?
 Frank gathers himself again and gets ready for the big battle with Xavier tomorrow. But the next day, when Frank looks for Xavier in the morning, he finds him asleep in the living room. Wearing a jacket, Xavier has one of his hands hanging off the couch. His brow furrows. In the bright sunlight, stuff shimmers on his shoulder. They remind Frank of specks of light or even pieces of glass.
 Where did Xavier go last night? What did he do?
@@ -95,13 +95,13 @@ Frank thinks, then realizes that like children getting two days of holiday after
 So, once Xavier is done resting, he'll go fight Wanderers, right?
 
 `,
-    },
-    {
-        id: 14,
-        link: "special-vacation",
-        serialNumber: "04",
-        subtitle: "A Hunter's Secret Training",
-        content: `
+  },
+  {
+    id: 14,
+    link: "special-vacation",
+    serialNumber: "04",
+    subtitle: "A Hunter's Secret Training",
+    content: `
 With that, Frank waits and waits and waits, but still, he never sees Xavier, the Best of the Best, go out to fight Wanderers. Instead, all he gets is the rapidly approaching end of his summer vacation. A week later, unable to wait anymore, Frank takes out his homework assignment and starts writing. "Deepspace Hunters will sleep until noon every day. When they wake up, they have lunch. After lunch, they either walk around outside or stay at home to watch TV. Sometimes they fall asleep Watching
 "Deepspace Hunters aren't picky. They eat everything. They also aren't picky when it comes to places to sleep. They can sleep anywhere. But..." 
 Frank stops writing.
@@ -148,13 +148,13 @@ Before Xavier can change his mind, Frank says, "Master!"
 Xavier doesn't argue with him. "...Just call me Xavier."
 
 `,
-    },
-    {
-        id: 15,
-        link: "special-vacation",
-        serialNumber: "05",
-        subtitle: "The Real Battle",
-        content: `
+  },
+  {
+    id: 15,
+    link: "special-vacation",
+    serialNumber: "05",
+    subtitle: "The Real Battle",
+    content: `
 It's sunny the next day. There are several groups of people in Linkon Central Park, walking and picnicking. Children around the same age as Frank are running across the field or playing around the playground. Xavier puts his bag on the grass. He sits down and starts taking things out. "Choose one."
 Seeing all sorts of "weapons" laid out in front of him, Frank is amazed. Without any hesitation, he grabs a small wooden sword.
 "I want this one!"
@@ -204,13 +204,13 @@ After he cuts down the last Wanderer, Xavier lands on the ground. With a flick o
 Frank... is stunned!
 
 `,
-    },
-    {
-        id: 16,
-        link: "special-vacation",
-        serialNumber: "06",
-        subtitle: "A Kept Secret",
-        content: `
+  },
+  {
+    id: 16,
+    link: "special-vacation",
+    serialNumber: "06",
+    subtitle: "A Kept Secret",
+    content: `
 When he comes out of the convenience store with Xavier, the park entrance across the street is covered with police tape. Police cars and ambulances are everywhere, and people with cameras are also running around. Everything is a mess.
 "Eat this. We'll go home after."
 Frank takes the ice cream cone Xavier gives him. It's a sweet treat to calm his nerves.
@@ -233,13 +233,13 @@ He doesn't know what kind of secret his son agreed to keep for Xavier, but... Wh
 After all, when Ulysses was younger, he was also "fooled" by Xavier.
 
 `,
-    },
-    {
-        id: 21,
-        link: "passing-by",
-        serialNumber: "01",
-        subtitle: "Team 013",
-        content: `
+  },
+  {
+    id: 21,
+    link: "passing-by",
+    serialNumber: "01",
+    subtitle: "Team 013",
+    content: `
 Sixteen Years Ago. Spring. Prior to Arthur's memory decaying to a point where he couldn't remember anything.
 Not long after the New Year, many of Linkon's residents still bask in the holiday spirit. However, Bloomshore District's Special Task Force, specifically Team 013, was in a panic. After five long years, they were welcoming a new recruit.
 "Heard his Evol is light or something. He's usually only responsible for providing light and scouting a path during missions. Support role. It's not that impressive."
@@ -266,13 +266,13 @@ Xavier doesn't like a lot of things, but he's very enthusiastic when it comes to
 Like a forgotten cactus on the window sill, Xavier lives a simple life, thriving amidst the winds and the sun's harsh glare.
 
 `,
-    },
-    {
-        id: 22,
-        link: "passing-by",
-        serialNumber: "02",
-        subtitle: "An Unspoken Secret",
-        content: `
+  },
+  {
+    id: 22,
+    link: "passing-by",
+    serialNumber: "02",
+    subtitle: "An Unspoken Secret",
+    content: `
 Xavier always tidies up paperwork when everyone else is out on missions. He helps Luke whenever the hallway lights are broken. Despite Xavier mostly keeping to himself, people find he's actually quite easy to get along with. His Evol is even more useful. Sometimes, for reasons unknown, a flash of light causes the criminal they're chasing to unexpectedly drop to the ground.
 "Our target this time is an old friend. Lawrence."
 Team 013 has its usual mission briefing.
@@ -345,13 +345,13 @@ As for who brought them luck, and whether Xavier is as simple as he appears to b
 Everyone seems to have an unspoken understanding to guard this secret.
 
 `,
-    },
-    {
-        id: 23,
-        link: "passing-by",
-        serialNumber: "03",
-        subtitle: "A Familiar Face",
-        content: `
+  },
+  {
+    id: 23,
+    link: "passing-by",
+    serialNumber: "03",
+    subtitle: "A Familiar Face",
+    content: `
 As the year draws to a close, the medals and recommendation letters from headquarters arrive. Tommy and Luke, two men on the cusp of their thirties, hug each other in a tearful embrace. For a moment, it's unclear whether Luke is crying from being overwhelmed or from the prickling pain of Tommy's wire-bristle stubble. After years of being underdogs, recognition finally came, reigniting the dreams of many. Luke pushes Tommy, rubbing his own reddening cheek. When Tommy goes to hug Xavier, Xavier places another pot of cactus on his desk, creating a barrier between him and the others.
 "Tomorrow is New Year's Eve. I haven't finished sorting out this year's files yet, and I won't be able to make it home again."
 "Hey, I'm going to be home alone too. Someone's going to have to keep watch here. How about we do this together?"
@@ -370,13 +370,13 @@ He lifts his head, staring at the New Year's fireworks that burst at the stroke 
 It's time for him to leave.
 
 `,
-    },
-    {
-        id: 24,
-        link: "passing-by",
-        serialNumber: "04",
-        subtitle: "Old Friend",
-        content: `
+  },
+  {
+    id: 24,
+    link: "passing-by",
+    serialNumber: "04",
+    subtitle: "Old Friend",
+    content: `
 Two days after Linkon New Year's Day, the streets remain eerily deserted. Xavier slips the missing file into the mailbox downstairs, then proceeds to feed the stray cats nearby before climbing up the stairs to his apartment.
 During the time it takes for rice to heat up, Xavier steals a glance at his phone.
 Finally, after 24 hours, he finally receives a response to the message he sent last night.
@@ -410,13 +410,13 @@ He presses a button. "It's in the mailbox. Take it and go."
 With a certain resolution set in his heart, he stares at his former friend on the other side of the screen.
 "Be careful. They're going to find you."
 `,
-    },
-    {
-        id: 25,
-        link: "passing-by",
-        serialNumber: "05",
-        subtitle: "The Road's End",
-        content: `
+  },
+  {
+    id: 25,
+    link: "passing-by",
+    serialNumber: "05",
+    subtitle: "The Road's End",
+    content: `
 Lingering in one place for too long always leaves noticeable traces. Xavier has certainly thought about this.
 Over the years, he has walked many paths, only to realize that there is no real difference between them. Despite their inevitable end, these paths are still worth treading.
 The fire blazes with such intensity that it leaves no chance for survival. Everything burns, leaving nothing behind. He decides to "die" in this fire.
@@ -476,13 +476,13 @@ A day later, a team conducts a thorough search of the factory. Eventually, in an
 Xavier, 23, served in the Bloomshore Special Task Force of Linkon City. In the winter of 2033, he honorably sacrificed himself during his solo mission to apprehend the wanted criminal Gray Hawk.
 
 `,
-    },
-    {
-        id: 26,
-        link: "passing-by",
-        serialNumber: "06",
-        subtitle: "The Passing Spring",
-        content: `
+  },
+  {
+    id: 26,
+    link: "passing-by",
+    serialNumber: "06",
+    subtitle: "The Passing Spring",
+    content: `
 In the year 2045, spring arrives.
 The day before New Year's Eve, Xavier finds himself in a cemetery on the city outskirts. Despite the passage of time, the disaster from 11 years ago failed to ravage this place. The sun, however, has bleached the granite tombstones white, and the details of the deceased have been obscured by grass and blossoms. But in line with the Special Task Force's customary confidentiality, the tombstones bear no pictures or names, only birth and death years and a string of special police numbers.
 Initially, Xavier only remembered sT-1101. As the years passed, many people appeared. Some were old friends while others were strangers. Some he had spoken to, and others he had merely encountered once before. He didn't visit often, but whenever he did, there were always flowers placed on the grave.
@@ -510,13 +510,13 @@ After many years, he finally leaves a bit of himself in someone else's story.
 "All right then. Happy New Year," the girl says. She waves him goodbye and leaves with the old man.
 Xavier also smiles. "Happy New Year."
 `,
-    },
-    {
-        id: 31,
-        link: "when-shooting-stars-fall",
-        serialNumber: "01",
-        subtitle: "Distant Stars",
-        content: `
+  },
+  {
+    id: 31,
+    link: "when-shooting-stars-fall",
+    serialNumber: "01",
+    subtitle: "Distant Stars",
+    content: `
 This is the hundredth time I sneak a glance at Xavier. You must first pretend to look at the clock on the classroom wall. Then your gaze can slowly drift to his face. You have to calm down your beating heart and do your best to avoid his gaze. Otherwise, you'll be like me—caught red-handed. Pretending to be nonchalant, I shift my gaze away from those tranquil eyes and turn around. According to the First Law of Cosmic Attraction, when a person unwittingly looks at someone, there's a 98.8% chance it's because he's looking at you too.
 Perhaps I caught him red-handed as he stared at me.
 That's what I tell myself, in any case.
@@ -534,13 +534,13 @@ But then, during our astronomy lecture, our teacher mentioned a once-in-a-centur
 If I can see it with someone I like, then I can die without regrets.
 
 `,
-    },
-    {
-        id: 32,
-        link: "when-shooting-stars-fall",
-        serialNumber: "02",
-        subtitle: "Gravity",
-        content: `
+  },
+  {
+    id: 32,
+    link: "when-shooting-stars-fall",
+    serialNumber: "02",
+    subtitle: "Gravity",
+    content: `
 The sun is like a red-hot iron, burning a hole into the sky. Xavier stands under its crimson glow, practicing his newly learned sword techniques. The whole sequence of events feels otherworldly, deterring people from approaching and thus interrupting him.
 Not too far away, I sit under the porch and hold a wooden sword. As I watch him train, I think about how to ask him. Knowing I'll forget half the things I want to say, I start writing words in the dirt with my sword. Once-in-a-century events aren't significant for Philos's denizens anymore.
 People like Xavier, they'll experience many centuries. As long as Philos's core still has energy, their lives shall last forevermore like the planet's.
@@ -584,13 +584,13 @@ Xavier is stunned. He asks, "What about you? What's your wish?"
 "This shooting star has made a promise to you."
 
 `,
-    },
-    {
-        id: 33,
-        link: "when-shooting-stars-fall",
-        serialNumber: "03",
-        subtitle: "Collision",
-        content: `
+  },
+  {
+    id: 33,
+    link: "when-shooting-stars-fall",
+    serialNumber: "03",
+    subtitle: "Collision",
+    content: `
 The weather forecast says it's going to be a clear day today, but there's only heavy rain in the afternoon. Fat water droplets cling to glass windows, blurring the gray outdoors into blobs of color. I glance at the empty space by my desk, recalling I left my umbrella in my dorm. The fragrance of flowers in the botany lecture hall is slowly putting me to sleep. I tear off a piece of paper to write my sorrows.
 ">A< Ugh, it's so annoying. I can't believe it's raining. I also didn't bring my umbrella today. What about you?" 
 I tear the paper, scrunch it into a ball, and then throw it at Xavier's desk when the teacher isn't looking. I hear two swishes before receiving his reply. Ever since that night, something changed between me and Xavier. At first glance, everything remains the same. He's still being "protected" and leaves school right when the bell rings. We don't have any interactions outside of school, either. It's just I sometimes "carelessly" walk into those "people," and then wave goodbye to him. He'd also sometimes poke me in the back and give me one of his earbuds. Or we'd slip notes to each other in class, just like today. However, just as I am about to look at Xavier's note, a hand snatches it away. I look up to find the teacher staring angrily at me. The classroom becomes quiet, waiting with bated breath. Luckily, he just took my note and told me to be on clean-up duty later.
@@ -629,13 +629,13 @@ It took me a long time to understand what he meant.
 If wishing on a star does make your wish come true, then I wish I could be healthy. Then I can wait another hundred years to watch the meteor shower with Xavier.
 
 `,
-    },
-    {
-        id: 34,
-        link: "when-shooting-stars-fall",
-        serialNumber: "04",
-        subtitle: "Friction",
-        content: `
+  },
+  {
+    id: 34,
+    link: "when-shooting-stars-fall",
+    serialNumber: "04",
+    subtitle: "Friction",
+    content: `
 I didn't think my heart would start acting up before I could even wish upon a star. The Academy's AC works without any care for the patients, blasting cold air into the room. I crack open an eye to glance at Xavier. It's only then I realize the cold isn't coming from the AC.
 A single movement from our eyes could break this silence.
 I haven't thought of how to explain myself yet, so I turn my back to him. I listen to the rattle of the medicine bottle in his hands. It rattles and rattles and rattles and rattles. It's a little irritating, but soon enough, he puts it down with a clack.
@@ -657,13 +657,13 @@ But when Xavier glances at me, he looks completely unfazed. Quietly, he turns to
 "Let's watch the meteor shower together."
 
 `,
-    },
-    {
-        id: 35,
-        link: "when-shooting-stars-fall",
-        serialNumber: "05",
-        subtitle: "Incineration",
-        content: `
+  },
+  {
+    id: 35,
+    link: "when-shooting-stars-fall",
+    serialNumber: "05",
+    subtitle: "Incineration",
+    content: `
 The late autumn wind blows away the last of the humid summer, carefree in its passing.
 It has almost been 24 hours since I last slept. I lie in bed tossing and turning, unable to steady my restless heart. I can only wait for the darkened sky to light up again, and then wait for the brightened sky to darken once more.
 Then, my alarm rings in the early hours of the next morning.
@@ -699,13 +699,13 @@ But was this the price I had to pay for my selfishness?
 Ever since that night, which was the brightest point of my life, everything became fleeting, fading like a shooting star.
 
 `,
-    },
-    {
-        id: 36,
-        link: "when-shooting-stars-fall",
-        serialNumber: "05",
-        subtitle: "Stardust Trail",
-        content: `
+  },
+  {
+    id: 36,
+    link: "when-shooting-stars-fall",
+    serialNumber: "05",
+    subtitle: "Stardust Trail",
+    content: `
 It's an awful disease.
 Ever since the meteor shower, I've only gotten more ill. My trips to the hospital became more and more frequent until, one day, I simply couldn't leave. It's nothing I didn't expect. It's just I didn't expect it to be so soon. What actually surprised me was that I never saw Xavier again. He just disappeared without a trace. No one knew where he went.
 I tried to contact him, of course, but to no avail. One, two, three days pass, and I get more and more anxious. Just as I sneak out of my room, with barely enough strength to leave the hospital room, I recall what he said about how reaching for freedom is to give it up.
@@ -746,13 +746,13 @@ In the final moments of my life, I feel like I'm being held. I hear sounds simil
 "No matter how many times it takes, no matter where you are... I will find you."
 
 `,
-    },
-    {
-        id: 41,
-        link: "pure-white-heart",
-        serialNumber: "01",
-        subtitle: "The Legendary Dr. Zayne",
-        content: `
+  },
+  {
+    id: 41,
+    link: "pure-white-heart",
+    serialNumber: "01",
+    subtitle: "The Legendary Dr. Zayne",
+    content: `
 The office looms in front of John. To say he's nervous is an understatement.
 Since the beginning of his internship at Akso Hospital, he has heard rumors about the chief of surgery, Dr. Zayne.
 They say he's an extremely cold person. He never talks to interns unless it's about work. If he finds out you made a mistake, he rips you a new one.
@@ -771,13 +771,13 @@ Everything he does is calculated, quick. Zayne puts the chopsticks in the box, c
 Picking up his access card and leaving his office, Zayne finally speaks to John. "The next surgery will involve cardiopulmonary bypass. Observe. Speak up if you have any questions."
 
 `,
-    },
-    {
-        id: 42,
-        link: "pure-white-heart",
-        serialNumber: "02",
-        subtitle: "Expert Surgeon",
-        content: `
+  },
+  {
+    id: 42,
+    link: "pure-white-heart",
+    serialNumber: "02",
+    subtitle: "Expert Surgeon",
+    content: `
 The operating room is quiet. Under the light, the patient's chest cavity is already open.
 "Intubate. Aorta, superior and inferior vena cava."
 Zayne oversees the progress, guiding the first and second surgeon's assistants for the upcoming tasks.
@@ -804,13 +804,13 @@ John can't decide if Zayne is joining in on the fun or reminding everyone that t
 This expert heart surgeon is truly terrifying.
 
 `,
-    },
-    {
-        id: 43,
-        link: "pure-white-heart",
-        serialNumber: "03",
-        subtitle: "Scarier Than A Demon",
-        content: `
+  },
+  {
+    id: 43,
+    link: "pure-white-heart",
+    serialNumber: "03",
+    subtitle: "Scarier Than A Demon",
+    content: `
 The next morning, two sets of mismatched footsteps echo down the hall. One is quick and heavy while the other follows hurriedly.
 "You didn't say much yesterday, I didn't expect you'd be so lively." The moment they go upstairs, Greyson is bombarded with John's questions about Zayne. It gives him a headache.
 "Well, Dr. Zayne isn't here, and checking patients is relatively easy. I'm not as nervous."
@@ -853,13 +853,13 @@ John tries to calm his racing heart, and a chill racks his entire body.
 Dr. Zayne is scary by being able to frighten even an old man.
 
 `,
-    },
-    {
-        id: 44,
-        link: "pure-white-heart",
-        serialNumber: "04",
-        subtitle: "Under The Sunlight",
-        content: `
+  },
+  {
+    id: 44,
+    link: "pure-white-heart",
+    serialNumber: "04",
+    subtitle: "Under The Sunlight",
+    content: `
 John learns from the nurses that the old man from Ward 3 is not the only one who listens to Zayne. All of his patients, no matter how temperamental or troublesome, become obedient and meek in front of him.
 As expected of Zayne, the man said to be able to "terrify" anyone!
 
@@ -894,13 +894,13 @@ Zack stares at the grass for a while. "Okay, then," he says quietly.
 He's drawn back from his thoughts at the sight of the old man and Zayne talking and laughing. For the first time, John doesn't feel Zayne's coldness. It's almost as if it's been melted by the same sunlight that blankets the grass beneath them.
 
 `,
-    },
-    {
-        id: 45,
-        link: "pure-white-heart",
-        serialNumber: "05",
-        subtitle: "Once Ice Melts",
-        content: `
+  },
+  {
+    id: 45,
+    link: "pure-white-heart",
+    serialNumber: "05",
+    subtitle: "Once Ice Melts",
+    content: `
 At noon, John stands in front of Zayne's office with Zack's report in hand.
 After knocking a few times and getting no response, he carefully pushes the half-closed door.
 Inside, Zayne is leaning back against his chair. His eyes are closed, appearing to be asleep.
@@ -922,13 +922,13 @@ After a few beats of silence, John says, "I understand!"
 Every intern is prone to be influenced by powerful teachers. That's why, at this moment, John feels Zayne's teachings have been ingrained into him.
 
 `,
-    },
-    {
-        id: 46,
-        link: "pure-white-heart",
-        serialNumber: "06",
-        subtitle: "The Best Doctor",
-        content: `
+  },
+  {
+    id: 46,
+    link: "pure-white-heart",
+    serialNumber: "06",
+    subtitle: "The Best Doctor",
+    content: `
 The next morning, as John is taking Jeanne back to the ward, his phone starts ringing. The caller ID shows it's a nurse from the Division of Cardiac Surgery.
 The nurse speaks concisely through the phone. Zayne's second assistant is unwell.
 John is to replace him immediately. The info takes John by surprise. He struggles to process it and is a little stunned. It isn't until he's changed into his lab coat does he truly realizes he has the opportunity to be Zayne's assistant.
@@ -957,13 +957,13 @@ Now, hearing others describe Zayne as "scary" makes John want to defend him.
 John is at a loss for words, and despite rattling his brain for half a day, all he can say is this: "He's the best doctor I've ever had the pleasure to meet."
 
 `,
-    },
-    {
-        id: 51,
-        link: "never-ending-winter",
-        serialNumber: "01",
-        subtitle: "Night's Daytime Brightness",
-        content: `
+  },
+  {
+    id: 51,
+    link: "never-ending-winter",
+    serialNumber: "01",
+    subtitle: "Night's Daytime Brightness",
+    content: `
 All Zayne sees is a world of ice and snow. He steps over dozens of bodies, blood still dripping from his hands. With a wave, dark crystals pierce through several others still struggling.
 There are no screams. It's so quiet that only the sound of his own footsteps can be heard. There is only a shivering little boy. Zayne stands before him, his shadow looming across the boy's blood-covered face.
 Afraid, the boy is silent. He can only look up at Zayne with wide, shining eyes.
@@ -1038,13 +1038,13 @@ William sighs. "Seems like we won't be getting any sleep tonight either. Let's g
 Zayne follows William. He turns around to see the distant Mt. Eternal lit up, as bright as day, by flash bombs.
 
 `,
-    },
-    {
-        id: 52,
-        link: "never-ending-winter",
-        serialNumber: "02",
-        subtitle: "Deathly Encounter",
-        content: `
+  },
+  {
+    id: 52,
+    link: "never-ending-winter",
+    serialNumber: "02",
+    subtitle: "Deathly Encounter",
+    content: `
 Zayne hasn't left the ward for several days.
 The battle rages on with the wounded being sent in one by one. Just as Zayne releases soldiers who arrived for treatment earlier that day, three bloody stretchers get pushed in. Most can't handle the long hours and stress. Four people already collapsed from his medical team alone.
 Taking over yet another exhausted colleague's patient in critical condition, Zayne leaves instructions before he adjusts the ventilator. He makes two rounds around the ward, and after confirming everything is as it should be, walks out of the tent for a breather.
@@ -1097,13 +1097,13 @@ It's impossible to save everyone. He knows this better than anyone else. Yet he 
 But he's not planning to give up.
 
 `,
-    },
-    {
-        id: 53,
-        link: "never-ending-winter",
-        serialNumber: "03",
-        subtitle: "Determination",
-        content: `
+  },
+  {
+    id: 53,
+    link: "never-ending-winter",
+    serialNumber: "03",
+    subtitle: "Determination",
+    content: `
 There's a loud noise. Half the operating room's wall comes crashing down, and a horrible, mangled body climbs in from the outside. The medics who were focused on the surgery freeze in fear, unable to even scream, as the Wanderer lunges straight for the operating table. 
 Boom!
 Just before the Wanderer can reach it, the creature is sent flying past the destroyed wall.
@@ -1142,13 +1142,13 @@ William smiles and stretches his hand out to him.
 "Welcome to the team."
 
 `,
-    },
-    {
-        id: 54,
-        link: "never-ending-winter",
-        serialNumber: "04",
-        subtitle: "Through Troubled Times",
-        content: `
+  },
+  {
+    id: 54,
+    link: "never-ending-winter",
+    serialNumber: "04",
+    subtitle: "Through Troubled Times",
+    content: `
 A week later, a special operations team composed of 30 elite members entered Mt. Eternal fully armed.
 "Our mission is to find the center of the Protofield and eliminate it to stop the creation of Wanderers. The speculated location is in the valley of the northern cliff. This operation is more difficult and even more dangerous than any others before, so you must all strictly follow orders and do everything in the name of safety..."
 As the leader of the group, Captain Xander, pauses his lecture about precautions to grab a map, William comes over and asks Zayne, "Who did you address your will to?" He's curious about whom Zayne, emotionless as he is, holds dear in his heart.
@@ -1179,13 +1179,13 @@ The summer when he was 12 was extraordinarily long. Every little thing—like th
 It was the first time a black-robed Grim Reaper appeared in his dreams.
 
 `,
-    },
-    {
-        id: 55,
-        link: "never-ending-winter",
-        serialNumber: "05",
-        subtitle: "A Long Way Home",
-        content: `
+  },
+  {
+    id: 55,
+    link: "never-ending-winter",
+    serialNumber: "05",
+    subtitle: "A Long Way Home",
+    content: `
 The day grows shorter. The night, with the relentless snowstorm, descends on Mt. Eternal.
 By the time the team reaches the valley, they are down to less than half their original number. Outside, the blizzard rages on. Yet inside, it's strangely calm. The dense forest is filled with dead trees, standing tall like tombstones. A faint blue light flickers on the black, broken branches. The continuous ringing of the detection alarm and the sight in front of them all point to one thing: the Protofield's center.
 Looking at the scarred but determined faces of his teammates, Captain Xander says in a deep voice, "Let's begin!"
@@ -1243,13 +1243,13 @@ Unable to speak, Zayne points. Confused, William looks down.
 An eerie blue glow appears on his chest. Crystals, beautiful and sinister, slowly begin to spread.
 
 `,
-    },
-    {
-        id: 56,
-        link: "never-ending-winter",
-        serialNumber: "06",
-        subtitle: "The Nightmare Worsens",
-        content: `
+  },
+  {
+    id: 56,
+    link: "never-ending-winter",
+    serialNumber: "06",
+    subtitle: "The Nightmare Worsens",
+    content: `
 "What is this?"
 Suspicious, William touches them. He finds the fine black crystals are now growing on his hand and sting. He tries to wipe them off, fling them off, even use his Evol to get rid of them. The crystals continue to grow. Sensing something is wrong, Zayne reaches out and is about to touch William's chest when—
 It all happens so suddenly.
@@ -1322,13 +1322,13 @@ But strange crystals reappeared. The Grim Reaper, hidden in the darkness, opens 
 This uncertain, cursed fate is far from over.
 
 `,
-    },
-    {
-        id: 61,
-        link: "still-in-dark",
-        serialNumber: "01",
-        subtitle: "Visitor",
-        content: `
+  },
+  {
+    id: 61,
+    link: "still-in-dark",
+    serialNumber: "01",
+    subtitle: "Visitor",
+    content: `
 When Zayne first appeared, Georgie thought he had seen the Grim Reaper. He and his mother cowered in a corner with no means of escaping, pursued relentlessly by a monster. Letting out a terrifying roar, the creature approached them.
 It wore human clothing and bore a human-like visage, but its veiny skin grotesquely bulged. Its pupils glowed a sinister, unnatural blue; its aura was anything but human.
 Suddenly, his mother pushed Georgie away. With all her might, she embraced the monster. And from beneath its skin, strange tendrils burst forth, resembling eerie blue hooks. They embedded themselves into her.
@@ -1355,13 +1355,13 @@ Looking up at the man towering over him, the boy asks, "Could you... help me fin
 Zayne stares at the young boy, his expression unreadable. After a moment, in a voice as cold as ice, he replies, "That is something you should ask the police about."
 
 `,
-    },
-    {
-        id: 62,
-        link: "still-in-dark",
-        serialNumber: "02",
-        subtitle: "Mystery",
-        content: `
+  },
+  {
+    id: 62,
+    link: "still-in-dark",
+    serialNumber: "02",
+    subtitle: "Mystery",
+    content: `
 Detective Ivan thinks he's about to die when he sees Zayne for the first time. The man standing before him, known within the police department as Dawnbreaker, is a mysterious serial killer. He leaves no corpses behind, only scattered fragments of an unknown, dark blue substance. If it weren't for surveillance cameras that had captured footage of him committing the murders, these victims would simply be considered missing people.
 And unlike normal murders, this resembles complete erasure.
 The victims vary in gender, age, and identity, but the only thing they have in common is the shards left at the crime scene.
@@ -1385,13 +1385,13 @@ Ivan's police intuition tells him that following this clue could very well lead 
 He's firmly convinced the next time they meet, he'll arrest this serial killer and bring him to justice.
 
 `,
-    },
-    {
-        id: 63,
-        link: "still-in-dark",
-        serialNumber: "03",
-        subtitle: "Shelter",
-        content: `
+  },
+  {
+    id: 63,
+    link: "still-in-dark",
+    serialNumber: "03",
+    subtitle: "Shelter",
+    content: `
 Zayne isn't surprised to see the little boy at his apartment door.
 When he left during the day, he noticed the glass jar full of chocolates placed by the door, like bait sitting in a trap. It Waited for its prey to be ensnared.
 A small head peeked out, barely visible behind the stairwell. Zayne chose to ignore him and continued walking downstairs.
@@ -1472,13 +1472,13 @@ Zayne stares at the nearby jasmine, something fleeting briefly cracking his expr
 "I often dream of that place."
 
 `,
-    },
-    {
-        id: 64,
-        link: "still-in-dark",
-        serialNumber: "04",
-        subtitle: "Nightmare",
-        content: `
+  },
+  {
+    id: 64,
+    link: "still-in-dark",
+    serialNumber: "04",
+    subtitle: "Nightmare",
+    content: `
 Last night, Zayne dreamed that he and a girl bought all kinds of snacks and even froze soda into the shape of a popsicle. Similar dreams visited him almost every night.
 In these dreams, he's a surgeon.
 His dreams keep overlapping with scenes of a doctor's life, and a constant reoccurring presence is a girl.
@@ -1517,13 +1517,13 @@ Just before the alarm rings, Zayne turns off the screen. "Good night."
 His voice is cold. He closes the bedroom door.
 
 `,
-    },
-    {
-        id: 65,
-        link: "still-in-dark",
-        serialNumber: "05",
-        subtitle: "Birthday",
-        content: `
+  },
+  {
+    id: 65,
+    link: "still-in-dark",
+    serialNumber: "05",
+    subtitle: "Birthday",
+    content: `
 The next day, Zayne goes through his usual routine of moving the jasmine to the window sill to soak up the sunlight. He waters it. After that, he puts on a black coat and takes the boy with him.
 Zayne leads Georgie into a dessert place, where the robots behind the glass window are diligently making cakes and pastries.
 "Is this... for me?" The boy's face is filled with surprise.
@@ -1579,13 +1579,13 @@ Zayne gently closes the boy's eyes. Georgie dissipates into black mist.
 The melody of "Happy Birthday" continues to echo in the dessert place under the setting sun. It's a final farewell.
 
 `,
-    },
-    {
-        id: 66,
-        link: "still-in-dark",
-        serialNumber: "06",
-        subtitle: "Cover-Up",
-        content: `
+  },
+  {
+    id: 66,
+    link: "still-in-dark",
+    serialNumber: "06",
+    subtitle: "Cover-Up",
+    content: `
 On a quiet hillside, two tombstones stand. One big and one small. Neither has photos or names.
 Zayne places a jar of chocolate in front of the small tombstone.
 He remembers the woman buried here. She approached him half a month ago, pleading for him to kill her.
@@ -1621,13 +1621,13 @@ Zayne's gaze sweeps over the window sill.
 The jasmine quietly blooms under the moonlight.
 
 `,
-    },
-    {
-        id: 71,
-        link: "unique-vermillion",
-        serialNumber: "01",
-        subtitle: "Unfinished Work",
-        content: `
+  },
+  {
+    id: 71,
+    link: "unique-vermillion",
+    serialNumber: "01",
+    subtitle: "Unfinished Work",
+    content: `
 Thomas's art exhibition begins in a week. Rafayel's art covers almost all of the walls except for one. Thomas announced that, on the opening day, Rafayel's magnum opus would be there. However, until then, no one can see it, not even his sponsors. Of course, only Thomas knows that Rafayel's magnum opus is still…
 
 He finally finds Rafayel in the storage room after running around for a long time. Thomas stops to catch his breath. He wipes the sweat off his forehead with one hand and airs himself with his collar. "You're here. Not going to take a bath today?"
@@ -1652,13 +1652,13 @@ Thomas withdraws himself from the painting, his mind filled with many thoughts.
 Thomas purses his lips. "You're a man of your word... Fine, but there has to be a deadline. How about two days? Or three? I can't give you any more than that." Closing his eyes, Rafayel nods.
 
 `,
-    },
-    {
-        id: 72,
-        link: "unique-vermillion",
-        serialNumber: "02",
-        subtitle: "Missing Color",
-        content: `
+  },
+  {
+    id: 72,
+    link: "unique-vermillion",
+    serialNumber: "02",
+    subtitle: "Missing Color",
+    content: `
 Three days pass in the blink of an eye. Thomas still hasn't heard from Rafayel. With no other alternatives, he returns to the island. On the beach not so far away, a thick branch dances across the sand. The man holding it stands up from time to time to look at the drawing.
 "I've said it before, and I'll say it again. Everything is ready! Why would I lie to you?" Thomas shifts his phone from left to right, then right to left. "You know his temper. No one can see the painting until the opening of the exhibition. You're all the same..."
 Ending his call with the sponsor's manager, Thomas walks toward the man drawing on the beach.
@@ -1674,13 +1674,13 @@ Looking up at the endless blue sea, Thomas closes his eyes. "I remember, back th
 Thomas recalls that time when he was still passionate about art.
 
 `,
-    },
-    {
-        id: 73,
-        link: "unique-vermillion",
-        serialNumber: "03",
-        subtitle: "Passionate Colors",
-        content: `
+  },
+  {
+    id: 73,
+    link: "unique-vermillion",
+    serialNumber: "03",
+    subtitle: "Passionate Colors",
+    content: `
 At a charity event, his painting just so happened to be displayed alongside Rafayel's. Thomas had heard of Rafayel before. He thought he stood a chance against him. If his painting sold for a price higher than Rafayel's, then he would become famous overnight. With that thought, Thomas went to the exhibit early. This time, their works were quite similar in tone. Comparing the two, he noticed Rafayel's was more unique, yet he didn't want to admit it. Thomas always thought his work was better than everyone else's.
 But those who approached the two paintings only admired Rafayel's and ignored Thomas's.
 Thomas reassured himself. These people only cared about Rafayel's name. They didn't know anything about the true meaning of art.
@@ -1690,13 +1690,13 @@ The old man took his glasses off. He glanced at Thomas's painting, waved his han
 Thomas's painting wasn't sold for a good price that night. It was that same night he decided to "let himself" visit Rafayel.
 
 `,
-    },
-    {
-        id: 74,
-        link: "unique-vermillion",
-        serialNumber: "04",
-        subtitle: "Carefree Painter",
-        content: `
+  },
+  {
+    id: 74,
+    link: "unique-vermillion",
+    serialNumber: "04",
+    subtitle: "Carefree Painter",
+    content: `
 Rafayel only let him in when he heard Thomas was also an artist. That was the first time Thomas met him. Thomas wanted to have an artistic discussion with Rafayel about colors, but Rafayel didn't seem interested. He just sat at his desk, mixing colors in paper cups.
 Thomas asked if he knew his painting sold at a high price.
 Without lifting his head, Rafayel asked, "Which one?"
@@ -1721,13 +1721,13 @@ Turning back, Thomas's words stop in his throat.
 Rafayel's figure moves further and further away, eventually becoming a small dot in the distance.
 
 `,
-    },
-    {
-        id: 75,
-        link: "unique-vermillion",
-        serialNumber: "05",
-        subtitle: "Drastic Measures",
-        content: `
+  },
+  {
+    id: 75,
+    link: "unique-vermillion",
+    serialNumber: "05",
+    subtitle: "Drastic Measures",
+    content: `
 With two days left until the exhibition, Thomas decides to take matters into his own hands. Darkness covers the sea and the island, and the studio is lit up by the moonlight filtering through the window. Thomas sneaks inside. He glances around, and when he doesn't see any signs of Rafayel, he fixes his gaze on the giant painting leaning against the wall. His footsteps are silent as he moves toward it. He puts on the gloves he brought with him, kneels, and tries to pick up the painting.
 Right at this moment, someone comes out from the shadows. The air is filled with the sound of a match being lit.
 Thomas shouts, "W-what are you doing with that match?!"
@@ -1752,13 +1752,13 @@ Rafayel pats Thomas's shoulder. "Nope." Excitement fades from Thomas's face.
 On the night before the exhibition, Thomas calls Rafayel for the tenth time but to no avail. He takes a deep breath. He knew he'd be like this. Thankfully, Thomas has a plan. It's not the greatest plan, but at this rate, he has to give it a go.
 
 `,
-    },
-    {
-        id: 76,
-        link: "unique-vermillion",
-        serialNumber: "06",
-        subtitle: "A Unique Legend",
-        content: `
+  },
+  {
+    id: 76,
+    link: "unique-vermillion",
+    serialNumber: "06",
+    subtitle: "A Unique Legend",
+    content: `
 It's been three days since the end of the exhibition. A mountain of conches sits in the corner of the studio, leading up to an assortment of paints. Pieces of conch shells are scattered across the floor.
 Rafayel stands in front of the painting with a brush. In his left hand, a roughly thumb-sized blotch of color stands out among his colorful palette.
 Thomas drifts into Rafayel's studio with a smile. He sits at the coffee table and pours himself a cup of coffee. Glancing at Rafayel, he says, still smiling, "You don't need to keep painting. The exhibition is over."
@@ -1791,13 +1791,13 @@ After sending a businessman away with a smile, Thomas frowns.
 He walks up to the painter, straightens his posture, and says, "Let me tell you, sir. This painting before you, with that reddish purple, is painted by the one-and-only Mr. Rafayel. He extracted this unique color from ten thousand conches, completely different from the manufactured one in your painting. That's what makes this shade fantastical, and that's one of the reasons why Mr. Rafayel is legendary."
 
 `,
-    },
-    {
-        id: 81,
-        link: "addictive-pain",
-        serialNumber: "01",
-        subtitle: "Ignition",
-        content: `
+  },
+  {
+    id: 81,
+    link: "addictive-pain",
+    serialNumber: "01",
+    subtitle: "Ignition",
+    content: `
 This year's summer in Linkon City was tranquil. That is until one fateful night, a masterpiece named Illusion made a grand entrance and stirred the art world.
 The name "Rafayel" surged like a tidal wave, striking the soul of every artist in Linkon. His influence, just like his artwork, swiftly blazed through the entire art community.
 
@@ -1824,13 +1824,13 @@ With a momentary lapse in his aloof smile, Rafayel speaks earnestly.
 Only he knows it's not a matter of taste, but a sense of perception. An addictive, painful kind.
 
 `,
-    },
-    {
-        id: 82,
-        link: "addictive-pain",
-        serialNumber: "02",
-        subtitle: "Another Disguise",
-        content: `
+  },
+  {
+    id: 82,
+    link: "addictive-pain",
+    serialNumber: "02",
+    subtitle: "Another Disguise",
+    content: `
 The phone on the bedside table vibrates, waking Rafayel from his sleep in the hotel bed.
 Overnight, his inbox is flooded with a variety of invitations and visitation requests. Most of these are from various art organizations, media outlets, and individual artists.
 He scrolls down, flipping through several pages before his finger abruptly stops.
@@ -1871,13 +1871,13 @@ However, the tranquility doesn't last long.
 "Hold on, there's one more thing."
 
 `,
-    },
-    {
-        id: 83,
-        link: "addictive-pain",
-        serialNumber: "03",
-        subtitle: "A New Player",
-        content: `
+  },
+  {
+    id: 83,
+    link: "addictive-pain",
+    serialNumber: "03",
+    subtitle: "A New Player",
+    content: `
 Inside a private booth on the second floor of The Nest, Rafayel lounges on the sofa, idly playing with a coin in his hand.
 "It's not easy to secure a meeting with a renowned, up-and-coming artist," the person seated across remarks, his greeting laced with hidden implications.
 Rafayel doesn't look at him as he places the coin on the table. "As long as you can provide valuable info, there will always be an opportunity for us to meet."
@@ -1899,13 +1899,13 @@ Suddenly, flames incinerate the file in the man's hands as well as the photos on
 "Otherwise, you'll never be able to work with anyone ever again."
 
 `,
-    },
-    {
-        id: 84,
-        link: "addictive-pain",
-        serialNumber: "04",
-        subtitle: "Bait",
-        content: `
+  },
+  {
+    id: 84,
+    link: "addictive-pain",
+    serialNumber: "04",
+    subtitle: "Bait",
+    content: `
 Linkon University's campus is accessible to everyone. Rafayel strolls under the shade of the tree-lined path, surrounded by hundreds of people.
 Ever since he gave that lecture, he has grown to love the campus ambiance. Green leaves and red bricks. The area resonates with simple, crisp laughter and shouts. Even the air is saturated with the floral scent of late summer, invigorating and refreshing.
 What a free, shallow sea... Under the sun the water is so clear that one can see the bottom.
@@ -1940,13 +1940,13 @@ For every step they take, it will only take a few to reunite.
 Besides, he has taken the bait she used once before.
 
 `,
-    },
-    {
-        id: 85,
-        link: "addictive-pain",
-        serialNumber: "05",
-        subtitle: "Unexpected Encounter",
-        content: `
+  },
+  {
+    id: 85,
+    link: "addictive-pain",
+    serialNumber: "05",
+    subtitle: "Unexpected Encounter",
+    content: `
 A week later, the Dean's office. "Fantastic, you will be our visiting professor for a year, Mr. Rafayel!" The Dean of the College of Fine Arts, satisfied, puts away the two-paged contract Rafayel signed in a file.
 "I hope we will have a wonderful time working together."
 
@@ -1980,13 +1980,13 @@ Rafayel places the spoon on the coaster. He raises a hand and gets the attention
 "Check, please."
 
 `,
-    },
-    {
-        id: 86,
-        link: "addictive-pain",
-        serialNumber: "06",
-        subtitle: "A Perfect Opportunity",
-        content: `
+  },
+  {
+    id: 86,
+    link: "addictive-pain",
+    serialNumber: "06",
+    subtitle: "A Perfect Opportunity",
+    content: `
 Morning, in the studio of the Art Center... The students move their easels to the sides of the classroom, their eyes focused on the canvas Rafayel has set up in the center.
 "Mr. Rafayel, since the Lemuria lecture series ended, what's the next series going to be about?"
 "I bet it's paint! Look at that glass jar..." This is a rare type of art class. Rafayel sits beside the canvas. He doesn't have a paintbrush or palette. Instead, he dips his hand into a vat of vibrant red paint.
@@ -2014,13 +2014,13 @@ After all, he has yet to formally invite an art appreciator, and his paint is st
 The perfect moment will happen in the distant future.
 
 `,
-    },
-    {
-        id: 91,
-        link: "sirens-song",
-        serialNumber: "01",
-        subtitle: "Cliffhanger",
-        content: `
+  },
+  {
+    id: 91,
+    link: "sirens-song",
+    serialNumber: "01",
+    subtitle: "Cliffhanger",
+    content: `
 Maverick finally arrives at the beach. The Siren who deceived him sits on the rocks She turns around, smiling amidst the fragmented waves.
 His bloodline that spanned 100 years has met its end, its family crest stained with the blood of loved ones. The Siren is responsible. He cherished her, yet she dug out their hearts with her own hands.
 He wades through the shallow water and climbs onto the rocks. His hands are marred with scars.
@@ -2051,13 +2051,13 @@ Louis senses something breeze by him Someone is walking on the stage, behind the
 He pulls back the curtain, but he only catches a glimpse of a person lowering the brim of their hat, disappearing through the exit.
 
 `,
-    },
-    {
-        id: 92,
-        link: "sirens-song",
-        serialNumber: "02",
-        subtitle: "Stage Manager",
-        content: `
+  },
+  {
+    id: 92,
+    link: "sirens-song",
+    serialNumber: "02",
+    subtitle: "Stage Manager",
+    content: `
 In the heart of Verona, Rafayel pushes open the cafe door. Before the tinkling of the wind chimes fades, he heads straight to an empty table and takes a seat.
 A few high school girls dressed in uniforms sit by the window. You can always get the hottest gossip from girls around that age.
 "Have you heard about what happened when they performed Siren's Voice?"
@@ -2096,13 +2096,13 @@ They only have each other as family now, yet at this moment, all she can do is w
 Alone.
 
 `,
-    },
-    {
-        id: 93,
-        link: "sirens-song",
-        serialNumber: "03",
-        subtitle: "The Fourth Wall",
-        content: `
+  },
+  {
+    id: 93,
+    link: "sirens-song",
+    serialNumber: "03",
+    subtitle: "The Fourth Wall",
+    content: `
 People look out the cafe's window to see the street while Louis looks into the cafe from the outside.
 Under pressure from the public, the police hurriedly closed the case. They ruled illness as the cause of death, but Mr. Fallon's family paid Louis several times the usual fee to continue the investigation Louis recognizes the woman inside the cafe. With her hair adorned with a gilded hairpin, she's Talia, a renowned soprano. He had previously been commissioned to investigate her. Despite being a celebrity, there's not much information about her personal life. She has no known relatives or lovers either.
 What a surprising turn of events.
@@ -2114,13 +2114,13 @@ This is the second time Louis has missed him. Frustrated, he stops in his tracks
 "Speak. Why are you following me?"
 
 `,
-    },
-    {
-        id: 94,
-        link: "sirens-song",
-        serialNumber: "04",
-        subtitle: "Improv",
-        content: `
+  },
+  {
+    id: 94,
+    link: "sirens-song",
+    serialNumber: "04",
+    subtitle: "Improv",
+    content: `
 This might be the day Louis is closest to the truth.
 
 At a fancy restaurant, Louis takes a seat directly across from Rafayel.
@@ -2169,13 +2169,13 @@ Rafayel stands up and departs, leaving only that statement behind.
 This is the third time. Louis feels he's gotten a hold of something, yet still finds himself empty-handed.
 
 `,
-    },
-    {
-        id: 95,
-        link: "sirens-song",
-        serialNumber: "05",
-        subtitle: "A One-Man Show",
-        content: `
+  },
+  {
+    id: 95,
+    link: "sirens-song",
+    serialNumber: "05",
+    subtitle: "A One-Man Show",
+    content: `
 The young boy sits alone in the middle of the coral reef, softly humming "Siren's Ballad."
 Waves lap the shore, staining it dark red. The color blends almost seamlessly with the bloody setting sun in the distance. Those who deceived him have long since sailed away on their massive ships, laughing all the while.
 "Siren's Ballad" isn't a song of revenge. It's an elegy sung for Lemuria.
@@ -2208,13 +2208,13 @@ The world gradually becomes clear before Rafayel.
 He takes several deep breaths, then wraps himself in a bathrobe. Barefoot, he steps onto 
 
 `,
-    },
-    {
-        id: 96,
-        link: "sirens-song",
-        serialNumber: "06",
-        subtitle: "Next Perfomance",
-        content: `
+  },
+  {
+    id: 96,
+    link: "sirens-song",
+    serialNumber: "06",
+    subtitle: "Next Perfomance",
+    content: `
 By the time a reluctant Louis reaches the pier, Rafayel has already boarded a ship set to depart from Verona.
 It's perfect weather for sailing-clear, bright. The port radio station continues its 24-hour broadcast of citizens calling in.
 "This is the 176th call about the special anniversary performance. Even though it ended several days ago, countless audience members who experienced it in person still praise it as groundbreaking. It's an unforgettable memory. Even I, Joanna, regret not having gone to see it! Now, let's take the next call."
@@ -2230,13 +2230,13 @@ Rafayel gazes at the girl in the photo, a smile gracing his lips. He pets the se
 "I'll give you some tasty snacks next time."
 
 `,
-    },
-    {
-        id: 101,
-        link: "land-of-lost",
-        serialNumber: "01",
-        subtitle: "High Alert",
-        content: `
+  },
+  {
+    id: 101,
+    link: "land-of-lost",
+    serialNumber: "01",
+    subtitle: "High Alert",
+    content: `
 Dri-Lar-404, Feathers Star.
 A fully loaded spaceship returns to a planet shaped like a black diamond.
 A young deputy grumbles as they pass the seventh checkpoint. They scoured the galaxy for rare treasures-gifts for the Overlord's birthday. Yet here they are. being treated like petty thieves by the guards.
@@ -2275,13 +2275,13 @@ Amidst screams of agony, their twisted arms are puppeteered by the mist to jab a
 It's the last thing the Captain hears as the ship dips and hurls toward the Overlord's fortress.
 
 `,
-    },
-    {
-        id: 102,
-        link: "land-of-lost",
-        serialNumber: "02",
-        subtitle: "Absolute Suppression",
-        content: `
+  },
+  {
+    id: 102,
+    link: "land-of-lost",
+    serialNumber: "02",
+    subtitle: "Absolute Suppression",
+    content: `
 The impact caused great fire, illuminating the night sky above Feathers Star's capital. The fully-armed Overlord hurries to the depths of his fortress, where lies a treasured bunker. It was with these very implements that he subdued Feathers Star, turning it into a cesspool of vice that leaves galaxies full of dread. As for the army outside, each soldier is a villain, their hands stained with blood...
 The Overlord's attempt at self-comfort is interrupted by the endless screaming outside. Behind the thick door acting as a barrier, he doesn't know what's happening in the unfolding chaos.
 Suddenly, tendrils of black-red mist breach the supposedly secure door. They wrap around him and drag him toward the detection device.
@@ -2300,13 +2300,13 @@ The Overlord's gaze starts to glaze over as he plops down to the ground, staring
 His lips twitch uncontrollably. "...Yes."
 
 `,
-    },
-    {
-        id: 103,
-        link: "land-of-lost",
-        serialNumber: "03",
-        subtitle: "Mysterious Visitor",
-        content: `
+  },
+  {
+    id: 103,
+    link: "land-of-lost",
+    serialNumber: "03",
+    subtitle: "Mysterious Visitor",
+    content: `
 The partially destroyed fortress is slowly being repaired, and everyone is preparing for the Overlord's birthday. Even though the Overlord called off the interstellar checkpoint alert, started counting the spaceships in the fortress, and raised the requirements for gifts from the visiting High Lords, people don't question it because of his history of being a greedy and capricious dictator. There are just rumors that the Overlord's been tied up with a mystery guest. "You lost again." Smirking, Sylus flips the king on the chessboard. "You already coughed up 97 spaceships. To fill them back up, you'll need a lot of gifts. Can you do it?"
 "That's nothing..." The Overlord, stuck on his throne by the mist, manages to flash a grin. Only during a game of chess is he allowed to have a brief moment of clarity.
 "As long as I give you what you want, you'll let me go, right?"
@@ -2339,13 +2339,13 @@ The Overlord can't help but widen his eyes.
 "Now it's your turn to show some sincerity." He stands up and pats the Overlord's shoulder. "The Overlord's life is a storage's worth of treasures from 100 ships. Anyone who brings less might not taste the birthday cake today."
 
 `,
-    },
-    {
-        id: 104,
-        link: "land-of-lost",
-        serialNumber: "04",
-        subtitle: "Out Of Reach",
-        content: `
+  },
+  {
+    id: 104,
+    link: "land-of-lost",
+    serialNumber: "04",
+    subtitle: "Out Of Reach",
+    content: `
 Arresting Sylus is Myer's dream. He used to think every Astral Enforcer shared it, but his boss's cryptic smile told a different tale.
 "Kid, it's good to dream." 
 In time, he understood what his boss meant—it's better to admire dreams from afar.
@@ -2365,13 +2365,13 @@ Once the Overlord's seal is verified by the system, the official watches with de
 "The High Lords must be throwing quite the party for the Overlord's birthday. I envy them. You know, I wonder if I'll ever get a shot at attending his birthday..." The official casts a wistful glance at the Overlord's fortress in the distance.
 
 `,
-    },
-    {
-        id: 105,
-        link: "land-of-lost",
-        serialNumber: "05",
-        subtitle: "Jugment Of Fate",
-        content: `
+  },
+  {
+    id: 105,
+    link: "land-of-lost",
+    serialNumber: "05",
+    subtitle: "Jugment Of Fate",
+    content: `
 After using up a substantial amount of energy for several days, Sylus can keenly feel he's hit his limit. An invisible tether within him holds him back from tapping into more power.
 If any of the "captives" in the banquet hall were sharp enough, they'd notice the mist is slowly losing its grip. Sadly, the days of being cooped up and mentally battered have already broken these pleasure-Seeking cowards.
 Sylus gazes at the artificial garden beneath the inky sky, those animalistic eyes silently locking onto him. He wonders how long they've been trapped there and if their wild instincts remain.
@@ -2410,13 +2410,13 @@ The Enforcers scrutinize the analysis displayed on the screen. "This material is
 Before long, the conversation veers in a different direction. But in the background, that holographically restored brooch seems to glimmer faintly. It captivates the dreamer still in pursuit of that impossible dream.
 
 `,
-    },
-    {
-        id: 106,
-        link: "land-of-lost",
-        serialNumber: "06",
-        subtitle: "Journey Begins",
-        content: `
+  },
+  {
+    id: 106,
+    link: "land-of-lost",
+    serialNumber: "06",
+    subtitle: "Journey Begins",
+    content: `
 A spaceship traverses the silent expanse of space.
 Its cabin resonates with the melodies of classical music and the aroma of freshly brewed coffee. They alleviate the monotony of the journey.
 "All the treasures on the ships have been reclassified based on their planetary origins and returned to their rightful owners." A deep voice cuts through the music's elegance, relaying messages from distant sources.
@@ -2451,13 +2451,13 @@ Sylus raises an eyebrow. "All right, then. When in Rome, do as the Romans do."
 The N109 Zone is about to greet its new ruler.
 
 `,
-    },
-    {
-        id: 201,
-        link: "pathless-realm",
-        serialNumber: "01",
-        subtitle: "Training",
-        content: `
+  },
+  {
+    id: 201,
+    link: "pathless-realm",
+    serialNumber: "01",
+    subtitle: "Training",
+    content: `
 It was morning when the rain finally stopped. Caleb takes his time getting out of bed before throwing on a T-shirt. With a toothbrush in his mouth, he groggily makes his way to the mirror. Patrick walks up to him, nudges him with his elbow, and yawns. "They're announcing the test schedule today. Are you nervous?"
 From the top bunk, Gideon leans down.
 "Please. Caleb's the last guy to be worried about anything."
@@ -2481,13 +2481,13 @@ Patrick doesn't know what to say. He looks at Caleb who's putting on his g-suit.
 "I don't know. Maybe I lost my marbles a long time ago!" Caleb replies cheerfully.
 
 `,
-    },
-    {
-        id: 202,
-        link: "pathless-realm",
-        serialNumber: "02",
-        subtitle: "Dreams",
-        content: `
+  },
+  {
+    id: 202,
+    link: "pathless-realm",
+    serialNumber: "02",
+    subtitle: "Dreams",
+    content: `
 Among these four dormmates, Timothy is the odd one out. Born into a family of fighter pilots, he scored perfectly on every theoretical test but consistently ranked last in practical assessments. If he were to be honest, he doesn't like Caleb. Whenever he hears others praising their "rising star" and lowering their voices when he's nearby, Timothy can't help but compare himself to Caleb. And Timothy always comes to the crushing conclusion that he's not even close. If he can't easily win, then he'd rather lose with apparent indifference. This is a defense mechanism carefully crafted to protect his pride.
 In the quiet hours of the night, specifically after his third attempt at the human centrifuge, he stumbles to the break room while clutching his violently churning stomach. He's exhausted physically and mentally speaking. To make matters worse, leaning against a locker and watching him with concern is the last person he wants to see.
 "Caleb... What are you doing here?"
@@ -2518,13 +2518,13 @@ The room falls silent as everyone waits for the countdown to end.
 "Three, two, one..."
 
 `,
-    },
-    {
-        id: 203,
-        link: "pathless-realm",
-        serialNumber: "03",
-        subtitle: "Night Flight",
-        content: `
+  },
+  {
+    id: 203,
+    link: "pathless-realm",
+    serialNumber: "03",
+    subtitle: "Night Flight",
+    content: `
 The aircraft smoothly rises through the blanket of clouds and gradually flies into the pitch-black Deepspace Tunnel.
 The familiar sensation of weightlessness creeps through Caleb's body and mingles with a thrilling reverberation. It's as if humanity's most primitive curiosity and desire for exploration that's encoded in their genes is being awakened. Caleb loves this feeling. Here, he is an outsider trespassing in a world that isn't his own. Caleb recalls a lecture. An old man from the Deepspace Academy said that even with today's rapidly advancing technology, humans have explored less than 0.1% of the Deepspace Tunnel. They haven't even touched what lies at the other end. Maybe the day humanity reaches the other end of the Deepspace Tunnel will be the day they unlock the secrets behind Protocore Energy and the Wanderers. The scholar's words have been burnt into his memory since they were delivered with such fervor. But Caleb doesn't care about these grand visions. His desire to become a pilot comes from himself.
 On the holographic map, a small section marked as a safe zone shows the aircraft's green indicator slowly pushing back the surrounding darkness as it ventures into the fathomless Deepspace. Compared to the safe flight zones designated by the DAA, the unexplored regions remain as large swathes of darkness on the map. The mission is to recalibrate the navigational beacons along the flight path. The environment in the Deepspace Tunnel is complex, and previous explorers have mapped out the currently known routes.
@@ -2560,13 +2560,13 @@ But for humans, flight itself is ultimately an illusion, one that always carries
 His hand moves to his chest. The necklace's pendant engraved with the words "When U Come Back" still rests closest to his heart. He can still feel the lingering warmth from when those fingers brushed against his Skin.
 
 `,
-    },
-    {
-        id: 204,
-        link: "pathless-realm",
-        serialNumber: "04",
-        subtitle: "Escape Velocity",
-        content: `
+  },
+  {
+    id: 204,
+    link: "pathless-realm",
+    serialNumber: "04",
+    subtitle: "Escape Velocity",
+    content: `
 The rescue aircraft finally finds him on an abandoned floating island far from Skyhaven's main isle. As suspected, the flight positioning system was severely damaged by electromagnetic interference. When the rescue robots detect signs of life, they find the pilot in the cockpit. He's covered in blood, and his face is barely recognizable.
 The young pilot who vanished a week ago somehow made it back alive.
 The flight parameters from the black box are almost entirely consumed by white noise. No one knows what he's been through. The only clues come from reconstructed return flight data. It reveals that he somehow flew in the opposite direction of his intended route and crossed through the unexplored pathless realm.
@@ -2598,13 +2598,13 @@ He heard bits and pieces from Zaki, about how Aerospace Academy immediately laun
 "I am. Terrified, to be honest." Caleb calmly looks at him and smiles. "But my desire to reach my destination is greater than my fear of dying."
 
 `,
-    },
-    {
-        id: 205,
-        link: "pathless-realm",
-        serialNumber: "05",
-        subtitle: "Arrival",
-        content: `
+  },
+  {
+    id: 205,
+    link: "pathless-realm",
+    serialNumber: "05",
+    subtitle: "Arrival",
+    content: `
 "See you after our break then. Bye!" 
 His friends' voices pull Caleb back to reality. Gideon and Patrick had already run to their train. They wave at him through the window. At the same time, the train to Linkon City appears near the opposite platform. He lowers his eyes to the message's draft pinned to the top of his screen: "I'm back." After thinking about it, he slowly taps the backspace key.
 He can't explain why, but imagining her reaction when he suddenly appears before her is enough to make him smile.
@@ -2634,13 +2634,13 @@ Maybe the fledglings will grow strong, new feathers and leave the nest after the
 Do humans become attached to things like baby birds? He isn't sure. Maybe he's a trapped bird. But outside, it's raining. It keeps raining, forever and ever. Maybe they'll fly their separate ways once the skies clear. 
 
 `,
-    },
-    {
-        id: 206,
-        link: "pathless-realm",
-        serialNumber: "06",
-        subtitle: "Graduation Ceremony",
-        content: `
+  },
+  {
+    id: 206,
+    link: "pathless-realm",
+    serialNumber: "06",
+    subtitle: "Graduation Ceremony",
+    content: `
 The next time Timothy sees Caleb is at the Aerospace Academy graduation. When the DAA published their selection list, Gideon's and Patrick's names appeared. But Caleb's name was nowhere to be found. He only appeared at the bottom of the follow-up list as an alternate candidate with the requirement of a secondary flight assessment. Timothy thinks this must be a devastating failure for someone who's used to being first. Maybe it's even humiliating.
 The wide-angle lens captures the crowd in the plaza. They're under a sky where clouds flow like water and the blazing sunlight shines. Caleb stands in his official pilot's uniform. He's holding a bouquet of pale blue flowers and smiling at the camera. Wherever he goes, people's gazes follow him with admiration or envy. Their voices drop below a whisper at his name. But his eyes stay fixed in one direction, and his gentle gaze holds whoever he's looking at as if they're precious.
 "You didn't contact me for two months. Are you actually not going to explain where you went?"
@@ -2653,6 +2653,5 @@ Can sheer determination carry someone through pathless realm?
 He used to think that starting a journey was important. The path itself was important. But in the end, he understands that knowing who you are and where you're going matters more than anything After signing the transfer application and dropping his locker's ID card in the return bin, he feels a weight be lifted from his do heart. If every flight route has a destination, then maybe he never found his because this wasn't his path to begin with.
 
 `,
-    },
-
-]
+  },
+];

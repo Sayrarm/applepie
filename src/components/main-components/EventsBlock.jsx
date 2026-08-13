@@ -1,36 +1,30 @@
-import styles from '@pages/main/Home.module.css';
-import {FlexibleTimer} from '@components';
-import {getImageUrl} from '@hooks';
+import styles from "@pages/main/Home.module.css";
+import { FlexibleTimer } from "@components";
+import { getImageUrl } from "@hooks";
 
+function EventsBlock({ events }) {
+  if (!events || events.length === 0) {
+    return <div className={styles.noEvents}>No events available</div>;
+  }
 
-function EventsBlock( {events} ) {
-
-    if (!events || events.length === 0) {
-        return <div className={styles.noEvents}>No events available</div>;
-    }
-
-    return (
-        <>
-                    {events.map(event => (
-                        <div
-                            key={event.id}
-                            className={styles.containerTitleTimer}
-                        >
-                            <div className={styles.bannerTitle}>{event.name}</div>
-                            <FlexibleTimer
-                                startDateTime={event.startDate}
-                                endDateTime={event.endDate}
-                            />
-                            <img
-                                className={styles.imgBanner}
-                                src={getImageUrl(event.image)}
-                                alt={event.name}
-                            />
-                        </div>
-                    ))}
-
-        </>
-    )
+  return (
+    <>
+      {events.map((event) => (
+        <div key={event.id} className={styles.containerTitleTimer}>
+          <div className={styles.bannerTitle}>{event.name}</div>
+          <FlexibleTimer
+            startDateTime={event.startDate}
+            endDateTime={event.endDate}
+          />
+          <img
+            className={styles.imgBanner}
+            src={getImageUrl(event.image)}
+            alt={event.name}
+          />
+        </div>
+      ))}
+    </>
+  );
 }
 
-export default EventsBlock
+export default EventsBlock;

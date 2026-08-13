@@ -1,25 +1,22 @@
-import { useEffect, useState, useCallback } from 'react';
-import {
-    getSearchQuery,
-    saveSearchQuery,
-} from '@localstorage';
+import { useEffect, useState, useCallback } from "react";
+import { getSearchQuery, saveSearchQuery } from "@localstorage";
 
-export const useSearch = (prefix = '') => {
-    const [searchQuery, setSearchQuery] = useState(() => getSearchQuery(prefix));
+export const useSearch = (prefix = "") => {
+  const [searchQuery, setSearchQuery] = useState(() => getSearchQuery(prefix));
 
-    // Сохраняем поисковый запрос
-    useEffect(() => {
-        saveSearchQuery(prefix, searchQuery);
-    }, [searchQuery, prefix]);
+  // Сохраняем поисковый запрос
+  useEffect(() => {
+    saveSearchQuery(prefix, searchQuery);
+  }, [searchQuery, prefix]);
 
-    const onSearch = useCallback((value) => {
-        setSearchQuery(value.toLowerCase());
-    }, []);
+  const onSearch = useCallback((value) => {
+    setSearchQuery(value.toLowerCase());
+  }, []);
 
-    const clearSearch = useCallback(() => {
-        setSearchQuery('');
-        saveSearchQuery(prefix, '');
-    }, [prefix]);
+  const clearSearch = useCallback(() => {
+    setSearchQuery("");
+    saveSearchQuery(prefix, "");
+  }, [prefix]);
 
-    return { searchQuery, onSearch, clearSearch };
+  return { searchQuery, onSearch, clearSearch };
 };

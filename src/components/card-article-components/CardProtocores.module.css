@@ -1,90 +1,90 @@
 .container {
-    margin-top: 10px;
-    padding: 5px;
-    background-color: var(--bg-glass);
-    box-shadow: var(--box-shadow);
-    position: relative;
+  margin-top: 10px;
+  padding: 5px;
+  background-color: var(--bg-glass);
+  box-shadow: var(--box-shadow);
+  position: relative;
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 10px 0;
 }
 
 .title {
-    font-size: 16px;
-    font-weight: bold;
-    color: var(--colorTextDark);
-    margin-left: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--colorTextDark);
+  margin-left: 5px;
 }
 
 .addButton {
-    padding: 4px 12px;
-    background-color: var(--forSelect);
-    box-shadow: var(--box-shadow);
-    color: var(--colorText);
-    border: none;
-    cursor: pointer;
-    font-size: 14px;
+  padding: 4px 12px;
+  background-color: var(--forSelect);
+  box-shadow: var(--box-shadow);
+  color: var(--colorText);
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
 }
 
 .addButton:disabled {
-    background: #ccc;
-    cursor: not-allowed;
+  background: #ccc;
+  cursor: not-allowed;
 }
 
 .protocoreList {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .protocoreWrapper {
-    display: flex;
+  display: flex;
 }
 
 .dropdownItem {
-    color: var(--colorTextDark);
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    width: 220px;
-    text-align: left;
-    font-size: 13px;
+  color: var(--colorTextDark);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 220px;
+  text-align: left;
+  font-size: 13px;
 }
 
 .emptyState {
-    color: #999;
-    font-size: 13px;
-    margin: 5px;
+  color: #999;
+  font-size: 13px;
+  margin: 5px;
 }
 
 .protocoreList {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 .limitInfo,
 .placementInfo {
-    margin: 5px;
+  margin: 5px;
 }
 
 @media screen and (max-width: 380px) {
-    .dropdownItem {
-        min-width: 150px;
-        max-width: 170px;
-    }
+  .dropdownItem {
+    min-width: 150px;
+    max-width: 170px;
+  }
 
-    .protocoreList {
-        gap: 2px;
-    }
+  .protocoreList {
+    gap: 2px;
+  }
 
-    :global(.ant-modal .ant-modal-container) {
-        padding: 5px !important;
-    }
+  :global(.ant-modal .ant-modal-container) {
+    padding: 5px !important;
+  }
 }

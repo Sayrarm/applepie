@@ -1,50 +1,46 @@
-.container  {
-    position: relative;
+.container {
+  position: relative;
 }
 
 .asideContainer {
-    margin: 20px 5px 0 5px;
-    display: flex;
-    justify-content: space-between;
+  margin: 20px 5px 0 5px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .memoriesInfoBlock {
-    width: 377px;
+  width: 377px;
 }
 
 .nav > a {
-    text-decoration: none;
-    color: var(--colorTextDark);
+  text-decoration: none;
+  color: var(--colorTextDark);
 }
 
 .asideCompanionList {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: -23%;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -23%;
 
-    width: 250px;
+  width: 250px;
 }
 
 @media screen and (max-width: 1660px) {
-
-    .asideCompanionList {
-        display: none;
-    }
-
+  .asideCompanionList {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 790px) {
+  .asideContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 5px 0 5px;
+  }
 
-    .asideContainer {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        margin: 20px 5px 0 5px;
-    }
-
-    .memoriesInfoBlock {
-       margin: 10px 0;
-    }
-
+  .memoriesInfoBlock {
+    margin: 10px 0;
+  }
 }

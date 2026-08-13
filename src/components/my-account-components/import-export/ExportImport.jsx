@@ -1,11 +1,11 @@
 import DataManager from "./DataManager.jsx";
 
 function ExportImport() {
-    return (
-        <>
-            <DataManager/>
-        </>
-    )
+  return (
+    <>
+      <DataManager />
+    </>
+  );
 }
 
 export default ExportImport;

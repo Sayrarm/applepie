@@ -1,20 +1,20 @@
 .title {
-    font-size: 16px;
-    color: var(--a);
+  font-size: 16px;
+  color: var(--a);
 }
 
 .nav {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .collapse :global(.ant-collapse-header) {
-    color: var(--colorTextDark) !important;
-    font-size: 16px !important;
-    font-weight: bold !important;
+  color: var(--colorTextDark) !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
 }
 
 .collapse :global(.ant-collapse-header) {
-    align-items: center !important;
+  align-items: center !important;
 }

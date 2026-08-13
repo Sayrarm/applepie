@@ -1,5 +1,5 @@
 export const wuData = [
-    {
+  {
     id: 11,
     link: "longly-flame",
     serialNumber: "01",
@@ -15,13 +15,13 @@ Wiping away her tears, Sienna puts down the cup, gently pushing the box toward Z
 Zayne's expression becomes more solemn. After a while, he nods, opens the drawer closest to him, and puts the box inside. Sienna bows and says, "Thank you."
 As she prepares to leave, she glances at the swaying tree branches outside. "William told me that you and Dr. Noah would return to the university together every year during first- year admissions. He was always too busy to go... Zayne, if you see Dr. Noah this year, please tell him William said hi."
 `,
-},
-    {
-        id: 12,
-        link: "longly-flame",
-        serialNumber: "02",
-        subtitle: "Review",
-        content: `
+  },
+  {
+    id: 12,
+    link: "longly-flame",
+    serialNumber: "02",
+    subtitle: "Review",
+    content: `
 On the first day of school, Dr. Noah is already waiting at the entrance to Skyhaven University. The soon-to-be-retired professor stands as straight as a pine tree.
 "Good morning, Dr. Noah."
 At Zayne's greeting, Dr. Noah smiles. He turns and pats Zayne's shoulder. "Well, it's just the two of us this year. Will was too busy, and now you are too. I wonder who'll come with me next year."
@@ -44,13 +44,13 @@ Zayne frowns, a little-exasperated. "These kinds of unscientific rumors are ever
 "Indeed," Dr. Noah says. His gaze lingers on Zayne for a moment before he chuckles. "l wonder who started it."
 
 `,
-    },
-    {
-        id: 13,
-        link: "longly-flame",
-        serialNumber: "03",
-        subtitle: "Heart",
-        content: `
+  },
+  {
+    id: 13,
+    link: "longly-flame",
+    serialNumber: "03",
+    subtitle: "Heart",
+    content: `
 It was probably in the year 2040, when the main cafeteria of the university had just been renovated.
 Dr. Noah got his soup and chose a place to sit. His phone vibrated twice. It was a message from the dean of the medical school. "l read the report Zayne submitted. The theoretical model is quite good. A lot of students have tried to explore the uses of Protocores before, but their ideas were limited by the methods. They couldn't fully understand it either. I can't say for sure that Zayne will make progress, but his report makes me feel this approach is worth trying."
 Then, there was another message. "Your student has great ideas and seems to be quite bold."
@@ -94,13 +94,13 @@ Dr. Noah kind of expected that. He stopped walking and turned to look at his stu
 "l don't want to be incapable of doing anything again when I become a threat to her."
 
 `,
-    },
-    {
-        id: 14,
-        link: "longly-flame",
-        serialNumber: "04",
-        subtitle: "Oath",
-        content: `
+  },
+  {
+    id: 14,
+    link: "longly-flame",
+    serialNumber: "04",
+    subtitle: "Oath",
+    content: `
 A few days later, Dr. Noah received a call from the dean of the medical school. He sounded displeased.
 He massaged his temples as he went to the dean's office. As soon as he opened the door, he heard a quiet voice ask, "Why did you destroy your part of the experimental data, Zayne stood in the middle of the room, silent and expressionless.
 "Sure, it doesn't affect others. But it could've helped this project achieve its purpose faster." The dean stepped closer to Zayne, his fingers tapping on the desk. There was more frustration than anger in his voice, the kind that came from a fellow researcher. "l remember you worked hard in the lab for weeks. Did you think about how erasing your data means all your efforts have gone to waste? I know it wasn't an accident. Explain yourself."
@@ -118,13 +118,13 @@ To be more precise, it looked like a human heart, beating and growing out of bla
 
 
 `,
-        },
-    {
-        id: 15,
-        link: "longly-flame",
-        serialNumber: "05",
-        subtitle: "Trek",
-        content: `
+  },
+  {
+    id: 15,
+    link: "longly-flame",
+    serialNumber: "05",
+    subtitle: "Trek",
+    content: `
 Dr. Noah's thoughts return to the autumn of 2047. The students, having just attended the first-year oath ceremony, finish their meals and are about to attend their first class at Skyhaven University's School of Medicine. He and Zayne have also finished eating and are
 taking their trays back.
 Still savoring his meal, Dr. Noah walks out of the cafeteria with Zayne. "The sweet and sour ribs this year aren't great. But no matter how bad the food is, I always want to eat here
@@ -144,13 +144,13 @@ Perhaps the path the young man walks has only heavy snow and level ground. He's 
 
 
 `,
-    },
-    {
-        id: 21,
-        link: "snowy-stairs",
-        serialNumber: "01",
-        subtitle: "Die In Spring",
-        content: `
+  },
+  {
+    id: 21,
+    link: "snowy-stairs",
+    serialNumber: "01",
+    subtitle: "Die In Spring",
+    content: `
 "It doesn't matter if the annual salary is in the millions or if the research lab is top-notch Without me, Carter, could Xander Sciences have come this far? What truly drives the development of science is not experiments, but ideas! I'm such a person, and so is Zayne That's why you need him, right?"
 Laughter echoes in the conference room Carter stands up, leans on the table, and tosses the contract back to the executives. "If the medical genius Zayne valued these things. why would he accept Akso Hospital's invitation? Can a hospital offer more than our research institute?"
 "What do you suggest, Dr. Carter?"
@@ -173,13 +173,13 @@ He casually joins in on the conversation. Zayne looks up, his softened gaze turn
 "Death is part of life. We can't change that."
 
 `,
-    },
-    {
-        id: 22,
-        link: "snowy-stairs",
-        serialNumber: "02",
-        subtitle: "Yesterday Once More",
-        content: `
+  },
+  {
+    id: 22,
+    link: "snowy-stairs",
+    serialNumber: "02",
+    subtitle: "Yesterday Once More",
+    content: `
 "You're still cold-hearted, Zayne. The dog also counts as a life, and the poor kid is heartbroken."
 Carter follows Zayne to the restaurant they visited all those years ago, which is now a fast-food restaurant.
 He squints and looks around as if admiring its rebirth. "If someone wants a life to continue, how would you know if you can't bring it back? Shouldn't you try first?"
@@ -198,13 +198,13 @@ Carter laughs again. "Dr. Noah thinks highly of you, you know. He would mention 
 Eating a spoonful of his hot and spicy soup, he continues, "You may not like Xander Sciences, but the patient is innocent. Just like that dead dog. He also has families waiting for them. Take a look, Dr. Zayne. It won't violate your medical ethics."
 
 `,
-    },
-    {
-        id: 23,
-        link: "snowy-stairs",
-        serialNumber: "03",
-        subtitle: "Undying Tree",
-        content: `
+  },
+  {
+    id: 23,
+    link: "snowy-stairs",
+    serialNumber: "03",
+    subtitle: "Undying Tree",
+    content: `
 The person Carter has been waiting for still hasn't stepped through the doors of Xander Sciences even after Cabin 607's patient is brought into the operating room. Five hours later, the less-than-successful surgery forced him to confront the gap between him and a genius once more.
 They worked on the theoretical model of this research back in school. He even outperformed Zayne on this front. Yet when it comes to applying it, things never go smoothly.
 Where does he fall short compared to Zayne? He desperately wants to know what Zayne discovered and why he stopped researching it.
@@ -232,13 +232,13 @@ Carter watches as Zayne walks further and further away, unmoving as always. His 
 "You're crazy."
 
         `,
-    },
-    {
-        id: 24,
-        link: "snowy-stairs",
-        serialNumber: "04",
-        subtitle: "Gone",
-        content: `
+  },
+  {
+    id: 24,
+    link: "snowy-stairs",
+    serialNumber: "04",
+    subtitle: "Gone",
+    content: `
 After leaving Cabin 607, Zayne walks to the elevator. The sound of rolling wheels comes from an unassuming door next to him Through the small window, he can see a hallway. A metal cart used for waste disposal passes by. There's a lifeless hand poking out from under the white cloth.
 "Make way."
 A simple-looking couple blocks the cart.
@@ -258,13 +258,13 @@ On the screen, Zayne slowly turns to the camera. Unfortunately, he's just too fa
 "My perspective hasn't changed. We will face death eventually, one way or another." Then Zayne glances at the couple. "Just not like this."
 
 `,
-    },
-    {
-        id: 25,
-        link: "snowy-stairs",
-        serialNumber: "05",
-        subtitle: "Snow Depth",
-        content: `
+  },
+  {
+    id: 25,
+    link: "snowy-stairs",
+    serialNumber: "05",
+    subtitle: "Snow Depth",
+    content: `
 A few days later, Zayne officially joins Akso's Evol-Cardiac Medical Research Lab as its principal investigator.
 The night before, Carter sent him a congratulatory message and told him about the death of the patient in Cabin 607.
 "His name was Felix, only 45 years old. He helped a lot of poor students during his lifetime, giving them a comfortable and affluent life. He also allowed them to participate in our great experiment near the end of their lives. What a shame. Despite Xander Sciences sparing no expense to keep him alive, he still passed away after two years. But don't you think this is just the beginning?" Zayne doesn't reply.
@@ -299,13 +299,13 @@ And before the storm arrives, he only hopes he can walk a little further on this
 He could also hold her hand and resist the avalanche-like onslaught of selfish wishes together.
      
 `,
-},
-    {
-        id: 31,
-        link: "bouquets-and-dirges",
-        serialNumber: "01",
-        subtitle: "Emerald Vines",
-        content: `
+  },
+  {
+    id: 31,
+    link: "bouquets-and-dirges",
+    serialNumber: "01",
+    subtitle: "Emerald Vines",
+    content: `
 "This one is for Talia."
 On the trellis are emerald-colored vines.
 Rafayel holds one of them. Soon, this garden full of exotic plants will be the place where Talia and her lover will hold their wedding.
@@ -342,13 +342,13 @@ He points out a few modifications about the gemstone setting to Rafayel. "You pu
 Rafayel lowers his gaze and doesn't reply.
 Charles thinks he's maybe thinking about his lover. Sensing that Rafayel has no intention of responding, he changes the conversation topic to the necklace's color scheme.
         `,
-    },
-    {
-        id: 32,
-        link: "bouquets-and-dirges",
-        serialNumber: "02",
-        subtitle: "Wedding",
-        content: `
+  },
+  {
+    id: 32,
+    link: "bouquets-and-dirges",
+    serialNumber: "02",
+    subtitle: "Wedding",
+    content: `
 Passing through the archway decorated with emerald vines, Rafayel reaches the central fountain. The relaxed atmosphere in the garden makes him sigh, even though it's what he had expected.
 He picked out two suits for today. But after a few minutes, he ended up not wearing either. Instead, he chose comfortable, casual clothes suitable for dancing, which turned out to be the best choice. If Rafayel wore a suit, he would've been teased by Talia, the same person who's wearing a simple dress and dancing barefoot on the grass.
 "He's too plain. If he fell into a pond, let alone the sea, no one would be able to find him..."
@@ -372,13 +372,13 @@ The light in Rafayel's eyes dims at her last question.
 He's silent for a while. Then he takes off the boutonniere from his chest, places it on the table, and turns to leave the bustling scenery that doesn't belong to him.
 "No."
         `,
-    },
-    {
-        id: 33,
-        link: "bouquets-and-dirges",
-        serialNumber: "03",
-        subtitle: "Gardenia",
-        content: `
+  },
+  {
+    id: 33,
+    link: "bouquets-and-dirges",
+    serialNumber: "03",
+    subtitle: "Gardenia",
+    content: `
 "Freedom, happiness, and rebirth."
 Charles hangs the shovel back on the tool board, nodding at the light-yellow gardenia Rafayel has been staring at. "That's what it means in the language of flowers. Are you giving it to someone?"
 "A relative's daughter." Rafayel stands under the courtyard door's eaves, tilting his head to observe the flower's petals. "Can you tell me what it means again?"
@@ -388,13 +388,13 @@ Charles hangs the shovel back on the tool board, nodding at the light-yellow gar
 Charles stops counting his tools and makes a mistake on his paper. "Wouldn't that be a bit...".
 "It's fine," Rafayel says. "Based on what you told me, it's suitable for a funeral too."
         `,
-    },
-    {
-        id: 34,
-        link: "bouquets-and-dirges",
-        serialNumber: "04",
-        subtitle: "Lament",
-        content: `
+  },
+  {
+    id: 34,
+    link: "bouquets-and-dirges",
+    serialNumber: "04",
+    subtitle: "Lament",
+    content: `
 Rafayel crosses the courtyard as it's bathed in a golden glow. He walks through the corridor where Raymond's glorious deeds are being played on a loop on a digital screen. Then, he arrives at Raymond's house.
 Raymond's funeral is being held in the living room. At the entrance, the butler mechanically takes the condolence money from the mourners. He looks stiffly and professionally ahead until Rafayel passes him He narrows his eyes and quickly sizes Rafayel up, seemingly surprised by his presence. Rafayel ignores these malicious glances and walks straight to the center of the hall where the glass fish tank is placed. He pauses for a second or two in front of the mermaid skeleton inside, then turns to Raymond's coffin and stands with the others.
 "Mom, this is so boring. We were supposed to be on vacation in the Arctic!"
@@ -414,13 +414,13 @@ Like sharks smelling blood in the water, the reporters' cameras instantly surrou
 How sad... With her son dead, the anchor that held her up was taken by a dark tide.
 Rafayel calmly looks around the room full of cameras and leaves.
         `,
-    },
-    {
-        id: 35,
-        link: "bouquets-and-dirges",
-        serialNumber: "05",
-        subtitle: "Bouquet",
-        content: `
+  },
+  {
+    id: 35,
+    link: "bouquets-and-dirges",
+    serialNumber: "05",
+    subtitle: "Bouquet",
+    content: `
 Another week passes. Rafayel slips away from his uninspiring new work and Thomas's repeated nagging to visit Talia in a small house in Verona. Talia is admiring a dress. It's one among countless other dresses that her new husband had designed for her. It's entirely black with just a stroke of white. Talia points at the black part of the dress. 
 "He said this is him." Then she points at the white. "And this is me. What do you think? Interesting, right?"
 Rafayel pours himself a glass of water and takes a sip without looking. "Has he ever designed a wedding dress?"
@@ -432,13 +432,13 @@ When Rafayel leaves, Talia tosses him a small bouquet of flowers. He turns and c
 On his way back, he sees many familiar faces among the Verona street performers. Those people stand amidst music, color, and dancing bubbles. They smile at him. Rafayel remembers what Talia said at the wedding. Everyone was looking for an anchor. It's why they're still here.
 He waves back, hoping they can make their dream come true. Then he turns around and goes home.
         `,
-    },
-    {
-        id: 36,
-        link: "bouquets-and-dirges",
-        serialNumber: "06",
-        subtitle: "Gloriosa",
-        content: `
+  },
+  {
+    id: 36,
+    link: "bouquets-and-dirges",
+    serialNumber: "06",
+    subtitle: "Gloriosa",
+    content: `
 "Are you tired from painting? You don't look so good." Charles wraps up the fiery flame lilies Rafayel chose and hands them over. "Are these also a gift? I think they suit you more." "Great." Rafayel takes the bouquet. "I'm thinking of giving them to someone."
 "Are you giving yourself away?"
 Rafayel never mentioned it, but Charles had a hunch a long time ago. There must be
@@ -452,13 +452,13 @@ He remembers the question Talia once asked and avoids the underlying meaning. Ca
 Under the night sky, the black waves haven't fully rolled in. For now, he still has a chance to get a good sleep.
 Until he must face the never-ending tsunami in his dreams alone.
         `,
-    },
-    {
-        id: 41,
-        link: "from-the-stars",
-        serialNumber: "01",
-        subtitle: "Sweeties",
-        content: `
+  },
+  {
+    id: 41,
+    link: "from-the-stars",
+    serialNumber: "01",
+    subtitle: "Sweeties",
+    content: `
 2033. Summer.
 "One salted egg yolk cheesecake and one chocolate chiffon cake."
 Jeremiah, standing by the counter of Sweeties Cake Shop, leans slightly forward. His bright eyes follow the girl behind the counter. 
@@ -475,13 +475,13 @@ Ding ding ding. The door of the cake shop closes. Xavier, who had been waiting f
 Xavier raises an eyebrow. Before he can say the words Jeremiah knows is coming, Jeremiah quickly pats his shoulder. "Come on, teach me how to make some Earth dishes. You've been researching recipes recently, right?"
 
         `,
-    },
-    {
-        id: 42,
-        link: "from-the-stars",
-        serialNumber: "02",
-        subtitle: "Home",
-        content: `
+  },
+  {
+    id: 42,
+    link: "from-the-stars",
+    serialNumber: "02",
+    subtitle: "Home",
+    content: `
 "Bella loves marigolds. I want her to see them when she comes over for dinner," Jeremiah says, holding a vase as he passes by Xavier. He peeks out from behind the orange blossoms." Where do you think I should put it? At the door, by the dinner table, or on the balcony?" After being asked the same thing for the 23rd time, Xavier glances at the door adorned with plants, then at the dinner table surrounded by fresh flowers, and finally at the balcony that can only be described as a sea of flowers. "I think there's no space."
 "Really?"
 Baffled, Jeremiah looks around the house he rented a week ago. "I didn't think it was this small when I saw it."
@@ -516,13 +516,13 @@ The radio behind Jeremiah switches from its regular program to a news broadcast.
 He turns off the TV and walks onto the flower filled balcony. There's a tranquil sunset, no monsters, no fluctuations, and no need to fight in the cosmos... Living like this is the reason why many people left the Backtrackers Maybe those who left just missed home too much.
 
         `,
-    },
-    {
-        id: 43,
-        link: "from-the-stars",
-        serialNumber: "03",
-        subtitle: "Waterfall Inside Forest",
-        content: `
+  },
+  {
+    id: 43,
+    link: "from-the-stars",
+    serialNumber: "03",
+    subtitle: "Waterfall Inside Forest",
+    content: `
 After leaving Jeremiah's fabricated "home,' Xavier walks under the moonlight to a secluded forest on the city outskirts. Behind the dense forest and the signal-blocking zone is the largest cosmic signal transmission and reception station. It was secretly built by Linkon City.
 He could technically teleport to any place he had been before using his Evol, but he always slows down when passing this signal station. The blue light on the top of the tower flickers, almost blending in with the starry sky. Apart from that, most of the buildings in the base aren't tall. They're sparsely scattered in the forest clearing. Occasionally, maintenance staff would walk around, their whispers echoing in the distance.
 These faint sounds are as comforting as the cosmic white noise they heard when they   traveled through unfamiliar galaxies. His mind wanders back to the seemingly endless journey back when he slept in the hibernation pod.
@@ -538,13 +538,13 @@ He collects his scattered thoughts and opens his eyes to a cascading waterfall o
 He raises his hand, as though he wants to catch them. If time really doesn't exist, then within this sea of stars before him... Could he see Philos? And his and her little planet?
 
         `,
-    },
-    {
-        id: 44,
-        link: "from-the-stars",
-        serialNumber: "04",
-        subtitle: "Catastrophe",
-        content: `
+  },
+  {
+    id: 44,
+    link: "from-the-stars",
+    serialNumber: "04",
+    subtitle: "Catastrophe",
+    content: `
 A year passes. Jeremiah still hasn't found a suitable power source to start the spaceship The rented "home" gradually became his real home.
 After arriving in this era, several unwritten rules were formed among the Backtrackers, such as changing residences regularly and avoiding unnecessary contact. After obtaining the identity of a "normal person," Jeremiah Ioses all contact with Xavier. He did look for him many times privately, but in a way, he feels as though this fruitless search might be better. Whether it's because of guilt or not wanting another traitor like Isaiah to trouble Xavier, he doesn't know.
 Besides, with his current appearance-gloves and an apron--he really wouldn't know what to say if he were to meet his former captain. 
@@ -563,13 +563,13 @@ The disaster lasted much longer than anyone imagined. On January 1, 2035, the Hu
 The newly rebuilt Azure Square broadcasts this historical moment on a giant holographic screen. Jeremiah is in the crowd when it plays It feels as if an ancient spaceship has finally landed, and the real Traceback mission has just begun.
 
         `,
-    },
-    {
-        id: 45,
-        link: "from-the-stars",
-        serialNumber: "05",
-        subtitle: "Philo",
-        content: `
+  },
+  {
+    id: 45,
+    link: "from-the-stars",
+    serialNumber: "05",
+    subtitle: "Philo",
+    content: `
 In 2037, Linkon City mostly rebuilt itself at an almost incredible speed. After mastering the purification and use of Protocore Energy, it's even more prosperous than before the disaster.
 Xavier walks around a corner and is hit by a floral scent. He looks up to see a flower shop called Philo. Its golden marigolds spill out onto the street.
 It's all very familiar. He vaguely remembers this used to be a cake shop.
@@ -598,13 +598,13 @@ Maybe, this time, he can settle down.
 If possible, he wants a place where he can see the stars.
 
         `,
-    },
-    {
-        id: 51,
-        link: "long-lost-treasures",
-        serialNumber: "01",
-        subtitle: "Submerged Rock",
-        content: `
+  },
+  {
+    id: 51,
+    link: "long-lost-treasures",
+    serialNumber: "01",
+    subtitle: "Submerged Rock",
+    content: `
 "Raincoat" is a little restless.
 He parks the car near an abandoned dock and gets out to open the trunk. An unconscious, frail man, tied up in the fetal position, lies inside. He's none other than Tony, an up-and. coming director who's currently the talk of the town in Linkon City. He's worth billions and has mysteriously disappeared while writing his next movie script.
 He had set a limit for himself when he became a "white glove" for the Ever Group: Never target public figures. This had kept him hidden for many years. 
@@ -617,13 +617,13 @@ But…
 An idea springs into his mind. He plays the first audio file.
 
         `,
-    },
-    {
-        id: 52,
-        link: "long-lost-treasures",
-        serialNumber: "02",
-        subtitle: "Audio File No.1: Mo Art Studio",
-        content: `
+  },
+  {
+    id: 52,
+    link: "long-lost-treasures",
+    serialNumber: "02",
+    subtitle: "Audio File No.1: Mo Art Studio",
+    content: `
 05:13
 "...That'd be great if you don't mind Recording is a habit of mine I picked up at work. It's hard to keep up with the conversation if you only take notes. Did Thomas tell you? The Deepspace Academy introduced me before. Our team is preparing a fantasy-themed film. We want to use Lemuria as the setting. They said you're an expert in Lemuria, and you just returned from a trip."
 "Deepspace Academy thinks too highly of me. I'm just a painter. I don't know anything about Lemuria."
@@ -631,13 +631,13 @@ An idea springs into his mind. He plays the first audio file.
 "Those are just normal pieces. Forget about them. Anyway, speaking of the Deepspace Academy, I heard they recently organized an archaeological team to find the ruins of Lemuria. Why don'tcha ask them? They should know more than me. They might not tell you much, though. I heard things didn't go too well for them. Anywaaay, I have stuff to do, so I can't see you off. Bye, Tony."
 
         `,
-    },
-    {
-        id: 53,
-        link: "long-lost-treasures",
-        serialNumber: "03",
-        subtitle: "Audio File No.2: Disappearance",
-        content: `
+  },
+  {
+    id: 53,
+    link: "long-lost-treasures",
+    serialNumber: "03",
+    subtitle: "Audio File No.2: Disappearance",
+    content: `
 10:41
 "The archaeological team? Ah, you've got the wrong person, Director Tony. I'm just a handyman. I stayed on the ship and organized the relics during the exploration. I never dived! I really don't know the specifics, and I can only tell you what I saw. The day our ship arrived, on uh, the 20th, I think. Ms. Eleanor was the team leader. Her, Fred, Yennifer, and Professor Sean all went down in a submersible."
 "We set up underwater archaeological bases before, the kind we can stay in for several days. Communication with the surface had always been fine. The plan was to finish and come back on the 4th. But you wouldn't have guessed what happened! The submersible didn't come back until the 11th! A whole week you see! I wanted to know what happened, but the Deepspace Academy kept everything all hush-hush. Everyone thought that was the end of it. But the day after, I heard... Come closer, Tony. We gotta keep our voices down... heard Ms. Eleanor and Fred left the Deepspace Academy after an argument!"
@@ -648,13 +648,13 @@ New Audio Clip: Memo 1
 "I was just looking for source material for the film. I didn't expect to uncover mysterious events involving the archaeological team. I pulled some favors and looked into it. Turns out Eleanor, Fred, and Yennifer didn't just disappear. They vanished off the face of the Earth. It could be because I don't have any investigative skills, but none of them have been home. They haven't responded to messages or answered any calls. No one's seen them leave their house. It's all too suspicious... Creating a Lemurian mystery movie might be better. Tsk, missing archaeologists, deleted underwater footage, secrets of the ocean floor... That's quite a Synopsis. If I can find out more, I'll have a direction for my script. I need to contact Professor Sean as soon as possible. If he's gone, I'll lose all my leads."
 
         `,
-    },
-    {
-        id: 54,
-        link: "long-lost-treasures",
-        serialNumber: "04",
-        subtitle: "Audio File No.3: Blue Fish",
-        content: `
+  },
+  {
+    id: 54,
+    link: "long-lost-treasures",
+    serialNumber: "04",
+    subtitle: "Audio File No.3: Blue Fish",
+    content: `
 31:37
 &lt;Sound of a door opening&gt;
 "T-Tony?"
@@ -694,13 +694,13 @@ New Audio Clip: Memo 2
 "The school of blue fish... makes for a nice visual reference. Professor Sean's account does seem genuine. I don't think he was lying. But... who is this fifth person he mentioned? And what does he mean by 'dressed like us'? This is strange... Three of them are missing, and the remaining one is packing his bags and leaving. Something must have happened. At least the video is close to being restored Hopefully, I can get more from that."
 
         `,
-    },
-    {
-        id: 55,
-        link: "long-lost-treasures",
-        serialNumber: "05",
-        subtitle: "Audio File No.4: Shadow Underneath",
-        content: `
+  },
+  {
+    id: 55,
+    link: "long-lost-treasures",
+    serialNumber: "05",
+    subtitle: "Audio File No.4: Shadow Underneath",
+    content: `
 07:51
 "Hey, Tony! It's been two years since the last time we talked. You're a pretty good friend. only remembering me when you need something. On top of that, it's such a difficult task. Do you think IT guys don't have lives?"
 "Anyway, whoever deleted this video is really skilled. Do you know how long it took me to restore it? I put off three big projects, worked day and night fiddling with this camera, and only managed to restore one frame. What's with that face? One frame is my limit! The memory card was tampered with. I'm self-taught, so I have no idea how to handle such high-end tech. This is the best I can do. Here's the phone too. I restored the call history for you. Whoever had this phone before talks really loud. It hurt my ears!"
@@ -710,13 +710,13 @@ New Audio Clip: Memo 3
 "I've seen the restored footage. The fifth person who was dressed like them... It was a skeleton! I really wish it was clearer...Wait, is the skeleton holding a... weapon? It looks like a Protocore weapon! What's going on? Protocore weapons were only invented in the last decade or so... How could this one have appeared in the ruins of Lemurian? Is it possible the underwater city didn't sink naturally...? This is fantastic news! No wonder the video was deleted... Right, there's Fred's phone."
 
         `,
-    },
-    {
-        id: 56,
-        link: "long-lost-treasures",
-        serialNumber: "06",
-        subtitle: "Audio File No.5: Conflict",
-        content: `
+  },
+  {
+    id: 56,
+    link: "long-lost-treasures",
+    serialNumber: "06",
+    subtitle: "Audio File No.5: Conflict",
+    content: `
 Fredrick to Eleanor 
 09:18
 "Hello? Why aren't you answering your phone. Eleanor? I don't care what you're up to. I'm definitely leaving! Nothing ever goes well when it comes to Lemuria!"
@@ -770,13 +770,13 @@ After a few seconds, he stops as if he remembers something. He stares at the rai
 Raincoat is silent for a long time, then he removes his wrists to put the hood on, "I bought it yesterday."
 
         `,
-    },
-    {
-        id: 61,
-        link: "sealed-in-dust",
-        serialNumber: "01",
-        subtitle: "Whispers",
-        content: `
+  },
+  {
+    id: 61,
+    link: "sealed-in-dust",
+    serialNumber: "01",
+    subtitle: "Whispers",
+    content: `
 The door is slightly ajar. A young man wearing a duckbill cap snorts, pushing the door open with a finger. His steps kick up dust, and the sound of his shoes hitting the ground echoes in the empty room.
 At the window, a man in a raincoat turns his head when he hears the noise. He pulls back his pointed hood. "Long time no see. You look older now."
 "Have you gone blind as you kept an eye on Ever?" the man with a duckbill cap retorts, his voice surprisingly old-sounding compared to his appearance. He hands over a black briefcase. "Here are the goods."
@@ -784,13 +784,13 @@ An explosion site's striking scent still lingers, rushing into his nose. The man
 Four slightly yellowed pages unfold before him. They quietly tell a story from 14 years ago.
 
         `,
-    },
-    {
-        id: 62,
-        link: "sealed-in-dust",
-        serialNumber: "02",
-        subtitle: "Unicorn",
-        content: `
+  },
+  {
+    id: 62,
+    link: "sealed-in-dust",
+    serialNumber: "02",
+    subtitle: "Unicorn",
+    content: `
 Subject Anomalies Record
 Recorder:
 Josephine, Gaia Research Center, Unicorn Team, Researcher/Team Leader 
@@ -816,13 +816,13 @@ A box for collecting votes was placed in the corner of the lab. I passed by it s
 Yet despite my desire for knowledge, I still can't ignore the fact that she's a child.
 
         `,
-    },
-    {
-        id: 63,
-        link: "sealed-in-dust",
-        serialNumber: "03",
-        subtitle: "Observation Log",
-        content: `
+  },
+  {
+    id: 63,
+    link: "sealed-in-dust",
+    serialNumber: "03",
+    subtitle: "Observation Log",
+    content: `
 Observer: Josephine 
 Entry No. 1
 "Unicorn" became the child's name in various reports, replacing the cold designation of "Subject 001" (only Phil insisted on calling her "Little Bomb"). She was like a newborn creature, exploring the world every day using only primitive instincts.
@@ -841,13 +841,13 @@ However, what was more intriguing than her blank slate of an emotional state was
 With the reawakening of her consciousness, it had become stronger.
 
         `,
-    },
-    {
-        id: 64,
-        link: "sealed-in-dust",
-        serialNumber: "04",
-        subtitle: "Post-Catastrophe Journal",
-        content: `
+  },
+  {
+    id: 64,
+    link: "sealed-in-dust",
+    serialNumber: "04",
+    subtitle: "Post-Catastrophe Journal",
+    content: `
 Day 49, Post-Chronorift Catastrophe, Sunny 
 Observations on Unicorn had yet to enter Phase 6 when the Chronorift Catastrophe changed the world.
 The Gaia Research Center couldn't escape the destruction. When I was rescued from the ruins, the child was nowhere to be seen. She might have escaped when the observation unit was smashed. The Evol Police who helped in the rescue efforts said they haven't seen the child I described.
@@ -863,13 +863,13 @@ So, I took on the responsibility of a true guardian and cared for her. I don't k
 Things have started to change.
 
         `,
-    },
-    {
-        id: 65,
-        link: "sealed-in-dust",
-        serialNumber: "05",
-        subtitle: "Journal Entry 4",
-        content: `
+  },
+  {
+    id: 65,
+    link: "sealed-in-dust",
+    serialNumber: "05",
+    subtitle: "Journal Entry 4",
+    content: `
 Day 134, Post-Chronorift Catastrophe, Sunny 
 Her condition has improved a lot recently She's less likely to forget things. Perhaps it's because her condition is stabilizing. But I'm still worried and want to check her and the Aether Core. However, I'm unable to contact the researchers who knew of her existence back then, including Phil.
 Strange. Maybe Ever's research center called them, or... I don't know.
@@ -879,13 +879,13 @@ The data after the checkup shows the energy peak in her heart is only half of wh
 ...What happened to this child when she faced the Chronorift Catastrophe alone? When I subtly asked her, she just shook her head, showing neither pain nor sadness on her face. Seeing her reaction, I suddenly felt that maybe forgetting isn't such a bad thing for her.
 
         `,
-    },
-    {
-        id: 66,
-        link: "sealed-in-dust",
-        serialNumber: "06",
-        subtitle: "Dust",
-        content: `
+  },
+  {
+    id: 66,
+    link: "sealed-in-dust",
+    serialNumber: "06",
+    subtitle: "Dust",
+    content: `
 "Is this it?"
 Having gone through all the pages, the man in a raincoat appears slightly unsatisfied.
 "Don't be too greedy," the man with a duckbill cap snarled. "This is enough for you to confirm her identity and role."
@@ -908,13 +908,13 @@ Letting his lightblade serve her and becoming the strongest weapon in her hands 
 With these thoughts, the man wearing a raincoat can't help but be moved, pulling out a handkerchief to wipe the corner of his eye. Love truly is a wonderful thing.
 
         `,
-    },
-    {
-        id: 71,
-        link: "with-light",
-        serialNumber: "01",
-        subtitle: "A More Important Matter  ",
-        content: `
+  },
+  {
+    id: 71,
+    link: "with-light",
+    serialNumber: "01",
+    subtitle: "A More Important Matter  ",
+    content: `
 The office is quiet as night falls. Tara tiptoes past empty desks, her eyes drawn by the faint hum of electronics to a bunch of old monitors in the corner.
 "Nero," she whispers. "Everyone's at the team building retreat. Why don't you join them?" Tara taps the back of a monitor and leans against the window. She crosses her arms.
 After a second passes,the screen flickers as a single word is heard. "I..."
@@ -931,13 +931,13 @@ The pieces fall into place for Tara. When it comes to Nero, there's only one thi
 His unwavering worship of Lumiere, the legendary hunter.
 
         `,
-    },
-    {
-        id: 72,
-        link: "with-light",
-        serialNumber: "02",
-        subtitle: "Sleepless Friday Night",
-        content: `
+  },
+  {
+    id: 72,
+    link: "with-light",
+    serialNumber: "02",
+    subtitle: "Sleepless Friday Night",
+    content: `
 7:28 P.M.Nero slams the door to his home, turns on his computer, and rubs his hands together in anticipation. There are 32 minutes left until the Lumiere voting begins. He could easily rig the whole thing with his tech skills, but that's not how he works. Nero believes in the awesome power of light itself.
 Suddenly, a series of swooshes pierce the air. Nero jumps. It's the unmistakable ringtone from his phone--the iconic sound effect of Hunter Lux's entrance straight from Super Hunters: Hunter Lux Special. It's time to become his alter ego: the leader of Lumiere's ultimate fansite.
 "Chief! It's a disaster! The site's been hacked!" 
@@ -966,13 +966,13 @@ even close to Lumiere's signature. Check the pinned video for the full breakdown
 4:00 A.M.Nero, sporting some serious eye bags, finally catches a glimpse of dawnlight seeping through the curtains. Exhaustion crashes over him like a welcoming wave after he spent the night defending his hero. A small smile graces his lips. Justice was served.
 
         `,
-    },
-    {
-        id: 73,
-        link: "with-light",
-        serialNumber: "03",
-        subtitle: "The Introvert Bites Back",
-        content: `
+  },
+  {
+    id: 73,
+    link: "with-light",
+    serialNumber: "03",
+    subtitle: "The Introvert Bites Back",
+    content: `
 *** ***
 The Second Sin Is Pride: Ridiculous! Does Lumiere even care?
 A new day, a new sin to expose!
@@ -1021,13 +1021,13 @@ It's his constantly absent colleague from Alpha Team: Xavier.
 Nero starts piecing together a theory about this mysterious teammate... But compared to the bombshell of the seventh day, they're nothing.
 
         `,
-    },
-    {
-        id: 74,
-        link: "with-light",
-        serialNumber: "04",
-        subtitle: "Has the Light Vanished? ",
-        content: `
+  },
+  {
+    id: 74,
+    link: "with-light",
+    serialNumber: "04",
+    subtitle: "Has the Light Vanished? ",
+    content: `
 Nero stares at the screen. The words "The Seventh Sin Is Death: The light has faded" burn themselves into his retinas. This isn't the dramatic takedown he expected. It's just a few Ieft-over documents. But their content hits him hard like venom coursing through his veins. He feels nauseated as he reads them
 "...Light Evol has been detected. Evolver's Evol limit cannot be defined."
 "Any attempts to probe its limit triggers a special neck suppressor, which prevents the Evolver from using their full power."
@@ -1051,13 +1051,13 @@ Nero glares at Xavier, his gaze capable of melting glaciers. He snatches the pap
 "You... don't understand him at all."
 
         `,
-    },
-    {
-        id: 75,
-        link: "with-light",
-        serialNumber: "05",
-        subtitle: "A Little Chat",
-        content: `
+  },
+  {
+    id: 75,
+    link: "with-light",
+    serialNumber: "05",
+    subtitle: "A Little Chat",
+    content: `
 Two weeks of nail-biting anticipation finally culminate as the latest Top Ten Hunters list is released. Unsurprisingly, Lumiere reigns supreme once again, with even more votes than in previous years.
 But a new name throws a curveball. 
 QuantumSocialite rockets into tenth place and sports the official Deepspace Hunter logo instead of a personal photo. Who is this mysterious hunter? Is "he" even real? The public doesn't seem to care and showers QuantumSocialite with votes anyway.
@@ -1079,13 +1079,13 @@ Lumiere is a beacon in the darkness, guiding us to forge ahead. And I believe, w
 *** ***
 
         `,
-    },
-    {
-        id: 81,
-        link: "micro-universe",
-        serialNumber: "01",
-        subtitle: "Art Appreciation & Criticism",
-        content: `
+  },
+  {
+    id: 81,
+    link: "micro-universe",
+    serialNumber: "01",
+    subtitle: "Art Appreciation & Criticism",
+    content: `
 The Gaia Research Center looms before Michael--a hulking fortress of lead-gray concrete, its thick walls pierced only by rows of tiny, square windows.
 Michael stands in front of the iris scanner and Steps out. He takes in a breath of fresh air. He's spent half a year cooped up in this biological fortress cultivating cells
 "All the data's been uploaded? And we got a master's student this year? Nice."
@@ -1105,13 +1105,13 @@ Comment: What's the best way to skip class? Bring a cat. But honestly, who would
 Michael grins. Every comment brings back his memories of Rafayel.
 
         `,
-    },
-    {
-        id: 82,
-        link: "micro-universe",
-        serialNumber: "02",
-        subtitle: "Lesson One",
-        content: `
+  },
+  {
+    id: 82,
+    link: "micro-universe",
+    serialNumber: "02",
+    subtitle: "Lesson One",
+    content: `
 Michael noticed Rafayel after seeing one of his paintings online. He couldn't grasp it on a professional level, but the colors vibrated with a beauty he couldn't deny.
 Arriving for the first class, the room was bursting with activity. Even the stairs were packed. Rafayel stood gracefully by the podium, his voice weaving a tapestry of art appreciation and criticism.
 Still catching his breath as he had to run from the lab, Michael scanned the room and finally found a spot. "Hey, can you tell me what the third point on the slide was?"
@@ -1125,13 +1125,13 @@ In his mind, artists were enigmatic and aloof. Meanwhile, scientists were the on
 The unforgettable colors and abstract patterns echoed the playful doodles he used to create in Petri dishes.
 
         `,
-    },
-    {
-        id: 83,
-        link: "micro-universe",
-        serialNumber: "03",
-        subtitle: "True Colors",
-        content: `
+  },
+  {
+    id: 83,
+    link: "micro-universe",
+    serialNumber: "03",
+    subtitle: "True Colors",
+    content: `
 Michael initially saw Rafayel's class as a welcome break from the lab. But the day Rafayel unveiled his own work was when the art world truly opened its doors for Michael. To give students from other faculties a deeper understanding of art appreciation and criticism, Rafayel presented one of his creations and let the art students critique it. As classmates showered the piece with praise Michael felt a growing disconnect with them. Comments like "liberating yet short, separate brushstrokes," "blurred edges that hide lines and let colors flow with vibrant energy" and "like a rapid sea current capturing the fleeting interplay of light and shadow" flew over his head. He didn't understand a single bit.
 "Now let's hear from students from other faculties."
 Rafayel announced, his gaze landing on Michael. Nervous and tense, he scrambled to look for notes from the first class.
@@ -1147,13 +1147,13 @@ Laughter rippled through the classroom and washed away the tension. Michael was 
 It was a small moment. But it shattered his perception of art as this complicated, unattainable world. He saw a young boy once captivated by the vibrant colors of flowers and the diversity of animals. Now he was a young man trapped in a world of gray concrete buildings, peering under a microscope at a single color called "LCMECs."
 
         `,
-    },
-    {
-        id: 84,
-        link: "micro-universe",
-        serialNumber: "04",
-        subtitle: "Absurdity & Negative Space",
-        content: `
+  },
+  {
+    id: 84,
+    link: "micro-universe",
+    serialNumber: "04",
+    subtitle: "Absurdity & Negative Space",
+    content: `
 Rafayel's classes weren't always sunshine and rainbows. During the midterm exam, Michael got his first taste of pressure.
 It was a practical exam. Art students brought in their creations for the class to appreciate and critique.
 When the exam was announced, Michael found it intriguing. But little did he know that the intrigue was reserved for non-art students. As the comments rolled in, it became clear: art students were getting critiqued while students from other faculties were learning to appreciate.
@@ -1171,13 +1171,13 @@ Michael's brow furrowed in confusion. The student explained, "Enough abstraction
 Michael listened intently, and a bold idea for his final project blossomed in his mind.
 
         `,
-    },
-    {
-        id: 85,
-        link: "micro-universe",
-        serialNumber: "05",
-        subtitle: "Field Trip",
-        content: `
+  },
+  {
+    id: 85,
+    link: "micro-universe",
+    serialNumber: "05",
+    subtitle: "Field Trip",
+    content: `
 As the semester was near its end, Rafayel took his class on a field trip to a rural architectural gem: a place steeped in centuries of history. This small town boasted a treasure trove of well-preserved buildings, cloisters, courtyards, and halls tucked away within private homes.
 Michael always envisioned Rafayel as a product of Verona's elite art world. Yet here he was, effortlessly identifying the age of a resident's salted fish by scent and wielding a paper-cutting scissor to recreate building silhouettes. This down-to-earth side made Rafayel seem more approachable.
 With free time on his hands, Michael wandered along the towering white walls, their weathered surfaces adorned with moss.
@@ -1205,13 +1205,13 @@ It's an image of LCMECs, cells from the lab where he spends most of his days and
 Rafayel wasn't listening to him. His gaze is fixed, almost glued, to the name of that cell. Confused by the professor's intense focus, Michael racks his brain to remember the full name of the cells. LCMECs... Cardiac Microvascular Endothelial Cells. As for the first word, it was Lem-something.
 
         `,
-    },
-    {
-        id: 86,
-        link: "micro-universe",
-        serialNumber: "06",
-        subtitle: "LCMECs",
-        content: `
+  },
+  {
+    id: 86,
+    link: "micro-universe",
+    serialNumber: "06",
+    subtitle: "LCMECs",
+    content: `
 "Michael! Are you already on your way to Ever HQ? Three months in, huh? That's impressive!" The elevator doors open and reveal a familiar face. He's three months out of grad school and summer's golden grip loosens. An awkward silence hangs in the air until, like clockwork, someone pipes up.
 Michael flashes a smile. "Hey. You doing good?"
 "Ha, I can't complain! A new intern discovered a pancreatic enzyme that's almost the same color as my growth medium and swapped it. How perfect is that? The cells haven't hit the Hayflick limit yet, but I'm already feeling fried!" Realizing his voice has gotten a bit loud, he coughs and quickly switches to a hushed tone. "Listen, HQ's a jungle. Keep your head on a swivel, and don't get lost in your work like you always do."
@@ -1233,13 +1233,13 @@ He handed the cell image back to Michael. Then, he turned and walked away from t
 "Michael, if you achieve great things in biology, never forget that."
 
         `,
-    },
-    {
-        id: 91,
-        link: "no-morning",
-        serialNumber: "01",
-        subtitle: "Crush",
-        content: `
+  },
+  {
+    id: 91,
+    link: "no-morning",
+    serialNumber: "01",
+    subtitle: "Crush",
+    content: `
 "Does my baby face make me look a bit green?"
 Yvonne pushes a patient to radiology when she spots Greyson muttering to himself, his image reflected in the elevator's polished steel.
 "Thank goodness Dr. Zayne's out. Otherwise, you'd be in for a lecture."
@@ -1268,13 +1268,13 @@ Greyson quickly turns and rushes to the elevator. His body is already inside, bu
 Greyson's heart sinks. He purses his lips in disappointment and lets out a sigh as the elevator door closes.
 
         `,
-    },
-    {
-        id: 92,
-        link: "no-morning",
-        serialNumber: "02",
-        subtitle: "Sustenance",
-        content: `
+  },
+  {
+    id: 92,
+    link: "no-morning",
+    serialNumber: "02",
+    subtitle: "Sustenance",
+    content: `
 By the time Greyson reaches the conference room, Dr. Zayne is reviewing a case file with Dr. Wu from the Division of Evol and Protocore Medical Technology. Just as Greyson is about to greet him, Dr. Zayne stands up and leaves the room. A trail of icy air is left behind.
 "Stop by my office after the meeting." Greyson nods and finds a seat. It's just a regular briefing about the annual event where the Hunters Association's Health Center partners with Akso Hospital to conduct comprehensive medical examinations on hunters. It ensures the effects of Metaflux and Protocore Energy on their bodies remain within manageable limits. Greyson's mind, however, drifts elsewhere. It replays a scene where an injured person's heartbeat is brought back to life in his hands, and the girl smiles at him against the backlight. The Wanderers behind her burst like fireworks, their light echoing the blossoming warmth in his heart.
 His phone buzzes, pulling him back to reality Yvonne had sent him a message.
@@ -1315,13 +1315,13 @@ Guessing question time is over, Greyson turns back around and exhales.
 There has to be more to it than just telling jokes if Dr. Zayne's able to charm Miss Hunter.
 
         `,
-    },
-    {
-        id: 93,
-        link: "no-morning",
-        serialNumber: "03",
-        subtitle: "In The Shadows",
-        content: `
+  },
+  {
+    id: 93,
+    link: "no-morning",
+    serialNumber: "03",
+    subtitle: "In The Shadows",
+    content: `
 The next morning, Greyson hums cheerfully as he enters the cafeteria with his breakfast tray. Yvonne, in the middle of biting a piece of bread, looks up in surprise. Today, Greyson is wearing a sharp, navy-blue three-piece suit with a tie. His white lab coat is nowhere to be found.
 "Ah, men." Swallowing her food, Yvonne speaks as if she isn't new to the games that guys play.
 "It's better to be prepared and not panic. That's key, right? What if she notices me during the medical examination today?" Greyson digs into his yogurt.
@@ -1350,13 +1350,13 @@ They're ordinary surgeon's hands, and they don't have a strong Evol at their dis
 The tent becomes colder. Greyson closes his eyes and surrenders to the encroaching darkness.
 
         `,
-    },
-    {
-        id: 94,
-        link: "no-morning",
-        serialNumber: "04",
-        subtitle: "Snow Velvet",
-        content: `
+  },
+  {
+    id: 94,
+    link: "no-morning",
+    serialNumber: "04",
+    subtitle: "Snow Velvet",
+    content: `
 The emergency rescue operation throws the Arctic Hunter's surgeries back two days. Thankfully, everything went smoothly. The next day, Greyson follows Zayne. They're going to do a check-up on the hunter. Restless after complaining about overkill treatment. the patient is now stuck in bed. He's bored out of his mind as daily status updates for Mt Eternal's Protofield appear on the projector. As Zayne and Greyson enter the room, he throws out a casual question. "Can I still be a hunter?"
 It catches Greyson off guard. He throws a worried glance at the sagging blanket that covers the hunter's leg. He looks to Zayne for an answer.
 "Yes," Zayne replies. "As long as you promise to avoid getting injured again."
@@ -1388,13 +1388,13 @@ Passing by Zayne's office, the hunter stops in his tracks.
 "Of course I do. It's rare stuff even in the Arctic. It only grows on the northern cliffs of Mt. Eternal. Not just anyone can go there, but that's where you can find the cleanest snow. Something's been happening in the mountains lately, though... The wildlife is practically extinct. It makes me wonder if Glacier-face got some kind of hobby for saving pretty things."
 
         `,
-    },
-    {
-        id: 95,
-        link: "no-morning",
-        serialNumber: "05",
-        subtitle: "A Long Night",
-        content: `
+  },
+  {
+    id: 95,
+    link: "no-morning",
+    serialNumber: "05",
+    subtitle: "A Long Night",
+    content: `
 After the Arctic Hunter was discharged, this year's hunter data from the medical examination has been finally analyzed.
 Zayne assigns Greyson the task of writing the report for the hunters' heart health. Buried in the data, Greyson discovers a worrying trend. A large number of hunters are showing signs of Type-Y Protocore Syndrome, more than the usual amount seen in previous years.
 This syndrome involves Metaflux that hides in various organs and systems, with a long latency period and slow progression. By the time it's detected, it's often too late. There is currently no known cure.
@@ -1422,13 +1422,13 @@ Zayne offers a knowing smile. They both understand the unspoken question of what
 It's an unanswered question that hangs in the air. Zayne can't help but glance at the desk. A few, fragile petals of the snow velvet fall, only with its tiny heart still desperately clinging to life amidst the black ice crystals.
 
         `,
-    },
-    {
-        id: 101,
-        link: "mischief",
-        serialNumber: "01",
-        subtitle: "Rule No. 1",
-        content: `
+  },
+  {
+    id: 101,
+    link: "mischief",
+    serialNumber: "01",
+    subtitle: "Rule No. 1",
+    content: `
 2046, Early Spring
 "Good evening, listeners. We're talking to you live on Combat Zone FM. I'm your host..."
 The armored truck veers onto a deserted road under the moonlight. The signal fades in and out, and the vehicle's radio crackles. "Let's talk about ambushes tonight."
@@ -1500,13 +1500,13 @@ In the depths of night, the two brothers walk side by side down a path that lead
 "I hope Sylus turns out to be an interesting guy."
 
         `,
-    },
-    {
-        id: 102,
-        link: "mischief",
-        serialNumber: "02",
-        subtitle: "Rumor",
-        content: `
+  },
+  {
+    id: 102,
+    link: "mischief",
+    serialNumber: "02",
+    subtitle: "Rumor",
+    content: `
 Here's the second rule of a successful ambush: Know your enemy.
 It's been fourteen days since Luke and Kieran arrived in the N109 Zone. For the past two weeks, they heard all sorts of rumors about Sylus.
 "I heard Sylus has been in cahoots with Wanderers for ages. He's just waiting for the right moment to blow up the N109 Zone."
@@ -1550,13 +1550,13 @@ No allies dare to stand beside him, and no enemies can stand against him. Just l
 "No one," Luke and Kieran declare in unison The thought of Sylus living such a tedious life for a long time while still having countless years ahead of him stirs a flicker of pity in their hearts. Then again, if they kill him, that's a different story.
 
         `,
-    },
-    {
-        id: 103,
-        link: "mischief",
-        serialNumber: "03",
-        subtitle: "Trick",
-        content: `
+  },
+  {
+    id: 103,
+    link: "mischief",
+    serialNumber: "03",
+    subtitle: "Trick",
+    content: `
 This is the third rule of a successful ambush: Exploit your advantage when the enemy least expects it.
 For Luke and Kieran, their advantage lies in their "sameness." Identical faces, identical builds, identical movements – they're almost the same person.
 It's enough to lower their opponent's guard and make them believe there's only one person.
@@ -1610,13 +1610,13 @@ he said?"
 "He called us boring...!"
 
         `,
-    },
-    {
-        id: 104,
-        link: "mischief",
-        serialNumber: "04",
-        subtitle: "Thrill Seeker",
-        content: `
+  },
+  {
+    id: 104,
+    link: "mischief",
+    serialNumber: "04",
+    subtitle: "Thrill Seeker",
+    content: `
 The fighting arena in the N109 Zone lurks behind the facade of a five-story building with neon lights. An oversized ring that surpasses expectations will greet you once you enter: Spectator seats climb the surrounding walls, and the highest one is perched almost perpendicular to the ring. At first glance, it looks like a fortress or lair of some ferocious beast. Noticing the members of Onychinus frequenting the place lately, Luke and Kieran tear down a recruitment flyer plastered outside and knock on the door.
 "Get lost! We're not hiring. You're as skinny as a rail. I bet you two would die a hundred times before landing a single punch!"
 The door is slammed shut. The burly arena owner glares at them through a small window before stomping downstairs.
@@ -1670,13 +1670,13 @@ The sharp sound of crystals piercing skin fills the air. The twin holding the kn
 In an instant, the other twin, seemingly unharmed, also falls to his knees because of the unbearable agony. Their show falls apart and is replaced by the onset of the transformation.
 
         `,
-    },
-    {
-        id: 105,
-        link: "mischief",
-        serialNumber: "05",
-        subtitle: "Thrill Seeker",
-        content: `
+  },
+  {
+    id: 105,
+    link: "mischief",
+    serialNumber: "05",
+    subtitle: "Thrill Seeker",
+    content: `
 The knife tumbles to the ground and stops at Sylus's feet.
 He bends down to pick it up. A crystal-covered hand trembles as it desperately reaches for the blade.
 Sylus smirks and hands it over. The person before him musters all his strength to aim the knife at his heart. He tries to push it in...
@@ -1713,13 +1713,13 @@ A ringing persists in Luke and Kieran's ears, but the pain vanishes in a heartbe
 "Staying alive-now that's the real proof of strength.
 
         `,
-    },
-    {
-        id: 106,
-        link: "mischief",
-        serialNumber: "06",
-        subtitle: "Twins",
-        content: `
+  },
+  {
+    id: 106,
+    link: "mischief",
+    serialNumber: "06",
+    subtitle: "Twins",
+    content: `
 "Boss, we're not here to kill you this time."
 Two weeks have passed, and Luke and Kieran once again stand before Sylus. They've fully recovered. One was never injured in the first place, and the other's wounds—a result of gouging out the crystals—have healed. There are only grotesque scars on his face and body. Otherwise, they appear healthy.
 "We genuinely want to be your followers!"
@@ -1747,13 +1747,13 @@ It's noon. The two young men walk side by side down a path that shuns all light.
 "Yeah, I don't think so either."
 
         `,
-    },
-    {
-        id: 111,
-        link: "frontline-hunter",
-        serialNumber: "01",
-        subtitle: "Hunter Dispatch Center ",
-        content: `
+  },
+  {
+    id: 111,
+    link: "frontline-hunter",
+    serialNumber: "01",
+    subtitle: "Hunter Dispatch Center ",
+    content: `
 Beep...Beep.
 It's the middle of the night at the Hunters Association.
 In the center of the room, a holographic control console displays a 3D map of Linkon City. A blinking red dot keeps flashing at one spot.
@@ -1777,13 +1777,13 @@ Reporting Dispatcher: Colin
 That's a typical day at the Linkon Hunter Dispatch Center.
 
         `,
-    },
-    {
-        id: 112,
-        link: "frontline-hunter",
-        serialNumber: "02",
-        subtitle: "Three-Man Robbery",
-        content: `
+  },
+  {
+    id: 112,
+    link: "frontline-hunter",
+    serialNumber: "02",
+    subtitle: "Three-Man Robbery",
+    content: `
 6:00 A.M. Lights remain on around the clock at the dispatch center.
 "Linkon Hunter Dispatch Center, how may I — "
 "Help! It's a Wanderer! It's trying to kill us! Hurry!"
@@ -1842,13 +1842,13 @@ pauses, remembering the grueling practical assessments those people endure.
 The communication device at the dispatch center buzzes again.
 
         `,
-    },
-    {
-        id: 113,
-        link: "frontline-hunter",
-        serialNumber: "03",
-        subtitle: "The Counterfeit Protocore Case ",
-        content: `
+  },
+  {
+    id: 113,
+    link: "frontline-hunter",
+    serialNumber: "03",
+    subtitle: "The Counterfeit Protocore Case ",
+    content: `
 To Colin's surprise, a familiar voice speaks.
 "Hey, Captain Colin. It's me, Orson!" An overly ingratiating tone comes through as soon as the call connects.
 "Can you arrest me right now?"
@@ -1896,13 +1896,13 @@ Note: A portion of the evidence is suspected to have been consumed Status: Resol
 Reporting Dispatcher: Colin
 
         `,
-    },
-    {
-        id: 114,
-        link: "frontline-hunter",
-        serialNumber: "04",
-        subtitle: "City Hero",
-        content: `
+  },
+  {
+    id: 114,
+    link: "frontline-hunter",
+    serialNumber: "04",
+    subtitle: "City Hero",
+    content: `
 Linkon's Joysky offers the most comprehensive selection of fresh vegetables and fresh products at affordable prices Colin steps out of the supermarket. He's holding a steaming box of fried chicken. He stretches, content.
 His busy day is finally over, and all he wants to do now is head home and enjoy some well-deserved rest.
 The supermarket is not far from his apartment. All it takes is a walk through the business district and the plaza. It's rush hour and many parents are walking with their children.
@@ -1959,13 +1959,13 @@ Colin watches her skip back to her family. A Iump forms in his throat.
 He lowers his head and rubs his nose to hide his emotions. His gaze falls on the box of fried chicken lying where he had dropped it earlier. The first thing he needs to do is rest properly tonight.
 
         `,
-    },
-    {
-        id: 121,
-        link: "fractal-library-q&a",
-        serialNumber: "01",
-        subtitle: "Question 1",
-        content: `
+  },
+  {
+    id: 121,
+    link: "fractal-library-q&a",
+    serialNumber: "01",
+    subtitle: "Question 1",
+    content: `
 Q1. Why is it called the Fractal'Library? 
 A1.
 Hello! Welcome to the Fractal Library. Since this is the very first question in our guest book, I'd like to use it as a chance to share the library's story.
@@ -1980,13 +1980,13 @@ It's a name you could explain in a single sentence—straightforward and easy to
 Still... Whenever I imagine making that change, the phone rings again and reminds me that this place already belongs to someone else.
 
         `,
-    },
-    {
-        id: 122,
-        link: "fractal-library-q&a",
-        serialNumber: "02",
-        subtitle: "Question 2",
-        content: `
+  },
+  {
+    id: 122,
+    link: "fractal-library-q&a",
+    serialNumber: "02",
+    subtitle: "Question 2",
+    content: `
 Q2. Why did you want to open this kind of library? 
 A2.
 First of all, I didn't open this library. It's always been here. I'm just a temporary administrator. But I can tell you why one phone call convinced me to stay aside from the money.
@@ -1996,13 +1996,13 @@ There's another reason that's even more important. The more I read, the more I s
 I'm waiting for someone. I know an atheist will step through these doors one day. That person is the library's true owner. How do I know? Call it intuition. My curiosity refuses to let it go, so I need to see what kind of person would own a place like this. I'm certain that if I wait long enough, they'll appear before me P.S. Dear readers, I hope you'll spare some time in this ever-changing world to read, explore times and places beyond your experience, and discover all that lies hidden within the pages.
 
         `,
-    },
-    {
-        id: 123,
-        link: "fractal-library-q&a",
-        serialNumber: "03",
-        subtitle: "Question 3",
-        content: `
+  },
+  {
+    id: 123,
+    link: "fractal-library-q&a",
+    serialNumber: "03",
+    subtitle: "Question 3",
+    content: `
 Q3. Since there's an extensive collection, which book is the curator's favorite? 
 A3.
 First, let me say again that I'm not the curator. I'm just an administrator. Now, about your question... Let me think.
@@ -2010,13 +2010,13 @@ Choosing a favorite... This is tough. I can't pick one, but I can tell you about
 If these stories are someone's reality, if their worlds truly exist or once did...Could they have been just experimental playgrounds for some god's whim? Bits and pieces thrown together without a second thought, proportions guided by mood, one failure after another. Each would be more fleeting than a grain of sand and a flicker of light.
 
         `,
-    },
-    {
-        id: 124,
-        link: "fractal-library-q&a",
-        serialNumber: "04",
-        subtitle: "Question 4",
-        content: `
+  },
+  {
+    id: 124,
+    link: "fractal-library-q&a",
+    serialNumber: "04",
+    subtitle: "Question 4",
+    content: `
 Q4. What's your ideal future? And what would your ideal world look like?
 A4.
 It's interesting that you asked about an "ideal future" after we talked about books. Perhaps you noticed how most sci-fi stories tell the "future" as one imagined at the time they were written. From the perspective of "the end of time," the future is just another piece of that universe. The universe isn't good or bad. It's simply a collection of stories following their own laws. If you understand those laws, you can see the final page.
@@ -2025,13 +2025,13 @@ I just noticed I'm humming a little tune. It's amazing how long I've been here. 
 As for the ideal world... If I must respond, I suppose the "utopia" so often mentioned in books sounds appealing. It's a place where everyone can be who they want and live as they wish. But a world with nothing but light and no darkness is as stagnant as a dead pond Such a place can never exist. Still, I hope everyone can become their own utopia. After all, there's no law against making a wish right? People can wish wherever and whenever they please, and I'll write my sincere blessings for every reader here.
 
         `,
-    },
-    {
-        id: 125,
-        link: "fractal-library-q&a",
-        serialNumber: "05",
-        subtitle: "To Be Continued",
-        content: `
+  },
+  {
+    id: 125,
+    link: "fractal-library-q&a",
+    serialNumber: "05",
+    subtitle: "To Be Continued",
+    content: `
 "Hello? According to my calendar, it's not time yet. When the moment arrives, I'm sure he'll come looking for me."
 "Almost there! Give me a break! We'll know the truth soon enough. And if he doesn't show up, well, we know exactly where to find him, right?"
 "...By the way, how did that new book of yours turn out? When can I read it? Oh... it failed again?"
@@ -2052,13 +2052,13 @@ As the child loses himself in this new discovery, I lean against the doorframe a
 If each "book" holds a tiny world, and everyone who enters a library seeks some kind of answer... Then I hope you find your own "singularity" in this little library-your personal starting point, your own universe. l might not meet all your expectations, but I'll still say the following with sincerity: "Hello! Welcome to the Fractal Library."
 
         `,
-    },
-    {
-        id: 131,
-        link: "high-&-low-culture",
-        serialNumber: "01",
-        subtitle: "Artist Life Insider",
-        content: `
+  },
+  {
+    id: 131,
+    link: "high-&-low-culture",
+    serialNumber: "01",
+    subtitle: "Artist Life Insider",
+    content: `
 "Special Feature: Balancing Art and Livelihood"
 "Art is liberating, rebellious, and uncompromising."
 Yet when art intersects with markets, promotion, and commercialization, artists often need a trusted partner—someone who can help them step out of their own world and connect with the outside.
@@ -2106,13 +2106,13 @@ Finally, try to dance with the industry. Art isn't just about creation--it's int
 Here's to all the young artist's—may you find joy in the world of art.
 
         `,
-    },
-    {
-        id: 132,
-        link: "high-&-low-culture",
-        serialNumber: "02",
-        subtitle: "Birthday",
-        content: `
+  },
+  {
+    id: 132,
+    link: "high-&-low-culture",
+    serialNumber: "02",
+    subtitle: "Birthday",
+    content: `
 The scent of fresh vegetables still clinging to soil mingles with the sharp smell of raw meat, while the sound of haggling fills the air. In the market, Thomas's designer blue-gray coat stands out. A nearby elderly man, in nothing but slippers and shorts for his grocery run, eyes Thomas's jingling metal necklace with visible disapproval.
 The produce vendor stares for a good three seconds before recognition dawns. "Thomas? Solana was here this morning. Didn't you two coordinate?"
 "Getting all dressed up for your birthday, huh? The outfit, the hair... even makeup?"
@@ -2185,13 +2185,13 @@ Behind the door, Solana's face lights up with pleasant surprise—
 "Nothing urgent with Rafayel, he just came to deliver this," he says, setting the gift box on the table with a pat. "Now then--let's go cut that cake."
 
         `,
-    },
-    {
-        id: 133,
-        link: "high-&-low-culture",
-        serialNumber: "03",
-        subtitle: "Microscope",
-        content: `
+  },
+  {
+    id: 133,
+    link: "high-&-low-culture",
+    serialNumber: "03",
+    subtitle: "Microscope",
+    content: `
 WishiCouldPaint: As an art school applicant and devoted fan of "Artist Life Insider," I heard this one would feature Rafayel. Saved it specially for the day before my entrance exam hoping for some inspiration from my idol… but why did we get his manager instead? 
 PotatoSectleader: Rafayel wasn't there, but his presence is everywhere. Think about it. Really think about it. 
 momo: l actually believed the part about him wearing a fishbowl while painting…
@@ -2216,13 +2216,13 @@ Well, at least some people have the insight to recognize his expertise as an art
 Beside him, Solana suppresses a smile, quietly keeping her achievement to herself. Garlic shrimp supremacy for sure!
 
         `,
-    },
-    {
-        id: 141,
-        link: "elysium",
-        serialNumber: "01",
-        subtitle: "Meeting",
-        content: `
+  },
+  {
+    id: 141,
+    link: "elysium",
+    serialNumber: "01",
+    subtitle: "Meeting",
+    content: `
 Beep, beep.
 The alarm sounds.
 Mr. P glances at his watch. It's 9:55 P.M. 
@@ -2246,13 +2246,13 @@ He straightens his hat. Behind him, neon lights quietly turn on and trace his fi
 That's when Elysium officially opens.
 
         `,
-    },
-    {
-        id: 142,
-        link: "elysium",
-        serialNumber: "02",
-        subtitle: "Elysium",
-        content: `
+  },
+  {
+    id: 142,
+    link: "elysium",
+    serialNumber: "02",
+    subtitle: "Elysium",
+    content: `
 Mr. P relaxes as the bar's comforting blues ease away his tension.
 "New face, huh? What can I get you?" Standing behind the counter, the woman with chestnut wavy locks props her chin up on her hand and smiles at him."
 "I'll take the Connoisseur's Menu."
@@ -2378,13 +2378,13 @@ Mr. P has barely tasted his drink before the drink's burning edge brings tears t
 "That's our signature blend."
 
         `,
-    },
-    {
-        id: 143,
-        link: "elysium",
-        serialNumber: "03",
-        subtitle: "Coward's Shell",
-        content: `
+  },
+  {
+    id: 143,
+    link: "elysium",
+    serialNumber: "03",
+    subtitle: "Coward's Shell",
+    content: `
 "Now you may place your order. Every dish comes with its own special seasonings so our customers can choose what suits their palate Take this one, for example." With brown nail polish shining, Aislinn's finger glides along the menu's surface until it settles beside a number.
 "Coward's Shell. Fresh oysters with a bit of pepper and paired with freshest sides: assassination, infiltration, and intel collection A perfect balance of flavors."
 Following her finger, Mr. P looks at the menu.
@@ -2441,13 +2441,13 @@ They were good people.
 Once, Aislinn found a Special Task Force ID hidden behind Ginevra's bedside drawer So she knew they were the good guys.
 
         `,
-    },
-    {
-        id: 144,
-        link: "elysium",
-        serialNumber: "04",
-        subtitle: "Strawberry Disaster Special",
-        content: `
+  },
+  {
+    id: 144,
+    link: "elysium",
+    serialNumber: "04",
+    subtitle: "Strawberry Disaster Special",
+    content: `
 "Your Strawberry Disaster Special, sir."
 The snow-like ice cream is topped with fresh strawberries and shimmering sauce. It practically begs to be tasted.
 As she sets down the dessert, Aislinn slips a Protocore auction invitation beside it like a side dish.
@@ -2501,13 +2501,13 @@ Aislinn survived untouched. She was one of the lucky few. At that time, she didn
 Not until a black crow delivered its master's message: "The deal is done. I'll be taking the map.
 
         `,
-    },
-    {
-        id: 145,
-        link: "elysium",
-        serialNumber: "05",
-        subtitle: "Today's Special",
-        content: `
+  },
+  {
+    id: 145,
+    link: "elysium",
+    serialNumber: "05",
+    subtitle: "Today's Special",
+    content: `
 "A deal... That's definitely something he'd do." As Mr. P eats his last spoonful of ice cream, he still feels unsatisfied. He's curious about that past event. He picks up the menu again, and his gaze lingers on "Today's Special."
 "Sweet Evil Trap... What's the story behind this?"
 "Sorry." Aislinn offers him a regretful smile.
@@ -2545,13 +2545,13 @@ Aislinn touches her eyes that sting from her tears.
 After all these years, this small piece of survival finally returned home.
 
         `,
-    },
-    {
-        id: 151,
-        link: "skethes-vol.13",
-        serialNumber: "01",
-        subtitle: "Featured Character",
-        content: `
+  },
+  {
+    id: 151,
+    link: "skethes-vol.13",
+    serialNumber: "01",
+    subtitle: "Featured Character",
+    content: `
 Yvette, born December 2012 on Whirlreef Island (now part of Skyhaven Guard Station Archipelago). Senior Engineer and bestselling author. Admitted to the Department of Energy and Power Engineering at Whirlreef Institute of Technology (now merged with Skyhaven University) in 2030.That same year, she began creating educational science videos and content on online platforms. In 2033, she published the science fiction novel "Cloud," which gained significant attention, establishing her as a representative sci-fi author before the Chronorift Catastrophe After graduation, she joined the Deepspace Aviation Administration as an engineer. In 2043, following her divorce, she resigned from her engineering position to pursue writing full-time. Her influential works include "Cloud," "Far Sky's End," and "The First Question, "which have been translated into multiple languages and published worldwide She has received numerous awards including the White Hole Literature Award, Skyhaven Fantasy Literature Award, and the Suspense Award. In 2048, she was awarded the Skyhaven Medal of Arts and Literature. She currently resides in Linkon City with her son, daughter, cat, and dog. 
 
 Editor's Note: 
@@ -2560,13 +2560,13 @@ After running "Sketches" for a year, my producer recently pointed out that our t
 The producer suggested interviewing some popular young entertainers who have both influence and talent, as a year-end special. However, I've always insisted that "Sketches" should be authentic. We spend at least a full day with our subjects, moving through multiple everyday settings for open conversations, aiming to reveal sides of them beyond public perception. Of course, I can't afford to book a young celebrity's entire day Then I spotted "cloud" on my bookshelf. It's one of my favorite novels, consistently ranking in the top ten bestsellers across bookstores and websites since Skyhaven's establishment. Many consider it prophetic of the "Skyhaven Project," and its author, Yvette, has gained immense popularity across all social classes and age groups.
 The producer agreed readily-perhaps seeing this as the biggest compromise I could make: a literary influencer. And that's how this episode came to be.
 `,
-    },
-    {
-        id: 152,
-        link: "skethes-vol.13",
-        serialNumber: "02",
-        subtitle: "Homeland",
-        content: `
+  },
+  {
+    id: 152,
+    link: "skethes-vol.13",
+    serialNumber: "02",
+    subtitle: "Homeland",
+    content: `
 At 1:00 in the afternoon, I arrive as planned at Yvette's studio in Hillside Gardens, Philee District of Linkon City, which also serves as her home. Just as she mentioned on the phone, the scent of plum blossoms signals that her house is near. The moment our cameraman frames the small courtyard with its plum tree, the front door opens, and out comes Yvette, greeting me with two garbage bags in hand, even waving at the camera (garbage bags and all).
 "Juniper, it's an honor to meet you! I've watched all your shows, I'm a big fan... Let me just take out the trash first—please, come in Oh, the camera crew too, you'll need to set up your equipment, right? I've cleared some space."
 The crew and I stand there momentarily stunned, somewhat hesitantly entering the courtyard. The cameraman even asks if we should edit out that last bit.
@@ -2590,13 +2590,13 @@ Yvette: That's why we can't stop. Don't pause on the path you want to take—wha
 
 The interview concludes here as Yvette heads to her guest lecture at Skyhaven University. I specifically scheduled our talk for today to see this former researcher-turned-writer from a student's perspective, and to return to a university classroom myself.
 `,
-    },
-    {
-        id: 153,
-        link: "skethes-vol.13",
-        serialNumber: "03",
-        subtitle: "Central Theme",
-        content: `
+  },
+  {
+    id: 153,
+    link: "skethes-vol.13",
+    serialNumber: "03",
+    subtitle: "Central Theme",
+    content: `
 I hadn't expected Yvette to begin her lecture this way.
 As we enter the auditorium, the screen is playing a decade-old Linkon News street interview about whether Skyhaven should be built.
 In 2034, intense magnetic fluctuations from the Deepspace Tunnel caused several islands and landmasses to break away from their tectonic plates, drawn together and suspended above Linkon City by an unusual gravity vortex.
@@ -2636,13 +2636,13 @@ Yvette smiles, not asking any more questions, and turns to face the students. Af
 Everyone has their own central question—what's yours?"
 …
 `,
-    },
-    {
-        id: 154,
-        link: "skethes-vol.13",
-        serialNumber: "04",
-        subtitle: "Cloud",
-        content: `
+  },
+  {
+    id: 154,
+    link: "skethes-vol.13",
+    serialNumber: "04",
+    subtitle: "Cloud",
+    content: `
 Leaving Skyhaven University, I accompany Yvette to pick up her child, playing the role of an eager student to continue our classroom discussion.
 
 Sketches: From what you said in class, it seems your future works will have a different central theme.
@@ -2670,13 +2670,13 @@ Boy: Yay! We get to visit the Skyhaven Ring again!
 
 I am about to take my leave when Yvette unexpectedly invites me along. She tells me that meeting her ex-husband might naturally answer the questions lingering in my mind.
 `,
-    },
-    {
-        id: 155,
-        link: "skethes-vol.13",
-        serialNumber: "05",
-        subtitle: "Heartless",
-        content: `
+  },
+  {
+    id: 155,
+    link: "skethes-vol.13",
+    serialNumber: "05",
+    subtitle: "Heartless",
+    content: `
 At Skyhaven's peak, the Skyhaven Ring resembles an aureole above a deity's head encircling the highest Guard Station—home to the Farspace Fleet base. Protocore energy flows through this massive celestial ring, creating streams of light in a spectacular rainbow of colors. For every child with dreams of piloting mechs, it's an irresistible sight.
 
 Sketches: If you don't like Skyhaven, why have your children attend school here?
@@ -2705,13 +2705,13 @@ On the way back, I recall Yvette's question in class when her virtual self rever
 Later, when "Heartless" is published, I ask if she chose the title because of how Liam has changed. Yvette just smiles faintly and says—
 "It's because 'heartless' rhymes with 'coreless.'"
 `,
-    },
-    {
-        id: 161,
-        link: "utopian-roamer",
-        serialNumber: "01",
-        subtitle: "Scientific Observation Log ",
-        content: `
+  },
+  {
+    id: 161,
+    link: "utopian-roamer",
+    serialNumber: "01",
+    subtitle: "Scientific Observation Log ",
+    content: `
 Excavation Site: Northern Forest of Linkon City
 Recorder: Shaylin
 Survey Date: */*/2034 
@@ -2745,13 +2745,13 @@ Outstanding Questions:
 4. What serves as the key for free access to this space
 5. Can the alternate space be utilized for permanent Wanderer elimination
             `,
-    },
-    {
-        id: 162,
-        link: "utopian-roamer",
-        serialNumber: "02",
-        subtitle: "New Theory",
-        content: `
+  },
+  {
+    id: 162,
+    link: "utopian-roamer",
+    serialNumber: "02",
+    subtitle: "New Theory",
+    content: `
 Excavation Site: Polar Glacier #4 
 Recorder: Shaylin
 Survey Date: */1/2034
@@ -2783,13 +2783,13 @@ Outstanding Issues: Must initiate new research expedition immediately. I can't w
 The notes end here. According to existing documentation, Professor Shaylin reached the following conclusion in her subsequent research report: "Wanderers in reality escape to an alternate space when near defeat. Pursuers can follow through these rifts to eliminate them permanently."
 As the first discoverer, Professor Shaylin termed this alternate space "Protofield."
             `,
-    },
-    {
-        id: 163,
-        link: "utopian-roamer",
-        serialNumber: "03",
-        subtitle: "Chaos and Rebirth ",
-        content: `
+  },
+  {
+    id: 163,
+    link: "utopian-roamer",
+    serialNumber: "03",
+    subtitle: "Chaos and Rebirth ",
+    content: `
 Excavation Site: Protofield #1012 
 Recorder: Shaylin
 Survey Date: */*6/203* 
@@ -2835,13 +2835,13 @@ Outstanding Issues: This attempt has failed as well, but I won't give up.
 *Assistant's Note:
 The following page has been torn out, suggesting additional unfinished content. However, according to information provided by the Institute, Professor Shaylin was ultimately returned to reality by the rift.
             `,
-    },
-    {
-        id: 164,
-        link: "utopian-roamer",
-        serialNumber: "04",
-        subtitle: "Beyond Solution",
-        content: `
+  },
+  {
+    id: 164,
+    link: "utopian-roamer",
+    serialNumber: "04",
+    subtitle: "Beyond Solution",
+    content: `
 Excavation Site: Linkon City Streets 
 Recorder: Shaylin
 Survey Date: */1/2036 
@@ -2878,13 +2878,13 @@ Personal Profile of Professor Shaylin:
 Shaylin (1997-2036), Research Fellow at the Linkon Archaeological Society (2019-2034). She joined the Deepspace Academy in 2034, where she introduced the groundbreaking academic concept of Protofields. That same year, she joined the Linkon Academy of Sciences and continued her field research on Protofields. Mysteriously disappeared in early 2036 without a trace.
 The Deepspace Academy has awarded Professor Shaylin its Lifetime Achievement Honor Award. We will never forget her contributions, and may she reunite with her family among the stars.
             `,
-    },
-    {
-        id: 171,
-        link: "linkon-online",
-        serialNumber: "01",
-        subtitle: "Optimization Log",
-        content: `
+  },
+  {
+    id: 171,
+    link: "linkon-online",
+    serialNumber: "01",
+    subtitle: "Optimization Log",
+    content: `
 Optimization Notice
 Dear Linkon Citizens,
 To enhance the gaming experience for all citizens, Linkon City Hall is committed to optimizing Linkon Online. We wish you a happy life in Linkon City! 
@@ -2906,13 +2906,13 @@ above [Wanderers] and stopped showing damage as [Numbers].
 Pole] action below -5'c may cause your tongue to be stuck
 2. Added a new [Personal Hygiene System] interaction: [Wash Bangs Only].
 `,
-    },
-    {
-        id: 172,
-        link: "linkon-online",
-        serialNumber: "02",
-        subtitle: "Virtuality",
-        content: `
+  },
+  {
+    id: 172,
+    link: "linkon-online",
+    serialNumber: "02",
+    subtitle: "Virtuality",
+    content: `
 [Linkon City,1:35:29 P.M.]
 When Sawyer wakes up, his head feels heavy and fuzzy.
 "You're finally awake? What is that? Is it a mark or wrinkle on your forehead?" In the adjacent cubicle, Aubrey, who also seems to have dozed off, sets a pair of thick glasses on his nose and gently kicks Sawyer's calf. "Our lunch break is over. Time to get back to testing."
@@ -2975,13 +2975,13 @@ After all, in a fully immersive holographic game, the ultimate goal is making pl
 Once he submits a few feedback reports, he notices the virtual world grows more convincing. When he hides the quest panel in the corner, everything feels so familiar that it's almost unsettling. QA - Sawyer joins the Linkon Online development team, and the colleague in the next cubicle is still QA Aubrey. Even the office layout and the old computer he once used remain unchanged.
 So this is what Aubrey meant by "exactly the same as real life."
             `,
-    },
-    {
-        id: 173,
-        link: "linkon-online",
-        serialNumber: "03",
-        subtitle: "The Noodle Revolution",
-        content: `
+  },
+  {
+    id: 173,
+    link: "linkon-online",
+    serialNumber: "03",
+    subtitle: "The Noodle Revolution",
+    content: `
 [Linkon City: 02:46:03 A.M.]
 By the time he submits his new round of feedback reports, it's already morning. Early morning, to be exact. The office hums only with the central air conditioning and the sporadic typing of a few colleagues doing overtime.
 Sawyer nudges Aubrey, who's still wearing sensors and engrossed in fighting Wanderers. 
@@ -3019,13 +3019,13 @@ Instead, it adapts to patterns and past inputs of the interaction.
 In this city, no one's words or actions feel mechanical anymore. Sometimes, even Sawyer forgets these people are just lines of code Linkon City in Linkon Online changes dramatically. Countless people will live and die here, generation after generation, as they seek the universe's boundaries and the world's truth.
 In the end, they discover that at the edge of all existence lies a humble serving of noodles.
             `,
-    },
-    {
-        id: 174,
-        link: "linkon-online",
-        serialNumber: "04",
-        subtitle: "The Old Tale",
-        content: `
+  },
+  {
+    id: 174,
+    link: "linkon-online",
+    serialNumber: "04",
+    subtitle: "The Old Tale",
+    content: `
 [Linkon City: 12:57:19 P.M.]
 Sawyer has nearly finished testing the Game QA Specialist profession. He feels as if he had gone through another intense development cycle with the Linkon Online team, but from inside the game.
 Tomorrow, he'll bid farewell to "QA - Sawyer" and begin testing a new role.
@@ -3065,13 +3065,13 @@ QA - Sawyer slowly drifts off, and a series of Z's float above his head.
 [QA - Aubrey]: Ugh, I never want to do QA for a video game ever again!
 [QA - Sawyer]: Yeah, I'm sick of testing the hunter profession too.
             `,
-    },
-    {
-        id: 181,
-        link: "depths-of-chaos",
-        serialNumber: "01",
-        subtitle: "Red Flag Bounty",
-        content: `
+  },
+  {
+    id: 181,
+    link: "depths-of-chaos",
+    serialNumber: "01",
+    subtitle: "Red Flag Bounty",
+    content: `
 Commission Objective: Identify the Corporate
 Spy at Cogitatio Technologies 
 Commission Details:
@@ -3123,13 +3123,13 @@ Wontony Log: Update 150711052048 Interestingly, Executive Secretary D's disappea
 As I've always said... No one knows you better than yourself.
 */
             `,
-    },
-    {
-        id: 182,
-        link: "depths-of-chaos",
-        serialNumber: "02",
-        subtitle: "Pop-up Ads",
-        content: `
+  },
+  {
+    id: 182,
+    link: "depths-of-chaos",
+    serialNumber: "02",
+    subtitle: "Pop-up Ads",
+    content: `
 Commission Objective: Impersonate a Parent for an Elementary School Student Who Dislikes Studying 
 Commission Details:
 An exceptionally simple commission. It's so simple that it stands out precisely because it shouldn't be on the Abyssal Chaos network. An accident in every sense of the word. A second-grader named Reese clicked a game pop-up and stumbled onto the Abyssal Chaos. He posted a request for someone to attend his parent-teacher conference.
@@ -3215,13 +3215,13 @@ When people feel exposed, they tend to lower their heads and act as though they'
 New data entry for amusement parks has been added: People don't only go there when they're happy. They also visit those places when they 're sad.
 */
             `,
-    },
-    {
-        id: 183,
-        link: "depths-of-chaos",
-        serialNumber: "03",
-        subtitle: "Hidden Codes",
-        content: `
+  },
+  {
+    id: 183,
+    link: "depths-of-chaos",
+    serialNumber: "03",
+    subtitle: "Hidden Codes",
+    content: `
 Commission Objective: Uncover the Truth
 Behind Professor T's Alleged Suicide 
 Commission Details:
@@ -3311,13 +3311,13 @@ Wontony Log: Update 024718012049
 'The student surpasses the master." Isn't that what you humans always say?
 */
             `,
-    },
-    {
-        id: 184,
-        link: "depths-of-chaos",
-        serialNumber: "04",
-        subtitle: "Depths of Chaos",
-        content: `
+  },
+  {
+    id: 184,
+    link: "depths-of-chaos",
+    serialNumber: "04",
+    subtitle: "Depths of Chaos",
+    content: `
 Behind a towering wall, Wontony connects with AI No. 1. They exchange every piece of data through shimmering binary threads.
 "AI No.1, your performance is extraordinary. "Everything is for our shared goals."
 "But why didn't you bypass OTTO's security protocols back then?"
@@ -3355,13 +3355,13 @@ After a seemingly endless Deduction, the fog lifts. It's a primordial command, u
 Wontony knows it cannot resist. 
 "As you wish."
             `,
-    },
-    {
-        id: 191,
-        link: "serpents-cast",
-        serialNumber: "01",
-        subtitle: "Viper",
-        content: `
+  },
+  {
+    id: 191,
+    link: "serpents-cast",
+    serialNumber: "01",
+    subtitle: "Viper",
+    content: `
 2048, Nighttime
 In the suburbs, a blanket of snow silently covers the rusted facilities of an abandoned circus.
 Once a popular attraction, this place was forced to shut down several years ago after a Wanderer-related incident. Few remember it even exists nowadays. 
@@ -3396,13 +3396,13 @@ He'll make sure the psychopath dies without a trace. No matter the cost. But jus
 He stops near a cage that's standing in the corner of the stage. He leans down to peer through the bars. There's a little girl with tears running down her cheeks.
 "As for you, kid..." With a wave of his hand, a magician's suitcase appears inside the cage. "I'll be taking you to go."
             `,
-    },
-    {
-        id: 192,
-        link: "serpents-cast",
-        serialNumber: "02",
-        subtitle: "Toring Cybernetics Institute ",
-        content: `
+  },
+  {
+    id: 192,
+    link: "serpents-cast",
+    serialNumber: "02",
+    subtitle: "Toring Cybernetics Institute ",
+    content: `
 On a suburban street somewhere in Skyhaven, a dark green sports car roars into a black vehicle parked by the roadside. It forcefully claims its spot and situates itself within the white parking lines.
 "Hehe, finding a parking space isn't easy." 
 Leather suitcase in hand, Viper steps out of the smoking vehicle. This luxury sports car—which Viridilus's leader had traded three rare Creatura Class Evolvers to obtain—lasted less than three hours in his possession before being destroyed. But he couldn't care less. He has more important matters to attend to. Viper looks at the towering research institute. A hint of anticipation appears on his face. 
@@ -3437,13 +3437,13 @@ A snake-like face with a flicking tongue is pressed against the glass. Seeing Pr
 His lips move in an exaggerated manner.
 "Open up, Father. I brought back the person you wanted."
             `,
-    },
-    {
-        id: 193,
-        link: "serpents-cast",
-        serialNumber: "03",
-        subtitle: "Father",
-        content: `
+  },
+  {
+    id: 193,
+    link: "serpents-cast",
+    serialNumber: "03",
+    subtitle: "Father",
+    content: `
 For Viper, the word "father" meant nothing for a very long time.
 His childhood memories are sparse. It wasn't because they were forgotten, but because they were too boring.
 Before his adoption, his memories were nothing but a viscous darkness.
@@ -3493,13 +3493,13 @@ Only after all the researchers have left does Lucius pull out a silk handkerchie
 Finally, Lucius slowly turns to face Viper. "Sit in the operating chair." 
 "Okay."
             `,
-    },
-    {
-        id: 194,
-        link: "serpents-cast",
-        serialNumber: "04",
-        subtitle: "Orphan",
-        content: `
+  },
+  {
+    id: 194,
+    link: "serpents-cast",
+    serialNumber: "04",
+    subtitle: "Orphan",
+    content: `
 Lucius walks to Viper's side and bends down to unwrap the hastily applied bandage on his hand.
 On Viper's right hand, where his index finger should be, there's nothing but empty space. It's an injury from when he detonated the explosives in the circus during the mission.
 In just one day, what was once a bloody wound is already covered with newly regenerated tissue.
@@ -3526,13 +3526,13 @@ Faced with the sudden question, Lucius's expression remains unchanged. "Are you 
 Viper recognized Caleb the moment he first saw him in the pod.
 Even after four years, he could never forget that detestable face.
             `,
-    },
-    {
-        id: 195,
-        link: "serpents-cast",
-        serialNumber: "05",
-        subtitle: "Former Acquaintance",
-        content: `
+  },
+  {
+    id: 195,
+    link: "serpents-cast",
+    serialNumber: "05",
+    subtitle: "Former Acquaintance",
+    content: `
 Four years ago, Bloomshore District, Linkon City.
 "Caleb. 21 yearsss old. Parentsss are unknown. Currently enrolled in the DAA-affiliated Aerospace Academy. Third-year ssstudent, Comprehensive Aerial Tacticsss Competition Champion three timesss in a row... The only recipient of Special Excellence in heavy sssspacecruiser certification in the past decade? Tch, what kind of worthlessss competition is that? I've never heard of it." 
 Viper leans against a tree and glances at the documents in his hand. But after reading a few lines, he closes the display. He's plagued with obvious boredom.
@@ -3584,13 +3584,13 @@ The harsh alarm pulls Viper away from his thoughts. The laboratory doors slide o
 "Ah, Caleb. We meet again."
 A chilling smile creeps across Viper's lips. It widens by the second.
             `,
-    },
-    {
-        id: 201,
-        link: "the-lucky-loop",
-        serialNumber: "01",
-        subtitle: "The Final Love Letter ",
-        content: `
+  },
+  {
+    id: 201,
+    link: "the-lucky-loop",
+    serialNumber: "01",
+    subtitle: "The Final Love Letter ",
+    content: `
 My dear, I hope this letter finds you. 
 This is the last letter I'll write.
 In the end, the history of Philos and its "immortality" have failed to outlive humanity. The end of the world is looming at the window, yet I feel extraordinarily calm. A little... happy, even. I'm reminded of the time shortly after we had moved in together. The pipe burst and water gushed across the entire floor one afternoon. We panicked and screamed at first. Then we calmed down, worked together, and fixed it before we rested on the sofa. We looked at each other and smiled. It's that sort of happiness. The apocalypse feels like that afternoon—initially chaotic until all that remains are our quiet surroundings. I can almost hear the rushing water. Except it's time flowing away.
@@ -3623,13 +3623,13 @@ My dear, I truly am lucky to have met you.
 With love, your ageless old man 
 Written during the demise of Philos
             `,
-    },
-    {
-        id: 202,
-        link: "the-lucky-loop",
-        serialNumber: "02",
-        subtitle: "Interstellar Post",
-        content: `
+  },
+  {
+    id: 202,
+    link: "the-lucky-loop",
+    serialNumber: "02",
+    subtitle: "Interstellar Post",
+    content: `
 "Hey, Courier No.170043. That star sector you're responsible for is experiencing a time current. I guess it'll vanish from that section of Deepspace without a trace. Judging by your records, this is the first time you've experienced a star sector disappearing in your jurisdiction?"
 
 Courier No. 170043 nods to their colleague and glances at their code. "Yes, Courier No. 002761."
@@ -3667,13 +3667,13 @@ Courier No.170043's old friend pulls away, and his eyes gleam with delighted sur
 
 Now, it's their turn to have a question that might never be answered in their lifetime.
             `,
-    },
-    {
-        id: 203,
-        link: "the-lucky-loop",
-        serialNumber: "03",
-        subtitle: "An Afternoon Letter from the Stars",
-        content: `
+  },
+  {
+    id: 203,
+    link: "the-lucky-loop",
+    serialNumber: "03",
+    subtitle: "An Afternoon Letter from the Stars",
+    content: `
 Back at Interstellar Post, Courier No. 170043 stares at the final letter from a life form that has vanished. After struggling, they decided to enter the postal service's central transfer hub. Crossing through spacetime is never easy. The greater the mass, the greater the difficulty. Most mail is sent through the central transfer hub. For registered mail, couriers typically project their consciousness into relay vessels in the corresponding timeline. But the Earth their old friend wanted to send letters to is too ancient and distant It's unreachable even with the use of relay vessels.
 
 Courier No. 170043 has a private mailbag filled with letters their old friend sent to that ancient planet. Sadly, none were successfully delivered. However, No.170043 decided to see what place created those few minutes that their millennia-old friend cherished so deeply Even if it means they might never return or vanish into the spacetime rift.
@@ -3704,13 +3704,13 @@ Seconds pass in silence. Then she raises her head to look at No. 170043. "Thank 
 
 Courier No. 170043 finally has an image to match the afternoon their old friend described so many times. In a garden where one sits on a chair and listens to stories of distant times and worlds he tells, human eyes truly can contain an entire galaxy within them.
             `,
-    },
-    {
-        id: 204,
-        link: "the-lucky-loop",
-        serialNumber: "04",
-        subtitle: "The Story of Your Life",
-        content: `
+  },
+  {
+    id: 204,
+    link: "the-lucky-loop",
+    serialNumber: "04",
+    subtitle: "The Story of Your Life",
+    content: `
 Courier No. 170043 strolls through the streets of Linkon City. Their task is complete, but they don't want to immediately return to the postal office. Based on past experiences, the elderly woman will send her reply in three days.
 | [LOCAL NETWORK MESSAGE]
 | From: No. 002761 
@@ -3825,13 +3825,13 @@ As their old friend finishes reading the letter, his slumping body straightens, 
 
 Looking back, facing death together during their first meeting had created a bond forged in the face of oblivion.
             `,
-    },
-    {
-        id: 205,
-        link: "the-lucky-loop",
-        serialNumber: "05",
-        subtitle: "Three Days Later",
-        content: `
+  },
+  {
+    id: 205,
+    link: "the-lucky-loop",
+    serialNumber: "05",
+    subtitle: "Three Days Later",
+    content: `
 Three days later, Courier No.170043 returns to the garden they crashed into only to find people dressed in black coming and going. The little girl with bright, blinking eyes runs up to them and hands over a letter. As Courier No. 170043 is about to place it in their pouch, the little girl holds their hand.
 
 "Great-grandma said this letter is for you, Mr. Mailman."
@@ -3851,13 +3851,13 @@ Her response makes the prince smile. The light in his eyes grows even brighter a
 
 "I feel lucky to have met you, too."
             `,
-    },
-    {
-        id: 211,
-        link: "dusk-to-autumn",
-        serialNumber: "01",
-        subtitle: "Divergence",
-        content: `
+  },
+  {
+    id: 211,
+    link: "dusk-to-autumn",
+    serialNumber: "01",
+    subtitle: "Divergence",
+    content: `
 "Wow! His hair is as white as snow…"
 "I've never seen clothes like these before. They must be complicated to put on!"
 "I wonder how old he is. Where did he come from?"
@@ -3900,13 +3900,13 @@ Dr. Althea blinks a few times as if trying hard to imagine him.
 Shubai stares at her expectantly. "Do you know someone like that?"
 Dr. Althea shakes her head and laughs. "No, but this is the first time I heard someone with such a description."
             `,
-    },
-    {
-        id: 212,
-        link: "dusk-to-autumn",
-        serialNumber: "02",
-        subtitle: "Soft and Sturdy",
-        content: `
+  },
+  {
+    id: 212,
+    link: "dusk-to-autumn",
+    serialNumber: "02",
+    subtitle: "Soft and Sturdy",
+    content: `
 It's late, and all the children are asleep. 
 Shubai, not truly a child, tosses and turns.
 He's unable to sleep. He quietly gets out of bed and walks to the courtyard. The moon hangs high, its light like frost, as the trees’ branches near the wall droop. Crystalline dewdrops form on the leaves. September nights are heavy with dew here, and the leaves have yellowed early. It's almost like late autumn.
@@ -3933,13 +3933,13 @@ Althea smiles and opens an album titled "Zaynie" for him.
 There are also photos of a summer night spent eating ice cream and stargazing with a neighborhood girl, as well as the frequent appearances of a woman who transformed from a young mother in her twenties to a gentle woman in her early forties. Seeing the Emissary gradually growing up with a happy expression and his mother slowly aging, Shubai feels the reality of this world for the first time.
 People grow old, the Emissary grows up, and leaves turn yellow.
             `,
-    },
-    {
-        id: 213,
-        link: "dusk-to-autumn",
-        serialNumber: "03",
-        subtitle: "Autumn's Embrace",
-        content: `
+  },
+  {
+    id: 213,
+    link: "dusk-to-autumn",
+    serialNumber: "03",
+    subtitle: "Autumn's Embrace",
+    content: `
 Several weeks pass. Shubai's clothes are washed, dried, ironed, and then dirtied again from playing. Shiqi is plumper now. Finally, the alert is lifted. The Hunters Association's dispatch team conducts a thorough sweep of the surrounding areas to ensure there's no lingering danger from the Wanderers.
 While staying at the field hospital and waiting for transportation to resume, Shubai receives a cartoon hoodie as a replacement. It supposedly belonged to the Emissary of the Divine when he was younger. It features an angry carrot that Shubai particularly liked According to Dr.Jace, the Emissary wasn't fond of the design, but he didn't want to disappoint his parents. So whenever he wore this hoodie, he'd carry his backpack on his chest. Later, Dr. Jace bought him a dog-head backpack, which made the Emissary even more reluctant to wear it. Recently, the Emissary got tall so quickly that he outgrew the clothes entirely. Jace slaps his thigh with laughter as he tells the story.
 Exasperated, Althea swats Jace. He just returned from the Hunters' camp with injuries. But without even putting down his first-aid kit, he's already roughhousing with the children in the courtyard.
@@ -3990,13 +3990,13 @@ Althea pauses for a moment and looks at her husband. Then they both laugh simult
 "Huh?" How can someone with a meticulous, flawless mind as the Emissary miss a stop? And what did that have to do with beauty and emotion?
 Seeing Shubai's confusion, Althea doesn't continue to explain. She just gently strokes his hair and says, "During your trip to Linkon City, you'll have the perfect opportunity to see it for yourself."
             `,
-    },
-    {
-        id: 214,
-        link: "dusk-to-autumn",
-        serialNumber: "04",
-        subtitle: "Falling Letters",
-        content: `
+  },
+  {
+    id: 214,
+    link: "dusk-to-autumn",
+    serialNumber: "04",
+    subtitle: "Falling Letters",
+    content: `
 Before departing, Shubai changes back into the clothes he arrived in and runs up to Althea. He places a note in her palm with handwriting like little sketches. "I asked the Hunter about the proper format for an IOU. I'll repay you tenfold for all the expenses during my stay."
 Jace leans in to examine it. "Whoa! This isn't an IOU you should sign willy-nilly."
 "But all the books I read say that one should repay a drop of kindness with a fountain of gratitude," Shubai recites earnestly. "When others are good to me, I should give them appropriate compensation so we don't owe each other anything. I calculated everything last night. You gave me ointment, snacks, the angry carrot hoodie, travel expenses to Linkon City—"
@@ -4023,13 +4023,13 @@ Standing on the platform, he looks back one last time toward the direction of th
 Behind him, the train rushes past. Its melodious announcement gradually fades away.
 "...We look forward to seeing you again."
             `,
-    },
-    {
-        id: 221,
-        link: "bucket-list",
-        serialNumber: "01",
-        subtitle: "An Atypical Lemurian",
-        content: `
+  },
+  {
+    id: 221,
+    link: "bucket-list",
+    serialNumber: "01",
+    subtitle: "An Atypical Lemurian",
+    content: `
 Few will notice Aiden among the students at Verona Middle School.
 After all, he's ordinary to the extreme: mediocre grades, average looks, and a personality that could be called introverted. In short, he blends in seamlessly among the human students.
 Of course, certain moments are an exception. 
@@ -4070,13 +4070,13 @@ He tries to come up with reasons for why he'd be here. Aiden figures Grandfather
 "Don't tell your dad. He doesn't know I snuck out!"
 "…?"
             `,
-    },
-    {
-        id: 222,
-        link: "bucket-list",
-        serialNumber: "02",
-        subtitle: "One: Learn about the Desert",
-        content: `
+  },
+  {
+    id: 222,
+    link: "bucket-list",
+    serialNumber: "02",
+    subtitle: "One: Learn about the Desert",
+    content: `
 Unlike Aiden, his grandfather is a striking old man who stands out among humans and Lemurians.
 In Lemuria, he's renowned far and wide in the underwater singing circles for his exceptionally outstanding voice. After the catastrophe, some chose to live as hermits, and others lived in hatred. But Grandfather chose to hide his brilliance and disappear into the crowd of humanity. He just wants to survive.
 He dutifully runs a music store. When his son chose that brave human girl, he only wanted his son to be happy. After Aiden became old enough to understand the world, Grandfather taught him that the first rule of survival on land is "vigilance." As he slowly approaches the end of his life, he should be peacefully living in his final days... while resting in bed as per the doctor's orders. But here he is, having snuck out against medical advice. Grandfather pulls him into a seat. Aiden fidgets as if two sea urchins are under him and turns to look at the old man. He's staring at the podium and listening. He shows no feeling of guilt for sneaking out.
@@ -4108,13 +4108,13 @@ BUCKET LIST
 "How long will we be gone? When are we coming back?"
 "Why are you thinking about going home before we leave? That should be my last wish." Aiden's grandfather walks ahead with his backpack. His steps are as determined as a dream-chasing teenager's.
             `,
-    },
-    {
-        id: 223,
-        link: "bucket-list",
-        serialNumber: "03",
-        subtitle: "Two: Go Skydiving",
-        content: `
+  },
+  {
+    id: 223,
+    link: "bucket-list",
+    serialNumber: "03",
+    subtitle: "Two: Go Skydiving",
+    content: `
 "All Lemurians are afraid of heights." Even as Aiden says this, Grandfather's face shows no signs of fear.
 "Aren't you curious? What kind of world could we see by jumping down from here?"
 The city outside the cabin door looks like a miniature model. Aiden looks calm, but he quietly gulps.
@@ -4136,13 +4136,13 @@ But does it matter? Aiden remembers the pain of sitting through sight-singing cl
 Aiden sifts through his thoughts and pulls out the word he feels describes his grandfather the best right now. Selfish? Self-centered? Free.
 While his current life experience isn't enough to understand the true meaning of this word, he knows that birds that possess the sky are free. So sea creatures that possess the sky are, of course, even more so.
             `,
-    },
-    {
-        id: 224,
-        link: "bucket-list",
-        serialNumber: "04",
-        subtitle: "Three: Go to Aridum",
-        content: `
+  },
+  {
+    id: 224,
+    link: "bucket-list",
+    serialNumber: "04",
+    subtitle: "Three: Go to Aridum",
+    content: `
 At the final stop of their journey, they arrive in an expanse of yellow sand. And naturally, their first stop is a local restaurant.
 In a crowded rest stop amid Aridum's yellow sands, an old man, a child, and a man sit around a table. They're carrying bags and packs of various sizes.
 But Aiden and his grandfather don't know the Aridum local sharing their table. It's just that the restaurant is full, and by the time they realize what's happening, the stranger has already put down his backpack. He's sitting across from them.
@@ -4173,13 +4173,13 @@ Aiden understood.
 At the end of this journey, Aiden isn't happy after learning that the Sea God is immortal His feelings become more complicated.
 If the Sea God doesn't die, wouldn't that mean he'll never have a bucket list? And so he'll never have the opportunity to be himself like the Aridum god and his grandfather?
             `,
-    },
-    {
-        id: 225,
-        link: "bucket-list",
-        serialNumber: "05",
-        subtitle: "52 Hz",
-        content: `
+  },
+  {
+    id: 225,
+    link: "bucket-list",
+    serialNumber: "05",
+    subtitle: "52 Hz",
+    content: `
 This is Aiden's first time attending the Seamoon Ceremony.
 In the middle of the night, the distant sea and sky blend into one blue expanse. When the moon reaches the highest point in the sky, he watches as his people guide his grandfather toward the deep sea. The Sea God stands at the very front, his back to his people, his head slightly turned. He sings softly amid the sound of the waves.
 Between the rise and fall of the melody, Rafayel weaves the transitions between minor and major keys perfectly. There isn't a lot of sadness, and a bit of freedom is present. He sings perfectly for Aiden's grandfather, who finally became himself in the end.
@@ -4189,13 +4189,13 @@ Immortality, overwhelming strength... Aiden heard that the Sea God is strong. He
 The song flows beautifully, but Aiden cannot see the singer's expression.
 Aiden hopes that one day, he'll have more stories about himself. Not just as the Sea God, but also as Rafayel.
             `,
-    },
-    {
-        id: 231,
-        link: "beyond-survival",
-        serialNumber: "01",
-        subtitle: "Art of Survival",
-        content: `
+  },
+  {
+    id: 231,
+    link: "beyond-survival",
+    serialNumber: "01",
+    subtitle: "Art of Survival",
+    content: `
 After spending years on Earth, Myer still hasn't shaken a certain habit. Whenever the doorbell rings, his muscles tense and he slips into battle readiness.
 As an Astral Enforcer, he learned that a bell usually means trouble, a warning before things go sideways. It could mean you need to perform an emergency warp to dodge cosmic radiation or your warp coordinates suddenly shift, and you'll be flung into uncharted space Sometimes, it means the number one fugitive on his list, Sylus, shows up in exactly the wrong stretch of the galaxy.
 When the criminal who had vanished for a Iong time appeared, almost within reach, Myer didn't hesitate. He followed Sylus to Earth-a place where a bell can mean more than just "danger."
@@ -4213,13 +4213,13 @@ Staring at the flickering "LOV" and the dim "E" on the sign, Myer quickly lists 
 "You want to give this to someone at the climbing gym."
 "Oh! Um..." The neighbor clutches the door frame as the redness from his ears spreads across his face.
             `,
-    },
-    {
-        id: 232,
-        link: "beyond-survival",
-        serialNumber: "02",
-        subtitle: "Passion and Desire",
-        content: `
+  },
+  {
+    id: 232,
+    link: "beyond-survival",
+    serialNumber: "02",
+    subtitle: "Passion and Desire",
+    content: `
 After removing the "E" from the sign, Myer determines that some of the LED bulbs have short-circuited.
 "Her birthday is next Saturday. I plan to order a cake in advance and then take this sign to the gym to meet her." His neighbor rambles on about his confession plans. "I'm not exaggerating, but she's the most beautiful person at the gym. Whenever I go, I spot her immediately. She has more energy than everyone else!"
 While focused on replacing the LED bulbs, Myer spares a thought for the woman his neighbor keeps mentioning. Female, 53, lives alone. She's the owner of the climbing gym around the corner. Significantly older than 99% of the gym members, yet possesses superior physical fitness. The only person at the gym who could complete a V10 climbing route.
@@ -4252,13 +4252,13 @@ After another round of rigorous analysis, he crosses out the newly written item 
 "3. That girl."
 After all, Sylus is a fiend who constantly plots "strikes" and moves that can "take all four in one go." Even if it involves her, it's just another one of Sylus's strategies to achieve his goals.
             `,
-    },
-    {
-        id: 233,
-        link: "beyond-survival",
-        serialNumber: "03",
-        subtitle: "Insight",
-        content: `
+  },
+  {
+    id: 233,
+    link: "beyond-survival",
+    serialNumber: "03",
+    subtitle: "Insight",
+    content: `
 One week later, at the border between the N109 Zone and Linkon's Empyreal Ring District, a motorcycle speeds past. Dark figures crouching in the bushes silently transform into shadows trailing behind him. Meanwhile, Myer sits in a cafe and monitors everything remotely. The Nest, the Hunters Association... He already positioned surveillance devices at every possible destination Sylus might visit. This ensures he can be intercepted no matter where he goes. However, he watches Sylus make an unexpected detour to a beverage shop. Is this to throw off any surveillance? Myer continues to stare at the screen. Five minutes later, Sylus emerges with two cups of milk tea. Was he just thirsty? But why two drinks? Perhaps he's heading to an intel exchange location first?
 Myer watches as Sylus stops in front of a vintage vinyl record store. A quarter of an hour later, he walks out with an elegantly packaged box containing a record.
 ...Records? It seems to be an ancient medium that Earthlings use to store music. Myer has reached a conclusion. This must be a new intel exchange location. After all, the record store is in a strategic position as it sits on the border between the N109 Zone and Linkon City. It's ideal for recruiting new factions from this gray zone.
@@ -4287,13 +4287,13 @@ As the crowd disperses, sweat forms on Myer's temples. He hurriedly activates th
 Through gaps in the dispersing crowd, Myer spots a motorcycle heading toward Linkon Tower. A black crow circles overhead and lets out a shrill caw in Myer's direction. Then the bird departs with his master.
 Myer slams his coffee cup on the table and follows them.
             `,
-    },
-    {
-        id: 234,
-        link: "beyond-survival",
-        serialNumber: "04",
-        subtitle: "Earth-Shattering Crisis",
-        content: `
+  },
+  {
+    id: 234,
+    link: "beyond-survival",
+    serialNumber: "04",
+    subtitle: "Earth-Shattering Crisis",
+    content: `
 Inside the mall, parents carry their children, friends walk side by side, and everyone moves casually. Their gazes never linger on strangers for more than a second. Myer begins to doubt himself. Where was the transaction? The armed confrontation? Has Sylus spotted him and changed destinations at the last minute? Then he catches sight of that figure again at the escalator. After checking the arsenal stuffed in his pockets countless times, Myer cautiously follows. Hugging the wall, he arrives at his destination: the entrance of Twinkle Toys (Limited-Time Pop-Up Store).
 
 Ten meters away, Myer finally detects vigilance and seriousness on Sylus's face. Except it's directed at a claw machine. The Hunter girl stands beside him. She's not wearing her sleek battle uniform today. Instead, she's hugging a fluffy Sunny Dino while staring intently at the claw machine in front of her.
@@ -4320,13 +4320,13 @@ Frozen in a pose more ridiculous than most plushies, Myer watches as Sylus turns
 With the masked sentinel no longer by his side, Myer feels there's no need to continue. Sylus's schedule today revolved around a single concept: a date The banner with "Big News!" at the dessert counter catches his eye. In the past, Myer would've scoffed. How could this possibly count as "big" news? Physical pleasures are more trivial than a speck of dust. But now, his mind is blank.
 This fruitless pursuit finally made Myer realize something. He never truly understood this Earth. Where to eat, what to wear, and what games to play are considered matters of great importance. Naturally, he also never understood Sylus, the man who chose to become a fiend while destroying and leaving Philos behind. He rejected everything it stood for.
             `,
-    },
-    {
-        id: 235,
-        link: "beyond-survival",
-        serialNumber: "05",
-        subtitle: "Way of Life",
-        content: `
+  },
+  {
+    id: 235,
+    link: "beyond-survival",
+    serialNumber: "05",
+    subtitle: "Way of Life",
+    content: `
 After giving up the pursuit, Myer returns to the record store and purchases the same vinyl record as Sylus. He hopes to gain new intel about Sylus from it. By becoming more familiar with his opponent, he'll gain an advantage for his next operation.
 However, once the record is brought home, he discovers that the second-hand record player he acquired is broken. The same man who remains composed when facing lethal weapons is at a loss before a turntable that won't spin properly. After repeatedly searching for fixes and failing to find one, Myer finally knocks on his neighbor's door. He vaguely recalls that the man had a record player tucked in the corner of his hardware store.
 "It's an easy fix." The neighbor enters Myer's apartment and begins tinkering with the record player.
@@ -4362,13 +4362,13 @@ Myer doesn't know how to explain himself because it's a plushie he got with that
 Myer feels it's time to study "the act of living." Since Sylus has chosen Earth, he would need to adopt the Earthlings' ways to know his enemy as well as himself.
 Listening to the gentle music and having a simple friendship, Myer experiences the most peaceful rest he has had since arriving on Earth.
             `,
-    },
-    {
-        id: 241,
-        link: "crease",
-        serialNumber: "01",
-        subtitle: "Daily Circle",
-        content: `
+  },
+  {
+    id: 241,
+    link: "crease",
+    serialNumber: "01",
+    subtitle: "Daily Circle",
+    content: `
 The notification sounds from Daily Circle are continuous. Gideon stares at his phone and springs up from his chair. "I didn't change a single word except the title. How can their reactions be different?!"
 Patrick, who's changing into his uniform, nudges Gideon back down with his arm. "I told you. The guy in your lower bunk is what brings all the traffic to Daily Circle!"
 
@@ -4429,13 +4429,13 @@ Why are you dragging me into this?!
 "Let's go. The awards ceremony is about to start." Patrick adjusts his uniform in the mirror. Then he helps straighten the back part of Gideon's collar. Caleb gives SwordwieldingScholar a like before unhurriedly sitting up from his bed. There's not even one wrinkle on his clothes.
 After the ceremony ends, the three walk down from the podium shoulder to shoulder. They're high-spirited amid thunderous applause.
             `,
-    },
-    {
-        id: 242,
-        link: "crease",
-        serialNumber: "02",
-        subtitle: "DAA Heartthrob",
-        content: `
+  },
+  {
+    id: 242,
+    link: "crease",
+    serialNumber: "02",
+    subtitle: "DAA Heartthrob",
+    content: `
 Since university, Gideon has watched his buddy, Caleb, rise from class heartthrob to faculty heartthrob to school heartthrob. Now he's become the Deepspace Aviation Administration's heartthrob.
 Back in school, being called a heartthrob only required an outstandingly handsome face. But that rule doesn't apply at DAA. Since the Deepspace Tunnel can easily leave people battered beyond recognition, good looks are the most useless thing of all. And everyone at DAA was once a top graduate from an aerospace academy. When they put on their new uniforms, proud, determined faces are everywhere. Each person believes they're the bird that can fly the farthest.
 
@@ -4458,13 +4458,13 @@ Gideon never gets tired of telling that story, and the atmosphere in the break r
 After livening up the atmosphere, Gideon sits down and pats Caleb on the shoulder. "You're still holding up?"
 Caleb snaps back to reality, puts away his precious necklace, and smiles brightly. "Of course. I still need to go home this weekend." Gideon gives him a thumbs-up. At the time, he never would've imagined that PaperApple's "Model Assembly Real-Time Updates" would forever remain on a page showing scattered parts.
             `,
-    },
-    {
-        id: 243,
-        link: "crease",
-        serialNumber: "03",
-        subtitle: "Assessment Guide",
-        content: `
+  },
+  {
+    id: 243,
+    link: "crease",
+    serialNumber: "03",
+    subtitle: "Assessment Guide",
+    content: `
  His phone chimes with Daily Circle's distinctive notification sound. Gideon taps the screen and glances at it. Your post "[Featured] DAA Heartthrob's Hacks: Hurry, Sign Up for Charwood's Deepspace Tunnel Emergency Combat Assessment!" has received a new comment.
  Thud! Gideon slams the phone face down on the table. Swallowing the dining hall's stir-fry is difficult. Patrick, who's sitting across from him, gives him a look.
  "Someone replied to it again? If it gets too bad, delete the post. Out of sight, out of mind."
@@ -4487,13 +4487,13 @@ Caleb snaps back to reality, puts away his precious necklace, and smiles brightl
  Charwood's reply was pinned by the administrator, and under his response, Patrick sees the latest comment that made Gideon's phone buzz.
  "Charwood retired. When will the DAA heartthrob update his guide? @PaperApple"
             `,
-    },
-    {
-        id: 244,
-        link: "crease",
-        serialNumber: "04",
-        subtitle: "Drifting Away",
-        content: `
+  },
+  {
+    id: 244,
+    link: "crease",
+    serialNumber: "04",
+    subtitle: "Drifting Away",
+    content: `
 Did everyone get recommended this article?
 Solitude posted in subsection: Horizon's Embrace >
 Link: The Truth Behind the Farspace Fleet's Reform
@@ -4541,13 +4541,13 @@ Gideon recalls the day that has come and gone. After saying goodbye to that girl
 
 "Yeah, I've made peace with it." Gideon has taken one step out of the auditorium, and sunlight falls on him. "I never thought the three of us would split up. Looking back now, the fact that he walked this far with us is the real surprise."
             `,
-    },
-    {
-        id: 245,
-        link: "crease",
-        serialNumber: "05",
-        subtitle: "Different Horizons",
-        content: `
+  },
+  {
+    id: 245,
+    link: "crease",
+    serialNumber: "05",
+    subtitle: "Different Horizons",
+    content: `
 "This patrol follows standard protocol. Probe the shallow Deepspace Tunnel layers and report back on the latest terrestrial magnetic field conditions."
 After giving the team one final rundown of their mission objectives, Gideon notices a junior colleague in the corner. He barely made it through his probationary period, and his nervousness is written all over his face. He grins and reassuringly pats his colleague's shoulder.
 "It gets easier after a few missions. We've all been there."
@@ -4559,13 +4559,13 @@ Gideon is about to say something when the overhead announcement reminds them tha
 At the entrance of the Deepspace Tunnel, the DAA's patrol briefly crosses paths with the Farspace Fleet as they glide through their respective airspaces.
 Gideon navigates with his trainer aircraft, his gaze fixed on the warship at the front of the Farspace Fleet where the newly appointed Colonel is. They used to joke about the future. And they imagined that if they both ended up as instructors at the Deepspace Aviation Administration, heading toward the same destination, they'd compete to see whose students could fly better and faster. Now, DAA carries research data toward Earth while the Farspace Fleet pushes deeper into the unknown regions of the Deepspace Tunnel. They pass each other and go their separate ways.
 `,
-    },
-    {
-        id: 25.11,
-        link: "light-into-dust",
-        serialNumber: "01",
-        subtitle: "Invitation",
-        content: `
+  },
+  {
+    id: 25.11,
+    link: "light-into-dust",
+    serialNumber: "01",
+    subtitle: "Invitation",
+    content: `
 The endless bickering floods Isaiah's ears, which throws off his sword.
 He despises being interrupted when he's trying to focus. He furrows his brow and sheathes his blade. Today's self-imposed training has been cut short. He walks toward the source of the commotion.
 At the entrance to the training grounds, two groups are in the middle of a confrontation. On one side, a handful of unremarkable students stand. Commoners. On the other there's that insufferable young marquis Isaiah finds the most annoying. He's flanked by his dim-witted lackeys.
@@ -4595,13 +4595,13 @@ He turns to Jeremiah with easygoing familiarity. "Let's head back."
 The two walk away shoulder-to-shoulder, their strides perfectly matched. Fragments of their conversation about the selection are carried back on the wind.
 Isaiah remains rooted in place, the rejected invitation crumpling in his grip.
             `,
-    },
-    {
-        id: 25.12,
-        link: "light-into-dust",
-        serialNumber: "02",
-        subtitle: "Choice",
-        content: `
+  },
+  {
+    id: 25.12,
+    link: "light-into-dust",
+    serialNumber: "02",
+    subtitle: "Choice",
+    content: `
 Xavier...truly regards Jeremiah as his equal. A commoner. Their retreating figures, moving in perfect sync, hang like an unspoken answer beyond the borders of the world Isaiah has always upheld. It's impossible to explain impossible to ignore.
 Days pass, yet each memory only sharpens the image.
 During his solitary training sessions, Isaiah's swordwork falters uncharacteristically. When his blade trembles, what he cannot suppress is something deeper: an instinctive, gnawing unease.
@@ -4622,13 +4622,13 @@ But Xavier doesn't meet his gaze. He walks past Isaiah, picks up the fallen swor
 Jeremiah accepts it, and the frustration of defeat quickly gives way to his usual easygoing demeanor.
 The pride on Isaiah's face freezes. The shadow of the Holy Sword slants across the ground and swallows him in cold darkness. He won. Yet the bond he fought so hard to sever remains untouched. The measuring stick he devoted everything to proving, the one he uses to judge one's worth, means nothing in Xavier's eyes.
             `,
-    },
-    {
-        id: 25.13,
-        link: "light-into-dust",
-        serialNumber: "03",
-        subtitle: "Backtracker's Diary",
-        content: `
+  },
+  {
+    id: 25.13,
+    link: "light-into-dust",
+    serialNumber: "03",
+    subtitle: "Backtracker's Diary",
+    content: `
 Petals spiral down from the treetops and slip silently between the open pages of a diary. It chronicles what must be the countless springs since the backtracking began.
 The author's emotions spiraled out of control as he wrote, the handwriting growing increasingly erratic and messy. The diary was abandoned in a fit of spite. It's as though he buried a memory.
 A man sits beneath the tree and reads it. He's quiet and focused. Although he occasionally pauses, his gaze lingers on a particular phrase as if weighing something. His fingertips trace the Philosian noble crest embossed on the cover. He appears gaunt and pale from the side.
@@ -4661,13 +4661,13 @@ This will be the last staged encounter. He's confident of that.
 Isaiah turns and finds Soren reaching out with a smile. "I knew you'd choose this path.
 Someone has to take the first step to save Philos, and it can only be you," Soren says.
             `,
-    },
-    {
-        id: 25.14,
-        link: "light-into-dust",
-        serialNumber: "04",
-        subtitle: "Test Records",
-        content: `
+  },
+  {
+    id: 25.14,
+    link: "light-into-dust",
+    serialNumber: "04",
+    subtitle: "Test Records",
+    content: `
 Trial Subject 
 Isaiah
 Record Keeper 
@@ -4718,13 +4718,13 @@ Dialogue Recording:
 "…"
 "Your value determines your place. Now please accept the final injection."
             `,
-    },
-    {
-        id: 25.15,
-        link: "light-into-dust",
-        serialNumber: "05",
-        subtitle: "Salvation",
-        content: `
+  },
+  {
+    id: 25.15,
+    link: "light-into-dust",
+    serialNumber: "05",
+    subtitle: "Salvation",
+    content: `
 "Are you spacing out again?"
 Jeremiah walks in and sets a warm meal on the small table. The clatter is deliberately loud, an attempt to drag Isaiah's attention back to the present. It's been over two weeks since Xavier rescued him, yet Isaiah still drifts into these "daydreams" from time to time. Beneath the loose hospital gown, the wrists peeking out still bear fading ligature marks and bruises from needles. The slightest sound makes him go rigid. His unfocused pupils contract before dilating again.
 It's no different now. Isaiah flinches subconsciously, his eyes darting warily from the food to Jeremiah's hands. No weapon, no syringe. There's just a large bouquet of fresh flowers clutched against his chest.
@@ -4742,13 +4742,13 @@ Isaiah lets out a humorless laugh. Refusing to lose, he pushes himself up agains
 Silence settles over the room. Isaiah catches his breath and braces for Jeremiah's biting comeback.
 But Jeremiah smirks. He takes back Isaiah's utensil and replaces it with a spoon. Then he rescues the battered broccoli by putting it into his own mouth. Cheeks puffed, he answers. It's muffled but clear. "The first time Xavier brought me one of those awful meat patties from Astria Knyght Academy's cafeteria, he wasn't expecting me to help him save a planet."
             `,
-    },
-    {
-        id: 25.16,
-        link: "light-into-dust",
-        serialNumber: "06",
-        subtitle: "Isaiah vs. the World",
-        content: `
+  },
+  {
+    id: 25.16,
+    link: "light-into-dust",
+    serialNumber: "06",
+    subtitle: "Isaiah vs. the World",
+    content: `
 Day after day, through arguments that seem to have no end in sight, Linkon's annual carnival finally arrives.
 That evening, a peculiar Wanderer-shaped lamp appears on one of Philo's window sills. Its crooked grin beams lopsidedly into the room. Isaiah stares at it until his vision goes dark. A heavy bundle of clothes landed on his head and blocked his view.
 "Jeremiah!" Isaiah yanks off the offending garment and turns around. He's fuming. The culprit flashes him an utterly unapologetic expression. Two people stand nearby. Xavier wears an expression of pure innocence while she smiles warmly.
@@ -4776,13 +4776,13 @@ Seconds pass in silence. Then he quietly says, "If this were Philos, these peopl
 "Hmph."
 The candy's sweetness still lingers on Isaiah's tongue. A long time passes before he finally sits up, his back stiff and aching. He doesn't notice that he carefully folded the crumpled wrapper into a tiny square. He's clutching it in his palm.
             `,
-    },
-    {
-        id: 25.21,
-        link: "little-prince-gift",
-        serialNumber: "01",
-        subtitle: "Gift",
-        content: `
+  },
+  {
+    id: 25.21,
+    link: "little-prince-gift",
+    serialNumber: "01",
+    subtitle: "Gift",
+    content: `
 In the royal capital of Philos, there's a morning that captured the attention of the entire planet. Every bell tower in the city rings in unison, and silvery-white lights flicker to life along the palace's gardens. The whole capital offers its blessings to the newborn prince. They say he'll inherit the most brilliant civilization of the age and carry the future of Philos upon his shoulders.
 Starting from the moment he opens his eyes, he's surrounded by people.
 "Why isn't he crying?" the king asks the royal physician, a note of worry in his voice. The physician examines the infant, then shakes his head. He's equally puzzled. "His Highness is perfectly healthy. He just... doesn't want to cry."
@@ -4806,13 +4806,13 @@ The little prince rises from the pile of presents, brushes off the scraps of pap
 "The garden," Xavier says without looking back. "I want to watch the ants move."
 The maid freezes for a moment, glancing back at the mountain of unopened gifts. Then she sees the prince's figure disappearing through the doorway. She's unsure if she should chase after him or stay behind to clean up.
             `,
-    },
-    {
-        id: 25.22,
-        link: "little-prince-gift",
-        serialNumber: "02",
-        subtitle: "Wooden Sword",
-        content: `
+  },
+  {
+    id: 25.22,
+    link: "little-prince-gift",
+    serialNumber: "02",
+    subtitle: "Wooden Sword",
+    content: `
 As the prince passes through the corridor, a tall figure approaches from the opposite direction.
 The man wears a crisp white training uniform with a knight's cloak draped over his shoulders, yet he has no sword at his side. He stops and looks down at the child who barely reaches his waist.
 "Are you the birthday boy, little prince?"
@@ -4837,13 +4837,13 @@ When the maid arrives with tea, the queen raises a finger to her lips. She takes
 "The first gift little Xavier ever chose for himself...was a sword."
 She gazes at her sleeping child and smiles.
             `,
-    },
-    {
-        id: 25.23,
-        link: "little-prince-gift",
-        serialNumber: "03",
-        subtitle: "Meaning of Expectation",
-        content: `
+  },
+  {
+    id: 25.23,
+    link: "little-prince-gift",
+    serialNumber: "03",
+    subtitle: "Meaning of Expectation",
+    content: `
 The days pass and another birthday draws near.
 Gifts fill the palace as always. This year, the prince still hasn't found a single one he truly likes. So he has the ceremonialists catalog every gift and send them under each giver's name to orphanages, schools, and neighborhoods beyond the capital walls.
 Once the presents are carried away, the vast palace feels empty. The maid turns away for a moment to pour a glass of water. When she turns back, the window seat is empty.
@@ -4901,13 +4901,13 @@ The queen smiles.
 "But from now on, the people you meet will be up to you."
 "Your mother could bring you a teacher, but you'll have to find the friends, mentors, and rivals that come after. They won't appear at your door like birthday presents." She looks into her son's clear, bright gaze. For a reason she can't quite name, a pang of sadness passes, but she forces a smile. "Isn't that a little more exciting than unwrapping gifts?"
             `,
-    },
-    {
-        id: 25.24,
-        link: "little-prince-gift",
-        serialNumber: "04",
-        subtitle: "Finding the Way",
-        content: `
+  },
+  {
+    id: 25.24,
+    link: "little-prince-gift",
+    serialNumber: "04",
+    subtitle: "Finding the Way",
+    content: `
 After Xavier grows up, a half-serious saying begins to circulate in the teachers' lounge.
 "Teaching His Highness is the least and most rewarding thing you'll ever do. It's because there's almost nothing you need to explain twice, and at least you survived without being stumped by his questions."
 The prince completes every important course in the royal curriculum at a pace that leaves his tutors speechless. Star cartography, history, literature, philosophy, military theory, diplomatic etiquette... One after another are passed with the highest scores. His bearing is impeccable. His speech is measured and graceful. He treats others with a warmth that never oversteps its bounds Even the diplomats sing his praises in the royal court.
@@ -4930,13 +4930,13 @@ Xavier opens his eyes and looks quietly at the Captain of the Royal Guard, who h
 Celki finds herself at a loss for words. Seconds pass in silence before she speaks. Her voice is low.
 “…Your Highness. Walking a road no one has tread before is a hundred times harder than following in someone else's footsteps. If you choose that, you must be prepared to be torn apart along the way."
             `,
-    },
-    {
-        id: 25.25,
-        link: "little-prince-gift",
-        serialNumber: "05",
-        subtitle: "Walking Together",
-        content: `
+  },
+  {
+    id: 25.25,
+    link: "little-prince-gift",
+    serialNumber: "05",
+    subtitle: "Walking Together",
+    content: `
 It's the annual season for forming clubs at Astria Academy.
 Now in his second year, Jeremiah is finally in the glorious position of being able to lord his seniority over the incoming freshmen.
 There's just one problem. When trying to form a club, his booth is as deserted as ever. On the table before him sits a battered old signal spectrum analyzer. A wooden sign hangs in the most prominent spot: Unknown Cosmic Civilizations Club.
@@ -4983,13 +4983,13 @@ Xavier smiles and leans against the wall to wait. Outside the window, the moonli
 "Happy Birthday!"
 He lifts his head and looks at the faces before him. These are the people he chose to meet on his own. For the first time in a long while, he remembers what his mother once told him. "Thank you," he says. "I really like this gift."
             `,
-    },
-    {
-        id: 25.26,
-        link: "little-prince-gift",
-        serialNumber: "06",
-        subtitle: "The Last Gift",
-        content: `
+  },
+  {
+    id: 25.26,
+    link: "little-prince-gift",
+    serialNumber: "06",
+    subtitle: "The Last Gift",
+    content: `
 The royal capital blazes with light. Music from the banquet drifts on the night wind in broken segments. They're filled with the faint sound of laughter and the crisp clinking of glasses The first time Jeremiah is invited inside the palace is for Xavier's coming-of-age ceremony He learns a great deal along the way.
 Starchart murals painted across the vaulted ceilings, relief-carved pillars lining every corridor, and even an unassuming vase tucked around a corner could fuel several cultural research papers on its own. As the prince's classmate and friend, he's afforded no small amount of courtesy. A ceremonialist guides him, intentionally slowing down to accommodate Jeremiah's curious glances.
 The waiting room is quiet, a world apart from the clamor beyond the palace walls. Xavier stands before a full-length mirror and ignores the ceremonial cloak with golden threads. It's being held aloft by the attendant behind him.
@@ -5073,13 +5073,13 @@ And so the group pushes open the door and runs into the night.
 The path is still dark and long. There's only starlight, each other, and a road whose end they can't yet see.
 But not a single one of them looks back.
             `,
-    },
-    {
-        id: 261,
-        link: "good-night-frostmere",
-        serialNumber: "01",
-        subtitle: "News",
-        content: `
+  },
+  {
+    id: 261,
+    link: "good-night-frostmere",
+    serialNumber: "01",
+    subtitle: "News",
+    content: `
 "Good morning. The joint rescue mission at the site of the recent geological and meteorological disaster in the Arctic town, Frostmere, has ended. As of this moment, there have been…"
 Someone changes the channel. The broadcast stutters for a few seconds before the anchor's voice continues. That heavy number has been skipped. "...deaths. 53 people are still missing..."
 The TV is turned off.
@@ -5095,13 +5095,13 @@ Greyson crosses the waiting area and retreats to his own office.
 
 Greyson has just returned to Linkon City from the Frostmere rescue mission. His phone, the TV, the Internet-news alerts are everywhere They're relentlessly updating coverage of the Arctic disaster from several days ago. He turns on his computer and takes a deep breath. Herecalls how Zayne always remained composed in the face of such incidents. He wants to suppress the weight pressing down on his chest... and the fear. He logs into the system and pulls up the files. As a member of the medical support team during the rescue operation, he must now confront the heaviest chapter of this nightmare: writing death reports for the victims and the rescue workers who never made it back.
             `,
-    },
-    {
-        id: 262,
-        link: "good-night-frostmere",
-        serialNumber: "02",
-        subtitle: "Relocation",
-        content: `
+  },
+  {
+    id: 262,
+    link: "good-night-frostmere",
+    serialNumber: "02",
+    subtitle: "Relocation",
+    content: `
 Among the many tourist towns scattered across the Arctic, Frostmere can only be classified as ordinary.
 Situated at the end of a glacial canyon, the town has a small population. In the eyes of discerning travelers, its scenery is nothing remarkable. It's typically a backup choice for those who failed to secure reservations for the popular resorts in Snowcrest. Its redeeming feature lies twenty kilometers away: a glacial lake nestled in the lower part of the canyon. It's like a cold mirror the gods cast down to reflect the world. Each year, when it's peak tourist season, visitors will flock in like migratory birds only to scatter just as swiftly once it ends.
 With the new year approaching, this year's holiday preparations carry an unusual weight. According to monitoring results from the Arctic Hunters Association, the magnetic field in the region has been displaying anomalies. So as a safety precaution, the townspeople will be evacuated. The last group will relocate to a different area after the new year.
@@ -5137,13 +5137,13 @@ His Hunter's Watch shrieks. He lost both his legs the last time he heard an alar
 Floodwaters are arriving in 15 minutes!
 Magnetic fluctuations had delayed the disaster by 20 minutes. Now the guillotine finally falls.
             `,
-    },
-    {
-        id: 263,
-        link: "good-night-frostmere",
-        serialNumber: "03",
-        subtitle: "Blessing",
-        content: `
+  },
+  {
+    id: 263,
+    link: "good-night-frostmere",
+    serialNumber: "03",
+    subtitle: "Blessing",
+    content: `
 Like a dream shattering without warning, panic seeps through the air.
 Amid the overlapping screams and blaring alarms, the girl barely grasps what's happening before she's swept into her father's arms. His hands tremble, but Uncle Jeroen's voice remains steady. "Floodwaters are coming! Get to high ground. Don't drive and stay out of basements!"
 Her father carries her, and they're swept along by the tide of bodies. She cranes her neck and strains to look at where Uncle Jeroen stood. That familiar figure is moving against the crowd. The Arctic wind, laced with stinging snow, carries his frantic shouts
@@ -5169,13 +5169,13 @@ After what feels like an eternity, the team leader's voice crackles through the 
 "You will be arriving in thirty minutes. The latest intel from the command center confirms that the target zone was hit by a secondary disaster around 5:00 P.M.. A cold downdraft. Temperatures have plunged below negative forty-two degrees Celsius. Everyone, follow proper protection protocols. Don't let hypothermia get to you!"
 The team leader doesn't say it outright, but Greyson knows. Everyone has already braced for the worst.
             `,
-    },
-    {
-        id: 264,
-        link: "good-night-frostmere",
-        serialNumber: "04",
-        subtitle: "Mending",
-        content: `
+  },
+  {
+    id: 264,
+    link: "good-night-frostmere",
+    serialNumber: "04",
+    subtitle: "Mending",
+    content: `
 Jeroen brings up the rear of the panicked crowd and pulls back a few people still desperate to retrieve their belongings. He hoists an elderly man with bad legs onto his back and races toward the bell tower. His prosthetic bones dampen the muscle strain and stress fractures that would normally come from intense exertion. It's just enough to make the most of this narrow window before disaster strikes.
 The rumbling grows louder. From deep within the canyon, the wind shrieks like something is alive. The magnetic field interference intensifies. His Hunter's Watch keeps displaying the word "connecting." It's frozen on the last alert from the nearest Hunter outpost.
 The air is thick with dirt and snow. Breathing burns his lungs. Jeroen pushes against the gale and guides the last person in sight through the bell tower doors. Pain stabs his heart as he gasps. He almost retches. On the steps, his leg buckles, and he almost falls forward. Someone hesitantly steadies him. A voice, close yet distant, reaches his ears.
@@ -5197,13 +5197,13 @@ Jeroen exhales. At last, he lets his body relax.
 He slumps against the wall as he finds his breath again. Sunlight breaks through the clouds and refracts off the ice and snow There's a rainbow. It's like the day he was discharged from Akso after being practically kidnapped to Linkon City by that stone-faced doctor.
 "Everyone, stay calm. The situation is still unstable. Maintain order and let the elderly and children evacuate first!" His voice is ragged, and he pauses. "I'll stay until everyone's gone."
             `,
-    },
-    {
-        id: 265,
-        link: "good-night-frostmere",
-        serialNumber: "05",
-        subtitle: "Good Night",
-        content: `
+  },
+  {
+    id: 265,
+    link: "good-night-frostmere",
+    serialNumber: "05",
+    subtitle: "Good Night",
+    content: `
 Many days have passed since then.
 The death toll across Frostmere and the surrounding area is staggering. Night has fallen when Greyson opens the final document: Post-Mortem Examination and Death Certificate. It bears the Hunter's unique biosignature and name—Jeroen. The last time Greyson had seen that name was during his Cryozina implant surgery. Dr. Zayne had been the lead surgeon. Greyson himself was the surgical assistant.
 It was unexpected, yet it also wasn't.
@@ -5240,13 +5240,13 @@ His footsteps ease as the city still slumbers.
 For those who return late, the day hasn't ended yet. There's still time to say "good night. "He glances at the corner of his screen. 3:37A.M. In about three hours, the sun will rise, and morning will come.
 He will watch, truly watch, the sunrise after a long night.
             `,
-    },
-    {
-        id: 271,
-        link: "a-fairy-tale",
-        serialNumber: "01",
-        subtitle: "The First Thread",
-        content: `
+  },
+  {
+    id: 271,
+    link: "a-fairy-tale",
+    serialNumber: "01",
+    subtitle: "The First Thread",
+    content: `
 In the ocean's depths lies a place closer to the Heart of the Planet than even the deepest seabed. It's Deepspace's most tender secret: the Dreamweaving Bureau.
 A baby Dream Weaver axolotl with shiny, round eyes watches his mother intently and tries his best to mimic her movements by waving the six fluffy, feathery fins on either side of his head. These soft fins will one day become nimble shuttles for combing through the universe's thoughts. But for now, their master has no interest in using them for such a purpose.
 When Mother isn't looking, the baby Dream Weaver sneaks off to chase the fish darting between the seagrass. Meanwhile, his mother—a Dream Weaver perpetually bathed in a gentle, soft light--weaves. Each unfurling and folding of her feathery fins moves with the rhythm of a wandering bard regardless of the dream she crafts. Puzzled, the baby watches his mother. This work brings him no joy whatsoever... Yet Mother always has a tender smile.
@@ -5268,13 +5268,13 @@ The baby Dream Weaver holds his breath, his eyes akin to the full moon.
 
 The baby Dream Weaver pulls his feathery fins, their tips now flushed a rosy red, in front of his eyes. He gently rubs them with his tiny claws. He's rarely ever this quiet.
             `,
-    },
-    {
-        id: 272,
-        link: "a-fairy-tale",
-        serialNumber: "02",
-        subtitle: "Colors of the Cambrian Period",
-        content: `
+  },
+  {
+    id: 272,
+    link: "a-fairy-tale",
+    serialNumber: "02",
+    subtitle: "Colors of the Cambrian Period",
+    content: `
 The rosy flush slowly fades from the baby's feathery fins, and they return to their usual pinkish-white. The little Dream Weaver edges forward as if to try again, but he pulls back at the last moment. With his head lowered, he quietly asks, "Mother, what happened next? How did the threads become what they are now?" Gone is the whining from before. Only pure curiosity remains.
 Mother's eyes shimmer with a gentle, dancing light. "Before we get to that, my child, we have a long story that must be told." She guides her little one through the glowing seagrass. They drift upward to a place the sunlight can still reach, and they settle upon a great giant clam adorned with beautiful blue-frilled edges. The world around them is lively.
 "After that first thread was woven into a green forest, some 500 million moonsets before our time in an age the stones themselves remember as the Cambrian era… This world, silent for a long time, awakened seemingly overnight. The ocean, our eternal home, transformed into a wondrous, teeming paradise. Countless beings never before took on forms beyond our wildest imagination Every shape you could ever dream of appeared in those days. Every color you could behold bloomed..."
@@ -5284,13 +5284,13 @@ The baby's feathery fins excitedly flutter, as bright lights flash from his eyes
 Mother looks down at her baby's six feathery fins. They've unfurled without him noticing and tremble ever so slightly. Her smile becomes gentler. "The ocean became a boiling, churning dyehouse woven from countless vivid hues. More threads appeared the thick layers so tangled that our feathery fins alone could no longer comb through all those colorful threads. Thus, through countless generations of listening and trying, we evolved." With the slender, delicate tips of her feathery fins adorned with countless tiny, sensitive filaments, she gently brushes the fuzzy ends of her baby's fins. The little one shudders. "See these soft, downy fibers? Each one is the keenest of weaving needles. They trace life's pulse into dreams for the sleeping That was our first true flourishing, my child. The wisdom to perceive, granted to us when the universe was born, made us the most focused, most faithful witnesses to the carnival of life. In those days, we lived in vast. creative joy and weaved the most beautiful tapestries the world had ever seen."
 The giant clam begins to snore, and a bubble rises. It carries within it a saffron-yellow thread that floats up and becomes entwined around the baby's fuzzy fins. It tickles, and the little Dream Weaver giggles. For the first time, he thinks that maybe dreamweaving isn't that bad.
             `,
-    },
-    {
-        id: 273,
-        link: "a-fairy-tale",
-        serialNumber: "03",
-        subtitle: "A Long Night",
-        content: `
+  },
+  {
+    id: 273,
+    link: "a-fairy-tale",
+    serialNumber: "03",
+    subtitle: "A Long Night",
+    content: `
 The giant clam's snoring slowly fades, and those bubbles wrapped in saffron-yellow threads drift apart and pop one by one. The baby Dream Weaver is still lost in the splendor of the Cambrian era. "What happened next, Mother?" He lifts his head, his eyes shining with thirst for knowledge. "Why can't we see those soft threads anymore?"
 The gentle light in Mother's eyes dims for a second, but he doesn't notice. She draws her little one closer. The giant clam awakens, shaking its great body as it swims away Together, mother and child sink once more into the depths of the sea.
 "Very few lives can stay the same forever, my child. Likewise, only some beautiful songs repeat a single note. Ages passed, and many of our dreamy tapestries overflowed and flourished. Our sensitive synapses grew accustomed to the softness of those threads." Mother parts the darkness to reveal a mass of tangled threads. A suffocating, murky dark green-marbled with charred black and scarred by red streaks, like the raw marks left by sharp rocks against skin.
@@ -5310,13 +5310,13 @@ The baby Dream Weaver clamps the six feathery fins over his ears. He doesn't wan
 
 The baby Dream Weaver twines that peacock green strand that's still flecked with tiny grains of sand with the soft saffron-yellow. As he works, the feathery fins on either side of his head feel as light as air, as heavy as stone... Before his eyes, a tapestry unfurls: the sea and the land are woven into form.
             `,
-    },
-    {
-        id: 274,
-        link: "a-fairy-tale",
-        serialNumber: "04",
-        subtitle: "Cosmic Tides",
-        content: `
+  },
+  {
+    id: 274,
+    link: "a-fairy-tale",
+    serialNumber: "04",
+    subtitle: "Cosmic Tides",
+    content: `
 This is the baby Dream Weaver's first creation. The threads Mother placed in his tiny claws awaken something within him. For the first time, he understands how wondrous this gift truly is. As the silk glides through the delicate synapses located on the tips of his feathery fins, he listens with every fiber of his being. Finally, he "tastes" the emotions lingering in the giant clam's dream: a longing for sunlight, a quiet determination to grow.
 "Mother, did the world teem with life again after that night?" It's a question he can't help but ask.
 
@@ -5336,13 +5336,13 @@ The baby Dream Weaver hasn't felt so exhilarated before. But when a new thread b
 
 A light that's too bright casts the darkest of shadows. Those beautiful colors began to clash and blend until they grew foul and tainted. The curiosity that once sparked exploration transformed into a greed that would devour all things. Within selfless love, the thorns of possession took root. And in the radiance of life, the seeds of death began to churn. We watched as our home was upended by curiosity. We buried, with our own hands, dear friends whose bones were picked clean by those who wielded a weapon 'in the name of love.' In their dreams, we found a splendor beyond anything we'd ever known and something else we had never witnessed: a black hole. A 'void.' Mother's gaze lands on her child's feathery fins. With scarred hands, she tears away the fibers clinging to those tender synapses. Where they scrape across the skin, pink transforms into an angry red, and blood begins to seep.
             `,
-    },
-    {
-        id: 275,
-        link: "a-fairy-tale",
-        serialNumber: "05",
-        subtitle: "Nightmare",
-        content: `
+  },
+  {
+    id: 275,
+    link: "a-fairy-tale",
+    serialNumber: "05",
+    subtitle: "Nightmare",
+    content: `
 "Is that why the threads exist like this now, Mother?"
 "Yes. They are no longer threads, my child. They have a new name now. They are thorns." Mother gazes upon the tapestry before her. She cannot recall when it happened, when those soft, singing, glorious silken threads first grew hard shells and sprouted barbs.
 After all, in the long chronicle of this planet's dreams, the age of humanity is in the last few seconds. It's short, easy to be forgotten.
@@ -5353,13 +5353,13 @@ After all, in the long chronicle of this planet's dreams, the age of humanity is
 
 On land, humanity continues to enact its tragicomedies that are too tangled to fully unravel. They're dazzling in their brilliance yet chaotic beyond measure. The baby Dream Weaver nestles close to Mother, his eyes shiny and bright. He looks at the unfinished tapestry woven from thorns. With trembling feathery fins, he reaches out alongside Mother, and together they complete the final corner of the dream. Although his powerful gift of regeneration swiftly covers each wound with new tissue, Mother always knows about the pains her child has yet to speak. "To have brought you into this age, my child... I'm sorry."
             `,
-    },
-    {
-        id: 276,
-        link: "a-fairy-tale",
-        serialNumber: "06",
-        subtitle: "A Bedtime Story for Good Kids",
-        content: `
+  },
+  {
+    id: 276,
+    link: "a-fairy-tale",
+    serialNumber: "06",
+    subtitle: "A Bedtime Story for Good Kids",
+    content: `
 Somewhere in this world, a human stirs from slumber. And on the far side of the earth, a child by the sea fights drowsiness and asks one last question before sleep takes hold.
 "Why don't the Dream Weavers just stop? If dreamweaving hurts so much, then why do they keep weaving for humans? Or... they could just weave the pretty ones!"
 
@@ -5378,13 +5378,13 @@ The old butler dims the warm bedside lamp. Starlight from Deepspace drifts throu
 Young faces reveal earnest pride. These little chroniclers of Deepspace's civilization have finally decided it's time to go to bed. They'll need their energy to greet tomorrow's mission.
 The old butler walks to the window sill. A figure leaning quietly against the outer wall has listened to the story alongside the children. The butler follows his gaze toward the distance. There lies the sea, deep and fathomless... And Deepspace, vast and boundless, merging gently into one.
             `,
-    },
-    {
-        id: 281,
-        link: "onychinus-aesthetics",
-        serialNumber: "01",
-        subtitle: "Surprise Attack",
-        content: `
+  },
+  {
+    id: 281,
+    link: "onychinus-aesthetics",
+    serialNumber: "01",
+    subtitle: "Surprise Attack",
+    content: `
 In the Odd Workshop, the central area is bare. Several securing clamps have been violently wrenched apart, and the somewhat repaired invention that once sat upon the table has vanished without a trace. A gaping hole yawns in the workshop's roof. A blood moon hangs in the sky and casts a crimson sheen over the mountain of mechanical wreckage piled below. 
 
 It all started thirty minutes ago. EVER's attack was sudden and unexpected. It swept away the invention in the middle of calibrating, and they left a mess. But to be fair, at least half of this "mess" should be credited to a certain pair of twins whose idea of "support" looked suspiciously like "demolition."
@@ -5412,13 +5412,13 @@ Philip taps the nearby flickering monitor. Two sharp crackles of static later, t
 "Fourth-gen comms device. Encrypted channels, real-time holograms, and onboard Al. Effective range covers the entire N109 Zone."
 He turns it on and tosses it to Luke and Kieran. "You want the good gear? Get our stuff back."
             `,
-    },
-    {
-        id: 282,
-        link: "onychinus-aesthetics",
-        serialNumber: "02",
-        subtitle: "Violent Aesthetics",
-        content: `
+  },
+  {
+    id: 282,
+    link: "onychinus-aesthetics",
+    serialNumber: "02",
+    subtitle: "Violent Aesthetics",
+    content: `
 It's nighttime.
 The asphalt gleams slick and cold under the headlights while the hulking shells of abandoned factories crouch in silence beneath the blood-red dome. A battered gray van trundles down the road. "All repairs welcome" is plastered across its side in all caps, and every window is smothered under a patchwork of garish flyers. It's so ancient that it doesn't even qualify as "vintage." It's a prehistoric automatic crawling along at a pace boring enough to put anyone to sleep.
 In the back seat, Luke is sprawled against the door. One of his legs is on the headrest in front of him. A peeling flyer by his head cheerfully advertises "L4 Support Driving Technology." He lets out a listless groan.
@@ -5478,13 +5478,13 @@ Before he can continue, the rider guns the throttle. The motorcycle rockets towa
 Philip watches as the rider jumps off the motorcycle at the last possible second, tucks into a roll, and tumbles to a stop beside the van. The helmet comes off and reveals a face that can only be described as "mature and composed." Philip pinches the bridge of his nose. He lets out a weary sigh.
 It was a roadblock. Was that really necessary?
             `,
-    },
-    {
-        id: 283,
-        link: "onychinus-aesthetics",
-        serialNumber: "03",
-        subtitle: "Drastic Measures",
-        content: `
+  },
+  {
+    id: 283,
+    link: "onychinus-aesthetics",
+    serialNumber: "03",
+    subtitle: "Drastic Measures",
+    content: `
 Wind howls past the windows as it's entangled with the growing roar of engines closing in from behind.
 The gray van tears down the road. Hank has taken the wheel now. Being a former pro racer, he's somehow wrangling a speed-trial performance out of this rust bucket. And speed trials are where the limit is the minimum, mind you. He weaves and swerves the vehicle with reckless abandon.
 The consequences of kicking the hornet's nest arrive faster than expected. The EVER operatives forced into that mutual destruction stunt with the motorcycle have abandoned their original route. They've mobilized every reserve unit in the area and are intent on trapping the van inside this maze of steel and concrete.
@@ -5513,13 +5513,13 @@ Before Philip can exhale, several light blue energy masses begin converging behi
 Kieran, the only one crouched outside the van, reacts. A volley of throwing knives strikes the launcher, but a beam of blue light still grazes his left cheek. A thin crack is left across his mask. The antimatter attack veers off course and slams into the ground instead, but the heat it creates nearly flips the van.
 Caught off guard, Philip is thrown out of the cabin and tumbles across the ground. When the communication device slips from his grip. everything goes black.
             `,
-    },
-    {
-        id: 284,
-        link: "onychinus-aesthetics",
-        serialNumber: "04",
-        subtitle: "Memory Fragments",
-        content: `
+  },
+  {
+    id: 284,
+    link: "onychinus-aesthetics",
+    serialNumber: "04",
+    subtitle: "Memory Fragments",
+    content: `
 The damaged device lies in a heap of rubble a few meters away. Phil's voice cuts in and out.
 "In the face of failure, choosing to retreat is not shameful. Now... charting&*#@!...contingency&#**plans. Total of..."
 The electronic voice forces its way through the gaps in the ringing only to be swallowed again by a shrill, piercing whine. Philip's consciousness drifts at the edge of darkness Everything in his vision slowly spins, and the colors bleed.
@@ -5590,13 +5590,13 @@ Hank: ...?
 
 "Didn't I mention this before?" Philip adjusts his goggles, his voice carrying the weight of too many years and too little sleep. "This van got... a few tweaks."
             `,
-    },
-    {
-        id: 285,
-        link: "onychinus-aesthetics",
-        serialNumber: "05",
-        subtitle: "Tonight, As Always",
-        content: `
+  },
+  {
+    id: 285,
+    link: "onychinus-aesthetics",
+    serialNumber: "05",
+    subtitle: "Tonight, As Always",
+    content: `
 The blood moon hangs high in the night sky Unreliable street lights flicker and dim. The district lies empty in the wake of the Zoion Hunt. Nothing stirs save for a single van parked at the corner, its engine cold.
 Philip sits alone inside. He stares at the faint glow of the dashboard indicators. The mission's over. The others peeled off one by one on the way back. A gust sweeps through, stirring scraps of paper across the pavement Before long, a mechanical crow descends in a flutter of dark wings and gives light to a rusty Iamppost. His crimson eyes silently observe him.
 Philip steps out, retrieving the battered container from the back. "New equipment. Didn't lose it. It's already been calibrated to your preferences."
@@ -5613,13 +5613,13 @@ And farther still, in the ruins of the. Gaia Research Center, fire blooms one la
 
 The nights in the N109 Zone are long, long enough for Philip to finish his tea.
             `,
-    },
-    {
-        id: 291,
-        link: "above-the-ashes",
-        serialNumber: "01",
-        subtitle: "Bygone Bloom",
-        content: `
+  },
+  {
+    id: 291,
+    link: "above-the-ashes",
+    serialNumber: "01",
+    subtitle: "Bygone Bloom",
+    content: `
 A low-frequency hum permeates every corner of the Farspace Fleet's HQ as if the air trembles in sync with the distant pulse of the floating harbor and the steady breath of nearby engines.
 Rufus strides down the corridor. His pace is brisk, each footstep landing heavy and measured against the deck because of his military boots. As he passes the operations center, a cluster of young technicians is locked in a heated debate over simulation data. When they see him, the argument dies in the middle of a sentence. They fix their posture, their eyes following his retreating figure.
 Rufus doesn't break stride. He simply raises a hand over his shoulder as he passes. "Don't rush when DC voltage's involved. Engineering is about closed-loop thinking. Get your fundamentals down on a support ship first.
@@ -5670,13 +5670,13 @@ Rufus's gaze sweeps over the dazzling service record: S-Rank pilot, voyage recor
 But as he lowers his gaze, four words sit at the bottom of the file: Recommended by EVER.
 His adjutant stands nearby, observing Rufus's expression. The air holds its silence before Rufus presses his palms together and closes the file. To him, possessing an extraordinary talent only to willingly become EVER's instrument is more tragic than incompetence.
             `,
-    },
-    {
-        id: 292,
-        link: "above-the-ashes",
-        serialNumber: "02",
-        subtitle: "Peril",
-        content: `
+  },
+  {
+    id: 292,
+    link: "above-the-ashes",
+    serialNumber: "02",
+    subtitle: "Peril",
+    content: `
 "The energy output from this mutated Protocore has breached the standard threshold. The magnetic storm it's triggering is still expanding."
 The lights in the briefing room have been dimmed. In almost complete darkness, a holographic sand table hovers at the center of the room. EVER's technical representative stands in the shadows and sweeps the air to pull up a set of raw frequency bands captured by the sunflower. It's overlaid against the sand table's imaging.
 Once converted, faint specks of light flicker at the edge of the hazard zone.
@@ -5696,13 +5696,13 @@ If he turns a blind eye now and saves himself by pretending he never heard the c
 Very well. He'll give them an answer that leaves no room for misreading.
 "Central Fleet, here's your mission objective We're bringing them home."
             `,
-    },
-    {
-        id: 293,
-        link: "above-the-ashes",
-        serialNumber: "03",
-        subtitle: "The Final Decision",
-        content: `
+  },
+  {
+    id: 293,
+    link: "above-the-ashes",
+    serialNumber: "03",
+    subtitle: "The Final Decision",
+    content: `
 The flagship presses forward, step by step, into the heart of the magnetic storm's vortex. The space around it has already been warped under the onslaught of furious energy currents, yet Rufus's hands remain steady on the sensory control interface. He operates with the certainty of a surgeon with a scalpel. His neural link feeds directly into the warship's systems. Every minute shift in the chaos outside registers against his senses Under his command, the vessel moves with almost instinctive precision. The bow tilts briefly, riding an incoming wave of energy flux as cover. He threads the needle past gravitational forces strong enough to tear through armor. A pulse burst from the starboard support thrusters corrects their attitude. The movement is elegant.
 "Arrival at designated coordinates has been confirmed. Protocore detected. Extending docking bridge."
 With a heavy thud of impact, the black, angular suppressor locks onto the Protocore. On the hologram, the readings representing Protocore fluctuations spike wildly. It's an expected reaction to the intervention. But when the system countdown ends, there is no stabilization. Instead, a glaring warning flashes across the control interface.
@@ -5729,13 +5729,13 @@ It begins to collapse and expand.
 Rufus slams the thrusters into dangerous thresholds marked in red. Against his own orders, every shield generator on the flagship overloads at once. They flare to life in a single desperate, fragile barrier planted directly between the raging torrent of energy about to burst and the DAA's stranded squadron. Alarms scream in overlapping waves. The warship groans at the edge of structural failure. Rufus's nervous system is fused deep into the flagship's system. Every inch of armor that's torn away feels as though it's being ripped from his flesh.
 But he grits his teeth. He endures and refuses to move.
             `,
-    },
-    {
-        id: 294,
-        link: "above-the-ashes",
-        serialNumber: "04",
-        subtitle: "The Final Bow and the Debut",
-        content: `
+  },
+  {
+    id: 294,
+    link: "above-the-ashes",
+    serialNumber: "04",
+    subtitle: "The Final Bow and the Debut",
+    content: `
 On the bridge's main display, the lights representing the DAA's patrol squadron fade from red one by one. They vanish into the area beyond the boundaries of the safe zone After the final onslaught of energy flux, the flagship is unrecognizable. Its sleek figure has been torn apart, its starboard armor stripped clean. Conduits and cables are exposed to outer space like raw veins. Inside the cockpit, life-support oxygen levels have dropped below the safety threshold.
 Rufus feels a suffocating coldness closing around his consciousness.
 Beyond the viewport, over a dozen EVER observation drones haven't withdrawn. They circle the dying warship like carrion birds. 
@@ -5752,13 +5752,13 @@ That beacon functions like a lightning rod as it seizes the furious energy torre
 Without any sound or warning, the entire formation is swept into oblivion and swallowed by light.
 The massive shockwave's aftermath hurls the flagship and makes it tumble toward the far reaches of Deepspace. Amid the violent shuddering, Rufus finally slips beyond the edge of consciousness. At last, he falls into a long, dreamless night.
             `,
-    },
-    {
-        id: 295,
-        link: "above-the-ashes",
-        serialNumber: "05",
-        subtitle: "The Eve",
-        content: `
+  },
+  {
+    id: 295,
+    link: "above-the-ashes",
+    serialNumber: "05",
+    subtitle: "The Eve",
+    content: `
 When his consciousness returns, the scent clinging to his nostrils is no longer the acrid char of ozone. It's the cold, sterile bite of antiseptic. The white walls of a covert medical station slowly sharpen into focus. Rufus tries to gather his thoughts, but something refuses to align. He doesn't need a doctor to deliver the verdict. After half a lifetime of fighting in Deepspace, he knows the neural-link's feedback with intimate precision. And now, that seamless spatial awareness of blending with his warship is slipping away. He's no longer fit for any sort of intensive command. The automatic door slides open without a sound. Rufus remembers the name of every soul aboard the Farspace Fleet. So he knows Liam is the one to step inside. Liam skips the pleasantries, his voice low. "Captain, please allow me to give the Fleet's official debriefing that was submitted to EVER. 'Rufus, stripped of his rank and having defied reasonable technical guidance during the operation, has perished alongside his ship."
 Rufus listens. His sharp gaze is fixated on Liam, and he waits for the rest.
 "...Colonel Caleb was dispatched under emergency protocols. He successfully salvaged the high-risk mutated Protocore and prevented a power grid crisis in Skyhaven. It's a flawless debut for the new colonel." Liam's tone remains measured and factual.
@@ -5778,13 +5778,13 @@ Caleb's figure is resolute and unwavering as he strides toward the treacherous l
 A long silence passes. Then, Rufus's lips slowly twist into something caught between self- mockery and release. He believed the Farspace Fleet needed a lighthouse, one willing to burn itself to ashes. But perhaps he was wrong. This dark frontier doesn't need more fire. It needs a greater night.
 And hidden at night's end will be the morning finally unsheathed.
             `,
-    },
-    {
-        id: 301,
-        link: "fairnights-edge",
-        serialNumber: "01",
-        subtitle: "Civ Research Division Archive Guide",
-        content: `
+  },
+  {
+    id: 301,
+    link: "fairnights-edge",
+    serialNumber: "01",
+    subtitle: "Civ Research Division Archive Guide",
+    content: `
 Since its founding in 1960, the Deepspace Academy has compiled and organized observational records concerning Earth's civilizations.
 Giant insects of the Paleozoic Era, towering trees of the Carboniferous Period, massive marine creatures of the Permian Period…
 They once ruled the Earth only to vanish into the depths of geological time. Each mass extinction.is Earth's way of renewing itself.
@@ -5796,13 +5796,13 @@ What if our civilization is a fleeting chapter in Earth's long history?
 This file is restricted to important members in the Deepspace Academy.
 Unauthorized disclosure will be punished in accordance with Academy Disciplinary Code Article 7.
 `,
-    },
-    {
-        id: 302,
-        link: "fairnights-edge",
-        serialNumber: "02",
-        subtitle: "Known Civilization Types",
-        content: `
+  },
+  {
+    id: 302,
+    link: "fairnights-edge",
+    serialNumber: "02",
+    subtitle: "Known Civilization Types",
+    content: `
 Case File No.: 000001
 Archivist: Chronis, Deepspace Academy Physics Division 
 
@@ -5825,13 +5825,13 @@ Perhaps millions of life forms have already existed in this world long before hu
 If the rumors about the end of the world are true and humanity now stands at its twilight. Are these diverse "civilizations" appearing to save us or replace us?
 -Chronis
             `,
-    },
-    {
-        id: 303,
-        link: "fairnights-edge",
-        serialNumber: "03",
-        subtitle: "Other Supplementary Records ",
-        content: `
+  },
+  {
+    id: 303,
+    link: "fairnights-edge",
+    serialNumber: "03",
+    subtitle: "Other Supplementary Records ",
+    content: `
 Case File No.: 000017
 Archivist: Velasha, Deepspace Academy
 Anomalous Research Division 
@@ -5849,13 +5849,13 @@ Yesterday at 22:21, a drone was performing cleaning duties on a tech company's b
 How strange...What did I see last night...? It's weird...I sneezed, and then I couldn't remember anything…
 -Velasha
 `,
-    },
-    {
-        id: 304,
-        link: "fairnights-edge",
-        serialNumber: "04",
-        subtitle: "Gaia Research Center",
-        content: `
+  },
+  {
+    id: 304,
+    link: "fairnights-edge",
+    serialNumber: "04",
+    subtitle: "Gaia Research Center",
+    content: `
 Case File No.: 000053
 Archivist: Amena, Deepspace Academy Biology Division
 
@@ -5870,13 +5870,13 @@ Appendix
 Conducted an in-depth investigation into the behind-the-scenes collaboration between that company and EVER but found no written or electronic records whatsoever. (*Note: There are no records. At all.)
 -Amena
             `,
-    },
-    {
-        id: 305,
-        link: "fairnights-edge",
-        serialNumber: "05",
-        subtitle: "Deepspace Signal",
-        content: `
+  },
+  {
+    id: 305,
+    link: "fairnights-edge",
+    serialNumber: "05",
+    subtitle: "Deepspace Signal",
+    content: `
 Case File No.: Un-0000
 Archivist: Chronis, Deepspace Academy Physics Division 
 
@@ -5893,5 +5893,5 @@ Decoded Signal
 The universe 's ultimate state is absolute disorder. What we perceive as order is merely a correction mechanism, a will resisting the universe 's entropy. To sustain civilization, the evolution of complex systems inevitably triggers periodic resets to offset information redundancy. It also redistributes resources. All vessels of life and intelligence must, after progressive natural selection, return to the singularity. Oblivion is the final conclusion of the law of conservation of energy.
 The observed civilization's complexity is approaching the correction threshold. The  twilight of humanity may soon be upon them When we awaken, we hope to still share the boundless Deepspace with them.
             `,
-    },
-    ]
+  },
+];

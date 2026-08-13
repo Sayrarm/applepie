@@ -1,97 +1,96 @@
 .container {
-    padding: 15px;
-    background-color: var(--bg-glass);
-    box-shadow: var(--box-shadow);
-    margin: 20px 0;
+  padding: 15px;
+  background-color: var(--bg-glass);
+  box-shadow: var(--box-shadow);
+  margin: 20px 0;
 }
 
 .title {
-    color: var(--colorTextDark);
-    font-size: 16px;
-    margin: 0 0 12px 0;
-    font-weight: 500;
+  color: var(--colorTextDark);
+  font-size: 16px;
+  margin: 0 0 12px 0;
+  font-weight: 500;
 }
 
 .buttonGroup {
-    display: flex;
-    gap: 12px;
-    align-items: center;
+  display: flex;
+  gap: 12px;
+  align-items: center;
 }
 
 .button {
-    padding: 10px 20px;
-    border: none;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    color: var(--colorText);
-    display: flex;
-    align-items: center;
-    gap: 6px;
+  padding: 10px 20px;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--colorText);
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .button:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-    transform: none !important;
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
 }
 
 .exportButton {
-    background: var(--green-button);
+  background: var(--green-button);
 }
 
 .exportButton:hover:not(:disabled) {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
 }
 
 .importButton {
-    background: var(--red-button);
+  background: var(--red-button);
 }
 
 .importButton:hover:not(:disabled) {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgb(99 18 19);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgb(99 18 19);
 }
 
 .clearButton {
-    background: white;
-    color: var(--colorTextSuperDark);
+  background: white;
+  color: var(--colorTextSuperDark);
 }
 
 .clearButton:hover:not(:disabled) {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgb(189 189 189);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgb(189 189 189);
 }
 
 .fileInput {
-    display: none;
+  display: none;
 }
 
 .info {
-    margin-top: 10px;
-    padding: 8px 12px;
-    background: var(--background);
-    border-left: 3px solid #ffd700;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: var(--background);
+  border-left: 3px solid #ffd700;
 }
 
 .info small {
-    color: var(--colorText);
-    font-size: 12px;
-    line-height: 1.5;
-    display: block;
+  color: var(--colorText);
+  font-size: 12px;
+  line-height: 1.5;
+  display: block;
 }
 
 /* Адаптивность */
 @media (max-width: 600px) {
+  .buttonGroup {
+    display: flex;
+  }
 
-    .buttonGroup {
-       display: flex;
-    }
-
-    .button {
-        width: 50%;
-        justify-content: center;
-    }
+  .button {
+    width: 50%;
+    justify-content: center;
+  }
 }
