@@ -67,3 +67,15 @@ export {
     getCardStella,
     getCardImageById
 } from './protocore-storage.js';
+export {
+    getShowcaseTeams,
+    saveShowcaseTeams,
+    addShowcaseTeam,
+    updateShowcaseTeam,
+    deleteShowcaseTeam,
+    getShowcaseTeamById,
+    getShowcaseTeamByIndex,
+    clearAllShowcaseTeams,
+    createDefaultTeam,
+    getShowcaseTeamsOrDefault
+} from './showcase-storage.js';
