@@ -3,10 +3,11 @@ import styles from "./DataManager.module.css";
 
 // Список всех ключей localStorage, которые нужно сохранять
 const STORAGE_KEYS = [
-  // Данные Showcase (старый ключ)
-  "showcase_data",
-  // Данные команд Showcase (новый ключ)
-  "showcase_teams",
+
+  "showcase_teams", // Данные команд Showcase
+  "farm_goals", // трекер
+  "theme", //ночная/светлая тема
+  "app_timezone", //часовой пояс
 
   // Данные карточек (уровни, ранги, доступность, возвышение)
   /^cardLevel_\d+$/,
