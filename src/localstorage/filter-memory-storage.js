@@ -1,40 +1,4 @@
-import { KEYS, getMemoryFilterKeys } from '@localstorage';
-
-// ===== ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ =====
-const get = (key, defaultValue) => {
-    try {
-        const saved = localStorage.getItem(key);
-        if (saved === null) return defaultValue;
-        try {
-            return JSON.parse(saved);
-        } catch {
-            return saved;
-        }
-    } catch (e) {
-        console.error(`Error loading from storage ${key}:`, e);
-        return defaultValue;
-    }
-};
-
-const set = (key, value) => {
-    try {
-        localStorage.setItem(key, JSON.stringify(value));
-        return true;
-    } catch (error) {
-        console.error(`Ошибка сохранения ${key}:`, error);
-        return false;
-    }
-};
-
-const remove = (key) => {
-    try {
-        localStorage.removeItem(key);
-        return true;
-    } catch (error) {
-        console.error(`Ошибка удаления ${key}:`, error);
-        return false;
-    }
-};
+import { KEYS, getMemoryFilterKeys, get, set, remove } from '@localstorage';
 
 // ===== ПОЛУЧЕНИЕ ВСЕХ КЛЮЧЕЙ ДЛЯ ПРЕФИКСА =====
 export const getFilterKeys = (prefix = '') => {
@@ -170,33 +134,13 @@ export const updateFilters = (prefix = '', newFilters) => {
 
 // ===== СОРТИРОВКА ТАБЛИЦЫ (MyMemories) =====
 export const getTableSort = () => {
-    try {
-        const saved = localStorage.getItem(KEYS.TABLE_SORT_KEY);
-        if (saved) {
-            return JSON.parse(saved);
-        }
-    } catch (e) {
-        console.error('Error loading table sort from localStorage:', e);
-    }
-    return { key: null, direction: 'desc' };
+    return get(KEYS.TABLE_SORT_KEY, { key: null, direction: 'desc' });
 };
 
 export const saveTableSort = (sortConfig) => {
-    try {
-        localStorage.setItem(KEYS.TABLE_SORT_KEY, JSON.stringify(sortConfig));
-        return true;
-    } catch (e) {
-        console.error('Error saving table sort to localStorage:', e);
-        return false;
-    }
+    return set(KEYS.TABLE_SORT_KEY, sortConfig);
 };
 
 export const clearTableSort = () => {
-    try {
-        localStorage.removeItem(KEYS.TABLE_SORT_KEY);
-        return true;
-    } catch (e) {
-        console.error('Error clearing table sort from localStorage:', e);
-        return false;
-    }
+    return remove(KEYS.TABLE_SORT_KEY);
 };

@@ -5,6 +5,14 @@ export {
     getProtocoreFilterKeys
 } from './localStorageKeys.js';
 export {
+    get,
+    set,
+    remove,
+    has,
+    getKeysByPrefix,
+    clearByPrefix
+} from './storage-utils.js';
+export {
     getBottles,
     saveBottles,
     getHeartsand,
@@ -24,7 +32,9 @@ export {
     getDiamonds,
     saveDiamonds,
     getWish,
-    saveWish
+    saveWish,
+    getResource,
+    saveResource
 } from './my-resources-storage.js';
 export {
     addFarmGoal,

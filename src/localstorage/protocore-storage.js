@@ -1,26 +1,5 @@
-import { KEYS, getCardKeys } from './localStorageKeys';
+import { KEYS, getCardKeys, get, set } from '@localstorage';
 import { memoriesData } from '@data';
-
-// ===== ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ =====
-const get = (key) => {
-    try {
-        const value = localStorage.getItem(key);
-        if (value === null) return null;
-        return JSON.parse(value);
-    } catch {
-        return localStorage.getItem(key);
-    }
-};
-
-const set = (key, value) => {
-    try {
-        localStorage.setItem(key, JSON.stringify(value));
-        return true;
-    } catch (error) {
-        console.error(`Ошибка сохранения ${key}:`, error);
-        return false;
-    }
-};
 
 // ===== ОСНОВНЫЕ ПРОТОКОРЫ (используем KEYS.PROTOCORES) =====
 export const getProtocores = () => {

@@ -1,41 +1,5 @@
-import {getCardKeys, getProtocoreFilterKeys} from './localStorageKeys';
+import {getCardKeys, getProtocoreFilterKeys, get, set, remove} from '@localstorage';
 import { memoriesData } from '@data';
-
-// ===== ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ =====
-const get = (key, defaultValue) => {
-    try {
-        const saved = localStorage.getItem(key);
-        if (saved === null) return defaultValue;
-        try {
-            return JSON.parse(saved);
-        } catch {
-            return saved;
-        }
-    } catch (e) {
-        console.error(`Error loading from storage ${key}:`, e);
-        return defaultValue;
-    }
-};
-
-const set = (key, value) => {
-    try {
-        localStorage.setItem(key, JSON.stringify(value));
-        return true;
-    } catch (error) {
-        console.error(`Ошибка сохранения ${key}:`, error);
-        return false;
-    }
-};
-
-const remove = (key) => {
-    try {
-        localStorage.removeItem(key);
-        return true;
-    } catch (error) {
-        console.error(`Ошибка удаления ${key}:`, error);
-        return false;
-    }
-};
 
 // ===== ПОЛУЧЕНИЕ ВСЕХ КЛЮЧЕЙ ДЛЯ ПРЕФИКСА =====
 export const getProtocoreFilterKeysByPrefix = (prefix = '') => {
@@ -166,13 +130,9 @@ export const getDefaultProtocoreFilters = () => ({
 export const isProtocoreEquipped = (protocoreId) => {
     for (const card of memoriesData) {
         const keys = getCardKeys(card.id);
-        try {
-            const cardProtocores = JSON.parse(localStorage.getItem(keys.protocores) || '[]');
-            if (cardProtocores.some(p => p.id === protocoreId)) {
-                return true;
-            }
-        } catch (e) {
-            console.error('Error checking protocore equipped status:', e);
+        const cardProtocores = get(keys.protocores, []);
+        if (cardProtocores.some(p => p.id === protocoreId)) {
+            return true;
         }
     }
     return false;

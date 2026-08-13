@@ -1,25 +1,8 @@
-import { getCardKeys } from '@localstorage';
-
-// ===== ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ =====
-const get = (key) => {
-    try {
-        const value = localStorage.getItem(key);
-        if (value === null) return null;
-        return JSON.parse(value);
-    } catch {
-        return localStorage.getItem(key);
-    }
-};
-
-const set = (key, value) => {
-    try {
-        localStorage.setItem(key, JSON.stringify(value));
-        return true;
-    } catch (error) {
-        console.error(`Ошибка сохранения ${key}:`, error);
-        return false;
-    }
-};
+import {
+    get,
+    set,
+    getCardKeys, getKeysByPrefix
+} from '@localstorage';
 
 // ===== УРОВЕНЬ КАРТОЧКИ =====
 export const getCardLevel = (cardId) => {
@@ -85,7 +68,6 @@ export const getAllCardData = (cardId) => {
         rank: getCardRank(cardId),
         available: getCardAvailability(cardId),
         ascend: getCardAscend(cardId),
-        protocores: getCardProtocores(cardId),
     };
 };
 
@@ -95,21 +77,17 @@ export const saveAllCardData = (cardId, data) => {
     if (data.rank !== undefined) saveCardRank(cardId, data.rank);
     if (data.available !== undefined) saveCardAvailability(cardId, data.available);
     if (data.ascend !== undefined) saveCardAscend(cardId, data.ascend);
-    if (data.protocores !== undefined) saveCardProtocores(cardId, data.protocores);
     return true;
 };
 
 // ===== ВСЕ ДОСТУПНЫЕ КАРТОЧКИ =====
 export const getAllCardAvailabilityMap = () => {
     const allCards = {};
-    for (let i = 0; i < localStorage.length; i++) {
-        const key = localStorage.key(i);
-        if (key && key.startsWith('cardAvailable_')) {
-            const cardId = key.replace('cardAvailable_', '');
-            const value = localStorage.getItem(key);
-            allCards[cardId] = value ? JSON.parse(value) : false;
-        }
-    }
+    const keys = getKeysByPrefix('cardAvailable_');
+    keys.forEach(key => {
+        const cardId = key.replace('cardAvailable_', '');
+        allCards[cardId] = get(key, false);
+    });
     return allCards;
 };
 
