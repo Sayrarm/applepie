@@ -20,10 +20,10 @@ import {
     getCardAscend,
     getCardProtocores,
     enhanceMemoriesWithAvailability,
+    getTableSort,
+    saveTableSort,
+    clearTableSort,
 } from '@localstorage';
-
-// Ключ для localStorage
-const TABLE_SORT_KEY = 'mymemories_table_sort';
 
 // Функция сортировки для таблицы
 const sortTableData = (data, sortConfig) => {
@@ -102,29 +102,15 @@ function MyMemories() {
     const filterModalRef = useRef();
     const [availableCards, setAvailableCards] = useState([]);
 
-    // Загружаем сохраненную сортировку таблицы из localStorage
-    const [tableSort, setTableSort] = useState(() => {
-        try {
-            const saved = localStorage.getItem(TABLE_SORT_KEY);
-            if (saved) {
-                return JSON.parse(saved);
-            }
-        } catch (e) {
-            console.error('Error loading table sort from localStorage:', e);
-        }
-        return { key: null, direction: 'desc' };
-    });
+    // ===== ЗАГРУЗАЕМ СОРТИРОВКУ ТАБЛИЦЫ =====
+    const [tableSort, setTableSort] = useState(() => getTableSort());
 
-    // Сохраняем сортировку таблицы в localStorage при изменении
+    // ===== СОХРАНЯЕМ СОРТИРОВКУ ТАБЛИЦЫ =====
     useEffect(() => {
-        try {
-            localStorage.setItem(TABLE_SORT_KEY, JSON.stringify(tableSort));
-        } catch (e) {
-            console.error('Error saving table sort to localStorage:', e);
-        }
+        saveTableSort(tableSort);
     }, [tableSort]);
 
-    // Функция обновления доступных карточек (используем card-storage)
+    // Функция обновления доступных карточек
     const refreshAvailableCards = () => {
         // Получаем все карточки со статусом доступности
         const allCards = enhanceMemoriesWithAvailability(memoriesData);
@@ -250,12 +236,8 @@ function MyMemories() {
         clearFilters();
         setTableSort({ key: null, direction: 'asc' });
 
-        // Очищаем localStorage
-        try {
-            localStorage.removeItem(TABLE_SORT_KEY);
-        } catch (e) {
-            console.error('Error clearing table sort from localStorage:', e);
-        }
+        // Очищаем localStorage через сервис
+        clearTableSort();
 
         if (filterModalRef.current) {
             filterModalRef.current.clearAll();
@@ -265,7 +247,6 @@ function MyMemories() {
     const formatNumber = (num) => {
         if (num === undefined || num === null || isNaN(num)) return '—';
         if (typeof num === 'string') return num;
-
         return num.toFixed(2);
     };
 

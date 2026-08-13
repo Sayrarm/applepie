@@ -102,5 +102,8 @@ export {
     saveSortCriteria,
     clearAllFilters,
     getDefaultFilters,
-    updateFilters
+    updateFilters,
+    getTableSort,
+    saveTableSort,
+    clearTableSort
 } from './filter-memory-storage.js';

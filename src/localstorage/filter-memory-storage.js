@@ -1,4 +1,4 @@
-import { getMemoryFilterKeys } from '@localstorage';
+import { KEYS, getMemoryFilterKeys } from '@localstorage';
 
 // ===== ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ =====
 const get = (key, defaultValue) => {
@@ -166,4 +166,37 @@ export const updateFilters = (prefix = '', newFilters) => {
     const updated = { ...currentFilters, ...newFilters };
     saveFilters(prefix, updated);
     return updated;
+};
+
+// ===== СОРТИРОВКА ТАБЛИЦЫ (MyMemories) =====
+export const getTableSort = () => {
+    try {
+        const saved = localStorage.getItem(KEYS.TABLE_SORT_KEY);
+        if (saved) {
+            return JSON.parse(saved);
+        }
+    } catch (e) {
+        console.error('Error loading table sort from localStorage:', e);
+    }
+    return { key: null, direction: 'desc' };
+};
+
+export const saveTableSort = (sortConfig) => {
+    try {
+        localStorage.setItem(KEYS.TABLE_SORT_KEY, JSON.stringify(sortConfig));
+        return true;
+    } catch (e) {
+        console.error('Error saving table sort to localStorage:', e);
+        return false;
+    }
+};
+
+export const clearTableSort = () => {
+    try {
+        localStorage.removeItem(KEYS.TABLE_SORT_KEY);
+        return true;
+    } catch (e) {
+        console.error('Error clearing table sort from localStorage:', e);
+        return false;
+    }
 };
