@@ -1,20 +1,19 @@
 import { useEffect, useState, forwardRef, useImperativeHandle } from 'react';
 import { Modal, Checkbox, Select, Tag, Button } from "antd";
-
-// Функция для получения ключей с префиксом
-const getStorageKeys = (prefix = '') => ({
-    RARITY: prefix ? `${prefix}_filter_rarity` : 'filter_rarity',
-    PLACEMENT: prefix ? `${prefix}_filter_placement` : 'filter_placement',
-    TALENT: prefix ? `${prefix}_filter_talent` : 'filter_talent',
-    STELLA: prefix ? `${prefix}_filter_stella` : 'filter_stella',
-    AVAILABILITY: prefix ? `${prefix}_filter_availability` : 'filter_availability'
-});
-
-// Функции загрузки из localStorage
-const loadFromStorage = (key, defaultValue) => {
-    const saved = localStorage.getItem(key);
-    return saved ? JSON.parse(saved) : defaultValue;
-};
+import {
+    getRarityFilter,
+    saveRarityFilter,
+    getPlacementFilter,
+    savePlacementFilter,
+    getTalentFilter,
+    saveTalentFilter,
+    getStellaFilter,
+    saveStellaFilter,
+    getAvailabilityFilter,
+    saveAvailabilityFilter,
+    clearAllFilters,
+    getFilterKeys,
+} from '@localstorage';
 
 const FilterModalMemory = forwardRef(({
                                           open,
@@ -23,35 +22,35 @@ const FilterModalMemory = forwardRef(({
                                           onClearFilters,
                                           storagePrefix = ''
                                       }, ref) => {
-    const storageKeys = getStorageKeys(storagePrefix);
+    const filterKeys = getFilterKeys(storagePrefix);
 
     // Состояния для каждого фильтра с загрузкой из localStorage
-    const [rarity, setRarity] = useState(() => loadFromStorage(storageKeys.RARITY, []));
-    const [placement, setPlacement] = useState(() => loadFromStorage(storageKeys.PLACEMENT, []));
-    const [talent, setTalent] = useState(() => loadFromStorage(storageKeys.TALENT, []));
-    const [stella, setStella] = useState(() => loadFromStorage(storageKeys.STELLA, []));
-    const [availability, setAvailability] = useState(() => loadFromStorage(storageKeys.AVAILABILITY, []));
+    const [rarity, setRarity] = useState(() => getRarityFilter(storagePrefix));
+    const [placement, setPlacement] = useState(() => getPlacementFilter(storagePrefix));
+    const [talent, setTalent] = useState(() => getTalentFilter(storagePrefix));
+    const [stella, setStella] = useState(() => getStellaFilter(storagePrefix));
+    const [availability, setAvailability] = useState(() => getAvailabilityFilter(storagePrefix));
 
     // Сохраняем в localStorage при изменении
     useEffect(() => {
-        localStorage.setItem(storageKeys.RARITY, JSON.stringify(rarity));
-    }, [rarity, storageKeys.RARITY]);
+        saveRarityFilter(storagePrefix, rarity);
+    }, [rarity, storagePrefix]);
 
     useEffect(() => {
-        localStorage.setItem(storageKeys.PLACEMENT, JSON.stringify(placement));
-    }, [placement, storageKeys.PLACEMENT]);
+        savePlacementFilter(storagePrefix, placement);
+    }, [placement, storagePrefix]);
 
     useEffect(() => {
-        localStorage.setItem(storageKeys.TALENT, JSON.stringify(talent));
-    }, [talent, storageKeys.TALENT]);
+        saveTalentFilter(storagePrefix, talent);
+    }, [talent, storagePrefix]);
 
     useEffect(() => {
-        localStorage.setItem(storageKeys.STELLA, JSON.stringify(stella));
-    }, [stella, storageKeys.STELLA]);
+        saveStellaFilter(storagePrefix, stella);
+    }, [stella, storagePrefix]);
 
     useEffect(() => {
-        localStorage.setItem(storageKeys.AVAILABILITY, JSON.stringify(availability));
-    }, [availability, storageKeys.AVAILABILITY]);
+        saveAvailabilityFilter(storagePrefix, availability);
+    }, [availability, storagePrefix]);
 
     // ЭКСПОРТИРУЕМ ФУНКЦИЮ ДЛЯ ВНЕШНЕГО ВЫЗОВА
     useImperativeHandle(ref, () => ({
@@ -63,10 +62,8 @@ const FilterModalMemory = forwardRef(({
             setStella([]);
             setAvailability([]);
 
-            // Очищаем localStorage
-            Object.values(storageKeys).forEach(key => {
-                localStorage.removeItem(key);
-            });
+            // Очищаем localStorage через сервис
+            clearAllFilters(storagePrefix);
 
             // Вызываем функцию очистки из родителя
             if (onClearFilters) {
@@ -151,10 +148,8 @@ const FilterModalMemory = forwardRef(({
         setStella([]);
         setAvailability([]);
 
-        // Очищаем localStorage
-        Object.values(storageKeys).forEach(key => {
-            localStorage.removeItem(key);
-        });
+        // Очищаем localStorage через сервис
+        clearAllFilters(storagePrefix);
 
         // Вызываем функцию очистки из родителя
         if (onClearFilters) {

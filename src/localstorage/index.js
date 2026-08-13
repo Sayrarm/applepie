@@ -35,6 +35,7 @@ export {
 } from './calculator-storage.js';
 export {getTheme, saveTheme} from './theme-storage.js';
 export {getTimezone, saveTimezone} from './timezone-storage.js';
+export {getCardSize, saveCardSize} from './ui-storage.js';
 export {
     getCardLevel,
     saveCardLevel,
@@ -79,3 +80,27 @@ export {
     createDefaultTeam,
     getShowcaseTeamsOrDefault
 } from './showcase-storage.js';
+export {
+    getSelectedChar,
+    saveSelectedChar,
+    getFilterKeys,
+    getFilters,
+    saveFilters,
+    getRarityFilter,
+    saveRarityFilter,
+    getPlacementFilter,
+    savePlacementFilter,
+    getTalentFilter,
+    saveTalentFilter,
+    getStellaFilter,
+    saveStellaFilter,
+    getAvailabilityFilter,
+    saveAvailabilityFilter,
+    getSearchQuery,
+    saveSearchQuery,
+    getSortCriteria,
+    saveSortCriteria,
+    clearAllFilters,
+    getDefaultFilters,
+    updateFilters
+} from './filter-memory-storage.js';

@@ -8,8 +8,8 @@ import {
     useFilter,
     FilterSortBarMemories
 } from '@components'
-import {memoriesData as initialMemoriesData} from '@data';
-import { enhanceMemoriesWithAvailability } from "@localstorage"
+import { memoriesData as initialMemoriesData } from '@data';
+import { getCardSize, saveCardSize, enhanceMemoriesWithAvailability } from '@localstorage';
 
 function Memories() {
     // Используем хуки
@@ -31,15 +31,15 @@ function Memories() {
         return enhanceMemoriesWithAvailability(initialMemoriesData);
     });
 
-    // Локальное состояние для размера карточек
+    // ===== РАЗМЕР КАРТОЧЕК (используем ui-storage) =====
     const [isImageSmall, setIsImageSmall] = useState(() => {
-        const saved = localStorage.getItem('card_image_size');
+        const saved = getCardSize();
         return saved === 'small';
     });
 
-    // Сохраняем в localStorage
+    // Сохраняем в localStorage через сервис
     useEffect(() => {
-        localStorage.setItem('card_image_size', isImageSmall ? 'small' : 'big');
+        saveCardSize(isImageSmall ? 'small' : 'big');
     }, [isImageSmall]);
 
     const toggleImageSize = () => {
@@ -52,7 +52,7 @@ function Memories() {
             memory.char.toLowerCase().includes(searchQuery.toLowerCase());
     });
 
-    // Синхронизация с localStorage
+    // ===== СИНХРОНИЗАЦИЯ С LOCALSTORAGE =====
     useEffect(() => {
         const handleStorageChange = (e) => {
             if (e.key && e.key.startsWith('cardAvailable_')) {

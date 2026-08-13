@@ -1,9 +1,8 @@
 import { useEffect, useState, useCallback } from 'react';
-
-// Функция для получения ключа с префиксом
-const getStorageKey = (prefix = '') => {
-    return prefix ? `${prefix}_sort_criteria` : 'memories_sort_criteria';
-};
+import {
+    getSortCriteria,
+    saveSortCriteria,
+} from '@localstorage';
 
 // Функции сравнения для каждого типа сортировки
 const compareFunctions = {
@@ -49,22 +48,14 @@ const multiSort = (memories, criteria) => {
 };
 
 export const useSort = (prefix = '') => {
-    const storageKey = getStorageKey(prefix);
-
-    // Загружаем сохранённые критерии из localStorage
-    const getInitialSortCriteria = () => {
-        const saved = localStorage.getItem(storageKey);
-        return saved ? JSON.parse(saved) : [];
-    };
-
-    const [sortCriteria, setSortCriteria] = useState(getInitialSortCriteria);
+    const [sortCriteria, setSortCriteria] = useState(() => getSortCriteria(prefix));
 
     // Сохраняем sortCriteria в localStorage при изменении
     useEffect(() => {
-        localStorage.setItem(storageKey, JSON.stringify(sortCriteria));
-    }, [sortCriteria, storageKey]);
+        saveSortCriteria(prefix, sortCriteria);
+    }, [sortCriteria, prefix]);
 
-    // Обработчик изменения сортировки (для mode="tags")
+    // Обработчик изменения сортировки
     const handleSortChange = useCallback((values) => {
         setSortCriteria(values);
     }, []);
@@ -72,7 +63,8 @@ export const useSort = (prefix = '') => {
     // Очистка всех сортировок
     const clearSorting = useCallback(() => {
         setSortCriteria([]);
-    }, []);
+        saveSortCriteria(prefix, []);
+    }, [prefix]);
 
     // Сортируем отфильтрованные данные
     const sortMemories = useCallback((memories) => {

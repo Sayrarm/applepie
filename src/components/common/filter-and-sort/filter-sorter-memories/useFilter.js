@@ -1,75 +1,45 @@
 import { useEffect, useState, useCallback } from 'react';
+import {
+    getSelectedChar,
+    saveSelectedChar,
+    getFilters,
+    saveFilters,
+    getDefaultFilters,
+    clearAllFilters,
+} from '@localstorage';
 
-// Функция для получения ключей с префиксом
-const getStorageKeys = (prefix = '') => ({
-    SELECTED_CHAR: prefix ? `${prefix}_selected_char` : 'memories_selected_char',
-    FILTERS: prefix ? `${prefix}_filters` : 'memories_filters'
-});
-
-// Функция для загрузки из localStorage с обработкой ошибок
-const loadFromStorage = (key, defaultValue) => {
-    try {
-        const saved = localStorage.getItem(key);
-        if (saved === null) return defaultValue;
-        // Пытаемся парсить как JSON
-        try {
-            return JSON.parse(saved);
-        } catch {
-            // Если не парсится, возвращаем как есть (для строк)
-            return saved;
-        }
-    } catch (e) {
-        console.error('Error loading from storage:', e);
-        return defaultValue;
-    }
-};
-
-// Основной хук с параметром prefix
 export const useFilter = (prefix = '') => {
-    const storageKeys = getStorageKeys(prefix);
-
     // Загружаем начальные значения из localStorage
-    const getInitialSelectedChar = () => {
-        return loadFromStorage(storageKeys.SELECTED_CHAR, 'ALL');
-    };
-
-    const getInitialFilters = () => {
-        return loadFromStorage(storageKeys.FILTERS, {
-            rarity: [],
-            placement: [],
-            talent: [],
-            stella: [],
-            availability: []
-        });
-    };
-
-    const [selectedChar, setSelectedChar] = useState(getInitialSelectedChar);
+    const [selectedChar, setSelectedChar] = useState(() => getSelectedChar(prefix));
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [filters, setFilters] = useState(getInitialFilters);
+    const [filters, setFilters] = useState(() => getFilters(prefix));
 
     // Сохраняем selectedChar в localStorage при изменении
     useEffect(() => {
-        localStorage.setItem(storageKeys.SELECTED_CHAR, JSON.stringify(selectedChar));
-    }, [selectedChar, storageKeys.SELECTED_CHAR]);
+        saveSelectedChar(prefix, selectedChar);
+    }, [selectedChar, prefix]);
 
     // Сохраняем filters в localStorage при изменении
     useEffect(() => {
-        localStorage.setItem(storageKeys.FILTERS, JSON.stringify(filters));
-    }, [filters, storageKeys.FILTERS]);
+        saveFilters(prefix, filters);
+    }, [filters, prefix]);
 
     const applyFilters = useCallback((newFilters) => {
         setFilters(newFilters);
     }, []);
 
     const clearFilters = useCallback(() => {
-        setFilters({
-            rarity: [],
-            placement: [],
-            talent: [],
-            stella: [],
-            availability: []
-        });
-    }, []);
+        const defaultFilters = getDefaultFilters();
+        setFilters(defaultFilters);
+        saveFilters(prefix, defaultFilters);
+    }, [prefix]);
+
+    // Полная очистка всех фильтров (включая localStorage)
+    const clearAll = useCallback(() => {
+        clearAllFilters(prefix);
+        setSelectedChar('ALL');
+        setFilters(getDefaultFilters());
+    }, [prefix]);
 
     // Фильтруем данные
     const filterMemories = useCallback((memories) => {
@@ -111,6 +81,7 @@ export const useFilter = (prefix = '') => {
         filters,
         applyFilters,
         clearFilters,
+        clearAll,
         filterMemories
     };
 };
