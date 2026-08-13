@@ -1,31 +1,22 @@
 import { useEffect, useState, forwardRef, useImperativeHandle } from 'react';
 import { Modal, Checkbox, Select, Tag, Button } from 'antd';
 import { protocoreTypes } from '@data';
-
-// Функция для получения ключей с префиксом
-const getStorageKeys = (prefix = '') => ({
-    TYPES: prefix ? `${prefix}_protocore_filter_types` : 'protocore_filter_types',
-    STELLACTRUM: prefix ? `${prefix}_protocore_filter_stellactrum` : 'protocore_filter_stellactrum',
-    LEVELS: prefix ? `${prefix}_protocore_filter_levels` : 'protocore_filter_levels',
-    MAIN_STATS: prefix ? `${prefix}_protocore_filter_mainStats` : 'protocore_filter_mainStats',
-    SUB_STATS: prefix ? `${prefix}_protocore_filter_subStats` : 'protocore_filter_subStats',
-    STATUS: prefix ? `${prefix}_protocore_filter_status` : 'protocore_filter_status'
-});
-
-const loadFromStorage = (key, defaultValue) => {
-    try {
-        const saved = localStorage.getItem(key);
-        if (saved === null) return defaultValue;
-        try {
-            return JSON.parse(saved);
-        } catch {
-            return saved;
-        }
-    } catch (e) {
-        console.error('Error loading from storage:', e);
-        return defaultValue;
-    }
-};
+import {
+    getTypesFilter,
+    saveTypesFilter,
+    getStellactrumFilter,
+    saveStellactrumFilter,
+    getLevelsFilter,
+    saveLevelsFilter,
+    getMainStatsFilter,
+    saveMainStatsFilter,
+    getSubStatsFilter,
+    saveSubStatsFilter,
+    getStatusFilter,
+    saveStatusFilter,
+    clearAllProtocoreFilters,
+    getProtocoreFilterKeysByPrefix,
+} from '@localstorage';
 
 const FilterModalProtocore = forwardRef(({
                                              open,
@@ -34,38 +25,38 @@ const FilterModalProtocore = forwardRef(({
                                              onClearFilters,
                                              storagePrefix = ''
                                          }, ref) => {
-    const storageKeys = getStorageKeys(storagePrefix);
+    const filterKeys = getProtocoreFilterKeysByPrefix(storagePrefix);
 
-    const [types, setTypes] = useState(() => loadFromStorage(storageKeys.TYPES, []));
-    const [stellactrum, setStellactrum] = useState(() => loadFromStorage(storageKeys.STELLACTRUM, []));
-    const [levels, setLevels] = useState(() => loadFromStorage(storageKeys.LEVELS, []));
-    const [mainStats, setMainStats] = useState(() => loadFromStorage(storageKeys.MAIN_STATS, []));
-    const [subStats, setSubStats] = useState(() => loadFromStorage(storageKeys.SUB_STATS, []));
-    const [status, setStatus] = useState(() => loadFromStorage(storageKeys.STATUS, []));
-
-    useEffect(() => {
-        localStorage.setItem(storageKeys.TYPES, JSON.stringify(types));
-    }, [types, storageKeys.TYPES]);
+    const [types, setTypes] = useState(() => getTypesFilter(storagePrefix));
+    const [stellactrum, setStellactrum] = useState(() => getStellactrumFilter(storagePrefix));
+    const [levels, setLevels] = useState(() => getLevelsFilter(storagePrefix));
+    const [mainStats, setMainStats] = useState(() => getMainStatsFilter(storagePrefix));
+    const [subStats, setSubStats] = useState(() => getSubStatsFilter(storagePrefix));
+    const [status, setStatus] = useState(() => getStatusFilter(storagePrefix));
 
     useEffect(() => {
-        localStorage.setItem(storageKeys.STELLACTRUM, JSON.stringify(stellactrum));
-    }, [stellactrum, storageKeys.STELLACTRUM]);
+        saveTypesFilter(storagePrefix, types);
+    }, [types, storagePrefix]);
 
     useEffect(() => {
-        localStorage.setItem(storageKeys.LEVELS, JSON.stringify(levels));
-    }, [levels, storageKeys.LEVELS]);
+        saveStellactrumFilter(storagePrefix, stellactrum);
+    }, [stellactrum, storagePrefix]);
 
     useEffect(() => {
-        localStorage.setItem(storageKeys.MAIN_STATS, JSON.stringify(mainStats));
-    }, [mainStats, storageKeys.MAIN_STATS]);
+        saveLevelsFilter(storagePrefix, levels);
+    }, [levels, storagePrefix]);
 
     useEffect(() => {
-        localStorage.setItem(storageKeys.SUB_STATS, JSON.stringify(subStats));
-    }, [subStats, storageKeys.SUB_STATS]);
+        saveMainStatsFilter(storagePrefix, mainStats);
+    }, [mainStats, storagePrefix]);
 
     useEffect(() => {
-        localStorage.setItem(storageKeys.STATUS, JSON.stringify(status));
-    }, [status, storageKeys.STATUS]);
+        saveSubStatsFilter(storagePrefix, subStats);
+    }, [subStats, storagePrefix]);
+
+    useEffect(() => {
+        saveStatusFilter(storagePrefix, status);
+    }, [status, storagePrefix]);
 
     useImperativeHandle(ref, () => ({
         clearAll: () => {
@@ -76,9 +67,7 @@ const FilterModalProtocore = forwardRef(({
             setStatus([]);
             setSubStats([]);
 
-            Object.values(storageKeys).forEach(key => {
-                localStorage.removeItem(key);
-            });
+            clearAllProtocoreFilters(storagePrefix);
 
             if (onClearFilters) {
                 onClearFilters();
@@ -148,9 +137,7 @@ const FilterModalProtocore = forwardRef(({
         setSubStats([]);
         setStatus([]);
 
-        Object.values(storageKeys).forEach(key => {
-            localStorage.removeItem(key);
-        });
+        clearAllProtocoreFilters(storagePrefix);
 
         if (onClearFilters) {
             onClearFilters();

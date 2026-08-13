@@ -1,34 +1,15 @@
 import { useState, useEffect, useCallback } from 'react';
-
-// Функция для получения ключа с префиксом
-const getStorageKey = (prefix = '') => {
-    return prefix ? `${prefix}_protocore_search_query` : 'protocore_search_query';
-};
-
-// Функция для загрузки из localStorage
-const loadFromStorage = (key, defaultValue) => {
-    try {
-        const saved = localStorage.getItem(key);
-        if (saved === null) return defaultValue;
-        return saved;
-    } catch (e) {
-        console.error('Error loading from storage:', e);
-        return defaultValue;
-    }
-};
+import {
+    getProtocoreSearchQuery,
+    saveProtocoreSearchQuery,
+} from '@localstorage';
 
 export const useProtocoreSearch = (prefix = '') => {
-    const storageKey = getStorageKey(prefix);
-
-    const getInitialSearchQuery = () => {
-        return loadFromStorage(storageKey, '');
-    };
-
-    const [searchQuery, setSearchQuery] = useState(getInitialSearchQuery);
+    const [searchQuery, setSearchQuery] = useState(() => getProtocoreSearchQuery(prefix));
 
     useEffect(() => {
-        localStorage.setItem(storageKey, searchQuery);
-    }, [searchQuery, storageKey]);
+        saveProtocoreSearchQuery(prefix, searchQuery);
+    }, [searchQuery, prefix]);
 
     const onSearch = useCallback((value) => {
         setSearchQuery(value.toLowerCase());
@@ -36,7 +17,8 @@ export const useProtocoreSearch = (prefix = '') => {
 
     const clearSearch = useCallback(() => {
         setSearchQuery('');
-    }, []);
+        saveProtocoreSearchQuery(prefix, '');
+    }, [prefix]);
 
     return { searchQuery, onSearch, clearSearch };
 };

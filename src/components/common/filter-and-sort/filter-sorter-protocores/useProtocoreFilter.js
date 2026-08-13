@@ -1,73 +1,28 @@
 import { useState, useEffect, useCallback } from 'react';
-import { memoriesData } from '@data';
-
-// Функция для получения ключей с префиксом
-const getStorageKeys = (prefix = '') => ({
-    FILTERS: prefix ? `${prefix}_protocore_filters` : 'protocore_filters'
-});
-
-// Функция для загрузки из localStorage с обработкой ошибок
-const loadFromStorage = (key, defaultValue) => {
-    try {
-        const saved = localStorage.getItem(key);
-        if (saved === null) return defaultValue;
-        try {
-            return JSON.parse(saved);
-        } catch {
-            return saved;
-        }
-    } catch (e) {
-        console.error('Error loading from storage:', e);
-        return defaultValue;
-    }
-};
-
-// Функция для проверки, одет ли протокор на карточку
-const isProtocoreEquipped = (protocoreId) => {
-    for (const card of memoriesData) {
-        const cardProtocores = JSON.parse(localStorage.getItem(`card_protocores_${card.id}`) || '[]');
-        if (cardProtocores.some(p => p.id === protocoreId)) {
-            return true;
-        }
-    }
-    return false;
-};
+import {
+    getProtocoreFilters,
+    saveProtocoreFilters,
+    getDefaultProtocoreFilters,
+    isProtocoreEquipped,
+} from '@localstorage';
 
 export const useProtocoreFilter = (prefix = '') => {
-    const storageKeys = getStorageKeys(prefix);
-
-    const getInitialFilters = () => {
-        return loadFromStorage(storageKeys.FILTERS, {
-            types: [],
-            stellactrum: [],
-            levels: [],
-            mainStats: [],
-            subStats: [],
-            status: []
-        });
-    };
-
-    const [filters, setFilters] = useState(getInitialFilters);
+    const [filters, setFilters] = useState(() => getProtocoreFilters(prefix));
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     useEffect(() => {
-        localStorage.setItem(storageKeys.FILTERS, JSON.stringify(filters));
-    }, [filters, storageKeys.FILTERS]);
+        saveProtocoreFilters(prefix, filters);
+    }, [filters, prefix]);
 
     const applyFilters = useCallback((newFilters) => {
         setFilters(newFilters);
     }, []);
 
     const clearFilters = useCallback(() => {
-        setFilters({
-            types: [],
-            stellactrum: [],
-            levels: [],
-            mainStats: [],
-            subStats: [],
-            status: []
-        });
-    }, []);
+        const defaultFilters = getDefaultProtocoreFilters();
+        setFilters(defaultFilters);
+        saveProtocoreFilters(prefix, defaultFilters);
+    }, [prefix]);
 
     const filterProtocores = useCallback((protocores) => {
         return protocores.filter(protocore => {

@@ -107,3 +107,28 @@ export {
     saveTableSort,
     clearTableSort
 } from './filter-memory-storage.js';
+export {
+    getProtocoreFilterKeysByPrefix,
+    getProtocoreFilters,
+    saveProtocoreFilters,
+    getTypesFilter,
+    saveTypesFilter,
+    getStellactrumFilter,
+    saveStellactrumFilter,
+    getLevelsFilter,
+    saveLevelsFilter,
+    getMainStatsFilter,
+    saveMainStatsFilter,
+    getSubStatsFilter,
+    saveSubStatsFilter,
+    getStatusFilter,
+    saveStatusFilter,
+    getProtocoreSearchQuery,
+    saveProtocoreSearchQuery,
+    getProtocoreSortCriteria,
+    saveProtocoreSortCriteria,
+    clearAllProtocoreFilters,
+    getDefaultProtocoreFilters,
+    isProtocoreEquipped,
+    updateProtocoreFilters
+} from './filter-protocore-storage.js';

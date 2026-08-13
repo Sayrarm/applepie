@@ -1,21 +1,9 @@
 import { useState, useEffect, useCallback } from 'react';
-import { memoriesData } from '@data';
-
-// Функция для получения ключа с префиксом
-const getStorageKey = (prefix = '') => {
-    return prefix ? `${prefix}_protocore_sort_criteria` : 'protocore_sort_criteria';
-};
-
-// Функция для проверки, одет ли протокор на карточку
-const isProtocoreEquipped = (protocoreId) => {
-    for (const card of memoriesData) {
-        const cardProtocores = JSON.parse(localStorage.getItem(`card_protocores_${card.id}`) || '[]');
-        if (cardProtocores.some(p => p.id === protocoreId)) {
-            return true;
-        }
-    }
-    return false;
-};
+import {
+    getProtocoreSortCriteria,
+    saveProtocoreSortCriteria,
+    isProtocoreEquipped,
+} from '@localstorage';
 
 // Функции сравнения для каждого типа сортировки
 const compareFunctions = {
@@ -52,18 +40,11 @@ const multiSort = (protocores, criteria) => {
 };
 
 export const useProtocoreSort = (prefix = '') => {
-    const storageKey = getStorageKey(prefix);
-
-    const getInitialSort = () => {
-        const saved = localStorage.getItem(storageKey);
-        return saved ? JSON.parse(saved) : [];
-    };
-
-    const [sortCriteria, setSortCriteria] = useState(getInitialSort);
+    const [sortCriteria, setSortCriteria] = useState(() => getProtocoreSortCriteria(prefix));
 
     useEffect(() => {
-        localStorage.setItem(storageKey, JSON.stringify(sortCriteria));
-    }, [sortCriteria, storageKey]);
+        saveProtocoreSortCriteria(prefix, sortCriteria);
+    }, [sortCriteria, prefix]);
 
     const handleSortChange = useCallback((values) => {
         setSortCriteria(values || []);
@@ -71,7 +52,8 @@ export const useProtocoreSort = (prefix = '') => {
 
     const clearSorting = useCallback(() => {
         setSortCriteria([]);
-    }, []);
+        saveProtocoreSortCriteria(prefix, []);
+    }, [prefix]);
 
     const sortProtocores = useCallback((protocores) => {
         return multiSort(protocores, sortCriteria);
