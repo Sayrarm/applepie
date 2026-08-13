@@ -32,9 +32,7 @@ export {
     getDiamonds,
     saveDiamonds,
     getWish,
-    saveWish,
-    getResource,
-    saveResource
+    saveWish
 } from './my-resources-storage.js';
 export {
     addFarmGoal,
