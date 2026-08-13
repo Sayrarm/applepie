@@ -1,4 +1,9 @@
-export { KEYS, getCardKeys, getMemoryFilterKeys } from './localStorageKeys.js';
+export {
+    KEYS,
+    getCardKeys,
+    getMemoryFilterKeys,
+    getProtocoreFilterKeys
+} from './localStorageKeys.js';
 export {
     getBottles,
     saveBottles,
@@ -39,10 +44,26 @@ export {
     saveCardAvailability,
     getCardAscend,
     saveCardAscend,
-    getCardProtocores,
-    saveCardProtocores,
     getAllCardData,
     saveAllCardData,
     getAllCardAvailabilityMap,
     enhanceMemoriesWithAvailability
 } from './card-storage.js';
+export {
+    getProtocores,
+    saveProtocores,
+    addProtocore,
+    updateProtocore,
+    deleteProtocore,
+    getProtocoreById,
+    getCardProtocores,
+    saveCardProtocores,
+    removeProtocoreFromAllCards,
+    updateProtocoreInAllCards,
+    findCardForProtocore,
+    getProtocoresWithCardInfo,
+    getCompatibleProtocores,
+    getCardPlacement,
+    getCardStella,
+    getCardImageById
+} from './protocore-storage.js';

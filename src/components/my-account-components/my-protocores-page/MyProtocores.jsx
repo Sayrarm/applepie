@@ -7,8 +7,13 @@ import {
     useProtocoreSort,
     FilterSortBarProtocores
 } from '@components'
-import {memoriesData} from "@data";
 import ModalWindowProtocore from './ModalWindowProtocore.jsx';
+import {
+    getProtocores,
+    deleteProtocore,
+    removeProtocoreFromAllCards,
+    findCardForProtocore,
+} from '@localstorage';
 
 function MyProtocores() {
     const [protocores, setProtocores] = useState([]);
@@ -19,12 +24,37 @@ function MyProtocores() {
     const { applyFilters, clearFilters, filterProtocores, isModalOpen, setIsModalOpen } = useProtocoreFilter('protocores');
     const { sortCriteria, handleSortChange, clearSorting, sortProtocores } = useProtocoreSort('protocores');
 
+    // ===== ЗАГРУЗКА ПРОТОКОРОВ =====
     useEffect(() => {
-        const savedProtocores = JSON.parse(localStorage.getItem('protocores') || '[]');
+        const savedProtocores = getProtocores();
         setProtocores(savedProtocores);
     }, []);
 
-    // Фильтруем данные
+    // ===== СЛУШАЕМ ИЗМЕНЕНИЯ В ДРУГИХ ВКЛАДКАХ =====
+    useEffect(() => {
+        const handleStorageChange = (e) => {
+            if (e.key === 'protocores') {
+                const updated = getProtocores();
+                setProtocores(updated);
+            }
+        };
+
+        // Слушаем глобальное событие обновления протокоров
+        const handleProtocoresUpdated = () => {
+            const updated = getProtocores();
+            setProtocores(updated);
+        };
+
+        window.addEventListener('storage', handleStorageChange);
+        window.addEventListener('protocoresUpdated', handleProtocoresUpdated);
+
+        return () => {
+            window.removeEventListener('storage', handleStorageChange);
+            window.removeEventListener('protocoresUpdated', handleProtocoresUpdated);
+        };
+    }, []);
+
+    // ===== ФИЛЬТРАЦИЯ =====
     const filteredProtocores = filterProtocores(protocores).filter(protocore => {
         if (!searchQuery) return true;
 
@@ -47,9 +77,10 @@ function MyProtocores() {
         return typeMatch || mainStatMatch || subStatMatch || stellactrumMatch;
     });
 
-    // Сортируем данные
+    // ===== СОРТИРОВКА =====
     const sortedProtocores = sortProtocores(filteredProtocores);
 
+    // ===== ОБРАБОТЧИКИ =====
     const resetAllSettings = () => {
         clearSearch();
         clearFilters();
@@ -84,42 +115,25 @@ function MyProtocores() {
         );
 
         if (confirmDelete) {
-            // Удаляем из localStorage
-            const existingProtocores = JSON.parse(localStorage.getItem('protocores') || '[]');
-            const updatedProtocores = existingProtocores.filter(
-                p => p.id !== protocoreToDelete.id
-            );
-            localStorage.setItem('protocores', JSON.stringify(updatedProtocores));
+            // 1. Удаляем из общего списка протокоров
+            deleteProtocore(protocoreToDelete.id);
 
-            // НОВОЕ: Удаляем протокор из всех карточек
-            for (const card of memoriesData) {
-                const key = `card_protocores_${card.id}`;
-                const cardProtocores = JSON.parse(localStorage.getItem(key) || '[]');
-                const filtered = cardProtocores.filter(p => p.id !== protocoreToDelete.id);
-                if (filtered.length !== cardProtocores.length) {
-                    localStorage.setItem(key, JSON.stringify(filtered));
-                    window.dispatchEvent(new CustomEvent('protocoresUpdated', {
-                        detail: { cardId: card.id, protocores: filtered }
-                    }));
-                }
-            }
+            // 2. Удаляем протокор из всех карточек
+            const updatedCards = removeProtocoreFromAllCards(protocoreToDelete.id);
 
+            // 3. Отправляем события для обновления карточек
+            updatedCards.forEach(({ cardId, protocores: cardProtocores }) => {
+                window.dispatchEvent(new CustomEvent('protocoresUpdated', {
+                    detail: { cardId, protocores: cardProtocores }
+                }));
+            });
+
+            // 4. Обновляем состояние
             setProtocores(prev => prev.filter(p => p.id !== protocoreToDelete.id));
 
-            // Отправляем глобальное событие
+            // 5. Отправляем глобальное событие
             window.dispatchEvent(new CustomEvent('protocoresUpdated'));
         }
-    };
-
-    const findCardForProtocore = (protocoreId) => {
-        // Ищем во всех карточках
-        for (const card of memoriesData) {
-            const cardProtocores = JSON.parse(localStorage.getItem(`card_protocores_${card.id}`) || '[]');
-            if (cardProtocores.some(p => p.id === protocoreId)) {
-                return card.imageSmall;
-            }
-        }
-        return null;
     };
 
     return (

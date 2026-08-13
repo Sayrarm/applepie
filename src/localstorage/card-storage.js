@@ -77,20 +77,6 @@ export const saveCardAscend = (cardId, isAscended) => {
     return set(keys.ascend, isAscended);
 };
 
-// ===== ПРОТОКОРЫ КАРТОЧКИ =====
-export const getCardProtocores = (cardId) => {
-    if (!cardId) return [];
-    const keys = getCardKeys(cardId);
-    const saved = get(keys.protocores);
-    return saved || [];
-};
-
-export const saveCardProtocores = (cardId, protocores) => {
-    if (!cardId) return false;
-    const keys = getCardKeys(cardId);
-    return set(keys.protocores, protocores);
-};
-
 // ===== ВСЕ ДАННЫЕ КАРТОЧКИ =====
 export const getAllCardData = (cardId) => {
     if (!cardId) return null;

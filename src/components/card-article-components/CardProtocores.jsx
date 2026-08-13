@@ -1,4 +1,4 @@
-import React, {useCallback, useMemo, useRef, useState} from 'react';
+import React, { useCallback, useMemo, useRef, useState, useEffect } from 'react';
 import styles from './CardProtocores.module.css';
 import {
     ProtocoreBlock,
@@ -8,9 +8,19 @@ import {
     useProtocoreFilter,
     useProtocoreSort
 } from '@components'
-import {memoriesData} from '@data';
+import {
+    getProtocores,
+    getCardProtocores,
+    saveCardProtocores,
+    getCardPlacement,
+    getCardStella,
+    getCardImageById,
+    findCardForProtocore,
+    getCompatibleProtocores,
+    removeProtocoreFromAllCards,
+} from '@localstorage';
 
-function CardProtocores({cardId}) {
+function CardProtocores({ cardId }) {
     const protocoreModalRef = useRef();
     const filterModalRef = useRef();
 
@@ -19,78 +29,68 @@ function CardProtocores({cardId}) {
     const { applyFilters, clearFilters, filterProtocores, isModalOpen, setIsModalOpen } = useProtocoreFilter('card');
     const { sortCriteria, handleSortChange, clearSorting, sortProtocores } = useProtocoreSort('card');
 
+    // ===== СОСТОЯНИЯ =====
+    const [allProtocores, setAllProtocores] = useState([]);
+    const [selectedProtocores, setSelectedProtocores] = useState([]);
+
+    // ===== ЗАГРУЗКА ДАННЫХ =====
+    useEffect(() => {
+        if (!cardId) return;
+
+        // Загружаем все протокоры
+        setAllProtocores(getProtocores());
+
+        // Загружаем протокоры карточки
+        setSelectedProtocores(getCardProtocores(cardId));
+    }, [cardId]);
+
+    // ===== СЛУШАЕМ ИЗМЕНЕНИЯ =====
+    useEffect(() => {
+        if (!cardId) return;
+
+        const handleStorageChange = (e) => {
+            if (e.key === 'protocores') {
+                setAllProtocores(getProtocores());
+            }
+            if (e.key === `card_protocores_${cardId}`) {
+                setSelectedProtocores(getCardProtocores(cardId));
+            }
+        };
+
+        const handleProtocoresUpdated = (event) => {
+            // Если событие пришло для этой карточки или глобальное
+            if (!event.detail || event.detail.cardId === cardId) {
+                setSelectedProtocores(getCardProtocores(cardId));
+            }
+            setAllProtocores(getProtocores());
+        };
+
+        window.addEventListener('storage', handleStorageChange);
+        window.addEventListener('protocoresUpdated', handleProtocoresUpdated);
+
+        return () => {
+            window.removeEventListener('storage', handleStorageChange);
+            window.removeEventListener('protocoresUpdated', handleProtocoresUpdated);
+        };
+    }, [cardId]);
+
+    // ===== МЕМОИЗИРОВАННЫЕ ДАННЫЕ КАРТОЧКИ =====
+    const cardPlacement = useMemo(() => getCardPlacement(cardId), [cardId]);
+    const cardStella = useMemo(() => getCardStella(cardId), [cardId]);
+    const currentCardImage = useMemo(() => getCardImageById(cardId), [cardId]);
+
+    // ===== ФУНКЦИИ =====
     const showProtocoreModal = () => {
         protocoreModalRef.current.showModal();
     };
 
-    // Загружаем все протокоры
-    const [allProtocores] = useState(() => {
-        return JSON.parse(localStorage.getItem('protocores') || '[]');
-    });
-
-    const [selectedProtocores, setSelectedProtocores] = useState(() => {
-        if (!cardId) return [];
-        return JSON.parse(localStorage.getItem(`card_protocores_${cardId}`) || '[]');
-    });
-
-    // Используем useMemo для placement
-    const cardPlacement = useMemo(() => {
-        if (!cardId) return null;
-        const card = memoriesData.find(c => String(c.id) === cardId);
-        return card ? card.placementName : null;
-    }, [cardId]);
-
-    // Получаем стеллактум текущей карточки
-    const cardStella = useMemo(() => {
-        if (!cardId) return null;
-        const card = memoriesData.find(c => String(c.id) === cardId);
-        return card ? card.stellaName : null;
-    }, [cardId]);
-
-    // Картинка текущей карточки
-    const currentCardImage = useMemo(() => {
-        if (!cardId) return null;
-        const card = memoriesData.find(c => String(c.id) === cardId);
-        return card ? card.imageSmall : null;
-    }, [cardId]);
-
-    // Функция для поиска карточки, к которой прикреплен протокор
-    const findCardForProtocore = useCallback((protocoreId) => {
-        // Проходим по всем карточкам в memoriesData
-        for (const card of memoriesData) {
-            const cardProtocores = JSON.parse(localStorage.getItem(`card_protocores_${card.id}`) || '[]');
-            if (cardProtocores.some(p => p.id === protocoreId)) {
-                return card.imageSmall;
-            }
-        }
-        return null;
-    }, []);
-
-    // Функция для удаления протокора со всех карточек
-    const removeProtocoreFromAllCards = useCallback((protocoreId) => {
-        // Проходим по всем карточкам в memoriesData
-        for (const card of memoriesData) {
-            const cardProtocores = JSON.parse(localStorage.getItem(`card_protocores_${card.id}`) || '[]');
-            const filtered = cardProtocores.filter(p => p.id !== protocoreId);
-
-            if (filtered.length !== cardProtocores.length) {
-                // Если протокор был найден и удален, сохраняем изменения
-                localStorage.setItem(`card_protocores_${card.id}`, JSON.stringify(filtered));
-
-                // Отправляем событие об обновлении
-                window.dispatchEvent(new CustomEvent('protocoresUpdated', {
-                    detail: {cardId: card.id, protocores: filtered}
-                }));
-            }
-        }
-    }, []);
-
-    // Функция для сохранения в localStorage
+    // Сохранение протокоров карточки
     const saveProtocores = useCallback((protocores) => {
         if (!cardId) return;
-        localStorage.setItem(`card_protocores_${cardId}`, JSON.stringify(protocores));
+        saveCardProtocores(cardId, protocores);
+
         window.dispatchEvent(new CustomEvent('protocoresUpdated', {
-            detail: {cardId, protocores}
+            detail: { cardId, protocores }
         }));
     }, [cardId]);
 
@@ -155,7 +155,7 @@ function CardProtocores({cardId}) {
 
         // Закрываем модалку после добавления
         protocoreModalRef.current?.closeModal?.();
-    }, [allProtocores, canAddProtocore, removeProtocoreFromAllCards, selectedProtocores, saveProtocores]);
+    }, [allProtocores, canAddProtocore, selectedProtocores, saveProtocores]);
 
     // Удалить протокор
     const handleRemoveProtocore = useCallback((protocoreId) => {
@@ -164,60 +164,33 @@ function CardProtocores({cardId}) {
         saveProtocores(updatedProtocores);
     }, [selectedProtocores, saveProtocores]);
 
-    // Фильтруем протокоры по совместимости с карточкой
-    const filterCompatible = useCallback((protocores) => {
-        return protocores.filter(p => {
-            if (selectedProtocores.some(sp => sp.id === p.id)) return false;
-
-            // Если уже 2 протокора — не показываем ничего
-            if (selectedProtocores.length >= 2) return false;
-
-            // Проверка совместимости с placement
-            if (!cardPlacement) return false;
-
-            const isSolar = cardPlacement === 'solar';
-            const isLunar = cardPlacement === 'lunar';
-
-            if (isSolar) {
-                // Для Solar: только alpha и beta
-                if (p.type !== 'alpha' && p.type !== 'beta') return false;
-            } else if (isLunar) {
-                // Для Lunar: только gamma и delta
-                if (p.type !== 'gamma' && p.type !== 'delta') return false;
-            }
-
-            // Проверка совместимости по стеллактуму
-            return !(cardStella && p.stellactrum !== cardStella);
-
-        });
-    }, [selectedProtocores, cardPlacement, cardStella]);
-
-    const filterBySearch = useCallback((protocores) => {
-        if (!searchQuery) return protocores;
-        const searchLower = searchQuery.toLowerCase();
-        return protocores.filter(protocore => {
-            return protocore.type.toLowerCase().includes(searchLower) ||
-                protocore.mainStat.toLowerCase().includes(searchLower) ||
-                protocore.stellactrum.toLowerCase().includes(searchLower) ||
-                protocore.substats?.some(sub => sub.stat.toLowerCase().includes(searchLower));
-        });
-    }, [searchQuery]);
-
-    // Используем useMemo
+    // ===== ФИЛЬТРАЦИЯ ДОСТУПНЫХ ПРОТОКОРОВ =====
     const availableProtocores = useMemo(() => {
         // 1. Фильтруем по совместимости с карточкой (placement + stellactrum)
-        const compatible = filterCompatible(allProtocores);
+        const compatible = getCompatibleProtocores(
+            allProtocores,
+            cardPlacement,
+            cardStella,
+            selectedProtocores
+        );
 
         // 2. Применяем фильтры
         const filtered = filterProtocores(compatible);
 
         // 3. Применяем поиск
-        const searched = filterBySearch(filtered);
+        if (searchQuery) {
+            const searchLower = searchQuery.toLowerCase();
+            return sortProtocores(filtered.filter(protocore => {
+                return protocore.type.toLowerCase().includes(searchLower) ||
+                    protocore.mainStat.toLowerCase().includes(searchLower) ||
+                    protocore.stellactrum.toLowerCase().includes(searchLower) ||
+                    protocore.substats?.some(sub => sub.stat.toLowerCase().includes(searchLower));
+            }));
+        }
 
         // 4. Сортируем
-        return sortProtocores(searched);
-    }, [allProtocores, filterCompatible, filterBySearch, filterProtocores, sortProtocores]);
-
+        return sortProtocores(filtered);
+    }, [allProtocores, cardPlacement, cardStella, selectedProtocores, filterProtocores, searchQuery, sortProtocores]);
 
     const resetAllSettings = () => {
         clearSearch();
@@ -236,6 +209,10 @@ function CardProtocores({cardId}) {
         const stellaText = cardStella ? ` (${cardStella.charAt(0).toUpperCase() + cardStella.slice(1)})` : '';
         return `${placementLabel} allowed: ${allowedTypes}${stellaText}`;
     };
+
+    if (!cardId) {
+        return <div>Loading...</div>;
+    }
 
     return (
         <div className={styles.container}>
@@ -302,7 +279,7 @@ function CardProtocores({cardId}) {
                                                 protocore={protocore}
                                                 hideChange={true}
                                                 hideDelete={true}
-                                                cardImage={cardImage} // Передаем найденную картинку или null
+                                                cardImage={cardImage}
                                             />
                                         </button>
                                     );

@@ -1,10 +1,12 @@
 import React, { useState, useImperativeHandle, forwardRef, useRef } from 'react';
 import { Button, Modal, Select, InputNumber, Form, Space } from 'antd';
 import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
+import { protocoreTypes } from '@data'
 import {
-    protocoreTypes,
-    memoriesData
-} from '@data'
+    addProtocore,
+    updateProtocore,
+    updateProtocoreInAllCards,
+} from '@localstorage';
 
 const ModalWindowProtocore = forwardRef((props, ref) => {
     const {
@@ -67,33 +69,6 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
 
     const getForm = () => {
         return formRef.current;
-    };
-
-    // НОВАЯ ФУНКЦИЯ: Обновление протокора во всех карточках
-    const updateProtocoreInAllCards = (updatedProtocore) => {
-        // Проходим по всем карточкам
-        for (const card of memoriesData) {
-            const key = `card_protocores_${card.id}`;
-            const cardProtocores = JSON.parse(localStorage.getItem(key) || '[]');
-
-            // Проверяем, есть ли этот протокор в карточке
-            const index = cardProtocores.findIndex(p => p.id === updatedProtocore.id);
-            if (index !== -1) {
-                // Обновляем данные протокора в карточке
-                cardProtocores[index] = {
-                    ...updatedProtocore
-                };
-                localStorage.setItem(key, JSON.stringify(cardProtocores));
-
-                // Отправляем событие для этой карточки
-                window.dispatchEvent(new CustomEvent('protocoresUpdated', {
-                    detail: {
-                        cardId: card.id,
-                        protocores: cardProtocores
-                    }
-                }));
-            }
-        }
     };
 
     useImperativeHandle(ref, () => ({
@@ -204,25 +179,20 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
                 updatedAt: new Date().toISOString()
             };
 
-            if (editingProtocore) {
-                // Обновление существующего протокора
-                const existingProtocores = JSON.parse(localStorage.getItem('protocores') || '[]');
-                const index = existingProtocores.findIndex((p) => p.id === editingProtocore.id);
-                if (index !== -1) {
-                    existingProtocores[index] = protocoreData;
-                    localStorage.setItem('protocores', JSON.stringify(existingProtocores));
-                }
-                onUpdate(protocoreData);
+            let savedProtocore;
 
-                // НОВОЕ: Обновляем протокор во всех карточках
-                updateProtocoreInAllCards(protocoreData);
+            if (editingProtocore) {
+                // Обновление через сервис
+                savedProtocore = updateProtocore(protocoreData);
+                onUpdate(savedProtocore);
+
+                // Обновляем протокор во всех карточках
+                updateProtocoreInAllCards(savedProtocore);
 
             } else {
-                // Создание нового протокора
-                const existingProtocores = JSON.parse(localStorage.getItem('protocores') || '[]');
-                existingProtocores.push(protocoreData);
-                localStorage.setItem('protocores', JSON.stringify(existingProtocores));
-                onSave(protocoreData);
+                // Создание через сервис
+                savedProtocore = addProtocore(protocoreData);
+                onSave(savedProtocore);
             }
 
             // Отправляем глобальное событие
