@@ -892,6 +892,17 @@ export const bannersDataFull = [
     startDate: "2026-08-05T05:00:00",
     endDate: "2026-08-15T04:59:59",
     rerun: false,
-    active: true,
+    active: false,
+  },
+  {
+    "id": 89,
+    "name": "Martial Ode",
+    "image": "../assets/banners/Martial-Ode.jpg",
+    "cardIds": [396],
+    "startDate": "2026-08-17T05:00:00",
+    "endDate": "2026-08-31T04:59:59",
+    "rerun": false,
+    "active": true
+
   },
 ];
