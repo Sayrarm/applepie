@@ -1,0 +1,45 @@
+.containerCalculator {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  padding: 5px;
+}
+
+.tabContent {
+  display: flex;
+}
+
+.tabButton {
+  padding: 8px 16px;
+  background: none;
+  border: none;
+  color: var(--colorTextDark);
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.tabButton:hover {
+  color: var(--a);
+}
+
+.tabButton.active {
+  background: var(--forSelect);
+  color: var(--colorText);
+  box-shadow: var(--box-shadow);
+}
+
+@media screen and (max-width: 948px) {
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .tabButton {
+    padding: 5px;
+  }
+}

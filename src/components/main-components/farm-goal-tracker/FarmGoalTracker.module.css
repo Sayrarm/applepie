@@ -1,0 +1,252 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  color: var(--colorTextDark);
+  font-family:
+    TikTok Sans,
+    monospace;
+}
+
+.noGoals {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px;
+  font-size: 12px;
+  text-align: center;
+
+  color: var(--colorTextDark);
+}
+
+.noGoals,
+.goalCard {
+  padding: 5px 15px 15px 15px;
+  background: var(--bg-glass);
+  box-shadow: var(--box-shadow);
+}
+
+.goalCard {
+  margin-top: 15px;
+}
+
+.goalCard:first-child {
+  border-top: none;
+  margin-top: 0;
+}
+
+.linkContainer {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--a);
+  transition: color 0.3s;
+  font-size: 14px;
+}
+
+.link:hover {
+  color: var(--a-hover);
+}
+
+.noGoals p:first-child {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: var(--a);
+}
+
+.goalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed var(--border);
+}
+
+.goalTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--colorTextDark);
+}
+
+.goalActions {
+  display: flex;
+  gap: 5px;
+}
+
+.completeButton,
+.deleteButton {
+  white-space: nowrap;
+  padding: 4px;
+  color: var(--colorText);
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  transition: 0.3s;
+}
+
+.completeButton {
+  background: var(--green-button);
+}
+
+.completeButton:hover {
+  background: var(--light-green-button);
+}
+
+.deleteButton {
+  background: var(--red-button);
+}
+
+.deleteButton:hover {
+  background: var(--light-red-button);
+}
+
+.goalContent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.resourcesSection h4,
+.remainingSection h4 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: var(--colorTextDark);
+}
+
+.resourcesList,
+.remainingList {
+  font-size: 12px;
+  color: var(--colorTextDark);
+  line-height: 1.8;
+}
+
+.completed {
+  color: #419716;
+}
+
+.notCompleted {
+  color: var(--redForText);
+}
+
+.completedBadge {
+  margin-top: 12px;
+  padding: 10px;
+  background: #e6f7e6;
+  border-radius: 8px;
+  color: #52c41a;
+  font-size: 13px;
+  text-align: center;
+}
+
+.crystalRow,
+.heartRow,
+.creditRow,
+.expRow {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin: 1px 0;
+}
+
+.crystalColorIcon,
+.heartIconSmall,
+.creditIconSmall {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.farmingSection,
+.replaceableGrid {
+  background: var(--bg-modal);
+  padding: 10px;
+  width: 100%;
+}
+
+.farmingDungeons {
+  display: flex;
+  gap: 5px;
+}
+
+.farmingRow {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-top: 5px;
+  color: var(--colorTextSuperDark);
+  font-size: 12px;
+}
+
+.farmingSection h4 {
+  margin-bottom: 5px;
+  color: var(--colorTextSuperDark);
+}
+
+.farmingList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.farmingCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+  justify-content: center;
+  padding: 10px;
+  background: var(--forSelect);
+  box-shadow: var(--box-shadow);
+  color: var(--colorText);
+}
+
+.farmingItem {
+  font-size: 12px;
+  color: var(--colorText);
+  text-align: center;
+}
+
+.itemIcon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.farmingValue {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--colorTextBright);
+}
+
+.enoughResources {
+  color: var(--green-button);
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1020px) {
+  .container {
+    padding: 5px;
+  }
+
+  .goalCard {
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+  }
+
+  .farmingCard {
+    padding: 5px;
+  }
+
+  .goalActions {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,47 @@
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  left: 20px;
+  bottom: 40px;
+  width: 60%;
+
+  text-decoration: none;
+  color: var(--colorText);
+}
+
+.navigationTop {
+  margin: 10px 5px;
+}
+
+.navigationTop > a {
+  text-decoration: none;
+  color: var(--colorTextDark);
+}
+
+.img {
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,9 @@
+.nav {
+  margin: 10px 5px;
+  color: var(--colorTextDark);
+}
+
+.link {
+  text-decoration: none;
+  color: var(--colorTextDark);
+}

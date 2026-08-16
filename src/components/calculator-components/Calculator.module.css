@@ -1,0 +1,292 @@
+.container {
+  max-width: 600px;
+  margin: 20px auto 0;
+  padding: 20px;
+  background: var(--bg-glass);
+  box-shadow: var(--box-shadow);
+  font-size: 16px;
+  font-family:
+    TikTok Sans,
+    monospace !important;
+  color: var(--colorTextDark);
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--colorTextDark);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.formGroup > div {
+  font-weight: 500;
+}
+
+.formGroup label {
+  display: block;
+  font-weight: 500;
+  color: var(--colorTextDark);
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 5px;
+}
+
+.typeButton {
+  padding: 8px 16px;
+  background: none;
+  border: none;
+  color: var(--colorTextDark);
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.typeButton:hover {
+  color: var(--a);
+}
+
+.typeButton.active {
+  background: var(--forSelect);
+  color: var(--colorText);
+  box-shadow: var(--box-shadow);
+}
+
+.select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--colorText);
+  background: var(--colorText);
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.select,
+.select:hover,
+.select:focus,
+.select:active,
+.select:visited {
+  border: none;
+  outline: none;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+}
+
+.row .formGroup {
+  flex: 1;
+}
+
+.results {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-battle-page);
+}
+
+.results h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: var(--a);
+  text-align: center;
+}
+
+.resultCard {
+  background: var(--colorText);
+  padding: 16px;
+  box-shadow: var(--box-shadow);
+}
+
+.resultContainer {
+  border-bottom: 1px dashed var(--border);
+}
+
+.resultRowUpgrade {
+  color: var(--colorTextSuperDark);
+  border-bottom: 2px solid var(--border);
+}
+
+.resultRow,
+.resultRowUpgrade {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 16px;
+}
+
+.resultRow span {
+  color: var(--colorTextSuperDark);
+}
+
+.resultLabel {
+  font-weight: 500;
+}
+
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin: 12px 0;
+}
+
+.warning {
+  margin-top: 20px;
+  padding: 12px;
+  background: var(--colorText);
+  border: 1px solid var(--a);
+  color: var(--a);
+  text-align: center;
+}
+
+.substatSection {
+  background: #f9f9f9;
+  padding: 12px;
+  margin: 12px 0;
+}
+
+.substatTitle {
+  font-weight: 600;
+  color: var(--colorTextSuperDark);
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.substatRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+  font-size: 13px;
+  color: var(--colorTextSuperDark);
+}
+
+.substatIcon {
+  font-size: 14px;
+  min-width: 24px;
+}
+
+.substatNote {
+  font-size: 12px;
+  color: var(--colorTextGrayNote);
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed #e0e0e0;
+}
+
+.calculateButton,
+.goToFarmButton {
+  width: 100%;
+  padding: 12px 24px;
+  background: var(--forSelect);
+  box-shadow: var(--box-shadow);
+  color: var(--colorText);
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.calculateButton:hover,
+.goToFarmButton:hover {
+  background: var(--a-hover);
+}
+
+.calculateButton:disabled {
+  background: var(--bg-modal);
+  cursor: not-allowed;
+}
+
+.goToFarmSection {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.colorButtons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.colorButton {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 6px 9px;
+  color: var(--colorTextDark);
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.colorButton:hover {
+  color: var(--a);
+}
+
+.colorButton.active {
+  background: var(--forSelect);
+  color: var(--colorText);
+  box-shadow: var(--box-shadow);
+}
+
+.colorIcon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--a);
+  font-size: 20px;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: var(--a-hover);
+}
+
+.heartContainer {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: var(--colorTextSuperDark);
+}
+
+.heartIcon {
+  width: 25px;
+  height: 25px;
+}
+
+@media screen and (max-width: 1020px) {
+  .resultCard,
+  .container {
+    padding: 10px;
+  }
+
+  .resultRow span {
+    font-size: 14px;
+  }
+}

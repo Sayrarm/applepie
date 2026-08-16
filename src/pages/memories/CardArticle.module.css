@@ -1,0 +1,190 @@
+.nav {
+  display: flex;
+  margin: 10px 5px;
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+
+  margin: 5px;
+  padding: 5px;
+}
+
+.img {
+  margin-top: 5px;
+  width: 500px;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+
+  -webkit-box-shadow: var(--box-shadow);
+  -moz-box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow);
+}
+
+.imgContainer {
+  height: 100%;
+}
+
+.span {
+  margin: 0 4px;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--colorTextDark);
+}
+
+.infoContainer {
+  width: 50%;
+}
+
+.protocoreSection {
+  background-color: var(--bg-glass);
+}
+
+/*********кнопки навигации (вправо-влево)***********/
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-top: 24px;
+  padding: 16px 0;
+  border-top: 1px solid var(--border-battle-page);
+}
+
+.navButtonLeft,
+.navButtonRight {
+  display: flex;
+  align-self: center;
+  padding: 5px 6px;
+  background: var(--forSelect);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: var(--box-shadow);
+}
+
+.navButtonLeft:hover:not(:disabled),
+.navButtonRight:hover:not(:disabled) {
+  background: var(--a-hover);
+}
+
+.navButtonLeft:disabled,
+.navButtonRight:disabled {
+  background: var(--bg-modal);
+  cursor: not-allowed;
+}
+
+.navCounter {
+  font-size: 14px;
+  color: var(--colorTextGrayNote);
+  font-weight: 500;
+  min-width: 80px;
+  text-align: center;
+}
+
+.arrowsButton {
+  width: 25px;
+  height: 25px;
+}
+
+.iconLeft,
+.iconRight {
+  color: var(--colorText);
+  width: 25px;
+  height: 25px;
+}
+
+/*****************************************/
+
+@media screen and (max-width: 485px) {
+  .imgContainer {
+    position: relative;
+  }
+
+  .navButtonLeft,
+  .navButtonRight {
+    position: absolute;
+    z-index: 999;
+  }
+
+  .navButtonLeft,
+  .navButtonRight,
+  .navButtonLeft:hover:not(:disabled),
+  .navButtonRight:hover:not(:disabled) {
+    background: none;
+    box-shadow: none;
+  }
+
+  .navButtonLeft {
+    left: 0;
+    top: 50%;
+  }
+
+  .navButtonRight {
+    right: 0;
+    top: 50%;
+  }
+
+  @keyframes ghostPulse {
+    0%,
+    100% {
+      opacity: 0.3;
+      filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.2))
+        drop-shadow(0 0 10px rgba(255, 255, 255, 0.1));
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.6;
+      filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.4))
+        drop-shadow(0 0 20px rgba(255, 255, 255, 0.2));
+      transform: scale(1.05);
+    }
+  }
+
+  .iconLeft,
+  .iconRight {
+    color: white;
+    animation: ghostPulse 2s ease-in-out infinite;
+    width: 35px;
+    height: 35px;
+  }
+
+  .navButtonLeft:disabled,
+  .navButtonRight:disabled {
+    background: none;
+    opacity: 0;
+    animation: none;
+  }
+
+  .navButtonLeft:disabled .iconLeft,
+  .navButtonRight:disabled .iconRight {
+    color: red;
+    cursor: not-allowed;
+  }
+}
+
+@media screen and (max-width: 1053px) {
+  .card {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .imgContainer {
+    align-self: center;
+  }
+
+  .infoContainer {
+    width: 100%;
+  }
+
+  .cardTitle {
+    font-size: 25px;
+  }
+}

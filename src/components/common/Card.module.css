@@ -1,0 +1,156 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 170px;
+  font-family:
+    TikTok Sans,
+    monospace;
+}
+
+.cardName {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 18px;
+  word-break: break-word;
+  max-width: 100%;
+  margin-top: 5px;
+  color: var(--colorTextDark);
+  text-decoration: none;
+}
+
+.img,
+.imgSmall {
+  -webkit-box-shadow: var(--box-shadow);
+  -moz-box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow);
+}
+
+.img {
+  height: 300px;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.imgSmall {
+  height: 170px;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.imgInfo {
+  position: relative;
+}
+
+.parametrsBG {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.stella,
+.placement,
+.talent,
+.starsGroup {
+  position: absolute;
+}
+
+.starsGroup {
+  display: flex;
+  bottom: 5px;
+  right: 5px;
+  z-index: 1;
+}
+
+.placement {
+  bottom: 5px;
+  left: 28px;
+  z-index: 1;
+}
+
+.talent {
+  bottom: 5px;
+  left: 51px;
+  z-index: 2;
+}
+
+.stella {
+  bottom: 5px;
+  left: 5px;
+  z-index: 3;
+}
+
+.card img {
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .card {
+    width: 160px;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .card {
+    width: 100px;
+  }
+
+  .cardName {
+    font-size: 14px;
+  }
+
+  .img {
+    height: 170px;
+  }
+
+  .imgSmall {
+    height: 110px;
+  }
+
+  .stella,
+  .placement,
+  .talent {
+    width: 15px;
+    height: 15px;
+  }
+
+  .stella {
+    left: 2px;
+  }
+
+  .placement {
+    left: 18px;
+  }
+
+  .talent {
+    left: 33px;
+  }
+
+  .starsGroup {
+    right: 1px;
+    bottom: 6px;
+  }
+
+  .stars {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .card {
+    width: 120px;
+  }
+}

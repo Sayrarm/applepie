@@ -1,0 +1,30 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  margin-top: 20px;
+}
+
+.link {
+  position: relative;
+}
+
+.title {
+  position: absolute;
+
+  left: 25px;
+  bottom: 10px;
+  color: var(--colorText);
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.img {
+  width: 405px;
+  height: 120px;
+
+  border-radius: 5px 100px 5px 5px;
+  object-fit: cover;
+  object-position: 10% 8%;
+}

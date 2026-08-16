@@ -1,0 +1,39 @@
+.button {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--colorText);
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+
+  /* Основная анимация */
+  transition:
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-8px);
+}
+
+.img {
+  width: 30px;
+  height: 30px;
+}
+
+@media screen and (max-width: 1115px) {
+  .button {
+    box-shadow: none;
+  }
+}

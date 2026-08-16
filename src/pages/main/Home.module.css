@@ -1,0 +1,305 @@
+.containerMain {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+.containerEvents {
+  margin: 5px;
+  width: 60%;
+}
+
+.containerSchedule {
+  margin: 5px;
+  width: 40%;
+}
+
+.containerEvents {
+  display: flex;
+  flex-direction: column;
+}
+
+.scheduleContainerGeneralButton,
+.containerTitleTimer,
+.containerActivityButton,
+.containerShopCardsButton,
+.containerTitleTimerButton {
+  background: var(--bg-glass);
+  -webkit-box-shadow: var(--box-shadow);
+  -moz-box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow);
+}
+
+.containerTitleTimerButton {
+  max-height: 216px;
+}
+
+.containerTitleTimer {
+  max-height: 132px;
+}
+
+.containerTitleTimer,
+.containerTitleTimerButton {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5px;
+}
+
+.containerResetActivity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+
+.containerTitleTimerButton,
+.containerTitleTimer {
+  position: relative;
+}
+
+.bannerTitle {
+  font-size: 23px;
+  font-family: "DM Serif Text", serif;
+  color: var(--colorText);
+  text-shadow: var(--text-shadow);
+
+  display: flex;
+  justify-self: flex-end;
+  position: absolute;
+  right: 1%;
+  bottom: 1px;
+  z-index: 999;
+}
+
+.noEvents {
+  font-size: 18px;
+  color: var(--colorTextDark);
+}
+
+.imgBanner {
+  width: 60%;
+  height: 100%;
+  -webkit-mask-image: var(--linear-gradient-webkit);
+  mask-image: var(--linear-gradient);
+}
+
+.img {
+  width: 413px;
+}
+
+.monthImg {
+  width: 100%;
+  height: 100%;
+}
+
+.stellacrumImg {
+  width: 20px;
+  height: 20px;
+}
+
+.schedule {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scheduleContainer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.scheduleContainerGeneralButton {
+  padding: 5px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.containerActivityButton {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  width: 100%;
+  gap: 10px;
+}
+
+.containerShopCardsButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  gap: 2px;
+}
+
+.monthImgContainer {
+  display: flex;
+}
+
+.containerActivityButton,
+.containerShopCardsButton,
+.scheduleContainerGeneralButton,
+.containerTitleTimerButton {
+  text-decoration: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.weeklyImgContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.weeklyImg {
+  width: 100px;
+}
+
+.weeklyImgProtocore {
+  width: 150px;
+}
+
+.h2 {
+  margin: 10px;
+  font-size: 25px;
+}
+
+.h3 {
+  font-size: 18px;
+}
+
+:global(.ant-modal .ant-modal-container) {
+  background-color: var(--bg-modal) !important;
+  padding: 20px !important;
+  border-radius: 16px !important;
+}
+
+@media screen and (max-width: 1020px) {
+  .containerMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+  }
+
+  .containerShopCardsButton {
+    width: 100%;
+  }
+
+  .scheduleContainerGeneralButton {
+    margin: 5px;
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .containerEvents,
+  .containerSchedule {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .containerTitleTimerButton {
+    max-height: 246px;
+  }
+
+  .containerTitleTimer {
+    max-height: 168px;
+  }
+
+  .containerTitleTimer,
+  .containerTitleTimerButton {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .containerSchedule {
+    display: flex;
+  }
+
+  .weeklyImg {
+    width: 70px;
+  }
+
+  .weeklyImgProtocore {
+    width: 100px;
+  }
+
+  .imgBanner {
+    width: 50%;
+    height: auto;
+    min-width: 50%;
+    min-height: 100%;
+  }
+
+  .img,
+  .imgAwards {
+    width: 275px;
+  }
+
+  .h2 {
+    margin: 5px;
+    align-self: start;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .bannerTitle {
+    right: 1%;
+    bottom: -1px;
+  }
+
+  .bannerTitle {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .scheduleContainerGeneralButton,
+  .container,
+  .containerTitleTimer,
+  .containerTitleTimerButton,
+  .containerActivityButton,
+  .containerShopCardsButton {
+    font-size: 12px;
+  }
+
+  .h2 {
+    font-size: 18px;
+  }
+
+  .scheduleContainerGeneralButton {
+    margin: 5px;
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .scheduleContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .schedule {
+    display: flex;
+    gap: 5px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .bannerTitle {
+    font-size: 14px;
+  }
+}

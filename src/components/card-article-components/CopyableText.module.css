@@ -1,0 +1,35 @@
+.copyableText {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.copyableText:hover {
+  color: var(--a);
+}
+
+.copyTooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  margin-bottom: 8px;
+  z-index: 100;
+}
+
+.copyTooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid transparent;
+  border-top-color: #333;
+}

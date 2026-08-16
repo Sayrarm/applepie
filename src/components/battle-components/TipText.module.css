@@ -1,0 +1,82 @@
+.glossaryText {
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.glossaryTerm {
+  color: var(--a);
+  cursor: help;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+  display: inline-block;
+}
+
+.glossaryTerm:hover {
+  color: var(--a-hover);
+  text-decoration-style: solid;
+}
+
+.glossaryTooltip {
+  position: fixed;
+  background: var(--background);
+  color: var(--colorText);
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+  max-width: 350px;
+  min-width: 200px;
+  z-index: 1000;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.glossaryTooltipTitle {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--a);
+}
+
+.glossaryTooltipText {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+  .glossaryTerm {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .glossaryTerm:active {
+    background-color: var(--background);
+  }
+
+  .glossaryTooltip {
+    max-width: 80vw;
+    width: auto;
+    word-wrap: break-word;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.2s ease;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}

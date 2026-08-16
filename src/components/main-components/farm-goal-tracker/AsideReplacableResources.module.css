@@ -1,0 +1,90 @@
+.replaceableSection h4 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: var(--colorTextDark);
+}
+
+.replaceableSection {
+  width: 100%;
+}
+
+.replaceableItems {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.replaceableItem {
+  height: 100%;
+  flex-direction: column;
+  padding: 10px;
+  background-color: var(--forSelect);
+}
+
+.replaceableItem,
+.replaceableItemlast {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: var(--colorTextBright);
+  font-weight: 600;
+}
+
+.replaceableItemlast {
+  border-bottom: 1px dashed var(--border);
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+
+.replaceableItemsCrystal {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.replaceableItemGeneralBox {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  background-color: var(--forSelect);
+}
+
+.itemTitle {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.boxesContainer {
+  display: flex;
+  color: var(--colorTextBright);
+  font-weight: 600;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.smallIcon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.itemTitle {
+  font-size: 12px;
+  color: var(--colorText);
+  text-align: center;
+  font-weight: 400;
+}
+
+.span {
+  font-size: 12px;
+  color: gray;
+}
+
+.aside {
+  width: 100%;
+}

@@ -1,0 +1,465 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.captureRef {
+  display: flex;
+  flex-direction: column;
+}
+
+.teamControls {
+  display: flex;
+  gap: 3px;
+}
+
+.deleteTab,
+.teamNameButton,
+.addTeamButton {
+  font-size: 16px;
+  color: var(--colorTextDark);
+}
+
+.teamNameButton,
+.addTeamButton {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px 10px 10px;
+  background-color: var(--bg-glass-dark) !important;
+  border-radius: 5px 5px 0 0;
+  transition: color 0.3s;
+}
+
+.tabWrapper {
+  position: relative;
+}
+
+.deleteTab {
+  position: absolute;
+  top: 0;
+  right: 5%;
+}
+
+.teamNameButton:hover,
+.addTeamButton:hover {
+  color: var(--a);
+}
+
+.activeTab {
+  color: var(--a);
+}
+
+.nameInputModal {
+  height: 30px;
+  padding: 5px;
+  font-family:
+    TikTok Sans,
+    monospace;
+}
+
+.renameModal {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.renameButtons {
+  display: flex;
+  gap: 3px;
+}
+
+.container {
+  font-family:
+    TikTok Sans,
+    monospace;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  background-color: var(--bg-glass-dark);
+  box-shadow: var(--box-shadow);
+
+  width: 1205px; /* фиксированная ширина десктопной версии */
+  transform: scale(1);
+  transform-origin: top left;
+}
+
+.topContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.addCompanionBtn,
+.companionItem,
+.cardItem,
+.emptyLabel,
+.screenshotButton,
+.clearButton,
+.teamNameButton,
+.renameButton,
+.deleteTab,
+.addTeamButton {
+  text-decoration: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family:
+    TikTok Sans,
+    monospace;
+}
+
+.companionSection {
+  display: flex;
+}
+
+.companionChar {
+  display: flex;
+  flex-direction: column;
+}
+
+.addCompanionBtn {
+  display: flex;
+  align-items: flex-start;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+
+.screenshotButton,
+.addCompanionText,
+.clearButton {
+  background-color: var(--forSelect);
+  box-shadow: var(--box-shadow);
+  padding: 10px;
+  color: var(--colorText);
+  font-size: 18px;
+}
+
+.addCompanionText {
+  margin: 10px;
+}
+
+.utilButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.screenshotButton,
+.clearButton {
+  width: 140px;
+  margin: 5px 0 10px 0;
+  font-size: 14px;
+}
+
+.companionImage,
+.mcWeaponImage {
+  width: 288px;
+  height: 110px;
+  -webkit-mask-image:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      black 40%,
+      black 90%,
+      transparent 100%
+    ),
+    linear-gradient(
+      0deg,
+      transparent 0%,
+      black 40%,
+      black 90%,
+      transparent 100%
+    );
+  -webkit-mask-composite: intersect;
+  mask-image:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      black 40%,
+      black 90%,
+      transparent 100%
+    ),
+    linear-gradient(
+      0deg,
+      transparent 0%,
+      black 40%,
+      black 90%,
+      transparent 100%
+    );
+  mask-composite: intersect;
+}
+
+.companionImage {
+  object-fit: cover;
+  object-position: 50% 15%;
+}
+.mcWeaponImage {
+  object-fit: cover;
+  object-position: 50% 30%;
+}
+
+.companionName {
+  font-size: 20px;
+  color: var(--colorTextDark);
+  text-align: start;
+  padding: 0 10px;
+}
+
+.companionGrid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+}
+
+.companionImg {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.companionItem {
+  margin-bottom: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 150px;
+}
+
+.cardsSection {
+  display: flex;
+}
+
+.cardSlot {
+  border: 1px solid var(--border-battle-page);
+  margin: 5px;
+  min-height: 416px;
+  min-width: 392px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.emptySlotContent,
+.noProtocores {
+  font-size: 18px;
+  color: var(--colorTextDark);
+}
+
+.rowLabel {
+  padding: 5px 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--a);
+}
+
+.cardGrid {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+}
+
+.protocoresContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.cardInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  margin: 5px 0;
+  font-size: 18px;
+}
+
+.noProtocores {
+  text-align: center;
+  padding: 40px;
+}
+
+.lunarCardsRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.solarCardsRow {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  border-right: 2px solid var(--border);
+  margin-bottom: 5px;
+}
+
+.statsTable {
+  border-collapse: collapse;
+  display: flex;
+  margin: 5px;
+}
+
+.statsTable th,
+.statsTable td {
+  border: 1px solid var(--border-table);
+  text-align: center;
+  padding: 5px 2px;
+}
+
+.statsTable th {
+  color: var(--colorTextDark);
+  padding: 0 2px;
+}
+
+.statsTable td {
+  width: 80px;
+}
+
+.bonuses {
+  padding: 0 5px;
+  gap: 5px;
+  display: flex;
+}
+
+.affinity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.selectAffinityContainer {
+  width: 150px;
+}
+
+.selectAffinityContainer [class$="-control"] {
+  background-color: var(--forSelect);
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.selectAffinityContainer [class$="-control"]:hover {
+  border-color: var(--colorText);
+}
+
+.selectAffinityContainer [class$="-placeholder"] {
+  color: var(--colorTextGrayNote);
+  font-size: 12px;
+}
+
+.selectAffinityContainer [class$="-menu"] {
+  background-color: var(--forSelect);
+  border: none;
+  border-radius: 0;
+  margin: 1px;
+}
+
+.selectAffinityContainer [class$="-option"] {
+  background-color: var(--forSelect);
+  color: var(--colorText);
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.selectAffinityContainer [class$="-option"]:hover {
+  background-color: var(--a-hover);
+  color: var(--colorText);
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.selectAffinityContainer [class$="-singleValue"] {
+  color: var(--colorText);
+}
+
+@media screen and (max-width: 768px) {
+  .captureRef {
+    height: 25%;
+  }
+
+  .container {
+    /* Уменьшаем контейнер до размеров экрана */
+    transform: scale(0.5); /* 32% от оригинального размера */
+    transform-origin: top left;
+    width: 1210px; /* оригинальная ширина (десктопная) */
+    margin: 0 auto;
+  }
+
+  .cardSlot {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 5px;
+  }
+
+  .teamNameButton,
+  .addTeamButton {
+    font-size: 14px;
+    padding: 5px 15px 5px 5px;
+  }
+}
+
+@media screen and (max-width: 766px) and (min-width: 615px) {
+  .container {
+    /* Уменьшаем контейнер до размеров экрана */
+    transform: scale(0.6); /* 32% от оригинального размера */
+    transform-origin: top left;
+    width: 1210px; /* оригинальная ширина (десктопная) */
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 614px) and (min-width: 511px) {
+  .captureRef {
+    height: 18%;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .captureRef {
+    height: 10%;
+  }
+
+  .container {
+    /* Уменьшаем контейнер до размеров экрана */
+    transform: scale(0.305); /* 32% от оригинального размера */
+    transform-origin: top left;
+    width: 1210px; /* оригинальная ширина (десктопная) */
+    margin: 0 auto;
+  }
+
+  .cardSlot {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 5px;
+  }
+
+  .cardSlotEquipped {
+    transform: scale(1.6);
+    transform-origin: -12% 56%;
+  }
+
+  .protocoreWrapper {
+    transform: scale(1);
+    transform-origin: 5% 5%;
+  }
+
+  .teamNameButton,
+  .addTeamButton {
+    font-size: 14px;
+    padding: 5px 15px 5px 5px;
+  }
+
+  .cardInfo {
+    font-size: 14px;
+    align-items: center;
+  }
+}
