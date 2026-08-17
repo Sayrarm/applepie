@@ -83,4 +83,8 @@ export const solar4Stars = [
     id: 21,
     cardIds: [261, 262],
   },
+  {
+    id: 22,
+    cardIds: [414, 415],
+  },
 ];

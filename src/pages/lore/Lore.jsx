@@ -14,7 +14,7 @@ function Lore() {
             alt="characters"
           />
         </Link>
-
+        {/*
         <Link className={styles.link} to="/main-story">
           <div className={styles.title}>Main Story</div>
           <img
@@ -23,7 +23,7 @@ function Lore() {
             alt="main story"
           />
         </Link>
-
+        */}
         <Link className={styles.link} to="/spacepedia">
           <div className={styles.title}>Spacepedia</div>
           <img

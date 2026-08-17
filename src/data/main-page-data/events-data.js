@@ -69,7 +69,7 @@ export const eventsData = [
     image: "../assets/main-page/events/kitty-extra.png",
     startDate: "2026-07-27T05:00:00",
     endDate: "2026-08-17T04:59:59",
-    active: true,
+    active: false,
   },
   {
     id: 10,
@@ -77,7 +77,7 @@ export const eventsData = [
     image: "../assets/main-page/events/plushie-23.png",
     startDate: "2026-08-03T05:00:00",
     endDate: "2026-08-17T04:59:59",
-    active: true,
+    active: false,
   },
   {
     id: 11,

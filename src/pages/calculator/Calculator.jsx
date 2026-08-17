@@ -27,6 +27,7 @@ function Calculator() {
         >
           Showcase
         </NavLink>
+        {/*
         <NavLink
           className={({ isActive }) =>
             `${styles.tabButton} ${isActive ? styles.active : ""}`
@@ -35,6 +36,7 @@ function Calculator() {
         >
           Optimizer
         </NavLink>
+        */}
         <NavLink
           className={({ isActive }) =>
             `${styles.tabButton} ${isActive ? styles.active : ""}`
