@@ -75,6 +75,7 @@ export { default as DynamicImage } from "./main-components/DynamicImage.jsx";
 export { default as ExportImport } from "./my-account-components/import-export/ExportImport.jsx";
 
 export { default as MyProtocores } from "./my-account-components/my-protocores-page/MyProtocores.jsx";
+export { default as ModalWindowProtocore } from "./my-account-components/my-protocores-page/ModalWindowProtocore.jsx";
 
 export { default as MyMemories } from "./my-account-components/MyMemories.jsx";
 export { default as MyResources } from "./my-account-components/MyResources.jsx";

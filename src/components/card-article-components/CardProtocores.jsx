@@ -10,6 +10,7 @@ import {
   ProtocoreBlock,
   ModalWindow,
   FilterSortBarProtocores,
+  ModalWindowProtocore, // <-- ДОБАВИТЬ ИМПОРТ
   useProtocoreSearch,
   useProtocoreFilter,
   useProtocoreSort,
@@ -24,10 +25,12 @@ import {
   findCardForProtocore,
   getCompatibleProtocores,
   removeProtocoreFromAllCards,
+  updateProtocoreInAllCards,
 } from "@localstorage";
 
 function CardProtocores({ cardId }) {
   const protocoreModalRef = useRef();
+  const protocoreEditModalRef = useRef(); // <-- ДОБАВИТЬ РЕФ ДЛЯ МОДАЛКИ РЕДАКТИРОВАНИЯ
   const filterModalRef = useRef();
 
   // Хуки для фильтрации и сортировки протокоров
@@ -45,6 +48,7 @@ function CardProtocores({ cardId }) {
   // ===== СОСТОЯНИЯ =====
   const [allProtocores, setAllProtocores] = useState([]);
   const [selectedProtocores, setSelectedProtocores] = useState([]);
+  const [editingProtocore, setEditingProtocore] = useState(null);
 
   // ===== ЗАГРУЗКА ДАННЫХ =====
   useEffect(() => {
@@ -95,6 +99,12 @@ function CardProtocores({ cardId }) {
   // ===== ФУНКЦИИ =====
   const showProtocoreModal = () => {
     protocoreModalRef.current.showModal();
+  };
+
+  // Функция для открытия модалки редактирования
+  const showEditProtocoreModal = (protocore) => {
+    setEditingProtocore(protocore);
+    protocoreEditModalRef.current?.showModal(protocore);
   };
 
   // Сохранение протокоров карточки
@@ -203,6 +213,36 @@ function CardProtocores({ cardId }) {
       saveProtocores(updatedProtocores);
     },
     [selectedProtocores, saveProtocores],
+  );
+
+  // Обработчик обновления протокора после редактирования
+  const handleProtocoreUpdate = useCallback(
+    (updatedProtocore) => {
+      if (!updatedProtocore) return;
+
+      // Обновляем протокор в основном хранилище
+      const allProtocoresList = getProtocores();
+      const index = allProtocoresList.findIndex(
+        (p) => p.id === updatedProtocore.id,
+      );
+      if (index !== -1) {
+        allProtocoresList[index] = updatedProtocore;
+        localStorage.setItem("protocores", JSON.stringify(allProtocoresList));
+      }
+
+      // Обновляем протокор во всех карточках
+      updateProtocoreInAllCards(updatedProtocore);
+
+      // Обновляем состояние
+      setAllProtocores(getProtocores());
+      setSelectedProtocores(getCardProtocores(cardId));
+
+      // Отправляем событие
+      window.dispatchEvent(new CustomEvent("protocoresUpdated"));
+
+      setEditingProtocore(null);
+    },
+    [cardId],
   );
 
   // ===== ФИЛЬТРАЦИЯ ДОСТУПНЫХ ПРОТОКОРОВ =====
@@ -358,7 +398,7 @@ function CardProtocores({ cardId }) {
               <div key={protocore.id} className={styles.protocoreWrapper}>
                 <ProtocoreBlock
                   protocore={protocore}
-                  hideChange={true}
+                  onEdit={() => showEditProtocoreModal(protocore)}
                   onDelete={() => handleRemoveProtocore(protocore.id)}
                   cardImage={currentCardImage}
                 />
@@ -367,6 +407,12 @@ function CardProtocores({ cardId }) {
           })}
         </div>
       )}
+      {/* Модалка редактирования протокора */}
+      <ModalWindowProtocore
+        ref={protocoreEditModalRef}
+        title="Edit Protocore"
+        onUpdate={handleProtocoreUpdate}
+      />
     </div>
   );
 }

@@ -36,7 +36,7 @@ export const obtainData = [
       234, 235, 236, 237, 238, 239, 240, 253, 254, 255, 256, 263, 264, 267, 289,
       290, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 313, 314,
       315, 316, 317, 318, 320, 321, 323, 325, 326, 327, 328, 329, 330, 331, 332,
-      333, 334, 335, 348, 349, 350, 351, 358, 359, 361, 385, 386, 412, 413
+      333, 334, 335, 348, 349, 350, 351, 358, 359, 361, 385, 386, 412, 413,
     ],
     description: "Can be obtain for 'Deepspace Wish' (Event Banner).",
     image: "../assets/main-page/modal-window/limited-banner.png",
@@ -70,7 +70,7 @@ export const obtainData = [
       151, 153, 401, 164, 165, 166, 167, 213, 214, 215, 217, 224, 243, 246, 247,
       258, 259, 260, 261, 262, 263, 264, 267, 307, 309, 311, 319, 320, 321, 323,
       325, 326, 327, 328, 329, 330, 331, 332, 333, 334, 335, 348, 349, 350, 351,
-      337, 339, 341, 343, 346, 354, 355, 356, 357, 399, 401, 414, 415, 416
+      337, 339, 341, 343, 346, 354, 355, 356, 357, 399, 401, 414, 415, 416,
     ],
     description: "Can be obtain from 'Wish' -> 'Galaxy Explorer'",
     image: "../assets/main-page/modal-window/galaxy-explorer.png",
@@ -89,7 +89,7 @@ export const obtainData = [
     obtain: "Limited Event",
     memories: [
       10, 21, 53, 104, 65, 71, 122, 134, 150, 156, 157, 216, 245, 250, 252, 308,
-      310, 312, 324, 340, 345, 347, 403, 414, 415, 416
+      310, 312, 324, 340, 345, 347, 403, 414, 415, 416,
     ],
     description: "Memory from 'Events'. Can be repeatable, check the news.",
     image: "../assets/main-page/modal-window/events.png",
