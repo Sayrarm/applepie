@@ -108,7 +108,7 @@ function DataManager() {
 
       // Скачиваем файл
       const link = document.createElement("a");
-      link.download = `love_and_deepspace_data_${new Date().toISOString().slice(0, 10)}.json`;
+      link.download = `lads-data-${new Date().toISOString().slice(0, 10)}.json`;
       link.href = url;
       document.body.appendChild(link);
       link.click();

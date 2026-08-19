@@ -171,7 +171,7 @@ function Showcase() {
       element.style.padding = "0";
 
       const link = document.createElement("a");
-      link.download = `showcase_${currentTeam.name}_${new Date().toISOString().slice(0, 10)}.png`;
+      link.download = `${currentTeam.name}_${new Date().toISOString().slice(0, 10)}.png`;
       link.href = dataUrl;
       link.click();
     } catch (error) {
