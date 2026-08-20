@@ -9,7 +9,7 @@ import {
   useSort,
   useFilter,
 } from "@components";
-import { memoriesData } from "@data";
+import {formatOptionLabel, memoriesData, rankOptions} from "@data";
 import { enhanceMemoriesWithAvailability } from "@localstorage";
 
 function ChooseTeamCards({
@@ -81,6 +81,12 @@ function ChooseTeamCards({
     }
   };
 
+  const renderRank = (rank) => {
+    const rankNum = Number(rank) || 0;
+    const rankOption = rankOptions.find(opt => opt.value === rankNum);
+    return rankOption ? formatOptionLabel(rankOption) : <span>Rank {rankNum}</span>;
+  };
+
   // Функция для отображения слота карточки с протокорами
   const renderCardSlot = (card, placement, index) => {
     const cardData = card ? getCardData(card) : null;
@@ -102,7 +108,7 @@ function ChooseTeamCards({
                   )}
                 </span>
                 <span className={styles.cardRank}>
-                  Rank {cardData?.rank || 0}{" "}
+                  {renderRank(cardData?.rank)}
                 </span>
               </div>
 

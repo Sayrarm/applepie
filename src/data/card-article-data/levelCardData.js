@@ -923,3 +923,10 @@ export const ascendData3star = {
     80: { hp: 6904, atk: 345, def: 189, critRate: 2.3, critDmg: 4.6 },
   },
 };
+
+export const rankOptions = [
+  { value: 0, img: '../assets/icons/rank-0.png' },
+  { value: 1, img: '../assets/icons/rank-1.png' },
+  { value: 2, img: '../assets/icons/rank-2.png' },
+  { value: 3, img: '../assets/icons/rank-3.png' },
+];

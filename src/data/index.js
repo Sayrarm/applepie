@@ -4,10 +4,12 @@ export {
   ascendData3star,
   ascendData4star,
   ascendData5star,
+  rankOptions
 } from "./card-article-data/levelCardData.js";
 export {
   calculateDmgBoost,
   getStatsWithRank,
+  formatOptionLabel
 } from "./card-article-data/levelCardFunctions.js";
 export { memoriesData } from "./card-article-data/memories-data.js";
 export { obtainData } from "./card-article-data/obtain-data.js";

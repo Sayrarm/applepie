@@ -8,6 +8,8 @@ import {
   memoryStats,
   memoriesData,
   calculateFinalStats,
+  rankOptions,
+  formatOptionLabel
 } from "@data";
 import {
   getCardLevel,
@@ -21,13 +23,6 @@ import {
   getCardProtocores,
   saveCardProtocores,
 } from "@localstorage";
-
-const rankOptions = [
-  { value: 0, label: "Rank 0" },
-  { value: 1, label: "Rank 1" },
-  { value: 2, label: "Rank 2" },
-  { value: 3, label: "Rank 3" },
-];
 
 function LevelCardBlock({ cardId: propCardId, onAvailabilityChange }) {
   const { cardId: paramCardId } = useParams();
@@ -307,12 +302,13 @@ function LevelCardBlock({ cardId: propCardId, onAvailabilityChange }) {
               </div>
 
               <Select
-                options={rankOptions}
-                value={rankOptions.find((opt) => opt.value === rank)}
-                onChange={(option) => setRank(option ? option.value : 0)}
-                placeholder="Select Rank"
-                className={styles.selectRankContainer}
-                isSearchable={false}
+                  options={rankOptions}
+                  value={rankOptions.find((opt) => opt.value === rank)}
+                  onChange={(option) => setRank(option ? option.value : 0)}
+                  placeholder="Select Rank"
+                  className={styles.selectRankContainer}
+                  isSearchable={false}
+                  formatOptionLabel={formatOptionLabel}
               />
             </div>
 

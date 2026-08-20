@@ -11,7 +11,7 @@ import {
   memoriesData,
   getStatsWithRank,
   calculateFinalStats,
-  getProtocoreLevelsString,
+  getProtocoreLevelsString, rankOptions, formatOptionLabel,
 } from "@data";
 import { getImageUrl } from "@hooks";
 import {
@@ -446,7 +446,7 @@ function MyMemories() {
                     </span>
                   </td>
                   <td>
-                    <span className={styles.rankBadge}>{card.rank}</span>
+                    {formatOptionLabel(rankOptions.find(opt => opt.value === card.rank))}
                   </td>
                   <td className={styles.stellaContainer}>
                     <img
