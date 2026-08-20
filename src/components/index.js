@@ -78,7 +78,7 @@ export { default as MyProtocores } from "./my-account-components/my-protocores-p
 export { default as ModalWindowProtocore } from "./my-account-components/my-protocores-page/ModalWindowProtocore.jsx";
 
 export { default as MyMemories } from "./my-account-components/MyMemories.jsx";
-export { default as MyResources } from "./my-account-components/MyResources.jsx";
+export { default as MyResources } from "./my-account-components/resources-components/MyResources.jsx";
 
 //ui
 export { default as AsideList } from "./ui/AsideList.jsx";

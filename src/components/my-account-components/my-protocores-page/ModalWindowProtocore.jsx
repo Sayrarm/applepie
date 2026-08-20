@@ -277,6 +277,17 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
     value: label,
   }));
 
+  const numberParser = (value) => {
+    if (!value) return "";
+    const normalized = value.replace(/,/g, ".");
+    // Удаляем лишние точки (оставляем только первую)
+    const parts = normalized.split(".");
+    if (parts.length > 2) {
+      return parts[0] + "." + parts.slice(1).join("");
+    }
+    return normalized;
+  };
+
   return (
     <Modal
       open={open}
@@ -480,6 +491,12 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
                         step={0.1}
                         inputMode="decimal"
                         pattern="[0-9.]*"
+                        parser={numberParser}
+                        formatter={(value) => {
+                          if (!value) return "";
+                          // Показываем значение с точкой для единообразия
+                          return String(value).replace(/,/g, ".");
+                        }}
                       />
                     </Form.Item>
 

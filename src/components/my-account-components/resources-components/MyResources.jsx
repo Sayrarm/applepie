@@ -15,8 +15,7 @@ import {
   getCrystalBoxExchange,
   getWishExchange,
 } from "@data";
-import { getImageUrl } from "@hooks";
-import { useResources } from "@hooks";
+import { getImageUrl, useResources } from "@hooks";
 
 function MyResources() {
   // ===== ИСПОЛЬЗУЕМ ХУК =====
