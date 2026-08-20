@@ -11,6 +11,7 @@ import {
   credits,
   wish,
   diamond,
+  capsules,
   getHeartsandExchange,
   getCrystalBoxExchange,
   getWishExchange,
@@ -31,6 +32,7 @@ function MyResources() {
     setSelectedCrystalColor,
     diamonds: diamondsState,
     wish: wishState,
+    capsules: capsulesState,
     setBottles,
     setHeartsand,
     setCrystals,
@@ -40,6 +42,7 @@ function MyResources() {
     setCredits,
     setDiamonds,
     setWish,
+    setCapsules,
     updateCount,
   } = useResources();
 
@@ -105,6 +108,12 @@ function MyResources() {
     } else {
       setDiamonds(String(Number(value)));
     }
+  };
+
+  const handleCapsuleChange = (id, value) => {
+    const newState = { ...capsulesState };
+    newState[id] = Math.max(0, Number(value) || 0);
+    setCapsules(newState);
   };
 
   return (
@@ -734,6 +743,48 @@ function MyResources() {
                 }}
               />
             </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Credits */}
+      <div className={styles.section}>
+        <h2>Energy Capsules</h2>
+        <div className={styles.itemsGrid}>
+          {capsules.map((item) => (
+              <div key={item.id} className={styles.itemRow}>
+                <div className={styles.itemDiv}>
+                  <img
+                      src={getImageUrl(item.img)}
+                      alt={item.name}
+                      className={styles.itemIcon}
+                  />
+                  <label htmlFor={`input-${item.id}`} className={styles.itemName}>
+                    {item.name}
+                  </label>
+                </div>
+                <input
+                    id={`input-${item.id}`}
+                    name="item"
+                    type="number"
+                    min="0"
+                    value={capsulesState[item.id] || ""}
+                    onChange={(e) =>
+                        handleCapsuleChange(item.id, e.target.value)
+                    }
+                    className={styles.itemInput}
+                    onFocus={(e) => {
+                      if (e.target.value === "0") {
+                        e.target.value = "";
+                      }
+                    }}
+                    onBlur={(e) => {
+                      if (e.target.value === "") {
+                        handleCapsuleChange(item.id, 0);
+                      }
+                    }}
+                />
+              </div>
           ))}
         </div>
       </div>

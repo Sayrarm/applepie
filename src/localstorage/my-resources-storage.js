@@ -44,3 +44,7 @@ export const saveDiamonds = (value) =>
 // ===== WISH =====
 export const getWish = () => get(KEYS.INVENTORY_WISH, {});
 export const saveWish = (data) => set(KEYS.INVENTORY_WISH, data);
+
+// ===== CAPSULES =====
+export const getCapsule = () => get(KEYS.INVENTORY_CAPSULES, {});
+export const saveCapsule = (data) => set(KEYS.INVENTORY_CAPSULES, data);

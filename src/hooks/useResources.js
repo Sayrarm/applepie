@@ -1,4 +1,3 @@
-// src/hooks/useResources.js
 import { useState, useEffect, useCallback } from "react";
 import {
   getBottles,
@@ -21,6 +20,8 @@ import {
   saveDiamonds,
   getWish,
   saveWish,
+  getCapsule,
+  saveCapsule,
 } from "@localstorage";
 
 export function useResources() {
@@ -37,6 +38,7 @@ export function useResources() {
   );
   const [diamonds, setDiamonds] = useState(getDiamonds);
   const [wish, setWish] = useState(getWish);
+  const [capsules, setCapsules] = useState(() => getCapsule());
 
   // ===== ОБНОВЛЕНИЕ КОЛИЧЕСТВА (универсальная функция) =====
   const updateCount = useCallback((state, setState, id, value) => {
@@ -77,6 +79,9 @@ export function useResources() {
   useEffect(() => {
     saveWish(wish);
   }, [wish]);
+  useEffect(() => {
+    saveCapsule(capsules);
+  }, [capsules]);
 
   // ===== ВОЗВРАЩАЕМ ВСЁ, ЧТО НУЖНО КОМПОНЕНТУ =====
   return {
@@ -91,6 +96,7 @@ export function useResources() {
     selectedCrystalColor,
     diamonds,
     wish,
+    capsules,
 
     // Сеттеры (для прямого обновления)
     setBottles,
@@ -103,6 +109,7 @@ export function useResources() {
     setSelectedCrystalColor,
     setDiamonds,
     setWish,
+    setCapsules,
 
     // Утилиты
     updateCount,

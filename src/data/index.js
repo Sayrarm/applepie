@@ -88,14 +88,15 @@ export {
   hearts,
   coreEnergy,
   credits,
-} from "./calculator-data/my-resources-data.js";
+  capsules
+} from "./my-account-data/my-resources-data.js";
 export {
   getHeartsandExchange,
   getCrystalBoxExchange,
   getHeartInfo,
   getHeartCount,
   getWishExchange,
-} from "./calculator-data/my-resources-functions.js";
+} from "./my-account-data/my-resources-functions.js";
 export {
   levelUpData,
   MAX_LEVEL,

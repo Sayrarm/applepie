@@ -18,6 +18,7 @@ export const KEYS = {
   INVENTORY_SELECTED_CRYSTAL_COLOR: "inventory_selected_crystal_color",
   INVENTORY_DIAMONDS: "inventory_diamonds",
   INVENTORY_WISH: "inventory_wish",
+  INVENTORY_CAPSULES: "inventory_capsules"
 };
 
 // Функции для динамических ключей

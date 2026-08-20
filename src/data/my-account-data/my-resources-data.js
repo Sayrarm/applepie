@@ -249,3 +249,23 @@ export const credits = [
     img: "../assets/icons/credits.png",
   },
 ];
+
+export const capsules = [
+  {
+    id: "capsule_light",
+    name: "Energy Capsule: Light",
+    value: 1,
+    img: "../assets/icons/energy-capsule-light.png",
+  },
+  {
+    id: "capsule_medium",
+    name: "Energy Capsule: Medium",
+    value: 1,
+    img: "../assets/icons/energy-capsule-medium.png",
+  },{
+    id: "capsule_powerful",
+    name: "Energy Capsule: Powerful",
+    value: 1,
+    img: "../assets/icons/energy-capsule-powerful.png",
+  },
+];
