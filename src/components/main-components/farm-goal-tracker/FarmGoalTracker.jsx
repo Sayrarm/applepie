@@ -14,8 +14,7 @@ import {
   credits,
   bottles,
   coreEnergy,
-  capsules,
-} from "@data";
+  } from "@data";
 import { getImageUrl, useFarmGoals } from "@hooks";
 import AsideReplaceableResources from "./AsideReplaceableResources.jsx";
 

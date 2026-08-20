@@ -66,6 +66,15 @@ function MyResources() {
     return total;
   };
 
+  const getTotalStaminaExp = () => {
+    let total = 0;
+    capsules.forEach((stamina) => {
+      const count = capsulesState[stamina.id] || 0;
+      total += count * (stamina.value || 0);
+    });
+    return total;
+  };
+
   // Функция для получения иконки кристалла по цвету и типу
   const getCrystalIcon = (color, typeId) => {
     if (!color || !typeId) return null;
@@ -127,7 +136,7 @@ function MyResources() {
         <div className={styles.sectionHeader}>
           <h2>Bottles of Wishes</h2>
           <div className={styles.totalExp}>
-            Total EXP: {getTotalBottleExp().toLocaleString()} EXP
+            Total: {getTotalBottleExp().toLocaleString()} EXP
           </div>
         </div>
         <div className={styles.itemsGrid}>
@@ -247,7 +256,7 @@ function MyResources() {
         <div className={styles.sectionHeader}>
           <h2>Core Energy</h2>
           <div className={styles.totalExp}>
-            Total EXP: {getTotalCoreEnergyExp().toLocaleString()} EXP
+            Total: {getTotalCoreEnergyExp().toLocaleString()} EXP
           </div>
         </div>
         <div className={styles.itemsGrid}>
@@ -749,9 +758,14 @@ function MyResources() {
         </div>
       </div>
 
-      {/* Credits */}
+      {/* Capsules */}
       <div className={styles.section}>
-        <h2>Energy Capsules</h2>
+        <div className={styles.sectionHeader}>
+          <h2>Energy Capsules</h2>
+          <div className={styles.totalExp}>
+            Total: {getTotalStaminaExp().toLocaleString()} stamina
+          </div>
+        </div>
         <div className={styles.itemsGrid}>
           {capsules.map((item) => (
               <div key={item.id} className={styles.itemRow}>
@@ -765,27 +779,31 @@ function MyResources() {
                     {item.name}
                   </label>
                 </div>
-                <input
-                    id={`input-${item.id}`}
-                    name="item"
-                    type="number"
-                    min="0"
-                    value={capsulesState[item.id] || ""}
-                    onChange={(e) =>
-                        handleCapsuleChange(item.id, e.target.value)
-                    }
-                    className={styles.itemInput}
-                    onFocus={(e) => {
-                      if (e.target.value === "0") {
-                        e.target.value = "";
+                <div className={styles.itemDiv}>
+                  <span className={styles.itemValue}>+{item.value} stamina</span>
+                  <input
+                      id={`input-${item.id}`}
+                      name="item"
+                      type="number"
+                      min="0"
+                      value={capsulesState[item.id] || ""}
+                      onChange={(e) =>
+                          handleCapsuleChange(item.id, e.target.value)
                       }
-                    }}
-                    onBlur={(e) => {
-                      if (e.target.value === "") {
-                        handleCapsuleChange(item.id, 0);
-                      }
-                    }}
-                />
+                      className={styles.itemInput}
+                      onFocus={(e) => {
+                        if (e.target.value === "0") {
+                          e.target.value = "";
+                        }
+                      }}
+                      onBlur={(e) => {
+                        if (e.target.value === "") {
+                          handleCapsuleChange(item.id, 0);
+                        }
+                      }}
+                  />
+                </div>
+
               </div>
           ))}
         </div>
