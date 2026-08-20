@@ -254,18 +254,18 @@ export const capsules = [
   {
     id: "capsule_light",
     name: "Energy Capsule: Light",
-    value: 1,
+    value: 30,
     img: "../assets/icons/energy-capsule-light.png",
   },
   {
-    id: "capsule_medium",
-    name: "Energy Capsule: Medium",
-    value: 1,
+    id: "capsule_vigorous",
+    name: "Energy Capsule: Vigorous",
+    value: 60,
     img: "../assets/icons/energy-capsule-medium.png",
   },{
     id: "capsule_powerful",
     name: "Energy Capsule: Powerful",
-    value: 1,
+    value: 100,
     img: "../assets/icons/energy-capsule-powerful.png",
   },
 ];

@@ -114,6 +114,8 @@ function MyResources() {
     const newState = { ...capsulesState };
     newState[id] = Math.max(0, Number(value) || 0);
     setCapsules(newState);
+
+    window.dispatchEvent(new CustomEvent('resourcesUpdated'));
   };
 
   return (

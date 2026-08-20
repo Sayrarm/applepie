@@ -14,6 +14,7 @@ import {
   credits,
   bottles,
   coreEnergy,
+  capsules,
 } from "@data";
 import { getImageUrl, useFarmGoals } from "@hooks";
 import AsideReplaceableResources from "./AsideReplaceableResources.jsx";
@@ -65,6 +66,25 @@ function FarmGoalTracker() {
     });
 
     return total;
+  };
+
+  const getTotalStaminaFromCapsules = (capsulesState) => {
+    const capsuleValues = {
+      capsule_light: 30,
+      capsule_vigorous: 60,
+      capsule_powerful: 100,
+    };
+
+    let total = 0;
+    Object.entries(capsulesState || {}).forEach(([key, count]) => {
+      total += count * (capsuleValues[key] || 0);
+    });
+
+    return total;
+  };
+
+  const getTotalStaminaFromUserCapsules = () => {
+    return getTotalStaminaFromCapsules(userResources.capsules);
   };
 
   // Подсчёт кристаллов пользователя с учётом цвета
@@ -419,7 +439,10 @@ function FarmGoalTracker() {
             totalStamina += crystalsFarming.stamina;
           }
 
-          const totalDays = Math.ceil(totalStamina / DAILY_STAMINA);
+          // Вычитаем stamina из капсул
+          const totalStaminaFromCapsules = getTotalStaminaFromUserCapsules();
+          const remainingStaminaAfterCapsules = Math.max(0, totalStamina - totalStaminaFromCapsules);
+          const totalDays = Math.ceil(remainingStaminaAfterCapsules / DAILY_STAMINA);
 
           return (
             <div key={goal.id} className={styles.goalCard}>
@@ -652,7 +675,8 @@ function FarmGoalTracker() {
                         <strong>
                           ~{totalDays} day{totalDays !== 1 ? "s" : ""}
                         </strong>{" "}
-                        (based on {DAILY_STAMINA} stamina/day)
+                        (based on {DAILY_STAMINA} stamina/day
+                        {totalStaminaFromCapsules > 0 && ` + ${totalStaminaFromCapsules} stamina from capsules`})
                       </div>
                     </div>
                   </div>

@@ -6,6 +6,7 @@ import {
   getCredits,
   getCrystals,
   getHearts,
+  getCapsule,
 } from "@localstorage";
 
 export function useFarmGoals() {
@@ -18,6 +19,7 @@ export function useFarmGoals() {
     credits: 0,
     crystals: {},
     hearts: {},
+    capsules: {}
   });
 
   // ===== ЗАГРУЗКА ЦЕЛЕЙ =====
@@ -35,6 +37,7 @@ export function useFarmGoals() {
       credits: getCredits(),
       crystals: getCrystals(),
       hearts: getHearts(),
+      capsules: getCapsule(),
     });
   }, []);
 
