@@ -896,12 +896,22 @@ export const bannersDataFull = [
   },
   {
     id: 89,
-    name: "Martial Ode",
+    name: "Po Zhen Zi",
     image: "../assets/banners/Martial-Ode.png",
     cardIds: [412, 413],
     startDate: "2026-08-17T05:00:00",
     endDate: "2026-08-31T04:59:59",
     rerun: false,
+    active: true,
+  },
+  {
+    id: 90,
+    name: "No Defense Zone",
+    image: "../assets/banners/no-defense-zone.png",
+    cardIds: [81],
+    startDate: "2026-08-24T05:00:00",
+    endDate: "2026-08-31T04:59:00",
+    rerun: true,
     active: true,
   },
 ];

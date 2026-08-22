@@ -87,4 +87,12 @@ export const eventsData = [
     endDate: "2026-08-31T04:59:59",
     active: true,
   },
+  {
+    id: 12,
+    name: "10 Days with you",
+    image: "../assets/main-page/events/10-days-with-you-caleb.png",
+    startDate: "2026-08-24T05:00:00",
+    endDate: "2026-09-11T04:59:59",
+    active: true,
+  },
 ];
