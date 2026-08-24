@@ -167,6 +167,31 @@ export const hunterContestBuffs = [
     teamC:
       "DMG increase: Increases DMG against vulnerable Boss for all allied units.",
 
+    active: false,
+  },
+  {
+    id: 8,
+    teamAStella1: "../assets/icons/emerald.png",
+    teamAStella1Count: 5,
+    teamAStella2: "../assets/icons/pearl.png",
+    teamAStella2Count: 1,
+    teamA:
+        "Life Stimulation: When restoring HP, you gain a stack of Life Stimulation, increasing allied units' DMG by 5% for 8s, up to 6 stack(s). Lose 1 stack when the duration ends.",
+
+    teamBStella1: "../assets/icons/ruby.png",
+    teamBStella1Count: 4,
+    teamBStella2: "../assets/icons/amber.png",
+    teamBStella2Count: 1,
+    teamB:
+        "Charged ATK Boost: After a Charged Attack hits an enemy, Active Skill DMG taken by all enemies is increased by 8% for 15s, up to 48%. This can trigger at most once per attack.",
+
+    teamCStella1: "../assets/icons/violet.png",
+    teamCStella1Count: 3,
+    teamCStella2: "../assets/icons/ruby.png",
+    teamCStella2Count: 1,
+    teamC:
+        "Advancement: Increases CRIT DMG of all allied units.",
+
     active: true,
   },
 ];

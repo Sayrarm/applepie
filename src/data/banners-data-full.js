@@ -907,10 +907,10 @@ export const bannersDataFull = [
   {
     id: 90,
     name: "No Defense Zone",
-    image: "../assets/banners/no-defense-zone.png",
+    image: "../assets/banners/no-defence-zone-rerun.png",
     cardIds: [81],
     startDate: "2026-08-24T05:00:00",
-    endDate: "2026-08-31T04:59:00",
+    endDate: "2026-08-31T04:59:59",
     rerun: true,
     active: true,
   },
