@@ -5,6 +5,7 @@ export const KEYS = {
   TIMEZONE: "app_timezone", //часовой пояс
   TABLE_SORT_KEY: "mymemories_table_sort", //фильтр таблицы в MyMemories
   CARD_SIZE: "card_image_size", //карточка маленького/большого размера
+  SHOW_USER_INFO: "show_user_info", //показывать информацию о карточке (уровень, ранг, возвышение)
   PROTOCORES: "protocores", // все протокоры
 
   // Инвентарь

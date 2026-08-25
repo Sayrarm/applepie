@@ -45,7 +45,7 @@ export {
 } from "./calculator-storage.js";
 export { getTheme, saveTheme } from "./theme-storage.js";
 export { getTimezone, saveTimezone } from "./timezone-storage.js";
-export { getCardSize, saveCardSize } from "./ui-storage.js";
+export { getCardSize, saveCardSize, getShowUserInfo, saveShowUserInfo } from "./ui-storage.js";
 export {
   getCardLevel,
   saveCardLevel,

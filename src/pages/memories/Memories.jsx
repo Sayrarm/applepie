@@ -13,6 +13,8 @@ import {
   getCardSize,
   saveCardSize,
   enhanceMemoriesWithAvailability,
+  getShowUserInfo,
+  saveShowUserInfo
 } from "@localstorage";
 
 function Memories() {
@@ -42,13 +44,27 @@ function Memories() {
     return saved === "small";
   });
 
+  // ===== ПОКАЗЫВАТЬ ИНФОРМАЦИЮ О КАРТОЧКЕ =====
+  const [showUserInfo, setShowUserInfo] = useState(() => {
+    return getShowUserInfo();
+  });
+
   // Сохраняем в localStorage через сервис
   useEffect(() => {
     saveCardSize(isImageSmall ? "small" : "big");
   }, [isImageSmall]);
 
+  // Сохраняем состояние showUserInfo
+  useEffect(() => {
+    saveShowUserInfo(showUserInfo);
+  }, [showUserInfo]);
+
   const toggleImageSize = () => {
     setIsImageSmall((prev) => !prev);
+  };
+
+  const toggleUserInfo = () => {
+    setShowUserInfo((prev) => !prev);
   };
 
   // Фильтруем данные
@@ -128,6 +144,11 @@ function Memories() {
             icon: "../assets/icons/icons8-change-64.png",
             title: "Change size of Cards",
           },
+          {
+            onClick: toggleUserInfo,
+            icon: "../assets/icons/icons8-info-80.png",
+            title: showUserInfo ? "Hide Card Info" : "Show Card Info",
+          },
         ]}
       />
 
@@ -145,7 +166,7 @@ function Memories() {
               }}
               className={styles.cardLink}
             >
-              <Card key={memory.id} data={memory} isSmall={isImageSmall} showUserInfo={true} />
+              <Card key={memory.id} data={memory} isSmall={isImageSmall} showUserInfo={showUserInfo} />
             </Link>
           );
         })}
