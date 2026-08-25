@@ -9,7 +9,7 @@ import {
   useSort,
   useFilter,
 } from "@components";
-import {formatOptionLabel, memoriesData, rankOptions} from "@data";
+import {memoriesData} from "@data";
 import { enhanceMemoriesWithAvailability } from "@localstorage";
 
 function ChooseTeamCards({
@@ -81,12 +81,6 @@ function ChooseTeamCards({
     }
   };
 
-  const renderRank = (rank) => {
-    const rankNum = Number(rank) || 0;
-    const rankOption = rankOptions.find(opt => opt.value === rankNum);
-    return rankOption ? formatOptionLabel(rankOption) : <span>Rank {rankNum}</span>;
-  };
-
   // Функция для отображения слота карточки с протокорами
   const renderCardSlot = (card, placement, index) => {
     const cardData = card ? getCardData(card) : null;
@@ -99,19 +93,6 @@ function ChooseTeamCards({
         {card ? (
           <>
             <div className={styles.cardSlotEquipped}>
-              {/* Информация о карточке — уровень и ранг */}
-              <div className={styles.cardInfo}>
-                <span className={styles.cardLevel}>
-                  Lv.{cardData?.level || 1}{" "}
-                  {cardData?.isAscended && (
-                    <span className={styles.ascendMark}>✦</span>
-                  )}
-                </span>
-                <span className={styles.cardRank}>
-                  {renderRank(cardData?.rank)}
-                </span>
-              </div>
-
               <div className={styles.cardWrapper}>
                 <Card data={card} isSmall={false} showUserInfo={true}/>
               </div>
@@ -202,7 +183,7 @@ function ChooseTeamCards({
                   className={styles.cardItem}
                   onClick={() => handleSelectCard(card)}
                 >
-                  <Card data={card} isSmall={true} />
+                  <Card data={card} isSmall={true} showUserInfo={true}/>
                 </button>
               ))}
               {getAvailableCards(modalPlacement).length === 0 && (

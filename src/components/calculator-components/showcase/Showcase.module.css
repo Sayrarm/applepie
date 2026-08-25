@@ -240,13 +240,18 @@
 .cardSlot {
   border: 1px solid var(--border-battle-page);
   margin: 5px;
+  padding-top: 4px;
   min-height: 416px;
   min-width: 392px;
 
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 5px;
+}
+
+.cardSlotEquipped {
+  padding-top: 25px;
 }
 
 .emptySlotContent,
@@ -400,6 +405,10 @@
     padding-right: 5px;
   }
 
+  .cardSlotEquipped {
+    padding: 10px;
+  }
+
   .teamNameButton,
   .addTeamButton {
     font-size: 14px;
@@ -407,7 +416,7 @@
   }
 }
 
-@media screen and (max-width: 766px) and (min-width: 615px) {
+@media screen and (max-width: 767px) and (min-width: 615px) {
   .container {
     /* Уменьшаем контейнер до размеров экрана */
     transform: scale(0.6); /* 32% от оригинального размера */
@@ -443,8 +452,8 @@
   }
 
   .cardSlotEquipped {
-    transform: scale(1.6);
-    transform-origin: -12% 56%;
+    transform: scale(1.7);
+    transform-origin: -2% -2%;
   }
 
   .protocoreWrapper {

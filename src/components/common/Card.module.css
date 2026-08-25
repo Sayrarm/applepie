@@ -144,6 +144,27 @@
     font-size: 14px;
   }
 
+  .userInfo {
+    bottom: 26px;
+    right: 1px;
+    z-index: 1;
+
+  }
+
+  .level {
+    font-size: 20px;
+  }
+
+  .userRank {
+    top: -6px;
+    left: -10px;
+  }
+
+  .userRank img {
+    height: 16px !important;
+    width: 24px !important;
+  }
+
   .img {
     height: 170px;
   }

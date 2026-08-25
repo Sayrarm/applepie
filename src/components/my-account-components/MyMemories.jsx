@@ -441,7 +441,7 @@ function MyMemories() {
                     <span className={styles.levelBadge}>
                       {card.level}
                       {card.isAscended && (
-                        <span className={styles.ascendMark}>✦</span>
+                        <span className={styles.ascendMark}>+</span>
                       )}
                     </span>
                   </td>
