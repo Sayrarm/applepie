@@ -145,7 +145,7 @@ function Memories() {
               }}
               className={styles.cardLink}
             >
-              <Card key={memory.id} data={memory} isSmall={isImageSmall} />
+              <Card key={memory.id} data={memory} isSmall={isImageSmall} showUserInfo={true} />
             </Link>
           );
         })}

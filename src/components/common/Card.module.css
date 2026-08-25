@@ -64,6 +64,39 @@
   z-index: 1;
 }
 
+.userInfo {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  bottom: 25px;
+  right: 5px;
+  z-index: 1;
+
+}
+
+.userLevel {
+  color: var(--colorText);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  letter-spacing: -0.5px;
+  position: relative;
+}
+
+.userRank {
+  position: absolute;
+  top: -3px;
+  left: -18px;
+
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.8))
+  drop-shadow(0 0 1px rgba(0, 0, 0, 0.8))
+  drop-shadow(0 0 1px rgba(0, 0, 0, 0.6));
+}
+
+.level {
+  font-size: 30px;
+  font-weight: 400;
+  text-shadow: var(--text-shadow);
+}
+
 .placement {
   bottom: 5px;
   left: 28px;

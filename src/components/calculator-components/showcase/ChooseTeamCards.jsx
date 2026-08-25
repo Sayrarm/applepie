@@ -113,7 +113,7 @@ function ChooseTeamCards({
               </div>
 
               <div className={styles.cardWrapper}>
-                <Card data={card} isSmall={false} />
+                <Card data={card} isSmall={false} showUserInfo={true}/>
               </div>
             </div>
 

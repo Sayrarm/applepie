@@ -24,6 +24,9 @@ const compareFunctions = {
     const order = ["atk", "def", "hp"];
     return order.indexOf(a.talentName) - order.indexOf(b.talentName);
   },
+  release: (a, b) => {
+    return new Date(a.release) - new Date(b.release);
+  },
 };
 
 // Функция для многоуровневой сортировки

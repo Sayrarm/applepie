@@ -168,7 +168,7 @@ export const memoriesData = [
     placement: "../assets/icons/lunar.png",
     talent: "../assets/icons/def.png",
     link: "",
-    release: "2024-01-18",
+    release: "2025-01-22",
   },
   {
     id: 2,
@@ -186,7 +186,7 @@ export const memoriesData = [
     placement: "../assets/icons/lunar.png",
     talent: "../assets/icons/hp.png",
     link: "",
-    release: "2024-01-18",
+    release: "2025-01-22",
   },
   {
     id: 5,
@@ -204,7 +204,7 @@ export const memoriesData = [
     placement: "../assets/icons/lunar.png",
     talent: "../assets/icons/atk.png",
     link: "",
-    release: "2024-01-18",
+    release: "2025-01-22",
   },
   {
     id: 3,
@@ -222,7 +222,7 @@ export const memoriesData = [
     placement: "../assets/icons/lunar.png",
     talent: "../assets/icons/def.png",
     link: "",
-    release: "2024-01-18",
+    release: "2025-01-22",
   },
   {
     id: 11,

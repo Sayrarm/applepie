@@ -24,7 +24,7 @@ function WishWellBlock() {
 
       <ModalWindow
         ref={wishWellModalRef}
-        title={"Wishing Well ScheduleBlock"}
+        title={"Wishing Well Schedule"}
         tag={
           <>
             <img

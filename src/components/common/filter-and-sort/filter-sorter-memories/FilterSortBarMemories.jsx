@@ -64,6 +64,7 @@ function FilterSortBarMemories({
               { value: "stella", label: "Stellactrum" },
               { value: "placement", label: "Placement" },
               { value: "talent", label: "Talent" },
+              { value: "release", label: "Release" },
             ]}
           />
 

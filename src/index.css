@@ -97,7 +97,10 @@ html.light {
   --bg-glass: color-mix(in srgb, var(--bg-brown) 10%, transparent);
   --bg-glass-dark: color-mix(in srgb, var(--orange) 10%, transparent);
   --bg-modal: #ecdace;
-  --text-shadow: 0 0 5px #e68038, 0 0 10px #e68038;
+  --text-shadow:
+          0 0 1px rgba(175 108 54 / 0.9),
+          0 0 1px rgb(175 108 54 / 0.9),
+          0 0 5px #e68038, 0 0 10px #e68038;
 
   --bg-primary: #ecdace;
   --bg-image: url("../public/assets/bg/bg-light.png");
@@ -151,7 +154,10 @@ html.dark {
   --bg-glass: color-mix(in srgb, var(--dark) 80%, transparent);
   --bg-glass-dark: color-mix(in srgb, var(--dark) 80%, transparent);
   --bg-modal: #8e9093;
-  --text-shadow: 0 0 5px #ff4444, 0 0 10px #ff4444;
+  --text-shadow:
+          0 0 1px rgba(78 28 28 / 2.2),
+          0 0 1px rgb(78 28 28 / 2.2),
+          0 0 5px #ff4444, 0 0 10px #ff4444;
 
   --bg-primary: #202227;
   --bg-image: url("../public/assets/bg/Frame 37.png");
