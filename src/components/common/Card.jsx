@@ -1,6 +1,11 @@
 import styles from "./Card.module.css";
 import { getImageUrl } from "@hooks";
-import { getCardLevel, getCardAvailability, getCardRank } from "@localstorage";
+import {
+  getCardLevel,
+  getCardAvailability,
+  getCardRank,
+  getCardAscend,
+} from "@localstorage";
 import { formatOptionLabel, rankOptions } from "@data";
 
 function Card({ data, isSmall = false, showUserInfo = false }) {
@@ -15,6 +20,8 @@ function Card({ data, isSmall = false, showUserInfo = false }) {
     userRank !== null
       ? rankOptions.find((opt) => opt.value === userRank)
       : null;
+  const isAscended =
+    showUserInfo && data?.id && isAvailable ? getCardAscend(data.id) : false;
 
   return (
     <article className={styles.card}>
@@ -39,6 +46,7 @@ function Card({ data, isSmall = false, showUserInfo = false }) {
               <span className={styles.level}>
                 {userLevel !== null ? userLevel : 1}
               </span>
+              {isAscended && <span className={styles.maxLevel}>+</span>}
             </div>
           </div>
         )}
