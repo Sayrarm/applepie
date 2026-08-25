@@ -76,7 +76,8 @@
 
 .userLevel {
   color: var(--colorText);
-  text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  text-shadow: 0 0 1px rgba(0 0 0 / 2.5),
+  0 0 1px rgb(0 0 0 / 2.5);
   letter-spacing: -0.5px;
   position: relative;
 }

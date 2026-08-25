@@ -452,8 +452,8 @@
   }
 
   .cardSlotEquipped {
-    transform: scale(1.7);
-    transform-origin: -2% -2%;
+    transform: scale(1.6);
+    transform-origin: 14% -14%;
   }
 
   .protocoreWrapper {
