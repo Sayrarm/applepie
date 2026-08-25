@@ -141,12 +141,16 @@
     width: 100px;
   }
 
+  .parametrsBG {
+    height: 22px;
+  }
+
   .cardName {
     font-size: 14px;
   }
 
   .userInfo {
-    bottom: 26px;
+    bottom: 18px;
     right: 1px;
     z-index: 1;
 
@@ -179,6 +183,7 @@
   .talent {
     width: 15px;
     height: 15px;
+    bottom: 4px;
   }
 
   .stella {
@@ -195,7 +200,7 @@
 
   .starsGroup {
     right: 1px;
-    bottom: 6px;
+    bottom: 4px;
   }
 
   .stars {
