@@ -79,6 +79,72 @@ function CompanionArticlePage({ data, linkField = "link" }) {
         </section>
 
         <section className={styles.companionContainer}>
+          {companion.imgSync && (
+              <img
+                  src={getImageUrl(companion.imgSync)}
+                  alt="sync skills"
+                  className={styles.portraitMC}
+              />
+          )}
+
+          {(companion.basicAttackSync ||
+              companion.activeSkillSync_I ||
+              companion.activeSkillSync_II ||
+              companion.activeSkillSync_III ||
+              companion.passiveSkillSync) && (
+              <section className={styles.skillSetContainer}>
+                <div className={styles.titleSection}>
+                  <h1 className={styles.h1Title}>
+                    Sync Skills
+                  </h1>
+                </div>
+
+                <div className={styles.borderHorizontal}></div>
+
+                {/* Basic Attack */}
+                <SkillBlock
+                    skillImg={companion.basicAttackSyncImg}
+                    skillName={companion.basicAttackSync}
+                    skillTitle="Basic Attack"
+                    skillText={companion.basicAttackSyncText}
+                />
+
+                {/* Active Skill */}
+                <SkillBlock
+                    skillImg={companion.activeSkillSyncImg_I}
+                    skillName={companion.activeSkillSync_I}
+                    skillTitle="Active Skill I"
+                    cooldown={`Cooldown: ${companion.activeSkillSyncCooldown_I}`}
+                    skillText={companion.activeSkillSyncText_I}
+                />
+                <SkillBlock
+                    skillImg={companion.activeSkillSyncImg_II}
+                    skillName={companion.activeSkillSync_II}
+                    skillTitle="Active Skill II"
+                    cooldown={`Cooldown: ${companion.activeSkillSyncCooldown_II}`}
+                    cost={`Cost: ${companion.activeSkillSyncCost_II}`}
+                    skillText={companion.activeSkillSyncText_II}
+                />
+                <SkillBlock
+                    skillImg={companion.activeSkillSyncImg_III}
+                    skillName={companion.activeSkillSync_III}
+                    skillTitle="Active Skill III"
+                    cooldown={`Cooldown: ${companion.activeSkillSyncCooldown_III}`}
+                    skillText={companion.activeSkillSyncText_III}
+                />
+
+                {/* Passive MC Skill */}
+                <SkillBlock
+                    skillImg={companion.passiveSkillSyncImg}
+                    skillName={companion.passiveSkillSync}
+                    skillTitle="Passive Skill"
+                    skillText={companion.passiveSkillSyncText}
+                />
+              </section>
+          )}
+        </section>
+
+        <section className={styles.companionContainer}>
           {companion.imgWeapon && (
             <img
               src={getImageUrl(companion.imgWeapon)}

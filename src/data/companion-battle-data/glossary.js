@@ -674,9 +674,47 @@ const glossary = {
     title: "Shattering Burst",
     description: "Sylus's Support Skill.",
   },
-  Synergy: {
+  "Synergy": {
     title: "Synergy",
     description: "",
+  },
+  "Warflame Cleave": {
+    title: "Warflame Cleave",
+    description: "Rafayel's Active Skill II while [Martial Soul] is active.",
+  },
+  "Martial Fall": {
+    title: "Martial Fall",
+    description: "A special attack that can be triggered while [Martial Soul] is active.",
+  },
+  "Vermilion Visage": {
+    title: "Vermilion Visage",
+    description: "A bond that links you with Rafayel. It can be charged when fighting alongside the Vermilion Martial God.",
+  },
+  "Sundering Thrust": {
+    title: "Sundering Thrust",
+    description: "Rafayel's Active Skill I while [Martial Soul] is active.",
+  },
+  "Martial Intent": {
+    title: "Martial Intent",
+    description: "Energy gained when your Charged Attack hits. When full, casting an Active Skill consumes all [Martial Intent] to enhance that skill.",
+  },
+  "Martial Soul": {
+    title: "Martial Soul",
+    description: "A special state entered after casting [Martial God's Descent].",
+  },
+  "Vermilion Flare": {
+    title: "Vermilion Flare",
+    description: "A resource accumulated by Rafayel during combat while [Martial Soul] is active. Can be used to cast [Warflame Cleave].",
+  },
+  "Ashen Duskfall": {
+    title: "Ashen Duskfall",
+    description: "A special attack that can be triggered while [Martial Soul] is active.",
+  },
+  "Suppression": {
+    title: "Suppression",
+    description: `Marks an enemy's Protocore Shield. When that shield breaks, the enemy enters the [Suppression Weakness] state. While in this state, DMG taken has a chance to become Suppression Weakness DMG.
+Targets immune to [Protocore DMG] cannot be inflicted with [Suppression].
+`,
   },
 };
 

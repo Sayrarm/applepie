@@ -147,7 +147,7 @@ function Memories() {
           {
             onClick: toggleUserInfo,
             icon: "../assets/icons/icons8-info-80.png",
-            title: showUserInfo ? "Hide Card Info" : "Show Card Info",
+            title: showUserInfo ? "Hide User info" : "Show User info",
           },
         ]}
       />

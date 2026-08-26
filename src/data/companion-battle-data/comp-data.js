@@ -683,6 +683,129 @@ When attacking Frozen enemies with Zayne, deal 20% more DMG.
         `,
   },
   {
+    id: 65,
+    cardIds: [412, 413],
+    link: "vmg",
+    img: "../assets/companions/rafayel-vmg.png",
+    imgWeapon: "../assets/companions/twilight-end.png",
+    imgSync: "../assets/companions/rafayel-sync-skills.png",
+    companionName: "Rafayel: Vermilion Martial God",
+    speciality: "DPS | Single-target | Empower",
+    weaponName: "Twilight's End",
+    specialityMC: "DPS | Single-target | Empower",
+    supportSkill: "Sweeping Clouds",
+    supportSkillCooldown: "14 sec.",
+    supportSkillImg: "../assets/battle-icons/a2_skill_ry_2508_02.png",
+    supportSkillText: `
+Rafayel swiftly moves to the target and slashes, dealing 300 + 400% ATK DMG. Casting it charges up [Vermilion Visage].
+[Empowered] Sweeping Clouds: Increases DMG, dealing 360 + 480% ATK DMG. Applies 1 stack(s) of [Suppression] to enemies on hit and deals an extra [Suppression Weakness DMG] equal to 150+200% ATK. This skill cannot be triggered by Perfect Dodge. It is triggered when your Active Skill empowered by [Martial Intent] hits an enemy.
+        `,
+    resonanceSkill: "Skyfire Sweep",
+    resonanceSkillCooldown: "15 sec.",
+    resonanceSkillCost: "2 energy charges",
+    resonanceSkillImg: "../assets/battle-icons/a2_skill_ry_2508_03.png",
+    resonanceSkillText: `
+You wield [Twilight Haze] while Rafayel wields his blades. The two of you leap into the air in tandem, unleashing blazing torrents toward the enemy, drawing in enemies within range and dealing a total of 852 + 1136% ATK DMG and 1 point(s) of [Protocore DMG].
+        `,
+    ardentOath: "Ashen Tempest",
+    ardentOathCost: "100% Oath Energy",
+    ardentOathImg: "../assets/battle-icons/a2_skill_ry_2508_04.png",
+    ardentOathText: `
+You resonate with Rafayel. A mid the clash of blades, Rafayel seizes the momentum to soar skyward as [Ashen Pair] cleaves through the setting sun. The vermilion light transforms into countless blade tips that rain down upon the earth, dealing 1800 + 2400% ATK DMG You start with 15% Oath Energy.
+        `,
+    passiveSkill: "Rally Drum",
+    passiveSkillImg: "../assets/battle-icons/a2_skill_ry_2508_01.png",
+    passiveSkillText: `
+Charged Attacks accumulate [Martial Intent] on hit. This effect can only trigger once per Charged Attack. When you cast an Active Skill while [Martial Intent] is full, all [Martial Intent] is consumed to empower the Active Skill, increasing its DMG by 50%.
+When fighting alongside the Vermilion Martial God, you gain [Vermilion Visage]. Using your Active Skill charges up the [Vermilion Visage].
+Once the [Vermilion Visage] is fully charged, [Martial God's Descent] becomes available. Upon activation, you place [Vermilion Visage] on Rafayel, merging your souls and channeling the [Martial Soul], with all [Martial Intent] cleared. You command him while under his protection - his hands become yours, his body an extension of your will. While [Martial Soul] is active, a new combat style and new skills become available.
+When [Martial Soul] is activated, Rafayel recovers all HP.
+While [Martial Soul] is active, some effects will not apply to you.
+        `,
+    basicAttackSync: "Rimefall Dance",
+    basicAttackSyncImg: "../assets/battle-icons/a2_skill_ry_2508_07.png",
+    basicAttackSyncText: `
+While [Martial Soul] is active, Rafayel's Basic Attacks and Charged Attacks are empowered with increased DMG. Basic Attack: Wield [Ashen Pair] to perform up to four consecutive strikes, dealing DMG. 
+First Strike: 113 + 150% ATK DMG 
+Second Strike: 222 + 297% ATK DMG 
+Third Strike: 235 + 313% ATK DMG 
+Fourth Strike: 253 + 337% ATK DMG
+Charged Attack: Leap forward to strike, dealing 356 + 475% ATK DMG.
+        `,
+    activeSkillSync_I: "Sundering Thrust",
+    activeSkillSyncCooldown_I: "5 sec.",
+    activeSkillSyncImg_I: "../assets/battle-icons/a2_skill_ry_2508_08.png",
+    activeSkillSyncText_I: `
+Thrust forward with [Ashen Pair], dealing 471 + 628% ATK DMG. When casting this skill, Rafayel becomes unstoppable for 4s and accumulates [Vermilion Flare].
+        `,
+    activeSkillSync_II: "Warflame Cleave",
+    activeSkillSyncCost_II: "3 special points",
+    activeSkillSyncImg_II: "../assets/battle-icons/a2_skill_ry_2508_09.png",
+    activeSkillSyncText_II: `
+Casting this skill consumes 3 points of [Vermilion Flare]. Leap into the air and charge up, then land with a slashing attack, dealing a total of 488 + 650% ATK DMG. When the landing strike hits an enemy, [Martial Fall] descends, dealing Single-target DMG equal to 281+375% ATK. This effect can only trigger once per skill cast. He becomes unstoppable for the duration.
+        `,
+    activeSkillSync_III: "Crushing Descent",
+    activeSkillSyncCooldown_III: "3 sec.",
+    activeSkillSyncImg_III: "../assets/battle-icons/a2_skill_ry_2508_10.png",
+    activeSkillSyncText_III: `
+Rafayel swiftly moves to the target and throws [Ashen Pair] gathering enemies within range before slamming [Twilight Haze] into the ground, dealing 632 + 840% ATK DMG. [Martial Soul] then dissipates.
+When the ground slam hits an enemy, [Martial Fall] descends upon them. This effect can only trigger once per skill cast. If [Vermilion Visage] still has energy, [Martial Fall] is replaced with [Ashen Duskfall], dealing 505 + 675% ATK AoE DMG. When enemies take multiple hits from [Ashen Duskfall], the first hit deals full DMG while the rest are reduced to 30%.
+Casting this skill pauses the stage timer and enemy Weakness duration for a period of time. During the skill Rafayel is invincible and [Vermilion Visage] energy does not decrease.
+When [Martial Soul] is activated, this skill starts with a 3s cooldown.
+        `,
+    passiveSkillSync: "Song of Rout",
+    passiveSkillSyncImg: "../assets/battle-icons/a2_skill_ry_2508_06.png",
+    passiveSkillSyncText: `
+Activating [Martial Soul] fully restores [Vermilion Visage]. After you and Rafayel merge souls and channel [Martial Soul], [Vermilion Visage] energy is continuously consumed, increasing DMG by 25%. When [Vermilion Visage] runs out of energy, no DMG Boost is granted.
+When [Martial Soul] is activated, Rafayel gains full [Vermilion Flare]. [Vermilion Flare] is a special combat resource capped at 3 points. Rafayel's Basic Attacks or Charged Attacks that hit enemies accumulate [Vermilion Flare]. The third and fourth strikes of Basic Attacks accumulate additional [Vermilion Flare]. These effects can only trigger once per Basic Attack or Charged Attack. [Warflame Cleave] consumes [Vermilion Flare] to cast. When [Martial Soul] dissipates, all [Vermilion Flare] and [Vermilion Visage] energy are cleared.
+        `,
+    basicAttack: "Twilight's End",
+    basicAttackImg: "../assets/battle-icons/a2_skill_pl_1902_01_ry_2508.png",
+    basicAttackText: `
+You swing [Twilight Haze] to perform up to three consecutive strikes. For a short time after your Basic Attack, you can continue your Basic Attack combo. 
+First Strike: 140 + 186% ATK DMG 
+Second Strike: 181 + 241% ATK DMG 
+Third Strike: 295 + 394% ATK DMG
+Each strike can be charged by holding. Upon reaching full charge, Dusk Energy is fired forward to perform a Ranged Attack and you become unstoppable, taking 40% less damage. Charged strikes are considered Charged Attacks and deal 50% increased DMG. When [Martial Soul] is activated, Dusk Energy dissipates immediately.
+Hitting an enemy with a Charged Attack restores 0.3 Energy Charge(s). This effect triggers once per Charged Attack.
+        `,
+    activeSkill: "Severed Grace",
+    activeSkillCooldown: "7 sec.",
+    activeSkillCost: "1 energy charge",
+    activeSkillImg: "../assets/battle-icons/a2_skill_pl_1902_03_ry_2508.png",
+    activeSkillText: `
+You swing [Twilight Haze] to slash forward, dealing 415 + 553% ATK DMG.
+When [Martial Intent] is full, your Active Skill is empowered into a powerful leap slash, dealing 662 + 883% ATK DMG. You become unstoppable throughout the cast.
+        `,
+    passiveMCSkill: "Lingering Haze",
+    passiveMCSkillImg: "../assets/battle-icons/a2_skill_pl_1902_04_ry_2508.png",
+    passiveMCText: `
+Casting an Active Skill causes the next 3 Charged Attack(s) on hit to accumulate additional [Martial Intent]. Casting another Active Skill resets this count. Any remaining count is cleared when [Martial Soul] is activated.
+When the third Charged Strike hits an enemy, it applies 1 stack(s) of [Suppression] and deals additional Suppression Weakness DMG equal to 150 + 200% of ATK. Each of the above effects can trigger at most once per attack per enemy.
+        `,
+    eidolon0: `
+The team deals 8% more DMG and takes 8% less DMG.
+When [Warflame Cleave]'s landing strike hits an enemy, it additionally calls down [Martial Fall] on up to 2 enemies on the field.
+If [Vermilion Visage] still has energy when [Sundering Thrust] is cast, [Vermilion Visage] will be charged.
+        `,
+    eidolon1: `
+Increases Ardent Oath charge by 20%.
+[Martial Intent] is fully charged at the start of combat or when [Martial Soul] dissipates.
+[Martial Fall] DMG is increased by 60%.
+On hit, [Sundering Thrust] gathers enemies within range and calls down another [Martial Fall] on them. These effects trigger only once per skill cast.
+        `,
+    eidolon2: `
+Energy Charge limit is raised by 1.
+When fighting alongside Vermilion Martial God, enemy Weakness duration is extended by 1s.
+Each time you cast an Active Skill empowered by [Martial Intent], [Vermilion Visage]'s DMG increase effect during your next [Martial Soul] activation is increased by 5%, up to 10%.
+        `,
+    eidolon3: `
+The team deals 8% more DMG.
+The cooldown of [Sundering Thrust] is reduced by 2s. For 1.5s after casting [Sundering Thrust] Rafayel accumulates [Vermilion Flare] over time, and tapping Basic Attack directly performs the third strike of Basic Attack.
+[Ashen Duskfall] DMG is increased by 10%. While [Vermilion Visage] has energy, [Martial Fall] generated by [Sundering Thrust] or [Warflame Cleave] is replaced with [Ashen Duskfall].
+        `,
+  },
+  {
     id: 31,
     cardIds: [389, 390],
     link: "lsg",
@@ -1732,4 +1855,5 @@ Perform an enhanced linear attack, dealing 160+213% ATK DMG.
 Basic attacks have a 20% chance of inflicting additional DMG. Upon using an Active Skill, the chance to do additional DMG increases by 80% while ATK SPD increases by 16% for 6s.
         `,
   },
+
 ];
