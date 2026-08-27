@@ -253,18 +253,18 @@ export const credits = [
 export const capsules = [
   {
     id: "capsule_light",
-    name: "Energy Capsule: Light",
+    name: "Capsule: Light",
     value: 30,
     img: "../assets/icons/energy-capsule-light.png",
   },
   {
     id: "capsule_vigorous",
-    name: "Energy Capsule: Vigorous",
+    name: "Capsule: Vigorous",
     value: 60,
     img: "../assets/icons/energy-capsule-medium.png",
   },{
     id: "capsule_powerful",
-    name: "Energy Capsule: Powerful",
+    name: "Capsule: Powerful",
     value: 100,
     img: "../assets/icons/energy-capsule-powerful.png",
   },

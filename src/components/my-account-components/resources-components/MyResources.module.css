@@ -245,3 +245,9 @@
     padding: 10px;
   }
 }
+
+@media screen and (max-width: 404px) {
+  .itemDiv {
+    gap: 2px;
+  }
+}
