@@ -201,6 +201,52 @@ function CombatCalculations({
     passive5: companionData.passiveSkillStats5
       ? createDamageCalculator(companionData.passiveSkillStats5)(companionStats)
       : 0,
+    basicSync1: companionData.basicSyncFirstStrikeStats
+        ? createDamageCalculator(companionData.basicSyncFirstStrikeStats)(companionStats)
+        : 0,
+    basicSync2: companionData.basicSyncSecondStrikeStats
+        ? createDamageCalculator(companionData.basicSyncSecondStrikeStats)(
+            companionStats,
+        )
+        : 0,
+    basicSync3: companionData.basicSyncThirdStrikeStats
+        ? createDamageCalculator(companionData.basicSyncThirdStrikeStats)(companionStats)
+        : 0,
+    basicSync4: companionData.basicSyncFourthStrikeStats
+        ? createDamageCalculator(companionData.basicSyncFourthStrikeStats)(
+            companionStats,
+        )
+        : 0,
+    basicSyncCharged: companionData.basicSyncChargedAttackStats
+        ? createDamageCalculator(companionData.basicSyncChargedAttackStats)(
+            companionStats,
+        )
+        : 0,
+    activeI: companionData.activeSkill_IStats
+        ? createDamageCalculator(companionData.activeSkill_IStats)(
+            companionStats,
+        )
+        : 0,
+    activeII: companionData.activeSkill_IStats
+        ? createDamageCalculator(companionData.activeSkill_IStats)(
+            companionStats,
+        )
+        : 0,
+    activeII2: companionData.activeSkill_IIStats2
+        ? createDamageCalculator(companionData.activeSkill_IIStats2)(
+            companionStats,
+        )
+        : 0,
+    activeIII: companionData.activeSkill_IIIStats
+        ? createDamageCalculator(companionData.activeSkill_IIIStats)(
+            companionStats,
+        )
+        : 0,
+    activeIII2: companionData.activeSkill_IIIStats2
+        ? createDamageCalculator(companionData.activeSkill_IIIStats2)(
+            companionStats,
+        )
+        : 0,
 
     // MC Weapon skills (из weaponData)
     basicTotal: weaponData.basicAttackFormula
@@ -595,6 +641,124 @@ function CombatCalculations({
               <td>{roundDisplay(critDamage.passive5)}</td>
               <td>{companionData.passiveSkillFormula5 || "—"}</td>
             </tr>
+          )}
+
+          {/* Sync Skill */}
+          {companionData.syncSkill && (
+              <>
+                <tr>
+                  <th className={styles.titleSkill}>Sync Skill:</th>
+                </tr>
+
+                {(baseDamage.basicSync1 > 0 || companionData.basicSyncFirstStrike) && (
+                    <tr>
+                      <th>First Strike</th>
+                      <td>{roundDisplay(baseDamage.basicSync1)}</td>
+                      <td>{roundDisplay(weakenedDamage.basicSync1)}</td>
+                      <td>{roundDisplay(critDamage.basicSync1)}</td>
+                      <td>{companionData.basicSyncFirstStrike || "—"}</td>
+                    </tr>
+                )}
+
+                {(baseDamage.basicSync2 > 0 || companionData.basicSyncSecondStrike) && (
+                    <tr>
+                      <th>Second Strike</th>
+                      <td>{roundDisplay(baseDamage.basicSync2)}</td>
+                      <td>{roundDisplay(weakenedDamage.basicSync2)}</td>
+                      <td>{roundDisplay(critDamage.basicSync2)}</td>
+                      <td>{companionData.basicSyncSecondStrike || "—"}</td>
+                    </tr>
+                )}
+
+                {(baseDamage.basicSync3 > 0 || companionData.basicSyncThirdStrike) && (
+                    <tr>
+                      <th>Third Strike</th>
+                      <td>{roundDisplay(baseDamage.basicSync3)}</td>
+                      <td>{roundDisplay(weakenedDamage.basicSync3)}</td>
+                      <td>{roundDisplay(critDamage.basicSync3)}</td>
+                      <td>{companionData.basicSyncThirdStrike || "—"}</td>
+                    </tr>
+                )}
+
+                {(baseDamage.basicSync4 > 0 || companionData.basicSyncFourthStrike) && (
+                    <tr>
+                      <th>Fourth Strike</th>
+                      <td>{roundDisplay(baseDamage.basicSync4)}</td>
+                      <td>{roundDisplay(weakenedDamage.basicSync4)}</td>
+                      <td>{roundDisplay(critDamage.basicSync4)}</td>
+                      <td>{companionData.basicSyncFourthStrike || "—"}</td>
+                    </tr>
+                )}
+
+                {(baseDamage.basicSyncCharged > 0 ||
+                    companionData.basicSyncChargedAttack) && (
+                    <tr>
+                      <th>Charged Attack</th>
+                      <td>{roundDisplay(baseDamage.basicSyncCharged)}</td>
+                      <td>{roundDisplay(weakenedDamage.basicSyncCharged)}</td>
+                      <td>{roundDisplay(critDamage.basicSyncCharged)}</td>
+                      <td>{companionData.basicSyncChargedAttack || "—"}</td>
+                    </tr>
+                )}
+
+                <tr>
+                  <th className={styles.titleSkill}>Sync Active Skill:</th>
+                </tr>
+
+                {(baseDamage.activeI > 0 || companionData.activeSkill_IFormula) && (
+                    <tr>
+                      <th>Active Skill I</th>
+                      <td>{roundDisplay(baseDamage.activeI)}</td>
+                      <td>{roundDisplay(weakenedDamage.activeI)}</td>
+                      <td>{roundDisplay(critDamage.activeI)}</td>
+                      <td>{companionData.activeSkill_IFormula || "—"}</td>
+                    </tr>
+                )}
+
+                {(baseDamage.activeII > 0 ||
+                    companionData.activeSkill_IIFormula) && (
+                    <tr>
+                      <th>Active Skill II</th>
+                      <td>{roundDisplay(baseDamage.activeII)}</td>
+                      <td>{roundDisplay(weakenedDamage.activeII)}</td>
+                      <td>{roundDisplay(critDamage.activeII)}</td>
+                      <td>{companionData.activeSkill_IIFormula || "—"}</td>
+                    </tr>
+                )}
+
+                {(baseDamage.activeII2 > 0 ||
+                    companionData.activeSkill_IIFormula2) && (
+                    <tr>
+                      <th>Active Skill II Additional</th>
+                      <td>{roundDisplay(baseDamage.activeII2)}</td>
+                      <td>{roundDisplay(weakenedDamage.activeII2)}</td>
+                      <td>{roundDisplay(critDamage.activeII2)}</td>
+                      <td>{companionData.activeSkill_IIFormula2 || "—"}</td>
+                    </tr>
+                )}
+
+                {(baseDamage.activeIII > 0 ||
+                    companionData.activeSkill_IIIFormula) && (
+                    <tr>
+                      <th>Active Skill III</th>
+                      <td>{roundDisplay(baseDamage.activeIII)}</td>
+                      <td>{roundDisplay(weakenedDamage.activeIII)}</td>
+                      <td>{roundDisplay(critDamage.activeIII)}</td>
+                      <td>{companionData.activeSkill_IIIFormula || "—"}</td>
+                    </tr>
+                )}
+
+                {(baseDamage.activeIII2 > 0 ||
+                    companionData.activeSkill_IIIFormula2) && (
+                    <tr>
+                      <th>Active Skill III Additional</th>
+                      <td>{roundDisplay(baseDamage.activeIII2)}</td>
+                      <td>{roundDisplay(weakenedDamage.activeIII2)}</td>
+                      <td>{roundDisplay(critDamage.activeIII2)}</td>
+                      <td>{companionData.activeSkill_IIIFormula2 || "—"}</td>
+                    </tr>
+                )}
+              </>
           )}
 
           {/* Basic Attack - всегда показываем заголовок, если есть оружие */}

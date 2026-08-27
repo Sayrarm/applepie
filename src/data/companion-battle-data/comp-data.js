@@ -711,7 +711,8 @@ You wield [Twilight Haze] while Rafayel wields his blades. The two of you leap i
     ardentOathCost: "100% Oath Energy",
     ardentOathImg: "../assets/battle-icons/a2_skill_ry_2508_04.png",
     ardentOathText: `
-You resonate with Rafayel. A mid the clash of blades, Rafayel seizes the momentum to soar skyward as [Ashen Pair] cleaves through the setting sun. The vermilion light transforms into countless blade tips that rain down upon the earth, dealing 1800 + 2400% ATK DMG You start with 15% Oath Energy.
+You resonate with Rafayel. A mid the clash of blades, Rafayel seizes the momentum to soar skyward as [Ashen Pair] cleaves through the setting sun. The vermilion light transforms into countless blade tips that rain down upon the earth, dealing 1800 + 2400% ATK DMG.
+You start with 15% Oath Energy.
         `,
     passiveSkill: "Rally Drum",
     passiveSkillImg: "../assets/battle-icons/a2_skill_ry_2508_01.png",
