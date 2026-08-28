@@ -127,6 +127,45 @@ function MyResources() {
     window.dispatchEvent(new CustomEvent('resourcesUpdated'));
   };
 
+  // ===== ОЧИСТКА ВСЕХ РЕСУРСОВ =====
+  const clearAllResources = () => {
+    const confirmMessage =
+        `⚠️ WARNING: This will permanently delete ALL your resource data!\n\n` +
+        `This includes:\n` +
+        `• Bottles of Wishes\n` +
+        `• Core Energy\n` +
+        `• Credits\n` +
+        `• Crystals\n` +
+        `• Memory Heartsand\n` +
+        `• Ascension Crystal Boxes\n` +
+        `• Awakening Hearts\n` +
+        `• Diamonds\n` +
+        `• Wishes\n` +
+        `• Energy Capsules\n\n` +
+        `Are you absolutely sure you want to continue?`;
+
+    if (!window.confirm(confirmMessage)) {
+      return;
+    }
+
+    // Очищаем все состояния
+    setBottles({});
+    setHeartsand({});
+    setCrystals({});
+    setCrystalBoxes({});
+    setHearts({});
+    setCoreEnergy({});
+    setCredits("0");
+    setDiamonds("0");
+    setWish({});
+    setCapsules({});
+
+    // Отправляем событие об обновлении ресурсов
+    window.dispatchEvent(new CustomEvent('resourcesUpdated'));
+
+    alert('✅ All resources cleared successfully!');
+  };
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>My Resources</h1>
@@ -808,6 +847,13 @@ function MyResources() {
           ))}
         </div>
       </div>
+
+      <button
+          className={styles.clearAllButton}
+          onClick={clearAllResources}
+      >
+        🗑️ Clear All
+      </button>
     </div>
   );
 }
