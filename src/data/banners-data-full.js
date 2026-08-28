@@ -914,4 +914,14 @@ export const bannersDataFull = [
     rerun: true,
     active: true,
   },
+  {
+    id: 91,
+    name: "When Embers Rise",
+    image: "../assets/banners/when-embers-rise.jpg",
+    cardIds: [],
+    startDate: "2026-08-31T05:00:00",
+    endDate: "2026-09-04T04:59:59",
+    rerun: false,
+    active: true,
+  },
 ];
