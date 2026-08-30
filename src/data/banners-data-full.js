@@ -918,7 +918,7 @@ export const bannersDataFull = [
     id: 91,
     name: "When Embers Rise",
     image: "../assets/banners/when-embers-rise.jpg",
-    cardIds: [],
+    cardIds: [420],
     startDate: "2026-08-31T05:00:00",
     endDate: "2026-09-04T04:59:59",
     rerun: false,
