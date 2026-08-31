@@ -85,7 +85,7 @@ export const eventsData = [
     image: "../assets/main-page/events/double-protocore.png",
     startDate: "2026-08-24T05:00:00",
     endDate: "2026-08-31T04:59:59",
-    active: true,
+    active: false,
   },
   {
     id: 12,
@@ -93,6 +93,14 @@ export const eventsData = [
     image: "../assets/main-page/events/10-days-caleb.png",
     startDate: "2026-08-24T05:00:00",
     endDate: "2026-09-11T04:59:59",
+    active: true,
+  },
+  {
+    id: 13,
+    name: "New plushie",
+    image: "../assets/main-page/events/corn-plushie.png",
+    startDate: "2026-08-31T05:00:00",
+    endDate: "2026-09-13T04:59:59",
     active: true,
   },
 ];
