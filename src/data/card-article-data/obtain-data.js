@@ -89,7 +89,7 @@ export const obtainData = [
     obtain: "Limited Event",
     memories: [
       10, 21, 53, 104, 65, 71, 122, 134, 150, 156, 157, 216, 245, 250, 252, 308,
-      310, 312, 324, 340, 345, 347, 403, 414, 415, 416, 419, 421
+      310, 312, 324, 340, 345, 347, 403, 419, 421
     ],
     description: "Memory from 'Events'. Can be repeatable, check the news.",
     image: "../assets/main-page/modal-window/events.png",
