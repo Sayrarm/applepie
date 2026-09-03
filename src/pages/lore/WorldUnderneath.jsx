@@ -29,6 +29,8 @@ function WorldUnderneath() {
               src={getImageUrl(category.image)}
               alt="image"
               loading="lazy"
+              width={291}
+              height={435}
               decoding="async"
             />
             <div className={styles.title}>

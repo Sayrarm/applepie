@@ -29,6 +29,8 @@ function Card({ data, isSmall = false, showUserInfo = false }) {
         className={imageClass}
         src={getImageUrl(data.imageSmall)}
         alt={data.name}
+        width={248}
+        height={456}
         loading="lazy"
         decoding="async"
       />
