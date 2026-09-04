@@ -1,7 +1,6 @@
 import { useState, useRef, useMemo, useEffect } from "react";
 import styles from "./Showcase.module.css";
 import Select from "react-select";
-import { toPng } from "html-to-image";
 import { Button } from "antd";
 import CombatCalculations from "./CombatCalculations.jsx";
 import ModalWindow from "@components/ui/ModalWindow.jsx";
@@ -19,8 +18,9 @@ import {
 import {
   ChooseCompanionAndWeapon,
   RenderCardSlot,
-  ModalChooseCard,
+  ModalChooseCard
 } from "@components";
+import {useScreenshot} from "@hooks"
 
 function Showcase() {
   // Загружаем сохраненные команды
@@ -29,12 +29,14 @@ function Showcase() {
   const [activeTeamIndex, setActiveTeamIndex] = useState(0);
   const [isEditingName, setIsEditingName] = useState(false);
   const [editingName, setEditingName] = useState("");
-  const [isCapturing, setIsCapturing] = useState(false);
+  const [longPressTimer, setLongPressTimer] = useState(null);
+
   const showcaseRef = useRef();
   const captureRef = useRef();
   const renameModalRef = useRef();
   const cardModalRef = useRef();
-  const [longPressTimer, setLongPressTimer] = useState(null);
+
+  const { isCapturing, captureScreenshot } = useScreenshot();
 
   // Получаем текущую активную команду
   const currentTeam = teams[activeTeamIndex] || teams[0];
@@ -158,51 +160,6 @@ function Showcase() {
     }
   };
 
-  // ===== ФУНКЦИЯ ДЛЯ СОЗДАНИЯ СКРИНШОТА =====
-  const captureScreenshot = async () => {
-    if (!captureRef.current) return;
-
-    setIsCapturing(true);
-
-    try {
-      const element = captureRef.current;
-
-      // Добавляем padding для отступов при скриншоте
-      element.style.padding = "1px";
-
-      const dataUrl = await toPng(element, {
-        quality: 1,
-        pixelRatio: 3,
-        backgroundColor: "var(--bg-primary)",
-        cacheBust: true,
-        width: element.scrollWidth,
-        height: element.scrollHeight,
-        filter: (node) => {
-          return (
-            !node.classList?.contains("modal") && !node.closest?.(".modal")
-          );
-        },
-      });
-
-      // Убираем временный padding
-      element.style.padding = "0";
-
-      const link = document.createElement("a");
-      link.download = `${currentTeam.name}_${new Date().toISOString().slice(0, 10)}.png`;
-      link.href = dataUrl;
-      link.click();
-    } catch (error) {
-      console.error("Error capturing screenshot:", error);
-      alert("Failed to capture screenshot. Please try again.");
-      // Убираем padding в случае ошибки
-      if (captureRef.current) {
-        captureRef.current.style.padding = "0";
-      }
-    } finally {
-      setIsCapturing(false);
-    }
-  };
-
   // ===== ФУНКЦИЯ ДЛЯ ПОЛУЧЕНИЯ ДАННЫХ КАРТОЧКИ =====
   const getCardData = (card) => {
     if (!card) return null;
@@ -311,7 +268,7 @@ function Showcase() {
       <div className={styles.utilButtons}>
         <button
           className={styles.screenshotButton}
-          onClick={captureScreenshot}
+          onClick={() => captureScreenshot(captureRef.current, currentTeam.name)}
           disabled={isCapturing}
         >
           {isCapturing ? "📸 Capturing..." : "📸 Save as Image"}
