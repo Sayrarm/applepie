@@ -10,10 +10,11 @@ import {
 } from "@localstorage";
 import {
   ModalWindow,
-  ChooseCompanionAndWeapon,
   RenderCardSlot,
   ModalChooseCard,
   AffinitySelect,
+  ChooseCompanion,
+  ChooseWeapon,
 } from "@components";
 import { useScreenshot } from "@hooks";
 import {
@@ -264,16 +265,20 @@ function Showcase() {
         >
           {/* компаньон и MC Weapon */}
           <div className={styles.topContainer}>
-            <ChooseCompanionAndWeapon
-              selectedCompanion={currentTeam.selectedCompanion}
-              selectedMCWeapon={currentTeam.selectedMCWeapon}
-              onSelectCompanion={(companion) =>
-                updateCurrentTeam({ selectedCompanion: companion })
-              }
-              onSelectMCWeapon={(companion) =>
-                updateCurrentTeam({ selectedMCWeapon: companion })
-              }
-            />
+            <div className={styles.companionSection}>
+              <ChooseCompanion
+                selectedCompanion={currentTeam.selectedCompanion}
+                onSelectCompanion={(companion) =>
+                  updateCurrentTeam({ selectedCompanion: companion })
+                }
+              />
+              <ChooseWeapon
+                selectedMCWeapon={currentTeam.selectedMCWeapon}
+                onSelectMCWeapon={(companion) =>
+                  updateCurrentTeam({ selectedMCWeapon: companion })
+                }
+              />
+            </div>
 
             <div>
               <table className={styles.statsTable}>

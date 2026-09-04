@@ -4,21 +4,11 @@ import { getImageUrl } from "@hooks";
 import { ModalWindow } from "@components";
 import { compData } from "@data";
 
-function ChooseCompanionAndWeapon({
-  selectedCompanion,
-  selectedMCWeapon,
-  onSelectCompanion,
-  onSelectMCWeapon,
-}) {
+function ChooseCompanionAndWeapon({ selectedCompanion, onSelectCompanion }) {
   const companionModalRef = useRef();
-  const mcWeaponModalRef = useRef();
 
   const showCompanionModal = () => {
     companionModalRef.current?.showModal();
-  };
-
-  const showMCWeaponModal = () => {
-    mcWeaponModalRef.current?.showModal();
   };
 
   const handleSelectCompanion = (companion) => {
@@ -26,13 +16,8 @@ function ChooseCompanionAndWeapon({
     companionModalRef.current?.closeModal();
   };
 
-  const handleSelectMCWeapon = (companion) => {
-    onSelectMCWeapon(companion);
-    mcWeaponModalRef.current?.closeModal();
-  };
-
   return (
-    <div className={styles.companionSection}>
+    <>
       {/* Кнопка выбора компаньона */}
       <button className={styles.addCompanionBtn} onClick={showCompanionModal}>
         {selectedCompanion ? (
@@ -48,24 +33,6 @@ function ChooseCompanionAndWeapon({
           </div>
         ) : (
           <div className={styles.addCompanionText}>+ Add Companion</div>
-        )}
-      </button>
-
-      {/* Кнопка выбора MC Weapon */}
-      <button className={styles.addCompanionBtn} onClick={showMCWeaponModal}>
-        {selectedMCWeapon ? (
-          <div className={styles.companionChar}>
-            <img
-              className={styles.mcWeaponImage}
-              src={getImageUrl(selectedMCWeapon.imgWeapon)}
-              alt={selectedMCWeapon.weaponName}
-            />
-            <div className={styles.companionName}>
-              MC Weapon: {selectedMCWeapon.weaponName}
-            </div>
-          </div>
-        ) : (
-          <div className={styles.addCompanionText}>+ Add MC Weapon</div>
         )}
       </button>
 
@@ -99,40 +66,7 @@ function ChooseCompanionAndWeapon({
           </div>
         }
       />
-
-      {/* Модалка выбора MC Weapon */}
-      <ModalWindow
-        ref={mcWeaponModalRef}
-        title="Select MC Weapon"
-        width={720}
-        tag={
-          <div className={styles.companionGrid}>
-            {compData
-              .filter(
-                (companion) => companion.imgWeapon && companion.weaponName,
-              )
-              .map((companion) => (
-                <button
-                  key={companion.id}
-                  className={styles.companionItem}
-                  onClick={() => handleSelectMCWeapon(companion)}
-                >
-                  <img
-                    className={styles.companionImg}
-                    src={getImageUrl(companion.imgWeapon)}
-                    alt={companion.weaponName}
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <div className={styles.companionTitle}>
-                    {companion.weaponName}
-                  </div>
-                </button>
-              ))}
-          </div>
-        }
-      />
-    </div>
+    </>
   );
 }
 
