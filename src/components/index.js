@@ -7,6 +7,7 @@ export { default as Showcase } from "./calculator-components/showcase/Showcase.j
 export { default as RenderCardSlot } from "./calculator-components/showcase/RenderCardSlot.jsx";
 export { default as ModalChooseCard } from "./calculator-components/showcase/ModalChooseCard.jsx";
 export { default as ChooseCompanionAndWeapon } from "./calculator-components/showcase/ChooseCompanionAndWeapon.jsx";
+export { default as AffinitySelect } from "./calculator-components/showcase/AffinitySelect.jsx";
 
 export { default as MemoryUpCalculator } from "./calculator-components/MemoryUpCalculator.jsx";
 export { default as Optimizer } from "./calculator-components/Optimizer.jsx";

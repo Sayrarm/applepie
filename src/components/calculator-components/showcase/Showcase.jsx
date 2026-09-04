@@ -1,9 +1,7 @@
 import { useState, useRef, useMemo, useEffect, useCallback } from "react";
 import styles from "./Showcase.module.css";
-import Select from "react-select";
 import { Button } from "antd";
 import CombatCalculations from "./CombatCalculations.jsx";
-import ModalWindow from "@components/ui/ModalWindow.jsx";
 import {
   getShowcaseTeamsOrDefault,
   saveShowcaseTeams,
@@ -11,17 +9,18 @@ import {
   createDefaultTeam,
 } from "@localstorage";
 import {
+  ModalWindow,
   ChooseCompanionAndWeapon,
   RenderCardSlot,
   ModalChooseCard,
+  AffinitySelect
 } from "@components";
 import { useScreenshot } from "@hooks";
 import {
   getCardData,
   calculateTotalStats,
-  calculateAffinityBonus,
   calculateFinalStatsWithAffinity,
-  affinityData,
+  calculateAffinityBonus,
 } from "@data";
 
 function Showcase() {
@@ -42,15 +41,6 @@ function Showcase() {
 
   // Получаем текущую активную команду
   const currentTeam = teams[activeTeamIndex] || teams[0];
-
-  // Опции для affinity
-  const affinityOptions = useMemo(() => {
-    const levels = affinityData[0]?.affinityLVL || [];
-    return levels.map((lvl) => ({
-      value: lvl,
-      label: `${lvl} LVL`,
-    }));
-  }, []);
 
   // ===== ОБРАБОТЧИКИ ДЛЯ ПЕРЕИМЕНОВАНИЯ =====
   const handleTabContextMenu = (e, team) => {
@@ -162,7 +152,12 @@ function Showcase() {
     }
   };
 
-  // ===== ОБЕРНУТАЯ ФУНКЦИЯ ДЛЯ ПОЛУЧЕНИЯ ДАННЫХ КАРТОЧКИ (для передачи в дочерние компоненты) =====
+  // ===== ОБРАБОТЧИК ИЗМЕНЕНИЯ AFFINITY =====
+  const handleAffinityChange = (level) => {
+    updateCurrentTeam({ affinityLevel: level });
+  };
+
+  // ===== ОБЕРНУТАЯ ФУНКЦИЯ ДЛЯ ПОЛУЧЕНИЯ ДАННЫХ КАРТОЧКИ =====
   const getCardDataWrapper = useCallback((card) => {
     return getCardData(card);
   }, []);
@@ -309,28 +304,10 @@ function Showcase() {
                 </table>
 
                 <div className={styles.bonuses}>
-                  <div className={styles.affinity}>
-                    <Select
-                        options={affinityOptions}
-                        value={affinityOptions.find(
-                            (opt) => opt.value === currentTeam.affinityLevel,
-                        )}
-                        onChange={(option) =>
-                            updateCurrentTeam({
-                              affinityLevel: option ? option.value : 0,
-                            })
-                        }
-                        placeholder="Select Affinity LVL"
-                        className={styles.selectAffinityContainer}
-                        isClearable
-                        isSearchable={false}
-                    />
-                    <div className={styles.affinityBonus}>
-                      Affinity Bonus: +{affinityBonus.hp} HP, +
-                      {affinityBonus.atk} ATK, +
-                      {affinityBonus.def} DEF
-                    </div>
-                  </div>
+                  <AffinitySelect
+                      value={currentTeam.affinityLevel}
+                      onChange={handleAffinityChange}
+                  />
                 </div>
               </div>
             </div>
