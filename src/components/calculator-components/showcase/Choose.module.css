@@ -1,0 +1,110 @@
+.companionItem,
+.addCompanionBtn {
+  text-decoration: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family:
+    TikTok Sans,
+    monospace;
+}
+
+.addCompanionBtn {
+  display: flex;
+  align-items: flex-start;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+
+.companionChar {
+  display: flex;
+  flex-direction: column;
+}
+
+.companionImage,
+.mcWeaponImage {
+  width: 288px;
+  height: 110px;
+  -webkit-mask-image:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      black 40%,
+      black 90%,
+      transparent 100%
+    ),
+    linear-gradient(
+      0deg,
+      transparent 0%,
+      black 40%,
+      black 90%,
+      transparent 100%
+    );
+  -webkit-mask-composite: intersect;
+  mask-image:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      black 40%,
+      black 90%,
+      transparent 100%
+    ),
+    linear-gradient(
+      0deg,
+      transparent 0%,
+      black 40%,
+      black 90%,
+      transparent 100%
+    );
+  mask-composite: intersect;
+}
+
+.companionImage {
+  object-fit: cover;
+  object-position: 50% 15%;
+}
+.mcWeaponImage {
+  object-fit: cover;
+  object-position: 50% 30%;
+}
+
+.companionName {
+  font-size: 20px;
+  color: var(--colorTextDark);
+  text-align: start;
+  padding: 0 10px;
+}
+
+.addCompanionText {
+  background-color: var(--forSelect);
+  box-shadow: var(--box-shadow);
+  padding: 10px;
+  color: var(--colorText);
+  font-size: 18px;
+  margin: 10px;
+}
+
+.companionGrid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+}
+
+.companionItem {
+  margin-bottom: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 150px;
+}
+
+.companionImg {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  object-position: top center;
+}

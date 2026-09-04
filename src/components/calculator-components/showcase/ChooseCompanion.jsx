@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import styles from "./Showcase.module.css";
+import styles from "./Choose.module.css";
 import { getImageUrl } from "@hooks";
 import { ModalWindow } from "@components";
 import { compData } from "@data";

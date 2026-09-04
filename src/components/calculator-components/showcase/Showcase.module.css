@@ -93,8 +93,6 @@
   justify-content: space-between;
 }
 
-.addCompanionBtn,
-.companionItem,
 .cardItem,
 .emptyLabel,
 .screenshotButton,
@@ -116,30 +114,13 @@
   display: flex;
 }
 
-.companionChar {
-  display: flex;
-  flex-direction: column;
-}
-
-.addCompanionBtn {
-  display: flex;
-  align-items: flex-start;
-  align-content: space-between;
-  flex-wrap: wrap;
-}
-
 .screenshotButton,
-.addCompanionText,
 .clearButton {
   background-color: var(--forSelect);
   box-shadow: var(--box-shadow);
   padding: 10px;
   color: var(--colorText);
   font-size: 18px;
-}
-
-.addCompanionText {
-  margin: 10px;
 }
 
 .utilButtons {
@@ -152,85 +133,6 @@
   width: 140px;
   margin: 5px 0 10px 0;
   font-size: 14px;
-}
-
-.companionImage,
-.mcWeaponImage {
-  width: 288px;
-  height: 110px;
-  -webkit-mask-image:
-    linear-gradient(
-      90deg,
-      transparent 0%,
-      black 40%,
-      black 90%,
-      transparent 100%
-    ),
-    linear-gradient(
-      0deg,
-      transparent 0%,
-      black 40%,
-      black 90%,
-      transparent 100%
-    );
-  -webkit-mask-composite: intersect;
-  mask-image:
-    linear-gradient(
-      90deg,
-      transparent 0%,
-      black 40%,
-      black 90%,
-      transparent 100%
-    ),
-    linear-gradient(
-      0deg,
-      transparent 0%,
-      black 40%,
-      black 90%,
-      transparent 100%
-    );
-  mask-composite: intersect;
-}
-
-.companionImage {
-  object-fit: cover;
-  object-position: 50% 15%;
-}
-.mcWeaponImage {
-  object-fit: cover;
-  object-position: 50% 30%;
-}
-
-.companionName {
-  font-size: 20px;
-  color: var(--colorTextDark);
-  text-align: start;
-  padding: 0 10px;
-}
-
-.companionGrid {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 5px;
-}
-
-.companionImg {
-  width: 150px;
-  height: 100px;
-  object-fit: cover;
-  object-position: top center;
-}
-
-.companionItem {
-  margin-bottom: 10px;
-  text-decoration: none;
-  font-size: 14px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 150px;
 }
 
 .cardsSection {
