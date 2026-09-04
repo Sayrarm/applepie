@@ -56,6 +56,12 @@ export {
   calculateDamageWithBonuses,
   calculateAllDamageTypes,
 } from "./showcase-data/damageCalculator.js";
+export {
+  getCardData,
+  calculateTotalStats,
+  calculateAffinityBonus,
+  calculateFinalStatsWithAffinity
+} from "./showcase-data/showcaseFunctions.js";
 
 //about-data
 export { aboutData } from "./about-data.js";

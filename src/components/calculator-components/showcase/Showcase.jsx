@@ -1,15 +1,10 @@
-import { useState, useRef, useMemo, useEffect } from "react";
+import { useState, useRef, useMemo, useEffect, useCallback } from "react";
 import styles from "./Showcase.module.css";
 import Select from "react-select";
 import { Button } from "antd";
 import CombatCalculations from "./CombatCalculations.jsx";
 import ModalWindow from "@components/ui/ModalWindow.jsx";
-import { calculateFinalStats, getStatsWithRank, affinityData } from "@data";
 import {
-  getCardLevel,
-  getCardRank,
-  getCardAscend,
-  getCardProtocores,
   getShowcaseTeamsOrDefault,
   saveShowcaseTeams,
   deleteShowcaseTeam,
@@ -18,9 +13,16 @@ import {
 import {
   ChooseCompanionAndWeapon,
   RenderCardSlot,
-  ModalChooseCard
+  ModalChooseCard,
 } from "@components";
-import {useScreenshot} from "@hooks"
+import { useScreenshot } from "@hooks";
+import {
+  getCardData,
+  calculateTotalStats,
+  calculateAffinityBonus,
+  calculateFinalStatsWithAffinity,
+  affinityData,
+} from "@data";
 
 function Showcase() {
   // Загружаем сохраненные команды
@@ -100,7 +102,7 @@ function Showcase() {
     }
     const teamToDelete = teams[index];
     if (
-      window.confirm(`Are you sure you want to delete "${teamToDelete.name}"?`)
+        window.confirm(`Are you sure you want to delete "${teamToDelete.name}"?`)
     ) {
       deleteShowcaseTeam(teamToDelete.id);
       const updatedTeams = teams.filter((_, i) => i !== index);
@@ -130,9 +132,9 @@ function Showcase() {
   // ===== ОЧИСТКА ТЕКУЩЕЙ КОМАНДЫ =====
   const clearCurrentTeam = () => {
     if (
-      window.confirm(
-        `Are you sure you want to clear all data for "${currentTeam.name}"?`,
-      )
+        window.confirm(
+            `Are you sure you want to clear all data for "${currentTeam.name}"?`,
+        )
     ) {
       const updatedTeams = [...teams];
       updatedTeams[activeTeamIndex] = {
@@ -160,203 +162,125 @@ function Showcase() {
     }
   };
 
-  // ===== ФУНКЦИЯ ДЛЯ ПОЛУЧЕНИЯ ДАННЫХ КАРТОЧКИ =====
-  const getCardData = (card) => {
-    if (!card) return null;
-    const level = getCardLevel(card.id);
-    const rank = getCardRank(card.id);
-    const isAscended = getCardAscend(card.id);
-    const protocores = getCardProtocores(card.id);
-    const baseStats = getStatsWithRank(card, level, rank, isAscended);
-
-    // Используем calculateFinalStats для корректного расчета всех статов
-    const stats = baseStats
-      ? calculateFinalStats(card, baseStats, protocores)
-      : null;
-
-    return { level, rank, isAscended, protocores, stats };
-  };
+  // ===== ОБЕРНУТАЯ ФУНКЦИЯ ДЛЯ ПОЛУЧЕНИЯ ДАННЫХ КАРТОЧКИ (для передачи в дочерние компоненты) =====
+  const getCardDataWrapper = useCallback((card) => {
+    return getCardData(card);
+  }, []);
 
   // ===== ПОДСЧЁТ СУММЫ СТАТОВ =====
-  const calculateTotalStats = useMemo(() => {
-    const allCards = [
-      ...currentTeam.solarCards,
-      ...currentTeam.lunarCards,
-    ].filter((card) => card !== null);
-
-    const total = {
-      hp: 0,
-      atk: 0,
-      def: 0,
-      critRate: 0,
-      critDmg: 0,
-      dmgBoost: 0,
-      oathStrength: 0,
-      oathRecoveryBoost: 0,
-      expeditedEnergyBoost: 0,
-    };
-
-    allCards.forEach((card) => {
-      const cardData = getCardData(card);
-      if (cardData?.stats) {
-        const stats = cardData.stats;
-        total.hp += stats.hp || 0;
-        total.atk += stats.atk || 0;
-        total.def += stats.def || 0;
-        total.critRate += stats.critRate || 0;
-        total.critDmg += stats.critDmg || 0;
-        total.dmgBoost += stats.dmgBoost || 0;
-        total.oathStrength += stats.oathStrength || 0;
-        total.oathRecoveryBoost += stats.oathRecoveryBoost || 0;
-        total.expeditedEnergyBoost += stats.expeditedEnergyBoost || 0;
-      }
-    });
-
-    return total;
+  const totalStats = useMemo(() => {
+    return calculateTotalStats(
+        currentTeam.solarCards,
+        currentTeam.lunarCards,
+        getCardData
+    );
   }, [currentTeam.solarCards, currentTeam.lunarCards]);
 
   // ===== ПОДСЧЁТ AFFINITY БОНУСОВ =====
-  const calculateAffinityBonus = useMemo(() => {
-    const affinityLevel = currentTeam.affinityLevel || 0;
-    if (affinityLevel === 0 || !affinityData.length) {
-      return { hp: 0, atk: 0, def: 0 };
-    }
-
-    const affinityEntry = affinityData[0];
-    const levels = affinityEntry.affinityLVL;
-
-    // Проверяем, есть ли такой уровень в массиве
-    const index = levels.indexOf(affinityLevel);
-    if (index === -1) {
-      return { hp: 0, atk: 0, def: 0 };
-    }
-
-    const hpPerLevel = affinityEntry.hp || 0;
-    const atkPerLevel = affinityEntry.atk || 0;
-    const defPerLevel = affinityEntry.def || 0;
-
-    // Используем сам уровень, деленный на шаг (5)
-    // Например: 5/5 = 1, 10/5 = 2, 15/5 = 3, и т.д.
-    const levelCount = affinityLevel / 5;
-
-    return {
-      hp: hpPerLevel * levelCount,
-      atk: atkPerLevel * levelCount,
-      def: defPerLevel * levelCount,
-    };
+  const affinityBonus = useMemo(() => {
+    return calculateAffinityBonus(currentTeam.affinityLevel);
   }, [currentTeam.affinityLevel]);
 
   // ===== ФИНАЛЬНЫЕ СТАТЫ С УЧЁТОМ AFFINITY =====
   const finalStats = useMemo(() => {
-    const affinityBonus = calculateAffinityBonus;
-    return {
-      hp: calculateTotalStats.hp + affinityBonus.hp,
-      atk: calculateTotalStats.atk + affinityBonus.atk,
-      def: calculateTotalStats.def + affinityBonus.def,
-      critRate: calculateTotalStats.critRate,
-      critDmg: calculateTotalStats.critDmg + 150,
-      dmgBoost: calculateTotalStats.dmgBoost,
-      oathStrength: calculateTotalStats.oathStrength,
-      oathRecoveryBoost: calculateTotalStats.oathRecoveryBoost,
-      expeditedEnergyBoost: calculateTotalStats.expeditedEnergyBoost,
-    };
-  }, [calculateTotalStats, calculateAffinityBonus]);
+    return calculateFinalStatsWithAffinity(totalStats, affinityBonus);
+  }, [totalStats, affinityBonus]);
 
   return (
-    <div className={styles.wrapper}>
-      {/* Кнопки для скриншота и очистки */}
-      <div className={styles.utilButtons}>
-        <button
-          className={styles.screenshotButton}
-          onClick={() => captureScreenshot(captureRef.current, currentTeam.name)}
-          disabled={isCapturing}
-        >
-          {isCapturing ? "📸 Capturing..." : "📸 Save as Image"}
-        </button>
+      <div className={styles.wrapper}>
+        {/* Кнопки для скриншота и очистки */}
+        <div className={styles.utilButtons}>
+          <button
+              className={styles.screenshotButton}
+              onClick={() => captureScreenshot(captureRef.current, currentTeam.name)}
+              disabled={isCapturing}
+          >
+            {isCapturing ? "📸 Capturing..." : "📸 Save as Image"}
+          </button>
 
-        <button className={styles.clearButton} onClick={clearCurrentTeam}>
-          🗑️ Clear All
-        </button>
-      </div>
+          <button className={styles.clearButton} onClick={clearCurrentTeam}>
+            🗑️ Clear All
+          </button>
+        </div>
 
-      {/* Кнопки управления */}
-      <div className={styles.teamControls}>
-        {teams.map((team, index) => (
-          <div key={team.id} className={styles.tabWrapper}>
-            <button
-              className={`${styles.teamNameButton} ${activeTeamIndex === index ? styles.activeTab : ""}`}
-              onClick={() => setActiveTeamIndex(index)}
-              onContextMenu={(e) => handleTabContextMenu(e, team)}
-              onTouchStart={(e) => handleTabTouchStart(e, team)}
-              onTouchEnd={handleTabTouchEnd}
-              onTouchCancel={handleTabTouchEnd}
-            >
-              {team.name}
-            </button>
-            <button
-              className={styles.deleteTab}
-              onClick={() => deleteTeam(index)}
-              title="Delete team"
-            >
-              ×
-            </button>
-          </div>
-        ))}
-        <button className={styles.addTeamButton} onClick={addNewTeam}>
-          + Add Team
-        </button>
-
-        <ModalWindow
-          ref={renameModalRef}
-          title="Rename Team"
-          width={400}
-          tag={
-            <div className={styles.renameModal}>
-              <input
-                className={styles.nameInputModal}
-                value={editingName}
-                onChange={(e) => setEditingName(e.target.value)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") {
-                    saveTeamName();
-                  } else if (e.key === "Escape") {
-                    renameModalRef.current?.closeModal();
-                  }
-                }}
-                autoFocus
-              />
-              <div className={styles.renameButtons}>
-                <Button className={styles.saveButton} onClick={saveTeamName}>
-                  Save
-                </Button>
+        {/* Кнопки управления */}
+        <div className={styles.teamControls}>
+          {teams.map((team, index) => (
+              <div key={team.id} className={styles.tabWrapper}>
+                <button
+                    className={`${styles.teamNameButton} ${activeTeamIndex === index ? styles.activeTab : ""}`}
+                    onClick={() => setActiveTeamIndex(index)}
+                    onContextMenu={(e) => handleTabContextMenu(e, team)}
+                    onTouchStart={(e) => handleTabTouchStart(e, team)}
+                    onTouchEnd={handleTabTouchEnd}
+                    onTouchCancel={handleTabTouchEnd}
+                >
+                  {team.name}
+                </button>
+                <button
+                    className={styles.deleteTab}
+                    onClick={() => deleteTeam(index)}
+                    title="Delete team"
+                >
+                  ×
+                </button>
               </div>
-            </div>
-          }
-        />
-      </div>
+          ))}
+          <button className={styles.addTeamButton} onClick={addNewTeam}>
+            + Add Team
+          </button>
 
-      <div ref={captureRef} className={styles.captureRef}>
-        <section
-          ref={showcaseRef}
-          className={styles.container}
-          id="showcase-container"
-        >
-          {/* компаньон и MC Weapon */}
-          <div className={styles.topContainer}>
-            <ChooseCompanionAndWeapon
-              selectedCompanion={currentTeam.selectedCompanion}
-              selectedMCWeapon={currentTeam.selectedMCWeapon}
-              onSelectCompanion={(companion) =>
-                updateCurrentTeam({ selectedCompanion: companion })
+          <ModalWindow
+              ref={renameModalRef}
+              title="Rename Team"
+              width={400}
+              tag={
+                <div className={styles.renameModal}>
+                  <input
+                      className={styles.nameInputModal}
+                      value={editingName}
+                      onChange={(e) => setEditingName(e.target.value)}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter") {
+                          saveTeamName();
+                        } else if (e.key === "Escape") {
+                          renameModalRef.current?.closeModal();
+                        }
+                      }}
+                      autoFocus
+                  />
+                  <div className={styles.renameButtons}>
+                    <Button className={styles.saveButton} onClick={saveTeamName}>
+                      Save
+                    </Button>
+                  </div>
+                </div>
               }
-              onSelectMCWeapon={(companion) =>
-                updateCurrentTeam({ selectedMCWeapon: companion })
-              }
-            />
+          />
+        </div>
 
-            <div>
-              <table className={styles.statsTable}>
-                <tbody>
+        <div ref={captureRef} className={styles.captureRef}>
+          <section
+              ref={showcaseRef}
+              className={styles.container}
+              id="showcase-container"
+          >
+            {/* компаньон и MC Weapon */}
+            <div className={styles.topContainer}>
+              <ChooseCompanionAndWeapon
+                  selectedCompanion={currentTeam.selectedCompanion}
+                  selectedMCWeapon={currentTeam.selectedMCWeapon}
+                  onSelectCompanion={(companion) =>
+                      updateCurrentTeam({ selectedCompanion: companion })
+                  }
+                  onSelectMCWeapon={(companion) =>
+                      updateCurrentTeam({ selectedMCWeapon: companion })
+                  }
+              />
+
+              <div>
+                <table className={styles.statsTable}>
+                  <tbody>
                   <tr>
                     <th>HP</th>
                     <td>{finalStats.hp.toFixed(2)}</td>
@@ -381,99 +305,99 @@ function Showcase() {
                     <th>Expedited Energy Boost</th>
                     <td>{finalStats.expeditedEnergyBoost.toFixed(2)}%</td>
                   </tr>
-                </tbody>
-              </table>
+                  </tbody>
+                </table>
 
-              <div className={styles.bonuses}>
-                <div className={styles.affinity}>
-                  <Select
-                    options={affinityOptions}
-                    value={affinityOptions.find(
-                      (opt) => opt.value === currentTeam.affinityLevel,
-                    )}
-                    onChange={(option) =>
-                      updateCurrentTeam({
-                        affinityLevel: option ? option.value : 0,
-                      })
-                    }
-                    placeholder="Select Affinity LVL"
-                    className={styles.selectAffinityContainer}
-                    isClearable
-                    isSearchable={false}
-                  />
-                  <div className={styles.affinityBonus}>
-                    Affinity Bonus: +{calculateAffinityBonus.hp} HP, +
-                    {calculateAffinityBonus.atk} ATK, +
-                    {calculateAffinityBonus.def} DEF
+                <div className={styles.bonuses}>
+                  <div className={styles.affinity}>
+                    <Select
+                        options={affinityOptions}
+                        value={affinityOptions.find(
+                            (opt) => opt.value === currentTeam.affinityLevel,
+                        )}
+                        onChange={(option) =>
+                            updateCurrentTeam({
+                              affinityLevel: option ? option.value : 0,
+                            })
+                        }
+                        placeholder="Select Affinity LVL"
+                        className={styles.selectAffinityContainer}
+                        isClearable
+                        isSearchable={false}
+                    />
+                    <div className={styles.affinityBonus}>
+                      Affinity Bonus: +{affinityBonus.hp} HP, +
+                      {affinityBonus.atk} ATK, +
+                      {affinityBonus.def} DEF
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* карточки */}
-          <div className={styles.cardsSection}>
-            {/* Solar карточки */}
-            <div className={styles.solarRow}>
-              <div className={styles.rowLabel}>SOLAR</div>
-              <div className={styles.solarCardsRow}>
-                {currentTeam.solarCards.map((card, index) => (
-                  <div
-                    key={`solar-${index}`}
-                    className={styles.cardWrapperSlot}
-                  >
-                    <RenderCardSlot
-                      card={card}
-                      placement="solar"
-                      index={index}
-                      getCardData={getCardData}
-                      cardModalRef={cardModalRef}
-                    />
-                  </div>
-                ))}
+            {/* карточки */}
+            <div className={styles.cardsSection}>
+              {/* Solar карточки */}
+              <div className={styles.solarRow}>
+                <div className={styles.rowLabel}>SOLAR</div>
+                <div className={styles.solarCardsRow}>
+                  {currentTeam.solarCards.map((card, index) => (
+                      <div
+                          key={`solar-${index}`}
+                          className={styles.cardWrapperSlot}
+                      >
+                        <RenderCardSlot
+                            card={card}
+                            placement="solar"
+                            index={index}
+                            getCardData={getCardDataWrapper}
+                            cardModalRef={cardModalRef}
+                        />
+                      </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Lunar карточки */}
+              <div className={styles.lunarRow}>
+                <div className={styles.rowLabel}>LUNAR</div>
+                <div className={styles.lunarCardsRow}>
+                  {currentTeam.lunarCards.map((card, index) => (
+                      <div
+                          key={`lunar-${index}`}
+                          className={styles.cardWrapperSlot}
+                      >
+                        <RenderCardSlot
+                            card={card}
+                            placement="lunar"
+                            index={index}
+                            getCardData={getCardDataWrapper}
+                            cardModalRef={cardModalRef}
+                        />
+                      </div>
+                  ))}
+                </div>
               </div>
             </div>
 
-            {/* Lunar карточки */}
-            <div className={styles.lunarRow}>
-              <div className={styles.rowLabel}>LUNAR</div>
-              <div className={styles.lunarCardsRow}>
-                {currentTeam.lunarCards.map((card, index) => (
-                  <div
-                    key={`lunar-${index}`}
-                    className={styles.cardWrapperSlot}
-                  >
-                    <RenderCardSlot
-                      card={card}
-                      placement="lunar"
-                      index={index}
-                      getCardData={getCardData}
-                      cardModalRef={cardModalRef}
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+            {/* Модалка выбора карточки с фильтрами */}
+            <ModalChooseCard onSelectCard={handleSelectCard} ref={cardModalRef} />
+          </section>
+        </div>
 
-          {/* Модалка выбора карточки с фильтрами */}
-          <ModalChooseCard onSelectCard={handleSelectCard} ref={cardModalRef} />
-        </section>
+        <br />
+        <br />
+
+        {/* CombatCalculations - показываем только если есть Компаньон и MC Weapon */}
+        {currentTeam.selectedCompanion && currentTeam.selectedMCWeapon && (
+            <CombatCalculations
+                stats={finalStats}
+                selectedCompanion={currentTeam.selectedCompanion}
+                selectedMCWeapon={currentTeam.selectedMCWeapon}
+                solarCards={currentTeam.solarCards}
+            />
+        )}
       </div>
-
-      <br />
-      <br />
-
-      {/* CombatCalculations - показываем только если есть Компаньон и MC Weapon */}
-      {currentTeam.selectedCompanion && currentTeam.selectedMCWeapon && (
-        <CombatCalculations
-          stats={finalStats}
-          selectedCompanion={currentTeam.selectedCompanion}
-          selectedMCWeapon={currentTeam.selectedMCWeapon}
-          solarCards={currentTeam.solarCards}
-        />
-      )}
-    </div>
   );
 }
 
