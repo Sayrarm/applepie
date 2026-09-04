@@ -4,12 +4,12 @@ export {
   ascendData3star,
   ascendData4star,
   ascendData5star,
-  rankOptions
+  rankOptions,
 } from "./card-article-data/levelCardData.js";
 export {
   calculateDmgBoost,
   getStatsWithRank,
-  formatOptionLabel
+  formatOptionLabel,
 } from "./card-article-data/levelCardFunctions.js";
 export { memoriesData } from "./card-article-data/memories-data.js";
 export { obtainData } from "./card-article-data/obtain-data.js";
@@ -88,7 +88,7 @@ export {
   hearts,
   coreEnergy,
   credits,
-  capsules
+  capsules,
 } from "./my-account-data/my-resources-data.js";
 export {
   getHeartsandExchange,

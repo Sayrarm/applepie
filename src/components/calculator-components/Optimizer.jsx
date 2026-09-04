@@ -8,19 +8,7 @@ function Optimizer() {
         <section>
           <ChooseCompanionAndWeapon />
 
-          <section className={styles.protocoreStats}>
-            <div>
-              <button>Main stat</button>
-              <button>sub stat</button>
-              <button>sub stat</button>
-              <button>sub stat</button>
-            </div>
-            <div>
-              <button>Beta 1</button>
-              <button>Beta 2</button>
-              <button>Delta</button>
-            </div>
-          </section>
+          <section className={styles.protocoreStats}></section>
         </section>
       </section>
     </>

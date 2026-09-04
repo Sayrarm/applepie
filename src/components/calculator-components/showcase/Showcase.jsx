@@ -4,8 +4,6 @@ import Select from "react-select";
 import { toPng } from "html-to-image";
 import { Button } from "antd";
 import CombatCalculations from "./CombatCalculations.jsx";
-import ChooseCompanionAndWeapon from "./ChooseCompanionAndWeapon.jsx";
-import ChooseTeamCards from "./ChooseTeamCards.jsx";
 import ModalWindow from "@components/ui/ModalWindow.jsx";
 import { calculateFinalStats, getStatsWithRank, affinityData } from "@data";
 import {
@@ -18,6 +16,11 @@ import {
   deleteShowcaseTeam,
   createDefaultTeam,
 } from "@localstorage";
+import {
+  ChooseCompanionAndWeapon,
+  RenderCardSlot,
+  ModalChooseCard,
+} from "@components";
 
 function Showcase() {
   // Загружаем сохраненные команды
@@ -30,6 +33,7 @@ function Showcase() {
   const showcaseRef = useRef();
   const captureRef = useRef();
   const renameModalRef = useRef();
+  const cardModalRef = useRef();
   const [longPressTimer, setLongPressTimer] = useState(null);
 
   // Получаем текущую активную команду
@@ -138,6 +142,19 @@ function Showcase() {
         affinityLevel: 0,
       };
       setTeams(updatedTeams);
+    }
+  };
+
+  // ===== ОБРАБОТЧИК ВЫБОРА КАРТОЧКИ =====
+  const handleSelectCard = (placement, index, card) => {
+    if (placement === "solar") {
+      const updatedSolarCards = [...currentTeam.solarCards];
+      updatedSolarCards[index] = card;
+      updateCurrentTeam({ solarCards: updatedSolarCards });
+    } else if (placement === "lunar") {
+      const updatedLunarCards = [...currentTeam.lunarCards];
+      updatedLunarCards[index] = card;
+      updateCurrentTeam({ lunarCards: updatedLunarCards });
     }
   };
 
@@ -438,23 +455,52 @@ function Showcase() {
           </div>
 
           {/* карточки */}
-          <ChooseTeamCards
-            solarCards={currentTeam.solarCards}
-            lunarCards={currentTeam.lunarCards}
-            onSelectCard={(placement, index, card) => {
-              const newSolar = [...currentTeam.solarCards];
-              const newLunar = [...currentTeam.lunarCards];
+          <div className={styles.cardsSection}>
+            {/* Solar карточки */}
+            <div className={styles.solarRow}>
+              <div className={styles.rowLabel}>SOLAR</div>
+              <div className={styles.solarCardsRow}>
+                {currentTeam.solarCards.map((card, index) => (
+                  <div
+                    key={`solar-${index}`}
+                    className={styles.cardWrapperSlot}
+                  >
+                    <RenderCardSlot
+                      card={card}
+                      placement="solar"
+                      index={index}
+                      getCardData={getCardData}
+                      cardModalRef={cardModalRef}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
 
-              if (placement === "solar") {
-                newSolar[index] = card;
-                updateCurrentTeam({ solarCards: newSolar });
-              } else if (placement === "lunar") {
-                newLunar[index] = card;
-                updateCurrentTeam({ lunarCards: newLunar });
-              }
-            }}
-            getCardData={getCardData}
-          />
+            {/* Lunar карточки */}
+            <div className={styles.lunarRow}>
+              <div className={styles.rowLabel}>LUNAR</div>
+              <div className={styles.lunarCardsRow}>
+                {currentTeam.lunarCards.map((card, index) => (
+                  <div
+                    key={`lunar-${index}`}
+                    className={styles.cardWrapperSlot}
+                  >
+                    <RenderCardSlot
+                      card={card}
+                      placement="lunar"
+                      index={index}
+                      getCardData={getCardData}
+                      cardModalRef={cardModalRef}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Модалка выбора карточки с фильтрами */}
+          <ModalChooseCard onSelectCard={handleSelectCard} ref={cardModalRef} />
         </section>
       </div>
 

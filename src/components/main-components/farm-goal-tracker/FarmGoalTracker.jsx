@@ -14,7 +14,7 @@ import {
   credits,
   bottles,
   coreEnergy,
-  } from "@data";
+} from "@data";
 import { getImageUrl, useFarmGoals } from "@hooks";
 import AsideReplaceableResources from "./AsideReplaceableResources.jsx";
 
@@ -440,8 +440,13 @@ function FarmGoalTracker() {
 
           // Вычитаем stamina из капсул
           const totalStaminaFromCapsules = getTotalStaminaFromUserCapsules();
-          const remainingStaminaAfterCapsules = Math.max(0, totalStamina - totalStaminaFromCapsules);
-          const totalDays = Math.ceil(remainingStaminaAfterCapsules / DAILY_STAMINA);
+          const remainingStaminaAfterCapsules = Math.max(
+            0,
+            totalStamina - totalStaminaFromCapsules,
+          );
+          const totalDays = Math.ceil(
+            remainingStaminaAfterCapsules / DAILY_STAMINA,
+          );
 
           return (
             <div key={goal.id} className={styles.goalCard}>
@@ -675,7 +680,9 @@ function FarmGoalTracker() {
                           ~{totalDays} day{totalDays !== 1 ? "s" : ""}
                         </strong>{" "}
                         (based on {DAILY_STAMINA} stamina/day
-                        {totalStaminaFromCapsules > 0 && ` + ${totalStaminaFromCapsules} stamina from capsules`})
+                        {totalStaminaFromCapsules > 0 &&
+                          ` + ${totalStaminaFromCapsules} stamina from capsules`}
+                        )
                       </div>
                     </div>
                   </div>

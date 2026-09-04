@@ -14,7 +14,7 @@ import {
   saveCardSize,
   enhanceMemoriesWithAvailability,
   getShowUserInfo,
-  saveShowUserInfo
+  saveShowUserInfo,
 } from "@localstorage";
 
 function Memories() {
@@ -166,7 +166,12 @@ function Memories() {
               }}
               className={styles.cardLink}
             >
-              <Card key={memory.id} data={memory} isSmall={isImageSmall} showUserInfo={showUserInfo} />
+              <Card
+                key={memory.id}
+                data={memory}
+                isSmall={isImageSmall}
+                showUserInfo={showUserInfo}
+              />
             </Link>
           );
         })}

@@ -4,6 +4,8 @@ export { default as CompanionArticlePage } from "./battle-components/CompanionAr
 
 // calculator-components
 export { default as Showcase } from "./calculator-components/showcase/Showcase.jsx";
+export { default as RenderCardSlot } from "./calculator-components/showcase/RenderCardSlot.jsx";
+export { default as ModalChooseCard } from "./calculator-components/showcase/ModalChooseCard.jsx";
 export { default as ChooseCompanionAndWeapon } from "./calculator-components/showcase/ChooseCompanionAndWeapon.jsx";
 
 export { default as MemoryUpCalculator } from "./calculator-components/MemoryUpCalculator.jsx";

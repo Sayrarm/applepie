@@ -36,7 +36,7 @@ export const obtainData = [
       234, 235, 236, 237, 238, 239, 240, 253, 254, 255, 256, 263, 264, 267, 289,
       290, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 313, 314,
       315, 316, 317, 318, 320, 321, 323, 325, 326, 327, 328, 329, 330, 331, 332,
-      333, 334, 335, 348, 349, 350, 351, 358, 359, 361, 385, 386, 412, 413, 420
+      333, 334, 335, 348, 349, 350, 351, 358, 359, 361, 385, 386, 412, 413, 420,
     ],
     description: "Can be obtain for 'Deepspace Wish' (Event Banner).",
     image: "../assets/main-page/modal-window/limited-banner.png",
@@ -79,7 +79,8 @@ export const obtainData = [
     obtain: "Promise",
     memories: [
       409, 410, 13, 14, 16, 397, 62, 63, 68, 69, 72, 130, 146, 149, 152, 154,
-      155, 227, 228, 242, 244, 248, 249, 251, 322, 336, 338, 342, 344, 398, 417, 418
+      155, 227, 228, 242, 244, 248, 249, 251, 322, 336, 338, 342, 344, 398, 417,
+      418,
     ],
     description:
       "Can be obtain from 'Promise' (check your 'Agenda'). 'Promise' is limited, can be rerun of memories from past 'Promises' in 'Shop', check the news.",
@@ -89,7 +90,7 @@ export const obtainData = [
     obtain: "Limited Event",
     memories: [
       10, 21, 53, 104, 65, 71, 122, 134, 150, 156, 157, 216, 245, 250, 252, 308,
-      310, 312, 324, 340, 345, 347, 403, 419, 421
+      310, 312, 324, 340, 345, 347, 403, 419, 421,
     ],
     description: "Memory from 'Events'. Can be repeatable, check the news.",
     image: "../assets/main-page/modal-window/events.png",
