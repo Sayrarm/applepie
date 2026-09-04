@@ -60,7 +60,7 @@ export {
   getCardData,
   calculateTotalStats,
   calculateAffinityBonus,
-  calculateFinalStatsWithAffinity
+  calculateFinalStatsWithAffinity,
 } from "./showcase-data/showcaseFunctions.js";
 
 //about-data

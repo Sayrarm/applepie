@@ -335,57 +335,6 @@
   display: flex;
 }
 
-.affinity {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.selectAffinityContainer {
-  width: 150px;
-}
-
-.selectAffinityContainer [class$="-control"] {
-  background-color: var(--forSelect);
-  border: none;
-  border-radius: 0;
-  cursor: pointer;
-}
-
-.selectAffinityContainer [class$="-control"]:hover {
-  border-color: var(--colorText);
-}
-
-.selectAffinityContainer [class$="-placeholder"] {
-  color: var(--colorTextGrayNote);
-  font-size: 12px;
-}
-
-.selectAffinityContainer [class$="-menu"] {
-  background-color: var(--forSelect);
-  border: none;
-  border-radius: 0;
-  margin: 1px;
-}
-
-.selectAffinityContainer [class$="-option"] {
-  background-color: var(--forSelect);
-  color: var(--colorText);
-  padding: 10px 16px;
-  cursor: pointer;
-}
-
-.selectAffinityContainer [class$="-option"]:hover {
-  background-color: var(--a-hover);
-  color: var(--colorText);
-  padding: 10px 16px;
-  cursor: pointer;
-}
-
-.selectAffinityContainer [class$="-singleValue"] {
-  color: var(--colorText);
-}
-
 @media screen and (max-width: 768px) {
   .captureRef {
     height: 25%;

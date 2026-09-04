@@ -13,7 +13,7 @@ import {
   ChooseCompanionAndWeapon,
   RenderCardSlot,
   ModalChooseCard,
-  AffinitySelect
+  AffinitySelect,
 } from "@components";
 import { useScreenshot } from "@hooks";
 import {
@@ -92,7 +92,7 @@ function Showcase() {
     }
     const teamToDelete = teams[index];
     if (
-        window.confirm(`Are you sure you want to delete "${teamToDelete.name}"?`)
+      window.confirm(`Are you sure you want to delete "${teamToDelete.name}"?`)
     ) {
       deleteShowcaseTeam(teamToDelete.id);
       const updatedTeams = teams.filter((_, i) => i !== index);
@@ -122,9 +122,9 @@ function Showcase() {
   // ===== ОЧИСТКА ТЕКУЩЕЙ КОМАНДЫ =====
   const clearCurrentTeam = () => {
     if (
-        window.confirm(
-            `Are you sure you want to clear all data for "${currentTeam.name}"?`,
-        )
+      window.confirm(
+        `Are you sure you want to clear all data for "${currentTeam.name}"?`,
+      )
     ) {
       const updatedTeams = [...teams];
       updatedTeams[activeTeamIndex] = {
@@ -165,9 +165,9 @@ function Showcase() {
   // ===== ПОДСЧЁТ СУММЫ СТАТОВ =====
   const totalStats = useMemo(() => {
     return calculateTotalStats(
-        currentTeam.solarCards,
-        currentTeam.lunarCards,
-        getCardData
+      currentTeam.solarCards,
+      currentTeam.lunarCards,
+      getCardData,
     );
   }, [currentTeam.solarCards, currentTeam.lunarCards]);
 
@@ -182,100 +182,102 @@ function Showcase() {
   }, [totalStats, affinityBonus]);
 
   return (
-      <div className={styles.wrapper}>
-        {/* Кнопки для скриншота и очистки */}
-        <div className={styles.utilButtons}>
-          <button
-              className={styles.screenshotButton}
-              onClick={() => captureScreenshot(captureRef.current, currentTeam.name)}
-              disabled={isCapturing}
-          >
-            {isCapturing ? "📸 Capturing..." : "📸 Save as Image"}
-          </button>
+    <div className={styles.wrapper}>
+      {/* Кнопки для скриншота и очистки */}
+      <div className={styles.utilButtons}>
+        <button
+          className={styles.screenshotButton}
+          onClick={() =>
+            captureScreenshot(captureRef.current, currentTeam.name)
+          }
+          disabled={isCapturing}
+        >
+          {isCapturing ? "📸 Capturing..." : "📸 Save as Image"}
+        </button>
 
-          <button className={styles.clearButton} onClick={clearCurrentTeam}>
-            🗑️ Clear All
-          </button>
-        </div>
+        <button className={styles.clearButton} onClick={clearCurrentTeam}>
+          🗑️ Clear All
+        </button>
+      </div>
 
-        {/* Кнопки управления */}
-        <div className={styles.teamControls}>
-          {teams.map((team, index) => (
-              <div key={team.id} className={styles.tabWrapper}>
-                <button
-                    className={`${styles.teamNameButton} ${activeTeamIndex === index ? styles.activeTab : ""}`}
-                    onClick={() => setActiveTeamIndex(index)}
-                    onContextMenu={(e) => handleTabContextMenu(e, team)}
-                    onTouchStart={(e) => handleTabTouchStart(e, team)}
-                    onTouchEnd={handleTabTouchEnd}
-                    onTouchCancel={handleTabTouchEnd}
-                >
-                  {team.name}
-                </button>
-                <button
-                    className={styles.deleteTab}
-                    onClick={() => deleteTeam(index)}
-                    title="Delete team"
-                >
-                  ×
-                </button>
-              </div>
-          ))}
-          <button className={styles.addTeamButton} onClick={addNewTeam}>
-            + Add Team
-          </button>
+      {/* Кнопки управления */}
+      <div className={styles.teamControls}>
+        {teams.map((team, index) => (
+          <div key={team.id} className={styles.tabWrapper}>
+            <button
+              className={`${styles.teamNameButton} ${activeTeamIndex === index ? styles.activeTab : ""}`}
+              onClick={() => setActiveTeamIndex(index)}
+              onContextMenu={(e) => handleTabContextMenu(e, team)}
+              onTouchStart={(e) => handleTabTouchStart(e, team)}
+              onTouchEnd={handleTabTouchEnd}
+              onTouchCancel={handleTabTouchEnd}
+            >
+              {team.name}
+            </button>
+            <button
+              className={styles.deleteTab}
+              onClick={() => deleteTeam(index)}
+              title="Delete team"
+            >
+              ×
+            </button>
+          </div>
+        ))}
+        <button className={styles.addTeamButton} onClick={addNewTeam}>
+          + Add Team
+        </button>
 
-          <ModalWindow
-              ref={renameModalRef}
-              title="Rename Team"
-              width={400}
-              tag={
-                <div className={styles.renameModal}>
-                  <input
-                      className={styles.nameInputModal}
-                      value={editingName}
-                      onChange={(e) => setEditingName(e.target.value)}
-                      onKeyDown={(e) => {
-                        if (e.key === "Enter") {
-                          saveTeamName();
-                        } else if (e.key === "Escape") {
-                          renameModalRef.current?.closeModal();
-                        }
-                      }}
-                      autoFocus
-                  />
-                  <div className={styles.renameButtons}>
-                    <Button className={styles.saveButton} onClick={saveTeamName}>
-                      Save
-                    </Button>
-                  </div>
-                </div>
-              }
-          />
-        </div>
-
-        <div ref={captureRef} className={styles.captureRef}>
-          <section
-              ref={showcaseRef}
-              className={styles.container}
-              id="showcase-container"
-          >
-            {/* компаньон и MC Weapon */}
-            <div className={styles.topContainer}>
-              <ChooseCompanionAndWeapon
-                  selectedCompanion={currentTeam.selectedCompanion}
-                  selectedMCWeapon={currentTeam.selectedMCWeapon}
-                  onSelectCompanion={(companion) =>
-                      updateCurrentTeam({ selectedCompanion: companion })
+        <ModalWindow
+          ref={renameModalRef}
+          title="Rename Team"
+          width={400}
+          tag={
+            <div className={styles.renameModal}>
+              <input
+                className={styles.nameInputModal}
+                value={editingName}
+                onChange={(e) => setEditingName(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    saveTeamName();
+                  } else if (e.key === "Escape") {
+                    renameModalRef.current?.closeModal();
                   }
-                  onSelectMCWeapon={(companion) =>
-                      updateCurrentTeam({ selectedMCWeapon: companion })
-                  }
+                }}
+                autoFocus
               />
+              <div className={styles.renameButtons}>
+                <Button className={styles.saveButton} onClick={saveTeamName}>
+                  Save
+                </Button>
+              </div>
+            </div>
+          }
+        />
+      </div>
 
-              <div>
-                <table className={styles.statsTable}>
-                  <tbody>
+      <div ref={captureRef} className={styles.captureRef}>
+        <section
+          ref={showcaseRef}
+          className={styles.container}
+          id="showcase-container"
+        >
+          {/* компаньон и MC Weapon */}
+          <div className={styles.topContainer}>
+            <ChooseCompanionAndWeapon
+              selectedCompanion={currentTeam.selectedCompanion}
+              selectedMCWeapon={currentTeam.selectedMCWeapon}
+              onSelectCompanion={(companion) =>
+                updateCurrentTeam({ selectedCompanion: companion })
+              }
+              onSelectMCWeapon={(companion) =>
+                updateCurrentTeam({ selectedMCWeapon: companion })
+              }
+            />
+
+            <div>
+              <table className={styles.statsTable}>
+                <tbody>
                   <tr>
                     <th>HP</th>
                     <td>{finalStats.hp.toFixed(2)}</td>
@@ -300,81 +302,82 @@ function Showcase() {
                     <th>Expedited Energy Boost</th>
                     <td>{finalStats.expeditedEnergyBoost.toFixed(2)}%</td>
                   </tr>
-                  </tbody>
-                </table>
+                </tbody>
+              </table>
 
-                <div className={styles.bonuses}>
-                  <AffinitySelect
-                      value={currentTeam.affinityLevel}
-                      onChange={handleAffinityChange}
-                  />
-                </div>
+              <div className={styles.bonuses}>
+                <AffinitySelect
+                  value={currentTeam.affinityLevel}
+                  onChange={handleAffinityChange}
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* карточки */}
+          <div className={styles.cardsSection}>
+            {/* Solar карточки */}
+            <div className={styles.solarRow}>
+              <div className={styles.rowLabel}>SOLAR</div>
+              <div className={styles.solarCardsRow}>
+                {currentTeam.solarCards.map((card, index) => (
+                  <div
+                    key={`solar-${index}`}
+                    className={styles.cardWrapperSlot}
+                  >
+                    <RenderCardSlot
+                      card={card}
+                      placement="solar"
+                      index={index}
+                      getCardData={getCardDataWrapper}
+                      cardModalRef={cardModalRef}
+                      smallCard={false}
+                    />
+                  </div>
+                ))}
               </div>
             </div>
 
-            {/* карточки */}
-            <div className={styles.cardsSection}>
-              {/* Solar карточки */}
-              <div className={styles.solarRow}>
-                <div className={styles.rowLabel}>SOLAR</div>
-                <div className={styles.solarCardsRow}>
-                  {currentTeam.solarCards.map((card, index) => (
-                      <div
-                          key={`solar-${index}`}
-                          className={styles.cardWrapperSlot}
-                      >
-                        <RenderCardSlot
-                            card={card}
-                            placement="solar"
-                            index={index}
-                            getCardData={getCardDataWrapper}
-                            cardModalRef={cardModalRef}
-                        />
-                      </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Lunar карточки */}
-              <div className={styles.lunarRow}>
-                <div className={styles.rowLabel}>LUNAR</div>
-                <div className={styles.lunarCardsRow}>
-                  {currentTeam.lunarCards.map((card, index) => (
-                      <div
-                          key={`lunar-${index}`}
-                          className={styles.cardWrapperSlot}
-                      >
-                        <RenderCardSlot
-                            card={card}
-                            placement="lunar"
-                            index={index}
-                            getCardData={getCardDataWrapper}
-                            cardModalRef={cardModalRef}
-                        />
-                      </div>
-                  ))}
-                </div>
+            {/* Lunar карточки */}
+            <div className={styles.lunarRow}>
+              <div className={styles.rowLabel}>LUNAR</div>
+              <div className={styles.lunarCardsRow}>
+                {currentTeam.lunarCards.map((card, index) => (
+                  <div
+                    key={`lunar-${index}`}
+                    className={styles.cardWrapperSlot}
+                  >
+                    <RenderCardSlot
+                      card={card}
+                      placement="lunar"
+                      index={index}
+                      getCardData={getCardDataWrapper}
+                      cardModalRef={cardModalRef}
+                    />
+                  </div>
+                ))}
               </div>
             </div>
+          </div>
 
-            {/* Модалка выбора карточки с фильтрами */}
-            <ModalChooseCard onSelectCard={handleSelectCard} ref={cardModalRef} />
-          </section>
-        </div>
-
-        <br />
-        <br />
-
-        {/* CombatCalculations - показываем только если есть Компаньон и MC Weapon */}
-        {currentTeam.selectedCompanion && currentTeam.selectedMCWeapon && (
-            <CombatCalculations
-                stats={finalStats}
-                selectedCompanion={currentTeam.selectedCompanion}
-                selectedMCWeapon={currentTeam.selectedMCWeapon}
-                solarCards={currentTeam.solarCards}
-            />
-        )}
+          {/* Модалка выбора карточки с фильтрами */}
+          <ModalChooseCard onSelectCard={handleSelectCard} ref={cardModalRef} />
+        </section>
       </div>
+
+      <br />
+      <br />
+
+      {/* CombatCalculations - показываем только если есть Компаньон и MC Weapon */}
+      {currentTeam.selectedCompanion && currentTeam.selectedMCWeapon && (
+        <CombatCalculations
+          stats={finalStats}
+          selectedCompanion={currentTeam.selectedCompanion}
+          selectedMCWeapon={currentTeam.selectedMCWeapon}
+          solarCards={currentTeam.solarCards}
+        />
+      )}
+    </div>
   );
 }
 

@@ -1,7 +1,14 @@
 import styles from "./Showcase.module.css";
 import { ProtocoreBlock, Card } from "@components";
 
-function RenderCardSlot({ card, placement, index, getCardData, cardModalRef }) {
+function RenderCardSlot({
+  card,
+  placement,
+  index,
+  getCardData,
+  cardModalRef,
+  smallCard,
+}) {
   const cardData = card ? getCardData(card) : null;
 
   return (
@@ -13,7 +20,7 @@ function RenderCardSlot({ card, placement, index, getCardData, cardModalRef }) {
         <>
           <div className={styles.cardSlotEquipped}>
             <div className={styles.cardWrapper}>
-              <Card data={card} isSmall={false} showUserInfo={true} />
+              <Card data={card} isSmall={smallCard} showUserInfo={true} />
             </div>
           </div>
 
