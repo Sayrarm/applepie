@@ -81,7 +81,7 @@ export { default as ExportImport } from "./my-account-components/import-export/E
 export { default as MyProtocores } from "./my-account-components/my-protocores-page/MyProtocores.jsx";
 export { default as ModalWindowProtocore } from "./my-account-components/my-protocores-page/ModalWindowProtocore.jsx";
 
-export { default as MyMemories } from "./my-account-components/MyMemories.jsx";
+export { default as MyMemories } from "./my-account-components/my-memories/MyMemories.jsx";
 export { default as MyResources } from "./my-account-components/resources-components/MyResources.jsx";
 
 //ui

@@ -71,6 +71,9 @@
   font-size: 14px;
   font-weight: 600;
   color: var(--colorTextDark);
+
+  display: flex;
+  width: 100%;
 }
 
 .goalActions {
@@ -154,6 +157,12 @@
   margin: 1px 0;
 }
 
+.protocoreIcon {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
 .crystalColorIcon,
 .heartIconSmall,
 .creditIconSmall {
@@ -231,16 +240,30 @@
   font-weight: 600;
 }
 
-@media screen and (max-width: 1020px) {
-  .container {
-    padding: 5px;
-  }
+.goalDescription {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 5px;
+}
 
-  .goalCard {
-    width: 100%;
-    padding: 10px;
-    margin: 5px;
-  }
+.titleAndImg {
+  display: flex;
+  align-items: center;
+}
+
+.mainStatTitle {
+  color: var(--colorText);
+  text-shadow: var(--text-shadow);
+}
+
+.protocoreName {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 1020px) {
 
   .farmingCard {
     padding: 5px;
@@ -249,4 +272,13 @@
   .goalActions {
     flex-direction: column;
   }
+}
+
+@media screen and (max-width: 408px) {
+
+  .spanLVL {
+    display: flex;
+    flex-direction: column;
+  }
+
 }
