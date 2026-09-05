@@ -1,5 +1,81 @@
 .container {
     display: flex;
-
+    flex-direction: column;
     margin-top: 15px;
+    padding: 5px;
+    width: 100%;
+
+    background-color: var(--bg-glass);
+}
+
+.navigation {
+    display: flex;
+    border-bottom: 1px dashed var(--forSelect);
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.selectMenu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+/*************Select********************/
+
+.select {
+    width: 150px;
+}
+
+.select [class$="-control"] {
+    background-color: var(--forSelect);
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+.select [class$="-control"]:hover {
+    border-color: var(--colorText);
+}
+
+.select [class$="-placeholder"] {
+    color: var(--colorText);
+    font-size: 12px;
+}
+
+.select [class$="-menu"] {
+    background-color: var(--forSelect);
+    border: none;
+    border-radius: 0;
+    margin: 1px;
+}
+
+.select [class$="-option"] {
+    background-color: var(--forSelect);
+    color: var(--colorText);
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+.select [class$="-option"]:hover {
+    background-color: var(--a-hover);
+    color: var(--colorText);
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+.select [class$="-singleValue"] {
+    color: var(--colorText);
+}
+
+/**********************************************/
+
+.articleContainer {
+    display: flex;
+    padding: 5px;
+    gap: 5px;
+}
+
+.protocoreContainer {
+    display: flex;
+    gap: 5px;
 }

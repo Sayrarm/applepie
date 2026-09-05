@@ -1,17 +1,99 @@
 import styles from "./Optimizer.module.css";
 import {ChooseCompanion, ChooseWeapon} from "@components";
+import Select from "react-select";
 
 function Optimizer() {
-  return (
-    <section className={styles.container}>
-      <ChooseCompanion />
-      <ChooseWeapon />
-        <section>
-            Main stat:
-            <button></button>
+    return (
+        <section className={styles.container}>
+            <nav className={styles.navigation}>
+                <ChooseCompanion/>
+                <ChooseWeapon/>
+                <div className={styles.selectMenu}>
+                    <Select
+                        placeholder="Select Main Stat"
+                        className={styles.select}
+                        isClearable
+                        isSearchable={false}
+                    />
+                    <Select
+                        placeholder="Select Sub Stat"
+                        className={styles.select}
+                        isClearable
+                        isSearchable={false}
+                    />
+                    <Select
+                        placeholder="Select Beta Protocore"
+                        className={styles.select}
+                        isClearable
+                        isSearchable={false}
+                    />
+                    <Select
+                        placeholder="Select Delta Protocore"
+                        className={styles.select}
+                        isClearable
+                        isSearchable={false}
+                    />
+                </div>
+            </nav>
+
+            <section className={styles.cardsContainer}>
+                <article className={styles.articleContainer}>
+                    <button className={styles.choosenCard}>
+                        Solar Memory 1 img
+                    </button>
+                    <div className={styles.protocoreContainer}>
+                        <div>Protocore 1</div>
+                        <div>Protocore 2</div>
+                    </div>
+                </article>
+                <article className={styles.articleContainer}>
+                    <button className={styles.choosenCard}>
+                        Solar Memory 2 img
+                    </button>
+                    <div className={styles.protocoreContainer}>
+                        <div>Protocore 1</div>
+                        <div>Protocore 2</div>
+                    </div>
+                </article>
+                <article className={styles.articleContainer}>
+                    <button className={styles.choosenCard}>
+                        Lunar Memory 1 img
+                    </button>
+                    <div className={styles.protocoreContainer}>
+                        <div>Protocore 1</div>
+                        <div>Protocore 2</div>
+                    </div>
+                </article>
+                <article className={styles.articleContainer}>
+                    <button className={styles.choosenCard}>
+                        Lunar Memory 2 img
+                    </button>
+                    <div className={styles.protocoreContainer}>
+                        <div>Protocore 1</div>
+                        <div>Protocore 2</div>
+                    </div>
+                </article>
+                <article className={styles.articleContainer}>
+                    <button className={styles.choosenCard}>
+                        Lunar Memory 3 img
+                    </button>
+                    <div className={styles.protocoreContainer}>
+                        <div>Protocore 1</div>
+                        <div>Protocore 2</div>
+                    </div>
+                </article>
+                <article className={styles.articleContainer}>
+                    <button className={styles.choosenCard}>
+                        Lunar Memory 4 img
+                    </button>
+                    <div className={styles.protocoreContainer}>
+                        <div>Protocore 1</div>
+                        <div>Protocore 2</div>
+                    </div>
+                </article>
+            </section>
         </section>
-    </section>
-  );
+    );
 }
 
 export default Optimizer;
