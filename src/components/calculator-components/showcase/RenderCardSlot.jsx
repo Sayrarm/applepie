@@ -42,8 +42,7 @@ function RenderCardSlot({
         </>
       ) : (
         <div className={styles.emptySlotContent}>
-          <span>+</span>
-          <span className={styles.emptyLabel}>Add {placement} card</span>
+          <span className={styles.emptyLabel}>+ Add {placement} Memory</span>
         </div>
       )}
     </div>

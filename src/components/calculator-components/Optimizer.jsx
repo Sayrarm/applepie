@@ -39,7 +39,7 @@ function Optimizer() {
             <section className={styles.cardsContainer}>
                 <article className={styles.articleContainer}>
                     <button className={styles.choosenCard}>
-                        Solar Memory 1 img
+                        + Add Solar Memory
                     </button>
                     <div className={styles.protocoreContainer}>
                         <div>Protocore 1</div>
@@ -48,7 +48,7 @@ function Optimizer() {
                 </article>
                 <article className={styles.articleContainer}>
                     <button className={styles.choosenCard}>
-                        Solar Memory 2 img
+                        + Add Solar Memory
                     </button>
                     <div className={styles.protocoreContainer}>
                         <div>Protocore 1</div>
@@ -57,7 +57,7 @@ function Optimizer() {
                 </article>
                 <article className={styles.articleContainer}>
                     <button className={styles.choosenCard}>
-                        Lunar Memory 1 img
+                        + Add Lunar Memory
                     </button>
                     <div className={styles.protocoreContainer}>
                         <div>Protocore 1</div>
@@ -66,7 +66,7 @@ function Optimizer() {
                 </article>
                 <article className={styles.articleContainer}>
                     <button className={styles.choosenCard}>
-                        Lunar Memory 2 img
+                        + Add Lunar Memory
                     </button>
                     <div className={styles.protocoreContainer}>
                         <div>Protocore 1</div>
@@ -75,7 +75,7 @@ function Optimizer() {
                 </article>
                 <article className={styles.articleContainer}>
                     <button className={styles.choosenCard}>
-                        Lunar Memory 3 img
+                        + Add Lunar Memory
                     </button>
                     <div className={styles.protocoreContainer}>
                         <div>Protocore 1</div>
@@ -84,7 +84,7 @@ function Optimizer() {
                 </article>
                 <article className={styles.articleContainer}>
                     <button className={styles.choosenCard}>
-                        Lunar Memory 4 img
+                        + Add Lunar Memory
                     </button>
                     <div className={styles.protocoreContainer}>
                         <div>Protocore 1</div>
@@ -92,6 +92,10 @@ function Optimizer() {
                     </div>
                 </article>
             </section>
+
+            <button className={styles.startButton}>
+                Start
+            </button>
         </section>
     );
 }

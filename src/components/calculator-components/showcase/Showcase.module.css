@@ -162,6 +162,15 @@
   color: var(--colorTextDark);
 }
 
+.emptySlotContent {
+  align-self: center;
+  transition: 0.3s;
+}
+
+.emptySlotContent:hover {
+  color: var(--a);
+}
+
 .rowLabel {
   padding: 5px 10px;
   font-size: 20px;

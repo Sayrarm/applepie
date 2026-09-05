@@ -1,11 +1,11 @@
 .container {
     display: flex;
     flex-direction: column;
-    margin-top: 15px;
     padding: 5px;
-    width: 100%;
+    margin: 20px auto 0;
 
     background-color: var(--bg-glass);
+    font-family: TikTok Sans, monospace;
 }
 
 .navigation {
@@ -24,6 +24,7 @@
 
 .select {
     width: 150px;
+    box-shadow: var(--box-shadow);
 }
 
 .select [class$="-control"] {
@@ -78,4 +79,53 @@
 .protocoreContainer {
     display: flex;
     gap: 5px;
+}
+
+.choosenCard,
+.startButton {
+    text-decoration: none;
+    background: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.choosenCard {
+    width: 170px;
+    height: 100px;
+    color: var(--colorTextDark);
+    font-family: TikTok Sans, monospace;
+    font-size: 16px;
+    border: 1px solid var(--border-battle-page);
+    margin: 5px;
+    padding-top: 4px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choosenCard:hover {
+    color: var(--a);
+}
+
+.cardsContainer {
+    border-bottom: 2px solid var(--forSelect);
+    padding-bottom: 5px;
+}
+
+.startButton {
+    margin-top: 5px;
+    padding: 10px 40px;
+    align-self: center;
+    font-family: TikTok Sans, monospace;
+    font-size: 18px;
+    border: none;
+
+    color: var(--colorText);
+    background-color: var(--forSelect);
+    box-shadow: var(--box-shadow);
+}
+
+.startButton:hover {
+    background-color: var(--a-hover);
 }

@@ -332,7 +332,7 @@ function Showcase() {
                   >
                     <RenderCardSlot
                       card={card}
-                      placement="solar"
+                      placement="Solar"
                       index={index}
                       getCardData={getCardDataWrapper}
                       cardModalRef={cardModalRef}
@@ -354,7 +354,7 @@ function Showcase() {
                   >
                     <RenderCardSlot
                       card={card}
-                      placement="lunar"
+                      placement="Lunar"
                       index={index}
                       getCardData={getCardDataWrapper}
                       cardModalRef={cardModalRef}
