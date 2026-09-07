@@ -103,4 +103,12 @@ export const eventsData = [
     endDate: "2026-09-13T04:59:59",
     active: true,
   },
+  {
+    id: 14,
+    name: "Shared Bloom",
+    image: "../assets/main-page/events/shared-bloom.png",
+    startDate: "2026-09-08T05:00:00",
+    endDate: "2026-09-17T04:59:59",
+    active: true,
+  },
 ];

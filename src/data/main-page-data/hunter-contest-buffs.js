@@ -192,6 +192,31 @@ export const hunterContestBuffs = [
     teamC:
         "Advancement: Increases CRIT DMG of all allied units.",
 
+    active: false,
+  },
+  {
+    id: 8,
+    teamAStella1: "../assets/icons/ruby.png",
+    teamAStella1Count: 5,
+    teamAStella2: "../assets/icons/amber.png",
+    teamAStella2Count: 1,
+    teamA:
+        "Charged ATK Boost: After a Charged Attack hits an enemy, Active Skill DMG taken by all enemies is increased by 8% for 15s, up to 48%. This can trigger at most once per attack.",
+
+    teamBStella1: "../assets/icons/sapphire.png",
+    teamBStella1Count: 4,
+    teamBStella2: "../assets/icons/emerald.png",
+    teamBStella2Count: 1,
+    teamB:
+        "Collaborative Fusion: Enemies hit by Support Skills take 80% more Basic Attack DMG for 5s.",
+
+    teamCStella1: "../assets/icons/emerald.png",
+    teamCStella1Count: 3,
+    teamCStella2: "../assets/icons/pearl.png",
+    teamCStella2Count: 1,
+    teamC:
+        "Empowerment: Increases ATK of all allied units.",
+
     active: true,
   },
 ];
