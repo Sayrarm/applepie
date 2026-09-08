@@ -47,3 +47,68 @@ export const storyCardInfo = [
     memories: [371, 274, 181],
   },
 ];
+
+export const mythTitle = [
+  {
+    cardsId: [195, 196],
+    title: "Shooting Stars",
+  },
+  {
+    cardsId: [199, 200],
+    title: "Where Stars Scatter",
+  },
+  {
+    cardsId: [197, 198],
+    title: "Twilight’s Dawn",
+  },
+  {
+    cardsId: [289, 290],
+    title: "Tower Of Secrets",
+  },
+  {
+    cardsId: [293, 294],
+    title: "Sacred Chapter",
+  },
+  {
+    cardsId: [291, 292],
+    title: "Snow’s Embrace",
+  },
+  {
+    cardsId: [385, 386],
+    title: "Sea Of Golden Sand",
+  },
+  {
+    cardsId: [412, 413],
+    title: "A Thought Across",
+  },
+  {
+    cardsId: [389, 390],
+    title: "Tears of Romirro",
+  },
+  {
+    cardsId: [387, 388],
+    title: "Forgotten Sea",
+  },
+  {
+    cardsId: [98, 99],
+    title: "Captivating Moment",
+  },
+  {
+    cardsId: [102, 103],
+    title: "Crimson Spirit",
+  },
+  {
+    cardsId: [100, 101],
+    title: "Beyond Cloudfall",
+  },
+  {
+    cardsId: [28, 27],
+    title: "Yin Yang Sundering",
+  },{
+    cardsId: [30, 29],
+    title: "Decoherence",
+  },{
+    cardsId: [32, 31],
+    title: "Lucid Dream",
+  },
+]

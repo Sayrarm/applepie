@@ -58,7 +58,6 @@ function CardArticle() {
             text={`${card.char}: ${card.name}`}
             className={styles.cardTitle}
           >
-            {card.char}: {card.name}
           </CopyableText>
 
           <ObtainInfo cardId={cardId} obtainData={obtainData} />

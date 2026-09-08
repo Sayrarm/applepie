@@ -19,7 +19,7 @@ export {
   getProtocoreLevelsString,
 } from "./card-article-data/protocoreUtils.js";
 export { solar4Stars } from "./card-article-data/solar-4-star-info.js";
-export { storyCardInfo } from "./card-article-data/story-card-info.js";
+export { storyCardInfo, mythTitle } from "./card-article-data/story-card-info.js";
 
 //companion-battle-data
 export { asideComp } from "./companion-battle-data/aside-comp.js";

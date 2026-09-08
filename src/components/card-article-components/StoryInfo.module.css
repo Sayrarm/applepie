@@ -27,3 +27,8 @@
 .value:hover {
   color: var(--a);
 }
+
+.cardTitle {
+  font-size: 20px;
+  font-family: TikTok Sans, monospace;
+}
