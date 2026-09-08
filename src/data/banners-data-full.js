@@ -950,7 +950,7 @@ export const bannersDataFull = [
     image: "../assets/banners/where-silverwings-rest.png",
     cardIds: [102, 103],
     startDate: "2026-09-08T05:00:00",
-    endDate: "2025-09-15T04:59:59",
+    endDate: "2026-09-15T04:59:59",
     rerun: true,
     active: true,
   },
