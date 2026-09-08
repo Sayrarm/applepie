@@ -17,7 +17,12 @@ export const anCategories = [
     title: "When Shooting Stars Fall",
     image: "../assets/companions/xavier-youth.png",
   },
-
+  {
+    id: 12,
+    link: "echoes-of-the-ruins",
+    title: "Echoes of the Ruins",
+    image: "../assets/companions/xavier_stoit.png",
+  },
   {
     id: 4,
     link: "pure-white-heart",
@@ -36,7 +41,12 @@ export const anCategories = [
     title: "Still In Dark",
     image: "../assets/companions/zayne-dawnbreaker.png",
   },
-
+  {
+    id: 13,
+    link: "what-gives-life-weight",
+    title: "What Gives Life Weight",
+    image: "../assets/companions/zayne_grystni.png",
+  },
   {
     id: 7,
     link: "unique-vermillion",
@@ -55,18 +65,34 @@ export const anCategories = [
     title: "Siren's Song",
     image: "../assets/companions/rafayel-phantom.png",
   },
-
+  {
+    id: 14,
+    link: "that-painting",
+    title: "That Painting",
+    image: "../assets/companions/rafayel_dumaet.png",
+  },
   {
     id: 10,
     link: "land-of-lost",
     title: "Land Of Lost",
     image: "../assets/companions/sylus-visitor.png",
   },
-
+  {
+    id: 15,
+    link: "temporary-teammate",
+    title: "Temporary Teammate",
+    image: "../assets/companions/sylus_karta.png",
+  },
   {
     id: 11,
     link: "pathless-realm",
     title: "Pathless Realm",
     image: "../assets/companions/caleb_pilot.png",
+  },
+  {
+    id: 16,
+    link: "an-open-window",
+    title: "An Open Window",
+    image: "../assets/companions/caleb_chitaet.png",
   },
 ];
