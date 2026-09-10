@@ -4,7 +4,7 @@ import { getImageUrl } from "@hooks";
 import { ModalWindow } from "@components";
 import { compData } from "@data";
 
-function ChooseCompanionAndWeapon({ selectedCompanion, onSelectCompanion }) {
+function ChooseCompanion({ selectedCompanion, onSelectCompanion }) {
   const companionModalRef = useRef();
 
   const showCompanionModal = () => {
@@ -70,4 +70,4 @@ function ChooseCompanionAndWeapon({ selectedCompanion, onSelectCompanion }) {
   );
 }
 
-export default ChooseCompanionAndWeapon;
+export default ChooseCompanion;

@@ -23,7 +23,7 @@
 /*************Select********************/
 
 .select {
-    width: 150px;
+    width: 200px;
     box-shadow: var(--box-shadow);
 }
 
@@ -66,6 +66,11 @@
 
 .select [class$="-singleValue"] {
     color: var(--colorText);
+    font-size: 12px;
+}
+
+.select [class$="-indicatorContainer"] {
+    padding: 5px;
 }
 
 /**********************************************/

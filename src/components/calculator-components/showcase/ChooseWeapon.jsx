@@ -4,7 +4,7 @@ import { getImageUrl } from "@hooks";
 import { ModalWindow } from "@components";
 import { compData } from "@data";
 
-function ChooseCompanionAndWeapon({ selectedMCWeapon, onSelectMCWeapon }) {
+function ChooseWeapon({ selectedMCWeapon, onSelectMCWeapon }) {
   const mcWeaponModalRef = useRef();
 
   const showMCWeaponModal = () => {
@@ -72,4 +72,4 @@ function ChooseCompanionAndWeapon({ selectedMCWeapon, onSelectMCWeapon }) {
   );
 }
 
-export default ChooseCompanionAndWeapon;
+export default ChooseWeapon;
