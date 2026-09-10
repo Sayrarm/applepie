@@ -78,6 +78,7 @@
 .addCompanionText {
   background-color: var(--forSelect);
   box-shadow: var(--box-shadow);
+  width: 175px;
   padding: 10px;
   color: var(--colorText);
   font-size: 18px;

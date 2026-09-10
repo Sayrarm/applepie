@@ -1,7 +1,7 @@
 import styles from "./Optimizer.module.css";
-import { ChooseCompanion, ChooseWeapon, ModalChooseCard, RenderCardSlot } from "@components";
+import {ChooseCompanion, ChooseWeapon, ModalChooseCard, RenderCardSlot} from "@components";
 import Select from "react-select";
-import { useState, useRef } from "react";
+import {useState, useRef} from "react";
 
 function Optimizer() {
     const [selectedCompanion, setSelectedCompanion] = useState(null);
@@ -19,37 +19,37 @@ function Optimizer() {
     const modalChooseCardRef = useRef();
 
     const betaProtocoreOptions = [
-        { value: "oath_recovery_boost", label: "Oath Recovery Boost" },
-        { value: "oath_strength", label: "Oath Strength" },
-        { value: "expedited_energy_boost", label: "Expedited Energy Boost" },
-        { value: "atk_bonus", label: "ATK Bonus" },
-        { value: "hp_bonus", label: "HP Bonus" },
-        { value: "def_bonus", label: "DEF Bonus" },
+        {value: "oath_recovery_boost", label: "Oath Recovery Boost"},
+        {value: "oath_strength", label: "Oath Strength"},
+        {value: "expedited_energy_boost", label: "Expedited Energy Boost"},
+        {value: "atk_bonus", label: "ATK Bonus"},
+        {value: "hp_bonus", label: "HP Bonus"},
+        {value: "def_bonus", label: "DEF Bonus"},
     ];
 
     const deltaProtocoreOptions = [
-        { value: "crit_rate", label: "CRIT Rate" },
-        { value: "crit_dmg", label: "CRIT DMG" },
-        { value: "dmg_boost_weakened", label: "DMG Boost to Weakened" },
-        { value: "atk_bonus", label: "ATK Bonus" },
-        { value: "hp_bonus", label: "HP Bonus" },
-        { value: "def_bonus", label: "DEF Bonus" },
+        {value: "crit_rate", label: "CRIT Rate"},
+        {value: "crit_dmg", label: "CRIT DMG"},
+        {value: "dmg_boost_weakened", label: "DMG Boost to Weakened"},
+        {value: "atk_bonus", label: "ATK Bonus"},
+        {value: "hp_bonus", label: "HP Bonus"},
+        {value: "def_bonus", label: "DEF Bonus"},
     ];
 
     const mainStatOptions = [
-        { value: "hp", label: "HP" },
-        { value: "atk", label: "ATK" },
-        { value: "def", label: "DEF" },
+        {value: "hp", label: "HP"},
+        {value: "atk", label: "ATK"},
+        {value: "def", label: "DEF"},
     ];
 
     const subStatOptions = [
-        { value: "atk_bonus", label: "ATK Bonus" },
-        { value: "hp_bonus", label: "HP Bonus" },
-        { value: "def_bonus", label: "DEF Bonus" },
-        { value: "crit_rate", label: "CRIT Rate" },
-        { value: "crit_dmg", label: "CRIT DMG" },
-        { value: "oath_strength", label: "Oath Strength" },
-        { value: "dmg_boost_weakened", label: "DMG Boost to Weakened" },
+        {value: "atk_bonus", label: "ATK Bonus"},
+        {value: "hp_bonus", label: "HP Bonus"},
+        {value: "def_bonus", label: "DEF Bonus"},
+        {value: "crit_rate", label: "CRIT Rate"},
+        {value: "crit_dmg", label: "CRIT DMG"},
+        {value: "oath_strength", label: "Oath Strength"},
+        {value: "dmg_boost_weakened", label: "DMG Boost to Weakened"},
     ];
 
     const handleSelectCard = (placement, index, card) => {
@@ -72,49 +72,65 @@ function Optimizer() {
     // Функция для получения данных карточки (заглушка, если нужна)
     const getCardData = (card) => {
         if (!card) return null;
-        return { level: 1, rank: 0, isAscended: false, protocores: [] };
+        return {level: 1, rank: 0, isAscended: false, protocores: []};
     };
 
     return (
         <section className={styles.container}>
             <nav className={styles.navigation}>
-                <ChooseCompanion
-                    selectedCompanion={selectedCompanion}
-                    onSelectCompanion={setSelectedCompanion}
-                />
-                <ChooseWeapon
-                    selectedMCWeapon={selectedWeapon}
-                    onSelectMCWeapon={setSelectedWeapon}
-                />
+                <div>
+                    <ChooseCompanion
+                        selectedCompanion={selectedCompanion}
+                        onSelectCompanion={setSelectedCompanion}
+                    />
+                    <ChooseWeapon
+                        selectedMCWeapon={selectedWeapon}
+                        onSelectMCWeapon={setSelectedWeapon}
+                    />
+                </div>
+
                 <div className={styles.selectMenu}>
-                    <Select
-                        placeholder="Select Beta Protocore"
-                        options={betaProtocoreOptions}
-                        className={styles.select}
-                        isClearable
-                        isSearchable={false}
-                    />
-                    <Select
-                        placeholder="Select Delta Protocore"
-                        options={deltaProtocoreOptions}
-                        className={styles.select}
-                        isClearable
-                        isSearchable={false}
-                    />
-                    <Select
-                        placeholder="Select Main Stat"
-                        options={mainStatOptions}
-                        className={styles.select}
-                        isClearable
-                        isSearchable={false}
-                    />
-                    <Select
-                        placeholder="Select Sub Stat"
-                        options={subStatOptions}
-                        className={styles.select}
-                        isClearable
-                        isSearchable={false}
-                    />
+                    <div className={styles.selectContainer}>
+                        Beta:
+                        <Select
+                            placeholder="Select Beta Protocore"
+                            options={betaProtocoreOptions}
+                            className={styles.select}
+                            isClearable
+                            isSearchable={false}
+                        />
+                    </div>
+
+                    <div className={styles.selectContainer}>
+                        Delta:
+                        <Select
+                            placeholder="Select Delta Protocore"
+                            options={deltaProtocoreOptions}
+                            className={styles.select}
+                            isClearable
+                            isSearchable={false}
+                        />
+                    </div>
+                    <div className={styles.selectContainer}>
+                        Main Stat:
+                        <Select
+                            placeholder="Select Main Stat"
+                            options={mainStatOptions}
+                            className={styles.select}
+                            isClearable
+                            isSearchable={false}
+                        />
+                    </div>
+                    <div className={styles.selectContainer}>
+                        Sub Stat:
+                        <Select
+                            placeholder="Select Sub Stat"
+                            options={subStatOptions}
+                            className={styles.select}
+                            isClearable
+                            isSearchable={false}
+                        />
+                    </div>
                 </div>
             </nav>
 
@@ -129,7 +145,7 @@ function Optimizer() {
                         smallCard={true}
                         showProtocores={false}
                         className={`${styles.choosenCard} ${!solarCard1 ? styles.emptySlot : ""}`}
-                        showCardSlotEquipped = {false}
+                        showCardSlotEquipped={false}
                     />
                     <div className={styles.protocoreContainer}>
                         <div>Protocore 1</div>
@@ -147,7 +163,7 @@ function Optimizer() {
                         smallCard={true}
                         showProtocores={false}
                         className={`${styles.choosenCard} ${!solarCard2 ? styles.emptySlot : ""}`}
-                        showCardSlotEquipped = {false}
+                        showCardSlotEquipped={false}
                     />
                     <div className={styles.protocoreContainer}>
                         <div>Protocore 1</div>
@@ -165,7 +181,7 @@ function Optimizer() {
                         smallCard={true}
                         showProtocores={false}
                         className={`${styles.choosenCard} ${!lunarCard1 ? styles.emptySlot : ""}`}
-                        showCardSlotEquipped = {false}
+                        showCardSlotEquipped={false}
                     />
                     <div className={styles.protocoreContainer}>
                         <div>Protocore 1</div>
@@ -183,7 +199,7 @@ function Optimizer() {
                         smallCard={true}
                         showProtocores={false}
                         className={`${styles.choosenCard} ${!lunarCard2 ? styles.emptySlot : ""}`}
-                        showCardSlotEquipped = {false}
+                        showCardSlotEquipped={false}
                     />
                     <div className={styles.protocoreContainer}>
                         <div>Protocore 1</div>
@@ -201,7 +217,7 @@ function Optimizer() {
                         smallCard={true}
                         showProtocores={false}
                         className={`${styles.choosenCard} ${!lunarCard3 ? styles.emptySlot : ""}`}
-                        showCardSlotEquipped = {false}
+                        showCardSlotEquipped={false}
                     />
                     <div className={styles.protocoreContainer}>
                         <div>Protocore 1</div>
@@ -219,7 +235,7 @@ function Optimizer() {
                         smallCard={true}
                         showProtocores={false}
                         className={`${styles.choosenCard} ${!lunarCard4 ? styles.emptySlot : ""}`}
-                        showCardSlotEquipped = {false}
+                        showCardSlotEquipped={false}
                     />
                     <div className={styles.protocoreContainer}>
                         <div>Protocore 1</div>
