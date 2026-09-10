@@ -1,14 +1,23 @@
 import styles from "./Optimizer.module.css";
-import {ChooseCompanion, ChooseWeapon} from "@components";
+import { ChooseCompanion, ChooseWeapon, ModalChooseCard, RenderCardSlot } from "@components";
 import Select from "react-select";
-import {useState} from "react";
+import { useState, useRef } from "react";
 
 function Optimizer() {
-
     const [selectedCompanion, setSelectedCompanion] = useState(null);
     const [selectedWeapon, setSelectedWeapon] = useState(null);
 
-    // Опции для Select Beta Protocore
+    // Состояния для карточек
+    const [solarCard1, setSolarCard1] = useState(null);
+    const [solarCard2, setSolarCard2] = useState(null);
+    const [lunarCard1, setLunarCard1] = useState(null);
+    const [lunarCard2, setLunarCard2] = useState(null);
+    const [lunarCard3, setLunarCard3] = useState(null);
+    const [lunarCard4, setLunarCard4] = useState(null);
+
+    // Рефы для модалок
+    const modalChooseCardRef = useRef();
+
     const betaProtocoreOptions = [
         { value: "oath_recovery_boost", label: "Oath Recovery Boost" },
         { value: "oath_strength", label: "Oath Strength" },
@@ -18,7 +27,6 @@ function Optimizer() {
         { value: "def_bonus", label: "DEF Bonus" },
     ];
 
-    // Опции для Select Delta Protocore
     const deltaProtocoreOptions = [
         { value: "crit_rate", label: "CRIT Rate" },
         { value: "crit_dmg", label: "CRIT DMG" },
@@ -28,14 +36,12 @@ function Optimizer() {
         { value: "def_bonus", label: "DEF Bonus" },
     ];
 
-    // Опции для Select Main Stat
     const mainStatOptions = [
         { value: "hp", label: "HP" },
         { value: "atk", label: "ATK" },
         { value: "def", label: "DEF" },
     ];
 
-    // Опции для Select Sub Stat
     const subStatOptions = [
         { value: "atk_bonus", label: "ATK Bonus" },
         { value: "hp_bonus", label: "HP Bonus" },
@@ -45,6 +51,29 @@ function Optimizer() {
         { value: "oath_strength", label: "Oath Strength" },
         { value: "dmg_boost_weakened", label: "DMG Boost to Weakened" },
     ];
+
+    const handleSelectCard = (placement, index, card) => {
+        switch (placement) {
+            case "solar":
+                if (index === 0) setSolarCard1(card);
+                else if (index === 1) setSolarCard2(card);
+                break;
+            case "lunar":
+                if (index === 0) setLunarCard1(card);
+                else if (index === 1) setLunarCard2(card);
+                else if (index === 2) setLunarCard3(card);
+                else if (index === 3) setLunarCard4(card);
+                break;
+            default:
+                break;
+        }
+    };
+
+    // Функция для получения данных карточки (заглушка, если нужна)
+    const getCardData = (card) => {
+        if (!card) return null;
+        return { level: 1, rank: 0, isAscended: false, protocores: [] };
+    };
 
     return (
         <section className={styles.container}>
@@ -91,54 +120,107 @@ function Optimizer() {
 
             <section className={styles.cardsContainer}>
                 <article className={styles.articleContainer}>
-                    <button className={styles.choosenCard}>
-                        + Add Solar Memory
-                    </button>
+                    <RenderCardSlot
+                        card={solarCard1}
+                        placement="solar"
+                        index={0}
+                        getCardData={getCardData}
+                        cardModalRef={modalChooseCardRef}
+                        smallCard={true}
+                        showProtocores={false}
+                        className={`${styles.choosenCard} ${!solarCard1 ? styles.emptySlot : ""}`}
+                        showCardSlotEquipped = {false}
+                    />
                     <div className={styles.protocoreContainer}>
                         <div>Protocore 1</div>
                         <div>Protocore 2</div>
                     </div>
                 </article>
+
                 <article className={styles.articleContainer}>
-                    <button className={styles.choosenCard}>
-                        + Add Solar Memory
-                    </button>
+                    <RenderCardSlot
+                        card={solarCard2}
+                        placement="solar"
+                        index={1}
+                        getCardData={getCardData}
+                        cardModalRef={modalChooseCardRef}
+                        smallCard={true}
+                        showProtocores={false}
+                        className={`${styles.choosenCard} ${!solarCard2 ? styles.emptySlot : ""}`}
+                        showCardSlotEquipped = {false}
+                    />
                     <div className={styles.protocoreContainer}>
                         <div>Protocore 1</div>
                         <div>Protocore 2</div>
                     </div>
                 </article>
+
                 <article className={styles.articleContainer}>
-                    <button className={styles.choosenCard}>
-                        + Add Lunar Memory
-                    </button>
+                    <RenderCardSlot
+                        card={lunarCard1}
+                        placement="lunar"
+                        index={0}
+                        getCardData={getCardData}
+                        cardModalRef={modalChooseCardRef}
+                        smallCard={true}
+                        showProtocores={false}
+                        className={`${styles.choosenCard} ${!lunarCard1 ? styles.emptySlot : ""}`}
+                        showCardSlotEquipped = {false}
+                    />
                     <div className={styles.protocoreContainer}>
                         <div>Protocore 1</div>
                         <div>Protocore 2</div>
                     </div>
                 </article>
+
                 <article className={styles.articleContainer}>
-                    <button className={styles.choosenCard}>
-                        + Add Lunar Memory
-                    </button>
+                    <RenderCardSlot
+                        card={lunarCard2}
+                        placement="lunar"
+                        index={1}
+                        getCardData={getCardData}
+                        cardModalRef={modalChooseCardRef}
+                        smallCard={true}
+                        showProtocores={false}
+                        className={`${styles.choosenCard} ${!lunarCard2 ? styles.emptySlot : ""}`}
+                        showCardSlotEquipped = {false}
+                    />
                     <div className={styles.protocoreContainer}>
                         <div>Protocore 1</div>
                         <div>Protocore 2</div>
                     </div>
                 </article>
+
                 <article className={styles.articleContainer}>
-                    <button className={styles.choosenCard}>
-                        + Add Lunar Memory
-                    </button>
+                    <RenderCardSlot
+                        card={lunarCard3}
+                        placement="lunar"
+                        index={2}
+                        getCardData={getCardData}
+                        cardModalRef={modalChooseCardRef}
+                        smallCard={true}
+                        showProtocores={false}
+                        className={`${styles.choosenCard} ${!lunarCard3 ? styles.emptySlot : ""}`}
+                        showCardSlotEquipped = {false}
+                    />
                     <div className={styles.protocoreContainer}>
                         <div>Protocore 1</div>
                         <div>Protocore 2</div>
                     </div>
                 </article>
+
                 <article className={styles.articleContainer}>
-                    <button className={styles.choosenCard}>
-                        + Add Lunar Memory
-                    </button>
+                    <RenderCardSlot
+                        card={lunarCard4}
+                        placement="lunar"
+                        index={3}
+                        getCardData={getCardData}
+                        cardModalRef={modalChooseCardRef}
+                        smallCard={true}
+                        showProtocores={false}
+                        className={`${styles.choosenCard} ${!lunarCard4 ? styles.emptySlot : ""}`}
+                        showCardSlotEquipped = {false}
+                    />
                     <div className={styles.protocoreContainer}>
                         <div>Protocore 1</div>
                         <div>Protocore 2</div>
@@ -146,9 +228,13 @@ function Optimizer() {
                 </article>
             </section>
 
-            <button className={styles.startButton}>
-                Start
-            </button>
+            <button className={styles.startButton}>Start</button>
+
+            {/* Модалка выбора карточки */}
+            <ModalChooseCard
+                ref={modalChooseCardRef}
+                onSelectCard={handleSelectCard}
+            />
         </section>
     );
 }

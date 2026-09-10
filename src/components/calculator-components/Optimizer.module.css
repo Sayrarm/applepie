@@ -16,8 +16,8 @@
 }
 
 .selectMenu {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 5px;
 }
 /*************Select********************/
@@ -94,15 +94,18 @@
     transition: 0.3s;
 }
 
+.emptySlot {
+    border: 1px solid var(--border-battle-page);
+}
+
 .choosenCard {
-    width: 170px;
-    height: 100px;
+    width: auto;
+    height: auto;
     color: var(--colorTextDark);
     font-family: TikTok Sans, monospace;
     font-size: 16px;
-    border: 1px solid var(--border-battle-page);
     margin: 5px;
-    padding-top: 4px;
+    padding: 5px;
 
     display: flex;
     justify-content: center;

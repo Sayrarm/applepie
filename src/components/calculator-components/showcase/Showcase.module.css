@@ -152,10 +152,6 @@
   gap: 5px;
 }
 
-.cardSlotEquipped {
-  padding-top: 25px;
-}
-
 .emptySlotContent,
 .noProtocores {
   font-size: 18px;
