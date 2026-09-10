@@ -1,4 +1,5 @@
 export const KEYS = {
+  OPTIMIZER: "optimizer_data",
   SHOWCASE: "showcase_teams", //витрина(шоукейс) команды
   CALC_RESULT: "farm_goals", //трекер
   THEME: "theme", //темная/светлая тема

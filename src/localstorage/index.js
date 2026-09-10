@@ -147,3 +147,8 @@ export {
   isProtocoreEquipped,
   updateProtocoreFilters,
 } from "./filter-protocore-storage.js";
+export {
+  getOptimizerData,
+  saveOptimizerData,
+  clearOptimizerData
+} from "./optimizer-storage.js";
