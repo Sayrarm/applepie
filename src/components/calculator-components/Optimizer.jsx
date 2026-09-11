@@ -3,6 +3,7 @@ import { ChooseCompanion, ChooseWeapon, ModalChooseCard, RenderCardSlot } from "
 import Select from "react-select";
 import { useState, useRef, useEffect } from "react";
 import {
+    clearOptimizerData,
     getOptimizerData,
     saveOptimizerData
 } from "@localstorage";
@@ -106,6 +107,15 @@ function Optimizer() {
         setData((prev) => ({ ...prev, subStat: option }));
     };
 
+    const clearAll = () => {
+        if (!window.confirm('Are you sure you want to clear all settings?')) {
+            return;
+        }
+
+        clearOptimizerData();
+        setData(getOptimizerData());
+    };
+
     const getCardData = (card) => {
         if (!card) return null;
         return { level: 1, rank: 0, isAscended: false, protocores: [] };
@@ -202,7 +212,14 @@ function Optimizer() {
                 ))}
             </section>
 
-            <button className={styles.startButton}>Start</button>
+            <div className={styles.buttonsContainer}>
+                <button
+                    className={styles.clearButton}
+                    onClick={clearAll}
+                >Clear all
+                </button>
+                <button className={styles.startButton}>Start</button>
+            </div>
 
             <ModalChooseCard
                 ref={modalChooseCardRef}

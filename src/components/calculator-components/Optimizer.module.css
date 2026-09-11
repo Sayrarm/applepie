@@ -129,6 +129,13 @@
     padding-bottom: 5px;
 }
 
+.buttonsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.clearButton,
 .startButton {
     margin-top: 5px;
     padding: 10px 40px;
@@ -142,6 +149,7 @@
     box-shadow: var(--box-shadow);
 }
 
+.clearButton:hover,
 .startButton:hover {
     background-color: var(--a-hover);
 }
