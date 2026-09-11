@@ -7,7 +7,8 @@ import {
     getOptimizerData,
     saveOptimizerData,
 } from "@localstorage";
-import { optimizeTeam, calculateTeamStats, calculateCardStats } from "@data";
+import { optimizeTeam, calculateTeamStats } from "@data";
+import StatsTable from "@components/calculator-components/showcase/StatsTable.jsx";
 
 const CARD_SLOTS = [
     { id: "solar1", placement: "solar", index: 0 },
@@ -141,22 +142,8 @@ function Optimizer() {
         // Считаем суммарные статы команды (карточки + протокоры)
         const totalStats = calculateTeamStats(data.cards, optimizationResults);
 
-        // Считаем статы для каждой карточки отдельно
-        const perCardStats = {};
-        CARD_SLOTS.forEach((slot) => {
-            const card = data.cards[slot.id];
-            const cardResults = optimizationResults[slot.id];
-            if (card) {
-                perCardStats[slot.id] = calculateCardStats(card, cardResults);
-            }
-        });
-
         setResults(optimizationResults);
         setTeamStats(totalStats);
-
-        console.log("Optimization results:", optimizationResults);
-        console.log("Team stats (cards + protocores):", totalStats);
-        console.log("Per card stats:", perCardStats);
     };
 
     const getCardData = (card) => {
@@ -283,20 +270,9 @@ function Optimizer() {
 
             {/* Суммарные статы команды */}
             {teamStats && (
-                <div className={styles.totalStats}>
-                    <h3>Total Team Stats (Cards + Protocores):</h3>
-                    <div className={styles.statsGrid}>
-                        <div>HP: {teamStats.hp.toFixed(2)}</div>
-                        <div>ATK: {teamStats.atk.toFixed(2)}</div>
-                        <div>DEF: {teamStats.def.toFixed(2)}</div>
-                        <div>CRIT Rate: {teamStats.critRate.toFixed(2)}%</div>
-                        <div>CRIT DMG: {teamStats.critDmg.toFixed(2)}%</div>
-                        <div>DMG Boost: {teamStats.dmgBoost.toFixed(2)}%</div>
-                        <div>Oath Strength: {teamStats.oathStrength.toFixed(2)}%</div>
-                        <div>Oath Recovery: {teamStats.oathRecoveryBoost.toFixed(2)}%</div>
-                        <div>Expedited Energy: {teamStats.expeditedEnergyBoost.toFixed(2)}%</div>
-                    </div>
-                </div>
+                <StatsTable
+                    stats={teamStats}
+                />
             )}
 
             <div className={styles.buttonsContainer}>

@@ -43,29 +43,43 @@ export { eventsData } from "./main-page-data/events-data.js";
 export { hunterContestBuffs } from "./main-page-data/hunter-contest-buffs.js";
 
 //showcase-data
-export { affinityData } from "./showcase-data/affinity-data.js";
+export { affinityData } from "./calculator-data/showcase-data/affinity-data.js";
 export {
   compDataShowcaseDefault5star,
   compDataShowcaseDefault4star,
   compDataShowcaseSpecific,
   weaponDataShowcaseSpecific,
-} from "./showcase-data/comp-data-showcase.js";
+} from "./calculator-data/showcase-data/comp-data-showcase.js";
 export {
   calculateDamage,
   createDamageCalculator,
   calculateDamageWithBonuses,
   calculateAllDamageTypes,
-} from "./showcase-data/damageCalculator.js";
+} from "./calculator-data/showcase-data/damageCalculator.js";
 export {
   getCardData,
   calculateTotalStats,
   calculateAffinityBonus,
   calculateFinalStatsWithAffinity,
-} from "./showcase-data/showcaseFunctions.js";
+} from "./calculator-data/showcase-data/showcase-functions.js";
 
-//about-data
-export { aboutData } from "./about-data.js";
-export { bannersDataFull } from "./banners-data-full.js";
+//optimizer-data
+export {
+  optimizeTeam,
+  calculateTeamStats,
+  calculateCardStats
+} from "./calculator-data/optimizer-data/optimizer-functions.js";
+
+//calculators data
+export {
+  createEmptyStats,
+  addProtocoreStats,
+  addBaseStats,
+  mergeStats,
+  applyBaseCritDmgBonus
+} from "./calculator-data/stats-utils.js";
+
+//memory upgrade data
 export {
   rarityLevels,
   expDungeonData,
@@ -81,6 +95,37 @@ export {
   getCrystalDungeonRuns,
   getStaminaCost,
 } from "./calculator-data/memory-up-functions.js";
+
+//protocore data
+export {
+  levelUpData,
+  MAX_LEVEL,
+  dungeonData,
+  DUNGEON_COST_PROTOCORE,
+  creditDungeonData,
+  CREDIT_DUNGEON_COST,
+  SUBSTAT_LEVELS,
+  protocoreTypes,
+  protocoreColor,
+} from "./calculator-data/protocore-data.js";
+export {
+  getMainStatValue,
+  getSubstatUpgradeInfo,
+  getRequiredExp,
+  getRequiredCredits,
+  getRequiredDungeonRuns,
+  getRequiredStamina,
+  getCreditDungeonRuns,
+  getStaminaForCredits,
+} from "./calculator-data/protocore-functions.js";
+
+//about-data
+export { aboutData } from "./about-data.js";
+
+//banners data
+export { bannersDataFull } from "./banners-data-full.js";
+
+//my resources data
 export {
   bottles,
   wish,
@@ -103,29 +148,3 @@ export {
   getHeartCount,
   getWishExchange,
 } from "./my-account-data/my-resources-functions.js";
-export {
-  levelUpData,
-  MAX_LEVEL,
-  dungeonData,
-  DUNGEON_COST_PROTOCORE,
-  creditDungeonData,
-  CREDIT_DUNGEON_COST,
-  SUBSTAT_LEVELS,
-  protocoreTypes,
-  protocoreColor,
-} from "./calculator-data/protocore-data.js";
-export {
-  getMainStatValue,
-  getSubstatUpgradeInfo,
-  getRequiredExp,
-  getRequiredCredits,
-  getRequiredDungeonRuns,
-  getRequiredStamina,
-  getCreditDungeonRuns,
-  getStaminaForCredits,
-} from "./calculator-data/protocore-functions.js";
-export {
-  optimizeTeam,
-  calculateTeamStats,
-  calculateCardStats
-} from "./optimizer-data/optimizer-functions.js";

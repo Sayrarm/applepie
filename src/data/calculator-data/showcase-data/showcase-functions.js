@@ -5,6 +5,11 @@ import {
   getCardAscend,
   getCardProtocores,
 } from "@localstorage";
+import {
+  createEmptyStats,
+  mergeStats,
+  applyBaseCritDmgBonus,
+} from "@data";
 
 // ===== ФУНКЦИЯ ДЛЯ ПОЛУЧЕНИЯ ДАННЫХ КАРТОЧКИ =====
 export const getCardData = (card) => {
@@ -16,8 +21,8 @@ export const getCardData = (card) => {
   const baseStats = getStatsWithRank(card, level, rank, isAscended);
 
   const stats = baseStats
-    ? calculateFinalStats(card, baseStats, protocores)
-    : null;
+      ? calculateFinalStats(card, baseStats, protocores)
+      : null;
 
   return { level, rank, isAscended, protocores, stats };
 };
@@ -25,34 +30,15 @@ export const getCardData = (card) => {
 // ===== ПОДСЧЁТ СУММЫ СТАТОВ =====
 export const calculateTotalStats = (solarCards, lunarCards, getCardDataFn) => {
   const allCards = [...solarCards, ...lunarCards].filter(
-    (card) => card !== null,
+      (card) => card !== null,
   );
 
-  const total = {
-    hp: 0,
-    atk: 0,
-    def: 0,
-    critRate: 0,
-    critDmg: 0,
-    dmgBoost: 0,
-    oathStrength: 0,
-    oathRecoveryBoost: 0,
-    expeditedEnergyBoost: 0,
-  };
+  const total = createEmptyStats();
 
   allCards.forEach((card) => {
     const cardData = getCardDataFn(card);
     if (cardData?.stats) {
-      const stats = cardData.stats;
-      total.hp += stats.hp || 0;
-      total.atk += stats.atk || 0;
-      total.def += stats.def || 0;
-      total.critRate += stats.critRate || 0;
-      total.critDmg += stats.critDmg || 0;
-      total.dmgBoost += stats.dmgBoost || 0;
-      total.oathStrength += stats.oathStrength || 0;
-      total.oathRecoveryBoost += stats.oathRecoveryBoost || 0;
-      total.expeditedEnergyBoost += stats.expeditedEnergyBoost || 0;
+      mergeStats(total, cardData.stats);
     }
   });
 
@@ -88,15 +74,11 @@ export const calculateAffinityBonus = (affinityLevel) => {
 
 // ===== ФИНАЛЬНЫЕ СТАТЫ С УЧЁТОМ AFFINITY =====
 export const calculateFinalStatsWithAffinity = (totalStats, affinityBonus) => {
-  return {
+  const withAffinity = {
+    ...totalStats,
     hp: totalStats.hp + affinityBonus.hp,
     atk: totalStats.atk + affinityBonus.atk,
     def: totalStats.def + affinityBonus.def,
-    critRate: totalStats.critRate,
-    critDmg: totalStats.critDmg + 150,
-    dmgBoost: totalStats.dmgBoost,
-    oathStrength: totalStats.oathStrength,
-    oathRecoveryBoost: totalStats.oathRecoveryBoost,
-    expeditedEnergyBoost: totalStats.expeditedEnergyBoost,
   };
+  return applyBaseCritDmgBonus(withAffinity);
 };
