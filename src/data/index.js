@@ -124,3 +124,7 @@ export {
   getCreditDungeonRuns,
   getStaminaForCredits,
 } from "./calculator-data/protocore-functions.js";
+export {
+  optimizeTeam,
+  calculateTotalProtocoreStats
+} from "./optimizer-data/optimizer-functions.js";

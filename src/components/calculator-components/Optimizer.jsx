@@ -5,8 +5,9 @@ import { useState, useRef, useEffect } from "react";
 import {
     clearOptimizerData,
     getOptimizerData,
-    saveOptimizerData
+    saveOptimizerData,
 } from "@localstorage";
+import { optimizeTeam, calculateTotalProtocoreStats } from "@data";
 
 // Конфигурация слотов
 const CARD_SLOTS = [
@@ -21,7 +22,8 @@ const CARD_SLOTS = [
 function Optimizer() {
     // Загружаем сохраненные данные
     const [data, setData] = useState(() => getOptimizerData());
-
+    const [results, setResults] = useState(null);
+    const [totalStats, setTotalStats] = useState(null);
     const modalChooseCardRef = useRef();
 
     // Сохраняем при изменении
@@ -76,10 +78,7 @@ function Optimizer() {
 
         setData((prev) => ({
             ...prev,
-            cards: {
-                ...prev.cards,
-                [slotId]: card,
-            },
+            cards: { ...prev.cards, [slotId]: card },
         }));
     };
 
@@ -112,12 +111,42 @@ function Optimizer() {
     };
 
     const clearAll = () => {
-        if (!window.confirm('Are you sure you want to clear all settings?')) {
+        if (!window.confirm("Are you sure you want to clear all settings?")) return;
+        clearOptimizerData();
+        setData(getOptimizerData());
+        setResults(null);
+        setTotalStats(null);
+    };
+
+    const startOptimization = () => {
+        const allProtocores = JSON.parse(localStorage.getItem("protocores") || "[]");
+
+        if (allProtocores.length === 0) {
+            alert("You don't have any protocores. Add them first.");
             return;
         }
 
-        clearOptimizerData();
-        setData(getOptimizerData());
+        const targets = {
+            beta1: data.betaProtocore_1?.value,
+            beta2: data.betaProtocore_2?.value,
+            delta: data.deltaProtocore?.value,
+            mainStat: data.mainStat?.value,
+            subStat: data.subStat?.value,
+        };
+
+        const { results: optimizationResults } = optimizeTeam({
+            cards: data.cards,
+            allProtocores,
+            targets,
+        });
+
+        const stats = calculateTotalProtocoreStats(optimizationResults);
+
+        setResults(optimizationResults);
+        setTotalStats(stats);
+
+        console.log("Optimization results:", optimizationResults);
+        console.log("Total stats:", stats);
     };
 
     const getCardData = (card) => {
@@ -221,21 +250,52 @@ function Optimizer() {
                             className={`${styles.choosenCard} ${!data.cards[slot.id] ? styles.emptySlot : ""}`}
                             showCardSlotEquipped={false}
                         />
-                        <div className={styles.protocoreContainer}>
-                            <div>Protocore 1</div>
-                            <div>Protocore 2</div>
-                        </div>
+
+                        {results && results[slot.id] && (
+                            <div className={styles.resultProtocores}>
+                                {Object.entries(results[slot.id]).map(([type, protocore]) => (
+                                    protocore && (
+                                        <div key={type} className={styles.resultProtocore}>
+                                            <span className={styles.resultType}>{type}:</span>
+                                            <span>
+                        Lv.{protocore.level} {protocore.mainStat}
+                      </span>
+                                            {protocore.substats?.map((sub, i) => (
+                                                <span key={i} className={styles.resultSubstat}>
+                          {sub.stat}: {sub.value}%
+                        </span>
+                                            ))}
+                                        </div>
+                                    )
+                                ))}
+                            </div>
+                        )}
                     </article>
                 ))}
             </section>
 
+            {totalStats && (
+                <div className={styles.totalStats}>
+                    <h3>Total Protocore Stats:</h3>
+                    <div className={styles.statsGrid}>
+                        <div>HP: {totalStats.hp.toFixed(2)}</div>
+                        <div>ATK: {totalStats.atk.toFixed(2)}</div>
+                        <div>DEF: {totalStats.def.toFixed(2)}</div>
+                        <div>CRIT Rate: {totalStats.critRate.toFixed(2)}%</div>
+                        <div>CRIT DMG: {totalStats.critDmg.toFixed(2)}%</div>
+                        <div>DMG Boost: {totalStats.dmgBoost.toFixed(2)}%</div>
+                        <div>Oath Strength: {totalStats.oathStrength.toFixed(2)}%</div>
+                    </div>
+                </div>
+            )}
+
             <div className={styles.buttonsContainer}>
-                <button
-                    className={styles.clearButton}
-                    onClick={clearAll}
-                >Clear all
+                <button className={styles.clearButton} onClick={clearAll}>
+                    Clear all
                 </button>
-                <button className={styles.startButton}>Start</button>
+                <button className={styles.startButton} onClick={startOptimization}>
+                    Start
+                </button>
             </div>
 
             <ModalChooseCard
