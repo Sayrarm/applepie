@@ -126,5 +126,6 @@ export {
 } from "./calculator-data/protocore-functions.js";
 export {
   optimizeTeam,
-  calculateTotalProtocoreStats
+  calculateTeamStats,
+  calculateCardStats
 } from "./optimizer-data/optimizer-functions.js";

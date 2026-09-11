@@ -9,7 +9,7 @@ import {
 import { forwardRef, useImperativeHandle, useRef, useState } from "react";
 import { enhanceMemoriesWithAvailability } from "@localstorage";
 import { memoriesData } from "@data";
-import styles from "./Showcase.module.css";
+import styles from "../showcase/Showcase.module.css";
 
 const ModalChooseCard = forwardRef(({ onSelectCard }, ref) => {
   const [modalPlacement, setModalPlacement] = useState(null);

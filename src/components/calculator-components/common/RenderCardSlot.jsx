@@ -1,4 +1,4 @@
-import styles from "./Showcase.module.css";
+import styles from "../showcase/Showcase.module.css";
 import { ProtocoreBlock, Card } from "@components";
 
 function RenderCardSlot({

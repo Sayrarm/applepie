@@ -7,9 +7,8 @@ import {
     getOptimizerData,
     saveOptimizerData,
 } from "@localstorage";
-import { optimizeTeam, calculateTotalProtocoreStats } from "@data";
+import { optimizeTeam, calculateTeamStats, calculateCardStats } from "@data";
 
-// Конфигурация слотов
 const CARD_SLOTS = [
     { id: "solar1", placement: "solar", index: 0 },
     { id: "solar2", placement: "solar", index: 1 },
@@ -23,7 +22,7 @@ function Optimizer() {
     // Загружаем сохраненные данные
     const [data, setData] = useState(() => getOptimizerData());
     const [results, setResults] = useState(null);
-    const [totalStats, setTotalStats] = useState(null);
+    const [teamStats, setTeamStats] = useState(null);
     const modalChooseCardRef = useRef();
 
     // Сохраняем при изменении
@@ -114,7 +113,7 @@ function Optimizer() {
         clearOptimizerData();
         setData(getOptimizerData());
         setResults(null);
-        setTotalStats(null);
+        setTeamStats(null);
     };
 
     const startOptimization = () => {
@@ -139,13 +138,25 @@ function Optimizer() {
             targets,
         });
 
-        const stats = calculateTotalProtocoreStats(optimizationResults);
+        // Считаем суммарные статы команды (карточки + протокоры)
+        const totalStats = calculateTeamStats(data.cards, optimizationResults);
+
+        // Считаем статы для каждой карточки отдельно
+        const perCardStats = {};
+        CARD_SLOTS.forEach((slot) => {
+            const card = data.cards[slot.id];
+            const cardResults = optimizationResults[slot.id];
+            if (card) {
+                perCardStats[slot.id] = calculateCardStats(card, cardResults);
+            }
+        });
 
         setResults(optimizationResults);
-        setTotalStats(stats);
+        setTeamStats(totalStats);
 
         console.log("Optimization results:", optimizationResults);
-        console.log("Total stats:", stats);
+        console.log("Team stats (cards + protocores):", totalStats);
+        console.log("Per card stats:", perCardStats);
     };
 
     const getCardData = (card) => {
@@ -270,17 +281,20 @@ function Optimizer() {
                 ))}
             </section>
 
-            {totalStats && (
+            {/* Суммарные статы команды */}
+            {teamStats && (
                 <div className={styles.totalStats}>
-                    <h3>Total Protocore Stats:</h3>
+                    <h3>Total Team Stats (Cards + Protocores):</h3>
                     <div className={styles.statsGrid}>
-                        <div>HP: {totalStats.hp.toFixed(2)}</div>
-                        <div>ATK: {totalStats.atk.toFixed(2)}</div>
-                        <div>DEF: {totalStats.def.toFixed(2)}</div>
-                        <div>CRIT Rate: {totalStats.critRate.toFixed(2)}%</div>
-                        <div>CRIT DMG: {totalStats.critDmg.toFixed(2)}%</div>
-                        <div>DMG Boost: {totalStats.dmgBoost.toFixed(2)}%</div>
-                        <div>Oath Strength: {totalStats.oathStrength.toFixed(2)}%</div>
+                        <div>HP: {teamStats.hp.toFixed(2)}</div>
+                        <div>ATK: {teamStats.atk.toFixed(2)}</div>
+                        <div>DEF: {teamStats.def.toFixed(2)}</div>
+                        <div>CRIT Rate: {teamStats.critRate.toFixed(2)}%</div>
+                        <div>CRIT DMG: {teamStats.critDmg.toFixed(2)}%</div>
+                        <div>DMG Boost: {teamStats.dmgBoost.toFixed(2)}%</div>
+                        <div>Oath Strength: {teamStats.oathStrength.toFixed(2)}%</div>
+                        <div>Oath Recovery: {teamStats.oathRecoveryBoost.toFixed(2)}%</div>
+                        <div>Expedited Energy: {teamStats.expeditedEnergyBoost.toFixed(2)}%</div>
                     </div>
                 </div>
             )}
