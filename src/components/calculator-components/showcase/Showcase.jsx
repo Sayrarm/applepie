@@ -23,6 +23,7 @@ import {
   calculateFinalStatsWithAffinity,
   calculateAffinityBonus,
 } from "@data";
+import StatsTable from "@components/calculator-components/showcase/StatsTable.jsx";
 
 function Showcase() {
   // Загружаем сохраненные команды
@@ -281,34 +282,7 @@ function Showcase() {
             </div>
 
             <div>
-              <table className={styles.statsTable}>
-                <tbody>
-                  <tr>
-                    <th>HP</th>
-                    <td>{finalStats.hp.toFixed(2)}</td>
-                    <th>Crit Rate</th>
-                    <td>{finalStats.critRate.toFixed(2)}%</td>
-                    <th>Oath Strength</th>
-                    <td>{finalStats.oathStrength.toFixed(2)}%</td>
-                  </tr>
-                  <tr>
-                    <th>ATK</th>
-                    <td>{finalStats.atk.toFixed(2)}</td>
-                    <th>Crit DMG</th>
-                    <td>{finalStats.critDmg.toFixed(2)}%</td>
-                    <th>Oath Recovery Boost</th>
-                    <td>{finalStats.oathRecoveryBoost.toFixed(2)}%</td>
-                  </tr>
-                  <tr>
-                    <th>DEF</th>
-                    <td>{finalStats.def.toFixed(2)}</td>
-                    <th>DMG Boost to Weakened</th>
-                    <td>{finalStats.dmgBoost.toFixed(2)}%</td>
-                    <th>Expedited Energy Boost</th>
-                    <td>{finalStats.expeditedEnergyBoost.toFixed(2)}%</td>
-                  </tr>
-                </tbody>
-              </table>
+              <StatsTable stats={finalStats}/>
 
               <div className={styles.bonuses}>
                 <AffinitySelect
