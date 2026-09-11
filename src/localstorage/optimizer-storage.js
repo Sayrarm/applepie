@@ -5,7 +5,8 @@ export const getOptimizerData = () => {
     return get(KEYS.OPTIMIZER, {
         selectedCompanion: null,
         selectedWeapon: null,
-        betaProtocore: null,
+        betaProtocore_1: null,
+        betaProtocore_2: null,
         deltaProtocore: null,
         mainStat: null,
         subStat: null,
@@ -28,7 +29,8 @@ export const clearOptimizerData = () => {
     return set(KEYS.OPTIMIZER, {
         selectedCompanion: null,
         selectedWeapon: null,
-        betaProtocore: null,
+        betaProtocore_1: null,
+        betaProtocore_2: null,
         deltaProtocore: null,
         mainStat: null,
         subStat: null,

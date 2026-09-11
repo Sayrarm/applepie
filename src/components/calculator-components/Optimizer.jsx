@@ -91,8 +91,12 @@ function Optimizer() {
         setData((prev) => ({ ...prev, selectedWeapon: weapon }));
     };
 
-    const handleBetaChange = (option) => {
-        setData((prev) => ({ ...prev, betaProtocore: option }));
+    const handleBetaChange1 = (option) => {
+        setData((prev) => ({ ...prev, betaProtocore_1: option }));
+    };
+
+    const handleBetaChange2 = (option) => {
+        setData((prev) => ({ ...prev, betaProtocore_2: option }));
     };
 
     const handleDeltaChange = (option) => {
@@ -137,12 +141,25 @@ function Optimizer() {
 
                 <div className={styles.selectMenu}>
                     <div className={styles.selectContainer}>
-                        Beta:
+                        Beta 1:
                         <Select
                             placeholder="Select Beta Protocore"
                             options={betaProtocoreOptions}
-                            value={data.betaProtocore}
-                            onChange={handleBetaChange}
+                            value={data.betaProtocore_1}
+                            onChange={handleBetaChange1}
+                            className={styles.select}
+                            isClearable
+                            isSearchable={false}
+                        />
+                    </div>
+
+                    <div className={styles.selectContainer}>
+                        Beta 2:
+                        <Select
+                            placeholder="Select Beta Protocore"
+                            options={betaProtocoreOptions}
+                            value={data.betaProtocore_2}
+                            onChange={handleBetaChange2}
                             className={styles.select}
                             isClearable
                             isSearchable={false}
