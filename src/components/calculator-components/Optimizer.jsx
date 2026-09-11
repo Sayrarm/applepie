@@ -1,5 +1,5 @@
 import styles from "./Optimizer.module.css";
-import { ChooseCompanion, ChooseWeapon, ModalChooseCard, RenderCardSlot } from "@components";
+import { ChooseCompanion, ChooseWeapon, ModalChooseCard, RenderCardSlot, ProtocoreBlock } from "@components";
 import Select from "react-select";
 import { useState, useRef, useEffect } from "react";
 import {
@@ -75,7 +75,6 @@ function Optimizer() {
     const handleSelectCard = (placement, index, card) => {
         const slotId = findSlotId(placement, index);
         if (!slotId) return;
-
         setData((prev) => ({
             ...prev,
             cards: { ...prev.cards, [slotId]: card },
@@ -253,21 +252,18 @@ function Optimizer() {
 
                         {results && results[slot.id] && (
                             <div className={styles.resultProtocores}>
-                                {Object.entries(results[slot.id]).map(([type, protocore]) => (
-                                    protocore && (
-                                        <div key={type} className={styles.resultProtocore}>
-                                            <span className={styles.resultType}>{type}:</span>
-                                            <span>
-                        Lv.{protocore.level} {protocore.mainStat}
-                      </span>
-                                            {protocore.substats?.map((sub, i) => (
-                                                <span key={i} className={styles.resultSubstat}>
-                          {sub.stat}: {sub.value}%
-                        </span>
-                                            ))}
-                                        </div>
-                                    )
-                                ))}
+                                {Object.entries(results[slot.id]).map(
+                                    ([type, protocore]) =>
+                                        protocore && (
+                                            <div key={type} className={styles.resultProtocore}>
+                                                <ProtocoreBlock
+                                                    protocore={protocore}
+                                                    hideChange={true}
+                                                    hideDelete={true}
+                                                />
+                                            </div>
+                                        )
+                                )}
                             </div>
                         )}
                     </article>
