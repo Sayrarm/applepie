@@ -58,13 +58,15 @@ function Optimizer() {
         { value: "DEF Bonus", label: "DEF Bonus" },
     ];
 
-    const mainStatOptions = [
+    // Sub Stat 1 — только HP / ATK / DEF
+    const subStat1Options = [
         { value: "HP", label: "HP" },
         { value: "ATK", label: "ATK" },
         { value: "DEF", label: "DEF" },
     ];
 
-    const subStatOptions = [
+    // Sub Stat 2 — остальные сабстаты
+    const subStat2Options = [
         { value: "ATK Bonus", label: "ATK Bonus" },
         { value: "HP Bonus", label: "HP Bonus" },
         { value: "DEF Bonus", label: "DEF Bonus" },
@@ -110,12 +112,12 @@ function Optimizer() {
         setData((prev) => ({ ...prev, deltaProtocore: option }));
     };
 
-    const handleMainStatChange = (option) => {
-        setData((prev) => ({ ...prev, mainStat: option }));
+    const handleSubStat1Change = (option) => {
+        setData((prev) => ({ ...prev, subStat1: option }));
     };
 
-    const handleSubStatChange = (option) => {
-        setData((prev) => ({ ...prev, subStat: option }));
+    const handleSubStat2Change = (option) => {
+        setData((prev) => ({ ...prev, subStat2: option }));
     };
 
     const clearAll = () => {
@@ -138,8 +140,8 @@ function Optimizer() {
             beta1: data.betaProtocore_1?.value,
             beta2: data.betaProtocore_2?.value,
             delta: data.deltaProtocore?.value,
-            mainStat: data.mainStat?.value,
-            subStat: data.subStat?.value,
+            subStat1: data.subStat1?.value,
+            subStat2: data.subStat2?.value,
         };
 
         const { results: optimizationResults } = optimizeTeam({
@@ -215,12 +217,12 @@ function Optimizer() {
                     </div>
 
                     <div className={styles.selectContainer}>
-                        Main Stat:
+                        Sub Stat 1:
                         <Select
-                            placeholder="Select Main Stat"
-                            options={mainStatOptions}
-                            value={data.mainStat}
-                            onChange={handleMainStatChange}
+                            placeholder="Select Sub Stat 1"
+                            options={subStat1Options}
+                            value={data.subStat1}
+                            onChange={handleSubStat1Change}
                             className={styles.select}
                             isClearable
                             isSearchable={false}
@@ -228,12 +230,12 @@ function Optimizer() {
                     </div>
 
                     <div className={styles.selectContainer}>
-                        Sub Stat:
+                        Sub Stat 2:
                         <Select
-                            placeholder="Select Sub Stat"
-                            options={subStatOptions}
-                            value={data.subStat}
-                            onChange={handleSubStatChange}
+                            placeholder="Select Sub Stat 2"
+                            options={subStat2Options}
+                            value={data.subStat2}
+                            onChange={handleSubStat2Change}
                             className={styles.select}
                             isClearable
                             isSearchable={false}

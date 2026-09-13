@@ -19,25 +19,48 @@ const normalizeStat = (stat) => {
 };
 
 /**
- * Считает score протокора по целевым статам
+ * Проверяет, матчится ли имя стата протокора с целевым.
+ * "ATK" матчится и с "ATK", и с "ATK Bonus".
+ */
+const statMatches = (protocoreStatName, targetStatName) => {
+    if (!protocoreStatName || !targetStatName) return false;
+    const a = normalizeStat(protocoreStatName);
+    const b = normalizeStat(targetStatName);
+    if (!a || !b) return false;
+    return a === b || a.includes(b) || b.includes(a);
+};
+
+/**
+ * Считает score протокора по целевым статам.
+ *
+ * targets:
+ *   mainStatFilter — точное имя main stat протокора (Expedited Energy Boost / DMG Boost to Weakened)
+ *   subStat1 — HP / ATK / DEF (приоритетный сабстат, ×3)
+ *   subStat2 — остальные сабстаты (×2)
  */
 export const scoreProtocore = (protocore, targets = {}) => {
     let score = 0;
 
-    if (targets.mainStat && protocore.mainStat) {
-        const protocoreMain = normalizeStat(protocore.mainStat);
-        const targetMain = normalizeStat(targets.mainStat);
-        if (protocoreMain.includes(targetMain) || targetMain.includes(protocoreMain)) {
+    // === 1. Main stat протокора (например, Expedited Energy Boost) ===
+    if (targets.mainStatFilter && protocore.mainStat) {
+        if (statMatches(protocore.mainStat, targets.mainStatFilter)) {
             score += 10;
         }
     }
 
-    if (targets.subStat && protocore.substats) {
+    // === 2. Sub Stat 1 (HP / ATK / DEF) — приоритетный сабстат ===
+    if (targets.subStat1 && protocore.substats) {
         protocore.substats.forEach((sub) => {
-            const subKey = normalizeStat(sub.stat);
-            const targetSub = normalizeStat(targets.subStat);
+            if (statMatches(sub.stat, targets.subStat1)) {
+                score += (sub.value || 0) * 3;
+            }
+        });
+    }
 
-            if (subKey === targetSub || subKey.includes(targetSub) || targetSub.includes(subKey)) {
+    // === 3. Sub Stat 2 (остальные сабстаты) ===
+    if (targets.subStat2 && protocore.substats) {
+        protocore.substats.forEach((sub) => {
+            if (statMatches(sub.stat, targets.subStat2)) {
                 score += (sub.value || 0) * 2;
             }
         });
@@ -91,12 +114,23 @@ const filterByStella = (protocores, card) => {
 };
 
 /**
+ * Проверяет, подходит ли протокор под основную цель (main stat протокора).
+ * Sub Stat 1 / Sub Stat 2 здесь НЕ участвуют — они только повышают score.
+ */
+const matchesTarget = (protocore, targets) => {
+    if (!targets.mainStatFilter) return true; // нет строгой цели — все подходят
+    if (!protocore.mainStat) return false;
+    return statMatches(protocore.mainStat, targets.mainStatFilter);
+};
+
+/**
  * Как pickTopN, но исключает уже использованные id и возвращает N штук,
  * помечая выбранные как использованные.
  */
 const pickTopNExcluding = (protocores, targets, usedIds, n) => {
     const pool = protocores.filter((p) => !usedIds.has(p.id));
 
+    // 1. Сначала — подходящие под mainStatFilter
     const matching = pool.filter((p) => matchesTarget(p, targets));
     const sortedMatching = sortByScore(matching, targets).map((s) => s.protocore);
 
@@ -104,6 +138,7 @@ const pickTopNExcluding = (protocores, targets, usedIds, n) => {
     if (sortedMatching.length >= n) {
         picked = sortedMatching.slice(0, n);
     } else {
+        // 2. Фолбэк — дополняем лучшими из оставшихся
         const matchingIds = new Set(sortedMatching.map((p) => p.id));
         const others = pool.filter((p) => !matchingIds.has(p.id));
         const sortedOthers = sortByScore(others, targets).map((s) => s.protocore);
@@ -111,6 +146,30 @@ const pickTopNExcluding = (protocores, targets, usedIds, n) => {
     }
 
     picked.forEach((p) => usedIds.add(p.id));
+    return picked;
+};
+
+/**
+ * Выбирает лучший протокор по цели (с учётом score).
+ * Помечает выбранный как использованный.
+ */
+export const pickBest = (protocores, targets, usedIds = new Set()) => {
+    const pool = protocores.filter((p) => !usedIds.has(p.id));
+
+    // 1. Сначала — те, что подходят под mainStatFilter
+    const matching = pool.filter((p) => matchesTarget(p, targets));
+    const sortedMatching = sortByScore(matching, targets);
+
+    if (sortedMatching.length > 0) {
+        const picked = sortedMatching[0].protocore;
+        usedIds.add(picked.id);
+        return picked;
+    }
+
+    // 2. Фолбэк — лучший из оставшихся
+    const sortedAll = sortByScore(pool, targets);
+    const picked = sortedAll[0]?.protocore || null;
+    if (picked) usedIds.add(picked.id);
     return picked;
 };
 
@@ -148,32 +207,42 @@ export const optimizeTeam = ({ cards, allProtocores, targets }) => {
         filterByStella(gamma, lunar4Card),
     ];
 
+    // Базовые цели (subStat1, subStat2) — для всех слотов
+    const baseTargets = {
+        subStat1: targets.subStat1,
+        subStat2: targets.subStat2,
+    };
+
     // ===== Единый набор использованных протокоров =====
     const usedIds = new Set();
 
     // ===== SOLAR 1 =====
-    const solar1BetaTargets = { subStat: targets.beta1, mainStat: targets.beta1 };
-    const bestBeta1 = pickBest(betaForSolar1, solar1BetaTargets, usedIds);
+    const bestBeta1 = pickBest(
+        betaForSolar1,
+        { ...baseTargets, mainStatFilter: targets.beta1 },
+        usedIds,
+    );
 
-    const alphaTargets = { subStat: targets.subStat };
-    const bestAlpha1 = pickBest(alphaForSolar1, alphaTargets, usedIds);
+    const bestAlpha1 = pickBest(alphaForSolar1, baseTargets, usedIds);
 
     // ===== SOLAR 2 =====
-    const solar2BetaTargets = { subStat: targets.beta2, mainStat: targets.beta2 };
-    const bestBeta2 = pickBest(betaForSolar2, solar2BetaTargets, usedIds);
+    const bestBeta2 = pickBest(
+        betaForSolar2,
+        { ...baseTargets, mainStatFilter: targets.beta2 },
+        usedIds,
+    );
 
-    const bestAlpha2 = pickBest(alphaForSolar2, alphaTargets, usedIds);
+    const bestAlpha2 = pickBest(alphaForSolar2, baseTargets, usedIds);
 
     // ===== LUNAR: Delta =====
-    const deltaTargets = { subStat: targets.delta, mainStat: targets.delta };
+    const deltaTargets = { ...baseTargets, mainStatFilter: targets.delta };
     const bestDeltaForLunar = deltaForLunar.map(
         (pool) => pickTopNExcluding(pool, deltaTargets, usedIds, 1)[0] || null
     );
 
     // ===== LUNAR: Gamma =====
-    const gammaTargets = { subStat: targets.subStat };
     const bestGammaForLunar = gammaForLunar.map(
-        (pool) => pickTopNExcluding(pool, gammaTargets, usedIds, 1)[0] || null
+        (pool) => pickTopNExcluding(pool, baseTargets, usedIds, 1)[0] || null
     );
 
     const results = {
@@ -189,51 +258,9 @@ export const optimizeTeam = ({ cards, allProtocores, targets }) => {
 };
 
 /**
- * Проверяет, подходит ли протокор под цель (mainStat или subStat)
- */
-const matchesTarget = (protocore, targets) => {
-    const matchesMain = targets.mainStat && protocore.mainStat
-        ? normalizeStat(protocore.mainStat).includes(normalizeStat(targets.mainStat))
-        : false;
-
-    const matchesSub = targets.subStat && protocore.substats
-        ? protocore.substats.some((sub) =>
-            normalizeStat(sub.stat).includes(normalizeStat(targets.subStat))
-        )
-        : false;
-
-    return matchesMain || matchesSub;
-};
-
-/**
- * Выбирает лучший протокор по цели (с учётом score)
- * @param {Array} protocores — пул протокоров
- * @param {Object} targets — цели
- * @param usedIds
- */
-export const pickBest = (protocores, targets, usedIds = new Set()) => {
-    const pool = protocores.filter((p) => !usedIds.has(p.id));
-
-    // Сначала — те, что подходят под цель
-    const matching = pool.filter((p) => matchesTarget(p, targets));
-    const sortedMatching = sortByScore(matching, targets);
-
-    if (sortedMatching.length > 0) {
-        const picked = sortedMatching[0].protocore;
-        usedIds.add(picked.id);
-        return picked;
-    }
-
-    // Фолбэк — лучший из оставшихся
-    const sortedAll = sortByScore(pool, targets);
-    const picked = sortedAll[0]?.protocore || null;
-    if (picked) usedIds.add(picked.id);
-    return picked;
-};
-
-/**
  * Собирает суммарные статы команды (для StatsTable):
- * базовые статы карточек + статы протокоров оптимизатора + базовый бонус CRIT DMG
+ * для каждой карточки считает финальные статы через calculateFinalStats
+ * (как в Showcase) и складывает их. В конце — +150 CRIT DMG.
  */
 export const calculateTeamStats = (cards, results) => {
     const total = createEmptyStats();
