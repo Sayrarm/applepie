@@ -110,24 +110,26 @@ export const getCardBaseStats = (card) => {
 export const optimizeTeam = ({ allProtocores, targets }) => {
     const { alpha, beta, gamma, delta } = splitProtocoresByType(allProtocores);
 
-    const betaTargets = { subStat: targets.beta1, mainStat: targets.beta1 };
-    const deltaTargets = { subStat: targets.delta, mainStat: targets.delta };
+    // ===== SOLAR 1: цель Beta 1 =====
+    const solar1BetaTargets = { subStat: targets.beta1, mainStat: targets.beta1 };
+    const bestBeta1 = pickBest(beta, solar1BetaTargets);
+
+    // ===== SOLAR 2: цель Beta 2 =====
+    const solar2BetaTargets = { subStat: targets.beta2, mainStat: targets.beta2 };
+    const bestBeta2 = pickBest(beta, solar2BetaTargets);
+
+    // ===== Alpha (по subStat) =====
     const alphaTargets = { subStat: targets.subStat };
+    const bestAlpha1 = pickBest(alpha, alphaTargets);
+    const bestAlpha2 = pickBest(alpha, alphaTargets, [bestAlpha1]); // исключаем уже выбранный
+
+    // ===== LUNAR: Delta (по цели delta) =====
+    const deltaTargets = { subStat: targets.delta, mainStat: targets.delta };
+    const bestDelta = pickTopN(delta, deltaTargets, 4);
+
+    // ===== LUNAR: Gamma (по subStat) =====
     const gammaTargets = { subStat: targets.subStat };
-
-    const sortedBeta = sortByScore(beta, betaTargets);
-    const sortedDelta = sortByScore(delta, deltaTargets);
-    const sortedAlpha = sortByScore(alpha, alphaTargets);
-    const sortedGamma = sortByScore(gamma, gammaTargets);
-
-    const bestBeta1 = sortedBeta[0]?.protocore || null;
-    const bestBeta2 = sortedBeta[1]?.protocore || null;
-
-    const bestAlpha1 = sortedAlpha[0]?.protocore || null;
-    const bestAlpha2 = sortedAlpha[1]?.protocore || null;
-
-    const bestDelta = sortedDelta.slice(0, 4).map((s) => s.protocore);
-    const bestGamma = sortedGamma.slice(0, 4).map((s) => s.protocore);
+    const bestGamma = pickTopN(gamma, gammaTargets, 4);
 
     const results = {
         solar1: { alpha: bestAlpha1, beta: bestBeta1 },
@@ -139,6 +141,69 @@ export const optimizeTeam = ({ allProtocores, targets }) => {
     };
 
     return { results };
+};
+
+/**
+ * Проверяет, подходит ли протокор под цель (mainStat или subStat)
+ */
+const matchesTarget = (protocore, targets) => {
+    const matchesMain = targets.mainStat && protocore.mainStat
+        ? normalizeStat(protocore.mainStat).includes(normalizeStat(targets.mainStat))
+        : false;
+
+    const matchesSub = targets.subStat && protocore.substats
+        ? protocore.substats.some((sub) =>
+            normalizeStat(sub.stat).includes(normalizeStat(targets.subStat))
+        )
+        : false;
+
+    return matchesMain || matchesSub;
+};
+
+/**
+ * Выбирает лучший протокор по цели (с учётом score)
+ * @param {Array} protocores — пул протокоров
+ * @param {Object} targets — цели
+ * @param {Array} exclude — протокоры, которые нужно исключить
+ */
+export const pickBest = (protocores, targets, exclude = []) => {
+    const excludeIds = new Set(exclude.filter(Boolean).map((p) => p.id));
+    const pool = protocores.filter((p) => !excludeIds.has(p.id));
+
+    // Сначала — те, что подходят под цель
+    const matching = pool.filter((p) => matchesTarget(p, targets));
+    const sortedMatching = sortByScore(matching, targets);
+
+    if (sortedMatching.length > 0) {
+        return sortedMatching[0].protocore;
+    }
+
+    // Фолбэк — лучший из оставшихся
+    const sortedAll = sortByScore(pool, targets);
+    return sortedAll[0]?.protocore || null;
+};
+
+/**
+ * Выбирает топ-N протокоров по цели.
+ * Сначала берёт подходящие под цель (в порядке score),
+ * затем дополняет оставшимися, если подходящих меньше N.
+ */
+export const pickTopN = (protocores, targets, n) => {
+    // 1. Подходящие под цель
+    const matching = protocores.filter((p) => matchesTarget(p, targets));
+    const sortedMatching = sortByScore(matching, targets).map((s) => s.protocore);
+
+    // 2. Если набралось N — возвращаем
+    if (sortedMatching.length >= n) {
+        return sortedMatching.slice(0, n);
+    }
+
+    // 3. Иначе — дополняем оставшимися (не подходящими под цель)
+    const matchingIds = new Set(sortedMatching.map((p) => p.id));
+    const others = protocores.filter((p) => !matchingIds.has(p.id));
+    const sortedOthers = sortByScore(others, targets).map((s) => s.protocore);
+
+    return [...sortedMatching, ...sortedOthers].slice(0, n);
 };
 
 /**
