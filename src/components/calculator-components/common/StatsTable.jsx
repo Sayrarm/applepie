@@ -1,4 +1,4 @@
-import styles from "./Showcase.module.css";
+import styles from "./StatsTable.module.css";
 
 function StatsTable({ stats }) {
     if (!stats) return null;

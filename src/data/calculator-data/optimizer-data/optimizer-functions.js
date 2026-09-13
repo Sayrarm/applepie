@@ -6,9 +6,9 @@ import {
 import {
     getStatsWithRank,
     createEmptyStats,
-    addProtocoreStats,
-    addBaseStats,
     applyBaseCritDmgBonus,
+    calculateFinalStats,
+    mergeStats,
 } from "@data";
 
 /**
@@ -238,20 +238,24 @@ export const pickBest = (protocores, targets, usedIds = new Set()) => {
 export const calculateTeamStats = (cards, results) => {
     const total = createEmptyStats();
 
-    // 1. Базовые статы карточек
-    Object.values(cards).forEach((card) => {
+    Object.entries(cards).forEach(([slotId, card]) => {
         if (!card) return;
-        addBaseStats(total, getCardBaseStats(card));
+
+        const baseStats = getCardBaseStats(card);
+        if (!baseStats) return;
+
+        // Протокоры, подобранные оптимизатором для этого слота
+        const slotResults = results[slotId] || {};
+        const protocores = Object.values(slotResults).filter(Boolean);
+
+        // Считаем финальные статы карточки — ТАК ЖЕ, как в Showcase
+        const cardFinalStats = calculateFinalStats(card, baseStats, protocores);
+        if (cardFinalStats) {
+            mergeStats(total, cardFinalStats);
+        }
     });
 
-    // 2. Статы протокоров, подобранных оптимизатором
-    Object.values(results).forEach((slot) => {
-        Object.values(slot).forEach((protocore) => {
-            addProtocoreStats(total, protocore);
-        });
-    });
-
-    // 3. Базовый бонус CRIT DMG (+150%)
+    // +150 CRIT DMG (базовый бонус)
     return applyBaseCritDmgBonus(total);
 };
 
@@ -264,12 +268,9 @@ export const calculateCardStats = (card, cardResults) => {
     const baseStats = getCardBaseStats(card);
     if (!baseStats) return null;
 
-    const total = createEmptyStats();
-    addBaseStats(total, baseStats);
+    const protocores = Object.values(cardResults || {}).filter(Boolean);
+    const cardStats = calculateFinalStats(card, baseStats, protocores);
+    if (!cardStats) return null;
 
-    Object.values(cardResults || {}).forEach((protocore) => {
-        addProtocoreStats(total, protocore);
-    });
-
-    return applyBaseCritDmgBonus(total);
+    return applyBaseCritDmgBonus(cardStats);
 };

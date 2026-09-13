@@ -1,14 +1,23 @@
-import styles from "./Optimizer.module.css";
-import { ChooseCompanion, ChooseWeapon, ModalChooseCard, RenderCardSlot, ProtocoreBlock } from "@components";
 import Select from "react-select";
 import { useState, useRef, useEffect } from "react";
+import styles from "./Optimizer.module.css";
+import {
+    ChooseCompanion,
+    ChooseWeapon,
+    ModalChooseCard,
+    RenderCardSlot,
+    ProtocoreBlock,
+    StatsTable
+} from "@components";
 import {
     clearOptimizerData,
     getOptimizerData,
     saveOptimizerData,
 } from "@localstorage";
-import { optimizeTeam, calculateTeamStats } from "@data";
-import StatsTable from "@components/calculator-components/showcase/StatsTable.jsx";
+import {
+    optimizeTeam,
+    calculateTeamStats
+} from "@data";
 
 const CARD_SLOTS = [
     { id: "solar1", placement: "solar", index: 0 },

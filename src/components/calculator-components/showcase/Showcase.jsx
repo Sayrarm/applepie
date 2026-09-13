@@ -23,7 +23,7 @@ import {
   calculateFinalStatsWithAffinity,
   calculateAffinityBonus,
 } from "@data";
-import StatsTable from "@components/calculator-components/showcase/StatsTable.jsx";
+import StatsTable from "@components/calculator-components/common/StatsTable.jsx";
 
 function Showcase() {
   // Загружаем сохраненные команды

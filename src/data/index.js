@@ -73,8 +73,6 @@ export {
 //calculators data
 export {
   createEmptyStats,
-  addProtocoreStats,
-  addBaseStats,
   mergeStats,
   applyBaseCritDmgBonus
 } from "./calculator-data/stats-utils.js";

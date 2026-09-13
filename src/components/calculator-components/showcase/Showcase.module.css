@@ -93,7 +93,6 @@
   justify-content: space-between;
 }
 
-.cardItem,
 .emptyLabel,
 .screenshotButton,
 .clearButton,
@@ -174,14 +173,6 @@
   color: var(--a);
 }
 
-.cardGrid {
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 5px;
-}
-
 .protocoresContainer {
   display: flex;
   flex-direction: column;
@@ -212,28 +203,6 @@
   grid-template-columns: repeat(1, 1fr);
   border-right: 2px solid var(--border);
   margin-bottom: 5px;
-}
-
-.statsTable {
-  border-collapse: collapse;
-  display: flex;
-  margin: 5px;
-}
-
-.statsTable th,
-.statsTable td {
-  border: 1px solid var(--border-table);
-  text-align: center;
-  padding: 5px 2px;
-}
-
-.statsTable th {
-  color: var(--colorTextDark);
-  padding: 0 2px;
-}
-
-.statsTable td {
-  width: 80px;
 }
 
 .bonuses {

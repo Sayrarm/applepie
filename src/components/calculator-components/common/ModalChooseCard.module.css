@@ -1,0 +1,17 @@
+.cardGrid {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+.cardItem {
+    text-decoration: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family:
+            TikTok Sans,
+            monospace;
+}

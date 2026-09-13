@@ -47,23 +47,6 @@ export const applyStat = (total, statName, value) => {
     }
 };
 
-export const addProtocoreStats = (total, protocore) => {
-    if (!protocore) return;
-    applyStat(total, protocore.mainStat, protocore.mainStatValue || 0);
-    if (protocore.substats) {
-        protocore.substats.forEach((sub) => {
-            applyStat(total, sub.stat, sub.value || 0);
-        });
-    }
-};
-
-export const addBaseStats = (total, baseStats) => {
-    if (!baseStats) return;
-    Object.keys(total).forEach((key) => {
-        total[key] += baseStats[key] || 0;
-    });
-};
-
 export const mergeStats = (target, source) => {
     if (!source) return target;
     Object.keys(target).forEach((key) => {
