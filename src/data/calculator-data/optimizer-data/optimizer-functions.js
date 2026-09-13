@@ -120,7 +120,7 @@ const pickTopNExcluding = (protocores, targets, usedIds, n) => {
 export const optimizeTeam = ({ cards, allProtocores, targets }) => {
     const { alpha, beta, gamma, delta } = splitProtocoresByType(allProtocores);
 
-    // Карточки по слотам (могут быть null)
+    // Карточки по слотам
     const solar1Card = cards?.solar1 || null;
     const solar2Card = cards?.solar2 || null;
     const lunar1Card = cards?.lunar1 || null;
@@ -128,59 +128,53 @@ export const optimizeTeam = ({ cards, allProtocores, targets }) => {
     const lunar3Card = cards?.lunar3 || null;
     const lunar4Card = cards?.lunar4 || null;
 
-    // Фильтруем пулы по цвету под каждую карточку
+    // Пулы по цвету для каждой карточки
     const betaForSolar1 = filterByStella(beta, solar1Card);
     const betaForSolar2 = filterByStella(beta, solar2Card);
     const alphaForSolar1 = filterByStella(alpha, solar1Card);
     const alphaForSolar2 = filterByStella(alpha, solar2Card);
 
-    const deltaForLunar1 = filterByStella(delta, lunar1Card);
-    const deltaForLunar2 = filterByStella(delta, lunar2Card);
-    const deltaForLunar3 = filterByStella(delta, lunar3Card);
-    const deltaForLunar4 = filterByStella(delta, lunar4Card);
+    const deltaForLunar = [
+        filterByStella(delta, lunar1Card),
+        filterByStella(delta, lunar2Card),
+        filterByStella(delta, lunar3Card),
+        filterByStella(delta, lunar4Card),
+    ];
 
-    const gammaForLunar1 = filterByStella(gamma, lunar1Card);
-    const gammaForLunar2 = filterByStella(gamma, lunar2Card);
-    const gammaForLunar3 = filterByStella(gamma, lunar3Card);
-    const gammaForLunar4 = filterByStella(gamma, lunar4Card);
+    const gammaForLunar = [
+        filterByStella(gamma, lunar1Card),
+        filterByStella(gamma, lunar2Card),
+        filterByStella(gamma, lunar3Card),
+        filterByStella(gamma, lunar4Card),
+    ];
 
-    // ===== SOLAR 1: цель Beta 1 =====
+    // ===== Единый набор использованных протокоров =====
+    const usedIds = new Set();
+
+    // ===== SOLAR 1 =====
     const solar1BetaTargets = { subStat: targets.beta1, mainStat: targets.beta1 };
-    const bestBeta1 = pickBest(betaForSolar1, solar1BetaTargets);
+    const bestBeta1 = pickBest(betaForSolar1, solar1BetaTargets, usedIds);
 
-    // ===== SOLAR 2: цель Beta 2 =====
-    const solar2BetaTargets = { subStat: targets.beta2, mainStat: targets.beta2 };
-    const bestBeta2 = pickBest(betaForSolar2, solar2BetaTargets);
-
-    // ===== Alpha (по subStat) =====
     const alphaTargets = { subStat: targets.subStat };
-    const bestAlpha1 = pickBest(alphaForSolar1, alphaTargets);
-    const bestAlpha2 = pickBest(alphaForSolar2, alphaTargets);
+    const bestAlpha1 = pickBest(alphaForSolar1, alphaTargets, usedIds);
 
-    // ===== LUNAR: Delta (по цели delta) =====
+    // ===== SOLAR 2 =====
+    const solar2BetaTargets = { subStat: targets.beta2, mainStat: targets.beta2 };
+    const bestBeta2 = pickBest(betaForSolar2, solar2BetaTargets, usedIds);
+
+    const bestAlpha2 = pickBest(alphaForSolar2, alphaTargets, usedIds);
+
+    // ===== LUNAR: Delta =====
     const deltaTargets = { subStat: targets.delta, mainStat: targets.delta };
+    const bestDeltaForLunar = deltaForLunar.map(
+        (pool) => pickTopNExcluding(pool, deltaTargets, usedIds, 1)[0] || null
+    );
 
-    // Для каждой lunar карты — свой пул и свои 4 кандидата,
-    // но чтобы не поставить один и тот же протокор дважды,
-    // отслеживаем уже использованные id
-    const usedDeltaIds = new Set();
-    const bestDeltaForLunar = [
-        pickTopNExcluding(deltaForLunar1, deltaTargets, usedDeltaIds, 1)[0] || null,
-        pickTopNExcluding(deltaForLunar2, deltaTargets, usedDeltaIds, 1)[0] || null,
-        pickTopNExcluding(deltaForLunar3, deltaTargets, usedDeltaIds, 1)[0] || null,
-        pickTopNExcluding(deltaForLunar4, deltaTargets, usedDeltaIds, 1)[0] || null,
-    ];
-
-    // ===== LUNAR: Gamma (по subStat) =====
+    // ===== LUNAR: Gamma =====
     const gammaTargets = { subStat: targets.subStat };
-
-    const usedGammaIds = new Set();
-    const bestGammaForLunar = [
-        pickTopNExcluding(gammaForLunar1, gammaTargets, usedGammaIds, 1)[0] || null,
-        pickTopNExcluding(gammaForLunar2, gammaTargets, usedGammaIds, 1)[0] || null,
-        pickTopNExcluding(gammaForLunar3, gammaTargets, usedGammaIds, 1)[0] || null,
-        pickTopNExcluding(gammaForLunar4, gammaTargets, usedGammaIds, 1)[0] || null,
-    ];
+    const bestGammaForLunar = gammaForLunar.map(
+        (pool) => pickTopNExcluding(pool, gammaTargets, usedIds, 1)[0] || null
+    );
 
     const results = {
         solar1: { alpha: bestAlpha1, beta: bestBeta1 },
@@ -215,23 +209,26 @@ const matchesTarget = (protocore, targets) => {
  * Выбирает лучший протокор по цели (с учётом score)
  * @param {Array} protocores — пул протокоров
  * @param {Object} targets — цели
- * @param {Array} exclude — протокоры, которые нужно исключить
+ * @param usedIds
  */
-export const pickBest = (protocores, targets, exclude = []) => {
-    const excludeIds = new Set(exclude.filter(Boolean).map((p) => p.id));
-    const pool = protocores.filter((p) => !excludeIds.has(p.id));
+export const pickBest = (protocores, targets, usedIds = new Set()) => {
+    const pool = protocores.filter((p) => !usedIds.has(p.id));
 
     // Сначала — те, что подходят под цель
     const matching = pool.filter((p) => matchesTarget(p, targets));
     const sortedMatching = sortByScore(matching, targets);
 
     if (sortedMatching.length > 0) {
-        return sortedMatching[0].protocore;
+        const picked = sortedMatching[0].protocore;
+        usedIds.add(picked.id);
+        return picked;
     }
 
     // Фолбэк — лучший из оставшихся
     const sortedAll = sortByScore(pool, targets);
-    return sortedAll[0]?.protocore || null;
+    const picked = sortedAll[0]?.protocore || null;
+    if (picked) usedIds.add(picked.id);
+    return picked;
 };
 
 /**
