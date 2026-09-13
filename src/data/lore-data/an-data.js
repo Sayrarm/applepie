@@ -2654,4 +2654,190 @@ He used to think that starting a journey was important. The path itself was impo
 
 `,
   },
+  {
+    id: 301,
+    link: "an-open-window",
+    serialNumber: "01",
+    subtitle: "Early Autumn",
+    content: `
+By the time brown spots appear on a fruit, the pit has long since become pulp. No one can see it. The little bird that feeds on it, chewing through the soft flesh and sucking the heady juices, eventually tumbles to the ground along with the fruit. It's tired. It doesn't move.
+This is the "drama" Caleb followed to its finale during his first autumn at the shelter.
+The fruit has split open upon touching the ground, releasing the smell of fermentation. A dozen curious children crowd around, then scatter in all directions. "The bird's dead!" they scream. The scent threads through the branches of the pagoda tree on the wind, and by the time it reaches Caleb, only a faint wisp remains.
+Perched high in the branches of a pagoda tree, he watches. The figures gathering and scattering bear a striking resemblance to the ants he can see by crouching on the ground. They're fragile, act like a herd, drawn to sweet things, and are occasionally stubborn.
+The smell grows stronger. It's closer to what he used to catch while wandering through the city ruins.
+But the bird isn't dead at all.
+Once everyone is gone, Caleb leaps from the branch to the first-floor eaves and drops down into the parterre. His shadow falls over the tiny chest rising and falling in secret. As the air cools, the bird's closed eyelids tremble.
+By the time the sky darkens, the bird still shows no signs of waking up. Caleb picks it up and places it between the thick branches of the pagoda tree. A nest folded from paper sits there with a few pagoda tree pods. He studies it for a moment before snapping off a leaf-covered branch and drapes it over the bird like a blanket. Then he walks away without looking back.
+
+The day after, a vehicle bearing a crude medical insignia pulls up at the front gate. Caleb stands on his tree's branch and looks down as the gate swings open and a girl's bewildered face appears behind the adults’ figures as they converse. The bird, roused by thirst, lets out a faint cry, and the girl lifts her head. When he sees those empty, uncomprehending eyes, Caleb knows. She remembers nothing.
+The medical staff and the shelter teachers lead her inside. Before long, the murmurs drift from a small second-floor room just behind the pagoda tree.
+"There was a Wanderer attack at the medical center a while back... She was almost hurt... It must've frightened her...'
+"...Her heart condition is somewhat complicated, but fortunately, her recovery after the surgery is decent enough..."
+"...Yours is the only facility in the area with proper medical credentials at the moment... Please, we're counting on you..."
+The months of separation since the Chronorift Catastrophe are condensed into fragmented words slipping through the crack in the window and echoing beneath the swaying leaves.
+The small room is a place Caleb has explored before. It has clean, white walls.
+It's unlike the research center in one crucial way: there's a window. Lean out from that single window and look to the right, and the forking branches of the pagoda tree come into view.
+During the girl's first week, the adults only ever open that window by a sliver.
+Whenever the bird calls out, Caleb sees the sheer curtain behind the glass stirring faintly, yet no one appears at the window.
+
+`,
+  },
+  {
+    id: 302,
+    link: "an-open-window",
+    serialNumber: "02",
+    subtitle: "Flaw",
+    content: `
+The TV flickers as it's turned on, and the drama begins right on schedule. The children sit obediently in the common room. Before long, cheerful laughter fills the air. Caleb doesn't join any other events, but he never misses TV time. A few months is more than enough for Emryn to conclude that he's a difficult child. He parts the grass to watch ants, climbs trees to study flowers, and once he picks up enough words, he starts devouring books. He spends every waking moment under the open sky or curled up in the reading corner. He's a boy who approaches anything that piques his curiosity and studies it with quiet intensity, yet his attitude toward people remains strangely guarded. Sometimes Emryn feels an inexplicable competitive streak rise in her. Is it really impossible to find this rascal's soft spot?
+She clasps her hands behind her back and laughs at herself. Grown-ups at a certain age just can't help but want to tease children. Then again, she's genuinely curious about Caleb's soft spot.
+One episode ends, and it's time to play outdoors. The barren yard offers little beyond a patch of sand and some flowers and trees. But having the chance to go outside again without worrying about monsters falling from the sky is more than enough. The children always make the most of it.
+Emryn stands beneath the eaves, sorting out the children whose hearts are closed because they lost their homes and who are more drawn to sports or toys. Whenever a child runs over for Ms Director and begs for a story, she settles onto a small stool. With a smile, she gives one that she knows will captivate them.
+During a break, she drinks water and catches sight of the taller-than-average Caleb perched atop the bookshelf in the reading corner. A heavy book is clutched to his chest, his body curled up against the wall, his knees drawn up tight to shield his torso. It leaves only a fathomless gaze exposed. Emryn freezes for a moment before it hits her. Just as she's been watching the children, he's been watching her. More precisely, he's been watching how she assesses the others.
+Children are always sharp enough to sense who holds the highest status at home.
+Even in the shelter—a small society larger than any family unit--the children can tell with perfect clarity that Emryn is the adult "leader" here.
+But Caleb has never been interested in any Specific person. So why is he studying her behavior?
+Unwilling to let this rare opening disappear, Emryn walks over to the base of the bookshelf and tilts her head up with a smile tinged with playful provocation. A little too spirited for a woman her age, perhaps, but Caleb clearly sees it.
+After a brief flash of bewilderment, the boy's eyes slowly narrow, his expression strikingly similar to that of the young leopard on the book cover, poised for its first hunt.
+
+`,
+  },
+  {
+    id: 303,
+    link: "an-open-window",
+    serialNumber: "03",
+    subtitle: "A Small Victory",
+    content: `
+Emryn brings the little girl from the second floor down to the common room to watch TV with the other children for the first time. While everyone's attention is glued to the screen, the newcomer slips in without a sound. Atop the bookshelf, Caleb shifts, moving from wedging his back into the corner where two walls meet to sitting against a single wall. His gaze lands on the girl's head. She turns, stares at him for a second, then quickly returns her attention to the TV.
+Emryn takes it all in.
+During group play time, Emryn forms a clearer picture of the girl: quiet in a way that carries no malice and almost no presence. After an hour or so of silent observation, she spares a glance toward Caleb only to find him gone.
+She calls the other teachers over to keep watch, then searches the yard from front to back. She's just starting to look grumpy when a rustle sounds from above.
+Caleb swings out from the small second-floor window sill. Then he leaps from the ledge and lands on a tree's thick branch.
+Despite the distance of several steps, his form remains impossibly steady. When he glances back, he sees the window has been thrown wide open, the sheer curtain drawn aside completely. The bed isn't visible from here, but anyone approaching the window would be plainly visible from where he was.
+The bird's cries are shrill and urgent. Caleb pats his pocket, fishes out half a biscuit, and crumbles it into the nest. The bird refuses to return. It's perched on a swaying treetop and calling even more frantically. Caleb tilts his head and watches it until a thundering shout erupts from below.
+"Caleb, get down here... Slowly!"
+She watches the boy descend the tree with practiced ease, dust off his knees with a gentle pat, and turn that expressionless face toward her. Emryn's heart, which only just calmed down, threatens to pick up speed again.
+She takes two breaths to steady herself. Then she bends down and asks gently,
+"What did you learn?"
+Perhaps uncomfortable with the decreased distance, Caleb shifts one foot half a step back and offers no answer.
+Emryn smiles. "I know you've been secretly studying me. And the other teachers, too." The boy takes a step back.
+"You're a fast learner, huh? When you first got here, you could barely read. But within a month you were picking up books on your own. After three months, you must've learned a thing or two about how people get along, right?" Before he can retreat any further, Emryn waggles her eyebrows.
+"Don't you want to test out what you've learned? Or are you scared?"
+This clever child has never read any books on military strategy. He doesn't know that seasoned adults have a trick called "reverse psychology." His eyes shift again. They're more vivid now, yet sharper with caution.
+Caleb stares at Emryn, then turns and walks inside.
+Emryn drops her cartoonishly villain-like grin and follows. By the time she finds Caleb again, he's standing before that girl with the almost invisible presence.
+Something is cupped in his palm. The girl stands on her tiptoes to peek, shakes her
+head, and turns away. She's as expressionless as he is.
+Emryn walks over with a new portable radio and tunes it to the only two receivable channels for the girl. Through the white noise, news from the world beyond the shelter trickles in. A high-risk Wanderer has been eliminated somewhere, a new medical outpost has been set up somewhere else, and another safe zone has been established... A voice, belonging to someone called a survivor, cries out and trembles. "Our fruit has ripened! Humanity won't be empty-handed this season. Everything is slowly getting better"...
+Engrossed, the girl sits in a quiet corner cradling the radio. Emryn gives her head a gentle pat, then rises and walks past Caleb—standing there grumpy and dazed—and pats him on the head too. Moments later, the director's hearty laughter rings out across the yard. "You want to learn my tricks? You've got a long way to go, kid! Hahahaha!"
+
+`,
+  },
+  {
+    id: 304,
+    link: "an-open-window",
+    serialNumber: "04",
+    subtitle: "The One They Follow",
+    content: `
+What kind of child reaches eleven or twelve while being sharp, vigilant, defensive, and profoundly unsocialized despite knowing nothing of the world? In calmer times, this would be a serious concern. But in an age where there's a gaping hole in the sky and Wanderers overrun the world, it barely registers as a minor one.
+The boy who is a bit of a "handful" caused Emryn very little trouble. It's just one name that never answers at roll call, one shadow she has to keep track of during every group event as he vanishes into thin air or burrows until he's out of sight. When he can't be found, one episode of a drama or new book is enough to lure him out. At this point, the difference between Caleb and a low-maintenance child isn't that big.
+
+Since the Chronorift Catastrophe, broadcast and communication systems have yet to fully recover. Whatever has been restored is reserved for emergency alerts and live news. The old TV at the shelter plays DVDs, which means there are only old shows. The discs belong to one of the teachers who reportedly grabbed three boxsets on reflex while fleeing for her life. One was lost to a Wanderer along the way. The remaining two were donated to the Shelter.
+Yesterday, the first boxset officially came to an end. It was a family sitcom spanning over ninety episodes that helped these children, torn away from home, weather the hardest stretch in relative peace. The sensitive ones shed tears watching the heartwarming moments of a family of five.
+The livelier ones were already boasting about having visited the same amusement park as the one on screen. And then there was young Caleb, who spent ninety episodes learning about families in human society.
+The new disc begins to play. Masked figures in sleek, tight-fitting stealth suits leap and dart between skyscrapers. The screen is alive with whooshes. The somewhat rough special effects and flashy action sequences capture every child's attention. It's an old cartoon about saving the world.
+In the days that follow, the kids who used to play house swap genres entirely. They become superpowered heroes and monsters instead. Caleb digs out a thick, worn storybook from the reading corner, balances it on his head, and dashes toward the pagoda tree. As he cuts through the recreational area in the yard, a branch comes flying at him. He slows and flicks his fingers. The branch stops before clattering to the ground.
+The kid who runs over to pick up the branch freezes. After a couple of seconds, he lets out a shriek in admiration as they experience an intense emotional episode.
+"You're Magnet Hero!"
+That single sentence costs Caleb his alone time.
+When he's swarmed for the third time, Caleb marches up to Emryn with a trail of children in tow. He's unable to hide the annoyance in his voice. "Are you going to do anything about this?"
+Emryn does nothing but laugh in his face. Magnet Hero needs to have minions.
+Annoyed beyond his limit, Caleb retreats to the pagoda tree and stays perched there for half the day. He refuses to come down.
+It doesn't matter who calls for him. 
+
+Almost a month after arriving at the shelter, the girl seems to have fallen ill. Just as she was beginning to get to know the other children, she's sent back upstairs to rest. Caleb hides in the tree with his book, reading aloud whenever he comes across passages describing different cities and scenery. Before long, the window the adults had shut is pushed open again. She stands by the sheer curtain, listening—or so it seems—to Caleb read. But her gaze cuts past the walls of the shelter. Caleb knows what she's looking at. He always comes up to this tree, and he looks in the same direction.
+Beyond the walls is a set of railroad tracks stretching into the distance. They reach for the horizon that can't be seen with the naked eye.
+One afternoon, he finishes the last story in the collection. Caleb closes the book and prepares to leave. A small voice drifts from the window sill. "What happened in that TV show? When the mother and father weren't home, did they go to the amusement park?" she asks.
+It's the episode of the family drama she missed while she was sick. Unfortunately, Caleb never watched it either. He has no answer. Minutes pass in silence, and all that remains is the soft rustling of the pagoda tree's pods swaying in the wind.
+
+`,
+  },
+  {
+    id: 305,
+    link: "an-open-window",
+    serialNumber: "05",
+    subtitle: "Paradise at the End",
+    content: `
+There are no stories about amusement parks in the reading corner.
+When the minions learn that Caleb is interested in amusement parks, they chatter and gather every scrap of knowledge and intel they have. Langston, the most worldly among them—a kindergarten graduate, no less-boasts.
+"There's an amusement park where the sun Sets. I used to go there all the time."
+The old railroad tracks beyond the shelter lead to where the sun sets.
+Naptime is the quietest hour at the shelter, second only to nightfall. Caleb climbs the tree, and a paper crane with words scrawled on it floats up from his palm. It wobbles with some effort as it squeezes through the gap in the window. Soon, the faint sound of footsteps can be heard from inside. The girl throws the window open, her eyes bright and fiery as they find him.
+Caleb meets her gaze. He pauses, then the question slips out before he realizes it. "Do you want to go beyond the walls and find that amusement park?"
+The girl's eyes widen with surprise, and she nods eagerly, leaning out and stretching her hand toward Caleb. "Catch me."
+He pauses. Then he takes her hand and lets her land gently on the branch where he stands.
+Just as they're about to scale the wall the same way, three children who had been watching Caleb since before naptime pop out of nowhere. They're lined up along the wall like a row of hopeful little birds watching him in silence.
+"...Climb up yourselves," Caleb mumbles. The children who want to save the world alongside Caleb boost and pull each other up to conquer the evil fortress wall. Along the abandoned railroad tracks, five little figures of varying heights run free toward the sun.
+It's only a wall away, yet the air tastes entirely different. The wind rushes to meet them like a rough tongue belonging to a panting animal, its hot breath touching their faces. Under the blazing sun, the rolling mountains shiver along the horizon.
+For one breathless moment, they stand perfectly still to feel the wind skim past their fingertips, and the faint tremor of exhilaration spreads its warmth throughout their entire bodies.
+This is the first time in a long while that they see the outside world with their own eyes.
+Creeping woodsorrel and endive flowers push through the gaps in the tracks to lean against the railroad ties and sway in the wind. It feels like they're on a spring excursion. The children's hearts are uplifted little by little, buoyed by an unwavering belief. If they just keep walking along this rusted railway, it'll lead them to the amusement park.
+It has to be the most wonderful, safest, happiest place in the world.
+Along the way, someone starts singing softly. Then someone worries the singing might attract monsters, so they stop. Caleb holds her hand, walking at the very back of the group. They pass what the teachers used to call "the place where many people are sleeping." One child swears it must be some kind of hotel.
+Another insists it's a rest stop. Confused, the girl looks to Caleb, and he thinks before shaking his head. He doesn't tell her it's a place people only go to after they die.
+After what feels like forever, they stop running. Their hands are braced on their knees as they catch their breath.
+"Are we there yet?"
+Caleb looks ahead. He knows how to read the sun for time and direction, but his answer still comes out uncertain. "...We should get there before the sun sets."
+A foul, acrid smell creeps in on the wind. The two more timid children grow uneasy and tired.
+"I want to go back."
+"Me too..."
+Caleb stops and points behind them.
+"Leave then. We're marching forward." 
+The two hesitate. Then they hold hands and run back the way they came. They're a little slower than before.
+They keep walking before a Wanderer's distant shriek tears the silence. The last remaining older child freezes in place. Caleb studies his face and quickly recalls which page of the personnel registry it belongs to.
+Emryn and the other teachers mentioned it when recording cases. A Wanderer dragged
+this child's family away before his eyes. Ever since then, one shriek locks his body in place. His soul possesses the ability to reverse time, and it can pull him back to the night he lost everything at any moment.
+"That was the sound of a Wanderer being killed. It's gone now." Caleb looks away, seemingly speaking to the tracks beneath his feet. "We'll keep going. You can head back."
+The sound of footsteps becomes a lonely rhythm. Not saying a word, the girl has been clinging to his sleeve since they left the shelter. Now that it's just the two of them, she speaks to the tracks too. "I'm not actually sick. I know that."
+Caleb glances at her small hand and nods.
+"It's not an illness. You're just not strong enough yet. You won't always be like this."
+The girl tilts her head up to look at him, presses her lips into a thin line, and is silent again. Her fingers gather more of Caleb's sleeve into her palm. The sun sinks fast, its gorgeous twilight creating strange, jagged silhouettes along the horizon. Caleb quickens his pace until he's practically pulling the girl into a run. The tracks reach a dead end at a chain-link fence and continue on the other side. He follows the unyielding barrier to the right, and gradually, a Ferris wheel almost identical to the one on TV appears. It's still so far away that even with their faces pressed against the wire, the mesh printing tiny squares into their skin, they can only make out a rough outline.
+Finally, they find a torn opening in the fence. Caleb hoists the girl onto his shoulders so she can crawl through first. But when she grips the edge of the hole, she freezes. Caleb looks up and sees the towering Ferris wheel in the distance tilting. It's slowly collapsing, and only after a massive cloud of dust billows into the sky does the dull, thunderous sound of its impact reach their ears. It's tangled with the furious howls of several Wanderers. Without any hesitation, Caleb hoists the girl onto his back and sprints toward the tracks. Before long, Emryn and several teachers are rushing out against the last sliver of twilight, their faces tense with panic. When he meets their gazes, someone grabs his arm harder than anyone ever has. He thinks of the ending of that family sitcom. It was boring, really. It only had a family crying and laughing at the same time.
+He doesn't struggle. Soon enough, he receives the first beating of his life.
+That night, Caleb is punished with weeding the entire yard. The other children quietly pitch in to help. Later, the two younger kids and the older one insist they've formed a hero squad with Caleb. Caleb pretends he didn't hear them.
+
+`,
+  },
+  {
+    id: 306,
+    link: "an-open-window",
+    serialNumber: "06",
+    subtitle: "Grab",
+    content: `
+Before autumn reaches its end, Caleb has accepted the children trailing after him. The show about saving the world is only a few episodes away from its finale. The girl can finally go downstairs, but she has missed the earlier episodes. Caleb tries to catch her up only to turn around and discover that she's fallen asleep. He doesn't bother waking her. Instead, following a tutorial in a book, he folds paper into the shapes of a house and tiny furniture. His followers walk over after finishing their TV time and instantly recognize them as the same ones from the family sitcom. Their worship of Caleb deepens once more.
+The news says things have stabilized considerably. Some of the less damaged districts have completed their initial reconstruction.
+More children are claimed by relatives or reunited with their parents. People come and go from the shelter until only they and a handful of others remain.
+Young as they are, the children sense it. Even the kids who always trailed after Caleb no longer have the heart to cling to him. Their dreams have shifted from becoming as strong as Caleb to simply wanting a home of their own.
+Caleb is happy to have some peace and quiet. His solitary battlefront shifts from the tree branch to the second-floor window sill. The left side is where he sits. The right is piled high with folded paper objects. Most of them are paper cranes.
+"How do you know how to do everything?" The girl pushes a paper crane back from the edge before it tumbles, then stretches her arms to corral the pile of folded paper toys.
+Another newly folded paper crane tumbles into the pile. Caleb wiggles his fingers, and the flat crane wobbles into the air. It floats left and right at his command. Nearby, the small bird he once saved flutters over, hops around to watch for a moment, then beats its wings and flies away.
+The paper crane lands on the girl's fingertip. Caleb picks up a downy feather the bird left behind and waves it in front of her. "With the power I have now, all I can control is a sheet of paper. And a single feather. I can make a paper crane obey me, but I can't tell that bird what to do."
+The girl thinks it's just fine. "That's fine. The bird can fly on its own, but the paper crane can't. So it needs you more."
+Caleb doesn't say anything else. One by one, he sends the paper cranes soaring into the sky only for each to plummet shortly after passing the wall. They fall in quiet succession, and before long, a tiny field of crushed paper gathers on the other side.
+"Everyone calls you Caleb. Should I call you Caleb too?" the girl asks.
+"If you want," he says, looking into her uneasy gaze and thinking it over carefully. Similar to that drawn-out family sitcom, the older child should always be a little taller with hands a little wider. If they end up going to school together someday, he'll grow up ahead of her, hold her hand in the crowd, and walk in front of her.
+
+In the courtyard, Emryn stands beneath the tree with a woman about her age.
+Overjoyed, she looks at them and beams at the girl. "Come down! Ms Josephine has decided to take you home."
+Behind her glasses, Josephine's eyes shift slowly from the girl's face to Caleb's. They're backlit against the light. She's calm and familiar yet somehow different from how she looked at the research center.
+While Caleb is still frozen in place, a small hand grabs his. The girl leans out and holds up their tightly clasped hands for the adults below to see. "I want to bring him with me. Is that okay, Ms... Ms Josephine?"
+"...And who is he?"
+"He's Caleb."
+She doesn't say yes, but she doesn't say no either. She looks away and slowly walks in circles with Emryn.
+Caleb looks down at his own hand, then at the girl. A strange light glimmers in her eyes. He swings himself inside, shuts the window, his lowered voice tense. "Do you remember?"
+The girl doesn't answer. She smiles at him, and her other hand closes around his.
+Two hands—heavier than a sheet of paper and a small bird. Yet Caleb is utterly powerless against them.
+The final episode of the story about saving the world was supposed to be played that day, but neither of them gets to see it. Caleb is given a small backpack, stuffed with clothes and cookies thanks to Emryn, and one thin book. It's the first book he ever opened at the shelter and the first he opened in this world: The Complete Guide to Paper Creations (Children's Edition).
+
+`,
+  },
 ];
