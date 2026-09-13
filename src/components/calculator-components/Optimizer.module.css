@@ -1,12 +1,33 @@
 .container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "result navigation"
+        "result cards"
+        "result buttons";
     flex-direction: column;
     padding: 5px;
     margin: 20px auto 0;
-    width: 600px;
 
     background-color: var(--bg-glass);
     font-family: TikTok Sans, monospace;
+}
+
+.navigation {
+    grid-area: navigation;
+}
+
+.cardsContainer {
+    grid-area: cards;
+}
+
+.buttonContainer {
+    grid-area: buttons;
+}
+
+.resultContainer {
+    grid-area: result;
 }
 
 .navigation {

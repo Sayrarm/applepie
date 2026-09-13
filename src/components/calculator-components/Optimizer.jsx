@@ -18,6 +18,7 @@ import {
     optimizeTeam,
     calculateTeamStats
 } from "@data";
+import CombatCalculations from "@components/calculator-components/showcase/CombatCalculations.jsx";
 
 const CARD_SLOTS = [
     { id: "solar1", placement: "solar", index: 0 },
@@ -75,6 +76,8 @@ function Optimizer() {
         { value: "Oath Strength", label: "Oath Strength" },
         { value: "DMG Boost to Weakened", label: "DMG Boost to Weakened" },
     ];
+
+    const solarCards = [data.cards.solar1, data.cards.solar2];
 
     // Находим слот по placement и index
     const findSlotId = (placement, index) => {
@@ -279,13 +282,6 @@ function Optimizer() {
                 ))}
             </section>
 
-            {/* Суммарные статы команды */}
-            {teamStats && (
-                <StatsTable
-                    stats={teamStats}
-                />
-            )}
-
             <div className={styles.buttonsContainer}>
                 <button className={styles.clearButton} onClick={clearAll}>
                     Clear all
@@ -293,6 +289,25 @@ function Optimizer() {
                 <button className={styles.startButton} onClick={startOptimization}>
                     Start
                 </button>
+            </div>
+
+            <div className={styles.resultContainer}>
+                {/* Суммарные статы команды */}
+                {teamStats && (
+                    <StatsTable
+                        stats={teamStats}
+                    />
+                )}
+
+                {/* Combat Calculations — показываем после оптимизации и только если есть companion + weapon */}
+                {teamStats && data.selectedCompanion && data.selectedWeapon && (
+                    <CombatCalculations
+                        stats={teamStats}
+                        selectedCompanion={data.selectedCompanion}
+                        selectedMCWeapon={data.selectedWeapon}
+                        solarCards={solarCards}
+                    />
+                )}
             </div>
 
             <ModalChooseCard
