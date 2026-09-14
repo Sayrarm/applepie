@@ -18,7 +18,7 @@ import {
     optimizeTeam,
     calculateTeamStats
 } from "@data";
-import CombatCalculations from "@components/calculator-components/showcase/CombatCalculations.jsx";
+import CombatCalculations from "@components/calculator-components/showcase/combat-calculations/CombatCalculations.jsx";
 
 const CARD_SLOTS = [
     { id: "solar1", placement: "solar", index: 0 },

@@ -1,7 +1,7 @@
 import { useState, useRef, useMemo, useEffect, useCallback } from "react";
 import styles from "./Showcase.module.css";
 import { Button } from "antd";
-import CombatCalculations from "./CombatCalculations.jsx";
+import CombatCalculations from "./combat-calculations/CombatCalculations.jsx";
 import {
   getShowcaseTeamsOrDefault,
   saveShowcaseTeams,
