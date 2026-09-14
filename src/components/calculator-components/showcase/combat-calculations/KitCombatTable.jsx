@@ -11,9 +11,10 @@ function KitCombatTable({
                             stats,
                             selectedCompanion,
                             selectedMCWeapon,
-                            teamDmgBonus,
+                            teamDmgBonus = 0,
                             additionalBonus,
                         }) {
+    // Если additionalBonus не передан — используем нули
     const { attributeBonus, perfectMatchBonus } = additionalBonus || {
         attributeBonus: 0,
         perfectMatchBonus: 0,

@@ -18,7 +18,8 @@ import {
     optimizeTeam,
     calculateTeamStats
 } from "@data";
-import CombatCalculations from "@components/calculator-components/showcase/combat-calculations/CombatCalculations.jsx";
+import KitCombatTable from "@components/calculator-components/showcase/combat-calculations/KitCombatTable.jsx";
+import {useSolarPair} from "@hooks";
 
 const CARD_SLOTS = [
     { id: "solar1", placement: "solar", index: 0 },
@@ -78,6 +79,7 @@ function Optimizer() {
     ];
 
     const solarCards = [data.cards.solar1, data.cards.solar2];
+    const { teamDmgBonus } = useSolarPair(solarCards);
 
     // Находим слот по placement и index
     const findSlotId = (placement, index) => {
@@ -301,11 +303,11 @@ function Optimizer() {
 
                 {/* Combat Calculations — показываем после оптимизации и только если есть companion + weapon */}
                 {teamStats && data.selectedCompanion && data.selectedWeapon && (
-                    <CombatCalculations
+                    <KitCombatTable
                         stats={teamStats}
                         selectedCompanion={data.selectedCompanion}
                         selectedMCWeapon={data.selectedWeapon}
-                        solarCards={solarCards}
+                        teamDmgBonus={teamDmgBonus}
                     />
                 )}
             </div>
