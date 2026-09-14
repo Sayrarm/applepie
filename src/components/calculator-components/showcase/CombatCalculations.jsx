@@ -1,4 +1,3 @@
-import { Range } from "react-range";
 import React, { useState, useMemo } from "react";
 import styles from "./CombatCalculations.module.css";
 import {
@@ -9,6 +8,7 @@ import {
 } from "@data";
 import { AsideList, TablePairBonus } from "@components";
 import { useSolarPair } from "@hooks";
+import AdditionalBonus from "@components/calculator-components/showcase/AdditionalBonus.jsx";
 
 function CombatCalculations({
                               stats,
@@ -16,6 +16,12 @@ function CombatCalculations({
                               selectedMCWeapon,
                               solarCards,
                             }) {
+  const [additionalBonus, setAdditionalBonus] = useState({
+    attributeBonus: 0,
+    perfectMatchBonus: 0,
+  });
+  const { attributeBonus, perfectMatchBonus } = additionalBonus;
+
   // Находим данные для выбранного компаньона по companionName
   const companionData = useMemo(() => {
     if (!selectedCompanion?.companionName) return {};
@@ -43,11 +49,6 @@ function CombatCalculations({
     teamDmgBonus,
   } = useSolarPair(solarCards);
 
-  // Состояния для Additional Bonus
-  const [isAttributeBonus, setIsAttributeBonus] = useState(false);
-  const [stellactrumCount, setStellactrumCount] = useState(0);
-  const [isPerfectMatch, setIsPerfectMatch] = useState(false);
-
   // Используем переданные статы
   const companionStats = {
     hp: stats?.hp || 1,
@@ -59,12 +60,6 @@ function CombatCalculations({
   const dmgBoostToWeakened = Number((stats?.dmgBoost || 0).toFixed(2));
   const critDmg = stats?.critDmg || 0;
   const oathStrength = stats?.oathStrength || 0;
-
-  // Additional Bonus: Attribute Bonus
-  const attributeBonus = isAttributeBonus ? stellactrumCount * 5 : 0;
-
-  // Additional Bonus: Perfect Match
-  const perfectMatchBonus = isPerfectMatch ? 100 : 0;
 
   // Добавляем бонусы к DMG Boost to Weakened
   const totalDmgBoostToWeakened = dmgBoostToWeakened + perfectMatchBonus;
@@ -281,75 +276,7 @@ function CombatCalculations({
         )}
 
         {/* Additional Bonus Section */}
-        <div className={styles.additionalBonus}>
-          <h3>Additional Bonus:</h3>
-
-          <div className={styles.bonusRow}>
-            <label className={styles.checkboxLabel}>
-              <input
-                  className={styles.checkbox}
-                  type="checkbox"
-                  checked={isAttributeBonus}
-                  onChange={(e) => setIsAttributeBonus(e.target.checked)}
-              />
-              Attribute Bonus: (For each matched Stellactrum, increases DMG Boost
-              5.0% and DMG Reduction 5.0%)
-            </label>
-            {isAttributeBonus && (
-                <div className={styles.rangeContainer}>
-                  <div className={styles.rangeLabel}>
-                    Stellactrum count: {stellactrumCount}
-                  </div>
-                  <Range
-                      step={1}
-                      min={0}
-                      max={6}
-                      values={[stellactrumCount]}
-                      onChange={(values) => setStellactrumCount(values[0])}
-                      renderTrack={({ props, children }) => (
-                          <div {...props} className={styles.track}>
-                            <div
-                                className={styles.trackFilled}
-                                style={{
-                                  width: `${(stellactrumCount / 6) * 100}%`,
-                                }}
-                            />
-                            {children}
-                          </div>
-                      )}
-                      renderThumb={({ props }) => {
-                        const { key, ...rest } = props;
-                        return (
-                            <div
-                                key={key}
-                                {...rest}
-                                className={styles.point}
-                                onKeyDown={(e) => {
-                                  if (e.key === "ArrowUp" || e.key === "ArrowDown") {
-                                    e.preventDefault();
-                                  }
-                                }}
-                            />
-                        );
-                      }}
-                  />
-                </div>
-            )}
-          </div>
-
-          <div className={styles.bonusRow}>
-            <label className={styles.checkboxLabel}>
-              <input
-                  className={styles.checkbox}
-                  type="checkbox"
-                  checked={isPerfectMatch}
-                  onChange={(e) => setIsPerfectMatch(e.target.checked)}
-              />
-              Perfect Match: (Double the number of Protocore Shield stacks
-              destroyed. DMG Boost to Weakened enemies increased by 100%)
-            </label>
-          </div>
-        </div>
+        <AdditionalBonus onChange={setAdditionalBonus} />
 
         <table className={styles.statsTable}>
           <thead>
