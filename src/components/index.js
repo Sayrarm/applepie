@@ -5,12 +5,17 @@ export { default as CompanionArticlePage } from "./battle-components/CompanionAr
 // calculator-components
 export { default as Showcase } from "./calculator-components/showcase/Showcase.jsx";
 export { default as AffinitySelect } from "./calculator-components/showcase/AffinitySelect.jsx";
+
 export { default as RenderCardSlot } from "./calculator-components/common/RenderCardSlot.jsx";
 export { default as ModalChooseCard } from "./calculator-components/common/ModalChooseCard.jsx";
 export { default as ChooseCompanion } from "./calculator-components/common/ChooseCompanion.jsx";
 export { default as ChooseWeapon } from "./calculator-components/common/ChooseWeapon.jsx";
 export { default as StatsTable } from "./calculator-components/common/StatsTable.jsx";
+
+export { default as CombatCalculations } from "./calculator-components/showcase/combat-calculations/CombatCalculations.jsx";
 export { default as TablePairBonus } from "./calculator-components/showcase/combat-calculations/TablePairBonus.jsx";
+export { default as AdditionalBonus } from "./calculator-components/showcase/combat-calculations/AdditionalBonus.jsx";
+export { default as KitCombatTable } from "./calculator-components/common/KitCombatTable.jsx";
 
 export { default as MemoryUpCalculator } from "./calculator-components/MemoryUpCalculator.jsx";
 export { default as Optimizer } from "./calculator-components/Optimizer.jsx";

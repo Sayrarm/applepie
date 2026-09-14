@@ -1,9 +1,12 @@
 import { useState } from "react";
 import styles from "./CombatCalculations.module.css";
-import { AsideList, TablePairBonus } from "@components";
+import {
+    AsideList,
+    TablePairBonus,
+    AdditionalBonus,
+    KitCombatTable
+} from "@components";
 import { useSolarPair } from "@hooks";
-import AdditionalBonus from "@components/calculator-components/showcase/combat-calculations/AdditionalBonus.jsx";
-import KitCombatTable from "@components/calculator-components/showcase/combat-calculations/KitCombatTable.jsx";
 
 function CombatCalculations({
                                 stats,

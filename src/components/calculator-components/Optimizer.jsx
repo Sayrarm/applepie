@@ -18,7 +18,7 @@ import {
     optimizeTeam,
     calculateTeamStats
 } from "@data";
-import KitCombatTable from "@components/calculator-components/showcase/combat-calculations/KitCombatTable.jsx";
+import KitCombatTable from "@components/calculator-components/common/KitCombatTable.jsx";
 import {useSolarPair} from "@hooks";
 
 const CARD_SLOTS = [

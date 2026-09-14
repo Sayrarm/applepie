@@ -1,7 +1,6 @@
 import { useState, useRef, useMemo, useEffect, useCallback } from "react";
 import styles from "./Showcase.module.css";
 import { Button } from "antd";
-import CombatCalculations from "./combat-calculations/CombatCalculations.jsx";
 import {
   getShowcaseTeamsOrDefault,
   saveShowcaseTeams,
@@ -15,6 +14,8 @@ import {
   AffinitySelect,
   ChooseCompanion,
   ChooseWeapon,
+  CombatCalculations,
+  StatsTable
 } from "@components";
 import { useScreenshot } from "@hooks";
 import {
@@ -23,7 +24,6 @@ import {
   calculateFinalStatsWithAffinity,
   calculateAffinityBonus,
 } from "@data";
-import StatsTable from "@components/calculator-components/common/StatsTable.jsx";
 
 function Showcase() {
   // Загружаем сохраненные команды

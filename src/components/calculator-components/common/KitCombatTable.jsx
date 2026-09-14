@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import styles from "./CombatCalculations.module.css";
+import styles from "./KitCombatTable.module.css";
 import {
     compDataShowcaseSpecific,
     weaponDataShowcaseSpecific,

@@ -1,4 +1,4 @@
-import styles from "./CombatCalculations.module.css";
+import styles from "./TablePairBonus.module.css";
 import { useMemo } from "react";
 import { useSolarPair } from "@hooks";
 
