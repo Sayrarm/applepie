@@ -69,9 +69,6 @@ function Optimizer() {
 
     // Sub Stat 2 — остальные сабстаты
     const subStat2Options = [
-        { value: "ATK Bonus", label: "ATK Bonus" },
-        { value: "HP Bonus", label: "HP Bonus" },
-        { value: "DEF Bonus", label: "DEF Bonus" },
         { value: "CRIT Rate", label: "CRIT Rate" },
         { value: "CRIT DMG", label: "CRIT DMG" },
         { value: "Oath Strength", label: "Oath Strength" },
@@ -170,7 +167,7 @@ function Optimizer() {
     return (
         <section className={styles.container}>
             <nav className={styles.navigation}>
-                <div>
+                <div className={styles.companionsContainer}>
                     <ChooseCompanion
                         selectedCompanion={data.selectedCompanion}
                         onSelectCompanion={handleSelectCompanion}
@@ -182,70 +179,77 @@ function Optimizer() {
                 </div>
 
                 <div className={styles.selectMenu}>
-                    <div className={styles.selectContainer}>
-                        Beta 1:
-                        <Select
-                            placeholder="Select Beta Protocore"
-                            options={betaProtocoreOptions}
-                            value={data.betaProtocore_1}
-                            onChange={handleBetaChange1}
-                            className={styles.select}
-                            isClearable
-                            isSearchable={false}
-                        />
+                    <div className={styles.protoSelectContainer}>
+                        Choose Protocores:
+                        <div className={styles.selectContainer}>
+                            Beta 1:
+                            <Select
+                                placeholder="Select Beta Protocore"
+                                options={betaProtocoreOptions}
+                                value={data.betaProtocore_1}
+                                onChange={handleBetaChange1}
+                                className={styles.select}
+                                isClearable
+                                isSearchable={false}
+                            />
+                        </div>
+
+                        <div className={styles.selectContainer}>
+                            Beta 2:
+                            <Select
+                                placeholder="Select Beta Protocore"
+                                options={betaProtocoreOptions}
+                                value={data.betaProtocore_2}
+                                onChange={handleBetaChange2}
+                                className={styles.select}
+                                isClearable
+                                isSearchable={false}
+                            />
+                        </div>
+
+                        <div className={styles.selectContainer}>
+                            Delta:
+                            <Select
+                                placeholder="Select Delta Protocore"
+                                options={deltaProtocoreOptions}
+                                value={data.deltaProtocore}
+                                onChange={handleDeltaChange}
+                                className={styles.select}
+                                isClearable
+                                isSearchable={false}
+                            />
+                        </div>
                     </div>
 
-                    <div className={styles.selectContainer}>
-                        Beta 2:
-                        <Select
-                            placeholder="Select Beta Protocore"
-                            options={betaProtocoreOptions}
-                            value={data.betaProtocore_2}
-                            onChange={handleBetaChange2}
-                            className={styles.select}
-                            isClearable
-                            isSearchable={false}
-                        />
+                    <div className={styles.substatsSelectContainer}>
+                        Choose Sub Stats:
+                        <div className={styles.selectContainer}>
+                            Sub Stat 1:
+                            <Select
+                                placeholder="Select Sub Stat 1"
+                                options={subStat1Options}
+                                value={data.subStat1}
+                                onChange={handleSubStat1Change}
+                                className={styles.select}
+                                isClearable
+                                isSearchable={false}
+                            />
+                        </div>
+
+                        <div className={styles.selectContainer}>
+                            Sub Stat 2:
+                            <Select
+                                placeholder="Select Sub Stat 2"
+                                options={subStat2Options}
+                                value={data.subStat2}
+                                onChange={handleSubStat2Change}
+                                className={styles.select}
+                                isClearable
+                                isSearchable={false}
+                            />
+                        </div>
                     </div>
 
-                    <div className={styles.selectContainer}>
-                        Delta:
-                        <Select
-                            placeholder="Select Delta Protocore"
-                            options={deltaProtocoreOptions}
-                            value={data.deltaProtocore}
-                            onChange={handleDeltaChange}
-                            className={styles.select}
-                            isClearable
-                            isSearchable={false}
-                        />
-                    </div>
-
-                    <div className={styles.selectContainer}>
-                        Sub Stat 1:
-                        <Select
-                            placeholder="Select Sub Stat 1"
-                            options={subStat1Options}
-                            value={data.subStat1}
-                            onChange={handleSubStat1Change}
-                            className={styles.select}
-                            isClearable
-                            isSearchable={false}
-                        />
-                    </div>
-
-                    <div className={styles.selectContainer}>
-                        Sub Stat 2:
-                        <Select
-                            placeholder="Select Sub Stat 2"
-                            options={subStat2Options}
-                            value={data.subStat2}
-                            onChange={handleSubStat2Change}
-                            className={styles.select}
-                            isClearable
-                            isSearchable={false}
-                        />
-                    </div>
                 </div>
             </nav>
 
