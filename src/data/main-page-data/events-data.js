@@ -101,7 +101,7 @@ export const eventsData = [
     image: "../assets/main-page/events/corn-plushie.png",
     startDate: "2026-08-31T05:00:00",
     endDate: "2026-09-13T04:59:59",
-    active: true,
+    active: false,
   },
   {
     id: 14,

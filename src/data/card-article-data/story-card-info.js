@@ -44,6 +44,6 @@ export const storyCardInfo = [
   },
   {
     story: "Main Story",
-    memories: [371, 274, 181],
+    memories: [371, 274, 181, 422],
   },
 ];
