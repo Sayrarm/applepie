@@ -1,12 +1,6 @@
 .container {
-    min-width: 1163px;
+    width: 1200px;
     display: flex;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-        "result navigation"
-        "result cards"
-        "result buttons";
     flex-direction: column;
     padding: 5px;
     margin: 20px auto 0;
@@ -15,23 +9,10 @@
     font-family: TikTok Sans, monospace;
 }
 
-.navigation {
-    grid-area: navigation;
-}
-
 .cardsContainer {
     display: flex;
-    justify-content: space-between;
-    grid-area: cards;
-    margin: 5px 0;
-}
-
-.buttonContainer {
-    grid-area: buttons;
-}
-
-.resultContainer {
-    grid-area: result;
+    justify-content: center;
+    gap: 5px;
 }
 
 .navigation {
@@ -123,8 +104,9 @@
 .articleContainer {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
     justify-content: space-between;
-    padding: 0 2px;
     zoom: 0.95;
 }
 
@@ -142,12 +124,10 @@
 }
 
 .emptySlot {
-    border: 1px solid var(--border-battle-page);
+    border: 1px dashed var(--border-battle-page);
 }
 
 .choosenCard {
-    width: auto;
-    height: auto;
     color: var(--colorTextDark);
     font-family: TikTok Sans, monospace;
     font-size: 16px;
@@ -170,7 +150,7 @@
 
 .cardsContainer {
     border-bottom: 2px solid var(--forSelect);
-    padding-bottom: 5px;
+    padding: 10px 0;
 }
 
 .buttonsContainer {
