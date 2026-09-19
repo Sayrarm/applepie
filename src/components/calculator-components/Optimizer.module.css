@@ -177,3 +177,10 @@
 .startButton:hover {
     background-color: var(--a-hover);
 }
+
+.loadingIndicator {
+    text-align: center;
+    padding: 16px;
+    font-size: 16px;
+    color: var(--forSelect);
+}

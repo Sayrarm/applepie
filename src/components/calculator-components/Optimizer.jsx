@@ -7,19 +7,16 @@ import {
     ModalChooseCard,
     RenderCardSlot,
     ProtocoreBlock,
-    StatsTable
+    StatsTable,
 } from "@components";
 import {
     clearOptimizerData,
     getOptimizerData,
     saveOptimizerData,
 } from "@localstorage";
-import {
-    optimizeTeam,
-    calculateTeamStats
-} from "@data";
+import { optimizeTeam, calculateTeamStats } from "@data";
 import KitCombatTable from "@components/calculator-components/common/KitCombatTable.jsx";
-import {useSolarPair} from "@hooks";
+import { useSolarPair } from "@hooks";
 
 const CARD_SLOTS = [
     { id: "solar1", placement: "solar", index: 0 },
@@ -31,13 +28,12 @@ const CARD_SLOTS = [
 ];
 
 function Optimizer() {
-    // Загружаем сохраненные данные
     const [data, setData] = useState(() => getOptimizerData());
     const [results, setResults] = useState(null);
     const [teamStats, setTeamStats] = useState(null);
+    const [isOptimizing, setIsOptimizing] = useState(false);
     const modalChooseCardRef = useRef();
 
-    // Сохраняем при изменении
     useEffect(() => {
         saveOptimizerData(data);
     }, [data]);
@@ -60,14 +56,12 @@ function Optimizer() {
         { value: "DEF Bonus", label: "DEF Bonus" },
     ];
 
-    // Sub Stat 1 — только HP / ATK / DEF
     const subStat1Options = [
         { value: "HP", label: "HP" },
         { value: "ATK", label: "ATK" },
         { value: "DEF", label: "DEF" },
     ];
 
-    // Sub Stat 2 — остальные сабстаты
     const subStat2Options = [
         { value: "CRIT Rate", label: "CRIT Rate" },
         { value: "CRIT DMG", label: "CRIT DMG" },
@@ -78,12 +72,10 @@ function Optimizer() {
     const solarCards = [data.cards.solar1, data.cards.solar2];
     const { teamDmgBonus } = useSolarPair(solarCards);
 
-    // Находим слот по placement и index
-    const findSlotId = (placement, index) => {
-        return CARD_SLOTS.find(
-            (slot) => slot.placement === placement && slot.index === index
+    const findSlotId = (placement, index) =>
+        CARD_SLOTS.find(
+            (slot) => slot.placement === placement && slot.index === index,
         )?.id;
-    };
 
     const handleSelectCard = (placement, index, card) => {
         const slotId = findSlotId(placement, index);
@@ -94,36 +86,26 @@ function Optimizer() {
         }));
     };
 
-    const handleSelectCompanion = (companion) => {
+    const handleSelectCompanion = (companion) =>
         setData((prev) => ({ ...prev, selectedCompanion: companion }));
-    };
 
-    const handleSelectWeapon = (weapon) => {
+    const handleSelectWeapon = (weapon) =>
         setData((prev) => ({ ...prev, selectedWeapon: weapon }));
-    };
 
-    const handleBetaChange1 = (option) => {
+    const handleBetaChange1 = (option) =>
         setData((prev) => ({ ...prev, betaProtocore_1: option }));
-    };
-
-    const handleBetaChange2 = (option) => {
+    const handleBetaChange2 = (option) =>
         setData((prev) => ({ ...prev, betaProtocore_2: option }));
-    };
-
-    const handleDeltaChange = (option) => {
+    const handleDeltaChange = (option) =>
         setData((prev) => ({ ...prev, deltaProtocore: option }));
-    };
-
-    const handleSubStat1Change = (option) => {
+    const handleSubStat1Change = (option) =>
         setData((prev) => ({ ...prev, subStat1: option }));
-    };
-
-    const handleSubStat2Change = (option) => {
+    const handleSubStat2Change = (option) =>
         setData((prev) => ({ ...prev, subStat2: option }));
-    };
 
     const clearAll = () => {
-        if (!window.confirm("Are you sure you want to clear all settings?")) return;
+        if (!window.confirm("Are you sure you want to clear all settings?"))
+            return;
         clearOptimizerData();
         setData(getOptimizerData());
         setResults(null);
@@ -131,32 +113,57 @@ function Optimizer() {
     };
 
     const startOptimization = () => {
-        const allProtocores = JSON.parse(localStorage.getItem("protocores") || "[]");
+        const allProtocores = JSON.parse(
+            localStorage.getItem("protocores") || "[]",
+        );
 
         if (allProtocores.length === 0) {
             alert("You don't have any protocores. Add them first.");
             return;
         }
 
-        const targets = {
-            beta1: data.betaProtocore_1?.value,
-            beta2: data.betaProtocore_2?.value,
-            delta: data.deltaProtocore?.value,
-            subStat1: data.subStat1?.value,
-            subStat2: data.subStat2?.value,
-        };
+        if (!data.selectedCompanion || !data.selectedWeapon) {
+            alert("Please select a Companion and MC Weapon first.");
+            return;
+        }
 
-        const { results: optimizationResults } = optimizeTeam({
-            cards: data.cards,
-            allProtocores,
-            targets,
-        });
+        setIsOptimizing(true);
 
-        // Считаем суммарные статы команды (карточки + протокоры)
-        const totalStats = calculateTeamStats(data.cards, optimizationResults);
+        // Даём React отрисовать индикатор, потом запускаем тяжёлый расчёт
+        setTimeout(() => {
+            try {
+                const targets = {
+                    beta1: data.betaProtocore_1?.value,
+                    beta2: data.betaProtocore_2?.value,
+                    delta: data.deltaProtocore?.value,
+                    subStat1: data.subStat1?.value,
+                    subStat2: data.subStat2?.value,
+                };
 
-        setResults(optimizationResults);
-        setTeamStats(totalStats);
+                const context = {
+                    selectedCompanion: data.selectedCompanion,
+                    selectedMCWeapon: data.selectedWeapon,
+                    teamDmgBonus,
+                };
+
+                const { results: optimizationResults } = optimizeTeam({
+                    cards: data.cards,
+                    allProtocores,
+                    targets,
+                    context,
+                });
+
+                const totalStats = calculateTeamStats(
+                    data.cards,
+                    optimizationResults,
+                );
+
+                setResults(optimizationResults);
+                setTeamStats(totalStats);
+            } finally {
+                setIsOptimizing(false);
+            }
+        }, 50);
     };
 
     const getCardData = (card) => {
@@ -249,7 +256,6 @@ function Optimizer() {
                             />
                         </div>
                     </div>
-
                 </div>
             </nav>
 
@@ -273,14 +279,17 @@ function Optimizer() {
                                 {Object.entries(results[slot.id]).map(
                                     ([type, protocore]) =>
                                         protocore && (
-                                            <div key={type} className={styles.resultProtocore}>
+                                            <div
+                                                key={type}
+                                                className={styles.resultProtocore}
+                                            >
                                                 <ProtocoreBlock
                                                     protocore={protocore}
                                                     hideChange={true}
                                                     hideDelete={true}
                                                 />
                                             </div>
-                                        )
+                                        ),
                                 )}
                             </div>
                         )}
@@ -292,20 +301,25 @@ function Optimizer() {
                 <button className={styles.clearButton} onClick={clearAll}>
                     Clear all
                 </button>
-                <button className={styles.startButton} onClick={startOptimization}>
-                    Start
+                <button
+                    className={styles.startButton}
+                    onClick={startOptimization}
+                    disabled={isOptimizing}
+                >
+                    {isOptimizing ? "Optimizing..." : "Start"}
                 </button>
             </div>
 
-            <div className={styles.resultContainer}>
-                {/* Суммарные статы команды */}
-                {teamStats && (
-                    <StatsTable
-                        stats={teamStats}
-                    />
-                )}
+            {/* Индикатор загрузки */}
+            {isOptimizing && (
+                <div className={styles.loadingIndicator}>
+                    Calculating best protocores, please wait...
+                </div>
+            )}
 
-                {/* Combat Calculations — показываем после оптимизации и только если есть companion + weapon */}
+            <div className={styles.resultContainer}>
+                {teamStats && <StatsTable stats={teamStats} />}
+
                 {teamStats && data.selectedCompanion && data.selectedWeapon && (
                     <KitCombatTable
                         stats={teamStats}

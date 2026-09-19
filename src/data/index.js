@@ -66,8 +66,7 @@ export {
 //optimizer-data
 export {
   optimizeTeam,
-  calculateTeamStats,
-  calculateCardStats
+  calculateTeamStats
 } from "./calculator-data/optimizer-data/optimizer-functions.js";
 
 //calculators data
@@ -76,6 +75,10 @@ export {
   mergeStats,
   applyBaseCritDmgBonus
 } from "./calculator-data/stats-utils.js";
+export {
+  computeKitDamage,
+  detectDamageType
+} from "./calculator-data/kitDamageFunctions.js";
 
 //memory upgrade data
 export {
