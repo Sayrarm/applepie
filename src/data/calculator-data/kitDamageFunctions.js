@@ -36,7 +36,6 @@ const computeRawDamage = (companionData, weaponData, s) => {
     const calc = createDamageCalculator;
 
     return {
-        // Companion
         support: companionData.supportSkillStats ? calc(companionData.supportSkillStats)(s) : 0,
         support2: companionData.supportSkillStats2 ? calc(companionData.supportSkillStats2)(s) : 0,
         support3: companionData.supportSkillStats3 ? calc(companionData.supportSkillStats3)(s) : 0,
@@ -61,7 +60,6 @@ const computeRawDamage = (companionData, weaponData, s) => {
         activeIII: companionData.activeSkill_IIIStats ? calc(companionData.activeSkill_IIIStats)(s) : 0,
         activeIII2: companionData.activeSkill_IIIStats2 ? calc(companionData.activeSkill_IIIStats2)(s) : 0,
 
-        // Weapon
         basicTotal: weaponData.basicAttackFormula ? calc(weaponData.basicAttackStats)(s) : 0,
         basic1: weaponData.basicFirstStrikeStats ? calc(weaponData.basicFirstStrikeStats)(s) : 0,
         basic2: weaponData.basicSecondStrikeStats ? calc(weaponData.basicSecondStrikeStats)(s) : 0,
@@ -81,8 +79,7 @@ const sumDamage = (damageMap) =>
 
 /**
  * Чистая функция расчёта урона команды.
- *
- * @param stats — { hp, atk, def, dmgBoost, critDmg, oathStrength, ... }
+ * @param stats — { hp, atk, def, dmgBoost, critDmg, oathStrength }
  * @param context — { selectedCompanion, selectedMCWeapon, teamDmgBonus }
  * @returns { baseDamage, weakenedDamage, critDamage, baseSum, weakenedSum, critSum }
  */
@@ -109,7 +106,7 @@ export const computeKitDamage = (stats, context) => {
     const rawDamage = computeRawDamage(companionData, weaponData, companionStats);
 
     const bonuses = {
-        attributeBonus: 0,      // в оптимизаторе не используется
+        attributeBonus: 0,
         teamDmgBonus,
         oathStrength,
         critDmg,
