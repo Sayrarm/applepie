@@ -684,4 +684,69 @@ True to her Evol, she excels at modifying weapons and equipment, though these mo
     content: `Hailing from Xavier's hometown, this group once included members like Xavier, Jeremiah, and Soren. They had many companions in the past, but now only a few remain.    
 `,
   },
+  {
+    id: 67,
+    navigation: "note",
+    title: "Liam",
+    img: "../assets/sp/liam.png",
+    content: `Caleb's adjutant, responsible for handling all fleet-related matters. Silent and dependable, he carries out every order from Caleb with unwavering dedication.
+`,
+  },
+  {
+    id: 68,
+    navigation: "note",
+    title: "Gideon",
+    img: "../assets/sp/gideon.png",
+    content: `A pilot at the Deepspace Aviation Administration and Caleb's college roommate. Straightforward by nature, he's always the comic relief in their group. He was the first friend to learn about Caleb's "resurrection" and helped keep the secret.
+`,
+  },
+  {
+    id: 69,
+    navigation: "note",
+    title: "Patrick",
+    img: "../assets/sp/patric.png",
+    content: `A pilot at the Deepspace Aviation Administration and Caleb's college roommate.Behind his composed exterior lies an overly passionate heart. He occasionally employs an eclectic blend of science and mysticism to explain all sorts of strange phenomena.
+`,
+  },
+  {
+    id: 70,
+    navigation: "note",
+    title: "Blythe",
+    img: "../assets/sp/blythe.png",
+    content: `A pilot at the Deepspace Aviation Administration and a former colleague of Caleb's. Candid yet perceptive, she's known for her calm, precise judgment in the field. Years ago, her mother boarded the Project Noctcael's vessel and was lost. She's been searching for clues ever since.
+`,
+  },
+  {
+    id: 71,
+    navigation: "note",
+    title: "Timothy",
+    img: "../assets/sp/timothy.png",
+    content: `A senior software engineer at the Deepspace Aviation Administration and Caleb's college roommate.Quiet and reserved most of the time,he keeps his distance from everyone around him. When it truly matters,he'll lend a hand however he can.
+`,
+  },
+  {
+    id: 72,
+    navigation: "guidance",
+    title: "Investigative Bureau Nine",
+    img: "",
+    content: `An organization under the mysterious Evol Management Alliance that seems to know a great deal about Caleb's and my backgrounds. Currently communicating with me through a liaison named Suzette, they've proactively invited me to join them.
+`,
+  },
+  {
+    id: 73,
+    navigation: "message",
+    title: "The Shelter",
+    img: "",
+    content: `Before Caleb and I were officially taken in by Josephine, we spent some time together at a shelter in Linkon City. Following a mysterious woman's lead, I discover that Caleb sent Mia, who had been declared dead, to the relocated shelter for protection.
+`,
+  },
+  {
+    id: 73,
+    navigation: "tale",
+    title: "Project Noctcael",
+    img: "",
+    content: `The earliest Deepspace exploration program. It once gathered the most brilliant minds and cutting-edge technology of its time.
+"Norn," later repurposed by EVER as the Toring Chip's control hub, was also born from this project. However, the mission vessel lost all contact within the Deepspace Tunnel, and no one knows what became of its crew.
+`,
+  },
 ];

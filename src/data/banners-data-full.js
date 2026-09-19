@@ -954,4 +954,14 @@ export const bannersDataFull = [
     rerun: true,
     active: false,
   },
+  {
+    id: 95,
+    name: "Banner",
+    image: "../assets/banners/banner-na.png",
+    cardIds: [],
+    startDate: "2026-09-22T05:00:00",
+    endDate: "2026-09-06T04:59:59",
+    rerun: false,
+    active: true,
+  },
 ];
