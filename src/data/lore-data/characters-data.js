@@ -255,7 +255,10 @@ export const charactersData = [
     char: "Caleb",
     img: "../assets/companions/caleb_pilot.png",
     mainStory: [
-      { title: "Under Deepspace", serialNumber: "01", subtitle: "To Begin" },
+      { title: "Under Deepspace",
+        serialNumber: "01",
+        subtitle: "To Begin"
+      },
       {
         title: "Under Deepspace",
         serialNumber: "04",
@@ -270,6 +273,16 @@ export const charactersData = [
         title: "Homecoming Wings",
         serialNumber: "02",
         subtitle: "Night Unending",
+      },
+      {
+        title: "Erratic Flux",
+        serialNumber: "01",
+        subtitle: "Our Trajectory Astray",
+      },
+      {
+        title: "Erratic Flux",
+        serialNumber: "02",
+        subtitle: "Silence of the Cosmos",
       },
     ],
     bond_1: {

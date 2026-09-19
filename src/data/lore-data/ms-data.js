@@ -167,4 +167,18 @@ export const msData = [
     subtitle: "Divergence Stirs",
     content: "link",
   },
+  {
+    id: 71,
+    link: "erratic-flux",
+    serialNumber: "01",
+    subtitle: "Our Trajectory Astray",
+    content: "link",
+  },
+  {
+    id: 72,
+    link: "erratic-flux",
+    serialNumber: "02",
+    subtitle: "Silence of the Cosmos",
+    content: "link",
+  },
 ];

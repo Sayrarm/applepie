@@ -35,4 +35,10 @@ export const msCategories = [
     title: "To Our Yesterday",
     image: "../assets/bg/6.png",
   },
+  {
+    id: 70,
+    link: "erratic-flux",
+    title: "Erratic Flux",
+    image: "../assets/bg/7.png",
+  },
 ];
