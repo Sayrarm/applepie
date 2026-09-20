@@ -24,6 +24,46 @@ const statMatches = (a, b) => {
     return na === nb || na.includes(nb) || nb.includes(na);
 };
 
+// ===== Клонирование results =====
+const cloneResults = (results) => ({
+    solar1: results.solar1 ? { ...results.solar1 } : null,
+    solar2: results.solar2 ? { ...results.solar2 } : null,
+    lunar1: results.lunar1 ? { ...results.lunar1 } : null,
+    lunar2: results.lunar2 ? { ...results.lunar2 } : null,
+    lunar3: results.lunar3 ? { ...results.lunar3 } : null,
+    lunar4: results.lunar4 ? { ...results.lunar4 } : null,
+});
+
+// ===== Сбор использованных id из results =====
+const collectUsedIds = (results) => {
+    const ids = new Set();
+    Object.values(results).forEach((slot) => {
+        if (!slot) return;
+        Object.values(slot).forEach((p) => {
+            if (p) ids.add(p.id);
+        });
+    });
+    return ids;
+};
+
+// ===== Сортировка слотов по потенциалу карточки =====
+const sortSlotsByPotential = (slotIds, cards, getBaseStatsFn) => {
+    return [...slotIds].sort((a, b) => {
+        const cardA = cards[a];
+        const cardB = cards[b];
+
+        const baseA = cardA ? getBaseStatsFn(cardA) : null;
+        const baseB = cardB ? getBaseStatsFn(cardB) : null;
+
+        const potA = (baseA?.hp || 0) + (baseA?.atk || 0) + (baseA?.def || 0);
+        const potB = (baseB?.hp || 0) + (baseB?.atk || 0) + (baseB?.def || 0);
+
+        if (potB !== potA) return potB - potA;
+
+        return (cardA?.id || 0) - (cardB?.id || 0);
+    });
+};
+
 // ===== Базовые статы карточки =====
 export const getCardBaseStats = (card) => {
     if (!card) return null;
@@ -95,10 +135,6 @@ export const calculateTeamStats = (cards, results, getBaseStatsFn = getCardBaseS
 };
 
 // ===== Оценка урона команды =====
-/**
- * Оценивает урон команды.
- * Слоты, которых нет в results — считаются пустыми.
- */
 const evaluateTeamDamage = (cards, results, context, damageType, getBaseStatsFn) => {
     const teamStats = calculateTeamStats(cards, results, getBaseStatsFn);
     const { baseSum, weakenedSum, critSum } = computeKitDamage(teamStats, context);
@@ -115,14 +151,6 @@ const evaluateTeamDamage = (cards, results, context, damageType, getBaseStatsFn)
 };
 
 // ===== Greedy: подбор лучшей пары для слота =====
-/**
- * Перебирает все пары (a, b) для слота, возвращает лучшую по урону.
- * @param slotId — id слота ("solar1" / "lunar2" / ...)
- * @param poolA — пул alpha (или gamma)
- * @param poolB — пул beta (или delta)
- * @param currentResults — текущие results (для контекста оценки)
- * @param isSolar — true → alpha/beta, false → gamma/delta
- */
 const pickBestPairForSlot = ({
                                  slotId,
                                  poolA,
@@ -177,14 +205,13 @@ const pickBestPairForSlot = ({
     return bestPair;
 };
 
-// ===== Greedy-оптимизация =====
+// ===== Главная функция оптимизации =====
 export const optimizeTeam = ({ cards, allProtocores, targets, context }) => {
     const damageType = detectDamageType(targets.delta);
     const getBaseStatsFn = createBaseStatsCache();
 
     const { alpha, beta, gamma, delta } = splitProtocoresByType(allProtocores);
 
-    // Пустые results (все слоты пустые)
     const emptyResults = {
         solar1: null,
         solar2: null,
@@ -194,9 +221,14 @@ export const optimizeTeam = ({ cards, allProtocores, targets, context }) => {
         lunar4: null,
     };
 
-    // ==========================================================
-    // SOLAR: 2 варианта распределения целей beta1 / beta2
-    // ==========================================================
+    // =========================================================
+    // ФАЗА 1: GREEDY
+    // =========================================================
+
+    // ---------- SOLAR ----------
+    const solarSlots = ["solar1", "solar2"];
+    const solarSlotOrder = sortSlotsByPotential(solarSlots, cards, getBaseStatsFn);
+
     const betaAssignments = [
         { solar1: targets.beta1, solar2: targets.beta2 },
         { solar1: targets.beta2, solar2: targets.beta1 },
@@ -204,12 +236,13 @@ export const optimizeTeam = ({ cards, allProtocores, targets, context }) => {
 
     let bestSolarResult = null;
     let bestSolarDamage = -Infinity;
+    let bestSolarAssignment = null;
 
     for (const assignment of betaAssignments) {
         const usedIds = new Set();
         const solarResults = { ...emptyResults };
 
-        for (const slotId of ["solar1", "solar2"]) {
+        for (const slotId of solarSlotOrder) {
             const card = cards[slotId];
             if (!card) continue;
 
@@ -239,7 +272,6 @@ export const optimizeTeam = ({ cards, allProtocores, targets, context }) => {
             }
         }
 
-        // Оцениваем полный solar-результат
         const solarDamage = evaluateTeamDamage(
             cards,
             solarResults,
@@ -251,16 +283,18 @@ export const optimizeTeam = ({ cards, allProtocores, targets, context }) => {
         if (solarDamage > bestSolarDamage) {
             bestSolarDamage = solarDamage;
             bestSolarResult = solarResults;
+            bestSolarAssignment = assignment;
         }
     }
 
-    // ==========================================================
-    // LUNAR: одна цель delta для всех 4 слотов
-    // ==========================================================
+    // ---------- LUNAR ----------
+    const lunarSlots = ["lunar1", "lunar2", "lunar3", "lunar4"];
+    const lunarSlotOrder = sortSlotsByPotential(lunarSlots, cards, getBaseStatsFn);
+
     const usedIdsLunar = new Set();
     const lunarResults = { ...emptyResults };
 
-    for (const slotId of ["lunar1", "lunar2", "lunar3", "lunar4"]) {
+    for (const slotId of lunarSlotOrder) {
         const card = cards[slotId];
         if (!card) continue;
 
@@ -290,10 +324,8 @@ export const optimizeTeam = ({ cards, allProtocores, targets, context }) => {
         }
     }
 
-    // ==========================================================
-    // Объединяем: solar — лучший вариант, lunar — greedy
-    // ==========================================================
-    const finalResults = {
+    // Объединяем
+    let bestResults = {
         solar1: bestSolarResult?.solar1 || null,
         solar2: bestSolarResult?.solar2 || null,
         lunar1: lunarResults.lunar1,
@@ -302,5 +334,178 @@ export const optimizeTeam = ({ cards, allProtocores, targets, context }) => {
         lunar4: lunarResults.lunar4,
     };
 
-    return { results: finalResults };
+    let bestDamage = evaluateTeamDamage(
+        cards,
+        bestResults,
+        context,
+        damageType,
+        getBaseStatsFn,
+    );
+
+    // =========================================================
+    // ФАЗА 2: LOCAL SEARCH
+    // =========================================================
+
+    // Фильтры по main stat для каждого слота
+    const mainStatFilterBySlot = {
+        solar1: { alpha: null, beta: bestSolarAssignment?.solar1 || null },
+        solar2: { alpha: null, beta: bestSolarAssignment?.solar2 || null },
+        lunar1: { gamma: null, delta: targets.delta },
+        lunar2: { gamma: null, delta: targets.delta },
+        lunar3: { gamma: null, delta: targets.delta },
+        lunar4: { gamma: null, delta: targets.delta },
+    };
+
+    // Пулы по цвету + фильтр по main stat (для replace и swap)
+    const solarPoolsBySlot = {};
+    for (const slotId of solarSlots) {
+        const card = cards[slotId];
+        if (!card) continue;
+
+        const betaFilter = mainStatFilterBySlot[slotId]?.beta;
+        solarPoolsBySlot[slotId] = {
+            alpha: filterByStella(alpha, card),
+            beta: filterByMainStatWithFallback(
+                filterByStella(beta, card),
+                betaFilter,
+            ),
+        };
+    }
+
+    const lunarPoolsBySlot = {};
+    for (const slotId of lunarSlots) {
+        const card = cards[slotId];
+        if (!card) continue;
+
+        const deltaFilter = mainStatFilterBySlot[slotId]?.delta;
+        lunarPoolsBySlot[slotId] = {
+            gamma: filterByStella(gamma, card),
+            delta: filterByMainStatWithFallback(
+                filterByStella(delta, card),
+                deltaFilter,
+            ),
+        };
+    }
+
+    // ---------- SWAP внутри типа ----------
+    const trySwapWithinType = (type) => {
+        const slots =
+            type === "alpha" || type === "beta" ? solarSlots : lunarSlots;
+
+        for (let i = 0; i < slots.length; i++) {
+            for (let j = i + 1; j < slots.length; j++) {
+                const slotA = slots[i];
+                const slotB = slots[j];
+
+                const cardA = cards[slotA];
+                const cardB = cards[slotB];
+                if (!cardA || !cardB) continue;
+
+                const protoA = bestResults[slotA]?.[type];
+                const protoB = bestResults[slotB]?.[type];
+
+                if (!protoA || !protoB) continue;
+                if (protoA.id === protoB.id) continue;
+
+                // Проверка цвета
+                if (cardA.stellaName && protoB.stellactrum !== cardA.stellaName) continue;
+                if (cardB.stellaName && protoA.stellactrum !== cardB.stellaName) continue;
+
+                // Проверка main stat filter
+                const filterA = mainStatFilterBySlot[slotA]?.[type];
+                const filterB = mainStatFilterBySlot[slotB]?.[type];
+
+                if (filterA && !statMatches(protoB.mainStat, filterA)) continue;
+                if (filterB && !statMatches(protoA.mainStat, filterB)) continue;
+
+                const trial = cloneResults(bestResults);
+                trial[slotA][type] = protoB;
+                trial[slotB][type] = protoA;
+
+                const trialDamage = evaluateTeamDamage(
+                    cards,
+                    trial,
+                    context,
+                    damageType,
+                    getBaseStatsFn,
+                );
+
+                if (trialDamage > bestDamage) {
+                    bestDamage = trialDamage;
+                    bestResults = trial;
+                }
+            }
+        }
+    };
+
+    // ---------- REPLACE: заменить протокор на свободный ----------
+    const tryReplace = (type) => {
+        const isSolarType = type === "alpha" || type === "beta";
+        const slots = isSolarType ? solarSlots : lunarSlots;
+        const poolsBySlot = isSolarType ? solarPoolsBySlot : lunarPoolsBySlot;
+
+        for (const slotId of slots) {
+            const card = cards[slotId];
+            if (!card) continue;
+
+            const pool = poolsBySlot[slotId]?.[type] || [];
+            const currentProto = bestResults[slotId]?.[type];
+
+            // Пересчитываем usedIds перед каждым слотом
+            const usedIds = collectUsedIds(bestResults);
+
+            const freeProtos = pool.filter(
+                (p) => !usedIds.has(p.id) || p.id === currentProto?.id,
+            );
+
+            for (const candidate of freeProtos) {
+                if (currentProto && candidate.id === currentProto.id) continue;
+
+                const trial = cloneResults(bestResults);
+                trial[slotId][type] = candidate;
+
+                const trialDamage = evaluateTeamDamage(
+                    cards,
+                    trial,
+                    context,
+                    damageType,
+                    getBaseStatsFn,
+                );
+
+                if (trialDamage > bestDamage) {
+                    bestDamage = trialDamage;
+                    bestResults = trial;
+                    break;
+                }
+            }
+        }
+    };
+
+    // ---------- Итерации ----------
+    let improved = true;
+    let iterations = 0;
+    const MAX_ITERATIONS = 20;
+
+    while (improved && iterations < MAX_ITERATIONS) {
+        improved = false;
+        iterations++;
+
+        const before = bestDamage;
+
+        trySwapWithinType("alpha");
+        trySwapWithinType("beta");
+        trySwapWithinType("gamma");
+        trySwapWithinType("delta");
+
+        tryReplace("alpha");
+        tryReplace("beta");
+        tryReplace("gamma");
+        tryReplace("delta");
+
+        if (bestDamage > before) {
+            improved = true;
+        }
+    }
+
+    return { results: bestResults };
 };
