@@ -13,8 +13,14 @@ import {
     clearOptimizerData,
     getOptimizerData,
     saveOptimizerData,
+    getCardProtocores,
 } from "@localstorage";
-import { optimizeTeam, calculateTeamStats } from "@data";
+import {
+    optimizeTeam,
+    calculateTeamStats,
+    computeKitDamage,
+    detectDamageType,
+} from "@data";
 import KitCombatTable from "@components/calculator-components/common/KitCombatTable.jsx";
 import { useSolarPair } from "@hooks";
 
@@ -32,6 +38,8 @@ function Optimizer() {
     const [results, setResults] = useState(null);
     const [teamStats, setTeamStats] = useState(null);
     const [isOptimizing, setIsOptimizing] = useState(false);
+    const [oldTeamStats, setOldTeamStats] = useState(null);
+    const [damageComparison, setDamageComparison] = useState(null);
     const modalChooseCardRef = useRef();
 
     useEffect(() => {
@@ -56,6 +64,7 @@ function Optimizer() {
         { value: "DEF Bonus", label: "DEF Bonus" },
     ];
 
+    {/*
     const subStat1Options = [
         { value: "HP", label: "HP" },
         { value: "ATK", label: "ATK" },
@@ -68,6 +77,38 @@ function Optimizer() {
         { value: "Oath Strength", label: "Oath Strength" },
         { value: "DMG Boost to Weakened", label: "DMG Boost to Weakened" },
     ];
+    */}
+
+    const buildOldResults = (cards) => {
+        const result = {
+            solar1: { alpha: null, beta: null },
+            solar2: { alpha: null, beta: null },
+            lunar1: { gamma: null, delta: null },
+            lunar2: { gamma: null, delta: null },
+            lunar3: { gamma: null, delta: null },
+            lunar4: { gamma: null, delta: null },
+        };
+
+        Object.entries(cards).forEach(([slotId, card]) => {
+            if (!card) return;
+            const protocores = getCardProtocores(card.id);
+            if (!protocores || protocores.length === 0) return;
+
+            protocores.forEach((p) => {
+                if (slotId.startsWith("solar")) {
+                    if (p.type === "alpha" || p.type === "beta") {
+                        result[slotId][p.type] = p;
+                    }
+                } else {
+                    if (p.type === "gamma" || p.type === "delta") {
+                        result[slotId][p.type] = p;
+                    }
+                }
+            });
+        });
+
+        return result;
+    };
 
     const solarCards = [data.cards.solar1, data.cards.solar2];
     const { teamDmgBonus } = useSolarPair(solarCards);
@@ -98,10 +139,12 @@ function Optimizer() {
         setData((prev) => ({ ...prev, betaProtocore_2: option }));
     const handleDeltaChange = (option) =>
         setData((prev) => ({ ...prev, deltaProtocore: option }));
+    {/*
     const handleSubStat1Change = (option) =>
         setData((prev) => ({ ...prev, subStat1: option }));
     const handleSubStat2Change = (option) =>
         setData((prev) => ({ ...prev, subStat2: option }));
+    */}
 
     const clearAll = () => {
         if (!window.confirm("Are you sure you want to clear all settings?"))
@@ -110,6 +153,8 @@ function Optimizer() {
         setData(getOptimizerData());
         setResults(null);
         setTeamStats(null);
+        setOldTeamStats(null);
+        setDamageComparison(null);
     };
 
     const startOptimization = () => {
@@ -146,6 +191,7 @@ function Optimizer() {
                     teamDmgBonus,
                 };
 
+                // ===== Новые протокоры =====
                 const { results: optimizationResults } = optimizeTeam({
                     cards: data.cards,
                     allProtocores,
@@ -153,13 +199,47 @@ function Optimizer() {
                     context,
                 });
 
-                const totalStats = calculateTeamStats(
+                const newTeamStats = calculateTeamStats(
                     data.cards,
                     optimizationResults,
                 );
 
+                // ===== Старые протокоры =====
+                const oldResults = buildOldResults(data.cards);
+                const oldStats = calculateTeamStats(data.cards, oldResults);
+
+                // ===== Сравнение урона =====
+                const damageType = detectDamageType(targets.delta);
+
+                const oldDamageData = computeKitDamage(oldStats, context);
+                const newDamageData = computeKitDamage(newTeamStats, context);
+
+                const pickDamage = (data) => {
+                    switch (damageType) {
+                        case "weakened":
+                            return data.weakenedSum;
+                        case "crit":
+                            return data.critSum;
+                        default:
+                            return data.baseSum;
+                    }
+                };
+
+                const oldDamage = pickDamage(oldDamageData);
+                const newDamage = pickDamage(newDamageData);
+                const percentChange = oldDamage > 0
+                    ? ((newDamage - oldDamage) / oldDamage) * 100
+                    : 0;
+
                 setResults(optimizationResults);
-                setTeamStats(totalStats);
+                setTeamStats(newTeamStats);
+                setOldTeamStats(oldStats);
+                setDamageComparison({
+                    oldDamage,
+                    newDamage,
+                    percentChange,
+                    damageType,
+                });
             } finally {
                 setIsOptimizing(false);
             }
@@ -320,7 +400,55 @@ function Optimizer() {
             )}
 
             <div className={styles.resultContainer}>
-                {teamStats && <StatsTable stats={teamStats} />}
+                {/* Два StatsTable рядом */}
+                {(teamStats || oldTeamStats) && (
+                    <div className={styles.statsComparison}>
+                        {oldTeamStats && (
+                            <div className={styles.statsColumn}>
+                                <h3 className={styles.statsColumnTitle}>
+                                    Before (Current Protocores)
+                                </h3>
+                                <StatsTable stats={oldTeamStats} />
+                            </div>
+                        )}
+                        {teamStats && (
+                            <div className={styles.statsColumn}>
+                                <h3 className={styles.statsColumnTitle}>
+                                    After (Optimized Protocores)
+                                </h3>
+                                <StatsTable stats={teamStats} />
+                            </div>
+                        )}
+                    </div>
+                )}
+
+                {/* Процент изменения урона */}
+                {damageComparison && (
+                    <div className={styles.damageComparison}>
+                        <div className={styles.damageRow}>
+                <span className={styles.damageLabel}>
+                    Damage ({damageComparison.damageType}):
+                </span>
+                            <span className={styles.damageOld}>
+                    {Math.round(damageComparison.oldDamage).toLocaleString()}
+                </span>
+                            <span className={styles.damageArrow}>→</span>
+                            <span className={styles.damageNew}>
+                    {Math.round(damageComparison.newDamage).toLocaleString()}
+                </span>
+                            <span
+                                className={
+                                    damageComparison.percentChange >= 0
+                                        ? styles.damagePositive
+                                        : styles.damageNegative
+                                }
+                            >
+                    {damageComparison.percentChange >= 0 ? "+" : ""}
+                                {damageComparison.percentChange.toFixed(2)}%
+                </span>
+                        </div>
+                    </div>
+                )}
 
                 {teamStats && data.selectedCompanion && data.selectedWeapon && (
                     <KitCombatTable
