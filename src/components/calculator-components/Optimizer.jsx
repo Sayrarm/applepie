@@ -228,6 +228,7 @@ function Optimizer() {
                         </div>
                     </div>
 
+                    {/* --Селекты для сабстатов, на данный момент не нужны--
                     <div className={styles.substatsSelectContainer}>
                         Choose Sub Stats:
                         <div className={styles.selectContainer}>
@@ -256,6 +257,7 @@ function Optimizer() {
                             />
                         </div>
                     </div>
+                    */}
                 </div>
             </nav>
 
