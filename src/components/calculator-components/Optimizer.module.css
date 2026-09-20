@@ -1,5 +1,5 @@
 .container {
-    width: 1200px;
+    min-width: 1200px;
     display: flex;
     flex-direction: column;
     padding: 5px;
@@ -37,6 +37,10 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+
+.protoSelectContainer {
+    align-items: flex-end;
 }
 
 .selectContainer {
@@ -178,6 +182,8 @@
     background-color: var(--a-hover);
 }
 
+/**********************************************/
+
 .loadingIndicator {
     text-align: center;
     padding: 16px;
@@ -187,20 +193,13 @@
 
 .statsComparison {
     display: flex;
-    gap: 24px;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    margin-bottom: 24px;
 }
 
 .statsColumn {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    min-width: 0;
-    flex: 1 1 400px;
-    max-width: 700px;
+    align-items: center;
+    margin-top: 10px;
 }
 
 .statsColumnTitle {
@@ -214,15 +213,13 @@
 .damageComparison {
     display: flex;
     justify-content: center;
-    margin: 16px 0 24px;
-    padding: 12px 16px;
-    border-radius: 8px;
+    margin: 15px 5px;
 }
 
 .damageRow {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 5px;
     font-size: 16px;
     flex-wrap: wrap;
 }
@@ -256,4 +253,68 @@
     color: #f87171;
     font-weight: 600;
     font-variant-numeric: tabular-nums;
+}
+
+/**************************************************/
+
+@media screen and (max-width: 1180px) {
+
+    .container {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .cardsContainer {
+        flex-direction: column;
+    }
+
+    .articleContainer {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .resultProtocores {
+        flex-direction: row;
+    }
+
+    .resultContainer,
+    .statsComparison {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+
+    .navigation {
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 535px) {
+
+    .companionsContainer {
+        flex-direction: column;
+        border-bottom: 1px dashed var(--forSelect);
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+    }
+
+    .articleContainer {
+        zoom: 0.70;
+    }
+
+    .resultContainer {
+        font-size: 12px;
+    }
+
+    .damageRow {
+        font-size: 13px;
+    }
+
+    .navigation {
+        align-items: flex-end;
+    }
 }
