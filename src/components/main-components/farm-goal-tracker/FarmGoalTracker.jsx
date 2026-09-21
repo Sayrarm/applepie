@@ -378,7 +378,7 @@ function FarmGoalTracker() {
                     <p>No active goals</p>
                     <p>
                         Go to Protocore Calculator or Memory Upgrade Calculator, calculate
-                        resources, and click "Add to Farm Goal Tracker".
+                        resources, and click "Add to Development Goal".
                     </p>
                     <p className={styles.linkContainer}>
                         <Link className={styles.link} to="calculator/protocore-calculator">
