@@ -8,12 +8,17 @@ import {
     RenderCardSlot,
     ProtocoreBlock,
     StatsTable,
+    KitCombatTable
 } from "@components";
 import {
     clearOptimizerData,
     getOptimizerData,
     saveOptimizerData,
     getCardProtocores,
+    saveCardProtocores,
+    getShowcaseTeams,
+    saveShowcaseTeams,
+    createDefaultTeam,
 } from "@localstorage";
 import {
     optimizeTeam,
@@ -21,7 +26,6 @@ import {
     computeKitDamage,
     detectDamageType,
 } from "@data";
-import KitCombatTable from "@components/calculator-components/common/KitCombatTable.jsx";
 import { useSolarPair } from "@hooks";
 
 const CARD_SLOTS = [
@@ -40,6 +44,7 @@ function Optimizer() {
     const [isOptimizing, setIsOptimizing] = useState(false);
     const [oldTeamStats, setOldTeamStats] = useState(null);
     const [damageComparison, setDamageComparison] = useState(null);
+    const [isSending, setIsSending] = useState(false);
     const modalChooseCardRef = useRef();
 
     useEffect(() => {
@@ -246,6 +251,55 @@ function Optimizer() {
         }, 50);
     };
 
+    // ===== отправка в Showcase =====
+    const handleSendToShowcase = () => {
+        setIsSending(true);
+
+        try {
+            // 1. Сохраняем протокоры на карточки в localStorage
+            CARD_SLOTS.forEach((slot) => {
+                const card = data.cards[slot.id];
+                if (!card) return;
+
+                const slotResult = results[slot.id];
+                const protocores = slotResult
+                    ? Object.values(slotResult).filter(Boolean)
+                    : [];
+
+                saveCardProtocores(card.id, protocores);
+            });
+
+            // 2. Собираем новую команду в формате Showcase
+            const teams = getShowcaseTeams();
+            const teamNumber = teams.length + 1;
+            const teamName = `Optimized Team ${teamNumber}`;
+
+            const newTeam = {
+                ...createDefaultTeam(teamName),
+                selectedCompanion: data.selectedCompanion,
+                selectedMCWeapon: data.selectedWeapon,
+                solarCards: [data.cards.solar1, data.cards.solar2],
+                lunarCards: [
+                    data.cards.lunar1,
+                    data.cards.lunar2,
+                    data.cards.lunar3,
+                    data.cards.lunar4,
+                ],
+                affinityLevel: 0,
+            };
+
+            // 3. Сохраняем команду
+            saveShowcaseTeams([...teams, newTeam]);
+
+            alert(`"${teamName}" sent to Showcase successfully!`);
+        } catch (err) {
+            console.error("Send to Showcase error:", err);
+            alert("Failed to send team to Showcase. See console for details.");
+        } finally {
+            setIsSending(false);
+        }
+    };
+
     const getCardData = (card) => {
         if (!card) return null;
         return { level: 1, rank: 0, isAscended: false, protocores: [] };
@@ -389,6 +443,13 @@ function Optimizer() {
                     disabled={isOptimizing}
                 >
                     {isOptimizing ? "Optimizing..." : "Start"}
+                </button>
+                <button
+                    className={styles.sendButton}
+                    onClick={handleSendToShowcase}
+                    disabled={!results || !teamStats || isOptimizing || isSending}
+                >
+                    {isSending ? "Sending..." : "Send to Showcase"}
                 </button>
             </div>
 

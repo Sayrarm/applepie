@@ -120,7 +120,8 @@
 }
 
 .choosenCard,
-.startButton {
+.startButton,
+.sendButton {
     text-decoration: none;
     background: none;
     cursor: pointer;
@@ -164,7 +165,8 @@
 }
 
 .clearButton,
-.startButton {
+.startButton,
+.sendButton {
     margin-top: 5px;
     padding: 10px 40px;
     align-self: center;
@@ -178,7 +180,8 @@
 }
 
 .clearButton:hover,
-.startButton:hover {
+.startButton:hover,
+.sendButton:hover {
     background-color: var(--a-hover);
 }
 
