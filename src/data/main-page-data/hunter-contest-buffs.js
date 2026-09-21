@@ -216,6 +216,31 @@ export const hunterContestBuffs = [
     teamC:
         "Empowerment: Increases ATK of all allied units.",
 
+    active: false,
+  },
+  {
+    id: 9,
+    teamAStella1: "../assets/icons/ruby.png",
+    teamAStella1Count: 5,
+    teamAStella2: "../assets/icons/amber.png",
+    teamAStella2Count: 1,
+    teamA:
+        "Press On Stacks: After an Active Skill is used, Support Skill damage increases by 35% for 4s. This effect can stack up to 3 time(s).",
+
+    teamBStella1: "../assets/icons/pearl.png",
+    teamBStella1Count: 4,
+    teamBStella2: "../assets/icons/ruby.png",
+    teamBStella2Count: 1,
+    teamB:
+        "Weakness Anchorage: Weakened enemies take 100% more Charged Attack DMG.",
+
+    teamCStella1: "../assets/icons/amber.png",
+    teamCStella1Count: 3,
+    teamCStella2: "../assets/icons/pearl.png",
+    teamCStella2Count: 1,
+    teamC:
+        "Overload: Increases CRIT rate of all allied units.",
+
     active: true,
   },
 ];

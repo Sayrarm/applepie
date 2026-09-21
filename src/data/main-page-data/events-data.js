@@ -113,8 +113,8 @@ export const eventsData = [
   },
   {
     id: 15,
-    name: "Double Drop of Protocore",
-    image: "../assets/main-page/events/double-protocore.png",
+    name: "Double Drop of Bounty Hunt",
+    image: "../assets/main-page/events/bounty-hunt.png",
     startDate: "2026-09-21T05:00:00",
     endDate: "2026-09-28T04:59:59",
     active: true,

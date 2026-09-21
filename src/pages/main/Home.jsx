@@ -73,7 +73,7 @@ function Home() {
       </div>
 
       <div className={styles.containerSchedule}>
-        <h2 className={styles.h2}>Farm Goal Tracker</h2>
+        <h2 className={styles.h2}>Development Goal</h2>
 
         <FarmGoalTracker />
 
