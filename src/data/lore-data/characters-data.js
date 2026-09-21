@@ -65,7 +65,7 @@ export const charactersData = [
       "Light Into Dust",
       "The Little Prince's Gift",
     ],
-    anecdotes: ["A Special Vacation", "Passing By", "When Shooting Stars Fall"],
+    anecdotes: ["A Special Vacation", "Passing By", "When Shooting Stars Fall", "Echoes of the Ruins"],
   },
   {
     link: "zayne",
@@ -147,7 +147,7 @@ export const charactersData = [
       "Dusk To Autumn",
       "Good Night, Frostmere",
     ],
-    anecdotes: ["A Pure White Heart", "Never-Ending Winter", "Still In Dark"],
+    anecdotes: ["A Pure White Heart", "Never-Ending Winter", "Still In Dark", "What Gives Life Weight"],
   },
   {
     link: "rafayel",
@@ -204,7 +204,7 @@ export const charactersData = [
       "Bucket List",
       "A Fairy Tale",
     ],
-    anecdotes: ["A Unique Vermillion", "Addictive Pain", "Siren's Song"],
+    anecdotes: ["A Unique Vermillion", "Addictive Pain", "Siren's Song", "That Painting"],
   },
   {
     link: "sylus",
@@ -248,14 +248,17 @@ export const charactersData = [
       image: "../assets/bond/Midnight-Stealth.png",
     },
     wu: ["Mischief", "Elysium", "Beyond Survival", "Onychinus Aesthetics"],
-    anecdotes: ["Land Of Lost"],
+    anecdotes: ["Land Of Lost", "Temporary Teammate"],
   },
   {
     link: "caleb",
     char: "Caleb",
     img: "../assets/companions/caleb_pilot.png",
     mainStory: [
-      { title: "Under Deepspace", serialNumber: "01", subtitle: "To Begin" },
+      { title: "Under Deepspace",
+        serialNumber: "01",
+        subtitle: "To Begin"
+      },
       {
         title: "Under Deepspace",
         serialNumber: "04",
@@ -271,6 +274,16 @@ export const charactersData = [
         serialNumber: "02",
         subtitle: "Night Unending",
       },
+      {
+        title: "Erratic Flux",
+        serialNumber: "01",
+        subtitle: "Our Trajectory Astray",
+      },
+      {
+        title: "Erratic Flux",
+        serialNumber: "02",
+        subtitle: "Silence of the Cosmos",
+      },
     ],
     bond_1: {
       link: "https://youtu.be/wCrvq0fDh6I",
@@ -278,6 +291,6 @@ export const charactersData = [
       image: "../assets/bond/Rain's-Embrace.png",
     },
     wu: ["Sketches Vol. 13", "Serpent's Cast", "Crease", "Above The Ashes"],
-    anecdotes: ["Pathless Realm"],
+    anecdotes: ["Pathless Realm", "An Open Window"],
   },
 ];

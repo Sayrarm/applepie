@@ -2654,4 +2654,1124 @@ He used to think that starting a journey was important. The path itself was impo
 
 `,
   },
+  {
+    id: 301,
+    link: "an-open-window",
+    serialNumber: "01",
+    subtitle: "Early Autumn",
+    content: `
+By the time brown spots appear on a fruit, the pit has long since become pulp. No one can see it. The little bird that feeds on it, chewing through the soft flesh and sucking the heady juices, eventually tumbles to the ground along with the fruit. It's tired. It doesn't move.
+This is the "drama" Caleb followed to its finale during his first autumn at the shelter.
+The fruit has split open upon touching the ground, releasing the smell of fermentation. A dozen curious children crowd around, then scatter in all directions. "The bird's dead!" they scream. The scent threads through the branches of the pagoda tree on the wind, and by the time it reaches Caleb, only a faint wisp remains.
+Perched high in the branches of a pagoda tree, he watches. The figures gathering and scattering bear a striking resemblance to the ants he can see by crouching on the ground. They're fragile, act like a herd, drawn to sweet things, and are occasionally stubborn.
+The smell grows stronger. It's closer to what he used to catch while wandering through the city ruins.
+But the bird isn't dead at all.
+Once everyone is gone, Caleb leaps from the branch to the first-floor eaves and drops down into the parterre. His shadow falls over the tiny chest rising and falling in secret. As the air cools, the bird's closed eyelids tremble.
+By the time the sky darkens, the bird still shows no signs of waking up. Caleb picks it up and places it between the thick branches of the pagoda tree. A nest folded from paper sits there with a few pagoda tree pods. He studies it for a moment before snapping off a leaf-covered branch and drapes it over the bird like a blanket. Then he walks away without looking back.
+
+The day after, a vehicle bearing a crude medical insignia pulls up at the front gate. Caleb stands on his tree's branch and looks down as the gate swings open and a girl's bewildered face appears behind the adults’ figures as they converse. The bird, roused by thirst, lets out a faint cry, and the girl lifts her head. When he sees those empty, uncomprehending eyes, Caleb knows. She remembers nothing.
+The medical staff and the shelter teachers lead her inside. Before long, the murmurs drift from a small second-floor room just behind the pagoda tree.
+"There was a Wanderer attack at the medical center a while back... She was almost hurt... It must've frightened her...'
+"...Her heart condition is somewhat complicated, but fortunately, her recovery after the surgery is decent enough..."
+"...Yours is the only facility in the area with proper medical credentials at the moment... Please, we're counting on you..."
+The months of separation since the Chronorift Catastrophe are condensed into fragmented words slipping through the crack in the window and echoing beneath the swaying leaves.
+The small room is a place Caleb has explored before. It has clean, white walls.
+It's unlike the research center in one crucial way: there's a window. Lean out from that single window and look to the right, and the forking branches of the pagoda tree come into view.
+During the girl's first week, the adults only ever open that window by a sliver.
+Whenever the bird calls out, Caleb sees the sheer curtain behind the glass stirring faintly, yet no one appears at the window.
+
+`,
+  },
+  {
+    id: 302,
+    link: "an-open-window",
+    serialNumber: "02",
+    subtitle: "Flaw",
+    content: `
+The TV flickers as it's turned on, and the drama begins right on schedule. The children sit obediently in the common room. Before long, cheerful laughter fills the air. Caleb doesn't join any other events, but he never misses TV time. A few months is more than enough for Emryn to conclude that he's a difficult child. He parts the grass to watch ants, climbs trees to study flowers, and once he picks up enough words, he starts devouring books. He spends every waking moment under the open sky or curled up in the reading corner. He's a boy who approaches anything that piques his curiosity and studies it with quiet intensity, yet his attitude toward people remains strangely guarded. Sometimes Emryn feels an inexplicable competitive streak rise in her. Is it really impossible to find this rascal's soft spot?
+She clasps her hands behind her back and laughs at herself. Grown-ups at a certain age just can't help but want to tease children. Then again, she's genuinely curious about Caleb's soft spot.
+One episode ends, and it's time to play outdoors. The barren yard offers little beyond a patch of sand and some flowers and trees. But having the chance to go outside again without worrying about monsters falling from the sky is more than enough. The children always make the most of it.
+Emryn stands beneath the eaves, sorting out the children whose hearts are closed because they lost their homes and who are more drawn to sports or toys. Whenever a child runs over for Ms Director and begs for a story, she settles onto a small stool. With a smile, she gives one that she knows will captivate them.
+During a break, she drinks water and catches sight of the taller-than-average Caleb perched atop the bookshelf in the reading corner. A heavy book is clutched to his chest, his body curled up against the wall, his knees drawn up tight to shield his torso. It leaves only a fathomless gaze exposed. Emryn freezes for a moment before it hits her. Just as she's been watching the children, he's been watching her. More precisely, he's been watching how she assesses the others.
+Children are always sharp enough to sense who holds the highest status at home.
+Even in the shelter—a small society larger than any family unit--the children can tell with perfect clarity that Emryn is the adult "leader" here.
+But Caleb has never been interested in any Specific person. So why is he studying her behavior?
+Unwilling to let this rare opening disappear, Emryn walks over to the base of the bookshelf and tilts her head up with a smile tinged with playful provocation. A little too spirited for a woman her age, perhaps, but Caleb clearly sees it.
+After a brief flash of bewilderment, the boy's eyes slowly narrow, his expression strikingly similar to that of the young leopard on the book cover, poised for its first hunt.
+
+`,
+  },
+  {
+    id: 303,
+    link: "an-open-window",
+    serialNumber: "03",
+    subtitle: "A Small Victory",
+    content: `
+Emryn brings the little girl from the second floor down to the common room to watch TV with the other children for the first time. While everyone's attention is glued to the screen, the newcomer slips in without a sound. Atop the bookshelf, Caleb shifts, moving from wedging his back into the corner where two walls meet to sitting against a single wall. His gaze lands on the girl's head. She turns, stares at him for a second, then quickly returns her attention to the TV.
+Emryn takes it all in.
+During group play time, Emryn forms a clearer picture of the girl: quiet in a way that carries no malice and almost no presence. After an hour or so of silent observation, she spares a glance toward Caleb only to find him gone.
+She calls the other teachers over to keep watch, then searches the yard from front to back. She's just starting to look grumpy when a rustle sounds from above.
+Caleb swings out from the small second-floor window sill. Then he leaps from the ledge and lands on a tree's thick branch.
+Despite the distance of several steps, his form remains impossibly steady. When he glances back, he sees the window has been thrown wide open, the sheer curtain drawn aside completely. The bed isn't visible from here, but anyone approaching the window would be plainly visible from where he was.
+The bird's cries are shrill and urgent. Caleb pats his pocket, fishes out half a biscuit, and crumbles it into the nest. The bird refuses to return. It's perched on a swaying treetop and calling even more frantically. Caleb tilts his head and watches it until a thundering shout erupts from below.
+"Caleb, get down here... Slowly!"
+She watches the boy descend the tree with practiced ease, dust off his knees with a gentle pat, and turn that expressionless face toward her. Emryn's heart, which only just calmed down, threatens to pick up speed again.
+She takes two breaths to steady herself. Then she bends down and asks gently,
+"What did you learn?"
+Perhaps uncomfortable with the decreased distance, Caleb shifts one foot half a step back and offers no answer.
+Emryn smiles. "I know you've been secretly studying me. And the other teachers, too." The boy takes a step back.
+"You're a fast learner, huh? When you first got here, you could barely read. But within a month you were picking up books on your own. After three months, you must've learned a thing or two about how people get along, right?" Before he can retreat any further, Emryn waggles her eyebrows.
+"Don't you want to test out what you've learned? Or are you scared?"
+This clever child has never read any books on military strategy. He doesn't know that seasoned adults have a trick called "reverse psychology." His eyes shift again. They're more vivid now, yet sharper with caution.
+Caleb stares at Emryn, then turns and walks inside.
+Emryn drops her cartoonishly villain-like grin and follows. By the time she finds Caleb again, he's standing before that girl with the almost invisible presence.
+Something is cupped in his palm. The girl stands on her tiptoes to peek, shakes her
+head, and turns away. She's as expressionless as he is.
+Emryn walks over with a new portable radio and tunes it to the only two receivable channels for the girl. Through the white noise, news from the world beyond the shelter trickles in. A high-risk Wanderer has been eliminated somewhere, a new medical outpost has been set up somewhere else, and another safe zone has been established... A voice, belonging to someone called a survivor, cries out and trembles. "Our fruit has ripened! Humanity won't be empty-handed this season. Everything is slowly getting better"...
+Engrossed, the girl sits in a quiet corner cradling the radio. Emryn gives her head a gentle pat, then rises and walks past Caleb—standing there grumpy and dazed—and pats him on the head too. Moments later, the director's hearty laughter rings out across the yard. "You want to learn my tricks? You've got a long way to go, kid! Hahahaha!"
+
+`,
+  },
+  {
+    id: 304,
+    link: "an-open-window",
+    serialNumber: "04",
+    subtitle: "The One They Follow",
+    content: `
+What kind of child reaches eleven or twelve while being sharp, vigilant, defensive, and profoundly unsocialized despite knowing nothing of the world? In calmer times, this would be a serious concern. But in an age where there's a gaping hole in the sky and Wanderers overrun the world, it barely registers as a minor one.
+The boy who is a bit of a "handful" caused Emryn very little trouble. It's just one name that never answers at roll call, one shadow she has to keep track of during every group event as he vanishes into thin air or burrows until he's out of sight. When he can't be found, one episode of a drama or new book is enough to lure him out. At this point, the difference between Caleb and a low-maintenance child isn't that big.
+
+Since the Chronorift Catastrophe, broadcast and communication systems have yet to fully recover. Whatever has been restored is reserved for emergency alerts and live news. The old TV at the shelter plays DVDs, which means there are only old shows. The discs belong to one of the teachers who reportedly grabbed three boxsets on reflex while fleeing for her life. One was lost to a Wanderer along the way. The remaining two were donated to the Shelter.
+Yesterday, the first boxset officially came to an end. It was a family sitcom spanning over ninety episodes that helped these children, torn away from home, weather the hardest stretch in relative peace. The sensitive ones shed tears watching the heartwarming moments of a family of five.
+The livelier ones were already boasting about having visited the same amusement park as the one on screen. And then there was young Caleb, who spent ninety episodes learning about families in human society.
+The new disc begins to play. Masked figures in sleek, tight-fitting stealth suits leap and dart between skyscrapers. The screen is alive with whooshes. The somewhat rough special effects and flashy action sequences capture every child's attention. It's an old cartoon about saving the world.
+In the days that follow, the kids who used to play house swap genres entirely. They become superpowered heroes and monsters instead. Caleb digs out a thick, worn storybook from the reading corner, balances it on his head, and dashes toward the pagoda tree. As he cuts through the recreational area in the yard, a branch comes flying at him. He slows and flicks his fingers. The branch stops before clattering to the ground.
+The kid who runs over to pick up the branch freezes. After a couple of seconds, he lets out a shriek in admiration as they experience an intense emotional episode.
+"You're Magnet Hero!"
+That single sentence costs Caleb his alone time.
+When he's swarmed for the third time, Caleb marches up to Emryn with a trail of children in tow. He's unable to hide the annoyance in his voice. "Are you going to do anything about this?"
+Emryn does nothing but laugh in his face. Magnet Hero needs to have minions.
+Annoyed beyond his limit, Caleb retreats to the pagoda tree and stays perched there for half the day. He refuses to come down.
+It doesn't matter who calls for him. 
+
+Almost a month after arriving at the shelter, the girl seems to have fallen ill. Just as she was beginning to get to know the other children, she's sent back upstairs to rest. Caleb hides in the tree with his book, reading aloud whenever he comes across passages describing different cities and scenery. Before long, the window the adults had shut is pushed open again. She stands by the sheer curtain, listening—or so it seems—to Caleb read. But her gaze cuts past the walls of the shelter. Caleb knows what she's looking at. He always comes up to this tree, and he looks in the same direction.
+Beyond the walls is a set of railroad tracks stretching into the distance. They reach for the horizon that can't be seen with the naked eye.
+One afternoon, he finishes the last story in the collection. Caleb closes the book and prepares to leave. A small voice drifts from the window sill. "What happened in that TV show? When the mother and father weren't home, did they go to the amusement park?" she asks.
+It's the episode of the family drama she missed while she was sick. Unfortunately, Caleb never watched it either. He has no answer. Minutes pass in silence, and all that remains is the soft rustling of the pagoda tree's pods swaying in the wind.
+
+`,
+  },
+  {
+    id: 305,
+    link: "an-open-window",
+    serialNumber: "05",
+    subtitle: "Paradise at the End",
+    content: `
+There are no stories about amusement parks in the reading corner.
+When the minions learn that Caleb is interested in amusement parks, they chatter and gather every scrap of knowledge and intel they have. Langston, the most worldly among them—a kindergarten graduate, no less-boasts.
+"There's an amusement park where the sun Sets. I used to go there all the time."
+The old railroad tracks beyond the shelter lead to where the sun sets.
+Naptime is the quietest hour at the shelter, second only to nightfall. Caleb climbs the tree, and a paper crane with words scrawled on it floats up from his palm. It wobbles with some effort as it squeezes through the gap in the window. Soon, the faint sound of footsteps can be heard from inside. The girl throws the window open, her eyes bright and fiery as they find him.
+Caleb meets her gaze. He pauses, then the question slips out before he realizes it. "Do you want to go beyond the walls and find that amusement park?"
+The girl's eyes widen with surprise, and she nods eagerly, leaning out and stretching her hand toward Caleb. "Catch me."
+He pauses. Then he takes her hand and lets her land gently on the branch where he stands.
+Just as they're about to scale the wall the same way, three children who had been watching Caleb since before naptime pop out of nowhere. They're lined up along the wall like a row of hopeful little birds watching him in silence.
+"...Climb up yourselves," Caleb mumbles. The children who want to save the world alongside Caleb boost and pull each other up to conquer the evil fortress wall. Along the abandoned railroad tracks, five little figures of varying heights run free toward the sun.
+It's only a wall away, yet the air tastes entirely different. The wind rushes to meet them like a rough tongue belonging to a panting animal, its hot breath touching their faces. Under the blazing sun, the rolling mountains shiver along the horizon.
+For one breathless moment, they stand perfectly still to feel the wind skim past their fingertips, and the faint tremor of exhilaration spreads its warmth throughout their entire bodies.
+This is the first time in a long while that they see the outside world with their own eyes.
+Creeping woodsorrel and endive flowers push through the gaps in the tracks to lean against the railroad ties and sway in the wind. It feels like they're on a spring excursion. The children's hearts are uplifted little by little, buoyed by an unwavering belief. If they just keep walking along this rusted railway, it'll lead them to the amusement park.
+It has to be the most wonderful, safest, happiest place in the world.
+Along the way, someone starts singing softly. Then someone worries the singing might attract monsters, so they stop. Caleb holds her hand, walking at the very back of the group. They pass what the teachers used to call "the place where many people are sleeping." One child swears it must be some kind of hotel.
+Another insists it's a rest stop. Confused, the girl looks to Caleb, and he thinks before shaking his head. He doesn't tell her it's a place people only go to after they die.
+After what feels like forever, they stop running. Their hands are braced on their knees as they catch their breath.
+"Are we there yet?"
+Caleb looks ahead. He knows how to read the sun for time and direction, but his answer still comes out uncertain. "...We should get there before the sun sets."
+A foul, acrid smell creeps in on the wind. The two more timid children grow uneasy and tired.
+"I want to go back."
+"Me too..."
+Caleb stops and points behind them.
+"Leave then. We're marching forward." 
+The two hesitate. Then they hold hands and run back the way they came. They're a little slower than before.
+They keep walking before a Wanderer's distant shriek tears the silence. The last remaining older child freezes in place. Caleb studies his face and quickly recalls which page of the personnel registry it belongs to.
+Emryn and the other teachers mentioned it when recording cases. A Wanderer dragged
+this child's family away before his eyes. Ever since then, one shriek locks his body in place. His soul possesses the ability to reverse time, and it can pull him back to the night he lost everything at any moment.
+"That was the sound of a Wanderer being killed. It's gone now." Caleb looks away, seemingly speaking to the tracks beneath his feet. "We'll keep going. You can head back."
+The sound of footsteps becomes a lonely rhythm. Not saying a word, the girl has been clinging to his sleeve since they left the shelter. Now that it's just the two of them, she speaks to the tracks too. "I'm not actually sick. I know that."
+Caleb glances at her small hand and nods.
+"It's not an illness. You're just not strong enough yet. You won't always be like this."
+The girl tilts her head up to look at him, presses her lips into a thin line, and is silent again. Her fingers gather more of Caleb's sleeve into her palm. The sun sinks fast, its gorgeous twilight creating strange, jagged silhouettes along the horizon. Caleb quickens his pace until he's practically pulling the girl into a run. The tracks reach a dead end at a chain-link fence and continue on the other side. He follows the unyielding barrier to the right, and gradually, a Ferris wheel almost identical to the one on TV appears. It's still so far away that even with their faces pressed against the wire, the mesh printing tiny squares into their skin, they can only make out a rough outline.
+Finally, they find a torn opening in the fence. Caleb hoists the girl onto his shoulders so she can crawl through first. But when she grips the edge of the hole, she freezes. Caleb looks up and sees the towering Ferris wheel in the distance tilting. It's slowly collapsing, and only after a massive cloud of dust billows into the sky does the dull, thunderous sound of its impact reach their ears. It's tangled with the furious howls of several Wanderers. Without any hesitation, Caleb hoists the girl onto his back and sprints toward the tracks. Before long, Emryn and several teachers are rushing out against the last sliver of twilight, their faces tense with panic. When he meets their gazes, someone grabs his arm harder than anyone ever has. He thinks of the ending of that family sitcom. It was boring, really. It only had a family crying and laughing at the same time.
+He doesn't struggle. Soon enough, he receives the first beating of his life.
+That night, Caleb is punished with weeding the entire yard. The other children quietly pitch in to help. Later, the two younger kids and the older one insist they've formed a hero squad with Caleb. Caleb pretends he didn't hear them.
+
+`,
+  },
+  {
+    id: 306,
+    link: "an-open-window",
+    serialNumber: "06",
+    subtitle: "Grab",
+    content: `
+Before autumn reaches its end, Caleb has accepted the children trailing after him. The show about saving the world is only a few episodes away from its finale. The girl can finally go downstairs, but she has missed the earlier episodes. Caleb tries to catch her up only to turn around and discover that she's fallen asleep. He doesn't bother waking her. Instead, following a tutorial in a book, he folds paper into the shapes of a house and tiny furniture. His followers walk over after finishing their TV time and instantly recognize them as the same ones from the family sitcom. Their worship of Caleb deepens once more.
+The news says things have stabilized considerably. Some of the less damaged districts have completed their initial reconstruction.
+More children are claimed by relatives or reunited with their parents. People come and go from the shelter until only they and a handful of others remain.
+Young as they are, the children sense it. Even the kids who always trailed after Caleb no longer have the heart to cling to him. Their dreams have shifted from becoming as strong as Caleb to simply wanting a home of their own.
+Caleb is happy to have some peace and quiet. His solitary battlefront shifts from the tree branch to the second-floor window sill. The left side is where he sits. The right is piled high with folded paper objects. Most of them are paper cranes.
+"How do you know how to do everything?" The girl pushes a paper crane back from the edge before it tumbles, then stretches her arms to corral the pile of folded paper toys.
+Another newly folded paper crane tumbles into the pile. Caleb wiggles his fingers, and the flat crane wobbles into the air. It floats left and right at his command. Nearby, the small bird he once saved flutters over, hops around to watch for a moment, then beats its wings and flies away.
+The paper crane lands on the girl's fingertip. Caleb picks up a downy feather the bird left behind and waves it in front of her. "With the power I have now, all I can control is a sheet of paper. And a single feather. I can make a paper crane obey me, but I can't tell that bird what to do."
+The girl thinks it's just fine. "That's fine. The bird can fly on its own, but the paper crane can't. So it needs you more."
+Caleb doesn't say anything else. One by one, he sends the paper cranes soaring into the sky only for each to plummet shortly after passing the wall. They fall in quiet succession, and before long, a tiny field of crushed paper gathers on the other side.
+"Everyone calls you Caleb. Should I call you Caleb too?" the girl asks.
+"If you want," he says, looking into her uneasy gaze and thinking it over carefully. Similar to that drawn-out family sitcom, the older child should always be a little taller with hands a little wider. If they end up going to school together someday, he'll grow up ahead of her, hold her hand in the crowd, and walk in front of her.
+
+In the courtyard, Emryn stands beneath the tree with a woman about her age.
+Overjoyed, she looks at them and beams at the girl. "Come down! Ms Josephine has decided to take you home."
+Behind her glasses, Josephine's eyes shift slowly from the girl's face to Caleb's. They're backlit against the light. She's calm and familiar yet somehow different from how she looked at the research center.
+While Caleb is still frozen in place, a small hand grabs his. The girl leans out and holds up their tightly clasped hands for the adults below to see. "I want to bring him with me. Is that okay, Ms... Ms Josephine?"
+"...And who is he?"
+"He's Caleb."
+She doesn't say yes, but she doesn't say no either. She looks away and slowly walks in circles with Emryn.
+Caleb looks down at his own hand, then at the girl. A strange light glimmers in her eyes. He swings himself inside, shuts the window, his lowered voice tense. "Do you remember?"
+The girl doesn't answer. She smiles at him, and her other hand closes around his.
+Two hands—heavier than a sheet of paper and a small bird. Yet Caleb is utterly powerless against them.
+The final episode of the story about saving the world was supposed to be played that day, but neither of them gets to see it. Caleb is given a small backpack, stuffed with clothes and cookies thanks to Emryn, and one thin book. It's the first book he ever opened at the shelter and the first he opened in this world: The Complete Guide to Paper Creations (Children's Edition).
+
+`,
+  },
+  {
+    id: 401,
+    link: "echoes-of-the-ruins",
+    serialNumber: "01",
+    subtitle: "Calamity Dawns",
+    content: `
+August 26, 2034. Early in the morning... 
+For everyone in Linkon City, this night has continued for too long.
+The sky is torn apart by an invisible force. From the bottomless rift, indescribable shadows twist and rush out at impossible speeds. For most, the end comes before the mind can register it. One moment they may be asleep or working late, and the next they lose their lives amid absolute, incomprehensible terror—without even a chance to scream.
+Russell, a convenience store clerk working the night shift, is one of the few who has a chance to react. But this "good fortune" feels more like torture. He cowers below the cash register, his teeth chattering beyond his control, his nails digging deep into his arm as he tries to wake himself up with the pain. This has to be a nightmare, one too vivid and too long to be real. Two minutes ago, something broke into the store.
+It looks like some grotesque reptile, its thick limbs covered in jagged spikes. Its metallic shell gleams under the fluorescent lights. Death follows in its wake. Its sharpened appendages knock over shelves, and its hard tail punctures bags of chips lying scattered on the floor. A drunk who doesn't get out in time meets a gruesome end at its claws. Russell catches only a glimpse. He doesn't dare look again. He clamps his hands over his mouth and listens to the grating screech of something scraping against the tiles. He can only pray for it to end.
+The electronic chime saying "welcome" suddenly rings out from the door.
+Russell's heart lurches. He peeks over the edge of the counter, trying to see which unlucky fool would be reckless enough to walk in for a pack of cigarettes at a time like this.
+But it's not a poor sucker.
+A figure steps unhurriedly into the store and doesn't even spare the monster a glance. Russell tries to yell at the person to run away but only a strangled croak escapes his throat. He's like a pigeon with its neck wrung.
+The monster lets out a hoarse, inhuman roar and lunges toward the entrance. Then, the roaring abruptly stops.
+Russell doesn't see what happens. All he sees is a flash of light—cold and blinding. Then it's gone. He hears the dull thud of a heavy object hitting the floor, and it's followed by the sharp crack of something shattering.
+
+The store is quiet save for his own ragged breathing and the pounding heart. He hears a soft beep from the self-checkout machine with "payment failed." The sound of steadfast footsteps slowly approaches. A shadow falls over him.
+Russell slowly looks up to find a young man holding open a shopping bag.
+"Hi. How much are these?" His voice is low with the slight hoarseness of someone who just woke up. Yet it strangely cuts through the frozen terror.
+The young man is dressed in a peculiar outfit and wears a metal mask over his face. As if he's suddenly noticed something, he turns toward the counter, picks up a box of hard candy on sale, and adds it to his bag before holding it out to Russell again.
+Still slumped on the floor, Russell rings up the items out of habit, his mind a blank slate.
+The young man takes the bag, nods, and thanks him before turning to leave.
+"It isn't safe with the lights this bright. I'll cut the power." The lights go out at once and leave only the emergency exit signs' faint green glow. Then there's the heavy grinding of gears from the entrance. It's from the explosion-proof shutters used to lock up the store at night.
+Darkness swallows everything. Dazed, Russell sits. A long time later, he scrambles out from his hiding place. By the dim glow of the emergency lights, he sees the wreckage of the store, but the monster is gone. The floor is clean. It's as if the carnage from moments ago was nothing but a hallucination born of his terror. Could it... really have been just a dream?
+Before that fragile thought can even form, more frenzied roars erupt from a few blocks away. They mix with human screams and sporadic gunfire.
+The illusion shatters. Russell scrambles back behind the counter, curls into a ball, and clutches his head.
+
+`,
+  },
+  {
+    id: 402,
+    link: "echoes-of-the-ruins",
+    serialNumber: "02",
+    subtitle: "Combat Suit",
+    content: `
+After locking the convenience store, Xavier darts into the street where the gunfire comes from. Shopping bag in hand, he sees an old, long-abandoned underground bunker that's now a rare refuge. The police are organizing survivors while firing at the Wanderers. But without Evol, conventional weapons have little effect on things from the rift.
+After making short work of the Wanderers, Xavier yanks the cumbersome short cape off his back, balls it up, and tosses it into a nearby trash can. Jeremiah designed this combat suit years ago after binge-watching action movies and female-oriented comic books. He carefully added in the signature traits of countless superheroes and protagonists. The material is special and offers decent protection, but the design is woefully dated. It just had to come with a cape too. To quote Jeremiah... "Your uniform must have a sense of ceremony befitting a captain."
+Xavier feels the only "ceremony" this cape provides—aside from smacking him in the face during high-speed movements and snagging on everything in tight spaces—is probably raising his odds of getting killed. But time was short and he had no choice. His usual workout gear got wrecked in tonight's first encounter, so he was forced to dig it out from the back of his closet.
+
+Nearby, the bunker's heavy alloy door is slowly closing. The last sliver of light through the gap illuminates a few exhausted but hopeful faces.
+"Hey, buddy... Can you stay and help protect the survivors?"
+Sweat is streaming down the officer's forehead, his bullets doing nothing but create sparks against the Wanderers' shells. With expectant desperation, he stares at Xavier like a drowning man grasping at a piece of driftwood.
+Xavier isn't used to being seen like that. He reaches up to touch his nose. The edge of his mask rubs against the bridge of his nose. It hurt at first, but he's grown accustomed to it. The mask is another one of Jeremiah's "thoughtful" designs. It supposedly wards off unwanted attention. To the officer, the young man looks like an actor who walked out of a theater only to realize he forgot to take off his costume. There's almost a hint of awkwardness in his posture. Xavier shakes his head. He points to himself—then toward the heart of the city—before helping them close the door.
+
+With that done, he pulls a pack of nuts from his shopping bag, tears it open, and tips them straight into his mouth. He chews slowly. High-energy food quickly replenishes his stamina, and the sweet and salty flavor helps soothe his taut nerves. He swallows the last few crumbs, brushes off the salt from his hands, and looks up to get his bearings. He needs to go north to the Lumiaestas District. That's where Linkon's high-tech industries are clustered and where the most active energy readings are coming from. According to the fragmented orders the officer's been picking up from the government, the area has become a major disaster zone. All Evolvers who can fight are being called in to seal the area.
+Xavier turns, blurring into a streak of light in the dark. He's racing against the thin trickle of fleeing cars as he heads toward the center of chaos.
+
+`,
+  },
+  {
+    id: 403,
+    link: "echoes-of-the-ruins",
+    serialNumber: "03",
+    subtitle: "The \"Paramedic\"",
+    content: `
+Soaria District. Warzone Temporary Emergency Medical Center...
+This is one of the few medical stations still functioning in the early hours of the disaster. But right now, it looks like an extension of hell itself. Agonized groans, desperate sobs, and the urgent shouts of running medical staff blend into a cacophony. The corridors reek of blood and rot that not even disinfectants can mask. The operating room doors burst open. A nurse rushes in with a gurney, words firing off like bullets. "Female child. Five years old max. Punctured in the back. Foreign object removed but contamination remains. High fever. Delirious. Suspected brain trauma with cause unknown!" 
+The surgeon does not look up, hands working with sharp precision. "Is her family here?"
+The nurse pauses, trying to recall anything. "Brought in by that masked Evolver again."
+The doctor leaves it at that. Over the past few days, a masked, remarkably skilled young man has been bringing in one patient after another. All are victims of those creatures. He always vanishes after dropping someone off, too. The doctor has never actually seen him, but has learned to recognize the distinct, fleeting style that's like an efficient, silent paramedic.
+Debridement, examination, removal of contaminated tissue... The surgery proceeds methodically. During a short break, the doctor glances at the observation window on the door. A figure is standing in the dimly lit hallway. A mask obscures most of his face. His peculiar clothes are covered in dirt, and his back is straight. The image matches the nurse's description of the "paramedic."
+The doctor looks away after a second. A fleeting thought takes hold.
+How strange. He didn't leave this time.
+The emergency surgery is over. The doctor removes the gloves and looks toward the door again, but the man is gone. Despite asking around, the doctor finds that none of the staff has seen anyone there. The subtle twinge of disappointment lasts only a moment before the next patient is brought in, and the doctor quickly returns to the operating table.
+But seeing the man brings the doctor an inexplicable sense of reassurance. In a time when everyone is fearing for their own survival, someone is silently traveling between the dangerous front lines and the rear just to deliver strangers to safety.
+The act itself seems to shine with a stubborn glimmer of light.
+
+`,
+  },
+  {
+    id: 404,
+    link: "echoes-of-the-ruins",
+    serialNumber: "04",
+    subtitle: "Evacuation Area",
+    content: `
+Three weeks after the rift appeared, pouring rain churns the dust and bloody rumble into mud.
+With Lumiaestas District marking the boundary, Linkon City begins its arduous journey south.
+The rift's area of influence is expanding visibly. Fortunately, humanity's instinct for survival has kicked into overdrive.
+Makeshift shelters rise from the rubble like misshapen fortresses. They're crude but effective enough to keep most Wanderers at bay.
+When Xavier arrives at Sweeties, he finds a sturdy camping tent pitched in front of the bakery that's somewhat collapsed.
+Jeremiah is surrounded by a group of wide-eyed children, deftly handing out freshly baked cupcakes. The warm aroma of caramel and butter fills the air.
+It isn't until the crowd disperses that Jeremiah notices the gaze on him. Carrying the familiar scent of gunpowder and rain, Xavier steps out of the shadows. The tension of the first few days is gone from his expression. It's been replaced by the quiet exhaustion of someone who's constantly on the move.
+"Running low on rations?" Jeremiah flips the baking tray with a pair of tongs, his tone as nonchalant as if he were discussing the weather. "I heard the supply routes to the big evacuation sites up north have stabilized."
+"More or less." Xavier sits down by the stove, takes off his mask, and sets it on his knee. He rubs the space between his brows. "Now that we've figured out the Wanderers' attack patterns, the pressure on the front lines has eased up. An experienced Evolver squad can handle most of the regular ones."
+"That's good." Jeremiah nods, tapping the cakes out of their molds. "Have you visited her lately?" he asks, trying to make it sound like an offhand remark.
+Xavier is silent for a moment. "Haven't found the time." His gaze is fixed on the flickering flames. "I dropped off a patient at the central hospital this morning and overheard the nurses talking. A new shipment of supplies came in. It's enough to set up a few separate children's wards... That should be a decent place."
+Jeremiah hums, his hands still moving. He knows that in a time of overwhelming uncertainty, too much attention might not be a good thing for a child who was saved from the disaster's epicenter.
+"The situation is similar here," Jeremiah continues. "The kids who were kept hidden away are finally getting some fresh air. They look forward to the cookies I make from my failed bread." A small smile appears on his lips. "We're getting more help-focused Evolvers assisting at the evacuation site. They're organized. It's like they've been through the same training." Jeremiah slips on a pair of puffy oven mitts and slides the baking tray back into the oven as he talks. "World Evol Government fixed the communications system in the university's district today. I was about to put in an ad for Sweeties and ask if anyone needs a pastry chef, but the volunteer lead chewed me out. They said the channel isn't for that."
+Xavier listens, his gaze sweeping over the people reinforcing the roof and distributing supplies nearby. The intermittent sound of a broadcast from a newly repaired signal tower announces the latest evacuation sites and public health notices. A crude but effective order slowly emerges from the chaos.
+"Things have settled down," Xavier concludes. "Faster than we expected."
+Individual lives are like candles in the wind before such a disaster. Yet something that belongs to humanity-the stubborn, instinctual insistence to rally, help one another, rebuild a home from the rubble—is like wild grass. It can't be burned away, and it always grows back.
+"Fragile, but not that fragile, right?"
+Jeremiah chimes in, smoothly piping the last bit of icing onto a cake. He sets the bag down and pushes the special cake toward Xavier. A round icing blob with square ears and stern beady eyes looks at him, its mouth stubbornly smiling.
+"...A bear?" Xavier studies it for a few seconds before offering his guess.
+"New design." Jeremiah grins. "Got the roses down, but I'm still figuring out the animals. It'll have to do."
+Xavier picks up a fork, carefully avoiding the glaring icing bear, and scoops up a piece. He chews, then looks up at Jeremiah. His expression is sincere. "You've done a great job."
+A faint sting rushes unbidden to Jeremiah's nose. He presses his lips together, blinks rapidly, and turns away. He pretends to tidy up the baking trays. The warm glow of the stove shines on his profile and chases away some of the gloom that has haunted him for so long.
+After seconds pass in silence, Jeremiah looks out at the ugly rift still gaping menacingly on the distant horizon and lowers his voice. "Do you think... we brought about this catastrophe? We came here without permission."
+Xavier doesn't answer immediately. He finishes the last of his cake and sets down his fork before speaking, his voice soft and steadfast. "We can't untangle a thread that was knotted long ago, nor do we need to." Jeremiah listens, and after a moment, his shoulders slowly relax. He's correct.
+Ensuring the land is rebuilt under their feet and letting people fight to survive are important right now. They need to be protected.
+"I know." He lets out a drawn-out breath. "You have your fires to put out, and I have my bread to bake, right?"
+Xavier nods. He puts his mask back on, stands, and pats Jeremiah on the shoulder.
+"I'm off."
+"Wait." Jeremiah stops him and holds out a bundle wrapped in wax paper. "Here's a new batch of butter cookies. They're packed with energy."
+Xavier weighs the cookies in his hand. "Thanks." Before the word even fades, he vanishes into the heavy rain.
+Jeremiah's legs move to follow before he catches himself. Habit is a terrifying thing Even in a different time and place with a different identity, his body still automatically follows when his captain sets out.
+Jeremiah stands there for several seconds before scratching his head and muttering under his breath. "Ugh, I got caught up in asking about the rebuilding and giving pep talks that I forgot to tell him... He's kind of famous now?"
+
+`,
+  },
+  {
+    id: 405,
+    link: "echoes-of-the-ruins",
+    serialNumber: "05",
+    subtitle: "The Hunters",
+    content: `
+The rain shows no sign of letting up.
+The southbound evacuees form a winding line while Xavier is a silent streak of light cutting against the current.
+His objective these past few days has been clear: Eliminate high-level Wanderer nests scattered throughout Linkon City. These zones had fallen early on due to violent energy surges and monster incursions. There were almost no survivors. These nests are tumors festering in the city's wounds, and they must be excised.
+Under the rain, Xavier leaps across the ruins and hurtles himself toward the next high-risk zone. As he cuts through an open plaza, several figures suddenly dart out from behind the rubble to block his path. "Please wait!"
+Xavier comes to an abrupt halt, his hand dropping to the hilt of his sword. His calm gaze sweeps over the four people before him. They're young, bearing normal energy fluctuations and signs of battle. Their eyes reveal their nervousness, but they're bright as they stare at him with a mix of excitement and awe.
+The leader, a girl with a high ponytail, takes a deep breath. "Are you Lumiere?"
+"...?"
+Beneath his mask, his brow furrows almost imperceptibly. Lumiere? Is she talking about him?
+Seeing his silence, the girl assumes he didn't hear her and quickly explains herself. "Evolvers like us who specialize in fighting Wanderers are called 'Hunters' now. And when you fight, you move so fast. You're like a streak of light. That's why everyone calls you that!"
+A boy with short hair nods beside her. "Sir, we just discovered our Evols not too long ago, and we're on patrol duty nearby. C-Can we join you? We want to learn a thing or two?"
+Xavier looks at their young, eager faces and remains silent for a few seconds. He can sense that their fundamentals are solid. It's the kind of fresh blood desperately needed on the front lines.
+"It won't be necessary." He doesn't explain that his destination is too dangerous and unsuited for new recruits. His gaze lingers briefly on their clumsy grips and the gaps in their formation. When he speaks again, his words are unhurried but clear and direct. "Focus your energy on a single point. It's more effective than spreading it thin. Watch for the shifting patterns of the Wanderers' Protocores. Keep moving and don't get surrounded. And... try not to be reckless. Then you'll be fine."
+He pauses for a few seconds and reviews his words to see if he missed anything. Then, with a slight nod, he vanishes into the buildings' shadows leading to the high-risk zone.
+Stunned, the four young Evolvers stand there.
+"All right," the one who seems the most level-headed says as they grab a companion on the shoulder. "Time to get to work. Keep moving just like he said. Don't be reckless!"
+Fired up by the excitement of getting pointers from a legend, the squad turns and sprints toward their assigned patrol zone. Meanwhile, that streak of light has already plunged itself into greater danger to resume his silent cleanup.
+
+Tonight, Xavier's battlefield is a massive commercial complex still under construction.
+The fight turns out harder than expected.
+As the last high-risk Wanderer—one capable of emitting psychic interferences—dissipates under his blade, Xavier stands with his sword lowered and catches his breath. The suppressor on his neck urgently flashes a red light. It's warning him that his body is at its limit.
+Cold rain beats down on his mask and clothes to help cool his overheated flesh. There's no time to go home and recover. He looks around and spots a row of roofed prefab buildings. They seem to be old workers' dormitories.
+Sliding down the wall to sit on the ground, Xavier takes two syringes from a small pouch at his side. He rolls up his sleeve and injects the light blue liquid into his vein, his face expressionless. The cold medicine spreads through his bloodstream and temporarily eases the ache in his muscles and the burning in his nerves. But it also brings waves of hollow fatigue.
+Xavier leans against the wall and closes his eyes.
+There are a few holes in the roof.
+Rainwater drips down and pools into small puddles by his feet.
+A soft rustling reaches his ears.
+Xavier's eyes open, his hand instantly finding his sword. But it isn't a monster. It's a blind old woman. She totters closer, seemingly mistaking him for someone she has been waiting for. Her face is alight with the pure joy of someone finding what they'd lost.
+Xavier stays silent, swallowing the words of denial.
+The old woman's fingers find a tear in his sleeve. She leads him into one of the prefab houses, produces a needle and thread, and has him remove his jacket. She then carefully begins to mend the tear stitch by stitch.
+"What took you so long to come back?" she murmurs softly as she sews. "There are rabid monsters out there these days. You have to be careful." Xavier only replies with a quiet hum.
+A chubby, ginger-and-white cat saunters over to his feet with a slight limp. It tilts its head back to glare at him with displeasure and lets out an annoyed meow. It's as though it's scolding him for stealing its spot. Xavier offers an apologetic look. Seeing that he has no intention of moving, the cat grumbles and hops up onto his lap, its soft paws making no sound. Then it curls itself into a fluffy ball to nap. Its stomach is warm, rising and falling with each breath like a tiny furnace.
+Xavier gently closes his eyes, his thoughts drifting like fine threads of rain.
+The number of Evolvers emerging during this catastrophe has grown unnaturally fast. The speed at which human society has gone from shock to organized resistance is also faster than normal. There must be Backtrackers among those guiding and coordinating in the shadows. Not even EVER has given him trouble during this time.
+"Our team never drops the ball when it matters the most."
+He imagines something Jeremiah might say, and the corners of his mouth shift almost imperceptibly.
+The old woman doesn't disturb Xavier.
+After putting down the jacket, she quietly goes into the back room.
+He turns back the cuff to look at the lining. The tear has been mended with neat stitches in a bright color. They form a light blue flower, a common roadside variety. He's seen it many times, but he still doesn't know its name. All it needs is a little sunlight to bloom in a barren place.
+In a cold, leaky house on a night still ringing with alarms, Xavier feels a strange sense of tranquility. It's a peace wrapped in a small, unfamiliar kindness, one that feels almost like a luxury.
+A heavy exhaustion washes over him, and he almost falls asleep.
+
+`,
+  },
+  {
+    id: 406,
+    link: "echoes-of-the-ruins",
+    serialNumber: "06",
+    subtitle: "The Journey",
+    content: `
+He doesn't know how much time has passed. Maybe only two minutes. Maybe fifteen. The cat in his lap suddenly twitches its ears and lifts its head to stare warily in one direction. A new, familiar roar echoes from deeper within the complex and cuts through the rain.
+Xavier exhales softly. With the gentlest of movements, he lifts the cat from his lap and places it in a cat bed the old woman had sewn from scraps of cloth. The cat meows in protest but doesn't fight him. It proceeds to curl up in a ball and continue purring.
+He stands up, stretching his stiff joints, and picks up the sword leaning against the wall. Something occurs to him. Xavier takes out the bag of cookies Jeremiah had pressed into his hands, opens it, and sets it gently on the table. The scent of milk and butter wafts through the air and mingles with the aroma of food drifting from the back room. It adds a touch of warmth to the humble house.
+"Are you leaving?" The old woman's voice comes from the kitchen doorway. She seems to have sensed something, a half-full bowl of soup still in her hands.
+Xavier stops in his tracks and looks back. The blind old woman is "looking" in his direction, her expression showing a mixture of confusion and a faint, barely perceptible sense of loss.
+After a few seconds pass, Xavier speaks, his voice lower than usual. "Yes. I have a job to do."
+The old woman murmurs a soft "oh" and doesn't try to stop him.
+Xavier turns to leave. Just as he's about to step out into the rain, the old woman suddenly speaks again, her voice so faint that it's almost a whisper to herself.
+"Come—... Get home soon, child. Watch out for the monsters."
+Xavier stops, his gaze fixed on the endless darkness beyond the window. He's looking in the direction of the roars. 
+The rain comes down harder.
+His voice is calm, cutting through the downpour to reach the old woman's ears.
+"Don't worry. I'm a Hunter. I'm here to kill monsters."
+Heading to the next monster-filled nest, he vanishes into the cold, damp night. Under the prefab roof, all that's left is the fading steam from a bowl of soup and a cat that has rolled over in its bed. It's fast asleep.
+
+In the distance, new Hunters are gathering. Their names are different, and their abilities vary. But they're all doing the same thing—hunting the "monsters" and protecting the survivors. It's as simple as that.
+The rain continues to fall, but the long night will soon be over.
+
+`,
+  },
+  {
+    id: 501,
+    link: "what-gives-life-weight",
+    serialNumber: "01",
+    subtitle: "Life",
+    content: `
+In the classroom for anatomy, the instructor spends fifteen minutes going over lab rules for the new students admitted to the medical school: be quiet, show respect for the donor, handle instruments properly, and if you feel unwell, don't push through it. Crouch down against the wall.
+The students hold their breath, their expressions ranging from solemn to anxious as the remarkably young teaching assistant puts on a pair of gloves, walks to the operating table, and lifts the light green cloth.
+He picks up the scalpel and moves it along the marked incision line. The blade advances, and the skin parts.
+A retching sound comes from somewhere behind him. The instructor remains calm, long accustomed to such scenes.
+"Continue." 
+Zayne nods.
+Slender blue vessels lie nestled between layers of tissue. They're always thinner than they appear in the anatomy textbooks.
+When a person walks down the street, what people notice is their face, their clothes, and their expression. But on the operating table, they become thousands of new terms to memorize. A life is reduced to organs, tissues, nerves, blood vessels, and cells.
+The first lesson of anatomy is rarely the dense terminology in the textbook. It's learning how to deconstruct a life into countless parts that can be observed, understood, and committed to memory.
+
+The smell of formalin is hard to wash off. Even after two rounds of using soap, the odor still lingers between his fingers.
+Zayne is about to leave when footsteps and hushed voices drift in from outside the stall.
+"The last guy the instructor called up for the dissection demo... That was Zayne?"
+"Yeah, the genius who broke the record for the youngest admission. Apparently, he was only fourteen when he enrolled."
+"Seriously, though. How does someone that young not even flinch? There was no reaction."
+"I know, right? My hands were shaking just watching. And he was calm, dissecting and explaining the structures to us at the same time..."
+The two realize the subject of their conversation is standing right there. Their voices cut off abruptly.
+An awkward silence hangs in the air for two seconds. Zayne turns off the faucet, looks up, and asks politely, "Did you need the sink?"
+"T-thanks."
+The two step aside, and Zayne walks past between them.
+
+`,
+  },
+  {
+    id: 502,
+    link: "what-gives-life-weight",
+    serialNumber: "02",
+    subtitle: "Growing Up",
+    content: `
+It's late September in Linkon City. The lingering heat of summer still hasn't fully let go, and a thin layer of dry restlessness hangs in the air.
+It's the start of another school year. Zayne walks alone down the main campus road. Trees are still green, and his arms are full of books he just borrowed from the library. Tall for his age, the boy mentally reviews his to-do list: organize his class schedule, visit the retired professor his parents asked him to check in on—who was recently hired back to teach—and pick up the "surprise gift" they mailed from out of town. Those are done. The last stop is the campus clinic.
+The campus doctor, his hair streaked with gray, peers through thick reading glasses as he quietly wages war against the clinic's newly installed electronic medical records system. He sees a student entering out of the corner of his eye and waves them over.
+"Are you here to see a doctor? Hand me your student ID so I can get you registered."
+"Dr. Kendrick."
+"Oh, you know my name? You must be from the medical school. Perfect. Go ahead and tell me what's wrong. What are your symptoms?"
+The boy is quiet for a moment, then begins speaking as if long accustomed to the unspoken rules of being a med student.
+"Over the past month, I've been experiencing paroxysmal pain in both lower extremities when I sleep. The episodes are intermittent, lasting approximately five to fifteen minutes each, and they resolve spontaneously. My joints don't swell, nor do I have an elevated skin temperature or rashes." 
+Dr. Kendrick's fingers pause on the electronic medical record. He looks up, his gaze flitting between the slightly baby-faced ID photo on the screen and the boy standing before him.
+"You're the young genius? What's your name again..." The old man pushes his glasses up and leans in for a closer look. Then he recognizes him. "Zayne, right?" 
+Zayne turns away.
+The basic physical examination is done quickly. Dr. Kendrick flips through the results. Complete blood count is normal, vitals are normal, and nothing is out of the ordinary across the board. He taps Zayne's bones, then looks up at him with a knowing smile. "It's nothing serious. At your age, growing pains are normal. It's a kid thing. Make sure you're getting enough vitamin D. Eat a balanced diet and exercise regularly too."
+"But I'm already—"
+"Anyone under eighteen still gets sent to pediatrics at the hospital. Stop trying to act like a grown-up all the time."
+Dr. Kendrick chuckles and ruffles Zayne's hair. "All right, I'll prescribe you some vitamin D and a few heat therapy patches." 
+
+Back in his dormitory room, Zayne receives a call. His mother, Althea, just returned from her work out on the field, and she finally has a signal again. Her first call is for him.
+"Zaynie, how have you been?"
+Althea has always been the more talkative one. She asks about his classes, his lab
+work, his advisor, his research topics, and then circles back to daily life. She makes sure he's eating on time and getting enough rest. Zayne answers each question in turn. When the conversation drifts to his current research interests, he mentions some studies in the field of Protocore Syndrome.
+"Oh." Althea chuckles. "It sounds exactly like the kind of thing you'd be interested in."
+"Why do you say that?"
+"Ever since you were little, you've always been drawn to questions that don't have a textbook answer." She pauses. "Has anything been bothering you lately? School, life...?"
+He's always been the kind of child who never gives his parents a reason to worry. Skipping grades, entering university, and getting into medical school are milestones he achieved before his peers. Althea and Jace were concerned back then. They're afraid that pushing him into the adult world too soon might cost him something that belonged to his childhood. But their son was resolute, as though a question burned inside him. It demanded an answer, and that was why he moved urgently.
+And yet, it's precisely this self-sufficiency, this demeanor of always having things figured out, that makes a parent wonder whether or not it's okay to stop worrying. "Everything is fine. Really." And from his perspective, it truly is.
+"That's good to hear." Althea smiles gently.
+"It's just... studying medicine isn't only about curing illnesses and saving lives. It's more like a journey about deepening your understanding of life and what it means to truly experience it. You'll learn what gives life its weight, and what makes it so light." A brief silence falls on the other end of the line. Althea knows the question is still a little too abstract for him. She wishes she could reach through the phone and ruffle his hair. But when they're separated by a thousand miles, all she can do is smile.
+"You'll figure it out. There's no need to have the answers right now. Get some sleep, Zaynie."
+After she says good night and the call ends, Zayne stares at his phone screen. He's lost in thought.
+He recalls the conversation after anatomy class earlier that day. His labmates thought he should've been afraid. He knows what the human body is made of, the ways in which life can come to an end, and yet none of it frightens him. He hasn't felt a single flicker of emotion during the dissection. Is it because he doesn't understand what life means?
+
+`,
+  },
+  {
+    id: 503,
+    link: "what-gives-life-weight",
+    serialNumber: "03",
+    subtitle: "Companion",
+    content: `
+Not long after Skyhaven is established in 2036, Linkon Medical School is officially merged with Skyhaven University. It becomes a vital piece of the city above the clouds and its vision as a technological capital. With Protocore Energy usage on the rise, the grand ambitions of merging cutting-edge technology with life sciences no longer seem out of reach.
+The boy who shuttles between lecture halls and libraries with books tucked under his arm grows taller by the day. The boyishness in his features slowly gives way to sharper lines. Outstanding grades and a steady stream of accolades don't consume his entire life. In his free time, he still crosses half the city just to catch a lecture or exhibition that piques his interest.
+Once Zayne enters his master's program, the question of choosing a research focus rises to the top. At the time, the application of Protocore technology in cardiac surgery is still in its exploratory stages. Proponents believe it has the potential to surpass the limitations of conventional treatments, while critics raise concerns over long-term safety, ethical boundaries, and the risks of clinical application. New findings emerge in rapid succession, and the debate never disappears.
+In the lab, Dr. Noah slides a research proposal form across the table toward him.
+"You made up your mind?"
+Zayne nods. "I've always hoped you would be my advisor, Dr. Noah." 
+Noah looks at him, his tone uncharacteristically serious. "This may not go as smoothly as you think. The existing data is far from sufficient. Its clinical value still needs more validation, and the controversy isn't going away anytime soon."
+He doesn't mince his words. For a student at this stage, choosing an established field of research typically means a steadier output, a clearer trajectory, and a more predictable career path. A new direction, on the other hand, means venturing into the unknown and accepting the risks that come with it.
+Zayne lowers his head. Without hesitating, he signs his name at the bottom of the application form.
+Dr. Noah looks at the paper. He isn't surprised. He knows Zayne isn't the type to back down from risks. What worries him right now is something else entirely.
+"Zayne, no one doubts your ability, but the most capable people are often the ones who overestimate what they can accomplish alone."
+"At the end of the day, every bit of research we do—no matter how cutting-edge or niche—is built on the shoulders of those who came before. We're reaching for that small piece of something new." Dr. Noah maintains eye contact. "You can go fast on your own, but you can only go far with others. You'll always need people."
+
+`,
+  },
+  {
+    id: 504,
+    link: "what-gives-life-weight",
+    serialNumber: "04",
+    subtitle: "Child Psychology",
+    content: `
+Zayne flips through a set of research project documents in the lab. His roommate catches a glimpse of the name on the cover, and his expression immediately turns uneasy.
+"Are you thinking about inviting Carter? You know what everyone says about him, right? He's the world's top narcissist with self-awareness reaching negative infinity." 
+Zayne doesn't answer immediately. He read several of Carter's theoretical papers.
+They're radical and recklessly bold, yes, but some of them...
+"Don't worry. I'll figure it out." Zayne nods, gathers his things, and leaves.
+Shortly in the afternoon, Zayne knocks on the door of Carter's lab at the agreed time.
+The space is messier than he expected. Papers and scratch paper covered in calculations are piled high across every surface. Electronic screens glow with dense data models, and a few half-assembled devices sit forgotten in the corner.
+When the door swings open, Carter is leaning against his workbench and adjusting parameters. He looks up, and his gaze lingers for a second when he sees who it is. Ever since he received the email yesterday, the whole thing has struck him as nothing short of absurd.
+He's heard of the boy, of course. The one who's been called a genius since the day he enrolled. Outstanding grades, impeccably written papers—he's a rare standout even among the brightest minds at the medical school. They say he made some decent headway in researching Protocore applications at a remarkably young age.
+Carter never had a lot of patience for supposed incremental breakthroughs, however. To him, they're nothing more than a lab patting itself on the back.
+"My research isn't here to pad anyone's resume." He leans back in his chair, barely bothering to open his eyes properly. "And it's not a vanity project where you slap your name on and call it networking. If you're here to improve your CV, you can walk out now and save us both the trouble."
+"The directions we want to pursue already align," Zayne says, neither humble nor arrogant. "They're centered around utilizing Protocores for medical applications. You focus on the theoretical framework while I do experimental verification. It's mutually beneficial."
+All the cutting remarks Carter prepared suddenly have nowhere to land. He stares at the young man before him for two seconds. His lips subtly twitch.
+"...Theoretical frameworks this, experimental verification that. I hope you actually understand what you're talking about."
+Zayne looks at him, not a single trace of offense in his eyes. If anything, he seems mildly surprised. "What's wrong? Is there something you don't understand, Carter? I can explain it to you if you'd like."
+"You—"
+Carter bites his tongue and tries to look on the bright side. Having a supposed genius assist him only proves that he's right and his research direction is beyond reproach.
+With that thought, he deigns to give a magnanimous nod and grants the boy's request.
+"Let's make things clear. I'm not joining any lab cleaning rotation. I'm a busy man, so I don't waste my time on trivial things like that."
+Carter is just about to explain the rest of his conditions when he sees Zayne is already out the door.
+"...Why is he trying so hard to be cool?"
+Carter takes a deep breath and resolves to spend every day of their partnership despising him.
+
+The early days of the research group are anything but smooth. After all, the medical application of Protocores remains largely uncharted territory, with a long road of exploration ahead. It's not fully accepted by the traditional establishment, nor is there a proven path to follow. What they're doing, essentially, is trial and error in a sea of uncertainty.
+"Zayne, what do you think happens if our research fails?"
+"Failure is the path to success."
+"...Are you seriously saying that? What am I, three?"
+"Then don't ask pointless questions, Carter."
+"Listen, Zayne. When it comes to Protocore research, we're the only ones doing anything worth a damn. Those old fogeys are too gutless to push the envelope. Don't take that lecture later too seriously."
+"...Okay."
+"You—Zayne, have you lost your mind?! Who told you to skip me and run that verification on your own?!"
+"But the data shows it was successful."
+"What was the look on your face just now?! Tch, let me see the data... Fine. I'll give you that one."
+The theoretical groundwork is something they built together. If anything, Carter has an edge there. Yet Zayne always manages to find the exact point of entry within those dense, labyrinthine theories. Carter isn't sure if what he feels is admiration or envy.
+William glances at Carter scowling at data in the corner, then leans toward Zayne and whispers, "It really does take someone like you to deal with his personality without losing your mind."
+If there's one thing Carter has going for him, it's that his self-assurance keeps him walking along a niche, controversial path with unwavering confidence.
+"Child psychology sometimes works on grown-ups like Carter, too." 
+William is silent.
+
+`,
+  },
+  {
+    id: 505,
+    link: "what-gives-life-weight",
+    serialNumber: "05",
+    subtitle: "Unspoken Thoughts",
+    content: `
+Seasons pass, one blurring into the next. The days are so monotonous that they're hardly worth recounting. When Zayne looks back on this part of his life as a full- fledged doctor, all that remains in his memory are the stark white walls and ceiling of the lab, the blinking indicator lights on monitors, and endless streams of data.
+Every now and then, he overhears fragments about that girl from his parents.
+"Remember the little girl at Josephine's home? She's already set on becoming a Deepspace Hunter. She always knew what she wanted, even as a kid. She's just like you."
+Zayne holds his phone in silence and doesn't answer. He isn't sure what he's feeling, either.
+"Zayne, you put the lab materials in the wrong spot." A labmate's voice cuts in and snaps him out of his daze. He glances down, then moves the reagent kit back where it belongs.
+Back at his apartment, he notices the souvenirs and postcards that Dr. Noah brought back from a recent trip to the Arctic. The thought of using the gifts as an excuse to reach out crosses his mind, but he doesn't know what to write.
+Should he encourage her to study hard? Ask about how she's been feeling? In what capacity? As the boy next door who used to help her with homework?
+Zayne sits. He picks up a pen and writes a few lines, but everything reads like a clueless man dispensing unsolicited wisdom. He sighs and tucks the postcard into the bottom of his cabinet. The past's guilt still runs deep. Until he finds a way to help her, perhaps it's better not to insert himself into her life too soon.
+The days pass in an unchanging rhythm. Experiments, data, papers, the occasional bout of insomnia—it's an endless loop folding back on itself. When the breakthrough finally arrives one night, it looks no different from any other. The data curve on the monitor climbs until it reaches the target threshold. Zayne sits at the lab bench and stares. For a moment, he doesn't move.
+Then he realizes he's hungry. He grabs his jacket from the back of the chair and pushes open the lab door. Warm summer night air sweeps through the corridor and lifts the hair from his forehead. He steps outside the lab building just in time to run into Carter and William. They're coming back with takeout.
+"Cafeteria's about to close," Carter says, gesturing over his shoulder with his thumb. "But the lunch lady at Window No. 3 always had a soft spot for you. It's possible for you to snag some leftovers."
+He waits. When Zayne says nothing, he shrugs and turns toward the elevator.
+"I think..." Zayne's voice stops them both just before they step inside. "Our hypothesis might actually be right."
+
+`,
+  },
+  {
+    id: 506,
+    link: "what-gives-life-weight",
+    serialNumber: "06",
+    subtitle: "That Night",
+    content: `
+The late-June wind rushes in, carrying the scent of parasol tree leaves. It's a thread of coolness woven through the humid air. Carter runs back from the convenience store with two stuffed plastic bags, handles stretched out of shape to the point where they're close to bursting. Beer, soda, chips—a haul is chaotically dumped across the empty steps in front of the lab building.
+"We're celebrating. We have to celebrate! I've slaved away for over a decade for this moment! Zayne, Will, cheers!"
+Tinged with a pleasant bitterness, the malty scent of beer drifts through the night breeze. Even William drank more than his usual share. Before long, empty cans lie scattered across the steps at odd angles. At the peak of his excitement, Carter throws his arm out in a wild gesture and knocks over a bottle that rolls down the steps with a clumsy, rattling clink.
+"Zayne... Stop sitting around. You don't need to watch. Come on, drink!"
+"As if. When has Zayne ever drunk alcohol in his life?"
+"Look again. I got him milk so he'd grow taller—"
+Zayne doesn't say anything.
+He wants to tell them that the experiment only proved the first step. Protocore technology could be applied to medical treatments. It doesn't mean the road ahead is clear. They're still far away from the kind of success they're imagining.
+However, watching the two of them bicker drunkenly in front of him, Zayne presses his lips together. Then he reaches for an unopened can of beer on the steps.
+The pull-tab is accompanied by a crisp pop, and it releases a thin stream of white foam. Under the stunned stares of his companions, he tilts his head back and takes a big sip.
+"...Carter, am I seeing things?"
+"Who knows. I might be too far gone." 
+Carter looks half-sobered by the shock. He's staring at Zayne in disbelief.
+Zayne has been an adult for years, and he's long since outgrown the boy who used to be a head shorter than them. Even so, at times like this, Carter and William still instinctively treat him like a junior they need to look after. Zayne lets out a silent sigh and decides not to explain himself for now. He simply wipes the beer from the corner of his mouth and raises the fizzing can, his fingertips flushed pink from the cold. "Aren't we celebrating? Cheers."
+"Cheers!"
+"We're going to be the best doctors in the world!"
+"Will, dream bigger! X-Heart is going to change the world. The Linde Award is as good as ours."
+"Hold on, X-Heart? That name is corny! Zayne, talk some sense into this quack!"
+"You have no taste. Zayne has better taste than you—"
+"...Fine, whatever. As long as everything works out, I don't care. Here's to another round!"
+In the distance, wind rustles through the parasol tree leaves as city lights flicker and turn on.
+The steps in front of the lab building stretch wide and long. Ignoring the figures passed out across them—under the warm glow of the street lights--they almost look like a stage waiting for the curtain to rise. They're ready for the applause. Tomorrow, when the sun comes up, they'll return to the lab, put on their white lab coats, and face the tedium of data and the weight of waiting all over again. But that's for tomorrow.
+"Hic... We're going to... be amazing doctors, right?" Carter rolls over, mumbling the words while half-asleep before drifting off again. Zayne sighs and turns to clean up the mess.
+Out of the corner of his eye, a familiar white head sneaks back into view.
+"...Come out." Zayne doesn't want to embarrass the boy for his less-than-stellar hiding skills, but he speaks. "I can see you." The boy called Shubai shuffles out of the tree's shadow reluctantly. There's no sign of the odd-looking white dog that always nips at people's ankles. It's been a few years since their last meeting. The Emissary has grown taller, yet Shubai still can't fathom why someone of his stature remains fixated on the modest research pursuits of ordinary humans.
+"Are you really not going to follow me to fulfill your duties? Being an ordinary person is exhausting. Endless coursework, monthly taxes, Linkon housing prices, retirement plans..."
+Zayne glances at the boy and absentmindedly hums.
+"You never believed a single thing I've Said, huh?" Shubai rises from the steps, looking a little hurt, and rummages through his backpack to pull out a hefty book.
+"This is the Book of Answers. It can answer any question in the world. If you don't believe me, use it to see for yourself."
+"It'll tell you the color of the next passerby's clothes, gold prices for the next three days, whether or not retirement plans will actually be removed, and if your experiment will truly succeed as you hope..."
+Zayne thinks, then shakes his head.
+"I don't want to know the answers ahead of time. I'd rather walk the road myself." The wind sweeps through the trees' canopy. Leaves whisper against each other. The world is full of unsolved mysteries, but answers given to you by someone else always lose part of their meaning. He'd rather walk toward the crossroads he has yet to reach, through the regrets and surprises he has yet to experience, one step at a time.
+It's like how it was all those years ago when he first walked into the classroom. He, too, believed that medicine would eventually explain everything.
+But he has learned much since then.
+Although diseases can be diagnosed, wounds can be sutured, and data can be recorded, some questions will never have textbook answers.
+What makes life profoundly heavy, and yet so weightless? As a doctor, he has a long road ahead to search for the answer.
+
+`,
+  },
+  {
+    id: 601,
+    link: "that-painting",
+    serialNumber: "01",
+    subtitle: "Briar Harbor",
+    content: `
+Briar Harbor in late autumn is always shrouded in a lingering mist that's like a sigh from the sea.
+Dawn's first ray of light has just appeared, yet the sound of ship whistles pierces through the morning fog to echo over the small town's port.
+Alain stands by the dock, watching the workers load the last few suitcases into the car's trunk. Rafayel's belongings were already packed the night before: two paint cases, an old suitcase, and a few books. In the years after coming ashore, they've lived in old apartments near the docks and secluded countryside estates alike. But no matter where they go, Rafayel's luggage has always remained the same. Whenever their whereabouts are exposed or a new lead about his people surfaces, they set off again. Over time, he's lost count of how many times they've moved, yet out of habit, he still tries to make every temporary home as comfortable as possible.
+Near the ship's railing, the young man stands with his head lowered. He crumbles the bread in his palm and scatters the pieces into the air. Morning light filters through the thin mist, casting a soft glow over his light-colored shirt.
+They visited this harbor town because of a letter Rafayel had received from his people not long ago. Alain didn't ask what it said as he watched the paper turn to ash between Rafayel's fingers. Yet the very next day, Rafayel proposed that they move to this town.
+"Autumn is almost here, and Briar Harbor will be hosting a private art exhibition,"
+Rafayel explains. Alain pauses, then turns toward the easel by the window. He set it there when they first moved in. Six months have passed, yet the dust cover draped over it has never been removed.
+Alain sighs and nods at Rafayel. "All right. I'll book the tickets."
+
+Briar Harbor is a damp, dreary place filled with people who keep their heads down and seldom concern themselves with where their neighbors come from. It's hardly an ideal place to live, but for anyone looking to lie low—or disappear from the world without a trace—this town and people from every walk of life couldn't be more suitable.
+Rafayel reviews the findings of his investigation into Briar Harbor's private art exhibition once more, then turns his attention to a local jewelry store favored by wealthy merchants and top collectors.
+
+`,
+  },
+  {
+    id: 602,
+    link: "that-painting",
+    serialNumber: "02",
+    subtitle: "Charles",
+    content: `
+The wind chime on the door rings. Inside the jewelry store, a small argument is ongoing. The owner holds up a pearl necklace and berates the designer before him. "It's lifeless! I want brilliance! Vitality! Now look at what you've made!"
+The designer only seems to be in his twenties, his hair slightly disheveled and sleeves dusted with metal shavings. His voice is soft yet clear as he defends himself. "Pearls are tears born from an oyster's pain. Yet you want them to smile at you. That's not right."
+The store owner chokes on his words, ready to explode, when he catches sight of a customer pushing through the door. He plasters on a smile, but his expression freezes for a moment as he takes in the newcomer—a thin, young man who looks no older than sixteen or seventeen, his simple dark coat making him look like a quiet shadow.
+The owner's smile shifts from eager to politely analytical. "May I... help you with something?"
+"What's the process for a custom piece?"
+Ignoring the scrutiny in the man's words, the young man calmly looks up.
+"Oh." The store owner tilts his head toward the designer beside him. "Charles, take this customer to the workshop in the back to look at the materials." He turns and leaves, clearly not taking this deal to heart.
+Charles agrees, then curiously sizes up the young man before him. He's seen plenty of customers since he started working here, but none were this young.
+There's an aloofness about the young man that doesn't suit his age. It's as if he's observing the world through an invisible pane of glass.
+
+The workshop is messier than the storefront. Tools, unfinished metal pieces, and loose gems cover the long table.
+Rafayel's gaze slowly sweeps across the clutter. Then it stops.
+In one corner of the table lies a newly bound booklet that's like some sort of appendix to a collection record. The open page displays a painting with its description. The painting itself is nothing special, but certain words in the text pierce Rafayel's eyes: "...painted with special pigments ground from rare materials. It possesses a unique hue and an irreplicable, lifelike quality."
+Rafayel's gaze lingers for a moment. Then he looks away, expressionless. The fingers at his side, however, curl slightly.
+"Tacky, right?" Charles says with a hint of resignation. "This is a reference from a major client. He wants my new design to lean into this style. Apparently it's all the rage in his circle."
+Charles is still marveling at these clients' strange tastes and fails to notice that the young man's gaze has already shifted to the other orders and sketches related to the exhibition nearby.
+"Your client..." The young man is silent for a while before finally speaking again.
+"Does he provide the special materials to make his jewelry?" As if something has occurred to him, he turns to Charles. "Do I need to do the same for my order?"
+Charles blinks. "Not really. It's just... this client is very particular about materials. He prefers to confirm them in person."
+"Thanks," Rafayel says. "I'll come back if I need anything."
+As he steps out of the workshop, the humid sea air rushes toward him.
+He narrows his eyes slightly and shoves his hands into his coat pockets. He's hiding the crescent-shaped marks his nails left in his palms.
+Another deal fell through. Charles shakes his head without thinking much of it and goes back to polishing the silver piece in his hands. He doesn't notice that several sheets once buried in the pile of drawings are gone.
+
+`,
+  },
+  {
+    id: 603,
+    link: "that-painting",
+    serialNumber: "03",
+    subtitle: "Making a Painting",
+    content: `
+Rafayel sits at his desk that night.
+Closing his eyes, he maps out several ways to get close and make his move. Based on the details Charles provided, he can use the relatively public setting of the exhibition to carry out his plan cleanly and efficiently. 
+But...
+Rafayel's gaze falls on the corner of the room where an easel rests. He hasn't picked up a brush in years, yet Alain still insists on carrying it wherever they go. A thought, wrapped in cold flames, finally burns through hesitation. He would weave a crown, a trophy the man will be compelled to conquer. It'll be a painting... laced with deadly poison.
+
+Ochre lines gradually trace out tangled shapes. Under the moonlight, they look like faded blood vessels clinging unevenly to the fabric. They tightly wrap around his brush. The young man's slender fingers tremble from the force of his grip until the canvas tears and the brush rolls away.
+Rafayel rushes into the cramped bathroom, turns on the faucet, and buries his face in the water. He doesn't lift his head for a long time. Unfamiliar water. Crisp water. It's water that's different from the sea, yet it offers him the same wordless comfort. Fortunately, he's no longer the Lemurian he was when he first came ashore. He was at a loss for so long over something he couldn't understand.
+Flames leap from his fingertips to incinerate every last tangled, hesitant line. Rafayel picks up the brush again and grips it like a sharp dagger.
+Charles is a little surprised when he receives a call from Rafayel. The young man proposes a deal. He wants Charles to craft a special frame with intricate gemstones. As for the payment, it's a number he can't refuse.
+The more Charles listens, the more he understands the situation.
+So that's what this is about... The keen interest in art exhibitions, the willingness to spend a fortune on an elaborate frame-he must have been counting on the arrival of so many top collectors in Briar Harbor, hoping to win their favor and rise to prominence overnight.
+It's not an unusual move, yet Rafayel seems to be young. He doesn't have the air of a scheming opportunist. Is an uncut gem like him not exempt from the temptation of fame and fortune?
+"I understand," Charles says in their call, a hint of comprehension and disappointment in his voice. "Don't worry. I'll put together the exhibition details for you later. Oh, and ocean-themed art that's full of life has been all the rage among wealthy collectors lately. The more lifelike, the better." This quiet, taciturn young painter probably needs this kind of precise intel to polish his debut.
+On the other end of the line, Rafayel listens to Charles's account, offering only a quiet "hmm" in response. His tone betrays no emotion.
+After that, Rafayel reaches out to Charles a few more times to finalize the frame's details.
+Charles gradually discovers that Rafayel possesses an extraordinarily keen intuition for beauty. Sometimes, it even inspires him, a professional designer. While they're not close friends, they've become familiar with each other. Charles regards him as a reclusive yet immensely talented collaborator, and his young age doesn't change Charles's judgment of him.
+
+The skyline hangs low as clouds press on toward the sea. Rafayel walks along the damp sand. Tiny seashells dig into the soles of his feet with faint, dull sounds. He doesn't stop until the white figure of a vacation villa appears at the headland. He takes the easel from his backpack, secures the canvas, and mixes his colors. He has no particular idea in mind for this painting. This is the first time he has faced a blank canvas without anything he wishes to express or record. Cold seawater surges up and washes over his feet. He stands still for a moment, quietly letting muscle memory guide his hand.
+Pigments spread across the canvas as the deep sea from his memories comes back to life beneath his brush. Strange seaweed drifts slowly, with dark corners where light cannot reach, and at the very center, a solitary jellyfish glows with a cold light as it gently unfurls its tentacles.
+Rafayel's every stroke is calm and precise. He isn't creating art. He's constructing a trap-a breathtakingly beautiful tomb.
+
+`,
+  },
+  {
+    id: 604,
+    link: "that-painting",
+    serialNumber: "04",
+    subtitle: "What Has Vanished",
+    content: `
+Charles finishes the frame on schedule. When he arrives to deliver it, Rafayel is still making the final adjustments to the painting.
+Charles's gaze is drawn to the scene on the canvas almost involuntarily. It feels as though the cold seawater might surge out from the canvas and bring the jellyfish's pulsing glow right before his eyes.
+"What kind of jellyfish is this...? I've never seen one like it." Charles snaps back to reality and leans in curiously.
+"It's extinct." Rafayel doesn't look up, adjusting the jellyfish's tentacles with an extremely fine brush.
+"Then what are you trying to express by painting it?"
+The young man pauses his brush and glances sideways at Charles. "I'm just recording some scenes from the deep sea." 
+He looks away and begins to carefully clean his brushes with a soft cloth. Then he places them back into their case one by one.
+Only after cleaning his tools does he walk to the painting and lowers his head to inspect the nails along the canvas edge. Once satisfied, he places the painting into a prepared wooden crate, covers it with a lining cloth, closes it, and fastens the metal clasps. Throughout the entire process, he treats this painstaking work of art as though it were an ordinary package that needs to be shipped on time.
+"Thanks." Rafayel hands the sealed wooden crate to Charles. "Don't open it until the day of the exhibition."
+Charles is somewhat surprised. "You're not going to check things out?"
+"No." Rafayel's answer is blunt. He turns and begins tidying up the scattered paint tubes nearby.
+Charles holds the wooden crate, hesitates for a moment, and asks. "This painting... It needs a name, right? What am I supposed to call it?"
+Rafayel's hands pause over the paints, his back to Charles. Silence stretches through the air for a few seconds.
+"It doesn't have a name." He finally says, his voice even fainter than before. "Write whatever you want."
+Charles gazes at the young man's slender back that's as straight as a board. He chooses not to press further. Holding the wooden crate containing the painting, he turns to leave the room still thick with the scent of turpentine.
+
+On the day of the exhibition, the store owner sends feedback. It's a huge success. All the works in the shop are taken. A wealthy merchant pays a premium price for the masterpiece by the unknown artist, and the designer, Charles, is invited to a private viewing at the villa that evening. It's an unprecedented opportunity, and Charles is thrilled. But after waiting at the shop until nightfall, he still can't reach Rafayel and has no choice but to go alone. The villa's interior is extravagantly opulent. The massive room known as the collection hall has no windows. It relies on artificial lighting. Along the walls and inside glass cabinets, all manner of collectibles are on display: organ specimens from giant whales, deep sea fish embryos suspended in unknown liquids, antiques salvaged from shipwrecks…
+This place doesn't resemble a gallery. It's more like an ocean graveyard that's been neatly dissected and laid bare.
+Rafayel's painting hangs in the center of the room, the dead jellyfish seeming to float at the end of death's river. Charles shivers, suddenly feeling that Rafayel's decision not to come was a wise choice.
+
+Later that night, the shrill screams within the collection hall, the thunderous crash of specimen cabinets, and the sound of shattering glass pierce the villa's silence. In the shadows of the hallway, Rafayel leans quietly against the door as he listens to the finale he waited so long for.
+When the commotion dies down, the young man steps over shattered glass and scattered debris, then lowers his gaze to meet those wide, staring eyes. Once filled with greed and cruelty, they now hold nothing but fear.
+Rafayel watches him for a long while, until no sound can escape him anymore. Only then does he slowly crouch down, pry open his clenched fist, and pull out the dagger.
+Without so much as a glance at the painting he made with his own hands, Rafayel turns and disappears into the night.
+
+The seaside is quiet, with only the patter of rain and the steady rhythm of the waves.
+Rafayel pulls out the dagger, spreads his fingers wide, and lets it fall. The waves carry it far away as it slowly sinks and disappears beneath the dark surface of the sea.
+Rafayel feels like he, too, is sinking with it. The frigid seawater cradles him as he falls and floats without end.
+There is no light, no sound, no ties to anything.
+Time passes. He blinks and finds his feet still planted on the wet sand. He never left. Yet that sensation of drifting away lingers. It's all too real.
+Every emotion recedes like water and leaves an exhaustion deep within his bones.
+But he understands one thing now. His paintings can serve as the perfect cover. They can also become... a more precise weapon.
+
+`,
+  },
+  {
+    id: 605,
+    link: "that-painting",
+    serialNumber: "05",
+    subtitle: "A Question",
+    content: `
+Charles's resignation goes through remarkably fast, and he seems like a man relieved of a heavy burden. Even the tedious chaos of setting up the studio carries a fresh energy. He rents a small shop facing the street. It has a loft near the docks, and while directing the movers, he happens to spot Rafayel walking along the coastline.
+"Hey." Charles waves at him, sweat on his forehead. "Perfect timing. Come take a look at this sign for me. What do you think?"
+Rafayel slowly walks over and looks up. He's wearing a simple dark hoodie today, the hood pulled low to reveal only the lower half of his face. The sea breeze sweeps past them and lifts a few stray strands from his bangs.
+"What's wrong?" Charles sets down the blueprints in his hands, his tone cautious. "You don't look well."
+Rafayel looks away and shakes his head to indicate he's fine. Neither of them speaks. Workers hurry in and out carrying boxes, the air thick with dust and the smell of fresh lumber. Charles turns to him. "By the way, the money from the painting..."
+"Keep it. You need funds for your studio, right?" He answers absentmindedly.
+Charles feels a little patronized but doesn't refuse. He has an idea in mind, and he really needs that money.
+"Well, thanks. What are your plans? Are you going to keep painting?"
+"What about you? Are you going to keep designing jewelry?"
+Charles blinks and shrugs with a smile. "Who knows? I like designing now, so I'm designing. If I fall in love with something else later, I'll do that instead. Actually, I've started studying flowers lately..."
+Seeing the young man listening intently, he suddenly realizes the question wasn't really meant for him.
+He thinks, then walks over to the pile of unsorted tools and picks up the prototype of a silver brooch.
+"When I first started making this, I wasn't focused on who'd see it or how much it'd sell for. I just saw the right materials and my hands itched to make it. Sketching it out, hammering away... The process itself made me happy."
+"That's why I've always felt that whatever we create carries a piece of ourselves."
+"When I saw your painting, I thought..." He smiles at Rafayel. "Even though you paint the deep sea, I can tell there's a fire burning in your heart, kid."
+
+`,
+  },
+  {
+    id: 606,
+    link: "that-painting",
+    serialNumber: "06",
+    subtitle: "To the Deep Sea",
+    content: `
+A month later, Rafayel suddenly receives an absurdly large package.
+On the phone, Charles's voice is cheerful yet tinged with exaggerated complaints. 
+"The collection got put up for auction! This painting... I gritted my teeth and bought it back. The price was several times what it originally sold for. What a ripoff... But I couldn't just leave it in a place like that." He pauses, his tone becoming lighthearted.
+"Don't judge. I bought it with my own money. But I did use the cash you originally made from it to fund my studio."
+Rafayel's gaze falls on the small label affixed to the back of the frame by the auction house. On it are four neat words in Charles's handwriting.
+"To the Deep Sea."
+A dry wind rushes in through the open window. It carries the smell of gasoline from the street, the aroma of the breakfast place downstairs, and the faint scent of laundry detergent from the neighbor's wet clothes drying upstairs. On the other end of the line, Charles is still talking about something—the first client for his new studio, some peculiar gemstone cut—his voice cheerful with unabashed excitement. The painting stands there quietly. It's still the same painting, but something about it has changed.
+"...Oh." Rafayel finally says into the receiver. "Nice name."
+Charles's voice stops. It's followed by a soft laugh as if he's finally breathing a sigh of relief.
+After hanging up, Rafayel stands still. The pothos on the window sill is dying, its leaves wilted and yellowed from neglect.
+Dusk deepens, and rain begins to fall outside. Raindrops hit the glass and trace winding, blurred paths before merging and streaking down.
+These are scenes so ordinary that they're hardly worth mentioning.
+He suddenly turns, pulls out a brand-new sketchbook, and picks up a pencil. He sits down and begins to draw the wilted pothos slumping to one side and the trails of rainwater on the glass. But halfway through, every stroke starts to feel wrong. The gloomy green grows heavier in his vision. It bleeds into crimson at his pencil's tip and reminds him of those wide, staring eyes.
+He sets the pencil down and stares outside. Long ago, when he first learned to hold a brush, Rafayel made his first painting. It was really just a wobbly smear of blue that lacked a definitive shape.
+The Virtuoso teaching him pointed at the blue blob and said gently, "Look, this is a blue that only you can paint right now. It holds your feelings from today. Whenever you see it in the future, you'll remember this moment. Hmm... Maybe you'll even remember me, hehe..." That blue blob was smeared on the priest's chin, and laughter drifted into distant memory.
+
+Alain stands at the dock and watches the workers load the last few suitcases into the car's trunk.
+As for Rafayel's belongings, they were packed the night before. They're still the same two paint cases, an old suitcase, and a few books. But this time there seem to be a few extra souvenirs. The ship will depart in less than ten minutes. They'll move on to the next city as always.
+"Is there anything else you need to do?" Seeing Rafayel shake his head, he says nothing else and continues directing the workers to load the luggage into the ship's cabin.
+"Wait!"
+The voice comes from the misty dock. Rafayel turns to see Charles running toward him.
+He stops in front of Rafayel, bent over and panting for a while. Then he straightens his posture and presses a rolled-up paper into Rafayel's hands.
+"I'll be honest with you. I secretly sent your painting to my teacher. He's a good man. This is his letter of recommendation..."
+Seeing the young man doesn't refuse immediately, Charles can't help but continue. "How do you even paint something like that?"
+In all his years as a designer, he's met plenty of artists, yet rarely has he felt a power that could stir the soul in anyone else's work.
+Realizing the letter is still being ignored, Charles isn't annoyed. He presses his hand down on Rafayel's shoulder and shoves the letter into his pocket.
+"I don't get it. You're young and talented, yet you never smile. Anyway... keep painting. One day, the whole world will flow from your brush."
+Charles reaches out as he speaks. He wants to ruffle his hair, but the young man turns away and dodges his hand.
+"Thanks. We need to get going," Rafayel says.
+Charles's hand hangs in midair. He pauses, then smiles and waves. "Have a safe trip."
+
+The ship will make a stop at a major port along the way. From there, they'll travel north by land and find a place to stay for a week before finally going to a town with milder weather. He'll reunite with his only living family member, Talia.
+Things should get better with family by his side. They say the summers there are long and bright, the sea breeze is warm, and there's a fine art academy in town. If he wants to, perhaps he could study painting or sculpting and learn how to grow up like a normal human kid.
+Alain adjusts the glasses on his nose and bows his head. He carefully writes the following in his notepad: "Rooms by the sea need thicker curtains or else the morning sunlight will arrive too early. The fireplace needs to be stocked with enough firewood before winter. If the yard is big enough, plant some of those flowers the child used to love... They're trivial little things. But he's still young. If his life can be filled with such minutiae, perhaps there won't be a lot of room left for pain." 
+
+The sea breeze blows as the ship slowly pulls away from the long, gray harbor. The morning mist clears, and the sun grows stronger. They sail until no land remains in sight, until the sun has climbed higher still. Then its light slants west, sinks into dusk, and finally gives way to darkness. The moon rises higher as the ship sails quietly across the sea.
+Rafayel hasn't slept. He sits before his easel, his back to the moonlight outside the window.
+The carbon pencil scratches the paper with a soft, rhythmic sound. He draws slowly with intent as if the only thing left in the world is the sheet in front of him.
+He pauses and flips back to that sketch of a wilted pothos and glass covered with streaks of rain.
+He gazes at it, then turns the page. 
+The paper is blank.
+He picks up his pencil and continues to draw.
+
+`,
+  },
+  {
+    id: 701,
+    link: "temporary-teammate",
+    serialNumber: "01",
+    subtitle: "Escape",
+    content: `
+The alarm crashes down from overhead, sending the ventilation shaft walls buzzing and trembling.
+The girl presses herself against the freezing metal duct and crawls. Her knees get caught on a raised weld seam, the pain sharp enough to almost make her swear. A robotic male voice drones on over the intercom.
+"An anomaly in the main arena has been detected."
+"Fighters Sylus and girl have left the supervised area."
+"Lock down the landing pad, supply zone, and outer ring corridors. All security units, pursue them immediately."
+She grits her teeth and crawls faster, keeping her voice low. "Sylus."
+From somewhere beyond the metal wall, in some parallel maintenance shaft, comes a lazy "yes?"
+"That question earlier. It was too sudden." 
+He seems to laugh, his voice muffled and slightly distorted through the duct. "You're having second thoughts?"
+"Can you maybe give me a heads-up next time you plan a jailbreak?"
+"I didn't plan anything." His words are tinged with certainty. "This is improvisation."
+"..." If that smug bastard were within reach, the girl would already be kicking him. She takes a deep breath. "Your improvisation doesn't seem to take your teammate's life into account."
+From somewhere in the ducts, that easygoing voice drifts over again. "If you can't even handle this risk, then we're nothing more than temporary teammates."
+"Hah! You better remember that temporary teammates can split up whenever they want!"
+
+They sprint out one after the other as they head toward the landing pad. Only one small transport shuttle still has its standby lights on. The hatch is somewhat open, its hull scorched black with one tail fin broken off. It looks like an iron bird beaten to within an inch of its life.
+But it's the only thing on this entire landing pad that resembles an escape route.
+The girl takes one glance and knows Sylus is staring at it too.
+They break into a sprint at the same time. The hatch closes behind them just as an energy round grazes the outer hull and rocks the entire vessel. The girl throws herself into the pilot's seat and slams her hands onto the control console, only to freeze at the dizzying array of buttons and indicator lights spread before her.
+Sylus stands behind her. He looks at the console. "You know how to fly this?"
+"Yeah."
+"How many times have you crashed?"
+"...Three."
+He grabs her arm. "Get up."
+"Why should I?! Can you do better?"
+"I haven't crashed three times."
+"You never even got the chance to crash!" The girl clings to the control stick, refusing to let go. Sylus clamps down on her wrist. Black-red energy presses in from his fingertips. Her knuckles go numb, and in a panic, she kicks at the underside of the central console.
+The main screen flares to life. The flight system speaks in a flat, mechanical tone. 
+"Startup sequence... An anomaly has been detected."
+Sylus looks down at her foot that's still hovering where it struck. "What did you kick?"
+She looks down at the red switch she kicked on. "I don't know."
+"The hatch has been locked. Backup thrusters are engaged. Autopilot module is damaged. Please manually confirm your destination."
+They stay silent.
+The impacts outside are more rapid. The girl grips the control stick again, forcing her voice to sound steady. "It's not a big deal."
+Sylus watches her. "Your hands are shaking."
+She pauses, then wraps both hands around the stick. "We're finally getting out of here. Aren't you excited?"
+He leans in, one arm reaching past her shoulder to flip a row of switches above the control console. The engine roar increases in volume, and the vessel lurches forward. The girl is yanked back into her seat by the harness and almost bites her tongue. "Sylus!"
+"Someone had to get this thing moving," the young man says with a shrug. He's utterly unfazed.
+"Moving and surviving are two different things!"
+Outside, the landing pad lights streak back and give way to the Interstellar Arena's massive outer metal ring. 
+It's getting closer.
+The girl's eyes widen. "Pull up!"
+Sylus's hand presses down over the back of hers, and together they wrench the control stick upward.
+The vessel scrapes past the metal ring and soars, its tail shearing against the structure with a sickening lurch. The alarm immediately shifts to a higher pitch. "The hull has been damaged. Flight path deviation detected. Cease improper operations."
+The girl stares at the screen. "Is it talking about someone?"
+"Whoever feels guilty, yeah," Sylus answers without missing a beat.
+Behind them, red dots close in fast like a swarm of bees whose hive has been disturbed. An asteroid belt stretches across their path, large shadows ballooning outside the viewport at dizzying speed.
+Black-red mist streaks out from the side of the ship to smash chunks of debris hurtling toward them. Every impact feels like it might rip the vessel in half. The girl's hands go numb around the control stick, but she doesn't dare let go, not until the very last red dot vanishes from the edge of the screen.
+She barely has time to exhale before the system chimes in. It's as calm as ever.
+"Insufficient energy has been detected. Navigation coordinates are missing. Emergency landing imminent."
+On the main screen, an unfamiliar, pallid planet grows steadily larger, its surface blanketed by an endless white wasteland. Sylus tilts his head toward her. "This is the route you picked?" he asks with a smirk.
+She tightly grips the control stick, watching the atmosphere ignite outside in a blaze. "The good news is that they didn't follow us."
+"And the bad news?"
+In their line of sight, the vessel they're piloting is nosediving toward that merciless, desolate white expanse.
+"Who knows what this place is..." She takes a deep breath, a note of despair creeping into her voice.
+
+`,
+  },
+  {
+    id: 702,
+    link: "temporary-teammate",
+    serialNumber: "02",
+    subtitle: "Barren Star",
+    content: `
+The vessel carves a long gash across the ground before plowing headfirst into a crusted wasteland as white as bone. It takes several kicks before the hatch gives way. The girl crawls out, nearly blinded by the white light bouncing off the surface.
+The entire planet looks like a sun-bleached skeleton. A thick layer of salt blankets the terrain, web-like cracks spreading out from beneath her feet to reach the horizon. When the wind blows, fine grains of salt scrape across her face like an insistent dull blade.
+He crawls out from a crack on the other side of the wreck, half of a charred wire still dangling from his hair. He squints against the harsh light, his brow furrowed. "Congratulations. You've promoted us. We went from being fugitives to exiles."
+"Me? Did I board that ship alone?"
+"The one who kicked the control console bears a little more accountability."
+"And you think the one who grabbed the control stick is free from this mess?"
+Sylus doesn't respond. He bends down and drags a dented supply crate from the wreckage. He flips it open for a look.
+"Food. Three days' worth."
+"Water?"
+He fishes out a water pouch and gives it a shake. "Enough for you alone. Two days."
+"What will you drink?"
+"Good question."
+
+For once, the two of them agree on something. They need to find water first. They push against the howling wind for half an hour—and argue for every minute of it—until a light gray creature suddenly darts out of a crack in the salt crust.
+It's barely half an arm's length, but its hind legs are absurdly long. It jumps forward like a coiled spring, streaking across the bleached ground.
+The girl's eyes light up. "A living creature!" Sylus has already stepped to the left, black-red mist skimming along the ground to cut off the creature's path. It swerves. Almost simultaneously, the girl snatches up a shard of salt crust and hurls it at the narrow crack on its right.
+The poor thing leaps into the air in a panic and bolts toward a shaded dip in the distance.
+"Follow it. It should lead us to water!"
+Watching the girl roll up her sleeves, Sylus smirks. For once, he doesn't argue.
+"We might even find food." Years of fighting together in the Interstellar Arena have taught them to read each other's body language.
+Chasing the jerboa-like critter, they finally find a water source. More importantly, the area is dotted with animal burrows. The girl's eyes light up at the sight of several nests full of oval-shaped eggs. In a flash, she stuffs a handful of eggs and one very unlucky fat bird into her pack.
+Then the salt crust in the distance begins to tremble.
+The girl looks up, her breath hitching. The shrubbery behind the low slope parts without a sound, and a head the size of a millstone pushes past it. The creature resembles a massive monitor lizard, but its face is warped. Salt-crusted spines bristle along its back, and half a bone dangles from its jaws. It's only partially chewed.
+Gravel scrapes faintly beneath their feet as both of them take half a step back. "It looks meaner than you," the girl whispers.
+Sylus sucks in a breath, but he sounds composed. "Is that so? Which do you prefer?"
+"You, I guess. At least you won't eat me alive."
+"Then you better start running." 
+Sylus grabs her hand and sprints.
+Behind them, the beast roars and charges downhill, its thundering weight bearing down on them like a landslide.
+They stumble and crash through a narrow crevice. They tumble down the slope until they roll to a stop deep inside a cave.
+Mercifully, the opening is tight. The beast claws at the entrance, salt crust raining down in flakes. But it can't squeeze through.
+When it realizes its prey has slipped away, the beast lumbers off in disappointment. The cave is quiet. The girl inspects the eggs in her pack, too breathless to speak.
+Sylus leans against the cave wall and glances at her. "You almost got yourself killed, but dinner is still fine."
+The girl clutches the eggs tighter. "I can't lose both, right? And just so we're clear, you're on sous-chef duty tonight."
+
+`,
+  },
+  {
+    id: 703,
+    link: "temporary-teammate",
+    serialNumber: "03",
+    subtitle: "Mealtime",
+    content: `
+Sylus picks up the fat bird and turns it over in his hands. "We're eating everything raw?"
+The girl clamps her hand over his. "Can you show the food some basic respect? At least pluck it first!"
+"I do respect it," Sylus says. "I'm about to give it a home in my stomach."
+"Show your stomach some respect then." She turns and rummages through the back of the cave. Pulling out a pile of dried roots, she snaps off a few thin slabs of salt crust and gathers some gray heat-retaining stones.
+Sylus watches her bustle about with his arms crossed. The sight isn't unfamiliar. Back in the Interstellar Arena, she always managed to smuggle the strangest things. They were bizarre but edible once she worked her magic. Sometimes, she'd even share.
+The girl strikes a metal shard to spark a flame, lights the dried roots, then wraps the prepared meat in a salt crust and buries it in the glowing ashes.
+Sylus watches before speaking up. "You're burying it this time?"
+"It's baked in salt."
+"That sounds harsh."
+"Going hungry is harsh."
+Sylus doesn't argue. He sits at the mouth of the cave, gazing at the salt flats as they dim in dusk.
+The girl tends the fire. Flickering light dances across her face and softens the sharp edges the day's harsh sun has carved into her features.
+In the Interstellar Arena, fire usually means burning, explosions, punishment, or the start of the next "show." When she secretly lit one to roast whatever strange scraps she scavenged, it began to serve another purpose.
+Sylus watches her. "Where did you learn this?"
+The girl prods the ashes with a piece of salt crust. "There were a few beat-up books in the Arena's storeroom. One was missing half its contents, but it talked about planetary minerals in the front and wilderness heat-source applications in the back."
+"We grew up in the same place. How do you always know a little more than me?" Sylus asks after a moment of silence. She looks up. "Because you're a dummy." 
+Sylus narrows his eyes.
+She continues without an ounce of fear.
+"You're the fiercest dummy in the Interstellar Arena."
+Before he can retort, she digs out a piece of steaming meat from the salt crust and shoves it into his hand. It's a preemptive strike to shut him up.
+Sylus looks down. An unfamiliar aroma rises with the heat. Just like all the times before, he doesn't hesitate and takes a bite.
+The girl leans in. "Well? How is it?" Sylus chews slowly, taking his time.
+"...Edible."
+"Would it kill you to just say 'delicious'?"
+"I don't want it going to your head."
+"Too late."
+"Clearly. If you had a tail, it'd be wagging against the ceiling by now."
+The girl breaks off a piece for herself. One bite makes her eyes light up.
+Sylus watches her, then lets out a quiet chuckle.
+The girl looks up. She's on high alert. "Why are you laughing?"
+Sylus leans back, his arms folded behind his head. "I'm just thinking that teaming up with you might not be the worst deal I've made."
+The girl cracks open a roasted egg and hands him half. "You make it sound like I'm the one who got lucky."
+"You did."
+"How?"
+Sylus takes the food. "You got the fiercest dummy in the Interstellar Arena," he says calmly.
+The girl is momentarily speechless.
+After some time passes, she turns away, but she can't hold back her laughter. Outside the cave stretches the cold, endless night of a barren star. Inside, only the last embers of a dying fire remain. Neither of them mentions what comes after.
+But that night, the girl places their last water pouch between them before she falls asleep.
+Sylus's hand rests close to it.
+He doesn't take it. Not until dawn.
+
+`,
+  },
+  {
+    id: 704,
+    link: "temporary-teammate",
+    serialNumber: "04",
+    subtitle: "Splitting Up?",
+    content: `
+On the fifth day after their crash landing, the vessel they'd written off as scrap flickers to life.
+The ship's self-repair system has soaked up enough sunlight over the past few days to partially restore power, which means it can still fly.
+The girl is watching Sylus work with a thoughtful look in her eyes. When he steps away for a short break, she slips into the cockpit, quietly detaches the control stick from the console, and tucks it into her bag. She climbs back out as if nothing happened.
+It's just as she expected. Sylus heads into the ship alone in the afternoon.
+When the engine roars to life, the girl steps outside. Salt dust spirals into the air on the exhaust, and that battered wreck of a ship wobbles off the ground. It lurches left first, then sways to the right before somehow actually rising into the sky.
+She draws a breath and counts in her head. One, two, three...
+She doesn't know what number she's counting to or when she should stop. She just watches the vessel drift farther and farther away, leaving a wavering shadow across the wasteland sky.
+Then it banks into an awkward, ungainly arc, and flies back. The landing is even worse than the takeoff.
+The hatch opens, and Sylus steps out. His face is smudged with soot, the hem of his clothes singed, yet he's as calm as if he just went out for a stroll.
+The girl looks at him. "How was the view?"
+"Not bad."
+"Did you find a new life?"
+"Not yet."
+"Shame."
+Sylus takes a few steps toward her. "You're not going to ask why I came back?"
+The girl pulls the control stick from her bag and waves it in front of him. "Why should I? You were never going to get far."
+"So this was all part of the plan?"
+"If it worked, it counts as a plan."
+Flying that far without the main control stick is a little impressive, she has to admit.
+Not that she'd ever say it.
+Sylus stops in front of her. "You weren't worried?"
+The girl shoves the control stick back into her bag. "I was worried you'd wreck yourself along with the ship."
+"So you're worried about me?"
+"I was worried about the ship," she says. Then she pauses. "You come after."
+Wind sweeps in from the edge of the salt flats, lifting a fine veil of white dust. She meets his gaze head-on.
+It's different from usual. The familiar teasing is gone, replaced by something quieter. It's something that feels like it had to travel a long way before it could finally be certain.
+The girl suddenly realizes that he could've kept going. Even if the ship had veered off course, even if it crashed again in the end—that was how he always survived. But he came back.
+Sylus lets out a quiet chuckle. "No wonder someone like you survived in the Interstellar Arena for a long time." The corners of the girl's mouth curl slightly. "Welcome back, world's fiercest dummy."
+They lock eyes. Then they smile.
+That evening, they reinstall the control stick and load the ship with water, filters, and a few bundles of edible roots.
+Before takeoff, the girl glances at the salt flats one last time. 
+She hates this place.
+Scorching, parched, and desolate. And the wind always tastes like salt.
+But this is also where they had their first hot meal after escaping, a poor little hopper got chased half to death, and a beat-up ship flew off into the distance only to circle back.
+As the vessel rises, Sylus turns to the girl. 
+"You're planning to fly the next stretch too?"
+"Can you do it?" she questions.
+"No."
+"Go ahead. It's your turn to crash."
+
+`,
+  },
+  {
+    id: 705,
+    link: "temporary-teammate",
+    serialNumber: "05",
+    subtitle: "Settling Down",
+    content: `
+They find the next planet before their energy runs out.
+The ship touches down on the edge of an abandoned district. Wind cuts through the hollow high-rises, scattering faded flyers. A railcar sits frozen on a severed overpass, half of it dangling in midair. A cleaning robot lies slumped on the curb. A sticker with the words "at your service" still clings to its chassis.
+They venture deeper into the district and find a small house that's barely holding itself together. There's half a door, three walls, a roof with a gaping hole. They also find a still-functioning water storage unit tucked in the corner.
+The girl looks around. "Not bad," she declares.
+Sylus glances at the half-door. "This is your definition of 'not bad'?"
+"We have water and walls. At night we won't get dragged off by beasts."
+"The door's half gone. They could just walk in."
+"Then you sleep by the door."
+"Someone's bossy."
+And just like that, they settle in.
+Living there is a generous way to put it. It's more like claiming a small part of the ruins as their own. The girl pries off old ad boards to cover the broken windows. Sylus takes charge of fixing the door. In the end, he removes the only half that was left.
+The girl stands in the doorway, staring at the door panel in his hands. "Do you have a
+personal vendetta against doors?"
+"I'm setting it free."
+In the end, the panel gets laid across two old crates to serve as a makeshift table.
+Once they've settled down, the two wander the empty streets and rummage through abandoned shops and homes for anything still useful.
+In one store, the girl finds a bag of tortilla chips. The packaging is bloated beyond recognition, the printed expiration date having faded to nothing, but when she tears it open, there's still a faint hint of seasoning in the air.
+Outside, a pack of uncontrollable cleaning robots patrols the streets. They lock onto any unusual sound and initiate their cleaning protocol. They chased a plastic bag rattling in the wind for three whole blocks a few seconds ago.
+The girl slips a chip into her mouth and whispers, "Keep it down. Don't let them hear us."
+Sylus takes a bite. 
+Crunch.
+Every robot on the street snaps its head toward them in unison.
+The girl freezes. Sylus, unfazed, takes another bite. 
+Crunch.
+The girl slowly turns her head. "Sylus!"
+"The bag says they're crispy."
+"Anyone listening to us would think you're eating a fire alarm."
+"It proves they're not stale."
+Rapid metallic footsteps close in. The girl grabs the bag and is about to spring to her feet when tendrils of black-red mist coil around the robot leader and hurl it backward.
+Several robots crash into each other in a tangle of mechanical limbs. The mist sweeps up a toppled shelf and wedges it across the entrance. Then it rips the metal security shutter from above the storefront window and slams it down along with a few ad boards. Every possible gap has been sealed.
+The robots scramble back to their feet in no time, shoving and clawing at the barricade. Their grating mechanical voices squeeze through the gaps in broken bursts. 
+"Trash detected. Initiating clean-up. Please keep the area clean."
+The girl glances at the sealed doors and windows, then at Sylus, who's still sitting comfortably behind the counter. "If you had done that sooner, we wouldn't have to eat and hide."
+Sylus takes a chip from the bag in her hand. "It's not too late." He bites down.
+"Now we can eat however we want."
+The crisp sound mingles with the crashing and alarms outside.
+The girl pulls out a chip and bites down deliberately louder than him. 
+Crunch.
+Sylus tilts his head. "Are you trying to provoke them?"
+"I'm showing respect toward the food."
+Their gazes meet over the half-empty bag, and they burst out laughing.
+Leaning against the counter, they share that bag of chips until every last crumb is gone.
+
+The abandoned city is full of little relics left behind by the prior civilization. The girl finds the Daydream Glasses the most intriguing. They read the wearer's surface-level thoughts and project a short vision onto the lenses.
+She puts them on. When the lenses flicker to life, the image blurs, then slowly sharpens. It's a small house with two steaming bowls of soup on the table. No one is in the room. Only the wind lifts a corner of the curtains.
+She takes the glasses off and stares before remembering to close her mouth. 
+"What did you see?" Sylus asks.
+"...That's a secret." She glances toward the window without thinking, then catches herself. There are no curtains here. Only an old billboard rattles outside.
+Sylus takes the glasses from her, turning them over in his hands. "It's that embarrassing?"
+"It's just ordinary."
+He raises an eyebrow, quietly studying her.
+"Then why can't you say it?"
+"You wouldn't understand."
+Sylus smirks and puts the glasses on. The girl can't see what plays behind the lenses. There's only the chaotic flicker of light and shadow sweeping across his face again and again.
+When he takes them off, she can't help but ask. "What did you see?"
+"A table," he says thoughtfully, his gaze resting on the table they cobbled together from half a door.
+"That's it? There wasn't anything else?"
+"Two chairs. And the night sky outside the window."
+"That's your dream? Talk about low standards."
+"At least there are chairs," he says. Then, after seemingly thinking, he continues with a little more weight to his words.
+"Two of them."
+The girl opens her mouth to respond, but a loud crash from outside cuts her off. A cleaning robot is slamming into a wall again.
+She swallows the words she was about to say and stands, looking outside. In the distance, wind sweeps through the empty streets of the abandoned city like a song that stopped playing long ago. Its echo still lingers.
+Sylus lies down on the sofa as usual, ready to sleep. His eyes rest on the Daydream Glasses sitting on the table. "When we actually have a home like that, you're in charge of fixing the door," he says suddenly.
+"Why me?" the girl asks with her eyes closed.
+"Doors and I don't get along."
+She pulls her jacket over her face, a laugh slipping out before she can stop it. "Then you're in charge of keeping the windows shut."
+He raises an eyebrow, not quite understanding her words, and glances toward the window. There are no curtains or glass. Faint streaks of colored light drift in through the gaps, falling softly across the jacket draped over the girl's face. As if sensing his confusion, she speaks quietly. "If the wind blows too long, the soup gets cold."
+Sylus narrows his eyes as though he's trying to hold on to that faint sliver of colored light. "Ah. So that's your secret." The girl shifts under her jacket and rolls over to face away from him. "Don't read into it."
+"How many bowls?"
+The room stays quiet for a while before she speaks. Her voice is muffled beneath the jacket. "...Two."
+A warmth rises from somewhere deep in his chest and reaches his face. Sylus blinks at the misty ring of colored light and murmurs, "Perfect. I have two chairs."
+
+`,
+  },
+  {
+    id: 706,
+    link: "temporary-teammate",
+    serialNumber: "06",
+    subtitle: "Survival",
+    content: `
+They spend seven peaceful days in that little house.
+Before dawn on the eighth, the old terminal aboard the ship shrieks to life.
+The girl jolts awake, grabs her weapon, and rushes to the window.
+In the distant night sky, several red dots are closing in fast. They're tracking ships from the Interstellar Arena.
+Sylus sits up and reaches over to silence the screaming terminal. "What is it?"
+"They found us."
+He glances at the house with no door. "At least I don't have to fix the door now."
+"It's not like you could anyway."
+The pursuers close in faster than expected. Every piece of scrap they scavenged over the past days finally finds its purpose. The girl wires salvaged energy cells into the terminal, which activates the alarms near the tracking ships' landing zone. Shrill alerts ring out one after another, drawing dozens of cleaning robots swarming toward the noise. Sylus lashes out with tendrils of black-red mist, ripping half a railcar from the overpass and slamming it across the intersection. Then it tears down several billboard screens sitting on an edge.
+The slumbering streets jolt awake all at once.
+Cleaning robots chase after the pursuers, screaming "Trash detected!" Drones weave through toppled billboards, opening fire. Metal wreckage crashes down in waves. Explosions and alarms ripple along the empty streets.
+Amid the chaos, the ship wobbles into the air and skims low over the ruined city.
+The drones are relentless. An energy beam slams into the tail, and the flight system erupts in a cascade of alarms. "The propulsion system has been damaged. Crash imminent."
+The vessel plunges into the depths of the ruined city. Shards of metal scatter in arcs of fire, the fuselage tumbling across the ground before finally crashing to a halt in the wreckage of an abandoned building. When the cabin finally falls silent, the girl lies sprawled among the shattered floor panels, her ears ringing.
+She blinks. She's still alive.
+She turns and spots Sylus lying nearby, his face covered in dust and looking so impossibly calm that it makes her want to punch him.
+The girl speaks, her voice hoarse. "Are you dead?"
+Sylus keeps his eyes closed. "You sound disappointed."
+"I'm deciding whether or not to claim the wreckage as my inheritance."
+"It's not worth inheriting anymore."
+They trade a few more jabs before falling quiet at the same time.
+Distant explosions echo in broken intervals. The night looms over the ruins, the glow of faraway fires leaving only faint traces of dark crimson along the horizon. Then, a streak of platinum light blazes to life across the sky.
+A meteor streaks above the ruined city, dragging a long tail of fire behind it. It burns impossibly bright and illuminates the rubble and dust before the girl's eyes, and the wound still healing along Sylus's profile.
+She watches it, her words forgotten.
+Sylus opens his eyes and follows her gaze to the night sky. "A burning rock."
+"...Can't you be a little romantic?"
+He pauses as if thinking it over. "Hmm... You can make a wish?"
+"You believe in that?" The girI's eyes widen slightly.
+"It's already here." Sylus watches the light trail across the sky. "Did you make a wish?"
+She stays silent for a second. "I did. I wished that our ship would be slightly better when we crash again."
+Sylus quietly chuckles, his chest rising with
+it. "It's practical."
+"Your turn."
+Sylus looks at where the meteor vanished. After a second passes, he speaks. "I don't want to be seeing this alone next time." The girl turns to look at him, but the sound of pursuers already echoes in the distance. She pushes herself up and grabs the weapon lying nearby. Sylus rises from the wreckage too, dusting off his shoulder.
+"We're still temporary teammates?" he asks.
+"It depends on your performance." She thinks. "Does your wish need my cooperation? That's kind of cheating."
+"Didn't you include the ship in yours?"
+"It's a necessity for survival."
+"So is mine."
+The pursuers' beams draw closer.
+The girl lures away the first squad of drones while Sylus tears through the encirclement. While sprinting, she glances over her shoulder and catches him looking her way at the exact same moment.
+The meteor is long gone, but somehow, it still lingers in their eyes.
+It occurs to the girl that the next time disaster strikes and some strange, beautiful sight appears, Sylus will probably still be beside her. He'll say something to kill the mood.
+The strange part is that she doesn't hate it.
+Sylus catches up and deflects an energy blast for her without breaking his stride.
+"Why are you spacing out?"
+The girl doesn't look back. "What's our next destination?"
+"I don't know."
+"Keep up, then."
+"Right back at you."
+The two of them charge out of the ruined city together.
+Behind them, the pursuers' beams tear through the night. Ahead, a sky of unfamiliar stars stretches on.
+For two fighters who freed themselves from the Interstellar Arena, this is close enough to a future.
+
+`,
+  },
 ];
