@@ -254,6 +254,11 @@ function Optimizer() {
 
     // ===== отправка в Showcase =====
     const handleSendToShowcase = () => {
+        const confirmed = window.confirm(
+            "The protocors on Memories will be replaced! Are you sure you want to send the team to Showcase?",
+        );
+        if (!confirmed) return;
+
         setIsSending(true);
 
         try {
