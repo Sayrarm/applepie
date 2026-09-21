@@ -262,7 +262,8 @@ export const capsules = [
     name: "Capsule: Vigorous",
     value: 60,
     img: "../assets/icons/energy-capsule-medium.png",
-  },{
+  },
+  {
     id: "capsule_powerful",
     name: "Capsule: Powerful",
     value: 100,

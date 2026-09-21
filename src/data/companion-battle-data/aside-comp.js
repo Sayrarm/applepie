@@ -73,6 +73,11 @@ export const asideComp = [
     char: "Rafayel",
     companions: [
       {
+        name: "Vermilion Martial God",
+        link: "vmg",
+        image: "../assets/companions/rafayel-vmg.png",
+      },
+      {
         name: "Lemurian Sea God",
         link: "lsg",
         image: "../assets/companions/rafayel-lsg.png",

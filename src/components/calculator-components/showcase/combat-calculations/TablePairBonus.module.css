@@ -1,0 +1,31 @@
+.statsTablePairBonus {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.statsTablePairBonus th,
+.statsTablePairBonus td {
+    border: 1px solid var(--border-table);
+    padding: 8px 12px;
+    text-align: center;
+}
+
+.statsTablePairBonus th {
+    background-color: var(--forSelect);
+    color: var(--colorText);
+}
+
+.statsTablePairBonus {
+    background-color: var(--bg-glass);
+}
+
+.titleTD {
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 500px) {
+    .titleTD {
+        white-space: wrap;
+    }
+}

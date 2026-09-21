@@ -19,7 +19,7 @@ export function useFarmGoals() {
     credits: 0,
     crystals: {},
     hearts: {},
-    capsules: {}
+    capsules: {},
   });
 
   // ===== ЗАГРУЗКА ЦЕЛЕЙ =====

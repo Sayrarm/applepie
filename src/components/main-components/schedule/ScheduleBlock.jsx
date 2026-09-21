@@ -35,7 +35,7 @@ function ScheduleBlock() {
 
       <ModalWindow
         ref={scheduleModalRef}
-        title={"ScheduleBlock of MyProtocores and Trials"}
+        title={"Schedule of Protocores and Trials"}
         tag={
           <>
             <img

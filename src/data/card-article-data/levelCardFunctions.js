@@ -4,7 +4,7 @@ import {
   ascendData5star,
   memoryStats,
 } from "@data";
-import {getImageUrl} from "@hooks";
+import { getImageUrl } from "@hooks";
 import React from "react";
 
 export const calculateDmgBoost = (hp, atk, def, talentKey) => {
@@ -138,12 +138,9 @@ export const getStatsWithRank = (card, level, rank, isAscended = false) => {
 };
 
 export const formatOptionLabel = ({ img }) => {
-  return React.createElement(
-      'img',
-      {
-        src: getImageUrl(img),
-        alt: 'rank',
-        style: { width: 34, height: 24 }
-      }
-  );
+  return React.createElement("img", {
+    src: getImageUrl(img),
+    alt: "rank",
+    style: { width: 34, height: 24 },
+  });
 };

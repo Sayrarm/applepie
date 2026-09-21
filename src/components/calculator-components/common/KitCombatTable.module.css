@@ -1,0 +1,43 @@
+.statsTable {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.statsTable {
+    white-space: pre-wrap;
+}
+
+.statsTable th,
+.statsTable td {
+    border: 1px solid var(--border-table);
+    padding: 8px 12px;
+    text-align: center;
+}
+
+.statsTable th {
+    background-color: var(--forSelect);
+    color: var(--colorText);
+}
+
+.statsTable td {
+    background-color: var(--bg-glass);
+}
+
+.titleSkill {
+    background: none !important;
+    color: var(--colorTextDark) !important;
+}
+
+@media screen and (max-width: 500px) {
+
+    .statsTable td,
+    .statsTable th {
+        white-space: wrap;
+    }
+
+    .statsTable th,
+    .statsTable td {
+        padding: 5px 2px;
+    }
+}

@@ -124,25 +124,25 @@ function MyResources() {
     newState[id] = Math.max(0, Number(value) || 0);
     setCapsules(newState);
 
-    window.dispatchEvent(new CustomEvent('resourcesUpdated'));
+    window.dispatchEvent(new CustomEvent("resourcesUpdated"));
   };
 
   // ===== ОЧИСТКА ВСЕХ РЕСУРСОВ =====
   const clearAllResources = () => {
     const confirmMessage =
-        `⚠️ WARNING: This will permanently delete ALL your resource data!\n\n` +
-        `This includes:\n` +
-        `• Bottles of Wishes\n` +
-        `• Core Energy\n` +
-        `• Credits\n` +
-        `• Crystals\n` +
-        `• Memory Heartsand\n` +
-        `• Ascension Crystal Boxes\n` +
-        `• Awakening Hearts\n` +
-        `• Diamonds\n` +
-        `• Wishes\n` +
-        `• Energy Capsules\n\n` +
-        `Are you absolutely sure you want to continue?`;
+      `⚠️ WARNING: This will permanently delete ALL your resource data!\n\n` +
+      `This includes:\n` +
+      `• Bottles of Wishes\n` +
+      `• Core Energy\n` +
+      `• Credits\n` +
+      `• Crystals\n` +
+      `• Memory Heartsand\n` +
+      `• Ascension Crystal Boxes\n` +
+      `• Awakening Hearts\n` +
+      `• Diamonds\n` +
+      `• Wishes\n` +
+      `• Energy Capsules\n\n` +
+      `Are you absolutely sure you want to continue?`;
 
     if (!window.confirm(confirmMessage)) {
       return;
@@ -161,9 +161,9 @@ function MyResources() {
     setCapsules({});
 
     // Отправляем событие об обновлении ресурсов
-    window.dispatchEvent(new CustomEvent('resourcesUpdated'));
+    window.dispatchEvent(new CustomEvent("resourcesUpdated"));
 
-    alert('✅ All resources cleared successfully!');
+    alert("✅ All resources cleared successfully!");
   };
 
   return (
@@ -807,51 +807,45 @@ function MyResources() {
         </div>
         <div className={styles.itemsGrid}>
           {capsules.map((item) => (
-              <div key={item.id} className={styles.itemRow}>
-                <div className={styles.itemDiv}>
-                  <img
-                      src={getImageUrl(item.img)}
-                      alt={item.name}
-                      className={styles.itemIcon}
-                  />
-                  <label htmlFor={`input-${item.id}`} className={styles.itemName}>
-                    {item.name}
-                  </label>
-                </div>
-                <div className={styles.itemDiv}>
-                  <span className={styles.itemValue}>+{item.value} stamina</span>
-                  <input
-                      id={`input-${item.id}`}
-                      name="item"
-                      type="number"
-                      min="0"
-                      value={capsulesState[item.id] || ""}
-                      onChange={(e) =>
-                          handleCapsuleChange(item.id, e.target.value)
-                      }
-                      className={styles.itemInput}
-                      onFocus={(e) => {
-                        if (e.target.value === "0") {
-                          e.target.value = "";
-                        }
-                      }}
-                      onBlur={(e) => {
-                        if (e.target.value === "") {
-                          handleCapsuleChange(item.id, 0);
-                        }
-                      }}
-                  />
-                </div>
-
+            <div key={item.id} className={styles.itemRow}>
+              <div className={styles.itemDiv}>
+                <img
+                  src={getImageUrl(item.img)}
+                  alt={item.name}
+                  className={styles.itemIcon}
+                />
+                <label htmlFor={`input-${item.id}`} className={styles.itemName}>
+                  {item.name}
+                </label>
               </div>
+              <div className={styles.itemDiv}>
+                <span className={styles.itemValue}>+{item.value} stamina</span>
+                <input
+                  id={`input-${item.id}`}
+                  name="item"
+                  type="number"
+                  min="0"
+                  value={capsulesState[item.id] || ""}
+                  onChange={(e) => handleCapsuleChange(item.id, e.target.value)}
+                  className={styles.itemInput}
+                  onFocus={(e) => {
+                    if (e.target.value === "0") {
+                      e.target.value = "";
+                    }
+                  }}
+                  onBlur={(e) => {
+                    if (e.target.value === "") {
+                      handleCapsuleChange(item.id, 0);
+                    }
+                  }}
+                />
+              </div>
+            </div>
           ))}
         </div>
       </div>
 
-      <button
-          className={styles.clearAllButton}
-          onClick={clearAllResources}
-      >
+      <button className={styles.clearAllButton} onClick={clearAllResources}>
         🗑️ Clear All
       </button>
     </div>

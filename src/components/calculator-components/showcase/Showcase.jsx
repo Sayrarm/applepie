@@ -1,23 +1,29 @@
-import { useState, useRef, useMemo, useEffect } from "react";
+import { useState, useRef, useMemo, useEffect, useCallback } from "react";
 import styles from "./Showcase.module.css";
-import Select from "react-select";
-import { toPng } from "html-to-image";
 import { Button } from "antd";
-import CombatCalculations from "./CombatCalculations.jsx";
-import ChooseCompanionAndWeapon from "./ChooseCompanionAndWeapon.jsx";
-import ChooseTeamCards from "./ChooseTeamCards.jsx";
-import ModalWindow from "@components/ui/ModalWindow.jsx";
-import { calculateFinalStats, getStatsWithRank, affinityData } from "@data";
 import {
-  getCardLevel,
-  getCardRank,
-  getCardAscend,
-  getCardProtocores,
   getShowcaseTeamsOrDefault,
   saveShowcaseTeams,
   deleteShowcaseTeam,
   createDefaultTeam,
 } from "@localstorage";
+import {
+  ModalWindow,
+  RenderCardSlot,
+  ModalChooseCard,
+  AffinitySelect,
+  ChooseCompanion,
+  ChooseWeapon,
+  CombatCalculations,
+  StatsTable
+} from "@components";
+import { useScreenshot } from "@hooks";
+import {
+  getCardData,
+  calculateTotalStats,
+  calculateFinalStatsWithAffinity,
+  calculateAffinityBonus,
+} from "@data";
 
 function Showcase() {
   // Загружаем сохраненные команды
@@ -26,23 +32,17 @@ function Showcase() {
   const [activeTeamIndex, setActiveTeamIndex] = useState(0);
   const [isEditingName, setIsEditingName] = useState(false);
   const [editingName, setEditingName] = useState("");
-  const [isCapturing, setIsCapturing] = useState(false);
+  const [longPressTimer, setLongPressTimer] = useState(null);
+
   const showcaseRef = useRef();
   const captureRef = useRef();
   const renameModalRef = useRef();
-  const [longPressTimer, setLongPressTimer] = useState(null);
+  const cardModalRef = useRef();
+
+  const { isCapturing, captureScreenshot } = useScreenshot();
 
   // Получаем текущую активную команду
   const currentTeam = teams[activeTeamIndex] || teams[0];
-
-  // Опции для affinity
-  const affinityOptions = useMemo(() => {
-    const levels = affinityData[0]?.affinityLVL || [];
-    return levels.map((lvl) => ({
-      value: lvl,
-      label: `${lvl} LVL`,
-    }));
-  }, []);
 
   // ===== ОБРАБОТЧИКИ ДЛЯ ПЕРЕИМЕНОВАНИЯ =====
   const handleTabContextMenu = (e, team) => {
@@ -141,152 +141,47 @@ function Showcase() {
     }
   };
 
-  // ===== ФУНКЦИЯ ДЛЯ СОЗДАНИЯ СКРИНШОТА =====
-  const captureScreenshot = async () => {
-    if (!captureRef.current) return;
-
-    setIsCapturing(true);
-
-    try {
-      const element = captureRef.current;
-
-      // Добавляем padding для отступов при скриншоте
-      element.style.padding = "1px";
-
-      const dataUrl = await toPng(element, {
-        quality: 1,
-        pixelRatio: 3,
-        backgroundColor: "var(--bg-primary)",
-        cacheBust: true,
-        width: element.scrollWidth,
-        height: element.scrollHeight,
-        filter: (node) => {
-          return (
-            !node.classList?.contains("modal") && !node.closest?.(".modal")
-          );
-        },
-      });
-
-      // Убираем временный padding
-      element.style.padding = "0";
-
-      const link = document.createElement("a");
-      link.download = `${currentTeam.name}_${new Date().toISOString().slice(0, 10)}.png`;
-      link.href = dataUrl;
-      link.click();
-    } catch (error) {
-      console.error("Error capturing screenshot:", error);
-      alert("Failed to capture screenshot. Please try again.");
-      // Убираем padding в случае ошибки
-      if (captureRef.current) {
-        captureRef.current.style.padding = "0";
-      }
-    } finally {
-      setIsCapturing(false);
+  // ===== ОБРАБОТЧИК ВЫБОРА КАРТОЧКИ =====
+  const handleSelectCard = (placement, index, card) => {
+    if (placement === "solar") {
+      const updatedSolarCards = [...currentTeam.solarCards];
+      updatedSolarCards[index] = card;
+      updateCurrentTeam({ solarCards: updatedSolarCards });
+    } else if (placement === "lunar") {
+      const updatedLunarCards = [...currentTeam.lunarCards];
+      updatedLunarCards[index] = card;
+      updateCurrentTeam({ lunarCards: updatedLunarCards });
     }
   };
 
-  // ===== ФУНКЦИЯ ДЛЯ ПОЛУЧЕНИЯ ДАННЫХ КАРТОЧКИ =====
-  const getCardData = (card) => {
-    if (!card) return null;
-    const level = getCardLevel(card.id);
-    const rank = getCardRank(card.id);
-    const isAscended = getCardAscend(card.id);
-    const protocores = getCardProtocores(card.id);
-    const baseStats = getStatsWithRank(card, level, rank, isAscended);
-
-    // Используем calculateFinalStats для корректного расчета всех статов
-    const stats = baseStats
-      ? calculateFinalStats(card, baseStats, protocores)
-      : null;
-
-    return { level, rank, isAscended, protocores, stats };
+  // ===== ОБРАБОТЧИК ИЗМЕНЕНИЯ AFFINITY =====
+  const handleAffinityChange = (level) => {
+    updateCurrentTeam({ affinityLevel: level });
   };
 
+  // ===== ОБЕРНУТАЯ ФУНКЦИЯ ДЛЯ ПОЛУЧЕНИЯ ДАННЫХ КАРТОЧКИ =====
+  const getCardDataWrapper = useCallback((card) => {
+    return getCardData(card);
+  }, []);
+
   // ===== ПОДСЧЁТ СУММЫ СТАТОВ =====
-  const calculateTotalStats = useMemo(() => {
-    const allCards = [
-      ...currentTeam.solarCards,
-      ...currentTeam.lunarCards,
-    ].filter((card) => card !== null);
-
-    const total = {
-      hp: 0,
-      atk: 0,
-      def: 0,
-      critRate: 0,
-      critDmg: 0,
-      dmgBoost: 0,
-      oathStrength: 0,
-      oathRecoveryBoost: 0,
-      expeditedEnergyBoost: 0,
-    };
-
-    allCards.forEach((card) => {
-      const cardData = getCardData(card);
-      if (cardData?.stats) {
-        const stats = cardData.stats;
-        total.hp += stats.hp || 0;
-        total.atk += stats.atk || 0;
-        total.def += stats.def || 0;
-        total.critRate += stats.critRate || 0;
-        total.critDmg += stats.critDmg || 0;
-        total.dmgBoost += stats.dmgBoost || 0;
-        total.oathStrength += stats.oathStrength || 0;
-        total.oathRecoveryBoost += stats.oathRecoveryBoost || 0;
-        total.expeditedEnergyBoost += stats.expeditedEnergyBoost || 0;
-      }
-    });
-
-    return total;
+  const totalStats = useMemo(() => {
+    return calculateTotalStats(
+      currentTeam.solarCards,
+      currentTeam.lunarCards,
+      getCardData,
+    );
   }, [currentTeam.solarCards, currentTeam.lunarCards]);
 
   // ===== ПОДСЧЁТ AFFINITY БОНУСОВ =====
-  const calculateAffinityBonus = useMemo(() => {
-    const affinityLevel = currentTeam.affinityLevel || 0;
-    if (affinityLevel === 0 || !affinityData.length) {
-      return { hp: 0, atk: 0, def: 0 };
-    }
-
-    const affinityEntry = affinityData[0];
-    const levels = affinityEntry.affinityLVL;
-
-    // Проверяем, есть ли такой уровень в массиве
-    const index = levels.indexOf(affinityLevel);
-    if (index === -1) {
-      return { hp: 0, atk: 0, def: 0 };
-    }
-
-    const hpPerLevel = affinityEntry.hp || 0;
-    const atkPerLevel = affinityEntry.atk || 0;
-    const defPerLevel = affinityEntry.def || 0;
-
-    // Используем сам уровень, деленный на шаг (5)
-    // Например: 5/5 = 1, 10/5 = 2, 15/5 = 3, и т.д.
-    const levelCount = affinityLevel / 5;
-
-    return {
-      hp: hpPerLevel * levelCount,
-      atk: atkPerLevel * levelCount,
-      def: defPerLevel * levelCount,
-    };
+  const affinityBonus = useMemo(() => {
+    return calculateAffinityBonus(currentTeam.affinityLevel);
   }, [currentTeam.affinityLevel]);
 
   // ===== ФИНАЛЬНЫЕ СТАТЫ С УЧЁТОМ AFFINITY =====
   const finalStats = useMemo(() => {
-    const affinityBonus = calculateAffinityBonus;
-    return {
-      hp: calculateTotalStats.hp + affinityBonus.hp,
-      atk: calculateTotalStats.atk + affinityBonus.atk,
-      def: calculateTotalStats.def + affinityBonus.def,
-      critRate: calculateTotalStats.critRate,
-      critDmg: calculateTotalStats.critDmg + 150,
-      dmgBoost: calculateTotalStats.dmgBoost,
-      oathStrength: calculateTotalStats.oathStrength,
-      oathRecoveryBoost: calculateTotalStats.oathRecoveryBoost,
-      expeditedEnergyBoost: calculateTotalStats.expeditedEnergyBoost,
-    };
-  }, [calculateTotalStats, calculateAffinityBonus]);
+    return calculateFinalStatsWithAffinity(totalStats, affinityBonus);
+  }, [totalStats, affinityBonus]);
 
   return (
     <div className={styles.wrapper}>
@@ -294,7 +189,9 @@ function Showcase() {
       <div className={styles.utilButtons}>
         <button
           className={styles.screenshotButton}
-          onClick={captureScreenshot}
+          onClick={() =>
+            captureScreenshot(captureRef.current, currentTeam.name)
+          }
           disabled={isCapturing}
         >
           {isCapturing ? "📸 Capturing..." : "📸 Save as Image"}
@@ -369,92 +266,81 @@ function Showcase() {
         >
           {/* компаньон и MC Weapon */}
           <div className={styles.topContainer}>
-            <ChooseCompanionAndWeapon
-              selectedCompanion={currentTeam.selectedCompanion}
-              selectedMCWeapon={currentTeam.selectedMCWeapon}
-              onSelectCompanion={(companion) =>
-                updateCurrentTeam({ selectedCompanion: companion })
-              }
-              onSelectMCWeapon={(companion) =>
-                updateCurrentTeam({ selectedMCWeapon: companion })
-              }
-            />
+            <div className={styles.companionSection}>
+              <ChooseCompanion
+                selectedCompanion={currentTeam.selectedCompanion}
+                onSelectCompanion={(companion) =>
+                  updateCurrentTeam({ selectedCompanion: companion })
+                }
+              />
+              <ChooseWeapon
+                selectedMCWeapon={currentTeam.selectedMCWeapon}
+                onSelectMCWeapon={(companion) =>
+                  updateCurrentTeam({ selectedMCWeapon: companion })
+                }
+              />
+            </div>
 
             <div>
-              <table className={styles.statsTable}>
-                <tbody>
-                  <tr>
-                    <th>HP</th>
-                    <td>{finalStats.hp.toFixed(2)}</td>
-                    <th>Crit Rate</th>
-                    <td>{finalStats.critRate.toFixed(2)}%</td>
-                    <th>Oath Strength</th>
-                    <td>{finalStats.oathStrength.toFixed(2)}%</td>
-                  </tr>
-                  <tr>
-                    <th>ATK</th>
-                    <td>{finalStats.atk.toFixed(2)}</td>
-                    <th>Crit DMG</th>
-                    <td>{finalStats.critDmg.toFixed(2)}%</td>
-                    <th>Oath Recovery Boost</th>
-                    <td>{finalStats.oathRecoveryBoost.toFixed(2)}%</td>
-                  </tr>
-                  <tr>
-                    <th>DEF</th>
-                    <td>{finalStats.def.toFixed(2)}</td>
-                    <th>DMG Boost to Weakened</th>
-                    <td>{finalStats.dmgBoost.toFixed(2)}%</td>
-                    <th>Expedited Energy Boost</th>
-                    <td>{finalStats.expeditedEnergyBoost.toFixed(2)}%</td>
-                  </tr>
-                </tbody>
-              </table>
+              <StatsTable stats={finalStats}/>
 
               <div className={styles.bonuses}>
-                <div className={styles.affinity}>
-                  <Select
-                    options={affinityOptions}
-                    value={affinityOptions.find(
-                      (opt) => opt.value === currentTeam.affinityLevel,
-                    )}
-                    onChange={(option) =>
-                      updateCurrentTeam({
-                        affinityLevel: option ? option.value : 0,
-                      })
-                    }
-                    placeholder="Select Affinity LVL"
-                    className={styles.selectAffinityContainer}
-                    isClearable
-                    isSearchable={false}
-                  />
-                  <div className={styles.affinityBonus}>
-                    Affinity Bonus: +{calculateAffinityBonus.hp} HP, +
-                    {calculateAffinityBonus.atk} ATK, +
-                    {calculateAffinityBonus.def} DEF
-                  </div>
-                </div>
+                <AffinitySelect
+                  value={currentTeam.affinityLevel}
+                  onChange={handleAffinityChange}
+                />
               </div>
             </div>
           </div>
 
           {/* карточки */}
-          <ChooseTeamCards
-            solarCards={currentTeam.solarCards}
-            lunarCards={currentTeam.lunarCards}
-            onSelectCard={(placement, index, card) => {
-              const newSolar = [...currentTeam.solarCards];
-              const newLunar = [...currentTeam.lunarCards];
+          <div className={styles.cardsSection}>
+            {/* Solar карточки */}
+            <div className={styles.solarRow}>
+              <div className={styles.rowLabel}>SOLAR</div>
+              <div className={styles.solarCardsRow}>
+                {currentTeam.solarCards.map((card, index) => (
+                  <div
+                    key={`solar-${index}`}
+                    className={styles.cardWrapperSlot}
+                  >
+                    <RenderCardSlot
+                      card={card}
+                      placement="solar"
+                      index={index}
+                      getCardData={getCardDataWrapper}
+                      cardModalRef={cardModalRef}
+                      smallCard={false}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
 
-              if (placement === "solar") {
-                newSolar[index] = card;
-                updateCurrentTeam({ solarCards: newSolar });
-              } else if (placement === "lunar") {
-                newLunar[index] = card;
-                updateCurrentTeam({ lunarCards: newLunar });
-              }
-            }}
-            getCardData={getCardData}
-          />
+            {/* Lunar карточки */}
+            <div className={styles.lunarRow}>
+              <div className={styles.rowLabel}>LUNAR</div>
+              <div className={styles.lunarCardsRow}>
+                {currentTeam.lunarCards.map((card, index) => (
+                  <div
+                    key={`lunar-${index}`}
+                    className={styles.cardWrapperSlot}
+                  >
+                    <RenderCardSlot
+                      card={card}
+                      placement="lunar"
+                      index={index}
+                      getCardData={getCardDataWrapper}
+                      cardModalRef={cardModalRef}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Модалка выбора карточки с фильтрами */}
+          <ModalChooseCard onSelectCard={handleSelectCard} ref={cardModalRef} />
         </section>
       </div>
 

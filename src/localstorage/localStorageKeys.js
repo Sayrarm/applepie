@@ -1,4 +1,5 @@
 export const KEYS = {
+  OPTIMIZER: "optimizer_data",
   SHOWCASE: "showcase_teams", //витрина(шоукейс) команды
   CALC_RESULT: "farm_goals", //трекер
   THEME: "theme", //темная/светлая тема
@@ -19,7 +20,7 @@ export const KEYS = {
   INVENTORY_SELECTED_CRYSTAL_COLOR: "inventory_selected_crystal_color",
   INVENTORY_DIAMONDS: "inventory_diamonds",
   INVENTORY_WISH: "inventory_wish",
-  INVENTORY_CAPSULES: "inventory_capsules"
+  INVENTORY_CAPSULES: "inventory_capsules",
 };
 
 // Функции для динамических ключей

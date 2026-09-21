@@ -1,0 +1,333 @@
+.container {
+    min-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin: 20px auto 0;
+
+    background-color: var(--bg-glass);
+    font-family: TikTok Sans, monospace;
+}
+
+.cardsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed var(--forSelect);
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.companionsContainer {
+    display: flex;
+}
+
+.selectMenu {
+    display: flex;
+    gap: 10px;
+}
+
+.protoSelectContainer,
+.substatsSelectContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.protoSelectContainer {
+    align-items: flex-end;
+}
+
+.selectContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+}
+/*************Select********************/
+
+.select {
+    width: 250px;
+    box-shadow: var(--box-shadow);
+}
+
+.select [class$="-control"] {
+    background-color: var(--forSelect);
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+.select [class$="-control"]:hover {
+    border-color: var(--colorText);
+}
+
+.select [class$="-placeholder"] {
+    color: var(--colorText);
+    font-size: 12px;
+}
+
+.select [class$="-menu"] {
+    background-color: var(--forSelect);
+    border: none;
+    border-radius: 0;
+    margin: 1px;
+    z-index: 9999;
+}
+
+.select [class$="-option"] {
+    background-color: var(--forSelect);
+    color: var(--colorText);
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+.select [class$="-option"]:hover {
+    background-color: var(--a-hover);
+    color: var(--colorText);
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+.select [class$="-singleValue"] {
+    color: var(--colorText);
+    font-size: 12px;
+}
+
+.select [class$="-indicatorContainer"] {
+    padding: 5px;
+}
+
+/**********************************************/
+
+.articleContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    zoom: 0.95;
+}
+
+.protocoreContainer {
+    display: flex;
+    gap: 5px;
+}
+
+.choosenCard,
+.startButton,
+.sendButton {
+    text-decoration: none;
+    background: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.emptySlot {
+    border: 1px dashed var(--border-battle-page);
+}
+
+.choosenCard {
+    color: var(--colorTextDark);
+    font-family: TikTok Sans, monospace;
+    font-size: 16px;
+    padding: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choosenCard:hover {
+    color: var(--a);
+}
+
+.resultProtocores {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.cardsContainer {
+    border-bottom: 2px solid var(--forSelect);
+    padding: 10px 0;
+}
+
+.buttonsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.clearButton,
+.startButton,
+.sendButton {
+    margin-top: 5px;
+    padding: 10px 40px;
+    align-self: center;
+    font-family: TikTok Sans, monospace;
+    font-size: 18px;
+    border: none;
+
+    color: var(--colorText);
+    background-color: var(--forSelect);
+    box-shadow: var(--box-shadow);
+}
+
+.clearButton:hover,
+.startButton:hover,
+.sendButton:hover {
+    background-color: var(--a-hover);
+}
+
+/**********************************************/
+
+.loadingIndicator {
+    text-align: center;
+    padding: 16px;
+    font-size: 16px;
+    color: var(--forSelect);
+}
+
+.statsComparison {
+    display: flex;
+}
+
+.statsColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.statsColumnTitle {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    color: var(--colorText, #fff);
+}
+
+.damageComparison {
+    display: flex;
+    justify-content: center;
+    margin: 15px 5px;
+}
+
+.damageRow {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    flex-wrap: wrap;
+}
+
+.damageLabel {
+    color: var(--text-secondary, #aaa);
+}
+
+.damageOld {
+    color: var(--text-secondary, #aaa);
+    font-variant-numeric: tabular-nums;
+}
+
+.damageArrow {
+    color: var(--text-secondary, #aaa);
+}
+
+.damageNew {
+    color: var(--text-primary, #fff);
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+}
+
+.damagePositive {
+    color: #4ade80;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+}
+
+.damageNegative {
+    color: #f87171;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+}
+
+/**************************************************/
+
+@media screen and (max-width: 1180px) {
+
+    .container {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .cardsContainer {
+        flex-direction: column;
+    }
+
+    .articleContainer {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .resultProtocores {
+        flex-direction: row;
+    }
+
+    .resultContainer,
+    .statsComparison {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+
+    .navigation {
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 535px) {
+
+    .clearButton,
+    .startButton,
+    .sendButton {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 535px) {
+
+    .companionsContainer {
+        flex-direction: column;
+        border-bottom: 1px dashed var(--forSelect);
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+    }
+
+    .articleContainer {
+        zoom: 0.70;
+    }
+
+    .resultContainer {
+        font-size: 12px;
+    }
+
+    .damageRow {
+        font-size: 13px;
+    }
+
+    .navigation {
+        align-items: flex-end;
+    }
+}

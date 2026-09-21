@@ -1856,5 +1856,4 @@ Perform an enhanced linear attack, dealing 160+213% ATK DMG.
 Basic attacks have a 20% chance of inflicting additional DMG. Upon using an Active Skill, the chance to do additional DMG increases by 80% while ATK SPD increases by 16% for 6s.
         `,
   },
-
 ];

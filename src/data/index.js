@@ -4,12 +4,12 @@ export {
   ascendData3star,
   ascendData4star,
   ascendData5star,
-  rankOptions
+  rankOptions,
 } from "./card-article-data/levelCardData.js";
 export {
   calculateDmgBoost,
   getStatsWithRank,
-  formatOptionLabel
+  formatOptionLabel,
 } from "./card-article-data/levelCardFunctions.js";
 export { memoriesData } from "./card-article-data/memories-data.js";
 export { obtainData } from "./card-article-data/obtain-data.js";
@@ -19,7 +19,7 @@ export {
   getProtocoreLevelsString,
 } from "./card-article-data/protocoreUtils.js";
 export { solar4Stars } from "./card-article-data/solar-4-star-info.js";
-export { storyCardInfo } from "./card-article-data/story-card-info.js";
+export { storyCardInfo, mythTitle } from "./card-article-data/story-card-info.js";
 
 //companion-battle-data
 export { asideComp } from "./companion-battle-data/aside-comp.js";
@@ -43,23 +43,44 @@ export { eventsData } from "./main-page-data/events-data.js";
 export { hunterContestBuffs } from "./main-page-data/hunter-contest-buffs.js";
 
 //showcase-data
-export { affinityData } from "./showcase-data/affinity-data.js";
+export { affinityData } from "./calculator-data/showcase-data/affinity-data.js";
 export {
   compDataShowcaseDefault5star,
   compDataShowcaseDefault4star,
   compDataShowcaseSpecific,
   weaponDataShowcaseSpecific,
-} from "./showcase-data/comp-data-showcase.js";
+} from "./calculator-data/showcase-data/comp-data-showcase.js";
 export {
   calculateDamage,
   createDamageCalculator,
   calculateDamageWithBonuses,
   calculateAllDamageTypes,
-} from "./showcase-data/damageCalculator.js";
+} from "./calculator-data/showcase-data/damageCalculator.js";
+export {
+  getCardData,
+  calculateTotalStats,
+  calculateAffinityBonus,
+  calculateFinalStatsWithAffinity,
+} from "./calculator-data/showcase-data/showcase-functions.js";
 
-//about-data
-export { aboutData } from "./about-data.js";
-export { bannersDataFull } from "./banners-data-full.js";
+//optimizer-data
+export {
+  optimizeTeam,
+  calculateTeamStats
+} from "./calculator-data/optimizer-data/optimizer-functions.js";
+
+//calculators data
+export {
+  createEmptyStats,
+  mergeStats,
+  applyBaseCritDmgBonus
+} from "./calculator-data/stats-utils.js";
+export {
+  computeKitDamage,
+  detectDamageType
+} from "./calculator-data/kitDamageFunctions.js";
+
+//memory upgrade data
 export {
   rarityLevels,
   expDungeonData,
@@ -75,28 +96,8 @@ export {
   getCrystalDungeonRuns,
   getStaminaCost,
 } from "./calculator-data/memory-up-functions.js";
-export {
-  bottles,
-  wish,
-  diamond,
-  heartSand,
-  crystalColors,
-  crystalTypes,
-  bossImg,
-  crystalIcons,
-  crystalBox,
-  hearts,
-  coreEnergy,
-  credits,
-  capsules
-} from "./my-account-data/my-resources-data.js";
-export {
-  getHeartsandExchange,
-  getCrystalBoxExchange,
-  getHeartInfo,
-  getHeartCount,
-  getWishExchange,
-} from "./my-account-data/my-resources-functions.js";
+
+//protocore data
 export {
   levelUpData,
   MAX_LEVEL,
@@ -118,3 +119,33 @@ export {
   getCreditDungeonRuns,
   getStaminaForCredits,
 } from "./calculator-data/protocore-functions.js";
+
+//about-data
+export { aboutData } from "./about-data.js";
+
+//banners data
+export { bannersDataFull } from "./banners-data-full.js";
+
+//my resources data
+export {
+  bottles,
+  wish,
+  diamond,
+  heartSand,
+  crystalColors,
+  crystalTypes,
+  bossImg,
+  crystalIcons,
+  crystalBox,
+  hearts,
+  coreEnergy,
+  credits,
+  capsules,
+} from "./my-account-data/my-resources-data.js";
+export {
+  getHeartsandExchange,
+  getCrystalBoxExchange,
+  getHeartInfo,
+  getHeartCount,
+  getWishExchange,
+} from "./my-account-data/my-resources-functions.js";

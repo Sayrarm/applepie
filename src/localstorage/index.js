@@ -34,7 +34,7 @@ export {
   getWish,
   saveWish,
   getCapsule,
-  saveCapsule
+  saveCapsule,
 } from "./my-resources-storage.js";
 export {
   addFarmGoal,
@@ -45,7 +45,12 @@ export {
 } from "./calculator-storage.js";
 export { getTheme, saveTheme } from "./theme-storage.js";
 export { getTimezone, saveTimezone } from "./timezone-storage.js";
-export { getCardSize, saveCardSize, getShowUserInfo, saveShowUserInfo } from "./ui-storage.js";
+export {
+  getCardSize,
+  saveCardSize,
+  getShowUserInfo,
+  saveShowUserInfo,
+} from "./ui-storage.js";
 export {
   getCardLevel,
   saveCardLevel,
@@ -142,3 +147,8 @@ export {
   isProtocoreEquipped,
   updateProtocoreFilters,
 } from "./filter-protocore-storage.js";
+export {
+  getOptimizerData,
+  saveOptimizerData,
+  clearOptimizerData
+} from "./optimizer-storage.js";
