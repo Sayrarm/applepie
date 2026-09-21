@@ -1,13 +1,41 @@
 import { KEYS, get, set } from "@localstorage";
+import { memoriesData, compData } from "@data";
+
+// объект -> id
+const toId = (item) => (item && typeof item === "object" ? item.id : item ?? null);
+
+// id -> объект
+const fromId = (id, source) => {
+  if (id == null) return null;
+  if (typeof id === "object") return id; // старый формат в localStorage
+  return source.find((x) => x.id === id) || null;
+};
+
+const normalizeTeam = (team) => ({
+  ...team,
+  selectedCompanion: toId(team.selectedCompanion),
+  selectedMCWeapon: toId(team.selectedMCWeapon),
+  solarCards: (team.solarCards || []).map(toId),
+  lunarCards: (team.lunarCards || []).map(toId),
+});
+
+const hydrateTeam = (team) => ({
+  ...team,
+  selectedCompanion: fromId(team.selectedCompanion, compData),
+  selectedMCWeapon: fromId(team.selectedMCWeapon, compData),
+  solarCards: (team.solarCards || []).map((id) => fromId(id, memoriesData)),
+  lunarCards: (team.lunarCards || []).map((id) => fromId(id, memoriesData)),
+});
 
 // ===== КОМАНДЫ SHOWCASE =====
 export const getShowcaseTeams = () => {
   const teams = get(KEYS.SHOWCASE);
-  return teams || [];
+  if (!teams) return [];
+  return teams.map(hydrateTeam);
 };
 
 export const saveShowcaseTeams = (teams) => {
-  return set(KEYS.SHOWCASE, teams);
+  return set(KEYS.SHOWCASE, teams.map(normalizeTeam));
 };
 
 export const addShowcaseTeam = (team) => {
