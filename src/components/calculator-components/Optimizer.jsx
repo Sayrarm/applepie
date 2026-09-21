@@ -19,6 +19,7 @@ import {
     getShowcaseTeams,
     saveShowcaseTeams,
     createDefaultTeam,
+    removeProtocoreFromAllCards
 } from "@localstorage";
 import {
     optimizeTeam,
@@ -256,7 +257,10 @@ function Optimizer() {
         setIsSending(true);
 
         try {
-            // 1. Сохраняем протокоры на карточки в localStorage
+            // 1. Собираем новые протокоры по слотам + все их id
+            const newProtocoresBySlot = [];
+            const allNewIds = [];
+
             CARD_SLOTS.forEach((slot) => {
                 const card = data.cards[slot.id];
                 if (!card) return;
@@ -266,13 +270,42 @@ function Optimizer() {
                     ? Object.values(slotResult).filter(Boolean)
                     : [];
 
-                saveCardProtocores(card.id, protocores);
+                newProtocoresBySlot.push({ cardId: card.id, protocores });
+                protocores.forEach((p) => allNewIds.push(p.id));
             });
 
-            // 2. Собираем новую команду в формате Showcase
+            // 2. Снимаем старые протокоры с карточек новой команды
+            //    (перезаписываем пустым массивом — заменяем на новые)
+            newProtocoresBySlot.forEach(({ cardId }) => {
+                saveCardProtocores(cardId, []);
+            });
+
+            // 3. Снимаем новые протокоры со ВСЕХ карточек, где они сейчас стоят
+            //    (чтобы не было дубликатов между карточками)
+            allNewIds.forEach((id) => {
+                removeProtocoreFromAllCards(id);
+            });
+
+            // 4. Ставим новые протокоры на карточки новой команды
+            newProtocoresBySlot.forEach(({ cardId, protocores }) => {
+                saveCardProtocores(cardId, protocores);
+            });
+
+            // 5. Создаём команду в showcase_teams
             const teams = getShowcaseTeams();
-            const teamNumber = teams.length + 1;
-            const teamName = `Optimized Team ${teamNumber}`;
+
+            const getNextTeamNumber = (list) => {
+                if (list.length === 0) return 1;
+                const numbers = list
+                    .map((t) => {
+                        const m = t.name?.match(/Optimized Team (\d+)/);
+                        return m ? parseInt(m[1], 10) : 0;
+                    })
+                    .filter((n) => n > 0);
+                return numbers.length > 0 ? Math.max(...numbers) + 1 : 1;
+            };
+
+            const teamName = `Optimized Team ${getNextTeamNumber(teams)}`;
 
             const newTeam = {
                 ...createDefaultTeam(teamName),

@@ -30,7 +30,7 @@ import {
 
 function CardProtocores({ cardId }) {
   const protocoreModalRef = useRef();
-  const protocoreEditModalRef = useRef(); // <-- ДОБАВИТЬ РЕФ ДЛЯ МОДАЛКИ РЕДАКТИРОВАНИЯ
+  const protocoreEditModalRef = useRef();
   const filterModalRef = useRef();
 
   // Хуки для фильтрации и сортировки протокоров
