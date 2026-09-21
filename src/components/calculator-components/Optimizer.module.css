@@ -298,6 +298,16 @@
 
 @media screen and (max-width: 535px) {
 
+    .clearButton,
+    .startButton,
+    .sendButton {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 535px) {
+
     .companionsContainer {
         flex-direction: column;
         border-bottom: 1px dashed var(--forSelect);
