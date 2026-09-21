@@ -30,8 +30,8 @@ function Showcase() {
   const [teams, setTeams] = useState(() => getShowcaseTeamsOrDefault());
 
   const [activeTeamIndex, setActiveTeamIndex] = useState(0);
-  const [isEditingName, setIsEditingName] = useState(false);
   const [editingName, setEditingName] = useState("");
+  const [editingTeamIndex, setEditingTeamIndex] = useState(null);
   const [longPressTimer, setLongPressTimer] = useState(null);
 
   const showcaseRef = useRef();
@@ -45,14 +45,14 @@ function Showcase() {
   const currentTeam = teams[activeTeamIndex] || teams[0];
 
   // ===== ОБРАБОТЧИКИ ДЛЯ ПЕРЕИМЕНОВАНИЯ =====
-  const handleTabContextMenu = (e, team) => {
+  const handleTabContextMenu = (e, team, index) => {
     e.preventDefault();
-    startEditingName(team.name);
+    startEditingName(team.name, index);
   };
 
-  const handleTabTouchStart = (e, team) => {
+  const handleTabTouchStart = (e, team, index) => {
     const timer = setTimeout(() => {
-      startEditingName(team.name);
+      startEditingName(team.name, index);
     }, 800);
     setLongPressTimer(timer);
   };
@@ -108,16 +108,22 @@ function Showcase() {
   };
 
   // ===== ИЗМЕНЕНИЕ НАЗВАНИЯ КОМАНДЫ =====
-  const startEditingName = (name) => {
+  const startEditingName = (name, index) => {
     setEditingName(name);
+    setEditingTeamIndex(index);
     renameModalRef.current?.showModal();
   };
 
   const saveTeamName = () => {
-    if (editingName.trim()) {
-      updateCurrentTeam({ name: editingName.trim() });
+    if (editingName.trim() && editingTeamIndex !== null) {
+      const updatedTeams = [...teams];
+      updatedTeams[editingTeamIndex] = {
+        ...updatedTeams[editingTeamIndex],
+        name: editingName.trim(),
+      };
+      setTeams(updatedTeams);
     }
-    setIsEditingName(false);
+    setEditingTeamIndex(null);
     renameModalRef.current?.closeModal();
   };
 
@@ -207,12 +213,12 @@ function Showcase() {
         {teams.map((team, index) => (
           <div key={team.id} className={styles.tabWrapper}>
             <button
-              className={`${styles.teamNameButton} ${activeTeamIndex === index ? styles.activeTab : ""}`}
-              onClick={() => setActiveTeamIndex(index)}
-              onContextMenu={(e) => handleTabContextMenu(e, team)}
-              onTouchStart={(e) => handleTabTouchStart(e, team)}
-              onTouchEnd={handleTabTouchEnd}
-              onTouchCancel={handleTabTouchEnd}
+                className={`${styles.teamNameButton} ${activeTeamIndex === index ? styles.activeTab : ""}`}
+                onClick={() => setActiveTeamIndex(index)}
+                onContextMenu={(e) => handleTabContextMenu(e, team, index)}
+                onTouchStart={(e) => handleTabTouchStart(e, team, index)}
+                onTouchEnd={handleTabTouchEnd}
+                onTouchCancel={handleTabTouchEnd}
             >
               {team.name}
             </button>
@@ -243,6 +249,7 @@ function Showcase() {
                   if (e.key === "Enter") {
                     saveTeamName();
                   } else if (e.key === "Escape") {
+                    setEditingTeamIndex(null);
                     renameModalRef.current?.closeModal();
                   }
                 }}
