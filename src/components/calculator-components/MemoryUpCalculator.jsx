@@ -453,7 +453,7 @@ function MemoryUpCalculator() {
       {hasCalculated && result && (
         <div className={styles.goToFarmSection}>
           <button className={styles.goToFarmButton} onClick={handleAddToFarm}>
-            🎯 Add to Farm Goal Tracker
+            🎯 Add to Development Goal
           </button>
 
           <ModalWindow
@@ -461,7 +461,7 @@ function MemoryUpCalculator() {
             title={"Alert"}
             tag={
               <>
-                <h2>Goal added to Farm Tracker on Home page!</h2>
+                <h2>Goal added to Development Goal on Main page!</h2>
                 <Link className={styles.link} to="/">
                   Go to Main Page
                 </Link>
