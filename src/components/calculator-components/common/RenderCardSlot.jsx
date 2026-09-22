@@ -24,12 +24,12 @@ function RenderCardSlot({
             {showCardSlotEquipped ? (
                 <div className={styles.cardSlotEquipped}>
                   <div className={styles.cardWrapper}>
-                    <Card data={card} isSmall={smallCard} showUserInfo={true} />
+                    <Card data={card} isSmall={smallCard} showUserInfo={true} linkToCard={true} />
                   </div>
                 </div>
             ) : (
                 <div className={styles.cardWrapper}>
-                  <Card data={card} isSmall={smallCard} showUserInfo={true} />
+                  <Card data={card} isSmall={smallCard} showUserInfo={true} linkToCard={true} />
                 </div>
             )}
 

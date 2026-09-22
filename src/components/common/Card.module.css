@@ -17,6 +17,11 @@
   margin-top: 5px;
   color: var(--colorTextDark);
   text-decoration: none;
+  transition: 0.3s;
+}
+
+.cardName:hover {
+  color: var(--a);
 }
 
 .img,

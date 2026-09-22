@@ -7,8 +7,14 @@ import {
   getCardAscend,
 } from "@localstorage";
 import { formatOptionLabel, rankOptions } from "@data";
+import {Link} from "react-router-dom";
 
-function Card({ data, isSmall = false, showUserInfo = false }) {
+function Card({
+                  data,
+                  isSmall = false,
+                  showUserInfo = false,
+                  linkToCard = false
+}) {
   const imageClass = isSmall ? styles.imgSmall : styles.img;
 
   const isAvailable =
@@ -22,6 +28,8 @@ function Card({ data, isSmall = false, showUserInfo = false }) {
       : null;
   const isAscended =
     showUserInfo && data?.id && isAvailable ? getCardAscend(data.id) : false;
+
+  const cardNameContent = `${data.char}: ${data.name}`;
 
   return (
     <article className={styles.card}>
@@ -89,9 +97,16 @@ function Card({ data, isSmall = false, showUserInfo = false }) {
         <div className={styles.parametrsBG}></div>
       </div>
 
-      <p className={styles.cardName}>
-        {data.char}: {data.name}
-      </p>
+        <p className={styles.cardName}>
+            {linkToCard ? (
+                <Link
+                    to={`/memories/${data.id}`}
+                    className={styles.cardName}
+                >{cardNameContent}</Link>
+            ) : (
+                cardNameContent
+            )}
+        </p>
     </article>
   );
 }
