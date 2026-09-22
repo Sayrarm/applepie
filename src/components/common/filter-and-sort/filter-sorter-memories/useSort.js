@@ -1,5 +1,11 @@
 import { useEffect, useState, useCallback } from "react";
-import { getSortCriteria, saveSortCriteria } from "@localstorage";
+import {
+  enhanceMemoriesWithAscend,
+  enhanceMemoriesWithAvailability,
+  enhanceMemoriesWithLevel,
+  getSortCriteria,
+  saveSortCriteria
+} from "@localstorage";
 
 // Функции сравнения для каждого типа сортировки
 const compareFunctions = {
@@ -26,6 +32,16 @@ const compareFunctions = {
   },
   release: (a, b) => {
     return new Date(a.release) - new Date(b.release);
+  },
+  level: (a, b) => {
+    // Сначала по уровню (по убыванию)
+    if (a.cardLevel !== b.cardLevel) {
+      return b.cardLevel - a.cardLevel;
+    }
+    // При равном уровне — ascend выше
+    const aAscend = a.isAscended ? 1 : 0;
+    const bAscend = b.isAscended ? 1 : 0;
+    return bAscend - aAscend;
   },
 };
 
@@ -70,10 +86,30 @@ export const useSort = (prefix = "") => {
 
   // Сортируем отфильтрованные данные
   const sortMemories = useCallback(
-    (memories) => {
-      return multiSort(memories, sortCriteria);
-    },
-    [sortCriteria],
+      (memories) => {
+        const needsLevel = sortCriteria.includes("level");
+
+        let data = memories;
+
+        if (needsLevel) {
+          data = enhanceMemoriesWithLevel(data);
+          data = enhanceMemoriesWithAvailability(data);
+          data = enhanceMemoriesWithAscend(data);
+        }
+
+        if (needsLevel) {
+          const available = data.filter((m) => m.isAvailable);
+          const unavailable = data.filter((m) => !m.isAvailable);
+
+          const sortedAvailable = multiSort(available, sortCriteria);
+          const sortedUnavailable = multiSort(unavailable, sortCriteria);
+
+          return [...sortedAvailable, ...sortedUnavailable];
+        }
+
+        return multiSort(data, sortCriteria);
+      },
+      [sortCriteria],
   );
 
   return {

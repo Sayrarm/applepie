@@ -96,3 +96,43 @@ export const enhanceMemoriesWithAvailability = (memoriesData) => {
     isAvailable: availabilityMap[String(card.id)] || false,
   }));
 };
+
+// ===== MAP ВСЕХ УРОВНЕЙ КАРТОЧЕК =====
+export const getAllCardLevelsMap = () => {
+  const levels = {};
+  const keys = getKeysByPrefix("cardLevel_");
+  keys.forEach((key) => {
+    const cardId = key.replace("cardLevel_", "");
+    levels[cardId] = parseInt(get(key, 1)) || 1;
+  });
+  return levels;
+};
+
+// ===== ОБОГАЩЕНИЕ МАССИВА КАРТОЧЕК УРОВНЕМ =====
+export const enhanceMemoriesWithLevel = (memoriesData) => {
+  const levelsMap = getAllCardLevelsMap();
+  return memoriesData.map((card) => ({
+    ...card,
+    cardLevel: levelsMap[String(card.id)] ?? 1,
+  }));
+};
+
+// ===== MAP ВСЕХ ASCEND КАРТОЧЕК =====
+export const getAllCardAscendMap = () => {
+  const ascends = {};
+  const keys = getKeysByPrefix("cardAscend_");
+  keys.forEach((key) => {
+    const cardId = key.replace("cardAscend_", "");
+    ascends[cardId] = get(key, false);
+  });
+  return ascends;
+};
+
+// ===== ОБОГАЩЕНИЕ МАССИВА КАРТОЧЕК ASCEND =====
+export const enhanceMemoriesWithAscend = (memoriesData) => {
+  const ascendMap = getAllCardAscendMap();
+  return memoriesData.map((card) => ({
+    ...card,
+    isAscended: ascendMap[String(card.id)] || false,
+  }));
+};

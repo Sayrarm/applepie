@@ -65,6 +65,7 @@ function FilterSortBarMemories({
               { value: "placement", label: "Placement" },
               { value: "talent", label: "Talent" },
               { value: "release", label: "Release" },
+              { value: "level", label: "Level" },
             ]}
           />
 
