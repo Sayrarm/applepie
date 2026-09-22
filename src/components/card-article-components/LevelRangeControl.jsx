@@ -5,6 +5,7 @@ import styles from "./LevelCardBlock.module.css";
 const ASCEND_LEVELS = [10, 20, 30, 40, 50, 60, 70, 80];
 
 function LevelRangeControl({
+                               id = "input",
                                level,
                                setLevel,
                                maxLevel,
@@ -28,7 +29,7 @@ function LevelRangeControl({
                     Level:
                 </label>
                 <input
-                    id="input"
+                    id={id}
                     type="number"
                     min="1"
                     max={maxLevel}

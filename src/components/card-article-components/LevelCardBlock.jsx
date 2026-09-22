@@ -8,7 +8,7 @@ import {
   memoriesData,
   calculateFinalStats,
   rankOptions,
-  formatOptionLabel,
+  formatOptionLabel, getUpgradeResources, getExpNeeded, crystalColors,
 } from "@data";
 import {
   getCardLevel,
@@ -20,7 +20,7 @@ import {
   getCardAscend,
   saveCardAscend,
   getCardProtocores,
-  saveCardProtocores,
+  saveCardProtocores, addFarmGoal,
 } from "@localstorage";
 import LevelRangeControl from "./LevelRangeControl.jsx";
 import {ModalWindow} from "@components";
@@ -38,6 +38,8 @@ function LevelCardBlock({ cardId: propCardId, onAvailabilityChange }) {
   const [equippedProtocores, setEquippedProtocores] = useState(() =>
     getCardProtocores(cardId),
   );
+  const [draftLevel, setDraftLevel] = useState(level);
+  const [draftAscended, setDraftAscended] = useState(false);
 
   const modalRef = useRef(null);
 
@@ -177,6 +179,92 @@ function LevelCardBlock({ cardId: propCardId, onAvailabilityChange }) {
     return num;
   };
 
+  // Строим массив уровней так же, как в MemoryUpCalculator
+  const buildAllLevels = () => {
+    const allLevels = [];
+    for (let i = 1; i <= 80; i++) {
+      allLevels.push(String(i));
+      if ([10, 20, 30, 40, 50, 60, 70].includes(i)) {
+        allLevels.push(`Ascend ${i}+`);
+      }
+    }
+    allLevels.push("Awaken 80");
+    return allLevels;
+  };
+
+// Открытие модалки: сбрасываем черновик на текущий уровень карточки
+  const openGoalModal = () => {
+    setDraftLevel(typeof level === "number" ? level : 1);
+    setDraftAscended(isAscended);
+    modalRef.current?.showModal();
+  };
+
+  const getCardCrystalColor = (stellaName) => {
+    const found = crystalColors.find(
+        (c) => c.id.toLowerCase() === String(stellaName).toLowerCase(),
+    );
+    return found ? found.id : stellaName; // вернёт "Violet" вместо "violet"
+  };
+
+// Добавление цели
+  const handleAddToFarm = () => {
+    if (!card) return;
+    if (typeof draftLevel !== "number" || typeof level !== "number") return;
+    if (draftLevel <= level) return;
+
+    const allLevels = buildAllLevels();
+    const rarity = card.rarityName;                  // "5-star" / "4-star" / "3-star"
+    const crystalColor = getCardCrystalColor(card.stellaName); // "Violet", "Emerald", ...
+
+    let targetKey = String(draftLevel);
+    if (draftAscended) {
+      if (draftLevel === 80) targetKey = "Awaken 80";
+      else if ([10, 20, 30, 40, 50, 60, 70].includes(draftLevel)) {
+        targetKey = `Ascend ${draftLevel}+`;
+      }
+    }
+
+    const currentIndex = allLevels.indexOf(String(level));
+    const targetIndex = allLevels.indexOf(targetKey);
+    if (currentIndex === -1 || targetIndex === -1 || targetIndex <= currentIndex) {
+      return;
+    }
+
+    const expNeeded = getExpNeeded(rarity, level, draftLevel);
+    const resources = getUpgradeResources(
+        rarity,
+        allLevels,
+        currentIndex,
+        targetIndex,
+    );
+
+    const goal = {
+      id: Date.now(),
+      type: "memory",
+      rarity,
+      currentLevel: level,
+      targetLevel: draftLevel,
+      targetAscended: draftAscended,
+      neededExp: expNeeded,
+      neededCrystalsN: resources.crystals.N,
+      neededCrystalsR: resources.crystals.R,
+      neededCrystalsSR: resources.crystals.SR,
+      crystalColor,               // ← теперь нормализованный, "Violet"
+      neededCredits: resources.credits,
+      expDungeonLevel: 9,
+      creditDungeonLevel: 9,
+      crystalDungeonLevel: 9,
+      heart: resources.heart || null,
+      createdAt: new Date().toISOString(),
+
+      isCardGoal: true,
+      cardId: card.id,
+    };
+
+    addFarmGoal(goal);
+    modalRef.current?.closeModal();
+  };
+
   if (!card) {
     return <div>Loading...</div>;
   }
@@ -201,7 +289,7 @@ function LevelCardBlock({ cardId: propCardId, onAvailabilityChange }) {
 
         <button
             className={styles.goalButton}
-            onClick={() => modalRef.current?.showModal()}
+            onClick={openGoalModal}
         >
           🎯
         </button>
@@ -303,13 +391,29 @@ function LevelCardBlock({ cardId: propCardId, onAvailabilityChange }) {
           title="Select Level for Goal"
           width={600}
           tag={
-            <LevelRangeControl
-                level={level}
-                setLevel={setLevel}
-                maxLevel={maxLevel}
-                isAscended={isAscended}
-                setIsAscended={setIsAscended}
-            />
+            <div style={{ textAlign: "left" }}>
+              <LevelRangeControl
+                  id="modal-level-input"
+                  level={draftLevel}
+                  setLevel={setDraftLevel}
+                  maxLevel={maxLevel}
+                  isAscended={draftAscended}
+                  setIsAscended={setDraftAscended}
+              />
+              <div style={{ textAlign: "right", marginTop: 16 }}>
+                <button
+                    className={styles.addGoalButton}
+                    onClick={handleAddToFarm}
+                    disabled={
+                        typeof draftLevel !== "number" ||
+                        typeof level !== "number" ||
+                        draftLevel <= level
+                    }
+                >
+                  🎯 Add to Development Goal
+                </button>
+              </div>
+            </div>
           }
       />
     </>

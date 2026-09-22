@@ -14,9 +14,12 @@ import {
     credits,
     bottles,
     coreEnergy,
+    memoriesData,
 } from "@data";
 import {getImageUrl, useFarmGoals} from "@hooks";
 import AsideReplaceableResources from "./AsideReplaceableResources.jsx";
+import {Card} from "@components";
+import { saveCardLevel, saveCardAscend } from "@localstorage";
 
 // Константы
 const DAILY_STAMINA = 390;
@@ -93,7 +96,10 @@ function FarmGoalTracker() {
 
     // Функция для получения иконки цвета кристалла
     const getCrystalColorIcon = (colorName) => {
-        const color = crystalColors.find((c) => c.id === colorName);
+        if (!colorName) return null;
+        const color = crystalColors.find(
+            (c) => c.id.toLowerCase() === String(colorName).toLowerCase(),
+        );
         return color ? color.img : null;
     };
 
@@ -238,6 +244,24 @@ function FarmGoalTracker() {
     };
 
     const getGoalDescription = (goal) => {
+        // Цель из LevelCardBlock
+        if (goal.isCardGoal) {
+            const cardData = memoriesData.find((c) => String(c.id) === String(goal.cardId));
+
+            if (!cardData) return <span>Unknown card</span>;
+
+            return (
+                <div className={styles.goalDescription}>
+                    <div className={styles.titleAndImg}>
+                        <Card data={cardData} isSmall={true} linkToCard={true} />
+                    </div>
+                    <div className={styles.spanLVL}>
+                        Lvl {goal.currentLevel} → <span>Lvl {goal.targetLevel}</span>
+                    </div>
+                </div>
+            );
+        }
+
         if (goal.type === "memory") {
             const rarityMap = {"3-star": "3★", "4-star": "4★", "5-star": "5★"};
             return (
@@ -278,6 +302,31 @@ function FarmGoalTracker() {
             );
         }
         return <span>Unknown goal</span>;
+    };
+
+    const handleComplete = (goal) => {
+        // Если это цель из карточки — применяем targetLevel к самой карточке
+        if (goal.isCardGoal && goal.cardId) {
+            saveCardLevel(goal.cardId, goal.targetLevel);
+
+            if (goal.targetAscended) {
+                saveCardAscend(goal.cardId, true);
+            }
+
+            // Опционально: уведомить LevelCardBlock, если он открыт на другой странице
+            window.dispatchEvent(
+                new CustomEvent("cardGoalCompleted", {
+                    detail: {
+                        cardId: goal.cardId,
+                        targetLevel: goal.targetLevel,
+                        targetAscended: !!goal.targetAscended,
+                    },
+                }),
+            );
+        }
+
+        // Стандартное удаление цели
+        completeGoal(goal.id);
     };
 
     // Функция для получения иконки данжа по цвету кристалла или типу EXP
@@ -482,18 +531,18 @@ function FarmGoalTracker() {
                                 <div className={styles.goalActions}>
                                     <button
                                         className={styles.completeButton}
-                                        onClick={() => completeGoal(goal.id)}
+                                        onClick={() => handleComplete(goal)}
                                     >
                                         ✓ Complete
                                     </button>
-                                    {/*
+
                   <button
                     className={styles.deleteButton}
                     onClick={() => deleteGoal(goal.id)}
                   >
                     ✕ Delete
                   </button>
-                  */}
+
                                 </div>
                             </div>
 
