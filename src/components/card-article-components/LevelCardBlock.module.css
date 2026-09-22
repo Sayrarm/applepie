@@ -52,10 +52,24 @@
   color: var(--colorTextDark);
 }
 
-.buttonAvailable.active {
+.goalButton {
+  width: 35px;
+  height: 35px;
+  border: none;
+  text-decoration: none;
+  background: none;
+  transition: 0.3s;
+}
+
+.buttonAvailable.active,
+.goalButton {
   background-color: var(--forSelect);
   box-shadow: var(--box-shadow);
   color: var(--colorText);
+}
+
+.goalButton:hover {
+  background-color: var(--a-hover);
 }
 
 .track {

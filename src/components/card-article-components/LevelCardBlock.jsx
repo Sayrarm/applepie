@@ -1,6 +1,5 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, {useEffect, useMemo, useRef, useState} from "react";
 import { useParams } from "react-router-dom";
-import { Range } from "react-range";
 import Select from "react-select";
 import styles from "./LevelCardBlock.module.css";
 import {
@@ -23,6 +22,8 @@ import {
   getCardProtocores,
   saveCardProtocores,
 } from "@localstorage";
+import LevelRangeControl from "./LevelRangeControl.jsx";
+import {ModalWindow} from "@components";
 
 function LevelCardBlock({ cardId: propCardId, onAvailabilityChange }) {
   const { cardId: paramCardId } = useParams();
@@ -37,6 +38,8 @@ function LevelCardBlock({ cardId: propCardId, onAvailabilityChange }) {
   const [equippedProtocores, setEquippedProtocores] = useState(() =>
     getCardProtocores(cardId),
   );
+
+  const modalRef = useRef(null);
 
   // Находим карточку
   const card = useMemo(() => {
@@ -130,10 +133,6 @@ function LevelCardBlock({ cardId: propCardId, onAvailabilityChange }) {
     }
   }, [isAvailable, cardId]);
 
-  // ===== ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ =====
-  const isAscendable = [10, 20, 30, 40, 50, 60, 70, 80].includes(level);
-  const isAwaken = level === 80;
-
   // Определяем доступные уровни
   const getAvailableLevels = () => {
     if (!card) return [];
@@ -199,107 +198,26 @@ function LevelCardBlock({ cardId: propCardId, onAvailabilityChange }) {
         >
           Available
         </button>
+
+        <button
+            className={styles.goalButton}
+            onClick={() => modalRef.current?.showModal()}
+        >
+          🎯
+        </button>
       </section>
 
       {isAvailable && (
         <section className={styles.container}>
           <div>
             <div className={styles.selectContainer}>
-              <div className={styles.rangeContainer}>
-                <div className={styles.levelContainer}>
-                  <label className={styles.levelInput} htmlFor="input">
-                    Level:
-                  </label>
-                  <input
-                    id="input"
-                    type="number"
-                    min="1"
-                    max={maxLevel}
-                    value={level}
-                    onChange={(e) => {
-                      const val = e.target.value;
-                      if (val === "") {
-                        setLevel("");
-                      } else {
-                        const numVal = parseInt(val);
-                        if (
-                          !isNaN(numVal) &&
-                          numVal >= 1 &&
-                          numVal <= maxLevel
-                        ) {
-                          setLevel(numVal);
-                          // Сбрасываем состояние Ascend при смене уровня
-                          if (
-                            ![10, 20, 30, 40, 50, 60, 70, 80].includes(numVal)
-                          ) {
-                            setIsAscended(false);
-                          }
-                        }
-                      }
-                    }}
-                    onBlur={(e) => {
-                      const val = parseInt(e.target.value);
-                      if (isNaN(val) || val < 1) {
-                        setLevel(1);
-                      } else if (val > maxLevel) {
-                        setLevel(maxLevel);
-                      }
-                    }}
-                    className={styles.levelInput}
-                  />
-                  {isAscendable && (
-                    <div className={styles.ascendContainer}>
-                      <button
-                        className={`${styles.ascendButton} ${isAscended ? styles.active : ""}`}
-                        onClick={() => setIsAscended(!isAscended)}
-                      >
-                        {isAwaken ? "Awaken" : "Ascend"} {isAscended ? "✓" : ""}
-                      </button>
-                    </div>
-                  )}
-                </div>
-
-                <Range
-                  step={1}
-                  min={1}
-                  max={maxLevel}
-                  values={[level]}
-                  onChange={(values) => {
-                    const newLevel = values[0];
-                    setLevel(newLevel);
-                    // Сбрасываем состояние Ascend при смене уровня
-                    if (![10, 20, 30, 40, 50, 60, 70, 80].includes(newLevel)) {
-                      setIsAscended(false);
-                    }
-                  }}
-                  renderTrack={({ props, children }) => (
-                    <div {...props} className={styles.track}>
-                      <div
-                        className={styles.trackFilled}
-                        style={{
-                          width: `${((level - 1) / (maxLevel - 1)) * 100}%`,
-                        }}
-                      />
-                      {children}
-                    </div>
-                  )}
-                  renderThumb={({ props }) => {
-                    const { key, ...rest } = props;
-                    return (
-                      <div
-                        key={key}
-                        {...rest}
-                        className={styles.point}
-                        onKeyDown={(e) => {
-                          if (e.key === "ArrowUp" || e.key === "ArrowDown") {
-                            e.preventDefault();
-                          }
-                        }}
-                      />
-                    );
-                  }}
-                />
-              </div>
+              <LevelRangeControl
+                  level={level}
+                  setLevel={setLevel}
+                  maxLevel={maxLevel}
+                  isAscended={isAscended}
+                  setIsAscended={setIsAscended}
+              />
 
               <Select
                 options={rankOptions}
@@ -378,6 +296,22 @@ function LevelCardBlock({ cardId: propCardId, onAvailabilityChange }) {
           </div>
         </section>
       )}
+
+      {/* Модальное окно с выбором уровня */}
+      <ModalWindow
+          ref={modalRef}
+          title="Select Level for Goal"
+          width={600}
+          tag={
+            <LevelRangeControl
+                level={level}
+                setLevel={setLevel}
+                maxLevel={maxLevel}
+                isAscended={isAscended}
+                setIsAscended={setIsAscended}
+            />
+          }
+      />
     </>
   );
 }
