@@ -246,17 +246,23 @@ function FarmGoalTracker() {
     const getGoalDescription = (goal) => {
         // Цель из LevelCardBlock
         if (goal.isCardGoal) {
-            const cardData = memoriesData.find((c) => String(c.id) === String(goal.cardId));
-
+            const cardData = memoriesData.find(
+                (c) => String(c.id) === String(goal.cardId),
+            );
             if (!cardData) return <span>Unknown card</span>;
 
             return (
                 <div className={styles.goalDescription}>
                     <div className={styles.card}>
-                        <Card data={cardData} isSmall={true} linkToCard={true} />
+                        <Card data={cardData} isSmall />
                     </div>
                     <div className={styles.spanLVL}>
-                        Lvl {goal.currentLevel} → <span>Lvl {goal.targetLevel}</span>
+                        Lvl {goal.currentLevel}
+                        {goal.currentAscended ? "+" : ""} →{" "}
+                        <span>
+          Lvl {goal.targetLevel}
+                            {goal.targetAscended ? "+" : ""}
+        </span>
                     </div>
                 </div>
             );
@@ -311,6 +317,9 @@ function FarmGoalTracker() {
 
             if (goal.targetAscended) {
                 saveCardAscend(goal.cardId, true);
+            } else {
+                // Если цель была без Ascend — снять флаг, чтобы не осталось лишнего
+                saveCardAscend(goal.cardId, false);
             }
 
             // Опционально: уведомить LevelCardBlock, если он открыт на другой странице
@@ -441,6 +450,9 @@ function FarmGoalTracker() {
                         <Link className={styles.link} to="calculator/memory-calculator">
                             Memory Upgrade Calculator
                         </Link>
+                    </p>
+                    <p>
+                        You can click on 🎯 in Memory, select the required level, and send the task to the Development Goal.
                     </p>
                 </div>
             </div>

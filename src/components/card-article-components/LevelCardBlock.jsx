@@ -213,9 +213,19 @@ function LevelCardBlock({ cardId: propCardId, onAvailabilityChange }) {
     if (draftLevel <= level) return;
 
     const allLevels = buildAllLevels();
-    const rarity = card.rarityName;                  // "5-star" / "4-star" / "3-star"
-    const crystalColor = getCardCrystalColor(card.stellaName); // "Violet", "Emerald", ...
+    const rarity = card.rarityName;
+    const crystalColor = getCardCrystalColor(card.stellaName);
 
+    // Ключ текущего уровня с учётом уже применённого Ascend
+    let currentKey = String(level);
+    if (isAscended) {
+      if (level === 80) currentKey = "Awaken 80";
+      else if ([10, 20, 30, 40, 50, 60, 70].includes(level)) {
+        currentKey = `Ascend ${level}+`;
+      }
+    }
+
+    // Ключ целевого уровня с учётом выбранного в модалке Ascend
     let targetKey = String(draftLevel);
     if (draftAscended) {
       if (draftLevel === 80) targetKey = "Awaken 80";
@@ -224,7 +234,7 @@ function LevelCardBlock({ cardId: propCardId, onAvailabilityChange }) {
       }
     }
 
-    const currentIndex = allLevels.indexOf(String(level));
+    const currentIndex = allLevels.indexOf(currentKey);
     const targetIndex = allLevels.indexOf(targetKey);
     if (currentIndex === -1 || targetIndex === -1 || targetIndex <= currentIndex) {
       return;
@@ -244,19 +254,19 @@ function LevelCardBlock({ cardId: propCardId, onAvailabilityChange }) {
       rarity,
       currentLevel: level,
       targetLevel: draftLevel,
+      currentAscended: isAscended,
       targetAscended: draftAscended,
       neededExp: expNeeded,
       neededCrystalsN: resources.crystals.N,
       neededCrystalsR: resources.crystals.R,
       neededCrystalsSR: resources.crystals.SR,
-      crystalColor,               // ← теперь нормализованный, "Violet"
+      crystalColor,
       neededCredits: resources.credits,
       expDungeonLevel: 9,
       creditDungeonLevel: 9,
       crystalDungeonLevel: 9,
       heart: resources.heart || null,
       createdAt: new Date().toISOString(),
-
       isCardGoal: true,
       cardId: card.id,
     };
