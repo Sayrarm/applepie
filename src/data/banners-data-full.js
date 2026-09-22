@@ -957,7 +957,7 @@ export const bannersDataFull = [
   {
     id: 95,
     name: "A Night That Never Ends",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/banners/a-night-that-never-ends.png",
     cardIds: [423, 424, 425, 426, 427],
     startDate: "2026-09-22T05:00:00",
     endDate: "2026-10-10T04:59:59",
