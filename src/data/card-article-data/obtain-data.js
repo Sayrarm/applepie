@@ -37,6 +37,7 @@ export const obtainData = [
       290, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 313, 314,
       315, 316, 317, 318, 320, 321, 323, 325, 326, 327, 328, 329, 330, 331, 332,
       333, 334, 335, 348, 349, 350, 351, 358, 359, 361, 385, 386, 412, 413, 420,
+      423, 424, 425, 426, 427
     ],
     description: "Can be obtain for 'Deepspace Wish' (Event Banner).",
     image: "../assets/main-page/modal-window/limited-banner.png",
@@ -90,7 +91,7 @@ export const obtainData = [
     obtain: "Limited Event",
     memories: [
       10, 21, 53, 104, 65, 71, 122, 134, 150, 156, 157, 216, 245, 250, 252, 308,
-      310, 312, 324, 340, 345, 347, 403, 419, 421,
+      310, 312, 324, 340, 345, 347, 403, 421,
     ],
     description: "Memory from 'Events'. Can be repeatable, check the news.",
     image: "../assets/main-page/modal-window/events.png",
