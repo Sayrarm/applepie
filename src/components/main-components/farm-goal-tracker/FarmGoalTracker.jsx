@@ -252,7 +252,7 @@ function FarmGoalTracker() {
 
             return (
                 <div className={styles.goalDescription}>
-                    <div className={styles.titleAndImg}>
+                    <div className={styles.card}>
                         <Card data={cardData} isSmall={true} linkToCard={true} />
                     </div>
                     <div className={styles.spanLVL}>

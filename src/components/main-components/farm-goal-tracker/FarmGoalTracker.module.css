@@ -111,6 +111,7 @@
 .goalContent {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   gap: 10px;
 }
 
@@ -242,6 +243,10 @@
   font-weight: 600;
 }
 
+.card {
+  zoom: 0.6;
+}
+
 .goalDescription {
   display: flex;
   align-items: center;
@@ -281,6 +286,10 @@
   .spanLVL {
     display: flex;
     flex-direction: column;
+  }
+
+  .card {
+    zoom: 1.0;
   }
 
 }

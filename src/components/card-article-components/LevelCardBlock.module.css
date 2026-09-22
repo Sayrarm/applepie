@@ -19,9 +19,6 @@
 }
 
 .ascendButton {
-  border: none;
-  text-decoration: none;
-  font-family: inherit;
   background-color: var(--forSelect);
   width: 80px;
   height: 30px;
@@ -42,12 +39,18 @@
   gap: 10px;
 }
 
+.addGoalButton,
+.buttonAvailable,
+.goalButton,
+.ascendButton {
+  text-decoration: none;
+  border: none;
+  font-family: inherit;
+}
+
 .buttonAvailable {
   width: 80px;
   height: 35px;
-  border: none;
-  text-decoration: none;
-  font-family: inherit;
   background: none;
   color: var(--colorTextDark);
 }
@@ -55,14 +58,17 @@
 .goalButton {
   width: 35px;
   height: 35px;
-  border: none;
-  text-decoration: none;
   background: none;
   transition: 0.3s;
 }
 
+.addGoalButton {
+  padding: 10px;
+}
+
 .buttonAvailable.active,
-.goalButton {
+.goalButton,
+.addGoalButton {
   background-color: var(--forSelect);
   box-shadow: var(--box-shadow);
   color: var(--colorText);
