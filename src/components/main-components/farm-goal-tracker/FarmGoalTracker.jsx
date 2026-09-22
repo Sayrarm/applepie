@@ -241,8 +241,13 @@ function FarmGoalTracker() {
         if (goal.type === "memory") {
             const rarityMap = {"3-star": "3★", "4-star": "4★", "5-star": "5★"};
             return (
-                <div>
-                    {rarityMap[goal.rarity]} Memory: Lvl {goal.currentLevel} → {goal.targetLevel}
+                <div className={styles.goalDescription}>
+                    <div className={styles.titleAndImg}>
+                        <span className={styles.mainStatTitle}>{rarityMap[goal.rarity]} Memory</span>
+                    </div>
+                    <div className={styles.spanLVL}>
+                        Lvl {goal.currentLevel} → <span>Lvl {goal.targetLevel}</span>
+                    </div>
                 </div>
             );
         } else if (goal.type === "protocore") {
