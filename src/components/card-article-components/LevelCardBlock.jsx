@@ -192,6 +192,33 @@ function LevelCardBlock({ cardId: propCardId, onAvailabilityChange }) {
     return allLevels;
   };
 
+  const getLevelKey = (lvl, ascended) => {
+    if (ascended) {
+      if (lvl === 80) return "Awaken 80";
+      if ([10, 20, 30, 40, 50, 60, 70].includes(lvl)) return `Ascend ${lvl}+`;
+    }
+    return String(lvl);
+  };
+
+  const getLevelIndexes = (allLevels) => {
+    const currentKey = getLevelKey(level, isAscended);
+    const targetKey = getLevelKey(draftLevel, draftAscended);
+    return {
+      currentIndex: allLevels.indexOf(currentKey),
+      targetIndex: allLevels.indexOf(targetKey),
+    };
+  };
+
+  const canAddGoal = () => {
+    if (!card) return false;
+    if (typeof draftLevel !== "number" || typeof level !== "number") return false;
+    const allLevels = buildAllLevels();
+    const { currentIndex, targetIndex } = getLevelIndexes(allLevels);
+    return (
+        currentIndex !== -1 && targetIndex !== -1 && targetIndex > currentIndex
+    );
+  };
+
 // Открытие модалки: сбрасываем черновик на текущий уровень карточки
   const openGoalModal = () => {
     setDraftLevel(typeof level === "number" ? level : 1);
@@ -210,35 +237,20 @@ function LevelCardBlock({ cardId: propCardId, onAvailabilityChange }) {
   const handleAddToFarm = () => {
     if (!card) return;
     if (typeof draftLevel !== "number" || typeof level !== "number") return;
-    if (draftLevel <= level) return;
 
     const allLevels = buildAllLevels();
-    const rarity = card.rarityName;
-    const crystalColor = getCardCrystalColor(card.stellaName);
+    const { currentIndex, targetIndex } = getLevelIndexes(allLevels);
 
-    // Ключ текущего уровня с учётом уже применённого Ascend
-    let currentKey = String(level);
-    if (isAscended) {
-      if (level === 80) currentKey = "Awaken 80";
-      else if ([10, 20, 30, 40, 50, 60, 70].includes(level)) {
-        currentKey = `Ascend ${level}+`;
-      }
-    }
-
-    // Ключ целевого уровня с учётом выбранного в модалке Ascend
-    let targetKey = String(draftLevel);
-    if (draftAscended) {
-      if (draftLevel === 80) targetKey = "Awaken 80";
-      else if ([10, 20, 30, 40, 50, 60, 70].includes(draftLevel)) {
-        targetKey = `Ascend ${draftLevel}+`;
-      }
-    }
-
-    const currentIndex = allLevels.indexOf(currentKey);
-    const targetIndex = allLevels.indexOf(targetKey);
-    if (currentIndex === -1 || targetIndex === -1 || targetIndex <= currentIndex) {
+    if (
+        currentIndex === -1 ||
+        targetIndex === -1 ||
+        targetIndex <= currentIndex
+    ) {
       return;
     }
+
+    const rarity = card.rarityName;
+    const crystalColor = getCardCrystalColor(card.stellaName);
 
     const expNeeded = getExpNeeded(rarity, level, draftLevel);
     const resources = getUpgradeResources(
@@ -414,11 +426,7 @@ function LevelCardBlock({ cardId: propCardId, onAvailabilityChange }) {
                 <button
                     className={styles.addGoalButton}
                     onClick={handleAddToFarm}
-                    disabled={
-                        typeof draftLevel !== "number" ||
-                        typeof level !== "number" ||
-                        draftLevel <= level
-                    }
+                    disabled={!canAddGoal()}
                 >
                   🎯 Add to Development Goal
                 </button>
