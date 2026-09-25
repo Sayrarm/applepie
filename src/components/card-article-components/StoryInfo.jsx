@@ -54,7 +54,7 @@ function StoryInfo({ cardId }) {
     // Если это не Myth или нет данных о мифе - пробуем открыть ссылку
     if (!hasLink) {
       e.preventDefault();
-      alert("No data available for this memory. Try to find it on YT :)");
+      {/*alert("No data available for this memory. Try to find it on YT :)");*/}
     }
   };
 
