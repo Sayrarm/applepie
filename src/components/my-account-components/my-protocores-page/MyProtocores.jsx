@@ -190,6 +190,7 @@ function MyProtocores() {
                 protocore={protocore}
                 onEdit={handleEditProtocore}
                 onDelete={handleDeleteProtocore}
+                hideGoal={false}
                 cardImage={cardImage}
               />
             );

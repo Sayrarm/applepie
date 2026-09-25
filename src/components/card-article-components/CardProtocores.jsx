@@ -400,6 +400,7 @@ function CardProtocores({ cardId }) {
                   protocore={protocore}
                   onEdit={() => showEditProtocoreModal(protocore)}
                   onDelete={() => handleRemoveProtocore(protocore.id)}
+                  hideGoal={false}
                   cardImage={currentCardImage}
                 />
               </div>

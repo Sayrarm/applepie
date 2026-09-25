@@ -113,15 +113,16 @@
   border-top: 1px solid gray;
   display: flex;
   justify-content: flex-end;
-  gap: 8px;
+  gap: 3px;
 }
 
+.goalButton,
 .editButton,
 .deleteButton {
   margin-top: 5px;
   color: white;
   border: none;
-  padding: 3px 8px;
+  padding: 4px 8px;
   font-size: 12px;
   font-weight: 500;
   cursor: pointer;
@@ -130,6 +131,16 @@
   align-items: center;
   gap: 6px;
   font-family: inherit;
+}
+
+.goalButton {
+  background-color: var(--a);
+  font-size: 14px;
+  padding: 4px 6px;
+}
+
+.goalButton:hover {
+  background-color: var(--a-hover);
 }
 
 .editButton {

@@ -7,8 +7,10 @@ function ProtocoreBlock({
   protocore,
   onEdit,
   onDelete,
+  onGoal,
   hideChange = false,
   hideDelete = false,
+  hideGoal = true,
   cardImage,
 }) {
   const { type, stellactrum, level, mainStat, mainStatValue, substats } =
@@ -54,6 +56,12 @@ function ProtocoreBlock({
   const handleDelete = () => {
     if (onDelete) {
       onDelete(protocore);
+    }
+  };
+
+  const handleGoal = () => {
+    if (onGoal) {
+      onGoal(protocore);
     }
   };
 
@@ -115,6 +123,11 @@ function ProtocoreBlock({
       </div>
 
       <div className={styles.actions}>
+        {!hideGoal && (
+        <button className={styles.goalButton} onClick={handleGoal}>
+          🎯
+        </button>
+        )}
         {!hideChange && (
           <button className={styles.editButton} onClick={handleEdit}>
             Change
