@@ -18,7 +18,7 @@ import {
 } from "@data";
 import {getImageUrl, useFarmGoals} from "@hooks";
 import AsideReplaceableResources from "./AsideReplaceableResources.jsx";
-import {Card} from "@components";
+import {Card, ModalWindowProtocore} from "@components";
 import {
     saveCardLevel,
     saveCardAscend,
@@ -26,6 +26,7 @@ import {
     updateProtocore,
     updateProtocoreInAllCards
 } from "@localstorage";
+import {useRef} from "react";
 
 // Константы
 const DAILY_STAMINA = 390;
@@ -41,6 +42,9 @@ function FarmGoalTracker() {
         getCrystalCount,
         getHeartCount,
     } = useFarmGoals();
+
+    const protocoreModalRef = useRef(null);
+    const pendingProtocoreGoalIdRef = useRef(null);
 
     // Подсчёт EXP из Bottles of Wishes (для карточек)
     const getTotalBottleExp = () => {
@@ -320,15 +324,8 @@ function FarmGoalTracker() {
         // ===== Цель по карточке =====
         if (goal.isCardGoal && goal.cardId) {
             saveCardLevel(goal.cardId, goal.targetLevel);
+            saveCardAscend(goal.cardId, !!goal.targetAscended);
 
-            if (goal.targetAscended) {
-                saveCardAscend(goal.cardId, true);
-            } else {
-                // Если цель была без Ascend — снять флаг, чтобы не осталось лишнего
-                saveCardAscend(goal.cardId, false);
-            }
-
-            // Опционально: уведомить LevelCardBlock, если он открыт на другой странице
             window.dispatchEvent(
                 new CustomEvent("cardGoalCompleted", {
                     detail: {
@@ -338,30 +335,56 @@ function FarmGoalTracker() {
                     },
                 }),
             );
+
+            completeGoal(goal.id);
+            return;
         }
 
         // ===== Цель по протокору =====
         if (goal.type === "protocore" && goal.protocoreId) {
             const protocore = getProtocoreById(goal.protocoreId);
-            if (protocore) {
-                const updated = {
-                    ...protocore,
-                    level: goal.targetLevel,
-                };
-
-                // 1. Обновляем в общем списке протокоров
-                updateProtocore(updated);
-
-                // 2. Обновляем во всех карточках, где он надет
-                updateProtocoreInAllCards(updated);
-
-                // 3. Уведомляем подписчиков (MyProtocores, CardProtocores, LevelCardBlock)
-                window.dispatchEvent(new CustomEvent("protocoresUpdated"));
+            if (!protocore) {
+                // Протокор удалён — просто убираем цель
+                completeGoal(goal.id);
+                return;
             }
+
+            // 1. Обновляем уровень в localStorage
+            const updated = { ...protocore, level: goal.targetLevel };
+            updateProtocore(updated);
+            updateProtocoreInAllCards(updated);
+
+            window.dispatchEvent(new CustomEvent("protocoresUpdated"));
+
+            // 2. Открываем модалку редактирования с актуальным протокором
+            //    (там уже level = targetLevel, юзер добавит сабстаты)
+            protocoreModalRef.current?.showModal(updated);
+
+            // Запоминаем, какую цель надо удалить после сохранения
+            pendingProtocoreGoalIdRef.current = goal.id;
+            return;
         }
 
-        // Стандартное удаление цели
+        // ===== Все остальные цели (memory/protocore из калькулятора) =====
         completeGoal(goal.id);
+    };
+
+    const handleProtocoreUpdate = (updatedProtocore) => {
+        if (!updatedProtocore) return;
+
+        // Модалка сама вызывает updateProtocore + updateProtocoreInAllCards,
+        // но перестрахуемся и обновим ещё раз — вреда не будет.
+        updateProtocore(updatedProtocore);
+        updateProtocoreInAllCards(updatedProtocore);
+
+        window.dispatchEvent(new CustomEvent("protocoresUpdated"));
+
+        // Удаляем цель, для которой открывали модалку
+        const goalId = pendingProtocoreGoalIdRef.current;
+        if (goalId) {
+            completeGoal(goalId);
+            pendingProtocoreGoalIdRef.current = null;
+        }
     };
 
     // Функция для получения иконки данжа по цвету кристалла или типу EXP
@@ -478,7 +501,7 @@ function FarmGoalTracker() {
                         </Link>
                     </p>
                     <p>
-                        You can click on 🎯 in Memory, select the required level, and send the task to the Development Goal.
+                        You can click on 🎯 in Memory/Protocore, select the required level, and send the task to the Development Goal.
                     </p>
                 </div>
             </div>
@@ -819,6 +842,12 @@ function FarmGoalTracker() {
                     );
                 })}
             </div>
+
+            <ModalWindowProtocore
+                ref={protocoreModalRef}
+                title="Edit Protocore"
+                onUpdate={handleProtocoreUpdate}
+            />
         </div>
     );
 }
