@@ -42,6 +42,7 @@ function ProtocoreBlock({
     const goal = {
       id: Date.now(),
       type: "protocore",
+      protocoreId: protocore.id,
       protocoreType: type,
       mainStat: mainStat,
       currentLevel: level,

@@ -19,7 +19,13 @@ import {
 import {getImageUrl, useFarmGoals} from "@hooks";
 import AsideReplaceableResources from "./AsideReplaceableResources.jsx";
 import {Card} from "@components";
-import { saveCardLevel, saveCardAscend } from "@localstorage";
+import {
+    saveCardLevel,
+    saveCardAscend,
+    getProtocoreById,
+    updateProtocore,
+    updateProtocoreInAllCards
+} from "@localstorage";
 
 // Константы
 const DAILY_STAMINA = 390;
@@ -311,7 +317,7 @@ function FarmGoalTracker() {
     };
 
     const handleComplete = (goal) => {
-        // Если это цель из карточки — применяем targetLevel к самой карточке
+        // ===== Цель по карточке =====
         if (goal.isCardGoal && goal.cardId) {
             saveCardLevel(goal.cardId, goal.targetLevel);
 
@@ -332,6 +338,26 @@ function FarmGoalTracker() {
                     },
                 }),
             );
+        }
+
+        // ===== Цель по протокору =====
+        if (goal.type === "protocore" && goal.protocoreId) {
+            const protocore = getProtocoreById(goal.protocoreId);
+            if (protocore) {
+                const updated = {
+                    ...protocore,
+                    level: goal.targetLevel,
+                };
+
+                // 1. Обновляем в общем списке протокоров
+                updateProtocore(updated);
+
+                // 2. Обновляем во всех карточках, где он надет
+                updateProtocoreInAllCards(updated);
+
+                // 3. Уведомляем подписчиков (MyProtocores, CardProtocores, LevelCardBlock)
+                window.dispatchEvent(new CustomEvent("protocoresUpdated"));
+            }
         }
 
         // Стандартное удаление цели
