@@ -18,7 +18,7 @@ import {
 } from "@data";
 import {getImageUrl, useFarmGoals} from "@hooks";
 import AsideReplaceableResources from "./AsideReplaceableResources.jsx";
-import {Card, ModalWindowProtocore} from "@components";
+import {Card, ModalWindowProtocore, ProtocoreBlock} from "@components";
 import {
     saveCardLevel,
     saveCardAscend,
@@ -291,28 +291,51 @@ function FarmGoalTracker() {
                 </div>
             );
         } else if (goal.type === "protocore") {
-            const typeMap = {
-                alpha: {label: "Alpha (α)", icon: "../assets/icons/alpha.png"},
-                beta: {label: "Beta (β)", icon: "../assets/icons/beta.png"},
-                gamma: {label: "Gamma (γ)", icon: "../assets/icons/gamma.png"},
-                delta: {label: "Delta (δ)", icon: "../assets/icons/delta.png"},
-            };
-            const type = typeMap[goal.protocoreType];
-            return (
-                <div className={styles.goalDescription}>
-                    <div className={styles.titleAndImg}>
-                        <img
-                            src={getImageUrl(type.icon)}
-                            alt={type.label}
-                            className={styles.protocoreIcon}
-                        />
-                        <div className={styles.protocoreName}>
-                            {type.label}
-                            <span className={styles.mainStatTitle}>{goal.mainStat}</span>
+            const protocore = goal.protocoreId
+                ? getProtocoreById(goal.protocoreId)
+                : null;
+
+            // Fallback на старый вариант, если протокор был удалён
+            if (!protocore) {
+                const typeMap = {
+                    alpha: { label: "Alpha (α)", icon: "../assets/icons/alpha.png" },
+                    beta: { label: "Beta (β)", icon: "../assets/icons/beta.png" },
+                    gamma: { label: "Gamma (γ)", icon: "../assets/icons/gamma.png" },
+                    delta: { label: "Delta (δ)", icon: "../assets/icons/delta.png" },
+                };
+                const type = typeMap[goal.protocoreType];
+                return (
+                    <div className={styles.goalDescription}>
+                        <div className={styles.titleAndImg}>
+                            <img
+                                src={getImageUrl(type.icon)}
+                                alt={type.label}
+                                className={styles.protocoreIcon}
+                            />
+                            <div className={styles.protocoreName}>
+                                {type.label}
+                                <span className={styles.mainStatTitle}>{goal.mainStat}</span>
+                            </div>
+                        </div>
+                        <div className={styles.spanLVL}>
+                            Lvl {goal.currentLevel} → <span>Lvl {goal.targetLevel}</span>
                         </div>
                     </div>
+                );
+            }
+
+            return (
+                <div className={styles.goalDescription}>
+                    <div className={styles.protocorePreview}>
+                        <ProtocoreBlock
+                            protocore={protocore}
+                            hideChange={true}
+                            hideDelete={true}
+                            hideGoal={true}
+                        />
+                    </div>
                     <div className={styles.spanLVL}>
-                        Lvl {goal.currentLevel} → <span>Lvl {goal.targetLevel}</span>
+                        Lvl {protocore.level} → <span>Lvl {goal.targetLevel}</span>
                     </div>
                 </div>
             );
