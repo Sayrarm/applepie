@@ -133,6 +133,16 @@
   font-family: inherit;
 }
 
+.addGoalButton {
+  text-decoration: none;
+  border: none;
+  font-family: inherit;
+  padding: 10px;
+  background-color: var(--forSelect);
+  box-shadow: var(--box-shadow);
+  color: var(--colorText);
+}
+
 .goalButton {
   background-color: var(--a);
   font-size: 14px;

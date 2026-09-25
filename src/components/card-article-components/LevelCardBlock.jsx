@@ -22,8 +22,7 @@ import {
   getCardProtocores,
   saveCardProtocores, addFarmGoal,
 } from "@localstorage";
-import LevelRangeControl from "./LevelRangeControl.jsx";
-import {ModalWindow} from "@components";
+import {ModalWindow, LevelRangeControl} from "@components";
 
 function LevelCardBlock({ cardId: propCardId, onAvailabilityChange }) {
   const { cardId: paramCardId } = useParams();

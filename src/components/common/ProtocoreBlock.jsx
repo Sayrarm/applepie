@@ -1,13 +1,14 @@
-import React from "react";
+import React, {useRef, useState} from "react";
 import styles from "./ProtocoreBlock.module.css";
 import { getImageUrl } from "@hooks";
-import { protocoreColor, protocoreTypes } from "@data";
+import {getRequiredCredits, getRequiredExp, protocoreColor, protocoreTypes} from "@data";
+import {addFarmGoal} from "@localstorage";
+import {LevelRangeControl, ModalWindow} from "@components";
 
 function ProtocoreBlock({
   protocore,
   onEdit,
   onDelete,
-  onGoal,
   hideChange = false,
   hideDelete = false,
   hideGoal = true,
@@ -15,6 +16,47 @@ function ProtocoreBlock({
 }) {
   const { type, stellactrum, level, mainStat, mainStatValue, substats } =
     protocore;
+
+  const modalRef = useRef(null);
+  const [draftLevel, setDraftLevel] = useState(level);
+
+  const openGoalModal = () => {
+    setDraftLevel(level);
+    modalRef.current?.showModal();
+  };
+
+  const canAddGoal = () => {
+    return (
+        typeof draftLevel === "number" &&
+        typeof level === "number" &&
+        draftLevel > level
+    );
+  };
+
+  const handleAddToFarm = () => {
+    if (!canAddGoal()) return;
+
+    const expNeeded = getRequiredExp(level, draftLevel);
+    const creditsNeeded = getRequiredCredits(level, draftLevel);
+
+    const goal = {
+      id: Date.now(),
+      type: "protocore",
+      protocoreType: type,
+      mainStat: mainStat,
+      currentLevel: level,
+      targetLevel: draftLevel,
+      neededExp: expNeeded,
+      neededCredits: creditsNeeded,
+      expDungeonLevel: 10,
+      creditDungeonLevel: 9,
+      neededCrystals: null,
+      createdAt: new Date().toISOString(),
+    };
+
+    addFarmGoal(goal);
+    modalRef.current?.closeModal();
+  };
 
   // Получаем данные типа из protocoreTypes
   const typeData = protocoreTypes[type];
@@ -56,12 +98,6 @@ function ProtocoreBlock({
   const handleDelete = () => {
     if (onDelete) {
       onDelete(protocore);
-    }
-  };
-
-  const handleGoal = () => {
-    if (onGoal) {
-      onGoal(protocore);
     }
   };
 
@@ -124,7 +160,7 @@ function ProtocoreBlock({
 
       <div className={styles.actions}>
         {!hideGoal && (
-        <button className={styles.goalButton} onClick={handleGoal}>
+        <button className={styles.goalButton} onClick={openGoalModal}>
           🎯
         </button>
         )}
@@ -139,6 +175,34 @@ function ProtocoreBlock({
           </button>
         )}
       </div>
+
+      <ModalWindow
+          ref={modalRef}
+          title="Select Level for Goal"
+          width={500}
+          tag={
+            <div style={{ textAlign: "left" }}>
+              <LevelRangeControl
+                  id="protocore-goal-level"
+                  level={draftLevel}
+                  setLevel={setDraftLevel}
+                  minLevel={0}
+                  maxLevel={15}
+                  showAscend={false}
+                  label="Level:"
+              />
+              <div style={{ textAlign: "right", marginTop: 16 }}>
+                <button
+                    className={styles.addGoalButton}
+                    onClick={handleAddToFarm}
+                    disabled={!canAddGoal()}
+                >
+                  🎯 Add to Development Goal
+                </button>
+              </div>
+            </div>
+          }
+      />
     </section>
   );
 }

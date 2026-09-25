@@ -50,6 +50,7 @@ export { default as CardList } from "./common/CardList.jsx";
 export { default as DailyResetTimer } from "./common/DailyResetTimer.jsx";
 export { default as FlexibleTimer } from "./common/FlexibleTimer.jsx";
 export { default as ProtocoreBlock } from "./common/ProtocoreBlock.jsx";
+export { default as LevelRangeControl } from "./common/LevelRangeControl.jsx";
 export { useRecurringTimer } from "./common/resetTimer.js";
 
 //farm-goal-tracker

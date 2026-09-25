@@ -1,0 +1,71 @@
+.rangeContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rangeContainer {
+    width: 100%;
+}
+
+.levelContainer {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.levelInput {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    color: inherit;
+    width: 50px;
+    background: none;
+    border: none;
+}
+
+.levelInput::-webkit-outer-spin-button,
+.levelInput::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.ascendButton {
+    background-color: var(--forSelect);
+    width: 80px;
+    height: 30px;
+    color: var(--colorText);
+}
+
+.ascendButton {
+    text-decoration: none;
+    border: none;
+    font-family: inherit;
+}
+
+.point {
+    height: 20px;
+    width: 20px;
+    background: var(--forSelect);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 8px 0 rgba(34, 60, 80, 0.6);
+    cursor: pointer;
+}
+
+.track {
+    height: 6px;
+    width: 100%;
+    background: var(--colorTextBright);
+    cursor: pointer;
+}
+
+.trackFilled {
+    position: absolute;
+    height: 100%;
+    background: var(--forSelect);
+    left: 0;
+    top: 0;
+    pointer-events: none;
+}
