@@ -1,6 +1,7 @@
 export const KEYS = {
   OPTIMIZER: "optimizer_data",
   SHOWCASE: "showcase_teams", //витрина(шоукейс) команды
+  ACTIVE_TEAM_KEY: 'showcase_active_team_id',
   CALC_RESULT: "farm_goals", //трекер
   THEME: "theme", //темная/светлая тема
   TIMEZONE: "app_timezone", //часовой пояс

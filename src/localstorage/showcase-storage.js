@@ -108,3 +108,23 @@ export const getShowcaseTeamsOrDefault = () => {
   }
   return [createDefaultTeam()];
 };
+
+export function getActiveTeamId() {
+  try {
+    return localStorage.getItem(KEYS.ACTIVE_TEAM_KEY);
+  } catch {
+    return null;
+  }
+}
+
+export function saveActiveTeamId(id) {
+  try {
+    if (id == null) {
+      localStorage.removeItem(KEYS.ACTIVE_TEAM_KEY);
+    } else {
+      localStorage.setItem(KEYS.ACTIVE_TEAM_KEY, id);
+    }
+  } catch {
+    // ignore
+  }
+}

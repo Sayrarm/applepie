@@ -5,7 +5,7 @@ import {
   getShowcaseTeamsOrDefault,
   saveShowcaseTeams,
   deleteShowcaseTeam,
-  createDefaultTeam,
+  createDefaultTeam, getActiveTeamId, saveActiveTeamId,
 } from "@localstorage";
 import {
   ModalWindow,
@@ -26,10 +26,7 @@ import {
 } from "@data";
 
 function Showcase() {
-  // Загружаем сохраненные команды
-  const [teams, setTeams] = useState(() => getShowcaseTeamsOrDefault());
 
-  const [activeTeamIndex, setActiveTeamIndex] = useState(0);
   const [editingName, setEditingName] = useState("");
   const [editingTeamIndex, setEditingTeamIndex] = useState(null);
   const [longPressTimer, setLongPressTimer] = useState(null);
@@ -40,6 +37,24 @@ function Showcase() {
   const cardModalRef = useRef();
 
   const { isCapturing, captureScreenshot } = useScreenshot();
+
+  // Загружаем сохраненные команды
+  const [teams, setTeams] = useState(() => getShowcaseTeamsOrDefault());
+
+  // Восстанавливаем активную команду по сохранённому id
+  const [activeTeamIndex, setActiveTeamIndex] = useState(() => {
+    const savedId = getActiveTeamId();
+    const initialTeams = getShowcaseTeamsOrDefault();
+    const idx = initialTeams.findIndex((t) => String(t.id) === String(savedId));
+    return idx >= 0 ? idx : 0;
+  });
+
+  useEffect(() => {
+    const activeTeam = teams[activeTeamIndex];
+    if (activeTeam) {
+      saveActiveTeamId(activeTeam.id);
+    }
+  }, [activeTeamIndex, teams]);
 
   // Получаем текущую активную команду
   const currentTeam = teams[activeTeamIndex] || teams[0];

@@ -96,6 +96,8 @@ export {
   clearAllShowcaseTeams,
   createDefaultTeam,
   getShowcaseTeamsOrDefault,
+  getActiveTeamId,
+  saveActiveTeamId
 } from "./showcase-storage.js";
 export {
   getSelectedChar,
