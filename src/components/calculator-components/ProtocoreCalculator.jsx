@@ -29,7 +29,7 @@ function ProtocoreCalculator() {
   const [protocoreType, setProtocoreType] = useState("alpha");
   const [mainStat, setMainStat] = useState(getFirstMainStat("alpha"));
   const [currentLevel, setCurrentLevel] = useState(0);
-  const [targetLevel, setTargetLevel] = useState(1);
+  const [targetLevel, setTargetLevel] = useState(15);
   const [dungeonLevel, setDungeonLevel] = useState(10);
   const [creditDungeonLevel, setCreditDungeonLevel] = useState(9);
   const [hasCalculated, setHasCalculated] = useState(false);
@@ -313,13 +313,13 @@ function ProtocoreCalculator() {
 
             <div className={styles.resultContainer}>
               <div className={styles.resultRow}>
-                <span className={styles.resultLabel}>EXP needed:</span>
+                <span className={styles.resultLabel}>EXP:</span>
                 <span>{result.expNeeded.toLocaleString()} EXP</span>
               </div>
 
               <div className={styles.resultRow}>
                 <span className={styles.resultLabel}>
-                  "Core Hunt" runs needed:
+                  "Core Hunt" runs:
                 </span>
                 <span>
                   {result.dungeonRuns} run(s) (Lvl {dungeonLevel})
@@ -327,20 +327,20 @@ function ProtocoreCalculator() {
               </div>
 
               <div className={styles.resultRow}>
-                <span className={styles.resultLabel}>Stamina for EXP:</span>
+                <span className={styles.resultLabel}>Stamina:</span>
                 <span>{result.staminaNeeded} stamina</span>
               </div>
             </div>
 
             <div className={styles.resultContainer}>
               <div className={styles.resultRow}>
-                <span className={styles.resultLabel}>Credits needed:</span>
+                <span className={styles.resultLabel}>Credits:</span>
                 <span>{result.creditsNeeded.toLocaleString()} Credits</span>
               </div>
 
               <div className={styles.resultRow}>
                 <span className={styles.resultLabel}>
-                  "Mr. Beanie" runs needed:
+                  "Mr. Beanie" runs:
                 </span>
                 <span>
                   {result.creditRuns} run(s) (Lvl {creditDungeonLevel})
@@ -348,13 +348,13 @@ function ProtocoreCalculator() {
               </div>
 
               <div className={styles.resultRow}>
-                <span className={styles.resultLabel}>Stamina for Credits:</span>
+                <span className={styles.resultLabel}>Stamina:</span>
                 <span>{result.staminaForCredits} stamina</span>
               </div>
             </div>
 
             <div className={styles.resultRow}>
-              <span className={styles.resultLabel}>Total Stamina needed:</span>
+              <span className={styles.resultLabel}>Total Stamina:</span>
               <span>
                 {result.staminaNeeded + result.staminaForCredits} stamina
               </span>

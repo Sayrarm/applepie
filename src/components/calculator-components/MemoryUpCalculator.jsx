@@ -24,7 +24,7 @@ import { addFarmGoal } from "@localstorage";
 function MemoryUpCalculator() {
   const [rarity, setRarity] = useState("5-star");
   const [currentLevel, setCurrentLevel] = useState("1");
-  const [targetLevel, setTargetLevel] = useState("80");
+  const [targetLevel, setTargetLevel] = useState("Awaken 80");
   const [expDungeonLevel, setExpDungeonLevel] = useState(9);
   const [crystalDungeonLevel, setCrystalDungeonLevel] = useState(9);
   const [creditDungeonLevel, setCreditDungeonLevel] = useState(9);
@@ -348,13 +348,13 @@ function MemoryUpCalculator() {
 
             <div className={styles.resultContainer}>
               <div className={styles.resultRow}>
-                <span className={styles.resultLabel}>EXP needed:</span>
+                <span className={styles.resultLabel}>EXP:</span>
                 <span>{result.expNeeded.toLocaleString()} EXP</span>
               </div>
 
               <div className={styles.resultRow}>
                 <span className={styles.resultLabel}>
-                  "Heartbreaker" runs needed:
+                  "Heartbreaker" runs:
                 </span>
                 <span>
                   {result.expRuns} runs (Lvl {expDungeonLevel})
@@ -362,14 +362,14 @@ function MemoryUpCalculator() {
               </div>
 
               <div className={styles.resultRow}>
-                <span className={styles.resultLabel}>Stamina needed:</span>
+                <span className={styles.resultLabel}>Stamina:</span>
                 <span>{result.staminaForExp} stamina</span>
               </div>
             </div>
 
             <div className={styles.resultContainer}>
               <div className={styles.resultRow}>
-                <span className={styles.resultLabel}>Crystals needed:</span>
+                <span className={styles.resultLabel}>Crystals:</span>
                 <span>
                   N: {result.crystals.N}
                   {result.crystals.R > 0 && ` | R: ${result.crystals.R}`}
@@ -379,7 +379,7 @@ function MemoryUpCalculator() {
 
               <div className={styles.resultRow}>
                 <span className={styles.resultLabel}>
-                  "{crystalDungeonName}" runs needed:
+                  "{crystalDungeonName}" runs:
                 </span>
                 <span>
                   {result.crystalRuns} runs (Lvl {crystalDungeonLevel})
@@ -387,20 +387,20 @@ function MemoryUpCalculator() {
               </div>
 
               <div className={styles.resultRow}>
-                <span className={styles.resultLabel}>Stamina needed:</span>
+                <span className={styles.resultLabel}>Stamina:</span>
                 <span>{result.staminaForCrystals} stamina</span>
               </div>
             </div>
 
             <div className={styles.resultContainer}>
               <div className={styles.resultRow}>
-                <span className={styles.resultLabel}>Credits needed:</span>
+                <span className={styles.resultLabel}>Credits:</span>
                 <span>{result.credits.toLocaleString()} Credits</span>
               </div>
 
               <div className={styles.resultRow}>
                 <span className={styles.resultLabel}>
-                  "Mr. Beanie" runs needed:
+                  "Mr. Beanie" runs:
                 </span>
                 <span>
                   {result.creditRuns} runs (Lvl {creditDungeonLevel})
@@ -408,7 +408,7 @@ function MemoryUpCalculator() {
               </div>
 
               <div className={styles.resultRow}>
-                <span className={styles.resultLabel}>Stamina needed:</span>
+                <span className={styles.resultLabel}>Stamina:</span>
                 <span>{result.staminaForCredits} stamina</span>
               </div>
             </div>
@@ -422,7 +422,7 @@ function MemoryUpCalculator() {
                   <div className={styles.resultContainer}>
                     <div className={styles.resultRow}>
                       <span className={styles.resultLabel}>
-                        Special Item needed:
+                        Special Item:
                       </span>
                       <div className={styles.heartContainer}>
                         <img
@@ -441,7 +441,7 @@ function MemoryUpCalculator() {
               })()}
 
             <div className={styles.resultRow}>
-              <span className={styles.resultLabel}>Total Stamina needed:</span>
+              <span className={styles.resultLabel}>Total Stamina:</span>
               <span className={styles.totalStamina}>
                 {result.totalStamina} stamina
               </span>
