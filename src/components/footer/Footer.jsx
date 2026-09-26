@@ -8,11 +8,13 @@ function Footer() {
       <div className={styles.footerMediaContainer}>
         General information:
         <div className={styles.borderHorizontal}></div>
+        {/*
         <Link className={styles.a} to="/about">
           About Project
         </Link>
+        */}
         <Link className={styles.a} to="/faq">
-          FAQ
+          Instructions
         </Link>
         <div className={styles.borderHorizontalDashed}></div>
         <a

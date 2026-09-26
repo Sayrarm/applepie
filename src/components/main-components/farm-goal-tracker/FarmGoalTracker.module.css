@@ -189,6 +189,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  text-align: center;
   gap: 3px;
   margin-top: 5px;
   color: var(--colorTextSuperDark);
@@ -272,6 +273,21 @@
 .protocoreName {
   display: flex;
   flex-direction: column;
+}
+
+.linktoResources {
+  width: max-content;
+  margin-left: auto;
+  align-self: flex-end;
+  text-decoration: none;
+  color: var(--colorText);
+  background-color: var(--forSelect);
+  box-shadow: var(--box-shadow);
+  padding: 5px;
+}
+
+.asideResources {
+  zoom: 0.9;
 }
 
 @media screen and (max-width: 1020px) {

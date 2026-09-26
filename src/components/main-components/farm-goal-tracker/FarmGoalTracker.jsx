@@ -759,7 +759,11 @@ function FarmGoalTracker() {
                                     </div>
                                 </div>
 
-                                <AsideReplaceableResources goal={goal} remaining={remaining}/>
+                                <Link className={styles.linktoResources} to={"/my-account/inventory"}>Go to My Resources</Link>
+
+                                <div className={styles.asideResources}>
+                                    <AsideReplaceableResources goal={goal} remaining={remaining} />
+                                </div>
 
                                 {/* Farming Calculation */}
                                 {(remaining.exp > 0 ||
