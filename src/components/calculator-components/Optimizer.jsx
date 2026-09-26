@@ -1,5 +1,5 @@
 import Select from "react-select";
-import { useState, useRef, useEffect } from "react";
+import {useState, useRef, useEffect} from "react";
 import styles from "./Optimizer.module.css";
 import {
     ChooseCompanion,
@@ -19,7 +19,8 @@ import {
     getShowcaseTeams,
     saveShowcaseTeams,
     createDefaultTeam,
-    removeProtocoreFromAllCards
+    removeProtocoreFromAllCards,
+    findCardForProtocore,
 } from "@localstorage";
 import {
     optimizeTeam,
@@ -461,6 +462,7 @@ function Optimizer() {
                                                     protocore={protocore}
                                                     hideChange={true}
                                                     hideDelete={true}
+                                                    cardImage={findCardForProtocore(protocore.id)}
                                                 />
                                             </div>
                                         ),
