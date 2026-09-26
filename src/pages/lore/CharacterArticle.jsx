@@ -68,7 +68,7 @@ function CharacterArticle() {
     <>
       <nav className={styles.nav}>
         <Fragment>
-          <Link className={styles.link} to="/characters">
+          <Link className={styles.link} to="/lore/characters">
             Characters
           </Link>
           <span> &gt; </span>

@@ -6,7 +6,7 @@ function Lore() {
   return (
     <>
       <nav className={styles.nav}>
-        <Link className={styles.link} to="/characters">
+        <Link className={styles.link} to="/lore/characters">
           <div className={styles.title}>Characters</div>
           <img
             className={styles.img}
@@ -15,7 +15,7 @@ function Lore() {
           />
         </Link>
         {/*
-        <Link className={styles.link} to="/main-story">
+        <Link className={styles.link} to="/lore/main-story">
           <div className={styles.title}>Main Story</div>
           <img
             className={styles.img}
@@ -24,7 +24,7 @@ function Lore() {
           />
         </Link>
         */}
-        <Link className={styles.link} to="/spacepedia">
+        <Link className={styles.link} to="/lore/spacepedia">
           <div className={styles.title}>Spacepedia</div>
           <img
             className={styles.img}
@@ -32,7 +32,7 @@ function Lore() {
             alt="spacepedia"
           />
         </Link>
-        <Link className={styles.link} to="/world-underneath">
+        <Link className={styles.link} to="/lore/world-underneath">
           <div className={styles.title}>World Underneath</div>
           <img
             className={styles.img}
@@ -40,7 +40,7 @@ function Lore() {
             alt="spacepedia"
           />
         </Link>
-        <Link className={styles.link} to="/anecdotes">
+        <Link className={styles.link} to="/lore/anecdotes">
           <div className={styles.title}>Anecdotes</div>
           <img
             className={styles.img}

@@ -22,7 +22,7 @@ function Characters() {
           <Link
             key={category.id}
             className={styles.link}
-            to={`/characters/${category.link}`}
+            to={`/lore/characters/${category.link}`}
           >
             <img
               className={styles.img}

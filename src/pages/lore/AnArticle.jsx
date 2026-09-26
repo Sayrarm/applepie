@@ -14,7 +14,7 @@ function AnArticle() {
     <>
       <nav className={styles.nav}>
         <Fragment>
-          <Link className={styles.link} to="/anecdotes">
+          <Link className={styles.link} to="/lore/anecdotes">
             Anecdotes
           </Link>
           <span> &gt; </span>

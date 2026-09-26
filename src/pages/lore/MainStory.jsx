@@ -10,7 +10,7 @@ function MainStory() {
         <Link
           key={category.id}
           className={styles.link}
-          to={`/main-story/${category.link}`}
+          to={`/lore/main-story/${category.link}`}
         >
           <img
             className={styles.img}

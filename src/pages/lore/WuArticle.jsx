@@ -14,7 +14,7 @@ function WuArticle() {
     <>
       <nav className={styles.nav}>
         <Fragment>
-          <Link className={styles.link} to="/world-underneath">
+          <Link className={styles.link} to="/lore/world-underneath">
             World Underneath
           </Link>
           <span> &gt; </span>

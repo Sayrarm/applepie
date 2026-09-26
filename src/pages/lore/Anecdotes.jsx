@@ -22,7 +22,7 @@ function Anecdotes() {
           <Link
             key={category.id}
             className={styles.link}
-            to={`/anecdotes/${category.link}`}
+            to={`/lore/anecdotes/${category.link}`}
           >
             <img
               className={styles.img}

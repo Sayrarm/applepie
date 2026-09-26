@@ -16,7 +16,7 @@ function Spacepedia() {
 
   // Если нет параметра — редиректим на guidance
   if (!navigation) {
-    return <Navigate to="/spacepedia/guidance" replace />;
+    return <Navigate to="/lore/spacepedia/guidance" replace />;
   }
 
   // Если нет выбранной навигации или нет статей

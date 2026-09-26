@@ -22,7 +22,7 @@ function WorldUnderneath() {
           <Link
             key={category.id}
             className={styles.link}
-            to={`/world-underneath/${category.link}`}
+            to={`/lore/world-underneath/${category.link}`}
           >
             <img
               className={styles.img}
