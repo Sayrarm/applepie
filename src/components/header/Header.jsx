@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import styles from "./Header.module.css";
 import ThemeToggleButton from "./ThemeToggleButton.jsx";
 import TimezoneButton from "./TimezoneButton.jsx";
@@ -70,27 +70,55 @@ function Header() {
     <header className={isHidden ? styles.headerHidden : ""}>
       <nav className={styles.nav}>
         <div className={styles.link}>
-          <Link className={styles.a} to="/">
+          <NavLink
+              className={({ isActive }) =>
+              `${styles.a} ${isActive ? styles.active : ""}`
+          }
+              to="/">
             Main
-          </Link>
-          <Link className={styles.a} to="/banners-history">
+          </NavLink>
+          <NavLink
+              className={({ isActive }) =>
+                  `${styles.a} ${isActive ? styles.active : ""}`
+              }
+              to="/banners-history">
             Banners
-          </Link>
-          <Link className={styles.a} to="/lore">
+          </NavLink>
+          <NavLink
+              className={({ isActive }) =>
+                  `${styles.a} ${isActive ? styles.active : ""}`
+              }
+              to="/lore">
             Lore
-          </Link>
-          <Link className={styles.a} to="/memories">
+          </NavLink>
+          <NavLink
+              className={({ isActive }) =>
+                  `${styles.a} ${isActive ? styles.active : ""}`
+              }
+              to="/memories">
             Memories
-          </Link>
-          <Link className={styles.a} to="/battle">
+          </NavLink>
+          <NavLink
+              className={({ isActive }) =>
+                  `${styles.a} ${isActive ? styles.active : ""}`
+              }
+              to="/battle">
             Battle
-          </Link>
-          <Link className={styles.a} to="/calculator">
+          </NavLink>
+          <NavLink
+              className={({ isActive }) =>
+                  `${styles.a} ${isActive ? styles.active : ""}`
+              }
+              to="/calculator">
             Calculator
-          </Link>
-          <Link className={styles.a} to="/my-account">
+          </NavLink>
+          <NavLink
+              className={({ isActive }) =>
+                  `${styles.a} ${isActive ? styles.active : ""}`
+              }
+              to="/my-account">
             Account
-          </Link>
+          </NavLink>
         </div>
 
         <div className={styles.burgerContainer}>

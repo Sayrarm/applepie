@@ -71,6 +71,10 @@
   z-index: 1;
 }
 
+.stars {
+  margin-left: -2px;
+}
+
 .userInfo {
   position: absolute;
   display: flex;
@@ -78,6 +82,10 @@
   bottom: 25px;
   right: 5px;
   z-index: 1;
+
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.8))
+  drop-shadow(0 0 1px rgba(0, 0, 0, 0.8))
+  drop-shadow(0 0 1px rgba(0, 0, 0, 0.6));
 }
 
 .userLevel {
@@ -94,9 +102,6 @@
   top: -3px;
   left: -18px;
 
-  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.8))
-    drop-shadow(0 0 1px rgba(0, 0, 0, 0.8))
-    drop-shadow(0 0 1px rgba(0, 0, 0, 0.6));
 }
 
 .level {
