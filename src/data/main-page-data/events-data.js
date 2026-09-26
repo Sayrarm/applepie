@@ -159,4 +159,20 @@ export const eventsData = [
     endDate: "2026-10-18T04:59:59",
     active: true,
   },
+  {
+    id: 21,
+    name: "New plushie",
+    image: "../assets/main-page/events/new-plushie.png",
+    startDate: "2026-09-28T05:00:00",
+    endDate: "2026-10-11T04:59:59",
+    active: true,
+  },
+  {
+    id: 22,
+    name: "10 Days with you",
+    image: "../assets/main-page/events/autumn-eyes.png",
+    startDate: "2026-09-28T05:00:00",
+    endDate: "2026-10-16T04:59:59",
+    active: true,
+  },
 ];
