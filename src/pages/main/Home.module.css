@@ -67,6 +67,10 @@
   color: var(--colorText);
   text-shadow: var(--text-shadow);
 
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.8))
+  drop-shadow(0 0 1px rgba(0, 0, 0, 0.8))
+  drop-shadow(0 0 1px rgba(0, 0, 0, 0.6));
+
   display: flex;
   justify-self: flex-end;
   position: absolute;
