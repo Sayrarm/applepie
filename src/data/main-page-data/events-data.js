@@ -141,7 +141,7 @@ export const eventsData = [
     image: "../assets/main-page/events/voyage-anew.png",
     startDate: "2026-09-17T05:00:00",
     endDate: "2026-09-27T04:59:59",
-    active: true,
+    active: false,
   },
   {
     id: 19,
