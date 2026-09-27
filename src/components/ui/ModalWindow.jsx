@@ -1,5 +1,6 @@
 import React, { useState, useImperativeHandle, forwardRef } from "react";
 import { Button, Modal } from "antd";
+import styles from './Modal.module.css'
 
 const ModalWindow = forwardRef((props, ref) => {
   const {
@@ -43,7 +44,7 @@ const ModalWindow = forwardRef((props, ref) => {
     >
       {/* Отображаем тег/изображение, если он передан */}
       {tag && (
-        <div style={{ marginBottom: "20px", textAlign: "center" }}>{tag}</div>
+        <div className={styles.modalContainer}>{tag}</div>
       )}
     </Modal>
   );
