@@ -58,7 +58,7 @@ function CharacterArticlePage() {
     const category = wuCategories.find(
       (cat) => cat.title.toLowerCase() === title.toLowerCase(),
     );
-    return category ? `/world-underneath/${category.link}` : null;
+    return category ? `/lore/world-underneath/${category.link}` : null;
   };
 
   // Функция для поиска ссылки по названию Anecdote
@@ -66,7 +66,7 @@ function CharacterArticlePage() {
     const category = anCategories.find(
       (cat) => cat.title.toLowerCase() === title.toLowerCase(),
     );
-    return category ? `/anecdotes/${category.link}` : null;
+    return category ? `/lore/anecdotes/${category.link}` : null;
   };
 
   // Функция для поиска ссылки по тайтлу и серийному номеру
