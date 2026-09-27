@@ -8,7 +8,7 @@ function SpacepediaNavigation() {
         className={({ isActive }) =>
           `${styles.a} ${isActive ? styles.active : ""}`
         }
-        to="/spacepedia/guidance"
+        to="/lore/spacepedia/guidance"
       >
         Hunter's guide
       </NavLink>
@@ -16,7 +16,7 @@ function SpacepediaNavigation() {
         className={({ isActive }) =>
           `${styles.a} ${isActive ? styles.active : ""}`
         }
-        to="/spacepedia/message"
+        to="/lore/spacepedia/message"
       >
         Deepspace Messages
       </NavLink>
@@ -24,7 +24,7 @@ function SpacepediaNavigation() {
         className={({ isActive }) =>
           `${styles.a} ${isActive ? styles.active : ""}`
         }
-        to="/spacepedia/life"
+        to="/lore/spacepedia/life"
       >
         Life At Linkon
       </NavLink>
@@ -32,7 +32,7 @@ function SpacepediaNavigation() {
         className={({ isActive }) =>
           `${styles.a} ${isActive ? styles.active : ""}`
         }
-        to="/spacepedia/tale"
+        to="/lore/spacepedia/tale"
       >
         Tales
       </NavLink>
@@ -40,7 +40,7 @@ function SpacepediaNavigation() {
         className={({ isActive }) =>
           `${styles.a} ${isActive ? styles.active : ""}`
         }
-        to="/spacepedia/note"
+        to="/lore/spacepedia/note"
       >
         My Notes
       </NavLink>
