@@ -366,9 +366,6 @@ function Showcase() {
         </section>
       </div>
 
-      <br />
-      <br />
-
       {/* CombatCalculations - показываем только если есть Компаньон и MC Weapon */}
       {currentTeam.selectedCompanion && currentTeam.selectedMCWeapon && (
         <CombatCalculations

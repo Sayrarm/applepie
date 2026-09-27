@@ -211,89 +211,45 @@
   display: flex;
 }
 
+/******************************MEDIA********************************/
+
+@media screen and (max-width: 1200px) {
+  .container {
+    zoom: 0.9;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .container {
+    zoom: 0.8;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .container {
+    zoom: 0.7;
+  }
+}
+
 @media screen and (max-width: 768px) {
-  .captureRef {
-    height: 25%;
+    .container {
+      zoom: 0.63;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+  .utilButtons,
+  .teamControls {
+    zoom: 0.6;
   }
 
   .container {
-    /* Уменьшаем контейнер до размеров экрана */
-    transform: scale(0.5); /* 32% от оригинального размера */
-    transform-origin: top left;
-    width: 1210px; /* оригинальная ширина (десктопная) */
-    margin: 0 auto;
+    zoom: 0.33;
   }
 
-  .cardSlot {
-    display: flex;
-    justify-content: space-between;
-    padding-right: 5px;
+  .cardWrapper {
+    zoom: 1.6;
   }
 
-  .cardSlotEquipped {
-    padding: 10px;
-  }
-
-  .teamNameButton,
-  .addTeamButton {
-    font-size: 14px;
-    padding: 5px 15px 5px 5px;
-  }
-}
-
-@media screen and (max-width: 767px) and (min-width: 615px) {
-  .container {
-    /* Уменьшаем контейнер до размеров экрана */
-    transform: scale(0.6); /* 32% от оригинального размера */
-    transform-origin: top left;
-    width: 1210px; /* оригинальная ширина (десктопная) */
-    margin: 0 auto;
-  }
-}
-
-@media screen and (max-width: 614px) and (min-width: 511px) {
-  .captureRef {
-    height: 18%;
-  }
-}
-
-@media screen and (max-width: 510px) {
-  .captureRef {
-    height: 10%;
-  }
-
-  .container {
-    /* Уменьшаем контейнер до размеров экрана */
-    transform: scale(0.305); /* 32% от оригинального размера */
-    transform-origin: top left;
-    width: 1210px; /* оригинальная ширина (десктопная) */
-    margin: 0 auto;
-  }
-
-  .cardSlot {
-    display: flex;
-    justify-content: space-between;
-    padding-right: 5px;
-  }
-
-  .cardSlotEquipped {
-    transform: scale(1.6);
-    transform-origin: 14% -14%;
-  }
-
-  .protocoreWrapper {
-    transform: scale(1);
-    transform-origin: 5% 5%;
-  }
-
-  .teamNameButton,
-  .addTeamButton {
-    font-size: 14px;
-    padding: 5px 15px 5px 5px;
-  }
-
-  .cardInfo {
-    font-size: 14px;
-    align-items: center;
-  }
 }
