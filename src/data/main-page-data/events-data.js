@@ -117,7 +117,7 @@ export const eventsData = [
     image: "../assets/main-page/events/bounty-hunt.png",
     startDate: "2026-09-21T05:00:00",
     endDate: "2026-09-28T04:59:59",
-    active: true,
+    active: false,
   },
   {
     id: 16,
@@ -162,7 +162,7 @@ export const eventsData = [
   {
     id: 21,
     name: "New plushie",
-    image: "../assets/main-page/events/new-plushie.png",
+    image: "../assets/main-page/events/pankake.png",
     startDate: "2026-09-28T05:00:00",
     endDate: "2026-10-11T04:59:59",
     active: true,
