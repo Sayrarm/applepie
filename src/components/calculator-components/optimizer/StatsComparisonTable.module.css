@@ -1,13 +1,7 @@
 .wrapper {
     width: 100%;
     overflow-x: auto;
-    margin: 16px 0;
-}
-
-.wrapper {
-    width: 100%;
-    overflow-x: auto;
-    margin: 16px 0;
+    margin: 15px 0;
 }
 
 .table {
@@ -19,18 +13,18 @@
 
 .table th,
 .table td {
-    padding: 10px 12px;
-    text-align: right;
+    padding: 10px 5px;
+    text-align: center;
     border-bottom: 1px solid var(--border-color, #333);
     white-space: nowrap;
 }
 
 .table thead th {
     font-weight: 600;
-    color: var(--text-secondary, #aaa);
+    color: var(--colorTextDark);
     font-size: 12px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    white-space: wrap;
 }
 
 .labelCell {
@@ -41,13 +35,7 @@
 
 .beforeRow .labelCell,
 .beforeRow td {
-    color: var(--text-secondary, #aaa);
-}
-
-.afterRow .labelCell,
-.afterRow td {
-    color: var(--text-primary, #fff);
-    font-weight: 500;
+    color: var(--colorTextGrayNote);
 }
 
 /* Подсветка активного столбца урона */
@@ -56,13 +44,13 @@
 }
 
 .damagePositive {
-    color: #4ade80;
+    color: var(--green-button);
     font-weight: 600;
     font-variant-numeric: tabular-nums;
 }
 
 .damageNegative {
-    color: #f87171;
+    color: var(--red-button);
     font-weight: 600;
     font-variant-numeric: tabular-nums;
 }
@@ -73,7 +61,7 @@
 }
 
 .buildRow:hover {
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .activeRow {
@@ -84,10 +72,6 @@
 .sortable {
     cursor: pointer;
     user-select: none;
-}
-
-.sortable:hover {
-    color: var(--text-primary, #fff);
 }
 
 .pagination {
@@ -101,10 +85,8 @@
 
 .pageButton {
     padding: 8px 16px;
-    background: var(--bg-secondary, #1c1c1c);
-    color: var(--text-primary, #fff);
-    border: 1px solid var(--border-color, #333);
-    border-radius: 6px;
+    color: var(--colorTextDark);
+    border: 1px solid var(--border-color);
     cursor: pointer;
     font-weight: 500;
 }
@@ -112,13 +94,4 @@
 .pageButton:disabled {
     opacity: 0.4;
     cursor: not-allowed;
-}
-
-.pageButton:hover:not(:disabled) {
-    background: var(--bg-tertiary, #2a2a2a);
-}
-
-.pageInfo {
-    color: var(--text-secondary, #aaa);
-    font-size: 14px;
 }

@@ -372,7 +372,7 @@ function Optimizer() {
 
                 <div className={styles.selectMenu}>
                     <div className={styles.protoSelectContainer}>
-                        Exclude cards:
+                        Exclude protocores:
                         <div className={styles.selectContainer}>
                             <Select
                                 isMulti

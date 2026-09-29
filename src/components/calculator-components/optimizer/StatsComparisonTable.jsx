@@ -60,7 +60,7 @@ function StatsComparisonTable({
         () =>
             builds.map((build, idx) => ({
                 idx,
-                name: `Build #${idx + 1}`,
+                name: `#${idx + 1}`,
                 stats: build.teamStats,
                 damage: build.damageData,
             })),
@@ -153,7 +153,7 @@ function StatsComparisonTable({
                         {DAMAGE_LABELS.crit} {getSortIcon("critSum")}
                     </th>
                     <th onClick={() => handleSort("percentChange")} className={styles.sortable}>
-                        Δ % {getSortIcon("percentChange")}
+                        difference {getSortIcon("percentChange")}
                     </th>
                 </tr>
                 </thead>
