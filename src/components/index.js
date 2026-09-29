@@ -51,6 +51,7 @@ export { default as DailyResetTimer } from "./common/DailyResetTimer.jsx";
 export { default as FlexibleTimer } from "./common/FlexibleTimer.jsx";
 export { default as ProtocoreBlock } from "./common/ProtocoreBlock.jsx";
 export { default as LevelRangeControl } from "./common/LevelRangeControl.jsx";
+export { default as MemoriesTable } from "./common/MemoriesTable.jsx";
 export { useRecurringTimer } from "./common/resetTimer.js";
 
 //farm-goal-tracker
