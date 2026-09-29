@@ -29,6 +29,7 @@ import {
     detectDamageType,
 } from "@data";
 import { useSolarPair } from "@hooks";
+import StatsComparisonTable from "@components/calculator-components/optimizer/StatsComparisonTable.jsx";
 
 const CARD_SLOTS = [
     { id: "solar1", placement: "solar", index: 0 },
@@ -221,30 +222,12 @@ function Optimizer() {
                 const oldDamageData = computeKitDamage(oldStats, context);
                 const newDamageData = computeKitDamage(newTeamStats, context);
 
-                const pickDamage = (data) => {
-                    switch (damageType) {
-                        case "weakened":
-                            return data.weakenedSum;
-                        case "crit":
-                            return data.critSum;
-                        default:
-                            return data.baseSum;
-                    }
-                };
-
-                const oldDamage = pickDamage(oldDamageData);
-                const newDamage = pickDamage(newDamageData);
-                const percentChange = oldDamage > 0
-                    ? ((newDamage - oldDamage) / oldDamage) * 100
-                    : 0;
-
                 setResults(optimizationResults);
                 setTeamStats(newTeamStats);
                 setOldTeamStats(oldStats);
                 setDamageComparison({
-                    oldDamage,
-                    newDamage,
-                    percentChange,
+                    oldDamageData,
+                    newDamageData,
                     damageType,
                 });
             } finally {
@@ -501,78 +484,16 @@ function Optimizer() {
             )}
 
             <div className={styles.resultContainer}>
-                {/* Два StatsTable рядом */}
-                {(teamStats || oldTeamStats) && (
-                    <div className={styles.statsComparison}>
-                        {oldTeamStats && (
-                            <div className={styles.statsColumn}>
-                                <h3 className={styles.statsColumnTitle}>
-                                    Before (Current Protocores)
-                                </h3>
-                                <MemoriesTable
-                                    data={[{ id: "before", stats: oldTeamStats }]}
-                                    storageKey="optimizer-before"
-                                    showImage={false}
-                                    showName={false}
-                                    showLevel={false}
-                                    showRank={false}
-                                    showStella={false}
-                                    showRarity={false}
-                                    showPlacement={false}
-                                    showTalent={false}
-                                    showProtocoreLevels={false}
-                                />
-                            </div>
-                        )}
-                        {teamStats && (
-                            <div className={styles.statsColumn}>
-                                <h3 className={styles.statsColumnTitle}>
-                                    After (Optimized Protocores)
-                                </h3>
-                                <MemoriesTable
-                                    data={[{ id: "after", stats: teamStats }]}
-                                    storageKey="optimizer-after"
-                                    showImage={false}
-                                    showName={false}
-                                    showLevel={false}
-                                    showRank={false}
-                                    showStella={false}
-                                    showRarity={false}
-                                    showPlacement={false}
-                                    showTalent={false}
-                                    showProtocoreLevels={false}
-                                />
-                            </div>
-                        )}
-                    </div>
-                )}
 
-                {/* Процент изменения урона */}
-                {damageComparison && (
-                    <div className={styles.damageComparison}>
-                        <div className={styles.damageRow}>
-                <span className={styles.damageLabel}>
-                    Damage ({damageComparison.damageType}):
-                </span>
-                            <span className={styles.damageOld}>
-                    {Math.round(damageComparison.oldDamage).toLocaleString()}
-                </span>
-                            <span className={styles.damageArrow}>→</span>
-                            <span className={styles.damageNew}>
-                    {Math.round(damageComparison.newDamage).toLocaleString()}
-                </span>
-                            <span
-                                className={
-                                    damageComparison.percentChange >= 0
-                                        ? styles.damagePositive
-                                        : styles.damageNegative
-                                }
-                            >
-                    {damageComparison.percentChange >= 0 ? "+" : ""}
-                                {damageComparison.percentChange.toFixed(2)}%
-                </span>
-                        </div>
-                    </div>
+                {/* Сравнение статов и урона */}
+                {(teamStats || oldTeamStats) && (
+                    <StatsComparisonTable
+                        beforeStats={oldTeamStats}
+                        afterStats={teamStats}
+                        beforeDamage={damageComparison?.oldDamageData}
+                        afterDamage={damageComparison?.newDamageData}
+                        damageType={damageComparison?.damageType}
+                    />
                 )}
 
                 {teamStats && data.selectedCompanion && data.selectedWeapon && (
@@ -583,6 +504,8 @@ function Optimizer() {
                         teamDmgBonus={teamDmgBonus}
                     />
                 )}
+
+
             </div>
 
             <ModalChooseCard
