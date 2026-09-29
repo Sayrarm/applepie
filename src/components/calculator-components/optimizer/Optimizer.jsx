@@ -127,8 +127,10 @@ function Optimizer() {
         setData((prev) => ({...prev, betaProtocore_1: option}));
     const handleBetaChange2 = (option) =>
         setData((prev) => ({...prev, betaProtocore_2: option}));
-    const handleDeltaChange = (option) =>
-        setData((prev) => ({...prev, deltaProtocore: option}));
+    const handleDeltaChange1 = (option) =>
+        setData((prev) => ({ ...prev, deltaProtocore_1: option }));
+    const handleDeltaChange2 = (option) =>
+        setData((prev) => ({ ...prev, deltaProtocore_2: option }));
 
     const clearAll = () => {
         if (!window.confirm("Are you sure you want to clear all settings?"))
@@ -182,7 +184,9 @@ function Optimizer() {
                 const targets = {
                     beta1: data.betaProtocore_1?.value,
                     beta2: data.betaProtocore_2?.value,
-                    delta: data.deltaProtocore?.value,
+                    delta: data.deltaProtocore_1?.value,        // ← для обратной совместимости
+                    delta1: data.deltaProtocore_1?.value,
+                    delta2: data.deltaProtocore_2?.value,
                     subStat1: data.subStat1?.value,
                     subStat2: data.subStat2?.value,
                 };
@@ -413,12 +417,24 @@ function Optimizer() {
                             />
                         </div>
                         <div className={styles.selectContainer}>
-                            Delta:
+                            Delta 1:
                             <Select
                                 placeholder="Select Delta Protocore"
                                 options={deltaProtocoreOptions}
                                 value={data.deltaProtocore}
-                                onChange={handleDeltaChange}
+                                onChange={handleDeltaChange1}
+                                className={styles.select}
+                                isClearable
+                                isSearchable={false}
+                            />
+                        </div>
+                        <div className={styles.selectContainer}>
+                            Delta 2:
+                            <Select
+                                placeholder="Select Delta Protocore"
+                                options={deltaProtocoreOptions}
+                                value={data.deltaProtocore}
+                                onChange={handleDeltaChange2}
                                 className={styles.select}
                                 isClearable
                                 isSearchable={false}

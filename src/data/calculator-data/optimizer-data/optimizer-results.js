@@ -21,7 +21,9 @@ export const buildOptimizationResults = ({
         return { builds: [] };
     }
 
-    const originalDamageType = detectDamageType(targets.delta);
+    // Берём первый непустой delta — для определения цели урона
+    const primaryDelta = targets.delta1 || targets.delta2 || null;
+    const originalDamageType = detectDamageType(primaryDelta);
 
     const damageTypesPool = [
         originalDamageType,

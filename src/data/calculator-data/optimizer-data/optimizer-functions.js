@@ -316,36 +316,90 @@ export const optimizeTeam = ({
     const lunarSlots = ["lunar1", "lunar2", "lunar3", "lunar4"];
     const lunarSlotOrder = sortSlotsByPotential(lunarSlots, cards, getBaseStatsFn);
 
-    const usedIdsLunar = new Set();
-    const lunarResults = { ...emptyResults };
+// Определяем delta-цели
+    const delta1 = targets.delta1 || null;
+    const delta2 = targets.delta2 || null;
 
-    for (const slotId of lunarSlotOrder) {
-        const card = cards[slotId];
-        if (!card) continue;
+// Формируем назначения delta-целей на слоты
+// Если есть оба — 2 варианта (2+2):
+//   A: lunar1, lunar2 → delta1; lunar3, lunar4 → delta2
+//   B: lunar1, lunar2 → delta2; lunar3, lunar4 → delta1
+// Если только один — все 4 слота под него.
+// Если оба пустые — все 4 под null (любые delta).
+    let deltaAssignments;
 
-        const gammaPool = filterByStella(gamma, card);
-        const deltaPool = filterByMainStatWithFallback(
-            filterByStella(delta, card),
-            targets.delta,
-        );
+    if (delta1 && delta2) {
+        deltaAssignments = [
+            {
+                lunar1: delta1, lunar2: delta1,
+                lunar3: delta2, lunar4: delta2,
+            },
+            {
+                lunar1: delta2, lunar2: delta2,
+                lunar3: delta1, lunar4: delta1,
+            },
+        ];
+    } else {
+        const singleDelta = delta1 || delta2 || null;
+        deltaAssignments = [
+            {
+                lunar1: singleDelta, lunar2: singleDelta,
+                lunar3: singleDelta, lunar4: singleDelta,
+            },
+        ];
+    }
 
-        const bestPair = pickBestPairForSlot({
-            slotId,
-            poolA: gammaPool,
-            poolB: deltaPool,
-            currentResults: lunarResults,
-            isSolar: false,
+    let bestLunarResult = null;
+    let bestLunarDamage = -Infinity;
+    let bestDeltaAssignment = null;
+
+    for (const assignment of deltaAssignments) {
+        const usedIdsLunar = new Set();
+        const lunarResults = { ...emptyResults };
+
+        for (const slotId of lunarSlotOrder) {
+            const card = cards[slotId];
+            if (!card) continue;
+
+            const deltaFilter = assignment[slotId];
+            const gammaPool = filterByStella(gamma, card);
+            const deltaPool = filterByMainStatWithFallback(
+                filterByStella(delta, card),
+                deltaFilter,
+            );
+
+            const bestPair = pickBestPairForSlot({
+                slotId,
+                poolA: gammaPool,
+                poolB: deltaPool,
+                currentResults: lunarResults,
+                isSolar: false,
+                cards,
+                context,
+                damageType,
+                getBaseStatsFn,
+                usedIds: usedIdsLunar,
+            });
+
+            if (bestPair) {
+                lunarResults[slotId] = bestPair;
+                if (bestPair.gamma) usedIdsLunar.add(bestPair.gamma.id);
+                if (bestPair.delta) usedIdsLunar.add(bestPair.delta.id);
+            }
+        }
+
+        const lunarDamage = evaluateTeamDamage(
             cards,
+            lunarResults,
             context,
             damageType,
             getBaseStatsFn,
-            usedIds: usedIdsLunar,
-        });
+        );
 
-        if (bestPair) {
-            lunarResults[slotId] = bestPair;
-            if (bestPair.gamma) usedIdsLunar.add(bestPair.gamma.id);
-            if (bestPair.delta) usedIdsLunar.add(bestPair.delta.id);
+        if (lunarDamage > bestLunarDamage) {
+            bestLunarDamage = lunarDamage;
+            bestLunarResult = lunarResults;
+            bestDeltaAssignment = assignment;
         }
     }
 
@@ -353,10 +407,10 @@ export const optimizeTeam = ({
     let bestResults = {
         solar1: bestSolarResult?.solar1 || null,
         solar2: bestSolarResult?.solar2 || null,
-        lunar1: lunarResults.lunar1,
-        lunar2: lunarResults.lunar2,
-        lunar3: lunarResults.lunar3,
-        lunar4: lunarResults.lunar4,
+        lunar1: bestLunarResult?.lunar1 || null,
+        lunar2: bestLunarResult?.lunar2 || null,
+        lunar3: bestLunarResult?.lunar3 || null,
+        lunar4: bestLunarResult?.lunar4 || null,
     };
 
     let bestDamage = evaluateTeamDamage(
@@ -375,10 +429,10 @@ export const optimizeTeam = ({
     const mainStatFilterBySlot = {
         solar1: { alpha: null, beta: bestSolarAssignment?.solar1 || null },
         solar2: { alpha: null, beta: bestSolarAssignment?.solar2 || null },
-        lunar1: { gamma: null, delta: targets.delta },
-        lunar2: { gamma: null, delta: targets.delta },
-        lunar3: { gamma: null, delta: targets.delta },
-        lunar4: { gamma: null, delta: targets.delta },
+        lunar1: { gamma: null, delta: bestDeltaAssignment?.lunar1 || null },
+        lunar2: { gamma: null, delta: bestDeltaAssignment?.lunar2 || null },
+        lunar3: { gamma: null, delta: bestDeltaAssignment?.lunar3 || null },
+        lunar4: { gamma: null, delta: bestDeltaAssignment?.lunar4 || null },
     };
 
     // Пулы по цвету + фильтр по main stat (для replace и swap)

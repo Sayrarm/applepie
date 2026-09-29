@@ -103,6 +103,10 @@
     padding: 5px;
 }
 
+.select [class$="-multiValue"] {
+   background-color: var(--bg-glass);
+}
+
 /**********************************************/
 
 .articleContainer {
