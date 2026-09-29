@@ -14,7 +14,7 @@ import {
     credits,
     bottles,
     coreEnergy,
-    memoriesData,
+    memoriesData, protocoreTypes,
 } from "@data";
 import {getImageUrl, useFarmGoals} from "@hooks";
 import AsideReplaceableResources from "./AsideReplaceableResources.jsx";
@@ -343,6 +343,14 @@ function FarmGoalTracker() {
         return <span>Unknown goal</span>;
     };
 
+    const getMainStatValue = (typeKey, level, statName) => {
+        const typeData = protocoreTypes[typeKey];
+        if (!typeData) return null;
+        const statData = typeData.mainStats.find((stat) => stat.name === statName);
+        if (!statData) return null;
+        return statData.values[level] ?? null;
+    };
+
     const handleComplete = (goal) => {
         // ===== Цель по карточке =====
         if (goal.isCardGoal && goal.cardId) {
@@ -372,8 +380,20 @@ function FarmGoalTracker() {
                 return;
             }
 
-            // 1. Обновляем уровень в localStorage
-            const updated = { ...protocore, level: goal.targetLevel };
+            const newLevel = goal.targetLevel;
+            const newMainStatValue = getMainStatValue(
+                protocore.type,
+                newLevel,
+                protocore.mainStat,
+            );
+
+            const updated = {
+                ...protocore,
+                level: newLevel,
+                mainStatValue:
+                    newMainStatValue !== null ? newMainStatValue : protocore.mainStatValue,
+            };
+
             updateProtocore(updated);
             updateProtocoreInAllCards(updated);
 
