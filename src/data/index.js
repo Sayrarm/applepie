@@ -68,6 +68,9 @@ export {
   optimizeTeam,
   calculateTeamStats
 } from "./calculator-data/optimizer-data/optimizer-functions.js";
+export {
+  buildOptimizationResults
+} from "./calculator-data/optimizer-data/optimizer-results.js";
 
 //calculators data
 export {

@@ -1,4 +1,6 @@
+import { useState, useMemo } from "react";
 import styles from "./StatsComparisonTable.module.css";
+import { useTableSort } from "@hooks";
 
 const DAMAGE_LABELS = {
     base: "Base DMG",
@@ -6,76 +8,98 @@ const DAMAGE_LABELS = {
     crit: "Crit DMG",
 };
 
+const getDamage = (damageData, key) => {
+    if (!damageData) return 0;
+    switch (key) {
+        case "base":
+            return damageData.baseSum ?? 0;
+        case "weakened":
+            return damageData.weakenedSum ?? 0;
+        case "crit":
+            return damageData.critSum ?? 0;
+        default:
+            return 0;
+    }
+};
+
+const formatNumber = (num, decimals = 2) => {
+    if (typeof num !== "number" || isNaN(num)) return "—";
+    return num.toFixed(decimals);
+};
+
+const formatDamage = (num) => {
+    if (typeof num !== "number" || isNaN(num)) return "—";
+    return Math.round(num).toLocaleString();
+};
+
+const PAGE_SIZE = 10;
+
 function StatsComparisonTable({
                                   beforeStats,
-                                  afterStats,
                                   beforeDamage,
-                                  afterDamage,
-                                  damageType,
+                                  builds,
+                                  activeIndex,
+                                  onSelectBuild,
+                                  defaultSortKey,
                               }) {
-    const formatNumber = (num, decimals = 2) => {
-        if (typeof num !== "number" || isNaN(num)) return "—";
-        return num.toFixed(decimals);
-    };
+    const initialSortKey = (() => {
+        if (defaultSortKey === "weakened") return "weakenedSum";
+        if (defaultSortKey === "crit") return "critSum";
+        if (defaultSortKey === "base") return "baseSum";
+        return null;
+    })();
 
-    const formatDamage = (num) => {
-        if (typeof num !== "number" || isNaN(num)) return "—";
-        return Math.round(num).toLocaleString();
-    };
+    const { sortConfig, handleSort, getSortIcon, sortData } = useTableSort({
+        key: initialSortKey,
+        direction: "desc",
+    });
 
-    const getDamage = (damageData, key) => {
-        if (!damageData) return null;
-        switch (key) {
-            case "base":
-                return damageData.baseSum;
-            case "weakened":
-                return damageData.weakenedSum;
-            case "crit":
-                return damageData.critSum;
-            default:
-                return null;
-        }
-    };
+    const [page, setPage] = useState(0);
 
-    const activeKey = damageType || null;
+    const buildRows = useMemo(
+        () =>
+            builds.map((build, idx) => ({
+                idx,
+                name: `Build #${idx + 1}`,
+                stats: build.teamStats,
+                damage: build.damageData,
+            })),
+        [builds],
+    );
+
+    // Кастомный valueGetter для сортировки
+    const valueGetter = useMemo(() => {
+        return (row, key) => {
+            if (key === "baseSum" || key === "weakenedSum" || key === "critSum") {
+                return row.damage?.[key] ?? 0;
+            }
+            if (key === "percentChange") {
+                const beforeVal = getDamage(beforeDamage, defaultSortKey);
+                const val = getDamage(row.damage, defaultSortKey);
+                return beforeVal > 0 ? ((val - beforeVal) / beforeVal) * 100 : 0;
+            }
+            return row.stats?.[key] ?? 0;
+        };
+    }, [beforeDamage, defaultSortKey]);
+
+    const sortedRows = useMemo(
+        () => sortData(buildRows, valueGetter),
+        [buildRows, sortData, valueGetter],
+    );
+
+    // Пагинация
+    const totalPages = Math.max(1, Math.ceil(sortedRows.length / PAGE_SIZE));
+    const safePage = Math.min(page, totalPages - 1);
+    const pageRows = sortedRows.slice(
+        safePage * PAGE_SIZE,
+        safePage * PAGE_SIZE + PAGE_SIZE,
+    );
+
+    const activeKey = defaultSortKey || null;
     const damageColumnClass = (key) =>
         activeKey === key ? styles.damageActiveColumn : "";
 
-    // Значения урона для активного типа
-    const oldDamage = getDamage(beforeDamage, activeKey);
-    const newDamage = getDamage(afterDamage, activeKey);
-
-    const percentChange =
-        typeof oldDamage === "number" &&
-        typeof newDamage === "number" &&
-        oldDamage > 0
-            ? ((newDamage - oldDamage) / oldDamage) * 100
-            : null;
-
-    // Класс для ячейки с процентом (зелёный / красный)
-    const percentClass =
-        percentChange === null
-            ? ""
-            : percentChange >= 0
-                ? styles.damagePositive
-                : styles.damageNegative;
-
-    const rows = [
-        {
-            key: "before",
-            label: "Before (Current)",
-            stats: beforeStats,
-            damage: beforeDamage,
-            className: styles.beforeRow,
-        },
-        {
-            key: "after",
-            label: "After (Optimized)",
-            stats: afterStats,
-            damage: afterDamage,
-            className: styles.afterRow,
-        },
-    ];
+    const beforeDamageValue = getDamage(beforeDamage, defaultSortKey);
 
     return (
         <div className={styles.wrapper}>
@@ -83,58 +107,156 @@ function StatsComparisonTable({
                 <thead>
                 <tr>
                     <th></th>
-                    <th>HP</th>
-                    <th>ATK</th>
-                    <th>DEF</th>
-                    <th>Crit Rate</th>
-                    <th>Crit DMG</th>
-                    <th>DMG Boost</th>
-                    <th>Oath Strength</th>
-                    <th>Oath Recovery</th>
-                    <th>Expedited Energy</th>
-                    <th className={damageColumnClass("base")}>
-                        {DAMAGE_LABELS.base}
+                    <th onClick={() => handleSort("hp")} className={styles.sortable}>
+                        HP {getSortIcon("hp")}
                     </th>
-                    <th className={damageColumnClass("weakened")}>
-                        {DAMAGE_LABELS.weakened}
+                    <th onClick={() => handleSort("atk")} className={styles.sortable}>
+                        ATK {getSortIcon("atk")}
                     </th>
-                    <th className={damageColumnClass("crit")}>
-                        {DAMAGE_LABELS.crit}
+                    <th onClick={() => handleSort("def")} className={styles.sortable}>
+                        DEF {getSortIcon("def")}
                     </th>
-                    <th>Δ %</th>
+                    <th onClick={() => handleSort("critRate")} className={styles.sortable}>
+                        Crit Rate {getSortIcon("critRate")}
+                    </th>
+                    <th onClick={() => handleSort("critDmg")} className={styles.sortable}>
+                        Crit DMG {getSortIcon("critDmg")}
+                    </th>
+                    <th onClick={() => handleSort("dmgBoost")} className={styles.sortable}>
+                        DMG Boost {getSortIcon("dmgBoost")}
+                    </th>
+                    <th onClick={() => handleSort("oathStrength")} className={styles.sortable}>
+                        Oath Strength {getSortIcon("oathStrength")}
+                    </th>
+                    <th onClick={() => handleSort("oathRecoveryBoost")} className={styles.sortable}>
+                        Oath Recovery {getSortIcon("oathRecoveryBoost")}
+                    </th>
+                    <th onClick={() => handleSort("expeditedEnergyBoost")} className={styles.sortable}>
+                        Expedited Energy {getSortIcon("expeditedEnergyBoost")}
+                    </th>
+                    <th
+                        onClick={() => handleSort("baseSum")}
+                        className={`${styles.sortable} ${damageColumnClass("base")}`}
+                    >
+                        {DAMAGE_LABELS.base} {getSortIcon("baseSum")}
+                    </th>
+                    <th
+                        onClick={() => handleSort("weakenedSum")}
+                        className={`${styles.sortable} ${damageColumnClass("weakened")}`}
+                    >
+                        {DAMAGE_LABELS.weakened} {getSortIcon("weakenedSum")}
+                    </th>
+                    <th
+                        onClick={() => handleSort("critSum")}
+                        className={`${styles.sortable} ${damageColumnClass("crit")}`}
+                    >
+                        {DAMAGE_LABELS.crit} {getSortIcon("critSum")}
+                    </th>
+                    <th onClick={() => handleSort("percentChange")} className={styles.sortable}>
+                        Δ % {getSortIcon("percentChange")}
+                    </th>
                 </tr>
                 </thead>
                 <tbody>
-                {rows.map(({ key, label, stats, damage, className }) => (
-                    <tr key={key} className={className}>
-                        <th className={styles.labelCell}>{label}</th>
-                        <td>{formatNumber(stats?.hp)}</td>
-                        <td>{formatNumber(stats?.atk)}</td>
-                        <td>{formatNumber(stats?.def)}</td>
-                        <td>{formatNumber(stats?.critRate, 1)}%</td>
-                        <td>{formatNumber(stats?.critDmg, 1)}%</td>
-                        <td>{formatNumber(stats?.dmgBoost)}%</td>
-                        <td>{formatNumber(stats?.oathStrength)}%</td>
-                        <td>{formatNumber(stats?.oathRecoveryBoost)}%</td>
-                        <td>{formatNumber(stats?.expeditedEnergyBoost)}%</td>
+                {/* Pinned: Before */}
+                {beforeStats && (
+                    <tr className={styles.beforeRow}>
+                        <th className={styles.labelCell}>Before (Current)</th>
+                        <td>{formatNumber(beforeStats.hp)}</td>
+                        <td>{formatNumber(beforeStats.atk)}</td>
+                        <td>{formatNumber(beforeStats.def)}</td>
+                        <td>{formatNumber(beforeStats.critRate, 1)}%</td>
+                        <td>{formatNumber(beforeStats.critDmg, 1)}%</td>
+                        <td>{formatNumber(beforeStats.dmgBoost)}%</td>
+                        <td>{formatNumber(beforeStats.oathStrength)}%</td>
+                        <td>{formatNumber(beforeStats.oathRecoveryBoost)}%</td>
+                        <td>{formatNumber(beforeStats.expeditedEnergyBoost)}%</td>
                         <td className={damageColumnClass("base")}>
-                            {formatDamage(getDamage(damage, "base"))}
+                            {formatDamage(getDamage(beforeDamage, "base"))}
                         </td>
                         <td className={damageColumnClass("weakened")}>
-                            {formatDamage(getDamage(damage, "weakened"))}
+                            {formatDamage(getDamage(beforeDamage, "weakened"))}
                         </td>
                         <td className={damageColumnClass("crit")}>
-                            {formatDamage(getDamage(damage, "crit"))}
+                            {formatDamage(getDamage(beforeDamage, "crit"))}
                         </td>
-                        <td className={percentClass}>
-                            {key === "after" && percentChange !== null
-                                ? `${percentChange >= 0 ? "+" : ""}${percentChange.toFixed(2)}%`
-                                : "—"}
-                        </td>
+                        <td>—</td>
                     </tr>
-                ))}
+                )}
+
+                {/* Сортируемые Build #N */}
+                {pageRows.map((row) => {
+                    const isActive = row.idx === activeIndex;
+                    const damageVal = getDamage(row.damage, defaultSortKey);
+                    const percent =
+                        beforeDamageValue > 0
+                            ? ((damageVal - beforeDamageValue) / beforeDamageValue) * 100
+                            : null;
+                    const percentClass =
+                        percent === null
+                            ? ""
+                            : percent >= 0
+                                ? styles.damagePositive
+                                : styles.damageNegative;
+
+                    return (
+                        <tr
+                            key={row.idx}
+                            className={`${styles.buildRow} ${isActive ? styles.activeRow : ""}`}
+                            onClick={() => onSelectBuild(row.idx)}
+                        >
+                            <th className={styles.labelCell}>{row.name}</th>
+                            <td>{formatNumber(row.stats?.hp)}</td>
+                            <td>{formatNumber(row.stats?.atk)}</td>
+                            <td>{formatNumber(row.stats?.def)}</td>
+                            <td>{formatNumber(row.stats?.critRate, 1)}%</td>
+                            <td>{formatNumber(row.stats?.critDmg, 1)}%</td>
+                            <td>{formatNumber(row.stats?.dmgBoost)}%</td>
+                            <td>{formatNumber(row.stats?.oathStrength)}%</td>
+                            <td>{formatNumber(row.stats?.oathRecoveryBoost)}%</td>
+                            <td>{formatNumber(row.stats?.expeditedEnergyBoost)}%</td>
+                            <td className={damageColumnClass("base")}>
+                                {formatDamage(getDamage(row.damage, "base"))}
+                            </td>
+                            <td className={damageColumnClass("weakened")}>
+                                {formatDamage(getDamage(row.damage, "weakened"))}
+                            </td>
+                            <td className={damageColumnClass("crit")}>
+                                {formatDamage(getDamage(row.damage, "crit"))}
+                            </td>
+                            <td className={percentClass}>
+                                {percent !== null
+                                    ? `${percent >= 0 ? "+" : ""}${percent.toFixed(2)}%`
+                                    : "—"}
+                            </td>
+                        </tr>
+                    );
+                })}
                 </tbody>
             </table>
+
+            {/* Пагинация */}
+            {totalPages > 1 && (
+                <div className={styles.pagination}>
+                    <button
+                        className={styles.pageButton}
+                        onClick={() => setPage((p) => Math.max(0, p - 1))}
+                        disabled={safePage === 0}
+                    >
+                        ← Prev
+                    </button>
+                    <span className={styles.pageInfo}>
+                        Page {safePage + 1} of {totalPages}
+                    </span>
+                    <button
+                        className={styles.pageButton}
+                        onClick={() => setPage((p) => Math.min(totalPages - 1, p + 1))}
+                        disabled={safePage >= totalPages - 1}
+                    >
+                        Next →
+                    </button>
+                </div>
+            )}
         </div>
     );
 }

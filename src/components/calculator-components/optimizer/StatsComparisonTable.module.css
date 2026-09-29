@@ -66,3 +66,59 @@
     font-weight: 600;
     font-variant-numeric: tabular-nums;
 }
+
+.buildRow {
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.buildRow:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.activeRow {
+    background: rgba(74, 222, 128, 0.15);
+    outline: 1px solid rgba(74, 222, 128, 0.4);
+}
+
+.sortable {
+    cursor: pointer;
+    user-select: none;
+}
+
+.sortable:hover {
+    color: var(--text-primary, #fff);
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 16px;
+    padding: 12px;
+}
+
+.pageButton {
+    padding: 8px 16px;
+    background: var(--bg-secondary, #1c1c1c);
+    color: var(--text-primary, #fff);
+    border: 1px solid var(--border-color, #333);
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.pageButton:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.pageButton:hover:not(:disabled) {
+    background: var(--bg-tertiary, #2a2a2a);
+}
+
+.pageInfo {
+    color: var(--text-secondary, #aaa);
+    font-size: 14px;
+}

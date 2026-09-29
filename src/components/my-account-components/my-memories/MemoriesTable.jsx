@@ -1,63 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./MemoriesTable.module.css";
 import { getImageUrl } from "@hooks";
 import { rankOptions, formatOptionLabel } from "@data";
-import { getTableSort, saveTableSort } from "@localstorage";
-
-// ===== утилиты (не компоненты) =====
-const sortTableData = (data, sortConfig) => {
-    if (!sortConfig || !sortConfig.key) return data;
-
-    const { key, direction } = sortConfig;
-    const sorted = [...data];
-
-    sorted.sort((a, b) => {
-        if (key === "level") {
-            if (a.level !== b.level) {
-                return direction === "asc" ? a.level - b.level : b.level - a.level;
-            }
-            const aAscend = a.isAscended ? 1 : 0;
-            const bAscend = b.isAscended ? 1 : 0;
-            return direction === "asc" ? aAscend - bAscend : bAscend - aAscend;
-        }
-
-        if (key === "rank") {
-            if (a.rank !== b.rank) {
-                return direction === "asc" ? a.rank - b.rank : b.rank - a.rank;
-            }
-            const aAscend = a.isAscended ? 1 : 0;
-            const bAscend = b.isAscended ? 1 : 0;
-            return direction === "asc" ? aAscend - bAscend : bAscend - aAscend;
-        }
-
-        let aValue, bValue;
-        if (
-            [
-                "hp", "atk", "def", "critRate", "critDmg", "dmgBoost",
-                "oathStrength", "oathRecoveryBoost", "expeditedEnergyBoost",
-            ].includes(key)
-        ) {
-            aValue = a.stats?.[key] ?? 0;
-            bValue = b.stats?.[key] ?? 0;
-        } else {
-            aValue = a[key];
-            bValue = b[key];
-        }
-
-        if (typeof aValue === "number" && typeof bValue === "number") {
-            return direction === "asc" ? aValue - bValue : bValue - aValue;
-        }
-        if (typeof aValue === "string" && typeof bValue === "string") {
-            return direction === "asc"
-                ? aValue.localeCompare(bValue)
-                : bValue.localeCompare(aValue);
-        }
-        return 0;
-    });
-
-    return sorted;
-};
+import { useTableSort } from "@hooks";
 
 const formatNumber = (num) => {
     if (num === undefined || num === null || isNaN(num)) return "—";
@@ -65,7 +11,6 @@ const formatNumber = (num) => {
     return num.toFixed(2);
 };
 
-// ===== компонент =====
 function MemoriesTable({
                            data = [],
                            storageKey = "memoriesTable",
@@ -90,30 +35,12 @@ function MemoriesTable({
                            showOathRecoveryBoost = true,
                            showExpeditedEnergyBoost = true,
                        }) {
-    const [tableSort, setTableSort] = useState(() => {
-        const saved = getTableSort(storageKey);
-        return saved && saved.key ? saved : { key: null, direction: "desc" };
+    const { sortConfig, handleSort, getSortIcon, sortData } = useTableSort({
+        key: null,
+        direction: "desc",
     });
 
-    useEffect(() => {
-        saveTableSort(tableSort, storageKey);
-    }, [tableSort, storageKey]);
-
-    const handleSort = (key) => {
-        setTableSort((prev) => {
-            if (prev.key === key) {
-                return { key, direction: prev.direction === "asc" ? "desc" : "asc" };
-            }
-            return { key, direction: "desc" };
-        });
-    };
-
-    const getSortIcon = (key) => {
-        if (tableSort.key !== key) return "↕";
-        return tableSort.direction === "asc" ? "▲" : "▼";
-    };
-
-    const sortedData = sortTableData(data, tableSort);
+    const sortedData = sortData(data);
 
     const visibleCount = [
         showImage, showName, showLevel, showRank, showStella, showRarity,
@@ -262,10 +189,10 @@ function MemoriesTable({
                             )}
                             {showLevel && (
                                 <td>
-                    <span className={styles.levelBadge}>
-                      {card.level}
-                        {card.isAscended && <span className={styles.ascendMark}>+</span>}
-                    </span>
+                                    <span className={styles.levelBadge}>
+                                        {card.level}
+                                        {card.isAscended && <span className={styles.ascendMark}>+</span>}
+                                    </span>
                                 </td>
                             )}
                             {showRank && (
@@ -320,9 +247,9 @@ function MemoriesTable({
                             )}
                             {showProtocoreLevels && (
                                 <td>
-                    <span className={styles.protocoreLevel}>
-                      {card.protocoreLevels}
-                    </span>
+                                    <span className={styles.protocoreLevel}>
+                                        {card.protocoreLevels}
+                                    </span>
                                 </td>
                             )}
                             {showHp && (

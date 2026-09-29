@@ -206,8 +206,33 @@ const pickBestPairForSlot = ({
 };
 
 // ===== Главная функция оптимизации =====
-export const optimizeTeam = ({ cards, allProtocores, targets, context }) => {
-    const damageType = detectDamageType(targets.delta);
+export const optimizeTeam = ({
+                                 cards,
+                                 allProtocores,
+                                 targets,
+                                 context,
+                                 damageTypeOverride,   // ← добавить
+                                 randomizeSeed,        // ← добавить
+                             }) => {
+    const damageType = damageTypeOverride || detectDamageType(targets.delta);
+
+    // Если randomizeSeed — перемешиваем пулы перед greedy
+    if (randomizeSeed !== undefined) {
+        const shuffle = (arr) => {
+            const copy = [...arr];
+            let seed = randomizeSeed;
+            const rand = () => {
+                seed = (seed * 9301 + 49297) % 233280;
+                return seed / 233280;
+            };
+            for (let i = copy.length - 1; i > 0; i--) {
+                const j = Math.floor(rand() * (i + 1));
+                [copy[i], copy[j]] = [copy[j], copy[i]];
+            }
+            return copy;
+        };
+        allProtocores = shuffle(allProtocores);
+    }
     const getBaseStatsFn = createBaseStatsCache();
 
     const { alpha, beta, gamma, delta } = splitProtocoresByType(allProtocores);
