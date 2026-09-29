@@ -49,10 +49,10 @@ function StatsComparisonTable({
         return null;
     })();
 
-    const { sortConfig, handleSort, getSortIcon, sortData } = useTableSort({
-        key: initialSortKey,
-        direction: "desc",
-    });
+    const { sortConfig, handleSort, getSortIcon, sortData } = useTableSort(
+        { key: initialSortKey, direction: "desc" },
+        // storageKey не передаём — не сохраняем
+    );
 
     const [page, setPage] = useState(0);
 

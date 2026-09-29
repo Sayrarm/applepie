@@ -35,10 +35,10 @@ function MemoriesTable({
                            showOathRecoveryBoost = true,
                            showExpeditedEnergyBoost = true,
                        }) {
-    const { sortConfig, handleSort, getSortIcon, sortData } = useTableSort({
-        key: null,
-        direction: "desc",
-    });
+    const { sortConfig, handleSort, getSortIcon, sortData } = useTableSort(
+        { key: null, direction: "desc" },
+        storageKey,   // ← добавить
+    );
 
     const sortedData = sortData(data);
 

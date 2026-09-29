@@ -1,8 +1,18 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { sortTableData } from "./tableSort.js";
+import { getTableSort, saveTableSort } from "@localstorage";
 
-export const useTableSort = (defaultSort = { key: null, direction: "desc" }) => {
-    const [sortConfig, setSortConfig] = useState(defaultSort);
+export const useTableSort = (defaultSort = { key: null, direction: "desc" }, storageKey) => {
+    const [sortConfig, setSortConfig] = useState(() => {
+        if (!storageKey) return defaultSort;
+        const saved = getTableSort(storageKey);
+        return saved && saved.key ? saved : defaultSort;
+    });
+
+    useEffect(() => {
+        if (!storageKey) return;
+        saveTableSort(sortConfig, storageKey);
+    }, [sortConfig, storageKey]);
 
     const handleSort = useCallback((key) => {
         setSortConfig((prev) => {
