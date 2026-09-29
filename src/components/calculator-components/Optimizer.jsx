@@ -8,7 +8,7 @@ import {
     RenderCardSlot,
     ProtocoreBlock,
     StatsTable,
-    KitCombatTable
+    KitCombatTable, MemoriesTable
 } from "@components";
 import {
     clearOptimizerData,
@@ -509,7 +509,19 @@ function Optimizer() {
                                 <h3 className={styles.statsColumnTitle}>
                                     Before (Current Protocores)
                                 </h3>
-                                <StatsTable stats={oldTeamStats} />
+                                <MemoriesTable
+                                    data={[{ id: "before", stats: oldTeamStats }]}
+                                    storageKey="optimizer-before"
+                                    showImage={false}
+                                    showName={false}
+                                    showLevel={false}
+                                    showRank={false}
+                                    showStella={false}
+                                    showRarity={false}
+                                    showPlacement={false}
+                                    showTalent={false}
+                                    showProtocoreLevels={false}
+                                />
                             </div>
                         )}
                         {teamStats && (
@@ -517,7 +529,19 @@ function Optimizer() {
                                 <h3 className={styles.statsColumnTitle}>
                                     After (Optimized Protocores)
                                 </h3>
-                                <StatsTable stats={teamStats} />
+                                <MemoriesTable
+                                    data={[{ id: "after", stats: teamStats }]}
+                                    storageKey="optimizer-after"
+                                    showImage={false}
+                                    showName={false}
+                                    showLevel={false}
+                                    showRank={false}
+                                    showStella={false}
+                                    showRarity={false}
+                                    showPlacement={false}
+                                    showTalent={false}
+                                    showProtocoreLevels={false}
+                                />
                             </div>
                         )}
                     </div>
