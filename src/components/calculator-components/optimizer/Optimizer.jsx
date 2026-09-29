@@ -1,5 +1,5 @@
 import Select from "react-select";
-import { useState, useRef, useEffect } from "react";
+import {useState, useRef, useEffect, useMemo} from "react";
 import styles from "./Optimizer.module.css";
 import {
     ChooseCompanion,
@@ -7,7 +7,6 @@ import {
     ModalChooseCard,
     RenderCardSlot,
     ProtocoreBlock,
-    KitCombatTable,
     StatsComparisonTable
 } from "@components";
 import {
@@ -26,17 +25,17 @@ import {
     calculateTeamStats,
     computeKitDamage,
     detectDamageType,
-    buildOptimizationResults
+    buildOptimizationResults, memoriesData
 } from "@data";
-import { useSolarPair } from "@hooks";
+import {getImageUrl, useSolarPair} from "@hooks";
 
 const CARD_SLOTS = [
-    { id: "solar1", placement: "solar", index: 0 },
-    { id: "solar2", placement: "solar", index: 1 },
-    { id: "lunar1", placement: "lunar", index: 0 },
-    { id: "lunar2", placement: "lunar", index: 1 },
-    { id: "lunar3", placement: "lunar", index: 2 },
-    { id: "lunar4", placement: "lunar", index: 3 },
+    {id: "solar1", placement: "solar", index: 0},
+    {id: "solar2", placement: "solar", index: 1},
+    {id: "lunar1", placement: "lunar", index: 0},
+    {id: "lunar2", placement: "lunar", index: 1},
+    {id: "lunar3", placement: "lunar", index: 2},
+    {id: "lunar4", placement: "lunar", index: 3},
 ];
 
 function Optimizer() {
@@ -56,31 +55,31 @@ function Optimizer() {
     }, [data]);
 
     const betaProtocoreOptions = [
-        { value: "Oath Recovery Boost", label: "Oath Recovery Boost" },
-        { value: "Oath Strength", label: "Oath Strength" },
-        { value: "Expedited Energy Boost", label: "Expedited Energy Boost" },
-        { value: "ATK Bonus", label: "ATK Bonus" },
-        { value: "HP Bonus", label: "HP Bonus" },
-        { value: "DEF Bonus", label: "DEF Bonus" },
+        {value: "Oath Recovery Boost", label: "Oath Recovery Boost"},
+        {value: "Oath Strength", label: "Oath Strength"},
+        {value: "Expedited Energy Boost", label: "Expedited Energy Boost"},
+        {value: "ATK Bonus", label: "ATK Bonus"},
+        {value: "HP Bonus", label: "HP Bonus"},
+        {value: "DEF Bonus", label: "DEF Bonus"},
     ];
 
     const deltaProtocoreOptions = [
-        { value: "CRIT Rate", label: "CRIT Rate" },
-        { value: "CRIT DMG", label: "CRIT DMG" },
-        { value: "DMG Boost to Weakened", label: "DMG Boost to Weakened" },
-        { value: "ATK Bonus", label: "ATK Bonus" },
-        { value: "HP Bonus", label: "HP Bonus" },
-        { value: "DEF Bonus", label: "DEF Bonus" },
+        {value: "CRIT Rate", label: "CRIT Rate"},
+        {value: "CRIT DMG", label: "CRIT DMG"},
+        {value: "DMG Boost to Weakened", label: "DMG Boost to Weakened"},
+        {value: "ATK Bonus", label: "ATK Bonus"},
+        {value: "HP Bonus", label: "HP Bonus"},
+        {value: "DEF Bonus", label: "DEF Bonus"},
     ];
 
     const buildOldResults = (cards) => {
         const result = {
-            solar1: { alpha: null, beta: null },
-            solar2: { alpha: null, beta: null },
-            lunar1: { gamma: null, delta: null },
-            lunar2: { gamma: null, delta: null },
-            lunar3: { gamma: null, delta: null },
-            lunar4: { gamma: null, delta: null },
+            solar1: {alpha: null, beta: null},
+            solar2: {alpha: null, beta: null},
+            lunar1: {gamma: null, delta: null},
+            lunar2: {gamma: null, delta: null},
+            lunar3: {gamma: null, delta: null},
+            lunar4: {gamma: null, delta: null},
         };
         Object.entries(cards).forEach(([slotId, card]) => {
             if (!card) return;
@@ -102,7 +101,7 @@ function Optimizer() {
     };
 
     const solarCards = [data.cards.solar1, data.cards.solar2];
-    const { teamDmgBonus } = useSolarPair(solarCards);
+    const {teamDmgBonus} = useSolarPair(solarCards);
 
     const findSlotId = (placement, index) =>
         CARD_SLOTS.find(
@@ -114,22 +113,22 @@ function Optimizer() {
         if (!slotId) return;
         setData((prev) => ({
             ...prev,
-            cards: { ...prev.cards, [slotId]: card },
+            cards: {...prev.cards, [slotId]: card},
         }));
     };
 
     const handleSelectCompanion = (companion) =>
-        setData((prev) => ({ ...prev, selectedCompanion: companion }));
+        setData((prev) => ({...prev, selectedCompanion: companion}));
 
     const handleSelectWeapon = (weapon) =>
-        setData((prev) => ({ ...prev, selectedWeapon: weapon }));
+        setData((prev) => ({...prev, selectedWeapon: weapon}));
 
     const handleBetaChange1 = (option) =>
-        setData((prev) => ({ ...prev, betaProtocore_1: option }));
+        setData((prev) => ({...prev, betaProtocore_1: option}));
     const handleBetaChange2 = (option) =>
-        setData((prev) => ({ ...prev, betaProtocore_2: option }));
+        setData((prev) => ({...prev, betaProtocore_2: option}));
     const handleDeltaChange = (option) =>
-        setData((prev) => ({ ...prev, deltaProtocore: option }));
+        setData((prev) => ({...prev, deltaProtocore: option}));
 
     const clearAll = () => {
         if (!window.confirm("Are you sure you want to clear all settings?"))
@@ -158,6 +157,23 @@ function Optimizer() {
             return;
         }
 
+        // ⚠️ Фильтрация исключённых
+        const excludedProtocoreIds = new Set();
+        (data.excludedCards || []).forEach((opt) => {
+            const cardId = opt.value;
+            const protocores = getCardProtocores(cardId);
+            protocores.forEach((p) => excludedProtocoreIds.add(p.id));
+        });
+
+        const availableProtocores = allProtocores.filter(
+            (p) => !excludedProtocoreIds.has(p.id),
+        );
+
+        if (availableProtocores.length === 0) {
+            alert("All protocores are excluded. Remove some exclusions.");
+            return;
+        }
+
         setIsOptimizing(true);
         setProgressText("Starting...");
 
@@ -177,9 +193,9 @@ function Optimizer() {
                     teamDmgBonus,
                 };
 
-                const { builds: newBuilds } = buildOptimizationResults({
+                const {builds: newBuilds} = buildOptimizationResults({
                     cards: data.cards,
-                    allProtocores,
+                    allProtocores: availableProtocores,
                     targets,
                     context,
                     onProgress: (cur, total) =>
@@ -229,11 +245,11 @@ function Optimizer() {
                     ? Object.values(slotResult).filter(Boolean)
                     : [];
 
-                newProtocoresBySlot.push({ cardId: card.id, protocores });
+                newProtocoresBySlot.push({cardId: card.id, protocores});
                 protocores.forEach((p) => allNewIds.push(p.id));
             });
 
-            newProtocoresBySlot.forEach(({ cardId }) => {
+            newProtocoresBySlot.forEach(({cardId}) => {
                 saveCardProtocores(cardId, []);
             });
 
@@ -241,7 +257,7 @@ function Optimizer() {
                 removeProtocoreFromAllCards(id);
             });
 
-            newProtocoresBySlot.forEach(({ cardId, protocores }) => {
+            newProtocoresBySlot.forEach(({cardId, protocores}) => {
                 saveCardProtocores(cardId, protocores);
             });
 
@@ -287,12 +303,58 @@ function Optimizer() {
 
     const getCardData = (card) => {
         if (!card) return null;
-        return { level: 1, rank: 0, isAscended: false, protocores: [] };
+        return {level: 1, rank: 0, isAscended: false, protocores: []};
     };
 
     const activeBuild = builds[activeBuildIndex] || null;
     const activeResults = activeBuild?.results || null;
-    const activeTeamStats = activeBuild?.teamStats || null;
+
+    // Карточки, у которых сейчас есть протокоры
+    const cardsWithProtocores = useMemo(() => {
+        return memoriesData
+            .map((card) => ({
+                card,
+                protocores: getCardProtocores(card.id),
+            }))
+            .filter(({protocores}) => protocores && protocores.length > 0);
+    }, []);
+
+    const formatCardOption = (option, { context }) => {
+        const isValue = context === "value";
+
+        return (
+            <div className={styles.cardOption}>
+                <img
+                    src={getImageUrl(option.imageSmall)}
+                    alt={option.label}
+                    className={styles.cardOptionImage}
+                    style={{
+                        width: isValue ? 24 : 32,
+                        height: isValue ? 24 : 32,
+                    }}
+                />
+                {!isValue && (
+                    <span className={styles.cardOptionLabel}>{option.label}</span>
+                )}
+            </div>
+        );
+    };
+
+    const exclusionOptions = useMemo(
+        () =>
+            cardsWithProtocores
+                .map(({ card }) => ({
+                    value: card.id,
+                    label: card.name,
+                    imageSmall: card.imageSmall,
+                }))
+                .sort((a, b) => a.label.localeCompare(b.label)),
+        [cardsWithProtocores],
+    );
+
+    const handleExcludedCardsChange = (options) => {
+        setData((prev) => ({...prev, excludedCards: options || []}));
+    };
 
     return (
         <section className={styles.container}>
@@ -309,6 +371,21 @@ function Optimizer() {
                 </div>
 
                 <div className={styles.selectMenu}>
+                    <div className={styles.protoSelectContainer}>
+                        Exclude cards:
+                        <div className={styles.selectContainer}>
+                            <Select
+                                isMulti
+                                options={exclusionOptions}
+                                value={data.excludedCards || []}
+                                onChange={handleExcludedCardsChange}
+                                className={styles.select}
+                                placeholder="Select cards to exclude their protocores"
+                                isSearchable
+                                formatOptionLabel={formatCardOption}
+                            />
+                        </div>
+                    </div>
                     <div className={styles.protoSelectContainer}>
                         Choose Protocores:
                         <div className={styles.selectContainer}>
@@ -348,6 +425,7 @@ function Optimizer() {
                             />
                         </div>
                     </div>
+
                 </div>
             </nav>
 
@@ -429,14 +507,6 @@ function Optimizer() {
                     />
                 )}
 
-                {activeTeamStats && data.selectedCompanion && data.selectedWeapon && (
-                    <KitCombatTable
-                        stats={activeTeamStats}
-                        selectedCompanion={data.selectedCompanion}
-                        selectedMCWeapon={data.selectedWeapon}
-                        teamDmgBonus={teamDmgBonus}
-                    />
-                )}
             </div>
 
             <ModalChooseCard

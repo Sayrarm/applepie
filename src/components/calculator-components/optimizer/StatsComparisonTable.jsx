@@ -49,7 +49,7 @@ function StatsComparisonTable({
         return null;
     })();
 
-    const { sortConfig, handleSort, getSortIcon, sortData } = useTableSort(
+    const { handleSort, getSortIcon, sortData } = useTableSort(
         { key: initialSortKey, direction: "desc" },
         // storageKey не передаём — не сохраняем
     );
@@ -161,7 +161,7 @@ function StatsComparisonTable({
                 {/* Pinned: Before */}
                 {beforeStats && (
                     <tr className={styles.beforeRow}>
-                        <th className={styles.labelCell}>Before (Current)</th>
+                        <th className={styles.labelCell}>Current</th>
                         <td>{formatNumber(beforeStats.hp)}</td>
                         <td>{formatNumber(beforeStats.atk)}</td>
                         <td>{formatNumber(beforeStats.def)}</td>

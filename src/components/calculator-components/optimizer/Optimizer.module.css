@@ -258,6 +258,28 @@
     font-variant-numeric: tabular-nums;
 }
 
+.cardOption {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cardOptionImage {
+    width: 38px;
+    height: 38px;
+    border-radius: 50px;
+    border: 2px solid gray;
+    object-fit: cover;
+    object-position: 20% 30%;
+}
+
+.cardOptionLabel {
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 /**************************************************/
 
 @media screen and (max-width: 1180px) {
