@@ -6,3 +6,5 @@ export { useResources } from "./useResources.js";
 export { useFarmGoals } from "./useFarmGoalTracker.js";
 export { useScreenshot } from "./useScreenshot.js";
 export { useSolarPair } from "./useSolarPair.js";
+export { sortTableData } from "./tableSort.js";
+export { useTableSort } from "./useTableSort.js";

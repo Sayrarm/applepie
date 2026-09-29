@@ -1,5 +1,5 @@
 import Select from "react-select";
-import {useState, useRef, useEffect} from "react";
+import {useState, useRef, useEffect, useMemo} from "react";
 import styles from "./Optimizer.module.css";
 import {
     ChooseCompanion,
@@ -7,8 +7,7 @@ import {
     ModalChooseCard,
     RenderCardSlot,
     ProtocoreBlock,
-    StatsTable,
-    KitCombatTable
+    StatsComparisonTable
 } from "@components";
 import {
     clearOptimizerData,
@@ -23,29 +22,31 @@ import {
     findCardForProtocore,
 } from "@localstorage";
 import {
-    optimizeTeam,
     calculateTeamStats,
     computeKitDamage,
     detectDamageType,
+    buildOptimizationResults, memoriesData
 } from "@data";
-import { useSolarPair } from "@hooks";
+import {getImageUrl, useSolarPair} from "@hooks";
 
 const CARD_SLOTS = [
-    { id: "solar1", placement: "solar", index: 0 },
-    { id: "solar2", placement: "solar", index: 1 },
-    { id: "lunar1", placement: "lunar", index: 0 },
-    { id: "lunar2", placement: "lunar", index: 1 },
-    { id: "lunar3", placement: "lunar", index: 2 },
-    { id: "lunar4", placement: "lunar", index: 3 },
+    {id: "solar1", placement: "solar", index: 0},
+    {id: "solar2", placement: "solar", index: 1},
+    {id: "lunar1", placement: "lunar", index: 0},
+    {id: "lunar2", placement: "lunar", index: 1},
+    {id: "lunar3", placement: "lunar", index: 2},
+    {id: "lunar4", placement: "lunar", index: 3},
 ];
 
 function Optimizer() {
     const [data, setData] = useState(() => getOptimizerData());
-    const [results, setResults] = useState(null);
-    const [teamStats, setTeamStats] = useState(null);
-    const [isOptimizing, setIsOptimizing] = useState(false);
+    const [builds, setBuilds] = useState([]);
+    const [activeBuildIndex, setActiveBuildIndex] = useState(0);
     const [oldTeamStats, setOldTeamStats] = useState(null);
-    const [damageComparison, setDamageComparison] = useState(null);
+    const [oldDamageData, setOldDamageData] = useState(null);
+    const [damageType, setDamageType] = useState(null);
+    const [isOptimizing, setIsOptimizing] = useState(false);
+    const [progressText, setProgressText] = useState("");
     const [isSending, setIsSending] = useState(false);
     const modalChooseCardRef = useRef();
 
@@ -54,53 +55,36 @@ function Optimizer() {
     }, [data]);
 
     const betaProtocoreOptions = [
-        { value: "Oath Recovery Boost", label: "Oath Recovery Boost" },
-        { value: "Oath Strength", label: "Oath Strength" },
-        { value: "Expedited Energy Boost", label: "Expedited Energy Boost" },
-        { value: "ATK Bonus", label: "ATK Bonus" },
-        { value: "HP Bonus", label: "HP Bonus" },
-        { value: "DEF Bonus", label: "DEF Bonus" },
+        {value: "Oath Recovery Boost", label: "Oath Recovery Boost"},
+        {value: "Oath Strength", label: "Oath Strength"},
+        {value: "Expedited Energy Boost", label: "Expedited Energy Boost"},
+        {value: "ATK Bonus", label: "ATK Bonus"},
+        {value: "HP Bonus", label: "HP Bonus"},
+        {value: "DEF Bonus", label: "DEF Bonus"},
     ];
 
     const deltaProtocoreOptions = [
-        { value: "CRIT Rate", label: "CRIT Rate" },
-        { value: "CRIT DMG", label: "CRIT DMG" },
-        { value: "DMG Boost to Weakened", label: "DMG Boost to Weakened" },
-        { value: "ATK Bonus", label: "ATK Bonus" },
-        { value: "HP Bonus", label: "HP Bonus" },
-        { value: "DEF Bonus", label: "DEF Bonus" },
+        {value: "CRIT Rate", label: "CRIT Rate"},
+        {value: "CRIT DMG", label: "CRIT DMG"},
+        {value: "DMG Boost to Weakened", label: "DMG Boost to Weakened"},
+        {value: "ATK Bonus", label: "ATK Bonus"},
+        {value: "HP Bonus", label: "HP Bonus"},
+        {value: "DEF Bonus", label: "DEF Bonus"},
     ];
-
-    {/*
-    const subStat1Options = [
-        { value: "HP", label: "HP" },
-        { value: "ATK", label: "ATK" },
-        { value: "DEF", label: "DEF" },
-    ];
-
-    const subStat2Options = [
-        { value: "CRIT Rate", label: "CRIT Rate" },
-        { value: "CRIT DMG", label: "CRIT DMG" },
-        { value: "Oath Strength", label: "Oath Strength" },
-        { value: "DMG Boost to Weakened", label: "DMG Boost to Weakened" },
-    ];
-    */}
 
     const buildOldResults = (cards) => {
         const result = {
-            solar1: { alpha: null, beta: null },
-            solar2: { alpha: null, beta: null },
-            lunar1: { gamma: null, delta: null },
-            lunar2: { gamma: null, delta: null },
-            lunar3: { gamma: null, delta: null },
-            lunar4: { gamma: null, delta: null },
+            solar1: {alpha: null, beta: null},
+            solar2: {alpha: null, beta: null},
+            lunar1: {gamma: null, delta: null},
+            lunar2: {gamma: null, delta: null},
+            lunar3: {gamma: null, delta: null},
+            lunar4: {gamma: null, delta: null},
         };
-
         Object.entries(cards).forEach(([slotId, card]) => {
             if (!card) return;
             const protocores = getCardProtocores(card.id);
             if (!protocores || protocores.length === 0) return;
-
             protocores.forEach((p) => {
                 if (slotId.startsWith("solar")) {
                     if (p.type === "alpha" || p.type === "beta") {
@@ -113,12 +97,11 @@ function Optimizer() {
                 }
             });
         });
-
         return result;
     };
 
     const solarCards = [data.cards.solar1, data.cards.solar2];
-    const { teamDmgBonus } = useSolarPair(solarCards);
+    const {teamDmgBonus} = useSolarPair(solarCards);
 
     const findSlotId = (placement, index) =>
         CARD_SLOTS.find(
@@ -130,38 +113,35 @@ function Optimizer() {
         if (!slotId) return;
         setData((prev) => ({
             ...prev,
-            cards: { ...prev.cards, [slotId]: card },
+            cards: {...prev.cards, [slotId]: card},
         }));
     };
 
     const handleSelectCompanion = (companion) =>
-        setData((prev) => ({ ...prev, selectedCompanion: companion }));
+        setData((prev) => ({...prev, selectedCompanion: companion}));
 
     const handleSelectWeapon = (weapon) =>
-        setData((prev) => ({ ...prev, selectedWeapon: weapon }));
+        setData((prev) => ({...prev, selectedWeapon: weapon}));
 
     const handleBetaChange1 = (option) =>
-        setData((prev) => ({ ...prev, betaProtocore_1: option }));
+        setData((prev) => ({...prev, betaProtocore_1: option}));
     const handleBetaChange2 = (option) =>
-        setData((prev) => ({ ...prev, betaProtocore_2: option }));
-    const handleDeltaChange = (option) =>
-        setData((prev) => ({ ...prev, deltaProtocore: option }));
-    {/*
-    const handleSubStat1Change = (option) =>
-        setData((prev) => ({ ...prev, subStat1: option }));
-    const handleSubStat2Change = (option) =>
-        setData((prev) => ({ ...prev, subStat2: option }));
-    */}
+        setData((prev) => ({...prev, betaProtocore_2: option}));
+    const handleDeltaChange1 = (option) =>
+        setData((prev) => ({ ...prev, deltaProtocore_1: option }));
+    const handleDeltaChange2 = (option) =>
+        setData((prev) => ({ ...prev, deltaProtocore_2: option }));
 
     const clearAll = () => {
         if (!window.confirm("Are you sure you want to clear all settings?"))
             return;
         clearOptimizerData();
         setData(getOptimizerData());
-        setResults(null);
-        setTeamStats(null);
+        setBuilds([]);
+        setActiveBuildIndex(0);
         setOldTeamStats(null);
-        setDamageComparison(null);
+        setOldDamageData(null);
+        setDamageType(null);
     };
 
     const startOptimization = () => {
@@ -179,15 +159,34 @@ function Optimizer() {
             return;
         }
 
-        setIsOptimizing(true);
+        // ⚠️ Фильтрация исключённых
+        const excludedProtocoreIds = new Set();
+        (data.excludedCards || []).forEach((opt) => {
+            const cardId = opt.value;
+            const protocores = getCardProtocores(cardId);
+            protocores.forEach((p) => excludedProtocoreIds.add(p.id));
+        });
 
-        // Даём React отрисовать индикатор, потом запускаем тяжёлый расчёт
+        const availableProtocores = allProtocores.filter(
+            (p) => !excludedProtocoreIds.has(p.id),
+        );
+
+        if (availableProtocores.length === 0) {
+            alert("All protocores are excluded. Remove some exclusions.");
+            return;
+        }
+
+        setIsOptimizing(true);
+        setProgressText("Starting...");
+
         setTimeout(() => {
             try {
                 const targets = {
                     beta1: data.betaProtocore_1?.value,
                     beta2: data.betaProtocore_2?.value,
-                    delta: data.deltaProtocore?.value,
+                    delta: data.deltaProtocore_1?.value,        // ← для обратной совместимости
+                    delta1: data.deltaProtocore_1?.value,
+                    delta2: data.deltaProtocore_2?.value,
                     subStat1: data.subStat1?.value,
                     subStat2: data.subStat2?.value,
                 };
@@ -198,63 +197,38 @@ function Optimizer() {
                     teamDmgBonus,
                 };
 
-                // ===== Новые протокоры =====
-                const { results: optimizationResults } = optimizeTeam({
+                const {builds: newBuilds} = buildOptimizationResults({
                     cards: data.cards,
-                    allProtocores,
+                    allProtocores: availableProtocores,
                     targets,
                     context,
+                    onProgress: (cur, total) =>
+                        setProgressText(`Building ${cur} of ${total}...`),
                 });
 
-                const newTeamStats = calculateTeamStats(
-                    data.cards,
-                    optimizationResults,
-                );
-
-                // ===== Старые протокоры =====
+                // Старая сборка
                 const oldResults = buildOldResults(data.cards);
                 const oldStats = calculateTeamStats(data.cards, oldResults);
+                const oldDamage = computeKitDamage(oldStats, context);
 
-                // ===== Сравнение урона =====
-                const damageType = detectDamageType(targets.delta);
+                const detectedType = detectDamageType(targets.delta);
 
-                const oldDamageData = computeKitDamage(oldStats, context);
-                const newDamageData = computeKitDamage(newTeamStats, context);
-
-                const pickDamage = (data) => {
-                    switch (damageType) {
-                        case "weakened":
-                            return data.weakenedSum;
-                        case "crit":
-                            return data.critSum;
-                        default:
-                            return data.baseSum;
-                    }
-                };
-
-                const oldDamage = pickDamage(oldDamageData);
-                const newDamage = pickDamage(newDamageData);
-                const percentChange = oldDamage > 0
-                    ? ((newDamage - oldDamage) / oldDamage) * 100
-                    : 0;
-
-                setResults(optimizationResults);
-                setTeamStats(newTeamStats);
+                setBuilds(newBuilds);
+                setActiveBuildIndex(0);
                 setOldTeamStats(oldStats);
-                setDamageComparison({
-                    oldDamage,
-                    newDamage,
-                    percentChange,
-                    damageType,
-                });
+                setOldDamageData(oldDamage);
+                setDamageType(detectedType);
             } finally {
                 setIsOptimizing(false);
+                setProgressText("");
             }
         }, 50);
     };
 
-    // ===== отправка в Showcase =====
     const handleSendToShowcase = () => {
+        const activeBuild = builds[activeBuildIndex];
+        if (!activeBuild) return;
+
         const confirmed = window.confirm(
             "The protocors on Memories will be replaced! Are you sure you want to send the team to Showcase?",
         );
@@ -263,7 +237,6 @@ function Optimizer() {
         setIsSending(true);
 
         try {
-            // 1. Собираем новые протокоры по слотам + все их id
             const newProtocoresBySlot = [];
             const allNewIds = [];
 
@@ -271,33 +244,27 @@ function Optimizer() {
                 const card = data.cards[slot.id];
                 if (!card) return;
 
-                const slotResult = results[slot.id];
+                const slotResult = activeBuild.results[slot.id];
                 const protocores = slotResult
                     ? Object.values(slotResult).filter(Boolean)
                     : [];
 
-                newProtocoresBySlot.push({ cardId: card.id, protocores });
+                newProtocoresBySlot.push({cardId: card.id, protocores});
                 protocores.forEach((p) => allNewIds.push(p.id));
             });
 
-            // 2. Снимаем старые протокоры с карточек новой команды
-            //    (перезаписываем пустым массивом — заменяем на новые)
-            newProtocoresBySlot.forEach(({ cardId }) => {
+            newProtocoresBySlot.forEach(({cardId}) => {
                 saveCardProtocores(cardId, []);
             });
 
-            // 3. Снимаем новые протокоры со ВСЕХ карточек, где они сейчас стоят
-            //    (чтобы не было дубликатов между карточками)
             allNewIds.forEach((id) => {
                 removeProtocoreFromAllCards(id);
             });
 
-            // 4. Ставим новые протокоры на карточки новой команды
-            newProtocoresBySlot.forEach(({ cardId, protocores }) => {
+            newProtocoresBySlot.forEach(({cardId, protocores}) => {
                 saveCardProtocores(cardId, protocores);
             });
 
-            // 5. Создаём команду в showcase_teams
             const teams = getShowcaseTeams();
 
             const getNextTeamNumber = (list) => {
@@ -327,7 +294,6 @@ function Optimizer() {
                 affinityLevel: 0,
             };
 
-            // 3. Сохраняем команду
             saveShowcaseTeams([...teams, newTeam]);
 
             alert(`"${teamName}" sent to Showcase successfully!`);
@@ -341,7 +307,57 @@ function Optimizer() {
 
     const getCardData = (card) => {
         if (!card) return null;
-        return { level: 1, rank: 0, isAscended: false, protocores: [] };
+        return {level: 1, rank: 0, isAscended: false, protocores: []};
+    };
+
+    const activeBuild = builds[activeBuildIndex] || null;
+    const activeResults = activeBuild?.results || null;
+
+    // Карточки, у которых сейчас есть протокоры
+    const cardsWithProtocores = useMemo(() => {
+        return memoriesData
+            .map((card) => ({
+                card,
+                protocores: getCardProtocores(card.id),
+            }))
+            .filter(({protocores}) => protocores && protocores.length > 0);
+    }, []);
+
+    const formatCardOption = (option, { context }) => {
+        const isValue = context === "value";
+
+        return (
+            <div className={styles.cardOption}>
+                <img
+                    src={getImageUrl(option.imageSmall)}
+                    alt={option.label}
+                    className={styles.cardOptionImage}
+                    style={{
+                        width: isValue ? 24 : 32,
+                        height: isValue ? 24 : 32,
+                    }}
+                />
+                {!isValue && (
+                    <span className={styles.cardOptionLabel}>{option.label}</span>
+                )}
+            </div>
+        );
+    };
+
+    const exclusionOptions = useMemo(
+        () =>
+            cardsWithProtocores
+                .map(({ card }) => ({
+                    value: card.id,
+                    label: card.name,
+                    imageSmall: card.imageSmall,
+                }))
+                .sort((a, b) => a.label.localeCompare(b.label)),
+        [cardsWithProtocores],
+    );
+
+    const handleExcludedCardsChange = (options) => {
+        setData((prev) => ({...prev, excludedCards: options || []}));
     };
 
     return (
@@ -360,6 +376,21 @@ function Optimizer() {
 
                 <div className={styles.selectMenu}>
                     <div className={styles.protoSelectContainer}>
+                        Exclude protocores:
+                        <div className={styles.selectContainer}>
+                            <Select
+                                isMulti
+                                options={exclusionOptions}
+                                value={data.excludedCards || []}
+                                onChange={handleExcludedCardsChange}
+                                className={styles.select}
+                                placeholder="Select cards to exclude their protocores"
+                                isSearchable
+                                formatOptionLabel={formatCardOption}
+                            />
+                        </div>
+                    </div>
+                    <div className={styles.protoSelectContainer}>
                         Choose Protocores:
                         <div className={styles.selectContainer}>
                             Beta 1:
@@ -373,7 +404,6 @@ function Optimizer() {
                                 isSearchable={false}
                             />
                         </div>
-
                         <div className={styles.selectContainer}>
                             Beta 2:
                             <Select
@@ -386,14 +416,25 @@ function Optimizer() {
                                 isSearchable={false}
                             />
                         </div>
-
                         <div className={styles.selectContainer}>
-                            Delta:
+                            Delta 1:
                             <Select
                                 placeholder="Select Delta Protocore"
                                 options={deltaProtocoreOptions}
                                 value={data.deltaProtocore}
-                                onChange={handleDeltaChange}
+                                onChange={handleDeltaChange1}
+                                className={styles.select}
+                                isClearable
+                                isSearchable={false}
+                            />
+                        </div>
+                        <div className={styles.selectContainer}>
+                            Delta 2:
+                            <Select
+                                placeholder="Select Delta Protocore"
+                                options={deltaProtocoreOptions}
+                                value={data.deltaProtocore}
+                                onChange={handleDeltaChange2}
                                 className={styles.select}
                                 isClearable
                                 isSearchable={false}
@@ -401,36 +442,6 @@ function Optimizer() {
                         </div>
                     </div>
 
-                    {/* --Селекты для сабстатов, на данный момент не нужны--
-                    <div className={styles.substatsSelectContainer}>
-                        Choose Sub Stats:
-                        <div className={styles.selectContainer}>
-                            Sub Stat 1:
-                            <Select
-                                placeholder="Select Sub Stat 1"
-                                options={subStat1Options}
-                                value={data.subStat1}
-                                onChange={handleSubStat1Change}
-                                className={styles.select}
-                                isClearable
-                                isSearchable={false}
-                            />
-                        </div>
-
-                        <div className={styles.selectContainer}>
-                            Sub Stat 2:
-                            <Select
-                                placeholder="Select Sub Stat 2"
-                                options={subStat2Options}
-                                value={data.subStat2}
-                                onChange={handleSubStat2Change}
-                                className={styles.select}
-                                isClearable
-                                isSearchable={false}
-                            />
-                        </div>
-                    </div>
-                    */}
                 </div>
             </nav>
 
@@ -449,9 +460,9 @@ function Optimizer() {
                             showCardSlotEquipped={false}
                         />
 
-                        {results && results[slot.id] && (
+                        {activeResults && activeResults[slot.id] && (
                             <div className={styles.resultProtocores}>
-                                {Object.entries(results[slot.id]).map(
+                                {Object.entries(activeResults[slot.id]).map(
                                     ([type, protocore]) =>
                                         protocore && (
                                             <div
@@ -487,7 +498,7 @@ function Optimizer() {
                 <button
                     className={styles.sendButton}
                     onClick={handleSendToShowcase}
-                    disabled={!results || !teamStats || isOptimizing || isSending}
+                    disabled={!activeResults || isOptimizing || isSending}
                 >
                     {isSending ? "Sending..." : "Send to Showcase"}
                 </button>
@@ -496,69 +507,22 @@ function Optimizer() {
             {/* Индикатор загрузки */}
             {isOptimizing && (
                 <div className={styles.loadingIndicator}>
-                    Calculating best protocores, please wait...
+                    {progressText || "Calculating best protocores, please wait..."}
                 </div>
             )}
 
             <div className={styles.resultContainer}>
-                {/* Два StatsTable рядом */}
-                {(teamStats || oldTeamStats) && (
-                    <div className={styles.statsComparison}>
-                        {oldTeamStats && (
-                            <div className={styles.statsColumn}>
-                                <h3 className={styles.statsColumnTitle}>
-                                    Before (Current Protocores)
-                                </h3>
-                                <StatsTable stats={oldTeamStats} />
-                            </div>
-                        )}
-                        {teamStats && (
-                            <div className={styles.statsColumn}>
-                                <h3 className={styles.statsColumnTitle}>
-                                    After (Optimized Protocores)
-                                </h3>
-                                <StatsTable stats={teamStats} />
-                            </div>
-                        )}
-                    </div>
-                )}
-
-                {/* Процент изменения урона */}
-                {damageComparison && (
-                    <div className={styles.damageComparison}>
-                        <div className={styles.damageRow}>
-                <span className={styles.damageLabel}>
-                    Damage ({damageComparison.damageType}):
-                </span>
-                            <span className={styles.damageOld}>
-                    {Math.round(damageComparison.oldDamage).toLocaleString()}
-                </span>
-                            <span className={styles.damageArrow}>→</span>
-                            <span className={styles.damageNew}>
-                    {Math.round(damageComparison.newDamage).toLocaleString()}
-                </span>
-                            <span
-                                className={
-                                    damageComparison.percentChange >= 0
-                                        ? styles.damagePositive
-                                        : styles.damageNegative
-                                }
-                            >
-                    {damageComparison.percentChange >= 0 ? "+" : ""}
-                                {damageComparison.percentChange.toFixed(2)}%
-                </span>
-                        </div>
-                    </div>
-                )}
-
-                {teamStats && data.selectedCompanion && data.selectedWeapon && (
-                    <KitCombatTable
-                        stats={teamStats}
-                        selectedCompanion={data.selectedCompanion}
-                        selectedMCWeapon={data.selectedWeapon}
-                        teamDmgBonus={teamDmgBonus}
+                {builds.length > 0 && (
+                    <StatsComparisonTable
+                        beforeStats={oldTeamStats}
+                        beforeDamage={oldDamageData}
+                        builds={builds}
+                        activeIndex={activeBuildIndex}
+                        onSelectBuild={setActiveBuildIndex}
+                        defaultSortKey={damageType}
                     />
                 )}
+
             </div>
 
             <ModalChooseCard

@@ -17,8 +17,10 @@ export { default as TablePairBonus } from "./calculator-components/showcase/comb
 export { default as AdditionalBonus } from "./calculator-components/showcase/combat-calculations/AdditionalBonus.jsx";
 export { default as KitCombatTable } from "./calculator-components/common/KitCombatTable.jsx";
 
+export { default as Optimizer } from "./calculator-components/optimizer/Optimizer.jsx";
+export { default as StatsComparisonTable } from "./calculator-components/optimizer/StatsComparisonTable.jsx";
+
 export { default as MemoryUpCalculator } from "./calculator-components/MemoryUpCalculator.jsx";
-export { default as Optimizer } from "./calculator-components/Optimizer.jsx";
 export { default as ProtocoreCalculator } from "./calculator-components/ProtocoreCalculator.jsx";
 
 //card-article-components
@@ -51,6 +53,7 @@ export { default as DailyResetTimer } from "./common/DailyResetTimer.jsx";
 export { default as FlexibleTimer } from "./common/FlexibleTimer.jsx";
 export { default as ProtocoreBlock } from "./common/ProtocoreBlock.jsx";
 export { default as LevelRangeControl } from "./common/LevelRangeControl.jsx";
+export { default as MemoriesTable } from "./my-account-components/my-memories/MemoriesTable.jsx";
 export { useRecurringTimer } from "./common/resetTimer.js";
 
 //farm-goal-tracker

@@ -133,12 +133,14 @@ export const updateFilters = (prefix = "", newFilters) => {
 };
 
 // ===== СОРТИРОВКА ТАБЛИЦЫ (MyMemories) =====
-export const getTableSort = () => {
-  return get(KEYS.TABLE_SORT_KEY, { key: null, direction: "desc" });
+export const getTableSort = (prefix = "") => {
+  const key = prefix ? `${KEYS.TABLE_SORT_KEY}_${prefix}` : KEYS.TABLE_SORT_KEY;
+  return get(key, { key: null, direction: "desc" });
 };
 
-export const saveTableSort = (sortConfig) => {
-  return set(KEYS.TABLE_SORT_KEY, sortConfig);
+export const saveTableSort = (sortConfig, prefix = "") => {
+  const key = prefix ? `${KEYS.TABLE_SORT_KEY}_${prefix}` : KEYS.TABLE_SORT_KEY;
+  return set(key, sortConfig);
 };
 
 export const clearTableSort = () => {

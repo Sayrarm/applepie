@@ -103,14 +103,18 @@
     padding: 5px;
 }
 
+.select [class$="-multiValue"] {
+   background-color: var(--bg-glass);
+}
+
 /**********************************************/
 
 .articleContainer {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-content: center;
     justify-content: space-between;
+    align-content: space-between;
     zoom: 0.95;
 }
 
@@ -213,49 +217,26 @@
     color: var(--colorTextDark, #fff);
 }
 
-.damageComparison {
-    display: flex;
-    justify-content: center;
-    margin: 15px 5px;
-}
-
-.damageRow {
+.cardOption {
     display: flex;
     align-items: center;
     gap: 5px;
-    font-size: 16px;
-    flex-wrap: wrap;
 }
 
-.damageLabel {
-    color: var(--colorTextDark);
+.cardOptionImage {
+    width: 38px;
+    height: 38px;
+    border-radius: 50px;
+    border: 2px solid gray;
+    object-fit: cover;
+    object-position: 20% 30%;
 }
 
-.damageOld {
-    color: var(--colorTextDark);
-    font-variant-numeric: tabular-nums;
-}
-
-.damageArrow {
-    color: var(--colorTextDark);
-}
-
-.damageNew {
-    color: var(--a);
-    font-weight: 600;
-    font-variant-numeric: tabular-nums;
-}
-
-.damagePositive {
-    color: var(--green-button);
-    font-weight: 600;
-    font-variant-numeric: tabular-nums;
-}
-
-.damageNegative {
-    color: var(--red-button);
-    font-weight: 600;
-    font-variant-numeric: tabular-nums;
+.cardOptionLabel {
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /**************************************************/
@@ -267,17 +248,14 @@
         min-width: 100%;
     }
 
-    .cardsContainer {
+    .selectMenu {
         flex-direction: column;
     }
 
     .articleContainer {
         flex-direction: row;
         justify-content: center;
-    }
-
-    .resultProtocores {
-        flex-direction: row;
+        zoom: 0.9;
     }
 
     .resultContainer,
@@ -288,12 +266,39 @@
 
 }
 
+@media screen and (max-width: 1040px) {
+    .articleContainer {
+        zoom: 0.8;
+    }
+}
+
+@media screen and (max-width: 961px) {
+    .articleContainer {
+        zoom: 0.7;
+    }
+}
+
 @media screen and (max-width: 900px) {
 
-    .navigation {
+    .companionsContainer {
         flex-direction: column;
     }
 
+}
+
+@media screen and (max-width: 769px) {
+    .cardsContainer {
+        flex-direction: column;
+    }
+
+    .articleContainer {
+        zoom: 1.0;
+    }
+
+    .resultProtocores {
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 @media screen and (max-width: 535px) {
@@ -315,8 +320,12 @@
         margin-bottom: 5px;
     }
 
+    .selectMenu {
+        flex-direction: column;
+    }
+
     .articleContainer {
-        zoom: 0.70;
+        zoom: 0.599;
     }
 
     .resultContainer {
