@@ -421,7 +421,7 @@ function Optimizer() {
                             <Select
                                 placeholder="Select Delta Protocore"
                                 options={deltaProtocoreOptions}
-                                value={data.deltaProtocore}
+                                value={data.deltaProtocore_1}
                                 onChange={handleDeltaChange1}
                                 className={styles.select}
                                 isClearable
@@ -433,7 +433,7 @@ function Optimizer() {
                             <Select
                                 placeholder="Select Delta Protocore"
                                 options={deltaProtocoreOptions}
-                                value={data.deltaProtocore}
+                                value={data.deltaProtocore_2}
                                 onChange={handleDeltaChange2}
                                 className={styles.select}
                                 isClearable
