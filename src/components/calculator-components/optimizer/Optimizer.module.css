@@ -296,8 +296,12 @@
         margin-bottom: 5px;
     }
 
+    .selectMenu {
+        flex-direction: column;
+    }
+
     .articleContainer {
-        zoom: 0.70;
+        zoom: 0.599;
     }
 
     .resultContainer {
