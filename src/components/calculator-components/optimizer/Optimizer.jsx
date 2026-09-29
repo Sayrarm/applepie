@@ -496,16 +496,6 @@ function Optimizer() {
                     />
                 )}
 
-                {teamStats && data.selectedCompanion && data.selectedWeapon && (
-                    <KitCombatTable
-                        stats={teamStats}
-                        selectedCompanion={data.selectedCompanion}
-                        selectedMCWeapon={data.selectedWeapon}
-                        teamDmgBonus={teamDmgBonus}
-                    />
-                )}
-
-
             </div>
 
             <ModalChooseCard
