@@ -125,7 +125,7 @@ export const eventsData = [
     image: "../assets/main-page/events/sachets.png",
     startDate: "2026-09-17T05:00:00",
     endDate: "2026-10-01T04:59:59",
-    active: true,
+    active: false,
   },
   {
     id: 17,
@@ -133,7 +133,7 @@ export const eventsData = [
     image: "../assets/main-page/events/blooming-osmantus.png",
     startDate: "2026-09-17T05:00:00",
     endDate: "2026-10-01T04:59:59",
-    active: true,
+    active: false,
   },
   {
     id: 18,
