@@ -27,6 +27,11 @@ const formatNumber = (num, decimals = 2) => {
     return num.toFixed(decimals);
 };
 
+const formatInteger = (num) => {
+    if (typeof num !== "number" || isNaN(num)) return "—";
+    return Math.floor(num).toLocaleString();
+};
+
 const formatDamage = (num) => {
     if (typeof num !== "number" || isNaN(num)) return "—";
     return Math.round(num).toLocaleString();
@@ -162,9 +167,9 @@ function StatsComparisonTable({
                 {beforeStats && (
                     <tr className={styles.beforeRow}>
                         <th className={styles.labelCell}>Current</th>
-                        <td>{formatNumber(beforeStats.hp)}</td>
-                        <td>{formatNumber(beforeStats.atk)}</td>
-                        <td>{formatNumber(beforeStats.def)}</td>
+                        <td>{formatInteger(beforeStats.hp)}</td>
+                        <td>{formatInteger(beforeStats.atk)}</td>
+                        <td>{formatInteger(beforeStats.def)}</td>
                         <td>{formatNumber(beforeStats.critRate, 1)}%</td>
                         <td>{formatNumber(beforeStats.critDmg, 1)}%</td>
                         <td>{formatNumber(beforeStats.dmgBoost)}%</td>
@@ -206,9 +211,9 @@ function StatsComparisonTable({
                             onClick={() => onSelectBuild(row.idx)}
                         >
                             <th className={styles.labelCell}>{row.name}</th>
-                            <td>{formatNumber(row.stats?.hp)}</td>
-                            <td>{formatNumber(row.stats?.atk)}</td>
-                            <td>{formatNumber(row.stats?.def)}</td>
+                            <td>{formatInteger(row.stats?.hp)}</td>
+                            <td>{formatInteger(row.stats?.atk)}</td>
+                            <td>{formatInteger(row.stats?.def)}</td>
                             <td>{formatNumber(row.stats?.critRate, 1)}%</td>
                             <td>{formatNumber(row.stats?.critDmg, 1)}%</td>
                             <td>{formatNumber(row.stats?.dmgBoost)}%</td>

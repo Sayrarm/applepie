@@ -8,7 +8,7 @@ import { useTableSort } from "@hooks";
 const formatNumber = (num) => {
     if (num === undefined || num === null || isNaN(num)) return "—";
     if (typeof num === "string") return num;
-    return num.toFixed(2);
+    return num;
 };
 
 function MemoriesTable({
@@ -288,28 +288,28 @@ function MemoriesTable({
                             {showDmgBoost && (
                                 <td className={styles.statValue}>
                                     {typeof card.stats?.dmgBoost === "number"
-                                        ? formatNumber(card.stats.dmgBoost.toFixed(2)) + "%"
+                                        ? formatNumber(card.stats.dmgBoost.toFixed(1)) + "%"
                                         : "—"}
                                 </td>
                             )}
                             {showOathStrength && (
                                 <td className={styles.statValue}>
                                     {typeof card.stats?.oathStrength === "number"
-                                        ? formatNumber(card.stats.oathStrength.toFixed(2)) + "%"
+                                        ? formatNumber(card.stats.oathStrength.toFixed(1)) + "%"
                                         : "—"}
                                 </td>
                             )}
                             {showOathRecoveryBoost && (
                                 <td className={styles.statValue}>
                                     {typeof card.stats?.oathRecoveryBoost === "number"
-                                        ? formatNumber(card.stats.oathRecoveryBoost.toFixed(2)) + "%"
+                                        ? formatNumber(card.stats.oathRecoveryBoost.toFixed(1)) + "%"
                                         : "—"}
                                 </td>
                             )}
                             {showExpeditedEnergyBoost && (
                                 <td className={styles.statValue}>
                                     {typeof card.stats?.expeditedEnergyBoost === "number"
-                                        ? formatNumber(card.stats.expeditedEnergyBoost.toFixed(2)) + "%"
+                                        ? formatNumber(card.stats.expeditedEnergyBoost.toFixed(1)) + "%"
                                         : "—"}
                                 </td>
                             )}

@@ -361,9 +361,9 @@ function LevelCardBlock({ cardId: propCardId, onAvailabilityChange }) {
               </thead>
               <tbody>
                 <tr>
-                  <td>{stats ? formatNumber(stats.hp.toFixed(2)) : "—"}</td>
-                  <td>{stats ? formatNumber(stats.atk.toFixed(2)) : "—"}</td>
-                  <td>{stats ? formatNumber(stats.def.toFixed(2)) : "—"}</td>
+                  <td>{stats ? formatNumber(stats.hp) : "—"}</td>
+                  <td>{stats ? formatNumber(stats.atk) : "—"}</td>
+                  <td>{stats ? formatNumber(stats.def) : "—"}</td>
                   <td>
                     {stats
                       ? formatNumber(stats.critRate.toFixed(1)) + "%"
