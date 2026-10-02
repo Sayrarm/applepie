@@ -25,10 +25,7 @@ export const sortTableData = (data, sortConfig, valueGetter) => {
         }
 
         if (key === "rank") {
-            if (a.rank !== b.rank) return (a.rank - b.rank) * sign;
-            const aAscend = a.isAscended ? 1 : 0;
-            const bAscend = b.isAscended ? 1 : 0;
-            return (aAscend - bAscend) * sign;
+            return (a.rank - b.rank) * sign;
         }
 
         // Из card.stats или card

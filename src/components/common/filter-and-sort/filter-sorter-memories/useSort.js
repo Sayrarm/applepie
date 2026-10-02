@@ -15,8 +15,8 @@ const compareFunctions = {
   },
   name: (a, b) => a.name.localeCompare(b.name),
   rarity: (a, b) => {
-    const order = { "3-star": 3, "4-star": 2, "5-star": 1 };
-    return (order[a.rarityName] || 0) - (order[b.rarityName] || 0);
+    const order = { "3-star": 1, "4-star": 2, "5-star": 3 };
+    return (order[b.rarityName] || 0) - (order[a.rarityName] || 0);
   },
   stella: (a, b) => {
     const order = ["emerald", "sapphire", "violet", "amber", "ruby", "pearl"];
