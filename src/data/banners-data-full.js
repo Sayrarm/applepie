@@ -964,4 +964,14 @@ export const bannersDataFull = [
     rerun: false,
     active: true,
   },
+  {
+    id: 96,
+    name: "Into the Canvas",
+    image: "../assets/banners/into-the-canvas.png",
+    cardIds: [369],
+    startDate: "2026-10-03T05:00:00",
+    endDate: "2026-10-10T04:59:00",
+    rerun: true,
+    active: true,
+  },
 ];
