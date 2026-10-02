@@ -124,9 +124,9 @@ export const getStatsWithRank = (card, level, rank, isAscended = false) => {
   let dmgBoost = calculateDmgBoost(hp, atk, def, talentKey);
 
   return {
-    hp,
-    atk,
-    def,
+    hp: Math.floor(hp),
+    atk: Math.floor(atk),
+    def: Math.floor(def),
     critRate: displayCritRate,
     critDmg: displayCritDmg,
     dmgBoost: dmgBoost * 100,

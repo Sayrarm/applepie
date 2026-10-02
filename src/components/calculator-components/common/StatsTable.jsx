@@ -8,7 +8,7 @@ function StatsTable({ stats }) {
             <tbody>
             <tr>
                 <th>HP</th>
-                <td>{stats.hp.toFixed(2)}</td>
+                <td>{stats.hp}</td>
                 <th>Crit Rate</th>
                 <td>{stats.critRate.toFixed(2)}%</td>
                 <th>Oath Strength</th>
@@ -16,7 +16,7 @@ function StatsTable({ stats }) {
             </tr>
             <tr>
                 <th>ATK</th>
-                <td>{stats.atk.toFixed(2)}</td>
+                <td>{stats.atk}</td>
                 <th>Crit DMG</th>
                 <td>{stats.critDmg.toFixed(2)}%</td>
                 <th>Oath Recovery Boost</th>
@@ -24,7 +24,7 @@ function StatsTable({ stats }) {
             </tr>
             <tr>
                 <th>DEF</th>
-                <td>{stats.def.toFixed(2)}</td>
+                <td>{stats.def}</td>
                 <th>DMG Boost to Weakened</th>
                 <td>{stats.dmgBoost.toFixed(2)}%</td>
                 <th>Expedited Energy Boost</th>

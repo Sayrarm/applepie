@@ -8,7 +8,10 @@ import {
   memoriesData,
   calculateFinalStats,
   rankOptions,
-  formatOptionLabel, getUpgradeResources, getExpNeeded, crystalColors,
+  formatOptionLabel,
+  getUpgradeResources,
+  getExpNeeded,
+  crystalColors,
 } from "@data";
 import {
   getCardLevel,

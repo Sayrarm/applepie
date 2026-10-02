@@ -146,15 +146,15 @@ export const calculateFinalStats = (card, baseStats, protocores) => {
   const protocoreStats = calculateProtocoreStats(protocores, baseStats);
 
   // Считаем финальные HP, ATK, DEF
-  const finalHp = (baseStats.hp || 0) + (protocoreStats.hp || 0);
-  const finalAtk = (baseStats.atk || 0) + (protocoreStats.atk || 0);
-  const finalDef = (baseStats.def || 0) + (protocoreStats.def || 0);
+  const finalHp = Math.floor((baseStats.hp || 0) + (protocoreStats.hp || 0));
+  const finalAtk = Math.floor((baseStats.atk || 0) + (protocoreStats.atk || 0));
+  const finalDef = Math.floor((baseStats.def || 0) + (protocoreStats.def || 0));
 
   // Пересчитываем DMG Boost на основе финальных статов
   const talentKey = card.talentName;
   let finalDmgBoost = calculateDmgBoost(finalHp, finalAtk, finalDef, talentKey);
 
-  // Добавляем бонусы от протокоров к DMG Boost и переводим в проценты
+  // Добавляем бонусы от протокоров к DMG Boost
   finalDmgBoost = finalDmgBoost + (protocoreStats.dmgBoost || 0);
 
   return {
@@ -165,13 +165,13 @@ export const calculateFinalStats = (card, baseStats, protocores) => {
     critDmg: (baseStats.critDmg || 0) + (protocoreStats.critDmg || 0),
     dmgBoost: finalDmgBoost,
     oathStrength:
-      (baseStats.oathStrength || 0) + (protocoreStats.oathStrength || 0),
+        (baseStats.oathStrength || 0) + (protocoreStats.oathStrength || 0),
     oathRecoveryBoost:
-      (baseStats.oathRecoveryBoost || 0) +
-      (protocoreStats.oathRecoveryBoost || 0),
+        (baseStats.oathRecoveryBoost || 0) +
+        (protocoreStats.oathRecoveryBoost || 0),
     expeditedEnergyBoost:
-      (baseStats.expeditedEnergyBoost || 0) +
-      (protocoreStats.expeditedEnergyBoost || 0),
+        (baseStats.expeditedEnergyBoost || 0) +
+        (protocoreStats.expeditedEnergyBoost || 0),
   };
 };
 
