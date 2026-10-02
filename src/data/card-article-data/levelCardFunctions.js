@@ -12,15 +12,15 @@ export const calculateDmgBoost = (hp, atk, def, talentKey) => {
 
   if (talentKey === "hp") {
     if (hp > 8000) {
-      dmgBoost = ((hp - 8000) / 400) * 0.2;
+      dmgBoost = Math.floor((hp - 8000) / 400) * 0.2;
     }
   } else if (talentKey === "atk") {
     if (atk > 400) {
-      dmgBoost = ((atk - 400) / 20) * 0.2;
+      dmgBoost = Math.floor((atk - 400) / 20) * 0.2;
     }
   } else if (talentKey === "def") {
     if (def > 200) {
-      dmgBoost = ((def - 200) / 10) * 0.2;
+      dmgBoost = Math.floor((def - 200) / 10) * 0.2;
     }
   }
 
@@ -129,7 +129,7 @@ export const getStatsWithRank = (card, level, rank, isAscended = false) => {
     def,
     critRate: displayCritRate,
     critDmg: displayCritDmg,
-    dmgBoost: (dmgBoost * 10000) / 10000,
+    dmgBoost: dmgBoost * 100,
     isAscended,
     oathStrength: 0,
     oathRecoveryBoost: 0,
