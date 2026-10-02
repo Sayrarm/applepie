@@ -1,4 +1,17 @@
 /**
+ * Парсит строку протокоров вида "+15/+15", "+9", "—".
+ * Возвращает { count, values }.
+ */
+const parseProtocores = (str) => {
+    if (!str || str === "—") return { count: 0, values: [] };
+    const values = str
+        .split("/")
+        .map((v) => parseInt(v.replace("+", ""), 10))
+        .filter((n) => !isNaN(n));
+    return { count: values.length, values };
+};
+
+/**
  * Сортирует массив по конфигу { key, direction }.
  */
 export const sortTableData = (data, sortConfig, valueGetter) => {
@@ -16,7 +29,7 @@ export const sortTableData = (data, sortConfig, valueGetter) => {
             return compareValues(aValue, bValue, sign);
         }
 
-        // Специальные ключи: level, rank
+        // level — уровень, при равенстве ascend
         if (key === "level") {
             if (a.level !== b.level) return (a.level - b.level) * sign;
             const aAscend = a.isAscended ? 1 : 0;
@@ -26,6 +39,24 @@ export const sortTableData = (data, sortConfig, valueGetter) => {
 
         if (key === "rank") {
             return (a.rank - b.rank) * sign;
+        }
+
+        // protocoreLevels — сначала по количеству, потом по значениям
+        if (key === "protocoreLevels") {
+            const aParsed = parseProtocores(a.protocoreLevels);
+            const bParsed = parseProtocores(b.protocoreLevels);
+
+            if (aParsed.count !== bParsed.count) {
+                return (aParsed.count - bParsed.count) * sign;
+            }
+
+            const maxLen = Math.max(aParsed.values.length, bParsed.values.length);
+            for (let i = 0; i < maxLen; i++) {
+                const av = aParsed.values[i] ?? 0;
+                const bv = bParsed.values[i] ?? 0;
+                if (av !== bv) return (av - bv) * sign;
+            }
+            return 0;
         }
 
         // Из card.stats или card
