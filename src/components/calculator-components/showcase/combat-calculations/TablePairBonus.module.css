@@ -28,4 +28,8 @@
     .titleTD {
         white-space: wrap;
     }
+
+    .statsTablePairBonus td {
+        padding: 5px 2px;
+    }
 }

@@ -301,6 +301,13 @@
     }
 }
 
+@media screen and (max-width: 769px) {
+    .navigation {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
+
 @media screen and (max-width: 535px) {
 
     .clearButton,
@@ -334,9 +341,5 @@
 
     .damageRow {
         font-size: 13px;
-    }
-
-    .navigation {
-        align-items: flex-end;
     }
 }
