@@ -36,6 +36,7 @@ function MyMemories() {
   } = useFilter("mymemories");
 
   const filterModalRef = useRef();
+  const tableRef = useRef(); // ссылка на MemoriesTable
 
   // тик — меняется, когда надо пересчитать данные из localStorage
   const [refreshTick, setRefreshTick] = useState(0);
@@ -125,7 +126,7 @@ function MyMemories() {
     };
   }, [refresh]);
 
-  // ===== дальше как было =====
+  // ===== фильтрация и сортировка карточек =====
   const filteredCards = filterMemories(availableCards).filter((card) => {
     return (
         card.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -143,6 +144,7 @@ function MyMemories() {
     if (filterModalRef.current) {
       filterModalRef.current.clearAll();
     }
+    tableRef.current?.resetSort(); // сброс сортировки в таблице
   };
 
   return (
@@ -165,6 +167,7 @@ function MyMemories() {
         />
 
         <MemoriesTable
+            ref={tableRef}
             data={sortedCards}
             storageKey="mymemories"
             emptyText="No available memories found"

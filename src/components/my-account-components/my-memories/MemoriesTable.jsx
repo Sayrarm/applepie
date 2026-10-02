@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useImperativeHandle } from "react";
 import { Link } from "react-router-dom";
 import styles from "./MemoriesTable.module.css";
 import { getImageUrl } from "@hooks";
@@ -34,11 +34,15 @@ function MemoriesTable({
                            showOathStrength = true,
                            showOathRecoveryBoost = true,
                            showExpeditedEnergyBoost = true,
+
+                           ref,
                        }) {
-    const { sortConfig, handleSort, getSortIcon, sortData } = useTableSort(
+    const { sortConfig, handleSort, getSortIcon, sortData, resetSort } = useTableSort(
         { key: null, direction: "desc" },
-        storageKey,   // ← добавить
+        storageKey,
     );
+
+    useImperativeHandle(ref, () => ({ resetSort }), [resetSort]);
 
     const sortedData = sortData(data);
 

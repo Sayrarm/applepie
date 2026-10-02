@@ -23,6 +23,15 @@ export const useTableSort = (defaultSort = { key: null, direction: "desc" }, sto
         });
     }, []);
 
+    // Стабильный resetSort — не зависит от ссылки на defaultSort
+    const resetSort = useCallback(() => {
+        const def = { key: null, direction: "desc" };
+        setSortConfig(def);
+        if (storageKey) {
+            saveTableSort(def, storageKey);
+        }
+    }, [storageKey]);
+
     const getSortIcon = useCallback(
         (key) => {
             if (sortConfig.key !== key) return "↕";
@@ -36,5 +45,5 @@ export const useTableSort = (defaultSort = { key: null, direction: "desc" }, sto
         [sortConfig],
     );
 
-    return { sortConfig, handleSort, getSortIcon, sortData };
+    return { sortConfig, handleSort, getSortIcon, sortData, resetSort };
 };
