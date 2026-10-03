@@ -138,8 +138,15 @@ function MemoryOptimizer() {
         }
 
         const card = data.selectedCard;
+
+        // Main Stat карты → формула урона
         const mainStatTarget = resolveMainStatTarget(data.mainStat, card);
-        const subStatTarget = data[protocoreKey]?.value || null;
+
+        // Main Stat второго протокора (Beta/Delta) → фильтр secondary
+        const protocoreMainStat = data[protocoreKey]?.value || null;
+
+        // Sub Stat (substats протокора) → приоритет сортировки
+        const subStatTarget = data.subStat?.value || null;
 
         setIsOptimizing(true);
         setProgressText("Calculating...");
@@ -153,6 +160,7 @@ function MemoryOptimizer() {
                     card,
                     allProtocores: available,
                     mainStatTarget,
+                    protocoreMainStat,
                     subStatTarget,
                 });
 
