@@ -27,6 +27,7 @@ import {
     removeProtocoreFromAllCards,
     updateProtocoreInAllCards,
 } from "@localstorage";
+import {NavLink} from "react-router-dom";
 
 function CardProtocores({cardId}) {
     const protocoreModalRef = useRef();
@@ -327,12 +328,6 @@ function CardProtocores({cardId}) {
         clearSorting();
     };
 
-    // Проверка, добавлен ли уже протокор данного типа
-    const hasProtocoreOfType = useCallback(
-        (type) => selectedProtocores.some((p) => p.type === type),
-        [selectedProtocores],
-    );
-
     const getLimitMessage = () => {
         if (selectedProtocores.length >= 2) {
             return "Maximum 2 protocores equipped";
@@ -386,19 +381,14 @@ function CardProtocores({cardId}) {
                             }
 
                             // Иначе — "Add {Type}"
-                            const isDisabled =
-                                allProtocores.length === 0 ||
-                                selectedProtocores.length >= 2;
-
                             return (
                                 <button
                                     key={type}
                                     className={styles.addButton}
                                     onClick={() => showProtocoreModalForType(type)}
-                                    disabled={isDisabled}
                                     title={`Add ${type} protocore`}
                                 >
-                                    Add {typeLabel}
+                                    + Add {typeLabel}
                                 </button>
                             );
                         })}
@@ -434,7 +424,27 @@ function CardProtocores({cardId}) {
 
                             {availableProtocores.length === 0 && (
                                 <div className={styles.noProtocores}>
-                                    No protocores available
+                                    {allProtocores.length === 0 ? (
+                                        <>
+                                            You don't have any protocores yet. Add some in the{" "}
+                                            <NavLink
+                                                className={({ isActive }) =>
+                                                    `${styles.tabButton} ${isActive ? styles.active : ""}`
+                                                }
+                                                to="/my-account/my-protocores"
+                                            >
+                                                Protocores
+                                            </NavLink>{" "}
+                                            section.
+                                        </>
+                                    ) : (
+                                        `No compatible ${
+                                            activeProtocoreType
+                                                ? activeProtocoreType.charAt(0).toUpperCase() +
+                                                activeProtocoreType.slice(1)
+                                                : ""
+                                        } protocores available for this card`
+                                    )}
                                 </div>
                             )}
 

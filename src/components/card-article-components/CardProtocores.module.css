@@ -45,6 +45,21 @@
   cursor: not-allowed;
 }
 
+.tabButton {
+  background: none;
+  border: none;
+  color: var(--a);
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.tabButton:hover {
+  color: var(--a-hover);
+}
+
 .protocoreList {
   display: flex;
   flex-wrap: wrap;
