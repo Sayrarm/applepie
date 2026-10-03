@@ -55,7 +55,7 @@ export {
   createDamageCalculator,
   calculateDamageWithBonuses,
   calculateAllDamageTypes,
-} from "./calculator-data/showcase-data/damageCalculator.js";
+} from "./calculator-data/damageCalculator.js";
 export {
   getCardData,
   calculateTotalStats,
@@ -84,6 +84,22 @@ export {
   findCompanionData,
   findWeaponData
 } from "./calculator-data/kitDamageFunctions.js";
+export {
+  getAvailableProtocores
+} from "./calculator-data/optimizer-data/getAvailableProtocores.js";
+export {
+  optimizeMemory,
+  resolveMainStatTarget,
+  computeCardStats
+} from "./calculator-data/optimizer-data/memory-optimizer-functions.js";
+export {
+  getCardBaseStats,
+  createBaseStatsCache,
+  filterByStella,
+  filterByMainStatWithFallback,
+  splitProtocoresByType,
+  statMatches,
+} from "./calculator-data/optimizer-data/optimizer-utils.js";
 
 //memory upgrade data
 export {

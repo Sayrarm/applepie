@@ -25,7 +25,8 @@ import {
     calculateTeamStats,
     computeKitDamage,
     detectDamageType,
-    buildOptimizationResults, memoriesData
+    buildOptimizationResults,
+    memoriesData
 } from "@data";
 import {getImageUrl, useSolarPair} from "@hooks";
 
