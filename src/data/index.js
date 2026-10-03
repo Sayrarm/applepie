@@ -80,7 +80,9 @@ export {
 } from "./calculator-data/stats-utils.js";
 export {
   computeKitDamage,
-  detectDamageType
+  detectDamageType,
+  findCompanionData,
+  findWeaponData
 } from "./calculator-data/kitDamageFunctions.js";
 
 //memory upgrade data

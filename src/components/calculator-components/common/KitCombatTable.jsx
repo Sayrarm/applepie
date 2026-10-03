@@ -1,10 +1,9 @@
 import { useMemo } from "react";
 import styles from "./KitCombatTable.module.css";
 import {
-    compDataShowcaseSpecific,
-    weaponDataShowcaseSpecific,
-    calculateAllDamageTypes,
-    createDamageCalculator,
+    findCompanionData,
+    findWeaponData,
+    computeKitDamage
 } from "@data";
 
 function KitCombatTable({
@@ -14,204 +13,40 @@ function KitCombatTable({
                             teamDmgBonus = 0,
                             additionalBonus,
                         }) {
-    // Если additionalBonus не передан — используем нули
     const { attributeBonus, perfectMatchBonus } = additionalBonus || {
         attributeBonus: 0,
         perfectMatchBonus: 0,
     };
 
-    // Находим данные для выбранного компаньона по companionName
-    const companionData = useMemo(() => {
-        if (!selectedCompanion?.companionName) return {};
-        return (
-            compDataShowcaseSpecific.find(
-                (item) => item.companionName === selectedCompanion.companionName,
-            ) || {}
-        );
-    }, [selectedCompanion]);
+    // Находим данные компаньона и оружия (для отображения формул)
+    const companionData = useMemo(
+        () => findCompanionData(selectedCompanion),
+        [selectedCompanion],
+    );
 
-    // Находим данные для выбранного оружия по weaponName
-    const weaponData = useMemo(() => {
-        if (!selectedMCWeapon?.weaponName) return {};
-        return (
-            weaponDataShowcaseSpecific.find(
-                (item) => item.weaponName === selectedMCWeapon.weaponName,
-            ) || {}
-        );
-    }, [selectedMCWeapon]);
+    const weaponData = useMemo(
+        () => findWeaponData(selectedMCWeapon),
+        [selectedMCWeapon],
+    );
 
-    // Используем переданные статы
-    const companionStats = {
-        hp: stats?.hp || 1,
-        atk: stats?.atk || 1,
-        def: stats?.def || 1,
-    };
-
-    const dmgBoostToWeakened = Number((stats?.dmgBoost || 0).toFixed(2));
-    const critDmg = stats?.critDmg || 0;
-    const oathStrength = stats?.oathStrength || 0;
-
-    // Добавляем бонусы к DMG Boost to Weakened
-    const totalDmgBoostToWeakened = dmgBoostToWeakened + perfectMatchBonus;
-
-    // Базовый урон (сырой, без бонусов)
-    const rawDamage = {
-        // Companion skills
-        support: companionData.supportSkillStats
-            ? createDamageCalculator(companionData.supportSkillStats)(companionStats)
-            : 0,
-        support2: companionData.supportSkillStats2
-            ? createDamageCalculator(companionData.supportSkillStats2)(companionStats)
-            : 0,
-        support3: companionData.supportSkillStats3
-            ? createDamageCalculator(companionData.supportSkillStats3)(companionStats)
-            : 0,
-        empoweredSupport: companionData.empoweredSupportSkillStats
-            ? createDamageCalculator(companionData.empoweredSupportSkillStats)(
-                companionStats,
-            )
-            : 0,
-        empoweredSupport2: companionData.empoweredSupportSkillStats2
-            ? createDamageCalculator(companionData.empoweredSupportSkillStats2)(
-                companionStats,
-            )
-            : 0,
-        resonance: companionData.resonanceSkillStats
-            ? createDamageCalculator(companionData.resonanceSkillStats)(
-                companionStats,
-            )
-            : 0,
-        resonance2: companionData.resonanceSkillStats2
-            ? createDamageCalculator(companionData.resonanceSkillStats2)(
-                companionStats,
-            )
-            : 0,
-        ardentOath: companionData.ardentOathStats
-            ? createDamageCalculator(companionData.ardentOathStats)(companionStats)
-            : 0,
-        passive1: companionData.passiveSkillStats1
-            ? createDamageCalculator(companionData.passiveSkillStats1)(companionStats)
-            : 0,
-        passive2: companionData.passiveSkillStats2
-            ? createDamageCalculator(companionData.passiveSkillStats2)(companionStats)
-            : 0,
-        passive3: companionData.passiveSkillStats3
-            ? createDamageCalculator(companionData.passiveSkillStats3)(companionStats)
-            : 0,
-        passive4: companionData.passiveSkillStats4
-            ? createDamageCalculator(companionData.passiveSkillStats4)(companionStats)
-            : 0,
-        passive5: companionData.passiveSkillStats5
-            ? createDamageCalculator(companionData.passiveSkillStats5)(companionStats)
-            : 0,
-        basicSync1: companionData.basicSyncFirstStrikeStats
-            ? createDamageCalculator(companionData.basicSyncFirstStrikeStats)(
-                companionStats,
-            )
-            : 0,
-        basicSync2: companionData.basicSyncSecondStrikeStats
-            ? createDamageCalculator(companionData.basicSyncSecondStrikeStats)(
-                companionStats,
-            )
-            : 0,
-        basicSync3: companionData.basicSyncThirdStrikeStats
-            ? createDamageCalculator(companionData.basicSyncThirdStrikeStats)(
-                companionStats,
-            )
-            : 0,
-        basicSync4: companionData.basicSyncFourthStrikeStats
-            ? createDamageCalculator(companionData.basicSyncFourthStrikeStats)(
-                companionStats,
-            )
-            : 0,
-        basicSyncCharged: companionData.basicSyncChargedAttackStats
-            ? createDamageCalculator(companionData.basicSyncChargedAttackStats)(
-                companionStats,
-            )
-            : 0,
-        activeI: companionData.activeSkill_IStats
-            ? createDamageCalculator(companionData.activeSkill_IStats)(companionStats)
-            : 0,
-        activeII: companionData.activeSkill_IStats
-            ? createDamageCalculator(companionData.activeSkill_IStats)(companionStats)
-            : 0,
-        activeII2: companionData.activeSkill_IIStats2
-            ? createDamageCalculator(companionData.activeSkill_IIStats2)(
-                companionStats,
-            )
-            : 0,
-        activeIII: companionData.activeSkill_IIIStats
-            ? createDamageCalculator(companionData.activeSkill_IIIStats)(
-                companionStats,
-            )
-            : 0,
-        activeIII2: companionData.activeSkill_IIIStats2
-            ? createDamageCalculator(companionData.activeSkill_IIIStats2)(
-                companionStats,
-            )
-            : 0,
-
-        // MC Weapon skills
-        basicTotal: weaponData.basicAttackFormula
-            ? createDamageCalculator(weaponData.basicAttackStats)(companionStats)
-            : 0,
-        basic1: weaponData.basicFirstStrikeStats
-            ? createDamageCalculator(weaponData.basicFirstStrikeStats)(companionStats)
-            : 0,
-        basic2: weaponData.basicSecondStrikeStats
-            ? createDamageCalculator(weaponData.basicSecondStrikeStats)(
-                companionStats,
-            )
-            : 0,
-        basic3: weaponData.basicThirdStrikeStats
-            ? createDamageCalculator(weaponData.basicThirdStrikeStats)(companionStats)
-            : 0,
-        basic4: weaponData.basicFourthStrikeStats
-            ? createDamageCalculator(weaponData.basicFourthStrikeStats)(
-                companionStats,
-            )
-            : 0,
-        basic5: weaponData.basicFifthStrikeStats
-            ? createDamageCalculator(weaponData.basicFifthStrikeStats)(companionStats)
-            : 0,
-        basicCharged: weaponData.basicChargedAttackStats
-            ? createDamageCalculator(weaponData.basicChargedAttackStats)(
-                companionStats,
-            )
-            : 0,
-        basicCharged2: weaponData.basicChargedAttackStats2
-            ? createDamageCalculator(weaponData.basicChargedAttackStats2)(
-                companionStats,
-            )
-            : 0,
-        active1: weaponData.activeSkillStats
-            ? createDamageCalculator(weaponData.activeSkillStats)(companionStats)
-            : 0,
-        active2: weaponData.activeSkillSecondStats
-            ? createDamageCalculator(weaponData.activeSkillSecondStats)(
-                companionStats,
-            )
-            : 0,
-        passiveMC: weaponData.passiveSkillMCStats
-            ? createDamageCalculator(weaponData.passiveSkillMCStats)(companionStats)
-            : 0,
-    };
-
-    // Собираем все бонусы в один объект
-    const bonuses = {
-        attributeBonus,
-        teamDmgBonus,
-        oathStrength,
-        critDmg,
-        weakenedDmg: totalDmgBoostToWeakened,
-    };
-
-    const ardentOathSkills = ["ardentOath"];
-
-    const { baseDamage, weakenedDamage, critDamage } = calculateAllDamageTypes(
-        rawDamage,
-        bonuses,
-        ardentOathSkills,
+    // Весь расчёт урона — одной функцией
+    const { baseDamage, weakenedDamage, critDamage } = useMemo(
+        () =>
+            computeKitDamage(stats, {
+                selectedCompanion,
+                selectedMCWeapon,
+                teamDmgBonus,
+                attributeBonus,
+                perfectMatchBonus,
+            }),
+        [
+            stats,
+            selectedCompanion,
+            selectedMCWeapon,
+            teamDmgBonus,
+            attributeBonus,
+            perfectMatchBonus,
+        ],
     );
 
     const roundDisplay = (value) => Math.round(value);

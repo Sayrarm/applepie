@@ -8,7 +8,7 @@ import {
 /**
  * Находит данные компаньона по companionName
  */
-const findCompanionData = (selectedCompanion) => {
+export const findCompanionData = (selectedCompanion) => {
     if (!selectedCompanion?.companionName) return {};
     return (
         compDataShowcaseSpecific.find(
@@ -20,7 +20,7 @@ const findCompanionData = (selectedCompanion) => {
 /**
  * Находит данные оружия по weaponName
  */
-const findWeaponData = (selectedMCWeapon) => {
+export const findWeaponData = (selectedMCWeapon) => {
     if (!selectedMCWeapon?.weaponName) return {};
     return (
         weaponDataShowcaseSpecific.find(
@@ -88,6 +88,8 @@ export const computeKitDamage = (stats, context) => {
         selectedCompanion,
         selectedMCWeapon,
         teamDmgBonus = 0,
+        attributeBonus = 0,
+        perfectMatchBonus = 0,
     } = context || {};
 
     const companionData = findCompanionData(selectedCompanion);
@@ -106,11 +108,11 @@ export const computeKitDamage = (stats, context) => {
     const rawDamage = computeRawDamage(companionData, weaponData, companionStats);
 
     const bonuses = {
-        attributeBonus: 0,
+        attributeBonus,
         teamDmgBonus,
         oathStrength,
         critDmg,
-        weakenedDmg: dmgBoostToWeakened,
+        weakenedDmg: dmgBoostToWeakened + perfectMatchBonus,
     };
 
     const ardentOathSkills = ["ardentOath"];
