@@ -7,6 +7,7 @@ import {
     statMatches,
 } from "@data";
 
+
 // ===== Определение целевого main stat =====
 export const resolveMainStatTarget = (mainStatChoice, card) => {
     if (!mainStatChoice || mainStatChoice.value === "Default") {
@@ -18,7 +19,7 @@ export const resolveMainStatTarget = (mainStatChoice, card) => {
     return mainStatChoice.value;
 };
 
-// ===== Фиксированные формулы урона =====
+// ===== Фиксированные формулы =====
 export const getDamageFormula = (mainStatTarget) => {
     switch (mainStatTarget) {
         case "HP":
@@ -31,8 +32,8 @@ export const getDamageFormula = (mainStatTarget) => {
     }
 };
 
-// ===== Расчёт урона для одной карты =====
-export const computeMemoryDamage = (stats, formula) => {
+// ===== Сырой урон (raw) =====
+export const computeRawDamage = (stats, formula) => {
     const { hp = 0, atk = 0, def = 0 } = stats || {};
     const { base, atk: atkPct, hp: hpPct, def: defPct } = formula;
     return (
@@ -43,7 +44,21 @@ export const computeMemoryDamage = (stats, formula) => {
     );
 };
 
-// ===== Расчёт финальных статов карты с протокорами =====
+// ===== Разбивка урона на base / weakened / crit =====
+export const computeMemoryDamage = (stats, formula) => {
+    const raw = computeRawDamage(stats, formula);
+
+    const critDmg = stats?.critDmg || 0;
+    const weakenedDmg = stats?.dmgBoost || 0; // DMG Boost to Weakened
+
+    return {
+        baseSum: raw,
+        weakenedSum: raw * (1 + weakenedDmg / 100),
+        critSum: raw * (1 + critDmg / 100),
+    };
+};
+
+// ===== Финальные статы карты =====
 export const computeCardFinalStats = (card, protocores) => {
     if (!card) return null;
     const baseStats = getCardBaseStats(card);
@@ -60,18 +75,7 @@ const hasSubStat = (protocore, subStatTarget) => {
     );
 };
 
-// ===== Основная функция оптимизации одной карты =====
-/**
- * Подбирает лучшую пару протокоров для одной карты:
- *  - solar → alpha + beta
- *  - lunar → gamma + delta
- *
- * @param card            — карта
- * @param allProtocores   — доступные протокоры (без исключённых)
- * @param mainStatTarget  — "HP" | "ATK" | "DEF"
- * @param subStatTarget   — строка из delta-опций (или null)
- * @param topN            — сколько лучших сборок вернуть
- */
+// ===== Основная функция =====
 export const optimizeMemory = ({
                                    card,
                                    allProtocores,
@@ -105,8 +109,7 @@ export const optimizeMemory = ({
 
     // Если хоть один пул пуст — вернём то, что сможем (по одному протокору)
     const primaryList = primaryPool.length > 0 ? primaryPool : [null];
-    const secondaryList =
-        secondaryPool.length > 0 ? secondaryPool : [null];
+    const secondaryList = secondaryPool.length > 0 ? secondaryPool : [null];
 
     // ===== Перебор пар =====
     const scored = [];
@@ -117,7 +120,7 @@ export const optimizeMemory = ({
 
             const protocores = [primary, secondary].filter(Boolean);
             const finalStats = computeCardFinalStats(card, protocores);
-            const damage = computeMemoryDamage(finalStats, formula);
+            const damageData = computeMemoryDamage(finalStats, formula);
 
             // Приоритет по subStat: смотрим на secondary и primary
             const subMatch =
@@ -128,16 +131,16 @@ export const optimizeMemory = ({
                 primary,
                 secondary,
                 finalStats,
-                damage,
+                damageData,
                 subMatch,
             });
         }
     }
 
-    // ===== Сортировка: сначала subMatch, потом damage =====
+    // Сортировка: сначала subMatch, потом base damage
     scored.sort((a, b) => {
         if (a.subMatch !== b.subMatch) return b.subMatch - a.subMatch;
-        return b.damage - a.damage;
+        return b.damageData.baseSum - a.damageData.baseSum;
     });
 
     // ===== Формируем topN =====
@@ -149,15 +152,9 @@ export const optimizeMemory = ({
 
         return {
             id: idx,
-            results: {
-                [slotKey]: slotResult,
-            },
+            results: { [slotKey]: slotResult },
             teamStats: entry.finalStats,
-            damageData: {
-                baseSum: entry.damage,
-                weakenedSum: entry.damage,
-                critSum: entry.damage,
-            },
+            damageData: entry.damageData,
             damageType: "base",
         };
     });
@@ -169,9 +166,6 @@ export const optimizeMemory = ({
 export const computeCardStats = (card, protocores) => {
     const stats = computeCardFinalStats(card, protocores);
     const formula = getDamageFormula(resolveMainStatTarget(null, card));
-    const damage = computeMemoryDamage(stats, formula);
-    return {
-        stats,
-        damageData: { baseSum: damage, weakenedSum: damage, critSum: damage },
-    };
+    const damageData = computeMemoryDamage(stats, formula);
+    return { stats, damageData };
 };
