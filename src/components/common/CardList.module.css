@@ -15,6 +15,15 @@
 
 :global(.ant-modal .ant-modal-container) {
   background-color: var(--bg-modal) !important;
-  padding: 5px !important;
+  padding: 15px !important;
   border-radius: 16px !important;
+}
+
+@media screen and (max-width: 413px) {
+
+  :global(.ant-modal .ant-modal-container) {
+    background-color: var(--bg-modal) !important;
+    padding: 5px !important;
+    border-radius: 16px !important;
+  }
 }
