@@ -20,6 +20,15 @@
   margin-left: 5px;
 }
 
+.headerActions {
+  display: flex;
+}
+
+.addButtonsContainer {
+  display: flex;
+  gap: 5px;
+}
+
 .addButton {
   padding: 4px 12px;
   background-color: var(--forSelect);
@@ -48,11 +57,10 @@
   color: var(--colorTextDark);
   display: flex;
   align-items: flex-start;
-  gap: 8px;
+  gap: 5px;
   background: none;
   border: none;
   cursor: pointer;
-  width: 220px;
   text-align: left;
   font-size: 13px;
 }

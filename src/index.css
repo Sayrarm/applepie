@@ -208,6 +208,12 @@ h4 {
   background-color: #35312d !important;
 }
 
+:global(.ant-modal .ant-modal-container) {
+  background-color: var(--bg-modal) !important;
+  padding: 5px !important;
+  border-radius: 16px !important;
+}
+
 /* Только для iOS — отключаем fixed */
 @supports (-webkit-touch-callout: none) {
   .fixed-bg {
