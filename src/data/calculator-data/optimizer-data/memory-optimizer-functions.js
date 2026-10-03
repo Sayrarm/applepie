@@ -4,7 +4,7 @@ import {
     getCardBaseStats,
     filterByStella,
     filterByMainStatWithFallback,
-    statMatches
+    statMatches,
 } from "@data";
 
 // ===== Определение целевого main stat =====
@@ -13,9 +13,9 @@ export const resolveMainStatTarget = (mainStatChoice, card) => {
         const talent = card?.talentName?.toLowerCase();
         if (talent === "hp") return "HP";
         if (talent === "def") return "DEF";
-        return "ATK"; // fallback
+        return "ATK";
     }
-    return mainStatChoice.value; // "HP" | "ATK" | "DEF"
+    return mainStatChoice.value;
 };
 
 // ===== Фиксированные формулы урона =====
@@ -52,13 +52,25 @@ export const computeCardFinalStats = (card, protocores) => {
     return applyBaseCritDmgBonus(finalStats);
 };
 
+// ===== Проверка subStat =====
+const hasSubStat = (protocore, subStatTarget) => {
+    if (!protocore || !subStatTarget) return false;
+    return (protocore.subStats || []).some((s) =>
+        statMatches(s.statName || s, subStatTarget),
+    );
+};
+
 // ===== Основная функция оптимизации одной карты =====
 /**
- * @param card — карта, для которой оптимизируем
- * @param allProtocores — доступные протокоры (уже без исключённых)
- * @param mainStatTarget — "HP" | "ATK" | "DEF"
- * @param subStatTarget — строка из delta-опций
- * @param topN — сколько лучших сборок вернуть
+ * Подбирает лучшую пару протокоров для одной карты:
+ *  - solar → alpha + beta
+ *  - lunar → gamma + delta
+ *
+ * @param card            — карта
+ * @param allProtocores   — доступные протокоры (без исключённых)
+ * @param mainStatTarget  — "HP" | "ATK" | "DEF"
+ * @param subStatTarget   — строка из delta-опций (или null)
+ * @param topN            — сколько лучших сборок вернуть
  */
 export const optimizeMemory = ({
                                    card,
@@ -71,57 +83,80 @@ export const optimizeMemory = ({
         return { builds: [] };
     }
 
-    const isSolar = card.placement === "solar";
-    const targetType = isSolar ? "beta" : "delta";
+    const isSolar = card.placementName === "solar";
+    const primaryType = isSolar ? "alpha" : "gamma";
+    const secondaryType = isSolar ? "beta" : "delta";
 
     const formula = getDamageFormula(mainStatTarget);
 
-    // Пул протокоров нужного типа + фильтр по цвету карты
-    const pool = filterByStella(
-        allProtocores.filter((p) => p.type === targetType),
+    // ===== Пулы =====
+    const primaryPool = filterByStella(
+        allProtocores.filter((p) => p.type === primaryType),
         card,
     );
+    const secondaryPoolRaw = filterByStella(
+        allProtocores.filter((p) => p.type === secondaryType),
+        card,
+    );
+    const secondaryPool = filterByMainStatWithFallback(
+        secondaryPoolRaw,
+        mainStatTarget,
+    );
 
-    // Фильтр по main stat
-    const mainFiltered = filterByMainStatWithFallback(pool, mainStatTarget);
+    // Если хоть один пул пуст — вернём то, что сможем (по одному протокору)
+    const primaryList = primaryPool.length > 0 ? primaryPool : [null];
+    const secondaryList =
+        secondaryPool.length > 0 ? secondaryPool : [null];
 
-    // Сортируем по subStat, затем по общей полезности
-    const scored = mainFiltered.map((p) => {
-        const trialStats = computeCardFinalStats(card, [p]);
-        const damage = computeMemoryDamage(trialStats, formula);
+    // ===== Перебор пар =====
+    const scored = [];
 
-        // Бонус за соответствие subStat
-        const subMatch = subStatTarget
-            ? (p.subStats || []).some((s) =>
-                statMatches(s.statName || s, subStatTarget),
-            )
-            : false;
+    for (const primary of primaryList) {
+        for (const secondary of secondaryList) {
+            if (!primary && !secondary) continue;
 
-        return { protocore: p, damage, subMatch };
-    });
+            const protocores = [primary, secondary].filter(Boolean);
+            const finalStats = computeCardFinalStats(card, protocores);
+            const damage = computeMemoryDamage(finalStats, formula);
 
-    // Сортируем: сначала subMatch, потом damage
+            // Приоритет по subStat: смотрим на secondary и primary
+            const subMatch =
+                hasSubStat(secondary, subStatTarget) ||
+                hasSubStat(primary, subStatTarget);
+
+            scored.push({
+                primary,
+                secondary,
+                finalStats,
+                damage,
+                subMatch,
+            });
+        }
+    }
+
+    // ===== Сортировка: сначала subMatch, потом damage =====
     scored.sort((a, b) => {
         if (a.subMatch !== b.subMatch) return b.subMatch - a.subMatch;
         return b.damage - a.damage;
     });
 
-    // Формируем topN уникальных сборок (каждая — один протокор)
+    // ===== Формируем topN =====
     const builds = scored.slice(0, topN).map((entry, idx) => {
-        const finalStats = computeCardFinalStats(card, [entry.protocore]);
-        const damage = computeMemoryDamage(finalStats, formula);
+        const slotKey = isSolar ? "solar" : "lunar";
+        const slotResult = isSolar
+            ? { alpha: entry.primary, beta: entry.secondary }
+            : { gamma: entry.primary, delta: entry.secondary };
+
         return {
             id: idx,
             results: {
-                [isSolar ? "solar" : "lunar"]: {
-                    [targetType]: entry.protocore,
-                },
+                [slotKey]: slotResult,
             },
-            teamStats: finalStats,
+            teamStats: entry.finalStats,
             damageData: {
-                baseSum: damage,
-                weakenedSum: damage,
-                critSum: damage,
+                baseSum: entry.damage,
+                weakenedSum: entry.damage,
+                critSum: entry.damage,
             },
             damageType: "base",
         };
