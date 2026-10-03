@@ -30,7 +30,8 @@
 }
 
 .addButton {
-  padding: 4px 12px;
+  width: 118px;
+  min-height: 30px;
   background-color: var(--forSelect);
   box-shadow: var(--box-shadow);
   color: var(--colorText);
@@ -101,5 +102,9 @@
 
   .protocoreList {
     zoom: 0.90;
+  }
+
+  .addButtonsContainer {
+    flex-direction: column;
   }
 }

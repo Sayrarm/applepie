@@ -368,10 +368,27 @@ function CardProtocores({cardId}) {
                     {/* Кнопки добавления протокоров по типам */}
                     <div className={styles.addButtonsContainer}>
                         {availableTypes.map((type) => {
+                            const equipped = selectedProtocores.find((p) => p.type === type);
+                            const typeLabel = type.charAt(0).toUpperCase() + type.slice(1);
+
+                            // Если слот занят — кнопка превращается в "Delete {Type}"
+                            if (equipped) {
+                                return (
+                                    <button
+                                        key={type}
+                                        className={`${styles.addButton} ${styles.deleteButton}`}
+                                        onClick={() => handleRemoveProtocore(equipped.id)}
+                                        title={`Delete ${type} protocore`}
+                                    >
+                                        Delete {typeLabel}
+                                    </button>
+                                );
+                            }
+
+                            // Иначе — "Add {Type}"
                             const isDisabled =
                                 allProtocores.length === 0 ||
-                                selectedProtocores.length >= 2 ||
-                                hasProtocoreOfType(type);
+                                selectedProtocores.length >= 2;
 
                             return (
                                 <button
@@ -379,13 +396,9 @@ function CardProtocores({cardId}) {
                                     className={styles.addButton}
                                     onClick={() => showProtocoreModalForType(type)}
                                     disabled={isDisabled}
-                                    title={
-                                        hasProtocoreOfType(type)
-                                            ? `${type} protocore already equipped`
-                                            : `Add ${type} protocore`
-                                    }
+                                    title={`Add ${type} protocore`}
                                 >
-                                    + Add {type.charAt(0).toUpperCase() + type.slice(1)}
+                                    Add {typeLabel}
                                 </button>
                             );
                         })}
@@ -461,7 +474,7 @@ function CardProtocores({cardId}) {
                                 <ProtocoreBlock
                                     protocore={protocore}
                                     onEdit={() => showEditProtocoreModal(protocore)}
-                                    onDelete={() => handleRemoveProtocore(protocore.id)}
+                                    hideDelete={true}
                                     hideGoal={false}
                                     cardImage={currentCardImage}
                                 />
