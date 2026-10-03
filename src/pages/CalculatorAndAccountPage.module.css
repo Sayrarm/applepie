@@ -5,6 +5,10 @@
   padding: 5px;
 }
 
+.optimizerContainer {
+  margin-top: 30px;
+}
+
 .tabContent {
   display: flex;
 }
