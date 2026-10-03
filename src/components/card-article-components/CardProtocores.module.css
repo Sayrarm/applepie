@@ -98,6 +98,21 @@
   margin: 5px;
 }
 
+@media screen and (max-width: 557px) {
+
+  .addButtonsContainer {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 413px) {
+
+  .protocoreList {
+    zoom: 0.90;
+  }
+
+}
+
 @media screen and (max-width: 380px) {
   .dropdownItem {
     min-width: 150px;
@@ -110,16 +125,5 @@
 
   :global(.ant-modal .ant-modal-container) {
     padding: 5px !important;
-  }
-}
-
-@media screen and (max-width: 413px) {
-
-  .protocoreList {
-    zoom: 0.90;
-  }
-
-  .addButtonsContainer {
-    flex-direction: column;
   }
 }

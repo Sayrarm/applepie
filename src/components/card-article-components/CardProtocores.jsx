@@ -388,7 +388,7 @@ function CardProtocores({cardId}) {
                                     onClick={() => showProtocoreModalForType(type)}
                                     title={`Add ${type} protocore`}
                                 >
-                                    + Add {typeLabel}
+                                    Add {typeLabel}
                                 </button>
                             );
                         })}
