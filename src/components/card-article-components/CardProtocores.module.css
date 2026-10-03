@@ -96,3 +96,10 @@
     padding: 5px !important;
   }
 }
+
+@media screen and (max-width: 361px) {
+
+  .protocoreList {
+    zoom: 0.93;
+  }
+}
