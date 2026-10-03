@@ -106,6 +106,15 @@ function CardProtocores({cardId}) {
         return [];
     }, [cardPlacement]);
 
+    // ===== СОРТИРОВКА ПРИКРЕПЛЁННЫХ ПРОТОКОРОВ ДЛЯ ОТОБРАЖЕНИЯ =====
+    // Alpha/Gamma — слева, Beta/Delta — справа
+    const displayProtocores = useMemo(() => {
+        const order = { alpha: 0, gamma: 0, beta: 1, delta: 1 };
+        return [...selectedProtocores].sort(
+            (a, b) => (order[a.type] ?? 99) - (order[b.type] ?? 99),
+        );
+    }, [selectedProtocores]);
+
     // ===== ФУНКЦИИ =====
     // Открытие модалки для выбора протокора конкретного типа
     const showProtocoreModalForType = (type) => {
@@ -442,12 +451,11 @@ function CardProtocores({cardId}) {
                 />
             </div>
 
-            {selectedProtocores.length === 0 ? (
+            {displayProtocores.length === 0 ? (
                 <div className={styles.emptyState}>No protocores equipped</div>
             ) : (
                 <div className={styles.protocoreList}>
-                    {selectedProtocores.map((protocore) => {
-                        // Для уже прикрепленных протокоров показываем картинку текущей карточки
+                    {displayProtocores.map((protocore) => {
                         return (
                             <div key={protocore.id} className={styles.protocoreWrapper}>
                                 <ProtocoreBlock
