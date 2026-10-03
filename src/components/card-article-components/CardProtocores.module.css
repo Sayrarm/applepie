@@ -97,9 +97,9 @@
   }
 }
 
-@media screen and (max-width: 361px) {
+@media screen and (max-width: 379px) {
 
   .protocoreList {
-    zoom: 0.93;
+    zoom: 0.90;
   }
 }
