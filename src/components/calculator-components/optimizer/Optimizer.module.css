@@ -49,6 +49,13 @@
     justify-content: flex-end;
     gap: 5px;
 }
+
+.hintText {
+    font-size: 14px;
+    color: #888;
+    font-style: italic;
+    padding: 8px 0;
+}
 /*************Select********************/
 
 .select {

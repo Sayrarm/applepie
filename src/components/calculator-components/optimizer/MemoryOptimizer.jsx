@@ -277,24 +277,32 @@ function MemoryOptimizer() {
                     {/* Choose Protocores: Beta ИЛИ Delta в зависимости от типа карты */}
                     <div className={styles.protoSelectContainer}>
                         Choose Protocores:
-                        <div className={styles.selectContainer}>
-                            {targetTypeLabel}:
-                            <Select
-                                placeholder={`Select ${targetTypeLabel} Protocore`}
-                                options={
-                                    isSolar
-                                        ? betaProtocoreOptions
-                                        : deltaProtocoreOptions
-                                }
-                                value={data[protocoreKey]}
-                                onChange={
-                                    isSolar ? handleBetaChange : handleDeltaChange
-                                }
-                                className={styles.select}
-                                isClearable
-                                isSearchable={false}
-                            />
-                        </div>
+                        {data.selectedCard ? (
+                            <div className={styles.selectContainer}>
+                                {targetTypeLabel}:
+                                <Select
+                                    placeholder={`Select ${targetTypeLabel} Protocore`}
+                                    options={
+                                        isSolar
+                                            ? betaProtocoreOptions
+                                            : deltaProtocoreOptions
+                                    }
+                                    value={data[protocoreKey]}
+                                    onChange={
+                                        isSolar ? handleBetaChange : handleDeltaChange
+                                    }
+                                    className={styles.select}
+                                    isClearable
+                                    isSearchable={false}
+                                />
+                            </div>
+                        ) : (
+                            <div className={styles.selectContainer}>
+            <span className={styles.hintText}>
+                Choose Memory first
+            </span>
+                            </div>
+                        )}
                     </div>
                 </div>
             </nav>
