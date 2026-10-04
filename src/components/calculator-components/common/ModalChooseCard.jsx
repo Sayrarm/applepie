@@ -55,7 +55,7 @@ const ModalChooseCard = forwardRef(({ onSelectCard }, ref) => {
     const available = enhanceMemoriesWithAvailability(memoriesData).filter(
         (card) =>
             card.isAvailable === true &&
-            (placement === "all" || card.placementName === placement),
+            (placement === "any" || card.placementName === placement),
     );
 
     // Применяем фильтры
@@ -74,7 +74,7 @@ const ModalChooseCard = forwardRef(({ onSelectCard }, ref) => {
   };
 
   const resetAllSettings = () => {
-    setSelectedChar("ALL");
+    setSelectedChar("any");
     clearSorting();
     clearSearch();
     clearFilters();
@@ -87,7 +87,7 @@ const ModalChooseCard = forwardRef(({ onSelectCard }, ref) => {
     <>
       <ModalWindow
         ref={cardModalRef}
-        title={`Select ${modalPlacement === "all" ? "" : modalPlacement?.toUpperCase() + " "}Card`}
+        title={`Select ${modalPlacement === "any" ? "" : modalPlacement?.toUpperCase() + " "}Card`}
         width={950}
         tag={
           <div className={styles.cardSelectModal}>

@@ -47,4 +47,9 @@
   .tabButton {
     padding: 5px;
   }
+
+  .optimizerNavigationButtons {
+    display: flex;
+    gap: 10px;
+  }
 }

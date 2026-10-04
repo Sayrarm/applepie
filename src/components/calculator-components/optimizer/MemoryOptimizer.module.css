@@ -53,9 +53,8 @@
 
 .articleContainer {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: space-between;
+    justify-content: center;
+    align-content: center;
     zoom: 0.95;
 }
 
@@ -64,3 +63,37 @@
     display: flex;
     gap: 5px;
 }
+
+@media screen and (max-width: 570px) {
+
+    .articleContainer {
+        zoom: 0.90;
+    }
+}
+
+@media screen and (max-width: 536px) {
+
+    .selectMenu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .articleContainer {
+        zoom: 0.80;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .articleContainer {
+        zoom: 0.70;
+    }
+}
+
+@media screen and (max-width: 413px) {
+
+    .articleContainer {
+        zoom: 0.60;
+    }
+}
+

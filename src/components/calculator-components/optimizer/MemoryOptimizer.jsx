@@ -314,7 +314,7 @@ function MemoryOptimizer() {
                 <article className={memoryStyles.articleContainer}>
                     <RenderCardSlot
                         card={data.selectedCard}
-                        placement="all"
+                        placement="any"
                         index={0}
                         getCardData={getCardData}
                         cardModalRef={modalChooseCardRef}

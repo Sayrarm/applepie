@@ -141,7 +141,7 @@
     color: var(--colorTextDark);
     font-family: TikTok Sans, monospace;
     font-size: 16px;
-    padding: 5px;
+    padding: 0 5px;
 
     display: flex;
     justify-content: center;
