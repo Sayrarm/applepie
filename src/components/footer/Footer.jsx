@@ -6,17 +6,20 @@ function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerMediaContainer}>
-        General information:
+        All information about project here:
         <div className={styles.borderHorizontal}></div>
         {/*
         <Link className={styles.a} to="/about">
           About Project
         </Link>
         */}
+        {/*
         <Link className={styles.a} to="/faq">
           Instructions
         </Link>
+
         <div className={styles.borderHorizontalDashed}></div>
+        */}
         <a
           className={styles.a}
           href={"https://t.me/applepie_lads"}
