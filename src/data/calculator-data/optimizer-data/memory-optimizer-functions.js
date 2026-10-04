@@ -1,5 +1,4 @@
 import {
-    applyBaseCritDmgBonus,
     calculateFinalStats,
     getCardBaseStats,
     filterByStella,
@@ -56,13 +55,12 @@ export const computeMemoryDamage = (stats, formula) => {
     };
 };
 
-// ===== Финальные статы карты =====
+// ===== Финальные статы карты (без +150 critDmg, в отличие от команды) =====
 export const computeCardFinalStats = (card, protocores) => {
     if (!card) return null;
     const baseStats = getCardBaseStats(card);
     if (!baseStats) return null;
-    const finalStats = calculateFinalStats(card, baseStats, protocores);
-    return applyBaseCritDmgBonus(finalStats);
+    return calculateFinalStats(card, baseStats, protocores);
 };
 
 // ===== Проверка substat'а протокора =====
