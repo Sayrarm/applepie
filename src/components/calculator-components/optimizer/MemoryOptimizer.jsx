@@ -1,6 +1,7 @@
 import Select from "react-select";
 import { useState, useRef, useEffect } from "react";
 import styles from "./Optimizer.module.css";
+import memoryStyles from "./MemoryOptimizer.module.css";
 import {
     ModalChooseCard,
     ProtocoreBlock,
@@ -225,13 +226,13 @@ function MemoryOptimizer() {
     };
 
     return (
-        <section className={styles.container}>
-            <nav className={styles.navigation}>
-                <div className={styles.selectMenu}>
+        <section className={memoryStyles.container}>
+            <nav className={memoryStyles.navigation}>
+                <div className={memoryStyles.selectMenu}>
                     {/* Exclude protocores */}
-                    <div className={styles.protoSelectContainer}>
+                    <div className={memoryStyles.excludeSelectContainer}>
                         Exclude protocores:
-                        <div className={styles.selectContainer}>
+                        <div className={memoryStyles.selectContainer}>
                             <Select
                                 isMulti
                                 options={exclusionOptions}
@@ -245,41 +246,11 @@ function MemoryOptimizer() {
                         </div>
                     </div>
 
-                    {/* Main Stat / Sub Stat */}
-                    <div className={styles.statsSelectContainer}>
-                        Main Stat:
-                        <div className={styles.selectContainer}>
-                            <Select
-                                placeholder="Select Main Stat"
-                                options={MAIN_STAT_OPTIONS}
-                                value={data.mainStat}
-                                onChange={handleMainStatChange}
-                                className={styles.select}
-                                isClearable
-                                isSearchable={false}
-                            />
-                        </div>
-
-                        Sub Stat:
-                        <div className={styles.selectContainer}>
-                            <Select
-                                placeholder="Select Sub Stat"
-                                options={SUB_STAT_OPTIONS}
-                                value={data.subStat}
-                                onChange={handleSubStatChange}
-                                className={styles.select}
-                                isClearable
-                                isSearchable={false}
-                            />
-                        </div>
-                    </div>
-
                     {/* Choose Protocores: Beta ИЛИ Delta в зависимости от типа карты */}
-                    <div className={styles.protoSelectContainer}>
-                        Choose Protocores:
+                    <div className={memoryStyles.protoSelectContainer}>
                         {data.selectedCard ? (
-                            <div className={styles.selectContainer}>
-                                {targetTypeLabel}:
+                            <div className={memoryStyles.selectContainer}>
+                                Choose {targetTypeLabel}:
                                 <Select
                                     placeholder={`Select ${targetTypeLabel} Protocore`}
                                     options={
@@ -297,19 +268,50 @@ function MemoryOptimizer() {
                                 />
                             </div>
                         ) : (
-                            <div className={styles.selectContainer}>
-            <span className={styles.hintText}>
+                            <div className={memoryStyles.selectContainer}>
+            <span className={memoryStyles.hintText}>
                 Choose Memory first
             </span>
                             </div>
                         )}
                     </div>
+
+                    {/* Main Stat / Sub Stat */}
+                    <div className={memoryStyles.statsSelectContainer}>
+                        Main Stat:
+                        <div className={memoryStyles.mainStatContainer}>
+                            <Select
+                                placeholder="Select Main Stat"
+                                options={MAIN_STAT_OPTIONS}
+                                value={data.mainStat}
+                                onChange={handleMainStatChange}
+                                className={styles.select}
+                                isClearable
+                                isSearchable={false}
+                            />
+                        </div>
+
+                        Sub Stat:
+                        <div className={memoryStyles.subStatContainer}>
+                            <Select
+                                placeholder="Select Sub Stat"
+                                options={SUB_STAT_OPTIONS}
+                                value={data.subStat}
+                                onChange={handleSubStatChange}
+                                className={styles.select}
+                                isClearable
+                                isSearchable={false}
+                            />
+                        </div>
+                    </div>
+
+
                 </div>
             </nav>
 
             {/* Карта + результат */}
             <section className={styles.cardsContainer}>
-                <article className={styles.articleContainer}>
+                <article className={memoryStyles.articleContainer}>
                     <RenderCardSlot
                         card={data.selectedCard}
                         placement="all"
@@ -323,7 +325,7 @@ function MemoryOptimizer() {
                     />
 
                     {activeResults && (
-                        <div className={styles.resultProtocores}>
+                        <div className={memoryStyles.resultProtocores}>
                             {Object.entries(
                                 activeResults[isSolar ? "solar" : "lunar"] || {},
                             ).map(
@@ -331,7 +333,7 @@ function MemoryOptimizer() {
                                     protocore && (
                                         <div
                                             key={type}
-                                            className={styles.resultProtocore}
+                                            className={memoryStyles.resultProtocore}
                                         >
                                             <ProtocoreBlock
                                                 protocore={protocore}

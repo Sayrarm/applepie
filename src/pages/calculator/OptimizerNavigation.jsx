@@ -11,7 +11,7 @@ function OptimizerNavigation() {
                 Memory Optimizer
             </NavLink>
 
-            <div className={styles.tabContent}>
+            <div className={styles.tabContentOptimizer}>
                 <Outlet />
             </div>
         </div>
