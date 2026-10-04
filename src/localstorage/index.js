@@ -154,5 +154,8 @@ export {
 export {
   getOptimizerData,
   saveOptimizerData,
-  clearOptimizerData
+  clearOptimizerData,
+  saveMemoryOptimizerData,
+  clearMemoryOptimizerData,
+  getMemoryOptimizerData
 } from "./optimizer-storage.js";

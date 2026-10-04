@@ -1,5 +1,5 @@
 import styles from "./SpacepediaNavigation.module.css";
-import { NavLink } from "react-router-dom"; // ← используем NavLink
+import { NavLink } from "react-router-dom";
 
 function SpacepediaNavigation() {
   return (

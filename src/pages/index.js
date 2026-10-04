@@ -10,6 +10,7 @@ export { default as CompanionBattleInfo } from "./battle/CompanionBattleInfo.jsx
 
 //calculator
 export { default as Calculator } from "./calculator/Calculator.jsx";
+export { default as OptimizerNavigation } from "./calculator/OptimizerNavigation.jsx";
 
 //faq
 export { default as FAQ } from "./faq/FAQ.jsx";

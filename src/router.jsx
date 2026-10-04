@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import {createBrowserRouter, Navigate} from "react-router-dom";
 import Layout from "./Layout";
 import {
   Home,
@@ -21,8 +21,10 @@ import {
   CharacterArticle,
   Characters,
   MyAccount,
+  OptimizerNavigation
 } from "@pages";
 import { RedirectHandler } from "@hooks";
+import {MemoryOptimizer, MemoryUpCalculator, ProtocoreCalculator, Showcase, TeamOptimizer} from "@components";
 
 const basename = import.meta.env.BASE_URL;
 
@@ -54,8 +56,25 @@ export const router = createBrowserRouter(
         { path: "lore/characters/:articleLink", element: <CharacterArticle /> },
         { path: "lore/anecdotes", element: <Anecdotes /> },
         { path: "lore/anecdotes/:articleLink", element: <AnArticle /> },
-        { path: "calculator", element: <Calculator /> },
-        { path: "calculator/:navigation", element: <Calculator /> },
+        {
+          path: "calculator",
+          element: <Calculator />,
+          children: [
+            { index: true, element: <Navigate to="showcase" replace /> },
+            { path: "showcase", element: <Showcase /> },
+            {
+              path: "optimizer",
+              element: <OptimizerNavigation />,
+              children: [
+                { index: true, element: <Navigate to="team-optimizer" replace /> },
+                { path: "team-optimizer", element: <TeamOptimizer /> },
+                { path: "memory-optimizer", element: <MemoryOptimizer /> },
+              ],
+            },
+            { path: "protocore-calculator", element: <ProtocoreCalculator /> },
+            { path: "memory-calculator", element: <MemoryUpCalculator /> },
+          ],
+        },
         { path: "my-account", element: <MyAccount /> },
         { path: "my-account/:navigation", element: <MyAccount /> },
         { path: "about", element: <About /> },

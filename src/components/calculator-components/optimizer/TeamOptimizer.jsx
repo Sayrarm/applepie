@@ -25,7 +25,8 @@ import {
     calculateTeamStats,
     computeKitDamage,
     detectDamageType,
-    buildOptimizationResults, memoriesData
+    buildOptimizationResults,
+    memoriesData
 } from "@data";
 import {getImageUrl, useSolarPair} from "@hooks";
 
@@ -38,7 +39,7 @@ const CARD_SLOTS = [
     {id: "lunar4", placement: "lunar", index: 3},
 ];
 
-function Optimizer() {
+function TeamOptimizer() {
     const [data, setData] = useState(() => getOptimizerData());
     const [builds, setBuilds] = useState([]);
     const [activeBuildIndex, setActiveBuildIndex] = useState(0);
@@ -533,4 +534,4 @@ function Optimizer() {
     );
 }
 
-export default Optimizer;
+export default TeamOptimizer;

@@ -8,3 +8,4 @@ export { useScreenshot } from "./useScreenshot.js";
 export { useSolarPair } from "./useSolarPair.js";
 export { sortTableData } from "./tableSort.js";
 export { useTableSort } from "./useTableSort.js";
+export { useExcludedCards } from "./useExcludedCards.jsx";

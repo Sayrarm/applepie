@@ -1,0 +1,404 @@
+import Select from "react-select";
+import { useState, useRef, useEffect } from "react";
+import styles from "./Optimizer.module.css";
+import memoryStyles from "./MemoryOptimizer.module.css";
+import {
+    ModalChooseCard,
+    ProtocoreBlock,
+    RenderCardSlot,
+    StatsComparisonTable,
+} from "@components";
+import {
+    getCardProtocores,
+    saveCardProtocores,
+    findCardForProtocore,
+    removeProtocoreFromAllCards,
+    getCardLevel,
+    getCardRank,
+    getCardAscend,
+    getMemoryOptimizerData,
+    saveMemoryOptimizerData,
+    clearMemoryOptimizerData
+} from "@localstorage";
+import {
+    optimizeMemory,
+    resolveMainStatTarget,
+    getAvailableProtocores,
+    computeCardStats,
+} from "@data";
+import { useExcludedCards } from "@hooks";
+
+// ===== Опции селектов =====
+const MAIN_STAT_OPTIONS = [
+    { value: "Default", label: "Default (by talent)" },
+    { value: "HP", label: "HP" },
+    { value: "ATK", label: "ATK" },
+    { value: "DEF", label: "DEF" },
+];
+
+const SUB_STAT_OPTIONS = [
+    { value: "CRIT Rate", label: "CRIT Rate" },
+    { value: "CRIT DMG", label: "CRIT DMG" },
+    { value: "DMG Boost to Weakened", label: "DMG Boost to Weakened" },
+    { value: "Oath Strength", label: "Oath Strength" },
+    { value: "ATK Bonus", label: "ATK Bonus" },
+    { value: "HP Bonus", label: "HP Bonus" },
+    { value: "DEF Bonus", label: "DEF Bonus" },
+];
+
+const betaProtocoreOptions = [
+    { value: "Oath Recovery Boost", label: "Oath Recovery Boost" },
+    { value: "Oath Strength", label: "Oath Strength" },
+    { value: "Expedited Energy Boost", label: "Expedited Energy Boost" },
+    { value: "ATK Bonus", label: "ATK Bonus" },
+    { value: "HP Bonus", label: "HP Bonus" },
+    { value: "DEF Bonus", label: "DEF Bonus" },
+];
+
+const deltaProtocoreOptions = [
+    { value: "CRIT Rate", label: "CRIT Rate" },
+    { value: "CRIT DMG", label: "CRIT DMG" },
+    { value: "DMG Boost to Weakened", label: "DMG Boost to Weakened" },
+    { value: "ATK Bonus", label: "ATK Bonus" },
+    { value: "HP Bonus", label: "HP Bonus" },
+    { value: "DEF Bonus", label: "DEF Bonus" },
+];
+
+function MemoryOptimizer() {
+    const [data, setData] = useState(() => getMemoryOptimizerData());
+    const [builds, setBuilds] = useState([]);
+    const [activeBuildIndex, setActiveBuildIndex] = useState(0);
+    const [oldStats, setOldStats] = useState(null);
+    const [oldDamageData, setOldDamageData] = useState(null);
+    const [isOptimizing, setIsOptimizing] = useState(false);
+    const [progressText, setProgressText] = useState("");
+    const [isEquipping, setIsEquipping] = useState(false);
+    const modalChooseCardRef = useRef();
+
+    useEffect(() => {
+        saveMemoryOptimizerData(data);
+    }, [data]);
+
+    const { exclusionOptions, handleExcludedCardsChange, formatCardOption } =
+        useExcludedCards(data, setData, styles);
+
+    // ===== Тип карты =====
+    const isSolar = data.selectedCard?.placementName === "solar";
+    const targetType = isSolar ? "beta" : "delta";
+    const targetTypeLabel = isSolar ? "Beta" : "Delta";
+    const protocoreKey = `${targetType}Protocore`;
+
+    // ===== Выбор карты =====
+    const handleSelectCard = (placement, index, card) => {
+        setData((prev) => ({
+            ...prev,
+            selectedCard: card,
+            mainStat: null,
+            subStat: null,
+            betaProtocore: null,
+            deltaProtocore: null,
+        }));
+        setBuilds([]);
+    };
+
+    const handleMainStatChange = (option) =>
+        setData((prev) => ({ ...prev, mainStat: option }));
+
+    const handleSubStatChange = (option) =>
+        setData((prev) => ({ ...prev, subStat: option }));
+
+    const handleBetaChange = (option) =>
+        setData((prev) => ({ ...prev, betaProtocore: option }));
+
+    const handleDeltaChange = (option) =>
+        setData((prev) => ({ ...prev, deltaProtocore: option }));
+
+    // ===== Clear all =====
+    const clearAll = () => {
+        if (!window.confirm("Are you sure you want to clear all settings?"))
+            return;
+        clearMemoryOptimizerData();
+        setData(getMemoryOptimizerData());
+        setBuilds([]);
+        setActiveBuildIndex(0);
+        setOldStats(null);
+        setOldDamageData(null);
+    };
+
+    // ===== Start optimization =====
+    const startOptimization = () => {
+        if (!data.selectedCard) {
+            alert("Please select a card first.");
+            return;
+        }
+
+        const { available } = getAvailableProtocores(data.excludedCards || []);
+        if (available.length === 0) {
+            alert("All protocores are excluded. Remove some exclusions.");
+            return;
+        }
+
+        const card = data.selectedCard;
+
+        // Main Stat карты → формула урона
+        const mainStatTarget = resolveMainStatTarget(data.mainStat, card);
+
+        // Main Stat второго протокора (Beta/Delta) → фильтр secondary
+        const protocoreMainStat = data[protocoreKey]?.value || null;
+
+        // Sub Stat (substats протокора) → приоритет сортировки
+        const subStatTarget = data.subStat?.value || null;
+
+        setIsOptimizing(true);
+        setProgressText("Calculating...");
+
+        setTimeout(() => {
+            try {
+                const oldProtocores = getCardProtocores(card.id);
+                const oldStatsCalc = computeCardStats(card, oldProtocores);
+
+                const { builds: newBuilds } = optimizeMemory({
+                    card,
+                    allProtocores: available,
+                    mainStatTarget,
+                    protocoreMainStat,
+                    subStatTarget,
+                });
+
+                setBuilds(newBuilds);
+                setActiveBuildIndex(0);
+                setOldStats(oldStatsCalc.stats);
+                setOldDamageData(oldStatsCalc.damageData);
+            } finally {
+                setIsOptimizing(false);
+                setProgressText("");
+            }
+        }, 50);
+    };
+
+    // ===== Equip on Card =====
+    const handleEquipOnCard = () => {
+        const activeBuild = builds[activeBuildIndex];
+        const card = data.selectedCard;
+        if (!activeBuild || !card) return;
+
+        const confirmed = window.confirm(
+            `Protocores on "${card.name}" will be replaced. Continue?`,
+        );
+        if (!confirmed) return;
+
+        setIsEquipping(true);
+        try {
+            const slotResult =
+                activeBuild.results[isSolar ? "solar" : "lunar"];
+            const newProtocores = Object.values(slotResult || {}).filter(Boolean);
+
+            // Убираем эти протокоры со всех других карт
+            const newIds = new Set(newProtocores.map((p) => p.id));
+            newIds.forEach((id) => removeProtocoreFromAllCards(id));
+
+            // Сохраняем на нашу карту
+            saveCardProtocores(card.id, newProtocores);
+
+            alert(`Protocores equipped on "${card.name}"!`);
+        } catch (err) {
+            console.error("Equip error:", err);
+            alert("Failed to equip protocores.");
+        } finally {
+            setIsEquipping(false);
+        }
+    };
+
+    // ===== Активная сборка =====
+    const activeBuild = builds[activeBuildIndex] || null;
+    const activeResults = activeBuild?.results || null;
+
+    // ===== Данные для RenderCardSlot =====
+    const getCardData = () => {
+        if (!data.selectedCard) return null;
+        const id = String(data.selectedCard.id);
+        return {
+            level: getCardLevel(id),
+            rank: getCardRank(id),
+            isAscended: getCardAscend(id),
+            protocores: [],
+        };
+    };
+
+    return (
+        <section className={memoryStyles.container}>
+            <nav className={memoryStyles.navigation}>
+                <div className={memoryStyles.selectMenu}>
+                    {/* Exclude protocores */}
+                    <div className={memoryStyles.excludeSelectContainer}>
+                        Exclude protocores:
+                        <div className={memoryStyles.selectContainer}>
+                            <Select
+                                isMulti
+                                options={exclusionOptions}
+                                value={data.excludedCards || []}
+                                onChange={handleExcludedCardsChange}
+                                className={styles.select}
+                                placeholder="Select cards to exclude their protocores"
+                                isSearchable
+                                formatOptionLabel={formatCardOption}
+                            />
+                        </div>
+                    </div>
+
+                    {/* Choose Protocores: Beta ИЛИ Delta в зависимости от типа карты */}
+                    <div className={memoryStyles.protoSelectContainer}>
+                        {data.selectedCard ? (
+                            <div className={memoryStyles.selectContainer}>
+                                Choose {targetTypeLabel}:
+                                <Select
+                                    placeholder={`Select ${targetTypeLabel} Protocore`}
+                                    options={
+                                        isSolar
+                                            ? betaProtocoreOptions
+                                            : deltaProtocoreOptions
+                                    }
+                                    value={data[protocoreKey]}
+                                    onChange={
+                                        isSolar ? handleBetaChange : handleDeltaChange
+                                    }
+                                    className={styles.select}
+                                    isClearable
+                                    isSearchable={false}
+                                />
+                            </div>
+                        ) : (
+                            <div className={memoryStyles.selectContainer}>
+            <span className={memoryStyles.hintText}>
+                Choose Memory first
+            </span>
+                            </div>
+                        )}
+                    </div>
+
+                    {/* Main Stat / Sub Stat */}
+                    <div className={memoryStyles.statsSelectContainer}>
+                        Main Stat:
+                        <div className={memoryStyles.mainStatContainer}>
+                            <Select
+                                placeholder="Select Main Stat"
+                                options={MAIN_STAT_OPTIONS}
+                                value={data.mainStat}
+                                onChange={handleMainStatChange}
+                                className={styles.select}
+                                isClearable
+                                isSearchable={false}
+                            />
+                        </div>
+
+                        Sub Stat:
+                        <div className={memoryStyles.subStatContainer}>
+                            <Select
+                                placeholder="Select Sub Stat"
+                                options={SUB_STAT_OPTIONS}
+                                value={data.subStat}
+                                onChange={handleSubStatChange}
+                                className={styles.select}
+                                isClearable
+                                isSearchable={false}
+                            />
+                        </div>
+                    </div>
+
+
+                </div>
+            </nav>
+
+            {/* Карта + результат */}
+            <section className={styles.cardsContainer}>
+                <article className={memoryStyles.articleContainer}>
+                    <RenderCardSlot
+                        card={data.selectedCard}
+                        placement="any"
+                        index={0}
+                        getCardData={getCardData}
+                        cardModalRef={modalChooseCardRef}
+                        smallCard={true}
+                        showProtocores={false}
+                        className={`${styles.choosenCard} ${!data.selectedCard ? styles.emptySlot : ""}`}
+                        showCardSlotEquipped={false}
+                    />
+
+                    {activeResults && (
+                        <div className={memoryStyles.resultProtocores}>
+                            {Object.entries(
+                                activeResults[isSolar ? "solar" : "lunar"] || {},
+                            ).map(
+                                ([type, protocore]) =>
+                                    protocore && (
+                                        <div
+                                            key={type}
+                                            className={memoryStyles.resultProtocore}
+                                        >
+                                            <ProtocoreBlock
+                                                protocore={protocore}
+                                                hideChange={true}
+                                                hideDelete={true}
+                                                cardImage={findCardForProtocore(
+                                                    protocore.id,
+                                                )}
+                                            />
+                                        </div>
+                                    ),
+                            )}
+                        </div>
+                    )}
+                </article>
+            </section>
+
+            {/* Кнопки */}
+            <div className={styles.buttonsContainer}>
+                <button className={styles.clearButton} onClick={clearAll}>
+                    Clear all
+                </button>
+                <button
+                    className={styles.startButton}
+                    onClick={startOptimization}
+                    disabled={isOptimizing || !data.selectedCard}
+                >
+                    {isOptimizing ? "Optimizing..." : "Start"}
+                </button>
+                <button
+                    className={styles.sendButton}
+                    onClick={handleEquipOnCard}
+                    disabled={!activeResults || isOptimizing || isEquipping}
+                >
+                    {isEquipping ? "Equipping..." : "Equip on Card"}
+                </button>
+            </div>
+
+            {/* Индикатор загрузки */}
+            {isOptimizing && (
+                <div className={styles.loadingIndicator}>
+                    {progressText || "Calculating best protocores, please wait..."}
+                </div>
+            )}
+
+            {/* Результаты */}
+            <div className={styles.resultContainer}>
+                {builds.length > 0 && (
+                    <StatsComparisonTable
+                        beforeStats={oldStats}
+                        beforeDamage={oldDamageData}
+                        builds={builds}
+                        activeIndex={activeBuildIndex}
+                        onSelectBuild={setActiveBuildIndex}
+                        defaultSortKey="base"
+                    />
+                )}
+            </div>
+
+            <ModalChooseCard
+                ref={modalChooseCardRef}
+                onSelectCard={handleSelectCard}
+            />
+        </section>
+    );
+}
+
+export default MemoryOptimizer;

@@ -1,6 +1,7 @@
 .wrapper {
     width: 100%;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     margin: 15px 0;
 }
 
@@ -85,8 +86,9 @@
 
 .pageButton {
     padding: 8px 16px;
-    color: var(--colorTextDark);
+    color: var(--colorText);
     border: 1px solid var(--border-color);
+    background-color: var(--forSelect);
     cursor: pointer;
     font-weight: 500;
 }
@@ -94,4 +96,15 @@
 .pageButton:disabled {
     opacity: 0.4;
     cursor: not-allowed;
+}
+
+@media screen and (max-width: 413px) {
+
+    .table {
+        font-size: 11px;
+    }
+
+    .table thead th {
+        font-size: 11px;
+    }
 }

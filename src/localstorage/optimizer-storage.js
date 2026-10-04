@@ -1,7 +1,7 @@
 import { KEYS, get, set } from "@localstorage";
 
-// ===== ДЕФОЛТНЫЕ ДАННЫЕ ОПТИМИЗАТОРА =====
-const getDefaultOptimizerData = () => ({
+// ===== ДЕФОЛТНЫЕ ДАННЫЕ TEAM OPTIMIZER =====
+const getDefaultTeamOptimizerData = () => ({
     selectedCompanion: null,
     selectedWeapon: null,
     betaProtocore_1: null,
@@ -21,18 +21,32 @@ const getDefaultOptimizerData = () => ({
     },
 });
 
-// ===== ПОЛУЧЕНИЕ ДАННЫХ ОПТИМИЗАТОРА =====
+// ===== ДЕФОЛТНЫЕ ДАННЫЕ MEMORY OPTIMIZER =====
+const getDefaultMemoryOptimizerData = () => ({
+    selectedCard: null,
+    mainStat: null,
+    subStat: null,
+    betaProtocore: null,
+    deltaProtocore: null,
+    excludedCards: [],
+});
+
+// =========================================================
+// TEAM OPTIMIZER
+// =========================================================
+
 export const getOptimizerData = () => {
-    const defaults = getDefaultOptimizerData();
+    const defaults = getDefaultTeamOptimizerData();
     const stored = get(KEYS.OPTIMIZER, null);
 
     if (!stored || typeof stored !== "object") {
         return defaults;
     }
 
-    // Миграция: старое поле deltaProtocore → deltaProtocore_1
+
     const migrated = { ...stored };
 
+    // Миграция: старое поле deltaProtocore → deltaProtocore_1
     if (migrated.deltaProtocore !== undefined) {
         if (migrated.deltaProtocore_1 === undefined) {
             migrated.deltaProtocore_1 = migrated.deltaProtocore;
@@ -60,5 +74,34 @@ export const saveOptimizerData = (data) => {
 
 // ===== ОЧИСТКА ДАННЫХ ОПТИМИЗАТОРА =====
 export const clearOptimizerData = () => {
-    return set(KEYS.OPTIMIZER, getDefaultOptimizerData());
+    return set(KEYS.OPTIMIZER, getDefaultTeamOptimizerData());
+};
+
+// =========================================================
+// MEMORY OPTIMIZER
+// =========================================================
+
+export const getMemoryOptimizerData = () => {
+    const defaults = getDefaultMemoryOptimizerData();
+    const stored = get(KEYS.MEMORY_OPTIMIZER, null);
+
+    if (!stored || typeof stored !== "object") {
+        return defaults;
+    }
+
+    return {
+        ...defaults,
+        ...stored,
+        excludedCards: Array.isArray(stored.excludedCards)
+            ? stored.excludedCards
+            : [],
+    };
+};
+
+export const saveMemoryOptimizerData = (data) => {
+    return set(KEYS.MEMORY_OPTIMIZER, data);
+};
+
+export const clearMemoryOptimizerData = () => {
+    return set(KEYS.MEMORY_OPTIMIZER, getDefaultMemoryOptimizerData());
 };
