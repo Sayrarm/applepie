@@ -5,7 +5,7 @@
     padding: 5px;
     margin: 20px auto 0;
 
-    background-color: var(--bg-glass);
+    background-color: var(--bg-glass-dark);
     font-family: TikTok Sans, monospace;
 }
 
@@ -105,7 +105,7 @@
 }
 
 .select [class$="-multiValue"] {
-   background-color: var(--bg-glass);
+   background-color: var(--bg-glass-dark);
 }
 
 /**********************************************/
