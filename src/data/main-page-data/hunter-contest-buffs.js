@@ -241,6 +241,31 @@ export const hunterContestBuffs = [
     teamC:
         "Overload: Increases CRIT rate of all allied units.",
 
+    active: false,
+  },
+  {
+    id: 10,
+    teamAStella1: "../assets/icons/violet.png",
+    teamAStella1Count: 5,
+    teamAStella2: "../assets/icons/ruby.png",
+    teamAStella2Count: 1,
+    teamA:
+        "Oath Amplification: After using the Ardent Oath, DMG dealt by you and Companion increases by 100% for 10s.",
+
+    teamBStella1: "../assets/icons/pearl.png",
+    teamBStella1Count: 4,
+    teamBStella2: "../assets/icons/violet.png",
+    teamBStella2Count: 1,
+    teamB:
+        "Press On: After using an Active or Support Skills, all allied units can deal up to 40% more DMG with their basic attacks for 10 seconds. The DMG boost effect depends on the number of allied units.",
+
+    teamCStella1: "../assets/icons/emerald.png",
+    teamCStella1Count: 3,
+    teamCStella2: "../assets/icons/amber.png",
+    teamCStella2Count: 1,
+    teamC:
+        "DMG increase: Increases DMG against vulnerable Boss for all allied units.",
+
     active: true,
   },
 ];
