@@ -31,20 +31,58 @@
     text-transform: uppercase;
 }
 
-.statsTable td {
+.statsTable tr {
     cursor: pointer;
     transition: background 0.15s;
 }
 
-.statsTable td:hover {
-    background: rgba(255, 255, 255, 0.2);
+.statsTable thead tr:hover:first-child {
+    background: none !important;
+}
+
+.statsTable tr:hover {
+    background: rgb(165 165 165 / 0.2);
 }
 
 .cardImage {
     width: 70px;
     height: 40px;
+    vertical-align: middle;
     object-fit: cover;
-    object-position: 20% 20%;
+    object-position: 20% 25%;
+
+    -webkit-mask-image:
+            linear-gradient(
+                    90deg,
+                    transparent 0%,
+                    black 40%,
+                    black 90%,
+                    transparent 100%
+            ),
+            linear-gradient(
+                    0deg,
+                    transparent 0%,
+                    black 40%,
+                    black 90%,
+                    transparent 100%
+            );
+    -webkit-mask-composite: intersect;
+    mask-image:
+            linear-gradient(
+                    90deg,
+                    transparent 0%,
+                    black 10%,
+                    black 90%,
+                    transparent 100%
+            ),
+            linear-gradient(
+                    0deg,
+                    transparent 0%,
+                    black 10%,
+                    black 90%,
+                    transparent 100%
+            );
+    mask-composite: intersect;
 }
 
 .cardLink {
@@ -55,7 +93,7 @@
 
 .cardLink:hover {
     text-decoration: none;
-    color: var(--a);
+    color: var(--a) !important;
 }
 
 .stellaContainer *,
@@ -96,5 +134,5 @@
 }
 
 .sortable:hover {
-    background-color: var(--a);
+    background-color: var(--a) !important;
 }
