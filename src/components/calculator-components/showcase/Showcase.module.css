@@ -146,7 +146,7 @@
 }
 
 .cardSlot {
-  border: 1px solid var(--border-battle-page);
+  border: 1px solid var(--border-color, #333);
   margin: 5px;
   padding-top: 4px;
   min-height: 416px;
