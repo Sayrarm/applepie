@@ -200,7 +200,7 @@ function MemoriesTable({
                                 </td>
                             )}
                             {showRank && (
-                                <td>
+                                <td className={styles.rankContainer}>
                                     {formatOptionLabel(
                                         rankOptions.find((opt) => opt.value === card.rank),
                                     )}

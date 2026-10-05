@@ -1,7 +1,10 @@
 .container {
   margin-top: 20px;
-
   width: 100%;
 }
 
-
+.myMemoriesContainer {
+  background-color: var(--bg-glass-dark);
+  box-shadow: var(--box-shadow);
+  padding: 5px;
+}

@@ -18,18 +18,26 @@
 .statsTable td {
     padding: 3px;
     letter-spacing: -0.5px;
-    background-color: var(--bg-glass);
 }
 
 .statsTable th,
 .statsTable td {
-    border: 1px solid var(--border-table);
+    border-bottom: 1px solid var(--border-color, #333);
     text-align: center;
 }
 
 .statsTable th {
-    background-color: var(--forSelect);
-    color: var(--colorText);
+    color: var(--colorTextDark);
+    text-transform: uppercase;
+}
+
+.statsTable td {
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.statsTable td:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .cardImage {
@@ -64,6 +72,20 @@
     height: 25px;
 }
 
+.placementIcon,
+.talentIcon,
+.stellaIcon {
+    filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.5))
+    drop-shadow(0 0 1px rgba(0, 0, 0, 0.5))
+    drop-shadow(0 0 1px rgba(0, 0, 0, 0.5));
+}
+
+.rankContainer {
+    filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.8))
+    drop-shadow(0 0 1px rgba(0, 0, 0, 0.8))
+    drop-shadow(0 0 1px rgba(0, 0, 0, 0.6));
+}
+
 .sortable {
     cursor: pointer;
     user-select: none;
@@ -74,5 +96,5 @@
 }
 
 .sortable:hover {
-    background-color: var(--a-hover);
+    background-color: var(--a);
 }
