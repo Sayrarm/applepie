@@ -31,6 +31,19 @@
     color: var(--a) !important;
 }
 
+.statsTable tr {
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.statsTable thead tr:hover:first-child {
+    background: none !important;
+}
+
+.statsTable tr:hover {
+    background: rgb(165 165 165 / 0.2);
+}
+
 @media screen and (max-width: 500px) {
 
     .statsTable td,
