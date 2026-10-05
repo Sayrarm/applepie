@@ -22,6 +22,19 @@
     text-transform: uppercase;
 }
 
+.statsTablePairBonus tr {
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.statsTablePairBonus thead tr:hover:first-child {
+    background: none !important;
+}
+
+.statsTablePairBonus tr:hover {
+    background: rgb(165 165 165 / 0.2);
+}
+
 .titleTD,
 .titleTDMain {
     white-space: nowrap;
