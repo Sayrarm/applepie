@@ -6,9 +6,10 @@
 
 .statsTable th,
 .statsTable td {
-    border: 1px solid var(--border-table);
+    border-bottom: 1px solid var(--border-color, #333);
     text-align: center;
-    padding: 5px 2px;
+    padding: 8px 2px;
+    text-transform: uppercase;
 }
 
 .statsTable th {

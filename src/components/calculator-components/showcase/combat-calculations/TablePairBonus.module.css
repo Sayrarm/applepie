@@ -1,27 +1,34 @@
+.tablePairBonusContainer {
+    margin-top: 5px;
+    padding: 5px;
+    background-color: var(--bg-glass-dark);
+    box-shadow: var(--box-shadow);
+}
+
 .statsTablePairBonus {
     border-collapse: collapse;
     width: 100%;
-    margin: 5px 0;
 }
 
 .statsTablePairBonus th,
 .statsTablePairBonus td {
-    border: 1px solid var(--border-table);
+    border: 1px solid var(--border-color, #333);
     padding: 8px 12px;
     text-align: center;
 }
 
 .statsTablePairBonus th {
-    background-color: var(--forSelect);
-    color: var(--colorText);
+    color: var(--colorTextDark);
+    text-transform: uppercase;
 }
 
-.statsTablePairBonus {
-    background-color: var(--bg-glass);
-}
-
-.titleTD {
+.titleTD,
+.titleTDMain {
     white-space: nowrap;
+}
+
+.titleTDMain {
+    color: var(--a) !important;
 }
 
 @media screen and (max-width: 500px) {

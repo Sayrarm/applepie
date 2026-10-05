@@ -79,6 +79,10 @@ html {
   padding-top: 80px;
 }
 
+table {
+  font-variant-numeric: tabular-nums;
+}
+
 :root,
 html.light {
   --colorText: white;

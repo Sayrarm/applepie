@@ -1,7 +1,12 @@
+.kitCombatTableContainer {
+    padding: 5px;
+    background-color: var(--bg-glass-dark);
+    box-shadow: var(--box-shadow);
+}
+
 .statsTable {
     border-collapse: collapse;
     width: 100%;
-    margin: 5px 0;
 }
 
 .statsTable {
@@ -10,23 +15,20 @@
 
 .statsTable th,
 .statsTable td {
-    border: 1px solid var(--border-table);
+    border: 1px solid var(--border-color, #333);
     padding: 8px 12px;
     text-align: center;
 }
 
 .statsTable th {
-    background-color: var(--forSelect);
-    color: var(--colorText);
-}
-
-.statsTable td {
-    background-color: var(--bg-glass);
+    color: var(--colorTextDark);
+    text-transform: uppercase;
 }
 
 .titleSkill {
     background: none !important;
-    color: var(--colorTextDark) !important;
+    border: none !important;
+    color: var(--a) !important;
 }
 
 @media screen and (max-width: 500px) {
