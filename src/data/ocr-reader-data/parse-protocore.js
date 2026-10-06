@@ -110,7 +110,6 @@ function findAllStatMatches(fullText, statName) {
 /**
  * Извлекает значение стата, начиная с позиции ПОСЛЕ названия.
  * Устойчив к мусору между названием и числом (но НЕ пропускает цифры).
- * Возвращает {value, type} или null.
  */
 function extractStatValue(fullText, statEndPos) {
     // Окно 35 символов — достаточно, чтобы поймать "+ im +13.2%"
@@ -136,15 +135,16 @@ function extractStatValue(fullText, statEndPos) {
  * Ищет main stat по значению с проверкой контекста.
  * Логика:
  *   1. Собираем всех кандидатов, у кого значение совпадает.
- *   2. Если имя уникально (значение встречается только у одного стата) —
- *      достаточно одного слова из имени в контексте.
- *   3. Если имя не уникально — требуем первое слово из имени.
+ *   2. Если имя уникально — достаточно любого слова из имени в узком контексте.
+ *   3. Если имя не уникально — требуем ТОЧНОГО совпадения первого слова.
  */
 function findMainStatByValueWithContext(value, searchZone, pos) {
     if (value == null) return null;
 
-    const ctxStart = Math.max(0, pos - 5);
-    const ctxEnd = Math.min(searchZone.length, pos + 15);
+    // Узкое окно контекста: только непосредственное окружение позиции.
+    // Это критично, чтобы не захватить соседние статы.
+    const ctxStart = Math.max(0, pos - 8);
+    const ctxEnd = Math.min(searchZone.length, pos + 12);
     const ctx = searchZone.slice(ctxStart, ctxEnd).toLowerCase();
 
     const candidates = [];
@@ -172,10 +172,12 @@ function findMainStatByValueWithContext(value, searchZone, pos) {
         }
     }
 
-    // Случай 2: значение у нескольких статов — требуем первое слово
+    // Случай 2: значение у нескольких статов — требуем точного первого слова
     for (const c of candidates) {
         const firstWord = c.name.toLowerCase().split(/\s+/)[0];
-        if (firstWord.length >= 3 && ctx.includes(firstWord)) {
+        if (firstWord.length < 3) continue;
+        const re = new RegExp(`\\b${firstWord}\\b`, 'i');
+        if (re.test(ctx)) {
             return c;
         }
     }
@@ -268,7 +270,7 @@ export function parseProtocore(rawText) {
 
     allOccurrences.sort((a, b) => a.pos - b.pos);
 
-    // Дедупликация
+    // Дедупликация перекрытий: длинное имя вытесняет короткое
     const deduped = [];
     for (const item of allOccurrences) {
         let skip = false;
@@ -284,7 +286,7 @@ export function parseProtocore(rawText) {
                 }
                 break;
             }
-            if (last.pos >= item.pos && last.pos < item.pos + last.stat.length) {
+            if (last.pos >= item.pos && last.pos < item.pos + item.stat.length) {
                 if (item.stat.length > last.stat.length) {
                     deduped.splice(i, 1);
                 } else {
@@ -302,7 +304,7 @@ export function parseProtocore(rawText) {
     // ─── 6. Выбор main stat ───────────────────────────────────────────
     let mainEntry = null;
 
-    // 6a. По кандидатам
+    // 6a. По кандидатам из deduped: проверяем значение + контекст
     for (const candidate of deduped) {
         if (candidate.value == null) continue;
 
@@ -317,7 +319,9 @@ export function parseProtocore(rawText) {
         const candFirst = candidate.stat.toLowerCase().split(/\s+/)[0];
         const canonFirst = match.name.toLowerCase().split(/\s+/)[0];
         const sameFirst =
-            candFirst.startsWith(canonFirst) || canonFirst.startsWith(candFirst);
+            candFirst === canonFirst ||
+            candFirst.startsWith(canonFirst) ||
+            canonFirst.startsWith(candFirst);
 
         if (sameFirst) {
             mainEntry = {
@@ -330,7 +334,7 @@ export function parseProtocore(rawText) {
         }
     }
 
-    // 6b. Сканируем числа в тексте (fallback)
+    // 6b. Fallback: сканируем числа в тексте
     if (!mainEntry) {
         const valueMatches = [...searchZone.matchAll(/(?<!#)\b(\d+(?:\.\d+)?)\s*(%)?/g)];
 
@@ -371,7 +375,7 @@ export function parseProtocore(rawText) {
         }
     }
 
-    // 6c. Fallback
+    // 6c. Fallback: первый кандидат
     if (!mainEntry) {
         mainEntry = deduped[0];
     }
@@ -461,22 +465,37 @@ export function parseProtocore(rawText) {
     const mainEntryPos = mainEntry.pos;
     const mainEntryStat = mainEntry.stat;
 
-    const substats = deduped
-        .filter(o => {
-            if (o.pos === mainEntryPos) return false;
-            if (
-                o.stat === mainEntryStat &&
-                Math.abs(o.pos - mainEntryPos) <= 5
-            ) {
-                return false;
-            }
-            return o.value != null;
-        })
-        .map(({ stat, value, valueType }) => ({
-            stat,
-            value,
-            type: valueType,
-        }));
+    // Собираем "сырые" сабстаты: всё кроме main stat, с известным значением
+    const rawSubstats = deduped.filter(o => {
+        if (o.pos === mainEntryPos) return false;
+        if (
+            o.stat === mainEntryStat &&
+            Math.abs(o.pos - mainEntryPos) <= 5
+        ) {
+            return false;
+        }
+        return o.value != null;
+    });
+
+    // Дедупликация по имени стата: одинаковые сабстаты не могут существовать.
+    // Если два HP Bonus — берём первый (верхний на скрине).
+    const seenStats = new Set();
+    const uniqueSubstats = [];
+    for (const o of rawSubstats) {
+        const normalized = o.stat.replace(/'/g, '').toLowerCase();
+        if (seenStats.has(normalized)) continue;
+        seenStats.add(normalized);
+        uniqueSubstats.push(o);
+    }
+
+    // Максимум 4 сабстата
+    const finalSubstats = uniqueSubstats.slice(0, 4);
+
+    const substats = finalSubstats.map(({ stat, value, valueType }) => ({
+        stat,
+        value,
+        type: valueType,
+    }));
 
     return {
         type,
