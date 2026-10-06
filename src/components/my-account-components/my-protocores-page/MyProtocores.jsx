@@ -14,6 +14,7 @@ import {
   removeProtocoreFromAllCards,
   findCardForProtocore,
 } from "@localstorage";
+import OcrReader from "@components/my-account-components/OcrReader.jsx";
 
 function MyProtocores() {
   const [protocores, setProtocores] = useState([]);
@@ -175,6 +176,8 @@ function MyProtocores() {
       <button className={styles.addButton} onClick={handleAddProtocore}>
         + Add protocore
       </button>
+
+      <OcrReader />
 
       <section className={styles.protocoreList}>
         {sortedProtocores.length === 0 ? (
