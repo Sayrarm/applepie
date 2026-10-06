@@ -173,3 +173,8 @@ export {
 
 //ocr reader
 export { parseProtocore } from "./ocr-reader-data/parse-protocore.js";
+export {
+  runOcr,
+  canSaveOcrProtocore,
+  saveOcrProtocore,
+} from "./ocr-reader-data/ocr-protocore-utils.js";

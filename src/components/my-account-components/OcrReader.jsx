@@ -1,123 +1,71 @@
 import React, { useState } from 'react';
-import Tesseract from 'tesseract.js';
-import { parseProtocore } from '@data';
-import { addProtocore } from '@localstorage';
-
-// Тип сабстата по названию.
-// Совпадает с логикой в ModalWindowProtocore.jsx.
-const FLAT_SUBSTATS = new Set(['HP', 'ATK', 'DEF']);
-
-const getSubstatType = (statName) => {
-    const normalized = statName.replace(/'/g, '').toLowerCase();
-    if (FLAT_SUBSTATS.has(statName)) return 'flat';
-    return 'percent';
-};
+import {
+    runOcr,
+    canSaveOcrProtocore,
+    saveOcrProtocore,
+} from '@data';
 
 const OcrReader = () => {
     const [image, setImage] = useState(null);
-    const [text, setText] = useState('');
-    const [protocore, setProtocore] = useState(null);
     const [progress, setProgress] = useState(0);
     const [loading, setLoading] = useState(false);
-    const [saved, setSaved] = useState(false);
+    const [message, setMessage] = useState(null); // { kind: 'success'|'error', text }
 
-    // Обработка выбора файла
     const handleImageChange = (e) => {
         if (e.target.files && e.target.files[0]) {
             setImage(URL.createObjectURL(e.target.files[0]));
-            setText('');
-            setProtocore(null);
             setProgress(0);
-            setSaved(false);
+            setMessage(null);
         }
     };
 
-    // Запуск распознавания
-    const handleRecognize = async () => {
+    const handleSave = async () => {
         if (!image) return;
 
         setLoading(true);
         setProgress(0);
-        setSaved(false);
+        setMessage(null);
 
         try {
-            const result = await Tesseract.recognize(
-                image,
-                'eng',
-                {
-                    // Логгер для отслеживания прогресса
-                    logger: (m) => {
-                        console.log(m);
-                        if (m.status === 'recognizing text') {
-                            setProgress(Math.round(m.progress * 100));
-                        }
-                    },
-                }
-            );
+            const { rawText, protocore } = await runOcr(image, setProgress);
 
-            const rawText = result.data.text;
-            setText(rawText);
+            console.log('=== OCR ===');
+            console.log('Сырой текст:', rawText);
+            console.log('Распознанный протокор:', protocore);
 
-            // Парсим текст в объект протокора
-            const parsed = parseProtocore(rawText);
-            console.log('Распознанный протокор:', parsed);
-            setProtocore(parsed);
+            if (!canSaveOcrProtocore(protocore)) {
+                console.warn('Не все поля распознаны, сохранение отменено.');
+                setMessage({
+                    kind: 'error',
+                    text: 'Не удалось распознать протокор. Проверь скриншот (качество, обрезка). Подробности — в консоли.',
+                });
+                return;
+            }
 
+            const saved = saveOcrProtocore(protocore);
+            console.log('Сохранённый протокор:', saved);
+
+            setMessage({
+                kind: 'success',
+                text: `Протокор сохранён: ${saved.type} / ${saved.stellactrum} / ур. ${saved.level}`,
+            });
+
+            // Очищаем image, чтобы сразу можно было загрузить следующий скрин
+            setImage(null);
         } catch (err) {
             console.error('Ошибка OCR:', err);
+            setMessage({
+                kind: 'error',
+                text: 'Ошибка распознавания. Подробности — в консоли.',
+            });
         } finally {
             setLoading(false);
         }
     };
 
-    // Проверка: можно ли сохранять протокор
-    const canSave = (p) => {
-        if (!p) return false;
-        return (
-            p.type &&
-            p.stellactrum &&
-            p.level !== null && p.level !== undefined &&
-            p.mainStat &&
-            p.mainStatValue !== null && p.mainStatValue !== undefined
-        );
-    };
-
-    // Сохранение в localStorage
-    const handleSave = () => {
-        if (!canSave(protocore)) return;
-
-        // Подготавливаем объект в формате localStorage.
-        // type и stellactrum уже есть.
-        // substats нужно дополнить полем type (flat/percent).
-        // id, createdAt, updatedAt добавит addProtocore.
-        const dataToSave = {
-            type: protocore.type,
-            stellactrum: protocore.stellactrum,
-            level: protocore.level,
-            mainStat: protocore.mainStat,
-            mainStatValue: protocore.mainStatValue,
-            substats: protocore.substats.map((s) => ({
-                stat: s.stat,
-                value: s.value,
-                type: getSubstatType(s.stat),
-            })),
-        };
-
-        try {
-            const saved = addProtocore(dataToSave);
-            console.log('Сохранённый протокор:', saved);
-            setSaved(true);
-
-            // Уведомляем другие компоненты
-            window.dispatchEvent(new CustomEvent('protocoresUpdated'));
-        } catch (err) {
-            console.error('Ошибка сохранения:', err);
-        }
-    };
-
     return (
         <div style={{ padding: 20 }}>
-            <h2>Распознавание текста (Tesseract.js)</h2>
+            <h2>Добавить протокор по скриншоту</h2>
 
             <input type="file" accept="image/*" onChange={handleImageChange} />
 
@@ -128,73 +76,44 @@ const OcrReader = () => {
                         alt="preview"
                         style={{ maxWidth: 300, border: '1px solid #ccc' }}
                     />
-                    <br />
-                    <button
-                        onClick={handleRecognize}
-                        disabled={loading}
-                        style={{ marginTop: 10, padding: '8px 16px' }}
-                    >
-                        {loading ? `Распознавание... ${progress}%` : 'Распознать текст'}
-                    </button>
                 </div>
             )}
 
-            {text && (
-                <div style={{ marginTop: 20 }}>
-                    <h3>Сырой текст OCR:</h3>
-                    <pre style={{
-                        background: '#000000',
-                        padding: 10,
-                        whiteSpace: 'pre-wrap',
-                        borderRadius: 8
-                    }}>
-                        {text}
-                    </pre>
-                </div>
-            )}
-
-            {protocore && (
-                <div style={{ marginTop: 20 }}>
-                    <h3>Распознанный протокор:</h3>
-                    <pre style={{
-                        background: '#000000',
-                        padding: 10,
-                        whiteSpace: 'pre-wrap',
-                        borderRadius: 8,
-                        border: '1px solid #b5d6b5'
-                    }}>
-                        {JSON.stringify(protocore, null, 2)}
-                    </pre>
-
+            {image && (
+                <div style={{ marginTop: 10 }}>
                     <button
                         onClick={handleSave}
-                        disabled={!canSave(protocore) || saved}
+                        disabled={loading}
                         style={{
-                            marginTop: 10,
                             padding: '8px 16px',
-                            background: saved ? '#b5d6b5' : '#1677ff',
+                            background: '#1677ff',
                             color: '#fff',
                             border: 'none',
                             borderRadius: 4,
-                            cursor: canSave(protocore) && !saved ? 'pointer' : 'not-allowed',
-                            opacity: canSave(protocore) ? 1 : 0.5,
+                            cursor: loading ? 'not-allowed' : 'pointer',
+                            opacity: loading ? 0.6 : 1,
                         }}
                     >
-                        {saved ? '✓ Сохранено' : 'Сохранить в localStorage'}
+                        {loading
+                            ? `Распознавание... ${progress}%`
+                            : 'Сохранить протокор'}
                     </button>
-
-                    {!canSave(protocore) && (
-                        <div style={{ marginTop: 8, color: '#a00', fontSize: 14 }}>
-                            ⚠️ Не все поля распознаны — сохранение недоступно.
-                            Проверь type, stellactrum, level, mainStat, mainStatValue.
-                        </div>
-                    )}
                 </div>
             )}
 
-            {!protocore && text && (
-                <div style={{ marginTop: 20, color: '#a00' }}>
-                    ⚠️ Не удалось распознать протокор. Проверь сырой текст выше.
+            {message && (
+                <div
+                    style={{
+                        marginTop: 15,
+                        padding: 10,
+                        borderRadius: 4,
+                        background: message.kind === 'success' ? '#e6ffe6' : '#ffe6e6',
+                        border: `1px solid ${message.kind === 'success' ? '#b5d6b5' : '#e0a0a0'}`,
+                        color: message.kind === 'success' ? '#0a5' : '#a00',
+                    }}
+                >
+                    {message.kind === 'success' ? '✓ ' : '⚠️ '}
+                    {message.text}
                 </div>
             )}
         </div>
