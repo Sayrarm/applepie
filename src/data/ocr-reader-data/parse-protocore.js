@@ -418,20 +418,21 @@ export function parseProtocore(rawText) {
     // ─── 8. Type ──────────────────────────────────────────────────────
     let type = symbolType;
 
-    if (!type) {
+    // Проверяем валидность symbolType по main stat:
+    // если main stat не входит в мейны symbolType — symbolType неверный.
+    const symbolTypeValid =
+        type && protocoreTypes[type] &&
+        protocoreTypes[type].mainStats.some(s => s.name === mainStat);
+
+    if (!symbolTypeValid) {
+        // symbolType не подходит (или не распознан вовсе) —
+        // определяем по main stat.
         if (mainEntry.canonicalType) {
             type = mainEntry.canonicalType;
         } else if (MAIN_STAT_TO_TYPES[mainStat]?.length === 1) {
             type = MAIN_STAT_TO_TYPES[mainStat][0];
         }
-    }
-
-    // Если тип известен, но main не входит в его мейны — попробуем canonicalType
-    if (type && protocoreTypes[type]) {
-        const possibleMains = protocoreTypes[type].mainStats.map(s => s.name);
-        if (!possibleMains.includes(mainStat) && mainEntry.canonicalType) {
-            type = mainEntry.canonicalType;
-        }
+        // Иначе оставляем symbolType (fallback)
     }
 
     // ─── 9. Level ─────────────────────────────────────────────────────
