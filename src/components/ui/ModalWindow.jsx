@@ -7,6 +7,7 @@ const ModalWindow = forwardRef((props, ref) => {
     title = "Title", // заголовок по умолчанию
     tag = null, // тег (может быть передан как React-элемент)
     width = 720,
+    onClose = () => {},
   } = props;
 
   const [loading, setLoading] = useState(false);
@@ -27,6 +28,7 @@ const ModalWindow = forwardRef((props, ref) => {
 
   const handleCancel = () => {
     setOpen(false);
+    onClose();
   };
 
   return (

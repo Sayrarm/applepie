@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, forwardRef, useImperativeHandle } from 'react';
 import { runOcrBatch } from '@data';
 
-const OcrReader = () => {
+const OcrReader = forwardRef((props, ref) => {
     const [files, setFiles] = useState([]);
     const [loading, setLoading] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(-1);
@@ -11,6 +11,21 @@ const OcrReader = () => {
     const [totalAll, setTotalAll] = useState(0);
     const [results, setResults] = useState([]);
     const [message, setMessage] = useState(null);
+
+    // ← сбрасываем всё состояние
+    useImperativeHandle(ref, () => ({
+        reset: () => {
+            setFiles([]);
+            setResults([]);
+            setMessage(null);
+            setCurrentIndex(-1);
+            setCurrentFileName('');
+            setFileProgress(0);
+            setTotalDone(0);
+            setTotalAll(0);
+            setLoading(false);
+        },
+    }));
 
     const handleFilesChange = (e) => {
         const list = Array.from(e.target.files || []);
@@ -24,6 +39,8 @@ const OcrReader = () => {
             setTotalDone(0);
             setTotalAll(0);
         }
+        // очищаем нативное значение input, чтобы можно было выбрать тот же файл повторно
+        e.target.value = '';
     };
 
     const handleSaveAll = async () => {
@@ -244,7 +261,7 @@ const OcrReader = () => {
             )}
         </div>
     );
-};
+});
 
 const th = {
     textAlign: 'left',

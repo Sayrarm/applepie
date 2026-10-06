@@ -6,7 +6,8 @@ import {
   useProtocoreFilter,
   useProtocoreSort,
   FilterSortBarProtocores,
-  OcrReader, ModalWindow, CardList
+  OcrReader,
+  ModalWindow
 } from "@components";
 import ModalWindowProtocore from "./ModalWindowProtocore.jsx";
 import {
@@ -21,6 +22,7 @@ function MyProtocores() {
   const modalRef = useRef();
   const filterModalRef = useRef();
   const ocrModalRef = useRef();
+  const ocrReaderRef = useRef();
 
   const { searchQuery, onSearch, clearSearch } =
     useProtocoreSearch("protocores");
@@ -109,6 +111,10 @@ function MyProtocores() {
   const handleOcr = () => {
     ocrModalRef.current?.showModal();
   }
+
+  const handleModalClose = () => {
+    ocrReaderRef.current?.reset();
+  };
 
   const handleAddProtocore = () => {
     modalRef.current?.showModal();
@@ -220,9 +226,9 @@ function MyProtocores() {
 
       <ModalWindow
           ref={ocrModalRef}
-          title = "Upload screenshots"
-          tag = {<OcrReader />}
-
+          title="Upload screenshots"
+          tag={<OcrReader ref={ocrReaderRef} />}
+          onClose={handleModalClose}
       />
     </section>
   );
