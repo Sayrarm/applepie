@@ -1,15 +1,9 @@
 import { protocoreTypes } from '@data';
 
-// Карта символов → ключи в protocoreTypes.
-// Включает как корректные греческие буквы, так и частые OCR-ошибки.
 const TYPE_MAP = {
-    // alpha
     'α': 'alpha', 'a': 'alpha', 'alpha': 'alpha', '4': 'alpha',
-    // beta
-    'β': 'beta', 'b': 'beta', 'beta': 'beta', '6': 'beta',
-    // gamma
+    'β': 'beta',  'b': 'beta',  'beta': 'beta',  '6': 'beta',
     'γ': 'gamma', 'y': 'gamma', 'gamma': 'gamma', 'v': 'gamma',
-    // delta
     'δ': 'delta', 'd': 'delta', 'delta': 'delta',
     '§': 'delta', '&': 'delta', '$': 'delta',
     'i': 'delta', '1': 'delta', '0': 'delta',
@@ -19,12 +13,14 @@ const STELLACTRUM_COLORS = [
     'violet', 'amber', 'emerald', 'sapphire', 'ruby', 'pearl', 'obsidian',
 ];
 
-const KNOWN_SUBSTATS = [
-    "Oath's Strength", // ← вариант с апострофом, как на 4.png
-    'DMG Boost to Weakened',
+// Полный список известных статов (мейны + сабстаты).
+// Порядок не важен — сортировка по позиции в тексте.
+const ALL_KNOWN_STATS = [
+    "Oath's Strength",
     'Oath Recovery Boost',
-    'Expedited Energy Boost',
     'Oath Strength',
+    'Expedited Energy Boost',
+    'DMG Boost to Weakened',
     'CRIT Rate', 'CRIT DMG',
     'HP Bonus', 'ATK Bonus', 'DEF Bonus',
     'HP', 'ATK', 'DEF',
@@ -35,48 +31,150 @@ function escapeRegex(str) {
 }
 
 /**
- * Извлекает уровень протокора.
- * Ищет первую короткую цифровую последовательность (1-2 цифры) в диапазоне 0..15,
- * которая не является частью другого числа.
+ * Вставляет пробелы в CamelCase: "oathRecoveryBoost" → "oath Recovery Boost"
+ * Это нужно, т.к. OCR часто склеивает слова без пробелов.
  */
-function extractLevel(fullText) {
-    // Ищем "+N" или просто "N" как отдельное число
-    // \b вокруг + опционально, чтобы поймать "515" или "8:5"
-    // Основной вариант — с плюсом:
-    let match = fullText.match(/(?:^|\s|\+)(\d{1,2})(?:\s|$|\))/);
+function normalizeCamelCase(str) {
+    return str
+        // граница: строчная → заглавная ("thR" → "th R")
+        .replace(/([a-z])([A-Z])/g, '$1 $2')
+        // граница: заглавная → заглавная+строчная ("ATKBonus" → "ATK Bonus")
+        .replace(/([A-Z]+)([A-Z][a-z])/g, '$1 $2');
+}
 
-    // Fallback: ищем любую короткую последовательность 0..15 в начале текста
-    if (!match) {
-        match = fullText.match(/\b(\d{1,2})\b/);
+/**
+ * Определяет уровень протокора.
+ * Приоритеты:
+ *   1. "Max Level" в тексте → 15
+ *   2. Значение main stat из OCR совпадает со значением из protocoreTypes
+ *      на каком-то уровне → этот уровень
+ *   3. Fallback: короткое число 0..15 из текста
+ *
+ * @param {string} fullText
+ * @param {string|null} type
+ * @param {string|null} mainStat
+ * @param {number|null} mainStatValueFromOcr
+ * @returns {number|null}
+ */
+function extractLevel(fullText, type, mainStat, mainStatValueFromOcr) {
+    // 1. Max Level
+    if (/\bMax\s*Level\b/i.test(fullText)) {
+        return 15;
     }
 
-    if (!match) return null;
+    // 2. По значению main stat из OCR
+    if (
+        type && mainStat && mainStatValueFromOcr != null &&
+        protocoreTypes[type]
+    ) {
+        const statDef = protocoreTypes[type].mainStats.find(
+            s => s.name === mainStat
+        );
+        if (statDef) {
+            // Ищем уровень, на котором значение из таблицы совпадает с OCR
+            // Используем небольшой допуск для float (например, CRIT Rate 1.7%)
+            for (let lvl = statDef.values.length - 1; lvl >= 0; lvl--) {
+                if (Math.abs(statDef.values[lvl] - mainStatValueFromOcr) < 0.05) {
+                    return lvl;
+                }
+            }
+        }
+    }
 
-    // Может быть несколько совпадений — перебираем все и берём первое подходящее
+    // 3. Fallback: короткое число 0..15
     const candidates = [...fullText.matchAll(/\b(\d{1,2})\b/g)]
         .map(m => parseInt(m[1], 10))
         .filter(n => n >= 0 && n <= 15);
-
     return candidates.length > 0 ? candidates[0] : null;
 }
 
 /**
- * Извлекает символ типа (α/β/γ/δ) из строки "Protocore - X".
- * Берёт символ сразу после дефиса, а не из всего текста.
+ * Извлекает тип (alpha/beta/gamma/delta) из "Protocore - X".
  */
 function extractType(fullText) {
-    // Регексп: "Protocore" + дефис/тире + (пробелы/мусор) + символ(ы)
-    // Захватываем до 3 символов, чтобы поймать "i B", "§&" и т.д.
     const m = fullText.match(/Protocore\s*[-–—]\s*([^\s]{1,3})/i);
     if (!m) return null;
-
     const raw = m[1].toLowerCase();
-
-    // Ищем первый символ, который есть в TYPE_MAP
     for (const ch of raw) {
         if (TYPE_MAP[ch]) return TYPE_MAP[ch];
     }
     return null;
+}
+
+/**
+ * Находит ВСЕ вхождения статов в тексте с их позициями и значениями.
+ * Возвращает отсортированный массив:
+ *   [{ stat, value, type: 'flat'|'percent', pos }]
+ */
+function findAllStats(fullText) {
+    const found = [];
+
+    for (const statName of ALL_KNOWN_STATS) {
+        const escaped = escapeRegex(statName);
+
+        // Ищем название стата как отдельные слова.
+        // \s+ между словами допускает любые пробелы в тексте (нормализованные).
+        const namePattern = escaped.replace(/\\?\s+/g, '\\s+');
+        const nameRe = new RegExp(`\\b${namePattern}\\b`, 'gi');
+        const nameMatches = [...fullText.matchAll(nameRe)];
+
+        for (const m of nameMatches) {
+            const pos = m.index;
+            const tail = fullText.slice(pos, pos + 40);
+
+            // Пробуем percent
+            const rePercent = new RegExp(
+                `^${namePattern}[^+\\d%]{0,15}\\+?(\\d+(?:\\.\\d+)?)\\s*%`,
+                'i'
+            );
+            const mp = tail.match(rePercent);
+            if (mp) {
+                found.push({
+                    stat: statName,
+                    value: parseFloat(mp[1]),
+                    type: 'percent',
+                    pos,
+                });
+                continue;
+            }
+
+            // Пробуем flat
+            const reFlat = new RegExp(
+                `^${namePattern}[^+\\d%]{0,15}\\+?(\\d+)\\b(?!\\s*%)`,
+                'i'
+            );
+            const mf = tail.match(reFlat);
+            if (mf) {
+                found.push({
+                    stat: statName,
+                    value: parseInt(mf[1], 10),
+                    type: 'flat',
+                    pos,
+                });
+            }
+        }
+    }
+
+    // Сортируем по позиции в тексте
+    found.sort((a, b) => a.pos - b.pos);
+
+    // Убираем перекрывающиеся совпадения:
+    // например, "HP" и "HP Bonus" могут матчиться в одной позиции.
+    // Оставляем более длинный стат.
+    const deduped = [];
+    for (const item of found) {
+        const last = deduped[deduped.length - 1];
+        if (last && item.pos < last.pos + last.stat.length) {
+            // Пересечение — оставляем того, у кого длиннее название
+            if (item.stat.length > last.stat.length) {
+                deduped[deduped.length - 1] = item;
+            }
+            continue;
+        }
+        deduped.push(item);
+    }
+
+    return deduped;
 }
 
 /**
@@ -86,10 +184,12 @@ export function parseProtocore(rawText) {
     if (!rawText) return null;
 
     // ─── 1. Нормализация ──────────────────────────────────────────────
-    const fullText = rawText
-        .replace(/[€~\\|]/g, ' ')           // мусор (НЕ трогаем § & $ — они нужны)
+    let fullText = rawText
+        .replace(/[€~\\|]/g, ' ')
         .replace(/\s+/g, ' ')
         .trim();
+
+    fullText = normalizeCamelCase(fullText);
 
     // ─── 2. Stellactrum ───────────────────────────────────────────────
     let stellactrum = null;
@@ -104,110 +204,60 @@ export function parseProtocore(rawText) {
     // ─── 3. Type ──────────────────────────────────────────────────────
     const type = extractType(fullText);
 
-    // ─── 4. Level ─────────────────────────────────────────────────────
-    const level = extractLevel(fullText);
+    // ─── 4. Обрезаем хвост по стоп-словам ─────────────────────────────
+    const stopWords = ['Max Level', 'Enhance', 'Unequip'];
+    let searchZone = fullText;
+    for (const stop of stopWords) {
+        const idx = searchZone.search(new RegExp(stop, 'i'));
+        if (idx > 0) searchZone = searchZone.slice(0, idx);
+    }
 
-    // ─── 5. Main stat (только из статов ЭТОГО типа) ───────────────────
-    let mainStat = null;
+    // ─── 5. Находим все статы ─────────────────────────────────────────
+    const allStats = findAllStats(searchZone);
+    if (allStats.length === 0) return null;
+
+    // ─── 6. Первый стат = main stat ───────────────────────────────────
+    const mainStatEntry = allStats[0];
+    const mainStat = mainStatEntry.stat;
+    const mainStatValueFromOcr = mainStatEntry.value;
+
+    // ─── 7. Level (по Max Level / main stat / OCR) ────────────────────
+    const level = extractLevel(
+        fullText,
+        type,
+        mainStat,
+        mainStatValueFromOcr
+    );
+
+    // ─── 8. mainStatValue — из таблицы по найденному уровню ───────────
     let mainStatValue = null;
-    let mainStatPos = -1; // позиция main stat в fullText — чтобы исключить из сабстатов
-
-    if (type && protocoreTypes[type]) {
-        const possibleMainStats = protocoreTypes[type].mainStats.map(s => s.name);
-
-        for (const stat of possibleMainStats) {
-            const re = new RegExp(`\\b${escapeRegex(stat)}\\b`, 'i');
-            const m = fullText.match(re);
-            if (m) {
-                mainStat = stat;
-                mainStatPos = m.index;
-                break;
-            }
-        }
-
-        if (mainStat && level != null) {
-            const statDef = protocoreTypes[type].mainStats.find(
-                s => s.name === mainStat
-            );
-            if (statDef && statDef.values[level] != null) {
-                mainStatValue = statDef.values[level];
-            }
+    if (type && protocoreTypes[type] && level != null) {
+        const statDef = protocoreTypes[type].mainStats.find(
+            s => s.name === mainStat
+        );
+        if (statDef && statDef.values[level] != null) {
+            mainStatValue = statDef.values[level];
         }
     }
-
-    // ─── 6. Substats ──────────────────────────────────────────────────
-    const substats = [];
-
-    for (const statName of KNOWN_SUBSTATS) {
-        // Пропускаем сам main stat — не хотим дублировать его в сабстатах
-        // (но осторожно: "HP" может быть и main "HP", и сабстат "HP" одновременно —
-        //  в 1.png main = "HP" +4000, а сабстат "HP" +970. Это два разных вхождения.)
-        // Решение: находим ВСЕ вхождения и берём то, что НЕ пересекается с main stat.
-
-        const escaped = escapeRegex(statName);
-        // Negative lookahead после названия: запрещает "HP" матчиться в "HP Bonus"
-        const nameEnd = `\\b(?!\\s+(?:Bonus|Boost|Rate|DMG|Strength|Recovery|Energy)\\b)`;
-
-        // Ищем все вхождения названия в тексте
-        const nameRe = new RegExp(`${escaped}${nameEnd}`, 'gi');
-        const allMatches = [...fullText.matchAll(nameRe)];
-
-        for (const nameMatch of allMatches) {
-            const startPos = nameMatch.index;
-
-            // Пропускаем вхождение, если оно совпадает с позицией main stat
-            if (startPos === mainStatPos) continue;
-
-            // Отрезаем кусок текста начиная с этого названия (до 30 символов вперёд)
-            const tail = fullText.slice(startPos, startPos + 30);
-
-            // 6a. Процентный вариант
-            const rePercent = new RegExp(
-                `^${escaped}${nameEnd}[^+\\d%]{0,15}\\+?(\\d+(?:\\.\\d+)?)\\s*%`,
-                'i'
-            );
-            const mPercent = tail.match(rePercent);
-
-            if (mPercent) {
-                substats.push({
-                    stat: statName,
-                    value: parseFloat(mPercent[1]),
-                    type: 'percent',
-                    _pos: startPos,
-                });
-                break; // нашли — переходим к следующему сабстату
-            }
-
-            // 6b. Flat вариант
-            const reFlat = new RegExp(
-                `^${escaped}${nameEnd}[^+\\d%]{0,15}\\+?(\\d+)\\b(?!\\s*%)`,
-                'i'
-            );
-            const mFlat = tail.match(reFlat);
-
-            if (mFlat) {
-                substats.push({
-                    stat: statName,
-                    value: parseInt(mFlat[1], 10),
-                    type: 'flat',
-                    _pos: startPos,
-                });
-                break;
-            }
-        }
+    // Fallback: значение из OCR
+    if (mainStatValue == null) {
+        mainStatValue = mainStatValueFromOcr;
     }
 
-    // ─── 7. Сортировка по позиции ─────────────────────────────────────
-    substats.sort((a, b) => a._pos - b._pos);
-    const cleanedSubstats = substats.map(({ _pos, ...rest }) => rest);
+    // ─── 9. Сабстаты ──────────────────────────────────────────────────
+    const substats = allStats.slice(1).map(({ stat, value, type: t }) => ({
+        stat,
+        value,
+        type: t,
+    }));
 
-    // ─── 8. Результат ─────────────────────────────────────────────────
+    // ─── 10. Результат ────────────────────────────────────────────────
     return {
         type,
         stellactrum,
         level,
         mainStat,
         mainStatValue,
-        substats: cleanedSubstats,
+        substats,
     };
 }
