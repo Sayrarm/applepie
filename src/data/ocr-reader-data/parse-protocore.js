@@ -110,21 +110,32 @@ function findAllStatMatches(fullText, statName) {
 
 /**
  * Извлекает значение стата, начиная с позиции ПОСЛЕ названия.
- * Устойчив к мусору между названием и числом (но НЕ пропускает цифры).
+ *
+ * Ключевое правило: значение стата ВСЕГДА начинается с "+".
+ * Поэтому ищем первый "+" в окне, и значение берём ПОСЛЕ него.
+ * Это отсекает OCR-мусор типа "DMG Boost to 3 Weakened +4.0%",
+ * где "3" — не значение стата, а артефакт OCR.
  */
 function extractStatValue(fullText, statEndPos) {
-    // Окно 35 символов — достаточно, чтобы поймать "+ im +13.2%"
-    const tail = fullText.slice(statEndPos, statEndPos + 35);
+    // Окно 40 символов — достаточно, чтобы поймать "+ +24.0%" или "+ im +13.2%"
+    const tail = fullText.slice(statEndPos, statEndPos + 40);
 
-    // Мусор между названием и числом: любые символы, кроме цифр.
-    // Не ограничиваем "+" и "%" — они часто попадают в мусор.
-    // Главное — чтобы первая цифра, которую встретим, была значением.
-    const mPercent = tail.match(/^[^\d]{0,25}?(\d+(?:\.\d+)?)\s*%/);
+    // Ищем первый "+" в окне.
+    // Если его нет — значения нет (в игре значение всегда с плюсом).
+    const plusIdx = tail.indexOf('+');
+    if (plusIdx === -1) return null;
+
+    // Окно после "+"
+    const afterPlus = tail.slice(plusIdx + 1);
+
+    // Процентный вариант: необязательный мусор, затем число, затем %
+    const mPercent = afterPlus.match(/^[^\d]{0,15}?(\d+(?:\.\d+)?)\s*%/);
     if (mPercent) {
         return { value: parseFloat(mPercent[1]), type: 'percent' };
     }
 
-    const mFlat = tail.match(/^[^\d]{0,25}?(\d+)\b(?!\s*%)/);
+    // Flat вариант: необязательный мусор, затем целое число без %
+    const mFlat = afterPlus.match(/^[^\d]{0,15}?(\d+)\b(?!\s*%)/);
     if (mFlat) {
         return { value: parseInt(mFlat[1], 10), type: 'flat' };
     }
