@@ -1,5 +1,5 @@
 import Tesseract from 'tesseract.js';
-import { parseProtocore } from '@data';
+import { parseProtocore } from './parse-protocore';
 import { addProtocore } from '@localstorage';
 
 // Тип сабстата по названию.
@@ -12,16 +12,11 @@ export const getSubstatType = (statName) => {
 };
 
 /**
- * Запускает OCR и парсинг.
- * Возвращает { rawText, protocore }.
- *
- * @param {string|File|Blob} image — image URL / File / Blob
- * @param {(progress: number) => void} onProgress — колбэк прогресса (0-100)
+ * Запускает OCR и парсинг для одного изображения.
  */
 export async function runOcr(image, onProgress = () => {}) {
     const result = await Tesseract.recognize(image, 'eng', {
         logger: (m) => {
-            console.log(m);
             if (m.status === 'recognizing text') {
                 onProgress(Math.round(m.progress * 100));
             }
@@ -69,6 +64,81 @@ export function saveOcrProtocore(protocore) {
     };
 
     const saved = addProtocore(dataToSave);
-    window.dispatchEvent(new CustomEvent('protocoresUpdated'));
     return saved;
+}
+
+/**
+ * Пакетная обработка нескольких изображений.
+ *
+ * Последовательно, одно за другим (чтобы не грузить CPU).
+ * После каждого успешного распознавания и валидации — сразу сохраняет.
+ *
+ * @param {File[]} files
+ * @param {object} callbacks
+ *   - onFileStart(index, fileName)
+ *   - onFileProgress(index, percent) — прогресс распознавания текущего файла
+ *   - onFileDone(index, result) — { fileName, status: 'saved'|'failed'|'error', protocore?, error? }
+ *   - onTotalProgress(done, total)
+ *
+ * @returns {Promise<Array>} массив результатов по каждому файлу
+ */
+export async function runOcrBatch(files, callbacks = {}) {
+    const {
+        onFileStart = () => {},
+        onFileProgress = () => {},
+        onFileDone = () => {},
+        onTotalProgress = () => {},
+    } = callbacks;
+
+    const results = [];
+    const total = files.length;
+
+    for (let i = 0; i < total; i++) {
+        const file = files[i];
+        const fileName = file.name || `file-${i + 1}`;
+
+        onFileStart(i, fileName);
+
+        try {
+            const imageUrl = URL.createObjectURL(file);
+
+            const { rawText, protocore } = await runOcr(imageUrl, (p) =>
+                onFileProgress(i, p)
+            );
+
+            URL.revokeObjectURL(imageUrl);
+
+            console.log(`[${i + 1}/${total}] ${fileName}`);
+            console.log('  Сырой текст:', rawText);
+            console.log('  Распознанный протокор:', protocore);
+
+            if (!canSaveOcrProtocore(protocore)) {
+                const result = { fileName, status: 'failed', protocore, rawText };
+                results.push(result);
+                onFileDone(i, result);
+                onTotalProgress(i + 1, total);
+                continue;
+            }
+
+            const saved = saveOcrProtocore(protocore);
+            console.log('  Сохранён:', saved);
+
+            const result = { fileName, status: 'saved', protocore: saved };
+            results.push(result);
+            onFileDone(i, result);
+            onTotalProgress(i + 1, total);
+
+        } catch (err) {
+            console.error(`[${i + 1}/${total}] Ошибка на ${fileName}:`, err);
+            const result = { fileName, status: 'error', error: err };
+            results.push(result);
+            onFileDone(i, result);
+            onTotalProgress(i + 1, total);
+        }
+    }
+
+    // Один раз уведомляем после всей пачки
+    window.dispatchEvent(new CustomEvent('protocoresUpdated'));
+
+    return results;
 }

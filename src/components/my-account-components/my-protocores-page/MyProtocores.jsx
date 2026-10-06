@@ -14,8 +14,8 @@ import {
   removeProtocoreFromAllCards,
   findCardForProtocore,
 } from "@localstorage";
-import OcrReader from "@components/my-account-components/OcrReader.jsx";
-import OcrDebugger from "@data/ocr-reader-data/OcrDebugger.jsx";
+import OcrReader from "@components/my-account-components/my-protocores-page/OcrReader.jsx";
+import OcrDebugger from "@components/my-account-components/my-protocores-page/OcrDebugger.jsx";
 
 function MyProtocores() {
   const [protocores, setProtocores] = useState([]);

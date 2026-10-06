@@ -177,4 +177,5 @@ export {
   runOcr,
   canSaveOcrProtocore,
   saveOcrProtocore,
+  runOcrBatch
 } from "./ocr-reader-data/ocr-protocore-utils.js";
