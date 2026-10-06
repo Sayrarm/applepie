@@ -17,8 +17,6 @@ const ALL_KNOWN_STATS = [
     'Expedited Energy Boost',
     'Oath Recovery Boost',
     "Oath's Strength",
-    'Oath Strength',
-    'Oaths Strength',
     'DMG Boost to Weakened',
     'CRIT Rate', 'CRIT DMG',
     'HP Bonus', 'ATK Bonus', 'DEF Bonus',
@@ -44,6 +42,20 @@ function normalizeCamelCase(str) {
     return str
         .replace(/([a-z])([A-Z])/g, '$1 $2')
         .replace(/([A-Z]+)([A-Z][a-z])/g, '$1 $2');
+}
+
+/**
+ * Приводит все варианты написания статов к каноничному виду.
+ * "Oaths Strength", "Oath Strength", "Oaths' Strength"
+ *   → "Oath's Strength"
+ *
+ * Применяется к нормализованному fullText ДО поиска статов.
+ */
+function normalizeStatNames(text) {
+    return text
+        .replace(/Oaths'\s+Strength/gi, "Oath's Strength")
+        .replace(/Oaths\s+Strength/gi, "Oath's Strength")
+        .replace(/Oath\s+Strength/gi, "Oath's Strength");
 }
 
 function extractType(fullText) {
@@ -114,13 +126,9 @@ function findAllStatMatches(fullText, statName) {
  *   1. Значение всегда начинается с "+". Ищем первый "+" в окне.
  *   2. После "+" идёт необязательный мусор, затем число.
  *   3. Число может быть с точкой (1.9, 4.2) или целым (1520, 70).
- *   4. После числа НЕ должно идти ещё одной цифры (иначе захватим
- *      часть другого числа).
- *      Точка после числа разрешена — это случай "3.%", когда OCR
+ *   4. После числа НЕ должно идти ещё одной цифры.
+ *      Точка после числа разрешена — случай "3.%", когда OCR
  *      потерял цифру дробной части, но число "3" остаётся валидным.
- *
- * Тип (percent/flat) не возвращаем — он определяется по названию стата
- * на этапе сохранения в localStorage.
  */
 function extractStatValue(fullText, statEndPos) {
     // Окно 40 символов — достаточно, чтобы поймать "+ +24.0%" или "+ im +13.2%"
@@ -146,7 +154,7 @@ function extractStatValue(fullText, statEndPos) {
 
 /**
  * Ищет main stat по значению с проверкой контекста.
- * Используется ТОЛЬКО в fallback (шаг 6b), когда имя main stat разорвано OCR.
+ * Используется ТОЛЬКО в fallback (шаг 6b).
  */
 function findMainStatByValueWithContext(value, searchZone, pos) {
     if (value == null) return null;
@@ -239,6 +247,7 @@ export function parseProtocore(rawText) {
         .trim();
 
     fullText = normalizeCamelCase(fullText);
+    fullText = normalizeStatNames(fullText);   // ← единое имя для Oath's Strength
 
     // ─── 2. Stellactrum ───────────────────────────────────────────────
     let stellactrum = null;
