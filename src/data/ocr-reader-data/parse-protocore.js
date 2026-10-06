@@ -133,10 +133,7 @@ function extractStatValue(fullText, statEndPos) {
 
 /**
  * Ищет main stat по значению с проверкой контекста.
- * Логика:
- *   1. Собираем всех кандидатов, у кого значение совпадает.
- *   2. Если имя уникально — достаточно любого слова из имени в узком контексте.
- *   3. Если имя не уникально — требуем ТОЧНОГО совпадения первого слова.
+ * Используется ТОЛЬКО в fallback (шаг 6b), когда имя main stat разорвано OCR.
  */
 function findMainStatByValueWithContext(value, searchZone, pos) {
     if (value == null) return null;
@@ -304,37 +301,49 @@ export function parseProtocore(rawText) {
     // ─── 6. Выбор main stat ───────────────────────────────────────────
     let mainEntry = null;
 
-    // 6a. По кандидатам из deduped: проверяем значение + контекст
+    // 6a. Первый кандидат из deduped, чьё значение совпадает
+    //     со значением ЭТОГО ЖЕ стата в protocoreTypes.
+    //     Это самая надёжная проверка: не важно, где стоит число и что
+    //     рядом в контексте — главное, что (имя, значение) совпадают.
     for (const candidate of deduped) {
         if (candidate.value == null) continue;
 
-        const match = findMainStatByValueWithContext(
-            candidate.value,
-            searchZone,
-            candidate.pos
-        );
-        if (!match) continue;
-        if (symbolType && match.type !== symbolType) continue;
+        const typesToCheck = symbolType
+            ? [symbolType]
+            : Object.keys(protocoreTypes);
 
-        const candFirst = candidate.stat.toLowerCase().split(/\s+/)[0];
-        const canonFirst = match.name.toLowerCase().split(/\s+/)[0];
-        const sameFirst =
-            candFirst === canonFirst ||
-            candFirst.startsWith(canonFirst) ||
-            canonFirst.startsWith(candFirst);
+        let matchedLevel = null;
+        let matchedType = null;
 
-        if (sameFirst) {
+        for (const t of typesToCheck) {
+            if (!protocoreTypes[t]) continue;
+            const statDef = protocoreTypes[t].mainStats.find(
+                s => s.name === candidate.stat
+            );
+            if (!statDef) continue;
+            for (let lvl = 0; lvl < statDef.values.length; lvl++) {
+                if (Math.abs(statDef.values[lvl] - candidate.value) < 0.05) {
+                    matchedLevel = lvl;
+                    matchedType = t;
+                    break;
+                }
+            }
+            if (matchedLevel != null) break;
+        }
+
+        if (matchedLevel != null) {
             mainEntry = {
                 ...candidate,
-                canonicalName: match.name,
-                canonicalType: match.type,
-                canonicalLevel: match.level,
+                canonicalName: candidate.stat,
+                canonicalType: matchedType,
+                canonicalLevel: matchedLevel,
             };
             break;
         }
     }
 
-    // 6b. Fallback: сканируем числа в тексте
+    // 6b. Fallback: сканируем числа в тексте (для случая, когда
+    //     имя main stat разорвано OCR и не совпадает с таблицей напрямую).
     if (!mainEntry) {
         const valueMatches = [...searchZone.matchAll(/(?<!#)\b(\d+(?:\.\d+)?)\s*(%)?/g)];
 
@@ -463,21 +472,16 @@ export function parseProtocore(rawText) {
 
     // ─── 11. Сабстаты ─────────────────────────────────────────────────
     const mainEntryPos = mainEntry.pos;
-    const mainEntryStat = mainEntry.stat;
 
-    // Собираем "сырые" сабстаты: всё кроме main stat, с известным значением
+    // Собираем "сырые" сабстаты: всё, кроме main stat ПО ПОЗИЦИИ.
+    // Это позволяет сохранить, например, "HP" как flat-сабстат,
+    // когда main stat тоже "HP" (но в другой позиции).
     const rawSubstats = deduped.filter(o => {
         if (o.pos === mainEntryPos) return false;
-        if (
-            o.stat === mainEntryStat &&
-            Math.abs(o.pos - mainEntryPos) <= 5
-        ) {
-            return false;
-        }
         return o.value != null;
     });
 
-    // Дедупликация по имени стата: одинаковые сабстаты не могут существовать.
+    // Дедупликация по имени стата: одинаковых сабстатов быть не может.
     // Если два HP Bonus — берём первый (верхний на скрине).
     const seenStats = new Set();
     const uniqueSubstats = [];
