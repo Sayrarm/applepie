@@ -20,3 +20,12 @@
 .statsTable td {
     width: 80px;
 }
+
+.statsTable td {
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.statsTable td:hover {
+    background: rgb(165 165 165 / 0.2);
+}

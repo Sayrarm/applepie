@@ -10,7 +10,7 @@ export { default as RenderCardSlot } from "./calculator-components/common/Render
 export { default as ModalChooseCard } from "./calculator-components/common/ModalChooseCard.jsx";
 export { default as ChooseCompanion } from "./calculator-components/common/ChooseCompanion.jsx";
 export { default as ChooseWeapon } from "./calculator-components/common/ChooseWeapon.jsx";
-export { default as StatsTable } from "./calculator-components/common/StatsTable.jsx";
+export { default as StatsTable } from "./calculator-components/showcase/StatsTable.jsx";
 
 export { default as CombatCalculations } from "./calculator-components/showcase/combat-calculations/CombatCalculations.jsx";
 export { default as TablePairBonus } from "./calculator-components/showcase/combat-calculations/TablePairBonus.jsx";
