@@ -5,6 +5,10 @@
   margin: 20px auto 0;
 }
 
+.buttonsContainer {
+  display: flex;
+}
+
 .addButton {
   background-color: var(--forSelect);
   box-shadow: var(--box-shadow);

@@ -129,7 +129,7 @@ export async function runOcrBatch(files, callbacks = {}) {
             onTotalProgress(i + 1, total);
 
         } catch (err) {
-            console.error(`[${i + 1}/${total}] Ошибка на ${fileName}:`, err);
+            console.error(`[${i + 1}/${total}] Error on ${fileName}:`, err);
             const result = { fileName, status: 'error', error: err };
             results.push(result);
             onFileDone(i, result);

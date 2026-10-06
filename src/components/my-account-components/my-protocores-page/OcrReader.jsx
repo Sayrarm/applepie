@@ -61,24 +61,24 @@ const OcrReader = () => {
             if (errorCount > 0) {
                 setMessage({
                     kind: 'warning',
-                    text: `Обработка завершена: сохранено ${savedCount}, не распознано ${failedCount}, ошибок ${errorCount}. Подробности в консоли.`,
+                    text: `Processing completed: saved ${savedCount}, not recognized ${failedCount}, error ${errorCount}. Details in the console.`,
                 });
             } else if (failedCount > 0) {
                 setMessage({
                     kind: 'warning',
-                    text: `Обработка завершена: сохранено ${savedCount}, не распознано ${failedCount}.`,
+                    text: `Processing completed: saved ${savedCount}, not recognized ${failedCount}.`,
                 });
             } else {
                 setMessage({
                     kind: 'success',
-                    text: `Обработка завершена: сохранено ${savedCount}.`,
+                    text: `Processing completed: saved ${savedCount}.`,
                 });
             }
         } catch (err) {
-            console.error('Ошибка пакетной обработки:', err);
+            console.error('Batch processing error:', err);
             setMessage({
                 kind: 'error',
-                text: 'Ошибка во время обработки. Подробности — в консоли.',
+                text: 'Error during processing. Details are available in the console.',
             });
         } finally {
             setLoading(false);
@@ -89,18 +89,34 @@ const OcrReader = () => {
 
     return (
         <div style={{ padding: 20 }}>
-            <h2>Добавить протокоры по скриншотам</h2>
+            <h2>Add screenshots with Protocores</h2>
 
-            <input
-                type="file"
-                accept="image/*"
-                multiple
-                onChange={handleFilesChange}
-            />
+            {/* Кастомная кнопка выбора файлов */}
+            <label
+                style={{
+                    display: 'inline-block',
+                    padding: '8px 16px',
+                    background: '#1677ff',
+                    color: '#fff',
+                    border: 'none',
+                    borderRadius: 4,
+                    cursor: 'pointer',
+                    fontSize: 14,
+                }}
+            >
+                Choose files
+                <input
+                    type="file"
+                    accept="image/*"
+                    multiple
+                    onChange={handleFilesChange}
+                    style={{ display: 'none' }}
+                />
+            </label>
 
             {files.length > 0 && (
                 <div style={{ marginTop: 10 }}>
-                    Выбрано файлов: {files.length}
+                    Selected files: {files.length}
                 </div>
             )}
 
@@ -120,15 +136,15 @@ const OcrReader = () => {
                         }}
                     >
                         {loading
-                            ? `Обработка ${currentIndex + 1}/${files.length}: ${currentFileName} (${fileProgress}%)`
-                            : `Сохранить протокоры (${files.length})`}
+                            ? `Processing ${currentIndex + 1}/${files.length}: ${currentFileName} (${fileProgress}%)`
+                            : `Save Protocore(s) (${files.length})`}
                     </button>
                 </div>
             )}
 
             {loading && (
                 <div style={{ marginTop: 10, fontSize: 14 }}>
-                    Общий прогресс: {totalDone} / {totalAll}
+                    Progress: {totalDone} / {totalAll}
                 </div>
             )}
 
@@ -165,7 +181,7 @@ const OcrReader = () => {
 
             {results.length > 0 && (
                 <div style={{ marginTop: 20 }}>
-                    <h3>Результаты</h3>
+                    <h3>Results</h3>
                     <table
                         style={{
                             borderCollapse: 'collapse',
@@ -177,9 +193,9 @@ const OcrReader = () => {
                         <thead>
                         <tr style={{ background: '#f4f4f4' }}>
                             <th style={th}>#</th>
-                            <th style={th}>Файл</th>
-                            <th style={th}>Статус</th>
-                            <th style={th}>Протокор</th>
+                            <th style={th}>File</th>
+                            <th style={th}>Status</th>
+                            <th style={th}>Protocore</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -191,13 +207,13 @@ const OcrReader = () => {
                                 </td>
                                 <td style={td}>
                                     {r.status === 'saved' && (
-                                        <span style={{ color: '#0a5' }}>✓ Сохранён</span>
+                                        <span style={{ color: '#0a5' }}>✓ Saved</span>
                                     )}
                                     {r.status === 'failed' && (
-                                        <span style={{ color: '#c80' }}>⚠ Не распознан</span>
+                                        <span style={{ color: '#c80' }}>⚠ Not recognized</span>
                                     )}
                                     {r.status === 'error' && (
-                                        <span style={{ color: '#a00' }}>✗ Ошибка</span>
+                                        <span style={{ color: '#a00' }}>✗ Error</span>
                                     )}
                                 </td>
                                 <td style={td}>
@@ -211,13 +227,13 @@ const OcrReader = () => {
                                     )}
                                     {r.status === 'failed' && (
                                         <span style={{ color: '#888' }}>
-                                                частично распознан — подробности в консоли
-                                            </span>
+                                            partially recognized — details in the console
+                                        </span>
                                     )}
                                     {r.status === 'error' && (
                                         <span style={{ color: '#888' }}>
-                                                {r.error?.message || 'см. консоль'}
-                                            </span>
+                                            {r.error?.message || 'look Console'}
+                                        </span>
                                     )}
                                 </td>
                             </tr>

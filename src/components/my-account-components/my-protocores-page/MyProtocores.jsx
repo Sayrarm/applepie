@@ -6,6 +6,7 @@ import {
   useProtocoreFilter,
   useProtocoreSort,
   FilterSortBarProtocores,
+  OcrReader, ModalWindow, CardList
 } from "@components";
 import ModalWindowProtocore from "./ModalWindowProtocore.jsx";
 import {
@@ -14,13 +15,12 @@ import {
   removeProtocoreFromAllCards,
   findCardForProtocore,
 } from "@localstorage";
-import OcrReader from "@components/my-account-components/my-protocores-page/OcrReader.jsx";
-import OcrDebugger from "@components/my-account-components/my-protocores-page/OcrDebugger.jsx";
 
 function MyProtocores() {
   const [protocores, setProtocores] = useState([]);
   const modalRef = useRef();
   const filterModalRef = useRef();
+  const ocrModalRef = useRef();
 
   const { searchQuery, onSearch, clearSearch } =
     useProtocoreSearch("protocores");
@@ -106,6 +106,10 @@ function MyProtocores() {
     }
   };
 
+  const handleOcr = () => {
+    ocrModalRef.current?.showModal();
+  }
+
   const handleAddProtocore = () => {
     modalRef.current?.showModal();
   };
@@ -174,11 +178,16 @@ function MyProtocores() {
         storagePrefix="protocores"
       />
 
-      <button className={styles.addButton} onClick={handleAddProtocore}>
-        + Add protocore
-      </button>
+      <div className={styles.buttonsContainer}>
+        <button className={styles.addButton} onClick={handleAddProtocore}>
+          + Add protocore
+        </button>
 
-      <OcrReader />
+        <button className={styles.addButton} onClick={handleOcr}>
+          Upload protocore screenshots
+        </button>
+
+      </div>
 
       <section className={styles.protocoreList}>
         {sortedProtocores.length === 0 ? (
@@ -207,6 +216,13 @@ function MyProtocores() {
         title="Add New Protocore"
         onSave={handleSaveProtocore}
         onUpdate={handleUpdateProtocore}
+      />
+
+      <ModalWindow
+          ref={ocrModalRef}
+          title = "Upload screenshots"
+          tag = {<OcrReader />}
+
       />
     </section>
   );
