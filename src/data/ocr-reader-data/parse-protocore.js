@@ -1,20 +1,19 @@
 import { protocoreTypes } from '@data';
 
-// Соответствие греческих букв и OCR-ошибок → ключи в protocoreTypes
 const TYPE_MAP = {
     'α': 'alpha', 'a': 'alpha', 'alpha': 'alpha',
     'β': 'beta',  'b': 'beta',  'beta': 'beta',
-    'γ': 'gamma', 'y': 'gamma', 'gamma': 'gamma', // OCR часто читает γ как y
+    'γ': 'gamma', 'y': 'gamma', 'gamma': 'gamma',
     'δ': 'delta', 'd': 'delta', 'delta': 'delta',
 };
 
-// Возможные цвета сталактитов
 const STELLACTRUM_COLORS = [
     'violet', 'amber', 'emerald', 'sapphire', 'ruby', 'pearl', 'obsidian',
 ];
 
-// Известные сабстаты (используются для поиска в тексте)
-// ВАЖНО: порядок не важен — сортировка идёт по позиции в fullText
+// Известные сабстаты.
+// ВАЖНО: порядок — от длинных названий к коротким.
+// Это нужно, чтобы "HP Bonus" проверялся раньше, чем "HP".
 const KNOWN_SUBSTATS = [
     'DMG Boost to Weakened',
     'Oath Recovery Boost',
@@ -25,30 +24,20 @@ const KNOWN_SUBSTATS = [
     'HP', 'ATK', 'DEF',
 ];
 
-/**
- * Экранирование спецсимволов для использования в RegExp
- */
 function escapeRegex(str) {
     return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
-/**
- * Основная функция парсинга OCR-текста в объект протокора
- * @param {string} rawText - сырой текст из Tesseract
- * @returns {object|null} - объект протокора в формате localStorage, или null
- */
 export function parseProtocore(rawText) {
     if (!rawText) return null;
 
     // ─── 1. Нормализация ──────────────────────────────────────────────
-    // Убираем мусорные символы, схлопываем пробелы.
-    // НЕ разбиваем на строки — некоторые сабстаты переносятся ("DMG Boost to\nWeakened").
     const fullText = rawText
-        .replace(/[€@&~\\|]/g, ' ')   // мусор от OCR
-        .replace(/\s+/g, ' ')          // множественные пробелы/переносы → один пробел
+        .replace(/[€@&~\\|]/g, ' ')
+        .replace(/\s+/g, ' ')
         .trim();
 
-    // ─── 2. Stellactrum (цвет) ────────────────────────────────────────
+    // ─── 2. Stellactrum ───────────────────────────────────────────────
     let stellactrum = null;
     for (const color of STELLACTRUM_COLORS) {
         if (new RegExp(`\\b${color}\\b`, 'i').test(fullText)) {
@@ -56,17 +45,16 @@ export function parseProtocore(rawText) {
             break;
         }
     }
-    if (!stellactrum) return null; // без цвета — не наш случай
+    if (!stellactrum) return null;
 
-    // ─── 3. Type (alpha/beta/gamma/delta) ─────────────────────────────
-    // Ищем "Protocore - X" где X — греческая буква или её OCR-замена
+    // ─── 3. Type ──────────────────────────────────────────────────────
     let type = null;
     const typeMatch = fullText.match(/Protocore\s*[-–—]\s*([a-zA-Zαβγδ])/i);
     if (typeMatch) {
         type = TYPE_MAP[typeMatch[1].toLowerCase()] || null;
     }
 
-    // ─── 4. Level (0..15) ─────────────────────────────────────────────
+    // ─── 4. Level ─────────────────────────────────────────────────────
     const levelMatch = fullText.match(/\+(\d{1,2})\b/);
     let level = levelMatch ? parseInt(levelMatch[1], 10) : null;
     if (level != null && (level < 0 || level > 15)) {
@@ -74,48 +62,48 @@ export function parseProtocore(rawText) {
         level = null;
     }
 
-    // ─── 5. Main stat (название) ──────────────────────────────────────
-    // Собираем все возможные мейн-статы из таблицы
-    const allMainStats = [
-        ...new Set(
-            Object.values(protocoreTypes).flatMap(t =>
-                t.mainStats.map(s => s.name)
-            )
-        ),
-    ];
-
+    // ─── 5. Main stat (только из статов ЭТОГО типа) ───────────────────
     let mainStat = null;
-    for (const stat of allMainStats) {
-        const re = new RegExp(`\\b${escapeRegex(stat)}\\b`, 'i');
-        if (re.test(fullText)) {
-            mainStat = stat;
-            break;
-        }
-    }
-
-    // ─── 6. Main stat value (из таблицы, индекс = уровень) ────────────
-    // В protocoreTypes массив values начинается с 0-го уровня,
-    // поэтому values[level] даёт правильное значение.
     let mainStatValue = null;
-    if (type && mainStat && level != null) {
-        const statDef = protocoreTypes[type]?.mainStats.find(
-            s => s.name === mainStat
-        );
-        if (statDef && statDef.values[level] != null) {
-            mainStatValue = statDef.values[level];
+
+    if (type && protocoreTypes[type]) {
+        const possibleMainStats = protocoreTypes[type].mainStats.map(s => s.name);
+
+        for (const stat of possibleMainStats) {
+            const re = new RegExp(`\\b${escapeRegex(stat)}\\b`, 'i');
+            if (re.test(fullText)) {
+                mainStat = stat;
+                break;
+            }
+        }
+
+        // Значение из таблицы: values[level] (массив начинается с 0-го уровня)
+        if (mainStat && level != null) {
+            const statDef = protocoreTypes[type].mainStats.find(
+                s => s.name === mainStat
+            );
+            if (statDef && statDef.values[level] != null) {
+                mainStatValue = statDef.values[level];
+            }
         }
     }
 
-    // ─── 7. Substats ──────────────────────────────────────────────────
+    // ─── 6. Substats ──────────────────────────────────────────────────
     const substats = [];
 
     for (const statName of KNOWN_SUBSTATS) {
         const escaped = escapeRegex(statName);
 
-        // 7a. Процентный сабстат: "HP Bonus +20.4%"
-        // Между названием и числом допускаем мусор (до 15 символов), но не ещё одну цифру.
+        // Negative lookahead в конце названия:
+        // запрещаем совпадение, если сразу за названием идёт пробел + ещё одна буква
+        // (например, "HP" не должен матчить "HP Bonus").
+        // Исключение — сам стат с пробелом внутри (CRIT Rate, Oath Strength и т.д.),
+        // у них escaped уже содержит пробел, и lookahead сработает корректно.
+        const nameEnd = `\\b(?!\\s+(?:Bonus|Boost|Rate|DMG|Strength|Recovery|Energy)\\b)`;
+
+        // 6a. Процентный сабстат: "HP Bonus +20.4%"
         const rePercent = new RegExp(
-            `${escaped}[^+\\d%]{0,15}\\+?(\\d+(?:\\.\\d+)?)\\s*%`,
+            `${escaped}${nameEnd}[^+\\d%]{0,15}\\+?(\\d+(?:\\.\\d+)?)\\s*%`,
             'i'
         );
         const mPercent = fullText.match(rePercent);
@@ -125,16 +113,14 @@ export function parseProtocore(rawText) {
                 stat: statName,
                 value: parseFloat(mPercent[1]),
                 type: 'percent',
-                _pos: fullText.indexOf(mPercent[0]), // для сортировки
+                _pos: fullText.indexOf(mPercent[0]),
             });
-            continue; // нашли percent — flat для этого стата не ищем
+            continue;
         }
 
-        // 7b. Flat сабстат: "HP +856"
-        // ВАЖНО: (?!\s*%) — число НЕ должно сопровождаться знаком процента.
-        // Также negative lookahead на цифры в начале, чтобы не поймать хвост числа.
+        // 6b. Flat сабстат: "HP +856"
         const reFlat = new RegExp(
-            `${escaped}[^+\\d%]{0,15}\\+?(\\d+)\\b(?!\\s*%)`,
+            `${escaped}${nameEnd}[^+\\d%]{0,15}\\+?(\\d+)\\b(?!\\s*%)`,
             'i'
         );
         const mFlat = fullText.match(reFlat);
@@ -149,24 +135,18 @@ export function parseProtocore(rawText) {
         }
     }
 
-    // ─── 8. Сортировка по позиции в тексте (порядок как на скрине) ────
+    // ─── 7. Сортировка по позиции в тексте ────────────────────────────
     substats.sort((a, b) => a._pos - b._pos);
 
-    // Убираем служебное поле _pos
     const cleanedSubstats = substats.map(({ _pos, ...rest }) => rest);
 
-    // ─── 9. Финальный объект ──────────────────────────────────────────
-    const now = new Date().toISOString();
-
+    // ─── 8. Финальный объект (без id / createdAt / updatedAt) ────────
     return {
-        id: Date.now(),
         type,
         stellactrum,
         level,
         mainStat,
         mainStatValue,
         substats: cleanedSubstats,
-        createdAt: now,
-        updatedAt: now,
     };
 }
