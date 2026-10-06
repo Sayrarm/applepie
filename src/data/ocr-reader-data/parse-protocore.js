@@ -17,6 +17,7 @@ const ALL_KNOWN_STATS = [
     'Expedited Energy Boost',
     'Oath Recovery Boost',
     "Oath's Strength",
+    'Oaths Strength',
     'Oath Strength',
     'DMG Boost to Weakened',
     'CRIT Rate', 'CRIT DMG',
@@ -301,45 +302,56 @@ export function parseProtocore(rawText) {
     // ─── 6. Выбор main stat ───────────────────────────────────────────
     let mainEntry = null;
 
-    // 6a. Первый кандидат из deduped, чьё значение совпадает
-    //     со значением ЭТОГО ЖЕ стата в protocoreTypes.
-    //     Это самая надёжная проверка: не важно, где стоит число и что
-    //     рядом в контексте — главное, что (имя, значение) совпадают.
-    for (const candidate of deduped) {
-        if (candidate.value == null) continue;
+    // 6a. Ищем main stat через валидацию по таблице мейнов.
+    //     Ищем первого кандидата (по позиции), чьё (имя, значение)
+    //     совпадают с мейном какого-либо типа — это bestGlobal.
+    //     Отдельно ищем bestSymbol — первого кандидата, чьё (имя, значение)
+    //     совпадают с мейном symbolType.
+    //
+    //     Правила:
+    //       - Если bestSymbol.pos === bestGlobal.pos → symbolType подтверждён.
+    //       - Если разные → symbolType ложный, используем bestGlobal.
+    //       - Если bestSymbol нет, но bestGlobal есть → bestGlobal.
+    //       - Если оба нет → 6b (fallback для разорванных имён).
+    //
+    //     ВАЖНО: symbolType используется как ПОДСКАЗКА, а не как фильтр.
+    //     Иначе ложный symbolType может отсеять правильный main stat.
 
-        const typesToCheck = symbolType
-            ? [symbolType]
-            : Object.keys(protocoreTypes);
-
-        let matchedLevel = null;
-        let matchedType = null;
-
-        for (const t of typesToCheck) {
-            if (!protocoreTypes[t]) continue;
-            const statDef = protocoreTypes[t].mainStats.find(
-                s => s.name === candidate.stat
-            );
-            if (!statDef) continue;
-            for (let lvl = 0; lvl < statDef.values.length; lvl++) {
-                if (Math.abs(statDef.values[lvl] - candidate.value) < 0.05) {
-                    matchedLevel = lvl;
-                    matchedType = t;
-                    break;
+    function findFirstMatchingCandidate(typesToCheck) {
+        for (const candidate of deduped) {
+            if (candidate.value == null) continue;
+            for (const t of typesToCheck) {
+                if (!protocoreTypes[t]) continue;
+                const statDef = protocoreTypes[t].mainStats.find(
+                    s => s.name === candidate.stat
+                );
+                if (!statDef) continue;
+                for (let lvl = 0; lvl < statDef.values.length; lvl++) {
+                    if (Math.abs(statDef.values[lvl] - candidate.value) < 0.05) {
+                        return {
+                            ...candidate,
+                            canonicalName: candidate.stat,
+                            canonicalType: t,
+                            canonicalLevel: lvl,
+                        };
+                    }
                 }
             }
-            if (matchedLevel != null) break;
         }
+        return null;
+    }
 
-        if (matchedLevel != null) {
-            mainEntry = {
-                ...candidate,
-                canonicalName: candidate.stat,
-                canonicalType: matchedType,
-                canonicalLevel: matchedLevel,
-            };
-            break;
-        }
+    const bestGlobal = findFirstMatchingCandidate(Object.keys(protocoreTypes));
+    const bestSymbol = symbolType
+        ? findFirstMatchingCandidate([symbolType])
+        : null;
+
+    if (bestSymbol && bestGlobal && bestSymbol.pos === bestGlobal.pos) {
+        // symbolType согласован с main stat
+        mainEntry = bestSymbol;
+    } else if (bestGlobal) {
+        // symbolType ложный или отсутствует — доверяем bestGlobal
+        mainEntry = bestGlobal;
     }
 
     // 6b. Fallback: сканируем числа в тексте (для случая, когда
