@@ -13,8 +13,6 @@ const STELLACTRUM_COLORS = [
     'violet', 'amber', 'emerald', 'sapphire', 'ruby', 'pearl', 'obsidian',
 ];
 
-// Полный список известных статов (мейны + сабстаты).
-// Порядок не важен — сортировка по позиции в тексте.
 const ALL_KNOWN_STATS = [
     "Oath's Strength",
     'Oath Recovery Boost',
@@ -30,62 +28,10 @@ function escapeRegex(str) {
     return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
-/**
- * Вставляет пробелы в CamelCase: "oathRecoveryBoost" → "oath Recovery Boost"
- * Это нужно, т.к. OCR часто склеивает слова без пробелов.
- */
 function normalizeCamelCase(str) {
     return str
-        // граница: строчная → заглавная ("thR" → "th R")
         .replace(/([a-z])([A-Z])/g, '$1 $2')
-        // граница: заглавная → заглавная+строчная ("ATKBonus" → "ATK Bonus")
         .replace(/([A-Z]+)([A-Z][a-z])/g, '$1 $2');
-}
-
-/**
- * Определяет уровень протокора.
- * Приоритеты:
- *   1. "Max Level" в тексте → 15
- *   2. Значение main stat из OCR совпадает со значением из protocoreTypes
- *      на каком-то уровне → этот уровень
- *   3. Fallback: короткое число 0..15 из текста
- *
- * @param {string} fullText
- * @param {string|null} type
- * @param {string|null} mainStat
- * @param {number|null} mainStatValueFromOcr
- * @returns {number|null}
- */
-function extractLevel(fullText, type, mainStat, mainStatValueFromOcr) {
-    // 1. Max Level
-    if (/\bMax\s*Level\b/i.test(fullText)) {
-        return 15;
-    }
-
-    // 2. По значению main stat из OCR
-    if (
-        type && mainStat && mainStatValueFromOcr != null &&
-        protocoreTypes[type]
-    ) {
-        const statDef = protocoreTypes[type].mainStats.find(
-            s => s.name === mainStat
-        );
-        if (statDef) {
-            // Ищем уровень, на котором значение из таблицы совпадает с OCR
-            // Используем небольшой допуск для float (например, CRIT Rate 1.7%)
-            for (let lvl = statDef.values.length - 1; lvl >= 0; lvl--) {
-                if (Math.abs(statDef.values[lvl] - mainStatValueFromOcr) < 0.05) {
-                    return lvl;
-                }
-            }
-        }
-    }
-
-    // 3. Fallback: короткое число 0..15
-    const candidates = [...fullText.matchAll(/\b(\d{1,2})\b/g)]
-        .map(m => parseInt(m[1], 10))
-        .filter(n => n >= 0 && n <= 15);
-    return candidates.length > 0 ? candidates[0] : null;
 }
 
 /**
@@ -102,18 +48,17 @@ function extractType(fullText) {
 }
 
 /**
- * Находит ВСЕ вхождения статов в тексте с их позициями и значениями.
- * Возвращает отсортированный массив:
- *   [{ stat, value, type: 'flat'|'percent', pos }]
+ * Находит все вхождения известных статов в тексте.
+ * Для каждого пытается извлечь значение (percent или flat),
+ * но возвращает запись даже если значение не найдено.
+ *
+ * @returns {Array<{stat, value|null, type|null, pos}>}
  */
-function findAllStats(fullText) {
+function findStatOccurrences(fullText) {
     const found = [];
 
     for (const statName of ALL_KNOWN_STATS) {
         const escaped = escapeRegex(statName);
-
-        // Ищем название стата как отдельные слова.
-        // \s+ между словами допускает любые пробелы в тексте (нормализованные).
         const namePattern = escaped.replace(/\\?\s+/g, '\\s+');
         const nameRe = new RegExp(`\\b${namePattern}\\b`, 'gi');
         const nameMatches = [...fullText.matchAll(nameRe)];
@@ -151,21 +96,27 @@ function findAllStats(fullText) {
                     type: 'flat',
                     pos,
                 });
+                continue;
             }
+
+            // Значение не найдено — всё равно записываем (важно для main stat)
+            found.push({
+                stat: statName,
+                value: null,
+                type: null,
+                pos,
+            });
         }
     }
 
-    // Сортируем по позиции в тексте
+    // Сортируем по позиции
     found.sort((a, b) => a.pos - b.pos);
 
-    // Убираем перекрывающиеся совпадения:
-    // например, "HP" и "HP Bonus" могут матчиться в одной позиции.
-    // Оставляем более длинный стат.
+    // Дедупликация перекрытий: "HP" vs "HP Bonus" в одной позиции
     const deduped = [];
     for (const item of found) {
         const last = deduped[deduped.length - 1];
         if (last && item.pos < last.pos + last.stat.length) {
-            // Пересечение — оставляем того, у кого длиннее название
             if (item.stat.length > last.stat.length) {
                 deduped[deduped.length - 1] = item;
             }
@@ -175,6 +126,40 @@ function findAllStats(fullText) {
     }
 
     return deduped;
+}
+
+/**
+ * Определяет уровень протокора.
+ * Приоритеты:
+ *   1. "Max Level" → 15
+ *   2. Совпадение значения main stat с таблицей
+ *   3. Fallback: короткое число 0..15
+ */
+function extractLevel(fullText, type, mainStat, mainStatValueFromOcr) {
+    if (/\bMax\s*Level\b/i.test(fullText)) {
+        return 15;
+    }
+
+    if (
+        type && mainStat && mainStatValueFromOcr != null &&
+        protocoreTypes[type]
+    ) {
+        const statDef = protocoreTypes[type].mainStats.find(
+            s => s.name === mainStat
+        );
+        if (statDef) {
+            for (let lvl = statDef.values.length - 1; lvl >= 0; lvl--) {
+                if (Math.abs(statDef.values[lvl] - mainStatValueFromOcr) < 0.05) {
+                    return lvl;
+                }
+            }
+        }
+    }
+
+    const candidates = [...fullText.matchAll(/\b(\d{1,2})\b/g)]
+        .map(m => parseInt(m[1], 10))
+        .filter(n => n >= 0 && n <= 15);
+    return candidates.length > 0 ? candidates[0] : null;
 }
 
 /**
@@ -205,6 +190,8 @@ export function parseProtocore(rawText) {
     const type = extractType(fullText);
 
     // ─── 4. Обрезаем хвост по стоп-словам ─────────────────────────────
+    // Важно: сохраняем "Max Level" в fullText для extractLevel,
+    // но обрезаем для поиска статов.
     const stopWords = ['Max Level', 'Enhance', 'Unequip'];
     let searchZone = fullText;
     for (const stop of stopWords) {
@@ -212,16 +199,16 @@ export function parseProtocore(rawText) {
         if (idx > 0) searchZone = searchZone.slice(0, idx);
     }
 
-    // ─── 5. Находим все статы ─────────────────────────────────────────
-    const allStats = findAllStats(searchZone);
-    if (allStats.length === 0) return null;
+    // ─── 5. Все вхождения статов ──────────────────────────────────────
+    const occurrences = findStatOccurrences(searchZone);
+    if (occurrences.length === 0) return null;
 
-    // ─── 6. Первый стат = main stat ───────────────────────────────────
-    const mainStatEntry = allStats[0];
+    // ─── 6. Первый стат = main stat (даже если без значения) ──────────
+    const mainStatEntry = occurrences[0];
     const mainStat = mainStatEntry.stat;
     const mainStatValueFromOcr = mainStatEntry.value;
 
-    // ─── 7. Level (по Max Level / main stat / OCR) ────────────────────
+    // ─── 7. Level ─────────────────────────────────────────────────────
     const level = extractLevel(
         fullText,
         type,
@@ -229,7 +216,7 @@ export function parseProtocore(rawText) {
         mainStatValueFromOcr
     );
 
-    // ─── 8. mainStatValue — из таблицы по найденному уровню ───────────
+    // ─── 8. mainStatValue — из таблицы ────────────────────────────────
     let mainStatValue = null;
     if (type && protocoreTypes[type] && level != null) {
         const statDef = protocoreTypes[type].mainStats.find(
@@ -244,12 +231,15 @@ export function parseProtocore(rawText) {
         mainStatValue = mainStatValueFromOcr;
     }
 
-    // ─── 9. Сабстаты ──────────────────────────────────────────────────
-    const substats = allStats.slice(1).map(({ stat, value, type: t }) => ({
-        stat,
-        value,
-        type: t,
-    }));
+    // ─── 9. Сабстаты — только те, у кого есть значение ────────────────
+    const substats = occurrences
+        .slice(1)
+        .filter(o => o.value != null)
+        .map(({ stat, value, type: t }) => ({
+            stat,
+            value,
+            type: t,
+        }));
 
     // ─── 10. Результат ────────────────────────────────────────────────
     return {
