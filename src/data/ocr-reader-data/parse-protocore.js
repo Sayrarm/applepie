@@ -17,7 +17,6 @@ const ALL_KNOWN_STATS = [
     'Expedited Energy Boost',
     'Oath Recovery Boost',
     "Oath's Strength",
-    'Oaths Strength',
     'Oath Strength',
     'DMG Boost to Weakened',
     'CRIT Rate', 'CRIT DMG',
@@ -70,7 +69,6 @@ function findAllStatMatches(fullText, statName) {
 
     const minMatches = words.length <= 2 ? words.length : words.length - 1;
 
-    // Якорь — первое слово
     const firstRe = new RegExp(`\\b${escapeRegex(words[0])}\\b`, 'gi');
     const firstMatches = [...fullText.matchAll(firstRe)];
 
@@ -111,10 +109,15 @@ function findAllStatMatches(fullText, statName) {
 /**
  * Извлекает значение стата, начиная с позиции ПОСЛЕ названия.
  *
- * Ключевое правило: значение стата ВСЕГДА начинается с "+".
- * Поэтому ищем первый "+" в окне, и значение берём ПОСЛЕ него.
- * Это отсекает OCR-мусор типа "DMG Boost to 3 Weakened +4.0%",
- * где "3" — не значение стата, а артефакт OCR.
+ * Правила:
+ *   1. Значение всегда начинается с "+". Ищем первый "+" в окне.
+ *   2. После "+" идёт необязательный мусор, затем число.
+ *   3. Число может быть с точкой (1.9, 4.2) или целым (1520, 70).
+ *   4. После числа НЕ должно идти цифры или точки
+ *      (иначе мы захватим часть другого числа, например "1" из "1.9").
+ *
+ * Тип (percent/flat) не возвращаем — он определяется по названию стата
+ * на этапе сохранения в localStorage.
  */
 function extractStatValue(fullText, statEndPos) {
     // Окно 40 символов — достаточно, чтобы поймать "+ +24.0%" или "+ im +13.2%"
@@ -128,16 +131,11 @@ function extractStatValue(fullText, statEndPos) {
     // Окно после "+"
     const afterPlus = tail.slice(plusIdx + 1);
 
-    // Процентный вариант: необязательный мусор, затем число, затем %
-    const mPercent = afterPlus.match(/^[^\d]{0,15}?(\d+(?:\.\d+)?)\s*%/);
-    if (mPercent) {
-        return { value: parseFloat(mPercent[1]), type: 'percent' };
-    }
-
-    // Flat вариант: необязательный мусор, затем целое число без %
-    const mFlat = afterPlus.match(/^[^\d]{0,15}?(\d+)\b(?!\s*%)/);
-    if (mFlat) {
-        return { value: parseInt(mFlat[1], 10), type: 'flat' };
+    // Ищем первое число: целое или с точкой.
+    // (?![\d.]) — после числа не должно быть цифры или точки.
+    const m = afterPlus.match(/^[^\d]{0,15}?(\d+(?:\.\d+)?)(?![\d.])/);
+    if (m) {
+        return { value: parseFloat(m[1]) };
     }
 
     return null;
@@ -272,7 +270,6 @@ export function parseProtocore(rawText) {
                 pos: m.pos,
                 endPos: m.endPos,
                 value: value ? value.value : null,
-                valueType: value ? value.type : null,
             });
         }
     }
@@ -314,20 +311,12 @@ export function parseProtocore(rawText) {
     let mainEntry = null;
 
     // 6a. Ищем main stat через валидацию по таблице мейнов.
-    //     Ищем первого кандидата (по позиции), чьё (имя, значение)
-    //     совпадают с мейном какого-либо типа — это bestGlobal.
-    //     Отдельно ищем bestSymbol — первого кандидата, чьё (имя, значение)
-    //     совпадают с мейном symbolType.
-    //
-    //     Правила:
-    //       - Если bestSymbol.pos === bestGlobal.pos → symbolType подтверждён.
-    //       - Если разные → symbolType ложный, используем bestGlobal.
-    //       - Если bestSymbol нет, но bestGlobal есть → bestGlobal.
-    //       - Если оба нет → 6b (fallback для разорванных имён).
-    //
-    //     ВАЖНО: symbolType используется как ПОДСКАЗКА, а не как фильтр.
-    //     Иначе ложный symbolType может отсеять правильный main stat.
-
+    //     bestGlobal — первый кандидат, чьё (имя, значение) совпадают
+    //                   с мейном ЛЮБОГО типа.
+    //     bestSymbol — первый кандидат, чьё (имя, значение) совпадают
+    //                   с мейном symbolType.
+    //     Если позиции совпадают — symbolType подтверждён.
+    //     Если разные или bestSymbol нет — используем bestGlobal.
     function findFirstMatchingCandidate(typesToCheck) {
         for (const candidate of deduped) {
             if (candidate.value == null) continue;
@@ -365,8 +354,7 @@ export function parseProtocore(rawText) {
         mainEntry = bestGlobal;
     }
 
-    // 6b. Fallback: сканируем числа в тексте (для случая, когда
-    //     имя main stat разорвано OCR и не совпадает с таблицей напрямую).
+    // 6b. Fallback: сканируем числа в тексте
     if (!mainEntry) {
         const valueMatches = [...searchZone.matchAll(/(?<!#)\b(\d+(?:\.\d+)?)\s*(%)?/g)];
 
@@ -397,7 +385,6 @@ export function parseProtocore(rawText) {
                     pos: vm.index,
                     endPos: vm.index + vm[0].length,
                     value,
-                    valueType: hasPercent ? 'percent' : 'flat',
                     canonicalName: match.name,
                     canonicalType: match.type,
                     canonicalLevel: match.level,
@@ -486,12 +473,21 @@ export function parseProtocore(rawText) {
     }
 
     // ─── 10. mainStatValue ────────────────────────────────────────────
-    let mainStatValue = mainStatValueFromOcr;
-    if (mainStatValue == null && type && level != null && protocoreTypes[type]) {
-        const statDef = protocoreTypes[type].mainStats.find(s => s.name === mainStat);
+    // Приоритет: значение из таблицы (по type + level + mainStat).
+    // Если OCR не распознал или распознал неверно — таблица даст верное.
+    let mainStatValue = null;
+
+    if (type && level != null && protocoreTypes[type]) {
+        const statDef = protocoreTypes[type].mainStats.find(
+            s => s.name === mainStat
+        );
         if (statDef && statDef.values[level] != null) {
             mainStatValue = statDef.values[level];
         }
+    }
+
+    if (mainStatValue == null) {
+        mainStatValue = mainStatValueFromOcr;
     }
 
     // ─── 11. Сабстаты ─────────────────────────────────────────────────
@@ -519,10 +515,9 @@ export function parseProtocore(rawText) {
     // Максимум 4 сабстата
     const finalSubstats = uniqueSubstats.slice(0, 4);
 
-    const substats = finalSubstats.map(({ stat, value, valueType }) => ({
+    const substats = finalSubstats.map(({ stat, value }) => ({
         stat,
         value,
-        type: valueType,
     }));
 
     return {
