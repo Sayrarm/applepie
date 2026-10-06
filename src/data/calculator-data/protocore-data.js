@@ -81,7 +81,7 @@ export const protocoreTypes = {
         values: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
       },
       {
-        name: "Oath Strength",
+        name: "Oath's Strength",
         values: [
           3.5, 4.2, 4.9, 5.6, 6.3, 7, 7.7, 8.4, 9.1, 9.8, 10.5, 11.2, 11.9,
           12.6, 13.3, 14,
