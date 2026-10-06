@@ -55,12 +55,6 @@ function extractType(fullText) {
     return null;
 }
 
-/**
- * Ищет все вхождения стата в тексте.
- * Fuzzy: слова должны идти подряд с малым зазором (до 5 символов),
- * и зазор НЕ должен содержать цифры (иначе это уже другой стат).
- * Требуется совпадение хотя бы (N-1) слов для N>=3, все слова для N<=2.
- */
 function findAllStatMatches(fullText, statName) {
     const words = statName.split(/\s+/);
     const results = [];
@@ -139,26 +133,88 @@ function extractStatValue(fullText, statEndPos) {
 }
 
 /**
- * Ищет каноничное имя стата по значению.
+ * Ищет main stat по значению с проверкой контекста.
+ * Логика:
+ *   1. Собираем всех кандидатов, у кого значение совпадает.
+ *   2. Если имя уникально (значение встречается только у одного стата) —
+ *      достаточно одного слова из имени в контексте.
+ *   3. Если имя не уникально — требуем первое слово из имени.
  */
-function matchStatByValue(partialName, value) {
-    const partial = partialName.toLowerCase().split(/\s+/)[0];
+function findMainStatByValueWithContext(value, searchZone, pos) {
+    if (value == null) return null;
 
+    const ctxStart = Math.max(0, pos - 5);
+    const ctxEnd = Math.min(searchZone.length, pos + 15);
+    const ctx = searchZone.slice(ctxStart, ctxEnd).toLowerCase();
+
+    const candidates = [];
     for (const [typeKey, typeData] of Object.entries(protocoreTypes)) {
         for (const stat of typeData.mainStats) {
-            const statFirstWord = stat.name.toLowerCase().split(/\s+/)[0];
-            if (!statFirstWord.startsWith(partial) && !partial.startsWith(statFirstWord)) {
-                continue;
-            }
-
             for (let lvl = 0; lvl < stat.values.length; lvl++) {
                 if (Math.abs(stat.values[lvl] - value) < 0.05) {
-                    return { name: stat.name, type: typeKey, level: lvl };
+                    candidates.push({ type: typeKey, name: stat.name, level: lvl });
                 }
             }
         }
     }
+
+    if (candidates.length === 0) return null;
+
+    const uniqueNames = [...new Set(candidates.map(c => c.name))];
+
+    // Случай 1: значение уникально для одного стата
+    if (uniqueNames.length === 1) {
+        const name = uniqueNames[0];
+        const words = name.toLowerCase().split(/\s+/);
+        const hasAny = words.some(w => w.length >= 3 && ctx.includes(w));
+        if (hasAny) {
+            return candidates[0];
+        }
+    }
+
+    // Случай 2: значение у нескольких статов — требуем первое слово
+    for (const c of candidates) {
+        const firstWord = c.name.toLowerCase().split(/\s+/)[0];
+        if (firstWord.length >= 3 && ctx.includes(firstWord)) {
+            return c;
+        }
+    }
+
     return null;
+}
+
+function findLevelForStat(type, statName, value) {
+    if (value == null || !type || !protocoreTypes[type]) return null;
+    const statDef = protocoreTypes[type].mainStats.find(s => s.name === statName);
+    if (!statDef) return null;
+    for (let lvl = statDef.values.length - 1; lvl >= 0; lvl--) {
+        if (Math.abs(statDef.values[lvl] - value) < 0.05) return lvl;
+    }
+    return null;
+}
+
+function canonicalMainName(partialName, fullText, pos, endPos) {
+    const partial = partialName.toLowerCase();
+    if (MAIN_STAT_TO_TYPES[partialName]) return partialName;
+
+    const left = fullText.slice(Math.max(0, pos - 15), pos).toLowerCase();
+    const right = fullText.slice(endPos, endPos + 15).toLowerCase();
+    const context = left + ' ' + partial + ' ' + right;
+
+    let best = null;
+    let bestScore = 0;
+    for (const name of Object.keys(MAIN_STAT_TO_TYPES)) {
+        const words = name.toLowerCase().split(/\s+/);
+        let score = 0;
+        for (const w of words) {
+            if (context.includes(w)) score++;
+        }
+        if (score > bestScore) {
+            bestScore = score;
+            best = name;
+        }
+    }
+    return best || partialName;
 }
 
 export function parseProtocore(rawText) {
@@ -212,10 +268,7 @@ export function parseProtocore(rawText) {
 
     allOccurrences.sort((a, b) => a.pos - b.pos);
 
-    // Дедупликация: если два матча начинаются в одной позиции —
-    // оставляем более длинное имя стата.
-    // Также удаляем "вложенные" матчи: если короткий стат начинается
-    // внутри длинного — убираем короткий.
+    // Дедупликация
     const deduped = [];
     for (const item of allOccurrences) {
         let skip = false;
@@ -231,8 +284,7 @@ export function parseProtocore(rawText) {
                 }
                 break;
             }
-            // Если last начинается внутри item — удаляем last
-            if (last.pos >= item.pos && last.pos < item.pos + item.stat.length) {
+            if (last.pos >= item.pos && last.pos < item.pos + last.stat.length) {
                 if (item.stat.length > last.stat.length) {
                     deduped.splice(i, 1);
                 } else {
@@ -247,42 +299,129 @@ export function parseProtocore(rawText) {
 
     if (deduped.length === 0) return null;
 
-    // ─── 6. Первый стат = main stat ───────────────────────────────────
-    const mainEntry = deduped[0];
-    let mainStat = mainEntry.stat;
-    let mainStatValueFromOcr = mainEntry.value;
-    let canonicalLevel = null;
-    let canonicalType = null;
+    // ─── 6. Выбор main stat ───────────────────────────────────────────
+    let mainEntry = null;
 
-    // Восстанавливаем каноничное имя + уровень по значению
-    if (mainStatValueFromOcr != null) {
-        const canonical = matchStatByValue(mainStat, mainStatValueFromOcr);
-        if (canonical) {
-            mainStat = canonical.name;
-            canonicalLevel = canonical.level;
-            canonicalType = canonical.type;
+    // 6a. По кандидатам
+    for (const candidate of deduped) {
+        if (candidate.value == null) continue;
+
+        const match = findMainStatByValueWithContext(
+            candidate.value,
+            searchZone,
+            candidate.pos
+        );
+        if (!match) continue;
+        if (symbolType && match.type !== symbolType) continue;
+
+        const candFirst = candidate.stat.toLowerCase().split(/\s+/)[0];
+        const canonFirst = match.name.toLowerCase().split(/\s+/)[0];
+        const sameFirst =
+            candFirst.startsWith(canonFirst) || canonFirst.startsWith(candFirst);
+
+        if (sameFirst) {
+            mainEntry = {
+                ...candidate,
+                canonicalName: match.name,
+                canonicalType: match.type,
+                canonicalLevel: match.level,
+            };
+            break;
         }
     }
 
-    // ─── 7. Type ──────────────────────────────────────────────────────
+    // 6b. Сканируем числа в тексте (fallback)
+    if (!mainEntry) {
+        const valueMatches = [...searchZone.matchAll(/(?<!#)\b(\d+(?:\.\d+)?)\s*(%)?/g)];
+
+        // Сначала проценты, потом остальное
+        const sorted = [...valueMatches].sort((a, b) => {
+            const aPct = a[2] === '%' ? 0 : 1;
+            const bPct = b[2] === '%' ? 0 : 1;
+            if (aPct !== bPct) return aPct - bPct;
+            return a.index - b.index;
+        });
+
+        for (const vm of sorted) {
+            const value = parseFloat(vm[1]);
+            if (isNaN(value)) continue;
+
+            const hasPercent = vm[2] === '%';
+
+            // Пропускаем числа-уровни: без %, < 100, рядом # или +
+            if (!hasPercent && value < 100) {
+                const before = searchZone.slice(Math.max(0, vm.index - 5), vm.index);
+                if (/[#+]/.test(before)) continue;
+            }
+
+            const match = findMainStatByValueWithContext(value, searchZone, vm.index);
+            if (match && (!symbolType || match.type === symbolType)) {
+                mainEntry = {
+                    stat: match.name,
+                    pos: vm.index,
+                    endPos: vm.index + vm[0].length,
+                    value,
+                    valueType: hasPercent ? 'percent' : 'flat',
+                    canonicalName: match.name,
+                    canonicalType: match.type,
+                    canonicalLevel: match.level,
+                };
+                break;
+            }
+        }
+    }
+
+    // 6c. Fallback
+    if (!mainEntry) {
+        mainEntry = deduped[0];
+    }
+
+    // ─── 7. Имя main stat ─────────────────────────────────────────────
+    let mainStat = mainEntry.canonicalName || mainEntry.stat;
+
+    if (!mainEntry.canonicalName && mainEntry.value != null) {
+        const again = findMainStatByValueWithContext(
+            mainEntry.value,
+            searchZone,
+            mainEntry.pos
+        );
+        if (again && (!symbolType || again.type === symbolType)) {
+            mainStat = again.name;
+            mainEntry.canonicalName = again.name;
+            mainEntry.canonicalType = again.type;
+            mainEntry.canonicalLevel = again.level;
+        } else {
+            mainStat = canonicalMainName(
+                mainEntry.stat,
+                searchZone,
+                mainEntry.pos,
+                mainEntry.endPos
+            );
+        }
+    }
+
+    const mainStatValueFromOcr = mainEntry.value;
+
+    // ─── 8. Type ──────────────────────────────────────────────────────
     let type = symbolType;
+
     if (!type) {
-        if (MAIN_STAT_TO_TYPES[mainStat] && MAIN_STAT_TO_TYPES[mainStat].length === 1) {
+        if (mainEntry.canonicalType) {
+            type = mainEntry.canonicalType;
+        } else if (MAIN_STAT_TO_TYPES[mainStat]?.length === 1) {
             type = MAIN_STAT_TO_TYPES[mainStat][0];
-        } else if (canonicalType) {
-            type = canonicalType;
         }
     }
 
     // Если тип известен, но main не входит в его мейны — попробуем canonicalType
     if (type && protocoreTypes[type]) {
         const possibleMains = protocoreTypes[type].mainStats.map(s => s.name);
-        if (!possibleMains.includes(mainStat) && canonicalType) {
-            type = canonicalType;
+        if (!possibleMains.includes(mainStat) && mainEntry.canonicalType) {
+            type = mainEntry.canonicalType;
         }
     }
 
-    // ─── 8. Level ─────────────────────────────────────────────────────
+    // ─── 9. Level ─────────────────────────────────────────────────────
     let level = null;
 
     // 8a. Max Level
@@ -290,22 +429,12 @@ export function parseProtocore(rawText) {
         level = 15;
     }
 
-    // 8b. По значению main stat из OCR
-    if (level == null && type && mainStatValueFromOcr != null && protocoreTypes[type]) {
-        const statDef = protocoreTypes[type].mainStats.find(s => s.name === mainStat);
-        if (statDef) {
-            for (let lvl = statDef.values.length - 1; lvl >= 0; lvl--) {
-                if (Math.abs(statDef.values[lvl] - mainStatValueFromOcr) < 0.05) {
-                    level = lvl;
-                    break;
-                }
-            }
-        }
+    if (level == null && type && mainStatValueFromOcr != null) {
+        level = findLevelForStat(type, mainStat, mainStatValueFromOcr);
     }
 
-    // 8c. Из canonical
-    if (level == null && canonicalLevel != null) {
-        level = canonicalLevel;
+    if (level == null && mainEntry.canonicalLevel != null) {
+        level = mainEntry.canonicalLevel;
     }
 
     // 8d. Fallback
@@ -319,9 +448,7 @@ export function parseProtocore(rawText) {
         if (candidates.length > 0) level = candidates[0];
     }
 
-    // ─── 9. mainStatValue ─────────────────────────────────────────────
-    // Приоритет: значение из OCR (если найдено matchStatByValue,
-    // значит оно точно совпадает с таблицей). Иначе — из таблицы по уровню.
+    // ─── 10. mainStatValue ────────────────────────────────────────────
     let mainStatValue = mainStatValueFromOcr;
     if (mainStatValue == null && type && level != null && protocoreTypes[type]) {
         const statDef = protocoreTypes[type].mainStats.find(s => s.name === mainStat);
@@ -330,10 +457,21 @@ export function parseProtocore(rawText) {
         }
     }
 
-    // ─── 10. Сабстаты ─────────────────────────────────────────────────
+    // ─── 11. Сабстаты ─────────────────────────────────────────────────
+    const mainEntryPos = mainEntry.pos;
+    const mainEntryStat = mainEntry.stat;
+
     const substats = deduped
-        .slice(1)
-        .filter(o => o.value != null)
+        .filter(o => {
+            if (o.pos === mainEntryPos) return false;
+            if (
+                o.stat === mainEntryStat &&
+                Math.abs(o.pos - mainEntryPos) <= 5
+            ) {
+                return false;
+            }
+            return o.value != null;
+        })
         .map(({ stat, value, valueType }) => ({
             stat,
             value,
