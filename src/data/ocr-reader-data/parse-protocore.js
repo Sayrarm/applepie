@@ -2,7 +2,7 @@ import { protocoreTypes } from '@data';
 
 const TYPE_MAP = {
     'α': 'alpha', 'a': 'alpha', 'alpha': 'alpha', '4': 'alpha',
-    'β': 'beta',  'b': 'beta',  'beta': 'beta',  '6': 'beta',
+    'β': 'beta',  'b': 'beta',  'beta': 'beta',  '6': 'beta', '3': 'beta',
     'γ': 'gamma', 'y': 'gamma', 'gamma': 'gamma', 'v': 'gamma',
     'δ': 'delta', 'd': 'delta', 'delta': 'delta',
     '§': 'delta', '&': 'delta', '$': 'delta',
@@ -14,15 +14,26 @@ const STELLACTRUM_COLORS = [
 ];
 
 const ALL_KNOWN_STATS = [
-    "Oath's Strength",
-    'Oath Recovery Boost',
-    'Oath Strength',
     'Expedited Energy Boost',
+    'Oath Recovery Boost',
+    "Oath's Strength",
+    'Oath Strength',
     'DMG Boost to Weakened',
     'CRIT Rate', 'CRIT DMG',
     'HP Bonus', 'ATK Bonus', 'DEF Bonus',
     'HP', 'ATK', 'DEF',
 ];
+
+const MAIN_STAT_TO_TYPES = (() => {
+    const map = {};
+    for (const [typeKey, typeData] of Object.entries(protocoreTypes)) {
+        for (const stat of typeData.mainStats) {
+            if (!map[stat.name]) map[stat.name] = [];
+            map[stat.name].push(typeKey);
+        }
+    }
+    return map;
+})();
 
 function escapeRegex(str) {
     return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -34,9 +45,6 @@ function normalizeCamelCase(str) {
         .replace(/([A-Z]+)([A-Z][a-z])/g, '$1 $2');
 }
 
-/**
- * Извлекает тип (alpha/beta/gamma/delta) из "Protocore - X".
- */
 function extractType(fullText) {
     const m = fullText.match(/Protocore\s*[-–—]\s*([^\s]{1,3})/i);
     if (!m) return null;
@@ -48,123 +56,111 @@ function extractType(fullText) {
 }
 
 /**
- * Находит все вхождения известных статов в тексте.
- * Для каждого пытается извлечь значение (percent или flat),
- * но возвращает запись даже если значение не найдено.
- *
- * @returns {Array<{stat, value|null, type|null, pos}>}
+ * Ищет все вхождения стата в тексте.
+ * Fuzzy: слова должны идти подряд с малым зазором (до 5 символов),
+ * и зазор НЕ должен содержать цифры (иначе это уже другой стат).
+ * Требуется совпадение хотя бы (N-1) слов для N>=3, все слова для N<=2.
  */
-function findStatOccurrences(fullText) {
-    const found = [];
+function findAllStatMatches(fullText, statName) {
+    const words = statName.split(/\s+/);
+    const results = [];
 
-    for (const statName of ALL_KNOWN_STATS) {
-        const escaped = escapeRegex(statName);
-        const namePattern = escaped.replace(/\\?\s+/g, '\\s+');
-        const nameRe = new RegExp(`\\b${namePattern}\\b`, 'gi');
-        const nameMatches = [...fullText.matchAll(nameRe)];
+    if (words.length === 1) {
+        const re = new RegExp(`\\b${escapeRegex(words[0])}\\b`, 'gi');
+        for (const m of fullText.matchAll(re)) {
+            results.push({ pos: m.index, endPos: m.index + m[0].length });
+        }
+        return results;
+    }
 
-        for (const m of nameMatches) {
-            const pos = m.index;
-            const tail = fullText.slice(pos, pos + 40);
+    const minMatches = words.length <= 2 ? words.length : words.length - 1;
 
-            // Пробуем percent
-            const rePercent = new RegExp(
-                `^${namePattern}[^+\\d%]{0,15}\\+?(\\d+(?:\\.\\d+)?)\\s*%`,
-                'i'
-            );
-            const mp = tail.match(rePercent);
-            if (mp) {
-                found.push({
-                    stat: statName,
-                    value: parseFloat(mp[1]),
-                    type: 'percent',
-                    pos,
-                });
-                continue;
+    // Якорь — первое слово
+    const firstRe = new RegExp(`\\b${escapeRegex(words[0])}\\b`, 'gi');
+    const firstMatches = [...fullText.matchAll(firstRe)];
+
+    for (const anchor of firstMatches) {
+        const startPos = anchor.index;
+        let lastEnd = startPos + anchor[0].length;
+        let matched = 1;
+        let ok = true;
+
+        for (let i = 1; i < words.length; i++) {
+            const wordRe = new RegExp(`\\b${escapeRegex(words[i])}\\b`, 'i');
+            // Окно от lastEnd до lastEnd + 10 символов (только пробелы/мусор без цифр)
+            const window = fullText.slice(lastEnd, lastEnd + 10);
+
+            // Проверяем, что в окне НЕТ цифр (иначе мы ушли к другому стату)
+            const beforeMatch = window.match(wordRe);
+            if (!beforeMatch) continue;
+
+            const gap = window.slice(0, beforeMatch.index);
+            if (/\d/.test(gap)) {
+                // Между словами есть цифра — это уже другой стат, не наш
+                ok = false;
+                break;
             }
 
-            // Пробуем flat
-            const reFlat = new RegExp(
-                `^${namePattern}[^+\\d%]{0,15}\\+?(\\d+)\\b(?!\\s*%)`,
-                'i'
-            );
-            const mf = tail.match(reFlat);
-            if (mf) {
-                found.push({
-                    stat: statName,
-                    value: parseInt(mf[1], 10),
-                    type: 'flat',
-                    pos,
-                });
-                continue;
-            }
+            lastEnd = lastEnd + beforeMatch.index + beforeMatch[0].length;
+            matched++;
+        }
 
-            // Значение не найдено — всё равно записываем (важно для main stat)
-            found.push({
-                stat: statName,
-                value: null,
-                type: null,
-                pos,
-            });
+        if (ok && matched >= minMatches) {
+            results.push({ pos: startPos, endPos: lastEnd });
         }
     }
 
-    // Сортируем по позиции
-    found.sort((a, b) => a.pos - b.pos);
-
-    // Дедупликация перекрытий: "HP" vs "HP Bonus" в одной позиции
-    const deduped = [];
-    for (const item of found) {
-        const last = deduped[deduped.length - 1];
-        if (last && item.pos < last.pos + last.stat.length) {
-            if (item.stat.length > last.stat.length) {
-                deduped[deduped.length - 1] = item;
-            }
-            continue;
-        }
-        deduped.push(item);
-    }
-
-    return deduped;
+    return results;
 }
 
 /**
- * Определяет уровень протокора.
- * Приоритеты:
- *   1. "Max Level" → 15
- *   2. Совпадение значения main stat с таблицей
- *   3. Fallback: короткое число 0..15
+ * Извлекает значение стата, начиная с позиции ПОСЛЕ названия.
+ * Устойчив к мусору между названием и числом (но НЕ пропускает цифры).
+ * Возвращает {value, type} или null.
  */
-function extractLevel(fullText, type, mainStat, mainStatValueFromOcr) {
-    if (/\bMax\s*Level\b/i.test(fullText)) {
-        return 15;
+function extractStatValue(fullText, statEndPos) {
+    // Окно 35 символов — достаточно, чтобы поймать "+ im +13.2%"
+    const tail = fullText.slice(statEndPos, statEndPos + 35);
+
+    // Мусор между названием и числом: любые символы, кроме цифр.
+    // Не ограничиваем "+" и "%" — они часто попадают в мусор.
+    // Главное — чтобы первая цифра, которую встретим, была значением.
+    const mPercent = tail.match(/^[^\d]{0,25}?(\d+(?:\.\d+)?)\s*%/);
+    if (mPercent) {
+        return { value: parseFloat(mPercent[1]), type: 'percent' };
     }
 
-    if (
-        type && mainStat && mainStatValueFromOcr != null &&
-        protocoreTypes[type]
-    ) {
-        const statDef = protocoreTypes[type].mainStats.find(
-            s => s.name === mainStat
-        );
-        if (statDef) {
-            for (let lvl = statDef.values.length - 1; lvl >= 0; lvl--) {
-                if (Math.abs(statDef.values[lvl] - mainStatValueFromOcr) < 0.05) {
-                    return lvl;
+    const mFlat = tail.match(/^[^\d]{0,25}?(\d+)\b(?!\s*%)/);
+    if (mFlat) {
+        return { value: parseInt(mFlat[1], 10), type: 'flat' };
+    }
+
+    return null;
+}
+
+/**
+ * Ищет каноничное имя стата по значению.
+ */
+function matchStatByValue(partialName, value) {
+    const partial = partialName.toLowerCase().split(/\s+/)[0];
+
+    for (const [typeKey, typeData] of Object.entries(protocoreTypes)) {
+        for (const stat of typeData.mainStats) {
+            const statFirstWord = stat.name.toLowerCase().split(/\s+/)[0];
+            if (!statFirstWord.startsWith(partial) && !partial.startsWith(statFirstWord)) {
+                continue;
+            }
+
+            for (let lvl = 0; lvl < stat.values.length; lvl++) {
+                if (Math.abs(stat.values[lvl] - value) < 0.05) {
+                    return { name: stat.name, type: typeKey, level: lvl };
                 }
             }
         }
     }
-
-    const candidates = [...fullText.matchAll(/\b(\d{1,2})\b/g)]
-        .map(m => parseInt(m[1], 10))
-        .filter(n => n >= 0 && n <= 15);
-    return candidates.length > 0 ? candidates[0] : null;
+    return null;
 }
 
-/**
- * Основная функция парсинга OCR-текста в объект протокора
- */
 export function parseProtocore(rawText) {
     if (!rawText) return null;
 
@@ -186,12 +182,10 @@ export function parseProtocore(rawText) {
     }
     if (!stellactrum) return null;
 
-    // ─── 3. Type ──────────────────────────────────────────────────────
-    const type = extractType(fullText);
+    // ─── 3. Type (символ) ─────────────────────────────────────────────
+    const symbolType = extractType(fullText);
 
-    // ─── 4. Обрезаем хвост по стоп-словам ─────────────────────────────
-    // Важно: сохраняем "Max Level" в fullText для extractLevel,
-    // но обрезаем для поиска статов.
+    // ─── 4. Стоп-слова ────────────────────────────────────────────────
     const stopWords = ['Max Level', 'Enhance', 'Unequip'];
     let searchZone = fullText;
     for (const stop of stopWords) {
@@ -200,48 +194,152 @@ export function parseProtocore(rawText) {
     }
 
     // ─── 5. Все вхождения статов ──────────────────────────────────────
-    const occurrences = findStatOccurrences(searchZone);
-    if (occurrences.length === 0) return null;
+    const allOccurrences = [];
 
-    // ─── 6. Первый стат = main stat (даже если без значения) ──────────
-    const mainStatEntry = occurrences[0];
-    const mainStat = mainStatEntry.stat;
-    const mainStatValueFromOcr = mainStatEntry.value;
+    for (const statName of ALL_KNOWN_STATS) {
+        const matches = findAllStatMatches(searchZone, statName);
+        for (const m of matches) {
+            const value = extractStatValue(searchZone, m.endPos);
+            allOccurrences.push({
+                stat: statName,
+                pos: m.pos,
+                endPos: m.endPos,
+                value: value ? value.value : null,
+                valueType: value ? value.type : null,
+            });
+        }
+    }
 
-    // ─── 7. Level ─────────────────────────────────────────────────────
-    const level = extractLevel(
-        fullText,
-        type,
-        mainStat,
-        mainStatValueFromOcr
-    );
+    allOccurrences.sort((a, b) => a.pos - b.pos);
 
-    // ─── 8. mainStatValue — из таблицы ────────────────────────────────
-    let mainStatValue = null;
-    if (type && protocoreTypes[type] && level != null) {
-        const statDef = protocoreTypes[type].mainStats.find(
-            s => s.name === mainStat
-        );
+    // Дедупликация: если два матча начинаются в одной позиции —
+    // оставляем более длинное имя стата.
+    // Также удаляем "вложенные" матчи: если короткий стат начинается
+    // внутри длинного — убираем короткий.
+    const deduped = [];
+    for (const item of allOccurrences) {
+        let skip = false;
+        for (let i = deduped.length - 1; i >= 0; i--) {
+            const last = deduped[i];
+            // Если item начинается внутри last — item вложенный, пропускаем
+            if (item.pos >= last.pos && item.pos < last.pos + last.stat.length) {
+                // Если у item имя длиннее — заменяем last
+                if (item.stat.length > last.stat.length) {
+                    deduped.splice(i, 1);
+                } else {
+                    skip = true;
+                }
+                break;
+            }
+            // Если last начинается внутри item — удаляем last
+            if (last.pos >= item.pos && last.pos < item.pos + item.stat.length) {
+                if (item.stat.length > last.stat.length) {
+                    deduped.splice(i, 1);
+                } else {
+                    skip = true;
+                    break;
+                }
+            }
+        }
+        if (!skip) deduped.push(item);
+    }
+    deduped.sort((a, b) => a.pos - b.pos);
+
+    if (deduped.length === 0) return null;
+
+    // ─── 6. Первый стат = main stat ───────────────────────────────────
+    const mainEntry = deduped[0];
+    let mainStat = mainEntry.stat;
+    let mainStatValueFromOcr = mainEntry.value;
+    let canonicalLevel = null;
+    let canonicalType = null;
+
+    // Восстанавливаем каноничное имя + уровень по значению
+    if (mainStatValueFromOcr != null) {
+        const canonical = matchStatByValue(mainStat, mainStatValueFromOcr);
+        if (canonical) {
+            mainStat = canonical.name;
+            canonicalLevel = canonical.level;
+            canonicalType = canonical.type;
+        }
+    }
+
+    // ─── 7. Type ──────────────────────────────────────────────────────
+    let type = symbolType;
+    if (!type) {
+        if (MAIN_STAT_TO_TYPES[mainStat] && MAIN_STAT_TO_TYPES[mainStat].length === 1) {
+            type = MAIN_STAT_TO_TYPES[mainStat][0];
+        } else if (canonicalType) {
+            type = canonicalType;
+        }
+    }
+
+    // Если тип известен, но main не входит в его мейны — попробуем canonicalType
+    if (type && protocoreTypes[type]) {
+        const possibleMains = protocoreTypes[type].mainStats.map(s => s.name);
+        if (!possibleMains.includes(mainStat) && canonicalType) {
+            type = canonicalType;
+        }
+    }
+
+    // ─── 8. Level ─────────────────────────────────────────────────────
+    let level = null;
+
+    // 8a. Max Level
+    if (/\bMax\s*Level\b/i.test(fullText)) {
+        level = 15;
+    }
+
+    // 8b. По значению main stat из OCR
+    if (level == null && type && mainStatValueFromOcr != null && protocoreTypes[type]) {
+        const statDef = protocoreTypes[type].mainStats.find(s => s.name === mainStat);
+        if (statDef) {
+            for (let lvl = statDef.values.length - 1; lvl >= 0; lvl--) {
+                if (Math.abs(statDef.values[lvl] - mainStatValueFromOcr) < 0.05) {
+                    level = lvl;
+                    break;
+                }
+            }
+        }
+    }
+
+    // 8c. Из canonical
+    if (level == null && canonicalLevel != null) {
+        level = canonicalLevel;
+    }
+
+    // 8d. Fallback
+    if (level == null) {
+        const typeMatch = fullText.match(/Protocore\s*[-–—]/i);
+        const nameEnd = typeMatch ? typeMatch.index + typeMatch[0].length : 0;
+        const tailText = fullText.slice(nameEnd);
+        const candidates = [...tailText.matchAll(/[+#]?(\d{1,2})\b/g)]
+            .map(m => parseInt(m[1], 10))
+            .filter(n => n >= 0 && n <= 15);
+        if (candidates.length > 0) level = candidates[0];
+    }
+
+    // ─── 9. mainStatValue ─────────────────────────────────────────────
+    // Приоритет: значение из OCR (если найдено matchStatByValue,
+    // значит оно точно совпадает с таблицей). Иначе — из таблицы по уровню.
+    let mainStatValue = mainStatValueFromOcr;
+    if (mainStatValue == null && type && level != null && protocoreTypes[type]) {
+        const statDef = protocoreTypes[type].mainStats.find(s => s.name === mainStat);
         if (statDef && statDef.values[level] != null) {
             mainStatValue = statDef.values[level];
         }
     }
-    // Fallback: значение из OCR
-    if (mainStatValue == null) {
-        mainStatValue = mainStatValueFromOcr;
-    }
 
-    // ─── 9. Сабстаты — только те, у кого есть значение ────────────────
-    const substats = occurrences
+    // ─── 10. Сабстаты ─────────────────────────────────────────────────
+    const substats = deduped
         .slice(1)
         .filter(o => o.value != null)
-        .map(({ stat, value, type: t }) => ({
+        .map(({ stat, value, valueType }) => ({
             stat,
             value,
-            type: t,
+            type: valueType,
         }));
 
-    // ─── 10. Результат ────────────────────────────────────────────────
     return {
         type,
         stellactrum,
