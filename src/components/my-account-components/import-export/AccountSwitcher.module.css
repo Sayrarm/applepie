@@ -38,11 +38,16 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
-    transition: border-color 0.2s;
+    transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .accountCard:hover {
     border-color: var(--accent-color, #6c8cff);
+}
+
+.accountCardActive {
+    border-color: #4caf50;
+    box-shadow: 0 0 0 1px #4caf50, 0 4px 12px rgba(76, 175, 80, 0.2);
 }
 
 .accountHeader {
@@ -59,32 +64,17 @@
     margin: 0;
     font-size: 1rem;
     color: var(--text-primary, #fff);
+    flex: 1;
 }
 
-.uploadButton {
-    padding: 10px 16px;
-    background: linear-gradient(135deg, #6c8cff, #8a6cff);
+.activeBadge {
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: #4caf50;
     color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
-}
-
-.uploadButton:hover:not(:disabled) {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(108, 140, 255, 0.4);
-}
-
-.uploadButton:active:not(:disabled) {
-    transform: translateY(0);
-}
-
-.uploadButton:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
+    letter-spacing: 0.5px;
 }
 
 .fileInfo {
@@ -106,6 +96,64 @@
     color: var(--text-secondary, #999);
     font-size: 0.75rem;
     margin-top: 2px;
+}
+
+.emptyState {
+    font-size: 0.8rem;
+    color: var(--text-secondary, #777);
+    font-style: italic;
+    padding: 8px 0;
+}
+
+.buttonRow {
+    display: flex;
+    gap: 8px;
+}
+
+.btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+}
+
+.btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.btnPrimary {
+    flex: 1;
+    background: linear-gradient(135deg, #4caf50, #3a9c40);
+    color: #fff;
+}
+
+.btnPrimary:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+}
+
+.btnSecondary {
+    flex: 1;
+    background: linear-gradient(135deg, #6c8cff, #8a6cff);
+    color: #fff;
+}
+
+.btnSecondary:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(108, 140, 255, 0.4);
+}
+
+.btnDanger {
+    background: rgba(255, 80, 80, 0.15);
+    color: #ff6b6b;
+}
+
+.btnDanger:hover:not(:disabled) {
+    background: rgba(255, 80, 80, 0.3);
 }
 
 .warning {

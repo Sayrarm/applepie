@@ -1,4 +1,5 @@
 import { isAppKey } from "./export-import-storage.js";
+import {readSlotAsText} from "./account-slots.js";
 
 /**
  * Возвращает список всех ключей приложения, которые сейчас есть в localStorage.
@@ -125,4 +126,15 @@ export const formatKeysPreview = (keys, limit = 10) => {
  */
 export const reloadWithDelay = (delay = 1000) => {
     setTimeout(() => window.location.reload(), delay);
+};
+
+export const switchToSlot = async (slotId) => {
+    const text = await readSlotAsText(slotId);
+    const content = JSON.parse(text);
+    validateImportFile(content);
+
+    const clearedCount = clearAppStorage();
+    const importedCount = applyDataToStorage(content.data);
+
+    return { clearedCount, importedCount };
 };
