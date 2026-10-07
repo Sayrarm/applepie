@@ -13,15 +13,22 @@ export const getSubstatType = (statName) => {
 
 /**
  * Запускает OCR и парсинг для одного изображения.
+ * Поддерживает signal для отмены.
  */
-export async function runOcr(image, onProgress = () => {}) {
+export async function runOcr(image, onProgress = () => {}, signal = null) {
     const result = await Tesseract.recognize(image, 'eng', {
         logger: (m) => {
+            if (signal?.aborted) return;
             if (m.status === 'recognizing text') {
                 onProgress(Math.round(m.progress * 100));
             }
         },
     });
+
+    // После распознавания проверяем, не отменили ли обработку
+    if (signal?.aborted) {
+        throw new DOMException('Aborted', 'AbortError');
+    }
 
     const rawText = result.data.text;
     const protocore = parseProtocore(rawText);
@@ -62,7 +69,6 @@ export function saveOcrProtocore(protocore) {
             type: getSubstatType(s.stat),
         })),
     };
-
     const saved = addProtocore(dataToSave);
     return saved;
 }
@@ -70,19 +76,11 @@ export function saveOcrProtocore(protocore) {
 /**
  * Пакетная обработка нескольких изображений.
  *
- * Последовательно, одно за другим (чтобы не грузить CPU).
- * После каждого успешного распознавания и валидации — сразу сохраняет.
- *
  * @param {File[]} files
  * @param {object} callbacks
- *   - onFileStart(index, fileName)
- *   - onFileProgress(index, percent) — прогресс распознавания текущего файла
- *   - onFileDone(index, result) — { fileName, status: 'saved'|'failed'|'error', protocore?, error? }
- *   - onTotalProgress(done, total)
- *
- * @returns {Promise<Array>} массив результатов по каждому файлу
+ * @param {AbortSignal} signal — для отмены обработки
  */
-export async function runOcrBatch(files, callbacks = {}) {
+export async function runOcrBatch(files, callbacks = {}, signal = null) {
     const {
         onFileStart = () => {},
         onFileProgress = () => {},
@@ -94,6 +92,12 @@ export async function runOcrBatch(files, callbacks = {}) {
     const total = files.length;
 
     for (let i = 0; i < total; i++) {
+        // Проверка на отмену
+        if (signal?.aborted) {
+            console.log('[runOcrBatch] Обработка отменена пользователем.');
+            break;
+        }
+
         const file = files[i];
         const fileName = file.name || `file-${i + 1}`;
 
@@ -102,8 +106,10 @@ export async function runOcrBatch(files, callbacks = {}) {
         try {
             const imageUrl = URL.createObjectURL(file);
 
-            const { rawText, protocore } = await runOcr(imageUrl, (p) =>
-                onFileProgress(i, p)
+            const { rawText, protocore } = await runOcr(
+                imageUrl,
+                (p) => onFileProgress(i, p),
+                signal,
             );
 
             URL.revokeObjectURL(imageUrl);
@@ -129,7 +135,11 @@ export async function runOcrBatch(files, callbacks = {}) {
             onTotalProgress(i + 1, total);
 
         } catch (err) {
-            console.error(`[${i + 1}/${total}] Error on ${fileName}:`, err);
+            if (err.name === 'AbortError') {
+                console.log(`[${i + 1}/${total}] Прервано на ${fileName}`);
+                break;
+            }
+            console.error(`[${i + 1}/${total}] Ошибка на ${fileName}:`, err);
             const result = { fileName, status: 'error', error: err };
             results.push(result);
             onFileDone(i, result);
@@ -137,7 +147,7 @@ export async function runOcrBatch(files, callbacks = {}) {
         }
     }
 
-    // Один раз уведомляем после всей пачки
+    // Уведомляем один раз после всей пачки
     window.dispatchEvent(new CustomEvent('protocoresUpdated'));
 
     return results;
