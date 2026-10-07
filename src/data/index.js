@@ -170,3 +170,12 @@ export {
   getHeartCount,
   getWishExchange,
 } from "./my-account-data/my-resources-functions.js";
+
+//ocr reader
+export { parseProtocore } from "./ocr-reader-data/parse-protocore.js";
+export {
+  runOcr,
+  canSaveOcrProtocore,
+  saveOcrProtocore,
+  runOcrBatch
+} from "./ocr-reader-data/ocr-protocore-utils.js";

@@ -5,6 +5,10 @@
   margin: 20px auto 0;
 }
 
+.buttonsContainer {
+  display: flex;
+}
+
 .addButton {
   background-color: var(--forSelect);
   box-shadow: var(--box-shadow);
@@ -48,6 +52,61 @@
 
 .emptyState {
   color: var(--colorTextDark);
+}
+
+.protocoreContainer {
+  display: flex;
+  align-items: stretch;
+  position: relative;
+}
+
+.checkbox {
+  position: absolute;
+  bottom: 7px;
+  left: 10px;
+  z-index: 10;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  background-color: var(--forSelect);
+  transition: 0.3s;
+}
+
+.checkbox:hover {
+  border-color: var(--colorText);
+  background-color: var(--colorText);
+}
+
+.checkbox:checked {
+  background-color: var(--a-hover);
+  border-color: var(--colorText);
+}
+
+.checkbox:checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: TikTok Sans, monospace;
+}
+
+@media (max-width: 666px) {
+  .buttonsContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .addButton {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 550px) {
