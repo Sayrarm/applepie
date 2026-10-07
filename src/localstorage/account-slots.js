@@ -1,4 +1,3 @@
-// accountSlots.js
 const DB_NAME = "lads-accounts";
 const DB_VERSION = 2; // подняли версию — старые слоты несовместимы
 const STORE = "slots";
@@ -68,4 +67,18 @@ export const getSlot = async (slotId) => {
  */
 export const deleteSlot = async (slotId) => {
     return tx("readwrite", (store) => store.delete(slotId));
+};
+
+/**
+ * Переименовать слот, не трогая его data.
+ */
+export const renameSlot = async (slotId, newName) => {
+    const existing = await getSlot(slotId);
+    if (!existing) throw new Error("Slot is empty");
+
+    return saveSlotData(slotId, {
+        name: newName,
+        fileName: existing.fileName,
+        data: existing.data,
+    });
 };

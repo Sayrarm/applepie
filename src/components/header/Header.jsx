@@ -3,6 +3,7 @@ import {Link, NavLink} from "react-router-dom";
 import styles from "./Header.module.css";
 import ThemeToggleButton from "./ThemeToggleButton.jsx";
 import TimezoneButton from "./TimezoneButton.jsx";
+import {useActiveAccount} from "@hooks";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,6 +20,12 @@ function Header() {
 
   const [isHidden, setIsHidden] = useState(false);
   const [lastScroll, setLastScroll] = useState(0);
+
+  const activeAccount = useActiveAccount();
+  // Текст для ссылки Account
+  const accountLabel = activeAccount
+      ? `ACCOUNT: ${activeAccount.name}`
+      : "ACCOUNT";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -116,8 +123,10 @@ function Header() {
               className={({ isActive }) =>
                   `${styles.a} ${isActive ? styles.active : ""}`
               }
-              to="/my-account">
-            Account
+              to="/my-account"
+              title={activeAccount?.fileName || ""}
+          >
+            {accountLabel}
           </NavLink>
         </div>
 
@@ -162,8 +171,13 @@ function Header() {
           <Link className={styles.a} to="/calculator" onClick={closeMenu}>
             Calculator
           </Link>
-          <Link className={styles.a} to="/my-account" onClick={closeMenu}>
-            Account
+          <Link
+              className={styles.a}
+              to="/my-account"
+              onClick={closeMenu}
+              title={activeAccount?.fileName || ""}
+          >
+            {accountLabel}
           </Link>
         </div>
       </nav>
