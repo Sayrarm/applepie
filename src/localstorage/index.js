@@ -159,3 +159,14 @@ export {
   clearMemoryOptimizerData,
   getMemoryOptimizerData
 } from "./optimizer-storage.js";
+export {
+  collectAppData,
+  buildExportPayload,
+  downloadJson,
+  validateImportFile,
+  applyDataToStorage,
+  clearAppStorage,
+  getAppKeys,
+  formatKeysPreview,
+  reloadWithDelay,
+} from "./export-import-utils.js";
