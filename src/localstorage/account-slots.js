@@ -1,8 +1,6 @@
-// Хранилище "слотов" аккаунтов в IndexedDB.
-// В каждом слоте лежит { name, fileName, fileBlob, updatedAt }.
-
+// accountSlots.js
 const DB_NAME = "lads-accounts";
-const DB_VERSION = 1;
+const DB_VERSION = 2; // подняли версию — старые слоты несовместимы
 const STORE = "slots";
 
 const openDb = () =>
@@ -11,9 +9,10 @@ const openDb = () =>
 
         req.onupgradeneeded = () => {
             const db = req.result;
-            if (!db.objectStoreNames.contains(STORE)) {
-                db.createObjectStore(STORE, { keyPath: "slotId" });
+            if (db.objectStoreNames.contains(STORE)) {
+                db.deleteObjectStore(STORE); // чистим старый формат
             }
+            db.createObjectStore(STORE, { keyPath: "slotId" });
         };
 
         req.onsuccess = () => resolve(req.result);
@@ -34,17 +33,17 @@ const tx = async (mode, fn) => {
 };
 
 /**
- * Сохранить файл в слот.
- * @param {string} slotId  например "account-1"
- * @param {File} file
+ * Слот: { slotId, name, fileName, data, updatedAt }
+ * data — тот же объект, что и в экспортном JSON (ключ → значение).
  */
-export const saveSlotFile = async (slotId, file) => {
+
+export const saveSlotData = async (slotId, { name, fileName, data }) => {
     return tx("readwrite", (store) =>
         store.put({
             slotId,
-            fileName: file.name,
-            fileBlob: file, // File — подкласс Blob, отлично хранится
-            size: file.size,
+            name,
+            fileName: fileName || null,
+            data,
             updatedAt: Date.now(),
         }),
     );
@@ -58,9 +57,7 @@ export const getSlot = async (slotId) => {
     const db = await openDb();
     return new Promise((resolve, reject) => {
         const transaction = db.transaction(STORE, "readonly");
-        const store = transaction.objectStore(STORE);
-        const req = store.get(slotId);
-
+        const req = transaction.objectStore(STORE).get(slotId);
         req.onsuccess = () => resolve(req.result || null);
         req.onerror = () => reject(req.error);
     });
@@ -71,13 +68,4 @@ export const getSlot = async (slotId) => {
  */
 export const deleteSlot = async (slotId) => {
     return tx("readwrite", (store) => store.delete(slotId));
-};
-
-/**
- * Прочитать содержимое файла слота как текст.
- */
-export const readSlotAsText = async (slotId) => {
-    const slot = await getSlot(slotId);
-    if (!slot) throw new Error("Slot is empty");
-    return slot.fileBlob.text();
 };

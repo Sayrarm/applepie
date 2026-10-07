@@ -169,11 +169,12 @@ export {
   getAppKeys,
   formatKeysPreview,
   reloadWithDelay,
-  switchToSlot
+  switchToSlot,
+  applySlotData,
+  getCurrentDataObject
 } from "./export-import-utils.js";
 export {
-  saveSlotFile,
+  saveSlotData,
   getSlot,
-  deleteSlot,
-  readSlotAsText
+  deleteSlot
 } from "./account-slots.js";

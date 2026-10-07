@@ -1,5 +1,4 @@
 import { isAppKey } from "./export-import-storage.js";
-import {readSlotAsText} from "./account-slots.js";
 
 /**
  * Возвращает список всех ключей приложения, которые сейчас есть в localStorage.
@@ -137,4 +136,22 @@ export const switchToSlot = async (slotId) => {
     const importedCount = applyDataToStorage(content.data);
 
     return { clearedCount, importedCount };
+};
+
+/**
+ * Собирает данные текущего localStorage в объект `{ key: value }`.
+ */
+export const getCurrentDataObject = () => {
+    const { data } = collectAppData();
+    return data;
+};
+
+/**
+ * Применяет слот: чистит localStorage и заливает данные слота.
+ */
+export const applySlotData = (slot) => {
+    if (!slot || !slot.data) throw new Error("Slot is empty");
+    const cleared = clearAppStorage();
+    const imported = applyDataToStorage(slot.data);
+    return { cleared, imported };
 };
