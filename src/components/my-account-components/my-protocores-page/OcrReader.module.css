@@ -1,0 +1,194 @@
+.container {
+    padding: 20px;
+}
+
+.title {
+    margin: 0 0 16px;
+}
+
+.buttonsCnotainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.chooseButton,
+.primaryButton,
+.cancelButton {
+    background: var(--a);
+    box-shadow: var(--box-shadow);
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    padding: 5px;
+    color: var(--colorText);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chooseButton:hover,
+.primaryButton:hover,
+.cancelButton:hover {
+    background: var(--a-hover);
+}
+
+.primaryButton:hover:not(:disabled) {
+    background: var(--a-hover);
+}
+
+.primaryButton:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.hiddenInput {
+    display: none;
+}
+
+/* Строка "Selected files: N (estimated time)" */
+.selectedInfo {
+    margin-top: 10px;
+}
+
+.estimate {
+    color: var(--colorTextDark);
+}
+
+/* Прогресс */
+.progressBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.progressLabel {
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.progressBarTrack {
+    width: 100%;
+    max-width: 500px;
+    height: 8px;
+    background: #eee;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progressBarTrack + .progressLabel {
+    margin-top: 8px;
+}
+
+.progressBarFillFile {
+    height: 100%;
+    background: #1677ff;
+    transition: width 0.2s;
+}
+
+.progressBarFillTotal {
+    height: 100%;
+    background: #0a5;
+    transition: width 0.2s;
+}
+
+/* Сообщение */
+.message {
+    margin-top: 15px;
+    padding: 10px;
+}
+
+.messageSuccess {
+    background: #e6ffe6;
+    border: 1px solid #b5d6b5;
+    color: #0a5;
+}
+
+.messageWarning {
+    background: #fff6e0;
+    border: 1px solid #e6c98a;
+    color: #8a6d00;
+}
+
+.messageError {
+    background: #ffe6e6;
+    border: 1px solid #e0a0a0;
+    color: #a00;
+}
+
+/* Таблица результатов */
+.results {
+    margin-top: 20px;
+}
+
+.resultsTitle {
+    margin: 0 0 10px;
+}
+
+.resultsCount {
+    color: var(--colorTextDark);
+    font-weight: normal;
+}
+
+.resultsScroll {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.resultsTable {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 900px;
+    font-size: 12px;
+}
+
+.resultsTable thead {
+    text-align: center;
+}
+
+.resultsTable th {
+    padding: 2px;
+    border-bottom: 1px solid #ddd;
+    font-weight: 600;
+}
+
+.resultsTable td {
+    padding: 2px;
+    vertical-align: top;
+}
+
+.resultsRow {
+    border-bottom: 1px solid #eee;
+}
+
+.fileCell {
+    max-width: 200px;
+    word-break: break-all;
+}
+
+.statusSaved {
+    color: #0a5;
+    text-shadow: 0 0 1px rgba(0 0 0 / 0.9), 0 0 1px rgb(0 0 0 / 0.9), 0 0 5px #000000,
+    0 0 10px #000000;
+}
+
+.statusFailed {
+    color: #c80;
+    text-shadow: 0 0 1px rgba(0 0 0 / 0.9), 0 0 1px rgb(0 0 0 / 0.9), 0 0 5px #000000,
+    0 0 10px #000000;
+}
+
+.statusError {
+    color: #a00;
+    text-shadow: 0 0 1px rgba(0 0 0 / 0.9), 0 0 1px rgb(0 0 0 / 0.9), 0 0 5px #000000,
+    0 0 10px #000000;
+}
+
+.statusMuted {
+    color: var(--colorTextDark);
+}

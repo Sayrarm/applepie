@@ -1,5 +1,6 @@
 import React, { useState, forwardRef, useImperativeHandle, useRef } from 'react';
 import { runOcrBatch } from '@data';
+import styles from './OcrReader.module.css';
 
 // Сколько секунд в среднем уходит на 1 файл (для оценки времени).
 const SECONDS_PER_FILE = 3;
@@ -145,220 +146,130 @@ const OcrReader = forwardRef((props, ref) => {
 
     const totalProgressPercent = totalAll > 0 ? Math.round((totalDone / totalAll) * 100) : 0;
 
-    return (
-        <div style={{ padding: 20 }}>
-            <h2>Add screenshots with Protocores</h2>
+    const messageClass =
+        message?.kind === 'success'
+            ? styles.messageSuccess
+            : message?.kind === 'warning'
+                ? styles.messageWarning
+                : styles.messageError;
 
-            {/* Кастомная кнопка выбора файлов */}
-            <label
-                style={{
-                    display: 'inline-block',
-                    padding: '8px 16px',
-                    background: '#1677ff',
-                    color: '#fff',
-                    border: 'none',
-                    borderRadius: 4,
-                    cursor: 'pointer',
-                    fontSize: 14,
-                }}
-            >
-                Choose files
-                <input
-                    type="file"
-                    accept="image/*"
-                    multiple
-                    onChange={handleFilesChange}
-                    style={{ display: 'none' }}
-                />
-            </label>
+    return (
+        <div className={styles.container}>
+            <h2 className={styles.title}>Add screenshots with Protocores</h2>
+
+            <div className={styles.buttonsCnotainer}>
+                <label className={styles.chooseButton}>
+                    Choose files
+                    <input
+                        type="file"
+                        accept="image/*"
+                        multiple
+                        onChange={handleFilesChange}
+                        className={styles.hiddenInput}
+                    />
+                </label>
+
+                {files.length > 0 && (
+                    <>
+                        <button
+                            className={styles.primaryButton}
+                            onClick={handleSaveAll}
+                            disabled={loading}
+                        >
+                            {loading
+                                ? `Processing ${currentIndex + 1}/${files.length}...`
+                                : `Save Protocore(s) (${files.length})`}
+                        </button>
+
+                        {loading && (
+                            <button className={styles.cancelButton} onClick={handleCancel}>
+                                Cancel
+                            </button>
+                        )}
+                    </>
+                )}
+            </div>
 
             {files.length > 0 && !loading && (
-                <div style={{ marginTop: 10 }}>
+                <div className={styles.selectedInfo}>
                     Selected files: <b>{files.length}</b>{' '}
-                    <span style={{ color: '#888' }}>
+                    <span className={styles.estimate}>
                         (estimated processing time: {estimateTime(files.length)})
                     </span>
                 </div>
             )}
 
-            {files.length > 0 && (
-                <div style={{ marginTop: 10, display: 'flex', gap: 10 }}>
-                    <button
-                        onClick={handleSaveAll}
-                        disabled={loading}
-                        style={{
-                            padding: '8px 16px',
-                            background: '#1677ff',
-                            color: '#fff',
-                            border: 'none',
-                            borderRadius: 4,
-                            cursor: loading ? 'not-allowed' : 'pointer',
-                            opacity: loading ? 0.6 : 1,
-                        }}
-                    >
-                        {loading
-                            ? `Processing ${currentIndex + 1}/${files.length}...`
-                            : `Save Protocore(s) (${files.length})`}
-                    </button>
 
-                    {loading && (
-                        <button
-                            onClick={handleCancel}
-                            style={{
-                                padding: '8px 16px',
-                                background: '#fff',
-                                color: '#a00',
-                                border: '1px solid #a00',
-                                borderRadius: 4,
-                                cursor: 'pointer',
-                            }}
-                        >
-                            Cancel
-                        </button>
-                    )}
-                </div>
-            )}
 
             {loading && (
-                <div style={{ marginTop: 12 }}>
-                    <div style={{ fontSize: 14, marginBottom: 4 }}>
+                <div className={styles.progressBlock}>
+                    <div className={styles.progressLabel}>
                         Current: <b>{currentFileName}</b> — {fileProgress}%
                     </div>
-                    <div
-                        style={{
-                            width: '100%',
-                            maxWidth: 500,
-                            height: 8,
-                            background: '#eee',
-                            borderRadius: 4,
-                            overflow: 'hidden',
-                        }}
-                    >
+                    <div className={styles.progressBarTrack}>
                         <div
-                            style={{
-                                width: `${fileProgress}%`,
-                                height: '100%',
-                                background: '#1677ff',
-                                transition: 'width 0.2s',
-                            }}
+                            className={styles.progressBarFillFile}
+                            style={{ width: `${fileProgress}%` }}
                         />
                     </div>
-                    <div style={{ marginTop: 8, fontSize: 14 }}>
+
+                    <div className={styles.progressLabel}>
                         Overall: {totalDone} / {totalAll} ({totalProgressPercent}%)
                     </div>
-                    <div
-                        style={{
-                            width: '100%',
-                            maxWidth: 500,
-                            height: 8,
-                            background: '#eee',
-                            borderRadius: 4,
-                            overflow: 'hidden',
-                            marginTop: 4,
-                        }}
-                    >
+                    <div className={styles.progressBarTrack}>
                         <div
-                            style={{
-                                width: `${totalProgressPercent}%`,
-                                height: '100%',
-                                background: '#0a5',
-                                transition: 'width 0.2s',
-                            }}
+                            className={styles.progressBarFillTotal}
+                            style={{ width: `${totalProgressPercent}%` }}
                         />
                     </div>
                 </div>
             )}
 
             {message && (
-                <div
-                    style={{
-                        marginTop: 15,
-                        padding: 10,
-                        borderRadius: 4,
-                        background:
-                            message.kind === 'success'
-                                ? '#e6ffe6'
-                                : message.kind === 'warning'
-                                    ? '#fff6e0'
-                                    : '#ffe6e6',
-                        border: `1px solid ${
-                            message.kind === 'success'
-                                ? '#b5d6b5'
-                                : message.kind === 'warning'
-                                    ? '#e6c98a'
-                                    : '#e0a0a0'
-                        }`,
-                        color:
-                            message.kind === 'success'
-                                ? '#0a5'
-                                : message.kind === 'warning'
-                                    ? '#8a6d00'
-                                    : '#a00',
-                    }}
-                >
+                <div className={`${styles.message} ${messageClass}`}>
                     {message.text}
                 </div>
             )}
 
             {results.length > 0 && (
-                <div style={{ marginTop: 20 }}>
-                    <h3>
+                <div className={styles.results}>
+                    <h3 className={styles.resultsTitle}>
                         Results{' '}
-                        <span style={{ color: '#888', fontWeight: 'normal' }}>
-                            ({results.length})
-                        </span>
+                        <span className={styles.resultsCount}>({results.length})</span>
                     </h3>
-                    <div style={{ maxHeight: 400, overflowY: 'auto' }}>
-                        <table
-                            style={{
-                                borderCollapse: 'collapse',
-                                width: '100%',
-                                maxWidth: 900,
-                                fontSize: 14,
-                            }}
-                        >
-                            <thead
-                                style={{
-                                    position: 'sticky',
-                                    top: 0,
-                                    background: '#f4f4f4',
-                                    zIndex: 1,
-                                }}
-                            >
+                    <div className={styles.resultsScroll}>
+                        <table className={styles.resultsTable}>
+                            <thead>
                             <tr>
-                                <th style={th}>#</th>
-                                <th style={th}>File</th>
-                                <th style={th}>Status</th>
-                                <th style={th}>Protocore</th>
+                                <th>#</th>
+                                <th>File</th>
+                                <th>Status</th>
+                                <th>Protocore</th>
                             </tr>
                             </thead>
                             <tbody>
                             {results.map((r, idx) => (
-                                <tr key={idx} style={{ borderBottom: '1px solid #eee' }}>
-                                    <td style={td}>{idx + 1}</td>
-                                    <td
-                                        style={{
-                                            ...td,
-                                            maxWidth: 200,
-                                            wordBreak: 'break-all',
-                                        }}
-                                    >
-                                        {r.fileName}
-                                    </td>
-                                    <td style={td}>
+                                <tr key={idx} className={styles.resultsRow}>
+                                    <td>{idx + 1}</td>
+                                    <td className={styles.fileCell}>{r.fileName}</td>
+                                    <td>
                                         {r.status === 'saved' && (
-                                            <span style={{ color: '#0a5' }}>✓ Saved</span>
+                                            <span className={styles.statusSaved}>
+                                                    ✓ Saved
+                                                </span>
                                         )}
                                         {r.status === 'failed' && (
-                                            <span style={{ color: '#c80' }}>
+                                            <span className={styles.statusFailed}>
                                                     ⚠ Not recognized
                                                 </span>
                                         )}
                                         {r.status === 'error' && (
-                                            <span style={{ color: '#a00' }}>✗ Error</span>
+                                            <span className={styles.statusError}>
+                                                    ✗ Error
+                                                </span>
                                         )}
                                     </td>
-                                    <td style={td}>
+                                    <td>
                                         {r.status === 'saved' && r.protocore && (
                                             <>
                                                 {r.protocore.type} /{' '}
@@ -368,13 +279,13 @@ const OcrReader = forwardRef((props, ref) => {
                                             </>
                                         )}
                                         {r.status === 'failed' && (
-                                            <span style={{ color: '#888' }}>
+                                            <span className={styles.statusMuted}>
                                                     partially recognized — details in the
                                                     console
                                                 </span>
                                         )}
                                         {r.status === 'error' && (
-                                            <span style={{ color: '#888' }}>
+                                            <span className={styles.statusMuted}>
                                                     {r.error?.message || 'see console'}
                                                 </span>
                                         )}
@@ -389,17 +300,5 @@ const OcrReader = forwardRef((props, ref) => {
         </div>
     );
 });
-
-const th = {
-    textAlign: 'left',
-    padding: '6px 8px',
-    borderBottom: '1px solid #ddd',
-    fontWeight: 600,
-};
-
-const td = {
-    padding: '6px 8px',
-    verticalAlign: 'top',
-};
 
 export default OcrReader;
