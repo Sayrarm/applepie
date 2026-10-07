@@ -1,0 +1,180 @@
+.container {
+    padding: 15px;
+    background-color: var(--bg-glass);
+    box-shadow: var(--box-shadow);
+    margin: 20px 0;
+}
+
+.title {
+    margin: 0 0 4px 0;
+    font-size: 1.1rem;
+    color: var(--colorTextDark);
+}
+
+.subtitle {
+    margin: 0 0 20px 0;
+    font-size: 12px;
+    color: var(--colorTextDark);
+}
+
+.accountsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+@media (max-width: 600px) {
+    .accountsGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.accountCard {
+    background: var(--background);
+    border: 1px solid var(--a);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.accountCard:hover {
+    border-color: var(--a-hover);
+}
+
+.accountCardActive {
+    border-color: var(--a);
+    box-shadow: 0 0 0 1px var(--a), 0 0 20px var(--a);
+}
+
+.accountHeader {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.accountIcon {
+    font-size: 1.2rem;
+}
+
+.accountTitle {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text-primary, #fff);
+    flex: 1;
+}
+
+.activeBadge {
+    font-family: TikTok Sans, monospace;
+    font-weight: bold;
+    font-size: 0.65rem;
+    height: 19px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--green-button);
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.iconButton {
+    border: none;
+    background: var(--colorText);
+    height: 19px;
+}
+
+.fileInfo {
+    background: var(--colorText);
+    padding: 8px 10px;
+    font-size: 0.8rem;
+}
+
+.fileName {
+    color: var(--colorTextSuperDark);
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.fileMeta {
+    color: var(--colorTextSuperDark);
+    font-size: 0.75rem;
+    margin-top: 2px;
+}
+
+.emptyState {
+    font-size: 0.8rem;
+    color: var(--text-secondary, #777);
+    font-style: italic;
+    padding: 8px 0;
+}
+
+.buttonRow {
+    display: flex;
+    gap: 8px;
+}
+
+.btn {
+    font-family: TikTok Sans, monospace;
+    padding: 8px 12px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+}
+
+.btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.btnPrimary {
+    flex: 1;
+    background: var(--green-button);
+    color: #fff;
+}
+
+.btnPrimary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+}
+
+.btnSecondary {
+    flex: 1;
+    background: linear-gradient(135deg, #6c8cff, #8a6cff);
+    color: #fff;
+}
+
+.btnActivate:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgb(189 189 189);
+}
+
+.btnSecondary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(108, 140, 255, 0.4);
+}
+
+.btnDanger {
+    background: var(--red-button);
+    color: #ff6b6b;
+}
+
+.btnDanger:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 80, 80, 0.3);
+}
+
+.warning {
+    margin-top: 16px;
+    padding: 10px 12px;
+    background: var(--background);
+    border-left: 3px solid #ffb400;
+    color: var(--colorText);
+    font-size: 12px;
+    line-height: 1.5;
+    display: block;
+}

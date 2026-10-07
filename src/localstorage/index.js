@@ -159,3 +159,24 @@ export {
   clearMemoryOptimizerData,
   getMemoryOptimizerData
 } from "./optimizer-storage.js";
+export {
+  collectAppData,
+  buildExportPayload,
+  downloadJson,
+  validateImportFile,
+  applyDataToStorage,
+  clearAppStorage,
+  getAppKeys,
+  formatKeysPreview,
+  reloadWithDelay,
+  switchToSlot,
+  applySlotData,
+  getCurrentDataObject
+} from "./export-import-utils.js";
+export {
+  saveSlotData,
+  getSlot,
+  deleteSlot,
+  renameSlot,
+  createEmptySlot
+} from "./account-slots.js";
