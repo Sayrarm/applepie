@@ -1,21 +1,20 @@
 .container {
-    background: var(--bg-secondary, #1e1e2e);
-    border: 1px solid var(--border-color, #333);
-    border-radius: 12px;
-    padding: 20px;
-    margin: 16px 0;
+    padding: 15px;
+    background-color: var(--bg-glass);
+    box-shadow: var(--box-shadow);
+    margin: 20px 0;
 }
 
 .title {
     margin: 0 0 4px 0;
     font-size: 1.1rem;
-    color: var(--text-primary, #fff);
+    color: var(--colorTextDark);
 }
 
 .subtitle {
     margin: 0 0 20px 0;
-    font-size: 0.85rem;
-    color: var(--text-secondary, #999);
+    font-size: 12px;
+    color: var(--colorTextDark);
 }
 
 .accountsGrid {
@@ -31,9 +30,8 @@
 }
 
 .accountCard {
-    background: var(--bg-tertiary, #2a2a3e);
-    border: 1px solid var(--border-color, #444);
-    border-radius: 10px;
+    background: var(--background);
+    border: 1px solid var(--a);
     padding: 16px;
     display: flex;
     flex-direction: column;
@@ -42,12 +40,12 @@
 }
 
 .accountCard:hover {
-    border-color: var(--accent-color, #6c8cff);
+    border-color: var(--a-hover);
 }
 
 .accountCardActive {
-    border-color: #4caf50;
-    box-shadow: 0 0 0 1px #4caf50, 0 4px 12px rgba(76, 175, 80, 0.2);
+    border-color: var(--a);
+    box-shadow: 0 0 0 1px var(--a), 0 0 20px var(--a);
 }
 
 .accountHeader {
@@ -68,24 +66,33 @@
 }
 
 .activeBadge {
+    font-family: TikTok Sans, monospace;
+    font-weight: bold;
     font-size: 0.65rem;
-    font-weight: 700;
-    padding: 2px 6px;
-    border-radius: 4px;
-    background: #4caf50;
+    height: 19px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--green-button);
     color: #fff;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+}
+
+.iconButton {
+    border: none;
+    background: var(--colorText);
+    height: 19px;
 }
 
 .fileInfo {
-    background: rgba(108, 140, 255, 0.1);
-    border-radius: 6px;
+    background: var(--colorText);
     padding: 8px 10px;
     font-size: 0.8rem;
 }
 
 .fileName {
-    color: var(--text-primary, #fff);
+    color: var(--colorTextSuperDark);
     font-weight: 500;
     white-space: nowrap;
     overflow: hidden;
@@ -93,7 +100,7 @@
 }
 
 .fileMeta {
-    color: var(--text-secondary, #999);
+    color: var(--colorTextSuperDark);
     font-size: 0.75rem;
     margin-top: 2px;
 }
@@ -111,11 +118,10 @@
 }
 
 .btn {
+    font-family: TikTok Sans, monospace;
     padding: 8px 12px;
     border: none;
-    border-radius: 8px;
-    font-size: 0.85rem;
-    font-weight: 600;
+    font-size: 14px;
     cursor: pointer;
     transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
 }
@@ -127,12 +133,12 @@
 
 .btnPrimary {
     flex: 1;
-    background: linear-gradient(135deg, #4caf50, #3a9c40);
+    background: var(--green-button);
     color: #fff;
 }
 
 .btnPrimary:hover:not(:disabled) {
-    transform: translateY(-1px);
+    transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
 }
 
@@ -142,27 +148,33 @@
     color: #fff;
 }
 
+.btnActivate:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgb(189 189 189);
+}
+
 .btnSecondary:hover:not(:disabled) {
-    transform: translateY(-1px);
+    transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(108, 140, 255, 0.4);
 }
 
 .btnDanger {
-    background: rgba(255, 80, 80, 0.15);
+    background: var(--red-button);
     color: #ff6b6b;
 }
 
 .btnDanger:hover:not(:disabled) {
-    background: rgba(255, 80, 80, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 80, 80, 0.3);
 }
 
 .warning {
     margin-top: 16px;
     padding: 10px 12px;
-    background: rgba(255, 180, 0, 0.1);
+    background: var(--background);
     border-left: 3px solid #ffb400;
-    border-radius: 6px;
-    font-size: 0.8rem;
-    color: var(--text-secondary, #ccc);
-    line-height: 1.4;
+    color: var(--colorText);
+    font-size: 12px;
+    line-height: 1.5;
+    display: block;
 }
