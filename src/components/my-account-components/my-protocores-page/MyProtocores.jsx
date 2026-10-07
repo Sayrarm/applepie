@@ -19,13 +19,15 @@ import {
 
 function MyProtocores() {
   const [protocores, setProtocores] = useState([]);
+  const [isSelectionMode, setIsSelectionMode] = useState(false);
+  const [selectedIds, setSelectedIds] = useState(new Set());
   const modalRef = useRef();
   const filterModalRef = useRef();
   const ocrModalRef = useRef();
   const ocrReaderRef = useRef();
 
   const { searchQuery, onSearch, clearSearch } =
-    useProtocoreSearch("protocores");
+      useProtocoreSearch("protocores");
   const {
     applyFilters,
     clearFilters,
@@ -34,7 +36,7 @@ function MyProtocores() {
     setIsModalOpen,
   } = useProtocoreFilter("protocores");
   const { sortCriteria, handleSortChange, clearSorting, sortProtocores } =
-    useProtocoreSort("protocores");
+      useProtocoreSort("protocores");
 
   // ===== ЗАГРУЗКА ПРОТОКОРОВ =====
   useEffect(() => {
@@ -68,10 +70,10 @@ function MyProtocores() {
 
   // ===== ФИЛЬТРАЦИЯ =====
   const filteredProtocores = filterProtocores(protocores).filter(
-    (protocore) => {
-      if (!searchQuery) return true;
+      (protocore) => {
+        if (!searchQuery) return true;
 
-      const searchLower = searchQuery.toLowerCase();
+        const searchLower = searchQuery.toLowerCase();
 
       // Поиск по типу
       const typeMatch = protocore.type.toLowerCase().includes(searchLower);
@@ -91,12 +93,32 @@ function MyProtocores() {
         .toLowerCase()
         .includes(searchLower);
 
-      return typeMatch || mainStatMatch || subStatMatch || stellactrumMatch;
-    },
+        return typeMatch || mainStatMatch || subStatMatch || stellactrumMatch;
+      },
   );
 
   // ===== СОРТИРОВКА =====
   const sortedProtocores = sortProtocores(filteredProtocores);
+
+  // ===== РЕЖИМ ВЫБОРА =====
+  const toggleSelectionMode = () => {
+    setIsSelectionMode((prev) => {
+      if (prev) setSelectedIds(new Set()); // при выходе очищаем выбор
+      return !prev;
+    });
+  };
+
+  const toggleProtocoreSelection = (id) => {
+    setSelectedIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) {
+        next.delete(id);
+      } else {
+        next.add(id);
+      }
+      return next;
+    });
+  };
 
   // ===== ОБРАБОТЧИКИ =====
   const resetAllSettings = () => {
@@ -110,7 +132,7 @@ function MyProtocores() {
 
   const handleOcr = () => {
     ocrModalRef.current?.showModal();
-  }
+  };
 
   const handleModalClose = () => {
     ocrReaderRef.current?.reset();
@@ -126,7 +148,7 @@ function MyProtocores() {
 
   const handleUpdateProtocore = (updatedProtocore) => {
     setProtocores((prev) =>
-      prev.map((p) => (p.id === updatedProtocore.id ? updatedProtocore : p)),
+        prev.map((p) => (p.id === updatedProtocore.id ? updatedProtocore : p)),
     );
   };
 
@@ -137,7 +159,7 @@ function MyProtocores() {
   const handleDeleteProtocore = (protocoreToDelete) => {
     // Показываем подтверждение перед удалением
     const confirmDelete = window.confirm(
-      `Are you sure you want to delete ${protocoreToDelete.type.charAt(0).toUpperCase() + protocoreToDelete.type.slice(1)} Protocore (Lv. ${protocoreToDelete.level})?`,
+        `Are you sure you want to delete ${protocoreToDelete.type.charAt(0).toUpperCase() + protocoreToDelete.type.slice(1)} Protocore (Lv. ${protocoreToDelete.level})?`,
     );
 
     if (confirmDelete) {
@@ -150,87 +172,144 @@ function MyProtocores() {
       // 3. Отправляем события для обновления карточек
       updatedCards.forEach(({ cardId, protocores: cardProtocores }) => {
         window.dispatchEvent(
-          new CustomEvent("protocoresUpdated", {
-            detail: { cardId, protocores: cardProtocores },
-          }),
+            new CustomEvent("protocoresUpdated", {
+              detail: { cardId, protocores: cardProtocores },
+            }),
         );
       });
 
       // 4. Обновляем состояние
       setProtocores((prev) =>
-        prev.filter((p) => p.id !== protocoreToDelete.id),
+          prev.filter((p) => p.id !== protocoreToDelete.id),
       );
 
-      // 5. Отправляем глобальное событие
+      window.dispatchEvent(new CustomEvent("protocoresUpdated"));
+    }
+  };
+
+  const handleDeleteSelected = () => {
+    if (selectedIds.size === 0) return;
+
+    const confirmDelete = window.confirm(
+        "Are you sure you want to delete selected protocores?",
+    );
+
+    if (confirmDelete) {
+      // 1. Удаляем каждый выбранный протокор
+      selectedIds.forEach((id) => {
+        deleteProtocore(id);
+        removeProtocoreFromAllCards(id);
+      });
+
+      // 2. Обновляем состояние
+      setProtocores((prev) => prev.filter((p) => !selectedIds.has(p.id)));
+
+      // 3. Сбрасываем выбор и выходим из режима выбора
+      setSelectedIds(new Set());
+      setIsSelectionMode(false);
+
+      // 4. Отправляем глобальное событие
       window.dispatchEvent(new CustomEvent("protocoresUpdated"));
     }
   };
 
   return (
-    <section className={styles.container}>
-      <FilterSortBarProtocores
-        searchQuery={searchQuery}
-        onSearch={onSearch}
-        clearSearch={clearSearch}
-        sortCriteria={sortCriteria}
-        handleSortChange={handleSortChange}
-        clearSorting={clearSorting}
-        isModalOpen={isModalOpen}
-        setIsModalOpen={setIsModalOpen}
-        applyFilters={applyFilters}
-        clearFilters={clearFilters}
-        filterModalRef={filterModalRef}
-        resetAllSettings={resetAllSettings}
-        storagePrefix="protocores"
-      />
+      <section className={styles.container}>
+        <FilterSortBarProtocores
+            searchQuery={searchQuery}
+            onSearch={onSearch}
+            clearSearch={clearSearch}
+            sortCriteria={sortCriteria}
+            handleSortChange={handleSortChange}
+            clearSorting={clearSorting}
+            isModalOpen={isModalOpen}
+            setIsModalOpen={setIsModalOpen}
+            applyFilters={applyFilters}
+            clearFilters={clearFilters}
+            filterModalRef={filterModalRef}
+            resetAllSettings={resetAllSettings}
+            storagePrefix="protocores"
+        />
 
-      <div className={styles.buttonsContainer}>
-        <button className={styles.addButton} onClick={handleAddProtocore}>
-          + Add protocore
-        </button>
+        <div className={styles.buttonsContainer}>
+          <button className={styles.addButton} onClick={handleAddProtocore}>
+            + Add protocore
+          </button>
 
-        <button className={styles.addButton} onClick={handleOcr}>
-          Upload protocore screenshots
-        </button>
+          <button className={styles.addButton} onClick={handleOcr}>
+            Upload protocore screenshots
+          </button>
 
-      </div>
+          <button className={styles.addButton} onClick={toggleSelectionMode}>
+            {isSelectionMode ? "Cancel selection" : "Choose protocores"}
+          </button>
 
-      <section className={styles.protocoreList}>
-        {sortedProtocores.length === 0 ? (
-          <div className={styles.emptyState}>
-            No protocores added yet. Click "Add protocore" to create one!
-          </div>
-        ) : (
-          sortedProtocores.map((protocore) => {
-            const cardImage = findCardForProtocore(protocore.id);
-            return (
-              <ProtocoreBlock
-                key={protocore.id}
-                protocore={protocore}
-                onEdit={handleEditProtocore}
-                onDelete={handleDeleteProtocore}
-                hideGoal={false}
-                cardImage={cardImage}
-              />
-            );
-          })
-        )}
+          {isSelectionMode && (
+              <button
+                  className={styles.addButton}
+                  onClick={handleDeleteSelected}
+                  disabled={selectedIds.size === 0}
+              >
+                Delete protocores ({selectedIds.size})
+              </button>
+          )}
+        </div>
+
+        <section className={styles.protocoreList}>
+          {sortedProtocores.length === 0 ? (
+              <div className={styles.emptyState}>
+                No protocores added yet. Click "Add protocore" to create one!
+              </div>
+          ) : (
+              sortedProtocores.map((protocore) => {
+                const cardImage = findCardForProtocore(protocore.id);
+                const isSelected = selectedIds.has(protocore.id);
+                return (
+                    <div
+                        className={styles.protocoreContainer}
+                        key={protocore.id}
+                        onClick={
+                          isSelectionMode
+                              ? () => toggleProtocoreSelection(protocore.id)
+                              : undefined
+                        }
+                    >
+                      {isSelectionMode && (
+                          <input
+                              className={styles.checkbox}
+                              type="checkbox"
+                              checked={isSelected}
+                              onChange={() => toggleProtocoreSelection(protocore.id)}
+                              onClick={(e) => e.stopPropagation()}
+                          />
+                      )}
+                      <ProtocoreBlock
+                          protocore={protocore}
+                          onEdit={handleEditProtocore}
+                          onDelete={handleDeleteProtocore}
+                          hideGoal={false}
+                          cardImage={cardImage}
+                      />
+                    </div>
+                );
+              })
+          )}
+        </section>
+
+        <ModalWindowProtocore
+            ref={modalRef}
+            title="Add New Protocore"
+            onSave={handleSaveProtocore}
+            onUpdate={handleUpdateProtocore}
+        />
+
+        <ModalWindow
+            ref={ocrModalRef}
+            title="Upload screenshots"
+            tag={<OcrReader ref={ocrReaderRef} />}
+            onClose={handleModalClose}
+        />
       </section>
-
-      <ModalWindowProtocore
-        ref={modalRef}
-        title="Add New Protocore"
-        onSave={handleSaveProtocore}
-        onUpdate={handleUpdateProtocore}
-      />
-
-      <ModalWindow
-          ref={ocrModalRef}
-          title="Upload screenshots"
-          tag={<OcrReader ref={ocrReaderRef} />}
-          onClose={handleModalClose}
-      />
-    </section>
   );
 }
 
