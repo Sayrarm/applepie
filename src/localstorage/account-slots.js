@@ -82,3 +82,19 @@ export const renameSlot = async (slotId, newName) => {
         data: existing.data,
     });
 };
+
+/**
+ * Создать пустой слот (новый аккаунт без данных).
+ */
+export const createEmptySlot = async (slotId, name) => {
+    const existing = await getSlot(slotId);
+    if (existing) return existing; // уже есть — не трогаем
+
+    await saveSlotData(slotId, {
+        name,
+        fileName: null,
+        data: {},
+    });
+
+    return getSlot(slotId);
+};

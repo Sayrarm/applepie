@@ -177,5 +177,6 @@ export {
   saveSlotData,
   getSlot,
   deleteSlot,
-  renameSlot
+  renameSlot,
+  createEmptySlot
 } from "./account-slots.js";
