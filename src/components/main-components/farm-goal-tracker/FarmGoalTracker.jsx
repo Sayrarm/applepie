@@ -27,6 +27,7 @@ import {
     updateProtocoreInAllCards
 } from "@localstorage";
 import {useRef} from "react";
+import { useTranslation } from "react-i18next";
 
 // Константы
 const DAILY_STAMINA = 390;
@@ -45,6 +46,7 @@ function FarmGoalTracker() {
 
     const protocoreModalRef = useRef(null);
     const pendingProtocoreGoalIdRef = useRef(null);
+    const { t } = useTranslation();
 
     // Подсчёт EXP из Bottles of Wishes (для карточек)
     const getTotalBottleExp = () => {
@@ -283,7 +285,7 @@ function FarmGoalTracker() {
             return (
                 <div className={styles.goalDescription}>
                     <div className={styles.titleAndImg}>
-                        <span className={styles.mainStatTitle}>{rarityMap[goal.rarity]} Memory</span>
+                        <span className={styles.mainStatTitle}>{rarityMap[goal.rarity]} {t('FarmGoalTracker.mainStatTitleMemory')}</span>
                     </div>
                     <div className={styles.spanLVL}>
                         Lvl {goal.currentLevel} → <span>Lvl {goal.targetLevel}</span>
@@ -521,7 +523,7 @@ function FarmGoalTracker() {
     if (loading) {
         return (
             <div className={styles.container}>
-                <div className={styles.noGoals}>Loading...</div>
+                <div className={styles.noGoals}>{t('FarmGoalTracker.loading')}</div>
             </div>
         );
     }
@@ -530,21 +532,20 @@ function FarmGoalTracker() {
         return (
             <div className={styles.container}>
                 <div className={styles.noGoals}>
-                    <p>No active goals</p>
+                    <p>{t('FarmGoalTracker.titleNoGoals')}</p>
                     <p>
-                        Go to Protocore Calculator or Memory Upgrade Calculator, calculate
-                        resources, and click "Add to Development Goal".
+                        {t('FarmGoalTracker.textNoGoals')}
                     </p>
                     <p className={styles.linkContainer}>
                         <Link className={styles.link} to="calculator/protocore-calculator">
-                            Protocore Calculator
+                            {t('FarmGoalTracker.titleProtocoreCalc')}
                         </Link>
                         <Link className={styles.link} to="calculator/memory-calculator">
-                            Memory Upgrade Calculator
+                            {t('FarmGoalTracker.titleMemoryCalc')}
                         </Link>
                     </p>
                     <p>
-                        You can click on 🎯 in Memory/Protocore, select the required level, and send the task to the Development Goal.
+                        {t('FarmGoalTracker.textNoGoalsSpecific')}
                     </p>
                 </div>
             </div>
@@ -637,14 +638,14 @@ function FarmGoalTracker() {
                                         className={styles.completeButton}
                                         onClick={() => handleComplete(goal)}
                                     >
-                                        ✓ Complete
+                                        {t('FarmGoalTracker.completeButton')}
                                     </button>
 
                   <button
                     className={styles.deleteButton}
                     onClick={() => deleteGoal(goal.id)}
                   >
-                    ✕ Delete
+                      {t('FarmGoalTracker.deleteButton')}
                   </button>
 
                                 </div>
@@ -653,7 +654,7 @@ function FarmGoalTracker() {
                             <div className={styles.goalContent}>
                                 {/* Resources Needed */}
                                 <div className={styles.resourcesSection}>
-                                    <h4>Resources Needed:</h4>
+                                    <h4>{t('FarmGoalTracker.resourcesNeeded')}</h4>
                                     <div className={styles.resourcesList}>
                                         {goal.neededExp > 0 && (
                                             <div className={styles.expRow}>
@@ -713,7 +714,7 @@ function FarmGoalTracker() {
 
                                 {/* Remaining to Farm */}
                                 <div className={styles.remainingSection}>
-                                    <h4>Remaining to Farm:</h4>
+                                    <h4>{t('FarmGoalTracker.remainingToFarm')}</h4>
                                     <div className={styles.remainingList}>
                                         {goal.neededExp > 0 && (
                                             <div
@@ -779,7 +780,7 @@ function FarmGoalTracker() {
                                     </div>
                                 </div>
 
-                                <Link className={styles.linktoResources} to={"/my-account/inventory"}>Go to My Resources</Link>
+                                <Link className={styles.linktoResources} to={"/my-account/inventory"}>{t('FarmGoalTracker.linktoResources')}</Link>
 
                                 <div className={styles.asideResources}>
                                     <AsideReplaceableResources goal={goal} remaining={remaining} />
@@ -793,7 +794,7 @@ function FarmGoalTracker() {
                                             remaining.crystals.R > 0 ||
                                             remaining.crystals.SR > 0))) && (
                                     <div className={styles.farmingSection}>
-                                        <h4>Farming Plan:</h4>
+                                        <h4>{t('FarmGoalTracker.titleFarmingSection')}</h4>
                                         <div className={styles.farmingList}>
                                             <div className={styles.farmingDungeons}>
                                                 {remaining.exp > 0 && (
@@ -807,7 +808,7 @@ function FarmGoalTracker() {
                                                             className={styles.itemIcon}
                                                         />
                                                         <span className={styles.farmingItem}>
-                              {expFarming.runs} runs (Lvl {expDungeonLvl})
+                              {expFarming.runs} {t('FarmGoalTracker.runs')} (Lvl {expDungeonLvl})
                             </span>
                                                         <span className={styles.farmingValue}>
                               {" "}
@@ -833,7 +834,7 @@ function FarmGoalTracker() {
                                                                 className={styles.itemIcon}
                                                             />
                                                             <span className={styles.farmingItem}>
-                                {crystalsFarming.runs} runs (Lvl{" "}
+                                {crystalsFarming.runs} {t('FarmGoalTracker.runs')} (Lvl{" "}
                                                                 {crystalDungeonLvl})
                               </span>
                                                             <span className={styles.farmingValue}>
@@ -851,7 +852,7 @@ function FarmGoalTracker() {
                                                             className={styles.itemIcon}
                                                         />
                                                         <span className={styles.farmingItem}>
-                              {creditsFarming.runs} runs (Lvl {creditDungeonLvl}
+                              {creditsFarming.runs} {t('FarmGoalTracker.runs')} (Lvl {creditDungeonLvl}
                                                             )
                             </span>
                                                         <span className={styles.farmingValue}>
@@ -861,13 +862,15 @@ function FarmGoalTracker() {
                                                 )}
                                             </div>
                                             <div className={styles.farmingRow}>
-                                                ⏱️ Estimated:{" "}
+                                                ⏱️ {t('FarmGoalTracker.estimated')}:{' '}
                                                 <strong>
-                                                    ~{totalDays} day{totalDays !== 1 ? "s" : ""}
-                                                </strong>{" "}
-                                                (based on {DAILY_STAMINA} stamina/day
-                                                {totalStaminaFromCapsules > 0 &&
-                                                    ` + ${totalStaminaFromCapsules} stamina from capsules`}
+                                                    ~{t('FarmGoalTracker.days', { count: totalDays })}
+                                                </strong>{' '}
+                                                ({t('FarmGoalTracker.basedOn')}{' '}
+                                                {t('FarmGoalTracker.staminaPerDay', { count: DAILY_STAMINA })}
+                                                {totalStaminaFromCapsules > 0 && (
+                                                    <> {t('FarmGoalTracker.fromCapsules', { count: totalStaminaFromCapsules })}</>
+                                                )}
                                                 )
                                             </div>
                                         </div>
@@ -881,7 +884,7 @@ function FarmGoalTracker() {
                                             remaining.crystals.R === 0 &&
                                             remaining.crystals.SR === 0)) && (
                                         <div className={styles.enoughResources}>
-                                            You have enough resources! 🎉
+                                            {t('FarmGoalTracker.enough')}
                                         </div>
                                     )}
                             </div>
@@ -892,7 +895,7 @@ function FarmGoalTracker() {
 
             <ModalWindowProtocore
                 ref={protocoreModalRef}
-                title="Edit Protocore"
+                title={t('FarmGoalTracker.titleEditProtocore')}
                 onUpdate={handleProtocoreUpdate}
             />
         </div>
