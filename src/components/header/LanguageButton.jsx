@@ -4,12 +4,11 @@ import styles from "@components/header/TimezoneButton.module.css";
 function LanguageButton() {
     const { t, i18n } = useTranslation();
 
-    const currentLang = i18n.language;        // 'en' или 'ru'
-    const nextLang = currentLang === "en" ? "ru" : "en";
-    const label = nextLang.toUpperCase();     // 'RU' или 'EN'
+    const currentLang = i18n.language;                        // 'en' или 'ru'
+    const label = currentLang.toUpperCase();                  // 'EN' или 'RU'
 
     const handleClick = () => {
-        i18n.changeLanguage(nextLang);
+        i18n.changeLanguage(currentLang === "en" ? "ru" : "en");
     };
 
     return (

@@ -1,37 +1,30 @@
 import { useEffect, useState } from "react";
-import {Link, NavLink} from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import styles from "./Header.module.css";
 import ThemeToggleButton from "./ThemeToggleButton.jsx";
 import TimezoneButton from "./TimezoneButton.jsx";
-import {useActiveAccount} from "@hooks";
+import { useActiveAccount } from "@hooks";
 import LanguageButton from "./LanguageButton.jsx";
 
 function Header() {
+  const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  // Переключение меню
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  // Закрываем меню при смене страницы
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
-
   const [isHidden, setIsHidden] = useState(false);
   const [lastScroll, setLastScroll] = useState(0);
 
   const activeAccount = useActiveAccount();
-  // Текст для ссылки Account
+
   const accountLabel = activeAccount
-      ? `ACCOUNT: ${activeAccount.name}`
-      : "ACCOUNT";
+      ? t('nav.accountWithName', { name: activeAccount.name })
+      : t('nav.account');
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScroll = window.pageYOffset;
-
       if (currentScroll <= 0) {
         setIsHidden(false);
       } else if (currentScroll > lastScroll) {
@@ -39,15 +32,10 @@ function Header() {
       } else {
         setIsHidden(false);
       }
-
       setLastScroll(currentScroll);
     };
-
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScroll]);
 
   // Закрываем меню при клике вне области (для мобильных)
@@ -59,131 +47,79 @@ function Header() {
       // Проверяем, был ли клик не по бургеру и не по меню
       const isBurger = event.target.closest(`.${styles.burgerContainer}`);
       const isModal = event.target.closest(`.${styles.modalNav}`);
-
-      if (!isBurger && !isModal) {
-        setIsMenuOpen(false);
-      }
+      if (!isBurger && !isModal) setIsMenuOpen(false);
     };
 
     // Добавляем обработчик
     document.addEventListener("click", handleClickOutside);
-
-    // Убираем обработчик при размонтировании
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
+    return () => document.removeEventListener("click", handleClickOutside);
   }, [isMenuOpen]);
 
   return (
-    <header className={isHidden ? styles.headerHidden : ""}>
-      <nav className={styles.nav}>
-        <div className={styles.link}>
-          <NavLink
-              className={({ isActive }) =>
-              `${styles.a} ${isActive ? styles.active : ""}`
-          }
-              to="/">
-            Main
-          </NavLink>
-          <NavLink
-              className={({ isActive }) =>
-                  `${styles.a} ${isActive ? styles.active : ""}`
-              }
-              to="/banners-history">
-            Banners
-          </NavLink>
-          <NavLink
-              className={({ isActive }) =>
-                  `${styles.a} ${isActive ? styles.active : ""}`
-              }
-              to="/lore">
-            Lore
-          </NavLink>
-          <NavLink
-              className={({ isActive }) =>
-                  `${styles.a} ${isActive ? styles.active : ""}`
-              }
-              to="/memories">
-            Memories
-          </NavLink>
-          <NavLink
-              className={({ isActive }) =>
-                  `${styles.a} ${isActive ? styles.active : ""}`
-              }
-              to="/battle">
-            Battle
-          </NavLink>
-          <NavLink
-              className={({ isActive }) =>
-                  `${styles.a} ${isActive ? styles.active : ""}`
-              }
-              to="/calculator">
-            Calculator
-          </NavLink>
-          <NavLink
-              className={({ isActive }) =>
-                  `${styles.a} ${isActive ? styles.active : ""}`
-              }
-              to="/my-account"
-              title={activeAccount?.fileName || ""}
-          >
-            {accountLabel}
-          </NavLink>
-        </div>
+      <header className={isHidden ? styles.headerHidden : ""}>
+        <nav className={styles.nav}>
+          <div className={styles.link}>
+            <NavLink className={({ isActive }) => `${styles.a} ${isActive ? styles.active : ""}`} to="/">
+              {t('nav.main')}
+            </NavLink>
+            <NavLink className={({ isActive }) => `${styles.a} ${isActive ? styles.active : ""}`} to="/banners-history">
+              {t('nav.banners')}
+            </NavLink>
+            <NavLink className={({ isActive }) => `${styles.a} ${isActive ? styles.active : ""}`} to="/lore">
+              {t('nav.lore')}
+            </NavLink>
+            <NavLink className={({ isActive }) => `${styles.a} ${isActive ? styles.active : ""}`} to="/memories">
+              {t('nav.memories')}
+            </NavLink>
+            <NavLink className={({ isActive }) => `${styles.a} ${isActive ? styles.active : ""}`} to="/battle">
+              {t('nav.battle')}
+            </NavLink>
+            <NavLink className={({ isActive }) => `${styles.a} ${isActive ? styles.active : ""}`} to="/calculator">
+              {t('nav.calculator')}
+            </NavLink>
+            <NavLink
+                className={({ isActive }) => `${styles.a} ${isActive ? styles.active : ""}`}
+                to="/my-account"
+                title={activeAccount?.fileName || ""}
+            >
+              {accountLabel}
+            </NavLink>
+          </div>
 
-        <div className={styles.burgerContainer}>
-          <label className={styles.burger} htmlFor="burger">
-            <input
-              type="checkbox"
-              id="burger"
-              checked={isMenuOpen}
-              onChange={toggleMenu}
-            />
-            <span></span>
-            <span></span>
-            <span></span>
-          </label>
-        </div>
+          <div className={styles.burgerContainer}>
+            <label className={styles.burger} htmlFor="burger">
+              <input type="checkbox" id="burger" checked={isMenuOpen} onChange={toggleMenu} />
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+          </div>
 
-        <div className={styles.buttonsChangers}>
-          <TimezoneButton />
-          <ThemeToggleButton />
-          <LanguageButton />
-        </div>
+          <div className={styles.buttonsChangers}>
+            <TimezoneButton />
+            <ThemeToggleButton />
+            <LanguageButton />
+          </div>
 
-        <div
-          className={`${styles.modalNav} ${isMenuOpen ? styles.active : ""}`}
-        >
-          <div className={styles.border}></div>
-          <Link className={styles.a} to="/" onClick={closeMenu}>
-            Main
-          </Link>
-          <Link className={styles.a} to="/banners-history" onClick={closeMenu}>
-            Banners
-          </Link>
-          <Link className={styles.a} to="/lore" onClick={closeMenu}>
-            Lore
-          </Link>
-          <Link className={styles.a} to="/memories" onClick={closeMenu}>
-            Memories
-          </Link>
-          <Link className={styles.a} to="/battle" onClick={closeMenu}>
-            Battle
-          </Link>
-          <Link className={styles.a} to="/calculator" onClick={closeMenu}>
-            Calculator
-          </Link>
-          <Link
-              className={styles.a}
-              to="/my-account"
-              onClick={closeMenu}
-              title={activeAccount?.fileName || ""}
-          >
-            {accountLabel}
-          </Link>
-        </div>
-      </nav>
-    </header>
+          <div className={`${styles.modalNav} ${isMenuOpen ? styles.active : ""}`}>
+            <div className={styles.border}></div>
+            <Link className={styles.a} to="/" onClick={closeMenu}>{t('nav.main')}</Link>
+            <Link className={styles.a} to="/banners-history" onClick={closeMenu}>{t('nav.banners')}</Link>
+            <Link className={styles.a} to="/lore" onClick={closeMenu}>{t('nav.lore')}</Link>
+            <Link className={styles.a} to="/memories" onClick={closeMenu}>{t('nav.memories')}</Link>
+            <Link className={styles.a} to="/battle" onClick={closeMenu}>{t('nav.battle')}</Link>
+            <Link className={styles.a} to="/calculator" onClick={closeMenu}>{t('nav.calculator')}</Link>
+            <Link
+                className={styles.a}
+                to="/my-account"
+                onClick={closeMenu}
+                title={activeAccount?.fileName || ""}
+            >
+              {accountLabel}
+            </Link>
+          </div>
+        </nav>
+      </header>
   );
 }
 
