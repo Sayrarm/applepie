@@ -59,6 +59,7 @@ header {
 .buttonsChangers {
   display: flex;
   gap: 5px;
+  margin-right: 15px;
 }
 
 /*************************burger menu button****************/

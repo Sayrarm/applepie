@@ -4,6 +4,7 @@ import styles from "./Header.module.css";
 import ThemeToggleButton from "./ThemeToggleButton.jsx";
 import TimezoneButton from "./TimezoneButton.jsx";
 import {useActiveAccount} from "@hooks";
+import LanguageButton from "./LanguageButton.jsx";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -147,6 +148,7 @@ function Header() {
         <div className={styles.buttonsChangers}>
           <TimezoneButton />
           <ThemeToggleButton />
+          <LanguageButton />
         </div>
 
         <div
