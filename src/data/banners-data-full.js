@@ -977,7 +977,7 @@ export const bannersDataFull = [
   {
     id: 97,
     name: "Lingering Light",
-    image: "../assets/banners/lingering-light.jpg",
+    image: "../assets/banners/lingering-light.png",
     cardIds: [429],
     startDate: "2026-10-11T05:00:00",
     endDate: "2026-10-18T04:59:59",
