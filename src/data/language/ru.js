@@ -74,6 +74,12 @@ export const ru = {
         },
         WishWellBlock: {
             titleModal: 'Расписание магазина "Wishing Well"',
+        },
+        footer: {
+            titleInformation: 'Вся информация о проекте здесь:',
+            titleTelegramButton: 'Telegram',
+            disclaimer1: 'Все торговые марки, персонажи, истории и изображения являются собственностью их соответствующих владельцев, Infold Games.',
+            disclaimer2: 'Сайт создан исключительно в информационных целях. Для некоммерческого использования.'
         }
     },
 };

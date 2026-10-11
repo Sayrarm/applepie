@@ -76,6 +76,12 @@ export const en = {
         },
         WishWellBlock: {
             titleModal: 'Wishing Well Schedule',
-        }
+        },
+        footer: {
+            titleInformation: 'All information about project here:',
+            titleTelegramButton: 'Telegram Group',
+            disclaimer1: 'All trademarks, characters, stories and images are the property of their respective owner, Infold Games.',
+            disclaimer2: 'The site was created for informational purposes only. For non-commercial use.'
+        },
     },
 };
