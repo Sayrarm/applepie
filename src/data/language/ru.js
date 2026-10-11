@@ -80,6 +80,20 @@ export const ru = {
             titleTelegramButton: 'Telegram',
             disclaimer1: 'Все торговые марки, персонажи, истории и изображения являются собственностью их соответствующих владельцев, Infold Games.',
             disclaimer2: 'Сайт создан исключительно в информационных целях. Для некоммерческого использования.'
-        }
+        },
+        resources: {
+            title: 'Мои Ресурсы',
+            exchange: 'может быть обменено на:',
+            or: 'или',
+            crystalExchange: '* Курс обмена: 1 General Box на 5 N, или 2 R, или 1 SR',
+            memoryExchange1: '* Курс обмена: 10 MH R → 5 Bottle R | 5 MH SR → 5 Bottle SR | 4 MH SSR → 5 Bottle SSR',
+            memoryExchange2: '100 MH R → 50,000 Credits | 10 MH SR → 50,000 Credits | 2 MH SSR → 50,000 Credits',
+            diamondExchange: '* Курс обмена: 1 Wish = 150 Diamonds',
+            clearButton: 'Очистить Всё',
+            warning1: '⚠️ ВНИМАНИЕ: Это приведет к необратимому удалению ВСЕХ ваших данных о ресурсах!\n\n',
+            warning2: 'Это включает в себя:\n',
+            warning3: 'Вы уверены, что хотите продолжить?',
+            alert: '✅ Все ресурсы успешно очищены!',
+        },
     },
 };

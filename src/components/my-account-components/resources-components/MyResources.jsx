@@ -17,6 +17,7 @@ import {
   getWishExchange,
 } from "@data";
 import { getImageUrl, useResources } from "@hooks";
+import { useTranslation } from "react-i18next";
 
 function MyResources() {
   // ===== ИСПОЛЬЗУЕМ ХУК =====
@@ -45,6 +46,7 @@ function MyResources() {
     setCapsules,
     updateCount,
   } = useResources();
+  const { t } = useTranslation();
 
   // ===== ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ ДЛЯ ПОДСЧЁТОВ =====
   const getTotalBottleExp = () => {
@@ -130,8 +132,8 @@ function MyResources() {
   // ===== ОЧИСТКА ВСЕХ РЕСУРСОВ =====
   const clearAllResources = () => {
     const confirmMessage =
-      `⚠️ WARNING: This will permanently delete ALL your resource data!\n\n` +
-      `This includes:\n` +
+      t('resources.warning1') +
+      t('resources.warning2') +
       `• Bottles of Wishes\n` +
       `• Core Energy\n` +
       `• Credits\n` +
@@ -142,7 +144,7 @@ function MyResources() {
       `• Diamonds\n` +
       `• Wishes\n` +
       `• Energy Capsules\n\n` +
-      `Are you absolutely sure you want to continue?`;
+      t('resources.warning3');
 
     if (!window.confirm(confirmMessage)) {
       return;
@@ -163,12 +165,12 @@ function MyResources() {
     // Отправляем событие об обновлении ресурсов
     window.dispatchEvent(new CustomEvent("resourcesUpdated"));
 
-    alert("✅ All resources cleared successfully!");
+    alert(t('resources.alert'));
   };
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>My Resources</h1>
+      <h1 className={styles.title}>{t('resources.title')}</h1>
 
       {/* Bottles of Wishes */}
       <div className={styles.section}>
@@ -463,7 +465,7 @@ function MyResources() {
         {crystalBoxesState["box_general"] > 0 && (
           <div className={styles.exchangeSection}>
             <h3 className={styles.exchangeTitle}>
-              Ascension Crystal Box: General can be exchanged for:
+              Ascension Crystal Box: General {t('resources.exchange')}
             </h3>
             <div className={styles.exchangeContent}>
               {(() => {
@@ -481,7 +483,7 @@ function MyResources() {
                         N: {exchange.toN}
                       </span>
                     </div>
-                    or
+                    {t('resources.or')}
                     <div className={styles.exchangeCard}>
                       <img
                         src={getImageUrl("../assets/icons/gray-r.png")}
@@ -493,7 +495,7 @@ function MyResources() {
                         R: {exchange.toR}
                       </span>
                     </div>
-                    or
+                    {t('resources.or')}
                     <div className={styles.exchangeCard}>
                       <img
                         src={getImageUrl("../assets/icons/gray-sr.png")}
@@ -510,7 +512,7 @@ function MyResources() {
               })()}
             </div>
             <div className={styles.exchangeNote}>
-              * Exchange rates: 1 General Box for either 5 N, or 2 R, or 1 SR
+              {t('resources.crystalExchange')}
             </div>
           </div>
         )}
@@ -573,7 +575,7 @@ function MyResources() {
           return (
             <div className={styles.exchangeSection}>
               <h3 className={styles.exchangeTitle}>
-                Memory Heartsand can be exchanged for:
+                Memory Heartsand {t('resources.exchange')}
               </h3>
               <div className={styles.exchangeGrid}>
                 {/* Карточка обмена на Bottles */}
@@ -626,7 +628,7 @@ function MyResources() {
                     )}
                   </div>
                 )}
-                or
+                {t('resources.or')}
                 {/* Карточка обмена на Credits */}
                 {hasCredits && (
                   <div className={styles.exchangeValue}>
@@ -643,11 +645,9 @@ function MyResources() {
                 )}
               </div>
               <div className={styles.exchangeNote}>
-                * Exchange rates: 10 MH R → 5 Bottle R | 5 MH SR → 5 Bottle SR |
-                4 MH SSR → 5 Bottle SSR
+                {t('resources.memoryExchange1')}
                 <br />
-                100 MH R → 50,000 Credits | 10 MH SR → 50,000 Credits | 2 MH SSR
-                → 50,000 Credits
+                {t('resources.memoryExchange2')}
               </div>
             </div>
           );
@@ -702,7 +702,7 @@ function MyResources() {
           return (
             <div className={styles.exchangeSection}>
               <h3 className={styles.exchangeTitle}>
-                Diamonds can be exchanged for:
+                Diamonds {t('resources.exchange')}
               </h3>
               <div className={styles.exchangeGrid}>
                 {exchange.wishes.standart > 0 && (
@@ -718,7 +718,7 @@ function MyResources() {
                     </div>
                   </div>
                 )}
-                or
+                {t('resources.or')}
                 {exchange.wishes.rerun > 0 && (
                   <div className={styles.exchangeCard}>
                     <div className={styles.exchangeItem}>Time Wish</div>
@@ -732,7 +732,7 @@ function MyResources() {
                     </div>
                   </div>
                 )}
-                or
+                {t('resources.or')}
                 {exchange.wishes.limited > 0 && (
                   <div className={styles.exchangeCard}>
                     <div className={styles.exchangeItem}>Deepspace Wish</div>
@@ -748,7 +748,7 @@ function MyResources() {
                 )}
               </div>
               <div className={styles.exchangeNote}>
-                * Exchange rate: 1 Wish = 150 Diamonds
+                {t('resources.diamondExchange')}
               </div>
             </div>
           );
@@ -846,7 +846,7 @@ function MyResources() {
       </div>
 
       <button className={styles.clearAllButton} onClick={clearAllResources}>
-        🗑️ Clear All
+        🗑️ {t('resources.clearButton')}
       </button>
     </div>
   );

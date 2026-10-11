@@ -83,5 +83,19 @@ export const en = {
             disclaimer1: 'All trademarks, characters, stories and images are the property of their respective owner, Infold Games.',
             disclaimer2: 'The site was created for informational purposes only. For non-commercial use.'
         },
+        resources: {
+            title: 'My Resources',
+            exchange: 'can be exchanged for:',
+            or: 'or',
+            crystalExchange: '* Exchange rates: 1 General Box for either 5 N, or 2 R, or 1 SR',
+            memoryExchange1: '* Exchange rates: 10 MH R → 5 Bottle R | 5 MH SR → 5 Bottle SR | 4 MH SSR → 5 Bottle SSR',
+            memoryExchange2: '100 MH R → 50,000 Credits | 10 MH SR → 50,000 Credits | 2 MH SSR → 50,000 Credits',
+            diamondExchange: '* Exchange rate: 1 Wish = 150 Diamonds',
+            clearButton: 'Clear All',
+            warning1: '⚠️ WARNING: This will permanently delete ALL your resource data!\n\n',
+            warning2: 'This includes:\n',
+            warning3: 'Are you absolutely sure you want to continue?',
+            alert: '✅ All resources cleared successfully!',
+        },
     },
 };
