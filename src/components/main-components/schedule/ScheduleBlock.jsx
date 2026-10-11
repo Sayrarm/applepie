@@ -4,10 +4,12 @@ import { ModalWindow, DailyResetTimer, useRecurringTimer } from "@components";
 import { getImageUrl } from "@hooks";
 import WeeklyProtocore from "./WeeklyProtocore.jsx";
 import WeeklyTrial from "./WeeklyTrial.jsx";
+import { useTranslation } from "react-i18next";
 
 function ScheduleBlock() {
   const timeLeftDay = useRecurringTimer("day");
   const scheduleModalRef = useRef();
+  const { t } = useTranslation();
 
   const showScheduleModal = () => {
     scheduleModalRef.current.showModal();
@@ -21,12 +23,12 @@ function ScheduleBlock() {
       >
         <div className={styles.scheduleContainer}>
           <div className={styles.schedule}>
-            <h3>Protocores</h3>
+            <h3>{t('schedule.titleCoreHunt')}</h3>
             <WeeklyProtocore />
           </div>
 
           <div className={styles.schedule}>
-            <h3>Deepspace Trial</h3>
+            <h3>{t('schedule.titleTrial')}</h3>
             <WeeklyTrial />
           </div>
         </div>
@@ -35,7 +37,7 @@ function ScheduleBlock() {
 
       <ModalWindow
         ref={scheduleModalRef}
-        title={"Schedule of Protocores and Trials"}
+        title={t('schedule.titleModalSchedule')}
         tag={
           <>
             <img

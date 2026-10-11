@@ -51,5 +51,31 @@ export const en = {
             titleEditProtocore: 'Edit Protocore',
 
         },
+        schedule: {
+            titleCoreHunt: 'Core Hunt',
+            titleTrial: 'Deepspace Trial',
+            titleModalSchedule:  'Schedule of Protocores and Trials',
+        },
+        DailyWeeklyBlock: {
+            titleDaily: 'Daily Missions',
+            titleWeekly: 'Weekly Missions',
+            titleModal: 'Daily and Weekly Awards',
+            titleDailyAwards: 'Daily Awards',
+            titleWeeklyAwards: 'Weekly Awards',
+
+        },
+        timer: {
+            waiting: 'Upcoming:',
+            active: 'Time left:',
+            finished: 'Completed',
+            days: 'days',
+            hours: 'hours',
+            minutes: 'minutes',
+            seconds: 'seconds',
+            permanently: 'permanently',
+        },
+        WishWellBlock: {
+            titleModal: 'Wishing Well Schedule',
+        }
     },
 };

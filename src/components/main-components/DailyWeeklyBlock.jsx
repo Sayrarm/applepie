@@ -2,11 +2,13 @@ import { useRef } from "react";
 import styles from "@pages/main/Home.module.css";
 import { ModalWindow, DailyResetTimer, useRecurringTimer } from "@components";
 import { getImageUrl } from "@hooks";
+import { useTranslation } from "react-i18next";
 
 function DailyWeeklyBlock() {
   const timeLeftWeek = useRecurringTimer("week");
   const timeLeftDay = useRecurringTimer("day");
   const dailyModalRef = useRef();
+    const { t } = useTranslation();
 
   const showDailyModal = () => {
     dailyModalRef.current.showModal();
@@ -19,22 +21,22 @@ function DailyWeeklyBlock() {
         className={styles.containerActivityButton}
       >
         <div className={styles.containerResetActivity}>
-          <h3>Daily Mission</h3>
+          <h3>{t('DailyWeeklyBlock.titleDaily')}</h3>
           <DailyResetTimer timeLeft={timeLeftDay} />
         </div>
 
         <div className={styles.containerResetActivity}>
-          <h3>Weekly Mission</h3>
+          <h3>{t('DailyWeeklyBlock.titleWeekly')}</h3>
           <DailyResetTimer timeLeft={timeLeftWeek} />
         </div>
       </button>
 
       <ModalWindow
         ref={dailyModalRef}
-        title={"Daily and Weekly Awards"}
+        title={t('DailyWeeklyBlock.titleModal')}
         tag={
           <>
-            <div>Daily Awards</div>
+            <div>{t('DailyWeeklyBlock.titleDailyAwards')}</div>
             <img
               className={styles.img}
               src={getImageUrl(
@@ -42,7 +44,7 @@ function DailyWeeklyBlock() {
               )}
               alt={"daily awards"}
             />
-            <div>Weekly Awards</div>
+            <div>{t('DailyWeeklyBlock.titleWeeklyAwards')}</div>
             <img
               className={styles.img}
               src={getImageUrl(

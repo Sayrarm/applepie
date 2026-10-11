@@ -1,8 +1,10 @@
 import styles from "./DailyResetTimer.module.css";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 function DailyResetTimer({ timeLeft, status = "active" }) {
   const formatNumber = (num) => num.toString().padStart(2, "0");
+  const { t } = useTranslation();
 
   if (!timeLeft) {
     return <div className={styles.container}>Loading...</div>;
@@ -11,13 +13,13 @@ function DailyResetTimer({ timeLeft, status = "active" }) {
   const getStatusConfig = () => {
     switch (status) {
       case "waiting":
-        return { text: `Upcoming:`, emoji: "⏰" };
+        return { text: t('timer.waiting'), emoji: "⏰" };
       case "active":
-        return { text: `Time left:`, emoji: "⚡" };
+        return { text: t('timer.active'), emoji: "⚡" };
       case "finished":
-        return { text: `Completed`, emoji: "🏁" };
+        return { text: t('timer.finished'), emoji: "🏁" };
       default:
-        return { text: `Time left:`, emoji: "⚡" };
+        return { text: t('timer.active'), emoji: "⚡" };
     }
   };
 
@@ -32,22 +34,22 @@ function DailyResetTimer({ timeLeft, status = "active" }) {
       <div className={styles.timer}>
         <div className={styles.time}>
           <div>{formatNumber(timeLeft.days || 0)}</div>
-          <div className={styles.tips}>Days</div>
+          <div className={styles.tips}>{t('timer.days')}</div>
         </div>
         <div className={styles.time}>:</div>
         <div className={styles.time}>
           <div>{formatNumber(timeLeft.hours || 0)}</div>
-          <div className={styles.tips}>Hours</div>
+          <div className={styles.tips}>{t('timer.hours')}</div>
         </div>
         <div className={styles.time}>:</div>
         <div className={styles.time}>
           <div>{formatNumber(timeLeft.minutes || 0)}</div>
-          <div className={styles.tips}>Minutes</div>
+          <div className={styles.tips}>{t('timer.minutes')}</div>
         </div>
         <div className={styles.time}>:</div>
         <div className={styles.time}>
           <div>{formatNumber(timeLeft.seconds || 0)}</div>
-          <div className={styles.tips}>Seconds</div>
+          <div className={styles.tips}>{t('timer.seconds')}</div>
         </div>
       </div>
     </div>

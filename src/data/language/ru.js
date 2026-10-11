@@ -50,5 +50,30 @@ export const ru = {
             enough: 'У вас достаточно ресурсов! 🎉',
             titleEditProtocore: 'Редактировать Протокор',
         },
+        schedule: {
+            titleCoreHunt: 'Core Hunt',
+            titleTrial: 'Deepspace Trial',
+            titleModalSchedule:  'Расписание Core Hunt и Deepspace Trial',
+        },
+        DailyWeeklyBlock: {
+            titleDaily: 'Ежедневные Миссии',
+            titleWeekly: 'Еженедельные Миссии',
+            titleModal: 'Награды за Миссии',
+            titleDailyAwards: 'Ежедневные Награды',
+            titleWeeklyAwards: 'Еженедельные Награды',
+        },
+        timer: {
+            waiting: 'Скоро:',
+            active: 'Осталось:',
+            finished: 'Завершено',
+            days: 'дней',
+            hours: 'часов',
+            minutes: 'минут',
+            seconds: 'секунд',
+            permanently: 'перманентно',
+        },
+        WishWellBlock: {
+            titleModal: 'Расписание магазина "Wishing Well"',
+        }
     },
 };

@@ -3,10 +3,12 @@ import styles from "@pages/main/Home.module.css";
 import { DailyResetTimer, ModalWindow, useRecurringTimer } from "@components";
 import { getImageUrl } from "@hooks";
 import MonthImage from "./MonthImage.jsx";
+import { useTranslation } from "react-i18next";
 
 function WishWellBlock() {
   const timeLeftMonth = useRecurringTimer("month");
   const wishWellModalRef = useRef();
+    const { t } = useTranslation();
 
   const showWishWellModal = () => {
     wishWellModalRef.current.showModal();
@@ -24,7 +26,7 @@ function WishWellBlock() {
 
       <ModalWindow
         ref={wishWellModalRef}
-        title={"Wishing Well Schedule"}
+        title={t('WishWellBlock.titleModal')}
         tag={
           <>
             <img
