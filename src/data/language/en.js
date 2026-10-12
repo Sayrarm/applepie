@@ -97,5 +97,18 @@ export const en = {
             warning3: 'Are you absolutely sure you want to continue?',
             alert: '✅ All resources cleared successfully!',
         },
+        MyProtocores: {
+            handleDeleteProtocore: 'Are you sure you want to delete {{type}} Protocore (Lv. {{level}})?',
+            handleDeleteSelected: 'Are you sure you want to delete selected protocores?',
+            addProtocore: 'Add protocore',
+            uploadButton: 'Upload protocore screenshots',
+            cancelSelection: 'Cancel selection',
+            chooseProtocores: 'Choose protocores',
+            deleteProtocores: 'Delete protocores ({{count}})',
+            noProtocoresText: 'No protocores added yet. Click "Add protocore" to create one!',
+            titleModalAdd: 'Add New Protocore',
+            titleModalUpload: 'Upload protocore screenshots',
+
+        },
     },
 };

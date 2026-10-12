@@ -95,5 +95,17 @@ export const ru = {
             warning3: 'Вы уверены, что хотите продолжить?',
             alert: '✅ Все ресурсы успешно очищены!',
         },
+        MyProtocores: {
+            handleDeleteProtocore: 'Вы уверены, что хотите удалить {{type}} Протокор (Lv. {{level}})?',
+            handleDeleteSelected: 'Вы уверены, что хотите удалить выбранные протокоры?',
+            addProtocore: 'Добавить протокор',
+            uploadButton: 'Загрузить скриншоты с протокорами',
+            cancelSelection: 'Отменить выбор',
+            chooseProtocores: 'Выбрать протокоры',
+            deleteProtocores: 'Удалить протокоры ({{count}})',
+            noProtocoresText: 'Протокоры пока не добавлены. Нажмите на "Добавить протокор" чтобы создать!',
+            titleModalAdd: 'Добавить новый протокор',
+            titleModalUpload: 'Загрузить скриншоты с протокорами',
+        },
     },
 };

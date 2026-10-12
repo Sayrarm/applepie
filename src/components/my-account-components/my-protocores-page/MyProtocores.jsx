@@ -16,6 +16,7 @@ import {
   removeProtocoreFromAllCards,
   findCardForProtocore,
 } from "@localstorage";
+import { useTranslation } from "react-i18next";
 
 function MyProtocores() {
   const [protocores, setProtocores] = useState([]);
@@ -25,6 +26,7 @@ function MyProtocores() {
   const filterModalRef = useRef();
   const ocrModalRef = useRef();
   const ocrReaderRef = useRef();
+  const { t } = useTranslation();
 
   const { searchQuery, onSearch, clearSearch } =
       useProtocoreSearch("protocores");
@@ -157,9 +159,13 @@ function MyProtocores() {
   };
 
   const handleDeleteProtocore = (protocoreToDelete) => {
+    const typeName = protocoreToDelete.type.charAt(0).toUpperCase() + protocoreToDelete.type.slice(1);
     // Показываем подтверждение перед удалением
     const confirmDelete = window.confirm(
-        `Are you sure you want to delete ${protocoreToDelete.type.charAt(0).toUpperCase() + protocoreToDelete.type.slice(1)} Protocore (Lv. ${protocoreToDelete.level})?`,
+        t('MyProtocores.handleDeleteProtocore', {
+          type: typeName,
+          level: protocoreToDelete.level,
+        })
     );
 
     if (confirmDelete) {
@@ -191,7 +197,7 @@ function MyProtocores() {
     if (selectedIds.size === 0) return;
 
     const confirmDelete = window.confirm(
-        "Are you sure you want to delete selected protocores?",
+        t('MyProtocores.handleDeleteSelected'),
     );
 
     if (confirmDelete) {
@@ -233,15 +239,17 @@ function MyProtocores() {
 
         <div className={styles.buttonsContainer}>
           <button className={styles.addButton} onClick={handleAddProtocore}>
-            + Add protocore
+            {t('MyProtocores.addProtocore')}
           </button>
 
           <button className={styles.addButton} onClick={handleOcr}>
-            Upload protocore screenshots
+            {t('MyProtocores.uploadButton')}
           </button>
 
           <button className={styles.addButton} onClick={toggleSelectionMode}>
-            {isSelectionMode ? "Cancel selection" : "Choose protocores"}
+            {isSelectionMode
+                ? t('MyProtocores.cancelSelection')
+                : t('MyProtocores.chooseProtocores')}
           </button>
 
           {isSelectionMode && (
@@ -250,7 +258,7 @@ function MyProtocores() {
                   onClick={handleDeleteSelected}
                   disabled={selectedIds.size === 0}
               >
-                Delete protocores ({selectedIds.size})
+                {t('MyProtocores.deleteProtocores', { count: selectedIds.size })}
               </button>
           )}
         </div>
@@ -258,7 +266,7 @@ function MyProtocores() {
         <section className={styles.protocoreList}>
           {sortedProtocores.length === 0 ? (
               <div className={styles.emptyState}>
-                No protocores added yet. Click "Add protocore" to create one!
+                {t('MyProtocores.noProtocoresText')}
               </div>
           ) : (
               sortedProtocores.map((protocore) => {
@@ -298,14 +306,14 @@ function MyProtocores() {
 
         <ModalWindowProtocore
             ref={modalRef}
-            title="Add New Protocore"
+            title={t('MyProtocores.titleModalAdd')}
             onSave={handleSaveProtocore}
             onUpdate={handleUpdateProtocore}
         />
 
         <ModalWindow
             ref={ocrModalRef}
-            title="Upload screenshots"
+            title={t('FarmGoalTracker.remainingToFarm')}
             tag={<OcrReader ref={ocrReaderRef} />}
             onClose={handleModalClose}
         />
