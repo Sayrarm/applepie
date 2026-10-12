@@ -12,6 +12,7 @@ import {
   updateProtocore,
   updateProtocoreInAllCards,
 } from "@localstorage";
+import { useTranslation } from "react-i18next";
 
 const ModalWindowProtocore = forwardRef((props, ref) => {
   const {
@@ -27,6 +28,7 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
   const [editingProtocore, setEditingProtocore] = useState(null);
 
   const formRef = useRef(null);
+  const { t } = useTranslation();
 
   const protocoreTypeKeys = Object.keys(protocoreTypes);
   const stellactrumColors = [
@@ -302,10 +304,10 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
       width={412}
       footer={[
         <Button key="cancel" onClick={handleCancel}>
-          Cancel
+          {t('ModalWindowProtocore.cancelButton')}
         </Button>,
         <Button key="save" type="primary" loading={loading} onClick={handleOk}>
-          {editingProtocore ? "Update" : "Save"}
+          {editingProtocore ? t('ModalWindowProtocore.update') : t('ModalWindowProtocore.save')}
         </Button>,
       ]}
     >
@@ -334,11 +336,11 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
       >
         <Form.Item
           name="type"
-          label="Protocore Type"
-          rules={[{ required: true, message: "Please select protocore type!" }]}
+          label={t('ModalWindowProtocore.titleType')}
+          rules={[{ required: true, message: t('ModalWindowProtocore.messageType') }]}
         >
           <Select
-            placeholder="Select protocore type"
+            placeholder={t('ModalWindowProtocore.placeholderType')}
             options={typeOptions}
             onChange={(value) => {
               const form = getForm();
@@ -352,22 +354,22 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
 
         <Form.Item
           name="stellactrum"
-          label="Protocore Stellactrum (Color)"
+          label={t('ModalWindowProtocore.titleStellactrum')}
           rules={[
-            { required: true, message: "Please select stellactrum color!" },
+            { required: true, message: t('ModalWindowProtocore.messageStellactrum') },
           ]}
         >
           <Select
-            placeholder="Select stellactrum color"
+            placeholder={t('ModalWindowProtocore.placeholderStellactrum')}
             options={stellactrumOptions}
           />
         </Form.Item>
 
         <Form.Item
           name="level"
-          label="Protocore Level"
+          label={t('ModalWindowProtocore.titleLevel')}
           rules={[
-            { required: true, message: "Please select level!" },
+            { required: true, message: t('ModalWindowProtocore.messageLevel') },
             {
               type: "number",
               min: 0,
@@ -380,7 +382,7 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
             min={0}
             max={15}
             style={{ width: "100%" }}
-            placeholder="Enter level (0-15)"
+            placeholder={t('ModalWindowProtocore.placeholderLevel')}
             inputMode="numeric"
             pattern="[0-9]*"
           />
@@ -389,9 +391,9 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
         <div style={{ display: "flex", gap: "16px" }}>
           <Form.Item
             name="mainStat"
-            label="Main Stat"
+            label={t('ModalWindowProtocore.titleMainStat')}
             rules={[
-              { required: true, message: "Please select main stat!" },
+              { required: true, message: t('ModalWindowProtocore.messageMainStat') },
               {
                 validator: (_, value) => {
                   const form = getForm();
@@ -414,13 +416,13 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
                 },
               },
             ]}
-            style={{ flex: 1 }}
+            style={{ flex: 1, width: "100px" }}
           >
             <Select
               placeholder={
                 selectedType
-                  ? "Select main stat"
-                  : "Select protocore type first"
+                  ? t('ModalWindowProtocore.placeholderMainStat1')
+                  : t('ModalWindowProtocore.placeholderMainStat2')
               }
               disabled={!selectedType}
               value={currentMainStat}
@@ -437,15 +439,15 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
 
           <Form.Item
             name="mainStatValue"
-            label="Main Stat Value"
+            label={t('ModalWindowProtocore.titleMainStatValue')}
             rules={[
-              { required: true, message: "Please enter main stat value!" },
+              { required: true, message: t('ModalWindowProtocore.messageMainStatValue') },
             ]}
             style={{ flex: 1 }}
           >
             <InputNumber
               style={{ width: "100%" }}
-              placeholder="Auto-filled from data"
+              placeholder={t('ModalWindowProtocore.placeholderMainStatValue')}
               disabled
               inputMode="numeric"
               pattern="[0-9]*"
@@ -453,7 +455,7 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
           </Form.Item>
         </div>
 
-        <Form.Item label="Substats (1-4)">
+        <Form.Item label={t('ModalWindowProtocore.titleSubstats')}>
           <Form.List name="substats">
             {(fields, { add, remove }) => (
               <>
@@ -466,12 +468,12 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
                     <Form.Item
                       name={[field.name, "stat"]}
                       rules={[
-                        { required: true, message: "Please select substat!" },
+                        { required: true, message: t('ModalWindowProtocore.messageSubstats') },
                       ]}
                       style={{ flex: 1, marginBottom: 0 }}
                     >
                       <Select
-                        placeholder={`Substat ${index + 1}`}
+                          placeholder={t('ModalWindowProtocore.placeholderSubstats', { number: index + 1 })}
                         style={{ width: "230px" }}
                         options={substatOptions}
                       />
@@ -480,12 +482,12 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
                     <Form.Item
                       name={[field.name, "value"]}
                       rules={[
-                        { required: true, message: "Please enter value!" },
+                        { required: true, message: t('ModalWindowProtocore.messageSubstatsValue') },
                       ]}
                       style={{ marginBottom: 0 }}
                     >
                       <InputNumber
-                        placeholder="Value"
+                        placeholder={t('ModalWindowProtocore.placeholderSubstatsValue')}
                         style={{ width: "100px" }}
                         min={0}
                         step={0.1}
@@ -516,7 +518,7 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
                       block
                       icon={<PlusOutlined />}
                     >
-                      Add Substat
+                      {t('ModalWindowProtocore.addSubstatButton')}
                     </Button>
                   </Form.Item>
                 )}
