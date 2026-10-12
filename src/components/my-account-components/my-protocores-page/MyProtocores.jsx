@@ -313,7 +313,7 @@ function MyProtocores() {
 
         <ModalWindow
             ref={ocrModalRef}
-            title={t('FarmGoalTracker.remainingToFarm')}
+            title={t('MyProtocores.titleModalUpload')}
             tag={<OcrReader ref={ocrReaderRef} />}
             onClose={handleModalClose}
         />
