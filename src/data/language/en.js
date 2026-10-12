@@ -168,6 +168,16 @@ export const en = {
             deleteButton: 'Delete',
             titleModalGoalButton: 'Select Level for Goal',
             addButton: '🎯 Add to Development Goal',
+        },
+        DataManager: {
+            alertSuccess: '✅ Successfully exported {{totalItems}} items!',
+            alertFailed: '❌ Failed to export data. See console for details.',
+            alertWarning: '⚠️ This will overwrite ALL existing data in localStorage with data from the file.\n\n',
+            alertInfo: '📦 Found {{count}} items to import:\n',
+            alertDate: '\n\nExport date: {{date}} \n',
+            alertWarning2: 'Are you sure you want to continue?',
+            alertImport: '✅ Successfully imported {{items}} items!\n\n🔄 Refreshing page to apply changes...',
+            alerdDelete: '⚠️ WARNING: This will permanently delete ALL your saved data!\n\n',
         }
     },
 };

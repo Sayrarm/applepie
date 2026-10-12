@@ -11,12 +11,14 @@ import {
   formatKeysPreview,
   reloadWithDelay,
 } from "@localstorage"
+import { useTranslation } from "react-i18next";
 
 function DataManager() {
   const [isExporting, setIsExporting] = useState(false);
   const [isImporting, setIsImporting] = useState(false);
   const [isClearing, setIsClearing] = useState(false);
   const fileInputRef = useRef();
+  const { t } = useTranslation();
 
   // ---------- EXPORT ----------
   const exportData = () => {
@@ -27,10 +29,10 @@ function DataManager() {
       const payload = buildExportPayload(data, totalItems);
 
       downloadJson(payload);
-      alert(`✅ Successfully exported ${totalItems} items!`);
+      alert(t('DataManager.alertSuccess', {totalItems}));
     } catch (error) {
       console.error("Export error:", error);
-      alert("❌ Failed to export data. See console for details.");
+      alert(t('DataManager.alertFailed'));
     } finally {
       setIsExporting(false);
     }
@@ -51,12 +53,11 @@ function DataManager() {
         const keys = validateImportFile(content);
 
         const confirmMessage =
-            `⚠️ This will overwrite ALL existing data in localStorage with data from the file.\n\n` +
-            `📦 Found ${keys.length} items to import:\n` +
+            t('DataManager.alertWarning') +
+            t('DataManager.alertInfo', { count: keys.length }) +
             formatKeysPreview(keys) +
-            `\n\nExport date: ${content.exportedAt || "Unknown"}\n` +
-            `Version: ${content.version || "Unknown"}\n\n` +
-            `Are you sure you want to continue?`;
+            t('DataManager.alertDate', { date: content.exportedAt.slice(0, -14) || "Unknown" }) +
+            t('DataManager.alertWarning2');
 
         if (!window.confirm(confirmMessage)) {
           resetFileInput();
@@ -67,7 +68,7 @@ function DataManager() {
         resetFileInput();
 
         alert(
-            `✅ Successfully imported ${importedCount} items!\n\n🔄 Refreshing page to apply changes...`,
+            t('DataManager.alertImport', { items: importedCount }),
         );
         reloadWithDelay(1000);
       } catch (error) {
@@ -98,7 +99,7 @@ function DataManager() {
     }
 
     const confirmMessage =
-        `⚠️ WARNING: This will permanently delete ALL your saved data!\n\n` +
+        t('DataManager.alerdDelete') +
         `📦 Found ${keys.length} items to delete:\n` +
         formatKeysPreview(keys) +
         `\n\nThis includes:\n` +

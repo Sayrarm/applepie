@@ -165,6 +165,7 @@ export const ru = {
             deleteButton: 'Удалить',
             titleModalGoalButton: 'Выбрать уровень для цели Развития',
             addButton: '🎯 Добавить в Цель Развития',
-        }
+        },
+
     },
 };
