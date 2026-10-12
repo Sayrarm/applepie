@@ -4,6 +4,7 @@ import { getImageUrl } from "@hooks";
 import {getRequiredCredits, getRequiredExp, protocoreColor, protocoreTypes} from "@data";
 import {addFarmGoal} from "@localstorage";
 import {LevelRangeControl, ModalWindow} from "@components";
+import { useTranslation } from "react-i18next";
 
 function ProtocoreBlock({
   protocore,
@@ -19,6 +20,7 @@ function ProtocoreBlock({
 
   const modalRef = useRef(null);
   const [draftLevel, setDraftLevel] = useState(level);
+  const { t } = useTranslation();
 
   const openGoalModal = () => {
     setDraftLevel(level);
@@ -167,19 +169,19 @@ function ProtocoreBlock({
         )}
         {!hideChange && (
           <button className={styles.editButton} onClick={handleEdit}>
-            Change
+            {t('ProtocoreBlock.changeButton')}
           </button>
         )}
         {!hideDelete && (
           <button className={styles.deleteButton} onClick={handleDelete}>
-            Delete
+            {t('ProtocoreBlock.deleteButton')}
           </button>
         )}
       </div>
 
       <ModalWindow
           ref={modalRef}
-          title="Select Level for Goal"
+          title={t('ProtocoreBlock.titleModalGoalButton')}
           width={500}
           tag={
             <div style={{ textAlign: "left" }}>
@@ -198,7 +200,7 @@ function ProtocoreBlock({
                     onClick={handleAddToFarm}
                     disabled={!canAddGoal()}
                 >
-                  🎯 Add to Development Goal
+                  {t('ProtocoreBlock.addButton')}
                 </button>
               </div>
             </div>

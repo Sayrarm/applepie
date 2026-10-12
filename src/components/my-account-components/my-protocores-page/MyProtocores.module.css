@@ -62,28 +62,28 @@
 
 .checkbox {
   position: absolute;
-  bottom: 7px;
-  left: 10px;
+  top: 8px;
+  right: 8px;
   z-index: 10;
   width: 25px;
   height: 25px;
   cursor: pointer;
+  border-radius: 50%;
+  border: 3px solid var(--colorText);
 
   appearance: none;
   -webkit-appearance: none;
 
-  background-color: var(--forSelect);
-  transition: 0.3s;
+  background-color: var(--a);
+  transition: 0.2s;
 }
 
 .checkbox:hover {
-  border-color: var(--colorText);
-  background-color: var(--colorText);
+  border-color: var(--a-hover);
 }
 
 .checkbox:checked {
   background-color: var(--a-hover);
-  border-color: var(--colorText);
 }
 
 .checkbox:checked::after {

@@ -290,13 +290,17 @@ const ModalWindowProtocore = forwardRef((props, ref) => {
     return normalized;
   };
 
+  const typeName = editingProtocore
+      ? editingProtocore.type.charAt(0).toUpperCase() + editingProtocore.type.slice(1)
+      : '';
+
   return (
     <Modal
       open={open}
       title={
         editingProtocore
-          ? `Edit ${editingProtocore.type.charAt(0).toUpperCase() + editingProtocore.type.slice(1)} Protocore`
-          : title
+            ? t('ModalWindowProtocore.editProtocore', { type: typeName })
+            : title
       }
       onOk={handleOk}
       onCancel={handleCancel}

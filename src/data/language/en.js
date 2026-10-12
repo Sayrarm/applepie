@@ -110,6 +110,7 @@ export const en = {
             titleModalUpload: 'Upload protocore screenshots',
         },
         ModalWindowProtocore: {
+            editProtocore: 'Edit {{type}} Protocore',
             cancelButton: 'Cancel',
             update: 'Update',
             save: 'Save',
@@ -161,6 +162,12 @@ export const en = {
             statusFailed: '⚠ Not recognized',
             statusError: '✗ Error',
             textErrorFailed: 'Protocore  is unidentified',
+        },
+        ProtocoreBlock: {
+            changeButton: 'Change',
+            deleteButton: 'Delete',
+            titleModalGoalButton: 'Select Level for Goal',
+            addButton: '🎯 Add to Development Goal',
         }
     },
 };

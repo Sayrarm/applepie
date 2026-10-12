@@ -108,6 +108,7 @@ export const ru = {
             titleModalUpload: 'Загрузить скриншоты с протокорами',
         },
         ModalWindowProtocore: {
+            editProtocore: 'Редактировать {{type}} Протокор',
             cancelButton: 'Отмена',
             update: 'Обновить',
             save: 'Сохранить',
@@ -158,6 +159,12 @@ export const ru = {
             statusFailed: '⚠ Не распознан',
             statusError: '✗ Ошибка',
             textErrorFailed: 'Протокор не распознан',
+        },
+        ProtocoreBlock: {
+            changeButton: 'Изменить',
+            deleteButton: 'Удалить',
+            titleModalGoalButton: 'Выбрать уровень для цели Развития',
+            addButton: '🎯 Добавить в Цель Развития',
         }
     },
 };
