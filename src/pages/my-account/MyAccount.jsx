@@ -6,9 +6,11 @@ import {
   MyMemories,
   ExportImport,
 } from "@components";
+import { useTranslation } from "react-i18next";
 
 function MyAccount() {
   const { navigation } = useParams();
+  const { t } = useTranslation();
 
   // Если нет параметра — редиректим на showcase
   if (!navigation) {
@@ -25,7 +27,7 @@ function MyAccount() {
           }
           to="/my-account/inventory"
         >
-          Resources
+          {t('MyAccount.resources')}
         </NavLink>
         <NavLink
           className={({ isActive }) =>
@@ -33,7 +35,7 @@ function MyAccount() {
           }
           to="/my-account/my-memories"
         >
-          Memories
+          {t('MyAccount.memories')}
         </NavLink>
         <NavLink
           className={({ isActive }) =>
@@ -41,7 +43,7 @@ function MyAccount() {
           }
           to="/my-account/my-protocores"
         >
-          Protocores
+          {t('MyAccount.protocores')}
         </NavLink>
         <NavLink
           className={({ isActive }) =>
@@ -49,7 +51,7 @@ function MyAccount() {
           }
           to="/my-account/export-import"
         >
-          Export/Import data
+          {t('MyAccount.export')}
         </NavLink>
       </div>
 

@@ -88,6 +88,12 @@ export const en = {
             disclaimer1: 'All trademarks, characters, stories and images are the property of their respective owner, Infold Games.',
             disclaimer2: 'The site was created for informational purposes only. For non-commercial use.'
         },
+        MyAccount: {
+            resources: 'Resources',
+            memories: 'Memories',
+            protocores: 'Protocores',
+            export: 'Export/Import data',
+        },
         resources: {
             title: 'My Resources',
             exchange: 'can be exchanged for:',
