@@ -11,6 +11,11 @@ export const en = {
             account: 'ACCOUNT',
             accountWithName: 'ACCOUNT: {{name}}',
         },
+        TimeZone: {
+            eu: 'EU time',
+            asia: 'Asia time',
+            na: 'NA time',
+        },
         main: {
             titleBanners: 'Banners',
             noBannersText: 'No banners available',

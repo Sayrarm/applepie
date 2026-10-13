@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import styles from "@components/header/TimezoneButton.module.css";
+import styles from "./ThemeToggleButton.module.css";
 import { saveLanguage } from "@localstorage";
 
 function LanguageButton() {

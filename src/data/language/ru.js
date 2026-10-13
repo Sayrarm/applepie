@@ -11,6 +11,11 @@ export const ru = {
             account: 'АККАУНТ',
             accountWithName: 'АККАУНТ: {{name}}',
         },
+        TimeZone: {
+            eu: 'EU время',
+            asia: 'Asia время',
+            na: 'NA время',
+        },
         main: {
             titleBanners: 'Баннеры',
             noBannersText: 'Нет доступных баннеров',
