@@ -80,7 +80,6 @@ function Header() {
             <NavLink
                 className={({ isActive }) => `${styles.a} ${isActive ? styles.active : ""}`}
                 to="/my-account"
-                title={activeAccount?.fileName || ""}
             >
               {accountLabel}
             </NavLink>

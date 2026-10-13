@@ -315,5 +315,14 @@ export const en = {
             filterButton: 'Filter',
             resetButton: 'Reset all filters and sorting',
         },
+        Memories: {
+            sizeButton: 'Change size of Cards',
+            hideUserInfoButton: 'Hide User info',
+            showUserInfoButton: 'Show User info',
+            noMemoriestext: 'No memories found ¯\\_(ツ)_/¯',
+        },
+        CardArticle: {
+            navigation: 'Memories',
+        },
     },
 };

@@ -14,10 +14,12 @@ import {
 } from "@components";
 import { getImageUrl } from "@hooks";
 import { memoriesData, obtainData, solar4Stars, compData } from "@data";
+import { useTranslation } from "react-i18next";
 
 function CardArticle() {
   const { cardId } = useParams();
   const [isCardAvailable, setIsCardAvailable] = useState(false);
+  const { t } = useTranslation();
 
   // Находим карточку напрямую в данных (для отображения)
   const card = memoriesData.find((c) => String(c.id) === cardId);
@@ -36,7 +38,7 @@ function CardArticle() {
       <nav className={styles.nav}>
         <Fragment>
           <Link className={styles.link} to="/memories">
-            Memories
+            {t('CardArticle.navigation')}
           </Link>
           <span className={styles.span}> &gt; </span>
           <span>

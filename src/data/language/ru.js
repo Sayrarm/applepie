@@ -313,5 +313,14 @@ export const ru = {
             filterButton: 'Фильтр',
             resetButton: 'Очистить фильтр и сортировку',
         },
+        Memories: {
+            sizeButton: 'Изменить размер карт',
+            hideUserInfoButton: 'Скрыть инфо Пользователя',
+            showUserInfoButton: 'Показать инфо Пользователя',
+            noMemoriestext: 'Воспоминаний не найдено ¯\\_(ツ)_/¯',
+        },
+        CardArticle: {
+            navigation: 'Воспоминания',
+        },
     },
 };
