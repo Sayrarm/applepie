@@ -171,13 +171,33 @@ export const en = {
         },
         DataManager: {
             alertSuccess: '✅ Successfully exported {{totalItems}} items!',
-            alertFailed: '❌ Failed to export data. See console for details.',
-            alertWarning: '⚠️ This will overwrite ALL existing data in localStorage with data from the file.\n\n',
+            alertFailed: '❌ Failed to export data.',
+            alertWarning: '⚠️ This will overwrite ALL existing data with data from the file.\n\n',
             alertInfo: '📦 Found {{count}} items to import:\n',
             alertDate: '\n\nExport date: {{date}} \n',
             alertWarning2: 'Are you sure you want to continue?',
             alertImport: '✅ Successfully imported {{items}} items!\n\n🔄 Refreshing page to apply changes...',
-            alerdDelete: '⚠️ WARNING: This will permanently delete ALL your saved data!\n\n',
-        }
+            alerdDelete: `⚠️ WARNING: This will permanently delete ALL your saved data!\n\n` +
+                `📦 Found {{itemsDelete}} items to delete:\n`,
+            alertDeleteConfirm: `\n\nThis includes:\n` +
+                `• All Memories data\n` +
+                `• All Protocores\n` +
+                `• All Resources\n` +
+                `• All Showcase Teams\n\n` +
+                `Are you absolutely sure you want to continue?`,
+            alertDeleteConfirmSecond: '⚠️ FINAL WARNING: This action cannot be undone! Are you sure?',
+            alertSuccessDelete: '✅ Successfully cleared {{clearedCount}} items!\n\n🔄 Refreshing page to apply changes...',
+            titleContainer: '💾 Data Management',
+            exportButton: '📤 Export Data',
+            exportButtonActing: '⏳ Exporting...',
+            importButton: '📥 Import Data',
+            importButtonActing: '⏳ Importing...',
+            clearButton: '🗑️ Clear All Data',
+            clearButtonActing: '⏳ Clearing...',
+            exportInfo: '💡 Export Data - exports all your data (My Memories, My Protocores, My Resources, Showcase Teams) to a JSON file.',
+            ImportInfo: '⚠️ Import will overwrite ALL existing data. Make sure to backup first!',
+            ClearInfo: '⚠️ Clear All Data will permanently delete ALL your saved data. This cannot be undone!',
+        },
+
     },
 };
