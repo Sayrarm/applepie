@@ -67,10 +67,9 @@
 
 .activeBadge {
     font-family: TikTok Sans, monospace;
-    font-weight: bold;
     font-size: 0.65rem;
     height: 19px;
-    width: 50px;
+    width: 60px;
     display: flex;
     align-items: center;
     justify-content: center;

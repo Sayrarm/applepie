@@ -178,6 +178,9 @@ function DataManager() {
             {t('DataManager.ImportInfo')}
             <br />
             {t('DataManager.ClearInfo')}
+            <br />
+            <br />
+            {t('DataManager.AccountInfo')}
           </small>
         </div>
       </div>

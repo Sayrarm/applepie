@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import styles from "./AccountSwitcher.module.css";
 import {
     saveSlotData,
@@ -40,6 +41,7 @@ async function saveCurrentStateToSlot(slotId) {
 }
 
 function AccountSlot({ slot, isActive, onSwitchRequest }) {
+    const { t } = useTranslation();
     const [meta, setMeta] = useState(null);
     const [isBusy, setIsBusy] = useState(false);
 
@@ -113,7 +115,7 @@ function AccountSlot({ slot, isActive, onSwitchRequest }) {
             notifySlotUpdated(slot.id);
         } catch (err) {
             console.error(err);
-            alert(`❌ Failed to rename: ${err.message}`);
+            alert(t('AccountSwitcher.failedToRename', { message: err.message }));
         } finally {
             setIsBusy(false);
             cancelEditName();
@@ -156,8 +158,7 @@ function AccountSlot({ slot, isActive, onSwitchRequest }) {
             notifySlotUpdated(slot.id);
 
             const applyNow = window.confirm(
-                `✅ File saved to "${name}" (${keys.length} items).\n\n` +
-                `Apply it now? This will replace all current data.`,
+                t('AccountSwitcher.fileSaved', { name, count: keys.length }),
             );
 
             if (applyNow) {
@@ -165,7 +166,7 @@ function AccountSlot({ slot, isActive, onSwitchRequest }) {
             }
         } catch (err) {
             console.error(err);
-            alert(`❌ Failed to save file: ${err.message}`);
+            alert(t('AccountSwitcher.failedToSaveFile', { message: err.message }));
         } finally {
             setIsBusy(false);
             if (inputRef.current) inputRef.current.value = "";
@@ -175,7 +176,7 @@ function AccountSlot({ slot, isActive, onSwitchRequest }) {
     // ---------- Активация ----------
     const handleActivate = () => {
         if (isActive) return handleSaveCurrent();
-        onSwitchRequest(slot.id); // слот может быть пустым — switchToSlot сам создаст
+        onSwitchRequest(slot.id);
     };
 
     const handleSaveCurrent = async () => {
@@ -185,10 +186,13 @@ function AccountSlot({ slot, isActive, onSwitchRequest }) {
             await refreshMeta();
             notifySlotUpdated(slot.id);
             alert(
-                `💾 Saved ${totalItems} items to "${meta?.name || slot.label}".`,
+                t('AccountSwitcher.savedItems', {
+                    count: totalItems,
+                    name: meta?.name || slot.label,
+                }),
             );
         } catch (err) {
-            alert(`❌ Failed to save: ${err.message}`);
+            alert(t('AccountSwitcher.failedToSave', { message: err.message }));
         } finally {
             setIsBusy(false);
         }
@@ -197,8 +201,9 @@ function AccountSlot({ slot, isActive, onSwitchRequest }) {
     const handleDelete = async () => {
         if (
             !window.confirm(
-                `Remove saved account "${meta?.name || slot.label}"?\n` +
-                `(Current app data will NOT be touched)`,
+                t('AccountSwitcher.removeConfirm', {
+                    name: meta?.name || slot.label,
+                }),
             )
         )
             return;
@@ -207,7 +212,7 @@ function AccountSlot({ slot, isActive, onSwitchRequest }) {
             await deleteSlot(slot.id);
             setMeta(null);
         } catch (err) {
-            alert(`❌ Failed to delete: ${err.message}`);
+            alert(t('AccountSwitcher.failedToDelete', { message: err.message }));
         }
     };
 
@@ -219,15 +224,24 @@ function AccountSlot({ slot, isActive, onSwitchRequest }) {
     // 3. Слота нет — "No data saved yet"
     const renderFileInfo = () => {
         if (!meta) {
-            return <div className={styles.emptyState}>No data saved yet</div>;
+            return (
+                <div className={styles.emptyState}>
+                    {t('AccountSwitcher.noDataSaved')}
+                </div>
+            );
         }
 
         if (meta.isEmpty) {
             return (
                 <div className={styles.fileInfo}>
-                    <div className={styles.fileName}>🆕 New account (empty)</div>
+                    <div className={styles.fileName}>
+                        {t('AccountSwitcher.newAccountEmpty')}
+                    </div>
                     <div className={styles.fileMeta}>
-                        0 items • {new Date(meta.updatedAt).toLocaleString()}
+                        {t('AccountSwitcher.itemsCount', {
+                            n: 0,
+                            date: new Date(meta.updatedAt).toLocaleString(),
+                        })}
                     </div>
                 </div>
             );
@@ -236,10 +250,13 @@ function AccountSlot({ slot, isActive, onSwitchRequest }) {
         return (
             <div className={styles.fileInfo}>
                 <div className={styles.fileName} title={meta.fileName}>
-                    📄 {meta.fileName || "(no file name)"}
+                    📄 {meta.fileName || t('AccountSwitcher.noFileName')}
                 </div>
                 <div className={styles.fileMeta}>
-                    {meta.count} items • {new Date(meta.updatedAt).toLocaleString()}
+                    {t('AccountSwitcher.itemsCount', {
+                        n: meta.count,
+                        date: new Date(meta.updatedAt).toLocaleString(),
+                    })}
                 </div>
             </div>
         );
@@ -269,20 +286,28 @@ function AccountSlot({ slot, isActive, onSwitchRequest }) {
                     <h4
                         className={styles.accountTitle}
                         onClick={meta ? startEditName : undefined}
-                        title={meta ? "Click to rename" : "Activate to create"}
+                        title={
+                            meta
+                                ? t('AccountSwitcher.clickToRename')
+                                : t('AccountSwitcher.activateToCreate')
+                        }
                         style={{ cursor: meta ? "text" : "default" }}
                     >
                         {displayName}
                     </h4>
                 )}
 
-                {isActive && <span className={styles.activeBadge}>ACTIVE</span>}
+                {isActive && (
+                    <span className={styles.activeBadge}>
+                        {t('AccountSwitcher.activeBadge')}
+                    </span>
+                )}
 
                 {meta && !isEditingName && (
                     <button
                         className={styles.iconButton}
                         onClick={startEditName}
-                        title="Rename"
+                        title={t('AccountSwitcher.rename')}
                         disabled={isBusy}
                         type="button"
                     >
@@ -301,16 +326,18 @@ function AccountSlot({ slot, isActive, onSwitchRequest }) {
                     onClick={handleActivate}
                     disabled={isBusy}
                     title={
-                        !meta && !isActive ? "Create this account (empty)" : ""
+                        !meta && !isActive
+                            ? t('AccountSwitcher.createAccountHint')
+                            : ""
                     }
                 >
                     {isBusy
-                        ? "⏳..."
+                        ? t('AccountSwitcher.busy')
                         : isActive
-                            ? "💾 Save current"
+                            ? t('AccountSwitcher.saveCurrent')
                             : meta
-                                ? "▶ Activate"
-                                : "➕ Create & Activate"}
+                                ? t('AccountSwitcher.activate')
+                                : t('AccountSwitcher.createAndActivate')}
                 </button>
 
                 <button
@@ -318,7 +345,9 @@ function AccountSlot({ slot, isActive, onSwitchRequest }) {
                     onClick={() => inputRef.current?.click()}
                     disabled={isBusy}
                 >
-                    {meta ? "🔁 Replace file" : "📁 Upload the file"}
+                    {meta
+                        ? t('AccountSwitcher.replaceFile')
+                        : t('AccountSwitcher.uploadFile')}
                 </button>
 
                 {meta && !isActive && (
@@ -326,7 +355,7 @@ function AccountSlot({ slot, isActive, onSwitchRequest }) {
                         className={`${styles.btn} ${styles.btnDanger}`}
                         onClick={handleDelete}
                         disabled={isBusy}
-                        title="Remove saved account"
+                        title={t('AccountSwitcher.removeSavedAccount')}
                     >
                         🗑️
                     </button>
@@ -345,6 +374,7 @@ function AccountSlot({ slot, isActive, onSwitchRequest }) {
 }
 
 function AccountSwitcher() {
+    const { t } = useTranslation();
     const [activeSlot, setActiveSlot] = useState(
         () => localStorage.getItem(ACTIVE_SLOT_KEY) || null,
     );
@@ -380,18 +410,15 @@ function AccountSwitcher() {
 
             // 3) Подтверждение
             const confirmMessage = createdEmpty
-                ? `➕ Create new empty account "${target.name}"?\n\n` +
-                `All current app data will be cleared.\n` +
-                `You'll start from scratch.`
+                ? t('AccountSwitcher.createNewConfirm', { name: target.name })
                 : isEmpty
-                    ? `⚠️ Switch to "${target.name}" (empty account)?\n\n` +
-                    `All current app data will be cleared.`
-                    : `⚠️ Switch to "${target.name}"?\n\n` +
-                    `Current app data will be COMPLETELY replaced by:\n` +
-                    `📄 ${target.fileName || "(no file name)"}\n` +
-                    `📦 ${Object.keys(target.data).length} items\n` +
-                    `🕒 saved ${new Date(target.updatedAt).toLocaleString()}\n\n` +
-                    `Continue?`;
+                    ? t('AccountSwitcher.switchEmptyConfirm', { name: target.name })
+                    : t('AccountSwitcher.switchConfirm', {
+                        name: target.name,
+                        fileName: target.fileName || t('AccountSwitcher.noFileName'),
+                        count: Object.keys(target.data).length,
+                        date: new Date(target.updatedAt).toLocaleString(),
+                    });
 
             if (!window.confirm(confirmMessage)) {
                 // Если мы только что создали пустой слот и отменили — удалим его,
@@ -411,15 +438,16 @@ function AccountSwitcher() {
             notifyActiveAccountChanged();
 
             alert(
-                `✅ Switched to "${target.name}"\n\n` +
-                `🗑️ Cleared: ${cleared}\n` +
-                `📥 Imported: ${imported}\n\n` +
-                `🔄 Refreshing...`,
+                t('AccountSwitcher.switched', {
+                    name: target.name,
+                    cleared,
+                    imported,
+                }),
             );
             reloadWithDelay(1000);
         } catch (err) {
             console.error(err);
-            alert(`❌ Failed to switch: ${err.message}`);
+            alert(t('AccountSwitcher.failedToSwitch', { message: err.message }));
         }
     };
 
@@ -472,11 +500,8 @@ function AccountSwitcher() {
 
     return (
         <div className={styles.container}>
-            <h3 className={styles.title}>🔄 Account Switcher</h3>
-            <p className={styles.subtitle}>
-                Upload a JSON export to a slot, or press <b>➕ Create & Activate</b> to
-                start a fresh account. Rename by clicking the title.
-            </p>
+            <h3 className={styles.title}>{t('AccountSwitcher.title')}</h3>
+            <p className={styles.subtitle}>{t('AccountSwitcher.subtitle')}</p>
 
             <div className={styles.accountsGrid}>
                 {SLOTS.map((slot) => (
@@ -489,10 +514,7 @@ function AccountSwitcher() {
                 ))}
             </div>
 
-            <div className={styles.warning}>
-                ⚠️ Switching erases current app data and loads the chosen slot. Your
-                current state will be auto-saved to the active slot first.
-            </div>
+            <div className={styles.warning}>{t('AccountSwitcher.warning')}</div>
         </div>
     );
 }

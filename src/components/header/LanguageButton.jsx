@@ -1,14 +1,17 @@
 import { useTranslation } from "react-i18next";
 import styles from "@components/header/TimezoneButton.module.css";
+import { saveLanguage } from "@localstorage";
 
 function LanguageButton() {
     const { t, i18n } = useTranslation();
 
-    const currentLang = i18n.language;                        // 'en' или 'ru'
-    const label = currentLang.toUpperCase();                  // 'EN' или 'RU'
+    const currentLang = i18n.language;
+    const label = currentLang.toUpperCase();
 
     const handleClick = () => {
-        i18n.changeLanguage(currentLang === "en" ? "ru" : "en");
+        const nextLang = currentLang === "en" ? "ru" : "en";
+        i18n.changeLanguage(nextLang);
+        saveLanguage(nextLang);
     };
 
     return (
