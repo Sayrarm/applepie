@@ -373,7 +373,7 @@ function ProtocoreCalculator() {
 
           <ModalWindow
             ref={modalGoalButton}
-            title={"Alert"}
+            title={""}
             tag={
               <>
                 <h2>{t('ProtocoreCalculator.addGoalAlert')}</h2>

@@ -20,6 +20,7 @@ import {
   getHeartInfo,
 } from "@data";
 import { addFarmGoal } from "@localstorage";
+import { useTranslation } from "react-i18next";
 
 function MemoryUpCalculator() {
   const [rarity, setRarity] = useState("5-star");
@@ -32,6 +33,7 @@ function MemoryUpCalculator() {
   const [hasCalculated, setHasCalculated] = useState(false);
   const [result, setResult] = useState(null);
   const modalGoalButton = useRef();
+  const { t } = useTranslation();
 
   const showModalGoalButton = () => {
     modalGoalButton.current.showModal();
@@ -184,10 +186,10 @@ function MemoryUpCalculator() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Memory Upgrade Calculator</h1>
+      <h1 className={styles.title}>{t('MemoryUpCalculator.titleContainer')}</h1>
 
       <div className={styles.formGroup}>
-        <div>Rarity</div>
+        <div>{t('MemoryUpCalculator.rarity')}</div>
         <div className={styles.buttonGroup}>
           {Object.entries(rarityLevels).map(([key, value]) => (
             <button
@@ -203,7 +205,7 @@ function MemoryUpCalculator() {
 
       <div className={styles.row}>
         <div className={styles.formGroup}>
-          <label htmlFor="current-lvl-select">Current Level</label>
+          <label htmlFor="current-lvl-select">{t('MemoryUpCalculator.current')}</label>
           <select
             id="current-lvl-select"
             name="current-lvl"
@@ -223,7 +225,7 @@ function MemoryUpCalculator() {
         </div>
 
         <div className={styles.formGroup}>
-          <label htmlFor="target-lvl-select">Target Level</label>
+          <label htmlFor="target-lvl-select">{t('MemoryUpCalculator.target')}</label>
           <select
             id="target-lvl-select"
             name="target-lvl"
@@ -246,7 +248,7 @@ function MemoryUpCalculator() {
       </div>
 
       <div className={styles.formGroup}>
-        <div>Crystal Color</div>
+        <div>{t('MemoryUpCalculator.crystalColor')}</div>
         <div className={styles.colorButtons}>
           {crystalColors.map((color) => (
             <button
@@ -266,7 +268,7 @@ function MemoryUpCalculator() {
       </div>
 
       <div className={styles.formGroup}>
-        <label htmlFor="bottle-lvl-select">Heartbreaker Level</label>
+        <label htmlFor="bottle-lvl-select">{t('MemoryUpCalculator.heartbreaker')}</label>
         <select
           id="bottle-lvl-select"
           name="bottle-lvl"
@@ -276,14 +278,14 @@ function MemoryUpCalculator() {
         >
           {expDungeonData.map((d) => (
             <option key={d.level} value={d.level}>
-              Lvl {d.level} (+{d.exp} EXP per run)
+              Lvl {d.level} (+{d.exp} EXP {t('MemoryUpCalculator.perRun')})
             </option>
           ))}
         </select>
       </div>
 
       <div className={styles.formGroup}>
-        <label htmlFor="crystal-lvl-select">{crystalDungeonName} Level</label>
+        <label htmlFor="crystal-lvl-select">{t('MemoryUpCalculator.crystals', {crystalDungeonName: crystalDungeonName})}</label>
         <select
           id="crystal-lvl-select"
           name="crystal-lvl"
@@ -294,14 +296,14 @@ function MemoryUpCalculator() {
           {crystalDungeonData.map((d) => (
             <option key={d.level} value={d.level}>
               Lvl {d.level} (N:{d.crystals.N} R:{d.crystals.R || 0} SR:
-              {d.crystals.SR || 0} per run)
+              {d.crystals.SR || 0} {t('MemoryUpCalculator.perRun')})
             </option>
           ))}
         </select>
       </div>
 
       <div className={styles.formGroup}>
-        <label htmlFor="credits-lvl-select">Mr. Beanie Level</label>
+        <label htmlFor="credits-lvl-select">{t('MemoryUpCalculator.beanie')}</label>
         <select
           id="credits-lvl-select"
           name="credits-lvl"
@@ -311,7 +313,7 @@ function MemoryUpCalculator() {
         >
           {creditDungeonData.map((d) => (
             <option key={d.level} value={d.level}>
-              Lvl {d.level} (+{d.credits.toLocaleString()} Credits per run)
+              Lvl {d.level} (+{d.credits.toLocaleString()} Credits {t('MemoryUpCalculator.perRun')})
             </option>
           ))}
         </select>
@@ -325,22 +327,22 @@ function MemoryUpCalculator() {
           allLevels.indexOf(String(targetLevel))
         }
       >
-        Calculate
+        {t('MemoryUpCalculator.calculateButton')}
       </button>
 
       {allLevels.indexOf(String(currentLevel)) >=
         allLevels.indexOf(String(targetLevel)) && (
         <div className={styles.warning}>
-          Target level must be higher than current level!
+          {t('MemoryUpCalculator.warningTarget')}
         </div>
       )}
 
       {hasCalculated && result && (
         <div className={styles.results}>
-          <h2>Results</h2>
+          <h2>{t('MemoryUpCalculator.results')}</h2>
           <div className={styles.resultCard}>
             <div className={styles.resultRowUpgrade}>
-              <span className={styles.resultLabel}>Upgrade:</span>
+              <span className={styles.resultLabel}>{t('MemoryUpCalculator.upgrade')}</span>
               <span>
                 {getDisplayLevel(currentLevel)} → {getDisplayLevel(targetLevel)}
               </span>
@@ -354,10 +356,10 @@ function MemoryUpCalculator() {
 
               <div className={styles.resultRow}>
                 <span className={styles.resultLabel}>
-                  "Heartbreaker" runs:
+                  {t('MemoryUpCalculator.hearbreakerRuns')}
                 </span>
                 <span>
-                  {result.expRuns} runs (Lvl {expDungeonLevel})
+                  {result.expRuns} {t('MemoryUpCalculator.run')} (Lvl {expDungeonLevel})
                 </span>
               </div>
 
@@ -379,10 +381,10 @@ function MemoryUpCalculator() {
 
               <div className={styles.resultRow}>
                 <span className={styles.resultLabel}>
-                  "{crystalDungeonName}" runs:
+                  {t('MemoryUpCalculator.crystalsRuns', {crystalDungeonName: crystalDungeonName})}
                 </span>
                 <span>
-                  {result.crystalRuns} runs (Lvl {crystalDungeonLevel})
+                  {result.crystalRuns} {t('MemoryUpCalculator.run')} (Lvl {crystalDungeonLevel})
                 </span>
               </div>
 
@@ -395,15 +397,15 @@ function MemoryUpCalculator() {
             <div className={styles.resultContainer}>
               <div className={styles.resultRow}>
                 <span className={styles.resultLabel}>Credits:</span>
-                <span>{result.credits.toLocaleString()} Credits</span>
+                <span>{result.credits.toLocaleString()} credits</span>
               </div>
 
               <div className={styles.resultRow}>
                 <span className={styles.resultLabel}>
-                  "Mr. Beanie" runs:
+                  {t('MemoryUpCalculator.beanieRuns')}
                 </span>
                 <span>
-                  {result.creditRuns} runs (Lvl {creditDungeonLevel})
+                  {result.creditRuns} {t('MemoryUpCalculator.run')} (Lvl {creditDungeonLevel})
                 </span>
               </div>
 
@@ -422,7 +424,7 @@ function MemoryUpCalculator() {
                   <div className={styles.resultContainer}>
                     <div className={styles.resultRow}>
                       <span className={styles.resultLabel}>
-                        Special Item:
+                        {t('MemoryUpCalculator.specialItem')}
                       </span>
                       <div className={styles.heartContainer}>
                         <img
@@ -441,7 +443,7 @@ function MemoryUpCalculator() {
               })()}
 
             <div className={styles.resultRow}>
-              <span className={styles.resultLabel}>Total Stamina:</span>
+              <span className={styles.resultLabel}>{t('MemoryUpCalculator.totalStamina')}</span>
               <span className={styles.totalStamina}>
                 {result.totalStamina} stamina
               </span>
@@ -453,17 +455,17 @@ function MemoryUpCalculator() {
       {hasCalculated && result && (
         <div className={styles.goToFarmSection}>
           <button className={styles.goToFarmButton} onClick={handleAddToFarm}>
-            🎯 Add to Development Goal
+            {t('MemoryUpCalculator.addButton')}
           </button>
 
           <ModalWindow
             ref={modalGoalButton}
-            title={"Alert"}
+            title={""}
             tag={
               <>
-                <h2>Goal added to Development Goal on Main page!</h2>
+                <h2>{t('MemoryUpCalculator.addGoalAlert')}</h2>
                 <Link className={styles.link} to="/">
-                  Go to Main Page
+                  {t('MemoryUpCalculator.mainButton')}
                 </Link>
               </>
             }
