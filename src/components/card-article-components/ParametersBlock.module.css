@@ -43,11 +43,9 @@
   margin-bottom: 20px;
 }
 
-/*
 .modalInfo p {
   text-align: start !important;
 }
-*/
 
 @media screen and (max-width: 560px) {
   .parametersContainer {

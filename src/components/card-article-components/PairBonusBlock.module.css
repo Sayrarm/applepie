@@ -9,18 +9,8 @@
     monospace;
 }
 
-.title {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: var(--colorTextDark);
-}
-
-.cardsContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 12px;
+.cards {
+  zoom: 0.7;
 }
 
 .companionLink,
@@ -32,7 +22,7 @@
   gap: 5px;
   font-size: 14px;
   color: var(--colorTextDark);
-  padding-top: 12px;
+  padding-top: 5px;
   border-top: 1px solid var(--border-color);
 }
 
@@ -50,4 +40,10 @@
 
 .companionLinkText:hover {
   color: var(--a-hover);
+}
+
+@media screen and (max-width: 500px) {
+  .cards {
+    zoom: 1.0;
+  }
 }
