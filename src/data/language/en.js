@@ -358,8 +358,8 @@ export const en = {
             label: 'Pair Bonus',
             textInfo: 'Having a pair unlocks a Companion:',
         },
-        SolarPairBonusBlock: {
-            label: 'Бонус Пары',
+        PairBonusBlock4Star: {
+            label: 'Pair Bonus',
             text1: '<zero>Duo Rank 0:</zero> increases team DMG by 5%',
             text2: '<one>Duo Rank 1:</one> boosts Ardent Oath charge by 10%',
             text3: '<two>Duo Rank 2:</two> reduces team DMG taken by 5%',

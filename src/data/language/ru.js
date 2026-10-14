@@ -356,7 +356,7 @@ export const ru = {
             label: 'Бонус Пары',
             textInfo: 'Наличие пары разблокирует Компаньона:',
         },
-        SolarPairBonusBlock: {
+        PairBonusBlock4Star: {
             label: 'Бонус Пары',
             text1: '<zero>Оба Ранг 0:</zero> повышает урон команды на 5%',
             text2: '<one>Оба Ранг 1:</one> повышает скорость восстановления Ardent Oath на 10%',

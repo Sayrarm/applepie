@@ -32,7 +32,7 @@ export { default as LevelCardBlock } from "./card-article-components/LevelCardBl
 export { default as ObtainInfo } from "./card-article-components/ObtainInfo.jsx";
 export { default as PairBonusBlock } from "./card-article-components/PairBonusBlock.jsx";
 export { default as ParametersBlock } from "./card-article-components/ParametersBlock.jsx";
-export { default as SolarPairBonusBlock } from "./card-article-components/SolarPairBonusBlock.jsx";
+export { default as PairBonusBlock4Star } from "./card-article-components/PairBonusBlock4Star.jsx";
 export { default as StoryInfo } from "./card-article-components/StoryInfo.jsx";
 
 //common

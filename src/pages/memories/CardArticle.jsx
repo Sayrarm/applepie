@@ -9,7 +9,7 @@ import {
   ButtonNavigationBlock,
   LevelCardBlock,
   CardProtocores,
-  SolarPairBonusBlock,
+  PairBonusBlock4Star,
   StoryInfo,
 } from "@components";
 import { getImageUrl } from "@hooks";
@@ -76,7 +76,7 @@ function CardArticle() {
             />
           )}
 
-          <SolarPairBonusBlock
+          <PairBonusBlock4Star
             cardId={cardId}
             memoriesData={memoriesData}
             solarPairData={solar4Stars}

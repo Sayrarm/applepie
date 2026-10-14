@@ -3,7 +3,7 @@ import {CardList, AsideList} from "@components";
 import {useTranslation} from "react-i18next";
 import {Trans} from "react-i18next";
 
-function SolarPairBonusBlock({cardId, memoriesData, solarPairData}) {
+function PairBonusBlock4Star({cardId, memoriesData, solarPairData}) {
 
     const {t} = useTranslation();
 
@@ -36,7 +36,7 @@ function SolarPairBonusBlock({cardId, memoriesData, solarPairData}) {
             items={[
                 {
                     key: "1",
-                    label: t('SolarPairBonusBlock.label'),
+                    label: t('PairBonusBlock4Star.label'),
                     children: (
                         <>
                             <div className={styles.cards}>
@@ -46,7 +46,7 @@ function SolarPairBonusBlock({cardId, memoriesData, solarPairData}) {
                             <div className={styles.companionLink4Star}>
                                 <p>
                                     <Trans
-                                        i18nKey="SolarPairBonusBlock.text1"
+                                        i18nKey="PairBonusBlock4Star.text1"
                                         components={{zero: <strong/>}}
                                     >
                                         <strong>Duo Rank 0:</strong> increases team DMG by 5%
@@ -54,7 +54,7 @@ function SolarPairBonusBlock({cardId, memoriesData, solarPairData}) {
                                 </p>
                                 <p>
                                     <Trans
-                                        i18nKey="SolarPairBonusBlock.text2"
+                                        i18nKey="PairBonusBlock4Star.text2"
                                         components={{one: <strong/>}}
                                     >
                                         <strong>Duo Rank 1:</strong> boosts Ardent Oath charge by 10%
@@ -62,7 +62,7 @@ function SolarPairBonusBlock({cardId, memoriesData, solarPairData}) {
                                 </p>
                                 <p>
                                     <Trans
-                                        i18nKey="SolarPairBonusBlock.text3"
+                                        i18nKey="PairBonusBlock4Star.text3"
                                         components={{two: <strong/>}}
                                     >
                                         <strong>Duo Rank 2:</strong> reduces team DMG taken by 5%
@@ -70,7 +70,7 @@ function SolarPairBonusBlock({cardId, memoriesData, solarPairData}) {
                                 </p>
                                 <p>
                                     <Trans
-                                        i18nKey="SolarPairBonusBlock.text4"
+                                        i18nKey="PairBonusBlock4Star.text4"
                                         components={{three: <strong/>}}
                                     >
                                         <strong>Duo Rank 3:</strong> increases team DMG by 5%
@@ -85,4 +85,4 @@ function SolarPairBonusBlock({cardId, memoriesData, solarPairData}) {
     );
 }
 
-export default SolarPairBonusBlock;
+export default PairBonusBlock4Star;
