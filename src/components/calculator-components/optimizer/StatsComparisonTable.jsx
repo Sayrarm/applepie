@@ -250,7 +250,7 @@ function StatsComparisonTable({
                         onClick={() => setPage((p) => Math.max(0, p - 1))}
                         disabled={safePage === 0}
                     >
-                        ← Prev
+                        ←
                     </button>
                     <span className={styles.pageInfo}>
                         Page {safePage + 1} of {totalPages}
@@ -260,7 +260,7 @@ function StatsComparisonTable({
                         onClick={() => setPage((p) => Math.min(totalPages - 1, p + 1))}
                         disabled={safePage >= totalPages - 1}
                     >
-                        Next →
+                        →
                     </button>
                 </div>
             )}
