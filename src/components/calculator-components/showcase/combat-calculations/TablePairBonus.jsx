@@ -1,6 +1,7 @@
 import styles from "./TablePairBonus.module.css";
 import {useMemo} from "react";
 import {useSolarPair} from "@hooks";
+import { useTranslation } from "react-i18next";
 
 function TablePairBonus({selectedCompanion, solarCards}) {
     // Вся логика пары — из хука
@@ -10,6 +11,7 @@ function TablePairBonus({selectedCompanion, solarCards}) {
         hasAnySolarPair,
         defaultBuffs,
     } = useSolarPair(solarCards);
+    const { t } = useTranslation();
 
     // Данные компаньона-пары (для колонки Companion Buffs)
     const companionData = matchingCompanion;
@@ -27,15 +29,15 @@ function TablePairBonus({selectedCompanion, solarCards}) {
             <table className={styles.statsTablePairBonus}>
                 <thead>
                 <tr>
-                    <th className={styles.titleTDMain}>Pair Bonus:</th>
-                    <th className={styles.titleTDMain}>Default Buffs</th>
-                    <th className={styles.titleTDMain}>Companion Buffs</th>
+                    <th className={styles.titleTDMain}>{t('TablePairBonus.pairBonus')}</th>
+                    <th className={styles.titleTDMain}>{t('TablePairBonus.defaultBuffs')}</th>
+                    <th className={styles.titleTDMain}>{t('TablePairBonus.companionBuffs')}</th>
                 </tr>
                 </thead>
                 <tbody>
                 {/* Starring Effect - всегда показываем */}
                 <tr>
-                    <th className={styles.titleTD}>Starring Effect</th>
+                    <th className={styles.titleTD}>{t('TablePairBonus.starringEffect')}</th>
                     <td className={styles.titleTD}>{defaultBuffs.eidolon0}</td>
                     <td>
                         {isCompanionMatching && companionData?.eidolon0
@@ -47,7 +49,7 @@ function TablePairBonus({selectedCompanion, solarCards}) {
                 {/* Duo Rank 1 - показываем если solarRank >= 1 */}
                 {solarRank >= 1 && (
                     <tr>
-                        <th className={styles.titleTD}>Duo Rank 1</th>
+                        <th className={styles.titleTD}>{t('TablePairBonus.duoRank1')}</th>
                         <td className={styles.titleTD}>{defaultBuffs.eidolon1}</td>
                         <td>
                             {isCompanionMatching && companionData?.eidolon1
@@ -60,7 +62,7 @@ function TablePairBonus({selectedCompanion, solarCards}) {
                 {/* Duo Rank 2 - показываем если solarRank >= 2 */}
                 {solarRank >= 2 && (
                     <tr>
-                        <th className={styles.titleTD}>Duo Rank 2</th>
+                        <th className={styles.titleTD}>{t('TablePairBonus.duoRank2')}</th>
                         <td className={styles.titleTD}>{defaultBuffs.eidolon2}</td>
                         <td>
                             {isCompanionMatching && companionData?.eidolon2
@@ -73,7 +75,7 @@ function TablePairBonus({selectedCompanion, solarCards}) {
                 {/* Duo Rank 3 - показываем если solarRank >= 3 */}
                 {solarRank >= 3 && (
                     <tr>
-                        <th className={styles.titleTD}>Duo Rank 3</th>
+                        <th className={styles.titleTD}>{t('TablePairBonus.duoRank3')}</th>
                         <td className={styles.titleTD}>{defaultBuffs.eidolon3}</td>
                         <td>
                             {isCompanionMatching && companionData?.eidolon3

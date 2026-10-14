@@ -198,8 +198,12 @@
 }
 
 .noProtocores {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 40px;
+  width: 200px;
+  height: 310px;
 }
 
 .lunarCardsRow {

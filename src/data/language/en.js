@@ -413,5 +413,39 @@ export const en = {
             titleModalRename: 'Rename Team',
             saveButton: 'Save',
         },
+        ChooseCompanion: {
+            addButton: 'Add Companion',
+            titleModal: 'Select Companion',
+        },
+        ChooseWeapon: {
+            addButton: 'Add MC Weapon',
+            titleModal: 'Select MC Weapon',
+        },
+        ModalChooseCard: {
+            selectCard: 'Select {{placement}} memory',
+            selectCardNoPlacement: 'Select memory',
+            noCardsText: 'No available {{modalPlacement}} memories found',
+        },
+        RenderCardSlot: {
+            noProtocoreText: 'No protocores',
+            addButton: '+ Add {{placement}} Memory',
+        },
+        TablePairBonus: {
+            pairBonus: 'Pair Bonus:',
+            defaultBuffs: 'Default Buffs',
+            companionBuffs: 'Companion Buffs',
+            starringEffect: 'Starring Effect',
+            duoRank1: 'Duo Rank 1',
+            duoRank2: 'Duo Rank 2',
+            duoRank3: 'Duo Rank 3',
+        },
+        CombatCalculations: {
+            disclaimer: 'Disclaimer',
+            text1: 'At the moment, the exact formula for damage directly from the game is unknown.',
+            text2: 'All calculations below are approximate figures of the damage you can get in battle. Personal bonuses from the Companion kit are not included here. Damage can also vary due to the level of the enemy, its type, defense, etc., which are also not included in the calculations below.',
+            text3: 'Only the increase in damage according to the ranks of Memories is included permanently (Default Buffs: Starring Effect and Duo Rank 3).',
+            text4: 'You can also check the box for Attribute Bonus and Perfect Match to calculate the damage along with these bonuses.',
+            titleContainer: 'Combat Calculations',
+        },
     },
 };

@@ -3,9 +3,11 @@ import styles from "./Choose.module.css";
 import { getImageUrl } from "@hooks";
 import { ModalWindow } from "@components";
 import { compData } from "@data";
+import { useTranslation } from "react-i18next";
 
 function ChooseCompanion({ selectedCompanion, onSelectCompanion }) {
   const companionModalRef = useRef();
+  const { t } = useTranslation();
 
   const showCompanionModal = () => {
     companionModalRef.current?.showModal();
@@ -32,14 +34,14 @@ function ChooseCompanion({ selectedCompanion, onSelectCompanion }) {
             </div>
           </div>
         ) : (
-          <div className={styles.addCompanionText}>+ Add Companion</div>
+          <div className={styles.addCompanionText}>{t('ChooseCompanion.addButton')}</div>
         )}
       </button>
 
       {/* Модалка выбора компаньона */}
       <ModalWindow
         ref={companionModalRef}
-        title="Select Companion"
+        title={t('ChooseCompanion.titleModal')}
         width={720}
         tag={
           <div className={styles.companionGrid}>

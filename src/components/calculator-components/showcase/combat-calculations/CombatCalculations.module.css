@@ -12,6 +12,10 @@
   justify-content: flex-end;
 }
 
+.red {
+  color: var(--a);
+}
+
 .additionalBonus {
   margin: 10px 0;
 }
