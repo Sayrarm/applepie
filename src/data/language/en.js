@@ -447,5 +447,11 @@ export const en = {
             text4: 'You can also check the box for Attribute Bonus and Perfect Match to calculate the damage along with these bonuses.',
             titleContainer: 'Combat Calculations',
         },
+        AdditionalBonus: {
+            titleContainer: 'Additional Bonuses:',
+            attributiveText: 'Attribute Bonus: (For each matched Stellactrum, increases DMG Boost 5.0% and DMG Reduction 5.0%)',
+            countRange: 'Stellactrum count: {{stellactrumCount}}',
+            perfectMatchText: 'Perfect Match: (Double the number of Protocore Shield stacks destroyed. DMG Boost to Weakened enemies increased by 100%)',
+        },
     },
 };

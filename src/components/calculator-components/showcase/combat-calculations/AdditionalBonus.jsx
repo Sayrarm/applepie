@@ -1,12 +1,14 @@
 import { useState, useEffect, useCallback } from "react";
 import { Range } from "react-range";
 import styles from "./CombatCalculations.module.css";
+import { useTranslation } from "react-i18next";
 
 function AdditionalBonus({ onChange }) {
     // Внутренние состояния
     const [isAttributeBonus, setIsAttributeBonus] = useState(false);
     const [stellactrumCount, setStellactrumCount] = useState(0);
     const [isPerfectMatch, setIsPerfectMatch] = useState(false);
+    const { t } = useTranslation();
 
     // Считаем бонусы
     const attributeBonus = isAttributeBonus ? stellactrumCount * 5 : 0;
@@ -24,7 +26,7 @@ function AdditionalBonus({ onChange }) {
 
     return (
         <div className={styles.additionalBonus}>
-            <h3>Additional Bonus:</h3>
+            <h3>{t('AdditionalBonus.titleContainer')}</h3>
 
             <div className={styles.bonusRow}>
                 <label className={styles.checkboxLabel}>
@@ -34,13 +36,12 @@ function AdditionalBonus({ onChange }) {
                         checked={isAttributeBonus}
                         onChange={(e) => setIsAttributeBonus(e.target.checked)}
                     />
-                    Attribute Bonus: (For each matched Stellactrum, increases DMG Boost
-                    5.0% and DMG Reduction 5.0%)
+                    {t('AdditionalBonus.attributiveText')}
                 </label>
                 {isAttributeBonus && (
                     <div className={styles.rangeContainer}>
                         <div className={styles.rangeLabel}>
-                            Stellactrum count: {stellactrumCount}
+                            {t('AdditionalBonus.countRange', {stellactrumCount: stellactrumCount})}
                         </div>
                         <Range
                             step={1}
@@ -87,8 +88,7 @@ function AdditionalBonus({ onChange }) {
                         checked={isPerfectMatch}
                         onChange={(e) => setIsPerfectMatch(e.target.checked)}
                     />
-                    Perfect Match: (Double the number of Protocore Shield stacks
-                    destroyed. DMG Boost to Weakened enemies increased by 100%)
+                    {t('AdditionalBonus.perfectMatchText')}
                 </label>
             </div>
         </div>
