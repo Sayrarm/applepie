@@ -1,6 +1,9 @@
 export const ru = {
     translation: {
         change_language: 'Сменить язык',
+        ModalWindow: {
+            returnButton: 'Назад',
+        },
         nav: {
             main: 'Главная',
             banners: 'Баннеры',

@@ -1,6 +1,9 @@
 export const en = {
     translation: {
         change_language: 'Change Language',
+        ModalWindow: {
+            returnButton: 'Return',
+        },
         nav: {
             main: 'Main',
             banners: 'Banners',
