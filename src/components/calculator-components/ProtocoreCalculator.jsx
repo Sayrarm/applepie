@@ -242,7 +242,7 @@ function ProtocoreCalculator() {
         >
           {dungeonData.map((d) => (
             <option key={d.level} value={d.level}>
-              Fusion Arena Lvl {d.level} (+{d.exp} EXP per run)
+              Fusion Arena Lvl {d.level} (+{d.exp} EXP {t('ProtocoreCalculator.perRun')})
             </option>
           ))}
         </select>
@@ -259,7 +259,7 @@ function ProtocoreCalculator() {
         >
           {creditDungeonData.map((d) => (
             <option key={d.level} value={d.level}>
-              Lvl {d.level} (+{d.credits.toLocaleString()} Credits per run)
+              Lvl {d.level} (+{d.credits.toLocaleString()} Credits {t('ProtocoreCalculator.perRun')})
             </option>
           ))}
         </select>

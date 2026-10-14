@@ -511,6 +511,7 @@ export const ru = {
             exp: 'EXP:',
             expPoint: 'EXP',
             coreHuntRuns: '"Core Hunt" забегов:',
+            perRun: 'за забег',
             run: 'забег(ов)',
             stamina: 'Stamina:',
             staminaPoint: 'stamina',

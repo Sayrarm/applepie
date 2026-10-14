@@ -513,6 +513,7 @@ export const en = {
             exp: 'EXP:',
             expPoint: 'EXP',
             coreHuntRuns: '"Core Hunt" runs:',
+            perRun: 'per run',
             run: 'run(s)',
             stamina: 'Stamina:',
             staminaPoint: 'stamina',
