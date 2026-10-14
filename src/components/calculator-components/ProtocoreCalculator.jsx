@@ -19,6 +19,7 @@ import {
 import { getImageUrl } from "@hooks";
 import { ModalWindow } from "@components";
 import { addFarmGoal } from "@localstorage";
+import { useTranslation } from "react-i18next";
 
 // Функция для получения первого доступного мейн стата
 const getFirstMainStat = (type) => {
@@ -35,6 +36,7 @@ function ProtocoreCalculator() {
   const [hasCalculated, setHasCalculated] = useState(false);
   const [result, setResult] = useState(null);
   const modalGoalButton = useRef();
+  const { t } = useTranslation();
 
   const showModalGoalButton = () => {
     modalGoalButton.current.showModal();
@@ -98,7 +100,7 @@ function ProtocoreCalculator() {
       mainStat,
       targetLevel,
     );
-    const substatUpgrades = getSubstatUpgradeInfo(currentLevel, targetLevel);
+    const substatUpgrades = getSubstatUpgradeInfo(currentLevel, targetLevel, t);
 
     const dungeonRuns = getRequiredDungeonRuns(expNeeded, dungeonLevel);
     const staminaNeeded = getRequiredStamina(expNeeded, dungeonLevel);
@@ -153,10 +155,10 @@ function ProtocoreCalculator() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Protocore Calculator</h1>
+      <h1 className={styles.title}>{t('ProtocoreCalculator.titleContainer')}</h1>
 
       <div className={styles.formGroup}>
-        <div>Protocore Type</div>
+        <div>{t('ProtocoreCalculator.type')}</div>
         <div className={styles.buttonGroup}>
           {Object.entries(protocoreTypes).map(([key, value]) => (
             <button
@@ -177,7 +179,7 @@ function ProtocoreCalculator() {
       </div>
 
       <div className={styles.formGroup}>
-        <label htmlFor="main-stat-select">Main Stat</label>
+        <label htmlFor="main-stat-select">{t('ProtocoreCalculator.mainStat')}</label>
         <select
           id="main-stat-select"
           name="main-stat"
@@ -195,7 +197,7 @@ function ProtocoreCalculator() {
 
       <div className={styles.row}>
         <div className={styles.formGroup}>
-          <label htmlFor="current-lvl-select">Current Level</label>
+          <label htmlFor="current-lvl-select">{t('ProtocoreCalculator.current')}</label>
           <select
             id="current-lvl-select"
             name="current-lvl"
@@ -212,7 +214,7 @@ function ProtocoreCalculator() {
         </div>
 
         <div className={styles.formGroup}>
-          <label htmlFor="target-lvl-select">Target Level</label>
+          <label htmlFor="target-lvl-select">{t('ProtocoreCalculator.target')}</label>
           <select
             id="target-lvl-select"
             name="target-lvl"
@@ -230,7 +232,7 @@ function ProtocoreCalculator() {
       </div>
 
       <div className={styles.formGroup}>
-        <label htmlFor="core-hunt-lvl-select">Core Hunt Level</label>
+        <label htmlFor="core-hunt-lvl-select">{t('ProtocoreCalculator.coreHunt')}</label>
         <select
           id="core-hunt-lvl-select"
           name="core-hunt-lvl"
@@ -247,7 +249,7 @@ function ProtocoreCalculator() {
       </div>
 
       <div className={styles.formGroup}>
-        <label htmlFor="credits-lvl-select">Mr. Beanie Level</label>
+        <label htmlFor="credits-lvl-select">{t('ProtocoreCalculator.beanie')}</label>
         <select
           id="credits-lvl-select"
           name="credits-lvl"
@@ -268,22 +270,22 @@ function ProtocoreCalculator() {
         onClick={handleCalculate}
         disabled={currentLevel >= targetLevel}
       >
-        Calculate
+        {t('ProtocoreCalculator.calculateButton')}
       </button>
 
       {currentLevel >= targetLevel && (
         <div className={styles.warning}>
-          Target level must be higher than current level!
+          {t('ProtocoreCalculator.warningTarget')}
         </div>
       )}
 
       {hasCalculated && result && currentLevel < targetLevel && (
         <div className={styles.results}>
-          <h2>Results</h2>
+          <h2>{t('ProtocoreCalculator.results')}</h2>
 
           <div className={styles.resultCard}>
             <div className={styles.resultRowUpgrade}>
-              <span className={styles.resultLabel}>Stat growth:</span>
+              <span className={styles.resultLabel}>{t('ProtocoreCalculator.statGrowth')}</span>
               <span>
                 {result.currentStatValue} → {result.targetStatValue}
                 {typeof result.targetStatValue === "number" &&
@@ -296,7 +298,7 @@ function ProtocoreCalculator() {
             {/* Информация о саб-статах */}
             {result.substatUpgrades.length > 0 && (
               <div className={styles.substatSection}>
-                <div className={styles.substatTitle}>Secondary Stats:</div>
+                <div className={styles.substatTitle}>{t('ProtocoreCalculator.subStats')}</div>
                 {result.substatUpgrades.map((upgrade, idx) => (
                   <div key={idx} className={styles.substatRow}>
                     <span className={styles.substatIcon}>
@@ -306,7 +308,7 @@ function ProtocoreCalculator() {
                   </div>
                 ))}
                 <div className={styles.substatNote}>
-                  {substatLevelsReached.length} substat level(s) reached
+                  {t('ProtocoreCalculator.subStatsReached', {substatLevelsReached: substatLevelsReached.length})}
                 </div>
               </div>
             )}
@@ -319,10 +321,10 @@ function ProtocoreCalculator() {
 
               <div className={styles.resultRow}>
                 <span className={styles.resultLabel}>
-                  "Core Hunt" runs:
+                  {t('ProtocoreCalculator.coreHuntRuns')}
                 </span>
                 <span>
-                  {result.dungeonRuns} run(s) (Lvl {dungeonLevel})
+                  {result.dungeonRuns} {t('ProtocoreCalculator.run')} (Lvl {dungeonLevel})
                 </span>
               </div>
 
@@ -335,12 +337,12 @@ function ProtocoreCalculator() {
             <div className={styles.resultContainer}>
               <div className={styles.resultRow}>
                 <span className={styles.resultLabel}>Credits:</span>
-                <span>{result.creditsNeeded.toLocaleString()} Credits</span>
+                <span>{result.creditsNeeded.toLocaleString()} credits</span>
               </div>
 
               <div className={styles.resultRow}>
                 <span className={styles.resultLabel}>
-                  "Mr. Beanie" runs:
+                  {t('ProtocoreCalculator.beanieRuns')}
                 </span>
                 <span>
                   {result.creditRuns} run(s) (Lvl {creditDungeonLevel})
@@ -354,7 +356,7 @@ function ProtocoreCalculator() {
             </div>
 
             <div className={styles.resultRow}>
-              <span className={styles.resultLabel}>Total Stamina:</span>
+              <span className={styles.resultLabel}>{t('ProtocoreCalculator.totalStamina')}</span>
               <span>
                 {result.staminaNeeded + result.staminaForCredits} stamina
               </span>
@@ -366,7 +368,7 @@ function ProtocoreCalculator() {
       {hasCalculated && result && currentLevel < targetLevel && (
         <div className={styles.goToFarmSection}>
           <button className={styles.goToFarmButton} onClick={handleAddToFarm}>
-            🎯 Add to Development Goal
+            {t('ProtocoreCalculator.addButton')}
           </button>
 
           <ModalWindow
@@ -374,9 +376,9 @@ function ProtocoreCalculator() {
             title={"Alert"}
             tag={
               <>
-                <h2>Goal added to Development Goal on Main page!</h2>
+                <h2>{t('ProtocoreCalculator.addGoalAlert')}</h2>
                 <Link className={styles.link} to="/">
-                  Go to Main Page
+                  {t('ProtocoreCalculator.mainButton')}
                 </Link>
               </>
             }
