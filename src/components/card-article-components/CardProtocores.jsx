@@ -28,11 +28,13 @@ import {
     updateProtocoreInAllCards,
 } from "@localstorage";
 import {NavLink} from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function CardProtocores({cardId}) {
     const protocoreModalRef = useRef();
     const protocoreEditModalRef = useRef();
     const filterModalRef = useRef();
+    const { t } = useTranslation();
 
     // Хуки для фильтрации и сортировки протокоров
     const {searchQuery, onSearch, clearSearch} = useProtocoreSearch("card");
@@ -330,7 +332,7 @@ function CardProtocores({cardId}) {
 
     const getLimitMessage = () => {
         if (selectedProtocores.length >= 2) {
-            return "Maximum 2 protocores equipped";
+            return t('CardProtocores.textMaximum');
         }
         if (!cardPlacement) return "Loading...";
 
@@ -340,18 +342,26 @@ function CardProtocores({cardId}) {
         const stellaText = cardStella
             ? ` (${cardStella.charAt(0).toUpperCase() + cardStella.slice(1)})`
             : "";
-        return `${placementLabel} allowed: ${allowedTypes}${stellaText}`;
+        return `${placementLabel} ${t('CardProtocores.allowed')} ${allowedTypes}${stellaText}`;
     };
 
     if (!cardId) {
         return <div>Loading...</div>;
     }
 
+    const typeName = activeProtocoreType
+        ? activeProtocoreType.charAt(0).toUpperCase() + activeProtocoreType.slice(1)
+        : '';
+
+    const typeName2 = activeProtocoreType
+        ? activeProtocoreType.charAt(0).toUpperCase() + activeProtocoreType.slice(1)
+        : '';
+
     return (
         <div className={styles.container}>
             <div className={styles.header}>
                 <div>
-                    <h4 className={styles.title}>Equipped Protocores</h4>
+                    <h4 className={styles.title}>{t('CardProtocores.titleContainer')}</h4>
                     <div className={styles.placementInfo}>{getLimitMessage()}</div>
                 </div>
 
@@ -373,9 +383,9 @@ function CardProtocores({cardId}) {
                                         key={type}
                                         className={`${styles.addButton} ${styles.deleteButton}`}
                                         onClick={() => handleRemoveProtocore(equipped.id)}
-                                        title={`Delete ${type} protocore`}
+                                        title={t('CardProtocores.deleteButtonPlaceholder', {typeLabel: typeLabel})}
                                     >
-                                        Delete {typeLabel}
+                                        {t('CardProtocores.deleteButton', {typeLabel: typeLabel})}
                                     </button>
                                 );
                             }
@@ -386,9 +396,9 @@ function CardProtocores({cardId}) {
                                     key={type}
                                     className={styles.addButton}
                                     onClick={() => showProtocoreModalForType(type)}
-                                    title={`Add ${type} protocore`}
+                                    title={t('CardProtocores.addButtonPlaceholder', {typeLabel: typeLabel})}
                                 >
-                                    Add {typeLabel}
+                                    {t('CardProtocores.addButton', {typeLabel: typeLabel})}
                                 </button>
                             );
                         })}
@@ -398,12 +408,7 @@ function CardProtocores({cardId}) {
                 <ModalWindow
                     ref={protocoreModalRef}
                     style={{ padding: 0 }}
-                    title={`Choose ${
-                        activeProtocoreType
-                            ? activeProtocoreType.charAt(0).toUpperCase() +
-                            activeProtocoreType.slice(1)
-                            : ""
-                    } Protocore`}
+                    title={t('CardProtocores.chooseTitle', { type: typeName })}
                     tag={
                         <div className={styles.modalInfo}>
                             <FilterSortBarProtocores
@@ -426,24 +431,19 @@ function CardProtocores({cardId}) {
                                 <div className={styles.noProtocores}>
                                     {allProtocores.length === 0 ? (
                                         <>
-                                            You don't have any protocores yet. Add some in the{" "}
+                                            {t('CardProtocores.zeroMessage1')}{" "}
                                             <NavLink
                                                 className={({ isActive }) =>
                                                     `${styles.tabButton} ${isActive ? styles.active : ""}`
                                                 }
                                                 to="/my-account/my-protocores"
                                             >
-                                                Protocores
+                                                {t('CardProtocores.zeroMessage2')}
                                             </NavLink>{" "}
-                                            section.
+                                            {t('CardProtocores.zeroMessage3')}
                                         </>
                                     ) : (
-                                        `No compatible ${
-                                            activeProtocoreType
-                                                ? activeProtocoreType.charAt(0).toUpperCase() +
-                                                activeProtocoreType.slice(1)
-                                                : ""
-                                        } protocores available for this card`
+                                        t('CardProtocores.notAvailableMessage', { type: typeName2 })
                                     )}
                                 </div>
                             )}
@@ -475,7 +475,7 @@ function CardProtocores({cardId}) {
             </div>
 
             {displayProtocores.length === 0 ? (
-                <div className={styles.emptyState}>No protocores equipped</div>
+                <div className={styles.emptyState}>{t('CardProtocores.zeroProtocores')}</div>
             ) : (
                 <div className={styles.protocoreList}>
                     {displayProtocores.map((protocore) => {
@@ -496,7 +496,7 @@ function CardProtocores({cardId}) {
 
             <ModalWindowProtocore
                 ref={protocoreEditModalRef}
-                title="Edit Protocore"
+                title={t('CardProtocores.titleModalProtocore')}
                 onUpdate={handleProtocoreUpdate}
             />
         </div>
