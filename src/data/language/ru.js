@@ -399,5 +399,17 @@ export const ru = {
             team: 'Оптимайзер Команды',
             memory: 'Оптимайзер Воспоминания',
         },
+        Showcase: {
+            alertTeam: 'Нельзя удалить первую команду!',
+            alertDeleteTeam: 'Вы уверены, что хотите удалить "{{teamToDelete}}"?',
+            alertClearButton: 'Вы уверены, что хотите очистить все данные для "{{currentTeam}}"?',
+            imageButtonActive: '📸 Сохранение...',
+            imageButton: '📸 Сохранить картинкой',
+            clearButton: '🗑️ Очистить всё',
+            deletePlaceholder: 'Удалить команду',
+            addTeamButton: '+ Добавить команду',
+            titleModalRename: 'Переименовать команду',
+            saveButton: 'Сохранить',
+        },
     },
 };

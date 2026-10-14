@@ -401,5 +401,17 @@ export const en = {
             team: 'Team Optimizer',
             memory: 'Memory Optimizer',
         },
+        Showcase: {
+            alertTeam: 'Cannot delete the first team!',
+            alertDeleteTeam: 'Are you sure you want to delete "{{teamToDelete}}"?',
+            alertClearButton: 'Are you sure you want to clear all data for "{{currentTeam}}"?',
+            imageButtonActive: '📸 Capturing...',
+            imageButton: '📸 Save as Image',
+            clearButton: '🗑️ Clear All',
+            deletePlaceholder: 'Delete team',
+            addTeamButton: '+ Add Team',
+            titleModalRename: 'Rename Team',
+            saveButton: 'Save',
+        },
     },
 };
