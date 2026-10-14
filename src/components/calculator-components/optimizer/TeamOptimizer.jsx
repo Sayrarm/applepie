@@ -29,6 +29,7 @@ import {
     memoriesData
 } from "@data";
 import {getImageUrl, useSolarPair} from "@hooks";
+import { useTranslation } from "react-i18next";
 
 const CARD_SLOTS = [
     {id: "solar1", placement: "solar", index: 0},
@@ -50,6 +51,7 @@ function TeamOptimizer() {
     const [progressText, setProgressText] = useState("");
     const [isSending, setIsSending] = useState(false);
     const modalChooseCardRef = useRef();
+    const { t } = useTranslation();
 
     useEffect(() => {
         saveOptimizerData(data);
@@ -134,7 +136,7 @@ function TeamOptimizer() {
         setData((prev) => ({ ...prev, deltaProtocore_2: option }));
 
     const clearAll = () => {
-        if (!window.confirm("Are you sure you want to clear all settings?"))
+        if (!window.confirm(t('TeamOptimizer.alertClearAll')))
             return;
         clearOptimizerData();
         setData(getOptimizerData());
@@ -151,12 +153,12 @@ function TeamOptimizer() {
         );
 
         if (allProtocores.length === 0) {
-            alert("You don't have any protocores. Add them first.");
+            alert(t('TeamOptimizer.alertNoProtocores'));
             return;
         }
 
         if (!data.selectedCompanion || !data.selectedWeapon) {
-            alert("Please select a Companion and MC Weapon first.");
+            alert(t('TeamOptimizer.alertCompanion'));
             return;
         }
 
@@ -173,12 +175,12 @@ function TeamOptimizer() {
         );
 
         if (availableProtocores.length === 0) {
-            alert("All protocores are excluded. Remove some exclusions.");
+            alert(t('TeamOptimizer.alertExclude'));
             return;
         }
 
         setIsOptimizing(true);
-        setProgressText("Starting...");
+        setProgressText(t('TeamOptimizer.starting'));
 
         setTimeout(() => {
             try {
@@ -231,7 +233,7 @@ function TeamOptimizer() {
         if (!activeBuild) return;
 
         const confirmed = window.confirm(
-            "The protocors on Memories will be replaced! Are you sure you want to send the team to Showcase?",
+            t('TeamOptimizer.alertSendShowcase'),
         );
         if (!confirmed) return;
 
@@ -297,7 +299,7 @@ function TeamOptimizer() {
 
             saveShowcaseTeams([...teams, newTeam]);
 
-            alert(`"${teamName}" sent to Showcase successfully!`);
+            alert(t('TeamOptimizer.alertSentShowcaseSuccess', {teamName: teamName}));
         } catch (err) {
             console.error("Send to Showcase error:", err);
             alert("Failed to send team to Showcase. See console for details.");
@@ -377,7 +379,7 @@ function TeamOptimizer() {
 
                 <div className={styles.selectMenu}>
                     <div className={styles.protoSelectContainer}>
-                        Exclude protocores:
+                        {t('TeamOptimizer.excludeText')}
                         <div className={styles.selectContainer}>
                             <Select
                                 isMulti
@@ -385,18 +387,18 @@ function TeamOptimizer() {
                                 value={data.excludedCards || []}
                                 onChange={handleExcludedCardsChange}
                                 className={styles.select}
-                                placeholder="Select cards to exclude their protocores"
+                                placeholder={t('TeamOptimizer.excludePlaceholder')}
                                 isSearchable
                                 formatOptionLabel={formatCardOption}
                             />
                         </div>
                     </div>
                     <div className={styles.protoSelectContainer}>
-                        Choose Protocores:
+                        {t('TeamOptimizer.chooseProtocoresText')}
                         <div className={styles.selectContainer}>
                             Beta 1:
                             <Select
-                                placeholder="Select Beta Protocore"
+                                placeholder={t('TeamOptimizer.chooseBetaPlaceholder')}
                                 options={betaProtocoreOptions}
                                 value={data.betaProtocore_1}
                                 onChange={handleBetaChange1}
@@ -408,7 +410,7 @@ function TeamOptimizer() {
                         <div className={styles.selectContainer}>
                             Beta 2:
                             <Select
-                                placeholder="Select Beta Protocore"
+                                placeholder={t('TeamOptimizer.chooseBetaPlaceholder')}
                                 options={betaProtocoreOptions}
                                 value={data.betaProtocore_2}
                                 onChange={handleBetaChange2}
@@ -420,7 +422,7 @@ function TeamOptimizer() {
                         <div className={styles.selectContainer}>
                             Delta 1:
                             <Select
-                                placeholder="Select Delta Protocore"
+                                placeholder={t('TeamOptimizer.chooseDeltaPlaceholder')}
                                 options={deltaProtocoreOptions}
                                 value={data.deltaProtocore_1}
                                 onChange={handleDeltaChange1}
@@ -432,7 +434,7 @@ function TeamOptimizer() {
                         <div className={styles.selectContainer}>
                             Delta 2:
                             <Select
-                                placeholder="Select Delta Protocore"
+                                placeholder={t('TeamOptimizer.chooseDeltaPlaceholder')}
                                 options={deltaProtocoreOptions}
                                 value={data.deltaProtocore_2}
                                 onChange={handleDeltaChange2}
@@ -487,28 +489,28 @@ function TeamOptimizer() {
 
             <div className={styles.buttonsContainer}>
                 <button className={styles.clearButton} onClick={clearAll}>
-                    Clear all
+                    {t('TeamOptimizer.clearButton')}
                 </button>
                 <button
                     className={styles.startButton}
                     onClick={startOptimization}
                     disabled={isOptimizing}
                 >
-                    {isOptimizing ? "Optimizing..." : "Start"}
+                    {isOptimizing ? t('TeamOptimizer.startButtonActive') : t('TeamOptimizer.startButton')}
                 </button>
                 <button
                     className={styles.sendButton}
                     onClick={handleSendToShowcase}
                     disabled={!activeResults || isOptimizing || isSending}
                 >
-                    {isSending ? "Sending..." : "Send to Showcase"}
+                    {isSending ? t('TeamOptimizer.sendButtonActive') : t('TeamOptimizer.sendButton')}
                 </button>
             </div>
 
             {/* Индикатор загрузки */}
             {isOptimizing && (
                 <div className={styles.loadingIndicator}>
-                    {progressText || "Calculating best protocores, please wait..."}
+                    {progressText || t('TeamOptimizer.progressText')}
                 </div>
             )}
 
