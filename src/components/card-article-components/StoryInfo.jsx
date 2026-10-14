@@ -2,10 +2,12 @@ import styles from "./StoryInfo.module.css";
 import {storyCardInfo, memoriesData, mythTitle} from "@data";
 import {useRef, useState} from "react";
 import {CopyableText, ModalWindow} from "@components";
+import { useTranslation } from "react-i18next";
 
 function StoryInfo({ cardId }) {
   const modalRef = useRef();
   const [mythInfo, setMythInfo] = useState(null);
+  const { t } = useTranslation();
 
   // Находим информацию о карточке в memoriesData
   const card = memoriesData.find((c) => String(c.id) === String(cardId));
@@ -61,7 +63,7 @@ function StoryInfo({ cardId }) {
   return (
       <>
         <div className={styles.container}>
-          <div className={styles.label}>Story:</div>
+          <div className={styles.label}>{t('StoryInfo.title')} </div>
           <a
               href={hasLink ? card.link : "#"}
               target={hasLink ? "_blank" : undefined}
@@ -76,12 +78,12 @@ function StoryInfo({ cardId }) {
         {/* Модалка для Myth */}
         <ModalWindow
             ref={modalRef}
-            title="Description"
-            width={300}
+            title={t('StoryInfo.titleModal')}
+            width={350}
             tag={
               <div className={styles.mythModal}>
                 <p>
-                  The memory is related to the Myth story
+                  {t('StoryInfo.titleText')}
                 </p>
                 <div>
                   <CopyableText

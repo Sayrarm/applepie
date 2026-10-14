@@ -324,5 +324,14 @@ export const en = {
         CardArticle: {
             navigation: 'Memories',
         },
+        ObtainInfo: {
+            title: 'Obtain:',
+            titleModal: 'How to get: {{obtain}}',
+        },
+        StoryInfo: {
+            title: 'Story:',
+            titleModal: 'Description',
+            titleText: 'The memory is related to the Myth story',
+        },
     },
 };

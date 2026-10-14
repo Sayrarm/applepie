@@ -3,10 +3,12 @@ import styles from "./ObtainInfo.module.css";
 import { ModalWindow, BannerList } from "@components";
 import { getImageUrl } from "@hooks";
 import { bannersDataFull } from "@data";
+import { useTranslation } from "react-i18next";
 
 function ObtainInfo({ cardId, obtainData }) {
   const obtainModalRef = useRef();
   const [selectedObtain, setSelectedObtain] = useState(null);
+    const { t } = useTranslation();
 
   const showObtainModal = (obtainItem) => {
     setSelectedObtain(obtainItem);
@@ -36,7 +38,7 @@ function ObtainInfo({ cardId, obtainData }) {
 
   return (
     <div className={styles.obtainContainer}>
-      <div className={styles.label}>Obtain:</div>
+      <div className={styles.label}>{t('ObtainInfo.title')}</div>
       <div className={styles.values}>
         {foundObtains.map((item, index) => (
           <span key={item.obtain}>
@@ -56,7 +58,7 @@ function ObtainInfo({ cardId, obtainData }) {
       <ModalWindow
         width={600}
         ref={obtainModalRef}
-        title={`How to get: ${selectedObtain?.obtain || ""}`}
+        title={t('ObtainInfo.titleModal', { obtain: selectedObtain?.obtain || '' })}
         tag={
           <div className={styles.modalInfo}>
             <div className={styles.modalInfo}>

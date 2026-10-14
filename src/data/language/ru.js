@@ -322,5 +322,14 @@ export const ru = {
         CardArticle: {
             navigation: 'Воспоминания',
         },
+        ObtainInfo: {
+            title: 'Получить:',
+            titleModal: 'Как получить: {{obtain}}',
+        },
+        StoryInfo: {
+            title: 'История:',
+            titleModal: 'Описание',
+            titleText: 'Это воспоминание связано с историей мифа',
+        },
     },
 };
