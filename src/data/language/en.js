@@ -391,5 +391,15 @@ export const en = {
             zeroProtocores: 'No protocores equipped',
             titleModalProtocore: 'Edit Protocore',
         },
+        Calculator: {
+            showcase: 'Showcase',
+            optimizer: 'Optimizer',
+            protocoreCalculator: 'Protocore Calculator',
+            memoryCalculator: 'Memory Calculator',
+        },
+        OptimizerNavigation: {
+            team: 'Team Optimizer',
+            memory: 'Memory Optimizer',
+        },
     },
 };

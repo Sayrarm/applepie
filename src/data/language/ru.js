@@ -389,5 +389,15 @@ export const ru = {
             zeroProtocores: 'Протокоры не экипированы',
             titleModalProtocore: 'Изменить протокор',
         },
+        Calculator: {
+            showcase: 'Шоукейс',
+            optimizer: 'Оптимайзер',
+            protocoreCalculator: 'Калькулятор Протокора',
+            memoryCalculator: 'Калькулятор Воспоминания',
+        },
+        OptimizerNavigation: {
+            team: 'Оптимайзер Команды',
+            memory: 'Оптимайзер Воспоминания',
+        },
     },
 };
