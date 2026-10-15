@@ -181,7 +181,7 @@ export const ru = {
             titleContainer: 'Добавьте скриншоты с протокорами',
             chooseButton: 'Выбрать файлы',
             processing: 'Обработка {{current}}/{{total}}...',
-            saveProtocores: 'Сохранено Протокоров ({{count}})',
+            saveProtocores: 'Сохранить Протокоры ({{count}})',
             cancelButton: 'Отмена',
             titleSelectedFiles: 'Выбрать файлы:',
             textEstimaied: 'Осталось времени:',
