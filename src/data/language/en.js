@@ -553,5 +553,17 @@ export const en = {
             addGoalAlert: 'Goal added to Development Goal on Main page!',
             mainButton: 'Go to Main Page',
         },
+        CharacterArticle: {
+            label: 'Spoiler Alert',
+            titleMain: 'This page provides information about the character\'s story. If you don\'t want spoilers, please open the links with caution :)',
+            main: '- the main storyline. Below are the chapters in which the character appears (both in full and cameo). Presented as a visual novel + animation;',
+            bond: '- a story that opens when the Affinity level increases. Presented as an animation;',
+            wu: '- a story that opens when you open Main Story. Presented as text;',
+            anecdotes: '- a story that opens when you receive multiple Character Memories or open Main Story. Presented as text;',
+            myths: '- a major plot that is presented in several chapters (usually 9). Specific Memories are required. Presented as a visual novel + animation;',
+            memoria: '- story/dates that can be obtained from 5-star Memories (and some 4-star Memories). Presented as a visual novel + animation;',
+            tm: '- a story that can be obtained from 4-star Memories. Presented as an audiobook (MC is not voiced, subtitles must be read);',
+            st: '- a story that can be obtained from 4-star Memories or reaching the required Affinity level. Presented as an audio track with only the male character voiced.'
+        },
     },
 };
