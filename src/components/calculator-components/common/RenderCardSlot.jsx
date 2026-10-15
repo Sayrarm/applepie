@@ -1,5 +1,6 @@
 import styles from "../showcase/Showcase.module.css";
 import { ProtocoreBlock, Card } from "@components";
+import { useTranslation } from "react-i18next";
 
 // Порядок отображения протокоров: Alpha/Gamma — слева, Beta/Delta — справа
 const PROTOCORE_TYPE_ORDER = { alpha: 0, gamma: 0, beta: 1, delta: 1 };
@@ -24,6 +25,7 @@ function RenderCardSlot({
                           showCardSlotEquipped = true,
                         }) {
   const cardData = card ? getCardData(card) : null;
+  const { t } = useTranslation();
 
   // Сортированный список протокоров для отображения
   const sortedProtocores = cardData?.protocores
@@ -62,14 +64,14 @@ function RenderCardSlot({
                             </div>
                         ))
                     ) : (
-                        <div className={styles.noProtocores}>No protocores</div>
+                        <div className={styles.noProtocores}>{t('RenderCardSlot.noProtocoreText')}</div>
                     )}
                   </div>
               )}
             </>
         ) : (
             <div className={styles.emptySlotContent}>
-              <span className={styles.emptyLabel}>+ Add {placement} Memory</span>
+              <span className={styles.emptyLabel}>{t('RenderCardSlot.addButton', {placement: placement})}</span>
             </div>
         )}
       </div>

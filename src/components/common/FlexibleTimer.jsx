@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./FlexibleTimer.module.css";
 import { useTimezone } from "@components";
+import { useTranslation } from "react-i18next";
 
 function FlexibleTimer({
   startDateTime = "2026-01-01T00:00:00", // Формат: YYYY-MM-DDTHH:MM:SS
@@ -8,6 +9,7 @@ function FlexibleTimer({
   autoRefresh = false,
 }) {
   const { timezone } = useTimezone();
+  const { t } = useTranslation();
 
   // Добавляем часовой пояс к датам
   const fullStart = startDateTime + timezone;
@@ -115,13 +117,13 @@ function FlexibleTimer({
   const getStatusConfig = () => {
     switch (status) {
       case "waiting":
-        return { text: `Upcoming:`, emoji: "⏰" };
+        return { text: t('timer.waiting'), emoji: "⏰" };
       case "active":
-        return { text: `Time left:`, emoji: "⚡" };
+        return { text: t('timer.active'), emoji: "⚡" };
       case "finished":
-        return { text: `Completed`, emoji: "🏁" };
+        return { text: t('timer.finished'), emoji: "🏁" };
       default:
-        return { text: "", emoji: "" };
+        return { text: t('timer.active'), emoji: "⚡" };
     }
   };
 
@@ -132,7 +134,7 @@ function FlexibleTimer({
     isNaN(new Date(currentStart).getTime()) ||
     isNaN(new Date(currentEnd).getTime())
   ) {
-    return <div className={styles.error}>permanently</div>;
+    return <div className={styles.error}>{t('timer.permanently')}</div>;
   }
 
   return (
@@ -145,22 +147,22 @@ function FlexibleTimer({
         <div className={styles.timer}>
           <div className={styles.time}>
             <div>{formatNumber(timeLeft.days || 0)}</div>
-            <div className={styles.tips}>Days</div>
+            <div className={styles.tips}>{t('timer.days')}</div>
           </div>
           <div className={styles.time}>:</div>
           <div className={styles.time}>
             <div>{formatNumber(timeLeft.hours || 0)}</div>
-            <div className={styles.tips}>Hours</div>
+            <div className={styles.tips}>{t('timer.hours')}</div>
           </div>
           <div className={styles.time}>:</div>
           <div className={styles.time}>
             <div>{formatNumber(timeLeft.minutes || 0)}</div>
-            <div className={styles.tips}>Minutes</div>
+            <div className={styles.tips}>{t('timer.minutes')}</div>
           </div>
           <div className={styles.time}>:</div>
           <div className={styles.time}>
             <div>{formatNumber(timeLeft.seconds || 0)}</div>
-            <div className={styles.tips}>Seconds</div>
+            <div className={styles.tips}>{t('timer.seconds')}</div>
           </div>
         </div>
       ) : (

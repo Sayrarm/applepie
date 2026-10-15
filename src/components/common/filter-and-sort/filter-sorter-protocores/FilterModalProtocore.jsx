@@ -17,12 +17,15 @@ import {
   clearAllProtocoreFilters,
   getProtocoreFilterKeysByPrefix,
 } from "@localstorage";
+import { useTranslation } from "react-i18next";
 
 const FilterModalProtocore = forwardRef(
   ({ open, onClose, onFilter, onClearFilters, storagePrefix = "" }, ref) => {
     const filterKeys = getProtocoreFilterKeysByPrefix(storagePrefix);
+    const { t } = useTranslation();
 
-    const [types, setTypes] = useState(() => getTypesFilter(storagePrefix));
+
+      const [types, setTypes] = useState(() => getTypesFilter(storagePrefix));
     const [stellactrum, setStellactrum] = useState(() =>
       getStellactrumFilter(storagePrefix),
     );
@@ -115,8 +118,8 @@ const FilterModalProtocore = forwardRef(
       "Oath Strength",
     ];
     const statusOptions = [
-      { label: "Equipped", value: "equipped" },
-      { label: "Free", value: "free" },
+      { label: t('FilterModalProtocore.equipped'), value: "equipped" },
+      { label: t('FilterModalProtocore.free'), value: "free" },
     ];
 
     const tagRender = (props) => {
@@ -171,14 +174,14 @@ const FilterModalProtocore = forwardRef(
 
     return (
       <Modal
-        title="Filter MyProtocores"
+        title={t('FilterModalProtocore.filterTitle')}
         open={open}
         onOk={handleOk}
         onCancel={onClose}
         width={450}
       >
         <div style={{ marginBottom: 15 }}>
-          <span>Type: </span>
+          <span>{t('FilterModalProtocore.type')} </span>
           <Checkbox.Group
             options={protocoreTypeKeys.map((key) => ({
               label: protocoreTypes[key].name,
@@ -190,7 +193,7 @@ const FilterModalProtocore = forwardRef(
         </div>
 
         <div style={{ marginBottom: 15 }}>
-          <span>Level: </span>
+          <span>{t('FilterModalProtocore.level')} </span>
           <Checkbox.Group
             options={levelOptions.map((l) => ({
               label: `Lv. ${l}`,
@@ -202,7 +205,7 @@ const FilterModalProtocore = forwardRef(
         </div>
 
         <div style={{ marginBottom: 15 }}>
-          <span>Main Stat: </span>
+          <span>{t('FilterModalProtocore.mainStat')} </span>
           <Checkbox.Group
             options={mainStatOptions.map((stat) => ({
               label: stat,
@@ -214,7 +217,7 @@ const FilterModalProtocore = forwardRef(
         </div>
 
         <div style={{ marginBottom: 15 }}>
-          <span>Sub Stat: </span>
+          <span>{t('FilterModalProtocore.subStat')} </span>
           <Checkbox.Group
             options={subStatOptions.map((stat) => ({
               label: stat,
@@ -226,7 +229,7 @@ const FilterModalProtocore = forwardRef(
         </div>
 
         <div style={{ marginBottom: 15 }}>
-          <span>Status: </span>
+          <span>{t('FilterModalProtocore.status')} </span>
           <Checkbox.Group
             options={statusOptions}
             value={status}
@@ -235,19 +238,19 @@ const FilterModalProtocore = forwardRef(
         </div>
 
         <div style={{ marginBottom: 15 }}>
-          <span>Stella: </span>
+          <span>{t('FilterModalProtocore.stella')} </span>
           <Select
             tagRender={tagRender}
             mode="multiple"
             value={stellactrum}
             onChange={setStellactrum}
             style={{ width: "100%" }}
-            placeholder="Select stellactrum colors"
+            placeholder={t('FilterModalProtocore.stellaPlaceholder')}
             options={stellactrumColors}
           />
         </div>
 
-        <Button onClick={handleClear}>Clear</Button>
+        <Button onClick={handleClear}>{t('FilterModalProtocore.clear')}</Button>
       </Modal>
     );
   },

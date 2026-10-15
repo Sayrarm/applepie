@@ -1,8 +1,10 @@
 import { useTimezone } from "@components";
 import styles from "./TimezoneButton.module.css";
+import { useTranslation } from "react-i18next";
 
 function TimezoneButton() {
   const { timezone, setTimezone } = useTimezone();
+  const { t } = useTranslation();
 
   const timezones = [
     { label: "EU", value: "+02:00" },
@@ -16,10 +18,10 @@ function TimezoneButton() {
 
   const getCurrentLabel = () => {
     return timezone === "+02:00"
-      ? "EU time"
+      ? t('TimeZone.eu')
       : timezone === "+08:00"
-        ? "Asia time"
-        : "NA time";
+        ? t('TimeZone.asia')
+        : t('TimeZone.na');
   };
 
   return (

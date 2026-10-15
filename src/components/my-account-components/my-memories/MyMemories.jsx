@@ -20,6 +20,7 @@ import {
     getCardProtocores,
     enhanceMemoriesWithAvailability,
 } from "@localstorage";
+import { useTranslation } from "react-i18next";
 
 function MyMemories() {
     const {searchQuery, onSearch} = useSearch("mymemories");
@@ -37,6 +38,7 @@ function MyMemories() {
 
     const filterModalRef = useRef();
     const tableRef = useRef(); // ссылка на MemoriesTable
+    const { t } = useTranslation();
 
     // тик — меняется, когда надо пересчитать данные из localStorage
     const [refreshTick, setRefreshTick] = useState(0);
@@ -171,7 +173,7 @@ function MyMemories() {
                     ref={tableRef}
                     data={sortedCards}
                     storageKey="mymemories"
-                    emptyText="No available memories found"
+                    emptyText={t('MyMemories.emptyMemories')}
                 />
             </section>
         </section>

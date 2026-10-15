@@ -179,3 +179,7 @@ export {
   saveOcrProtocore,
   runOcrBatch
 } from "./ocr-reader-data/ocr-protocore-utils.js";
+
+//language
+export { en } from "./language/en.js";
+export { ru } from "./language/ru.js";

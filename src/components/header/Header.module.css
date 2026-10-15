@@ -59,6 +59,7 @@ header {
 .buttonsChangers {
   display: flex;
   gap: 5px;
+  margin-right: 15px;
 }
 
 /*************************burger menu button****************/
@@ -187,13 +188,13 @@ header {
 
 /*MOBILE*/
 
-@media screen and (min-width: 755px) {
+@media screen and (min-width: 778px) {
   .burgerContainer {
     display: none;
   }
 }
 
-@media screen and (max-width: 754px) {
+@media screen and (max-width: 777px) {
   .link {
     display: none;
   }

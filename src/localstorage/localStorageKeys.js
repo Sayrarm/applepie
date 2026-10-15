@@ -4,12 +4,15 @@ export const KEYS = {
   SHOWCASE: "showcase_teams", //витрина(шоукейс) команды
   ACTIVE_TEAM_KEY: 'showcase_active_team_id',
   CALC_RESULT: "farm_goals", //трекер
-  THEME: "theme", //темная/светлая тема
-  TIMEZONE: "app_timezone", //часовой пояс
   TABLE_SORT_KEY: "mymemories_table_sort", //фильтр таблицы в MyMemories
   CARD_SIZE: "card_image_size", //карточка маленького/большого размера
   SHOW_USER_INFO: "show_user_info", //показывать информацию о карточке (уровень, ранг, возвышение)
   PROTOCORES: "protocores", // все протокоры
+
+  //ui
+  THEME: "theme", //темная/светлая тема
+  TIMEZONE: "app_timezone", //часовой пояс
+  LANGUAGE: "app_language", //язык
 
   // Инвентарь
   INVENTORY_BOTTLES: "inventory_bottles",

@@ -4,6 +4,7 @@ import styles from "./MemoriesTable.module.css";
 import { getImageUrl } from "@hooks";
 import { rankOptions, formatOptionLabel } from "@data";
 import { useTableSort } from "@hooks";
+import { useTranslation } from "react-i18next";
 
 const formatNumber = (num) => {
     if (num === undefined || num === null || isNaN(num)) return "—";
@@ -41,6 +42,7 @@ function MemoriesTable({
         { key: null, direction: "desc" },
         storageKey,
     );
+    const { t } = useTranslation();
 
     useImperativeHandle(ref, () => ({ resetSort }), [resetSort]);
 
@@ -59,107 +61,107 @@ function MemoriesTable({
             <table className={styles.statsTable}>
                 <thead>
                 <tr>
-                    {showImage && <th className={styles.sortable}>Memory</th>}
+                    {showImage && <th className={styles.sortable}></th>}
 
                     {showName && (
                         <th onClick={() => handleSort("name")} className={styles.sortable}>
-                            Name {getSortIcon("name")}
+                            {t('MemoriesTable.name')} {getSortIcon("name")}
                         </th>
                     )}
 
                     {showLevel && (
                         <th onClick={() => handleSort("level")} className={styles.sortable}>
-                            Level {getSortIcon("level")}
+                            {t('MemoriesTable.level')} {getSortIcon("level")}
                         </th>
                     )}
 
                     {showRank && (
                         <th onClick={() => handleSort("rank")} className={styles.sortable}>
-                            Rank {getSortIcon("rank")}
+                            {t('MemoriesTable.rank')} {getSortIcon("rank")}
                         </th>
                     )}
 
                     {showStella && (
                         <th onClick={() => handleSort("stellaName")} className={styles.sortable}>
-                            Stella {getSortIcon("stellaName")}
+                            {t('MemoriesTable.stella')} {getSortIcon("stellaName")}
                         </th>
                     )}
 
                     {showRarity && (
                         <th onClick={() => handleSort("rarityName")} className={styles.sortable}>
-                            Rarity {getSortIcon("rarityName")}
+                            {t('MemoriesTable.rarity')} {getSortIcon("rarityName")}
                         </th>
                     )}
 
                     {showPlacement && (
                         <th onClick={() => handleSort("placementName")} className={styles.sortable}>
-                            Placement {getSortIcon("placementName")}
+                            {t('MemoriesTable.placement')} {getSortIcon("placementName")}
                         </th>
                     )}
 
                     {showTalent && (
                         <th onClick={() => handleSort("talentName")} className={styles.sortable}>
-                            Talent {getSortIcon("talentName")}
+                            {t('MemoriesTable.talent')} {getSortIcon("talentName")}
                         </th>
                     )}
 
                     {showProtocoreLevels && (
                         <th onClick={() => handleSort("protocoreLevels")} className={styles.sortable}>
-                            Protocores lvl {getSortIcon("protocoreLevels")}
+                            {t('MemoriesTable.protocores')} {getSortIcon("protocoreLevels")}
                         </th>
                     )}
 
                     {showHp && (
                         <th onClick={() => handleSort("hp")} className={styles.sortable}>
-                            HP {getSortIcon("hp")}
+                            {t('MemoriesTable.hp')} {getSortIcon("hp")}
                         </th>
                     )}
 
                     {showAtk && (
                         <th onClick={() => handleSort("atk")} className={styles.sortable}>
-                            ATK {getSortIcon("atk")}
+                            {t('MemoriesTable.atk')} {getSortIcon("atk")}
                         </th>
                     )}
 
                     {showDef && (
                         <th onClick={() => handleSort("def")} className={styles.sortable}>
-                            DEF {getSortIcon("def")}
+                            {t('MemoriesTable.def')} {getSortIcon("def")}
                         </th>
                     )}
 
                     {showCritRate && (
                         <th onClick={() => handleSort("critRate")} className={styles.sortable}>
-                            Crit Rate {getSortIcon("critRate")}
+                            {t('MemoriesTable.critRate')} {getSortIcon("critRate")}
                         </th>
                     )}
 
                     {showCritDmg && (
                         <th onClick={() => handleSort("critDmg")} className={styles.sortable}>
-                            Crit DMG {getSortIcon("critDmg")}
+                            {t('MemoriesTable.critDMG')} {getSortIcon("critDmg")}
                         </th>
                     )}
 
                     {showDmgBoost && (
                         <th onClick={() => handleSort("dmgBoost")} className={styles.sortable}>
-                            DMG Boost to Weakened {getSortIcon("dmgBoost")}
+                            {t('MemoriesTable.weakened')} {getSortIcon("dmgBoost")}
                         </th>
                     )}
 
                     {showOathStrength && (
                         <th onClick={() => handleSort("oathStrength")} className={styles.sortable}>
-                            Oath Strength {getSortIcon("oathStrength")}
+                            {t('MemoriesTable.oathStrength')} {getSortIcon("oathStrength")}
                         </th>
                     )}
 
                     {showOathRecoveryBoost && (
                         <th onClick={() => handleSort("oathRecoveryBoost")} className={styles.sortable}>
-                            Oath Recovery Boost {getSortIcon("oathRecoveryBoost")}
+                            {t('MemoriesTable.oathRecovery')} {getSortIcon("oathRecoveryBoost")}
                         </th>
                     )}
 
                     {showExpeditedEnergyBoost && (
                         <th onClick={() => handleSort("expeditedEnergyBoost")} className={styles.sortable}>
-                            Expedited Energy Boost {getSortIcon("expeditedEnergyBoost")}
+                            {t('MemoriesTable.expeditedEnergy')} {getSortIcon("expeditedEnergyBoost")}
                         </th>
                     )}
                 </tr>

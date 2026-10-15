@@ -37,7 +37,7 @@
 
 .titleTD,
 .titleTDMain {
-    white-space: nowrap;
+    white-space: wrap;
 }
 
 .titleTDMain {

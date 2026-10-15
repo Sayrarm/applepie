@@ -7,6 +7,7 @@ import {
   protocoreTypes,
   SUBSTAT_LEVELS,
 } from "@data";
+import { useTranslation } from "react-i18next";
 
 // Получить значение мейн стата для указанного уровня
 export const getMainStatValue = (protocoreType, statName, level) => {
@@ -20,7 +21,7 @@ export const getMainStatValue = (protocoreType, statName, level) => {
 };
 
 // Получить информацию о прокачке саб-статов
-export const getSubstatUpgradeInfo = (currentLevel, targetLevel) => {
+export const getSubstatUpgradeInfo = (currentLevel, targetLevel, t) => {
   const upgrades = [];
 
   for (let level = currentLevel + 1; level <= targetLevel; level++) {
@@ -36,14 +37,14 @@ export const getSubstatUpgradeInfo = (currentLevel, targetLevel) => {
         upgrades.push({
           level: level,
           type: "new",
-          message: `+1 secondary stat (at level ${level})`,
+          message: t('ProtocoreCalculator.newSubstat', { level }),
         });
       } else {
         // Усиливается существующий саб-стат
         upgrades.push({
           level: level,
           type: "enhance",
-          message: `Secondary stat enhanced (at level ${level})`,
+          message: t('ProtocoreCalculator.enhanceSubstat', { level }),
         });
       }
     }

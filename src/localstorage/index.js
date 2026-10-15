@@ -50,6 +50,8 @@ export {
   saveCardSize,
   getShowUserInfo,
   saveShowUserInfo,
+  getLanguage,
+  saveLanguage
 } from "./ui-storage.js";
 export {
   getCardLevel,

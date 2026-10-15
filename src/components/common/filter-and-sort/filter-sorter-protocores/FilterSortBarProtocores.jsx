@@ -3,6 +3,7 @@ import styles from "../FilterSortBar.module.css";
 import FilterModalProtocore from "./FilterModalProtocore.jsx";
 import { getImageUrl } from "@hooks";
 import { stylesFnSearch } from "@components";
+import { useTranslation } from "react-i18next";
 
 const { Search } = Input;
 
@@ -20,28 +21,31 @@ function FilterSortBarProtocores({
   resetAllSettings,
   storagePrefix = "",
 }) {
+  const { t } = useTranslation();
+
   return (
     <div className={styles.options}>
       <div className={styles.select}>
         <div className={styles.sortBy}>
           <Select
             mode="tags"
-            placeholder="Select sort"
+            placeholder={t('FilterSortBarProtocores.placeholder')}
             value={sortCriteria}
             onChange={handleSortChange}
             style={{ width: 250 }}
             className={styles.colorBrown}
             allowClear
             options={[
-              { value: "type", label: "Type" },
-              { value: "stellactrum", label: "Stellactrum" },
-              { value: "level", label: "Level" },
-              { value: "mainStat", label: "Main Stat" },
-              { value: "status", label: "Status" },
+              { value: "type", label: t('FilterSortBarProtocores.type') },
+              { value: "stellactrum", label: t('FilterSortBarProtocores.stella') },
+              { value: "level", label: t('FilterSortBarProtocores.level') },
+              { value: "mainStat", label: t('FilterSortBarProtocores.mainStat') },
+              { value: "status", label: t('FilterSortBarProtocores.status') },
             ]}
           />
           <Button
             onClick={clearSorting}
+            title={t('FilterSortBarProtocores.clearSorting')}
             className={styles.colorBrown}
             size="medium"
             icon={
@@ -56,7 +60,7 @@ function FilterSortBarProtocores({
 
         <div className={styles.filterBy}>
           <Search
-            placeholder="Search protocores..."
+            placeholder={t('FilterSortBarProtocores.search')}
             allowClear
             onSearch={onSearch}
             name="search-fn"
@@ -72,6 +76,7 @@ function FilterSortBarProtocores({
 
           <Button
             onClick={() => setIsModalOpen(true)}
+            title={t('FilterSortBarProtocores.filterButton')}
             className={styles.colorBrown}
             icon={
               <img
@@ -84,7 +89,7 @@ function FilterSortBarProtocores({
 
           <Button
             onClick={resetAllSettings}
-            title="Reset all filters and sorting"
+            title={t('FilterSortBarProtocores.resetButton')}
             className={styles.colorBrown}
             icon={
               <img

@@ -4,10 +4,12 @@ import { getImageUrl } from "@hooks";
 import { getHeartsandExchange, getCrystalBoxExchange } from "@data";
 import { KEYS } from "@localstorage";
 import { AsideList } from "@components";
+import { useTranslation } from "react-i18next";
 
 function AsideReplaceableResources({ goal, remaining }) {
   const [heartsandExchange, setHeartsandExchange] = useState(null);
   const [crystalBoxExchange, setCrystalBoxExchange] = useState(null);
+  const { t } = useTranslation();
 
   // Функция для обновления данных
   const updateData = () => {
@@ -121,7 +123,7 @@ function AsideReplaceableResources({ goal, remaining }) {
           needsCredits &&
           heartsandExchange.bottles.hasAny &&
           heartsandExchange.credits.total > 0 && (
-            <span className={styles.span}> or </span>
+            <span className={styles.span}> {t('AsideReplacableResources.or')} </span>
           )}
 
         {/* Показываем Credits только если они нужны (remaining.credits > 0) и есть */}
@@ -214,14 +216,14 @@ function AsideReplaceableResources({ goal, remaining }) {
               )}
               {remaining.crystals.N > 0 &&
                 (remaining.crystals.R > 0 || remaining.crystals.SR > 0) && (
-                  <span className={styles.span}> or </span>
+                  <span className={styles.span}> {t('AsideReplacableResources.or')} </span>
                 )}
               {/* Показываем R только если нужен R */}
               {remaining.crystals.R > 0 && (
                 <span>R: {crystalBoxExchange.box_general_to_r}</span>
               )}
               {remaining.crystals.R > 0 && remaining.crystals.SR > 0 && (
-                <span className={styles.span}> or </span>
+                <span className={styles.span}> {t('AsideReplacableResources.or')} </span>
               )}
               {/* Показываем SR только если нужен SR */}
               {remaining.crystals.SR > 0 && (
@@ -246,7 +248,7 @@ function AsideReplaceableResources({ goal, remaining }) {
   return (
     <AsideList
       className={styles.aside}
-      title="You have replaceable resources:"
+      title={t('AsideReplacableResources.titleReplacableResources')}
       items={asideItems}
     />
   );

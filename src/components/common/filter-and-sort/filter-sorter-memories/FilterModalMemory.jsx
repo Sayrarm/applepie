@@ -14,10 +14,12 @@ import {
   clearAllFilters,
   getFilterKeys,
 } from "@localstorage";
+import { useTranslation } from "react-i18next";
 
 const FilterModalMemory = forwardRef(
   ({ open, onClose, onFilter, onClearFilters, storagePrefix = "" }, ref) => {
     const filterKeys = getFilterKeys(storagePrefix);
+    const { t } = useTranslation();
 
     // Состояния для каждого фильтра с загрузкой из localStorage
     const [rarity, setRarity] = useState(() => getRarityFilter(storagePrefix));
@@ -96,8 +98,8 @@ const FilterModalMemory = forwardRef(
     ];
 
     const optionsAvailability = [
-      { label: "Available", value: "available" },
-      { label: "Not Available", value: "notAvailable" },
+      { label: t('FilterModalMemory.available'), value: "available" },
+      { label: t('FilterModalMemory.notAvailable'), value: "notAvailable" },
     ];
 
     const tagRender = (props) => {
@@ -171,14 +173,14 @@ const FilterModalMemory = forwardRef(
 
     return (
       <Modal
-        title="Filter"
+        title={t('FilterModalMemory.titleModal')}
         open={open}
         onOk={handleOk}
         onCancel={onClose}
         width={400}
       >
         <div style={{ marginBottom: 15 }}>
-          <span>Rarity: </span>
+          <span>{t('FilterModalMemory.rarity')} </span>
           <Checkbox.Group
             options={optionsRarity}
             value={rarity}
@@ -187,7 +189,7 @@ const FilterModalMemory = forwardRef(
         </div>
 
         <div style={{ marginBottom: 15 }}>
-          <span>Placement: </span>
+          <span>{t('FilterModalMemory.placement')} </span>
           <Checkbox.Group
             options={optionsPlace}
             value={placement}
@@ -196,7 +198,7 @@ const FilterModalMemory = forwardRef(
         </div>
 
         <div style={{ marginBottom: 15 }}>
-          <span>Talent: </span>
+          <span>{t('FilterModalMemory.talent')} </span>
           <Checkbox.Group
             options={optionsTalent}
             value={talent}
@@ -205,7 +207,7 @@ const FilterModalMemory = forwardRef(
         </div>
 
         <div style={{ marginBottom: 15 }}>
-          <span>Availability: </span>
+          <span>{t('FilterModalMemory.availability')} </span>
           <Checkbox.Group
             options={optionsAvailability}
             value={availability}
@@ -214,7 +216,7 @@ const FilterModalMemory = forwardRef(
         </div>
 
         <div style={{ marginBottom: 15 }}>
-          <span>Stella: </span>
+          <span>{t('FilterModalMemory.stella')} </span>
           <Select
             tagRender={tagRender}
             mode="multiple"
@@ -225,7 +227,7 @@ const FilterModalMemory = forwardRef(
           />
         </div>
 
-        <Button onClick={handleClear}>Clear</Button>
+        <Button onClick={handleClear}>{t('FilterModalMemory.clear')}</Button>
       </Modal>
     );
   },

@@ -1,6 +1,7 @@
 .obtainContainer {
   display: flex;
   margin: 10px 0;
+  gap: 2px;
 }
 
 .label {

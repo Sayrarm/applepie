@@ -125,9 +125,12 @@
 .clearButton {
   background-color: var(--forSelect);
   box-shadow: var(--box-shadow);
-  padding: 10px;
+  padding: 10px 3px;
   color: var(--colorText);
-  font-size: 18px;
+  width: 180px;
+  margin: 5px 0 10px 0;
+  font-size: 14px;
+  transition: 0.2s;
 }
 
 .utilButtons {
@@ -135,11 +138,9 @@
   gap: 10px;
 }
 
-.screenshotButton,
-.clearButton {
-  width: 140px;
-  margin: 5px 0 10px 0;
-  font-size: 14px;
+.screenshotButton:hover,
+.clearButton:hover {
+  transform: translateY(-2px);
 }
 
 .cardsSection {
@@ -197,8 +198,12 @@
 }
 
 .noProtocores {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 40px;
+  width: 200px;
+  height: 310px;
 }
 
 .lunarCardsRow {

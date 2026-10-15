@@ -3,6 +3,7 @@ import { Button, Input, Select } from "antd";
 import FilterModalMemory from "./FilterModalMemory.jsx";
 import { getImageUrl } from "@hooks";
 import { stylesFnSearch } from "@components";
+import { useTranslation } from "react-i18next";
 
 const { Search } = Input;
 
@@ -23,6 +24,7 @@ function FilterSortBarMemories({
   storagePrefix = "",
 }) {
   const characters = ["Xavier", "Zayne", "Rafayel", "Sylus", "Caleb"];
+  const { t } = useTranslation();
 
   return (
     <div className={styles.options}>
@@ -53,19 +55,19 @@ function FilterSortBarMemories({
             mode="tags"
             size="medium"
             value={sortCriteria}
-            placeholder="Sorting by"
+            placeholder={t('FilterSortBarMemories.placeholder')}
             onChange={handleSortChange}
             className={styles.colorBrown}
             style={{ width: 250 }}
             options={[
-              { value: "char", label: "Character" },
-              { value: "name", label: "Memory's name" },
-              { value: "rarity", label: "Rarity" },
-              { value: "stella", label: "Stellactrum" },
-              { value: "placement", label: "Placement" },
-              { value: "talent", label: "Talent" },
-              { value: "release", label: "Release" },
-              { value: "level", label: "Level" },
+              { value: "char", label: t('FilterSortBarMemories.char') },
+              { value: "name", label: t('FilterSortBarMemories.name') },
+              { value: "rarity", label: t('FilterSortBarMemories.rarity') },
+              { value: "stella", label: t('FilterSortBarMemories.stella') },
+              { value: "placement", label: t('FilterSortBarMemories.placement') },
+              { value: "talent", label: t('FilterSortBarMemories.talent') },
+              { value: "release", label: t('FilterSortBarMemories.release') },
+              { value: "level", label: t('FilterSortBarMemories.level') },
             ]}
           />
 
@@ -78,10 +80,10 @@ function FilterSortBarMemories({
                 className={styles.imgIcon}
                 src={getImageUrl("../assets/icons/eraser_16863523.png")}
                 style={{ width: 22, height: 22 }}
-                alt="Clear sorting"
+                alt={t('FilterSortBarMemories.clearSorting')}
               />
             }
-            title="Clear sorting"
+            title={t('FilterSortBarMemories.clearSorting')}
             className={styles.colorBrown}
           />
         </div>
@@ -89,7 +91,7 @@ function FilterSortBarMemories({
 
       <aside className={styles.filterBy}>
         <Search
-          placeholder="Search by memory name"
+          placeholder={t('FilterSortBarMemories.search')}
           allowClear
           onSearch={onSearch}
           style={{ width: 215 }}
@@ -105,10 +107,10 @@ function FilterSortBarMemories({
               className={styles.imgIcon}
               src={getImageUrl("../assets/icons/filter.png")}
               style={{ width: 20, height: 20 }}
-              alt="Filter"
+              alt={t('FilterSortBarMemories.filterButton')}
             />
           }
-          title="Filter"
+          title={t('FilterSortBarMemories.filterButton')}
           className={styles.colorBrown}
         />
 
@@ -151,7 +153,7 @@ function FilterSortBarMemories({
               alt="Reset"
             />
           }
-          title="Reset all filters and sorting"
+          title={t('FilterSortBarMemories.resetButton')}
           className={styles.colorBrown}
         />
       </aside>

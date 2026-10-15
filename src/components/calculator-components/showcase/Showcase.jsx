@@ -24,12 +24,14 @@ import {
   calculateFinalStatsWithAffinity,
   calculateAffinityBonus,
 } from "@data";
+import { useTranslation } from "react-i18next";
 
 function Showcase() {
 
   const [editingName, setEditingName] = useState("");
   const [editingTeamIndex, setEditingTeamIndex] = useState(null);
   const [longPressTimer, setLongPressTimer] = useState(null);
+  const { t } = useTranslation();
 
   const showcaseRef = useRef();
   const captureRef = useRef();
@@ -104,12 +106,14 @@ function Showcase() {
   // ===== УДАЛЕНИЕ КОМАНДЫ =====
   const deleteTeam = (index) => {
     if (teams.length <= 1) {
-      alert("Cannot delete the last team!");
+      alert(t('Showcase.alertTeam'));
       return;
     }
     const teamToDelete = teams[index];
     if (
-      window.confirm(`Are you sure you want to delete "${teamToDelete.name}"?`)
+      window.confirm(
+          t('Showcase.alertDeleteTeam', {teamToDelete: teamToDelete.name})
+      )
     ) {
       deleteShowcaseTeam(teamToDelete.id);
       const updatedTeams = teams.filter((_, i) => i !== index);
@@ -146,7 +150,7 @@ function Showcase() {
   const clearCurrentTeam = () => {
     if (
       window.confirm(
-        `Are you sure you want to clear all data for "${currentTeam.name}"?`,
+        t('Showcase.alertClearButton', {currentTeam: currentTeam.name}),
       )
     ) {
       const updatedTeams = [...teams];
@@ -215,11 +219,11 @@ function Showcase() {
           }
           disabled={isCapturing}
         >
-          {isCapturing ? "📸 Capturing..." : "📸 Save as Image"}
+          {isCapturing ? t('Showcase.imageButtonActive') : t('Showcase.imageButton')}
         </button>
 
         <button className={styles.clearButton} onClick={clearCurrentTeam}>
-          🗑️ Clear All
+          {t('Showcase.clearButton')}
         </button>
       </div>
 
@@ -240,19 +244,19 @@ function Showcase() {
             <button
               className={styles.deleteTab}
               onClick={() => deleteTeam(index)}
-              title="Delete team"
+              title={t('Showcase.deletePlaceholder')}
             >
               ×
             </button>
           </div>
         ))}
         <button className={styles.addTeamButton} onClick={addNewTeam}>
-          + Add Team
+          {t('Showcase.addTeamButton')}
         </button>
 
         <ModalWindow
           ref={renameModalRef}
-          title="Rename Team"
+          title={t('Showcase.titleModalRename')}
           width={400}
           tag={
             <div className={styles.renameModal}>
@@ -272,7 +276,7 @@ function Showcase() {
               />
               <div className={styles.renameButtons}>
                 <Button className={styles.saveButton} onClick={saveTeamName}>
-                  Save
+                  {t('Showcase.saveButton')}
                 </Button>
               </div>
             </div>

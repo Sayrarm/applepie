@@ -39,3 +39,22 @@ export const saveShowUserInfo = (value) => {
     return false;
   }
 };
+
+// ===== ЯЗЫК ИНТЕРФЕЙСА =====
+export const getLanguage = () => {
+  try {
+    return localStorage.getItem(KEYS.LANGUAGE) || null;
+  } catch {
+    return null;
+  }
+};
+
+export const saveLanguage = (lang) => {
+  try {
+    localStorage.setItem(KEYS.LANGUAGE, lang);
+    return true;
+  } catch (error) {
+    console.error("Ошибка сохранения языка:", error);
+    return false;
+  }
+};

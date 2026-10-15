@@ -10,11 +10,13 @@ import { forwardRef, useImperativeHandle, useRef, useState } from "react";
 import { enhanceMemoriesWithAvailability } from "@localstorage";
 import { memoriesData } from "@data";
 import styles from "./ModalChooseCard.module.css";
+import { useTranslation } from "react-i18next";
 
 const ModalChooseCard = forwardRef(({ onSelectCard }, ref) => {
   const [modalPlacement, setModalPlacement] = useState(null);
   const [modalIndex, setModalIndex] = useState(null);
   const cardModalRef = useRef();
+  const { t } = useTranslation();
 
   // Хуки для фильтрации и сортировки карточек в модалке Showcase
   const filterModalRef = useRef();
@@ -83,11 +85,20 @@ const ModalChooseCard = forwardRef(({ onSelectCard }, ref) => {
     }
   };
 
+  const placementPart =
+      modalPlacement === "any" || !modalPlacement
+          ? ""
+          : modalPlacement.toUpperCase() + " ";
+
   return (
     <>
       <ModalWindow
         ref={cardModalRef}
-        title={`Select ${modalPlacement === "any" ? "" : modalPlacement?.toUpperCase() + " "}Card`}
+        title={
+          placementPart
+              ? t('ModalChooseCard.selectCard', { placement: placementPart })
+              : t('ModalChooseCard.selectCardNoPlacement')
+        }
         width={950}
         tag={
           <div className={styles.cardSelectModal}>
@@ -120,7 +131,7 @@ const ModalChooseCard = forwardRef(({ onSelectCard }, ref) => {
               ))}
               {getAvailableCards(modalPlacement).length === 0 && (
                 <div className={styles.emptyCards}>
-                  No available {modalPlacement} cards found
+                  {t('ModalChooseCard.noCardsText', {modalPlacement: modalPlacement})}
                 </div>
               )}
             </div>

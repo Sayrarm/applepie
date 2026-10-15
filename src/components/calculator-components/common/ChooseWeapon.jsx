@@ -3,9 +3,11 @@ import styles from "./Choose.module.css";
 import { getImageUrl } from "@hooks";
 import { ModalWindow } from "@components";
 import { compData } from "@data";
+import { useTranslation } from "react-i18next";
 
 function ChooseWeapon({ selectedMCWeapon, onSelectMCWeapon }) {
   const mcWeaponModalRef = useRef();
+  const { t } = useTranslation();
 
   const showMCWeaponModal = () => {
     mcWeaponModalRef.current?.showModal();
@@ -32,14 +34,14 @@ function ChooseWeapon({ selectedMCWeapon, onSelectMCWeapon }) {
             </div>
           </div>
         ) : (
-          <div className={styles.addCompanionText}>+ Add MC Weapon</div>
+          <div className={styles.addCompanionText}>{t('ChooseWeapon.addButton')}</div>
         )}
       </button>
 
       {/* Модалка выбора MC Weapon */}
       <ModalWindow
         ref={mcWeaponModalRef}
-        title="Select MC Weapon"
+        title={t('ChooseWeapon.titleModal')}
         width={720}
         tag={
           <div className={styles.companionGrid}>

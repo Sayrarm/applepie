@@ -16,6 +16,7 @@ import {
   getShowUserInfo,
   saveShowUserInfo,
 } from "@localstorage";
+import { useTranslation } from "react-i18next";
 
 function Memories() {
   // Используем хуки
@@ -31,6 +32,7 @@ function Memories() {
     clearFilters,
     filterMemories,
   } = useFilter("memories");
+  const { t } = useTranslation();
 
   const filterModalRef = useRef();
 
@@ -142,12 +144,12 @@ function Memories() {
           {
             onClick: toggleImageSize,
             icon: "../assets/icons/icons8-change-64.png",
-            title: "Change size of Cards",
+            title: t('Memories.sizeButton'),
           },
           {
             onClick: toggleUserInfo,
             icon: "../assets/icons/icons8-info-80.png",
-            title: showUserInfo ? "Hide User info" : "Show User info",
+            title: showUserInfo ? t('Memories.hideUserInfoButton') : t('Memories.showUserInfoButton'),
           },
         ]}
       />
@@ -178,7 +180,7 @@ function Memories() {
       </div>
 
       {sortedMemories.length === 0 && (
-        <p className={styles.noResults}>No memories found ¯\_(ツ)_/¯</p>
+        <p className={styles.noResults}>{t('Memories.noMemoriestext')}</p>
       )}
     </section>
   );

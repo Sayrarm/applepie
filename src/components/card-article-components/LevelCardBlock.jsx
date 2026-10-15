@@ -26,10 +26,12 @@ import {
   saveCardProtocores, addFarmGoal,
 } from "@localstorage";
 import {ModalWindow, LevelRangeControl} from "@components";
+import { useTranslation } from "react-i18next";
 
 function LevelCardBlock({ cardId: propCardId, onAvailabilityChange }) {
   const { cardId: paramCardId } = useParams();
   const cardId = propCardId || paramCardId;
+  const { t } = useTranslation();
 
   const [level, setLevel] = useState(() => getCardLevel(cardId));
   const [rank, setRank] = useState(() => getCardRank(cardId));
@@ -302,13 +304,13 @@ function LevelCardBlock({ cardId: propCardId, onAvailabilityChange }) {
           className={`${styles.buttonAvailable} ${!isAvailable ? styles.active : ""}`}
           onClick={() => setIsAvailable(false)}
         >
-          Not available
+          {t('LevelCardBlock.notAvailableButton')}
         </button>
         <button
           className={`${styles.buttonAvailable} ${isAvailable ? styles.active : ""}`}
           onClick={() => setIsAvailable(true)}
         >
-          Available
+          {t('LevelCardBlock.availableButton')}
         </button>
 
         <button
@@ -412,7 +414,7 @@ function LevelCardBlock({ cardId: propCardId, onAvailabilityChange }) {
       {/* Модальное окно с выбором уровня */}
       <ModalWindow
           ref={modalRef}
-          title="Select Level for Goal"
+          title={t('LevelCardBlock.titleModal')}
           width={600}
           tag={
             <div style={{ textAlign: "left" }}>
@@ -430,7 +432,7 @@ function LevelCardBlock({ cardId: propCardId, onAvailabilityChange }) {
                     onClick={handleAddToFarm}
                     disabled={!canAddGoal()}
                 >
-                  🎯 Add to Development Goal
+                  {t('LevelCardBlock.addButton')}
                 </button>
               </div>
             </div>

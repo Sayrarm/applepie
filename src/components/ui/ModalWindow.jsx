@@ -1,6 +1,7 @@
 import React, { useState, useImperativeHandle, forwardRef } from "react";
 import { Button, Modal } from "antd";
 import styles from './Modal.module.css'
+import { useTranslation } from "react-i18next";
 
 const ModalWindow = forwardRef((props, ref) => {
   const {
@@ -12,6 +13,7 @@ const ModalWindow = forwardRef((props, ref) => {
 
   const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
+  const { t } = useTranslation();
 
   useImperativeHandle(ref, () => ({
     showModal: () => setOpen(true),
@@ -40,7 +42,7 @@ const ModalWindow = forwardRef((props, ref) => {
       onCancel={handleCancel}
       footer={[
         <Button key="back" onClick={handleCancel}>
-          Return
+          {t('ModalWindow.returnButton')}
         </Button>,
       ]}
     >

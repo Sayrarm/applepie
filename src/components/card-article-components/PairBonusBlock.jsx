@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
 import styles from "./PairBonusBlock.module.css";
 import { CardList, AsideList } from "@components";
+import { useTranslation } from "react-i18next";
 
 function PairBonusBlock({
   cardId, // ID текущей карточки
   compData, // Данные компаньонов
   memoriesData, // Данные всех карточек
 }) {
+  const { t } = useTranslation();
+
   // Находим компаньона, у которого в cardIds есть текущая карточка
   const companion = compData.find((item) =>
     item.cardIds?.includes(Number(cardId)),
@@ -37,13 +40,15 @@ function PairBonusBlock({
       items={[
         {
           key: "1",
-          label: "Pair Bonus",
+          label: t('PairBonusBlock.label'),
           children: (
             <>
-              <CardList cards={companionCards} />
+              <div className={styles.cards}>
+                <CardList cards={companionCards} />
+              </div>
 
               <div className={styles.companionLink}>
-                <p>Having a pair unlocks a Companion:</p>
+                <p>{t('PairBonusBlock.textInfo')}</p>
                 <Link
                   to={`/battle/${companion.link}`}
                   className={styles.companionLinkText}

@@ -11,12 +11,14 @@ import {
   formatKeysPreview,
   reloadWithDelay,
 } from "@localstorage"
+import { useTranslation } from "react-i18next";
 
 function DataManager() {
   const [isExporting, setIsExporting] = useState(false);
   const [isImporting, setIsImporting] = useState(false);
   const [isClearing, setIsClearing] = useState(false);
   const fileInputRef = useRef();
+  const { t } = useTranslation();
 
   // ---------- EXPORT ----------
   const exportData = () => {
@@ -27,10 +29,10 @@ function DataManager() {
       const payload = buildExportPayload(data, totalItems);
 
       downloadJson(payload);
-      alert(`✅ Successfully exported ${totalItems} items!`);
+      alert(t('DataManager.alertSuccess', {totalItems}));
     } catch (error) {
       console.error("Export error:", error);
-      alert("❌ Failed to export data. See console for details.");
+      alert(t('DataManager.alertFailed'));
     } finally {
       setIsExporting(false);
     }
@@ -51,12 +53,11 @@ function DataManager() {
         const keys = validateImportFile(content);
 
         const confirmMessage =
-            `⚠️ This will overwrite ALL existing data in localStorage with data from the file.\n\n` +
-            `📦 Found ${keys.length} items to import:\n` +
+            t('DataManager.alertWarning') +
+            t('DataManager.alertInfo', { count: keys.length }) +
             formatKeysPreview(keys) +
-            `\n\nExport date: ${content.exportedAt || "Unknown"}\n` +
-            `Version: ${content.version || "Unknown"}\n\n` +
-            `Are you sure you want to continue?`;
+            t('DataManager.alertDate', { date: content.exportedAt.slice(0, -14) || "Unknown" }) +
+            t('DataManager.alertWarning2');
 
         if (!window.confirm(confirmMessage)) {
           resetFileInput();
@@ -67,7 +68,7 @@ function DataManager() {
         resetFileInput();
 
         alert(
-            `✅ Successfully imported ${importedCount} items!\n\n🔄 Refreshing page to apply changes...`,
+            t('DataManager.alertImport', { items: importedCount }),
         );
         reloadWithDelay(1000);
       } catch (error) {
@@ -98,20 +99,14 @@ function DataManager() {
     }
 
     const confirmMessage =
-        `⚠️ WARNING: This will permanently delete ALL your saved data!\n\n` +
-        `📦 Found ${keys.length} items to delete:\n` +
+        t('DataManager.alerdDelete', { itemsDelete: keys.length }) +
         formatKeysPreview(keys) +
-        `\n\nThis includes:\n` +
-        `• All My Memories data (levels, ranks, availability, ascension)\n` +
-        `• All My Protocores\n` +
-        `• All My Resources\n` +
-        `• All Showcase Teams\n\n` +
-        `Are you absolutely sure you want to continue?`;
+        t('DataManager.alertDeleteConfirm');
 
     if (!window.confirm(confirmMessage)) return;
     if (
         !window.confirm(
-            "⚠️ FINAL WARNING: This action cannot be undone! Are you sure?",
+            t('DataManager.alertDeleteConfirmSecond'),
         )
     )
       return;
@@ -121,7 +116,7 @@ function DataManager() {
     try {
       const clearedCount = clearAppStorage();
       alert(
-          `✅ Successfully cleared ${clearedCount} items!\n\n🔄 Refreshing page to apply changes...`,
+          t('DataManager.alertSuccessDelete', { clearedCount: clearedCount }),
       );
       reloadWithDelay(1000);
     } catch (error) {
@@ -140,7 +135,7 @@ function DataManager() {
 
   return (
       <div className={styles.container}>
-        <h3 className={styles.title}>💾 Data Management</h3>
+        <h3 className={styles.title}>{t('DataManager.titleContainer')}</h3>
 
         <div className={styles.buttonGroup}>
           <button
@@ -148,7 +143,7 @@ function DataManager() {
               onClick={exportData}
               disabled={isExporting}
           >
-            {isExporting ? "⏳ Exporting..." : "📤 Export Data"}
+            {isExporting ? t('DataManager.exportButtonActing') : t('DataManager.exportButton')}
           </button>
 
           <button
@@ -156,7 +151,7 @@ function DataManager() {
               onClick={triggerFileInput}
               disabled={isImporting}
           >
-            {isImporting ? "⏳ Importing..." : "📥 Import Data"}
+            {isImporting ? t('DataManager.importButtonActing') : t('DataManager.importButton')}
           </button>
 
           <input
@@ -172,19 +167,20 @@ function DataManager() {
               onClick={clearAllData}
               disabled={isClearing}
           >
-            {isClearing ? "⏳ Clearing..." : "🗑️ Clear All Data"}
+            {isClearing ? t('DataManager.clearButtonActing') : t('DataManager.clearButton')}
           </button>
         </div>
 
         <div className={styles.info}>
           <small>
-            💡 Exports all your data (My Memories, My Protocores, My Resources,
-            Showcase Teams) to a JSON file.
+            {t('DataManager.exportInfo')}
             <br />
-            Import will overwrite ALL existing data. Make sure to backup first!
+            {t('DataManager.ImportInfo')}
             <br />
-            ⚠️ Clear All Data will permanently delete ALL your saved data. This
-            cannot be undone!
+            {t('DataManager.ClearInfo')}
+            <br />
+            <br />
+            {t('DataManager.AccountInfo')}
           </small>
         </div>
       </div>

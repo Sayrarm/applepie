@@ -27,6 +27,7 @@ import {
     computeCardStats,
 } from "@data";
 import { useExcludedCards } from "@hooks";
+import { useTranslation } from "react-i18next";
 
 // ===== Опции селектов =====
 const MAIN_STAT_OPTIONS = [
@@ -74,6 +75,7 @@ function MemoryOptimizer() {
     const [progressText, setProgressText] = useState("");
     const [isEquipping, setIsEquipping] = useState(false);
     const modalChooseCardRef = useRef();
+    const { t } = useTranslation();
 
     useEffect(() => {
         saveMemoryOptimizerData(data);
@@ -86,7 +88,7 @@ function MemoryOptimizer() {
     const isSolar = data.selectedCard?.placementName === "solar";
     const targetType = isSolar ? "beta" : "delta";
     const targetTypeLabel = isSolar ? "Beta" : "Delta";
-    const protocoreKey = `${targetType}Protocore`;
+    const protocoreKey = `${targetType} Protocore`;
 
     // ===== Выбор карты =====
     const handleSelectCard = (placement, index, card) => {
@@ -115,7 +117,7 @@ function MemoryOptimizer() {
 
     // ===== Clear all =====
     const clearAll = () => {
-        if (!window.confirm("Are you sure you want to clear all settings?"))
+        if (!window.confirm(t('MemoryOptimizer.alertClearAll')))
             return;
         clearMemoryOptimizerData();
         setData(getMemoryOptimizerData());
@@ -128,13 +130,13 @@ function MemoryOptimizer() {
     // ===== Start optimization =====
     const startOptimization = () => {
         if (!data.selectedCard) {
-            alert("Please select a card first.");
+            alert(t('MemoryOptimizer.alertChooseCard'));
             return;
         }
 
         const { available } = getAvailableProtocores(data.excludedCards || []);
         if (available.length === 0) {
-            alert("All protocores are excluded. Remove some exclusions.");
+            alert(t('MemoryOptimizer.alertExclude'));
             return;
         }
 
@@ -150,7 +152,7 @@ function MemoryOptimizer() {
         const subStatTarget = data.subStat?.value || null;
 
         setIsOptimizing(true);
-        setProgressText("Calculating...");
+        setProgressText(t('MemoryOptimizer.starting'));
 
         setTimeout(() => {
             try {
@@ -183,7 +185,7 @@ function MemoryOptimizer() {
         if (!activeBuild || !card) return;
 
         const confirmed = window.confirm(
-            `Protocores on "${card.name}" will be replaced. Continue?`,
+            t('MemoryOptimizer.alertSendShowcase', {card: card.name}),
         );
         if (!confirmed) return;
 
@@ -200,7 +202,7 @@ function MemoryOptimizer() {
             // Сохраняем на нашу карту
             saveCardProtocores(card.id, newProtocores);
 
-            alert(`Protocores equipped on "${card.name}"!`);
+            alert(t('MemoryOptimizer.alertSendShowcase', {card: card.name}));
         } catch (err) {
             console.error("Equip error:", err);
             alert("Failed to equip protocores.");
@@ -231,7 +233,7 @@ function MemoryOptimizer() {
                 <div className={memoryStyles.selectMenu}>
                     {/* Exclude protocores */}
                     <div className={memoryStyles.excludeSelectContainer}>
-                        Exclude protocores:
+                        {t('MemoryOptimizer.excludeText')}
                         <div className={memoryStyles.selectContainer}>
                             <Select
                                 isMulti
@@ -239,7 +241,7 @@ function MemoryOptimizer() {
                                 value={data.excludedCards || []}
                                 onChange={handleExcludedCardsChange}
                                 className={styles.select}
-                                placeholder="Select cards to exclude their protocores"
+                                placeholder={t('MemoryOptimizer.excludePlaceholder')}
                                 isSearchable
                                 formatOptionLabel={formatCardOption}
                             />
@@ -250,9 +252,9 @@ function MemoryOptimizer() {
                     <div className={memoryStyles.protoSelectContainer}>
                         {data.selectedCard ? (
                             <div className={memoryStyles.selectContainer}>
-                                Choose {targetTypeLabel}:
+                                {t('MemoryOptimizer.chooseProtocore', {targetTypeLabel: targetTypeLabel})}
                                 <Select
-                                    placeholder={`Select ${targetTypeLabel} Protocore`}
+                                    placeholder={t('MemoryOptimizer.chooseProtocorePlaceholder', {targetTypeLabel: targetTypeLabel})}
                                     options={
                                         isSolar
                                             ? betaProtocoreOptions
@@ -270,7 +272,7 @@ function MemoryOptimizer() {
                         ) : (
                             <div className={memoryStyles.selectContainer}>
             <span className={memoryStyles.hintText}>
-                Choose Memory first
+               {t('MemoryOptimizer.noProtocoreText')}
             </span>
                             </div>
                         )}
@@ -278,10 +280,10 @@ function MemoryOptimizer() {
 
                     {/* Main Stat / Sub Stat */}
                     <div className={memoryStyles.statsSelectContainer}>
-                        Main Stat:
+                        {t('MemoryOptimizer.mainStat')}
                         <div className={memoryStyles.mainStatContainer}>
                             <Select
-                                placeholder="Select Main Stat"
+                                placeholder={t('MemoryOptimizer.mainStatPlaceholder')}
                                 options={MAIN_STAT_OPTIONS}
                                 value={data.mainStat}
                                 onChange={handleMainStatChange}
@@ -291,10 +293,10 @@ function MemoryOptimizer() {
                             />
                         </div>
 
-                        Sub Stat:
+                        {t('MemoryOptimizer.subStat')}
                         <div className={memoryStyles.subStatContainer}>
                             <Select
-                                placeholder="Select Sub Stat"
+                                placeholder={t('MemoryOptimizer.subStatPlaceholder')}
                                 options={SUB_STAT_OPTIONS}
                                 value={data.subStat}
                                 onChange={handleSubStatChange}
@@ -354,28 +356,28 @@ function MemoryOptimizer() {
             {/* Кнопки */}
             <div className={styles.buttonsContainer}>
                 <button className={styles.clearButton} onClick={clearAll}>
-                    Clear all
+                    {t('MemoryOptimizer.clearButton')}
                 </button>
                 <button
                     className={styles.startButton}
                     onClick={startOptimization}
                     disabled={isOptimizing || !data.selectedCard}
                 >
-                    {isOptimizing ? "Optimizing..." : "Start"}
+                    {isOptimizing ? t('MemoryOptimizer.startButtonActive') : t('MemoryOptimizer.startButton')}
                 </button>
                 <button
                     className={styles.sendButton}
                     onClick={handleEquipOnCard}
                     disabled={!activeResults || isOptimizing || isEquipping}
                 >
-                    {isEquipping ? "Equipping..." : "Equip on Card"}
+                    {isEquipping ? t('MemoryOptimizer.equipButtonActive') : t('MemoryOptimizer.equipButton')}
                 </button>
             </div>
 
             {/* Индикатор загрузки */}
             {isOptimizing && (
                 <div className={styles.loadingIndicator}>
-                    {progressText || "Calculating best protocores, please wait..."}
+                    {progressText || t('MemoryOptimizer.progressText')}
                 </div>
             )}
 

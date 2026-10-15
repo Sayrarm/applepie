@@ -1,6 +1,7 @@
 import React, { useState, forwardRef, useImperativeHandle, useRef } from 'react';
 import { runOcrBatch } from '@data';
 import styles from './OcrReader.module.css';
+import { useTranslation } from "react-i18next";
 
 // Сколько секунд в среднем уходит на 1 файл (для оценки времени).
 const SECONDS_PER_FILE = 3;
@@ -15,6 +16,7 @@ const OcrReader = forwardRef((props, ref) => {
     const [totalAll, setTotalAll] = useState(0);
     const [results, setResults] = useState([]);
     const [message, setMessage] = useState(null);
+    const { t } = useTranslation();
 
     // AbortController для отмены
     const abortControllerRef = useRef(null);
@@ -98,22 +100,22 @@ const OcrReader = forwardRef((props, ref) => {
             if (cancelled) {
                 setMessage({
                     kind: 'warning',
-                    text: `Cancelled. Saved before cancelling: ${savedCount}.`,
+                    text: t('OcrReader.cancelled', { savedCount }),
                 });
             } else if (errorCount > 0) {
                 setMessage({
                     kind: 'warning',
-                    text: `Processing completed: saved ${savedCount}, not recognized ${failedCount}, error ${errorCount}. Details in the console.`,
+                    text: t('OcrReader.errorCount', { savedCount, failedCount, errorCount }),
                 });
             } else if (failedCount > 0) {
                 setMessage({
                     kind: 'warning',
-                    text: `Processing completed: saved ${savedCount}, not recognized ${failedCount}.`,
+                    text: t('OcrReader.failedCount', { savedCount, failedCount }),
                 });
             } else {
                 setMessage({
                     kind: 'success',
-                    text: `Processing completed: saved ${savedCount}.`,
+                    text: t('OcrReader.success', { savedCount }),
                 });
             }
         } catch (err) {
@@ -139,9 +141,9 @@ const OcrReader = forwardRef((props, ref) => {
     // Примерная оценка времени обработки
     const estimateTime = (count) => {
         const totalSeconds = count * SECONDS_PER_FILE;
-        if (totalSeconds < 60) return `~${totalSeconds} sec`;
+        if (totalSeconds < 60) return t('OcrReader.sec', { totalSeconds });
         const minutes = Math.round(totalSeconds / 60);
-        return `~${minutes} min`;
+        return t('OcrReader.min', { minutes });
     };
 
     const totalProgressPercent = totalAll > 0 ? Math.round((totalDone / totalAll) * 100) : 0;
@@ -155,11 +157,11 @@ const OcrReader = forwardRef((props, ref) => {
 
     return (
         <div className={styles.container}>
-            <h2 className={styles.title}>Add screenshots with Protocores</h2>
+            <h2 className={styles.title}>{t('OcrReader.titleContainer')}</h2>
 
             <div className={styles.buttonsCnotainer}>
                 <label className={styles.chooseButton}>
-                    Choose files
+                    {t('OcrReader.chooseButton')}
                     <input
                         type="file"
                         accept="image/*"
@@ -177,13 +179,13 @@ const OcrReader = forwardRef((props, ref) => {
                             disabled={loading}
                         >
                             {loading
-                                ? `Processing ${currentIndex + 1}/${files.length}...`
-                                : `Save Protocore(s) (${files.length})`}
+                                ? t('OcrReader.processing', { current: currentIndex + 1, total: files.length })
+                                : t('OcrReader.saveProtocores', { count: files.length })}
                         </button>
 
                         {loading && (
                             <button className={styles.cancelButton} onClick={handleCancel}>
-                                Cancel
+                                {t('OcrReader.cancelButton')}
                             </button>
                         )}
                     </>
@@ -192,9 +194,9 @@ const OcrReader = forwardRef((props, ref) => {
 
             {files.length > 0 && !loading && (
                 <div className={styles.selectedInfo}>
-                    Selected files: <b>{files.length}</b>{' '}
+                    {t('OcrReader.titleSelectedFiles')} <b>{files.length}</b>{' '}
                     <span className={styles.estimate}>
-                        (estimated processing time: {estimateTime(files.length)})
+                        ({t('OcrReader.textEstimaied')} {estimateTime(files.length)})
                     </span>
                 </div>
             )}
@@ -204,7 +206,7 @@ const OcrReader = forwardRef((props, ref) => {
             {loading && (
                 <div className={styles.progressBlock}>
                     <div className={styles.progressLabel}>
-                        Current: <b>{currentFileName}</b> — {fileProgress}%
+                        {t('OcrReader.textCurrent')} <b>{currentFileName}</b> — {fileProgress}%
                     </div>
                     <div className={styles.progressBarTrack}>
                         <div
@@ -214,7 +216,7 @@ const OcrReader = forwardRef((props, ref) => {
                     </div>
 
                     <div className={styles.progressLabel}>
-                        Overall: {totalDone} / {totalAll} ({totalProgressPercent}%)
+                        {t('OcrReader.textOverall')} {totalDone} / {totalAll} ({totalProgressPercent}%)
                     </div>
                     <div className={styles.progressBarTrack}>
                         <div
@@ -234,7 +236,7 @@ const OcrReader = forwardRef((props, ref) => {
             {results.length > 0 && (
                 <div className={styles.results}>
                     <h3 className={styles.resultsTitle}>
-                        Results{' '}
+                        {t('OcrReader.textResults')}{' '}
                         <span className={styles.resultsCount}>({results.length})</span>
                     </h3>
                     <div className={styles.resultsScroll}>
@@ -242,9 +244,9 @@ const OcrReader = forwardRef((props, ref) => {
                             <thead>
                             <tr>
                                 <th>#</th>
-                                <th>File</th>
-                                <th>Status</th>
-                                <th>Protocore</th>
+                                <th>{t('OcrReader.textFile')}</th>
+                                <th>{t('OcrReader.textStatus')}</th>
+                                <th>{t('OcrReader.textProtocore')}</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -255,17 +257,17 @@ const OcrReader = forwardRef((props, ref) => {
                                     <td>
                                         {r.status === 'saved' && (
                                             <span className={styles.statusSaved}>
-                                                    ✓ Saved
+                                                    {t('OcrReader.statusSaved')}
                                                 </span>
                                         )}
                                         {r.status === 'failed' && (
                                             <span className={styles.statusFailed}>
-                                                    ⚠ Not recognized
+                                                    {t('OcrReader.statusFailed')}
                                                 </span>
                                         )}
                                         {r.status === 'error' && (
                                             <span className={styles.statusError}>
-                                                    ✗ Error
+                                                   {t('OcrReader.statusError')}
                                                 </span>
                                         )}
                                     </td>
@@ -280,9 +282,8 @@ const OcrReader = forwardRef((props, ref) => {
                                         )}
                                         {r.status === 'failed' && (
                                             <span className={styles.statusMuted}>
-                                                    partially recognized — details in the
-                                                    console
-                                                </span>
+                                                {t('OcrReader.textErrorFailed')}
+                                            </span>
                                         )}
                                         {r.status === 'error' && (
                                             <span className={styles.statusMuted}>

@@ -1,12 +1,16 @@
 import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
 import { getImageUrl } from "@hooks";
+import { useTranslation } from "react-i18next";
 
 function Footer() {
+
+  const { t } = useTranslation();
+
   return (
     <footer className={styles.footer}>
       <div className={styles.footerMediaContainer}>
-        All information about project here:
+          {t('footer.titleInformation')}
         <div className={styles.borderHorizontal}></div>
         {/*
         <Link className={styles.a} to="/about">
@@ -25,7 +29,7 @@ function Footer() {
           href={"https://t.me/applepie_lads"}
           target="_blank"
         >
-          Telegram Group
+            {t('footer.titleTelegramButton')}
         </a>
       </div>
 
@@ -33,13 +37,11 @@ function Footer() {
         <p>© 2026 sayrarm.github.io</p>
         <div className={styles.borderHorizontal}></div>
         <p>
-          All trademarks, characters, stories and images are the property of
-          their respective owner, Infold Games.
+            {t('footer.disclaimer1')}
         </p>
         <br className={styles.br} />
         <p>
-          The site was created for informational purposes only. For
-          non-commercial use.
+            {t('footer.disclaimer2')}
         </p>
       </div>
 
