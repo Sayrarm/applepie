@@ -28,7 +28,7 @@ function TimezoneButton() {
     <button
       className={styles.button}
       onClick={() => setTimezone(nextTimezone.value)}
-      title={`Switch to ${nextTimezone.label}`}
+      title={t('TimeZone.placeholder', {nextTimezone: nextTimezone.label})}
     >
       {getCurrentLabel()}
     </button>

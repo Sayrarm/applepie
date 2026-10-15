@@ -95,9 +95,9 @@ function Header() {
           </div>
 
           <div className={styles.buttonsChangers}>
+            <LanguageButton />
             <TimezoneButton />
             <ThemeToggleButton />
-            <LanguageButton />
           </div>
 
           <div className={`${styles.modalNav} ${isMenuOpen ? styles.active : ""}`}>

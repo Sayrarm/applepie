@@ -5,7 +5,7 @@
   cursor: pointer;
   border: none;
   font-size: 14px;
-  color: black;
+  color: var(--colorTextDark);
   transition: 0.3s;
   font-family: TikTok Sans, monospace;
   box-shadow: 0 0 0 2px var(--a), 2px 2px 10px var(--a);

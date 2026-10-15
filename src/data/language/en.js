@@ -18,6 +18,7 @@ export const en = {
             eu: 'EU time',
             asia: 'Asia time',
             na: 'NA time',
+            placeholder: 'Switch time to {{nextTimezone}}',
         },
         main: {
             titleBanners: 'Banners',

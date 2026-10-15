@@ -18,6 +18,7 @@ export const ru = {
             eu: 'EU время',
             asia: 'Asia время',
             na: 'NA время',
+            placeholder: 'Сменить время на {{nextTimezone}}',
         },
         main: {
             titleBanners: 'Баннеры',
