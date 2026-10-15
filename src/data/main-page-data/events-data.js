@@ -165,7 +165,7 @@ export const eventsData = [
     image: "../assets/main-page/events/pankake.png",
     startDate: "2026-09-28T05:00:00",
     endDate: "2026-10-12T04:59:59",
-    active: true,
+    active: false,
   },
   {
     id: 22,
