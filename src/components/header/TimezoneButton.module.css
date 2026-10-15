@@ -1,17 +1,16 @@
 .button {
-  font-family:
-    TikTok Sans,
-    monospace;
   width: 45px;
-  height: 35px;
-  background: var(--colorText);
+  height: 37px;
+  background: var(--a);
   cursor: pointer;
   border: none;
   font-size: 14px;
   color: black;
   transition: 0.3s;
+  font-family: TikTok Sans, monospace;
+  box-shadow: 0 0 0 2px var(--a), 2px 2px 10px var(--a);
 }
 
 .button:hover {
-  color: var(--a);
+  transform: translateY(-2px);
 }
