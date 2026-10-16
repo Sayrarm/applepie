@@ -76,7 +76,8 @@ export {
 export {
   createEmptyStats,
   mergeStats,
-  applyBaseCritDmgBonus
+  applyBaseCritDmgBonus,
+  getStatKey
 } from "./calculator-data/stats-utils.js";
 export {
   computeKitDamage,

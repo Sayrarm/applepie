@@ -59,3 +59,23 @@ export const applyBaseCritDmgBonus = (stats) => ({
     ...stats,
     critDmg: stats.critDmg + 150,
 });
+
+// Display-имя (как в протокорах и StatsTable) → ключ в stats
+export const STAT_KEY_BY_NAME = {
+    "HP": "hp",
+    "HP Bonus": "hp",
+    "ATK": "atk",
+    "ATK Bonus": "atk",
+    "DEF": "def",
+    "DEF Bonus": "def",
+    "CRIT Rate": "critRate",
+    "Crit Rate": "critRate",
+    "CRIT DMG": "critDmg",
+    "Crit DMG": "critDmg",
+    "DMG Boost to Weakened": "dmgBoost",
+    "Oath Strength": "oathStrength",
+    "Oath Recovery Boost": "oathRecoveryBoost",
+    "Expedited Energy Boost": "expeditedEnergyBoost",
+};
+
+export const getStatKey = (name) => STAT_KEY_BY_NAME[name] || null;
