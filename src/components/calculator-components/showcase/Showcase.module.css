@@ -151,13 +151,12 @@
   border: 1px solid var(--border-color, #333);
   margin: 5px;
   padding-top: 4px;
-  min-height: 416px;
-  min-width: 392px;
-
+  min-height: 409px;
+  min-width: 390px;
+  height: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  gap: 5px;
 }
 
 .emptySlotContent,
@@ -186,6 +185,7 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
+  padding-right: 5px;
 }
 
 .cardInfo {
@@ -209,6 +209,7 @@
 .lunarCardsRow {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
 }
 
 .solarCardsRow {
@@ -216,12 +217,54 @@
   grid-template-columns: repeat(1, 1fr);
   border-right: 2px solid var(--border);
   margin-bottom: 5px;
+  gap: 5px;
 }
 
 .bonuses {
   padding: 0 5px;
   gap: 5px;
   display: flex;
+}
+
+.cardSlotEquipped {
+  height: 100%;
+  max-height: 409px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.baseStats {
+  border-collapse: collapse;
+  display: flex;
+  font-size: 10px;
+}
+
+.baseStats th,
+.baseStats td {
+  border-bottom: 1px solid var(--border-color, #333);
+  text-align: center;
+  padding: 2px;
+  text-transform: uppercase;
+}
+
+.baseStats th {
+  color: var(--colorTextDark);
+}
+
+.baseStats td {
+
+}
+
+.baseStats td,
+.baseStats th {
+  cursor: default;
+}
+
+.highlight {
+  background: rgb(165 165 165 / 0.34);
+  transition: background 0.15s;
 }
 
 /******************************MEDIA********************************/

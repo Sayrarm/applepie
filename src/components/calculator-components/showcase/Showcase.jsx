@@ -5,7 +5,9 @@ import {
     getShowcaseTeamsOrDefault,
     saveShowcaseTeams,
     deleteShowcaseTeam,
-    createDefaultTeam, getActiveTeamId, saveActiveTeamId,
+    createDefaultTeam,
+    getActiveTeamId,
+    saveActiveTeamId,
 } from "@localstorage";
 import {
     ModalWindow,
