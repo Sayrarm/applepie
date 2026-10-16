@@ -2,46 +2,55 @@ import styles from "./StatsTable.module.css";
 import { useHighlight } from "@components";
 
 function StatsTable({ stats }) {
+    const { highlightedStat, setHighlightedStat } = useHighlight();
+
     if (!stats) return null;
 
-    const { setHighlightedStat } = useHighlight();
-
-    const cellProps = (key) => ({
-        onMouseEnter: () => setHighlightedStat(key),
-        onMouseLeave: () => setHighlightedStat(null),
-        "data-stat": key,
-    });
+    // Одна ячейка — обработчики + класс
+    const cell = (key, content, isHeader = false) => {
+        const Tag = isHeader ? "th" : "td";
+        const isHighlighted = highlightedStat === key;
+        return (
+            <Tag
+                onMouseEnter={() => setHighlightedStat(key)}
+                onMouseLeave={() => setHighlightedStat(null)}
+                className={isHighlighted ? styles.highlight : ""}
+            >
+                {content}
+            </Tag>
+        );
+    };
 
     return (
         <table className={styles.statsTable}>
             <tbody>
             <tr>
-                <th>HP</th>
-                <td {...cellProps("hp")}>{stats.hp}</td>
-                <th>Crit Rate</th>
-                <td {...cellProps("critRate")}>{stats.critRate.toFixed(2)}%</td>
-                <th>Oath Strength</th>
-                <td {...cellProps("oathStrength")}>{stats.oathStrength.toFixed(2)}%</td>
+                {cell("hp", "HP", true)}
+                {cell("hp", stats.hp)}
+                {cell("critRate", "Crit Rate", true)}
+                {cell("critRate", `${stats.critRate.toFixed(2)}%`)}
+                {cell("oathStrength", "Oath Strength", true)}
+                {cell("oathStrength", `${stats.oathStrength.toFixed(2)}%`)}
             </tr>
             <tr>
-                <th>ATK</th>
-                <td {...cellProps("atk")}>{stats.atk}</td>
-                <th>Crit DMG</th>
-                <td {...cellProps("critDmg")}>{stats.critDmg.toFixed(2)}%</td>
-                <th>Oath Recovery Boost</th>
-                <td {...cellProps("oathRecoveryBoost")}>{stats.oathRecoveryBoost.toFixed(2)}%</td>
+                {cell("atk", "ATK", true)}
+                {cell("atk", stats.atk)}
+                {cell("critDmg", "Crit DMG", true)}
+                {cell("critDmg", `${stats.critDmg.toFixed(2)}%`)}
+                {cell("oathRecoveryBoost", "Oath Recovery Boost", true)}
+                {cell("oathRecoveryBoost", `${stats.oathRecoveryBoost.toFixed(2)}%`)}
             </tr>
             <tr>
-                <th>DEF</th>
-                <td {...cellProps("def")}>{stats.def}</td>
-                <th>DMG Boost to Weakened</th>
-                <td {...cellProps("dmgBoost")}>{stats.dmgBoost.toFixed(2)}%</td>
-                <th>Expedited Energy Boost</th>
-                <td {...cellProps("expeditedEnergyBoost")}>{stats.expeditedEnergyBoost.toFixed(2)}%</td>
+                {cell("def", "DEF", true)}
+                {cell("def", stats.def)}
+                {cell("dmgBoost", "DMG Boost to Weakened", true)}
+                {cell("dmgBoost", `${stats.dmgBoost.toFixed(2)}%`)}
+                {cell("expeditedEnergyBoost", "Expedited Energy Boost", true)}
+                {cell("expeditedEnergyBoost", `${stats.expeditedEnergyBoost.toFixed(2)}%`)}
             </tr>
             </tbody>
         </table>
-    )
+    );
 }
 
 export default StatsTable;

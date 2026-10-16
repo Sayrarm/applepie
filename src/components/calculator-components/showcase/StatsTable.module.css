@@ -21,11 +21,12 @@
     width: 80px;
 }
 
-.statsTable td {
-    cursor: pointer;
-    transition: background 0.15s;
+.statsTable td,
+.statsTable th {
+    cursor: default;
 }
 
-.statsTable td:hover {
+.highlight {
     background: rgb(165 165 165 / 0.2);
+    transition: background 0.15s;
 }
