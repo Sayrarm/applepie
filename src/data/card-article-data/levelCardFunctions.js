@@ -129,7 +129,7 @@ export const getStatsWithRank = (card, level, rank, isAscended = false) => {
     def: Math.floor(def),
     critRate: displayCritRate,
     critDmg: displayCritDmg,
-    dmgBoost: dmgBoost * 100,
+    dmgBoost: dmgBoost,
     isAscended,
     oathStrength: 0,
     oathRecoveryBoost: 0,

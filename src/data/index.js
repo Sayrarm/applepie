@@ -5,6 +5,7 @@ export {
   ascendData4star,
   ascendData5star,
   rankOptions,
+  STAT_ICONS
 } from "./card-article-data/levelCardData.js";
 export {
   calculateDmgBoost,

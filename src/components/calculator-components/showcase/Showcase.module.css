@@ -266,6 +266,11 @@
   transition: background 0.15s;
 }
 
+.statIcon {
+  width: 16px;
+  height: 15px;
+}
+
 /******************************MEDIA********************************/
 
 @media screen and (max-width: 1200px) {
