@@ -18,6 +18,7 @@ export {
   calculateProtocoreStats,
   calculateFinalStats,
   getProtocoreLevelsString,
+  getDmgBoostGrowth
 } from "./card-article-data/protocoreUtils.js";
 export { solar4Stars } from "./card-article-data/solar-4-star-info.js";
 export { storyCardInfo, mythTitle } from "./card-article-data/story-card-info.js";

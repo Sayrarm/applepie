@@ -236,38 +236,64 @@
   justify-content: space-between;
 }
 
-.baseStats {
-  border-collapse: collapse;
+/************************************************/
+
+/* Контейнер для всех статов (колонка) */
+.baseStatsContainer {
   display: flex;
-  font-size: 11px;
+  flex-direction: column;
+  gap: 2px; /* расстояние между рядами */
+  width: 100%;
 }
 
-.baseStats th,
-.baseStats td {
-  border-bottom: 1px solid var(--border-color, #333);
+/* Один ряд (строка) */
+.statsRow {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 4px; /* расстояние между ячейками в ряду */
+  width: 100%;
+}
+
+/* Одна ячейка */
+.statCell {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* или flex-start, если хочешь прижать влево */
+  min-width: 0; /* важно, чтобы flex-элемент мог сжиматься и не ломал ряд */
+  padding: 2px 3px;
+  border: 1px solid var(--border-color, #333);
+  border-radius: 4px;
+  background: var(--background);
   text-align: center;
-  padding: 2px;
-  text-transform: uppercase;
+  transition: background 0.15s;
+  color: var(--colorText);
 }
 
-.baseStats th {
-  color: var(--colorTextDark);
+/* Иконка */
+.statIconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 4px; /* отступ между иконкой и текстом */
 }
 
-.baseStats td,
-.baseStats th {
-  cursor: default;
+.statIconWrap img {
+  width: 14px; /* можно подогнать под размер карточки */
+  height: 14px;
+  object-fit: contain;
+}
+
+/* Значение */
+.statValue {
+  font-size: 11px;
+  line-height: 1.1;
+  white-space: nowrap; /* запрещаем перенос текста */
 }
 
 .highlight {
   background: var(--background-color);
   transition: background 0.15s;
-}
-
-.statIcon {
-  width: 16px;
-  height: 15px;
-  vertical-align: middle;
 }
 
 /******************************MEDIA********************************/

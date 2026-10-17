@@ -1,7 +1,7 @@
 import styles from "../showcase/Showcase.module.css";
 import { ProtocoreBlock, Card, useHighlight } from "@components";
 import { useTranslation } from "react-i18next";
-import { STAT_ICONS } from "@data";
+import {getDmgBoostGrowth, STAT_ICONS} from "@data";
 import { getImageUrl } from "@hooks";
 
 // Порядок отображения протокоров: Alpha/Gamma — слева, Beta/Delta — справа
@@ -29,6 +29,13 @@ function RenderCardSlot({
     const { highlightedStat } = useHighlight();
     const cardData = card ? getCardData(card) : null;
     const baseStats = cardData?.baseStats;
+    const protocores = cardData?.protocores;
+
+    // Считаем прирост
+    const dmgBoostGrowth = cardData
+        ? getDmgBoostGrowth(card, baseStats, protocores)
+        : 0;
+
     const { t } = useTranslation();
 
     // Сортированный список протокоров для отображения
@@ -73,34 +80,45 @@ function RenderCardSlot({
                             </div>
 
                             {baseStats && (
-                                <table className={styles.baseStats}>
-                                    <tbody>
-                                    <tr>
-                                        {cellReadOnly("hp", statIcon("hp"), true)}
-                                        {cellReadOnly("hp", baseStats.hp)}
-                                        {cellReadOnly("atk", statIcon("atk"), true)}
-                                        {cellReadOnly("atk", baseStats.atk)}
-                                        {cellReadOnly("def", statIcon("def"), true)}
-                                        {cellReadOnly("def", baseStats.def)}
-                                    </tr>
-                                    <tr>
+                                <div className={styles.baseStatsContainer}>
+                                    {/* Ряд 1: HP, ATK, DEF */}
+                                    <div className={styles.statsRow}>
+                                        <div className={`${styles.statCell} ${highlightedStat === "hp" ? styles.highlight : ""}`}>
+                                            <div className={styles.statIconWrap}>{statIcon("hp")}</div>
+                                            <div className={styles.statValue}>{baseStats.hp}</div>
+                                        </div>
+                                        <div className={`${styles.statCell} ${highlightedStat === "atk" ? styles.highlight : ""}`}>
+                                            <div className={styles.statIconWrap}>{statIcon("atk")}</div>
+                                            <div className={styles.statValue}>{baseStats.atk}</div>
+                                        </div>
+                                        <div className={`${styles.statCell} ${highlightedStat === "def" ? styles.highlight : ""}`}>
+                                            <div className={styles.statIconWrap}>{statIcon("def")}</div>
+                                            <div className={styles.statValue}>{baseStats.def}</div>
+                                        </div>
+                                    </div>
+
+                                    {/* Ряд 2: CR, CD, DMG Boost */}
+                                    <div className={styles.statsRow}>
                                         {baseStats.critRate > 0 && (
-                                            <>
-                                                {cellReadOnly("critRate", statIcon("critRate"), true)}
-                                                {cellReadOnly("critRate", `${baseStats.critRate.toFixed(2)}%`)}
-                                            </>
+                                            <div className={`${styles.statCell} ${highlightedStat === "critRate" ? styles.highlight : ""}`}>
+                                                <div className={styles.statIconWrap}>{statIcon("critRate")}</div>
+                                                <div className={styles.statValue}>{baseStats.critRate.toFixed(2)}%</div>
+                                            </div>
                                         )}
                                         {baseStats.critDmg > 0 && (
-                                            <>
-                                                {cellReadOnly("critDmg", statIcon("critDmg"), true)}
-                                                {cellReadOnly("critDmg", `${baseStats.critDmg.toFixed(2)}%`)}
-                                            </>
+                                            <div className={`${styles.statCell} ${highlightedStat === "critDmg" ? styles.highlight : ""}`}>
+                                                <div className={styles.statIconWrap}>{statIcon("critDmg")}</div>
+                                                <div className={styles.statValue}>{baseStats.critDmg.toFixed(2)}%</div>
+                                            </div>
                                         )}
-                                        {cellReadOnly("dmgBoost", statIcon("dmgBoost"), true)}
-                                        {cellReadOnly("dmgBoost", `${baseStats.dmgBoost.toFixed(2)}%`)}
-                                    </tr>
-                                    </tbody>
-                                </table>
+                                        <div className={`${styles.statCell} ${highlightedStat === "dmgBoost" ? styles.highlight : ""}`}>
+                                            <div className={styles.statIconWrap}>{statIcon("dmgBoost")}</div>
+                                            <div className={styles.statValue}>
+                                                {`${baseStats.dmgBoost.toFixed(2)}%${dmgBoostGrowth > 0.01 ? ` + ${dmgBoostGrowth.toFixed(2)}%` : ""}`}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             )}
                         </div>
                     ) : (

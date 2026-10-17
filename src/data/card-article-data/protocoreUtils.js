@@ -183,3 +183,23 @@ export const getProtocoreLevelsString = (protocores) => {
     .sort((a, b) => b - a);
   return `+${levels.join(" / +")}`;
 };
+
+// Функция для получения значения DMG Boost, которое наросло именно из-за увеличения HP/ATK/DEF
+export const getDmgBoostGrowth = (card, baseStats, protocores) => {
+  if (!baseStats || !card) return 0;
+
+  // 1. Базовый DMG Boost
+  const baseDmgBoost = baseStats.dmgBoost || 0;
+
+  // 2. Считаем статы протокоров и финальные статы
+  const protocoreStats = calculateProtocoreStats(protocores, baseStats);
+  const finalHp = Math.floor((baseStats.hp || 0) + (protocoreStats.hp || 0));
+  const finalAtk = Math.floor((baseStats.atk || 0) + (protocoreStats.atk || 0));
+  const finalDef = Math.floor((baseStats.def || 0) + (protocoreStats.def || 0));
+
+  // 3. Считаем DMG Boost от нарощенных статов (БЕЗ учета плоского бонуса dmgBoost от самих протокоров)
+  const scaledDmgBoost = calculateDmgBoost(finalHp, finalAtk, finalDef, card.talentName);
+
+  // 4. Возвращаем разницу
+  return scaledDmgBoost - baseDmgBoost;
+};
