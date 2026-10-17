@@ -144,11 +144,11 @@
 .cardsSection {
   display: flex;
   padding-bottom: 5px;
+  gap: 5px;
 }
 
 .cardSlot {
   border: 1px solid var(--border-color, #333);
-  margin: 5px;
   padding-top: 4px;
   min-height: 409px;
   min-width: 390px;
@@ -214,6 +214,7 @@
 .solarCardsRow {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
+  padding-right: 5px;
   border-right: 2px solid var(--border);
   margin-bottom: 5px;
   gap: 5px;
