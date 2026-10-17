@@ -12,6 +12,7 @@ import {
   getUpgradeResources,
   getExpNeeded,
   crystalColors,
+  getDmgBoostGrowth,
 } from "@data";
 import {
   getCardLevel,
@@ -23,7 +24,8 @@ import {
   getCardAscend,
   saveCardAscend,
   getCardProtocores,
-  saveCardProtocores, addFarmGoal,
+  saveCardProtocores,
+  addFarmGoal,
 } from "@localstorage";
 import {ModalWindow, LevelRangeControl} from "@components";
 import { useTranslation } from "react-i18next";
@@ -53,13 +55,81 @@ function LevelCardBlock({ cardId: propCardId, onAvailabilityChange }) {
     return memoriesData.find((c) => String(c.id) === cardId) || null;
   }, [cardId]);
 
-  // Пересчитываем статы
-  const stats = useMemo(() => {
+  // Пересчитываем базовые статы
+  const baseStats = useMemo(() => {
     if (!card) return null;
-    const baseStats = getStatsWithRank(card, level, rank, isAscended);
+    return getStatsWithRank(card, level, rank, isAscended);
+  }, [card, level, rank, isAscended]);
+
+  // Пересчитываем финальные статы (с протокорами)
+  const stats = useMemo(() => {
     if (!baseStats) return null;
     return calculateFinalStats(card, baseStats, equippedProtocores);
-  }, [card, level, rank, isAscended, equippedProtocores]);
+  }, [card, baseStats, equippedProtocores]);
+
+  const renderStatWithBreakdown = (statKey, isPercent = false) => {
+    if (!stats) return "—";
+
+    const finalValue = stats[statKey];
+    const baseValue = baseStats ? baseStats[statKey] : 0;
+
+    // Считаем прирост
+    const diff = finalValue - baseValue;
+    const suffix = isPercent ? "%" : "";
+
+    // Если протокоров нет, показываем только итоговое значение
+    if (diff <= 0.01) {
+      return <div>{formatNumber(finalValue)}{suffix}</div>;
+    }
+
+    // Если прирост есть, выводим в две строки
+    return (
+        <div className={styles.statBreakdown}>
+            <div className={styles.statBreakdownFinal}>
+                {formatNumber(finalValue)}{suffix}
+            </div>
+          <div className={styles.statBreakdownDiff}>
+            {formatNumber(baseValue)}{suffix} <span className={styles.addStat}>+ {formatNumber(diff)}{suffix}</span>
+            </div>
+        </div>
+    );
+  };
+
+  const renderDmgBoostBreakdown = () => {
+    if (!stats || !baseStats) return "—";
+
+    const finalValue = stats.dmgBoost;
+    const baseValue = baseStats.dmgBoost;
+
+    // 1. Прирост от скейлинга (HP/ATK/DEF)
+    const scalingGrowth = getDmgBoostGrowth(card, baseStats, equippedProtocores);
+
+    // 2. Плоский прирост (если в протокорах есть свой стат DMG Boost)
+    // Считаем как: (общий итог - база) - прирост от скейлинга
+    const flatGrowth = (finalValue - baseValue) - scalingGrowth;
+
+    const totalDiff = finalValue - baseValue;
+
+    // Если нет ни скейлинга, ни плоского прироста
+    if (totalDiff <= 0.01) {
+      return <div>{formatNumber(finalValue)}%</div>;
+    }
+
+    // Формируем нижнюю строку
+    // Если есть плоский прирост, добавляем его в скобках
+    const flatText = flatGrowth > 0.01 ? ` + ${formatNumber(flatGrowth)}%` : "";
+
+    return (
+        <div className={styles.statBreakdown}>
+            <div className={styles.statBreakdownFinal}>
+                {formatNumber(finalValue)}%
+            </div>
+          <div className={styles.statBreakdownDiff}>
+                {formatNumber(baseValue)}% <span className={styles.addStat}>+ {formatNumber(scalingGrowth)}%{flatText}</span>
+            </div>
+        </div>
+    );
+  };
 
   // ===== СОХРАНЕНИЕ В LOCALSTORAGE =====
   useEffect(() => {
@@ -362,24 +432,14 @@ function LevelCardBlock({ cardId: propCardId, onAvailabilityChange }) {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>{stats ? formatNumber(stats.hp) : "—"}</td>
-                  <td>{stats ? formatNumber(stats.atk) : "—"}</td>
-                  <td>{stats ? formatNumber(stats.def) : "—"}</td>
-                  <td>
-                    {stats
-                      ? formatNumber(stats.critRate.toFixed(1)) + "%"
-                      : "—"}
-                  </td>
-                  <td>
-                    {stats ? formatNumber(stats.critDmg.toFixed(1)) + "%" : "—"}
-                  </td>
-                  <td>
-                    {stats
-                      ? formatNumber(stats.dmgBoost.toFixed(2)) + "%"
-                      : "—"}
-                  </td>
-                </tr>
+              <tr>
+                <td>{renderStatWithBreakdown("hp")}</td>
+                <td>{renderStatWithBreakdown("atk")}</td>
+                <td>{renderStatWithBreakdown("def")}</td>
+                <td>{renderStatWithBreakdown("critRate", true)}</td>
+                <td>{renderStatWithBreakdown("critDmg", true)}</td>
+                <td>{renderDmgBoostBreakdown()}</td>
+              </tr>
               </tbody>
             </table>
 

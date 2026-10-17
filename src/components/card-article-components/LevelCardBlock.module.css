@@ -144,6 +144,35 @@
   color: var(--colorText);
 }
 
+/****************************/
+
+/* Обертка для стата в две строки */
+.statBreakdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  white-space: nowrap;
+}
+
+/* Верхняя строка (итоговое значение) */
+.statBreakdownFinal {
+  /* Если нужен особый стиль для итогового значения, добавь сюда */
+}
+
+/* Нижняя строка (база + прирост) */
+.statBreakdownDiff {
+  display: flex;
+  font-size: 11px;
+  color: var(--colorTextGrayNote);
+}
+
+.addStat {
+  color: var(--green-button);
+  padding-left: 3px;
+}
+
+/********************************/
+
 @media screen and (max-width: 860px) {
   .container {
     padding: 5px;
@@ -151,6 +180,11 @@
 
   .statsTable {
     font-size: 12px;
+  }
+
+  .statBreakdownDiff {
+    font-size: 10px;
+    letter-spacing: -0.5px;
   }
 
   .selectRankContainer [class$="-indicatorContainer"] {
