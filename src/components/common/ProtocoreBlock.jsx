@@ -1,9 +1,15 @@
 import React, {useRef, useState} from "react";
 import styles from "./ProtocoreBlock.module.css";
 import { getImageUrl } from "@hooks";
-import {getRequiredCredits, getRequiredExp, protocoreColor, protocoreTypes} from "@data";
+import {
+  getRequiredCredits,
+  getRequiredExp,
+  protocoreColor,
+  protocoreTypes,
+  getStatKey
+} from "@data";
 import {addFarmGoal} from "@localstorage";
-import {LevelRangeControl, ModalWindow} from "@components";
+import {LevelRangeControl, ModalWindow, useHighlight} from "@components";
 import { useTranslation } from "react-i18next";
 
 function ProtocoreBlock({
@@ -17,6 +23,10 @@ function ProtocoreBlock({
 }) {
   const { type, stellactrum, level, mainStat, mainStatValue, substats } =
     protocore;
+  const { highlightedStat } = useHighlight();
+
+  const mainStatKey = getStatKey(mainStat);
+  const isMainHighlighted = highlightedStat && mainStatKey === highlightedStat;
 
   const modalRef = useRef(null);
   const [draftLevel, setDraftLevel] = useState(level);
@@ -135,29 +145,31 @@ function ProtocoreBlock({
           </div>
         </div>
 
-        <div className={styles.mainStat}>
+        <div className={`${styles.mainStat} ${isMainHighlighted ? styles.highlighted : ""}`}>
           <span className={styles.statLabelMain}>{mainStat}</span>
           <span className={styles.statValueMain}>
-            {formatStatValue(mainStat, mainStatValue)}
-          </span>
+    {formatStatValue(mainStat, mainStatValue)}
+  </span>
         </div>
 
         <div className={styles.substatsContainer}>
-          {substats &&
-            substats.map((substat, index) => {
-              const statName =
-                typeof substat === "object" ? substat.stat : substat;
-              const statValue =
-                typeof substat === "object" ? substat.value : null;
-              return (
-                <div key={index} className={styles.subStat}>
+          {substats && substats.map((substat, index) => {
+            const statName = typeof substat === "object" ? substat.stat : substat;
+            const statValue = typeof substat === "object" ? substat.value : null;
+            const isHighlighted =
+                highlightedStat && getStatKey(statName) === highlightedStat;
+            return (
+                <div
+                    key={index}
+                    className={`${styles.subStat} ${isHighlighted ? styles.highlighted : ""}`}
+                >
                   <span className={styles.statLabel}>{statName}</span>
                   <span className={styles.statValue}>
-                    {formatStatValue(statName, statValue)}
-                  </span>
+        {formatStatValue(statName, statValue)}
+      </span>
                 </div>
-              );
-            })}
+            );
+          })}
         </div>
       </div>
 

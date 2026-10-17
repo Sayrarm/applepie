@@ -72,6 +72,12 @@
   color: gray;
 }
 
+.mainStat.highlighted,
+.subStat.highlighted {
+  background: rgb(255 255 255 / 0.32);
+  transition: background 0.15s, box-shadow 0.15s;
+}
+
 .mainStat {
   text-shadow: var(--text-shadow);
   background-color: color-mix(in srgb, black 50%, transparent);

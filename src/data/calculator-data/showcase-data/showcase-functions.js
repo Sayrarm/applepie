@@ -24,7 +24,7 @@ export const getCardData = (card) => {
       ? calculateFinalStats(card, baseStats, protocores)
       : null;
 
-  return { level, rank, isAscended, protocores, stats };
+  return { level, rank, isAscended, protocores, baseStats, stats };
 };
 
 // ===== ПОДСЧЁТ СУММЫ СТАТОВ =====

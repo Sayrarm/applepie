@@ -48,3 +48,18 @@
 .selectAffinityContainer [class$="-singleValue"] {
   color: var(--colorText);
 }
+
+.affinityBonus {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.affinityBonus span {
+  padding: 2px 4px;
+}
+
+.highlight {
+  background: var(--background-color);
+  transition: background 0.15s;
+}

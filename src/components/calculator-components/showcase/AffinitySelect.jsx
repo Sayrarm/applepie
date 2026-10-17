@@ -1,14 +1,12 @@
 import Select from "react-select";
 import styles from "./AffinitySelect.module.css";
-import { affinityData } from "@data";
-import { calculateAffinityBonus } from "@data";
+import { useHighlight } from "@components";
+import { calculateAffinityBonus, affinityData } from "@data";
 import { useMemo } from "react";
 
-function AffinitySelect({
-  value, // текущее значение из родителя
-  onChange, // функция для обновления значения в родителе
-}) {
-  // Опции для affinity
+function AffinitySelect({ value, onChange }) {
+  const { highlightedStat } = useHighlight();
+
   const affinityOptions = useMemo(() => {
     const levels = affinityData[0]?.affinityLVL || [];
     return levels.map((lvl) => ({
@@ -26,22 +24,33 @@ function AffinitySelect({
     onChange(option ? option.value : 0);
   };
 
+  const bonusSpan = (key, value, suffix) => (
+      <span
+          className={highlightedStat === key ? styles.highlight : ""}
+          data-stat={key}
+      >
+      +{value} {suffix}
+    </span>
+  );
+
   return (
-    <div className={styles.affinity}>
-      <Select
-        options={affinityOptions}
-        value={affinityOptions.find((opt) => opt.value === value)}
-        onChange={handleChange}
-        placeholder="Select Affinity LVL"
-        className={styles.selectAffinityContainer}
-        isClearable
-        isSearchable={false}
-      />
-      <div className={styles.affinityBonus}>
-        Affinity Bonus: +{affinityBonus.hp} HP, +{affinityBonus.atk} ATK, +
-        {affinityBonus.def} DEF
+      <div className={styles.affinity}>
+        <Select
+            options={affinityOptions}
+            value={affinityOptions.find((opt) => opt.value === value)}
+            onChange={handleChange}
+            placeholder="Select Affinity LVL"
+            className={styles.selectAffinityContainer}
+            isClearable
+            isSearchable={false}
+        />
+        <div className={styles.affinityBonus}>
+          Affinity Bonus:{" "}
+          {bonusSpan("hp", affinityBonus.hp, "HP")},{" "}
+          {bonusSpan("atk", affinityBonus.atk, "ATK")},{" "}
+          {bonusSpan("def", affinityBonus.def, "DEF")}
+        </div>
       </div>
-    </div>
   );
 }
 

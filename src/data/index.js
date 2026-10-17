@@ -5,6 +5,7 @@ export {
   ascendData4star,
   ascendData5star,
   rankOptions,
+  STAT_ICONS
 } from "./card-article-data/levelCardData.js";
 export {
   calculateDmgBoost,
@@ -76,7 +77,8 @@ export {
 export {
   createEmptyStats,
   mergeStats,
-  applyBaseCritDmgBonus
+  applyBaseCritDmgBonus,
+  getStatKey
 } from "./calculator-data/stats-utils.js";
 export {
   computeKitDamage,

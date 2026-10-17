@@ -930,3 +930,12 @@ export const rankOptions = [
   { value: 2, img: "../assets/icons/rank-2.png" },
   { value: 3, img: "../assets/icons/rank-3.png" },
 ];
+
+export const STAT_ICONS = {
+  hp: { src: "../assets/icons/hp-icon.png", alt: "HP" },
+  atk: { src: "../assets/icons/atk-icon.png", alt: "ATK" },
+  def: { src: "../assets/icons/def-icon.png", alt: "DEF" },
+  critRate: { src: "../assets/icons/crit-rate.png", alt: "Crit Rate" },
+  critDmg: { src: "../assets/icons/crit-dmg.png", alt: "Crit DMG" },
+  dmgBoost: { src: "../assets/icons/dmg-boost-to-weakened.png", alt: "DMG Boost to Weakened" },
+};
