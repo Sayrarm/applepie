@@ -185,6 +185,7 @@
   flex-direction: column;
   gap: 5px;
   padding-right: 5px;
+  padding-bottom: 4px;
 }
 
 .cardInfo {
@@ -238,7 +239,7 @@
 .baseStats {
   border-collapse: collapse;
   display: flex;
-  font-size: 10px;
+  font-size: 11px;
 }
 
 .baseStats th,
@@ -253,23 +254,20 @@
   color: var(--colorTextDark);
 }
 
-.baseStats td {
-
-}
-
 .baseStats td,
 .baseStats th {
   cursor: default;
 }
 
 .highlight {
-  background: rgb(165 165 165 / 0.34);
+  background: var(--background-color);
   transition: background 0.15s;
 }
 
 .statIcon {
   width: 16px;
   height: 15px;
+  vertical-align: middle;
 }
 
 /******************************MEDIA********************************/

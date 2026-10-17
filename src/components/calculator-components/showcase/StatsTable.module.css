@@ -27,6 +27,6 @@
 }
 
 .highlight {
-    background: rgb(165 165 165 / 0.2);
+    background: var(--background-color);
     transition: background 0.15s;
 }
