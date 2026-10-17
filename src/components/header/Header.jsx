@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import styles from "./Header.module.css";
@@ -7,11 +7,16 @@ import TimezoneButton from "./TimezoneButton.jsx";
 import { useActiveAccount } from "@hooks";
 import LanguageButton from "./LanguageButton.jsx";
 
+const SHOW_THRESHOLD = 100; // пикселей вверх, чтобы показать хедер
+const HIDE_THRESHOLD = 100; // пикселей вниз, чтобы спрятать (защита от дребезга)
+
 function Header() {
   const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
-  const [lastScroll, setLastScroll] = useState(0);
+  const lastScrollY = useRef(0);
+  const upAccum = useRef(0);
+  const downAccum = useRef(0);
 
   const activeAccount = useActiveAccount();
 
@@ -25,18 +30,32 @@ function Header() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScroll = window.pageYOffset;
-      if (currentScroll <= 0) {
-        setIsHidden(false);
-      } else if (currentScroll > lastScroll) {
-        setIsHidden(true);
+      const delta = currentScroll - lastScrollY.current;
+
+      if (delta === 0) return;
+
+      if (delta > 0) {
+        // Скролл вниз — копим, сбрасываем накопитель вверх
+        upAccum.current = 0;
+        downAccum.current += delta;
+        if (downAccum.current >= HIDE_THRESHOLD) {
+          setIsHidden(true);
+        }
       } else {
-        setIsHidden(false);
+        // Скролл вверх — копим, сбрасываем накопитель вниз
+        downAccum.current = 0;
+        upAccum.current += Math.abs(delta);
+        if (upAccum.current >= SHOW_THRESHOLD) {
+          setIsHidden(false);
+        }
       }
-      setLastScroll(currentScroll);
+
+      lastScrollY.current = currentScroll;
     };
-    window.addEventListener("scroll", handleScroll);
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScroll]);
+  }, []);
 
   // Закрываем меню при клике вне области (для мобильных)
   useEffect(() => {
