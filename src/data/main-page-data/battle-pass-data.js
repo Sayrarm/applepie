@@ -31,4 +31,12 @@ export const battlePassData = [
     endDate: "2026-10-21T04:59:59",
     active: true,
   },
+  {
+    id: 5,
+    name: "Promise",
+    image: "../assets/main-page/events/promise-oct-26.png",
+    startDate: "2026-10-21T05:00:00",
+    endDate: "2026-12-18T04:59:59",
+    active: true,
+  },
 ];
