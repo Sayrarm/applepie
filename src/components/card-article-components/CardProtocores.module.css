@@ -32,17 +32,26 @@
 .addButton {
   width: 118px;
   min-height: 30px;
-  background-color: var(--forSelect);
+  background-color: var(--green-button);
   box-shadow: var(--box-shadow);
   color: var(--colorText);
   border: none;
   cursor: pointer;
   font-size: 14px;
+  transition: 0.3s;
 }
 
-.addButton:disabled {
-  background: #ccc;
-  cursor: not-allowed;
+.deleteButton {
+  background-color: var(--red-button);
+  transition: 0.3s;
+}
+
+.addButton:hover {
+  background-color: var(--light-green-button);
+}
+
+.deleteButton:hover {
+  background-color: var(--light-red-button);
 }
 
 .tabButton {
