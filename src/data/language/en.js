@@ -566,5 +566,26 @@ export const en = {
             tm: '- a story that can be obtained from 4-star Memories. Presented as an audiobook (MC is not voiced, subtitles must be read);',
             st: '- a story that can be obtained from 4-star Memories or reaching the required Affinity level. Presented as an audio track with only the male character voiced.'
         },
+        FilterModalBanner: {
+            "titleModal": "Filter",
+            "type": "Type:",
+            "solo": "Solo",
+            "multi": "Multi",
+            "clear": "Clear"
+        },
+        FilterSortBarBanners: {
+            "placeholder": "Sort by...",
+            "new": "New",
+            "rerun": "Rerun",
+            "active": "Active",
+            "inactive": "Inactive",
+            "name": "Name",
+            "startDate": "Release",
+            "endDate": "End",
+            "clearSorting": "Clear sorting",
+            "filterButton": "Filters",
+            "search": "Search banners...",
+            "resetButton": "Reset all settings"
+        },
     },
 };
