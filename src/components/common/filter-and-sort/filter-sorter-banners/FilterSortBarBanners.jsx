@@ -66,7 +66,6 @@ function FilterSortBarBanners({
                             { value: "inactive", label: t('FilterSortBarBanners.inactive') },
                             { value: "name", label: t('FilterSortBarBanners.name') },
                             { value: "startDate", label: t('FilterSortBarBanners.startDate') },
-                            { value: "endDate", label: t('FilterSortBarBanners.endDate') },
                         ]}
                     />
 

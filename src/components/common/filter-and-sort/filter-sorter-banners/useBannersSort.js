@@ -21,14 +21,6 @@ const compareFunctions = {
     },
     name: (a, b) => a.name.localeCompare(b.name),
     startDate: (a, b) => new Date(a.startDate) - new Date(b.startDate),
-    endDate: (a, b) => {
-        // "permanently" считаем как самую позднюю дату
-        const getEnd = (banner) =>
-            banner.endDate === "permanently"
-                ? Infinity
-                : new Date(banner.endDate).getTime();
-        return getEnd(a) - getEnd(b);
-    },
 };
 
 // Функция для многоуровневой сортировки
