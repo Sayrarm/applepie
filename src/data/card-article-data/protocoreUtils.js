@@ -203,3 +203,24 @@ export const getDmgBoostGrowth = (card, baseStats, protocores) => {
   // 4. Возвращаем разницу
   return scaledDmgBoost - baseDmgBoost;
 };
+
+// Функция для получения полной разбивки DMG Boost (база + скейлинг + плоский прирост)
+export const getDmgBoostBreakdown = (card, baseStats, protocores) => {
+  if (!baseStats || !card) {
+    return { base: 0, scaling: 0, flat: 0, total: 0 };
+  }
+
+  const base = baseStats.dmgBoost || 0;
+
+  // 1. Прирост от скейлинга (используем готовую функцию)
+  const scaling = getDmgBoostGrowth(card, baseStats, protocores);
+
+  // 2. Плоский прирост (считаем через calculateProtocoreStats)
+  const protocoreStats = calculateProtocoreStats(protocores, baseStats);
+  const flat = protocoreStats.dmgBoost || 0;
+
+  // 3. Итоговое значение (база + скейлинг + плоский)
+  const total = base + scaling + flat;
+
+  return { base, scaling, flat, total };
+};

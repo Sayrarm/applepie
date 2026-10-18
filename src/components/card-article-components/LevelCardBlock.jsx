@@ -12,7 +12,7 @@ import {
   getUpgradeResources,
   getExpNeeded,
   crystalColors,
-  getDmgBoostGrowth,
+  getDmgBoostBreakdown
 } from "@data";
 import {
   getCardLevel,
@@ -98,26 +98,19 @@ function LevelCardBlock({ cardId: propCardId, onAvailabilityChange }) {
   const renderDmgBoostBreakdown = () => {
     if (!stats || !baseStats) return "—";
 
-    const finalValue = stats.dmgBoost;
-    const baseValue = baseStats.dmgBoost;
+    // Получаем готовую разбивку
+    const breakdown = getDmgBoostBreakdown(card, baseStats, equippedProtocores);
+    const finalValue = stats.dmgBoost; // Берем итог из calculateFinalStats
 
-    // 1. Прирост от скейлинга (HP/ATK/DEF)
-    const scalingGrowth = getDmgBoostGrowth(card, baseStats, equippedProtocores);
+    // Проверяем, есть ли хоть какой-то прирост
+    const hasGrowth = breakdown.scaling > 0.01 || breakdown.flat > 0.01;
 
-    // 2. Плоский прирост (если в протокорах есть свой стат DMG Boost)
-    // Считаем как: (общий итог - база) - прирост от скейлинга
-    const flatGrowth = (finalValue - baseValue) - scalingGrowth;
-
-    const totalDiff = finalValue - baseValue;
-
-    // Если нет ни скейлинга, ни плоского прироста
-    if (totalDiff <= 0.01) {
+    if (!hasGrowth) {
       return <div>{formatNumber(finalValue)}%</div>;
     }
 
-    // Формируем нижнюю строку
     // Если есть плоский прирост, добавляем его в скобках
-    const flatText = flatGrowth > 0.01 ? ` + ${formatNumber(flatGrowth)}%` : "";
+    const flatText = breakdown.flat > 0.01 ? ` + ${formatNumber(breakdown.flat)}%` : "";
 
     return (
         <div className={styles.statBreakdown}>
@@ -125,7 +118,7 @@ function LevelCardBlock({ cardId: propCardId, onAvailabilityChange }) {
                 {formatNumber(finalValue)}%
             </div>
           <div className={styles.statBreakdownDiff}>
-                {formatNumber(baseValue)}% <span className={styles.addStat}>+ {formatNumber(scalingGrowth)}%{flatText}</span>
+                {formatNumber(breakdown.base)}% <span className={styles.addStat}>+ {formatNumber(breakdown.scaling)}%{flatText}</span>
             </div>
         </div>
     );
