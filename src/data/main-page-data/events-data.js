@@ -175,4 +175,12 @@ export const eventsData = [
     endDate: "2026-10-16T04:59:59",
     active: false,
   },
+  {
+    id: 23,
+    name: "LADS x BladeRunner 2049 Log in event",
+    image: "../assets/main-page/events/blade-runner-event.png",
+    startDate: "2026-10-19T05:00:00",
+    endDate: "2026-11-05T04:59:59",
+    active: true,
+  },
 ];
