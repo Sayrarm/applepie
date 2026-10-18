@@ -183,4 +183,12 @@ export const eventsData = [
     endDate: "2026-11-05T04:59:59",
     active: true,
   },
+  {
+    id: 24,
+    name: "Double Drop of Protocore",
+    image: "../assets/main-page/events/double-protocore.png",
+    startDate: "2026-10-26T05:00:00",
+    endDate: "2026-11-02T04:59:59",
+    active: true,
+  },
 ];
