@@ -982,7 +982,7 @@ export const bannersDataFull = [
     startDate: "2026-10-11T05:00:00",
     endDate: "2026-10-18T04:59:59",
     rerun: false,
-    active: true,
+    active: false,
   },
   {
     id: 98,
@@ -992,7 +992,7 @@ export const bannersDataFull = [
     startDate: "2026-10-11T05:00:00",
     endDate: "2026-10-18T04:59:59",
     rerun: true,
-    active: true,
+    active: false,
   },
   {
     id: 99,
@@ -1002,7 +1002,7 @@ export const bannersDataFull = [
     startDate: "2026-10-11T05:00:00",
     endDate: "2026-10-18T04:59:59",
     rerun: true,
-    active: true,
+    active: false,
   },
   {
     id: 100,
