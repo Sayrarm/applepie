@@ -122,9 +122,9 @@ export const calculateProtocoreStats = (protocores, baseStats) => {
   // Рассчитываем статы с учетом процентов от базовых значений
   stats.hp = bonuses.hpFlat + (baseStats.hp || 0) * (bonuses.hpPercent / 100);
   stats.atk =
-    bonuses.atkFlat + (baseStats.atk || 0) * (bonuses.atkPercent / 100);
+      bonuses.atkFlat + (baseStats.atk || 0) * (bonuses.atkPercent / 100);
   stats.def =
-    bonuses.defFlat + (baseStats.def || 0) * (bonuses.defPercent / 100);
+      bonuses.defFlat + (baseStats.def || 0) * (bonuses.defPercent / 100);
   stats.critRate = bonuses.critRate;
   stats.critDmg = bonuses.critDmg;
   stats.dmgBoost = bonuses.dmgBoostPercent;
@@ -133,6 +133,15 @@ export const calculateProtocoreStats = (protocores, baseStats) => {
   stats.expeditedEnergyBoost = bonuses.expeditedEnergyBoostPercent;
 
   return stats;
+};
+
+// Вспомогательная функция для расчета финальных HP, ATK, DEF (используется в нескольких местах)
+const getFinalBaseStats = (baseStats, protocoreStats) => {
+  return {
+    finalHp: Math.floor((baseStats.hp || 0) + (protocoreStats.hp || 0)),
+    finalAtk: Math.floor((baseStats.atk || 0) + (protocoreStats.atk || 0)),
+    finalDef: Math.floor((baseStats.def || 0) + (protocoreStats.def || 0)),
+  };
 };
 
 // Функция для расчета финальных статов с учетом протокоров
@@ -145,10 +154,8 @@ export const calculateFinalStats = (card, baseStats, protocores) => {
   // Рассчитываем бонусы от протокоров
   const protocoreStats = calculateProtocoreStats(protocores, baseStats);
 
-  // Считаем финальные HP, ATK, DEF
-  const finalHp = Math.floor((baseStats.hp || 0) + (protocoreStats.hp || 0));
-  const finalAtk = Math.floor((baseStats.atk || 0) + (protocoreStats.atk || 0));
-  const finalDef = Math.floor((baseStats.def || 0) + (protocoreStats.def || 0));
+  // Считаем финальные HP, ATK, DEF (через хелпер)
+  const { finalHp, finalAtk, finalDef } = getFinalBaseStats(baseStats, protocoreStats);
 
   // Пересчитываем DMG Boost на основе финальных статов
   const talentKey = card.talentName;
@@ -179,29 +186,9 @@ export const calculateFinalStats = (card, baseStats, protocores) => {
 export const getProtocoreLevelsString = (protocores) => {
   if (!protocores || protocores.length === 0) return "—";
   const levels = protocores
-    .map((proto) => proto.level || 0)
-    .sort((a, b) => b - a);
+      .map((proto) => proto.level || 0)
+      .sort((a, b) => b - a);
   return `+${levels.join(" / +")}`;
-};
-
-// Функция для получения значения DMG Boost, которое наросло именно из-за увеличения HP/ATK/DEF
-export const getDmgBoostGrowth = (card, baseStats, protocores) => {
-  if (!baseStats || !card) return 0;
-
-  // 1. Базовый DMG Boost
-  const baseDmgBoost = baseStats.dmgBoost || 0;
-
-  // 2. Считаем статы протокоров и финальные статы
-  const protocoreStats = calculateProtocoreStats(protocores, baseStats);
-  const finalHp = Math.floor((baseStats.hp || 0) + (protocoreStats.hp || 0));
-  const finalAtk = Math.floor((baseStats.atk || 0) + (protocoreStats.atk || 0));
-  const finalDef = Math.floor((baseStats.def || 0) + (protocoreStats.def || 0));
-
-  // 3. Считаем DMG Boost от нарощенных статов (БЕЗ учета плоского бонуса dmgBoost от самих протокоров)
-  const scaledDmgBoost = calculateDmgBoost(finalHp, finalAtk, finalDef, card.talentName);
-
-  // 4. Возвращаем разницу
-  return scaledDmgBoost - baseDmgBoost;
 };
 
 // Функция для получения полной разбивки DMG Boost (база + скейлинг + плоский прирост)
@@ -210,17 +197,30 @@ export const getDmgBoostBreakdown = (card, baseStats, protocores) => {
     return { base: 0, scaling: 0, flat: 0, total: 0 };
   }
 
+  // 1. Базовый DMG Boost
   const base = baseStats.dmgBoost || 0;
 
-  // 1. Прирост от скейлинга (используем готовую функцию)
-  const scaling = getDmgBoostGrowth(card, baseStats, protocores);
-
-  // 2. Плоский прирост (считаем через calculateProtocoreStats)
+  // 2. Считаем статы протокоров и финальные статы (через хелпер)
   const protocoreStats = calculateProtocoreStats(protocores, baseStats);
+  const { finalHp, finalAtk, finalDef } = getFinalBaseStats(baseStats, protocoreStats);
+
+  // 3. Считаем DMG Boost от нарощенных статов
+  const scaledDmgBoost = calculateDmgBoost(finalHp, finalAtk, finalDef, card.talentName);
+
+  // 4. Прирост от скейлинга (разница между новым и базовым)
+  const scaling = scaledDmgBoost - base;
+
+  // 5. Плоский прирост от протокоров
   const flat = protocoreStats.dmgBoost || 0;
 
-  // 3. Итоговое значение (база + скейлинг + плоский)
-  const total = base + scaling + flat;
+  // 6. Итоговое значение
+  const total = scaledDmgBoost + flat;
 
   return { base, scaling, flat, total };
+};
+
+// Функция для получения значения DMG Boost, которое наросло именно из-за увеличения HP/ATK/DEF
+// (Оставлена для обратной совместимости, внутри использует getDmgBoostBreakdown)
+export const getDmgBoostGrowth = (card, baseStats, protocores) => {
+  return getDmgBoostBreakdown(card, baseStats, protocores).scaling;
 };
