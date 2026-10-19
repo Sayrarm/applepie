@@ -266,6 +266,31 @@ export const hunterContestBuffs = [
     teamC:
         "DMG increase: Increases DMG against vulnerable Boss for all allied units.",
 
+    active: false,
+  },
+  {
+    id: 11,
+    teamAStella1: "../assets/icons/amber.png",
+    teamAStella1Count: 5,
+    teamAStella2: "../assets/icons/emerald.png",
+    teamAStella2Count: 1,
+    teamA:
+        "Restrained: Deal 30% more DMG to Wanderers that are restrained from moving.",
+
+    teamBStella1: "../assets/icons/ruby.png",
+    teamBStella1Count: 4,
+    teamBStella2: "../assets/icons/sapphire.png",
+    teamBStella2Count: 1,
+    teamB:
+        "Weakened Boost: Resonance Skill's damage dealt to Wanderers under the weakened state will be increased by 80%.",
+
+    teamCStella1: "../assets/icons/sapphire.png",
+    teamCStella1Count: 3,
+    teamCStella2: "../assets/icons/ruby.png",
+    teamCStella2Count: 1,
+    teamC:
+        "Advancement: Increases CRIT DMG of all allied units.",
+
     active: true,
   },
 ];
