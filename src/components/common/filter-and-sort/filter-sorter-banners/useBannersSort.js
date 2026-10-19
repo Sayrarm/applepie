@@ -1,5 +1,8 @@
 import { useEffect, useState, useCallback } from "react";
-import { getSortCriteria, saveSortCriteria } from "@localstorage";
+import {
+    getBannerSortCriteria,
+    saveBannerSortCriteria
+} from "@localstorage";
 
 // Функции сравнения для каждого типа сортировки баннеров
 const compareFunctions = {
@@ -44,12 +47,12 @@ const multiSort = (banners, criteria) => {
 
 export const useBannersSort = (prefix = "") => {
     const [sortCriteria, setSortCriteria] = useState(() =>
-        getSortCriteria(prefix),
+        getBannerSortCriteria(prefix),
     );
 
     // Сохраняем sortCriteria в localStorage при изменении
     useEffect(() => {
-        saveSortCriteria(prefix, sortCriteria);
+        saveBannerSortCriteria(prefix, sortCriteria);
     }, [sortCriteria, prefix]);
 
     // Обработчик изменения сортировки
@@ -60,7 +63,7 @@ export const useBannersSort = (prefix = "") => {
     // Очистка всех сортировок
     const clearSorting = useCallback(() => {
         setSortCriteria([]);
-        saveSortCriteria(prefix, []);
+        saveBannerSortCriteria(prefix, []);
     }, [prefix]);
 
     // Сортируем баннеры
@@ -78,6 +81,3 @@ export const useBannersSort = (prefix = "") => {
         sortBanners,
     };
 };
-
-// Для обратной совместимости
-export const useDefaultBannersSort = () => useBannersSort("");

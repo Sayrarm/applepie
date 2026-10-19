@@ -1,12 +1,17 @@
 import { useEffect, useState, useCallback } from "react";
-import { getSearchQuery, saveSearchQuery } from "@localstorage";
+import {
+    getBannerSearchQuery,
+    saveBannerSearchQuery,
+} from "@localstorage";
 
 export const useBannersSearch = (prefix = "") => {
-    const [searchQuery, setSearchQuery] = useState(() => getSearchQuery(prefix));
+    const [searchQuery, setSearchQuery] = useState(() =>
+        getBannerSearchQuery(prefix),
+    );
 
     // Сохраняем поисковый запрос
     useEffect(() => {
-        saveSearchQuery(prefix, searchQuery);
+        saveBannerSearchQuery(prefix, searchQuery);
     }, [searchQuery, prefix]);
 
     const onSearch = useCallback((value) => {
@@ -15,7 +20,7 @@ export const useBannersSearch = (prefix = "") => {
 
     const clearSearch = useCallback(() => {
         setSearchQuery("");
-        saveSearchQuery(prefix, "");
+        saveBannerSearchQuery(prefix, "");
     }, [prefix]);
 
     return { searchQuery, onSearch, clearSearch };

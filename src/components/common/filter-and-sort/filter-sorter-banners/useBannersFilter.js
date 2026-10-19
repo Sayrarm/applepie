@@ -1,11 +1,11 @@
 import { useEffect, useState, useCallback } from "react";
 import {
-    getSelectedChar,
-    saveSelectedChar,
-    getFilters,
-    saveFilters,
-    getDefaultFilters,
-    clearAllFilters,
+    getBannerSelectedChar,
+    saveBannerSelectedChar,
+    getDefaultBannerFilters,
+    clearAllBannerFilters,
+    saveBannerFilters,
+    getBannerFilters
 } from "@localstorage";
 import { memoriesData } from "@data";
 
@@ -30,19 +30,19 @@ const getBannerType = (banner) => {
 export const useBannersFilter = (prefix = "") => {
     // Загружаем начальные значения из localStorage
     const [selectedChar, setSelectedChar] = useState(() =>
-        getSelectedChar(prefix),
+        getBannerSelectedChar(prefix),
     );
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [filters, setFilters] = useState(() => getFilters(prefix));
+    const [filters, setFilters] = useState(() => getBannerFilters(prefix));
 
     // Сохраняем selectedChar в localStorage при изменении
     useEffect(() => {
-        saveSelectedChar(prefix, selectedChar);
+        saveBannerSelectedChar(prefix, selectedChar);
     }, [selectedChar, prefix]);
 
     // Сохраняем filters в localStorage при изменении
     useEffect(() => {
-        saveFilters(prefix, filters);
+        saveBannerFilters(prefix, filters);
     }, [filters, prefix]);
 
     const applyFilters = useCallback((newFilters) => {
@@ -50,16 +50,16 @@ export const useBannersFilter = (prefix = "") => {
     }, []);
 
     const clearFilters = useCallback(() => {
-        const defaultFilters = getDefaultFilters();
+        const defaultFilters = getDefaultBannerFilters();
         setFilters(defaultFilters);
-        saveFilters(prefix, defaultFilters);
+        saveBannerFilters(prefix, defaultFilters);
     }, [prefix]);
 
     // Полная очистка всех фильтров (включая localStorage)
     const clearAll = useCallback(() => {
-        clearAllFilters(prefix);
+        clearAllBannerFilters(prefix);
         setSelectedChar("ALL");
-        setFilters(getDefaultFilters());
+        setFilters(getDefaultBannerFilters());
     }, [prefix]);
 
     // Фильтруем баннеры

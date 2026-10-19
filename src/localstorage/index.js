@@ -3,6 +3,7 @@ export {
   getCardKeys,
   getMemoryFilterKeys,
   getProtocoreFilterKeys,
+  getBannerFilterKeys
 } from "./localStorageKeys.js";
 export {
   get,
@@ -153,6 +154,21 @@ export {
   isProtocoreEquipped,
   updateProtocoreFilters,
 } from "./filter-protocore-storage.js";
+export {
+  getBannerFilterKeysForPrefix,
+  getBannerSelectedChar,
+  saveBannerSelectedChar,
+  getBannerTypeFilter,
+  saveBannerTypeFilter,
+  getBannerSearchQuery,
+  saveBannerSearchQuery,
+  getBannerSortCriteria,
+  saveBannerSortCriteria,
+  clearAllBannerFilters,
+  getDefaultBannerFilters,
+  getBannerFilters,
+  saveBannerFilters
+} from "./filter-banner-storage.js";
 export {
   getOptimizerData,
   saveOptimizerData,

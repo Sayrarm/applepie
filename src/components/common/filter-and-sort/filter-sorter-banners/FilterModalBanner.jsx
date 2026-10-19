@@ -1,11 +1,9 @@
 import { useEffect, useState, forwardRef, useImperativeHandle } from "react";
 import { Modal, Checkbox, Button } from "antd";
 import {
-    getFilters,
-    saveFilters,
-    getDefaultFilters,
-    clearAllFilters,
-    getFilterKeys,
+    getBannerFilters,
+    saveBannerFilters,
+    clearAllBannerFilters,
 } from "@localstorage";
 import { useTranslation } from "react-i18next";
 
@@ -15,21 +13,21 @@ const FilterModalBanner = forwardRef(
 
         // Загружаем фильтры из localStorage
         const [type, setType] = useState(() => {
-            const saved = getFilters(storagePrefix);
+            const saved = getBannerFilters(storagePrefix);
             return saved.type || [];
         });
 
-        // Сохраняем в localStorage при изменении
+        // Сохраняем только type, не затирая другие поля
         useEffect(() => {
-            const saved = getFilters(storagePrefix);
-            saveFilters(storagePrefix, { ...saved, type });
+            const saved = getBannerFilters(storagePrefix);
+            saveBannerFilters(storagePrefix, { ...saved, type });
         }, [type, storagePrefix]);
 
         // ЭКСПОРТИРУЕМ ФУНКЦИЮ ДЛЯ ВНЕШНЕГО ВЫЗОВА
         useImperativeHandle(ref, () => ({
             clearAll: () => {
                 setType([]);
-                clearAllFilters(storagePrefix);
+                clearAllBannerFilters(storagePrefix);
                 if (onClearFilters) {
                     onClearFilters();
                 }
@@ -37,48 +35,41 @@ const FilterModalBanner = forwardRef(
         }));
 
         const optionsType = [
-            { label: t('FilterModalBanner.solo'), value: "solo" },
-            { label: t('FilterModalBanner.multi'), value: "multi" },
+            { label: t("FilterModalBanner.solo"), value: "solo" },
+            { label: t("FilterModalBanner.multi"), value: "multi" },
         ];
-
-        const handleTypeChange = (checkedValues) => {
-            setType(checkedValues);
-        };
 
         const handleClear = () => {
             setType([]);
-            clearAllFilters(storagePrefix);
+            clearAllBannerFilters(storagePrefix);
             if (onClearFilters) {
                 onClearFilters();
             }
         };
 
         const handleOk = () => {
-            const filters = {
-                type: type,
-            };
-            onFilter(filters);
+            onFilter({ type });
             onClose();
         };
 
         return (
             <Modal
-                title={t('FilterModalBanner.titleModal')}
+                title={t("FilterModalBanner.titleModal")}
                 open={open}
                 onOk={handleOk}
                 onCancel={onClose}
                 width={400}
             >
                 <div style={{ marginBottom: 15 }}>
-                    <span>{t('FilterModalBanner.type')} </span>
+                    <span>{t("FilterModalBanner.type")} </span>
                     <Checkbox.Group
                         options={optionsType}
                         value={type}
-                        onChange={handleTypeChange}
+                        onChange={setType}
                     />
                 </div>
 
-                <Button onClick={handleClear}>{t('FilterModalBanner.clear')}</Button>
+                <Button onClick={handleClear}>{t("FilterModalBanner.clear")}</Button>
             </Modal>
         );
     },
