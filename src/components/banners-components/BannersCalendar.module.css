@@ -1,0 +1,92 @@
+.calendar {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+    background: var(--bg-secondary, #fafafa);
+    border-radius: 12px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    min-width: 180px;
+    text-align: center;
+}
+
+.navBtn {
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 8px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.navBtn:hover {
+    background: #f0f0f0;
+}
+
+/* Заголовок с числами дней */
+.daysHeader {
+    display: grid;
+    gap: 2px;
+}
+
+.dayCell {
+    font-size: 11px;
+    text-align: center;
+    color: #666;
+    padding: 4px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* Контейнер полос */
+.rows {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.row {
+    display: grid;
+    gap: 2px;
+    min-height: 28px;
+}
+
+.bannerBar {
+    height: 26px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: default;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.bannerBarText {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.empty {
+    text-align: center;
+    color: #999;
+    padding: 20px;
+    font-style: italic;
+}

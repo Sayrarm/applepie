@@ -57,7 +57,7 @@ export const router = createBrowserRouter(
           children: [
             { index: true, element: <Navigate to="all-banners" replace /> },
             { path: "all-banners", element: <BannerList banners={bannersDataFull} showFilters={true} /> },
-            { path: "banners-calendar", element: <BannersCalendar /> },
+            { path: "banners-calendar", element: <BannersCalendar banners={bannersDataFull} /> },
           ],
         },
         { path: "battle/:articleLink", element: <CompanionBattleInfo /> },
