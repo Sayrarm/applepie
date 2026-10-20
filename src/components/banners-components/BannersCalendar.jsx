@@ -188,6 +188,11 @@ function MiniMonth({ year, month, banners, onClick }) {
 
 // ===== Основной компонент =====
 function BannersCalendar({ banners, initialDate = new Date() }) {
+    // Фильтруем перманентные баннеры (без даты окончания)
+    const calendarBanners = useMemo(() => {
+        return banners.filter(b => b.endDate !== "permanently");
+    }, [banners]);
+
     const [selectedYear, setSelectedYear] = useState(
         () => initialDate.getFullYear(),
     );
@@ -202,9 +207,10 @@ function BannersCalendar({ banners, initialDate = new Date() }) {
         [selectedYear, selectedMonth],
     );
 
+    // Используем отфильтрованный массив calendarBanners
     const bannerRows = useMemo(
-        () => buildBannerRows(banners, monthDays),
-        [banners, monthDays],
+        () => buildBannerRows(calendarBanners, monthDays),
+        [calendarBanners, monthDays],
     );
 
     const goPrevMonth = () => {
@@ -257,7 +263,7 @@ function BannersCalendar({ banners, initialDate = new Date() }) {
                             key={idx}
                             year={selectedYear}
                             month={idx}
-                            banners={banners}
+                            banners={calendarBanners} // Передаем отфильтрованный массив
                             onClick={() => openMonth(idx)}
                         />
                     ))}
