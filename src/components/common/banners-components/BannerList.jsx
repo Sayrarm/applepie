@@ -13,7 +13,7 @@ import { memoriesData } from "@data";
 import { getImageUrl } from "@hooks";
 import BannerPeriod from "./BannerPeriod.jsx";
 
-function BannerList({ banners }) {
+function BannerList({ banners, showFilters = false }) {
     const [selectedBanner, setSelectedBanner] = useState(null);
     const memoriesModalRef = useRef();
     const filterModalRef = useRef();
@@ -24,7 +24,6 @@ function BannerList({ banners }) {
         setSelectedChar,
         isModalOpen,
         setIsModalOpen,
-        filters,
         applyFilters,
         clearFilters,
         clearAll,
@@ -84,21 +83,23 @@ function BannerList({ banners }) {
 
     return (
         <>
-            <FilterSortBarBanners
-                onSearch={onSearch}
-                sortCriteria={sortCriteria}
-                handleSortChange={handleSortChange}
-                clearSorting={clearSorting}
-                selectedChar={selectedChar}
-                setSelectedChar={setSelectedChar}
-                isModalOpen={isModalOpen}
-                setIsModalOpen={setIsModalOpen}
-                applyFilters={applyFilters}
-                clearFilters={clearFilters}
-                filterModalRef={filterModalRef}
-                resetAllSettings={resetAllSettings}
-                storagePrefix="banners"
-            />
+            {showFilters && (
+                <FilterSortBarBanners
+                    onSearch={onSearch}
+                    sortCriteria={sortCriteria}
+                    handleSortChange={handleSortChange}
+                    clearSorting={clearSorting}
+                    selectedChar={selectedChar}
+                    setSelectedChar={setSelectedChar}
+                    isModalOpen={isModalOpen}
+                    setIsModalOpen={setIsModalOpen}
+                    applyFilters={applyFilters}
+                    clearFilters={clearFilters}
+                    filterModalRef={filterModalRef}
+                    resetAllSettings={resetAllSettings}
+                    storagePrefix="banners"
+                />
+            )}
 
             {(!banners || banners.length === 0) && (
                 <div className={styles.noBanners}>No banners available</div>
