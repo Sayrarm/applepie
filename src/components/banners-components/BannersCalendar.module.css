@@ -149,7 +149,7 @@
 .miniBannerBar {
     height: 4px;
     border-radius: 2px;
-    margin-top: 16px; /* Сдвигаем вниз, чтобы не перекрывать числа */
+    /* margin-top задаётся инлайн-стилем (16px + lane * 8px) */
     margin-left: 2px;
     margin-right: 2px;
     opacity: 0.9;
@@ -239,10 +239,10 @@
     overflow: hidden;
     text-overflow: ellipsis;
     pointer-events: auto; /* Для тултипа */
-    margin-top: 28px; /* Сдвигаем вниз под число */
+    /* margin-top задаётся инлайн-стилем (28px + lane * 20px) */
     margin-left: 2px;
     margin-right: 2px;
-    height: 24px;
+    height: 20px;
     align-self: start;
 }
 

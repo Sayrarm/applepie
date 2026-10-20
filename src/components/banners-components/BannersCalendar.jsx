@@ -54,6 +54,31 @@ const getBannerRange = (banner, monthDays) => {
     return { startIndex, endIndex };
 };
 
+// Распределяет баннеры по рядам (lane), чтобы пересекающиеся по датам
+// полосы не накладывались друг на друга, а шли одна под другой.
+const assignLanes = (rows) => {
+    const sorted = [...rows].sort((a, b) => a.startIndex - b.startIndex);
+
+    // lanes[i] = массив занятых интервалов [start, end] в ряду i
+    const lanes = [];
+
+    return sorted.map((row) => {
+        let laneIndex = 0;
+        while (true) {
+            if (!lanes[laneIndex]) lanes[laneIndex] = [];
+            const hasConflict = lanes[laneIndex].some(
+                ([s, e]) => row.startIndex <= e && row.endIndex >= s,
+            );
+            if (!hasConflict) {
+                lanes[laneIndex].push([row.startIndex, row.endIndex]);
+                break;
+            }
+            laneIndex++;
+        }
+        return { ...row, lane: laneIndex };
+    });
+};
+
 const buildBannerRows = (banners, monthDays) => {
     const rows = [];
     banners.forEach((banner) => {
@@ -67,7 +92,7 @@ const buildBannerRows = (banners, monthDays) => {
             typeLabel: getBannerTypeLabel(banner),
         });
     });
-    return rows;
+    return assignLanes(rows);
 };
 
 // Нарезает диапазон баннера на сегменты по 7 дней (для календарной сетки)
@@ -160,7 +185,7 @@ function MiniMonth({ year, month, banners, onClick }) {
                     className={styles.miniBannersLayer}
                     style={{ gridTemplateRows: `repeat(${totalWeeks}, 1fr)` }}
                 >
-                    {bannerRows.map(({ banner, startIndex, endIndex, color }) => {
+                    {bannerRows.map(({ banner, startIndex, endIndex, color, lane }) => {
                         const segments = getBannerSegments(startIndex, endIndex, firstDayOfWeek);
 
                         return (
@@ -173,6 +198,7 @@ function MiniMonth({ year, month, banners, onClick }) {
                                             gridColumn: `${seg.startCol} / span ${seg.span}`,
                                             gridRow: seg.row + 1,
                                             backgroundColor: color,
+                                            marginTop: `${16 + (lane || 0) * 8}px`,
                                         }}
                                         title={banner.name}
                                     />
@@ -338,7 +364,7 @@ function BannersCalendar({ banners, initialDate = new Date() }) {
                     className={styles.monthBannersLayer}
                     style={{ gridTemplateRows: `repeat(${totalWeeks}, 1fr)` }}
                 >
-                    {bannerRows.map(({ banner, startIndex, endIndex, color, typeLabel }) => {
+                    {bannerRows.map(({ banner, startIndex, endIndex, color, typeLabel, lane }) => {
                         const segments = getBannerSegments(startIndex, endIndex, firstDayOfWeek);
                         const chars = getBannerCharacters(banner);
                         const tooltip = `${banner.name} — ${typeLabel}${chars.length > 0 ? ` (${chars.join(", ")})` : ""}`;
@@ -353,6 +379,7 @@ function BannersCalendar({ banners, initialDate = new Date() }) {
                                             gridColumn: `${seg.startCol} / span ${seg.span}`,
                                             gridRow: seg.row + 1,
                                             backgroundColor: color,
+                                            marginTop: `${28 + (lane || 0) * 20}px`,
                                         }}
                                         title={tooltip}
                                     >
