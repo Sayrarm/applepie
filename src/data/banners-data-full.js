@@ -11,6 +11,7 @@ export const bannersDataFull = [
     endDate: "permanently",
     rerun: false,
     active: false,
+    type: 'standart',
   },
   {
     id: 2,
@@ -21,6 +22,7 @@ export const bannersDataFull = [
     endDate: "2024-01-26T04:59:00",
     rerun: false,
     active: false,
+    type: 'solo',
   },
   {
     id: 3,
@@ -31,6 +33,7 @@ export const bannersDataFull = [
     endDate: "2024-02-04T04:59:00",
     rerun: false,
     active: false,
+    type: 'solo',
   },
   {
     id: 4,
@@ -41,6 +44,7 @@ export const bannersDataFull = [
     endDate: "2024-02-19T04:59:00",
     rerun: false,
     active: false,
+    type: 'multi',
   },
   {
     id: 5,
@@ -51,6 +55,7 @@ export const bannersDataFull = [
     endDate: "2024-02-29T04:59:00",
     rerun: false,
     active: false,
+    type: 'solo',
   },
   {
     id: 6,
@@ -61,6 +66,7 @@ export const bannersDataFull = [
     endDate: "2024-03-08T04:59:00",
     rerun: false,
     active: false,
+    type: 'birthday',
   },
   {
     id: 7,
@@ -71,6 +77,7 @@ export const bannersDataFull = [
     endDate: "2024-03-23T04:59:00",
     rerun: false,
     active: false,
+    type: 'multi',
   },
   {
     id: 8,
@@ -81,6 +88,7 @@ export const bannersDataFull = [
     endDate: "2024-04-17T04:59:00",
     rerun: false,
     active: false,
+    type: 'myth',
   },
   {
     id: 9,
@@ -91,6 +99,7 @@ export const bannersDataFull = [
     endDate: "2024-04-29T04:59:00",
     rerun: false,
     active: false,
+    type: 'solo',
   },
   {
     id: 10,
@@ -101,6 +110,7 @@ export const bannersDataFull = [
     endDate: "2024-05-10T04:59:00",
     rerun: false,
     active: false,
+    type: 'solo',
   },
   {
     id: 11,
@@ -111,6 +121,7 @@ export const bannersDataFull = [
     endDate: "2024-05-27T04:59:00",
     rerun: false,
     active: false,
+    type: 'myth',
   },
   {
     id: 12,
@@ -121,6 +132,7 @@ export const bannersDataFull = [
     endDate: "2024-06-07T04:59:00",
     rerun: false,
     active: false,
+    type: 'solo',
   },
   {
     id: 13,
@@ -131,6 +143,7 @@ export const bannersDataFull = [
     endDate: "2024-06-21T04:59:00",
     rerun: false,
     active: false,
+    type: 'myth',
   },
   {
     id: 14,
@@ -141,6 +154,7 @@ export const bannersDataFull = [
     endDate: "2024-07-10T04:59:00",
     rerun: false,
     active: false,
+    type: 'multi',
   },
   {
     id: 15,
@@ -154,6 +168,7 @@ export const bannersDataFull = [
     endDate: "2024-08-01T04:59:00",
     rerun: false,
     active: false,
+    type: 'standart',
   },
   {
     id: 16,
@@ -164,6 +179,7 @@ export const bannersDataFull = [
     endDate: "2024-08-01T04:59:00",
     rerun: false,
     active: false,
+    type: 'solo',
   },
   {
     id: 17,
@@ -174,6 +190,7 @@ export const bannersDataFull = [
     endDate: "2024-08-27T04:59:00",
     rerun: false,
     active: false,
+    type: 'multi',
   },
   {
     id: 18,
@@ -184,6 +201,7 @@ export const bannersDataFull = [
     endDate: "2024-09-07T04:59:00",
     rerun: false,
     active: false,
+    type: 'birthday',
   },
   {
     id: 19,
@@ -194,6 +212,7 @@ export const bannersDataFull = [
     endDate: "2024-09-20T04:59:00",
     rerun: false,
     active: false,
+    type: 'solo',
   },
   {
     id: 20,
@@ -204,6 +223,7 @@ export const bannersDataFull = [
     endDate: "2024-10-09T04:59:00",
     rerun: false,
     active: false,
+    type: 'multi',
   },
   {
     id: 21,
@@ -214,6 +234,7 @@ export const bannersDataFull = [
     endDate: "2024-10-18T04:59:00",
     rerun: false,
     active: false,
+    type: 'birthday',
   },
   {
     id: 22,
@@ -224,6 +245,7 @@ export const bannersDataFull = [
     endDate: "2024-10-30T04:59:00",
     rerun: false,
     active: false,
+    type: 'solo',
   },
   {
     id: 23,
@@ -234,6 +256,7 @@ export const bannersDataFull = [
     endDate: "2024-11-10T04:59:00",
     rerun: false,
     active: false,
+    type: 'solo',
   },
   {
     id: 24,
@@ -244,6 +267,7 @@ export const bannersDataFull = [
     endDate: "2024-11-30T04:59:00",
     rerun: false,
     active: false,
+    type: 'multi',
   },
   {
     id: 25,
@@ -254,6 +278,7 @@ export const bannersDataFull = [
     endDate: "2024-12-16T04:59:00",
     rerun: false,
     active: false,
+    type: 'myth',
   },
   {
     id: 26,
@@ -264,6 +289,7 @@ export const bannersDataFull = [
     endDate: "2024-12-28T04:59:00",
     rerun: false,
     active: false,
+    type: 'solo',
   },
   {
     id: 27,
@@ -274,6 +300,7 @@ export const bannersDataFull = [
     endDate: "2025-01-20T04:59:00",
     rerun: false,
     active: false,
+    type: 'multi',
   },
   {
     id: 28,
@@ -287,6 +314,7 @@ export const bannersDataFull = [
     endDate: "2025-02-08T04:59:00",
     rerun: false,
     active: false,
+    type: 'standart',
   },
   {
     id: 29,
@@ -297,6 +325,7 @@ export const bannersDataFull = [
     endDate: "2025-02-08T04:59:00",
     rerun: false,
     active: false,
+    type: 'solo',
   },
   {
     id: 30,
@@ -307,6 +336,7 @@ export const bannersDataFull = [
     endDate: "2025-02-27T04:59:00",
     rerun: false,
     active: false,
+    type: 'multi',
   },
   {
     id: 31,
@@ -317,6 +347,7 @@ export const bannersDataFull = [
     endDate: "2025-03-08T04:59:00",
     rerun: false,
     active: false,
+    type: 'birthday',
   },
   {
     id: 32,
@@ -327,6 +358,7 @@ export const bannersDataFull = [
     endDate: "2025-03-08T04:59:00",
     rerun: true,
     active: false,
+    type: 'birthday',
   },
   {
     id: 33,
@@ -337,6 +369,7 @@ export const bannersDataFull = [
     endDate: "2025-03-18T04:59:00",
     rerun: false,
     active: false,
+    type: 'solo',
   },
   {
     id: 34,
@@ -347,6 +380,7 @@ export const bannersDataFull = [
     endDate: "2025-03-27T04:59:00",
     rerun: true,
     active: false,
+    type: 'myth',
   },
   {
     id: 35,
@@ -357,6 +391,7 @@ export const bannersDataFull = [
     endDate: "2025-04-11T04:59:00",
     rerun: false,
     active: false,
+    type: 'myth',
   },
   {
     id: 36,
@@ -367,6 +402,7 @@ export const bannersDataFull = [
     endDate: "2025-04-20T04:59:00",
     rerun: false,
     active: false,
+    type: 'birthday',
   },
   {
     id: 37,
@@ -377,6 +413,7 @@ export const bannersDataFull = [
     endDate: "2025-04-28T04:59:00",
     rerun: true,
     active: false,
+    type: 'myth',
   },
   {
     id: 38,
@@ -387,6 +424,7 @@ export const bannersDataFull = [
     endDate: "2025-05-18T04:59:00",
     rerun: false,
     active: false,
+    type: 'multi',
   },
   {
     id: 39,
@@ -397,6 +435,7 @@ export const bannersDataFull = [
     endDate: "2025-05-26T04:59:00",
     rerun: true,
     active: false,
+    type: 'myth',
   },
   {
     id: 40,
@@ -407,6 +446,7 @@ export const bannersDataFull = [
     endDate: "2025-06-07T04:59:00",
     rerun: false,
     active: false,
+    type: 'solo',
   },
   {
     id: 41,
@@ -417,6 +457,7 @@ export const bannersDataFull = [
     endDate: "2025-06-15T04:59:00",
     rerun: false,
     active: false,
+    type: 'birthday',
   },
   {
     id: 42,
@@ -427,6 +468,7 @@ export const bannersDataFull = [
     endDate: "2025-07-01T04:59:00",
     rerun: false,
     active: false,
+    type: 'birthday',
   },
   {
     id: 43,
@@ -437,6 +479,7 @@ export const bannersDataFull = [
     endDate: "2025-07-22T04:59:00",
     rerun: false,
     active: false,
+    type: 'multi',
   },
   {
     id: 44,
@@ -447,6 +490,7 @@ export const bannersDataFull = [
     endDate: "2025-08-08T04:59:00",
     rerun: false,
     active: false,
+    type: 'myth',
   },
   {
     id: 45,
@@ -457,6 +501,7 @@ export const bannersDataFull = [
     endDate: "2025-08-31T04:59:00",
     rerun: false,
     active: false,
+    type: 'multi',
   },
   {
     id: 46,
@@ -467,6 +512,7 @@ export const bannersDataFull = [
     endDate: "2025-09-07T04:59:00",
     rerun: false,
     active: false,
+    type: 'birthday',
   },
   {
     id: 47,
@@ -477,6 +523,7 @@ export const bannersDataFull = [
     endDate: "2025-09-07T04:59:00",
     rerun: true,
     active: false,
+    type: 'birthday',
   },
   {
     id: 48,
@@ -487,6 +534,7 @@ export const bannersDataFull = [
     endDate: "2025-09-18T04:59:00",
     rerun: false,
     active: false,
+    type: 'solo',
   },
   {
     id: 49,
@@ -497,6 +545,7 @@ export const bannersDataFull = [
     endDate: "2025-09-27T04:59:00",
     rerun: true,
     active: false,
+    type: 'multi',
   },
   {
     id: 50,
@@ -507,6 +556,7 @@ export const bannersDataFull = [
     endDate: "2025-10-09T04:59:00",
     rerun: false,
     active: false,
+    type: 'myth',
   },
   {
     id: 51,
@@ -517,6 +567,7 @@ export const bannersDataFull = [
     endDate: "2025-10-18T04:59:00",
     rerun: false,
     active: false,
+    type: 'birthday',
   },
   {
     id: 52,
@@ -527,6 +578,7 @@ export const bannersDataFull = [
     endDate: "2025-10-18T04:59:00",
     rerun: true,
     active: false,
+    type: 'birthday',
   },
   {
     id: 53,
@@ -537,6 +589,7 @@ export const bannersDataFull = [
     endDate: "2025-10-27T04:59:00",
     rerun: true,
     active: false,
+    type: 'myth',
   },
   {
     id: 54,
@@ -547,6 +600,7 @@ export const bannersDataFull = [
     endDate: "2025-11-18T04:59:00",
     rerun: false,
     active: false,
+    type: 'multi',
   },
   {
     id: 55,
@@ -557,6 +611,7 @@ export const bannersDataFull = [
     endDate: "2025-11-20T04:59:00",
     rerun: true,
     active: false,
+    type: 'solo',
   },
   {
     id: 56,
@@ -567,6 +622,7 @@ export const bannersDataFull = [
     endDate: "2025-11-30T04:59:00",
     rerun: false,
     active: false,
+    type: 'solo',
   },
   {
     id: 57,
@@ -577,6 +633,7 @@ export const bannersDataFull = [
     endDate: "2025-12-16T04:59:00",
     rerun: false,
     active: false,
+    type: 'myth',
   },
   {
     id: 58,
@@ -587,6 +644,7 @@ export const bannersDataFull = [
     endDate: "2025-12-18T04:59:00",
     rerun: true,
     active: false,
+    type: 'solo',
   },
   {
     id: 59,
@@ -597,6 +655,7 @@ export const bannersDataFull = [
     endDate: "2025-12-27T04:59:00",
     rerun: false,
     active: false,
+    type: 'solo',
   },
   {
     id: 60,
@@ -607,6 +666,7 @@ export const bannersDataFull = [
     endDate: "2025-12-31T04:59:00",
     rerun: true,
     active: false,
+    type: 'solo',
   },
   {
     id: 61,
@@ -617,6 +677,7 @@ export const bannersDataFull = [
     endDate: "2026-01-21T04:59:00",
     rerun: false,
     active: false,
+    type: 'multi',
   },
   {
     id: 62,
@@ -630,6 +691,7 @@ export const bannersDataFull = [
     endDate: "2026-01-21T04:59:00",
     rerun: false,
     active: false,
+    type: 'standart',
   },
   {
     id: 63,
@@ -640,6 +702,7 @@ export const bannersDataFull = [
     endDate: "2026-02-01T04:59:00",
     rerun: false,
     active: false,
+    type: 'solo',
   },
   {
     id: 64,
@@ -650,6 +713,7 @@ export const bannersDataFull = [
     endDate: "2026-02-09T04:59:00",
     rerun: true,
     active: false,
+    type: 'myth',
   },
   {
     id: 65,
@@ -660,6 +724,7 @@ export const bannersDataFull = [
     endDate: "2026-02-27T04:59:00",
     rerun: false,
     active: false,
+    type: 'multi',
   },
   {
     id: 66,
@@ -670,6 +735,7 @@ export const bannersDataFull = [
     endDate: "2026-03-08T04:59:00",
     rerun: false,
     active: false,
+    type: 'birthday',
   },
   {
     id: 67,
@@ -680,6 +746,7 @@ export const bannersDataFull = [
     endDate: "2026-03-08T04:59:00",
     rerun: true,
     active: false,
+    type: 'birthday',
   },
   {
     id: 68,
@@ -690,6 +757,7 @@ export const bannersDataFull = [
     endDate: "2026-03-08T04:59:00",
     rerun: true,
     active: false,
+    type: 'birthday',
   },
   {
     id: 69,
@@ -700,6 +768,7 @@ export const bannersDataFull = [
     endDate: "2026-03-18T04:59:00",
     rerun: false,
     active: false,
+    type: 'solo',
   },
   {
     id: 70,
@@ -710,6 +779,7 @@ export const bannersDataFull = [
     endDate: "2026-03-27T04:59:00",
     rerun: true,
     active: false,
+    type: 'multi',
   },
   {
     id: 71,
@@ -720,6 +790,7 @@ export const bannersDataFull = [
     endDate: "2026-04-11T04:59:00",
     rerun: false,
     active: false,
+    type: 'myth',
   },
   {
     id: 72,
@@ -730,6 +801,7 @@ export const bannersDataFull = [
     endDate: "2026-04-13T04:59:00",
     rerun: true,
     active: false,
+    type: 'solo',
   },
   {
     id: 73,
@@ -740,6 +812,7 @@ export const bannersDataFull = [
     endDate: "2026-04-20T04:59:00",
     rerun: false,
     active: false,
+    type: 'birthday',
   },
   {
     id: 74,
@@ -750,6 +823,7 @@ export const bannersDataFull = [
     endDate: "2026-04-20T04:59:00",
     rerun: true,
     active: false,
+    type: 'birthday',
   },
   {
     id: 75,
@@ -760,6 +834,7 @@ export const bannersDataFull = [
     endDate: "2026-04-28T04:59:00",
     rerun: true,
     active: false,
+    type: 'myth',
   },
   {
     id: 76,
@@ -770,6 +845,7 @@ export const bannersDataFull = [
     endDate: "2026-05-15T04:59:00",
     rerun: false,
     active: false,
+    type: 'myth',
   },
   {
     id: 77,
@@ -780,6 +856,7 @@ export const bannersDataFull = [
     endDate: "2026-05-15T04:59:00",
     rerun: true,
     active: false,
+    type: 'solo',
   },
   {
     id: 78,
@@ -790,6 +867,7 @@ export const bannersDataFull = [
     endDate: "2026-05-22T04:59:00",
     rerun: true,
     active: false,
+    type: 'myth',
   },
   {
     id: 79,
@@ -800,6 +878,7 @@ export const bannersDataFull = [
     endDate: "2026-05-31T04:59:00",
     rerun: false,
     active: false,
+    type: 'solo',
   },
   {
     id: 80,
@@ -810,6 +889,7 @@ export const bannersDataFull = [
     endDate: "2026-06-08T04:59:00",
     rerun: true,
     active: false,
+    type: 'multi',
   },
   {
     id: 81,
@@ -820,6 +900,7 @@ export const bannersDataFull = [
     endDate: "2026-06-15T04:59:00",
     rerun: false,
     active: false,
+    type: 'birthday',
   },
   {
     id: 82,
@@ -830,6 +911,7 @@ export const bannersDataFull = [
     endDate: "2026-06-15T04:59:00",
     rerun: true,
     active: false,
+    type: 'birthday',
   },
   {
     id: 83,
@@ -840,6 +922,7 @@ export const bannersDataFull = [
     endDate: "2026-07-02T04:59:59",
     rerun: false,
     active: false,
+    type: 'multi',
   },
   {
     id: 84,
@@ -850,6 +933,7 @@ export const bannersDataFull = [
     endDate: "2026-07-02T04:59:59",
     rerun: true,
     active: false,
+    type: 'solo',
   },
   {
     id: 85,
@@ -860,6 +944,7 @@ export const bannersDataFull = [
     endDate: "2026-07-09T04:59:00",
     rerun: true,
     active: false,
+    type: 'myth',
   },
   {
     id: 86,
@@ -870,6 +955,7 @@ export const bannersDataFull = [
     endDate: "2026-07-17T04:59:59",
     rerun: true,
     active: false,
+    type: 'multi',
   },
   {
     id: 87,
@@ -883,6 +969,7 @@ export const bannersDataFull = [
     endDate: "2026-07-24T04:59:59",
     rerun: false,
     active: false,
+    type: 'standart',
   },
   {
     id: 88,
@@ -893,6 +980,7 @@ export const bannersDataFull = [
     endDate: "2026-08-15T04:59:59",
     rerun: false,
     active: false,
+    type: 'solo',
   },
   {
     id: 89,
@@ -903,6 +991,7 @@ export const bannersDataFull = [
     endDate: "2026-08-31T04:59:59",
     rerun: false,
     active: false,
+    type: 'myth',
   },
   {
     id: 90,
@@ -913,6 +1002,7 @@ export const bannersDataFull = [
     endDate: "2026-08-31T04:59:59",
     rerun: true,
     active: false,
+    type: 'solo',
   },
   {
     id: 91,
@@ -923,6 +1013,7 @@ export const bannersDataFull = [
     endDate: "2026-09-07T04:59:59",
     rerun: false,
     active: false,
+    type: 'birthday',
   },
   {
     id: 92,
@@ -933,6 +1024,7 @@ export const bannersDataFull = [
     endDate: "2026-09-07T04:59:59",
     rerun: true,
     active: false,
+    type: 'birthday',
   },
   {
     id: 93,
@@ -943,6 +1035,7 @@ export const bannersDataFull = [
     endDate: "2026-09-07T04:59:59",
     rerun: true,
     active: false,
+    type: 'birthday',
   },
   {
     id: 94,
@@ -953,6 +1046,7 @@ export const bannersDataFull = [
     endDate: "2026-09-15T04:59:59",
     rerun: true,
     active: false,
+    type: 'myth',
   },
   {
     id: 95,
@@ -963,6 +1057,7 @@ export const bannersDataFull = [
     endDate: "2026-10-10T04:59:59",
     rerun: false,
     active: false,
+    type: 'multi',
   },
   {
     id: 96,
@@ -973,6 +1068,7 @@ export const bannersDataFull = [
     endDate: "2026-10-10T04:59:59",
     rerun: true,
     active: false,
+    type: 'solo',
   },
   {
     id: 97,
@@ -983,6 +1079,7 @@ export const bannersDataFull = [
     endDate: "2026-10-18T04:59:59",
     rerun: false,
     active: false,
+    type: 'birthday',
   },
   {
     id: 98,
@@ -993,6 +1090,7 @@ export const bannersDataFull = [
     endDate: "2026-10-18T04:59:59",
     rerun: true,
     active: false,
+    type: 'birthday',
   },
   {
     id: 99,
@@ -1003,6 +1101,7 @@ export const bannersDataFull = [
     endDate: "2026-10-18T04:59:59",
     rerun: true,
     active: false,
+    type: 'birthday',
   },
   {
     id: 100,
@@ -1013,5 +1112,6 @@ export const bannersDataFull = [
     endDate: "2026-10-27T04:59:59",
     rerun: true,
     active: true,
+    type: 'multi',
   },
 ];
