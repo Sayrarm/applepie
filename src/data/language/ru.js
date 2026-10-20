@@ -569,7 +569,16 @@ export const ru = {
             "type": "Тип:",
             "solo": "Соло",
             "multi": "Мульти",
-            "clear": "Очистить"
+            "clear": "Очистить",
+            "standart": "Стандарт",
+            "myth": "Миф",
+            "birthday": "День Рождения",
+            "newRerun": "Новизна:",
+            "new": "Новый",
+            "rerun": "Реран",
+            "availability": "Доступность:",
+            "active": "Активный",
+            "inactive": "Неактивный",
         },
         FilterSortBarBanners: {
             "placeholder": "Сортировка по...",

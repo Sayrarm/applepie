@@ -468,7 +468,7 @@ export const bannersDataFull = [
     endDate: "2025-07-01T04:59:00",
     rerun: false,
     active: false,
-    type: 'birthday',
+    type: 'myth',
   },
   {
     id: 43,
@@ -572,7 +572,7 @@ export const bannersDataFull = [
   {
     id: 52,
     name: "Galaxy Dance",
-    image: "../assets/banners/celestial-message.png",
+    image: "../assets/banners/galaxy-dance.png",
     cardIds: [179],
     startDate: "2025-10-11T05:00:00",
     endDate: "2025-10-18T04:59:00",
@@ -845,7 +845,7 @@ export const bannersDataFull = [
     endDate: "2026-05-15T04:59:00",
     rerun: false,
     active: false,
-    type: 'myth',
+    type: 'multi',
   },
   {
     id: 77,

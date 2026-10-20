@@ -21,6 +21,8 @@ export const getBannerFilters = (prefix = "") => {
     const keys = getBannerFilterKeys(prefix);
     return get(keys.filters, {
         type: [],
+        newRerun: [],
+        availability: [],
     });
 };
 
@@ -74,4 +76,6 @@ export const clearAllBannerFilters = (prefix = "") => {
 // ===== ДЕФОЛТНЫЕ ФИЛЬТРЫ =====
 export const getDefaultBannerFilters = () => ({
     type: [],
+    newRerun: [],
+    availability: [],
 });

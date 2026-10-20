@@ -567,10 +567,19 @@ export const en = {
             st: '- a story that can be obtained from 4-star Memories or reaching the required Affinity level. Presented as an audio track with only the male character voiced.'
         },
         FilterModalBanner: {
-            "titleModal": "Filter",
+            "titleModal": "Banner filters",
             "type": "Type:",
-            "solo": "Solo",
+            "standart": "Standart",
             "multi": "Multi",
+            "myth": "Myth",
+            "solo": "Solo",
+            "birthday": "Birthday",
+            "newRerun": "New / Rerun:",
+            "new": "New",
+            "rerun": "Rerun",
+            "availability": "Availability:",
+            "active": "Active",
+            "inactive": "Inactive",
             "clear": "Clear"
         },
         FilterSortBarBanners: {

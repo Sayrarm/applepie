@@ -2,10 +2,10 @@ import { useEffect, useState, useCallback } from "react";
 import {
     getBannerSelectedChar,
     saveBannerSelectedChar,
+    getBannerFilters,
+    saveBannerFilters,
     getDefaultBannerFilters,
     clearAllBannerFilters,
-    saveBannerFilters,
-    getBannerFilters
 } from "@localstorage";
 import { memoriesData } from "@data";
 
@@ -21,12 +21,6 @@ const getBannerCharacters = (banner) => {
     return Array.from(chars);
 };
 
-// Определяем тип баннера: solo (один персонаж) или multi (несколько)
-const getBannerType = (banner) => {
-    const chars = getBannerCharacters(banner);
-    return chars.length <= 1 ? "solo" : "multi";
-};
-
 export const useBannersFilter = (prefix = "") => {
     // Загружаем начальные значения из localStorage
     const [selectedChar, setSelectedChar] = useState(() =>
@@ -35,12 +29,12 @@ export const useBannersFilter = (prefix = "") => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [filters, setFilters] = useState(() => getBannerFilters(prefix));
 
-    // Сохраняем selectedChar в localStorage при изменении
+    // Сохраняем selectedChar в localStorage
     useEffect(() => {
         saveBannerSelectedChar(prefix, selectedChar);
     }, [selectedChar, prefix]);
 
-    // Сохраняем filters в localStorage при изменении
+    // Сохраняем filters в localStorage
     useEffect(() => {
         saveBannerFilters(prefix, filters);
     }, [filters, prefix]);
@@ -66,24 +60,43 @@ export const useBannersFilter = (prefix = "") => {
     const filterBanners = useCallback(
         (banners) => {
             return banners.filter((banner) => {
+                // --- Фильтр по персонажу (кнопки) ---
                 const bannerChars = getBannerCharacters(banner);
-                const bannerType = getBannerType(banner);
-
-                // Фильтр по персонажу (кнопки)
-                // Если баннер содержит карточки выбранного персонажа
                 const matchesChar =
                     selectedChar === "ALL" ||
                     bannerChars.some(
                         (c) => c.toLowerCase() === selectedChar.toLowerCase(),
                     );
 
-                // Фильтр по типу (solo / multi)
+                // --- Фильтр по типу баннера (standart/multi/myth/solo/birthday) ---
+                // Если type не задан в данных баннера — не отфильтровываем
+                const typeFilter = filters.type || [];
                 const matchesType =
-                    !filters.type ||
-                    filters.type.length === 0 ||
-                    filters.type.includes(bannerType);
+                    typeFilter.length === 0 ||
+                    (banner.type != null && typeFilter.includes(banner.type));
 
-                return matchesChar && matchesType;
+                // --- Фильтр New/Rerun ---
+                // Массив может содержать "new" и/или "rerun"
+                // Фильтр применяется только если массив не пуст
+                const newRerunFilter = filters.newRerun || [];
+                const matchesNewRerun =
+                    newRerunFilter.length === 0 ||
+                    (newRerunFilter.includes("new") && banner.rerun === false) ||
+                    (newRerunFilter.includes("rerun") && banner.rerun === true);
+
+                // --- Фильтр Active/Inactive ---
+                const availabilityFilter = filters.availability || [];
+                const matchesAvailability =
+                    availabilityFilter.length === 0 ||
+                    (availabilityFilter.includes("active") && banner.active === true) ||
+                    (availabilityFilter.includes("inactive") && banner.active === false);
+
+                return (
+                    matchesChar &&
+                    matchesType &&
+                    matchesNewRerun &&
+                    matchesAvailability
+                );
             });
         },
         [selectedChar, filters],

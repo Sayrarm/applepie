@@ -11,22 +11,37 @@ const FilterModalBanner = forwardRef(
     ({ open, onClose, onFilter, onClearFilters, storagePrefix = "" }, ref) => {
         const { t } = useTranslation();
 
-        // Загружаем фильтры из localStorage
+        // Загружаем каждый фильтр из общего объекта
         const [type, setType] = useState(() => {
             const saved = getBannerFilters(storagePrefix);
             return saved.type || [];
         });
+        const [newRerun, setNewRerun] = useState(() => {
+            const saved = getBannerFilters(storagePrefix);
+            return saved.newRerun || [];
+        });
+        const [availability, setAvailability] = useState(() => {
+            const saved = getBannerFilters(storagePrefix);
+            return saved.availability || [];
+        });
 
-        // Сохраняем только type, не затирая другие поля
+        // Сохраняем при изменении любого фильтра
         useEffect(() => {
             const saved = getBannerFilters(storagePrefix);
-            saveBannerFilters(storagePrefix, { ...saved, type });
-        }, [type, storagePrefix]);
+            saveBannerFilters(storagePrefix, {
+                ...saved,
+                type,
+                newRerun,
+                availability,
+            });
+        }, [type, newRerun, availability, storagePrefix]);
 
-        // ЭКСПОРТИРУЕМ ФУНКЦИЮ ДЛЯ ВНЕШНЕГО ВЫЗОВА
+        // Экспорт функции для внешнего вызова
         useImperativeHandle(ref, () => ({
             clearAll: () => {
                 setType([]);
+                setNewRerun([]);
+                setAvailability([]);
                 clearAllBannerFilters(storagePrefix);
                 if (onClearFilters) {
                     onClearFilters();
@@ -34,13 +49,29 @@ const FilterModalBanner = forwardRef(
             },
         }));
 
+        // --- Опции чекбоксов ---
         const optionsType = [
-            { label: t("FilterModalBanner.solo"), value: "solo" },
+            { label: t("FilterModalBanner.standart"), value: "standart" },
             { label: t("FilterModalBanner.multi"), value: "multi" },
+            { label: t("FilterModalBanner.myth"), value: "myth" },
+            { label: t("FilterModalBanner.solo"), value: "solo" },
+            { label: t("FilterModalBanner.birthday"), value: "birthday" },
+        ];
+
+        const optionsNewRerun = [
+            { label: t("FilterModalBanner.new"), value: "new" },
+            { label: t("FilterModalBanner.rerun"), value: "rerun" },
+        ];
+
+        const optionsAvailability = [
+            { label: t("FilterModalBanner.active"), value: "active" },
+            { label: t("FilterModalBanner.inactive"), value: "inactive" },
         ];
 
         const handleClear = () => {
             setType([]);
+            setNewRerun([]);
+            setAvailability([]);
             clearAllBannerFilters(storagePrefix);
             if (onClearFilters) {
                 onClearFilters();
@@ -48,7 +79,7 @@ const FilterModalBanner = forwardRef(
         };
 
         const handleOk = () => {
-            onFilter({ type });
+            onFilter({ type, newRerun, availability });
             onClose();
         };
 
@@ -66,6 +97,24 @@ const FilterModalBanner = forwardRef(
                         options={optionsType}
                         value={type}
                         onChange={setType}
+                    />
+                </div>
+
+                <div style={{ marginBottom: 15 }}>
+                    <span>{t("FilterModalBanner.newRerun")} </span>
+                    <Checkbox.Group
+                        options={optionsNewRerun}
+                        value={newRerun}
+                        onChange={setNewRerun}
+                    />
+                </div>
+
+                <div style={{ marginBottom: 15 }}>
+                    <span>{t("FilterModalBanner.availability")} </span>
+                    <Checkbox.Group
+                        options={optionsAvailability}
+                        value={availability}
+                        onChange={setAvailability}
                     />
                 </div>
 
