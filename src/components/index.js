@@ -1,3 +1,6 @@
+//banners-components
+export { default as BannersCalendar } from "./banners-components/BannersCalendar.jsx";
+
 // battle-components
 export { default as AsideCompanionList } from "./battle-components/AsideCompanionList.jsx";
 export { default as CompanionArticlePage } from "./battle-components/CompanionArticlePage.jsx";

@@ -585,5 +585,9 @@ export const ru = {
             "search": "Поиск баннера...",
             "resetButton": "Очистить фильтр и сортировку"
         },
+        Banners: {
+            allBanners: 'Все баннеры',
+            calendar: 'Календарь',
+        },
     },
 };

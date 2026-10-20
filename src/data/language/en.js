@@ -587,5 +587,9 @@ export const en = {
             "search": "Search banners...",
             "resetButton": "Reset all settings"
         },
+        Banners: {
+            allBanners: 'All banners',
+            calendar: 'Calendar',
+        },
     },
 };
