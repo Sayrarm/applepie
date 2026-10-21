@@ -41,6 +41,7 @@ export { default as StoryInfo } from "./card-article-components/StoryInfo.jsx";
 
 //common
 export { default as BannerList } from "./common/banners-components/BannerList.jsx";
+export { default as BannerPeriod } from "./common/banners-components/BannerPeriod.jsx";
 
 export { default as FilterSortBarProtocores } from "./common/filter-and-sort/filter-sorter-protocores/FilterSortBarProtocores.jsx";
 export { useProtocoreFilter } from "./common/filter-and-sort/filter-sorter-protocores/useProtocoreFilter.js";

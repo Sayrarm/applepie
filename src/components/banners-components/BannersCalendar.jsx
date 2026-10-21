@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import {useMemo, useRef, useState} from "react";
 import styles from "./BannersCalendar.module.css";
 import {
     getBannerColor,
@@ -6,6 +6,12 @@ import {
     getBannerTypeLabel,
 } from "./bannerColors.js";
 import { getImageUrl } from "@hooks";
+import {memoriesData} from "@data";
+import {
+    CardList,
+    ModalWindow,
+    BannerPeriod
+} from "@components";
 
 // --- Утилиты дат ---
 const startOfDay = (date) => {
@@ -216,6 +222,18 @@ function MiniMonth({ year, month, banners, onClick }) {
 
 // ===== Основной компонент =====
 function BannersCalendar({ banners, initialDate = new Date() }) {
+    const [selectedBanner, setSelectedBanner] = useState(null);
+    const memoriesModalRef = useRef();
+
+    const showMemoriesModal = (banner) => {
+        setSelectedBanner(banner);
+        memoriesModalRef.current.showModal();
+    };
+
+    const cards = memoriesData.filter((card) =>
+        selectedBanner?.cardIds?.includes(card.id),
+    );
+
     // Фильтруем перманентные баннеры (без даты окончания)
     const calendarBanners = useMemo(() => {
         return banners.filter(b => b.endDate !== "permanently");
@@ -384,6 +402,15 @@ function BannersCalendar({ banners, initialDate = new Date() }) {
                                             marginTop: `${3 + (lane || 0) * 32}px`,
                                         }}
                                         title={tooltip}
+                                        onClick={() => showMemoriesModal(banner)}
+                                        role="button"
+                                        tabIndex={0}
+                                        onKeyDown={(e) => {
+                                            if (e.key === "Enter" || e.key === " ") {
+                                                e.preventDefault();
+                                                showMemoriesModal(banner);
+                                            }
+                                        }}
                                     >
                                         {seg.span > 1 && (
                                             <div className={styles.bannerBarText}>{banner.name}</div>
@@ -404,6 +431,19 @@ function BannersCalendar({ banners, initialDate = new Date() }) {
                     })}
                 </div>
             </div>
+
+            <ModalWindow
+                ref={memoriesModalRef}
+                title={selectedBanner?.name}
+                tag={
+                    <>
+                        <CardList cards={cards} />
+                        {selectedBanner && (
+                            <BannerPeriod banners={[selectedBanner]} />
+                        )}
+                    </>
+                }
+            />
         </div>
     );
 }

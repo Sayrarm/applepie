@@ -244,6 +244,7 @@
     height: 30px;
     align-self: start;
     padding-left: 30px;
+    cursor: pointer;
 }
 
 .bannerBarImage {
