@@ -5,6 +5,7 @@ import {
     getBannerCharacters,
     getBannerTypeLabel,
 } from "./bannerColors.js";
+import { getImageUrl } from "@hooks";
 
 // --- Утилиты дат ---
 const startOfDay = (date) => {
@@ -90,6 +91,7 @@ const buildBannerRows = (banners, monthDays) => {
             endIndex: range.endIndex,
             color: getBannerColor(banner),
             typeLabel: getBannerTypeLabel(banner),
+            imageUrl: getImageUrl(banner.image),
         });
     });
     return assignLanes(rows);
@@ -364,7 +366,7 @@ function BannersCalendar({ banners, initialDate = new Date() }) {
                     className={styles.monthBannersLayer}
                     style={{ gridTemplateRows: `repeat(${totalWeeks}, 1fr)` }}
                 >
-                    {bannerRows.map(({ banner, startIndex, endIndex, color, typeLabel, lane }) => {
+                    {bannerRows.map(({ banner, startIndex, endIndex, color, typeLabel, lane, imageUrl }) => {
                         const segments = getBannerSegments(startIndex, endIndex, firstDayOfWeek);
                         const chars = getBannerCharacters(banner);
                         const tooltip = `${banner.name} — ${typeLabel}${chars.length > 0 ? ` (${chars.join(", ")})` : ""}`;
@@ -384,9 +386,16 @@ function BannersCalendar({ banners, initialDate = new Date() }) {
                                         title={tooltip}
                                     >
                                         {seg.span > 1 && (
-                                            <span className={styles.bannerBarText}>
-                                                {banner.name}
-                                            </span>
+                                            <div className={styles.bannerBarText}>{banner.name}</div>
+                                        )}
+                                        {imageUrl && (
+                                            <img
+                                                src={imageUrl}
+                                                alt=""
+                                                className={styles.bannerBarImage}
+                                                loading="lazy"
+                                                onError={(e) => { e.currentTarget.style.display = "none"; }}
+                                            />
                                         )}
                                     </div>
                                 ))}
