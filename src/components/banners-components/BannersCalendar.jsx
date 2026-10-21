@@ -199,8 +199,8 @@ function MiniMonth({ year, month, banners, onClick }) {
                                         style={{
                                             gridColumn: `${seg.startCol} / span ${seg.span}`,
                                             gridRow: seg.row + 1,
-                                            backgroundColor: color,
-                                            marginTop: `${16 + (lane || 0) * 8}px`,
+                                            "--bar-color": color,
+                                            marginTop: `${2 + (lane || 0) * 5}px`,
                                         }}
                                         title={banner.name}
                                     />
@@ -380,8 +380,8 @@ function BannersCalendar({ banners, initialDate = new Date() }) {
                                         style={{
                                             gridColumn: `${seg.startCol} / span ${seg.span}`,
                                             gridRow: seg.row + 1,
-                                            backgroundColor: color,
-                                            marginTop: `${28 + (lane || 0) * 20}px`,
+                                            "--bar-color": color,
+                                            marginTop: `${3 + (lane || 0) * 32}px`,
                                         }}
                                         title={tooltip}
                                     >

@@ -3,9 +3,9 @@ import { memoriesData } from "@data";
 // Цвета по персонажам (solo / birthday)
 const CHAR_COLORS = {
     Xavier: "#9b6cff",   // фиолетовый
-    Zayne: "#5fb8ff",    // голубой
+    Zayne: "#7bc6ff",    // голубой
     Rafayel: "#ff8ac4",  // розовый
-    Sylus: "#ff4d4d",    // красный
+    Sylus: "#8e2828",    // красный
     Caleb: "#ff9f43",    // оранжевый
 };
 
@@ -13,7 +13,7 @@ const CHAR_COLORS = {
 const COLORS = {
     multi: "#3fae5a",     // зелёный
     rerun: "#9a9a9a",     // серый
-    standart: "#3a7bd5",  // синий
+    standart: "#175fb3",  // синий
 };
 
 // Получить уникальных персонажей баннера
