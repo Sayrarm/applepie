@@ -631,6 +631,13 @@ export const en = {
             type: 'Type',
             char: 'Character',
             chooseChar: 'Choose the character',
+            "types": {
+                "solo": "Solo",
+                "multi": "Multi",
+                "birthday": "Birthday",
+                "standart": "Standart",
+                "myth": "Myth"
+            }
         },
     },
 };

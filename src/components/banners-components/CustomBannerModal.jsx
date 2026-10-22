@@ -1,14 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Modal, Input, Select, Button } from "antd";
 import { useTranslation } from "react-i18next";
-
-const CUSTOM_TYPES = [
-    { label: "Solo", value: "solo" },
-    { label: "Multi", value: "multi" },
-    { label: "Birthday", value: "birthday" },
-    { label: "Standart", value: "standart" },
-    { label: "Myth", value: "myth" },
-];
 
 const CHARACTERS = ["Xavier", "Zayne", "Rafayel", "Sylus", "Caleb"];
 
@@ -17,6 +9,15 @@ function CustomBannerModal({ open, onClose, onSave }) {
     const [type, setType] = useState("solo");
     const [character, setCharacter] = useState("");
     const { t } = useTranslation();
+
+    // Типы теперь зависят от перевода, поэтому создаем их внутри компонента
+    const customTypes = useMemo(() => [
+        { label: t('CustomBannerModal.types.solo'), value: "solo" },
+        { label: t('CustomBannerModal.types.multi'), value: "multi" },
+        { label: t('CustomBannerModal.types.birthday'), value: "birthday" },
+        { label: t('CustomBannerModal.types.standart'), value: "standart" },
+        { label: t('CustomBannerModal.types.myth'), value: "myth" },
+    ], [t]);
 
     // Сбрасываем персонажа, если выбран тип, где он не нужен
     useEffect(() => {
@@ -91,7 +92,7 @@ function CustomBannerModal({ open, onClose, onSave }) {
                         style={{ width: "100%" }}
                         value={type}
                         onChange={setType}
-                        options={CUSTOM_TYPES}
+                        options={customTypes}
                     />
                 </div>
 

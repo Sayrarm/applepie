@@ -798,7 +798,7 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
                                     }}
                                     style={{ padding: "10px 20px", cursor: "pointer", background: "#9b6cff", color: "#fff", border: "none", borderRadius: "8px", fontSize: "16px" }}
                                 >
-                                    {t('BannersCalendar.addBannerButton')}
+                                    {t('BannersCalendar.addBannerButton')} ({selectedDays.length})
                                 </button>
                             )}
 
