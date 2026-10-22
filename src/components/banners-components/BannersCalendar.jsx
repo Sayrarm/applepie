@@ -358,6 +358,8 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
     const [selectedMonth, setSelectedMonth] = useState(
         () => initialDate.getMonth(),
     );
+    const [isDragging, setIsDragging] = useState(false);
+    const [dragAction, setDragAction] = useState(null);
 
     // Состояние для модалки
     const [selectedBanner, setSelectedBanner] = useState(null);
@@ -449,6 +451,49 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
                 : [...prev, time]
         );
     };
+
+    // Новые функции для drag-and-drop:
+    const handleDayMouseDown = (day, e) => {
+        if (!editMode) return;
+        e.preventDefault(); // Предотвращаем нежелательное выделение текста
+        const time = day.getTime();
+        const isAlreadySelected = selectedDays.includes(time);
+
+        // Определяем, будем мы добавлять или удалять
+        setDragAction(isAlreadySelected ? "remove" : "add");
+        setIsDragging(true);
+
+        // Сразу применяем действие к первому дню
+        setSelectedDays((prev) => {
+            if (isAlreadySelected) {
+                return prev.filter((t) => t !== time);
+            } else {
+                return [...prev, time];
+            }
+        });
+    };
+
+    const handleDayMouseEnter = (day) => {
+        if (!isDragging || !editMode) return;
+        const time = day.getTime();
+        const isAlreadySelected = selectedDays.includes(time);
+
+        if (dragAction === "add" && !isAlreadySelected) {
+            setSelectedDays((prev) => [...prev, time]);
+        } else if (dragAction === "remove" && isAlreadySelected) {
+            setSelectedDays((prev) => prev.filter((t) => t !== time));
+        }
+    };
+
+// Глобальный обработчик для отпускания мыши (чтобы сбросить isDragging)
+    useEffect(() => {
+        const handleGlobalMouseUp = () => {
+            setIsDragging(false);
+            setDragAction(null);
+        };
+        window.addEventListener("mouseup", handleGlobalMouseUp);
+        return () => window.removeEventListener("mouseup", handleGlobalMouseUp);
+    }, []);
 
     const handleAddPredict = (banner) => {
         if (selectedDays.length === 0) return;
@@ -644,7 +689,15 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
                             return (
                                 <div
                                     key={i}
-                                    onClick={() => handleDayClick(day)}
+                                    onMouseDown={(e) => isCurrentMonth && handleDayMouseDown(day, e)}
+                                    onMouseEnter={() => isCurrentMonth && handleDayMouseEnter(day)}
+                                    onClick={(e) => {
+                                        // Обычный клик (без перетаскивания) — переключаем день
+                                        // Но мы уже обработали нажатие в onMouseDown, поэтому onClick здесь можно не использовать,
+                                        // чтобы избежать двойного срабатывания.
+                                        // Или можно оставить для одиночного клика, если isDragging === false.
+                                        // Но так как mousedown уже все сделал, onClick не нужен.
+                                    }}
                                     className={[
                                         styles.monthDay,
                                         !isCurrentMonth ? styles.monthDayOutside : "",
@@ -704,7 +757,7 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
                                         <img
                                             src={imageUrl}
                                             alt=""
-                                            className={styles.bannerBarImage}
+                                            className={`${styles.bannerBarImage} ${banner.isCustom ? styles.customBannerImage : ""}`}
                                             loading="lazy"
                                             onError={(e) => { e.currentTarget.style.display = "none"; }}
                                         />
