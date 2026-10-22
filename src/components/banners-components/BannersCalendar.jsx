@@ -21,6 +21,7 @@ import {
     clearPredicts,
     savePredicts
 } from "@localstorage";
+import CustomBannerModal from "./CustomBannerModal.jsx";
 
 // --- Утилиты дат ---
 // ИСПРАВЛЕНО: applyTimezone теперь принимает isPredict и не сдвигает время для предиктов
@@ -77,7 +78,7 @@ const parseDate = (value, timezone, isPredict) => {
 };
 
 const getBannerRange = (banner, monthDays, timezone) => {
-    const isPredict = banner.isPredict; // <-- Получаем флаг
+    const isPredict = banner.isPredict || banner.isCustom; // <-- Учитываем и кастомные
     const bannerStart = parseDate(banner.startDate, timezone, isPredict);
     const bannerEnd = parseDate(banner.endDate, timezone, isPredict);
     if (!bannerStart) return null;
@@ -144,8 +145,8 @@ const buildBannerSegments = (banners, monthDays, firstDayOfWeek, timezone) => {
                 startCol: seg.startCol,
                 span: seg.span,
                 row: seg.row,
-                realStartTime: parseDate(banner.startDate, timezone, banner.isPredict)?.getTime() ?? 0,
-                realEndTime: parseDate(banner.endDate, timezone, banner.isPredict)?.getTime() ?? Infinity,
+                realStartTime: parseDate(banner.startDate, timezone, banner.isPredict || banner.isCustom)?.getTime() ?? 0,
+                realEndTime: parseDate(banner.endDate, timezone, banner.isPredict || banner.isCustom)?.getTime() ?? Infinity,
             });
         });
     });
@@ -367,6 +368,9 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
     const [predicts, setPredicts] = useState(() => getPredicts());
     const predictModalRef = useRef(); // Ссылка на модалку выбора
 
+    // ===== СОСТОЯНИЕ ДЛЯ КАСТОМНОГО БАННЕРА =====
+    const [isCustomModalOpen, setIsCustomModalOpen] = useState(false);
+
     // Сброс выбранных дней при выходе из режима
     useEffect(() => {
         if (!editMode) {
@@ -474,6 +478,34 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
         if (predictModalRef.current) {
             predictModalRef.current.closeModal();
         }
+    };
+
+    // ===== СОЗДАНИЕ КАСТОМНОГО БАННЕРА =====
+    const handleSaveCustomBanner = (customBanner) => {
+        if (selectedDays.length === 0) return;
+
+        const sortedDays = [...selectedDays].sort((a, b) => a - b);
+
+        const startDate = new Date(sortedDays[0]);
+        startDate.setHours(0, 0, 0, 0);
+
+        const endDate = new Date(sortedDays[sortedDays.length - 1]);
+        endDate.setHours(23, 59, 59, 999);
+
+        // Объединяем данные кастомного баннера с датами
+        const predict = {
+            ...customBanner,
+            startDate: startDate.toISOString(),
+            endDate: endDate.toISOString(),
+            isPredict: true,
+            isCustom: true, // Флаг кастомного (чтобы не сдвигать пояса)
+        };
+
+        const updatedPredicts = addPredict(predict);
+        setPredicts(updatedPredicts);
+
+        setSelectedDays([]);
+        setIsCustomModalOpen(false); // Закрываем нашу новую модалку
     };
 
     // ===== УДАЛЕНИЕ ВСЕХ ПРЕДИКТОВ =====
@@ -717,6 +749,16 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
                                 </button>
                             )}
 
+                            {/* НОВАЯ КНОПКА ДЛЯ СОЗДАНИЯ СВОЕГО БАННЕРА */}
+                            {selectedDays.length > 0 && (
+                                <button
+                                    onClick={() => setIsCustomModalOpen(true)}
+                                    style={{ padding: "10px 20px", cursor: "pointer", background: "#3fae5a", color: "#fff", border: "none", borderRadius: "8px", fontSize: "16px" }}
+                                >
+                                    Создать свой баннер
+                                </button>
+                            )}
+
                             {selectedDays.length > 0 && predicts.length > 0 && (
                                 <button
                                     onClick={handleRemoveSelectedPredicts}
@@ -767,6 +809,13 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
                         )}
                     </>
                 }
+            />
+
+            {/* НОВАЯ МОДАЛКА ДЛЯ СОЗДАНИЯ СВОЕГО БАННЕРА */}
+            <CustomBannerModal
+                open={isCustomModalOpen}
+                onClose={() => setIsCustomModalOpen(false)}
+                onSave={handleSaveCustomBanner}
             />
         </>
     );

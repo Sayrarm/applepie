@@ -18,6 +18,11 @@ const COLORS = {
 
 // Получить уникальных персонажей баннера
 export const getBannerCharacters = (banner) => {
+    // Если это кастомный баннер с указанным персонажем (из модалки)
+    if (banner.customChar) {
+        return [banner.customChar];
+    }
+
     const set = new Set();
     banner.cardIds?.forEach((cardId) => {
         const memory = memoriesData.find((m) => m.id === cardId);
@@ -28,6 +33,14 @@ export const getBannerCharacters = (banner) => {
 
 // Определить цвет баннера
 export const getBannerColor = (banner) => {
+    // Если у баннера есть кастомный цвет — используем его (на будущее)
+    if (banner.customColor) return banner.customColor;
+
+    // Если это кастомный баннер с персонажем — берем цвет из CHAR_COLORS
+    if (banner.customChar && CHAR_COLORS[banner.customChar]) {
+        return CHAR_COLORS[banner.customChar];
+    }
+
     // Рерун важнее типа — он всегда серый
     if (banner.rerun === true) return COLORS.rerun;
 
