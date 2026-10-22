@@ -6,24 +6,46 @@ import {
     getBannerTypeLabel,
 } from "./bannerColors.js";
 import { getImageUrl } from "@hooks";
-import {memoriesData} from "@data";
+import { memoriesData } from "@data";
 import {
     CardList,
     ModalWindow,
+    useTimezone,
     BannerPeriod
 } from "@components";
 
 // --- Утилиты дат ---
+const applyTimezone = (dateInput, serverOffset) => {
+    if (!dateInput) return null;
+
+    // Парсим строку как локальное время пользователя (Москва)
+    const localDate = new Date(dateInput);
+    if (isNaN(localDate.getTime())) return null;
+
+    // Получаем оффсет пользователя в минутах (для Москвы это 180)
+    const userOffsetMinutes = -localDate.getTimezoneOffset(); // getTimezoneOffset возвращает -180, ставим минус
+
+    // Парсим оффсет сервера (например, "+08:00" -> 480 минут)
+    const match = serverOffset?.match(/([+-])(\d{2}):(\d{2})/);
+    if (!match) return localDate;
+
+    const sign = match[1] === "-" ? -1 : 1;
+    const hours = parseInt(match[2], 10);
+    const minutes = parseInt(match[3], 10);
+    const serverOffsetMinutes = sign * (hours * 60 + minutes);
+
+    // Вычисляем разницу: (Оффсет пользователя - Оффсет сервера)
+    const diffMinutes = userOffsetMinutes - serverOffsetMinutes;
+    const diffMs = diffMinutes * 60 * 1000;
+
+    // Возвращаем новую дату
+    return new Date(localDate.getTime() + diffMs);
+};
+
 const startOfDay = (date) => {
     const d = new Date(date);
     d.setHours(0, 0, 0, 0);
     return d;
-};
-
-const parseDate = (value) => {
-    if (!value || value === "permanently") return null;
-    const d = new Date(value);
-    return isNaN(d.getTime()) ? null : d;
 };
 
 const getMonthDays = (year, month) => {
@@ -35,9 +57,14 @@ const getMonthDays = (year, month) => {
     return days;
 };
 
-const getBannerRange = (banner, monthDays) => {
-    const bannerStart = parseDate(banner.startDate);
-    const bannerEnd = parseDate(banner.endDate);
+const parseDate = (value, timezone) => {
+    if (!value || value === "permanently") return null;
+    return applyTimezone(value, timezone);
+};
+
+const getBannerRange = (banner, monthDays, timezone) => {
+    const bannerStart = parseDate(banner.startDate, timezone);
+    const bannerEnd = parseDate(banner.endDate, timezone);
     if (!bannerStart) return null;
 
     const monthFirst = monthDays[0];
@@ -74,9 +101,9 @@ const getBannerSegments = (startIndex, endIndex, firstDayOfWeek) => {
         const segmentEnd = Math.min(endCell, rowEndCell);
 
         segments.push({
-            startCol: (currentStart % 7) + 1, // CSS Grid колонки начинаются с 1
+            startCol: (currentStart % 7) + 1,
             span: segmentEnd - currentStart + 1,
-            row: currentRow, // Индекс строки (0, 1, 2...)
+            row: currentRow,
         });
 
         currentStart = segmentEnd + 1;
@@ -84,13 +111,12 @@ const getBannerSegments = (startIndex, endIndex, firstDayOfWeek) => {
     return segments;
 };
 
-// Строит сегменты баннеров и распределяет их по локальным рядам (lane) для каждой недели
-const buildBannerSegments = (banners, monthDays, firstDayOfWeek) => {
+const buildBannerSegments = (banners, monthDays, firstDayOfWeek, timezone) => {
     const allSegments = [];
 
     // 1. Собираем все сегменты
     banners.forEach((banner) => {
-        const range = getBannerRange(banner, monthDays);
+        const range = getBannerRange(banner, monthDays, timezone);
         if (!range) return;
 
         const segments = getBannerSegments(range.startIndex, range.endIndex, firstDayOfWeek);
@@ -102,9 +128,9 @@ const buildBannerSegments = (banners, monthDays, firstDayOfWeek) => {
                 imageUrl: getImageUrl(banner.image),
                 startCol: seg.startCol,
                 span: seg.span,
-                row: seg.row, // Это номер недели (строки календаря)
-                realStartTime: parseDate(banner.startDate)?.getTime() ?? 0,
-                realEndTime: parseDate(banner.endDate)?.getTime() ?? Infinity,
+                row: seg.row,
+                realStartTime: parseDate(banner.startDate, timezone)?.getTime() ?? 0,
+                realEndTime: parseDate(banner.endDate, timezone)?.getTime() ?? Infinity,
             });
         });
     });
@@ -210,13 +236,14 @@ const WEEK_DAYS = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
 
 // ===== Мини-месяц для режима "год" =====
 function MiniMonth({ year, month, banners, onClick }) {
+    const { timezone } = useTimezone();
     const monthDays = useMemo(() => getMonthDays(year, month), [year, month]);
 
     const firstDayOfWeek = (monthDays[0].getDay() + 6) % 7;
 
     const bannerRows = useMemo(
-        () => buildBannerSegments(banners, monthDays, firstDayOfWeek),
-        [banners, monthDays, firstDayOfWeek],
+        () => buildBannerSegments(banners, monthDays, firstDayOfWeek, timezone),
+        [banners, monthDays, firstDayOfWeek, timezone],
     );
 
     const monthName = new Date(year, month, 1).toLocaleString("ru-RU", {
@@ -305,7 +332,8 @@ function MiniMonth({ year, month, banners, onClick }) {
 
 // ===== Основной компонент =====
 function BannersCalendar({ banners, initialDate = new Date() }) {
-    // Фильтруем перманентные баннеры (без даты окончания)
+    const { timezone } = useTimezone();
+
     const calendarBanners = useMemo(() => {
         return banners.filter(b => b.endDate !== "permanently");
     }, [banners]);
@@ -313,7 +341,7 @@ function BannersCalendar({ banners, initialDate = new Date() }) {
     const [selectedYear, setSelectedYear] = useState(
         () => initialDate.getFullYear(),
     );
-    const [viewMode, setViewMode] = useState("year"); // "year" | "month"
+    const [viewMode, setViewMode] = useState("year");
     const [selectedMonth, setSelectedMonth] = useState(
         () => initialDate.getMonth(),
     );
@@ -340,8 +368,8 @@ function BannersCalendar({ banners, initialDate = new Date() }) {
     const firstDayOfWeek = (monthDays[0].getDay() + 6) % 7;
 
     const bannerRows = useMemo(
-        () => buildBannerSegments(calendarBanners, monthDays, firstDayOfWeek),
-        [calendarBanners, monthDays, firstDayOfWeek]
+        () => buildBannerSegments(calendarBanners, monthDays, firstDayOfWeek, timezone),
+        [calendarBanners, monthDays, firstDayOfWeek, timezone]
     );
 
     const goPrevMonth = () => {
@@ -411,9 +439,10 @@ function BannersCalendar({ banners, initialDate = new Date() }) {
 
     const totalCells = Math.ceil((firstDayOfWeek + monthDays.length) / 7) * 7;
     const totalWeeks = totalCells / 7;
-    const todayTime = startOfDay(new Date()).getTime();
 
-    // Вычисляем максимальный lane для каждой недели, чтобы правильно задать высоту строки
+    // Сдвигаем "сегодня" в соответствии с выбранным поясом
+    const todayTime = applyTimezone(new Date(), timezone)?.getTime();
+
     const weekMaxLanes = Array(totalWeeks).fill(0);
     bannerRows.forEach(seg => {
         if (seg.lane !== undefined) {
@@ -464,7 +493,10 @@ function BannersCalendar({ banners, initialDate = new Date() }) {
                             const dayIndex = i - firstDayOfWeek;
                             const day = monthDays[dayIndex];
                             const isCurrentMonth = dayIndex >= 0 && dayIndex < monthDays.length;
-                            const isToday = isCurrentMonth && day.getTime() === todayTime;
+
+                            // ВАЖНО: todayTime уже сдвинут, но startOfDay применяется к нему,
+                            // чтобы сравнить именно дни (без учета времени)
+                            const isToday = isCurrentMonth && day.getTime() === startOfDay(todayTime).getTime();
 
                             const specialClass = isCurrentMonth ? getSpecialDayClass(day) : "";
 
