@@ -3,6 +3,7 @@ export { default as About } from "./about/About.jsx";
 
 //banners
 export { default as Banners } from "./banners/Banners.jsx";
+export { default as CalendarPage } from "./banners/CalendarPage.jsx";
 
 //battle
 export { default as Battle } from "./battle/Battle.jsx";

@@ -21,11 +21,12 @@ import {
   CharacterArticle,
   Characters,
   MyAccount,
-  OptimizerNavigation
+  OptimizerNavigation,
+  CalendarPage
 } from "@pages";
 import { RedirectHandler } from "@hooks";
 import {
-  BannerList, BannersCalendar,
+  BannerList,
   MemoryOptimizer,
   MemoryUpCalculator,
   ProtocoreCalculator,
@@ -57,7 +58,7 @@ export const router = createBrowserRouter(
           children: [
             { index: true, element: <Navigate to="all-banners" replace /> },
             { path: "all-banners", element: <BannerList banners={bannersDataFull} showFilters={true} /> },
-            { path: "banners-calendar", element: <BannersCalendar banners={bannersDataFull} /> },
+            { path: "banners-calendar", element: <CalendarPage /> },
           ],
         },
         { path: "battle/:articleLink", element: <CompanionBattleInfo /> },
