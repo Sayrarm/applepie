@@ -128,6 +128,66 @@ const getBannerSegments = (startIndex, endIndex, firstDayOfWeek) => {
 
 const WEEK_DAYS = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
 
+// Специальные диапазоны дат (без года — повторяются каждый год)
+// month: 0-11 (как в JS), day: число месяца
+const SPECIAL_RANGES = [
+    {
+        start: { month: 2, day: 1 },   // 1 марта
+        end: { month: 2, day: 8 },     // 8 марта
+        color: "rafayel",
+    },
+    {
+        start: { month: 3, day: 13 },  // 13 апреля
+        end: { month: 3, day: 20 },    // 20 апреля
+        color: "sylus",
+    },
+    {
+        start: { month: 5, day: 8 },   // 8 июня
+        end: { month: 5, day: 15 },    // 15 июня
+        color: "caleb",
+    },
+    {
+        start: { month: 8, day: 1 },   // 1 сентября
+        end: { month: 8, day: 7 },     // 7 сентября
+        color: "zayne",
+    },
+    {
+        start: { month: 9, day: 11 },  // 11 октября
+        end: { month: 9, day: 18 },    // 18 октября
+        color: "xavier",
+    },
+];
+
+// Возвращает CSS-класс подсветки для конкретного дня (или "")
+const getSpecialDayClass = (day) => {
+    const month = day.getMonth();
+    const date = day.getDate();
+
+    for (const range of SPECIAL_RANGES) {
+        const { start, end } = range;
+        // Сравниваем по (month, day) — без года
+        if (month < start.month || month > end.month) continue;
+
+        // Если диапазон в пределах одного месяца
+        if (start.month === end.month) {
+            if (month === start.month && date >= start.day && date <= end.day) {
+                return `specialDay${range.color.charAt(0).toUpperCase() + range.color.slice(1)}`;
+            }
+            continue;
+        }
+
+        // Диапазон переходит через границу месяцев (на всякий случай)
+        if (
+            (month === start.month && date >= start.day) ||
+            (month === end.month && date <= end.day)
+        ) {
+            return `specialDay${range.color.charAt(0).toUpperCase() + range.color.slice(1)}`;
+        }
+    }
+
+    return "";
+};
+
 // ===== Мини-месяц для режима "год" =====
 function MiniMonth({ year, month, banners, onClick }) {
     const monthDays = useMemo(() => getMonthDays(year, month), [year, month]);
@@ -367,11 +427,17 @@ function BannersCalendar({ banners, initialDate = new Date() }) {
                         const day = monthDays[dayIndex];
                         const isCurrentMonth = dayIndex >= 0 && dayIndex < monthDays.length;
                         const isToday = isCurrentMonth && day.getTime() === todayTime;
+                        const specialClass = isCurrentMonth ? getSpecialDayClass(day) : "";
 
                         return (
                             <div
                                 key={i}
-                                className={`${styles.monthDay} ${!isCurrentMonth ? styles.monthDayOutside : ""} ${isToday ? styles.monthDayToday : ""}`}
+                                className={[
+                                    styles.monthDay,
+                                    !isCurrentMonth ? styles.monthDayOutside : "",
+                                    specialClass ? styles[specialClass] : "",
+                                    isToday ? styles.monthDayToday : "",
+                                ].filter(Boolean).join(" ")}
                             >
                                 {isCurrentMonth ? day.getDate() : ""}
                             </div>

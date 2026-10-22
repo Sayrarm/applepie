@@ -205,9 +205,29 @@
 .monthDayToday {
     color: #fff;
     font-weight: 700;
-    background: #2d223a;
-    box-shadow: inset 0 0 0 2px #9b6cff;
+    background: rgb(66 66 66 / 0.6);
     border-radius: 2px;
+}
+
+/* Подсветка специальных диапазонов (повторяются каждый год) */
+.specialDayRafayel {
+    background: rgba(255, 138, 196, 0.18); /* Rafayel #ff8ac4 */
+}
+
+.specialDaySylus {
+    background: rgba(142, 40, 40, 0.22); /* Sylus #8e2828 */
+}
+
+.specialDayCaleb {
+    background: rgba(255, 159, 67, 0.18); /* Caleb #ff9f43 */
+}
+
+.specialDayZayne {
+    background: rgba(123, 198, 255, 0.18); /* Zayne #7bc6ff */
+}
+
+.specialDayXavier {
+    background: rgba(155, 108, 255, 0.20); /* Xavier #9b6cff */
 }
 
 .monthBannersLayer {
