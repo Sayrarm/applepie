@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Modal, Input, Select, Button } from "antd";
+import { useTranslation } from "react-i18next";
 
 const CUSTOM_TYPES = [
     { label: "Solo", value: "solo" },
@@ -15,6 +16,7 @@ function CustomBannerModal({ open, onClose, onSave }) {
     const [name, setName] = useState("");
     const [type, setType] = useState("solo");
     const [character, setCharacter] = useState("");
+    const { t } = useTranslation();
 
     // Сбрасываем персонажа, если выбран тип, где он не нужен
     useEffect(() => {
@@ -27,11 +29,11 @@ function CustomBannerModal({ open, onClose, onSave }) {
 
     const handleSave = () => {
         if (!name.trim()) {
-            alert("Введите название баннера");
+            alert(t('CustomBannerModal.alertName'));
             return;
         }
         if (showCharacterSelect && !character) {
-            alert("Выберите персонажа");
+            alert(t('CustomBannerModal.alertChar'));
             return;
         }
 
@@ -61,30 +63,30 @@ function CustomBannerModal({ open, onClose, onSave }) {
 
     return (
         <Modal
-            title="Создать свой баннер"
+            title={t('CustomBannerModal.titleModalOwnBanner')}
             open={open}
             onCancel={onClose}
             footer={[
                 <Button key="back" onClick={onClose}>
-                    Отмена
+                    {t('CustomBannerModal.cancel')}
                 </Button>,
                 <Button key="submit" type="primary" onClick={handleSave}>
-                    Сохранить
+                    {t('CustomBannerModal.save')}
                 </Button>,
             ]}
         >
             <div style={{ display: "flex", flexDirection: "column", gap: "16px", marginTop: "16px" }}>
                 <div>
-                    <label style={{ display: "block", marginBottom: "4px" }}>Название баннера</label>
+                    <label style={{ display: "block", marginBottom: "4px" }}>{t('CustomBannerModal.bannerName')}</label>
                     <Input
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        placeholder="Введите название"
+                        placeholder={t('CustomBannerModal.enterName')}
                     />
                 </div>
 
                 <div>
-                    <label style={{ display: "block", marginBottom: "4px" }}>Тип</label>
+                    <label style={{ display: "block", marginBottom: "4px" }}>{t('CustomBannerModal.type')}</label>
                     <Select
                         style={{ width: "100%" }}
                         value={type}
@@ -96,12 +98,12 @@ function CustomBannerModal({ open, onClose, onSave }) {
                 {/* Показываем выбор персонажа только для Solo / Myth / Birthday */}
                 {showCharacterSelect && (
                     <div>
-                        <label style={{ display: "block", marginBottom: "4px" }}>Персонаж</label>
+                        <label style={{ display: "block", marginBottom: "4px" }}>{t('CustomBannerModal.char')}</label>
                         <Select
                             style={{ width: "100%" }}
                             value={character}
                             onChange={setCharacter}
-                            placeholder="Выберите персонажа"
+                            placeholder={t('CustomBannerModal.chooseChar')}
                             options={CHARACTERS.map((char) => ({ label: char, value: char }))}
                         />
                     </div>

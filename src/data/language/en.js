@@ -611,7 +611,26 @@ export const en = {
                 fri: "Fri",
                 sat: "Sat",
                 sun: "Sun"
-            }
-        }
+            },
+            addPredictButton: 'Add prediction',
+            exitButton: 'Exit editing',
+            addBannerButton: 'Add banner',
+            createBannerButton: 'Create own banner',
+            deletePredictButton: 'Delete selected prediction',
+            deleteAllButton: 'Delete all predictions',
+            titleModalBanner: 'Choose banner',
+        },
+        CustomBannerModal: {
+            alertName: 'Enter the name of the banner',
+            alertChar: 'Choose a character',
+            titleModalOwnBanner: 'Create own banner',
+            cancel: 'Cancel',
+            save: 'Save',
+            bannerName: 'Banner name',
+            enterName: 'Enter the name',
+            type: 'Type',
+            char: 'Character',
+            chooseChar: 'Choose the character',
+        },
     },
 };

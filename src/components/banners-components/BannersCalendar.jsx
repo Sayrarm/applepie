@@ -783,7 +783,7 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
                             fontSize: "16px"
                         }}
                     >
-                        {editMode ? "Выйти из редактирования" : "Добавить предикт"}
+                        {editMode ? t('BannersCalendar.exitButton') : t('BannersCalendar.addPredictButton')}
                     </button>
 
                     {/* Остальные кнопки - только если включен режим редактирования */}
@@ -798,7 +798,7 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
                                     }}
                                     style={{ padding: "10px 20px", cursor: "pointer", background: "#9b6cff", color: "#fff", border: "none", borderRadius: "8px", fontSize: "16px" }}
                                 >
-                                    Подтвердить ({selectedDays.length} дн.)
+                                    {t('BannersCalendar.addBannerButton')}
                                 </button>
                             )}
 
@@ -808,7 +808,7 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
                                     onClick={() => setIsCustomModalOpen(true)}
                                     style={{ padding: "10px 20px", cursor: "pointer", background: "#3fae5a", color: "#fff", border: "none", borderRadius: "8px", fontSize: "16px" }}
                                 >
-                                    Создать свой баннер
+                                    {t('BannersCalendar.createBannerButton')}
                                 </button>
                             )}
 
@@ -817,7 +817,7 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
                                     onClick={handleRemoveSelectedPredicts}
                                     style={{ padding: "10px 20px", cursor: "pointer", background: "#ff4d4d", color: "#fff", border: "none", borderRadius: "8px", fontSize: "16px" }}
                                 >
-                                    Удалить предикт в выбранных днях
+                                    {t('BannersCalendar.deletePredictButton')}
                                 </button>
                             )}
 
@@ -826,7 +826,7 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
                                     onClick={handleClearAllPredicts}
                                     style={{ padding: "10px 20px", cursor: "pointer", background: "#444", color: "#fff", border: "1px solid #666", borderRadius: "8px", fontSize: "16px" }}
                                 >
-                                    Удалить все предикты ({predicts.length})
+                                    {t('BannersCalendar.deleteAllButton')}
                                 </button>
                             )}
                         </>
@@ -837,7 +837,7 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
             {/* Модалка выбора баннера для предикта */}
             <ModalWindow
                 ref={predictModalRef}
-                title="Выберите баннер"
+                title={t('BannersCalendar.titleModalBanner')}
                 onClose={() => {}} // Пустая функция, чтобы не сбрасывать выбранные дни при закрытии
                 tag={
                     <div style={{ maxHeight: "60vh", overflowY: "auto" }}>

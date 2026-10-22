@@ -609,7 +609,26 @@ export const ru = {
                 fri: "Пт",
                 sat: "Сб",
                 sun: "Вс"
-            }
+            },
+            addPredictButton: 'Добавить предикт',
+            exitButton: 'Выйти из редактирования',
+            addBannerButton: 'Добавить баннер',
+            createBannerButton: 'Создать свой баннер',
+            deletePredictButton: 'Удалить выбранный предикт',
+            deleteAllButton: 'Удалить все предикты',
+            titleModalBanner: 'Выбрать баннер',
+        },
+        CustomBannerModal: {
+            alertName: 'Введите название баннера',
+            alertChar: 'Выберите персонажа',
+            titleModalOwnBanner: 'Создать свой баннер',
+            cancel: 'Отмена',
+            save: 'Сохранить',
+            bannerName: 'Название баннера',
+            enterName: 'Введите название баннера',
+            type: 'Тип',
+            char: 'Персонаж',
+            chooseChar: 'Выберите персонажа',
         },
     },
 };
