@@ -12,24 +12,30 @@ import {
     ModalWindow,
     useTimezone,
     BannerPeriod,
-    BannerList // Подключаем BannerList для модалки выбора
+    BannerList
 } from "@components";
 import { useTranslation } from "react-i18next";
 import {
     getPredicts,
     addPredict,
-    removePredict,
     clearPredicts,
     savePredicts
 } from "@localstorage";
 
 // --- Утилиты дат ---
-const applyTimezone = (dateInput, serverOffset) => {
+// ИСПРАВЛЕНО: applyTimezone теперь принимает isPredict и не сдвигает время для предиктов
+const applyTimezone = (dateInput, serverOffset, isPredict = false) => {
     if (!dateInput) return null;
 
     // Парсим строку как локальное время пользователя (Москва)
     const localDate = new Date(dateInput);
     if (isNaN(localDate.getTime())) return null;
+
+    // Если это предикт, мы не сдвигаем его по часовому поясу,
+    // чтобы он всегда отображался в тех днях, которые выбрал пользователь.
+    if (isPredict) {
+        return localDate;
+    }
 
     const userOffsetMinutes = -localDate.getTimezoneOffset();
 
@@ -65,14 +71,15 @@ const getMonthDays = (year, month) => {
     return days;
 };
 
-const parseDate = (value, timezone) => {
+const parseDate = (value, timezone, isPredict) => {
     if (!value || value === "permanently") return null;
-    return applyTimezone(value, timezone);
+    return applyTimezone(value, timezone, isPredict); // <-- Передаем флаг
 };
 
 const getBannerRange = (banner, monthDays, timezone) => {
-    const bannerStart = parseDate(banner.startDate, timezone);
-    const bannerEnd = parseDate(banner.endDate, timezone);
+    const isPredict = banner.isPredict; // <-- Получаем флаг
+    const bannerStart = parseDate(banner.startDate, timezone, isPredict);
+    const bannerEnd = parseDate(banner.endDate, timezone, isPredict);
     if (!bannerStart) return null;
 
     const monthFirst = monthDays[0];
@@ -137,8 +144,8 @@ const buildBannerSegments = (banners, monthDays, firstDayOfWeek, timezone) => {
                 startCol: seg.startCol,
                 span: seg.span,
                 row: seg.row,
-                realStartTime: parseDate(banner.startDate, timezone)?.getTime() ?? 0,
-                realEndTime: parseDate(banner.endDate, timezone)?.getTime() ?? Infinity,
+                realStartTime: parseDate(banner.startDate, timezone, banner.isPredict)?.getTime() ?? 0,
+                realEndTime: parseDate(banner.endDate, timezone, banner.isPredict)?.getTime() ?? Infinity,
             });
         });
     });
@@ -339,7 +346,7 @@ function MiniMonth({ year, month, banners, onClick }) {
 }
 
 // ===== Основной компонент =====
-function BannersCalendar({ banners, initialDate = new Date(), editMode = false }) {
+function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditMode }) {
     const { timezone } = useTimezone();
     const { t, i18n } = useTranslation();
 
@@ -444,12 +451,12 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode = false }
 
         const sortedDays = [...selectedDays].sort((a, b) => a - b);
 
+        // ИСПРАВЛЕНО: ставим 00:00:00 для начала и 23:59:59 для конца
         const startDate = new Date(sortedDays[0]);
-        startDate.setHours(5, 0, 0, 0); // Время начала (EU)
+        startDate.setHours(0, 0, 0, 0);
 
         const endDate = new Date(sortedDays[sortedDays.length - 1]);
-        endDate.setHours(4, 59, 0, 0);
-        endDate.setDate(endDate.getDate() + 1); // Конец следующего дня в 04:59
+        endDate.setHours(23, 59, 59, 999);
 
         const predict = {
             ...banner,
@@ -676,41 +683,60 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode = false }
                     </div>
                 </div>
 
-                {/* Кнопки управления предиктами */}
-                {editMode && (
-                    <div style={{ marginTop: "16px", display: "flex", gap: "10px", justifyContent: "center", flexWrap: "wrap" }}>
-                        {selectedDays.length > 0 && (
-                            <button
-                                onClick={() => {
-                                    if (predictModalRef.current) {
-                                        predictModalRef.current.showModal();
-                                    }
-                                }}
-                                style={{ padding: "10px 20px", cursor: "pointer", background: "#9b6cff", color: "#fff", border: "none", borderRadius: "8px", fontSize: "16px" }}
-                            >
-                                Добавить предикт ({selectedDays.length} дн.)
-                            </button>
-                        )}
+                {/* Блок кнопок внизу календаря */}
+                <div style={{ marginTop: "16px", display: "flex", gap: "10px", justifyContent: "center", flexWrap: "wrap" }}>
+                    {/* Кнопка входа/выхода из режима редактирования - ТОЛЬКО В РЕЖИМЕ МЕСЯЦА */}
+                    <button
+                        onClick={() => setEditMode(!editMode)}
+                        style={{
+                            padding: "10px 20px",
+                            cursor: "pointer",
+                            background: editMode ? "#9b6cff" : "#2a2a2a",
+                            color: "#fff",
+                            border: "1px solid #444",
+                            borderRadius: "8px",
+                            fontSize: "16px"
+                        }}
+                    >
+                        {editMode ? "Выйти из редактирования" : "Добавить предикт"}
+                    </button>
 
-                        {selectedDays.length > 0 && predicts.length > 0 && (
-                            <button
-                                onClick={handleRemoveSelectedPredicts}
-                                style={{ padding: "10px 20px", cursor: "pointer", background: "#ff4d4d", color: "#fff", border: "none", borderRadius: "8px", fontSize: "16px" }}
-                            >
-                                Удалить предикт в выбранных днях
-                            </button>
-                        )}
+                    {/* Остальные кнопки - только если включен режим редактирования */}
+                    {editMode && (
+                        <>
+                            {selectedDays.length > 0 && (
+                                <button
+                                    onClick={() => {
+                                        if (predictModalRef.current) {
+                                            predictModalRef.current.showModal();
+                                        }
+                                    }}
+                                    style={{ padding: "10px 20px", cursor: "pointer", background: "#9b6cff", color: "#fff", border: "none", borderRadius: "8px", fontSize: "16px" }}
+                                >
+                                    Подтвердить ({selectedDays.length} дн.)
+                                </button>
+                            )}
 
-                        {predicts.length > 0 && (
-                            <button
-                                onClick={handleClearAllPredicts}
-                                style={{ padding: "10px 20px", cursor: "pointer", background: "#444", color: "#fff", border: "1px solid #666", borderRadius: "8px", fontSize: "16px" }}
-                            >
-                                Удалить все предикты ({predicts.length})
-                            </button>
-                        )}
-                    </div>
-                )}
+                            {selectedDays.length > 0 && predicts.length > 0 && (
+                                <button
+                                    onClick={handleRemoveSelectedPredicts}
+                                    style={{ padding: "10px 20px", cursor: "pointer", background: "#ff4d4d", color: "#fff", border: "none", borderRadius: "8px", fontSize: "16px" }}
+                                >
+                                    Удалить предикт в выбранных днях
+                                </button>
+                            )}
+
+                            {predicts.length > 0 && (
+                                <button
+                                    onClick={handleClearAllPredicts}
+                                    style={{ padding: "10px 20px", cursor: "pointer", background: "#444", color: "#fff", border: "1px solid #666", borderRadius: "8px", fontSize: "16px" }}
+                                >
+                                    Удалить все предикты ({predicts.length})
+                                </button>
+                            )}
+                        </>
+                    )}
+                </div>
             </div>
 
             {/* Модалка выбора баннера для предикта */}
