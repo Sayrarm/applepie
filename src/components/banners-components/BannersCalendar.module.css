@@ -2,10 +2,10 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    padding: 16px;
-    background: var(--bg-secondary, #1a1a1a); /* Подстроено под темную тему */
-    border-radius: 12px;
-    color: #ddd;
+    padding: 10px;
+    background: var(--bg-glass-dark);
+    box-shadow: var(--box-shadow);
+    color: var(--colorTextDark);
 }
 
 .header {
@@ -21,24 +21,22 @@
     font-weight: 600;
     min-width: 180px;
     text-align: center;
-    text-transform: capitalize;
 }
 
 .titleClickable {
     cursor: pointer;
-    transition: color 0.15s;
+    transition: color 0.2s;
 }
 
 .titleClickable:hover {
-    color: #9b6cff;
-    text-decoration: underline;
+    color: var(--a);
 }
 
 .navBtn {
-    border: 1px solid #444;
-    background: #2a2a2a;
-    color: #ddd;
-    border-radius: 8px;
+    border: var(--border-table);
+    background: var(--background);
+    border: 1px solid var(--border-battle-page);
+    color: var(--colorText);
     width: 36px;
     height: 36px;
     cursor: pointer;
@@ -46,11 +44,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.15s;
+    transition: background 0.2s;
 }
 
 .navBtn:hover {
-    background: #3a3a3a;
+    background: var(--a);
 }
 
 /* =========================================
@@ -66,24 +64,22 @@
     display: flex;
     flex-direction: column;
     padding: 12px;
-    border: 1px solid #333;
-    border-radius: 10px;
-    background: #222;
+    border: 1px solid var(--border-table);
+    background: var(--background);
     cursor: pointer;
-    transition: box-shadow 0.15s, transform 0.15s;
+    transition: all 0.2s;
 }
 
 .miniMonth:hover {
-    box-shadow: 0 4px 12px rgba(155, 108, 255, 0.2);
-    border-color: #555;
+    box-shadow: 0 0px 12px var(--a);
+    border: 1px solid var(--border-table);
     transform: translateY(-2px);
 }
 
 .miniMonthTitle {
     font-size: 14px;
-    font-weight: 600;
     text-align: center;
-    color: #eee;
+    color: var(--colorText);
     margin-bottom: 8px;
     text-transform: capitalize;
 }
@@ -97,7 +93,7 @@
 .miniWeekDayName {
     font-size: 10px;
     text-align: center;
-    color: #888;
+    color: var(--colorTextGrayNote);
     font-weight: 500;
 }
 
@@ -105,29 +101,31 @@
     position: relative;
     display: grid;
     gap: 1px;
+    background: none;
+    border: none;
 }
 
 .miniGrid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 1px;
-    background: #333;
-    border-radius: 4px;
-    overflow: hidden;
+    border: none;
 }
 
 .miniDay {
     font-size: 10px;
     text-align: center;
-    color: #ccc;
+    color: var(--colorText);
     padding: 6px 0;
-    background: #222;
+    background: var(--background-light);
     min-height: 20px;
+    border: none;
 }
 
 .miniDayOutside {
-    color: #444;
-    background: #1a1a1a;
+    color: var(--colorTextGrayNote);
+    background: var(--background);
+    border: none;
 }
 
 .miniBannersLayer {
@@ -170,43 +168,41 @@
 .weekDayName {
     text-align: center;
     font-size: 13px;
-    color: #888;
-    font-weight: 600;
+    color: var(--colorTextGrayNote);
 }
 
 .monthGridWrapper {
     position: relative;
-    border-radius: 8px;
     overflow: hidden;
+    background: none;
+    border: 1px solid var(--border-table);
 }
 
 .monthGrid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 1px;
-    background: #333; /* Цвет линий сетки */
 }
 
 .monthDay {
-    background: #222;
-    color: #ddd;
+    background: var(--background-light);
+    color: var(--colorText);
     font-size: 14px;
     padding: 8px;
-    min-height: 100px; /* Высота ячейки, чтобы влезали баннеры */
+    min-height: 118px; /* Высота ячейки, чтобы влезали баннеры */
     display: flex;
     flex-direction: column;
+    border: none;
 }
 
 .monthDayOutside {
-    color: #555;
-    background: #1a1a1a;
+    background: none;
 }
 
 .monthDayToday {
-    color: #fff;
+    color: var(--a);
     font-weight: 700;
-    background: rgb(66 66 66 / 0.6);
-    border-radius: 2px;
+    background: var(--background);
 }
 
 /* Подсветка специальных диапазонов (повторяются каждый год) */
@@ -265,6 +261,11 @@
     align-self: start;
     padding-left: 30px;
     cursor: pointer;
+    transition: 0.2s;
+}
+
+.bannerBar:hover {
+    transform: translateY(-2px);
 }
 
 .bannerBarImage {

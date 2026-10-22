@@ -318,7 +318,7 @@ function MiniMonth({ year, month, banners, onClick }) {
                                     gridColumn: `${startCol} / span ${span}`,
                                     gridRow: row + 1,
                                     "--bar-color": color,
-                                    marginTop: `${2 + (lane || 0) * 5}px`,
+                                    marginTop: `${4 + (lane || 0) * 5}px`,
                                 }}
                                 title={banner.name}
                             />

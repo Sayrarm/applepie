@@ -98,6 +98,7 @@ html.light {
   --a: #e68038;
   --a-hover: #9a5929;
   --background: #35312d;
+  --background-light: #45413D;
   --background-gray: rgb(9 7 4 / 0.38);
   --background-color: rgb(154 89 41 / 0.7);
   --bg-glass: color-mix(in srgb, var(--bg-brown) 10%, transparent);
@@ -156,6 +157,7 @@ html.dark {
   --a: #9c2007;
   --a-hover: #ff4444;
   --background: #202227;
+  --background-light: #313338;
   --background-gray: rgb(165 165 165 / 0.34);
   --background-color: rgb(156 32 7 / 0.5);
   --bg-glass: color-mix(in srgb, var(--dark) 80%, transparent);
