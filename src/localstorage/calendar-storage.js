@@ -33,3 +33,13 @@ export const removePredict = (id) => {
     savePredicts(predicts);
     return predicts;
 };
+
+export const clearPredicts = () => {
+    try {
+        localStorage.removeItem(STORAGE_KEY);
+        return [];
+    } catch (e) {
+        console.error("Failed to clear predicts", e);
+        return [];
+    }
+};

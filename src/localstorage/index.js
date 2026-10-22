@@ -202,5 +202,6 @@ export {
   getPredicts,
   savePredicts,
   addPredict,
-  removePredict
+  removePredict,
+  clearPredicts
 } from "./calendar-storage.js";
