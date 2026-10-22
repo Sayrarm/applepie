@@ -567,38 +567,51 @@ export const en = {
             st: '- a story that can be obtained from 4-star Memories or reaching the required Affinity level. Presented as an audio track with only the male character voiced.'
         },
         FilterModalBanner: {
-            "titleModal": "Banner filters",
-            "type": "Type:",
-            "standart": "Standart",
-            "multi": "Multi",
-            "myth": "Myth",
-            "solo": "Solo",
-            "birthday": "Birthday",
-            "newRerun": "New / Rerun:",
-            "new": "New",
-            "rerun": "Rerun",
-            "availability": "Availability:",
-            "active": "Active",
-            "inactive": "Inactive",
-            "clear": "Clear"
+            titleModal: "Banner filters",
+            type: "Type:",
+            standart: "Standart",
+            multi: "Multi",
+            myth: "Myth",
+            solo: "Solo",
+            birthday: "Birthday",
+            newRerun: "New / Rerun:",
+            new: "New",
+            rerun: "Rerun",
+            availability: "Availability:",
+            active: "Active",
+            inactive: "Inactive",
+            clear: "Clear"
         },
         FilterSortBarBanners: {
-            "placeholder": "Sort by...",
-            "new": "New",
-            "rerun": "Rerun",
-            "active": "Active",
-            "inactive": "Inactive",
-            "name": "Name",
-            "startDate": "Release",
-            "endDate": "End",
-            "clearSorting": "Clear sorting",
-            "filterButton": "Filters",
-            "search": "Search banners...",
-            "resetButton": "Reset all settings"
+            placeholder: "Sort by...",
+            new: "New",
+            rerun: "Rerun",
+            active: "Active",
+            inactive: "Inactive",
+            name: "Name",
+            startDate: "Release",
+            endDate: "End",
+            clearSorting: "Clear sorting",
+            filterButton: "Filters",
+            search: "Search banners...",
+            resetButton: "Reset all settings"
         },
         Banners: {
             allBanners: 'All banners',
             calendar: 'Calendar',
         },
+        BannersCalendar: {
+            openMonthTitle: "Open {{month}} {{year}}",
+            backToYearTitle: "Back to year",
+            weekDays: {
+                mon: "Mon",
+                tue: "Tue",
+                wed: "Wed",
+                thu: "Thu",
+                fri: "Fri",
+                sat: "Sat",
+                sun: "Sun"
+            }
+        }
     },
 };

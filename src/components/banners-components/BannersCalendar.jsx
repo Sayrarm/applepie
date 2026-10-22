@@ -13,6 +13,7 @@ import {
     useTimezone,
     BannerPeriod
 } from "@components";
+import { useTranslation } from "react-i18next";
 
 // --- Утилиты дат ---
 const applyTimezone = (dateInput, serverOffset) => {
@@ -22,8 +23,7 @@ const applyTimezone = (dateInput, serverOffset) => {
     const localDate = new Date(dateInput);
     if (isNaN(localDate.getTime())) return null;
 
-    // Получаем оффсет пользователя в минутах (для Москвы это 180)
-    const userOffsetMinutes = -localDate.getTimezoneOffset(); // getTimezoneOffset возвращает -180, ставим минус
+    const userOffsetMinutes = -localDate.getTimezoneOffset();
 
     // Парсим оффсет сервера (например, "+08:00" -> 480 минут)
     const match = serverOffset?.match(/([+-])(\d{2}):(\d{2})/);
@@ -175,30 +175,30 @@ const buildBannerSegments = (banners, monthDays, firstDayOfWeek, timezone) => {
 // Специальные диапазоны дат (без года — повторяются каждый год)
 const SPECIAL_RANGES = [
     {
-        start: { month: 2, day: 1 },   // 1 марта
-        end: { month: 2, day: 8 },     // 8 марта
+        start: { month: 2, day: 1 },
+        end: { month: 2, day: 8 },
         color: "rafayel",
     },
     {
-        start: { month: 3, day: 13 },  // 13 апреля
-        end: { month: 3, day: 20 },    // 20 апреля
+        start: { month: 3, day: 13 },
+        end: { month: 3, day: 20 },
         color: "sylus",
         skipYears: [2024],
     },
     {
-        start: { month: 5, day: 8 },   // 8 июня
-        end: { month: 5, day: 15 },    // 15 июня
+        start: { month: 5, day: 8 },
+        end: { month: 5, day: 15 },
         color: "caleb",
         skipYears: [2024],
     },
     {
-        start: { month: 8, day: 1 },   // 1 сентября
-        end: { month: 8, day: 7 },     // 7 сентября
+        start: { month: 8, day: 1 },
+        end: { month: 8, day: 7 },
         color: "zayne",
     },
     {
-        start: { month: 9, day: 11 },  // 11 октября
-        end: { month: 9, day: 18 },    // 18 октября
+        start: { month: 9, day: 11 },
+        end: { month: 9, day: 18 },
         color: "xavier",
     },
 ];
@@ -232,11 +232,10 @@ const getSpecialDayClass = (day) => {
     return "";
 };
 
-const WEEK_DAYS = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
-
 // ===== Мини-месяц для режима "год" =====
 function MiniMonth({ year, month, banners, onClick }) {
     const { timezone } = useTimezone();
+    const { t, i18n } = useTranslation(); // <-- ДОБАВЛЕНО
     const monthDays = useMemo(() => getMonthDays(year, month), [year, month]);
 
     const firstDayOfWeek = (monthDays[0].getDay() + 6) % 7;
@@ -246,9 +245,12 @@ function MiniMonth({ year, month, banners, onClick }) {
         [banners, monthDays, firstDayOfWeek, timezone],
     );
 
-    const monthName = new Date(year, month, 1).toLocaleString("ru-RU", {
+    const monthName = new Date(year, month, 1).toLocaleString(i18n.language, { // <-- ЗАМЕНЕНО ru-RU на i18n.language
         month: "long",
     });
+
+    // <-- НОВЫЙ МАССИВ КЛЮЧЕЙ ДЛЯ ПЕРЕВОДА
+    const weekDayKeys = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 
     const totalCells = Math.ceil((firstDayOfWeek + monthDays.length) / 7) * 7;
     const totalWeeks = totalCells / 7;
@@ -262,15 +264,15 @@ function MiniMonth({ year, month, banners, onClick }) {
             onKeyDown={(e) => {
                 if (e.key === "Enter" || e.key === " ") onClick();
             }}
-            title={`Открыть ${monthName} ${year}`}
+            title={t('BannersCalendar.openMonthTitle', { month: monthName, year })} // <-- ПЕРЕВОД
         >
             <div className={styles.miniMonthTitle}>{monthName}</div>
 
             {/* Шапка с днями недели */}
             <div className={styles.miniWeekHeader}>
-                {WEEK_DAYS.map((d) => (
-                    <div key={d} className={styles.miniWeekDayName}>
-                        {d}
+                {weekDayKeys.map((key) => ( // <-- ЗАМЕНЕНО WEEK_DAYS
+                    <div key={key} className={styles.miniWeekDayName}>
+                        {t(`BannersCalendar.weekDays.${key}`)} {/* <-- ПЕРЕВОД */}
                     </div>
                 ))}
             </div>
@@ -333,6 +335,7 @@ function MiniMonth({ year, month, banners, onClick }) {
 // ===== Основной компонент =====
 function BannersCalendar({ banners, initialDate = new Date() }) {
     const { timezone } = useTimezone();
+    const { t, i18n } = useTranslation(); // <-- ДОБАВЛЕНО
 
     const calendarBanners = useMemo(() => {
         return banners.filter(b => b.endDate !== "permanently");
@@ -402,6 +405,9 @@ function BannersCalendar({ banners, initialDate = new Date() }) {
         setViewMode("year");
     };
 
+    // <-- НОВЫЙ МАССИВ КЛЮЧЕЙ ДЛЯ ПЕРЕВОДА
+    const weekDayKeys = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+
     // ===== РЕНДЕР: режим "год" =====
     if (viewMode === "year") {
         return (
@@ -433,7 +439,7 @@ function BannersCalendar({ banners, initialDate = new Date() }) {
 
     // ===== РЕНДЕР: режим "месяц" =====
     const monthName = new Date(selectedYear, selectedMonth, 1).toLocaleString(
-        "ru-RU",
+        i18n.language,
         { month: "long", year: "numeric" },
     );
 
@@ -465,7 +471,7 @@ function BannersCalendar({ banners, initialDate = new Date() }) {
                     <h2
                         className={`${styles.title} ${styles.titleClickable}`}
                         onClick={backToYear}
-                        title="Вернуться к году"
+                        title={t('BannersCalendar.backToYearTitle')} // <-- ПЕРЕВОД
                     >
                         {monthName}
                     </h2>
@@ -476,9 +482,9 @@ function BannersCalendar({ banners, initialDate = new Date() }) {
 
                 {/* Шапка дней недели */}
                 <div className={styles.weekHeader}>
-                    {WEEK_DAYS.map((d) => (
-                        <div key={d} className={styles.weekDayName}>
-                            {d}
+                    {weekDayKeys.map((key) => (
+                        <div key={key} className={styles.weekDayName}>
+                            {t(`BannersCalendar.weekDays.${key}`)}
                         </div>
                     ))}
                 </div>
