@@ -1,4 +1,4 @@
-import { useMemo, useRef } from "react";
+import { useMemo, useRef, useState } from "react";
 import styles from "./Banners.module.css";
 import { bannersDataFull } from "@data";
 import {
@@ -10,6 +10,7 @@ import {
 
 function CalendarPage() {
     const filterModalRef = useRef();
+    const [editMode, setEditMode] = useState(false);
 
     // 1. Подключаем только фильтрацию и поиск (сортировка нам не нужна)
     const {
@@ -75,8 +76,27 @@ function CalendarPage() {
                 storagePrefix="banners"
             />
 
-            {/* 4. Передаем отфильтрованные баннеры в календарь */}
-            <BannersCalendar banners={processedBanners} />
+            <div style={{ display: "flex", justifyContent: "flex-end", padding: "0 16px", marginBottom: "16px" }}>
+                <button
+                    onClick={() => setEditMode(!editMode)}
+                    style={{
+                        padding: "8px 16px",
+                        cursor: "pointer",
+                        background: editMode ? "#9b6cff" : "#2a2a2a",
+                        color: "#fff",
+                        border: "1px solid #444",
+                        borderRadius: "8px",
+                        transition: "background 0.2s"
+                    }}
+                >
+                    {editMode ? "Выйти из редактирования" : "Добавить предикт"}
+                </button>
+            </div>
+
+            <BannersCalendar
+                banners={processedBanners}
+                editMode={editMode}
+            />
         </section>
     );
 }

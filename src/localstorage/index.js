@@ -198,3 +198,9 @@ export {
   renameSlot,
   createEmptySlot
 } from "./account-slots.js";
+export {
+  getPredicts,
+  savePredicts,
+  addPredict,
+  removePredict
+} from "./calendar-storage.js";

@@ -13,7 +13,7 @@ import { memoriesData } from "@data";
 import { getImageUrl } from "@hooks";
 import BannerPeriod from "./BannerPeriod.jsx";
 
-function BannerList({ banners, showFilters = false }) {
+function BannerList({ banners, showFilters = false, onSelect = null }) {
     const [selectedBanner, setSelectedBanner] = useState(null);
     const memoriesModalRef = useRef();
     const filterModalRef = useRef();
@@ -72,7 +72,12 @@ function BannerList({ banners, showFilters = false }) {
         return result;
     }, [banners, filterBanners, searchQuery, sortBanners]);
 
+    // ОДНА функция показа модалки / выбора баннера
     const showMemoriesModal = (banner) => {
+        if (onSelect) {
+            onSelect(banner); // <-- Если передан onSelect, возвращаем баннер
+            return;
+        }
         setSelectedBanner(banner);
         memoriesModalRef.current.showModal();
     };

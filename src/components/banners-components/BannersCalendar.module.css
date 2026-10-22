@@ -286,3 +286,18 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.monthDayEdit {
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.monthDayEdit:hover {
+    background: #333 !important;
+}
+
+.monthDaySelected {
+    background: #3a2d55 !important;
+    box-shadow: inset 0 0 0 2px #9b6cff;
+    border-radius: 2px;
+}

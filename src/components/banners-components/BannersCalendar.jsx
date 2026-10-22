@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from "react";
+import { useMemo, useRef, useState, useEffect } from "react";
 import styles from "./BannersCalendar.module.css";
 import {
     getBannerColor,
@@ -11,9 +11,11 @@ import {
     CardList,
     ModalWindow,
     useTimezone,
-    BannerPeriod
+    BannerPeriod,
+    BannerList
 } from "@components";
 import { useTranslation } from "react-i18next";
+import { getPredicts, addPredict } from "@localstorage/calendar-storage";
 
 // --- Утилиты дат ---
 const applyTimezone = (dateInput, serverOffset) => {
@@ -235,7 +237,7 @@ const getSpecialDayClass = (day) => {
 // ===== Мини-месяц для режима "год" =====
 function MiniMonth({ year, month, banners, onClick }) {
     const { timezone } = useTimezone();
-    const { t, i18n } = useTranslation(); // <-- ДОБАВЛЕНО
+    const { t, i18n } = useTranslation();
     const monthDays = useMemo(() => getMonthDays(year, month), [year, month]);
 
     const firstDayOfWeek = (monthDays[0].getDay() + 6) % 7;
@@ -245,7 +247,7 @@ function MiniMonth({ year, month, banners, onClick }) {
         [banners, monthDays, firstDayOfWeek, timezone],
     );
 
-    const monthName = new Date(year, month, 1).toLocaleString(i18n.language, { // <-- ЗАМЕНЕНО ru-RU на i18n.language
+    const monthName = new Date(year, month, 1).toLocaleString(i18n.language, {
         month: "long",
     });
 
@@ -264,15 +266,15 @@ function MiniMonth({ year, month, banners, onClick }) {
             onKeyDown={(e) => {
                 if (e.key === "Enter" || e.key === " ") onClick();
             }}
-            title={t('BannersCalendar.openMonthTitle', { month: monthName, year })} // <-- ПЕРЕВОД
+            title={t('BannersCalendar.openMonthTitle', { month: monthName, year })}
         >
             <div className={styles.miniMonthTitle}>{monthName}</div>
 
             {/* Шапка с днями недели */}
             <div className={styles.miniWeekHeader}>
-                {weekDayKeys.map((key) => ( // <-- ЗАМЕНЕНО WEEK_DAYS
+                {weekDayKeys.map((key) => (
                     <div key={key} className={styles.miniWeekDayName}>
-                        {t(`BannersCalendar.weekDays.${key}`)} {/* <-- ПЕРЕВОД */}
+                        {t(`BannersCalendar.weekDays.${key}`)}
                     </div>
                 ))}
             </div>
@@ -333,13 +335,9 @@ function MiniMonth({ year, month, banners, onClick }) {
 }
 
 // ===== Основной компонент =====
-function BannersCalendar({ banners, initialDate = new Date() }) {
+function BannersCalendar({ banners, initialDate = new Date(), editMode = false }) {
     const { timezone } = useTimezone();
-    const { t, i18n } = useTranslation(); // <-- ДОБАВЛЕНО
-
-    const calendarBanners = useMemo(() => {
-        return banners.filter(b => b.endDate !== "permanently");
-    }, [banners]);
+    const { t, i18n } = useTranslation();
 
     const [selectedYear, setSelectedYear] = useState(
         () => initialDate.getFullYear(),
@@ -352,6 +350,26 @@ function BannersCalendar({ banners, initialDate = new Date() }) {
     // Состояние для модалки
     const [selectedBanner, setSelectedBanner] = useState(null);
     const memoriesModalRef = useRef();
+
+    // ===== СОСТОЯНИЯ ДЛЯ ПРЕДИКТОВ =====
+    const [selectedDays, setSelectedDays] = useState([]);
+    const [predicts, setPredicts] = useState(() => getPredicts());
+    const predictModalRef = useRef(); // Ссылка на модалку выбора
+
+    // Сброс выбранных дней при выходе из режима
+    useEffect(() => {
+        if (!editMode) {
+            setSelectedDays([]);
+        }
+    }, [editMode]);
+
+    const allBanners = useMemo(() => {
+        return [...banners, ...predicts];
+    }, [banners, predicts]);
+
+    const calendarBanners = useMemo(() => {
+        return allBanners.filter(b => b.endDate !== "permanently");
+    }, [allBanners]);
 
     const showMemoriesModal = (banner) => {
         setSelectedBanner(banner);
@@ -405,7 +423,47 @@ function BannersCalendar({ banners, initialDate = new Date() }) {
         setViewMode("year");
     };
 
-    // <-- НОВЫЙ МАССИВ КЛЮЧЕЙ ДЛЯ ПЕРЕВОДА
+    // ===== ОБРАБОТЧИКИ РЕЖИМА РЕДАКТИРОВАНИЯ =====
+    const handleDayClick = (day) => {
+        if (!editMode) return;
+        const time = day.getTime();
+        setSelectedDays((prev) =>
+            prev.includes(time)
+                ? prev.filter((t) => t !== time)
+                : [...prev, time]
+        );
+    };
+
+    const handleAddPredict = (banner) => {
+        if (selectedDays.length === 0) return;
+
+        const sortedDays = [...selectedDays].sort((a, b) => a - b);
+
+        const startDate = new Date(sortedDays[0]);
+        startDate.setHours(5, 0, 0, 0);
+
+        const endDate = new Date(sortedDays[sortedDays.length - 1]);
+        endDate.setHours(4, 59, 0, 0);
+        endDate.setDate(endDate.getDate() + 1);
+
+        const predict = {
+            ...banner,
+            id: `predict-${Date.now()}`,
+            startDate: startDate.toISOString(),
+            endDate: endDate.toISOString(),
+            isPredict: true,
+        };
+
+        const updatedPredicts = addPredict(predict);
+        setPredicts(updatedPredicts);
+
+        setSelectedDays([]);
+        // Закрываем модалку
+        if (predictModalRef.current) {
+            predictModalRef.current.closeModal();
+        }
+    };
+
     const weekDayKeys = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 
     // ===== РЕНДЕР: режим "год" =====
@@ -471,7 +529,7 @@ function BannersCalendar({ banners, initialDate = new Date() }) {
                     <h2
                         className={`${styles.title} ${styles.titleClickable}`}
                         onClick={backToYear}
-                        title={t('BannersCalendar.backToYearTitle')} // <-- ПЕРЕВОД
+                        title={t('BannersCalendar.backToYearTitle')}
                     >
                         {monthName}
                     </h2>
@@ -505,15 +563,19 @@ function BannersCalendar({ banners, initialDate = new Date() }) {
                             const isToday = isCurrentMonth && day.getTime() === startOfDay(todayTime).getTime();
 
                             const specialClass = isCurrentMonth ? getSpecialDayClass(day) : "";
+                            const isSelectedDay = isCurrentMonth && selectedDays.includes(day.getTime());
 
                             return (
                                 <div
                                     key={i}
+                                    onClick={() => handleDayClick(day)}
                                     className={[
                                         styles.monthDay,
                                         !isCurrentMonth ? styles.monthDayOutside : "",
                                         specialClass ? styles[specialClass] : "",
                                         isToday ? styles.monthDayToday : "",
+                                        isSelectedDay ? styles.monthDaySelected : "",
+                                        editMode && isCurrentMonth ? styles.monthDayEdit : "",
                                     ].filter(Boolean).join(" ")}
                                 >
                                     {isCurrentMonth ? day.getDate() : ""}
@@ -543,11 +605,17 @@ function BannersCalendar({ banners, initialDate = new Date() }) {
                                         marginTop: `${3 + (lane || 0) * 32}px`,
                                     }}
                                     title={tooltip}
-                                    onClick={() => showMemoriesModal(banner)}
+                                    onClick={(e) => {
+                                        if (!editMode) {
+                                            showMemoriesModal(banner);
+                                        } else {
+                                            e.stopPropagation();
+                                        }
+                                    }}
                                     role="button"
                                     tabIndex={0}
                                     onKeyDown={(e) => {
-                                        if (e.key === "Enter" || e.key === " ") {
+                                        if ((e.key === "Enter" || e.key === " ") && !editMode) {
                                             e.preventDefault();
                                             showMemoriesModal(banner);
                                         }
@@ -570,8 +638,40 @@ function BannersCalendar({ banners, initialDate = new Date() }) {
                         })}
                     </div>
                 </div>
+
+                {editMode && selectedDays.length > 0 && (
+                    <div style={{ marginTop: "16px", textAlign: "center" }}>
+                        <button
+                            onClick={() => {
+                                if (predictModalRef.current) {
+                                    predictModalRef.current.showModal();
+                                }
+                            }}
+                            style={{ padding: "10px 20px", cursor: "pointer", background: "#9b6cff", color: "#fff", border: "none", borderRadius: "8px", fontSize: "16px" }}
+                        >
+                            Добавить баннер ({selectedDays.length} дн.)
+                        </button>
+                    </div>
+                )}
             </div>
 
+            {/* Модалка выбора баннера для предикта */}
+            <ModalWindow
+                ref={predictModalRef}
+                title="Выберите баннер"
+                onClose={() => {}} // Пустая функция, чтобы не сбрасывать выбранные дни при закрытии
+                tag={
+                    <div style={{ maxHeight: "60vh", overflowY: "auto" }}>
+                        <BannerList
+                            banners={banners}
+                            showFilters={true}
+                            onSelect={(banner) => handleAddPredict(banner)}
+                        />
+                    </div>
+                }
+            />
+
+            {/* Существующая модалка для просмотра карточек */}
             <ModalWindow
                 ref={memoriesModalRef}
                 title={selectedBanner?.name}
