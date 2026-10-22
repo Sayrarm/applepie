@@ -21,10 +21,19 @@ import {
   CharacterArticle,
   Characters,
   MyAccount,
-  OptimizerNavigation
+  OptimizerNavigation,
+  CalendarPage
 } from "@pages";
 import { RedirectHandler } from "@hooks";
-import {MemoryOptimizer, MemoryUpCalculator, ProtocoreCalculator, Showcase, TeamOptimizer} from "@components";
+import {
+  BannerList,
+  MemoryOptimizer,
+  MemoryUpCalculator,
+  ProtocoreCalculator,
+  Showcase,
+  TeamOptimizer
+} from "@components";
+import {bannersDataFull} from "@data";
 
 const basename = import.meta.env.BASE_URL;
 
@@ -43,7 +52,15 @@ export const router = createBrowserRouter(
         { path: "memories/:cardId", element: <CardArticle /> },
         { path: "memories", element: <Memories /> },
         { path: "battle", element: <Battle /> },
-        { path: "banners-history", element: <Banners /> },
+        {
+          path: "banners-history",
+          element: <Banners />,
+          children: [
+            { index: true, element: <Navigate to="all-banners" replace /> },
+            { path: "all-banners", element: <BannerList banners={bannersDataFull} showFilters={true} /> },
+            { path: "banners-calendar", element: <CalendarPage /> },
+          ],
+        },
         { path: "battle/:articleLink", element: <CompanionBattleInfo /> },
         { path: "lore", element: <Lore /> },
         { path: "lore/spacepedia", element: <Spacepedia /> },

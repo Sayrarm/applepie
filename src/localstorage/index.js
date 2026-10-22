@@ -3,6 +3,7 @@ export {
   getCardKeys,
   getMemoryFilterKeys,
   getProtocoreFilterKeys,
+  getBannerFilterKeys
 } from "./localStorageKeys.js";
 export {
   get,
@@ -154,6 +155,21 @@ export {
   updateProtocoreFilters,
 } from "./filter-protocore-storage.js";
 export {
+  getBannerFilterKeysForPrefix,
+  getBannerSelectedChar,
+  saveBannerSelectedChar,
+  getBannerTypeFilter,
+  saveBannerTypeFilter,
+  getBannerSearchQuery,
+  saveBannerSearchQuery,
+  getBannerSortCriteria,
+  saveBannerSortCriteria,
+  clearAllBannerFilters,
+  getDefaultBannerFilters,
+  getBannerFilters,
+  saveBannerFilters
+} from "./filter-banner-storage.js";
+export {
   getOptimizerData,
   saveOptimizerData,
   clearOptimizerData,
@@ -182,3 +198,10 @@ export {
   renameSlot,
   createEmptySlot
 } from "./account-slots.js";
+export {
+  getPredicts,
+  savePredicts,
+  addPredict,
+  removePredict,
+  clearPredicts
+} from "./calendar-storage.js";

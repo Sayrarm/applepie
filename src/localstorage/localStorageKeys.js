@@ -8,6 +8,7 @@ export const KEYS = {
   CARD_SIZE: "card_image_size", //карточка маленького/большого размера
   SHOW_USER_INFO: "show_user_info", //показывать информацию о карточке (уровень, ранг, возвышение)
   PROTOCORES: "protocores", // все протокоры
+  banners_calendar_predicts: "banners_calendar_predicts",
 
   //ui
   THEME: "theme", //темная/светлая тема
@@ -80,3 +81,14 @@ export const getProtocoreFilterKeys = (prefix) => ({
     ? `${prefix}_protocore_sort_criteria`
     : "protocore_sort_criteria",
 });
+
+//для фильтров баннеров
+export const getBannerFilterKeys = (prefix) => {
+  const base = prefix || "banners";
+  return {
+    selectedChar: `${base}_selected_char`,
+    filters: `${base}_filters`,
+    search: `${base}_search_query`,
+    sort: `${base}_sort_criteria`,
+  };
+};

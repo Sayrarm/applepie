@@ -1,13 +1,27 @@
-import { BannerList } from "@components";
-import { bannersDataFull } from "@data";
 import styles from "./Banners.module.css";
+import { useTranslation } from "react-i18next";
+import {NavLink, Outlet} from "react-router-dom";
 
 function AllBannersPage() {
+    const { t } = useTranslation();
+
   return (
-    <div>
-      <h1 className={styles.title}>All banners</h1>
-      <BannerList banners={bannersDataFull} />
-    </div>
+      <section className={styles.containerBanners}>
+          <div className={styles.tabs}>
+              <NavLink className={({isActive}) => `${styles.tabButton} ${isActive ? styles.active : ""}`}
+                       to="/banners-history/all-banners">
+                  {t('Banners.allBanners')}
+              </NavLink>
+              <NavLink className={({isActive}) => `${styles.tabButton} ${isActive ? styles.active : ""}`}
+                       to="/banners-history/banners-calendar">
+                  {t('Banners.calendar')}
+              </NavLink>
+          </div>
+
+          <div className={styles.tabContent}>
+              <Outlet/>
+          </div>
+      </section>
   );
 }
 
