@@ -72,7 +72,6 @@
 
 .miniMonth:hover {
     box-shadow: 0 0px 12px var(--a);
-    border: 1px solid var(--border-table);
     transform: translateY(-2px);
 }
 
@@ -101,15 +100,17 @@
     position: relative;
     display: grid;
     gap: 1px;
-    background: none;
-    border: none;
+
+    /* 👇 Фон под цвет границ и внешняя рамка */
+    background: var(--border-table);
+    border: 1px solid var(--border-table);
+    overflow: hidden;
 }
 
 .miniGrid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 1px;
-    border: none;
+    gap: 1px; /* 👈 Расстояние между ячейками = толщина линии */
 }
 
 .miniDay {
@@ -117,26 +118,27 @@
     text-align: center;
     color: var(--colorText);
     padding: 6px 0;
-    background: var(--background-light);
+    background: var(--background); /* 👈 Фон ячейки перекрывает линии сетки */
     min-height: 20px;
     border: none;
 }
 
 .miniDayOutside {
     color: var(--colorTextGrayNote);
-    background: var(--background);
+    background: var(--background); /* 👈 Фон для пустых дней (тоже перекрывает линии) */
     border: none;
 }
 
 .miniBannersLayer {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 1px;   /* 👈 Учитываем border обёртки (1px) */
+    left: 1px;  /* 👈 Учитываем border обёртки (1px) */
+    right: 1px; /* 👈 Учитываем border обёртки (1px) */
+    bottom: 1px;/* 👈 Учитываем border обёртки (1px) */
+
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 1px;
+    gap: 1px; /* 👈 Тот же gap, что и у .miniGrid */
     pointer-events: none;
 }
 
@@ -207,23 +209,23 @@
 
 /* Подсветка специальных диапазонов (повторяются каждый год) */
 .specialDayRafayel {
-    background: rgba(255, 138, 196, 0.18); /* Rafayel #ff8ac4 */
+    background: rgba(255, 138, 196, 0.4); /* Rafayel #ff8ac4 */
 }
 
 .specialDaySylus {
-    background: rgba(142, 40, 40, 0.22); /* Sylus #8e2828 */
+    background: rgba(142, 40, 40, 0.4); /* Sylus #8e2828 */
 }
 
 .specialDayCaleb {
-    background: rgba(255, 159, 67, 0.18); /* Caleb #ff9f43 */
+    background: rgba(255, 159, 67, 0.4); /* Caleb #ff9f43 */
 }
 
 .specialDayZayne {
-    background: rgba(123, 198, 255, 0.18); /* Zayne #7bc6ff */
+    background: rgba(123, 198, 255, 0.4); /* Zayne #7bc6ff */
 }
 
 .specialDayXavier {
-    background: rgba(155, 108, 255, 0.20); /* Xavier #9b6cff */
+    background: rgba(155, 108, 255, 0.4); /* Xavier #9b6cff */
 }
 
 .monthBannersLayer {
