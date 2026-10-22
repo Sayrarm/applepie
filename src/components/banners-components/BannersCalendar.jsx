@@ -1,4 +1,4 @@
-import {useMemo, useRef, useState} from "react";
+import { useMemo, useRef, useState } from "react";
 import styles from "./BannersCalendar.module.css";
 import {
     getBannerColor,
@@ -61,48 +61,6 @@ const getBannerRange = (banner, monthDays) => {
     return { startIndex, endIndex };
 };
 
-// Распределяет баннеры по рядам (lane), чтобы пересекающиеся по датам
-// полосы не накладывались друг на друга, а шли одна под другой.
-const assignLanes = (rows) => {
-    const sorted = [...rows].sort((a, b) => a.startIndex - b.startIndex);
-
-    // lanes[i] = массив занятых интервалов [start, end] в ряду i
-    const lanes = [];
-
-    return sorted.map((row) => {
-        let laneIndex = 0;
-        while (true) {
-            if (!lanes[laneIndex]) lanes[laneIndex] = [];
-            const hasConflict = lanes[laneIndex].some(
-                ([s, e]) => row.startIndex <= e && row.endIndex >= s,
-            );
-            if (!hasConflict) {
-                lanes[laneIndex].push([row.startIndex, row.endIndex]);
-                break;
-            }
-            laneIndex++;
-        }
-        return { ...row, lane: laneIndex };
-    });
-};
-
-const buildBannerRows = (banners, monthDays) => {
-    const rows = [];
-    banners.forEach((banner) => {
-        const range = getBannerRange(banner, monthDays);
-        if (!range) return;
-        rows.push({
-            banner,
-            startIndex: range.startIndex,
-            endIndex: range.endIndex,
-            color: getBannerColor(banner),
-            typeLabel: getBannerTypeLabel(banner),
-            imageUrl: getImageUrl(banner.image),
-        });
-    });
-    return assignLanes(rows);
-};
-
 // Нарезает диапазон баннера на сегменты по 7 дней (для календарной сетки)
 const getBannerSegments = (startIndex, endIndex, firstDayOfWeek) => {
     const segments = [];
@@ -126,10 +84,69 @@ const getBannerSegments = (startIndex, endIndex, firstDayOfWeek) => {
     return segments;
 };
 
-const WEEK_DAYS = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
+// Строит сегменты баннеров и распределяет их по локальным рядам (lane) для каждой недели
+const buildBannerSegments = (banners, monthDays, firstDayOfWeek) => {
+    const allSegments = [];
+
+    // 1. Собираем все сегменты
+    banners.forEach((banner) => {
+        const range = getBannerRange(banner, monthDays);
+        if (!range) return;
+
+        const segments = getBannerSegments(range.startIndex, range.endIndex, firstDayOfWeek);
+        segments.forEach(seg => {
+            allSegments.push({
+                banner,
+                color: getBannerColor(banner),
+                typeLabel: getBannerTypeLabel(banner),
+                imageUrl: getImageUrl(banner.image),
+                startCol: seg.startCol,
+                span: seg.span,
+                row: seg.row, // Это номер недели (строки календаря)
+                realStartTime: parseDate(banner.startDate)?.getTime() ?? 0,
+                realEndTime: parseDate(banner.endDate)?.getTime() ?? Infinity,
+            });
+        });
+    });
+
+    // 2. Сортируем сегменты по неделям, затем по реальной дате начала
+    allSegments.sort((a, b) => {
+        if (a.row !== b.row) return a.row - b.row;
+        if (a.realStartTime !== b.realStartTime) return a.realStartTime - b.realStartTime;
+        return a.realEndTime - b.realEndTime;
+    });
+
+    // 3. Распределяем ЛОКАЛЬНЫЕ lane для каждой недели
+    const weekLanes = [];
+    const result = [];
+
+    allSegments.forEach((seg) => {
+        if (!weekLanes[seg.row]) weekLanes[seg.row] = [];
+
+        const segEnd = seg.startCol + seg.span - 1;
+        let laneIndex = 0;
+
+        while (true) {
+            if (!weekLanes[seg.row][laneIndex]) weekLanes[seg.row][laneIndex] = [];
+
+            const hasConflict = weekLanes[seg.row][laneIndex].some(
+                ([s, e]) => seg.startCol <= e && segEnd >= s
+            );
+
+            if (!hasConflict) {
+                weekLanes[seg.row][laneIndex].push([seg.startCol, segEnd]);
+                break;
+            }
+            laneIndex++;
+        }
+
+        result.push({ ...seg, lane: laneIndex });
+    });
+
+    return result;
+};
 
 // Специальные диапазоны дат (без года — повторяются каждый год)
-// month: 0-11 (как в JS), day: число месяца
 const SPECIAL_RANGES = [
     {
         start: { month: 2, day: 1 },   // 1 марта
@@ -160,21 +177,17 @@ const SPECIAL_RANGES = [
     },
 ];
 
-// Возвращает CSS-класс подсветки для конкретного дня (или "")
 const getSpecialDayClass = (day) => {
     const month = day.getMonth();
     const date = day.getDate();
     const year = day.getFullYear();
 
     for (const range of SPECIAL_RANGES) {
-        // Если год в skipYears — пропускаем этот диапазон
         if (range.skipYears && range.skipYears.includes(year)) continue;
 
         const { start, end } = range;
-        // Сравниваем по (month, day) — без года
         if (month < start.month || month > end.month) continue;
 
-        // Если диапазон в пределах одного месяца
         if (start.month === end.month) {
             if (month === start.month && date >= start.day && date <= end.day) {
                 return `specialDay${range.color.charAt(0).toUpperCase() + range.color.slice(1)}`;
@@ -182,7 +195,6 @@ const getSpecialDayClass = (day) => {
             continue;
         }
 
-        // Диапазон переходит через границу месяцев (на всякий случай)
         if (
             (month === start.month && date >= start.day) ||
             (month === end.month && date <= end.day)
@@ -194,19 +206,23 @@ const getSpecialDayClass = (day) => {
     return "";
 };
 
+const WEEK_DAYS = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
+
 // ===== Мини-месяц для режима "год" =====
 function MiniMonth({ year, month, banners, onClick }) {
     const monthDays = useMemo(() => getMonthDays(year, month), [year, month]);
+
+    const firstDayOfWeek = (monthDays[0].getDay() + 6) % 7;
+
     const bannerRows = useMemo(
-        () => buildBannerRows(banners, monthDays),
-        [banners, monthDays],
+        () => buildBannerSegments(banners, monthDays, firstDayOfWeek),
+        [banners, monthDays, firstDayOfWeek],
     );
 
     const monthName = new Date(year, month, 1).toLocaleString("ru-RU", {
         month: "long",
     });
 
-    const firstDayOfWeek = (monthDays[0].getDay() + 6) % 7;
     const totalCells = Math.ceil((firstDayOfWeek + monthDays.length) / 7) * 7;
     const totalWeeks = totalCells / 7;
 
@@ -242,6 +258,7 @@ function MiniMonth({ year, month, banners, onClick }) {
                         const dayIndex = i - firstDayOfWeek;
                         const day = monthDays[dayIndex];
                         const isCurrentMonth = dayIndex >= 0 && dayIndex < monthDays.length;
+
                         const specialClass = isCurrentMonth ? getSpecialDayClass(day) : "";
 
                         return (
@@ -264,25 +281,20 @@ function MiniMonth({ year, month, banners, onClick }) {
                     className={styles.miniBannersLayer}
                     style={{ gridTemplateRows: `repeat(${totalWeeks}, 1fr)` }}
                 >
-                    {bannerRows.map(({ banner, startIndex, endIndex, color, lane }) => {
-                        const segments = getBannerSegments(startIndex, endIndex, firstDayOfWeek);
-
+                    {bannerRows.map((seg, idx) => {
+                        const { banner, color, startCol, span, row, lane } = seg;
                         return (
-                            <div key={banner.id} className={styles.miniSegmentsWrapper}>
-                                {segments.map((seg, idx) => (
-                                    <div
-                                        key={`${banner.id}-${idx}`}
-                                        className={styles.miniBannerBar}
-                                        style={{
-                                            gridColumn: `${seg.startCol} / span ${seg.span}`,
-                                            gridRow: seg.row + 1,
-                                            "--bar-color": color,
-                                            marginTop: `${2 + (lane || 0) * 5}px`,
-                                        }}
-                                        title={banner.name}
-                                    />
-                                ))}
-                            </div>
+                            <div
+                                key={`${banner.id}-${row}-${idx}`}
+                                className={styles.miniBannerBar}
+                                style={{
+                                    gridColumn: `${startCol} / span ${span}`,
+                                    gridRow: row + 1,
+                                    "--bar-color": color,
+                                    marginTop: `${2 + (lane || 0) * 5}px`,
+                                }}
+                                title={banner.name}
+                            />
                         );
                     })}
                 </div>
@@ -293,18 +305,6 @@ function MiniMonth({ year, month, banners, onClick }) {
 
 // ===== Основной компонент =====
 function BannersCalendar({ banners, initialDate = new Date() }) {
-    const [selectedBanner, setSelectedBanner] = useState(null);
-    const memoriesModalRef = useRef();
-
-    const showMemoriesModal = (banner) => {
-        setSelectedBanner(banner);
-        memoriesModalRef.current.showModal();
-    };
-
-    const cards = memoriesData.filter((card) =>
-        selectedBanner?.cardIds?.includes(card.id),
-    );
-
     // Фильтруем перманентные баннеры (без даты окончания)
     const calendarBanners = useMemo(() => {
         return banners.filter(b => b.endDate !== "permanently");
@@ -318,16 +318,30 @@ function BannersCalendar({ banners, initialDate = new Date() }) {
         () => initialDate.getMonth(),
     );
 
+    // Состояние для модалки
+    const [selectedBanner, setSelectedBanner] = useState(null);
+    const memoriesModalRef = useRef();
+
+    const showMemoriesModal = (banner) => {
+        setSelectedBanner(banner);
+        memoriesModalRef.current.showModal();
+    };
+
+    const cards = memoriesData.filter((card) =>
+        selectedBanner?.cardIds?.includes(card.id),
+    );
+
     // ===== Режим "месяц" =====
     const monthDays = useMemo(
         () => getMonthDays(selectedYear, selectedMonth),
         [selectedYear, selectedMonth],
     );
 
-    // Используем отфильтрованный массив calendarBanners
+    const firstDayOfWeek = (monthDays[0].getDay() + 6) % 7;
+
     const bannerRows = useMemo(
-        () => buildBannerRows(calendarBanners, monthDays),
-        [calendarBanners, monthDays],
+        () => buildBannerSegments(calendarBanners, monthDays, firstDayOfWeek),
+        [calendarBanners, monthDays, firstDayOfWeek]
     );
 
     const goPrevMonth = () => {
@@ -380,7 +394,7 @@ function BannersCalendar({ banners, initialDate = new Date() }) {
                             key={idx}
                             year={selectedYear}
                             month={idx}
-                            banners={calendarBanners} // Передаем отфильтрованный массив
+                            banners={calendarBanners}
                             onClick={() => openMonth(idx)}
                         />
                     ))}
@@ -395,117 +409,128 @@ function BannersCalendar({ banners, initialDate = new Date() }) {
         { month: "long", year: "numeric" },
     );
 
-    const firstDayOfWeek = (monthDays[0].getDay() + 6) % 7;
     const totalCells = Math.ceil((firstDayOfWeek + monthDays.length) / 7) * 7;
     const totalWeeks = totalCells / 7;
     const todayTime = startOfDay(new Date()).getTime();
 
+    // Вычисляем максимальный lane для каждой недели, чтобы правильно задать высоту строки
+    const weekMaxLanes = Array(totalWeeks).fill(0);
+    bannerRows.forEach(seg => {
+        if (seg.lane !== undefined) {
+            weekMaxLanes[seg.row] = Math.max(weekMaxLanes[seg.row], seg.lane);
+        }
+    });
+
+    // Высота ячейки: минимум 100px, плюс 32px на каждый дополнительный слой
+    const gridTemplateRows = weekMaxLanes
+        .map(maxLane => `minmax(${Math.max(100, 35 + maxLane * 32)}px, auto)`)
+        .join(" ");
+
     return (
-        <div className={styles.calendar}>
-            <div className={styles.header}>
-                <button onClick={goPrevMonth} className={styles.navBtn}>
-                    ←
-                </button>
-                <h2
-                    className={`${styles.title} ${styles.titleClickable}`}
-                    onClick={backToYear}
-                    title="Вернуться к году"
-                >
-                    {monthName}
-                </h2>
-                <button onClick={goNextMonth} className={styles.navBtn}>
-                    →
-                </button>
-            </div>
-
-            {/* Шапка дней недели */}
-            <div className={styles.weekHeader}>
-                {WEEK_DAYS.map((d) => (
-                    <div key={d} className={styles.weekDayName}>
-                        {d}
-                    </div>
-                ))}
-            </div>
-
-            {/* Сетка календаря */}
-            <div className={styles.monthGridWrapper}>
-                <div
-                    className={styles.monthGrid}
-                    style={{ gridTemplateRows: `repeat(${totalWeeks}, 1fr)` }}
-                >
-                    {Array.from({ length: totalCells }).map((_, i) => {
-                        const dayIndex = i - firstDayOfWeek;
-                        const day = monthDays[dayIndex];
-                        const isCurrentMonth = dayIndex >= 0 && dayIndex < monthDays.length;
-                        const isToday = isCurrentMonth && day.getTime() === todayTime;
-                        const specialClass = isCurrentMonth ? getSpecialDayClass(day) : "";
-
-                        return (
-                            <div
-                                key={i}
-                                className={[
-                                    styles.monthDay,
-                                    !isCurrentMonth ? styles.monthDayOutside : "",
-                                    specialClass ? styles[specialClass] : "",
-                                    isToday ? styles.monthDayToday : "",
-                                ].filter(Boolean).join(" ")}
-                            >
-                                {isCurrentMonth ? day.getDate() : ""}
-                            </div>
-                        );
-                    })}
+        <>
+            <div className={styles.calendar}>
+                <div className={styles.header}>
+                    <button onClick={goPrevMonth} className={styles.navBtn}>
+                        ←
+                    </button>
+                    <h2
+                        className={`${styles.title} ${styles.titleClickable}`}
+                        onClick={backToYear}
+                        title="Вернуться к году"
+                    >
+                        {monthName}
+                    </h2>
+                    <button onClick={goNextMonth} className={styles.navBtn}>
+                        →
+                    </button>
                 </div>
 
-                {/* Слой с полосами баннеров */}
-                <div
-                    className={styles.monthBannersLayer}
-                    style={{ gridTemplateRows: `repeat(${totalWeeks}, 1fr)` }}
-                >
-                    {bannerRows.map(({ banner, startIndex, endIndex, color, typeLabel, lane, imageUrl }) => {
-                        const segments = getBannerSegments(startIndex, endIndex, firstDayOfWeek);
-                        const chars = getBannerCharacters(banner);
-                        const tooltip = `${banner.name} — ${typeLabel}${chars.length > 0 ? ` (${chars.join(", ")})` : ""}`;
+                {/* Шапка дней недели */}
+                <div className={styles.weekHeader}>
+                    {WEEK_DAYS.map((d) => (
+                        <div key={d} className={styles.weekDayName}>
+                            {d}
+                        </div>
+                    ))}
+                </div>
 
-                        return (
-                            <div key={banner.id} className={styles.bannerSegmentsWrapper}>
-                                {segments.map((seg, idx) => (
-                                    <div
-                                        key={`${banner.id}-${idx}`}
-                                        className={styles.bannerBar}
-                                        style={{
-                                            gridColumn: `${seg.startCol} / span ${seg.span}`,
-                                            gridRow: seg.row + 1,
-                                            "--bar-color": color,
-                                            marginTop: `${3 + (lane || 0) * 32}px`,
-                                        }}
-                                        title={tooltip}
-                                        onClick={() => showMemoriesModal(banner)}
-                                        role="button"
-                                        tabIndex={0}
-                                        onKeyDown={(e) => {
-                                            if (e.key === "Enter" || e.key === " ") {
-                                                e.preventDefault();
-                                                showMemoriesModal(banner);
-                                            }
-                                        }}
-                                    >
-                                        {seg.span > 1 && (
-                                            <div className={styles.bannerBarText}>{banner.name}</div>
-                                        )}
-                                        {imageUrl && (
-                                            <img
-                                                src={imageUrl}
-                                                alt=""
-                                                className={styles.bannerBarImage}
-                                                loading="lazy"
-                                                onError={(e) => { e.currentTarget.style.display = "none"; }}
-                                            />
-                                        )}
-                                    </div>
-                                ))}
-                            </div>
-                        );
-                    })}
+                {/* Сетка календаря */}
+                <div className={styles.monthGridWrapper}>
+                    <div
+                        className={styles.monthGrid}
+                        style={{ gridTemplateRows: gridTemplateRows }}
+                    >
+                        {Array.from({ length: totalCells }).map((_, i) => {
+                            const dayIndex = i - firstDayOfWeek;
+                            const day = monthDays[dayIndex];
+                            const isCurrentMonth = dayIndex >= 0 && dayIndex < monthDays.length;
+                            const isToday = isCurrentMonth && day.getTime() === todayTime;
+
+                            const specialClass = isCurrentMonth ? getSpecialDayClass(day) : "";
+
+                            return (
+                                <div
+                                    key={i}
+                                    className={[
+                                        styles.monthDay,
+                                        !isCurrentMonth ? styles.monthDayOutside : "",
+                                        specialClass ? styles[specialClass] : "",
+                                        isToday ? styles.monthDayToday : "",
+                                    ].filter(Boolean).join(" ")}
+                                >
+                                    {isCurrentMonth ? day.getDate() : ""}
+                                </div>
+                            );
+                        })}
+                    </div>
+
+                    {/* Слой с полосами баннеров */}
+                    <div
+                        className={styles.monthBannersLayer}
+                        style={{ gridTemplateRows: gridTemplateRows }}
+                    >
+                        {bannerRows.map((seg, idx) => {
+                            const { banner, color, typeLabel, imageUrl, startCol, span, row, lane } = seg;
+                            const chars = getBannerCharacters(banner);
+                            const tooltip = `${banner.name} — ${typeLabel}${chars.length > 0 ? ` (${chars.join(", ")})` : ""}`;
+
+                            return (
+                                <div
+                                    key={`${banner.id}-${row}-${idx}`}
+                                    className={styles.bannerBar}
+                                    style={{
+                                        gridColumn: `${startCol} / span ${span}`,
+                                        gridRow: row + 1,
+                                        "--bar-color": color,
+                                        marginTop: `${3 + (lane || 0) * 32}px`,
+                                    }}
+                                    title={tooltip}
+                                    onClick={() => showMemoriesModal(banner)}
+                                    role="button"
+                                    tabIndex={0}
+                                    onKeyDown={(e) => {
+                                        if (e.key === "Enter" || e.key === " ") {
+                                            e.preventDefault();
+                                            showMemoriesModal(banner);
+                                        }
+                                    }}
+                                >
+                                    {span > 1 && (
+                                        <div className={styles.bannerBarText}>{banner.name}</div>
+                                    )}
+                                    {imageUrl && (
+                                        <img
+                                            src={imageUrl}
+                                            alt=""
+                                            className={styles.bannerBarImage}
+                                            loading="lazy"
+                                            onError={(e) => { e.currentTarget.style.display = "none"; }}
+                                        />
+                                    )}
+                                </div>
+                            );
+                        })}
+                    </div>
                 </div>
             </div>
 
@@ -521,7 +546,7 @@ function BannersCalendar({ banners, initialDate = new Date() }) {
                     </>
                 }
             />
-        </div>
+        </>
     );
 }
 
