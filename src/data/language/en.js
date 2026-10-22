@@ -619,6 +619,8 @@ export const en = {
             deletePredictButton: 'Delete selected prediction',
             deleteAllButton: 'Delete all predictions',
             titleModalBanner: 'Choose banner',
+            saveAsImage: '📸 Save as Image',
+            saveAsImageActive: '📸 Capturing...',
         },
         CustomBannerModal: {
             alertName: 'Enter the name of the banner',

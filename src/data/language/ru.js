@@ -617,6 +617,8 @@ export const ru = {
             deletePredictButton: 'Удалить выбранный предикт',
             deleteAllButton: 'Удалить все предикты',
             titleModalBanner: 'Выбрать баннер',
+            saveAsImage: '📸 Сохранить картинкой',
+            saveAsImageActive: '📸 Сохранение...',
         },
         CustomBannerModal: {
             alertName: 'Введите название баннера',

@@ -22,6 +22,8 @@ import {
     savePredicts
 } from "@localstorage";
 import CustomBannerModal from "./CustomBannerModal.jsx";
+// ИМПОРТ ХУКА ДЛЯ СКРИНШОТА
+import { useScreenshot } from "@hooks/useScreenshot";
 
 // --- Утилиты дат ---
 // ИСПРАВЛЕНО: applyTimezone теперь принимает isPredict и не сдвигает время для предиктов
@@ -350,6 +352,7 @@ function MiniMonth({ year, month, banners, onClick }) {
 function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditMode }) {
     const { timezone } = useTimezone();
     const { t, i18n } = useTranslation();
+    const { isCapturing, captureScreenshot } = useScreenshot(); // <-- ХУК СКРИНШОТА
 
     const [selectedYear, setSelectedYear] = useState(
         () => initialDate.getFullYear(),
@@ -360,6 +363,9 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
     );
     const [isDragging, setIsDragging] = useState(false);
     const [dragAction, setDragAction] = useState(null);
+
+    // Реф для контейнера, который будем снимать
+    const calendarContentRef = useRef();
 
     // Состояние для модалки
     const [selectedBanner, setSelectedBanner] = useState(null);
@@ -485,7 +491,7 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
         }
     };
 
-// Глобальный обработчик для отпускания мыши (чтобы сбросить isDragging)
+    // Глобальный обработчик для отпускания мыши (чтобы сбросить isDragging)
     useEffect(() => {
         const handleGlobalMouseUp = () => {
             setIsDragging(false);
@@ -644,127 +650,130 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
     return (
         <>
             <div className={styles.calendar}>
-                <div className={styles.header}>
-                    <button onClick={goPrevMonth} className={styles.navBtn}>
-                        ←
-                    </button>
-                    <h2
-                        className={`${styles.title} ${styles.titleClickable}`}
-                        onClick={backToYear}
-                        title={t('BannersCalendar.backToYearTitle')}
-                    >
-                        {monthName}
-                    </h2>
-                    <button onClick={goNextMonth} className={styles.navBtn}>
-                        →
-                    </button>
-                </div>
-
-                {/* Шапка дней недели */}
-                <div className={styles.weekHeader}>
-                    {weekDayKeys.map((key) => (
-                        <div key={key} className={styles.weekDayName}>
-                            {t(`BannersCalendar.weekDays.${key}`)}
-                        </div>
-                    ))}
-                </div>
-
-                {/* Сетка календаря */}
-                <div className={styles.monthGridWrapper}>
-                    <div
-                        className={styles.monthGrid}
-                        style={{ gridTemplateRows: gridTemplateRows }}
-                    >
-                        {Array.from({ length: totalCells }).map((_, i) => {
-                            const dayIndex = i - firstDayOfWeek;
-                            const day = monthDays[dayIndex];
-                            const isCurrentMonth = dayIndex >= 0 && dayIndex < monthDays.length;
-
-                            // ВАЖНО: todayTime уже сдвинут, но startOfDay применяется к нему,
-                            // чтобы сравнить именно дни (без учета времени)
-                            const isToday = isCurrentMonth && day.getTime() === startOfDay(todayTime).getTime();
-                            const specialClass = isCurrentMonth ? getSpecialDayClass(day) : "";
-                            const isSelectedDay = isCurrentMonth && selectedDays.includes(day.getTime());
-
-                            return (
-                                <div
-                                    key={i}
-                                    onMouseDown={(e) => isCurrentMonth && handleDayMouseDown(day, e)}
-                                    onMouseEnter={() => isCurrentMonth && handleDayMouseEnter(day)}
-                                    onClick={(e) => {
-                                        // Обычный клик (без перетаскивания) — переключаем день
-                                        // Но мы уже обработали нажатие в onMouseDown, поэтому onClick здесь можно не использовать,
-                                        // чтобы избежать двойного срабатывания.
-                                        // Или можно оставить для одиночного клика, если isDragging === false.
-                                        // Но так как mousedown уже все сделал, onClick не нужен.
-                                    }}
-                                    className={[
-                                        styles.monthDay,
-                                        !isCurrentMonth ? styles.monthDayOutside : "",
-                                        specialClass ? styles[specialClass] : "",
-                                        isToday ? styles.monthDayToday : "",
-                                        isSelectedDay ? styles.monthDaySelected : "",
-                                        editMode && isCurrentMonth ? styles.monthDayEdit : "",
-                                    ].filter(Boolean).join(" ")}
-                                >
-                                    {isCurrentMonth ? day.getDate() : ""}
-                                </div>
-                            );
-                        })}
+                {/* ОБОРАЧИВАЕМ КОНТЕНТ В REF ДЛЯ СКРИНШОТА (без кнопок) */}
+                <div ref={calendarContentRef}>
+                    <div className={styles.header}>
+                        <button onClick={goPrevMonth} className={styles.navBtn}>
+                            ←
+                        </button>
+                        <h2
+                            className={`${styles.title} ${styles.titleClickable}`}
+                            onClick={backToYear}
+                            title={t('BannersCalendar.backToYearTitle')}
+                        >
+                            {monthName}
+                        </h2>
+                        <button onClick={goNextMonth} className={styles.navBtn}>
+                            →
+                        </button>
                     </div>
 
-                    {/* Слой с полосами баннеров */}
-                    <div
-                        className={styles.monthBannersLayer}
-                        style={{ gridTemplateRows: gridTemplateRows }}
-                    >
-                        {bannerRows.map((seg, idx) => {
-                            const { banner, color, typeLabel, imageUrl, startCol, span, row, lane } = seg;
-                            const chars = getBannerCharacters(banner);
-                            const tooltip = `${banner.name} — ${typeLabel}${chars.length > 0 ? ` (${chars.join(", ")})` : ""}`;
+                    {/* Шапка дней недели */}
+                    <div className={styles.weekHeader}>
+                        {weekDayKeys.map((key) => (
+                            <div key={key} className={styles.weekDayName}>
+                                {t(`BannersCalendar.weekDays.${key}`)}
+                            </div>
+                        ))}
+                    </div>
 
-                            return (
-                                <div
-                                    key={`${banner.id}-${row}-${idx}`}
-                                    className={styles.bannerBar}
-                                    style={{
-                                        gridColumn: `${startCol} / span ${span}`,
-                                        gridRow: row + 1,
-                                        "--bar-color": color,
-                                        marginTop: `${3 + (lane || 0) * 32}px`,
-                                    }}
-                                    title={tooltip}
-                                    onClick={(e) => {
-                                        if (!editMode) {
-                                            showMemoriesModal(banner);
-                                        } else {
-                                            e.stopPropagation(); // Блокируем клик по дню, если кликнули по баннеру
-                                        }
-                                    }}
-                                    role="button"
-                                    tabIndex={0}
-                                    onKeyDown={(e) => {
-                                        if ((e.key === "Enter" || e.key === " ") && !editMode) {
-                                            e.preventDefault();
-                                            showMemoriesModal(banner);
-                                        }
-                                    }}
-                                >
-                                    {span > 1 && (
-                                        <div className={styles.bannerBarText}>{banner.name}</div>
-                                    )}
-                                    {imageUrl && (
-                                        <img
-                                            src={imageUrl}
-                                            alt=""
-                                            className={`${styles.bannerBarImage} ${banner.isCustom ? styles.customBannerImage : ""}`}
-                                            loading="lazy"
-                                            onError={(e) => { e.currentTarget.style.display = "none"; }}
-                                        />
-                                    )}
-                                </div>
-                            );
-                        })}
+                    {/* Сетка календаря */}
+                    <div className={styles.monthGridWrapper}>
+                        <div
+                            className={styles.monthGrid}
+                            style={{ gridTemplateRows: gridTemplateRows }}
+                        >
+                            {Array.from({ length: totalCells }).map((_, i) => {
+                                const dayIndex = i - firstDayOfWeek;
+                                const day = monthDays[dayIndex];
+                                const isCurrentMonth = dayIndex >= 0 && dayIndex < monthDays.length;
+
+                                // ВАЖНО: todayTime уже сдвинут, но startOfDay применяется к нему,
+                                // чтобы сравнить именно дни (без учета времени)
+                                const isToday = isCurrentMonth && day.getTime() === startOfDay(todayTime).getTime();
+                                const specialClass = isCurrentMonth ? getSpecialDayClass(day) : "";
+                                const isSelectedDay = isCurrentMonth && selectedDays.includes(day.getTime());
+
+                                return (
+                                    <div
+                                        key={i}
+                                        onMouseDown={(e) => isCurrentMonth && handleDayMouseDown(day, e)}
+                                        onMouseEnter={() => isCurrentMonth && handleDayMouseEnter(day)}
+                                        onClick={(e) => {
+                                            // Обычный клик (без перетаскивания) — переключаем день
+                                            // Но мы уже обработали нажатие в onMouseDown, поэтому onClick здесь можно не использовать,
+                                            // чтобы избежать двойного срабатывания.
+                                            // Или можно оставить для одиночного клика, если isDragging === false.
+                                            // Но так как mousedown уже все сделал, onClick не нужен.
+                                        }}
+                                        className={[
+                                            styles.monthDay,
+                                            !isCurrentMonth ? styles.monthDayOutside : "",
+                                            specialClass ? styles[specialClass] : "",
+                                            isToday ? styles.monthDayToday : "",
+                                            isSelectedDay ? styles.monthDaySelected : "",
+                                            editMode && isCurrentMonth ? styles.monthDayEdit : "",
+                                        ].filter(Boolean).join(" ")}
+                                    >
+                                        {isCurrentMonth ? day.getDate() : ""}
+                                    </div>
+                                );
+                            })}
+                        </div>
+
+                        {/* Слой с полосами баннеров */}
+                        <div
+                            className={styles.monthBannersLayer}
+                            style={{ gridTemplateRows: gridTemplateRows }}
+                        >
+                            {bannerRows.map((seg, idx) => {
+                                const { banner, color, typeLabel, imageUrl, startCol, span, row, lane } = seg;
+                                const chars = getBannerCharacters(banner);
+                                const tooltip = `${banner.name} — ${typeLabel}${chars.length > 0 ? ` (${chars.join(", ")})` : ""}`;
+
+                                return (
+                                    <div
+                                        key={`${banner.id}-${row}-${idx}`}
+                                        className={styles.bannerBar}
+                                        style={{
+                                            gridColumn: `${startCol} / span ${span}`,
+                                            gridRow: row + 1,
+                                            "--bar-color": color,
+                                            marginTop: `${3 + (lane || 0) * 32}px`,
+                                        }}
+                                        title={tooltip}
+                                        onClick={(e) => {
+                                            if (!editMode) {
+                                                showMemoriesModal(banner);
+                                            } else {
+                                                e.stopPropagation(); // Блокируем клик по дню, если кликнули по баннеру
+                                            }
+                                        }}
+                                        role="button"
+                                        tabIndex={0}
+                                        onKeyDown={(e) => {
+                                            if ((e.key === "Enter" || e.key === " ") && !editMode) {
+                                                e.preventDefault();
+                                                showMemoriesModal(banner);
+                                            }
+                                        }}
+                                    >
+                                        {span > 1 && (
+                                            <div className={styles.bannerBarText}>{banner.name}</div>
+                                        )}
+                                        {imageUrl && (
+                                            <img
+                                                src={imageUrl}
+                                                alt=""
+                                                className={`${styles.bannerBarImage} ${banner.isCustom ? styles.customBannerImage : ""}`}
+                                                loading="lazy"
+                                                onError={(e) => { e.currentTarget.style.display = "none"; }}
+                                            />
+                                        )}
+                                    </div>
+                                );
+                            })}
+                        </div>
                     </div>
                 </div>
 
@@ -831,6 +840,19 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
                             )}
                         </>
                     )}
+
+                    {/* КНОПКА СОХРАНЕНИЯ СКРИНШОТА */}
+                    <button
+                        onClick={() => {
+                            if (calendarContentRef.current) {
+                                captureScreenshot(calendarContentRef.current, `calendar_${selectedYear}_${selectedMonth + 1}`);
+                            }
+                        }}
+                        disabled={isCapturing}
+                        style={{ padding: "10px 20px", cursor: "pointer", background: "#2a2a2a", color: "#fff", border: "1px solid #444", borderRadius: "8px", fontSize: "16px" }}
+                    >
+                        {isCapturing ? t('BannersCalendar.saveAsImageActive') : t('BannersCalendar.saveAsImage')}
+                    </button>
                 </div>
             </div>
 
