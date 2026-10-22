@@ -22,6 +22,7 @@ function FilterSortBarBanners({
                                   extraButtons = [],
                                   resetAllSettings,
                                   storagePrefix = "",
+                                  hideSort = false,
                               }) {
     const characters = ["Xavier", "Zayne", "Rafayel", "Sylus", "Caleb"];
     const { t } = useTranslation();
@@ -50,41 +51,44 @@ function FilterSortBarBanners({
                     </div>
                 </div>
 
-                <div className={styles.sortBy}>
-                    <Select
-                        mode="tags"
-                        size="medium"
-                        value={sortCriteria}
-                        placeholder={t('FilterSortBarBanners.placeholder')}
-                        onChange={handleSortChange}
-                        className={styles.colorBrown}
-                        style={{ width: 250 }}
-                        options={[
-                            { value: "new", label: t('FilterSortBarBanners.new') },
-                            { value: "rerun", label: t('FilterSortBarBanners.rerun') },
-                            { value: "active", label: t('FilterSortBarBanners.active') },
-                            { value: "inactive", label: t('FilterSortBarBanners.inactive') },
-                            { value: "name", label: t('FilterSortBarBanners.name') },
-                            { value: "startDate", label: t('FilterSortBarBanners.startDate') },
-                        ]}
-                    />
+                {/* Скрываем блок сортировки, если hideSort === true */}
+                {!hideSort && (
+                    <div className={styles.sortBy}>
+                        <Select
+                            mode="tags"
+                            size="medium"
+                            value={sortCriteria}
+                            placeholder={t('FilterSortBarBanners.placeholder')}
+                            onChange={handleSortChange}
+                            className={styles.colorBrown}
+                            style={{ width: 250 }}
+                            options={[
+                                { value: "new", label: t('FilterSortBarBanners.new') },
+                                { value: "rerun", label: t('FilterSortBarBanners.rerun') },
+                                { value: "active", label: t('FilterSortBarBanners.active') },
+                                { value: "inactive", label: t('FilterSortBarBanners.inactive') },
+                                { value: "name", label: t('FilterSortBarBanners.name') },
+                                { value: "startDate", label: t('FilterSortBarBanners.startDate') },
+                            ]}
+                        />
 
-                    <Button
-                        onClick={clearSorting}
-                        color="default"
-                        variant="outlined"
-                        icon={
-                            <img
-                                className={styles.imgIcon}
-                                src={getImageUrl("../assets/icons/eraser_16863523.png")}
-                                style={{ width: 22, height: 22 }}
-                                alt={t('FilterSortBarBanners.clearSorting')}
-                            />
-                        }
-                        title={t('FilterSortBarBanners.clearSorting')}
-                        className={styles.colorBrown}
-                    />
-                </div>
+                        <Button
+                            onClick={clearSorting}
+                            color="default"
+                            variant="outlined"
+                            icon={
+                                <img
+                                    className={styles.imgIcon}
+                                    src={getImageUrl("../assets/icons/eraser_16863523.png")}
+                                    style={{ width: 22, height: 22 }}
+                                    alt={t('FilterSortBarBanners.clearSorting')}
+                                />
+                            }
+                            title={t('FilterSortBarBanners.clearSorting')}
+                            className={styles.colorBrown}
+                        />
+                    </div>
+                )}
             </nav>
 
             <aside className={styles.filterBy}>

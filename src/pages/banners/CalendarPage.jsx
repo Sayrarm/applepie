@@ -6,13 +6,12 @@ import {
     FilterSortBarBanners,
     useBannersFilter,
     useBannersSearch,
-    useBannersSort,
 } from "@components";
 
 function CalendarPage() {
     const filterModalRef = useRef();
 
-    // 1. Подключаем хуки фильтрации, поиска и сортировки
+    // 1. Подключаем только фильтрацию и поиск (сортировка нам не нужна)
     const {
         selectedChar,
         setSelectedChar,
@@ -26,20 +25,16 @@ function CalendarPage() {
 
     const { searchQuery, onSearch, clearSearch } = useBannersSearch("banners");
 
-    const { sortCriteria, handleSortChange, clearSorting, sortBanners } =
-        useBannersSort("banners");
-
-    // 2. Функция полного сброса
+    // 2. Функция полного сброса (без clearSorting)
     const resetAllSettings = () => {
         clearAll();
         clearSearch();
-        clearSorting();
         if (filterModalRef.current) {
             filterModalRef.current.clearAll();
         }
     };
 
-    // 3. Применяем фильтры, поиск и сортировку к данным
+    // 3. Применяем только фильтры и поиск
     const processedBanners = useMemo(() => {
         let result = bannersDataFull;
 
@@ -56,19 +51,18 @@ function CalendarPage() {
             });
         }
 
-        // Сортировка (влияет на порядок в списке, но в календаре баннеры все равно распределяются по датам)
-        result = sortBanners(result);
-
         return result;
-    }, [filterBanners, searchQuery, sortBanners]);
+    }, [filterBanners, searchQuery]);
 
     return (
         <section className={styles.calendarContainer}>
             <FilterSortBarBanners
                 onSearch={onSearch}
-                sortCriteria={sortCriteria}
-                handleSortChange={handleSortChange}
-                clearSorting={clearSorting}
+                // Для скрытой сортировки передаем заглушки, чтобы не ломать пропсы компонента
+                sortCriteria={[]}
+                handleSortChange={() => {}}
+                clearSorting={() => {}}
+
                 selectedChar={selectedChar}
                 setSelectedChar={setSelectedChar}
                 isModalOpen={isModalOpen}
@@ -77,6 +71,7 @@ function CalendarPage() {
                 clearFilters={clearFilters}
                 filterModalRef={filterModalRef}
                 resetAllSettings={resetAllSettings}
+                hideSort={true}
                 storagePrefix="banners"
             />
 
