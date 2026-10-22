@@ -140,11 +140,13 @@ const SPECIAL_RANGES = [
         start: { month: 3, day: 13 },  // 13 апреля
         end: { month: 3, day: 20 },    // 20 апреля
         color: "sylus",
+        skipYears: [2024],
     },
     {
         start: { month: 5, day: 8 },   // 8 июня
         end: { month: 5, day: 15 },    // 15 июня
         color: "caleb",
+        skipYears: [2024],
     },
     {
         start: { month: 8, day: 1 },   // 1 сентября
@@ -162,8 +164,12 @@ const SPECIAL_RANGES = [
 const getSpecialDayClass = (day) => {
     const month = day.getMonth();
     const date = day.getDate();
+    const year = day.getFullYear();
 
     for (const range of SPECIAL_RANGES) {
+        // Если год в skipYears — пропускаем этот диапазон
+        if (range.skipYears && range.skipYears.includes(year)) continue;
+
         const { start, end } = range;
         // Сравниваем по (month, day) — без года
         if (month < start.month || month > end.month) continue;
@@ -236,11 +242,16 @@ function MiniMonth({ year, month, banners, onClick }) {
                         const dayIndex = i - firstDayOfWeek;
                         const day = monthDays[dayIndex];
                         const isCurrentMonth = dayIndex >= 0 && dayIndex < monthDays.length;
+                        const specialClass = isCurrentMonth ? getSpecialDayClass(day) : "";
 
                         return (
                             <div
                                 key={i}
-                                className={`${styles.miniDay} ${!isCurrentMonth ? styles.miniDayOutside : ""}`}
+                                className={[
+                                    styles.miniDay,
+                                    !isCurrentMonth ? styles.miniDayOutside : "",
+                                    specialClass ? styles[specialClass] : "",
+                                ].filter(Boolean).join(" ")}
                             >
                                 {isCurrentMonth ? day.getDate() : ""}
                             </div>
