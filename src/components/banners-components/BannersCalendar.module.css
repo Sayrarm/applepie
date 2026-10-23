@@ -12,29 +12,34 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
+    gap: 10px;
+    margin: 10px 0 10px 0;
     position: relative;
 }
 
 .predictButton {
     padding: 6px 12px;
     cursor: pointer;
-    background: black;
-    color: white;
-    border: 1px solid #444;
-    border-radius: 8px;
+    background: var(--a);
+    box-shadow: var(--box-shadow);
+    border: none;
+    color: var(--colorText);
     font-size: 14px;
-    margin-left: 16px;
     position: absolute;
     right: 0;
-    top: 5px;
+    top: 2px;
+    transition: 0.2s;
+}
+
+.predictButton:hover {
+    transform: translateY(-2px);
 }
 
 .title {
     margin: 0;
     font-size: 20px;
     font-weight: 600;
-    min-width: 180px;
+    min-width: 100px;
     text-align: center;
 }
 
@@ -52,8 +57,8 @@
     background: var(--background);
     border: 1px solid var(--border-battle-page);
     color: var(--colorText);
-    width: 36px;
-    height: 36px;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
     font-size: 16px;
     display: flex;
@@ -205,11 +210,14 @@
     background: var(--background-light);
     color: var(--colorText);
     font-size: 14px;
-    padding: 8px;
+    padding: 3px 8px 8px 8px;
     min-height: 118px; /* Высота ячейки, чтобы влезали баннеры */
     display: flex;
     flex-direction: column;
     border: none;
+
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 .monthDayOutside {
@@ -279,6 +287,7 @@
     padding-left: 30px;
     cursor: pointer;
     transition: 0.2s;
+
 }
 
 .bannerBar:hover {
@@ -324,37 +333,76 @@
 }
 
 .monthDaySelected {
-    background: #3a2d55 !important;
-    box-shadow: inset 0 0 0 2px #9b6cff;
-    border-radius: 2px;
+    background: var(--a) !important;
 }
 
-/* Кнопка удаления предикта (крестик на полосе) */
-.deletePredictBtn {
-    position: absolute;
-    right: 4px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 16px;
-    height: 16px;
+.predictContainer {
     display: flex;
-    align-items: center;
+    gap: 10px;
     justify-content: center;
-    font-size: 10px;
+    flex-wrap: wrap;
+}
+
+.savePicButton,
+.deleteAllPredictButton,
+.deletePredict,
+.ownBannerButton,
+.addBannerButton,
+.addPredictButton {
+    padding: 8px 12px;
     cursor: pointer;
-    opacity: 0;
-    transition: opacity 0.2s, background 0.2s;
-    z-index: 10;
+    box-shadow: var(--box-shadow);
+    border: none;
+    color: var(--colorText);
+    font-size: 14px;
+    transition: 0.2s;
 }
 
-.bannerBar:hover .deletePredictBtn {
-    opacity: 1;
+.savePicButton:hover,
+.deleteAllPredictButton:hover,
+.deletePredict:hover,
+.ownBannerButton:hover,
+.addBannerButton:hover,
+.addPredictButton:hover {
+    transform: translateY(-2px);
 }
 
-.deletePredictBtn:hover {
-    background: #ff4d4d;
+.editModeButton {
+    background: var(--green-button);
+}
+
+.exitEditModeButton {
+    background: var(--red-button);
+}
+
+.addBannerButton {
+    background: var(--green-button);
+}
+
+.ownBannerButton {
+    background: var(--green-button);
+}
+
+.deletePredict {
+    background: var(--red-button);
+}
+
+.deleteAllPredictButton {
+    background: white;
+    color: var(--colorTextSuperDark);
+}
+
+.savePicButton {
+    background: var(--a);
+}
+
+@media screen and (max-width: 450px) {
+
+    .header {
+        margin: 30px 0 10px 0;
+    }
+
+    .predictButton {
+        top: -35px;
+    }
 }

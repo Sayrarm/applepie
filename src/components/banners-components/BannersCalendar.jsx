@@ -796,19 +796,11 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
                 </div>
 
                 {/* Блок кнопок внизу календаря */}
-                <div style={{ marginTop: "16px", display: "flex", gap: "10px", justifyContent: "center", flexWrap: "wrap" }}>
+                <div className={styles.predictContainer}>
                     {/* Кнопка входа/выхода из режима редактирования - ТОЛЬКО В РЕЖИМЕ МЕСЯЦА */}
                     <button
                         onClick={() => setEditMode(!editMode)}
-                        style={{
-                            padding: "10px 20px",
-                            cursor: "pointer",
-                            background: editMode ? "#9b6cff" : "#2a2a2a",
-                            color: "#fff",
-                            border: "1px solid #444",
-                            borderRadius: "8px",
-                            fontSize: "16px"
-                        }}
+                        className={`${styles.addPredictButton} ${editMode ? styles.exitEditModeButton : styles.editModeButton}`}
                     >
                         {editMode ? t('BannersCalendar.exitButton') : t('BannersCalendar.addPredictButton')}
                     </button>
@@ -823,7 +815,7 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
                                             predictModalRef.current.showModal();
                                         }
                                     }}
-                                    style={{ padding: "10px 20px", cursor: "pointer", background: "#9b6cff", color: "#fff", border: "none", borderRadius: "8px", fontSize: "16px" }}
+                                    className={styles.addBannerButton}
                                 >
                                     {t('BannersCalendar.addBannerButton')} ({selectedDays.length})
                                 </button>
@@ -833,7 +825,7 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
                             {selectedDays.length > 0 && (
                                 <button
                                     onClick={() => setIsCustomModalOpen(true)}
-                                    style={{ padding: "10px 20px", cursor: "pointer", background: "#3fae5a", color: "#fff", border: "none", borderRadius: "8px", fontSize: "16px" }}
+                                    className={styles.ownBannerButton}
                                 >
                                     {t('BannersCalendar.createBannerButton')}
                                 </button>
@@ -842,7 +834,7 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
                             {selectedDays.length > 0 && predicts.length > 0 && (
                                 <button
                                     onClick={handleRemoveSelectedPredicts}
-                                    style={{ padding: "10px 20px", cursor: "pointer", background: "#ff4d4d", color: "#fff", border: "none", borderRadius: "8px", fontSize: "16px" }}
+                                    className={styles.deletePredict}
                                 >
                                     {t('BannersCalendar.deletePredictButton')}
                                 </button>
@@ -851,7 +843,7 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
                             {predicts.length > 0 && (
                                 <button
                                     onClick={handleClearAllPredicts}
-                                    style={{ padding: "10px 20px", cursor: "pointer", background: "#444", color: "#fff", border: "1px solid #666", borderRadius: "8px", fontSize: "16px" }}
+                                    className={styles.deleteAllPredictButton}
                                 >
                                     {t('BannersCalendar.deleteAllButton')}
                                 </button>
@@ -867,7 +859,7 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
                             }
                         }}
                         disabled={isCapturing}
-                        style={{ padding: "10px 20px", cursor: "pointer", background: "#2a2a2a", color: "#fff", border: "1px solid #444", borderRadius: "8px", fontSize: "16px" }}
+                        className={styles.savePicButton}
                     >
                         {isCapturing ? "..." : t('BannersCalendar.saveAsImage')}
                     </button>
