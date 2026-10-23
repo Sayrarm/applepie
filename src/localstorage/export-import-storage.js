@@ -2,11 +2,14 @@ export const STORAGE_KEYS = [
     // Showcase
     "showcase_teams",
 
+    //Оптимайзер
+    "optimizer_data",
+    "memory_optimizer_data",
+
     // Трекер
     "farm_goals",
 
     // Настройки
-    "theme",
     "app_timezone",
 
     // Данные карточек (уровни, ранги, доступность, возвышение)
