@@ -175,7 +175,8 @@ export {
   clearOptimizerData,
   saveMemoryOptimizerData,
   clearMemoryOptimizerData,
-  getMemoryOptimizerData
+  getMemoryOptimizerData,
+  loadTeamIntoOptimizer
 } from "./optimizer-storage.js";
 export {
   collectAppData,

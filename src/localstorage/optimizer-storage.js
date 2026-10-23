@@ -105,3 +105,24 @@ export const saveMemoryOptimizerData = (data) => {
 export const clearMemoryOptimizerData = () => {
     return set(KEYS.MEMORY_OPTIMIZER, getDefaultMemoryOptimizerData());
 };
+
+export const loadTeamIntoOptimizer = (team) => {
+    const current = getOptimizerData();
+
+    const next = {
+        ...current,
+        cards: {
+            solar1: team.solarCards?.[0] || null,
+            solar2: team.solarCards?.[1] || null,
+            lunar1: team.lunarCards?.[0] || null,
+            lunar2: team.lunarCards?.[1] || null,
+            lunar3: team.lunarCards?.[2] || null,
+            lunar4: team.lunarCards?.[3] || null,
+        },
+        selectedCompanion: team.selectedCompanion || null,
+        selectedWeapon: team.selectedMCWeapon || null,
+    };
+
+    saveOptimizerData(next);
+    return next;
+};

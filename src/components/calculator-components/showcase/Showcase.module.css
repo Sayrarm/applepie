@@ -120,7 +120,8 @@
 }
 
 .screenshotButton,
-.clearButton {
+.clearButton,
+.sendToOptimizerButton {
   background-color: var(--forSelect);
   box-shadow: var(--box-shadow);
   padding: 10px 3px;
@@ -129,6 +130,7 @@
   margin: 5px 0 10px 0;
   font-size: 14px;
   transition: 0.2s;
+  border: none;
 }
 
 .utilButtons {
@@ -137,7 +139,8 @@
 }
 
 .screenshotButton:hover,
-.clearButton:hover {
+.clearButton:hover,
+.sendToOptimizerButton:hover {
   transform: translateY(-2px);
 }
 

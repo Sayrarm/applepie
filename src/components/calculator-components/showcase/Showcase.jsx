@@ -7,7 +7,7 @@ import {
     deleteShowcaseTeam,
     createDefaultTeam,
     getActiveTeamId,
-    saveActiveTeamId,
+    saveActiveTeamId, loadTeamIntoOptimizer,
 } from "@localstorage";
 import {
     ModalWindow,
@@ -148,6 +148,16 @@ function Showcase() {
         renameModalRef.current?.closeModal();
     };
 
+    // ===== Отправка в Оптимайзер =====
+    const handleSendToOptimizer = () => {
+        const confirmed = window.confirm(
+            t('Showcase.alertSendToOptimizer', { team: currentTeam.name })
+        );
+        if (!confirmed) return;
+
+        loadTeamIntoOptimizer(currentTeam);
+    };
+
     // ===== ОЧИСТКА ТЕКУЩЕЙ КОМАНДЫ =====
     const clearCurrentTeam = () => {
         if (
@@ -227,6 +237,13 @@ function Showcase() {
 
                     <button className={styles.clearButton} onClick={clearCurrentTeam}>
                         {t('Showcase.clearButton')}
+                    </button>
+
+                    <button
+                        className={styles.sendToOptimizerButton}
+                        onClick={handleSendToOptimizer}
+                    >
+                        {t('Showcase.sendToOptimizerButton')}
                     </button>
                 </div>
 
