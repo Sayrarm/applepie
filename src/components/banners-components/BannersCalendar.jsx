@@ -13,14 +13,14 @@ import {
     useTimezone,
     BannerPeriod,
     BannerList,
-    AsideList
 } from "@components";
 import { useTranslation } from "react-i18next";
 import {
     getPredicts,
     addPredict,
     clearPredicts,
-    savePredicts
+    savePredicts,
+    removePredict
 } from "@localstorage";
 import CustomBannerModal from "./CustomBannerModal.jsx";
 import { useScreenshot } from "@hooks/useScreenshot";
@@ -366,6 +366,9 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
     // СТЕЙТ ДЛЯ ПОКАЗА/СКРЫТИЯ ПРЕДИКТОВ
     const [showPredicts, setShowPredicts] = useState(true);
 
+    // НОВЫЙ СТЕЙТ: выбранный предикт для удаления
+    const [selectedPredictId, setSelectedPredictId] = useState(null);
+
     const calendarContentRef = useRef();
 
     // Состояние для модалки
@@ -383,6 +386,7 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
     useEffect(() => {
         if (!editMode) {
             setSelectedDays([]);
+            setSelectedPredictId(null); // Сбрасываем выбранный предикт при выходе из режима
         }
     }, [editMode]);
 
@@ -567,32 +571,16 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
         if (window.confirm("Вы уверены, что хотите удалить все предикты?")) {
             clearPredicts();
             setPredicts([]);
+            setSelectedPredictId(null);
         }
     };
 
-    // ===== УДАЛЕНИЕ ВЫБРАННЫХ ПРЕДИКТОВ =====
-    const handleRemoveSelectedPredicts = () => {
-        if (selectedDays.length === 0) return;
-
-        // Находим предикты, которые пересекаются с выбранными днями
-        const remainingPredicts = predicts.filter((predict) => {
-            const range = getBannerRange(predict, monthDays, timezone);
-            if (!range) return true;
-
-            // Проверяем пересечение с выбранными днями
-            for (let i = range.startIndex; i <= range.endIndex; i++) {
-                const dayTime = monthDays[i].getTime();
-                if (selectedDays.includes(dayTime)) {
-                    return false;
-                }
-            }
-            return true;
-        });
-
-        // Сохраняем обновленный список
-        savePredicts(remainingPredicts);
-        setPredicts(remainingPredicts);
-        setSelectedDays([]);
+    // ===== УДАЛЕНИЕ ОДНОГО ВЫБРАННОГО ПРЕДИКТА =====
+    const handleRemoveSelectedPredict = () => {
+        if (!selectedPredictId) return;
+        const updatedPredicts = removePredict(selectedPredictId);
+        setPredicts(updatedPredicts);
+        setSelectedPredictId(null);
     };
 
     const weekDayKeys = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
@@ -750,11 +738,16 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
                                 const { banner, color, typeLabel, imageUrl, startCol, span, row, lane } = seg;
                                 const chars = getBannerCharacters(banner);
                                 const tooltip = `${banner.name} — ${typeLabel}${chars.length > 0 ? ` (${chars.join(", ")})` : ""}`;
+                                const isPredictBanner = banner.isPredict || banner.isCustom; // Проверяем, предикт ли это
+                                const isSelectedForDelete = selectedPredictId === banner.id; // Выбран ли этот предикт для удаления
 
                                 return (
                                     <div
                                         key={`${banner.id}-${row}-${idx}`}
-                                        className={styles.bannerBar}
+                                        className={[
+                                            styles.bannerBar,
+                                            isSelectedForDelete ? styles.bannerBarSelected : "", // Новый класс для выделения
+                                        ].filter(Boolean).join(" ")}
                                         style={{
                                             gridColumn: `${startCol} / span ${span}`,
                                             gridRow: row + 1,
@@ -766,7 +759,11 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
                                             if (!editMode) {
                                                 showMemoriesModal(banner);
                                             } else {
-                                                e.stopPropagation();
+                                                e.stopPropagation(); // Блокируем клик по дню
+                                                // В режиме редактирования выбираем предикт для удаления
+                                                if (isPredictBanner) {
+                                                    setSelectedPredictId(isSelectedForDelete ? null : banner.id);
+                                                }
                                             }
                                         }}
                                         role="button"
@@ -833,12 +830,13 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
                                 </button>
                             )}
 
-                            {selectedDays.length > 0 && predicts.length > 0 && (
+                            {/* КНОПКА УДАЛЕНИЯ ВЫБРАННОГО ПРЕДИКТА */}
+                            {selectedPredictId && (
                                 <button
-                                    onClick={handleRemoveSelectedPredicts}
+                                    onClick={handleRemoveSelectedPredict}
                                     className={styles.deletePredict}
                                 >
-                                    {t('BannersCalendar.deletePredictButton')}
+                                    {t('BannersCalendar.deletePredictButton') || t('BannersCalendar.deletePredictButton')}
                                 </button>
                             )}
 

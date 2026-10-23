@@ -290,6 +290,13 @@
 
 }
 
+.bannerBarSelected {
+    outline: 2px solid var(--a);
+    outline-offset: -2px; /* контур внутри, чтобы не задевал соседей */
+    box-shadow: 0 0 0 1px var(--a), 0 0 20px var(--a);
+}
+
+
 .bannerBar:hover {
     transform: translateY(-2px);
 }
