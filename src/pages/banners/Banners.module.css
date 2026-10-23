@@ -39,6 +39,27 @@
   box-shadow: var(--box-shadow);
 }
 
+.calendarContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.navigationContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.AsideListContainer {
+  font-family: TikTok Sans, monospace;
+}
+
+.disclaimerContent p,
+.titleMain {
+  color: var(--colorText);
+}
+
 @media screen and (max-width: 948px) {
   .tabs {
     display: flex;
@@ -54,5 +75,11 @@
   .optimizerNavigationButtons {
     display: flex;
     gap: 10px;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .navigationContainer {
+    flex-wrap: wrap;
   }
 }

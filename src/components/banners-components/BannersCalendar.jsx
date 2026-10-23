@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState, useEffect } from "react";
+import React, { useMemo, useRef, useState, useEffect } from "react";
 import styles from "./BannersCalendar.module.css";
 import {
     getBannerColor,
@@ -6,13 +6,14 @@ import {
     getBannerTypeLabel,
 } from "./bannerColors.js";
 import { getImageUrl } from "@hooks";
-import { memoriesData } from "@data";
+import {memoriesData} from "@data";
 import {
     CardList,
     ModalWindow,
     useTimezone,
     BannerPeriod,
-    BannerList
+    BannerList,
+    AsideList
 } from "@components";
 import { useTranslation } from "react-i18next";
 import {
@@ -23,6 +24,7 @@ import {
 } from "@localstorage";
 import CustomBannerModal from "./CustomBannerModal.jsx";
 import { useScreenshot } from "@hooks/useScreenshot";
+import {Link} from "react-router-dom";
 
 // --- Утилиты дат ---
 const applyTimezone = (dateInput, serverOffset, isPredict = false) => {
