@@ -51,6 +51,7 @@ function TeamOptimizer() {
     const [progressText, setProgressText] = useState("");
     const [isSending, setIsSending] = useState(false);
     const [isEquipping, setIsEquipping] = useState(false);
+    const [cardsWithProtocoresVersion, setCardsWithProtocoresVersion] = useState(0);
     const modalChooseCardRef = useRef();
     const { t } = useTranslation();
 
@@ -76,6 +77,43 @@ function TeamOptimizer() {
         {value: "DEF Bonus", label: "DEF Bonus"},
     ];
 
+    // Применяет сборку к картам: снимает протокоры со ВСЕХ карт
+    // и сохраняет на целевые. Возвращает массив {cardId, protocores}.
+    const applyBuildToCards = (build) => {
+        const newProtocoresBySlot = [];
+        const allNewIds = [];
+
+        CARD_SLOTS.forEach((slot) => {
+            const card = data.cards[slot.id];
+            if (!card) return;
+
+            const slotResult = build.results[slot.id];
+            const protocores = slotResult
+                ? Object.values(slotResult).filter(Boolean)
+                : [];
+
+            newProtocoresBySlot.push({ cardId: card.id, protocores });
+            protocores.forEach((p) => allNewIds.push(p.id));
+        });
+
+        // 1. Очищаем целевые карты (гарантия, что старые протокоры не останутся).
+        newProtocoresBySlot.forEach(({ cardId }) => {
+            saveCardProtocores(cardId, []);
+        });
+
+        // 2. Снимаем новые протокоры со ВСЕХ карт (в т.ч. с не-целевых).
+        allNewIds.forEach((id) => {
+            removeProtocoreFromAllCards(id);
+        });
+
+        // 3. Сохраняем на целевые карты.
+        newProtocoresBySlot.forEach(({ cardId, protocores }) => {
+            saveCardProtocores(cardId, protocores);
+        });
+
+        return newProtocoresBySlot;
+    };
+
     const handleEquipOnCards = () => {
         const activeBuild = builds[activeBuildIndex];
         if (!activeBuild) return;
@@ -87,38 +125,21 @@ function TeamOptimizer() {
 
         setIsEquipping(true);
         try {
-            const newProtocoresBySlot = [];
-            const allNewIds = [];
-
-            CARD_SLOTS.forEach((slot) => {
-                const card = data.cards[slot.id];
-                if (!card) return;
-
-                const slotResult = activeBuild.results[slot.id];
-                const protocores = slotResult
-                    ? Object.values(slotResult).filter(Boolean)
-                    : [];
-
-                newProtocoresBySlot.push({ cardId: card.id, protocores });
-                protocores.forEach((p) => allNewIds.push(p.id));
-            });
-
-            // Убираем эти протокоры со всех других карт
-            allNewIds.forEach((id) => {
-                removeProtocoreFromAllCards(id);
-            });
-
-            // Сохраняем на наши карты
-            newProtocoresBySlot.forEach(({ cardId, protocores }) => {
-                saveCardProtocores(cardId, protocores);
-            });
-
+            applyBuildToCards(activeBuild);
             alert(t('TeamOptimizer.alertEquipSuccess'));
         } catch (err) {
             console.error("Equip error:", err);
             alert("Failed to equip protocores.");
         } finally {
             setIsEquipping(false);
+            setCardsWithProtocoresVersion((v) => v + 1);
+            setData((prev) => ({
+                ...prev,
+                excludedCards: (prev.excludedCards || []).filter((opt) => {
+                    const protocores = getCardProtocores(opt.value);
+                    return protocores && protocores.length > 0;
+                }),
+            }));
         }
     };
 
@@ -287,33 +308,7 @@ function TeamOptimizer() {
         setIsSending(true);
 
         try {
-            const newProtocoresBySlot = [];
-            const allNewIds = [];
-
-            CARD_SLOTS.forEach((slot) => {
-                const card = data.cards[slot.id];
-                if (!card) return;
-
-                const slotResult = activeBuild.results[slot.id];
-                const protocores = slotResult
-                    ? Object.values(slotResult).filter(Boolean)
-                    : [];
-
-                newProtocoresBySlot.push({cardId: card.id, protocores});
-                protocores.forEach((p) => allNewIds.push(p.id));
-            });
-
-            newProtocoresBySlot.forEach(({cardId}) => {
-                saveCardProtocores(cardId, []);
-            });
-
-            allNewIds.forEach((id) => {
-                removeProtocoreFromAllCards(id);
-            });
-
-            newProtocoresBySlot.forEach(({cardId, protocores}) => {
-                saveCardProtocores(cardId, protocores);
-            });
+            applyBuildToCards(activeBuild);
 
             const teams = getShowcaseTeams();
 
@@ -346,12 +341,20 @@ function TeamOptimizer() {
 
             saveShowcaseTeams([...teams, newTeam]);
 
-            alert(t('TeamOptimizer.alertSentShowcaseSuccess', {teamName: teamName}));
+            alert(t('TeamOptimizer.alertSentShowcaseSuccess', { teamName }));
         } catch (err) {
             console.error("Send to Showcase error:", err);
             alert("Failed to send team to Showcase. See console for details.");
         } finally {
             setIsSending(false);
+            setCardsWithProtocoresVersion((v) => v + 1);
+            setData((prev) => ({
+                ...prev,
+                excludedCards: (prev.excludedCards || []).filter((opt) => {
+                    const protocores = getCardProtocores(opt.value);
+                    return protocores && protocores.length > 0;
+                }),
+            }));
         }
     };
 
@@ -371,7 +374,7 @@ function TeamOptimizer() {
                 protocores: getCardProtocores(card.id),
             }))
             .filter(({protocores}) => protocores && protocores.length > 0);
-    }, []);
+    }, [cardsWithProtocoresVersion]);
 
     const formatCardOption = (option, { context }) => {
         const isValue = context === "value";
@@ -547,17 +550,17 @@ function TeamOptimizer() {
                 </button>
                 <button
                     className={styles.sendButton}
-                    onClick={handleSendToShowcase}
-                    disabled={!activeResults || isOptimizing || isSending}
+                    onClick={handleEquipOnCards}
+                    disabled={!activeResults || isOptimizing || isEquipping || isSending}
                 >
-                    {isSending ? t('TeamOptimizer.sendButtonActive') : t('TeamOptimizer.sendButton')}
+                    {isEquipping ? t('TeamOptimizer.equipButtonActive') : t('TeamOptimizer.equipButton')}
                 </button>
                 <button
                     className={styles.sendButton}
-                    onClick={handleEquipOnCards}
-                    disabled={!activeResults || isOptimizing || isEquipping}
+                    onClick={handleSendToShowcase}
+                    disabled={!activeResults || isOptimizing || isSending || isEquipping}
                 >
-                    {isEquipping ? t('TeamOptimizer.equipButtonActive') : t('TeamOptimizer.equipButton')}
+                    {isSending ? t('TeamOptimizer.sendButtonActive') : t('TeamOptimizer.sendButton')}
                 </button>
             </div>
 
