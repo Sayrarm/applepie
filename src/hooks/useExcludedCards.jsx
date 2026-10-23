@@ -3,15 +3,16 @@ import { getCardProtocores } from "@localstorage";
 import { getImageUrl } from "./index.js";
 import { memoriesData } from "@data";
 
-export function useExcludedCards(data, setData, styles) {
+export function useExcludedCards(data, setData, styles, version = 0) {
     const cardsWithProtocores = useMemo(() => {
+        void version; // триггер пересчёта при изменении
         return memoriesData
             .map((card) => ({
                 card,
                 protocores: getCardProtocores(card.id),
             }))
             .filter(({ protocores }) => protocores && protocores.length > 0);
-    }, []);
+    }, [version]);
 
     const exclusionOptions = useMemo(
         () =>

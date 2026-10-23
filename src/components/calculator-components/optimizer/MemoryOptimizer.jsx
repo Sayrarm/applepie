@@ -74,6 +74,7 @@ function MemoryOptimizer() {
     const [isOptimizing, setIsOptimizing] = useState(false);
     const [progressText, setProgressText] = useState("");
     const [isEquipping, setIsEquipping] = useState(false);
+    const [excludedVersion, setExcludedVersion] = useState(0);
     const modalChooseCardRef = useRef();
     const { t } = useTranslation();
 
@@ -82,7 +83,7 @@ function MemoryOptimizer() {
     }, [data]);
 
     const { exclusionOptions, handleExcludedCardsChange, formatCardOption } =
-        useExcludedCards(data, setData, styles);
+        useExcludedCards(data, setData, styles, excludedVersion);
 
     // ===== Тип карты =====
     const isSolar = data.selectedCard?.placementName === "solar";
@@ -125,6 +126,22 @@ function MemoryOptimizer() {
         setActiveBuildIndex(0);
         setOldStats(null);
         setOldDamageData(null);
+    };
+
+    // Применяет сборку к одной карте: снимает протокоры со ВСЕХ карт,
+    // очищает целевую карту и сохраняет на неё новые протокоры.
+    const applyBuildToCard = (build, card) => {
+        const slotResult = build.results[isSolar ? "solar" : "lunar"];
+        const newProtocores = Object.values(slotResult || {}).filter(Boolean);
+
+        // 1. Очищаем целевую карту (гарантия, что старые протокоры не останутся).
+        saveCardProtocores(card.id, []);
+
+        // 2. Снимаем новые протокоры со ВСЕХ карт (в т.ч. с не-целевых).
+        newProtocores.forEach((p) => removeProtocoreFromAllCards(p.id));
+
+        // 3. Сохраняем на целевую карту.
+        saveCardProtocores(card.id, newProtocores);
     };
 
     // ===== Start optimization =====
@@ -185,29 +202,27 @@ function MemoryOptimizer() {
         if (!activeBuild || !card) return;
 
         const confirmed = window.confirm(
-            t('MemoryOptimizer.alertSendShowcase', {card: card.name}),
+            t('MemoryOptimizer.alertEquipOnCard', { card: card.name }),
         );
         if (!confirmed) return;
 
         setIsEquipping(true);
         try {
-            const slotResult =
-                activeBuild.results[isSolar ? "solar" : "lunar"];
-            const newProtocores = Object.values(slotResult || {}).filter(Boolean);
-
-            // Убираем эти протокоры со всех других карт
-            const newIds = new Set(newProtocores.map((p) => p.id));
-            newIds.forEach((id) => removeProtocoreFromAllCards(id));
-
-            // Сохраняем на нашу карту
-            saveCardProtocores(card.id, newProtocores);
-
-            alert(t('MemoryOptimizer.alertSendShowcase', {card: card.name}));
+            applyBuildToCard(activeBuild, card);
+            alert(t('MemoryOptimizer.alertEquipSuccess', { card: card.name }));
         } catch (err) {
             console.error("Equip error:", err);
             alert("Failed to equip protocores.");
         } finally {
             setIsEquipping(false);
+            setExcludedVersion((v) => v + 1);  // ← добавь
+            setData((prev) => ({
+                ...prev,
+                excludedCards: (prev.excludedCards || []).filter((opt) => {
+                    const protocores = getCardProtocores(opt.value);
+                    return protocores && protocores.length > 0;
+                }),
+            }));
         }
     };
 
@@ -216,9 +231,9 @@ function MemoryOptimizer() {
     const activeResults = activeBuild?.results || null;
 
     // ===== Данные для RenderCardSlot =====
-    const getCardData = () => {
-        if (!data.selectedCard) return null;
-        const id = String(data.selectedCard.id);
+    const getCardData = (card) => {
+        if (!card) return null;
+        const id = String(card.id);
         return {
             level: getCardLevel(id),
             rank: getCardRank(id),
