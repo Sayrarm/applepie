@@ -22,11 +22,9 @@ import {
     savePredicts
 } from "@localstorage";
 import CustomBannerModal from "./CustomBannerModal.jsx";
-// ИМПОРТ ХУКА ДЛЯ СКРИНШОТА
 import { useScreenshot } from "@hooks/useScreenshot";
 
 // --- Утилиты дат ---
-// ИСПРАВЛЕНО: applyTimezone теперь принимает isPredict и не сдвигает время для предиктов
 const applyTimezone = (dateInput, serverOffset, isPredict = false) => {
     if (!dateInput) return null;
 
@@ -76,11 +74,11 @@ const getMonthDays = (year, month) => {
 
 const parseDate = (value, timezone, isPredict) => {
     if (!value || value === "permanently") return null;
-    return applyTimezone(value, timezone, isPredict); // <-- Передаем флаг
+    return applyTimezone(value, timezone, isPredict);
 };
 
 const getBannerRange = (banner, monthDays, timezone) => {
-    const isPredict = banner.isPredict || banner.isCustom; // <-- Учитываем и кастомные
+    const isPredict = banner.isPredict || banner.isCustom;
     const bannerStart = parseDate(banner.startDate, timezone, isPredict);
     const bannerEnd = parseDate(banner.endDate, timezone, isPredict);
     if (!bannerStart) return null;
@@ -267,7 +265,6 @@ function MiniMonth({ year, month, banners, onClick }) {
         month: "long",
     });
 
-
     const weekDayKeys = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 
     const totalCells = Math.ceil((firstDayOfWeek + monthDays.length) / 7) * 7;
@@ -352,7 +349,7 @@ function MiniMonth({ year, month, banners, onClick }) {
 function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditMode }) {
     const { timezone } = useTimezone();
     const { t, i18n } = useTranslation();
-    const { isCapturing, captureScreenshot } = useScreenshot(); // <-- ХУК СКРИНШОТА
+    const { isCapturing, captureScreenshot } = useScreenshot();
 
     const [selectedYear, setSelectedYear] = useState(
         () => initialDate.getFullYear(),
@@ -364,17 +361,18 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
     const [isDragging, setIsDragging] = useState(false);
     const [dragAction, setDragAction] = useState(null);
 
-    // Реф для контейнера, который будем снимать
+    // СТЕЙТ ДЛЯ ПОКАЗА/СКРЫТИЯ ПРЕДИКТОВ
+    const [showPredicts, setShowPredicts] = useState(true);
+
     const calendarContentRef = useRef();
 
     // Состояние для модалки
     const [selectedBanner, setSelectedBanner] = useState(null);
     const memoriesModalRef = useRef();
 
-    // ===== СОСТОЯНИЯ ДЛЯ ПРЕДИКТОВ =====
-    const [selectedDays, setSelectedDays] = useState([]); // Массив timestamp
+    const [selectedDays, setSelectedDays] = useState([]);
     const [predicts, setPredicts] = useState(() => getPredicts());
-    const predictModalRef = useRef(); // Ссылка на модалку выбора
+    const predictModalRef = useRef();
 
     // ===== СОСТОЯНИЕ ДЛЯ КАСТОМНОГО БАННЕРА =====
     const [isCustomModalOpen, setIsCustomModalOpen] = useState(false);
@@ -386,10 +384,13 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
         }
     }, [editMode]);
 
-    // Объединяем оригинальные баннеры и предикты
+    // ОБНОВЛЕНО: Добавляем предикты только если showPredicts === true
     const allBanners = useMemo(() => {
-        return [...banners, ...predicts];
-    }, [banners, predicts]);
+        if (showPredicts) {
+            return [...banners, ...predicts];
+        }
+        return banners;
+    }, [banners, predicts, showPredicts]);
 
     const calendarBanners = useMemo(() => {
         return allBanners.filter(b => b.endDate !== "permanently");
@@ -461,7 +462,7 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
     // Новые функции для drag-and-drop:
     const handleDayMouseDown = (day, e) => {
         if (!editMode) return;
-        e.preventDefault(); // Предотвращаем нежелательное выделение текста
+        e.preventDefault();
         const time = day.getTime();
         const isAlreadySelected = selectedDays.includes(time);
 
@@ -515,10 +516,10 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
 
         const predict = {
             ...banner,
-            id: `predict-${Date.now()}`, // Уникальный ID
+            id: `predict-${Date.now()}`,
             startDate: startDate.toISOString(),
             endDate: endDate.toISOString(),
-            isPredict: true, // Флаг предикта
+            isPredict: true,
         };
 
         const updatedPredicts = addPredict(predict);
@@ -549,14 +550,14 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
             startDate: startDate.toISOString(),
             endDate: endDate.toISOString(),
             isPredict: true,
-            isCustom: true, // Флаг кастомного (чтобы не сдвигать пояса)
+            isCustom: true,
         };
 
         const updatedPredicts = addPredict(predict);
         setPredicts(updatedPredicts);
 
         setSelectedDays([]);
-        setIsCustomModalOpen(false); // Закрываем нашу новую модалку
+        setIsCustomModalOpen(false);
     };
 
     // ===== УДАЛЕНИЕ ВСЕХ ПРЕДИКТОВ =====
@@ -574,16 +575,16 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
         // Находим предикты, которые пересекаются с выбранными днями
         const remainingPredicts = predicts.filter((predict) => {
             const range = getBannerRange(predict, monthDays, timezone);
-            if (!range) return true; // Оставляем, если не попадает в этот месяц
+            if (!range) return true;
 
             // Проверяем пересечение с выбранными днями
             for (let i = range.startIndex; i <= range.endIndex; i++) {
                 const dayTime = monthDays[i].getTime();
                 if (selectedDays.includes(dayTime)) {
-                    return false; // Если пересекается — удаляем
+                    return false;
                 }
             }
-            return true; // Если нет — оставляем
+            return true;
         });
 
         // Сохраняем обновленный список
@@ -605,6 +606,14 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
                     <h2 className={styles.title}>{selectedYear}</h2>
                     <button onClick={goNextYear} className={styles.navBtn}>
                         →
+                    </button>
+
+                    {/* КНОПКА ДЛЯ ПОКАЗА/СКРЫТИЯ ПРЕДИКТОВ В РЕЖИМЕ "ГОД" */}
+                    <button
+                        onClick={() => setShowPredicts(!showPredicts)}
+                        className={styles.predictButton}
+                    >
+                        {showPredicts ? t('BannersCalendar.hidePredicts') : t('BannersCalendar.showPredicts')}
                     </button>
                 </div>
 
@@ -653,6 +662,7 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
                 {/* ОБОРАЧИВАЕМ КОНТЕНТ В REF ДЛЯ СКРИНШОТА (без кнопок) */}
                 <div ref={calendarContentRef}>
                     <div className={styles.header}>
+
                         <button onClick={goPrevMonth} className={styles.navBtn}>
                             ←
                         </button>
@@ -665,6 +675,14 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
                         </h2>
                         <button onClick={goNextMonth} className={styles.navBtn}>
                             →
+                        </button>
+
+                        {/* КНОПКА ДЛЯ ПОКАЗА/СКРЫТИЯ ПРЕДИКТОВ В РЕЖИМЕ "МЕСЯЦ" */}
+                        <button
+                            onClick={() => setShowPredicts(!showPredicts)}
+                            className={styles.predictButton}
+                        >
+                            {showPredicts ? t('BannersCalendar.hidePredicts') : t('BannersCalendar.showPredicts')}
                         </button>
                     </div>
 
@@ -746,7 +764,7 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
                                             if (!editMode) {
                                                 showMemoriesModal(banner);
                                             } else {
-                                                e.stopPropagation(); // Блокируем клик по дню, если кликнули по баннеру
+                                                e.stopPropagation();
                                             }
                                         }}
                                         role="button"
@@ -851,7 +869,7 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
                         disabled={isCapturing}
                         style={{ padding: "10px 20px", cursor: "pointer", background: "#2a2a2a", color: "#fff", border: "1px solid #444", borderRadius: "8px", fontSize: "16px" }}
                     >
-                        {isCapturing ? t('BannersCalendar.saveAsImageActive') : t('BannersCalendar.saveAsImage')}
+                        {isCapturing ? "..." : t('BannersCalendar.saveAsImage')}
                     </button>
                 </div>
             </div>
@@ -860,7 +878,7 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
             <ModalWindow
                 ref={predictModalRef}
                 title={t('BannersCalendar.titleModalBanner')}
-                onClose={() => {}} // Пустая функция, чтобы не сбрасывать выбранные дни при закрытии
+                onClose={() => {}}
                 tag={
                     <div style={{ maxHeight: "60vh", overflowY: "auto" }}>
                         <BannerList

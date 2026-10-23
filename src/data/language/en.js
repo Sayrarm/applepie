@@ -621,6 +621,8 @@ export const en = {
             titleModalBanner: 'Choose banner',
             saveAsImage: '📸 Save as Image',
             saveAsImageActive: '📸 Capturing...',
+            hidePredicts: 'Prediction Off',
+            showPredicts: 'Prediction On',
         },
         CustomBannerModal: {
             alertName: 'Enter the name of the banner',

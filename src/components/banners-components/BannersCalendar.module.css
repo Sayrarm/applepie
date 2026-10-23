@@ -13,6 +13,21 @@
     align-items: center;
     justify-content: center;
     gap: 16px;
+    position: relative;
+}
+
+.predictButton {
+    padding: 6px 12px;
+    cursor: pointer;
+    background: black;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-left: 16px;
+    position: absolute;
+    right: 0;
+    top: 5px;
 }
 
 .title {

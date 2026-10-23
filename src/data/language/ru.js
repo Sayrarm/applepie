@@ -619,6 +619,8 @@ export const ru = {
             titleModalBanner: 'Выбрать баннер',
             saveAsImage: '📸 Сохранить картинкой',
             saveAsImageActive: '📸 Сохранение...',
+            hidePredicts: 'Без предиктов',
+            showPredicts: 'С предиктами',
         },
         CustomBannerModal: {
             alertName: 'Введите название баннера',
