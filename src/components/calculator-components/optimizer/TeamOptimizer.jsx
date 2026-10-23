@@ -50,6 +50,7 @@ function TeamOptimizer() {
     const [isOptimizing, setIsOptimizing] = useState(false);
     const [progressText, setProgressText] = useState("");
     const [isSending, setIsSending] = useState(false);
+    const [isEquipping, setIsEquipping] = useState(false);
     const modalChooseCardRef = useRef();
     const { t } = useTranslation();
 
@@ -74,6 +75,52 @@ function TeamOptimizer() {
         {value: "HP Bonus", label: "HP Bonus"},
         {value: "DEF Bonus", label: "DEF Bonus"},
     ];
+
+    const handleEquipOnCards = () => {
+        const activeBuild = builds[activeBuildIndex];
+        if (!activeBuild) return;
+
+        const confirmed = window.confirm(
+            t('TeamOptimizer.alertEquipOnCards'),
+        );
+        if (!confirmed) return;
+
+        setIsEquipping(true);
+        try {
+            const newProtocoresBySlot = [];
+            const allNewIds = [];
+
+            CARD_SLOTS.forEach((slot) => {
+                const card = data.cards[slot.id];
+                if (!card) return;
+
+                const slotResult = activeBuild.results[slot.id];
+                const protocores = slotResult
+                    ? Object.values(slotResult).filter(Boolean)
+                    : [];
+
+                newProtocoresBySlot.push({ cardId: card.id, protocores });
+                protocores.forEach((p) => allNewIds.push(p.id));
+            });
+
+            // Убираем эти протокоры со всех других карт
+            allNewIds.forEach((id) => {
+                removeProtocoreFromAllCards(id);
+            });
+
+            // Сохраняем на наши карты
+            newProtocoresBySlot.forEach(({ cardId, protocores }) => {
+                saveCardProtocores(cardId, protocores);
+            });
+
+            alert(t('TeamOptimizer.alertEquipSuccess'));
+        } catch (err) {
+            console.error("Equip error:", err);
+            alert("Failed to equip protocores.");
+        } finally {
+            setIsEquipping(false);
+        }
+    };
 
     const buildOldResults = (cards) => {
         const result = {
@@ -504,6 +551,13 @@ function TeamOptimizer() {
                     disabled={!activeResults || isOptimizing || isSending}
                 >
                     {isSending ? t('TeamOptimizer.sendButtonActive') : t('TeamOptimizer.sendButton')}
+                </button>
+                <button
+                    className={styles.sendButton}
+                    onClick={handleEquipOnCards}
+                    disabled={!activeResults || isOptimizing || isEquipping}
+                >
+                    {isEquipping ? t('TeamOptimizer.equipButtonActive') : t('TeamOptimizer.equipButton')}
                 </button>
             </div>
 

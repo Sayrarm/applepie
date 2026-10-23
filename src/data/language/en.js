@@ -473,6 +473,10 @@ export const en = {
             sendButton: 'Send to Showcase',
             sendButtonActive: 'Sending...',
             progressText: 'Calculating best protocores, please wait...',
+            equipButton: 'Equip on Cards',
+            equipButtonActive: 'Equipping...',
+            alertEquipOnCards: 'Equip these protocores on the selected cards?',
+            alertEquipSuccess: 'Protocores equipped successfully!'
         },
         MemoryOptimizer: {
             alertClearAll: 'Are you sure you want to clear all settings?',
@@ -493,7 +497,7 @@ export const en = {
             clearButton: 'Clear all',
             startButton: 'Start',
             startButtonActive: 'Optimizing...',
-            equipButton: 'Equip',
+            equipButton: 'Equip on Card',
             equipButtonActive: 'Equipping...',
             progressText: 'Calculating best protocores, please wait...',
         },

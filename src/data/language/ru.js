@@ -471,6 +471,10 @@ export const ru = {
             sendButton: 'Отправить в Шоукейс',
             sendButtonActive: 'Отправка...',
             progressText: 'Поиск лучших протокоров, пожалуйста ожидайте...',
+            equipButton: 'Экипировать протокоры',
+            equipButtonActive: 'Экипировка...',
+            alertEquipOnCards: 'Экипировать эти протокоры на Воспоминания?',
+            alertEquipSuccess: 'Протокоры удачно экипированы!'
         },
         MemoryOptimizer: {
             alertClearAll: 'Вы уверены, что хотите сбросить все настройки?',
@@ -491,7 +495,7 @@ export const ru = {
             clearButton: 'Очистить всё',
             startButton: 'Старт',
             startButtonActive: 'Оптимизация...',
-            equipButton: 'Экипировать',
+            equipButton: 'Экипировать протокоры',
             equipButtonActive: 'Экипировка...',
             progressText: 'Поиск лучших протокоров, пожалуйста ожидайте...',
         },

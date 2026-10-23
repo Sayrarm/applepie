@@ -166,6 +166,7 @@
 .buttonsContainer {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 5px;
 }
 
@@ -173,7 +174,7 @@
 .startButton,
 .sendButton {
     margin-top: 5px;
-    padding: 10px 40px;
+    padding: 10px 20px;
     align-self: center;
     font-family: TikTok Sans, monospace;
     font-size: 18px;
