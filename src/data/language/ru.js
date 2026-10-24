@@ -202,6 +202,8 @@ export const ru = {
             deleteButton: 'Удалить',
             titleModalGoalButton: 'Выбрать уровень для цели Развития',
             addButton: '🎯 Добавить в Цель Развития',
+            addGoalAlert: 'Цель добавлена в "Цель Развития" на главной странице!',
+            mainButton: 'Перейти на Главную страницу',
         },
         DataManager: {
             alertSuccess: '✅ Успешно экспортировано {{totalItems}} элементов!',
@@ -369,6 +371,8 @@ export const ru = {
             availableButton: 'В наличии',
             titleModal: 'Выбрать уровень для цели Развития',
             addButton: '🎯 Добавить в Цель Развития',
+            addGoalAlert: 'Цель добавлена в "Цель Развития" на главной странице!',
+            mainButton: 'Перейти на Главную страницу',
         },
         CopyableText: {
             title: 'Кликните чтобы скопировать',

@@ -26,6 +26,14 @@
   margin: 5px 5px 20px 5px;
 }
 
+.link {
+  color: var(--a);
+}
+
+.link:hover {
+  color: var(--a-hover);
+}
+
 .addGoalButton,
 .buttonAvailable,
 .goalButton {

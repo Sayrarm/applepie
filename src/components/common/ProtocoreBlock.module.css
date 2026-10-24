@@ -122,6 +122,14 @@
   gap: 3px;
 }
 
+.link {
+  color: var(--a);
+}
+
+.link:hover {
+  color: var(--a-hover);
+}
+
 .goalButton,
 .editButton,
 .deleteButton {

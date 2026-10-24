@@ -1,5 +1,5 @@
 import React, {useEffect, useMemo, useRef, useState} from "react";
-import { useParams } from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import Select from "react-select";
 import styles from "./LevelCardBlock.module.css";
 import {
@@ -46,6 +46,7 @@ function LevelCardBlock({ cardId: propCardId, onAvailabilityChange }) {
   );
   const [draftLevel, setDraftLevel] = useState(level);
   const [draftAscended, setDraftAscended] = useState(false);
+  const [goalAdded, setGoalAdded] = useState(false);
 
   const modalRef = useRef(null);
 
@@ -290,6 +291,7 @@ function LevelCardBlock({ cardId: propCardId, onAvailabilityChange }) {
   const openGoalModal = () => {
     setDraftLevel(typeof level === "number" ? level : 1);
     setDraftAscended(isAscended);
+    setGoalAdded(false);
     modalRef.current?.showModal();
   };
 
@@ -351,7 +353,7 @@ function LevelCardBlock({ cardId: propCardId, onAvailabilityChange }) {
     };
 
     addFarmGoal(goal);
-    modalRef.current?.closeModal();
+    setGoalAdded(true);
   };
 
   if (!card) {
@@ -467,28 +469,37 @@ function LevelCardBlock({ cardId: propCardId, onAvailabilityChange }) {
       {/* Модальное окно с выбором уровня */}
       <ModalWindow
           ref={modalRef}
-          title={t('LevelCardBlock.titleModal')}
+          title={goalAdded ? t('LevelCardBlock.titleModal') : t('LevelCardBlock.titleModal')}
           width={600}
           tag={
-            <div style={{ textAlign: "left" }}>
-              <LevelRangeControl
-                  id="modal-level-input"
-                  level={draftLevel}
-                  setLevel={setDraftLevel}
-                  maxLevel={maxLevel}
-                  isAscended={draftAscended}
-                  setIsAscended={setDraftAscended}
-              />
-              <div style={{ textAlign: "right", marginTop: 16 }}>
-                <button
-                    className={styles.addGoalButton}
-                    onClick={handleAddToFarm}
-                    disabled={!canAddGoal()}
-                >
-                  {t('LevelCardBlock.addButton')}
-                </button>
-              </div>
-            </div>
+            goalAdded ? (
+                <div style={{ textAlign: "left" }}>
+                  <p>{t('LevelCardBlock.addGoalAlert')}</p>
+                  <Link className={styles.link} to="/">
+                    {t('LevelCardBlock.mainButton')}
+                  </Link>
+                </div>
+            ) : (
+                <div style={{ textAlign: "left" }}>
+                  <LevelRangeControl
+                      id="modal-level-input"
+                      level={draftLevel}
+                      setLevel={setDraftLevel}
+                      maxLevel={maxLevel}
+                      isAscended={draftAscended}
+                      setIsAscended={setDraftAscended}
+                  />
+                  <div style={{ textAlign: "right", marginTop: 16 }}>
+                    <button
+                        className={styles.addGoalButton}
+                        onClick={handleAddToFarm}
+                        disabled={!canAddGoal()}
+                    >
+                      {t('LevelCardBlock.addButton')}
+                    </button>
+                  </div>
+                </div>
+            )
           }
       />
     </>

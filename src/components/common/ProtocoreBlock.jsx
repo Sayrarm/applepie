@@ -11,6 +11,7 @@ import {
 import {addFarmGoal} from "@localstorage";
 import {LevelRangeControl, ModalWindow, useHighlight} from "@components";
 import { useTranslation } from "react-i18next";
+import {Link} from "react-router-dom";
 
 function ProtocoreBlock({
   protocore,
@@ -21,6 +22,7 @@ function ProtocoreBlock({
   hideGoal = true,
   cardImage,
 }) {
+  const [goalAdded, setGoalAdded] = useState(false);
   const { type, stellactrum, level, mainStat, mainStatValue, substats } =
     protocore;
   const { highlightedStat } = useHighlight();
@@ -34,6 +36,7 @@ function ProtocoreBlock({
 
   const openGoalModal = () => {
     setDraftLevel(level);
+    setGoalAdded(false);
     modalRef.current?.showModal();
   };
 
@@ -68,7 +71,7 @@ function ProtocoreBlock({
     };
 
     addFarmGoal(goal);
-    modalRef.current?.closeModal();
+    setGoalAdded(true);
   };
 
   // Получаем данные типа из protocoreTypes
@@ -196,28 +199,42 @@ function ProtocoreBlock({
           title={t('ProtocoreBlock.titleModalGoalButton')}
           width={500}
           tag={
-            <div style={{ textAlign: "left" }}>
-              <LevelRangeControl
-                  id="protocore-goal-level"
-                  level={draftLevel}
-                  setLevel={setDraftLevel}
-                  minLevel={0}
-                  maxLevel={15}
-                  showAscend={false}
-                  label="Level:"
-              />
-              <div style={{ textAlign: "right", marginTop: 16 }}>
-                <button
-                    className={styles.addGoalButton}
-                    onClick={handleAddToFarm}
-                    disabled={!canAddGoal()}
-                >
-                  {t('ProtocoreBlock.addButton')}
-                </button>
-              </div>
-            </div>
+            goalAdded ? (
+                <div style={{ textAlign: "left" }}>
+                  <p>{t('ProtocoreBlock.addGoalAlert')}</p>
+                  <Link
+                      className={styles.link}
+                      to="/"
+                      onClick={() => modalRef.current?.closeModal()}
+                  >
+                    {t('ProtocoreBlock.mainButton')}
+                  </Link>
+                </div>
+            ) : (
+                <div style={{ textAlign: "left" }}>
+                  <LevelRangeControl
+                      id="protocore-goal-level"
+                      level={draftLevel}
+                      setLevel={setDraftLevel}
+                      minLevel={0}
+                      maxLevel={15}
+                      showAscend={false}
+                      label="Level:"
+                  />
+                  <div style={{ textAlign: "right", marginTop: 16 }}>
+                    <button
+                        className={styles.addGoalButton}
+                        onClick={handleAddToFarm}
+                        disabled={!canAddGoal()}
+                    >
+                      {t('ProtocoreBlock.addButton')}
+                    </button>
+                  </div>
+                </div>
+            )
           }
       />
+
     </section>
   );
 }

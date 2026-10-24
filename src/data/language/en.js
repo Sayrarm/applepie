@@ -205,6 +205,8 @@ export const en = {
             deleteButton: 'Delete',
             titleModalGoalButton: 'Select Level for Goal',
             addButton: '🎯 Add to Development Goal',
+            addGoalAlert: 'Goal added to Development Goal on Main page!',
+            mainButton: 'Go to Main Page',
         },
         DataManager: {
             alertSuccess: '✅ Successfully exported {{totalItems}} items!',
@@ -371,6 +373,8 @@ export const en = {
             availableButton: 'Available',
             titleModal: 'Select Level for Goal',
             addButton: '🎯 Add to Development Goal',
+            addGoalAlert: 'Goal added to Development Goal on Main page!',
+            mainButton: 'Go to Main Page',
         },
         CopyableText: {
             title: 'Click to copy',
