@@ -201,6 +201,7 @@ export const en = {
             statusFailed: '⚠ Not recognized',
             statusError: '✗ Error',
             textErrorFailed: 'Protocore  is unidentified',
+            warningText: 'Warning! The feature is in beta testing. Check the protocores after they are created, the characteristics may be recognized incorrectly.',
         },
         ProtocoreBlock: {
             changeButton: 'Change',

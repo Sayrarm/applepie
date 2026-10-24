@@ -159,6 +159,8 @@ const OcrReader = forwardRef((props, ref) => {
         <div className={styles.container}>
             <h2 className={styles.title}>{t('OcrReader.titleContainer')}</h2>
 
+            <div>{t('OcrReader.warningText')}</div>
+
             <div className={styles.buttonsCnotainer}>
                 <label className={styles.chooseButton}>
                     {t('OcrReader.chooseButton')}

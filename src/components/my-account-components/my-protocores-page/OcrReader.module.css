@@ -2,10 +2,6 @@
     padding: 20px;
 }
 
-.title {
-    margin: 0 0 16px;
-}
-
 .buttonsCnotainer {
     display: flex;
     align-items: center;
