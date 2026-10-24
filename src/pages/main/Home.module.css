@@ -20,6 +20,20 @@
 }
 
 .scheduleContainerGeneralButton,
+.containerActivityButton,
+.containerShopCardsButton,
+.containerTitleTimerButton {
+  transition: 0.2s;
+}
+
+.scheduleContainerGeneralButton:hover,
+.containerActivityButton:hover,
+.containerShopCardsButton:hover,
+.containerTitleTimerButton:hover {
+  transform: translateY(-4px);
+}
+
+.scheduleContainerGeneralButton,
 .containerTitleTimer,
 .containerActivityButton,
 .containerShopCardsButton,
