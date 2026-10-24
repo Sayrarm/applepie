@@ -430,6 +430,9 @@ export const ru = {
             selectCard: 'Выберите {{placement}} воспоминание',
             selectCardNoPlacement: 'Выберите воспоминание',
             noCardsText: 'Доступных {{modalPlacement}} воспоминаний не найдено',
+            zeroMessage1: 'У вас еще нет Воспоминаний. Добавить их можно на странице',
+            zeroMessage2: '"Воспоминания"',
+            zeroMessage3: '. Выберите Воспоминание и кликните "В наличии" на странице Воспоминания.',
         },
         RenderCardSlot: {
             noProtocoreText: 'Нет протокоров',

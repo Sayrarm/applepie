@@ -11,6 +11,7 @@ import { enhanceMemoriesWithAvailability } from "@localstorage";
 import { memoriesData } from "@data";
 import styles from "./ModalChooseCard.module.css";
 import { useTranslation } from "react-i18next";
+import {NavLink} from "react-router-dom";
 
 const ModalChooseCard = forwardRef(({ onSelectCard }, ref) => {
   const [modalPlacement, setModalPlacement] = useState(null);
@@ -75,6 +76,20 @@ const ModalChooseCard = forwardRef(({ onSelectCard }, ref) => {
     return sortMemories(searched);
   };
 
+  // Все карточки пользователя (без учёта плейсмента и фильтров)
+  const allUserCards = enhanceMemoriesWithAvailability(memoriesData).filter(
+      (card) => card.isAvailable === true
+  );
+
+// Карточки для текущего плейсмента (до фильтров/поиска/сортировки)
+  const cardsForPlacement =
+      modalPlacement === "any" || !modalPlacement
+          ? allUserCards
+          : allUserCards.filter((card) => card.placementName === modalPlacement);
+
+// Итоговый список после фильтров/поиска/сортировки
+  const availableCards = getAvailableCards(modalPlacement);
+
   const resetAllSettings = () => {
     setSelectedChar("any");
     clearSorting();
@@ -120,19 +135,32 @@ const ModalChooseCard = forwardRef(({ onSelectCard }, ref) => {
             />
 
             <div className={styles.cardGrid}>
-              {getAvailableCards(modalPlacement).map((card) => (
-                <button
-                  key={card.id}
-                  className={styles.cardItem}
-                  onClick={() => handleSelectCard(card)}
-                >
-                  <Card data={card} isSmall={true} showUserInfo={true} />
-                </button>
+              {availableCards.map((card) => (
+                  <button
+                      key={card.id}
+                      className={styles.cardItem}
+                      onClick={() => handleSelectCard(card)}
+                  >
+                    <Card data={card} isSmall={true} showUserInfo={true} />
+                  </button>
               ))}
-              {getAvailableCards(modalPlacement).length === 0 && (
-                <div className={styles.emptyCards}>
-                  {t('ModalChooseCard.noCardsText', {modalPlacement: modalPlacement})}
-                </div>
+              {availableCards.length === 0 && (
+                  <div className={styles.emptyCards}>
+                    {allUserCards.length === 0 ? (
+                        <>
+                          {t('ModalChooseCard.zeroMessage1')}{" "}
+                          <NavLink
+                              className={styles.link}
+                              to="/memories"
+                          >
+                            {t('ModalChooseCard.zeroMessage2')}
+                          </NavLink>{" "}
+                          {t('ModalChooseCard.zeroMessage3')}
+                        </>
+                    ) : (
+                        t('ModalChooseCard.noCardsText', { modalPlacement: modalPlacement })
+                    )}
+                  </div>
               )}
             </div>
           </div>

@@ -432,6 +432,9 @@ export const en = {
             selectCard: 'Select {{placement}} memory',
             selectCardNoPlacement: 'Select memory',
             noCardsText: 'No available {{modalPlacement}} memories found',
+            zeroMessage1: 'You don\'t have any memories yet. Go to',
+            zeroMessage2: 'Memories',
+            zeroMessage3: 'section, select Memory and click "Available" in Memory page',
         },
         RenderCardSlot: {
             noProtocoreText: 'No protocores',

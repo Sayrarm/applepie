@@ -16,3 +16,11 @@
             TikTok Sans,
             monospace;
 }
+
+.link {
+    color: var(--a);
+}
+
+.link:hover {
+    color: var(--a-hover);
+}
