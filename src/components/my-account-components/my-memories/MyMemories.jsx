@@ -21,6 +21,7 @@ import {
     enhanceMemoriesWithAvailability,
 } from "@localstorage";
 import { useTranslation } from "react-i18next";
+import {NavLink} from "react-router-dom";
 
 function MyMemories() {
     const {searchQuery, onSearch} = useSearch("mymemories");
@@ -173,7 +174,15 @@ function MyMemories() {
                     ref={tableRef}
                     data={sortedCards}
                     storageKey="mymemories"
-                    emptyText={t('MyMemories.emptyMemories')}
+                    emptyText={
+                        <div className={styles.emptyTextContainer}>
+                            {t('MyMemories.emptyMemoriesPart1')}{" "}
+                            <NavLink className={styles.emptyLink} to="/memories">
+                                {t('MyMemories.emptyMemoriesLink')}
+                            </NavLink>
+                            {" "}{t('MyMemories.emptyMemoriesPart3')}
+                        </div>
+                    }
                 />
             </section>
         </section>

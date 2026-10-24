@@ -8,3 +8,18 @@
   box-shadow: var(--box-shadow);
   padding: 5px;
 }
+
+.emptyLink {
+  color: var(--a);
+  text-decoration: none;
+  transition: 0.2s;
+  font-size: 16px;
+}
+
+.emptyLink:hover {
+  color: var(--a-hover);
+}
+
+.emptyTextContainer {
+  text-align: center;
+}

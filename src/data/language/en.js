@@ -113,7 +113,9 @@ export const en = {
             alert: '✅ All resources cleared successfully!',
         },
         MyMemories: {
-            emptyMemories: 'No available memories found. Go to "MEMORIES", click on the required card and fill in the details. The completed cards will be displayed here!',
+            emptyMemoriesPart1: 'No available memories found. Go to',
+            emptyMemoriesLink: 'MEMORIES',
+            emptyMemoriesPart3: ', click on the required card and fill in the details. The completed cards will be displayed here!',
         },
         MemoriesTable: {
             name: 'Name',
