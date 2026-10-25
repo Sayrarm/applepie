@@ -1118,7 +1118,7 @@ export const bannersDataFull = [
     id: 101,
     name: "Nightly Overflow",
     image: "../assets/banners/nightly-prev.png",
-    cardIds: [],
+    cardIds: [433],
     startDate: "2026-10-27T05:00:00",
     endDate: "2026-11-05T04:59:59",
     rerun: false,

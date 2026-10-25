@@ -7684,13 +7684,11 @@ export const memoriesData = [
     link: "",
     release: "2026-10-21",
   },
-
-    /*
   {
     id: 433,
     char: "Rafayel",
     name: "Nightly Overflow",
-    image: "../assets/pictures/Rafayel/Rafayel_433.jpg",
+    image: "../assets/pictures/Rafayel/Rafayel_433.png",
     imageSmall: "../assets/pictures/card-middle/Rafayel_433.png",
     stellaName: "",
     placementName: "",
@@ -7698,11 +7696,10 @@ export const memoriesData = [
     rarityName: "5-star",
     rarity: "../assets/icons/5-star.png",
     rarityStars: 5,
-    stella: "../assets/icons/violet.png",
+    stella: "../assets/icons/who-is-who.png",
     placement: "../assets/icons/lunar.png",
-    talent: "../assets/icons/atk.png",
+    talent: "../assets/icons/who-is-who.png",
     link: "",
     release: "2026-10-27",
   },
-  */
 ];
