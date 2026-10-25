@@ -23,7 +23,7 @@ import {
 } from "@localstorage";
 import CustomBannerModal from "./CustomBannerModal.jsx";
 import { useScreenshot } from "@hooks/useScreenshot";
-import { Link } from "react-router-dom";
+import {Link, useSearchParams} from "react-router-dom";
 
 // --- Утилиты дат ---
 const applyTimezone = (dateInput, serverOffset, isPredict = false) => {
@@ -351,14 +351,19 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
     const { timezone } = useTimezone();
     const { t, i18n } = useTranslation();
     const { isCapturing, captureScreenshot } = useScreenshot();
+    const [searchParams, setSearchParams] = useSearchParams();
 
-    const [selectedYear, setSelectedYear] = useState(
-        () => initialDate.getFullYear(),
-    );
-    const [viewMode, setViewMode] = useState("year");
-    const [selectedMonth, setSelectedMonth] = useState(
-        () => initialDate.getMonth(),
-    );
+    // читаем из URL при инициализации
+    const initialView = searchParams.get("view") === "month" ? "month" : "year";
+    const initialYear = Number(searchParams.get("year")) || initialDate.getFullYear();
+    const initialMonth = searchParams.has("month")
+        ? Number(searchParams.get("month"))
+        : initialDate.getMonth();
+
+    const [selectedYear, setSelectedYear] = useState(initialYear);
+    const [viewMode, setViewMode] = useState(initialView);
+    const [selectedMonth, setSelectedMonth] = useState(initialMonth);
+
     const [isDragging, setIsDragging] = useState(false);
     const [dragAction, setDragAction] = useState(null);
 
@@ -400,6 +405,22 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
 
     // ===== СОСТОЯНИЕ ДЛЯ КАСТОМНОГО БАННЕРА =====
     const [isCustomModalOpen, setIsCustomModalOpen] = useState(false);
+
+    // синхронизация состояния -> URL
+    useEffect(() => {
+        const params = new URLSearchParams(searchParams);
+        if (viewMode === "month") {
+            params.set("view", "month");
+            params.set("year", String(selectedYear));
+            params.set("month", String(selectedMonth));
+        } else {
+            params.delete("view");
+            params.delete("month");
+            params.set("year", String(selectedYear));
+        }
+        setSearchParams(params, { replace: true });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [viewMode, selectedYear, selectedMonth]);
 
     // Сброс выбранных дней при выходе из режима
     useEffect(() => {
