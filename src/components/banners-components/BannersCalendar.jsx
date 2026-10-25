@@ -6,7 +6,7 @@ import {
     getBannerTypeLabel,
 } from "./bannerColors.js";
 import { getImageUrl } from "@hooks";
-import {memoriesData} from "@data";
+import { memoriesData } from "@data";
 import {
     CardList,
     ModalWindow,
@@ -19,12 +19,11 @@ import {
     getPredicts,
     addPredict,
     clearPredicts,
-    savePredicts,
     removePredict
 } from "@localstorage";
 import CustomBannerModal from "./CustomBannerModal.jsx";
 import { useScreenshot } from "@hooks/useScreenshot";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // --- Утилиты дат ---
 const applyTimezone = (dateInput, serverOffset, isPredict = false) => {
@@ -363,6 +362,26 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
     const [isDragging, setIsDragging] = useState(false);
     const [dragAction, setDragAction] = useState(null);
 
+    // ===== ТАЧ-ЛОГИКА =====
+    const monthGridRef = useRef(null);
+    const touchStateRef = useRef({
+        active: false,
+        startX: 0,
+        startY: 0,
+        startTime: 0,
+        startDayTime: null,
+        longPressFired: false,
+        dragAction: null,
+        lastDayTime: null,
+        moved: false,
+    });
+    const longPressTimerRef = useRef(null);
+    const lastTouchTimeRef = useRef(0);
+    const [touchDragging, setTouchDragging] = useState(false);
+
+    const LONG_PRESS_MS = 100;
+    const TAP_MOVE_THRESHOLD = 8;
+
     // СТЕЙТ ДЛЯ ПОКАЗА/СКРЫТИЯ ПРЕДИКТОВ
     const [showPredicts, setShowPredicts] = useState(true);
 
@@ -386,11 +405,20 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
     useEffect(() => {
         if (!editMode) {
             setSelectedDays([]);
-            setSelectedPredictId(null); // Сбрасываем выбранный предикт при выходе из режима
+            setSelectedPredictId(null);
         }
     }, [editMode]);
 
-    // ОБНОВЛЕНО: Добавляем предикты только если showPredicts === true
+    // Очистка таймера при размонтировании
+    useEffect(() => {
+        return () => {
+            if (longPressTimerRef.current) {
+                clearTimeout(longPressTimerRef.current);
+                longPressTimerRef.current = null;
+            }
+        };
+    }, []);
+
     const allBanners = useMemo(() => {
         if (showPredicts) {
             return [...banners, ...predicts];
@@ -454,21 +482,23 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
         setViewMode("year");
     };
 
-    // ===== ОБРАБОТЧИКИ РЕЖИМА РЕДАКТИРОВАНИЯ =====
-    const handleDayClick = (day) => {
-        if (!editMode) return;
-        const time = day.getTime();
-        setSelectedDays((prev) =>
-            prev.includes(time)
-                ? prev.filter((t) => t !== time)
-                : [...prev, time]
-        );
+    // ===== ОБЩИЕ ХЭНДЛЕРЫ =====
+    const applyDayAction = (time, action) => {
+        if (time == null) return;
+        setSelectedDays((prev) => {
+            const has = prev.includes(time);
+            if (action === "add") return has ? prev : [...prev, time];
+            if (action === "remove") return has ? prev.filter((t) => t !== time) : prev;
+            return has ? prev.filter((t) => t !== time) : [...prev, time];
+        });
     };
 
-    // Новые функции для drag-and-drop:
-    const handleDayMouseDown = (day, e) => {
+    // ===== МЫШЬ (через pointer events) =====
+    const handleDayPointerDown = (day, e) => {
         if (!editMode) return;
-        e.preventDefault();
+        // Тач обрабатывается в touch-логике контейнера
+        if (e.pointerType === "touch") return;
+
         const time = day.getTime();
         const isAlreadySelected = selectedDays.includes(time);
 
@@ -478,16 +508,15 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
 
         // Сразу применяем действие к первому дню
         setSelectedDays((prev) => {
-            if (isAlreadySelected) {
-                return prev.filter((t) => t !== time);
-            } else {
-                return [...prev, time];
-            }
+            if (isAlreadySelected) return prev.filter((t) => t !== time);
+            return [...prev, time];
         });
     };
 
-    const handleDayMouseEnter = (day) => {
+    const handleDayPointerEnter = (day, e) => {
+        if (e.pointerType === "touch") return;
         if (!isDragging || !editMode) return;
+
         const time = day.getTime();
         const isAlreadySelected = selectedDays.includes(time);
 
@@ -498,16 +527,145 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
         }
     };
 
-    // Глобальный обработчик для отпускания мыши (чтобы сбросить isDragging)
+    // Глобальный pointerup — сбрасывает drag для мыши/пера
     useEffect(() => {
-        const handleGlobalMouseUp = () => {
+        const handleGlobalPointerUp = (e) => {
+            if (e.pointerType === "touch") return;
             setIsDragging(false);
             setDragAction(null);
         };
-        window.addEventListener("mouseup", handleGlobalMouseUp);
-        return () => window.removeEventListener("mouseup", handleGlobalMouseUp);
+        window.addEventListener("pointerup", handleGlobalPointerUp);
+        return () => window.removeEventListener("pointerup", handleGlobalPointerUp);
     }, []);
 
+    // ===== ТАЧ (на контейнере) =====
+    const getDayTimeFromPoint = (x, y) => {
+        const el = document.elementFromPoint(x, y);
+        if (!el) return null;
+        const dayEl = el.closest(`[data-day-time]`);
+        if (!dayEl) return null;
+        const val = dayEl.getAttribute("data-day-time");
+        return val ? Number(val) : null;
+    };
+
+    const cancelLongPressTimer = () => {
+        if (longPressTimerRef.current) {
+            clearTimeout(longPressTimerRef.current);
+            longPressTimerRef.current = null;
+        }
+    };
+
+    const handleGridTouchStart = (e) => {
+        if (!editMode) return;
+        if (e.touches.length !== 1) return;
+
+        const touch = e.touches[0];
+        const dayTime = getDayTimeFromPoint(touch.clientX, touch.clientY);
+        if (dayTime == null) return;
+
+        const st = touchStateRef.current;
+        st.active = true;
+        st.startX = touch.clientX;
+        st.startY = touch.clientY;
+        st.startTime = Date.now();
+        st.startDayTime = dayTime;
+        st.longPressFired = false;
+        st.dragAction = null;
+        st.lastDayTime = null;
+        st.moved = false;
+
+        cancelLongPressTimer();
+        longPressTimerRef.current = setTimeout(() => {
+            const s = touchStateRef.current;
+            if (!s.active || s.moved) return;
+
+            s.longPressFired = true;
+            setTouchDragging(true);
+
+            const has = selectedDays.includes(s.startDayTime);
+            s.dragAction = has ? "remove" : "add";
+            applyDayAction(s.startDayTime, s.dragAction);
+            s.lastDayTime = s.startDayTime;
+
+            if (navigator.vibrate) navigator.vibrate(15);
+        }, LONG_PRESS_MS);
+    };
+
+    const handleGridTouchEnd = () => {
+        if (!editMode) return;
+        const st = touchStateRef.current;
+        if (!st.active) return;
+
+        cancelLongPressTimer();
+
+        const elapsed = Date.now() - st.startTime;
+        const wasLongPress = st.longPressFired || elapsed >= LONG_PRESS_MS;
+        const moved = st.moved;
+
+        if (!wasLongPress && !moved && st.startDayTime != null) {
+            applyDayAction(st.startDayTime, "toggle");
+        }
+
+        st.active = false;
+        st.startDayTime = null;
+        st.longPressFired = false;
+        st.dragAction = null;
+        st.lastDayTime = null;
+        st.moved = false;
+        setTouchDragging(false);
+        lastTouchTimeRef.current = Date.now();
+    };
+
+    const handleGridTouchCancel = () => {
+        cancelLongPressTimer();
+        const st = touchStateRef.current;
+        st.active = false;
+        st.startDayTime = null;
+        st.longPressFired = false;
+        st.dragAction = null;
+        st.lastDayTime = null;
+        st.moved = false;
+        setTouchDragging(false);
+        lastTouchTimeRef.current = Date.now();
+    };
+
+    // ===== НАТИВНЫЙ TOUCHMOVE (passive: false) =====
+    useEffect(() => {
+        const el = monthGridRef.current;
+        if (!el) return;
+
+        const onMove = (e) => {
+            if (!editMode) return;
+            const st = touchStateRef.current;
+            if (!st.active) return;
+
+            const touch = e.touches[0];
+            const dx = touch.clientX - st.startX;
+            const dy = touch.clientY - st.startY;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+
+            if (!st.longPressFired) {
+                if (dist > TAP_MOVE_THRESHOLD) {
+                    st.moved = true;
+                    cancelLongPressTimer();
+                }
+                return;
+            }
+
+            if (e.cancelable) e.preventDefault();
+
+            const dayTime = getDayTimeFromPoint(touch.clientX, touch.clientY);
+            if (dayTime != null && dayTime !== st.lastDayTime) {
+                applyDayAction(dayTime, st.dragAction);
+                st.lastDayTime = dayTime;
+            }
+        };
+
+        el.addEventListener("touchmove", onMove, { passive: false });
+        return () => el.removeEventListener("touchmove", onMove);
+    }, [editMode]);
+
+    // ===== ПРЕДИКТЫ =====
     const handleAddPredict = (banner) => {
         if (selectedDays.length === 0) return;
 
@@ -688,8 +846,12 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
                     {/* Сетка календаря */}
                     <div className={styles.monthGridWrapper}>
                         <div
+                            ref={monthGridRef}
                             className={styles.monthGrid}
                             style={{ gridTemplateRows: gridTemplateRows }}
+                            onTouchStart={handleGridTouchStart}
+                            onTouchEnd={handleGridTouchEnd}
+                            onTouchCancel={handleGridTouchCancel}
                         >
                             {Array.from({ length: totalCells }).map((_, i) => {
                                 const dayIndex = i - firstDayOfWeek;
@@ -705,15 +867,9 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
                                 return (
                                     <div
                                         key={i}
-                                        onMouseDown={(e) => isCurrentMonth && handleDayMouseDown(day, e)}
-                                        onMouseEnter={() => isCurrentMonth && handleDayMouseEnter(day)}
-                                        onClick={(e) => {
-                                            // Обычный клик (без перетаскивания) — переключаем день
-                                            // Но мы уже обработали нажатие в onMouseDown, поэтому onClick здесь можно не использовать,
-                                            // чтобы избежать двойного срабатывания.
-                                            // Или можно оставить для одиночного клика, если isDragging === false.
-                                            // Но так как mousedown уже все сделал, onClick не нужен.
-                                        }}
+                                        data-day-time={isCurrentMonth ? day.getTime() : undefined}
+                                        onPointerDown={(e) => isCurrentMonth && handleDayPointerDown(day, e)}
+                                        onPointerEnter={(e) => isCurrentMonth && handleDayPointerEnter(day, e)}
                                         className={[
                                             styles.monthDay,
                                             !isCurrentMonth ? styles.monthDayOutside : "",
@@ -721,6 +877,7 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
                                             isToday ? styles.monthDayToday : "",
                                             isSelectedDay ? styles.monthDaySelected : "",
                                             editMode && isCurrentMonth ? styles.monthDayEdit : "",
+                                            editMode && isCurrentMonth ? styles.monthDayTouch : "",
                                         ].filter(Boolean).join(" ")}
                                     >
                                         {isCurrentMonth ? day.getDate() : ""}
@@ -732,21 +889,24 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
                         {/* Слой с полосами баннеров */}
                         <div
                             className={styles.monthBannersLayer}
-                            style={{ gridTemplateRows: gridTemplateRows }}
+                            style={{
+                                gridTemplateRows: gridTemplateRows,
+                                pointerEvents: editMode ? "none" : "auto",
+                            }}
                         >
                             {bannerRows.map((seg, idx) => {
                                 const { banner, color, typeLabel, imageUrl, startCol, span, row, lane } = seg;
                                 const chars = getBannerCharacters(banner);
                                 const tooltip = `${banner.name} — ${typeLabel}${chars.length > 0 ? ` (${chars.join(", ")})` : ""}`;
-                                const isPredictBanner = banner.isPredict || banner.isCustom; // Проверяем, предикт ли это
-                                const isSelectedForDelete = selectedPredictId === banner.id; // Выбран ли этот предикт для удаления
+                                const isPredictBanner = banner.isPredict || banner.isCustom;
+                                const isSelectedForDelete = selectedPredictId === banner.id;
 
                                 return (
                                     <div
                                         key={`${banner.id}-${row}-${idx}`}
                                         className={[
                                             styles.bannerBar,
-                                            isSelectedForDelete ? styles.bannerBarSelected : "", // Новый класс для выделения
+                                            isSelectedForDelete ? styles.bannerBarSelected : "",
                                         ].filter(Boolean).join(" ")}
                                         style={{
                                             gridColumn: `${startCol} / span ${span}`,
@@ -759,8 +919,7 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
                                             if (!editMode) {
                                                 showMemoriesModal(banner);
                                             } else {
-                                                e.stopPropagation(); // Блокируем клик по дню
-                                                // В режиме редактирования выбираем предикт для удаления
+                                                e.stopPropagation();
                                                 if (isPredictBanner) {
                                                     setSelectedPredictId(isSelectedForDelete ? null : banner.id);
                                                 }

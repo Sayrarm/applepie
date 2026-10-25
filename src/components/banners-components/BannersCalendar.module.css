@@ -335,6 +335,16 @@
     user-select: none;
 }
 
+.monthDayTouch {
+    /* touch-action: none — гарантирует, что touchmove/touchend доходят до JS.
+       Без этого браузер "съедает" touchmove при скролле, и тап превращается
+       в долгий long-press. */
+    touch-action: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+}
+
 .monthDayEdit:hover {
     background: var(--bg-glass);
 }
