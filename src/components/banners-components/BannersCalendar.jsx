@@ -19,11 +19,13 @@ import {
     getPredicts,
     addPredict,
     clearPredicts,
-    removePredict
+    removePredict,
+    getShowPredicts,
+    saveShowPredicts
 } from "@localstorage";
 import CustomBannerModal from "./CustomBannerModal.jsx";
-import { useScreenshot } from "@hooks/useScreenshot";
-import {Link, useSearchParams} from "react-router-dom";
+import { useScreenshot } from "@hooks";
+import {useSearchParams} from "react-router-dom";
 
 // --- Утилиты дат ---
 const applyTimezone = (dateInput, serverOffset, isPredict = false) => {
@@ -388,7 +390,7 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
     const TAP_MOVE_THRESHOLD = 8;
 
     // СТЕЙТ ДЛЯ ПОКАЗА/СКРЫТИЯ ПРЕДИКТОВ
-    const [showPredicts, setShowPredicts] = useState(true);
+    const [showPredicts, setShowPredicts] = useState(getShowPredicts);
 
     // НОВЫЙ СТЕЙТ: выбранный предикт для удаления
     const [selectedPredictId, setSelectedPredictId] = useState(null);
@@ -405,6 +407,10 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
 
     // ===== СОСТОЯНИЕ ДЛЯ КАСТОМНОГО БАННЕРА =====
     const [isCustomModalOpen, setIsCustomModalOpen] = useState(false);
+
+    useEffect(() => {
+        saveShowPredicts(showPredicts);
+    }, [showPredicts]);
 
     // синхронизация состояния -> URL
     useEffect(() => {
@@ -779,7 +785,7 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
 
                     {/* КНОПКА ДЛЯ ПОКАЗА/СКРЫТИЯ ПРЕДИКТОВ В РЕЖИМЕ "ГОД" */}
                     <button
-                        onClick={() => setShowPredicts(!showPredicts)}
+                        onClick={() => setShowPredicts(prev => !prev)}
                         className={styles.predictButton}
                     >
                         {showPredicts ? t('BannersCalendar.hidePredicts') : t('BannersCalendar.showPredicts')}
@@ -848,7 +854,7 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
 
                         {/* КНОПКА ДЛЯ ПОКАЗА/СКРЫТИЯ ПРЕДИКТОВ В РЕЖИМЕ "МЕСЯЦ" */}
                         <button
-                            onClick={() => setShowPredicts(!showPredicts)}
+                            onClick={() => setShowPredicts(prev => !prev)}
                             className={styles.predictButton}
                         >
                             {showPredicts ? t('BannersCalendar.hidePredicts') : t('BannersCalendar.showPredicts')}

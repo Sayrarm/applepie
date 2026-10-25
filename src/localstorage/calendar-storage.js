@@ -1,6 +1,7 @@
 import {KEYS} from "./localStorageKeys.js";
 
 const STORAGE_KEY = KEYS.banners_calendar_predicts;
+const SHOW_PREDICTS_KEY = KEYS.banners_calendar_show_predicts;
 
 export const getPredicts = () => {
     try {
@@ -41,5 +42,24 @@ export const clearPredicts = () => {
     } catch (e) {
         console.error("Failed to clear predicts", e);
         return [];
+    }
+};
+
+export const getShowPredicts = () => {
+    try {
+        const data = localStorage.getItem(SHOW_PREDICTS_KEY);
+        // Если ничего не сохранено — по умолчанию показываем предикты
+        return data === null ? true : data === "true";
+    } catch (e) {
+        console.error("Failed to load showPredicts", e);
+        return true;
+    }
+};
+
+export const saveShowPredicts = (value) => {
+    try {
+        localStorage.setItem(SHOW_PREDICTS_KEY, String(value));
+    } catch (e) {
+        console.error("Failed to save showPredicts", e);
     }
 };

@@ -9,6 +9,7 @@ export const KEYS = {
   SHOW_USER_INFO: "show_user_info", //показывать информацию о карточке (уровень, ранг, возвышение)
   PROTOCORES: "protocores", // все протокоры
   banners_calendar_predicts: "banners_calendar_predicts",
+  banners_calendar_show_predicts: "banners_calendar_show_predicts",
 
   //ui
   THEME: "theme", //темная/светлая тема
