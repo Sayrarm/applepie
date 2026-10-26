@@ -194,7 +194,7 @@ export const eventsData = [
   {
     id: 25,
     name: "New plushie",
-    image: "../assets/main-page/events/baby-shark-tu-du-tu-du-du.png",
+    image: "../assets/main-page/events/baby-shark-plushie.png",
     startDate: "2026-10-26T05:00:00",
     endDate: "2026-11-08T04:59:59",
     active: true,
