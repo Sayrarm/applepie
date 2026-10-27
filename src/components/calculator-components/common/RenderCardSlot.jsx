@@ -31,6 +31,7 @@ function RenderCardSlot({
     const cardData = card ? getCardData(card) : null;
     const baseStats = cardData?.baseStats;
     const protocores = cardData?.protocores;
+    const finalStats = cardData?.stats;
 
     // Считаем прирост
     const dmgBoostGrowth = cardData
@@ -57,45 +58,49 @@ function RenderCardSlot({
         );
     };
 
-    // Блок статов (общий для full и mini)
-    const renderBaseStats = () => {
-        if (!baseStats) return null;
+    // Блок статов (теперь принимает нужный объект статов)
+    const renderBaseStats = (statsToShow, isFinal = false) => {
+        if (!statsToShow) return null;
         return (
             <div className={styles.baseStatsContainer}>
                 {/* Ряд 1: HP, ATK, DEF */}
                 <div className={styles.statsRow}>
                     <div className={`${styles.statCell} ${highlightedStat === "hp" ? styles.highlight : ""}`}>
                         <div className={styles.statIconWrap}>{statIcon("hp")}</div>
-                        <div className={styles.statValue}>{baseStats.hp}</div>
+                        <div className={styles.statValue}>{statsToShow.hp}</div>
                     </div>
                     <div className={`${styles.statCell} ${highlightedStat === "atk" ? styles.highlight : ""}`}>
                         <div className={styles.statIconWrap}>{statIcon("atk")}</div>
-                        <div className={styles.statValue}>{baseStats.atk}</div>
+                        <div className={styles.statValue}>{statsToShow.atk}</div>
                     </div>
                     <div className={`${styles.statCell} ${highlightedStat === "def" ? styles.highlight : ""}`}>
                         <div className={styles.statIconWrap}>{statIcon("def")}</div>
-                        <div className={styles.statValue}>{baseStats.def}</div>
+                        <div className={styles.statValue}>{statsToShow.def}</div>
                     </div>
                 </div>
 
                 {/* Ряд 2: CR, CD, DMG Boost */}
                 <div className={styles.statsRow}>
-                    {baseStats.critRate > 0 && (
+                    {statsToShow.critRate > 0 && (
                         <div className={`${styles.statCell} ${highlightedStat === "critRate" ? styles.highlight : ""}`}>
                             <div className={styles.statIconWrap}>{statIcon("critRate")}</div>
-                            <div className={styles.statValue}>{baseStats.critRate.toFixed(2)}%</div>
+                            <div className={styles.statValue}>{statsToShow.critRate.toFixed(2)}%</div>
                         </div>
                     )}
-                    {baseStats.critDmg > 0 && (
+                    {statsToShow.critDmg > 0 && (
                         <div className={`${styles.statCell} ${highlightedStat === "critDmg" ? styles.highlight : ""}`}>
                             <div className={styles.statIconWrap}>{statIcon("critDmg")}</div>
-                            <div className={styles.statValue}>{baseStats.critDmg.toFixed(2)}%</div>
+                            <div className={styles.statValue}>{statsToShow.critDmg.toFixed(2)}%</div>
                         </div>
                     )}
                     <div className={`${styles.statCell} ${highlightedStat === "dmgBoost" ? styles.highlight : ""}`}>
                         <div className={styles.statIconWrap}>{statIcon("dmgBoost")}</div>
                         <div className={styles.statValue}>
-                            {`${baseStats.dmgBoost.toFixed(2)}%${dmgBoostGrowth > 0.01 ? ` + ${dmgBoostGrowth.toFixed(2)}%` : ""}`}
+                            {/* В мини-режиме (isFinal) показываем просто итоговое значение, без прироста */}
+                            {isFinal
+                                ? `${statsToShow.dmgBoost.toFixed(2)}%`
+                                : `${baseStats.dmgBoost.toFixed(2)}%${dmgBoostGrowth > 0.01 ? ` + ${dmgBoostGrowth.toFixed(2)}%` : ""}`
+                            }
                         </div>
                     </div>
                 </div>
@@ -116,7 +121,8 @@ function RenderCardSlot({
                             <Card data={card} isSmall={true} showUserInfo={true} linkToCard={true} />
                         </div>
                         <div className={styles.baseStatsContainer}>
-                            {renderBaseStats()}
+                            {/* Показываем финальные статы (base + protocores) */}
+                            {renderBaseStats(finalStats, true)}
                         </div>
                     </div>
                 ) : (
@@ -141,7 +147,8 @@ function RenderCardSlot({
                             <div className={styles.cardWrapper}>
                                 <Card data={card} isSmall={smallCard} showUserInfo={true} linkToCard={true} />
                             </div>
-                            {renderBaseStats()}
+                            {/* Показываем базовые статы + разбивку */}
+                            {renderBaseStats(baseStats, false)}
                         </div>
                     ) : (
                         <div className={styles.cardWrapper}>
