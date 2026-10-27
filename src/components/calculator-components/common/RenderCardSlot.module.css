@@ -143,7 +143,7 @@
 .baseStatsContainerMini {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* расстояние между рядами */
+    gap: 10px; /* расстояние между рядами */
     width: 100%;
 }
 
@@ -184,7 +184,7 @@
 }
 
 .statValueMini {
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1.1;
     white-space: nowrap; /* запрещаем перенос текста */
 }

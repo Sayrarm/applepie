@@ -938,4 +938,7 @@ export const STAT_ICONS = {
   critRate: { src: "../assets/icons/crit-rate.png", alt: "Crit Rate" },
   critDmg: { src: "../assets/icons/crit-dmg.png", alt: "Crit DMG" },
   dmgBoost: { src: "../assets/icons/dmg-boost-to-weakened.png", alt: "DMG Boost to Weakened" },
+  oathStrength: { src: "../assets/icons/oath-strength.png", alt: "Oath's Strength" },
+  oathRecoveryBoost: { src: "../assets/icons/oath-recovery-boost.png", alt: "Oath Recovery Boost" },
+  expeditedEnergyBoost: { src: "../assets/icons/expedited-energy-boost.png", alt: "Expedited Energy Boost" },
 };

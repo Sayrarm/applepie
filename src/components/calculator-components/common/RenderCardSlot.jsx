@@ -120,7 +120,27 @@ function RenderCardSlot({
                             }
                         </div>
                     </div>
+
+                    {variant === "mini" && (
+                        <>
+                            <div className={`${c.cell} ${highlightedStat === "oathStrength" ? styles.highlight : ""}`}>
+                                <div className={c.iconWrap}>{statIcon("oathStrength")}</div>
+                                <div className={c.value}>{statsToShow.oathStrength.toFixed(2)}%</div>
+                            </div>
+                            <div className={`${c.cell} ${highlightedStat === "oathRecoveryBoost" ? styles.highlight : ""}`}>
+                                <div className={c.iconWrap}>{statIcon("oathRecoveryBoost")}</div>
+                                <div className={c.value}>{statsToShow.oathRecoveryBoost.toFixed(2)}%</div>
+                            </div>
+                            <div className={`${c.cell} ${highlightedStat === "expeditedEnergyBoost" ? styles.highlight : ""}`}>
+                                <div className={c.iconWrap}>{statIcon("expeditedEnergyBoost")}</div>
+                                <div className={c.value}>{statsToShow.expeditedEnergyBoost.toFixed(2)}%</div>
+                            </div>
+                        </>
+                    )}
                 </div>
+
+                {/* Ряд 3: Oath Strength, Oath Recovery Boost, Expedited Energy Boost (ТОЛЬКО В MINI) */}
+
             </div>
         );
     };
