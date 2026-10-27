@@ -143,25 +143,25 @@
 .baseStatsContainerMini {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* расстояние между рядами */
     width: 100%;
 }
 
 .statsRowMini {
+    margin: 5px 0 10px 0;
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
     gap: 4px; /* расстояние между ячейками в ряду */
-    width: 100%;
+    max-width: 200px;
+    flex-wrap: wrap;
 }
 
 .statCellMini {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 10px;
     min-width: 0; /* важно, чтобы flex-элемент мог сжиматься и не ломал ряд */
-    padding: 2px 10px;
+    padding: 3px 10px;
     border: 1px solid var(--border-color, #333);
     border-radius: 4px;
     background: var(--background);
@@ -184,7 +184,7 @@
 }
 
 .statValueMini {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.1;
     white-space: nowrap; /* запрещаем перенос текста */
 }

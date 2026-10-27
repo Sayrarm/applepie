@@ -121,6 +121,7 @@ function RenderCardSlot({
                         </div>
                     </div>
 
+                    {/* Ряд 3: Oath Strength, Oath Recovery Boost, Expedited Energy Boost (ТОЛЬКО В MINI) */}
                     {variant === "mini" && (
                         <>
                             <div className={`${c.cell} ${highlightedStat === "oathStrength" ? styles.highlight : ""}`}>
@@ -138,8 +139,6 @@ function RenderCardSlot({
                         </>
                     )}
                 </div>
-
-                {/* Ряд 3: Oath Strength, Oath Recovery Boost, Expedited Energy Boost (ТОЛЬКО В MINI) */}
 
             </div>
         );
