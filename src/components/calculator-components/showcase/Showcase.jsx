@@ -239,7 +239,7 @@ function Showcase() {
                 <div className={styles.critDmgCell}>
                     <span>{finalStats.critDmg.toFixed(2)}%</span>
                     <small className={styles.critDmgSubtext}>
-                        {critDmgBase}% + <span>{critDmgExtra.toFixed(2)}%</span>
+                        {critDmgBase}%  <span>+ {critDmgExtra.toFixed(2)}%</span>
                     </small>
                 </div>
             )
