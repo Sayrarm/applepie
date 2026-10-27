@@ -1,7 +1,7 @@
-import styles from "../showcase/Showcase.module.css";
+import styles from "./RenderCardSlot.module.css";
 import { ProtocoreBlock, Card, useHighlight } from "@components";
 import { useTranslation } from "react-i18next";
-import {getDmgBoostGrowth, STAT_ICONS} from "@data";
+import { getDmgBoostGrowth, STAT_ICONS } from "@data";
 import { getImageUrl } from "@hooks";
 
 // Порядок отображения протокоров: Alpha/Gamma — слева, Beta/Delta — справа
@@ -22,6 +22,7 @@ function RenderCardSlot({
                             getCardData,
                             cardModalRef,
                             smallCard,
+                            miniMode = false,
                             showProtocores = true,
                             className,
                             showCardSlotEquipped = true,
@@ -56,16 +57,78 @@ function RenderCardSlot({
         );
     };
 
-    const cellReadOnly = (key, content, isHeader = false) => {
-        const Tag = isHeader ? "th" : "td";
-        const isHighlighted = highlightedStat === key;
+    // Блок статов (общий для full и mini)
+    const renderBaseStats = () => {
+        if (!baseStats) return null;
         return (
-            <Tag className={isHighlighted ? styles.highlight : ""}>
-                {content}
-            </Tag>
+            <div className={styles.baseStatsContainer}>
+                {/* Ряд 1: HP, ATK, DEF */}
+                <div className={styles.statsRow}>
+                    <div className={`${styles.statCell} ${highlightedStat === "hp" ? styles.highlight : ""}`}>
+                        <div className={styles.statIconWrap}>{statIcon("hp")}</div>
+                        <div className={styles.statValue}>{baseStats.hp}</div>
+                    </div>
+                    <div className={`${styles.statCell} ${highlightedStat === "atk" ? styles.highlight : ""}`}>
+                        <div className={styles.statIconWrap}>{statIcon("atk")}</div>
+                        <div className={styles.statValue}>{baseStats.atk}</div>
+                    </div>
+                    <div className={`${styles.statCell} ${highlightedStat === "def" ? styles.highlight : ""}`}>
+                        <div className={styles.statIconWrap}>{statIcon("def")}</div>
+                        <div className={styles.statValue}>{baseStats.def}</div>
+                    </div>
+                </div>
+
+                {/* Ряд 2: CR, CD, DMG Boost */}
+                <div className={styles.statsRow}>
+                    {baseStats.critRate > 0 && (
+                        <div className={`${styles.statCell} ${highlightedStat === "critRate" ? styles.highlight : ""}`}>
+                            <div className={styles.statIconWrap}>{statIcon("critRate")}</div>
+                            <div className={styles.statValue}>{baseStats.critRate.toFixed(2)}%</div>
+                        </div>
+                    )}
+                    {baseStats.critDmg > 0 && (
+                        <div className={`${styles.statCell} ${highlightedStat === "critDmg" ? styles.highlight : ""}`}>
+                            <div className={styles.statIconWrap}>{statIcon("critDmg")}</div>
+                            <div className={styles.statValue}>{baseStats.critDmg.toFixed(2)}%</div>
+                        </div>
+                    )}
+                    <div className={`${styles.statCell} ${highlightedStat === "dmgBoost" ? styles.highlight : ""}`}>
+                        <div className={styles.statIconWrap}>{statIcon("dmgBoost")}</div>
+                        <div className={styles.statValue}>
+                            {`${baseStats.dmgBoost.toFixed(2)}%${dmgBoostGrowth > 0.01 ? ` + ${dmgBoostGrowth.toFixed(2)}%` : ""}`}
+                        </div>
+                    </div>
+                </div>
+            </div>
         );
     };
 
+    // ===== MINI-РЕЖИМ =====
+    if (miniMode) {
+        return (
+            <div
+                className={`${styles.cardSlot} ${styles.cardSlotMini} ${!card ? styles.emptySlot : ""}`}
+                onClick={() => cardModalRef?.current?.showModal(placement, index)}
+            >
+                {card ? (
+                    <div className={styles.miniModeContainer}>
+                        <div className={styles.cardWrapper}>
+                            <Card data={card} isSmall={true} showUserInfo={true} linkToCard={true} />
+                        </div>
+                        <div className={styles.baseStatsContainer}>
+                            {renderBaseStats()}
+                        </div>
+                    </div>
+                ) : (
+                    <div className={styles.emptySlotContent}>
+                        <span className={styles.emptyLabel}>{t('RenderCardSlot.addButton', { placement: placement })}</span>
+                    </div>
+                )}
+            </div>
+        );
+    }
+
+    // ===== FULL-РЕЖИМ =====
     return (
         <div
             className={className || `${styles.cardSlot} ${!card ? styles.emptySlot : ""}`}
@@ -78,48 +141,7 @@ function RenderCardSlot({
                             <div className={styles.cardWrapper}>
                                 <Card data={card} isSmall={smallCard} showUserInfo={true} linkToCard={true} />
                             </div>
-
-                            {baseStats && (
-                                <div className={styles.baseStatsContainer}>
-                                    {/* Ряд 1: HP, ATK, DEF */}
-                                    <div className={styles.statsRow}>
-                                        <div className={`${styles.statCell} ${highlightedStat === "hp" ? styles.highlight : ""}`}>
-                                            <div className={styles.statIconWrap}>{statIcon("hp")}</div>
-                                            <div className={styles.statValue}>{baseStats.hp}</div>
-                                        </div>
-                                        <div className={`${styles.statCell} ${highlightedStat === "atk" ? styles.highlight : ""}`}>
-                                            <div className={styles.statIconWrap}>{statIcon("atk")}</div>
-                                            <div className={styles.statValue}>{baseStats.atk}</div>
-                                        </div>
-                                        <div className={`${styles.statCell} ${highlightedStat === "def" ? styles.highlight : ""}`}>
-                                            <div className={styles.statIconWrap}>{statIcon("def")}</div>
-                                            <div className={styles.statValue}>{baseStats.def}</div>
-                                        </div>
-                                    </div>
-
-                                    {/* Ряд 2: CR, CD, DMG Boost */}
-                                    <div className={styles.statsRow}>
-                                        {baseStats.critRate > 0 && (
-                                            <div className={`${styles.statCell} ${highlightedStat === "critRate" ? styles.highlight : ""}`}>
-                                                <div className={styles.statIconWrap}>{statIcon("critRate")}</div>
-                                                <div className={styles.statValue}>{baseStats.critRate.toFixed(2)}%</div>
-                                            </div>
-                                        )}
-                                        {baseStats.critDmg > 0 && (
-                                            <div className={`${styles.statCell} ${highlightedStat === "critDmg" ? styles.highlight : ""}`}>
-                                                <div className={styles.statIconWrap}>{statIcon("critDmg")}</div>
-                                                <div className={styles.statValue}>{baseStats.critDmg.toFixed(2)}%</div>
-                                            </div>
-                                        )}
-                                        <div className={`${styles.statCell} ${highlightedStat === "dmgBoost" ? styles.highlight : ""}`}>
-                                            <div className={styles.statIconWrap}>{statIcon("dmgBoost")}</div>
-                                            <div className={styles.statValue}>
-                                                {`${baseStats.dmgBoost.toFixed(2)}%${dmgBoostGrowth > 0.01 ? ` + ${dmgBoostGrowth.toFixed(2)}%` : ""}`}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            )}
+                            {renderBaseStats()}
                         </div>
                     ) : (
                         <div className={styles.cardWrapper}>

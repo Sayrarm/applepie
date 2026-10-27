@@ -33,6 +33,7 @@ function Showcase() {
     const [editingName, setEditingName] = useState("");
     const [editingTeamIndex, setEditingTeamIndex] = useState(null);
     const [longPressTimer, setLongPressTimer] = useState(null);
+    const [miniMode, setMiniMode] = useState(false);
     const {t} = useTranslation();
 
     const showcaseRef = useRef();
@@ -245,6 +246,13 @@ function Showcase() {
                     >
                         {t('Showcase.sendToOptimizerButton')}
                     </button>
+
+                    <button
+                        className={styles.miniModeButton}
+                        onClick={() => setMiniMode((prev) => !prev)}
+                    >
+                        {miniMode ? t('Showcase.miniModeOff') : t('Showcase.miniModeOn')}
+                    </button>
                 </div>
 
                 {/* Кнопки управления */}
@@ -357,6 +365,7 @@ function Showcase() {
                                                 getCardData={getCardDataWrapper}
                                                 cardModalRef={cardModalRef}
                                                 smallCard={false}
+                                                miniMode={miniMode}
                                             />
                                         </div>
                                     ))}
@@ -378,6 +387,7 @@ function Showcase() {
                                                 index={index}
                                                 getCardData={getCardDataWrapper}
                                                 cardModalRef={cardModalRef}
+                                                miniMode={miniMode}
                                             />
                                         </div>
                                     ))}

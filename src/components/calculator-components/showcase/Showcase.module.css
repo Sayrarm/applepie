@@ -91,7 +91,6 @@
   justify-content: space-between;
 }
 
-.emptyLabel,
 .screenshotButton,
 .clearButton,
 .teamNameButton,
@@ -107,18 +106,11 @@
     monospace;
 }
 
-.emptyLabel,
-.emptySlotContent {
-  text-transform: uppercase;
-  font-size: 17px;
-  text-align: center;
-  padding: 15px 0;
-}
-
 .companionSection {
   display: flex;
 }
 
+.miniModeButton,
 .screenshotButton,
 .clearButton,
 .sendToOptimizerButton {
@@ -138,6 +130,7 @@
   gap: 10px;
 }
 
+.miniModeButton:hover,
 .screenshotButton:hover,
 .clearButton:hover,
 .sendToOptimizerButton:hover {
@@ -150,45 +143,11 @@
   gap: 5px;
 }
 
-.cardSlot {
-  border: 1px solid var(--border-color, #333);
-  padding-top: 4px;
-  min-height: 409px;
-  min-width: 390px;
-  height: 100%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-.emptySlotContent,
-.noProtocores {
-  font-size: 18px;
-  color: var(--colorTextDark);
-}
-
-.emptySlotContent {
-  align-self: center;
-  transition: 0.3s;
-}
-
-.emptySlotContent:hover {
-  color: var(--a);
-}
-
 .rowLabel {
   padding: 0 10px;
   font-size: 20px;
   font-weight: bold;
   color: var(--a);
-}
-
-.protocoresContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  padding-right: 5px;
-  padding-bottom: 4px;
 }
 
 .cardInfo {
@@ -198,15 +157,6 @@
   padding: 5px;
   margin: 5px 0;
   font-size: 18px;
-}
-
-.noProtocores {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 200px;
-  height: 310px;
 }
 
 .lunarCardsRow {
@@ -228,75 +178,6 @@
   padding: 0 5px;
   gap: 5px;
   display: flex;
-}
-
-.cardSlotEquipped {
-  height: 100%;
-  max-height: 409px;
-  padding: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/************************************************/
-
-/* Контейнер для всех статов (колонка) */
-.baseStatsContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 2px; /* расстояние между рядами */
-  width: 100%;
-}
-
-/* Один ряд (строка) */
-.statsRow {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  gap: 4px; /* расстояние между ячейками в ряду */
-  width: 100%;
-}
-
-/* Одна ячейка */
-.statCell {
-  display: flex;
-  align-items: center;
-  justify-content: center; /* или flex-start, если хочешь прижать влево */
-  min-width: 0; /* важно, чтобы flex-элемент мог сжиматься и не ломал ряд */
-  padding: 2px 3px;
-  border: 1px solid var(--border-color, #333);
-  border-radius: 4px;
-  background: var(--background);
-  text-align: center;
-  transition: background 0.15s;
-  color: var(--colorText);
-}
-
-/* Иконка */
-.statIconWrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 4px; /* отступ между иконкой и текстом */
-}
-
-.statIconWrap img {
-  width: 14px; /* можно подогнать под размер карточки */
-  height: 14px;
-  object-fit: contain;
-}
-
-/* Значение */
-.statValue {
-  font-size: 11px;
-  line-height: 1.1;
-  white-space: nowrap; /* запрещаем перенос текста */
-}
-
-.highlight {
-  background: var(--background-color);
-  transition: background 0.15s;
 }
 
 /******************************MEDIA********************************/
@@ -334,10 +215,6 @@
 
   .container {
     zoom: 0.29;
-  }
-
-  .cardWrapper {
-    zoom: 1.6;
   }
 
 }
