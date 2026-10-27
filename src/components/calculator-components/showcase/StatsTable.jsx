@@ -16,7 +16,12 @@ function StatsTable({ stats }) {
                 onMouseLeave={() => setHighlightedStat(null)}
                 className={isHighlighted ? styles.highlight : ""}
             >
-                {content}
+                {/* Если контент передан как React-узел (для многострочности), оборачиваем в div */}
+                {!isHeader && typeof content === "object" ? (
+                    <div className={styles.cellContent}>{content}</div>
+                ) : (
+                    content
+                )}
             </Tag>
         );
     };
@@ -36,7 +41,8 @@ function StatsTable({ stats }) {
                 {cell("atk", "ATK", true)}
                 {cell("atk", stats.atk)}
                 {cell("critDmg", "Crit DMG", true)}
-                {cell("critDmg", `${stats.critDmg.toFixed(2)}%`)}
+                {/* СЮДА МЫ ПЕРЕДАДИМ JSX ИЗ SHOWCASE */}
+                {cell("critDmg", stats.critDmgContent)}
                 {cell("oathRecoveryBoost", "Oath Recovery Boost", true)}
                 {cell("oathRecoveryBoost", `${stats.oathRecoveryBoost.toFixed(2)}%`)}
             </tr>

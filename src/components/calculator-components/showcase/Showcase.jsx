@@ -221,6 +221,27 @@ function Showcase() {
         return calculateFinalStatsWithAffinity(totalStats, affinityBonus);
     }, [totalStats, affinityBonus]);
 
+    const critDmgBase = 150; // Базовый бонус из applyBaseCritDmgBonus
+    // Считаем, сколько процентов крит. урона дали карточки/протокоры
+    const critDmgExtra = totalStats.critDmg;
+
+    // Создаем объект для таблицы, копируя finalStats и добавляя JSX для critDmg
+    const tableStats = useMemo(() => {
+        if (!finalStats) return null;
+
+        return {
+            ...finalStats,
+            critDmgContent: (
+                <div className={styles.critDmgCell}>
+                    <span>{finalStats.critDmg.toFixed(2)}%</span>
+                    <small className={styles.critDmgSubtext}>
+                        {critDmgBase}% + <span>{critDmgExtra.toFixed(2)}%</span>
+                    </small>
+                </div>
+            )
+        };
+    }, [finalStats, critDmgExtra]);
+
     return (
         <HighlightProvider>
             <div className={styles.wrapper}>
@@ -336,7 +357,7 @@ function Showcase() {
                             </div>
 
                             <div>
-                                <StatsTable stats={finalStats}/>
+                                <StatsTable stats={tableStats}/>
 
                                 <div className={styles.bonuses}>
                                     <AffinitySelect

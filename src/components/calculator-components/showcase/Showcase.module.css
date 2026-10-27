@@ -180,6 +180,23 @@
   display: flex;
 }
 
+.critDmgCell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.1;
+}
+
+.critDmgSubtext {
+  font-size: 10px;
+  font-weight: bold;
+  white-space: nowrap;
+  color: var(--colorTextGrayNote) !important;
+}
+
+.critDmgSubtext span {
+  color: var(--green-button) !important;
+}
 /******************************MEDIA********************************/
 
 @media screen and (max-width: 1200px) {
