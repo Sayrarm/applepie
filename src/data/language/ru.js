@@ -420,6 +420,8 @@ export const ru = {
             addTeamButton: '+ Добавить команду',
             titleModalRename: 'Переименовать команду',
             saveButton: 'Сохранить',
+            miniModeOn: "Стандарт режим",
+            miniModeOff: "Мини режим"
         },
         ChooseCompanion: {
             addButton: 'Добавить Компаньона',

@@ -422,6 +422,8 @@ export const en = {
             addTeamButton: '+ Add Team',
             titleModalRename: 'Rename Team',
             saveButton: 'Save',
+            miniModeOn: "Full mode",
+            miniModeOff: "Mini mode"
         },
         ChooseCompanion: {
             addButton: 'Add Companion',
