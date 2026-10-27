@@ -2,6 +2,7 @@ export const KEYS = {
   OPTIMIZER: "optimizer_data",
   MEMORY_OPTIMIZER: "memory_optimizer_data",
   SHOWCASE: "showcase_teams", //витрина(шоукейс) команды
+  SHOWCASE_MINI_MODE: "showcase_mini_mode", // mini/full режим витрины
   ACTIVE_TEAM_KEY: 'showcase_active_team_id',
   CALC_RESULT: "farm_goals", //трекер
   TABLE_SORT_KEY: "mymemories_table_sort", //фильтр таблицы в MyMemories

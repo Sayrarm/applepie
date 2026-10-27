@@ -100,7 +100,9 @@ export {
   createDefaultTeam,
   getShowcaseTeamsOrDefault,
   getActiveTeamId,
-  saveActiveTeamId
+  saveActiveTeamId,
+  getShowcaseMiniMode,
+  saveShowcaseMiniMode
 } from "./showcase-storage.js";
 export {
   getSelectedChar,

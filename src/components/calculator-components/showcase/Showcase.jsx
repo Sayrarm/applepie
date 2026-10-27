@@ -7,7 +7,7 @@ import {
     deleteShowcaseTeam,
     createDefaultTeam,
     getActiveTeamId,
-    saveActiveTeamId, loadTeamIntoOptimizer,
+    saveActiveTeamId, loadTeamIntoOptimizer, getShowcaseMiniMode, saveShowcaseMiniMode,
 } from "@localstorage";
 import {
     ModalWindow,
@@ -33,7 +33,7 @@ function Showcase() {
     const [editingName, setEditingName] = useState("");
     const [editingTeamIndex, setEditingTeamIndex] = useState(null);
     const [longPressTimer, setLongPressTimer] = useState(null);
-    const [miniMode, setMiniMode] = useState(false);
+    const [miniMode, setMiniMode] = useState(() => getShowcaseMiniMode());
     const {t} = useTranslation();
 
     const showcaseRef = useRef();
@@ -53,6 +53,10 @@ function Showcase() {
         const idx = initialTeams.findIndex((t) => String(t.id) === String(savedId));
         return idx >= 0 ? idx : 0;
     });
+
+    useEffect(() => {
+        saveShowcaseMiniMode(miniMode);
+    }, [miniMode]);
 
     useEffect(() => {
         const activeTeam = teams[activeTeamIndex];

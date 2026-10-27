@@ -1,6 +1,7 @@
 export const STORAGE_KEYS = [
     // Showcase
     "showcase_teams",
+    "showcase_mini_mode",
 
     //Оптимайзер
     "optimizer_data",

@@ -128,3 +128,13 @@ export function saveActiveTeamId(id) {
     // ignore
   }
 }
+
+// ===== MINI / FULL РЕЖИМ ВИТРИНЫ =====
+export function getShowcaseMiniMode() {
+  const value = get(KEYS.SHOWCASE_MINI_MODE);
+  return Boolean(value);
+}
+
+export function saveShowcaseMiniMode(miniMode) {
+  return set(KEYS.SHOWCASE_MINI_MODE, Boolean(miniMode));
+}
