@@ -6,6 +6,7 @@
 
 .selectAffinityContainer {
   width: 150px;
+  z-index: 9999;
 }
 
 .selectAffinityContainer [class$="-control"] {
