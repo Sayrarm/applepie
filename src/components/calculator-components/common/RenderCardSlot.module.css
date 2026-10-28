@@ -122,6 +122,12 @@
             monospace;
 }
 
+.emptySlot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .protocoresContainer {
     display: flex;
     flex-direction: column;
