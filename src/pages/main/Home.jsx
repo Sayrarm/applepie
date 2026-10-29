@@ -68,6 +68,9 @@ function Home() {
 
                 <h2 className={styles.h2}>{t('main.titleBP')}</h2>
 
+                {activeBattlePass.length === 0 && (
+                    <div className={styles.h3}>{t('main.noBPText')}</div>
+                )}
 
                 {activeBattlePass.map((bp) => (
                     <BannerForHome key={bp.id} banner={bp}/>
