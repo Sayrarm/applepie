@@ -6,7 +6,6 @@ import {
     ScheduleBlock,
     HunterContestBlock,
     EventsBlock,
-    BattlePassBlock,
     FarmGoalTracker,
 } from "@components";
 import {bannersDataFull, eventsData, battlePassData} from "@data";

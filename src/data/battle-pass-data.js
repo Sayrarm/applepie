@@ -2,7 +2,7 @@ export const battlePassData = [
   {
     id: 1,
     name: "Promise: 1",
-    image: "../assets/battle-pass/banner-na.png",
+    image: "../assets/battle-pass/promise-1.png",
     cardIds: [322],
     startDate: "2024-01-18T09:00:00",
     endDate: "2024-03-16T04:59:59",

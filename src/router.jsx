@@ -33,7 +33,7 @@ import {
   Showcase,
   TeamOptimizer
 } from "@components";
-import {bannersDataFull} from "@data";
+import {bannersDataFull, battlePassData} from "@data";
 
 const basename = import.meta.env.BASE_URL;
 
@@ -58,6 +58,7 @@ export const router = createBrowserRouter(
           children: [
             { index: true, element: <Navigate to="all-banners" replace /> },
             { path: "all-banners", element: <BannerList banners={bannersDataFull} showFilters={true} /> },
+            { path: "all-promises", element: <BannerList banners={battlePassData} showFilters={true} /> },
             { path: "banners-calendar", element: <CalendarPage /> },
           ],
         },

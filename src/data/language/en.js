@@ -617,6 +617,7 @@ export const en = {
         },
         Banners: {
             allBanners: 'All banners',
+            allPromises: 'All Promises',
             calendar: 'Calendar',
         },
         CalendarPage: {

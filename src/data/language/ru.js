@@ -615,6 +615,7 @@ export const ru = {
         },
         Banners: {
             allBanners: 'Все баннеры',
+            allPromises: 'Все Промисы',
             calendar: 'Календарь',
         },
         CalendarPage: {

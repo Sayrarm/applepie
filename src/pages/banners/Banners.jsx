@@ -13,6 +13,10 @@ function AllBannersPage() {
                   {t('Banners.allBanners')}
               </NavLink>
               <NavLink className={({isActive}) => `${styles.tabButton} ${isActive ? styles.active : ""}`}
+                       to="/banners-history/all-promises">
+                  {t('Banners.allPromises')}
+              </NavLink>
+              <NavLink className={({isActive}) => `${styles.tabButton} ${isActive ? styles.active : ""}`}
                        to="/banners-history/banners-calendar">
                   {t('Banners.calendar')}
               </NavLink>

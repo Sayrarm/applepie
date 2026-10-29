@@ -92,7 +92,6 @@ export { default as ScheduleBlock } from "./main-components/schedule/ScheduleBlo
 export { default as WishWellBlock } from "./main-components/wishwellshop/WishWellBlock.jsx";
 
 export { default as BannerForHome } from "./main-components/BannerForHome.jsx";
-export { default as BattlePassBlock } from "./main-components/BattlePassBlock.jsx";
 export { default as DailyWeeklyBlock } from "./main-components/DailyWeeklyBlock.jsx";
 export { default as EventsBlock } from "./main-components/EventsBlock.jsx";
 export { default as DynamicImage } from "./main-components/DynamicImage.jsx";
