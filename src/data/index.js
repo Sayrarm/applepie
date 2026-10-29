@@ -41,7 +41,7 @@ export { wuCategories } from "./lore-data/wu-categories.js";
 export { wuData } from "./lore-data/wu-data.js";
 
 //main-page-data
-export { battlePassData } from "./main-page-data/battle-pass-data.js";
+export { battlePassData } from "./battle-pass-data.js";
 export { eventsData } from "./main-page-data/events-data.js";
 export { hunterContestBuffs } from "./main-page-data/hunter-contest-buffs.js";
 

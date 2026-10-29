@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import styles from "./ObtainInfo.module.css";
 import { ModalWindow, BannerList } from "@components";
 import { getImageUrl } from "@hooks";
-import { bannersDataFull } from "@data";
+import {bannersDataFull, battlePassData} from "@data";
 import { useTranslation } from "react-i18next";
 
 function ObtainInfo({ cardId, obtainData }) {
@@ -20,8 +20,16 @@ function ObtainInfo({ cardId, obtainData }) {
     b.cardIds.includes(Number(cardId)),
   );
 
+    // Находим ВСЕ Promise баннеры, где есть эта карточка
+    const promise = battlePassData.filter((b) =>
+        b.cardIds.includes(Number(cardId)),
+    );
+
   // Список способов получения, для которых показываем баннеры
   const BANNER_OBTAIN_TYPES = ["Xspace Echo", "Limited Banner"];
+
+    // Список способов получения, для которых показываем баннеры
+  const PROMISE_OBTAIN_TYPES = ["Promise"];
 
   if (!obtainData || !cardId) {
     return null;
@@ -79,6 +87,15 @@ function ObtainInfo({ cardId, obtainData }) {
                   <BannerList banners={banners} />
                 </>
               )}
+
+              {/* Показываем баннеры только для Promise */}
+              {selectedObtain &&
+                  PROMISE_OBTAIN_TYPES.includes(selectedObtain.obtain) &&
+                  promise.length > 0 && (
+                      <>
+                          <BannerList banners={promise} />
+                      </>
+                  )}
           </div>
         }
       />
