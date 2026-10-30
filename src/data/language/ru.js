@@ -292,6 +292,7 @@ export const ru = {
             talent: 'Талант',
             release: 'Релиз',
             level: 'Уровень',
+            rank: 'Ранг',
             clearSorting: 'Очистить сортировку',
             search: 'Искать по названию',
             filterButton: 'Фильтр',

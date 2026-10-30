@@ -136,3 +136,23 @@ export const enhanceMemoriesWithAscend = (memoriesData) => {
     isAscended: ascendMap[String(card.id)] || false,
   }));
 };
+
+// ===== MAP ВСЕХ РАНГОВ КАРТОЧЕК =====
+export const getAllCardRanksMap = () => {
+  const ranks = {};
+  const keys = getKeysByPrefix("cardRank_");
+  keys.forEach((key) => {
+    const cardId = key.replace("cardRank_", "");
+    ranks[cardId] = parseInt(get(key, 0)) || 0;
+  });
+  return ranks;
+};
+
+// ===== ОБОГАЩЕНИЕ МАССИВА КАРТОЧЕК РАНГОМ =====
+export const enhanceMemoriesWithRank = (memoriesData) => {
+  const ranksMap = getAllCardRanksMap();
+  return memoriesData.map((card) => ({
+    ...card,
+    cardRank: ranksMap[String(card.id)] ?? 0,
+  }));
+};

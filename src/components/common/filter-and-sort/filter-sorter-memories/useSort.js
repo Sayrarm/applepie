@@ -3,6 +3,7 @@ import {
   enhanceMemoriesWithAscend,
   enhanceMemoriesWithAvailability,
   enhanceMemoriesWithLevel,
+  enhanceMemoriesWithRank,
   getSortCriteria,
   saveSortCriteria
 } from "@localstorage";
@@ -42,6 +43,10 @@ const compareFunctions = {
     const aAscend = a.isAscended ? 1 : 0;
     const bAscend = b.isAscended ? 1 : 0;
     return bAscend - aAscend;
+  },
+  rank: (a, b) => {
+    // по убыванию: больший ранг — выше
+    return (b.cardRank || 0) - (a.cardRank || 0);
   },
 };
 
@@ -88,27 +93,37 @@ export const useSort = (prefix = "") => {
   const sortMemories = useCallback(
       (memories) => {
         const needsLevel = sortCriteria.includes("level");
+        const needsRank = sortCriteria.includes("rank");
+        const needsAvailability = needsLevel || needsRank;
 
         let data = memories;
 
-        if (needsLevel) {
-          data = enhanceMemoriesWithLevel(data);
+        if (needsAvailability) {
           data = enhanceMemoriesWithAvailability(data);
-          data = enhanceMemoriesWithAscend(data);
         }
 
         if (needsLevel) {
+          data = enhanceMemoriesWithLevel(data);
+          data = enhanceMemoriesWithAscend(data);
+        }
+
+        if (needsRank) {
+          data = enhanceMemoriesWithRank(data);
+        }
+
+        if (needsAvailability) {
           const available = data.filter((m) => m.isAvailable);
           const unavailable = data.filter((m) => !m.isAvailable);
-
-          const sortedAvailable = multiSort(available, sortCriteria);
-          const sortedUnavailable = multiSort(unavailable, sortCriteria);
-
-          return [...sortedAvailable, ...sortedUnavailable];
+          return [
+            ...multiSort(available, sortCriteria),
+            ...multiSort(unavailable, sortCriteria),
+          ];
         }
 
         return multiSort(data, sortCriteria);
       },
+
+
       [sortCriteria],
   );
 

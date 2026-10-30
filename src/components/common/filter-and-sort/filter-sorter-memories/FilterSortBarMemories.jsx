@@ -68,6 +68,7 @@ function FilterSortBarMemories({
               { value: "talent", label: t('FilterSortBarMemories.talent') },
               { value: "release", label: t('FilterSortBarMemories.release') },
               { value: "level", label: t('FilterSortBarMemories.level') },
+              { value: "rank", label: t('FilterSortBarMemories.rank') },
             ]}
           />
 

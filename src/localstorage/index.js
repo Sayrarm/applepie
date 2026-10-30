@@ -68,7 +68,8 @@ export {
   getAllCardAvailabilityMap,
   enhanceMemoriesWithAvailability,
   enhanceMemoriesWithLevel,
-  enhanceMemoriesWithAscend
+  enhanceMemoriesWithAscend,
+  enhanceMemoriesWithRank
 } from "./card-storage.js";
 export {
   getProtocores,

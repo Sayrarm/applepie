@@ -295,6 +295,7 @@ export const en = {
             talent: 'Talent',
             release: 'Release',
             level: 'Level',
+            rank: 'Rank',
             clearSorting: 'Clear sorting',
             search: 'Search by memory name',
             filterButton: 'Filter',
