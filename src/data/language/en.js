@@ -614,7 +614,11 @@ export const en = {
             clearSorting: "Clear sorting",
             filterButton: "Filters",
             search: "Search banners...",
-            resetButton: "Reset all settings"
+            resetButton: "Reset all settings",
+            hidePromises: "Hide Promises",
+            showPromises: "Show Promises",
+            promisesOn: "Promises On",
+            promisesOff: "Promises Off",
         },
         Banners: {
             allBanners: 'All banners',

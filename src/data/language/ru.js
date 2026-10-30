@@ -612,7 +612,11 @@ export const ru = {
             clearSorting: "Очистить сортировку",
             filterButton: "Фильтры",
             search: "Поиск баннера...",
-            resetButton: "Очистить все настройки"
+            resetButton: "Очистить все настройки",
+            hidePromises: "Спрятать Промисы",
+            showPromises: "Показать Промисы",
+            promisesOn: "Промис Вкл",
+            promisesOff: "Промис Выкл",
         },
         Banners: {
             allBanners: 'Все баннеры',

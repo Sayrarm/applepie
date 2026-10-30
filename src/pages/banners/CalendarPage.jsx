@@ -13,6 +13,7 @@ import { useTranslation } from "react-i18next";
 function CalendarPage() {
     const filterModalRef = useRef();
     const [editMode, setEditMode] = useState(false); // Режим редактирования
+    const [showPromises, setShowPromises] = useState(true);
     const { t } = useTranslation();
 
     // Подключаем фильтрацию и поиск (без сортировки)
@@ -57,10 +58,15 @@ function CalendarPage() {
     const processedBanners = useMemo(() => {
         let result = allBanners;
 
-        // Фильтрация
+        // скрываем Promise, если выключено
+        if (!showPromises) {
+            result = result.filter((banner) => banner.type !== "promise");
+        }
+
+        // фильтрация
         result = filterBanners(result);
 
-        // Поиск
+        // поиск
         if (searchQuery.trim()) {
             const query = searchQuery.toLowerCase().trim();
             result = result.filter((banner) => {
@@ -71,7 +77,7 @@ function CalendarPage() {
         }
 
         return result;
-    }, [allBanners, filterBanners, searchQuery]);
+    }, [allBanners, showPromises, filterBanners, searchQuery]);
 
     const items = [
         {
@@ -121,6 +127,8 @@ function CalendarPage() {
                     resetAllSettings={resetAllSettings}
                     hideSort={true}
                     storagePrefix="banners"
+                    showPromises={showPromises}
+                    onTogglePromises={() => setShowPromises((v) => !v)}
                 />
 
                 <div className={styles.AsideListContainer}>

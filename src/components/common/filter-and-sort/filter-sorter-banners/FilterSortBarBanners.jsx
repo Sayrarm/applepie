@@ -23,6 +23,8 @@ function FilterSortBarBanners({
                                   resetAllSettings,
                                   storagePrefix = "",
                                   hideSort = false,
+                                  showPromises = true,
+                                  onTogglePromises,
                               }) {
     const characters = ["Xavier", "Zayne", "Rafayel", "Sylus", "Caleb"];
     const { t } = useTranslation();
@@ -158,6 +160,24 @@ function FilterSortBarBanners({
                     title={t('FilterSortBarBanners.resetButton')}
                     className={styles.colorBrown}
                 />
+
+                {/* Кнопка показа/скрытия Promise-баннеров */}
+                {typeof onTogglePromises === "function" && (
+                    <Button
+                        onClick={onTogglePromises}
+                        title={
+                            showPromises
+                                ? t('FilterSortBarBanners.hidePromises')
+                                : t('FilterSortBarBanners.showPromises')
+                        }
+                        className={styles.colorBrown}
+                        type={showPromises ? "default" : "dashed"}
+                    >
+                        {showPromises
+                            ? t('FilterSortBarBanners.promisesOn')
+                            : t('FilterSortBarBanners.promisesOff')}
+                    </Button>
+                )}
             </aside>
         </div>
     );
