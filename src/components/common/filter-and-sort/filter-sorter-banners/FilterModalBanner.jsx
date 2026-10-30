@@ -56,6 +56,7 @@ const FilterModalBanner = forwardRef(
             { label: t("FilterModalBanner.myth"), value: "myth" },
             { label: t("FilterModalBanner.solo"), value: "solo" },
             { label: t("FilterModalBanner.birthday"), value: "birthday" },
+            { label: t("FilterModalBanner.promise"), value: "promise" },
         ];
 
         const optionsNewRerun = [

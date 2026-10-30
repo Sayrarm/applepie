@@ -8,6 +8,7 @@ export const battlePassData = [
     endDate: "2024-03-16T04:59:59",
     rerun: false,
     active: false,
+    type: 'promise',
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ export const battlePassData = [
     endDate: "2024-05-14T04:59:59",
     rerun: false,
     active: false,
+    type: 'promise',
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ export const battlePassData = [
     endDate: "2024-07-11T04:59:59",
     rerun: false,
     active: false,
+    type: 'promise',
   },
   {
     id: 4,
@@ -38,6 +41,7 @@ export const battlePassData = [
     endDate: "2024-09-11T04:59:59",
     rerun: false,
     active: false,
+    type: 'promise',
   },
   {
     id: 5,
@@ -48,6 +52,7 @@ export const battlePassData = [
     endDate: "2024-11-11T04:59:59",
     rerun: false,
     active: false,
+    type: 'promise',
   },
   {
     id: 6,
@@ -58,6 +63,7 @@ export const battlePassData = [
     endDate: "2025-01-09T04:59:59",
     rerun: false,
     active: false,
+    type: 'promise',
   },
   {
     id: 7,
@@ -68,6 +74,7 @@ export const battlePassData = [
     endDate: "2025-03-09T04:59:59",
     rerun: false,
     active: false,
+    type: 'promise',
   },
   {
     id: 8,
@@ -78,6 +85,7 @@ export const battlePassData = [
     endDate: "2025-05-06T04:59:59",
     rerun: false,
     active: false,
+    type: 'promise',
   },
   {
     id: 9,
@@ -88,6 +96,7 @@ export const battlePassData = [
     endDate: "2025-07-03T04:59:59",
     rerun: false,
     active: false,
+    type: 'promise',
   },
   {
     id: 10,
@@ -98,6 +107,7 @@ export const battlePassData = [
     endDate: "2025-08-30T04:59:59",
     rerun: false,
     active: false,
+    type: 'promise',
   },
   {
     id: 101,
@@ -108,6 +118,7 @@ export const battlePassData = [
     endDate: "2025-08-31T04:59:59",
     rerun: true,
     active: false,
+    type: 'promise',
   },
   {
     id: 11,
@@ -118,6 +129,7 @@ export const battlePassData = [
     endDate: "2025-10-28T04:59:59",
     rerun: false,
     active: false,
+    type: 'promise',
   },
   {
     id: 12,
@@ -128,6 +140,7 @@ export const battlePassData = [
     endDate: "2025-12-26T04:59:59",
     rerun: false,
     active: false,
+    type: 'promise',
   },
   {
     id: 13,
@@ -138,6 +151,7 @@ export const battlePassData = [
     endDate: "2026-02-27T04:59:59",
     rerun: false,
     active: false,
+    type: 'promise',
   },
   {
     id: 14,
@@ -148,6 +162,7 @@ export const battlePassData = [
     endDate: "2026-04-28T04:59:59",
     rerun: false,
     active: false,
+    type: 'promise',
   },
   {
     id: 202,
@@ -158,6 +173,7 @@ export const battlePassData = [
     endDate: "2026-04-28T04:59:59",
     rerun: true,
     active: false,
+    type: 'promise',
   },
   {
     id: 15,
@@ -168,6 +184,7 @@ export const battlePassData = [
     endDate: "2026-06-27T04:59:59",
     rerun: false,
     active: false,
+    type: 'promise',
   },
   {
     id: 16,
@@ -178,6 +195,7 @@ export const battlePassData = [
     endDate: "2026-08-23T04:59:59",
     rerun: false,
     active: false,
+    type: 'promise',
   },
   {
     id: 303,
@@ -188,6 +206,7 @@ export const battlePassData = [
     endDate: "2026-08-02T04:59:59",
     rerun: true,
     active: false,
+    type: 'promise',
   },
   {
     id: 17,
@@ -198,6 +217,7 @@ export const battlePassData = [
     endDate: "2026-10-21T04:59:59",
     rerun: false,
     active: false,
+    type: 'promise',
   },
   {
     id: 18,
@@ -208,5 +228,6 @@ export const battlePassData = [
     endDate: "2026-12-18T04:59:59",
     rerun: false,
     active: true,
+    type: 'promise',
   },
 ];

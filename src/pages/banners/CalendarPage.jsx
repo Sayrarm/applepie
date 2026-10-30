@@ -1,6 +1,6 @@
 import { useMemo, useRef, useState } from "react";
 import styles from "./Banners.module.css";
-import { bannersDataFull } from "@data";
+import { bannersDataFull, battlePassData } from "@data";
 import {
     AsideList,
     BannersCalendar,
@@ -38,9 +38,24 @@ function CalendarPage() {
         }
     };
 
+    // Нормализуем Promise-баннеры: уникальный id (на случай коллизий)
+    const battlePassAsBanners = useMemo(
+        () =>
+            battlePassData.map((bp) => ({
+                ...bp,
+                id: `bp-${bp.id}`,
+            })),
+        []
+    );
+
+    const allBanners = useMemo(
+        () => [...bannersDataFull, ...battlePassAsBanners],
+        [battlePassAsBanners]
+    );
+
     // 3. Применяем только фильтры и поиск
     const processedBanners = useMemo(() => {
-        let result = bannersDataFull;
+        let result = allBanners;
 
         // Фильтрация
         result = filterBanners(result);
@@ -56,7 +71,7 @@ function CalendarPage() {
         }
 
         return result;
-    }, [filterBanners, searchQuery]);
+    }, [allBanners, filterBanners, searchQuery]);
 
     const items = [
         {
@@ -74,6 +89,7 @@ function CalendarPage() {
                     <p>{t('CalendarPage.hintOrange')}</p>
                     <p>{t('CalendarPage.hintGreen')}</p>
                     <p>{t('CalendarPage.hintDarkBlue')}</p>
+                    <p>{t('CalendarPage.hintYellow')}</p>
                     <br/>
                     <p>{t('CalendarPage.hintRafaelBirthday')}</p>
                     <p>{t('CalendarPage.hintSilusBirthday')}</p>

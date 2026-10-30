@@ -57,7 +57,7 @@
 
 .disclaimerContent p,
 .titleMain {
-  color: var(--colorText);
+  color: var(--colorTextDark);
 }
 
 @media screen and (max-width: 948px) {

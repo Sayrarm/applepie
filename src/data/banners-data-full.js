@@ -739,9 +739,9 @@ export const bannersDataFull = [
   },
   {
     id: 67,
-    name: "Special Embrace",
-    image: "../assets/banners/special-embrace.png",
-    cardIds: [366],
+    name: "Heartbound Wish",
+    image: "../assets/banners/heartbound-wish.png",
+    cardIds: [366, 375],
     startDate: "2026-03-01T05:00:00",
     endDate: "2026-03-08T04:59:00",
     rerun: true,
@@ -750,17 +750,6 @@ export const bannersDataFull = [
   },
   {
     id: 68,
-    name: "Boundless Seas",
-    image: "../assets/banners/boundless-seas.png",
-    cardIds: [375],
-    startDate: "2026-03-01T05:00:00",
-    endDate: "2026-03-08T04:59:00",
-    rerun: true,
-    active: false,
-    type: 'birthday',
-  },
-  {
-    id: 69,
     name: "Tranquil Moments",
     image: "../assets/banners/tranquil-moments.png",
     cardIds: [194],
@@ -771,7 +760,7 @@ export const bannersDataFull = [
     type: 'solo',
   },
   {
-    id: 70,
+    id: 69,
     name: "Lingering Gaze",
     image: "../assets/banners/lingering-gaze.png",
     cardIds: [172, 269, 363],
@@ -782,7 +771,7 @@ export const bannersDataFull = [
     type: 'multi',
   },
   {
-    id: 71,
+    id: 70,
     name: "Ghosts' Final March",
     image: "../assets/banners/ghosts-final-march.png",
     cardIds: [28, 27],
@@ -793,7 +782,7 @@ export const bannersDataFull = [
     type: 'myth',
   },
   {
-    id: 72,
+    id: 71,
     name: "Heating Up",
     image: "../assets/banners/heating-up.png",
     cardIds: [175],
@@ -804,7 +793,7 @@ export const bannersDataFull = [
     type: 'solo',
   },
   {
-    id: 73,
+    id: 72,
     name: "Rainlit Night",
     image: "../assets/banners/rainlit-night.png",
     cardIds: [105],
@@ -815,7 +804,7 @@ export const bannersDataFull = [
     type: 'birthday',
   },
   {
-    id: 74,
+    id: 73,
     name: "Where Hearts Live",
     image: "../assets/banners/where-hearts-live.png",
     cardIds: [90],
@@ -826,7 +815,7 @@ export const bannersDataFull = [
     type: 'birthday',
   },
   {
-    id: 75,
+    id: 74,
     name: "Submerged Eclipse",
     image: "../assets/banners/submerged-eclipse.png",
     cardIds: [390, 389],
@@ -837,7 +826,7 @@ export const bannersDataFull = [
     type: 'myth',
   },
   {
-    id: 76,
+    id: 75,
     name: "Lingering Lust",
     image: "../assets/banners/lingering-lust.png",
     cardIds: [393, 392, 391, 394, 395],
@@ -848,7 +837,7 @@ export const bannersDataFull = [
     type: 'multi',
   },
   {
-    id: 77,
+    id: 76,
     name: "Double Kiss",
     image: "../assets/banners/double-kiss.png",
     cardIds: [268],
@@ -859,7 +848,7 @@ export const bannersDataFull = [
     type: 'solo',
   },
   {
-    id: 78,
+    id: 77,
     name: "Fallen Crown",
     image: "../assets/banners/fallen-crown.png",
     cardIds: [199, 200],
@@ -870,7 +859,7 @@ export const bannersDataFull = [
     type: 'myth',
   },
   {
-    id: 79,
+    id: 78,
     name: "Kitten Included",
     image: "../assets/banners/kitten-included.png",
     cardIds: [400],
@@ -881,7 +870,7 @@ export const bannersDataFull = [
     type: 'solo',
   },
   {
-    id: 80,
+    id: 79,
     name: "Entwined Shadows",
     image: "../assets/banners/entwined-shadows.png",
     cardIds: [176, 270, 365],
@@ -892,7 +881,7 @@ export const bannersDataFull = [
     type: 'multi',
   },
   {
-    id: 81,
+    id: 80,
     name: "Your Skyblue",
     image: "../assets/banners/your-skyblue.png",
     cardIds: [402],
@@ -903,7 +892,7 @@ export const bannersDataFull = [
     type: 'birthday',
   },
   {
-    id: 82,
+    id: 81,
     name: "No-Return Night",
     image: "../assets/banners/no-return-night.png",
     cardIds: [40],
@@ -914,7 +903,7 @@ export const bannersDataFull = [
     type: 'birthday',
   },
   {
-    id: 83,
+    id: 82,
     name: "Once Upon a Frame",
     image: "../assets/banners/once-upon-a-frame.png",
     cardIds: [404, 405, 406, 407, 408],
@@ -925,7 +914,7 @@ export const bannersDataFull = [
     type: 'multi',
   },
   {
-    id: 84,
+    id: 83,
     name: "Dawn's Embrace",
     image: "../assets/banners/dawns-embrace.png",
     cardIds: [364],
@@ -936,7 +925,7 @@ export const bannersDataFull = [
     type: 'solo',
   },
   {
-    id: 85,
+    id: 84,
     name: "Edge of Continuum",
     image: "../assets/banners/edge-of-continuum.png",
     cardIds: [293, 294],
@@ -947,7 +936,7 @@ export const bannersDataFull = [
     type: 'myth',
   },
   {
-    id: 86,
+    id: 85,
     name: "Wander in Wonder",
     image: "../assets/banners/wander-in-wonder-rerun.png",
     cardIds: [370, 178, 273, 84],
@@ -958,7 +947,7 @@ export const bannersDataFull = [
     type: 'multi',
   },
   {
-    id: 87,
+    id: 86,
     name: "Radiant Fantasia",
     image: "../assets/banners/radiant-fantasia.png",
     cardIds: [
@@ -972,7 +961,7 @@ export const bannersDataFull = [
     type: 'standart',
   },
   {
-    id: 88,
+    id: 87,
     name: "Summer Surge",
     image: "../assets/banners/summer-surge.png",
     cardIds: [396],
@@ -983,7 +972,7 @@ export const bannersDataFull = [
     type: 'solo',
   },
   {
-    id: 89,
+    id: 88,
     name: "Po Zhen Zi",
     image: "../assets/banners/Martial-Ode.png",
     cardIds: [412, 413],
@@ -994,7 +983,7 @@ export const bannersDataFull = [
     type: 'myth',
   },
   {
-    id: 90,
+    id: 89,
     name: "No Defense Zone",
     image: "../assets/banners/no-defence-zone-rerun.png",
     cardIds: [81],
@@ -1005,7 +994,7 @@ export const bannersDataFull = [
     type: 'solo',
   },
   {
-    id: 91,
+    id: 90,
     name: "When Embers Rise",
     image: "../assets/banners/when-embers-rise.png",
     cardIds: [420],
@@ -1016,29 +1005,18 @@ export const bannersDataFull = [
     type: 'birthday',
   },
   {
+    id: 91,
+    name: "In Earnest Hope",
+    image: "../assets/banners/in-earnest-hope.png",
+    cardIds: [284, 272],
+    startDate: "2026-08-31T05:00:00",
+    endDate: "2026-09-07T04:59:59",
+    rerun: true,
+    active: false,
+    type: 'birthday',
+  },
+  {
     id: 92,
-    name: "Dawnbreak Promise",
-    image: "../assets/banners/dawnbreak-promise.png",
-    cardIds: [284],
-    startDate: "2026-08-31T05:00:00",
-    endDate: "2026-09-07T04:59:59",
-    rerun: true,
-    active: false,
-    type: 'birthday',
-  },
-  {
-    id: 93,
-    name: "Destined Reunion",
-    image: "../assets/banners/destined-Reunion.png",
-    cardIds: [272],
-    startDate: "2026-08-31T05:00:00",
-    endDate: "2026-09-07T04:59:59",
-    rerun: true,
-    active: false,
-    type: 'birthday',
-  },
-  {
-    id: 94,
     name: "Where Silverwings Rest",
     image: "../assets/banners/where-silverwings-rest.png",
     cardIds: [102, 103],
@@ -1049,7 +1027,7 @@ export const bannersDataFull = [
     type: 'myth',
   },
   {
-    id: 95,
+    id: 93,
     name: "A Night That Never Ends",
     image: "../assets/banners/a-night-that-never-ends.png",
     cardIds: [423, 424, 425, 426, 427],
@@ -1060,7 +1038,7 @@ export const bannersDataFull = [
     type: 'multi',
   },
   {
-    id: 96,
+    id: 94,
     name: "Into the Canvas",
     image: "../assets/banners/into-the-canvas.png",
     cardIds: [369],
@@ -1071,7 +1049,7 @@ export const bannersDataFull = [
     type: 'solo',
   },
   {
-    id: 97,
+    id: 95,
     name: "Lingering Light",
     image: "../assets/banners/lingering-light.png",
     cardIds: [429],
@@ -1082,10 +1060,10 @@ export const bannersDataFull = [
     type: 'birthday',
   },
   {
-    id: 98,
-    name: "Between Stars",
-    image: "../assets/banners/between-stars.webp",
-    cardIds: [189],
+    id: 96,
+    name: "Lights Evermore",
+    image: "../assets/banners/lights-evermore.png",
+    cardIds: [189, 179],
     startDate: "2026-10-11T05:00:00",
     endDate: "2026-10-18T04:59:59",
     rerun: true,
@@ -1093,18 +1071,7 @@ export const bannersDataFull = [
     type: 'birthday',
   },
   {
-    id: 99,
-    name: "Galaxy Dance",
-    image: "../assets/banners/galaxy-dance.png",
-    cardIds: [179],
-    startDate: "2026-10-11T05:00:00",
-    endDate: "2026-10-18T04:59:59",
-    rerun: true,
-    active: false,
-    type: 'birthday',
-  },
-  {
-    id: 100,
+    id: 97,
     name: "Misty Invasion",
     image: "../assets/banners/misty-invasion.png",
     cardIds: [177, 271, 368, 83],
@@ -1115,7 +1082,7 @@ export const bannersDataFull = [
     type: 'multi',
   },
   {
-    id: 101,
+    id: 98,
     name: "Nightly Overflow",
     image: "../assets/banners/nightly-overflow.png",
     cardIds: [433],

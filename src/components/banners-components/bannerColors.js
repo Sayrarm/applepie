@@ -14,6 +14,7 @@ const COLORS = {
     multi: "#3fae5a",     // зелёный
     rerun: "#9a9a9a",     // серый
     standart: "#175fb3",  // синий
+    promise: "#ffce00",  //желтый
 };
 
 // Получить уникальных персонажей баннера
@@ -50,6 +51,9 @@ export const getBannerColor = (banner) => {
     // Multi
     if (banner.type === "multi") return COLORS.multi;
 
+    // Promise
+    if (banner.type === "promise") return COLORS.promise;
+
     // Solo / Birthday — цвет персонажа
     if (banner.type === "solo" || banner.type === "birthday") {
         const chars = getBannerCharacters(banner);
@@ -81,6 +85,7 @@ export const getBannerTypeLabel = (banner) => {
         case "solo": return "Solo";
         case "birthday": return "Birthday";
         case "myth": return "Myth";
+        case "promise": return "Promise";
         default: return "Banner";
     }
 };
