@@ -826,9 +826,18 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
         }
     });
 
-    // Высота ячейки: минимум 100px, плюс 32px на каждый дополнительный слой
+    const BAR_BASE_TOP = 24;
+    const LANE_STEP = 32;      // шаг между баннерами
+    const BAR_HEIGHT = 30;     // высота баннера
+    const MIN_ROW_HEIGHT = 118;
+
     const gridTemplateRows = weekMaxLanes
-        .map(maxLane => `minmax(${Math.max(100, 35 + maxLane * 32)}px, auto)`)
+        .map(maxLane =>
+            `minmax(${Math.max(
+                MIN_ROW_HEIGHT,
+                BAR_BASE_TOP + (maxLane + 1) * LANE_STEP + BAR_HEIGHT
+            )}px, auto)`
+        )
         .join(" ");
 
     return (
