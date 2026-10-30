@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from "react";
+import {useEffect, useMemo, useRef, useState} from "react";
 import styles from "./Banners.module.css";
 import { bannersDataFull, battlePassData } from "@data";
 import {
@@ -9,11 +9,14 @@ import {
     useBannersSearch,
 } from "@components";
 import { useTranslation } from "react-i18next";
+import {getBannerShowPromises, saveBannerShowPromises} from "@localstorage";
 
 function CalendarPage() {
     const filterModalRef = useRef();
     const [editMode, setEditMode] = useState(false); // Режим редактирования
-    const [showPromises, setShowPromises] = useState(true);
+    const [showPromises, setShowPromises] = useState(() =>
+        getBannerShowPromises("banners")
+    );
     const { t } = useTranslation();
 
     // Подключаем фильтрацию и поиск (без сортировки)
@@ -29,6 +32,12 @@ function CalendarPage() {
     } = useBannersFilter("banners");
 
     const { searchQuery, onSearch, clearSearch } = useBannersSearch("banners");
+
+
+    // сохраняем при каждом изменении
+    useEffect(() => {
+        saveBannerShowPromises("banners", showPromises);
+    }, [showPromises]);
 
     // 2. Функция полного сброса (без clearSorting)
     const resetAllSettings = () => {

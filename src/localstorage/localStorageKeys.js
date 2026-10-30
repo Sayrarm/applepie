@@ -92,5 +92,6 @@ export const getBannerFilterKeys = (prefix) => {
     filters: `${base}_filters`,
     search: `${base}_search_query`,
     sort: `${base}_sort_criteria`,
+    promise: `${base}_show_promises`,
   };
 };

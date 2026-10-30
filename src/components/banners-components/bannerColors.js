@@ -14,7 +14,7 @@ const COLORS = {
     multi: "#3fae5a",     // зелёный
     rerun: "#9a9a9a",     // серый
     standart: "#175fb3",  // синий
-    promise: "#ffce00",  //желтый
+    promise: "#ecd86d",  //желтый
 };
 
 // Получить уникальных персонажей баннера

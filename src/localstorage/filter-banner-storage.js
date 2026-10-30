@@ -79,3 +79,14 @@ export const getDefaultBannerFilters = () => ({
     newRerun: [],
     availability: [],
 });
+
+// ===== SHOW PROMISES =====
+export const getBannerShowPromises = (prefix = "") => {
+    const keys = getBannerFilterKeys(prefix);
+    return get(keys.promise, true);
+};
+
+export const saveBannerShowPromises = (prefix = "", value) => {
+    const keys = getBannerFilterKeys(prefix);
+    return set(keys.promise, Boolean(value));
+};

@@ -169,7 +169,9 @@ export {
   clearAllBannerFilters,
   getDefaultBannerFilters,
   getBannerFilters,
-  saveBannerFilters
+  saveBannerFilters,
+  getBannerShowPromises,
+  saveBannerShowPromises
 } from "./filter-banner-storage.js";
 export {
   getOptimizerData,
