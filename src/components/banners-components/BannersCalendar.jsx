@@ -826,7 +826,7 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
         }
     });
 
-    const BAR_BASE_TOP = 24;
+    const BAR_BASE_TOP = 0;
     const LANE_STEP = 32;      // шаг между баннерами
     const BAR_HEIGHT = 30;     // высота баннера
     const MIN_ROW_HEIGHT = 118;
