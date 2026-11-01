@@ -46,7 +46,7 @@ export const calculateDamageWithBonuses = (
   const weakenedMultiplier = baseMultiplier + weakenedDmg / 100;
 
   // Множитель для Crit DMG
-  const critMultiplier = baseMultiplier + critDmg / 100;
+  const critMultiplier = baseMultiplier * critDmg / 100;
 
   return {
     base: rawDamage * baseMultiplier,
