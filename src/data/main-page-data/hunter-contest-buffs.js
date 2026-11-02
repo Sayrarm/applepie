@@ -291,6 +291,31 @@ export const hunterContestBuffs = [
     teamC:
         "Advancement: Increases CRIT DMG of all allied units.",
 
+    active: false,
+  },
+  {
+    id: 12,
+    teamAStella1: "../assets/icons/sapphire.png",
+    teamAStella1Count: 5,
+    teamAStella2: "../assets/icons/emerald.png",
+    teamAStella2Count: 1,
+    teamA:
+        "Collaborative Fusion: Enemies hit by Support Skills take 80% more Basic Attack DMG for 5s.",
+
+    teamBStella1: "../assets/icons/emerald.png",
+    teamBStella1Count: 4,
+    teamBStella2: "../assets/icons/violet.png",
+    teamBStella2Count: 1,
+    teamB:
+        "Press On Coupling: After using the Support Skill, enemies take 30% increased damage from non-Basic Attacks for 3s",
+
+    teamCStella1: "../assets/icons/pearl.png",
+    teamCStella1Count: 3,
+    teamCStella2: "../assets/icons/emerald.png",
+    teamCStella2Count: 1,
+    teamC:
+        "Empowerment: Increases ATK of all allied units.",
+
     active: true,
   },
 ];
