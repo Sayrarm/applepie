@@ -1092,4 +1092,15 @@ export const bannersDataFull = [
     active: true,
     type: 'solo',
   },
+  {
+    id: 99,
+    name: "Rebooting Dreams",
+    image: "../assets/banners/rebooting-dreams.png",
+    cardIds: [434, 435, 436, 437, 438],
+    startDate: "2026-11-06T05:00:00",
+    endDate: "2026-11-24T04:59:59",
+    rerun: false,
+    active: true,
+    type: 'multi',
+  },
 ];
