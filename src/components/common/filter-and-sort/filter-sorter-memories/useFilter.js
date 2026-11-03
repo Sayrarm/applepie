@@ -7,6 +7,7 @@ import {
   getDefaultFilters,
   clearAllFilters,
 } from "@localstorage";
+import {obtainData} from "@data";
 
 export const useFilter = (prefix = "") => {
   // Загружаем начальные значения из localStorage
@@ -45,51 +46,65 @@ export const useFilter = (prefix = "") => {
 
   // Фильтруем данные
   const filterMemories = useCallback(
-    (memories) => {
-      return memories.filter((memory) => {
-        // Фильтр по персонажу (кнопки)
-        const matchesChar =
-          selectedChar === "ALL" ||
-          memory.char.toLowerCase() === selectedChar.toLowerCase();
+      (memories) => {
+        // Предвычисляем допустимые id один раз
+        const allowedObtainIds =
+            filters.obtain?.length > 0
+                ? new Set(
+                    obtainData
+                        .filter((o) => filters.obtain.includes(o.bannerType))
+                        .flatMap((o) => o.memories)
+                )
+                : null;
 
-        // Фильтр по редкости (из модалки)
-        const matchesRarity =
-          filters.rarity.length === 0 ||
-          filters.rarity.includes(memory.rarityName);
+        return memories.filter((memory) => {
+          // Фильтр по персонажу (кнопки)
+          const matchesChar =
+              selectedChar === "ALL" ||
+              memory.char.toLowerCase() === selectedChar.toLowerCase();
 
-        // Фильтр по размещению (solar/lunar)
-        const matchesPlacement =
-          filters.placement.length === 0 ||
-          filters.placement.includes(memory.placementName);
+          // Фильтр по редкости (из модалки)
+          const matchesRarity =
+              filters.rarity.length === 0 ||
+              filters.rarity.includes(memory.rarityName);
 
-        // Фильтр по таланту
-        const matchesTalent =
-          filters.talent.length === 0 ||
-          filters.talent.includes(memory.talentName);
+          // Фильтр по размещению (solar/lunar)
+          const matchesPlacement =
+              filters.placement.length === 0 ||
+              filters.placement.includes(memory.placementName);
 
-        // Фильтр по стелле (цвету)
-        const matchesStella =
-          filters.stella.length === 0 ||
-          filters.stella.includes(memory.stellaName);
+          // Фильтр по таланту
+          const matchesTalent =
+              filters.talent.length === 0 ||
+              filters.talent.includes(memory.talentName);
 
-        //фильтр по наличию
-        const matchesAvailability =
-          filters.availability.length === 0 ||
-          filters.availability.includes(
-            memory.isAvailable ? "available" : "notAvailable",
+          // Фильтр по стелле (цвету)
+          const matchesStella =
+              filters.stella.length === 0 ||
+              filters.stella.includes(memory.stellaName);
+
+          //фильтр по наличию
+          const matchesAvailability =
+              filters.availability.length === 0 ||
+              filters.availability.includes(
+                  memory.isAvailable ? "available" : "notAvailable"
+              );
+
+          const matchesObtain =
+              !allowedObtainIds || allowedObtainIds.has(Number(memory.id));
+
+          return (
+              matchesChar &&
+              matchesRarity &&
+              matchesPlacement &&
+              matchesTalent &&
+              matchesStella &&
+              matchesAvailability &&
+              matchesObtain
           );
-
-        return (
-          matchesChar &&
-          matchesRarity &&
-          matchesPlacement &&
-          matchesTalent &&
-          matchesStella &&
-          matchesAvailability
-        );
-      });
-    },
-    [selectedChar, filters],
+        });
+      },
+      [selectedChar, filters]
   );
 
   return {

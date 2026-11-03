@@ -131,6 +131,8 @@ export {
   getTableSort,
   saveTableSort,
   clearTableSort,
+  getObtainFilter,
+  saveObtainFilter
 } from "./filter-memory-storage.js";
 export {
   getProtocoreFilterKeysByPrefix,

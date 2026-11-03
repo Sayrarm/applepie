@@ -25,6 +25,7 @@ export const getFilters = (prefix = "") => {
     talent: [],
     stella: [],
     availability: [],
+    obtain: [],
   });
 };
 
@@ -84,6 +85,16 @@ export const saveAvailabilityFilter = (prefix = "", value) => {
   return set(keys.availability, value);
 };
 
+export const getObtainFilter = (prefix = "") => {
+  const keys = getFilterKeys(prefix);
+  return get(keys.obtain, []);
+};
+
+export const saveObtainFilter = (prefix = "", value) => {
+  const keys = getFilterKeys(prefix);
+  return set(keys.obtain, value);
+};
+
 // ===== SEARCH =====
 export const getSearchQuery = (prefix = "") => {
   const keys = getFilterKeys(prefix);
@@ -122,6 +133,7 @@ export const getDefaultFilters = () => ({
   talent: [],
   stella: [],
   availability: [],
+  obtain: [],
 });
 
 // ===== ОБНОВЛЕНИЕ ФИЛЬТРОВ =====

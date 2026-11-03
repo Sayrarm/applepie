@@ -281,6 +281,7 @@ export const en = {
             talent: 'Talent:',
             availability: 'Availability:',
             stella: 'Stella:',
+            obtain: 'Obtain:',
             clear: 'Clear',
             available: 'Available',
             notAvailable: 'Not Available',

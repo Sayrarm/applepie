@@ -278,6 +278,7 @@ export const ru = {
             talent: 'Талант:',
             availability: 'Наличие:',
             stella: 'Стелла:',
+            obtain: 'Способ получения:',
             clear: 'Очистить',
             available: 'В наличии',
             notAvailable: 'Нет в наличии',
