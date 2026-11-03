@@ -71,7 +71,7 @@ export const obtainData = [
       18, 19, 20, 22, 23, 24, 25, 26, 11, 12, 15, 9, 17, 8, 7, 46, 45, 44, 47,
       48, 49, 50, 55, 56, 4, 2, 5, 3, 6, 1, 52, 54, 51, 60, 64, 66, 67, 70, 75,
       76, 77, 78, 57, 58, 59, 60, 61, 79, 80, 82, 118, 119, 120, 121, 147, 148,
-      151, 153, 401, 164, 165, 166, 167, 213, 214, 215, 217, 224, 243, 246, 247,
+      151, 153, 401, 164, 165, 166, 167, 213, 214, 217, 224, 243, 246, 247,
       258, 259, 260, 261, 262, 263, 264, 267, 307, 309, 311, 319, 320, 321, 323,
       325, 326, 327, 328, 329, 330, 331, 332, 333, 334, 335, 348, 349, 350, 351,
       337, 339, 341, 343, 346, 354, 355, 356, 357, 399, 401, 414, 415, 416, 419,
@@ -121,12 +121,21 @@ export const obtainData = [
     bannerType: "illusia-locus",
   },
   {
+    obtain: "Birthday Event",
+    memories: [
+      21, 53, 104, 122, 216, 308, 310, 312, 403, 421, 430, 215
+    ],
+    description: "The card can be redeemed in the store for in-game currency. The currency can be obtained in an Event during the Character's Birthday celebration week. Reran every year.",
+    image: "../assets/main-page/modal-window/events.png",
+    bannerType: "birthday-event",
+  },
+  {
     obtain: "Limited Event",
     memories: [
-      21, 53, 104, 122, 216, 308,
-      310, 312, 403, 421, 430
+
     ],
     description: "Memory from 'Events'. Can be repeatable, check the news.",
     image: "../assets/main-page/modal-window/events.png",
+    bannerType: "limited-event",
   },
 ];
