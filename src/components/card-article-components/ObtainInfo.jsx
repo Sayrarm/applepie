@@ -2,9 +2,8 @@ import {useRef, useState} from "react";
 import styles from "./ObtainInfo.module.css";
 import {ModalWindow, BannerList} from "@components";
 import {getImageUrl} from "@hooks";
-import {bannersDataFull, battlePassData} from "@data";
+import {bannersDataFull, battlePassData, eventsData} from "@data";
 import {useTranslation} from "react-i18next";
-import {eventsData} from "@data/events-data.js";
 
 function ObtainInfo({cardId, obtainData}) {
     const obtainModalRef = useRef();

@@ -151,6 +151,9 @@ export { aboutData } from "./about-data.js";
 //banners data
 export { bannersDataFull } from "./banners-data-full.js";
 
+//banners data
+export { eventsData } from "./events-data.js";
+
 //my resources data
 export {
   bottles,
