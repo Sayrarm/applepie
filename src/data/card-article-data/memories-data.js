@@ -7705,7 +7705,7 @@ export const memoriesData = [
   {
     id: 434,
     char: "Rafayel",
-    name: "Nightly Overflow",
+    name: "Synced Drowning",
     image: "../assets/pictures/Rafayel/Rafayel_434.png",
     imageSmall: "../assets/pictures/card-middle/Rafayel_434.png",
     stellaName: "",
@@ -7723,7 +7723,7 @@ export const memoriesData = [
   {
     id: 435,
     char: "Xavier",
-    name: "Nightly Overflow",
+    name: "Program Fallacy",
     image: "../assets/pictures/Xavier/Xavier_435.png",
     imageSmall: "../assets/pictures/card-middle/Xavier_435.png",
     stellaName: "",
@@ -7741,7 +7741,7 @@ export const memoriesData = [
   {
     id: 436,
     char: "Zayne",
-    name: "Nightly Overflow",
+    name: "Shattered Simulacrum",
     image: "../assets/pictures/Zayne/Zayne_436.png",
     imageSmall: "../assets/pictures/card-middle/Zayne_436.png",
     stellaName: "",
@@ -7759,7 +7759,7 @@ export const memoriesData = [
   {
     id: 437,
     char: "Sylus",
-    name: "Nightly Overflow",
+    name: "Paradox Vector",
     image: "../assets/pictures/Sylus/Sylus_437.png",
     imageSmall: "../assets/pictures/card-middle/Sylus_437.png",
     stellaName: "",
@@ -7777,7 +7777,7 @@ export const memoriesData = [
   {
     id: 438,
     char: "Caleb",
-    name: "Nightly Overflow",
+    name: "Oneiric Protocol",
     image: "../assets/pictures/Caleb/Caleb_438.png",
     imageSmall: "../assets/pictures/card-middle/Caleb_438.png",
     stellaName: "",
