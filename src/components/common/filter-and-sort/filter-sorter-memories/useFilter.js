@@ -47,12 +47,16 @@ export const useFilter = (prefix = "") => {
   // Фильтруем данные
   const filterMemories = useCallback(
       (memories) => {
-        // Предвычисляем допустимые id один раз
+        const selectedBannerTypes = [
+          ...(filters.obtain || []),
+          ...(filters.eventStandard || []),
+        ];
+
         const allowedObtainIds =
-            filters.obtain?.length > 0
+            selectedBannerTypes.length > 0
                 ? new Set(
                     obtainData
-                        .filter((o) => filters.obtain.includes(o.bannerType))
+                        .filter((o) => selectedBannerTypes.includes(o.bannerType))
                         .flatMap((o) => o.memories)
                 )
                 : null;

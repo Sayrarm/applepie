@@ -26,6 +26,7 @@ export const getFilters = (prefix = "") => {
     stella: [],
     availability: [],
     obtain: [],
+    eventStandard: [],
   });
 };
 
@@ -95,6 +96,16 @@ export const saveObtainFilter = (prefix = "", value) => {
   return set(keys.obtain, value);
 };
 
+export const getEventStandardFilter = (prefix = "") => {
+  const keys = getFilterKeys(prefix);
+  return get(keys.obtain, []);
+};
+
+export const saveEventStandardFilter = (prefix = "", value) => {
+  const keys = getFilterKeys(prefix);
+  return set(keys.obtain, value);
+};
+
 // ===== SEARCH =====
 export const getSearchQuery = (prefix = "") => {
   const keys = getFilterKeys(prefix);
@@ -134,6 +145,7 @@ export const getDefaultFilters = () => ({
   stella: [],
   availability: [],
   obtain: [],
+  eventStandard: [],
 });
 
 // ===== ОБНОВЛЕНИЕ ФИЛЬТРОВ =====

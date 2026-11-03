@@ -15,6 +15,8 @@ import {
     saveObtainFilter,
     clearAllFilters,
     getFilterKeys,
+    getEventStandardFilter,
+    saveEventStandardFilter,
 } from "@localstorage";
 import {useTranslation} from "react-i18next";
 
@@ -31,6 +33,7 @@ const FilterModalMemory = forwardRef(
         const [talent, setTalent] = useState(() => getTalentFilter(storagePrefix));
         const [stella, setStella] = useState(() => getStellaFilter(storagePrefix));
         const [obtain, setObtain] = useState(() => getObtainFilter(storagePrefix));
+        const [eventStandard, setEventStandard] = useState(() => getEventStandardFilter(storagePrefix));
         const [availability, setAvailability] = useState(() =>
             getAvailabilityFilter(storagePrefix),
         );
@@ -60,6 +63,10 @@ const FilterModalMemory = forwardRef(
             saveObtainFilter(storagePrefix, obtain);
         }, [obtain, storagePrefix]);
 
+        useEffect(() => {
+            saveEventStandardFilter(storagePrefix, eventStandard);
+        }, [eventStandard, storagePrefix]);
+
         // ЭКСПОРТИРУЕМ ФУНКЦИЮ ДЛЯ ВНЕШНЕГО ВЫЗОВА
         useImperativeHandle(ref, () => ({
             clearAll: () => {
@@ -70,6 +77,7 @@ const FilterModalMemory = forwardRef(
                 setStella([]);
                 setAvailability([]);
                 setObtain([]);
+                setEventStandard([]);
 
                 // Очищаем localStorage через сервис
                 clearAllFilters(storagePrefix);
@@ -122,6 +130,11 @@ const FilterModalMemory = forwardRef(
             {label: t('FilterModalMemory.notAvailable'), value: "notAvailable"},
         ];
 
+        const optionsEventStandard = [
+            {label: t('FilterModalMemory.event'), value: "event-memories"},
+            {label: t('FilterModalMemory.standard'), value: "standard-memories"},
+        ];
+
         const tagRender = (props) => {
             const {label, value, closable, onClose} = props;
             const option = optionsStella.find((opt) => opt.value === value);
@@ -161,6 +174,10 @@ const FilterModalMemory = forwardRef(
             setAvailability(checkedValues);
         };
 
+        const handleEventStandardChange = (checkedValues) => {
+            setEventStandard(checkedValues);
+        };
+
         const handleClear = () => {
             // Очищаем локальные состояния
             setRarity([]);
@@ -169,6 +186,7 @@ const FilterModalMemory = forwardRef(
             setStella([]);
             setAvailability([]);
             setObtain([]);
+            setEventStandard([]);
 
             // Очищаем localStorage через сервис
             clearAllFilters(storagePrefix);
@@ -187,6 +205,7 @@ const FilterModalMemory = forwardRef(
                 stella: stella,
                 availability: availability || [],
                 obtain: obtain || [],
+                eventStandard: eventStandard || [],
             };
 
             onFilter(filters);
@@ -248,6 +267,7 @@ const FilterModalMemory = forwardRef(
                         options={optionsStella}
                     />
                 </div>
+                ------------------------------------------------------
 
                 <div style={{marginBottom: 15}}>
                     <span>{t('FilterModalMemory.obtain')} </span>
@@ -258,6 +278,15 @@ const FilterModalMemory = forwardRef(
                         onChange={setObtain}
                         style={{width: "100%"}}
                         options={optionsObtain}
+                    />
+                </div>
+
+                <div style={{marginBottom: 15}}>
+                    <span>{t('FilterModalMemory.memory')} </span>
+                    <Checkbox.Group
+                        options={optionsEventStandard}
+                        value={eventStandard}
+                        onChange={handleEventStandardChange}
                     />
                 </div>
 
