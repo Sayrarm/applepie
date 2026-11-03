@@ -1,4 +1,4 @@
-export const eventsData = [
+export const eventsDataMainPage = [
   {
     id: 1,
     name: "10 Days with you",

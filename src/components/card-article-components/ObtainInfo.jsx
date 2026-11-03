@@ -4,7 +4,7 @@ import {ModalWindow, BannerList} from "@components";
 import {getImageUrl} from "@hooks";
 import {bannersDataFull, battlePassData} from "@data";
 import {useTranslation} from "react-i18next";
-import {oracleOfStarsData} from "@data/oracle-of-stars.js";
+import {eventsData} from "@data/events-data.js";
 
 function ObtainInfo({cardId, obtainData}) {
     const obtainModalRef = useRef();
@@ -26,19 +26,19 @@ function ObtainInfo({cardId, obtainData}) {
         b.cardIds.includes(Number(cardId)),
     );
 
-    // Находим ВСЕ Oracle of Stars баннеры, где есть эта карточка
-    const oracle = oracleOfStarsData.filter((b) =>
-        b.cardIds.includes(Number(cardId)),
-    );
+    // Находим ВСЕ events баннеры, где есть эта карточка
+        const eventBanners = selectedObtain?.bannerType
+        ? eventsData.filter((b) =>
+            b.type === selectedObtain.bannerType &&
+            b.cardIds.includes(Number(cardId))
+        )
+        : [];
 
     // Список способов получения, для которых показываем баннеры
     const BANNER_OBTAIN_TYPES = ["Xspace Echo", "Limited Banner"];
 
     // Список способов получения, для которых показываем баннеры
     const PROMISE_OBTAIN_TYPES = ["Promise"];
-
-    // Список способов получения, для которых показываем баннеры
-    const ORACLE_OBTAIN_TYPES = ["Oracle Of Stars"];
 
     if (!obtainData || !cardId) {
         return null;
@@ -106,14 +106,10 @@ function ObtainInfo({cardId, obtainData}) {
                                 </>
                             )}
 
-                        {/* Показываем баннеры только для Oracle of Stars */}
-                        {selectedObtain &&
-                            ORACLE_OBTAIN_TYPES.includes(selectedObtain.obtain) &&
-                            oracle.length > 0 && (
-                                <>
-                                    <BannerList banners={oracle}/>
-                                </>
-                            )}
+                        {/* Показываем баннеры только для Events */}
+                        {selectedObtain && eventBanners.length > 0 && (
+                            <BannerList banners={eventBanners} />
+                        )}
                     </div>
                 }
             />

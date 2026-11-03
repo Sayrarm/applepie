@@ -8,7 +8,7 @@ import {
     EventsBlock,
     FarmGoalTracker,
 } from "@components";
-import {bannersDataFull, eventsData, battlePassData} from "@data";
+import {bannersDataFull, eventsDataMainPage, battlePassData} from "@data";
 import {useTranslation} from "react-i18next";
 
 function Home() {
@@ -23,7 +23,7 @@ function Home() {
     );
 
     // Активные эвенты
-    const newEvents = eventsData.filter((event) => event.active === true);
+    const newEvents = eventsDataMainPage.filter((event) => event.active === true);
 
     // Активный баттлпас
     const activeBattlePass = battlePassData.filter((bp) => bp.active === true);

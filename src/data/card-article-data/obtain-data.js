@@ -15,6 +15,7 @@ export const obtainData = [
     ],
     description: "Can be obtain for 'Empyrean Wish' (Standart Banner).",
     image: "../assets/main-page/modal-window/standart-banner.png",
+    bannerType: "xspace-echo",
   },
   {
     obtain: "Limited Banner",
@@ -41,6 +42,7 @@ export const obtainData = [
     ],
     description: "Can be obtain for 'Deepspace Wish' (Event Banner).",
     image: "../assets/main-page/modal-window/limited-banner.png",
+    bannerType: "limited-banner",
   },
   {
     obtain: "Wishing Well",
@@ -54,6 +56,7 @@ export const obtainData = [
     description:
       "Can be obtain from 'Shop' -> 'Exchange' -> 'Wishing Well'. Check the schedule of 'memories' on the home page!",
     image: "../assets/main-page/modal-window/wish-well.png",
+    bannerType: "wishing-well",
   },
   {
     obtain: "Galaxy Explorer",
@@ -76,6 +79,7 @@ export const obtainData = [
     ],
     description: "Can be obtain from 'Wish' -> 'Galaxy Explorer'",
     image: "../assets/main-page/modal-window/galaxy-explorer.png",
+    bannerType: "galaxy-explorer",
   },
   {
     obtain: "Promise",
@@ -87,6 +91,7 @@ export const obtainData = [
     description:
       "Can be obtain from 'Promise' (check your 'Agenda'). 'Promise' is limited, can be rerun of memories from past 'Promises' in 'Shop', check the news.",
     image: "../assets/main-page/modal-window/promise.png",
+    bannerType: "promise",
   },
   {
     obtain: "Oracle Of Stars",
@@ -95,12 +100,31 @@ export const obtainData = [
     ],
     description: "A donation wheel where you can get certain Memories for diamonds. This event is limited in time.",
     image: "../assets/main-page/modal-window/oracle-of-stars.png",
+    bannerType: "oracle-of-stars",
+  },
+  {
+    obtain: "Fondess Treasure",
+    memories: [
+      65, 150, 245, 340
+    ],
+    description: "An Event where you can get certain Memories. This event is limited in time.",
+    image: "../assets/main-page/modal-window/fondess-treasure-events.png",
+    bannerType: "fondess-treasure",
+  },
+  {
+    obtain: "Illusia Locus",
+    memories: [
+      10, 71, 156, 250, 345
+    ],
+    description: "An Event where you can get certain Memories. This event is limited in time.",
+    image: "../assets/main-page/modal-window/illusia-locus-event.png",
+    bannerType: "illusia-locus",
   },
   {
     obtain: "Limited Event",
     memories: [
-      10, 21, 53, 104, 65, 71, 122, 150, 156, 216, 245, 250, 308,
-      310, 312, 340, 345, 403, 421, 430
+      21, 53, 104, 122, 216, 308,
+      310, 312, 403, 421, 430
     ],
     description: "Memory from 'Events'. Can be repeatable, check the news.",
     image: "../assets/main-page/modal-window/events.png",
