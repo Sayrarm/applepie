@@ -37,7 +37,7 @@ export const obtainData = [
       290, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 313, 314,
       315, 316, 317, 318, 320, 321, 323, 325, 326, 327, 328, 329, 330, 331, 332,
       333, 334, 335, 348, 349, 350, 351, 358, 359, 361, 385, 386, 412, 413, 420,
-      423, 424, 425, 426, 427, 429, 433
+      423, 424, 425, 426, 427, 429, 433, 434, 435, 436, 437, 438
     ],
     description: "Can be obtain for 'Deepspace Wish' (Event Banner).",
     image: "../assets/main-page/modal-window/limited-banner.png",
@@ -89,10 +89,18 @@ export const obtainData = [
     image: "../assets/main-page/modal-window/promise.png",
   },
   {
+    obtain: "Oracle Of Stars",
+    memories: [
+      134, 228, 324, 157, 252, 347
+    ],
+    description: "A donation wheel where you can get certain Memories for diamonds. This event is limited in time.",
+    image: "../assets/main-page/modal-window/oracle-of-stars.png",
+  },
+  {
     obtain: "Limited Event",
     memories: [
-      10, 21, 53, 104, 65, 71, 122, 134, 150, 156, 157, 216, 245, 250, 252, 308,
-      310, 312, 324, 340, 345, 347, 403, 421, 430, 228
+      10, 21, 53, 104, 65, 71, 122, 150, 156, 216, 245, 250, 308,
+      310, 312, 340, 345, 403, 421, 430
     ],
     description: "Memory from 'Events'. Can be repeatable, check the news.",
     image: "../assets/main-page/modal-window/events.png",
