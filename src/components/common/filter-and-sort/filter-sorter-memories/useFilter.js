@@ -45,71 +45,79 @@ export const useFilter = (prefix = "") => {
   }, [prefix]);
 
   // Фильтруем данные
-  const filterMemories = useCallback(
-      (memories) => {
-        const selectedBannerTypes = [
-          ...(filters.obtain || []),
-          ...(filters.eventStandard || []),
-        ];
-
-        const allowedObtainIds =
-            selectedBannerTypes.length > 0
-                ? new Set(
+    const filterMemories = useCallback(
+        (memories) => {
+            // Хелпер: возвращает Set id карт для выбранных bannerType'ов
+            // или null, если фильтр не активен (ничего не выбрано)
+            const getMatchedIds = (bannerTypes) => {
+                if (!bannerTypes || bannerTypes.length === 0) return null;
+                return new Set(
                     obtainData
-                        .filter((o) => selectedBannerTypes.includes(o.bannerType))
+                        .filter((o) => bannerTypes.includes(o.bannerType))
                         .flatMap((o) => o.memories)
-                )
-                : null;
+                );
+            };
 
-        return memories.filter((memory) => {
-          // Фильтр по персонажу (кнопки)
-          const matchesChar =
-              selectedChar === "ALL" ||
-              memory.char.toLowerCase() === selectedChar.toLowerCase();
+            // Предвычисляем допустимые id для каждой группы фильтров
+            const obtainIds = getMatchedIds(filters.obtain);
+            const eventStandardIds = getMatchedIds(filters.eventStandard);
 
-          // Фильтр по редкости (из модалки)
-          const matchesRarity =
-              filters.rarity.length === 0 ||
-              filters.rarity.includes(memory.rarityName);
+            return memories.filter((memory) => {
+                const id = Number(memory.id);
 
-          // Фильтр по размещению (solar/lunar)
-          const matchesPlacement =
-              filters.placement.length === 0 ||
-              filters.placement.includes(memory.placementName);
+                // Фильтр по персонажу (кнопки)
+                const matchesChar =
+                    selectedChar === "ALL" ||
+                    memory.char.toLowerCase() === selectedChar.toLowerCase();
 
-          // Фильтр по таланту
-          const matchesTalent =
-              filters.talent.length === 0 ||
-              filters.talent.includes(memory.talentName);
+                // Фильтр по редкости (из модалки)
+                const matchesRarity =
+                    filters.rarity.length === 0 ||
+                    filters.rarity.includes(memory.rarityName);
 
-          // Фильтр по стелле (цвету)
-          const matchesStella =
-              filters.stella.length === 0 ||
-              filters.stella.includes(memory.stellaName);
+                // Фильтр по размещению (solar/lunar)
+                const matchesPlacement =
+                    filters.placement.length === 0 ||
+                    filters.placement.includes(memory.placementName);
 
-          //фильтр по наличию
-          const matchesAvailability =
-              filters.availability.length === 0 ||
-              filters.availability.includes(
-                  memory.isAvailable ? "available" : "notAvailable"
-              );
+                // Фильтр по таланту
+                const matchesTalent =
+                    filters.talent.length === 0 ||
+                    filters.talent.includes(memory.talentName);
 
-          const matchesObtain =
-              !allowedObtainIds || allowedObtainIds.has(Number(memory.id));
+                // Фильтр по стелле (цвету)
+                const matchesStella =
+                    filters.stella.length === 0 ||
+                    filters.stella.includes(memory.stellaName);
 
-          return (
-              matchesChar &&
-              matchesRarity &&
-              matchesPlacement &&
-              matchesTalent &&
-              matchesStella &&
-              matchesAvailability &&
-              matchesObtain
-          );
-        });
-      },
-      [selectedChar, filters]
-  );
+                // Фильтр по наличию
+                const matchesAvailability =
+                    filters.availability.length === 0 ||
+                    filters.availability.includes(
+                        memory.isAvailable ? "available" : "notAvailable"
+                    );
+
+                // Фильтр по способу получения (obtain)
+                const matchesObtain = !obtainIds || obtainIds.has(id);
+
+                // Фильтр по категории памяти (Event / Standard)
+                const matchesEventStandard =
+                    !eventStandardIds || eventStandardIds.has(id);
+
+                return (
+                    matchesChar &&
+                    matchesRarity &&
+                    matchesPlacement &&
+                    matchesTalent &&
+                    matchesStella &&
+                    matchesAvailability &&
+                    matchesObtain &&
+                    matchesEventStandard
+                );
+            });
+        },
+        [selectedChar, filters]
+    );
 
   return {
     selectedChar,
