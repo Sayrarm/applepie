@@ -55,6 +55,8 @@ export const getMemoryFilterKeys = (prefix) => ({
   filters: prefix ? `${prefix}_filters` : "memories_filters",
   search: prefix ? `${prefix}_search_query` : "memories_search_query",
   sort: prefix ? `${prefix}_sort_criteria` : "memories_sort_criteria",
+  obtain: `${prefix}obtain`,
+  eventStandard: `${prefix}eventStandard`,
 });
 
 //для фильтров протокоров

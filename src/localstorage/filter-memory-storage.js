@@ -98,12 +98,12 @@ export const saveObtainFilter = (prefix = "", value) => {
 
 export const getEventStandardFilter = (prefix = "") => {
   const keys = getFilterKeys(prefix);
-  return get(keys.obtain, []);
+  return get(keys.eventStandard, []);
 };
 
 export const saveEventStandardFilter = (prefix = "", value) => {
   const keys = getFilterKeys(prefix);
-  return set(keys.obtain, value);
+  return set(keys.eventStandard, value);
 };
 
 // ===== SEARCH =====

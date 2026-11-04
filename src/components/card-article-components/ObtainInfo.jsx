@@ -44,8 +44,10 @@ function ObtainInfo({cardId, obtainData}) {
     }
 
     // Находим ВСЕ способы получения, где есть этот cardId
-    const foundObtains = obtainData.filter((item) =>
-        item.memories.includes(Number(cardId)),
+    const foundObtains = obtainData.filter(
+        (item) =>
+            !item.hiddenFromObtain &&
+            item.memories.includes(Number(cardId))
     );
 
     if (foundObtains.length === 0) {

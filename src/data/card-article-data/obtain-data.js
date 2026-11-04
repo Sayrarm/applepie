@@ -130,7 +130,7 @@ export const obtainData = [
     bannerType: "birthday-event",
   },
   {
-    obtain: "Event Memories",
+    obtain: "Limited Event",
     memories: [
       396, 404, 405, 406, 407, 408, 402, 30, 43, 42, 41, 40, 38, 37, 36, 35, 34,
       33, 29, 28, 27, 81, 83, 84, 85, 86, 87, 88, 90, 91, 92, 93, 94, 95, 96,
@@ -144,12 +144,18 @@ export const obtainData = [
       14, 16, 397, 62, 63, 68, 69, 72, 130, 146, 149, 152, 154, 155, 227, 242, 244,
       248, 249, 251, 322, 336, 338, 342, 344, 398, 417, 418, 431, 432, 134, 228, 324,
       157, 252, 347, 65, 150, 245, 340, 10, 71, 156, 250, 345, 21, 53, 104, 122, 216,
-      310, 312, 403, 421, 430,
+      310, 312, 403, 421, 430, 308, 307, 118, 213, 51, 119, 214, 309, 215, 120, 52,
+      22, 311, 121, 217, 54, 20, 416, 162, 163, 257, 258, 352, 353, 224, 354, 355,
+      319, 164, 165, 259, 260, 133, 61, 241, 337, 147, 75, 76, 64, 148, 243, 339,
+      11, 12, 66, 151, 246, 341, 9, 17, 67, 153, 356, 357, 247, 166, 167, 343, 15,
+      261, 262, 70, 77, 78, 346, 8, 7, 399, 401, 414, 415, 419, 428, 422, 411, 384,
+      191, 39, 89, 277, 181, 371, 274, 367
 
     ],
-    description: "",
-    image: "",
+    description: "Memory from 'Events'.",
+    image: "../assets/main-page/modal-window/events.png",
     bannerType: "event-memories",
+    hiddenFromObtain: true,
   },
   {
     obtain: "Standart Memories",
@@ -168,14 +174,6 @@ export const obtainData = [
     description: "",
     image: "",
     bannerType: "standard-memories",
-  },
-  {
-    obtain: "Limited Event",
-    memories: [
-
-    ],
-    description: "Memory from 'Events'. Can be repeatable, check the news.",
-    image: "../assets/main-page/modal-window/events.png",
-    bannerType: "limited-event",
+    hiddenFromObtain: true,
   },
 ];

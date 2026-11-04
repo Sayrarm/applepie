@@ -338,7 +338,7 @@ export const ru = {
             navigation: 'Воспоминания',
         },
         ObtainInfo: {
-            title: 'Получить:',
+            title: 'Получение:',
             titleModal: 'Как получить: {{obtain}}',
         },
         StoryInfo: {
