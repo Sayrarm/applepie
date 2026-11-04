@@ -61,7 +61,7 @@ function TeamOptimizer() {
 
     const betaProtocoreOptions = [
         {value: "Oath Recovery Boost", label: "Oath Recovery Boost"},
-        {value: "Oath Strength", label: "Oath Strength"},
+        {value: "Oath's Strength", label: "Oath's Strength"},
         {value: "Expedited Energy Boost", label: "Expedited Energy Boost"},
         {value: "ATK Bonus", label: "ATK Bonus"},
         {value: "HP Bonus", label: "HP Bonus"},

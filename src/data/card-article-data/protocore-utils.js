@@ -66,7 +66,7 @@ export const calculateProtocoreStats = (protocores, baseStats) => {
       case "DMG Boost to Weakened":
         bonuses.dmgBoostPercent += statValue;
         break;
-      case "Oath Strength":
+      case "Oath's Strength":
         bonuses.oathStrengthPercent += statValue;
         break;
       case "Oath Recovery Boost":
@@ -109,7 +109,7 @@ export const calculateProtocoreStats = (protocores, baseStats) => {
           case "DMG Boost to Weakened":
             bonuses.dmgBoostPercent += sub.value || 0;
             break;
-          case "Oath Strength":
+          case "Oath's Strength":
             bonuses.oathStrengthPercent += sub.value || 0;
             break;
           default:

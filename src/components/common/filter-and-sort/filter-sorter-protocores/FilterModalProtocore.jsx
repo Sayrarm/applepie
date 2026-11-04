@@ -101,7 +101,7 @@ const FilterModalProtocore = forwardRef(
       "CRIT Rate",
       "CRIT DMG",
       "DMG Boost to Weakened",
-      "Oath Strength",
+      "Oath's Strength",
       "Oath Recovery Boost",
       "Expedited Energy Boost",
     ];
@@ -115,7 +115,7 @@ const FilterModalProtocore = forwardRef(
       "CRIT Rate",
       "CRIT DMG",
       "DMG Boost to Weakened",
-      "Oath Strength",
+      "Oath's Strength",
     ];
     const statusOptions = [
       { label: t('FilterModalProtocore.equipped'), value: "equipped" },

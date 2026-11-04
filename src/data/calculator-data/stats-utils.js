@@ -33,7 +33,7 @@ export const applyStat = (total, statName, value) => {
         case "DMG Boost to Weakened":
             total.dmgBoost += value;
             break;
-        case "Oath Strength":
+        case "Oath's Strength":
             total.oathStrength += value;
             break;
         case "Oath Recovery Boost":
@@ -73,7 +73,7 @@ export const STAT_KEY_BY_NAME = {
     "CRIT DMG": "critDmg",
     "Crit DMG": "critDmg",
     "DMG Boost to Weakened": "dmgBoost",
-    "Oath Strength": "oathStrength",
+    "Oath's Strength": "oathStrength",
     "Oath Recovery Boost": "oathRecoveryBoost",
     "Expedited Energy Boost": "expeditedEnergyBoost",
 };

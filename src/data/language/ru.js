@@ -131,7 +131,7 @@ export const ru = {
             critRate: 'Crit Rate',
             critDMG: 'Crit DMG',
             weakened: 'DMG Boost to Weakened',
-            oathStrength: 'Oath Strength',
+            oathStrength: "Oath's Strength",
             oathRecovery: 'Oath Recovery Boost',
             expeditedEnergy: 'Expedited Energy Boost',
         },
@@ -549,8 +549,8 @@ export const ru = {
             mainButton: 'Перейти на Главную страницу',
 
             //в protocore-functions.js
-            newSubstat: '+1 доп. хар-ка / усиление доп. хар-ки (на уровне {{level}})',
-            enhanceSubstat: 'Доп. Хар-ка усилена (на уровне {{level}})',
+            newSubstat: '+1 доп. хар-ка / усиление доп. хар-ки (на ур. {{level}})',
+            enhanceSubstat: 'Доп. Хар-ка усилена (на ур. {{level}})',
         },
         MemoryUpCalculator: {
             titleContainer: 'Калькулятор Воспоминания',

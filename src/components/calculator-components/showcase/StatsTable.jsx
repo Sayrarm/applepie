@@ -34,7 +34,7 @@ function StatsTable({ stats }) {
                 {cell("hp", stats.hp)}
                 {cell("critRate", "Crit Rate", true)}
                 {cell("critRate", `${stats.critRate.toFixed(2)}%`)}
-                {cell("oathStrength", "Oath Strength", true)}
+                {cell("oathStrength", "Oath's Strength", true)}
                 {cell("oathStrength", `${stats.oathStrength.toFixed(2)}%`)}
             </tr>
             <tr>

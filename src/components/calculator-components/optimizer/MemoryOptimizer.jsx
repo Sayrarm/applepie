@@ -41,7 +41,7 @@ const SUB_STAT_OPTIONS = [
     { value: "CRIT Rate", label: "CRIT Rate" },
     { value: "CRIT DMG", label: "CRIT DMG" },
     { value: "DMG Boost to Weakened", label: "DMG Boost to Weakened" },
-    { value: "Oath Strength", label: "Oath Strength" },
+    { value: "Oath's Strength", label: "Oath's Strength" },
     { value: "ATK Bonus", label: "ATK Bonus" },
     { value: "HP Bonus", label: "HP Bonus" },
     { value: "DEF Bonus", label: "DEF Bonus" },
@@ -49,7 +49,7 @@ const SUB_STAT_OPTIONS = [
 
 const betaProtocoreOptions = [
     { value: "Oath Recovery Boost", label: "Oath Recovery Boost" },
-    { value: "Oath Strength", label: "Oath Strength" },
+    { value: "Oath's Strength", label: "Oath's Strength" },
     { value: "Expedited Energy Boost", label: "Expedited Energy Boost" },
     { value: "ATK Bonus", label: "ATK Bonus" },
     { value: "HP Bonus", label: "HP Bonus" },

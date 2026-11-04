@@ -7,7 +7,11 @@ import { getStatsWithRank } from "@data";
 
 // ===== Утилиты =====
 export const normalizeStat = (stat) =>
-    String(stat).toLowerCase().replace(/\s+/g, "_").replace(/_+/g, "_");
+    String(stat)
+        .toLowerCase()
+        .replace(/['’‘`]/g, "")
+        .replace(/\s+/g, "_")
+        .replace(/_+/g, "_");
 
 export const statMatches = (a, b) => {
     if (!a || !b) return false;

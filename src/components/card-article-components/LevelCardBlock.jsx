@@ -441,7 +441,7 @@ function LevelCardBlock({ cardId: propCardId, onAvailabilityChange }) {
             <table className={styles.statsTable}>
               <thead>
                 <tr>
-                  <th>Oath Strength</th>
+                  <th>Oath's Strength</th>
                   <th>Oath Recovery Boost</th>
                   <th>Expedited Energy Boost</th>
                 </tr>

@@ -132,7 +132,7 @@ function StatsComparisonTable({
                             DMG Boost {getSortIcon("dmgBoost")}
                         </th>
                         <th onClick={() => handleSort("oathStrength")} className={styles.sortable}>
-                            Oath Strength {getSortIcon("oathStrength")}
+                            Oath's Strength {getSortIcon("oathStrength")}
                         </th>
                         <th onClick={() => handleSort("oathRecoveryBoost")} className={styles.sortable}>
                             Oath Recovery {getSortIcon("oathRecoveryBoost")}

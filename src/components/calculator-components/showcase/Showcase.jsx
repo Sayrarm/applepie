@@ -17,7 +17,8 @@ import {
     ChooseCompanion,
     ChooseWeapon,
     CombatCalculations,
-    StatsTable, HighlightProvider
+    StatsTable,
+    HighlightProvider
 } from "@components";
 import {useScreenshot} from "@hooks";
 import {

@@ -7,7 +7,7 @@ import {
   protocoreTypes,
   SUBSTAT_LEVELS,
 } from "@data";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next"; //не удаляй, импорт работает лол
 
 // Получить значение мейн стата для указанного уровня
 export const getMainStatValue = (protocoreType, statName, level) => {

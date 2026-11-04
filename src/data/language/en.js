@@ -133,7 +133,7 @@ export const en = {
             critRate: 'Crit Rate',
             critDMG: 'Crit DMG',
             weakened: 'DMG Boost to Weakened',
-            oathStrength: 'Oath Strength',
+            oathStrength: "Oath's Strength",
             oathRecovery: 'Oath Recovery Boost',
             expeditedEnergy: 'Expedited Energy Boost',
         },
