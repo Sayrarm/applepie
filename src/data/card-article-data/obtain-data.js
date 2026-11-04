@@ -130,6 +130,25 @@ export const obtainData = [
     bannerType: "birthday-event",
   },
   {
+    obtain: "10 Days With You",
+    memories: [
+      224, 319, 133, 61, 241, 337, 147, 11, 67, 153, 247,
+      343, 15, 70, 346, 399, 401, 419, 428
+    ],
+    description: "Log In Event. After the end of the event, the Memory ends up in Galaxy Explorer",
+    image: "../assets/main-page/modal-window/events.png",
+    bannerType: "10-days-with-you",
+  },
+  {
+    obtain: "Heartfelt Gift",
+    memories: [
+      173, 367, 277, 89, 39, 191, 384, 411
+    ],
+    description: "Log In Event. After the end of the event, the Memory ends up in Galaxy Explorer",
+    image: "../assets/main-page/modal-window/events.png",
+    bannerType: "heartfelt-gift",
+  },
+  {
     obtain: "Limited Event",
     memories: [
       396, 404, 405, 406, 407, 408, 402, 30, 43, 42, 41, 40, 38, 37, 36, 35, 34,

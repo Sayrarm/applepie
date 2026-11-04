@@ -123,6 +123,8 @@ const FilterModalMemory = forwardRef(
             {value: "fondess-treasure", label: "Fondess Treasure"},
             {value: "illusia-locus", label: "Illusia Locus"},
             {value: "birthday-event", label: "Birthday Event"},
+            {value: "10-days-with-you", label: "10 Days With You"},
+            {value: "heartfelt-gift", label: "Heartfelt Gift"},
         ];
 
         const optionsAvailability = [
