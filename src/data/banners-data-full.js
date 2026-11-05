@@ -1089,7 +1089,7 @@ export const bannersDataFull = [
     startDate: "2026-10-27T05:00:00",
     endDate: "2026-11-05T04:59:59",
     rerun: false,
-    active: true,
+    active: false,
     type: 'solo',
   },
   {
