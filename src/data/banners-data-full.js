@@ -1,7 +1,7 @@
 export const bannersDataFull = [
   {
     id: 1,
-    name: "Xspace Echo (Standart)",
+    name: "Xspace Echo (standard)",
     image: "../assets/banners/xspace-echo.png",
     cardIds: [
       32, 31, 98, 99, 195, 196, 289, 290, 385, 386, 46, 45, 44, 169, 170, 171,
@@ -11,7 +11,7 @@ export const bannersDataFull = [
     endDate: "permanently",
     rerun: false,
     active: false,
-    type: 'standart',
+    type: 'standard',
   },
   {
     id: 2,
@@ -168,7 +168,7 @@ export const bannersDataFull = [
     endDate: "2024-08-01T04:59:00",
     rerun: false,
     active: false,
-    type: 'standart',
+    type: 'standard',
   },
   {
     id: 16,
@@ -314,7 +314,7 @@ export const bannersDataFull = [
     endDate: "2025-02-08T04:59:00",
     rerun: false,
     active: false,
-    type: 'standart',
+    type: 'standard',
   },
   {
     id: 29,
@@ -691,7 +691,7 @@ export const bannersDataFull = [
     endDate: "2026-01-21T04:59:00",
     rerun: false,
     active: false,
-    type: 'standart',
+    type: 'standard',
   },
   {
     id: 63,
@@ -958,7 +958,7 @@ export const bannersDataFull = [
     endDate: "2026-07-24T04:59:59",
     rerun: false,
     active: false,
-    type: 'standart',
+    type: 'standard',
   },
   {
     id: 87,

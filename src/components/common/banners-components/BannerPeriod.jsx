@@ -19,7 +19,7 @@ function BannerPeriod({ banners }) {
 
   return (
     <div className={styles.period}>
-      <h3>From banner:</h3>
+      <h3>From banner/event:</h3>
       {banners.map((banner) => (
         <div key={banner.id}>
           "{banner.name}" {banner.rerun === true && " (Rerun)"}:{" "}

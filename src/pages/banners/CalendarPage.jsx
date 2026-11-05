@@ -1,6 +1,6 @@
 import {useEffect, useMemo, useRef, useState} from "react";
 import styles from "./Banners.module.css";
-import { bannersDataFull, battlePassData } from "@data";
+import {BANNER_TYPE_GROUPS, bannersDataFull, battlePassData, eventsData} from "@data";
 import {
     AsideList,
     BannersCalendar,
@@ -9,13 +9,16 @@ import {
     useBannersSearch,
 } from "@components";
 import { useTranslation } from "react-i18next";
-import {getBannerShowPromises, saveBannerShowPromises} from "@localstorage";
+import {
+    getBannerVisibleTypes,
+    saveBannerVisibleTypes,
+} from "@localstorage";
 
 function CalendarPage() {
     const filterModalRef = useRef();
     const [editMode, setEditMode] = useState(false); // Режим редактирования
-    const [showPromises, setShowPromises] = useState(() =>
-        getBannerShowPromises("banners")
+    const [visibleTypes, setVisibleTypes] = useState(() =>
+        getBannerVisibleTypes("banners")
     );
     const { t } = useTranslation();
 
@@ -36,13 +39,14 @@ function CalendarPage() {
 
     // сохраняем при каждом изменении
     useEffect(() => {
-        saveBannerShowPromises("banners", showPromises);
-    }, [showPromises]);
+        saveBannerVisibleTypes("banners", visibleTypes);
+    }, [visibleTypes]);
 
     // 2. Функция полного сброса (без clearSorting)
     const resetAllSettings = () => {
         clearAll();
         clearSearch();
+        setVisibleTypes([]);        // сброс видимых типов
         if (filterModalRef.current) {
             filterModalRef.current.clearAll();
         }
@@ -58,21 +62,38 @@ function CalendarPage() {
         []
     );
 
+    // Нормализуем Event-баннеры: уникальный id (на случай коллизий)
+    const eventsAsBanners = useMemo(
+        () =>
+            eventsData.map((bp) => ({
+                ...bp,
+                id: `bp-${bp.id}`,
+            })),
+        []
+    );
+
     const allBanners = useMemo(
-        () => [...bannersDataFull, ...battlePassAsBanners],
-        [battlePassAsBanners]
+        () => [...bannersDataFull, ...battlePassAsBanners, ...eventsAsBanners],
+        [battlePassAsBanners, eventsAsBanners]
     );
 
     // 3. Применяем только фильтры и поиск
     const processedBanners = useMemo(() => {
         let result = allBanners;
 
-        // скрываем Promise, если выключено
-        if (!showPromises) {
-            result = result.filter((banner) => banner.type !== "promise");
+        // Фильтр по выбранным группам типов
+        if (visibleTypes.length > 0) {
+            // Собираем все type, которые входят в выбранные группы
+            const allowedTypes = new Set(
+                visibleTypes.flatMap((group) => BANNER_TYPE_GROUPS[group] || [])
+            );
+            result = result.filter((banner) => allowedTypes.has(banner.type));
+        } else {
+            // Ничего не выбрано → ничего не показываем
+            return [];
         }
 
-        // фильтрация
+        // фильтрация (useBannersFilter)
         result = filterBanners(result);
 
         // поиск
@@ -86,7 +107,7 @@ function CalendarPage() {
         }
 
         return result;
-    }, [allBanners, showPromises, filterBanners, searchQuery]);
+    }, [allBanners, visibleTypes, filterBanners, searchQuery]);
 
     const items = [
         {
@@ -136,8 +157,8 @@ function CalendarPage() {
                     resetAllSettings={resetAllSettings}
                     hideSort={true}
                     storagePrefix="banners"
-                    showPromises={showPromises}
-                    onTogglePromises={() => setShowPromises((v) => !v)}
+                    visibleTypes={visibleTypes}
+                    setVisibleTypes={setVisibleTypes}
                 />
 
                 <div className={styles.AsideListContainer}>

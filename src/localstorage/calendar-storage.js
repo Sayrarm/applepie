@@ -1,4 +1,5 @@
 import {KEYS} from "./localStorageKeys.js";
+import {get, set} from "./storage-utils.js";
 
 const STORAGE_KEY = KEYS.banners_calendar_predicts;
 const SHOW_PREDICTS_KEY = KEYS.banners_calendar_show_predicts;
@@ -62,4 +63,14 @@ export const saveShowPredicts = (value) => {
     } catch (e) {
         console.error("Failed to save showPredicts", e);
     }
+};
+
+export const getBannerVisibleTypes = (prefix = "") => {
+    const key = prefix ? `${prefix}_visible_types` : "banners_visible_types";
+    return get(key, ["banner"]);   // по умолчанию — показываем баннер
+};
+
+export const saveBannerVisibleTypes = (prefix = "", value) => {
+    const key = prefix ? `${prefix}_visible_types` : "banners_visible_types";
+    return set(key, value);
 };

@@ -215,5 +215,7 @@ export {
   removePredict,
   clearPredicts,
   getShowPredicts,
-  saveShowPredicts
+  saveShowPredicts,
+  getBannerVisibleTypes,
+  saveBannerVisibleTypes
 } from "./calendar-storage.js";

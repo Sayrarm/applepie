@@ -177,7 +177,7 @@ export const obtainData = [
     hiddenFromObtain: true,
   },
   {
-    obtain: "Standart Memories",
+    obtain: "Standard Memories",
     memories: [
       226, 26, 25, 24, 23, 19, 18, 4, 2, 5, 3, 6, 1, 46, 45, 44, 32, 31, 48, 47,
       49, 50, 55, 56, 57, 58, 59, 60, 73, 74, 79, 80, 82, 98, 99, 106, 107, 108,

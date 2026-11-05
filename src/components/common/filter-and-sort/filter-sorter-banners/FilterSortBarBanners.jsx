@@ -23,11 +23,27 @@ function FilterSortBarBanners({
                                   resetAllSettings,
                                   storagePrefix = "",
                                   hideSort = false,
-                                  showPromises = true,
-                                  onTogglePromises,
+                                  visibleTypes = [],
+                                  setVisibleTypes,
                               }) {
-    const characters = ["Xavier", "Zayne", "Rafayel", "Sylus", "Caleb"];
     const { t } = useTranslation();
+    const typeOptions = [
+        { value: "banner", label: t('FilterSortBarBanners.types.banner') },
+        { value: "promise", label: t('FilterSortBarBanners.types.promise') },
+        { value: "oracle-of-stars", label: t('FilterSortBarBanners.types.oracleOfStars') },
+        { value: "fondess-treasure", label: t('FilterSortBarBanners.types.fondessTreasure') },
+        { value: "illusia-locus", label: t('FilterSortBarBanners.types.illusiaLocus') },
+        { value: "10-days-with-you", label: t('FilterSortBarBanners.types.tenDaysWithYou') },
+        { value: "heartfelt-gift", label: t('FilterSortBarBanners.types.heartfeltGift') },
+        { value: "kitty-tokens", label: t('FilterSortBarBanners.types.kittyTokens') },
+        { value: "plushie", label: t('FilterSortBarBanners.types.plushie') },
+        { value: "double-protocore", label: t('FilterSortBarBanners.types.doubleProtocore') },
+        { value: "double-bounty-hunt", label: t('FilterSortBarBanners.types.doubleBountyHunt') },
+        { value: "illusio", label: t('FilterSortBarBanners.types.illusio') },
+        { value: "event", label: t('FilterSortBarBanners.types.event') },
+    ];
+    const characters = ["Xavier", "Zayne", "Rafayel", "Sylus", "Caleb"];
+
 
     return (
         <div className={styles.options}>
@@ -161,23 +177,16 @@ function FilterSortBarBanners({
                     className={styles.colorBrown}
                 />
 
-                {/* Кнопка показа/скрытия Promise-баннеров */}
-                {typeof onTogglePromises === "function" && (
-                    <Button
-                        onClick={onTogglePromises}
-                        title={
-                            showPromises
-                                ? t('FilterSortBarBanners.hidePromises')
-                                : t('FilterSortBarBanners.showPromises')
-                        }
-                        className={styles.colorBrown}
-                        type={showPromises ? "default" : "dashed"}
-                    >
-                        {showPromises
-                            ? t('FilterSortBarBanners.promisesOn')
-                            : t('FilterSortBarBanners.promisesOff')}
-                    </Button>
-                )}
+                <Select
+                    mode="multiple"
+                    options={typeOptions}
+                    value={visibleTypes}
+                    onChange={(values) => setVisibleTypes(values)}
+                    placeholder={t('FilterSortBarBanners.typesPlaceholder')}
+                    className={styles.colorBrown}
+                    style={{ minWidth: 220 }}
+                    allowClear
+                />
             </aside>
         </div>
     );
