@@ -199,4 +199,12 @@ export const eventsDataMainPage = [
     endDate: "2026-11-08T04:59:59",
     active: true,
   },
+  {
+    id: 26,
+    name: "Double Drop of Bounty Hunt",
+    image: "../assets/main-page/events/bounty-hunt.png",
+    startDate: "2026-11-23T05:00:00",
+    endDate: "2026-11-30T04:59:59",
+    active: true,
+  },
 ];
