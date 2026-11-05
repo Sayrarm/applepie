@@ -181,7 +181,7 @@ export const eventsDataMainPage = [
     image: "../assets/main-page/events/blade-runner-event.png",
     startDate: "2026-10-19T05:00:00",
     endDate: "2026-11-05T04:59:59",
-    active: true,
+    active: false,
   },
   {
     id: 24,
@@ -196,7 +196,7 @@ export const eventsDataMainPage = [
     name: "New plushie",
     image: "../assets/main-page/events/baby-shark-plushie.png",
     startDate: "2026-10-26T05:00:00",
-    endDate: "2026-11-08T04:59:59",
+    endDate: "2026-11-09T04:59:59",
     active: true,
   },
   {
