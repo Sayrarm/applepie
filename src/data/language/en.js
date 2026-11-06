@@ -622,8 +622,8 @@ export const en = {
             resetButton: "Reset all settings",
             typesPlaceholder: "Show banners/events...",
             types: {
-                "banner": "Banner",
-                "promise": "Promise",
+                "banner": "Gacha Banners",
+                "promise": "Promises",
                 "oracleOfStars": "Oracle Of Stars",
                 "fondessTreasure": "Fondess Treasure",
                 "illusiaLocus": "Illusia Locus",

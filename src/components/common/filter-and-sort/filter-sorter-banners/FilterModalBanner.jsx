@@ -51,7 +51,7 @@ const FilterModalBanner = forwardRef(
 
         // --- Опции чекбоксов ---
         const optionsType = [
-            { label: t("FilterModalBanner.standart"), value: "standart" },
+            { label: t("FilterModalBanner.standart"), value: "standard" },
             { label: t("FilterModalBanner.multi"), value: "multi" },
             { label: t("FilterModalBanner.myth"), value: "myth" },
             { label: t("FilterModalBanner.solo"), value: "solo" },

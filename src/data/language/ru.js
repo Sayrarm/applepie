@@ -620,8 +620,8 @@ export const ru = {
             resetButton: "Очистить все настройки",
             typesPlaceholder: "Показать баннеры/эвенты...",
             types: {
-                "banner": "Banner",
-                "promise": "Promise",
+                "banner": "Gacha Banners",
+                "promise": "Promises",
                 "oracleOfStars": "Oracle Of Stars",
                 "fondessTreasure": "Fondess Treasure",
                 "illusiaLocus": "Illusia Locus",

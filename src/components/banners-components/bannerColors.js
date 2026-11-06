@@ -13,7 +13,7 @@ const CHAR_COLORS = {
 const COLORS = {
     multi: "#3fae5a",     // зелёный
     rerun: "#9a9a9a",     // серый
-    standart: "#175fb3",  // синий
+    standard: "#175fb3",  // синий
     promise: "#ecd86d",  //желтый
 };
 
@@ -45,8 +45,8 @@ export const getBannerColor = (banner) => {
     // Рерун важнее типа — он всегда серый
     if (banner.rerun === true) return COLORS.rerun;
 
-    // Standart
-    if (banner.type === "standart") return COLORS.standart;
+    // Standard
+    if (banner.type === "standard") return COLORS.standard;
 
     // Multi
     if (banner.type === "multi") return COLORS.multi;
@@ -73,7 +73,7 @@ export const getBannerColor = (banner) => {
         return COLORS.multi;
     }
 
-    return "#888"; // fallback
+    return "#FF0000"; // fallback
 };
 
 // Получить подпись типа (для tooltip)
