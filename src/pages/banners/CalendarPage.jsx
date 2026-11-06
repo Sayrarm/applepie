@@ -157,6 +157,7 @@ function CalendarPage() {
                     resetAllSettings={resetAllSettings}
                     hideSort={true}
                     storagePrefix="banners"
+                    hideTypeSelect={false}
                     visibleTypes={visibleTypes}
                     setVisibleTypes={setVisibleTypes}
                 />

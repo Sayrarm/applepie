@@ -23,6 +23,7 @@ function FilterSortBarBanners({
                                   resetAllSettings,
                                   storagePrefix = "",
                                   hideSort = false,
+                                  hideTypeSelect = true,
                                   visibleTypes = [],
                                   setVisibleTypes,
                               }) {
@@ -177,6 +178,7 @@ function FilterSortBarBanners({
                     className={styles.colorBrown}
                 />
 
+                {!hideTypeSelect && setVisibleTypes && (
                 <Select
                     mode="multiple"
                     options={typeOptions}
@@ -187,6 +189,7 @@ function FilterSortBarBanners({
                     style={{ minWidth: 220 }}
                     allowClear
                 />
+                )}
             </aside>
         </div>
     );

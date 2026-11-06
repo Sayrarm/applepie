@@ -618,7 +618,7 @@ export const ru = {
             filterButton: "Фильтры",
             search: "Поиск баннера...",
             resetButton: "Очистить все настройки",
-            typesPlaceholder: "Show types...",
+            typesPlaceholder: "Показать баннеры/эвенты...",
             types: {
                 "banner": "Banner",
                 "promise": "Promise",

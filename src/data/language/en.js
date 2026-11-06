@@ -620,7 +620,7 @@ export const en = {
             filterButton: "Filters",
             search: "Search banners...",
             resetButton: "Reset all settings",
-            typesPlaceholder: "Show banners...",
+            typesPlaceholder: "Show banners/events...",
             types: {
                 "banner": "Banner",
                 "promise": "Promise",
