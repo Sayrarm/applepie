@@ -9,25 +9,25 @@ export const wuCategories = [
     id: 2,
     link: "snowy-stairs",
     title: "Snowy Stairs",
-    image: "../assets/wu/Zayne_436.png",
+    image: "../assets/wu/2.png",
   },
   {
     id: 3,
     link: "bouquets-and-dirges",
     title: "Bouquets And Dirges",
-    image: "../assets/wu/Rafayel_434.png",
+    image: "../assets/wu/3.png",
   },
   {
     id: 4,
     link: "from-the-stars",
     title: "From The Stars",
-    image: "../assets/wu/Sylus_437.png",
+    image: "../assets/wu/4.png",
   },
   {
     id: 5,
     link: "long-lost-treasures",
     title: "Long Lost Treasures",
-    image: "../assets/wu/Caleb_438.png",
+    image: "../assets/wu/5.png",
   },
   {
     id: 6,
@@ -138,7 +138,7 @@ export const wuCategories = [
     id: 25.2,
     link: "little-prince-gift",
     title: "The Little Prince's Gift",
-    image: "../assets/wu/25.Zayne_436.png",
+    image: "../assets/wu/25.2.png",
   },
   {
     id: 26,

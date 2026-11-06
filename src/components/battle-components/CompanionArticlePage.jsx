@@ -241,7 +241,7 @@ function CompanionArticlePage({ data, linkField = "link" }) {
             cooldown="All Solar Memories are Rank 2"
             cost={
               <img
-                src={getImageUrl("../assets/icons/rank-Zayne_436.png")}
+                src={getImageUrl("../assets/icons/rank-2.png")}
                 alt="Rank 2"
                 className={styles.costImage}
               />
@@ -257,7 +257,7 @@ function CompanionArticlePage({ data, linkField = "link" }) {
             cooldown="All Solar Memories are Rank 3"
             cost={
               <img
-                src={getImageUrl("../assets/icons/rank-Rafayel_434.png")}
+                src={getImageUrl("../assets/icons/rank-3.png")}
                 alt="Rank 3"
                 className={styles.costImage}
               />
