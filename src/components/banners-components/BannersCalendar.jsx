@@ -252,7 +252,7 @@ const getSpecialDayClass = (day) => {
 };
 
 // ===== Мини-месяц для режима "год" =====
-function MiniMonth({ year, month, banners, onClick }) {
+function MiniMonth({ year, month, banners, onClick, showSpecialDays = true }) {
     const { timezone } = useTimezone();
     const { t, i18n } = useTranslation();
     const monthDays = useMemo(() => getMonthDays(year, month), [year, month]);
@@ -305,7 +305,9 @@ function MiniMonth({ year, month, banners, onClick }) {
                         const dayIndex = i - firstDayOfWeek;
                         const day = monthDays[dayIndex];
                         const isCurrentMonth = dayIndex >= 0 && dayIndex < monthDays.length;
-                        const specialClass = isCurrentMonth ? getSpecialDayClass(day) : "";
+                        const specialClass = isCurrentMonth && showSpecialDays
+                            ? getSpecialDayClass(day)
+                            : "";
                         return (
                             <div
                                 key={i}
@@ -349,7 +351,13 @@ function MiniMonth({ year, month, banners, onClick }) {
 }
 
 // ===== Основной компонент =====
-function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditMode }) {
+function BannersCalendar({
+                             banners,
+                             initialDate = new Date(),
+                             editMode,
+                             setEditMode,
+                             showSpecialDays = true,
+}) {
     const { timezone } = useTimezone();
     const { t, i18n } = useTranslation();
     const { isCapturing, captureScreenshot } = useScreenshot();
@@ -800,6 +808,7 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
                             month={idx}
                             banners={calendarBanners}
                             onClick={() => openMonth(idx)}
+                            showSpecialDays={showSpecialDays}
                         />
                     ))}
                 </div>
@@ -897,7 +906,9 @@ function BannersCalendar({ banners, initialDate = new Date(), editMode, setEditM
                                 // ВАЖНО: todayTime уже сдвинут, но startOfDay применяется к нему,
                                 // чтобы сравнить именно дни (без учета времени)
                                 const isToday = isCurrentMonth && day.getTime() === startOfDay(todayTime).getTime();
-                                const specialClass = isCurrentMonth ? getSpecialDayClass(day) : "";
+                                const specialClass = isCurrentMonth && showSpecialDays
+                                    ? getSpecialDayClass(day)
+                                    : "";
                                 const isSelectedDay = isCurrentMonth && selectedDays.includes(day.getTime());
 
                                 return (

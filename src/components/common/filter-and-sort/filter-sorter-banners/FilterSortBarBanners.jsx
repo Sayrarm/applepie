@@ -26,6 +26,8 @@ function FilterSortBarBanners({
                                   hideTypeSelect = true,
                                   visibleTypes = [],
                                   setVisibleTypes,
+                                  showSpecialDays = true,
+                                  onToggleSpecialDays,
                               }) {
     const { t } = useTranslation();
     const typeOptions = [
@@ -189,6 +191,23 @@ function FilterSortBarBanners({
                     style={{ minWidth: 220 }}
                     allowClear
                 />
+                )}
+
+                {typeof onToggleSpecialDays === "function" && (
+                    <Button
+                        onClick={onToggleSpecialDays}
+                        title={
+                            showSpecialDays
+                                ? t('FilterSortBarBanners.hideSpecialDays')
+                                : t('FilterSortBarBanners.showSpecialDays')
+                        }
+                        className={styles.colorBrown}
+                        type={showSpecialDays ? "default" : "dashed"}
+                    >
+                        {showSpecialDays
+                            ? t('FilterSortBarBanners.specialDaysOn')
+                            : t('FilterSortBarBanners.specialDaysOff')}
+                    </Button>
                 )}
             </aside>
         </div>

@@ -74,3 +74,13 @@ export const saveBannerVisibleTypes = (prefix = "", value) => {
     const key = prefix ? `${prefix}_visible_types` : "banners_visible_types";
     return set(key, value);
 };
+
+export const getShowSpecialDays = (prefix = "") => {
+    const key = prefix ? `${prefix}_show_special_days` : "banners_show_special_days";
+    return get(key, true);   // по умолчанию показываем
+};
+
+export const saveShowSpecialDays = (prefix = "", value) => {
+    const key = prefix ? `${prefix}_show_special_days` : "banners_show_special_days";
+    return set(key, value);
+};

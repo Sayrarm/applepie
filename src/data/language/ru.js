@@ -634,6 +634,10 @@ export const ru = {
                 "illusio": "Illusio",
                 "event": "Events"
             },
+            showSpecialDays: "Показывать ДР",
+            hideSpecialDays: "Спрятать ДР",
+            specialDaysOn: "ДР вкл.",
+            specialDaysOff: "ДР выкл."
         },
         Banners: {
             allBanners: 'Все баннеры',

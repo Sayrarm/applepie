@@ -636,6 +636,10 @@ export const en = {
                 "illusio": "Illusio",
                 "event": "Events"
             },
+            showSpecialDays: "Show birthdays",
+            hideSpecialDays: "Hide birthdays",
+            specialDaysOn: "Birthdays: on",
+            specialDaysOff: "Birthdays: off"
         },
         Banners: {
             allBanners: 'All banners',

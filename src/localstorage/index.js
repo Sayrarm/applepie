@@ -217,5 +217,7 @@ export {
   getShowPredicts,
   saveShowPredicts,
   getBannerVisibleTypes,
-  saveBannerVisibleTypes
+  saveBannerVisibleTypes,
+  getShowSpecialDays,
+  saveShowSpecialDays
 } from "./calendar-storage.js";

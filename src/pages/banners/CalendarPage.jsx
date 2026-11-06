@@ -1,6 +1,11 @@
 import {useEffect, useMemo, useRef, useState} from "react";
 import styles from "./Banners.module.css";
-import {BANNER_TYPE_GROUPS, bannersDataFull, battlePassData, eventsData} from "@data";
+import {
+    BANNER_TYPE_GROUPS,
+    bannersDataFull,
+    battlePassData,
+    eventsData
+} from "@data";
 import {
     AsideList,
     BannersCalendar,
@@ -11,7 +16,9 @@ import {
 import { useTranslation } from "react-i18next";
 import {
     getBannerVisibleTypes,
+    getShowSpecialDays,
     saveBannerVisibleTypes,
+    saveShowSpecialDays,
 } from "@localstorage";
 
 function CalendarPage() {
@@ -19,6 +26,9 @@ function CalendarPage() {
     const [editMode, setEditMode] = useState(false); // Режим редактирования
     const [visibleTypes, setVisibleTypes] = useState(() =>
         getBannerVisibleTypes("banners")
+    );
+    const [showSpecialDays, setShowSpecialDays] = useState(() =>
+        getShowSpecialDays("banners")
     );
     const { t } = useTranslation();
 
@@ -42,11 +52,16 @@ function CalendarPage() {
         saveBannerVisibleTypes("banners", visibleTypes);
     }, [visibleTypes]);
 
+    useEffect(() => {
+        saveShowSpecialDays("banners", showSpecialDays);
+    }, [showSpecialDays]);
+
     // 2. Функция полного сброса (без clearSorting)
     const resetAllSettings = () => {
         clearAll();
         clearSearch();
-        setVisibleTypes([]);        // сброс видимых типов
+        setVisibleTypes([]);
+        setShowSpecialDays(true);
         if (filterModalRef.current) {
             filterModalRef.current.clearAll();
         }
@@ -160,6 +175,8 @@ function CalendarPage() {
                     hideTypeSelect={false}
                     visibleTypes={visibleTypes}
                     setVisibleTypes={setVisibleTypes}
+                    showSpecialDays={showSpecialDays}
+                    onToggleSpecialDays={() => setShowSpecialDays((v) => !v)}
                 />
 
                 <div className={styles.AsideListContainer}>
@@ -174,6 +191,7 @@ function CalendarPage() {
                 banners={processedBanners}
                 editMode={editMode}
                 setEditMode={setEditMode}
+                showSpecialDays={showSpecialDays}
             />
         </section>
     );
