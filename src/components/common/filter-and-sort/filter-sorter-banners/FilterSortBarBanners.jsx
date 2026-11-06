@@ -188,7 +188,7 @@ function FilterSortBarBanners({
                     onChange={(values) => setVisibleTypes(values)}
                     placeholder={t('FilterSortBarBanners.typesPlaceholder')}
                     className={styles.colorBrown}
-                    style={{ minWidth: 220 }}
+                    style={{ width: 250 }}
                     allowClear
                 />
                 )}
