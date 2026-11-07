@@ -606,6 +606,17 @@ export const eventsData = [
     },
     {
         id: 26,
+        name: "Illusio",
+        image: "../assets/main-page/events/illusio.png",
+        cardIds: [],
+        startDate: "2026-11-06T05:00:00",
+        endDate: "2026-11-23T04:59:59",
+        rerun: false,
+        active: true,
+        type: 'illusio',
+    },
+    {
+        id: 27,
         name: "Double Drop of Bounty Hunt",
         image: "../assets/main-page/events/bounty-hunt.png",
         cardIds: [],
@@ -615,4 +626,5 @@ export const eventsData = [
         active: true,
         type: 'double-bounty-hunt',
     },
+
 ]
