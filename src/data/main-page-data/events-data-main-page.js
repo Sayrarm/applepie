@@ -66,7 +66,7 @@ export const eventsDataMainPage = [
   {
     id: 9,
     name: "New Kitty Tokens",
-    image: "../assets/main-page/events/kitty-extra.png",
+    image: "../assets/main-page/events/sport-series.png",
     startDate: "2026-07-27T05:00:00",
     endDate: "2026-08-17T04:59:59",
     active: false,
@@ -74,7 +74,7 @@ export const eventsDataMainPage = [
   {
     id: 10,
     name: "New plushie",
-    image: "../assets/main-page/events/plushie-23.png",
+    image: "../assets/main-page/events/wooble-berry.png",
     startDate: "2026-08-03T05:00:00",
     endDate: "2026-08-17T04:59:59",
     active: false,
@@ -98,7 +98,7 @@ export const eventsDataMainPage = [
   {
     id: 13,
     name: "New plushie",
-    image: "../assets/main-page/events/corn-plushie.png",
+    image: "../assets/main-page/events/stylish-corn.png",
     startDate: "2026-08-31T05:00:00",
     endDate: "2026-09-13T04:59:59",
     active: false,
@@ -154,7 +154,7 @@ export const eventsDataMainPage = [
   {
     id: 20,
     name: "New Kitty Tokens",
-    image: "../assets/main-page/events/kitty-sleepwear.png",
+    image: "../assets/main-page/events/sleppwear-series.png",
     startDate: "2026-09-28T05:00:00",
     endDate: "2026-10-19T04:59:59",
     active: false,
@@ -162,7 +162,7 @@ export const eventsDataMainPage = [
   {
     id: 21,
     name: "New plushie",
-    image: "../assets/main-page/events/pankake.png",
+    image: "../assets/main-page/events/sweet-pancake.png",
     startDate: "2026-09-28T05:00:00",
     endDate: "2026-10-12T04:59:59",
     active: false,
