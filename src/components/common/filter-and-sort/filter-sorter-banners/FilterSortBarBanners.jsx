@@ -46,6 +46,7 @@ function FilterSortBarBanners({
         { value: "event", label: t('FilterSortBarBanners.types.event') },
         { value: "memory-growth", label: t('FilterSortBarBanners.types.memory-growth') },
         { value: "companion-rehearsal", label: t('FilterSortBarBanners.types.companion-rehearsal') },
+        { value: "bd-event", label: t('FilterSortBarBanners.types.bd-event') },
     ];
     const characters = ["Xavier", "Zayne", "Rafayel", "Sylus", "Caleb"];
 

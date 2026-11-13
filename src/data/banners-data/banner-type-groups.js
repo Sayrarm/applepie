@@ -14,6 +14,7 @@ export const BANNER_TYPE_GROUPS = {
     "event": ["event"],
     "memory-growth": ["memory-growth"],
     "companion-rehearsal": ["companion-rehearsal"],
+    "bd-event": ["bd-event"],
 };
 
 export const ALL_BANNER_TYPE_GROUPS = Object.keys(BANNER_TYPE_GROUPS);

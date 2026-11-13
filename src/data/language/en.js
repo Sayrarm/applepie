@@ -637,6 +637,7 @@ export const en = {
                 "event": "Events",
                 "memory-growth": "Memory Growth Bonus Event",
                 "companion-rehearsal": "Companion Rehearsal",
+                "bd-event": "Birthday Event",
             },
             showSpecialDays: "Show birthdays",
             hideSpecialDays: "Hide birthdays",
