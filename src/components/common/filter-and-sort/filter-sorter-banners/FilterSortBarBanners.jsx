@@ -44,6 +44,8 @@ function FilterSortBarBanners({
         { value: "double-bounty-hunt", label: t('FilterSortBarBanners.types.doubleBountyHunt') },
         { value: "illusio", label: t('FilterSortBarBanners.types.illusio') },
         { value: "event", label: t('FilterSortBarBanners.types.event') },
+        { value: "memory-growth", label: t('FilterSortBarBanners.types.memory-growth') },
+        { value: "companion-rehearsal", label: t('FilterSortBarBanners.types.companion-rehearsal') },
     ];
     const characters = ["Xavier", "Zayne", "Rafayel", "Sylus", "Caleb"];
 

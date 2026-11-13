@@ -1,17 +1,19 @@
 export const BANNER_TYPE_GROUPS = {
-    banner: ["multi", "solo", "myth", "standard", "birthday"],
-    promise: ["promise"],
+    "banner": ["multi", "solo", "myth", "standard", "birthday"],
+    "promise": ["promise"],
     "oracle-of-stars": ["oracle-of-stars"],
     "fondess-treasure": ["fondess-treasure"],
     "illusia-locus": ["illusia-locus"],
     "10-days-with-you": ["10-days-with-you"],
     "heartfelt-gift": ["heartfelt-gift"],
     "kitty-tokens": ["kitty-tokens"],
-    plushie: ["plushie"],
+    "plushie": ["plushie"],
     "double-protocore": ["double-protocore"],
     "double-bounty-hunt": ["double-bounty-hunt"],
-    illusio: ["illusio"],
-    event: ["event"],
+    "illusio": ["illusio"],
+    "event": ["event"],
+    "memory-growth": ["memory-growth"],
+    "companion-rehearsal": ["companion-rehearsal"],
 };
 
 export const ALL_BANNER_TYPE_GROUPS = Object.keys(BANNER_TYPE_GROUPS);

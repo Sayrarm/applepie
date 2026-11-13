@@ -632,7 +632,9 @@ export const ru = {
                 "doubleProtocore": "Double Protocores",
                 "doubleBountyHunt": "Double Bounty Hunt",
                 "illusio": "Illusio",
-                "event": "Events"
+                "event": "Events",
+                "memory-growth": "Memory Growth Bonus Event",
+                "companion-rehearsal": "Companion Rehearsal",
             },
             showSpecialDays: "Показывать ДР",
             hideSpecialDays: "Спрятать ДР",
