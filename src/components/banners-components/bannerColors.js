@@ -17,6 +17,40 @@ const COLORS = {
     promise: "#ecd86d",  //желтый
 };
 
+const hashString = (str) => {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+        hash = (hash << 5) - hash + str.charCodeAt(i);
+        hash |= 0;
+    }
+    return Math.abs(hash);
+};
+
+export const getHashedColor = (seed, attempt = 0) => {
+    const hue = (hashString(`${seed}_${attempt}`)) % 360;
+    return `hsl(${hue}, 65%, 55%)`;
+};
+
+// Проверяет, есть ли у баннера «фиксированный» цвет
+export const hasFixedColor = (banner) => {
+    if (banner.customColor) return true;
+    if (banner.customChar && CHAR_COLORS[banner.customChar]) return true;
+    if (banner.rerun === true) return true;
+    if (banner.type === "standard" || banner.type === "multi" ||
+        banner.type === "promise") return true;
+    if (banner.type === "solo" || banner.type === "birthday" || banner.type === "myth") {
+        const chars = getBannerCharacters(banner);
+        if (chars.length === 1) return true;
+    }
+    return false;
+};
+
+// Возвращает фиксированный цвет или null, если нужен «рандомный»
+export const getFixedBannerColor = (banner) => {
+    if (!hasFixedColor(banner)) return null;
+    return getBannerColor(banner);   // твоя текущая логика, но без fallback "#FF0000"
+};
+
 // Получить уникальных персонажей баннера
 export const getBannerCharacters = (banner) => {
     // Если это кастомный баннер с указанным персонажем (из модалки)
@@ -73,7 +107,7 @@ export const getBannerColor = (banner) => {
         return COLORS.multi;
     }
 
-    return "#FF0000"; // fallback
+    return null;
 };
 
 // Получить подпись типа (для tooltip)

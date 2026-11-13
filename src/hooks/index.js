@@ -10,3 +10,4 @@ export { sortTableData } from "./tableSort.js";
 export { useTableSort } from "./useTableSort.js";
 export { useExcludedCards } from "./useExcludedCards.jsx";
 export { notifyActiveAccountChanged, useActiveAccount, notifySlotUpdated } from "./useActiveAccount.js";
+export { getBannerColorMap } from "./useBannerColorMap.js";

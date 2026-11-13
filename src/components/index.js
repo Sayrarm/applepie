@@ -1,5 +1,6 @@
 //banners-components
 export { default as BannersCalendar } from "./banners-components/BannersCalendar.jsx";
+export { getFixedBannerColor, getHashedColor } from "./banners-components/bannerColors.js";
 
 // battle-components
 export { default as AsideCompanionList } from "./battle-components/AsideCompanionList.jsx";

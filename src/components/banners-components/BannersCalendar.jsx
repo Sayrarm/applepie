@@ -5,7 +5,7 @@ import {
     getBannerCharacters,
     getBannerTypeLabel,
 } from "./bannerColors.js";
-import { getImageUrl } from "@hooks";
+import {getBannerColorMap, getImageUrl} from "@hooks";
 import { memoriesData } from "@data";
 import {
     CardList,
@@ -142,7 +142,6 @@ const buildBannerSegments = (banners, monthDays, firstDayOfWeek, timezone) => {
         segments.forEach(seg => {
             allSegments.push({
                 banner,
-                color: getBannerColor(banner),
                 typeLabel: getBannerTypeLabel(banner),
                 imageUrl: getImageUrl(banner.image),
                 startCol: seg.startCol,
@@ -252,7 +251,7 @@ const getSpecialDayClass = (day) => {
 };
 
 // ===== Мини-месяц для режима "год" =====
-function MiniMonth({ year, month, banners, onClick, showSpecialDays = true }) {
+function MiniMonth({ year, month, banners, onClick, showSpecialDays = true, bannerColorMap }) {
     const { timezone } = useTimezone();
     const { t, i18n } = useTranslation();
     const monthDays = useMemo(() => getMonthDays(year, month), [year, month]);
@@ -329,7 +328,8 @@ function MiniMonth({ year, month, banners, onClick, showSpecialDays = true }) {
                     style={{ gridTemplateRows: `repeat(${totalWeeks}, 1fr)` }}
                 >
                     {bannerRows.map((seg, idx) => {
-                        const { banner, color, startCol, span, row, lane } = seg;
+                        const { banner, startCol, span, row, lane } = seg;
+                        const color = bannerColorMap.get(banner.id) || getBannerColor(banner);
                         return (
                             <div
                                 key={`${banner.id}-${row}-${idx}`}
@@ -464,6 +464,11 @@ function BannersCalendar({
     const calendarBanners = useMemo(() => {
         return allBanners.filter(b => b.endDate !== "permanently");
     }, [allBanners]);
+
+    const bannerColorMap = useMemo(
+        () => getBannerColorMap(calendarBanners),
+        [calendarBanners]
+    );
 
     const showMemoriesModal = (banner) => {
         setSelectedBanner(banner);
@@ -809,6 +814,7 @@ function BannersCalendar({
                             banners={calendarBanners}
                             onClick={() => openMonth(idx)}
                             showSpecialDays={showSpecialDays}
+                            bannerColorMap={bannerColorMap}
                         />
                     ))}
                 </div>
@@ -942,7 +948,8 @@ function BannersCalendar({
                             }}
                         >
                             {bannerRows.map((seg, idx) => {
-                                const { banner, color, typeLabel, imageUrl, startCol, span, row, lane } = seg;
+                                const { banner, typeLabel, imageUrl, startCol, span, row, lane } = seg;
+                                const color = bannerColorMap.get(banner.id) || getBannerColor(banner);
                                 const chars = getBannerCharacters(banner);
                                 const tooltip = `${banner.name} — ${typeLabel}${chars.length > 0 ? ` (${chars.join(", ")})` : ""}`;
                                 const isPredictBanner = banner.isPredict || banner.isCustom;
