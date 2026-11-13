@@ -42,7 +42,6 @@ export { wuData } from "./lore-data/wu-data.js";
 
 //main-page-data
 export { battlePassData } from "./battle-pass-data.js";
-export { eventsDataMainPage } from "./main-page-data/events-data-main-page.js";
 export { hunterContestBuffs } from "./main-page-data/hunter-contest-buffs.js";
 
 //showcase-data

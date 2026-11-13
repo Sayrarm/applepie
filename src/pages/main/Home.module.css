@@ -49,7 +49,7 @@
 }
 
 .containerTitleTimer {
-  max-height: 132px;
+  max-height: 143px;
 }
 
 .containerTitleTimer,
@@ -101,6 +101,7 @@
 .imgBanner {
   width: 60%;
   height: 100%;
+  object-fit: cover;
   -webkit-mask-image: var(--linear-gradient-webkit);
   mask-image: var(--linear-gradient);
 }
