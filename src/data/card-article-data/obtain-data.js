@@ -38,7 +38,7 @@ export const obtainData = [
       290, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 313, 314,
       315, 316, 317, 318, 320, 321, 323, 325, 326, 327, 328, 329, 330, 331, 332,
       333, 334, 335, 348, 349, 350, 351, 358, 359, 361, 385, 386, 412, 413, 420,
-      423, 424, 425, 426, 427, 429, 433, 434, 435, 436, 437, 438
+      423, 424, 425, 426, 427, 429, 433, 434, 435, 436, 437, 438,
     ],
     description: "Can be obtain for 'Deepspace Wish' (Event Banner).",
     image: "../assets/main-page/modal-window/limited-banner.png",
@@ -51,7 +51,7 @@ export const obtainData = [
       143, 144, 145, 267, 4, 2, 5, 3, 46, 45, 44, 57, 58, 59, 60, 39, 79, 80,
       82, 89, 173, 181, 191, 236, 235, 233, 231, 230, 229, 225, 240, 239, 238,
       237, 234, 232, 226, 263, 264, 297, 274, 277, 320, 321, 323, 325, 326, 327,
-      328, 329, 330, 333, 334, 335, 331, 332, 358, 359, 361, 367, 371, 384, 422
+      328, 329, 330, 333, 334, 335, 331, 332, 358, 359, 361, 367, 371, 384, 422,
     ],
     description:
       "Can be obtain from 'Shop' -> 'Exchange' -> 'Wishing Well'. Check the schedule of 'memories' on the home page!",
@@ -70,12 +70,12 @@ export const obtainData = [
       300, 301, 302, 303, 304, 305, 306, 313, 314, 315, 316, 317, 318, 73, 74,
       18, 19, 20, 22, 23, 24, 25, 26, 11, 12, 15, 9, 17, 8, 7, 46, 45, 44, 47,
       48, 49, 50, 55, 56, 4, 2, 5, 3, 6, 1, 52, 54, 51, 60, 64, 66, 67, 70, 75,
-      76, 77, 78, 57, 58, 59, 60, 61, 79, 80, 82, 118, 119, 121, 147, 148,
-      151, 153, 401, 164, 165, 166, 167, 213, 214, 217, 224, 243, 246, 247,
-      258, 259, 260, 261, 262, 263, 264, 267, 307, 309, 311, 319, 320, 321, 323,
-      325, 326, 327, 328, 329, 330, 331, 332, 333, 334, 335, 348, 349, 350, 351,
-      337, 339, 341, 343, 346, 354, 355, 356, 357, 399, 401, 414, 415, 416, 419,
-      428, 308, 215, 120
+      76, 77, 78, 57, 58, 59, 60, 61, 79, 80, 82, 118, 119, 121, 147, 148, 151,
+      153, 401, 164, 165, 166, 167, 213, 214, 217, 224, 243, 246, 247, 258, 259,
+      260, 261, 262, 263, 264, 267, 307, 309, 311, 319, 320, 321, 323, 325, 326,
+      327, 328, 329, 330, 331, 332, 333, 334, 335, 348, 349, 350, 351, 337, 339,
+      341, 343, 346, 354, 355, 356, 357, 399, 401, 414, 415, 416, 419, 428, 308,
+      215, 120,
     ],
     description: "Can be obtain from 'Wish' -> 'Galaxy Explorer'",
     image: "../assets/main-page/modal-window/galaxy-explorer.png",
@@ -85,8 +85,8 @@ export const obtainData = [
     obtain: "Promise",
     memories: [
       409, 410, 13, 14, 16, 397, 62, 63, 68, 69, 72, 130, 146, 149, 152, 154,
-      155, 227, 242, 244, 248, 249, 251, 322, 336, 338, 342, 344, 398, 417,
-      418, 431, 432
+      155, 227, 242, 244, 248, 249, 251, 322, 336, 338, 342, 344, 398, 417, 418,
+      431, 432,
     ],
     description:
       "Can be obtain from 'Promise' (check your 'Agenda'). 'Promise' is limited, can be rerun of memories from past 'Promises' in 'Shop', check the news.",
@@ -95,58 +95,97 @@ export const obtainData = [
   },
   {
     obtain: "Oracle Of Stars",
-    memories: [
-      134, 228, 324, 157, 252, 347
-    ],
-    description: "A donation wheel where you can get certain Memories for diamonds. This event is limited in time.",
+    memories: [134, 228, 324, 157, 252, 347],
+    description:
+      "A donation wheel where you can get certain Memories for diamonds. This event is limited in time.",
     image: "../assets/main-page/modal-window/oracle-of-stars.png",
     bannerType: "oracle-of-stars",
   },
   {
     obtain: "Fondess Treasure",
-    memories: [
-      65, 150, 245, 340
-    ],
-    description: "An Event where you can get certain Memories. This event is limited in time.",
+    memories: [65, 150, 245, 340],
+    description:
+      "An Event where you can get certain Memories. This event is limited in time.",
     image: "../assets/main-page/modal-window/fondess-treasure-events.png",
     bannerType: "fondess-treasure",
   },
   {
     obtain: "Illusia Locus",
-    memories: [
-      10, 71, 156, 250, 345
-    ],
-    description: "An Event where you can get certain Memories. This event is limited in time.",
+    memories: [10, 71, 156, 250, 345],
+    description:
+      "An Event where you can get certain Memories. This event is limited in time.",
     image: "../assets/main-page/modal-window/illusia-locus-event.png",
     bannerType: "illusia-locus",
   },
   {
     obtain: "Birthday Event",
-    memories: [
-      21, 53, 104, 122, 216, 310, 312, 403, 421, 430,
-    ],
-    description: "The card can be redeemed in the store for in-game currency. The currency can be obtained in an Event during the Character's Birthday celebration week. Reran every year.",
+    memories: [21, 53, 104, 122, 216, 310, 312, 403, 421, 430],
+    description:
+      "The card can be redeemed in the store for in-game currency. The currency can be obtained in an Event during the Character's Birthday celebration week. Reran every year.",
     image: "../assets/main-page/modal-window/events.png",
     bannerType: "birthday-event",
   },
   {
     obtain: "10 Days With You",
     memories: [
-      224, 319, 133, 61, 241, 337, 147, 11, 67, 153, 247,
-      343, 15, 70, 346, 399, 401, 419, 428
+      224, 319, 133, 61, 241, 337, 147, 11, 67, 153, 247, 343, 15, 70, 346, 399,
+      401, 419, 428,
     ],
-    description: "Log In Event. After the end of the event, the Memory ends up in Galaxy Explorer",
+    description:
+      "Log In Event. After the end of the event, the Memory ends up in Galaxy Explorer",
     image: "../assets/main-page/modal-window/events.png",
     bannerType: "10-days-with-you",
   },
   {
     obtain: "Heartfelt Gift",
-    memories: [
-      173, 367, 277, 89, 39, 191, 384, 411
-    ],
-    description: "Log In Event. After the end of the event, the Memory ends up in Galaxy Explorer",
+    memories: [173, 367, 277, 89, 39, 191, 384, 411],
+    description:
+      "Log In Event. After the end of the event, the Memory ends up in Galaxy Explorer",
     image: "../assets/main-page/modal-window/events.png",
     bannerType: "heartfelt-gift",
+  },
+  {
+    obtain: "Companion Rehearsal",
+    memories: [415, 8, 77, 262, 167, 357, 9, 75],
+    description:
+      "Battle Event. After the end of the event, the Memory ends up in Galaxy Explorer",
+    image: "../assets/main-page/modal-window/events.png",
+    bannerType: "companion-rehearsal",
+  },
+  {
+    obtain: "Myth Event",
+    memories: [
+      414, 416, 20, 7, 54, 78, 217, 261, 121, 166, 311, 356, 22, 17, 52, 76,
+      213, 259, 260, 118, 164, 165, 307, 354, 355,
+    ],
+    description:
+      "Event during the myth banner. After the end of the event, the Memory ends up in Galaxy Explorer",
+    image: "../assets/main-page/modal-window/events.png",
+    bannerType: "myth-event",
+  },
+  {
+    obtain: "Branch Event",
+    memories: [274, 371, 181, 422],
+    description:
+      "Event during the branch story. After the end of the event, the Memory ends up in Wishing Well",
+    image: "../assets/main-page/modal-window/events.png",
+    bannerType: "branch-event",
+  },
+  {
+    obtain: "Festive Blessing",
+    memories: [12, 66, 151, 246, 341],
+    description:
+      "Event. After the end of the event, the Memory ends up in Galaxy Explorer",
+    image: "../assets/main-page/modal-window/events.png",
+    bannerType: "festive-blessing",
+  },
+  {
+    obtain: "Sweetie Silk",
+    memories: [214, 119, 309, 51],
+    description:
+      "Event. After the end of the event, the Memory ends up in Galaxy Explorer",
+    image: "../assets/main-page/modal-window/events.png",
+    bannerType: "sweetie-silk",
   },
   {
     obtain: "Limited Event",
@@ -160,16 +199,15 @@ export const obtainData = [
       365, 366, 368, 369, 370, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381,
       382, 383, 387, 388, 389, 390, 391, 392, 393, 394, 395, 400, 412, 413, 420,
       423, 424, 425, 426, 427, 429, 433, 434, 435, 436, 437, 438, 409, 410, 13,
-      14, 16, 397, 62, 63, 68, 69, 72, 130, 146, 149, 152, 154, 155, 227, 242, 244,
-      248, 249, 251, 322, 336, 338, 342, 344, 398, 417, 418, 431, 432, 134, 228, 324,
-      157, 252, 347, 65, 150, 245, 340, 10, 71, 156, 250, 345, 21, 53, 104, 122, 216,
-      310, 312, 403, 421, 430, 308, 307, 118, 213, 51, 119, 214, 309, 215, 120, 52,
-      22, 311, 121, 217, 54, 20, 416, 162, 163, 257, 258, 352, 353, 224, 354, 355,
-      319, 164, 165, 259, 260, 133, 61, 241, 337, 147, 75, 76, 64, 148, 243, 339,
-      11, 12, 66, 151, 246, 341, 9, 17, 67, 153, 356, 357, 247, 166, 167, 343, 15,
-      261, 262, 70, 77, 78, 346, 8, 7, 399, 401, 414, 415, 419, 428, 422, 411, 384,
-      191, 39, 89, 277, 181, 371, 274, 367
-
+      14, 16, 397, 62, 63, 68, 69, 72, 130, 146, 149, 152, 154, 155, 227, 242,
+      244, 248, 249, 251, 322, 336, 338, 342, 344, 398, 417, 418, 431, 432, 134,
+      228, 324, 157, 252, 347, 65, 150, 245, 340, 10, 71, 156, 250, 345, 21, 53,
+      104, 122, 216, 310, 312, 403, 421, 430, 308, 307, 118, 213, 51, 119, 214,
+      309, 215, 120, 52, 22, 311, 121, 217, 54, 20, 416, 162, 163, 257, 258,
+      352, 353, 224, 354, 355, 319, 164, 165, 259, 260, 133, 61, 241, 337, 147,
+      75, 76, 64, 148, 243, 339, 11, 12, 66, 151, 246, 341, 9, 17, 67, 153, 356,
+      357, 247, 166, 167, 343, 15, 261, 262, 70, 77, 78, 346, 8, 7, 399, 401,
+      414, 415, 419, 428, 422, 411, 384, 191, 39, 89, 277, 181, 371, 274, 367,
     ],
     description: "Memory from 'Events'.",
     image: "../assets/main-page/modal-window/events.png",
