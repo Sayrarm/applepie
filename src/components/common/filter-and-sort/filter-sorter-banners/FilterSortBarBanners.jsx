@@ -31,22 +31,68 @@ function FilterSortBarBanners({
                               }) {
     const { t } = useTranslation();
     const typeOptions = [
-        { value: "banner", label: t('FilterSortBarBanners.types.banner') },
-        { value: "promise", label: t('FilterSortBarBanners.types.promise') },
-        { value: "oracle-of-stars", label: t('FilterSortBarBanners.types.oracleOfStars') },
-        { value: "fondess-treasure", label: t('FilterSortBarBanners.types.fondessTreasure') },
-        { value: "illusia-locus", label: t('FilterSortBarBanners.types.illusiaLocus') },
-        { value: "10-days-with-you", label: t('FilterSortBarBanners.types.tenDaysWithYou') },
-        { value: "heartfelt-gift", label: t('FilterSortBarBanners.types.heartfeltGift') },
-        { value: "kitty-tokens", label: t('FilterSortBarBanners.types.kittyTokens') },
-        { value: "plushie", label: t('FilterSortBarBanners.types.plushie') },
-        { value: "double-protocore", label: t('FilterSortBarBanners.types.doubleProtocore') },
-        { value: "double-bounty-hunt", label: t('FilterSortBarBanners.types.doubleBountyHunt') },
-        { value: "illusio", label: t('FilterSortBarBanners.types.illusio') },
-        { value: "event", label: t('FilterSortBarBanners.types.event') },
-        { value: "memory-growth", label: t('FilterSortBarBanners.types.memory-growth') },
-        { value: "companion-rehearsal", label: t('FilterSortBarBanners.types.companion-rehearsal') },
-        { value: "bd-event", label: t('FilterSortBarBanners.types.bd-event') },
+      { value: "banner", label: t("FilterSortBarBanners.types.banner") },
+      { value: "promise", label: t("FilterSortBarBanners.types.promise") },
+      {
+        value: "oracle-of-stars",
+        label: t("FilterSortBarBanners.types.oracleOfStars"),
+      },
+      {
+        value: "fondess-treasure",
+        label: t("FilterSortBarBanners.types.fondessTreasure"),
+      },
+      {
+        value: "illusia-locus",
+        label: t("FilterSortBarBanners.types.illusiaLocus"),
+      },
+      {
+        value: "10-days-with-you",
+        label: t("FilterSortBarBanners.types.tenDaysWithYou"),
+      },
+      {
+        value: "heartfelt-gift",
+        label: t("FilterSortBarBanners.types.heartfeltGift"),
+      },
+      {
+        value: "kitty-tokens",
+        label: t("FilterSortBarBanners.types.kittyTokens"),
+      },
+      { value: "plushie", label: t("FilterSortBarBanners.types.plushie") },
+      {
+        value: "double-protocore",
+        label: t("FilterSortBarBanners.types.doubleProtocore"),
+      },
+      {
+        value: "double-bounty-hunt",
+        label: t("FilterSortBarBanners.types.doubleBountyHunt"),
+      },
+      { value: "illusio", label: t("FilterSortBarBanners.types.illusio") },
+      { value: "event", label: t("FilterSortBarBanners.types.event") },
+      {
+        value: "memory-growth",
+        label: t("FilterSortBarBanners.types.memory-growth"),
+      },
+      {
+        value: "companion-rehearsal",
+        label: t("FilterSortBarBanners.types.companion-rehearsal"),
+      },
+      { value: "bd-event", label: t("FilterSortBarBanners.types.bd-event") },
+      {
+        value: "branch-event",
+        label: t("FilterSortBarBanners.types.branch-event"),
+      },
+      {
+        value: "myth-event",
+        label: t("FilterSortBarBanners.types.myth-event"),
+      },
+      {
+        value: "festive-blessing",
+        label: t("FilterSortBarBanners.types.festive-blessing"),
+      },
+      {
+        value: "sweetie-silk",
+        label: t("FilterSortBarBanners.types.sweetie-silk"),
+      },
     ];
     const characters = ["Xavier", "Zayne", "Rafayel", "Sylus", "Caleb"];
 
