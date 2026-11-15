@@ -696,6 +696,7 @@ export const ru = {
         "myth-event": "Myth Event",
         "festive-blessing": "Festive Blessing",
         "sweetie-silk": "Sweetie Silk",
+        "touring-in-love": "touring-in-love",
       },
       showSpecialDays: "Показывать ДР",
       hideSpecialDays: "Спрятать ДР",

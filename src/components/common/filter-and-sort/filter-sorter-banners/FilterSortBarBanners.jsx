@@ -93,6 +93,10 @@ function FilterSortBarBanners({
         value: "sweetie-silk",
         label: t("FilterSortBarBanners.types.sweetie-silk"),
       },
+      {
+        value: "touring-in-love",
+        label: t("FilterSortBarBanners.types.touring-in-love"),
+      },
     ];
     const characters = ["Xavier", "Zayne", "Rafayel", "Sylus", "Caleb"];
 

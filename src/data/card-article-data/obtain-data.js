@@ -145,6 +145,14 @@ export const obtainData = [
     bannerType: "heartfelt-gift",
   },
   {
+    obtain: "Birthday Event",
+    memories: [308, 215, 120],
+    description:
+      "An event during the Character’s Birthday Week celebration. Now you can get this Memory in Galaxy Explorer.",
+    image: "../assets/main-page/modal-window/events.png",
+    bannerType: "birthday-event",
+  },
+  {
     obtain: "Companion Rehearsal",
     memories: [415, 8, 77, 262, 167, 357, 9, 75],
     description:
@@ -186,6 +194,14 @@ export const obtainData = [
       "Event. After the end of the event, the Memory ends up in Galaxy Explorer",
     image: "../assets/main-page/modal-window/events.png",
     bannerType: "sweetie-silk",
+  },
+  {
+    obtain: "Touring In Love",
+    memories: [148, 243, 339, 64],
+    description:
+      "Event. After the end of the event, the Memory ends up in Galaxy Explorer",
+    image: "../assets/main-page/modal-window/events.png",
+    bannerType: "touring-in-love",
   },
   {
     obtain: "Limited Event",

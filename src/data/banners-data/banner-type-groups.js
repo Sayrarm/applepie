@@ -19,6 +19,7 @@ export const BANNER_TYPE_GROUPS = {
   "myth-event": ["myth-event"],
   "festive-blessing": ["festive-blessing"],
   "sweetie-silk": ["sweetie-silk"],
+  "touring-in-love": ["touring-in-love"],
 };
 
 export const ALL_BANNER_TYPE_GROUPS = Object.keys(BANNER_TYPE_GROUPS);
