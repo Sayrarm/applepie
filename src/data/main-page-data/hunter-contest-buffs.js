@@ -325,21 +325,21 @@ export const hunterContestBuffs = [
     teamAStella2: "../assets/icons/ruby.png",
     teamAStella2Count: 1,
     teamA:
-        "Collaborative Fusion: Enemies hit by Support Skills take 80% more Basic Attack DMG for 5s.",
+        "Weakness Anchorage: Weakened enemies take 100% more Charged Attack DMG.",
 
     teamBStella1: "../assets/icons/ruby.png",
     teamBStella1Count: 4,
     teamBStella2: "../assets/icons/amber.png",
     teamBStella2Count: 1,
     teamB:
-        "Press On Coupling: After using the Support Skill, enemies take 30% increased damage from non-Basic Attacks for 3s",
+        "Press On Stacks: After an Active Skill is used, Support Skill damage increases by 35% for 4s. This effect can stack up to 3 time(s).",
 
     teamCStella1: "../assets/icons/violet.png",
     teamCStella1Count: 3,
     teamCStella2: "../assets/icons/pearl.png",
     teamCStella2Count: 1,
     teamC:
-        "Empowerment: Increases ATK of all allied units.",
+        "Overload: Increases CRIT rate of all allied units.",
 
     active: true,
   },
