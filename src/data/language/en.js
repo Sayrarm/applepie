@@ -692,7 +692,8 @@ export const en = {
         "myth-event": "Myth Event",
         "festive-blessing": "Festive Blessing",
         "sweetie-silk": "Sweetie Silk",
-        "touring-in-love": "touring-in-love",
+        "touring-in-love": "Touring in Love",
+        "events-cards": "Events with Memories"
       },
       showSpecialDays: "Show birthdays",
       hideSpecialDays: "Hide birthdays",

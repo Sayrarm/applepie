@@ -97,6 +97,10 @@ function FilterSortBarBanners({
         value: "touring-in-love",
         label: t("FilterSortBarBanners.types.touring-in-love"),
       },
+      {
+        value: "events-cards",
+        label: t("FilterSortBarBanners.types.events-cards"),
+      },
     ];
     const characters = ["Xavier", "Zayne", "Rafayel", "Sylus", "Caleb"];
 

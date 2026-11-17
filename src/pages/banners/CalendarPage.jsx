@@ -2,6 +2,7 @@ import {useEffect, useMemo, useRef, useState} from "react";
 import styles from "./Banners.module.css";
 import {
     BANNER_TYPE_GROUPS,
+    SPECIAL_GROUPS,
     bannersDataFull,
     battlePassData,
     eventsData
@@ -73,6 +74,7 @@ function CalendarPage() {
             battlePassData.map((bp) => ({
                 ...bp,
                 id: `bp-${bp.id}`,
+                source: "promise",
             })),
         []
     );
@@ -82,31 +84,46 @@ function CalendarPage() {
         () =>
             eventsData.map((bp) => ({
                 ...bp,
-                id: `bp-${bp.id}`,
+                id: `ev-${bp.id}`,
+                source: "events",
             })),
         []
     );
 
     const allBanners = useMemo(
-        () => [...bannersDataFull, ...battlePassAsBanners, ...eventsAsBanners],
-        [battlePassAsBanners, eventsAsBanners]
+        () => [
+        ...bannersDataFull.map((b) => ({ ...b, source: "banners" })),
+        ...battlePassAsBanners,
+        ...eventsAsBanners,
+    ],
+    [battlePassAsBanners, eventsAsBanners]
     );
 
     // 3. Применяем только фильтры и поиск
     const processedBanners = useMemo(() => {
         let result = allBanners;
 
-        // Фильтр по выбранным группам типов
-        if (visibleTypes.length > 0) {
-            // Собираем все type, которые входят в выбранные группы
-            const allowedTypes = new Set(
-                visibleTypes.flatMap((group) => BANNER_TYPE_GROUPS[group] || [])
-            );
-            result = result.filter((banner) => allowedTypes.has(banner.type));
-        } else {
-            // Ничего не выбрано → ничего не показываем
-            return [];
-        }
+    if (visibleTypes.length > 0) {
+        // 1. Обычные группы — по type
+        const allowedTypes = new Set(
+            visibleTypes
+                .filter((g) => BANNER_TYPE_GROUPS[g])
+                .flatMap((g) => BANNER_TYPE_GROUPS[g])
+        );
+
+        // 2. Спец-группы — по предикату
+        const specialPredicates = visibleTypes
+            .filter((g) => SPECIAL_GROUPS[g])
+            .map((g) => SPECIAL_GROUPS[g]);
+
+        result = result.filter((banner) => {
+            const byType = allowedTypes.has(banner.type);
+            const bySpecial = specialPredicates.some((fn) => fn(banner));
+            return byType || bySpecial;
+        });
+    } else {
+        return [];
+    }
 
         // фильтрация (useBannersFilter)
         result = filterBanners(result);

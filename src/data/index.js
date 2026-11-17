@@ -191,4 +191,4 @@ export { en } from "./language/en.js";
 export { ru } from "./language/ru.js";
 
 //banners data
-export { BANNER_TYPE_GROUPS, ALL_BANNER_TYPE_GROUPS } from "./banners-data/banner-type-groups.js";
+export { BANNER_TYPE_GROUPS, ALL_BANNER_TYPE_GROUPS, SPECIAL_GROUPS } from "./banners-data/banner-type-groups.js";

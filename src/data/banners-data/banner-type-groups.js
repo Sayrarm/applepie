@@ -23,3 +23,11 @@ export const BANNER_TYPE_GROUPS = {
 };
 
 export const ALL_BANNER_TYPE_GROUPS = Object.keys(BANNER_TYPE_GROUPS);
+
+// Спец-группа, которая фильтруется по cardIds, а не по type
+export const SPECIAL_GROUPS = {
+  "events-cards": (banner) =>
+    banner.source === "events" &&
+    Array.isArray(banner.cardIds) &&
+    banner.cardIds.length > 0,
+};
