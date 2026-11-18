@@ -376,7 +376,7 @@ export const eventsData = [
   {
     id: 28,
     name: "Kindled Reveries",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/kindled-reveries.png",
     cardIds: [],
     startDate: "2024-02-05T05:00:00",
     endDate: "2024-02-19T04:59:59",
@@ -398,7 +398,7 @@ export const eventsData = [
   {
     id: 30,
     name: "Miracle Voyage",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/miracle-voyage.png",
     cardIds: [308],
     startDate: "2024-03-01T05:00:00",
     endDate: "2024-03-08T04:59:59",
@@ -420,7 +420,7 @@ export const eventsData = [
   {
     id: 32,
     name: "Time Tour",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/time-tour.png",
     cardIds: [],
     startDate: "2024-03-11T05:00:00",
     endDate: "2024-03-23T04:59:59",
@@ -486,7 +486,7 @@ export const eventsData = [
   {
     id: 38,
     name: "Heartwork Routine",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/heartwork-routine.png",
     cardIds: [],
     startDate: "2024-04-03T05:00:00",
     endDate: "2024-04-17T04:59:59",
@@ -541,7 +541,7 @@ export const eventsData = [
   {
     id: 43,
     name: "Yunshan's Charm",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/yunshans-charm.png",
     cardIds: [213, 259, 260],
     startDate: "2024-06-07T05:00:00",
     endDate: "2024-06-21T04:59:59",
@@ -552,7 +552,7 @@ export const eventsData = [
   {
     id: 44,
     name: "Puffy Penguin",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/plushie/puffy-penguin.png",
     cardIds: [],
     startDate: "2024-06-10T05:00:00",
     endDate: "2024-06-23T04:59:59",
@@ -563,7 +563,7 @@ export const eventsData = [
   {
     id: 45,
     name: "Partner Go Go",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/partner-go-go.png",
     cardIds: [],
     startDate: "2024-06-25T05:00:00",
     endDate: "2024-07-10T04:59:59",
@@ -629,7 +629,7 @@ export const eventsData = [
   {
     id: 49,
     name: "Adventure Above Clouds",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/adventure-above-clouds.png",
     cardIds: [],
     startDate: "2024-08-07T05:00:00",
     endDate: "2024-08-27T04:59:59",
@@ -640,7 +640,7 @@ export const eventsData = [
   {
     id: 50,
     name: "Sweetie Silk",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/sweetie-silk.png",
     cardIds: [214, 119, 309, 51],
     startDate: "2024-08-07T05:00:00",
     endDate: "2024-08-20T04:59:59",
@@ -662,7 +662,7 @@ export const eventsData = [
   {
     id: 52,
     name: "Very Moment With U",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/very-moment-with-u.png",
     cardIds: [215],
     startDate: "2024-08-31T05:00:00",
     endDate: "2024-09-07T04:59:59",
@@ -695,7 +695,7 @@ export const eventsData = [
   {
     id: 55,
     name: "Twilight Comrades",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/twilight-comrades.png",
     cardIds: [],
     startDate: "2024-09-10T05:00:00",
     endDate: "2024-09-20T04:59:59",
@@ -706,7 +706,7 @@ export const eventsData = [
   {
     id: 56,
     name: "Seremoon Gift",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/seremoon-gift.png",
     cardIds: [],
     startDate: "2024-09-10T05:00:00",
     endDate: "2024-09-20T04:59:59",
@@ -717,7 +717,7 @@ export const eventsData = [
   {
     id: 57,
     name: "Mountain Journey",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/mountain-journey.png",
     cardIds: [],
     startDate: "2024-09-23T05:00:00",
     endDate: "2024-10-09T04:59:59",
@@ -739,7 +739,7 @@ export const eventsData = [
   {
     id: 59,
     name: "Chansia Journey",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/chansia-journey.png",
     cardIds: [274],
     startDate: "2024-09-30T05:00:00",
     endDate: "2024-10-10T04:59:59",
@@ -750,7 +750,7 @@ export const eventsData = [
   {
     id: 60,
     name: "Timeless Days",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/timeless-days.png",
     cardIds: [120],
     startDate: "2024-10-11T05:00:00",
     endDate: "2024-10-18T04:59:59",
@@ -761,7 +761,7 @@ export const eventsData = [
   {
     id: 61,
     name: "Waking Reverie",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/waking-reverie.png",
     cardIds: [],
     startDate: "2024-10-20T05:00:00",
     endDate: "2024-10-30T04:59:59",
@@ -783,7 +783,7 @@ export const eventsData = [
   {
     id: 63,
     name: "Cuteness Crush",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/curious-chase.png",
     cardIds: [],
     startDate: "2024-10-31T05:00:00",
     endDate: "2024-11-10T04:59:59",
@@ -805,7 +805,7 @@ export const eventsData = [
   {
     id: 65,
     name: "Island Secrets",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/island-secrets.png",
     cardIds: [371],
     startDate: "2024-11-08T05:00:00",
     endDate: "2024-11-18T04:59:59",
@@ -816,7 +816,7 @@ export const eventsData = [
   {
     id: 66,
     name: "Meow's Time!",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/meows-time.png",
     cardIds: [],
     startDate: "2024-11-12T05:00:00",
     endDate: "2024-11-30T04:59:59",
@@ -838,7 +838,7 @@ export const eventsData = [
   {
     id: 68,
     name: "Abyssal Splendor",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/abyssal-splendor.png",
     cardIds: [52, 76],
     startDate: "2024-12-02T05:00:00",
     endDate: "2024-12-16T04:59:59",
@@ -883,7 +883,7 @@ export const eventsData = [
   {
     id: 72,
     name: "Lost Petals",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/lost-petals.png",
     cardIds: [],
     startDate: "2024-12-18T05:00:00",
     endDate: "2024-12-28T04:59:59",
@@ -894,7 +894,7 @@ export const eventsData = [
   {
     id: 73,
     name: "Touring In Love Presale",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/touring-in-love-presale.png",
     cardIds: [],
     startDate: "2024-12-28T05:00:00",
     endDate: "2024-12-31T04:59:59",
@@ -905,7 +905,7 @@ export const eventsData = [
   {
     id: 74,
     name: "Deluxe Annual Pass",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/deluxe-annual-pass.png",
     cardIds: [],
     startDate: "2024-12-31T05:00:00",
     endDate: "2025-01-20T04:59:59",
@@ -916,7 +916,7 @@ export const eventsData = [
   {
     id: 75,
     name: "Touring In Love",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/touring-in-love.png",
     cardIds: [148, 243, 339, 64],
     startDate: "2024-12-31T05:00:00",
     endDate: "2025-01-20T04:59:59",
@@ -961,7 +961,7 @@ export const eventsData = [
   {
     id: 79,
     name: "Festive Blessing",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/festive-blessing.png",
     cardIds: [12, 66, 151, 246, 341],
     startDate: "2025-01-22T05:00:00",
     endDate: "2025-02-08T04:59:59",
@@ -983,7 +983,7 @@ export const eventsData = [
   {
     id: 81,
     name: "Savage Overture",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/savage-overture.png",
     cardIds: [],
     startDate: "2025-02-10T05:00:00",
     endDate: "2025-02-27T04:59:59",
@@ -994,7 +994,7 @@ export const eventsData = [
   {
     id: 82,
     name: "Lanternet Gift",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/lanternet-gift.png",
     cardIds: [],
     startDate: "2025-02-10T05:00:00",
     endDate: "2025-02-20T04:59:59",
@@ -1027,7 +1027,7 @@ export const eventsData = [
   {
     id: 85,
     name: "Until Twilight",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/until-twilight.png",
     cardIds: [308, 310],
     startDate: "2025-03-01T05:00:00",
     endDate: "2025-03-08T04:59:59",
@@ -1038,7 +1038,7 @@ export const eventsData = [
   {
     id: 86,
     name: "Gamers Assembly",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/gaming-assembly.png",
     cardIds: [],
     startDate: "2025-03-09T05:00:00",
     endDate: "2025-03-18T04:59:59",
@@ -1082,7 +1082,7 @@ export const eventsData = [
   {
     id: 90,
     name: "Night Whisper",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/night-whisper.png",
     cardIds: [53],
     startDate: "2025-04-13T05:00:00",
     endDate: "2025-04-20T04:59:59",
@@ -1104,7 +1104,7 @@ export const eventsData = [
   {
     id: 92,
     name: "Spring Arrives",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/spring-arrives.png",
     cardIds: [],
     startDate: "2025-04-21T05:00:00",
     endDate: "2025-04-30T04:59:59",
@@ -1115,7 +1115,7 @@ export const eventsData = [
   {
     id: 93,
     name: "Blossom Escape",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/blossom-escape.png",
     cardIds: [],
     startDate: "2025-04-30T05:00:00",
     endDate: "2025-05-18T04:59:59",
@@ -1138,7 +1138,7 @@ export const eventsData = [
   {
     id: 95,
     name: "Blooming Promise",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/blooming-promise.png",
     cardIds: [],
     startDate: "2025-04-30T05:00:00",
     endDate: "2025-05-18T04:59:59",
@@ -1160,7 +1160,7 @@ export const eventsData = [
   {
     id: 97,
     name: "Wild Wander",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/wild-wander.png",
     cardIds: [],
     startDate: "2025-05-29T05:00:00",
     endDate: "2025-06-07T04:59:59",
@@ -1171,7 +1171,7 @@ export const eventsData = [
   {
     id: 98,
     name: "Summer Daydream",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/summer-daydream.png",
     cardIds: [21],
     startDate: "2025-06-08T05:00:00",
     endDate: "2025-06-15T04:59:59",
@@ -1237,7 +1237,7 @@ export const eventsData = [
   {
     id: 104,
     name: "Before Sunset, After Vows",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/before-sunset-after-vows.png",
     cardIds: [],
     startDate: "2025-07-03T05:00:00",
     endDate: "2025-07-22T04:59:59",
@@ -1248,7 +1248,7 @@ export const eventsData = [
   {
     id: 105,
     name: "Memory Growth Bonus Event",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/memory-growth/memory-growth-witnessed-by-deepspace.png",
     cardIds: [],
     startDate: "2025-07-03T05:00:00",
     endDate: "2025-07-22T04:59:59",
@@ -1292,7 +1292,7 @@ export const eventsData = [
   {
     id: 109,
     name: "Estival Splash",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/estival-splash.png",
     cardIds: [],
     startDate: "2025-08-12T05:00:00",
     endDate: "2025-08-31T04:59:59",
@@ -1314,7 +1314,7 @@ export const eventsData = [
   {
     id: 111,
     name: "Summery Promise",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/summery-promise.webp",
     cardIds: [],
     startDate: "2025-08-12T05:00:00",
     endDate: "2025-08-31T04:59:59",
@@ -1336,7 +1336,7 @@ export const eventsData = [
   {
     id: 111,
     name: "Sunset Finale",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/sunset-finale.png",
     cardIds: [215, 216],
     startDate: "2025-08-31T05:00:00",
     endDate: "2025-09-07T04:59:59",
@@ -1347,7 +1347,7 @@ export const eventsData = [
   {
     id: 112,
     name: "Wonder Trove",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/wonder-trove.png",
     cardIds: [],
     startDate: "2025-09-09T05:00:00",
     endDate: "2025-09-18T04:59:59",
@@ -1369,7 +1369,7 @@ export const eventsData = [
   {
     id: 112,
     name: "Born To Dazzle",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/born-to-dazzle.png",
     cardIds: [],
     startDate: "2025-09-25T05:00:00",
     endDate: "2025-10-05T04:59:59",
@@ -1402,7 +1402,7 @@ export const eventsData = [
   {
     id: 115,
     name: "Moonbloom Date",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/moonbloom-date.png",
     cardIds: [],
     startDate: "2025-10-01T05:00:00",
     endDate: "2025-10-11T04:59:59",
@@ -1413,7 +1413,7 @@ export const eventsData = [
   {
     id: 116,
     name: "Trace the Stars",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/trace-the-stars.png",
     cardIds: [120, 122],
     startDate: "2025-10-11T05:00:00",
     endDate: "2025-10-18T04:59:59",
@@ -1446,7 +1446,7 @@ export const eventsData = [
   {
     id: 119,
     name: "Evernit Meloride",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/evernit-meloride.png",
     cardIds: [],
     startDate: "2025-10-29T05:00:00",
     endDate: "2025-11-18T04:59:59",
@@ -1468,7 +1468,7 @@ export const eventsData = [
   {
     id: 121,
     name: "Curious Chase",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/curious-chase.png",
     cardIds: [],
     startDate: "2025-11-21T05:00:00",
     endDate: "2025-11-30T04:59:59",
@@ -1613,7 +1613,7 @@ export const eventsData = [
   {
     id: 134,
     name: "Timelock Key",
-    image: "../assets/events/cuteness-charge.png",
+    image: "../assets/events/timelock-key.png",
     cardIds: [],
     startDate: "2026-01-23T05:00:00",
     endDate: "2026-02-01T04:59:59",
@@ -1856,7 +1856,7 @@ export const eventsData = [
   {
     id: 156,
     name: "Cotton Sheep",
-    image: "../assets/main-page/events/plushie/cotton-sheep.png",
+    image: "../assets/events/plushie/cotton-sheep.png",
     cardIds: [],
     startDate: "2026-04-13T05:00:00",
     endDate: "2026-04-26T04:59:59",
@@ -1944,7 +1944,7 @@ export const eventsData = [
   {
     id: 164,
     name: "Toast Express",
-    image: "../assets/main-page/events/plushie/toast-express.png",
+    image: "../assets/events/plushie/toast-express.png",
     cardIds: [],
     startDate: "2026-05-11T05:00:00",
     endDate: "2026-05-25T04:59:59",
