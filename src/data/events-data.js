@@ -596,7 +596,7 @@ export const eventsData = [
   {
     id: 46,
     name: "Radiant Ripples",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/radiant-ripples.webp",
     cardIds: [],
     startDate: "2024-07-26T05:00:00",
     endDate: "2024-08-10T04:59:59",
