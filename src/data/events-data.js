@@ -508,7 +508,7 @@ export const eventsData = [
   {
     id: 40,
     name: "Another Dawnbreak",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/another-dawnbreak.png",
     cardIds: [118, 164, 165],
     startDate: "2024-05-13T05:00:00",
     endDate: "2024-05-27T04:59:59",
