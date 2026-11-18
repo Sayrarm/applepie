@@ -86,21 +86,24 @@ const getBannerRange = (banner, monthDays, timezone) => {
     const bannerEnd = parseDate(banner.endDate, timezone, isPredict);
     if (!bannerStart) return null;
 
-    const monthFirst = monthDays[0];
-    const monthLast = monthDays[monthDays.length - 1];
+    const monthFirst = startOfDay(monthDays[0]);
+    const monthLast = startOfDay(monthDays[monthDays.length - 1]);
 
-    if (bannerEnd && bannerEnd < monthFirst) return null;
-    if (bannerStart > monthLast) return null;
+    const startDay = startOfDay(bannerStart);
+    const endDay = bannerEnd ? startOfDay(bannerEnd) : null;
+
+    if (endDay && endDay < monthFirst) return null;
+    if (startDay > monthLast) return null;
 
     let startIndex = 0;
-    if (bannerStart > monthFirst) {
-        startIndex = monthDays.findIndex((d) => d >= startOfDay(bannerStart));
+    if (startDay > monthFirst) {
+        startIndex = monthDays.findIndex((d) => d >= startDay);
         if (startIndex < 0) startIndex = 0;
     }
 
     let endIndex = monthDays.length - 1;
-    if (bannerEnd && bannerEnd < monthLast) {
-        endIndex = monthDays.findIndex((d) => d > startOfDay(bannerEnd)) - 1;
+    if (endDay && endDay < monthLast) {
+        endIndex = monthDays.findIndex((d) => d > endDay) - 1;
         if (endIndex < 0) endIndex = monthDays.length - 1;
     }
 
