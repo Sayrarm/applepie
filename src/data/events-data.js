@@ -1503,7 +1503,7 @@ export const eventsData = [
   {
     id: 124,
     name: "Floofy Party",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/floofy-party.png",
     cardIds: [],
     startDate: "2025-12-18T05:00:00",
     endDate: "2025-12-27T04:59:59",
@@ -1525,7 +1525,7 @@ export const eventsData = [
   {
     id: 126,
     name: "Royal Masque Presale",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/royal-masque-presale.webp",
     cardIds: [],
     startDate: "2025-12-28T05:00:00",
     endDate: "2025-12-31T04:59:59",
@@ -1790,7 +1790,7 @@ export const eventsData = [
   {
     id: 150,
     name: "Warming Solace",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/warming-solace.png",
     cardIds: [],
     startDate: "2026-03-09T05:00:00",
     endDate: "2026-03-18T04:59:59",
@@ -1889,7 +1889,7 @@ export const eventsData = [
   {
     id: 159,
     name: "Tiptop Hop",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/tiptop-hop.webp",
     cardIds: [],
     startDate: "2026-04-21T05:00:00",
     endDate: "2026-04-29T04:59:59",
@@ -1911,7 +1911,7 @@ export const eventsData = [
   {
     id: 161,
     name: "Steam Veil",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/steam-veil.webp",
     cardIds: [],
     startDate: "2026-04-30T05:00:00",
     endDate: "2026-05-15T04:59:59",
@@ -1933,7 +1933,7 @@ export const eventsData = [
   {
     id: 163,
     name: "Misty Promise",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/misty-promise.webp",
     cardIds: [],
     startDate: "2026-04-30T05:00:00",
     endDate: "2026-05-15T04:59:59",
@@ -1955,7 +1955,7 @@ export const eventsData = [
   {
     id: 165,
     name: "Vibrant Prelude",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/vibrant-prelude.webp",
     cardIds: [],
     startDate: "2026-05-15T05:00:00",
     endDate: "2026-05-22T04:59:59",
@@ -1966,7 +1966,7 @@ export const eventsData = [
   {
     id: 166,
     name: "Fluff Realm",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/fluff-realm.webp",
     cardIds: [],
     startDate: "2026-05-22T05:00:00",
     endDate: "2026-05-31T04:59:59",
@@ -1999,7 +1999,7 @@ export const eventsData = [
   {
     id: 169,
     name: "Clearsky Daydrift",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/clearsky-daydrift.webp",
     cardIds: [21, 403],
     startDate: "2026-06-08T05:00:00",
     endDate: "2026-06-15T04:59:59",
@@ -2021,7 +2021,7 @@ export const eventsData = [
   {
     id: 171,
     name: "Love On Screen",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/love-on-screen.webp",
     cardIds: [],
     startDate: "2026-06-17T05:00:00",
     endDate: "2026-07-02T04:59:59",
@@ -2044,7 +2044,7 @@ export const eventsData = [
   {
     id: 173,
     name: "Picture Perfect Pack",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/picture-perfect-pack.png",
     cardIds: [],
     startDate: "2026-06-17T05:00:00",
     endDate: "2026-07-02T04:59:59",
@@ -2055,7 +2055,7 @@ export const eventsData = [
   {
     id: 174,
     name: "Spirited Fashion",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/spirited-fashion.png",
     cardIds: [],
     startDate: "2026-06-17T05:00:00",
     endDate: "2026-07-02T04:59:59",
@@ -2088,7 +2088,7 @@ export const eventsData = [
   {
     id: 177,
     name: "Cozy Summer",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/cozy-summer.png",
     cardIds: [],
     startDate: "2026-07-02T05:00:00",
     endDate: "2026-07-08T04:59:59",
@@ -2165,7 +2165,7 @@ export const eventsData = [
   {
     id: 184,
     name: "Cuddly Factory",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/cuddly-factory.webp",
     cardIds: [],
     startDate: "2026-08-05T05:00:00",
     endDate: "2026-08-14T04:59:59",
@@ -2187,7 +2187,7 @@ export const eventsData = [
   {
     id: 186,
     name: "Radiant Horizons",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/radiant-horizons.webp",
     cardIds: [],
     startDate: "2026-08-17T05:00:00",
     endDate: "2026-08-31T04:59:59",
@@ -2220,7 +2220,7 @@ export const eventsData = [
   {
     id: 189,
     name: "Dawnlit Path",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/dawnlit-path.webp",
     cardIds: [216, 421],
     startDate: "2026-08-31T05:00:00",
     endDate: "2026-09-07T04:59:59",
@@ -2276,7 +2276,7 @@ export const eventsData = [
   {
     id: 194,
     name: "Fragrant Sachets",
-    image: "../assets/events/sachets.png",
+    image: "../assets/events/fragrant-sachets.png",
     cardIds: [],
     startDate: "2026-09-17T05:00:00",
     endDate: "2026-10-01T04:59:59",
@@ -2331,7 +2331,7 @@ export const eventsData = [
   {
     id: 199,
     name: "Refined Revelry",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/refined-revelry.webp",
     cardIds: [],
     startDate: "2026-09-22T05:00:00",
     endDate: "2026-10-10T04:59:59",
@@ -2342,7 +2342,7 @@ export const eventsData = [
   {
     id: 200,
     name: "Gracious Treasure",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/gracious-treasure.png",
     cardIds: [],
     startDate: "2026-09-22T05:00:00",
     endDate: "2026-10-10T04:59:59",
@@ -2353,7 +2353,7 @@ export const eventsData = [
   {
     id: 201,
     name: "Moonlit Reserve",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/moonlit-reserve.webp",
     cardIds: [],
     startDate: "2026-09-22T05:00:00",
     endDate: "2026-10-10T04:59:59",
@@ -2398,7 +2398,7 @@ export const eventsData = [
   {
     id: 205,
     name: "Flicker of Wishes",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/flicker-of-wishes.png",
     cardIds: [122, 430],
     startDate: "2026-10-11T05:00:00",
     endDate: "2026-10-18T04:59:59",
@@ -2442,7 +2442,7 @@ export const eventsData = [
   {
     id: 209,
     name: "Plush Rush",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/plush-rush.png",
     cardIds: [],
     startDate: "2026-10-27T05:00:00",
     endDate: "2026-11-05T04:59:59",
