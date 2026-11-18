@@ -861,7 +861,7 @@ export const eventsData = [
   {
     id: 70,
     name: "Campus Mystery",
-    image: "../assets/banners/banner-na.png",
+    image: "../assets/events/campus-mystery.png",
     cardIds: [181],
     startDate: "2024-12-07T05:00:00",
     endDate: "2024-12-17T04:59:59",
