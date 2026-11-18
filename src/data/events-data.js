@@ -387,7 +387,7 @@ export const eventsData = [
   {
     id: 29,
     name: "Golden Throat",
-    image: "../assets/main-page/events/plushie/golden-throat.png",
+    image: "../assets/events/plushie/golden-throat.png",
     cardIds: [],
     startDate: "2024-02-19T05:00:00",
     endDate: "2024-03-03T04:59:59",
@@ -431,7 +431,7 @@ export const eventsData = [
   {
     id: 33,
     name: "Banana Boat",
-    image: "../assets/main-page/events/plushie/banana-boat.png",
+    image: "../assets/events/plushie/banana-boat.png",
     cardIds: [],
     startDate: "2024-03-18T05:00:00",
     endDate: "2024-04-01T04:59:59",
@@ -475,7 +475,7 @@ export const eventsData = [
   {
     id: 37,
     name: "Fairymare",
-    image: "../assets/main-page/events/plushie/fairymare.png",
+    image: "../assets/events/plushie/fairymare.png",
     cardIds: [],
     startDate: "2024-04-15T05:00:00",
     endDate: "2024-04-28T04:59:59",
@@ -519,7 +519,7 @@ export const eventsData = [
   {
     id: 41,
     name: "Fluffy Doggie",
-    image: "../assets/main-page/events/plushie/fluffy-doggie.png",
+    image: "../assets/events/plushie/fluffy-doggie.png",
     cardIds: [],
     startDate: "2024-05-13T05:00:00",
     endDate: "2024-05-26T04:59:59",
@@ -574,7 +574,7 @@ export const eventsData = [
   {
     id: 44,
     name: "Tippy Banana",
-    image: "../assets/main-page/events/plushie/tippy-banana.png",
+    image: "../assets/events/plushie/tippy-banana.png",
     cardIds: [],
     startDate: "2024-07-08T05:00:00",
     endDate: "2024-07-21T04:59:59",
@@ -607,7 +607,7 @@ export const eventsData = [
   {
     id: 47,
     name: "Diving Dolphin",
-    image: "../assets/main-page/events/plushie/diving-dolphin.png",
+    image: "../assets/events/plushie/diving-dolphin.png",
     cardIds: [],
     startDate: "2024-08-05T05:00:00",
     endDate: "2024-08-18T04:59:59",
@@ -684,7 +684,7 @@ export const eventsData = [
   {
     id: 54,
     name: "Cuddly Llama",
-    image: "../assets/main-page/events/plushie/diving-dolphin.png",
+    image: "../assets/events/plushie/diving-dolphin.png",
     cardIds: [],
     startDate: "2024-09-02T05:00:00",
     endDate: "2024-09-15T04:59:59",
@@ -783,7 +783,7 @@ export const eventsData = [
   {
     id: 63,
     name: "Cuteness Crush",
-    image: "../assets/events/curious-chase.png",
+    image: "../assets/events/cuteness-crush.png",
     cardIds: [],
     startDate: "2024-10-31T05:00:00",
     endDate: "2024-11-10T04:59:59",
@@ -1735,7 +1735,7 @@ export const eventsData = [
   {
     id: 145,
     name: "Kiwi Curio",
-    image: "../assets/main-page/events/plushie/kiwi-curio.png",
+    image: "../assets/events/plushie/kiwi-curio.png",
     cardIds: [],
     startDate: "2026-02-16T05:00:00",
     endDate: "2026-03-01T04:59:59",
@@ -1801,7 +1801,7 @@ export const eventsData = [
   {
     id: 151,
     name: "Puff Squad",
-    image: "../assets/main-page/events/plushie/puff-squad.png",
+    image: "../assets/events/plushie/puff-squad.png",
     cardIds: [],
     startDate: "2026-03-16T05:00:00",
     endDate: "2026-03-29T04:59:59",
@@ -2010,7 +2010,7 @@ export const eventsData = [
   {
     id: 170,
     name: "Broccoo Bird",
-    image: "../assets/main-page/events/plushie/brocco-bird.png",
+    image: "../assets/events/plushie/brocco-bird.png",
     cardIds: [],
     startDate: "2026-06-08T05:00:00",
     endDate: "2026-06-21T04:59:59",
@@ -2099,7 +2099,7 @@ export const eventsData = [
   {
     id: 178,
     name: "Crunchy Raccoon",
-    image: "../assets/main-page/events/plushie/crunchy-raccoon.png",
+    image: "../assets/events/plushie/crunchy-raccoon.png",
     cardIds: [],
     startDate: "2026-07-06T05:00:00",
     endDate: "2026-07-20T04:59:59",
