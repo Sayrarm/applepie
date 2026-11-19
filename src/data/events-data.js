@@ -374,7 +374,7 @@ export const eventsData = [
     type: "heartfelt-gift",
   },
 {
-    id: 26
+    id: 26,
     name: "Feb. 5 New Version Gift Event Pt. 1",
     image: "../assets/events/feb-5-new-version-gift.jpg",
     cardIds: [],
@@ -385,7 +385,7 @@ export const eventsData = [
     type: "event",
   },
 {
-    id: 27
+    id: 27,
     name: "Feb. 5 New Version Gift Event Pt. 2",
     image: "../assets/events/feb-5-new-version-gift-2.jpg",
     cardIds: [],
@@ -826,7 +826,7 @@ export const eventsData = [
     type: "branch-event",
   },
  {
-    id: 59_1
+    id: 59_1,
     name: "Cherry Ducky",
     image: "../assets/events/plushie/cherry-ducky.png",
     cardIds: [],
@@ -859,7 +859,7 @@ export const eventsData = [
     type: "event",
   },
 {
-    id: 61_1
+    id: 61_1,
     name: "Hearty Heart",
     image: "../assets/events/plushie/hearty_heart.png",
     cardIds: [],
