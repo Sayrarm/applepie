@@ -92,7 +92,7 @@ export const getWishExchange = (diamondsState) => {
 
   return {
     wishes: {
-      standart: Math.floor(diamonds / wishPrice),
+      standard: Math.floor(diamonds / wishPrice),
       limited: Math.floor(diamonds / wishPrice),
       rerun: Math.floor(diamonds / wishPrice),
     },

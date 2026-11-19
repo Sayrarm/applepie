@@ -114,7 +114,7 @@ export const getBannerColor = (banner) => {
 export const getBannerTypeLabel = (banner) => {
     if (banner.rerun) return "Rerun";
     switch (banner.type) {
-        case "standart": return "Standart";
+        case "standart": return "Standard";
         case "multi": return "Multi";
         case "solo": return "Solo";
         case "birthday": return "Birthday";
