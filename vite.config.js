@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 
 export default defineConfig({
   plugins: [react()],
-  base: "/applepie/",
+  base: "/linkon-online/",
   resolve: {
     alias: {
       "@components": path.resolve(__dirname, "src/components"),
