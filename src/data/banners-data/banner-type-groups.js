@@ -2,7 +2,7 @@ export const BANNER_TYPE_GROUPS = {
   banner: ["multi", "solo", "myth", "standard", "birthday"],
   promise: ["promise"],
   "oracle-of-stars": ["oracle-of-stars"],
-  "fondess-treasure": ["fondess-treasure"],
+  "fondness-treasure": ["fondness-treasure"],
   "illusia-locus": ["illusia-locus"],
   "10-days-with-you": ["10-days-with-you"],
   "heartfelt-gift": ["heartfelt-gift"],

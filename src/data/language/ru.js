@@ -679,7 +679,7 @@ export const ru = {
         banner: "Gacha Banners",
         promise: "Promises",
         oracleOfStars: "Oracle Of Stars",
-        fondessTreasure: "Fondess Treasure",
+        fondessTreasure: "Fondness Treasure",
         illusiaLocus: "Illusia Locus",
         tenDaysWithYou: "10 Days With You",
         heartfeltGift: "Heartfelt Gift",

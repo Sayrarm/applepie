@@ -102,12 +102,12 @@ export const obtainData = [
     bannerType: "oracle-of-stars",
   },
   {
-    obtain: "Fondess Treasure",
+    obtain: "Fondness Treasure",
     memories: [65, 150, 245, 340],
     description:
       "An Event where you can get certain Memories. This event is limited in time.",
     image: "../assets/main-page/modal-window/fondess-treasure-events.png",
-    bannerType: "fondess-treasure",
+    bannerType: "fondness-treasure",
   },
   {
     obtain: "Illusia Locus",

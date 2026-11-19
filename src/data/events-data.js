@@ -52,7 +52,7 @@ export const eventsData = [
     endDate: "2025-01-20T04:59:59",
     rerun: false,
     active: false,
-    type: "fondess-treasure",
+    type: "fondness-treasure",
   },
   {
     id: 3_001,

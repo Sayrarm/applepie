@@ -38,7 +38,7 @@ function FilterSortBarBanners({
         label: t("FilterSortBarBanners.types.oracleOfStars"),
       },
       {
-        value: "fondess-treasure",
+        value: "fondness-treasure",
         label: t("FilterSortBarBanners.types.fondessTreasure"),
       },
       {

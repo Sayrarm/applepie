@@ -120,7 +120,7 @@ const FilterModalMemory = forwardRef(
             {value: "galaxy-explorer", label: "Galaxy Explorer"},
             {value: "promise", label: "Promise"},
             {value: "oracle-of-stars", label: "Oracle Of Stars"},
-            {value: "fondess-treasure", label: "Fondess Treasure"},
+            {value: "fondness-treasure", label: "Fondness Treasure"},
             {value: "illusia-locus", label: "Illusia Locus"},
             {value: "birthday-event", label: "Birthday Event"},
             {value: "10-days-with-you", label: "10 Days With You"},
