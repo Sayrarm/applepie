@@ -1092,7 +1092,7 @@ export const eventsData = [
     type: "memory-growth",
   },
 {
-    id: 76_1
+    id: 76_1,
     name: "Winter Series",
     image: "../assets/events/kitti-tokens/winter-series.png",
     cardIds: [],
