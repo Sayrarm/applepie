@@ -3,6 +3,17 @@
   <head>
     <meta charset="UTF-8" />
 
+    <!-- Восстановление пути SPA: выполняется синхронно ДО загрузки приложения -->
+    <script>
+      (function () {
+        var redirect = sessionStorage.getItem("redirectPath");
+        if (redirect && redirect !== "/") {
+          sessionStorage.removeItem("redirectPath");
+          history.replaceState(null, "", "/linkon-online" + redirect);
+        }
+      })();
+    </script>
+
     <!-- Обычные иконки (вкладки, поиск, Android) -->
     <link rel="icon" type="image/png" sizes="16x16" href="/logo/apple_16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/logo/apple_32x32.png">
@@ -15,7 +26,6 @@
 
     <!-- Для iOS (домашний экран iPhone/iPad) -->
     <link rel="apple-touch-icon" sizes="180x180" href="/logo/apple_180x180.png">
-
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -36,12 +46,5 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <script>
-      const redirectPath = sessionStorage.getItem("redirectPath");
-      if (redirectPath && redirectPath !== "/") {
-        sessionStorage.removeItem("redirectPath");
-        window.__redirectTo = redirectPath;
-      }
-    </script>
   </body>
 </html>
