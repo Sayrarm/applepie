@@ -417,6 +417,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+text: "During the event, log in to the game to receive Deepspace Wish: Limited Deepspace Wish: Limited x5, Empyrean Wish Empyrean Wish x5, and Evol Appearance Reset Evol Appearance Reset x1.",
   },
 {
     id: 27,
@@ -428,6 +429,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+text: "Log in to the game to receive Deepspace Wish: Limited Deepspace Wish: Limited x5 and Empyrean Wish Empyrean Wish x5.",
   },
  
 {
@@ -440,6 +442,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Kindled_Reveries",
   },
 {
     id: 28_1,
@@ -451,6 +454,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.infoldgames.com/en-EN/news/6",
   },
 {
     id: 28_2,
@@ -462,6 +466,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.infoldgames.com/en-EN/news/6",
   },
   {
     id: 29,
@@ -473,6 +478,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://loveanddeepspace.wiki.gg/wiki/Golden_Throat_Drop_Rate_Up",
   },
 {
     id: 29_1,
@@ -484,6 +490,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "double-bounty-hunt",
+link: "https://loveanddeepspace.wiki.gg/wiki/Hunting_Season#Core_Hunt",
   },
   {
     id: 30,
@@ -495,6 +502,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "bd-event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Miracle_Voyage",
   },
   {
     id: 31,
@@ -506,6 +514,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "kitty-tokens",
+link: "https://loveanddeepspace.wiki.gg/wiki/Meow_Badge:_Meowstar_Series_Available",
   },
   {
     id: 32,
@@ -517,6 +526,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Time_Tour",
   },
   {
     id: 33,
@@ -528,6 +538,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://loveanddeepspace.wiki.gg/wiki/Banana_Boat_Drop_Rate_Up",
   },
   {
     id: 34,
@@ -539,6 +550,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "double-protocore",
+link: "https://loveanddeepspace.wiki.gg/wiki/Hunting_Season#Core_Hunt",
   },
   {
     id: 35,
@@ -550,6 +562,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "kitty-tokens",
+link: "https://loveanddeepspace.wiki.gg/wiki/Meow_Badge:_Superkitty_Series_Available",
   },
   {
     id: 36,
@@ -561,6 +574,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "myth-event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Sea_Breeze_Echo",
   },
   {
     id: 37,
@@ -572,6 +586,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://loveanddeepspace.wiki.gg/wiki/Fairymare_Drop_Rate_Up",
   },
   {
     id: 38,
@@ -583,6 +598,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Heartwork_Routine",
   },
   {
     id: 39,
@@ -594,6 +610,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "double-protocore",
+link: "https://loveanddeepspace.wiki.gg/wiki/Hunting_Season#Core_Hunt",
   },
   {
     id: 40,
@@ -605,6 +622,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "myth-event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Another_Dawnbreak",
   },
   {
     id: 41,
@@ -616,6 +634,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://lads.wiki/wiki/Fluffy_Doggie",
   },
   {
     id: 42,
@@ -627,6 +646,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "kitty-tokens",
+link: "https://loveanddeepspace.wiki.gg/wiki/Meow_Badge:_Kittycat_Series_Available",
   },
   {
     id: 43,
@@ -638,6 +658,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "myth-event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Yunshan%27s_Charm",
   },
   {
     id: 44,
@@ -649,6 +670,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://loveanddeepspace.wiki.gg/wiki/Puffy_Penguin_Drop_Rate_Up",
   },
   {
     id: 45,
@@ -660,6 +682,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Partner_Go_Go",
   },
   {
     id: 44,
@@ -671,6 +694,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://loveanddeepspace.wiki.gg/wiki/Tippy_Banana_Drop_Rate_Up",
   },
   {
     id: 45,
@@ -682,6 +706,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "illusio",
+link: "https://loveanddeepspace.wiki.gg/wiki/Illusio",
   },
  {
     id: 46_1,
@@ -693,6 +718,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://lads.wiki/wiki/Secret_Investigation",
   },
   {
     id: 46,
@@ -704,6 +730,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/A_Call_From_Him#Radiant_Ripples",
   },
   {
     id: 47,
@@ -715,6 +742,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://loveanddeepspace.wiki.gg/wiki/Diving_Dolphin_Drop_Rate_Up",
   },
   {
     id: 48,
@@ -726,6 +754,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "memory-growth",
+link: "https://loveanddeepspace.wiki.gg/wiki/Misty_Invasion",
   },
   {
     id: 49,
@@ -737,6 +766,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Adventure_Above_Clouds",
   },
   {
     id: 50,
@@ -748,6 +778,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "sweetie-silk",
+link: "https://loveanddeepspace.wiki.gg/wiki/Sweetie_Silk",
   },
   {
     id: 51,
@@ -759,6 +790,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "double-protocore",
+link: "https://loveanddeepspace.wiki.gg/wiki/Hunting_Season#Core_Hunt",
   },
   {
     id: 52,
@@ -770,6 +802,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "bd-event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Very_Moment_With_U",
   },
   {
     id: 53,
@@ -781,6 +814,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "kitty-tokens",
+link: "https://loveanddeepspace.wiki.gg/wiki/Meow_Badge:_Campus_Series_Available",
   },
   {
     id: 54,
@@ -792,6 +826,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://loveanddeepspace.wiki.gg/wiki/Cuddly_Llama_Drop_Rate_Up",
   },
   {
     id: 55,
@@ -803,6 +838,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Twilight_Comrades",
   },
   {
     id: 56,
@@ -814,6 +850,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Seremoon_Gift",
   },
 {
     id: 57_2,
@@ -825,6 +862,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "double-bounty-hunt",
+link: "https://loveanddeepspace.wiki.gg/wiki/Hunting_Season#Bounty_Hunt",
   },
   {
     id: 57,
@@ -836,6 +874,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Mountain_Journey",
   },
   {
     id: 58,
@@ -847,6 +886,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "memory-growth",
+link: "https://loveanddeepspace.wiki.gg/wiki/Wander_In_Wonder",
   },
   {
     id: 59,
@@ -858,6 +898,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "branch-event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Chansia_Journey",
   },
  {
     id: 59_1,
@@ -869,6 +910,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://lads.wiki/wiki/Cherry_Ducky",
   },
   {
     id: 60,
@@ -880,6 +922,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "bd-event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Timeless_Days",
   },
   {
     id: 61,
@@ -891,6 +934,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Waking_Reverie",
   },
 {
     id: 61_1,
@@ -902,6 +946,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://lads.wiki/wiki/Hearty_Heart",
   },
   {
     id: 62,
@@ -913,6 +958,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "double-protocore",
+link: "https://loveanddeepspace.wiki.gg/wiki/Hunting_Season#Core_Hunt",
   },
   {
     id: 63,
@@ -924,6 +970,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Cuteness_Crush",
   },
   {
     id: 64,
@@ -935,6 +982,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "kitty-tokens",
+link: "https://loveanddeepspace.wiki.gg/wiki/Meow_Badge:_Beverage_Series_Available",
   },
   {
     id: 65,
@@ -946,6 +994,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "branch-event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Island_Secrets",
   },
   {
     id: 66,
@@ -957,6 +1006,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Meow%27s_Time!",
   },
   {
     id: 67,
@@ -968,6 +1018,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "memory-growth",
+link: "https://loveanddeepspace.wiki.gg/wiki/Yes,_Cat_Caretaker",
   },
 {
     id: 67_1,
@@ -979,6 +1030,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://lads.wiki/wiki/Snowhunt_Day",
   },
 {
     id: 67_2,
@@ -990,6 +1042,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "double-bounty-hunt",
+link: "https://loveanddeepspace.wiki.gg/wiki/Hunting_Season#Bounty_Hunt",
   },
 {
     id: 67_3,
@@ -1001,6 +1054,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://lads.wiki/wiki/Coco_Puff",
   },
   {
     id: 68,
@@ -1012,6 +1066,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "myth-event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Abyssal_Splendor",
   },
   {
     id: 69,
@@ -1024,6 +1079,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "companion-rehearsal",
+link: "https://loveanddeepspace.wiki.gg/wiki/Sylus:_Abysm_Sovereign_Rehearsal",
   },
   {
     id: 70,
@@ -1035,6 +1091,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "branch-event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Campus_Mystery",
   },
   {
     id: 71,
@@ -1046,6 +1103,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "double-protocore",
+link: "https://loveanddeepspace.wiki.gg/wiki/Hunting_Season#Core_Hunt",
   },
   {
     id: 72,
@@ -1057,6 +1115,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Lost_Petals",
   },
 {
     id: 72_1,
@@ -1068,6 +1127,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://lads.wiki/wiki/No-Wakey_Elephant",
   },
   {
     id: 73,
@@ -1079,6 +1139,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Touring_In_Love_Presale",
   },
   {
     id: 74,
@@ -1090,6 +1151,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Deluxe_Annual_Pass",
   },
 {
     id: 74_1,
@@ -1101,6 +1163,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+text: "Review your Yearly Highlights and create an exclusive commemorative video with him in Video Studio. After completing both features, claim Diamond Diamond x100, Gold Gold x50000, and Suffix Time Ripples Time Ripples x1.",
   },
   {
     id: 75,
@@ -1112,6 +1175,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "touring-in-love",
+link: "https://loveanddeepspace.wiki.gg/wiki/Touring_In_Love",
   },
   {
     id: 76,
@@ -1124,6 +1188,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "memory-growth",
+link: "https://loveanddeepspace.wiki.gg/wiki/Nightly_Rendezvous",
   },
 {
     id: 76_1,
@@ -1135,6 +1200,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "kitty-tokens",
+link: "https://lads.wiki/wiki/Meow_Badges#Winterpaws",
   },
   {
     id: 77,
@@ -1146,6 +1212,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/A_Call_From_Him#Joyous_Serenades",
   },
 {
     id: 77_1,
@@ -1157,6 +1224,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://lads.wiki/wiki/Rain_Deer",
   },
   {
     id: 78,
@@ -1168,6 +1236,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "illusio",
+link: "https://loveanddeepspace.wiki.gg/wiki/Illusio",
   },
   {
     id: 79,
@@ -1179,6 +1248,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "festive-blessing",
+link: "https://loveanddeepspace.wiki.gg/wiki/Festive_Blessing",
   },
 {
     id: 79_1,
@@ -1190,6 +1260,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://lads.wiki/wiki/Special_Inquiry",
   },
 {
     id: 79_2,
@@ -1201,6 +1272,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "double-bounty-hunt",
+link: "https://loveanddeepspace.wiki.gg/wiki/Hunting_Season#Bounty_Hunt",
   },
   {
     id: 80,
@@ -1212,6 +1284,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "illusio",
+link: "https://loveanddeepspace.wiki.gg/wiki/Illusio",
   },
   {
     id: 81,
@@ -1223,6 +1296,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Savage_Overture",
   },
   {
     id: 82,
@@ -1234,6 +1308,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Lanternet_Gift",
   },
   {
     id: 83,
@@ -1245,6 +1320,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "memory-growth",
+link: "https://loveanddeepspace.wiki.gg/wiki/Tomorrow%27s_Catch-22",
   },
 {
     id: 83_1,
@@ -1256,6 +1332,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://lads.wiki/wiki/Wobbly_Eggplant",
   },
   {
     id: 84,
@@ -1267,6 +1344,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "double-protocore",
+link: "https://loveanddeepspace.wiki.gg/wiki/Hunting_Season#Core_Hunt",
   },
   {
     id: 85,
@@ -1278,6 +1356,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "bd-event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Until_Twilight",
   },
   {
     id: 86,
@@ -1289,6 +1368,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Gamers_Assembly",
   },
   {
     id: 87,
@@ -1300,6 +1380,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "kitty-tokens",
+link: "https://loveanddeepspace.wiki.gg/wiki/Meow_Badge:_Fairytale_Series_Available",
   },
 {
     id: 87_1,
@@ -1311,6 +1392,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://lads.wiki/wiki/Fussy_Kitty",
   },
 {
     id: 87_2,
@@ -1322,6 +1404,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: true,
     active: false,
     type: "companion-rehearsal",
+link: "To fully experience the combat effects, the Companion, the Team Setup, the Memories (level, rank, pair bonus, etc.), My Weapon and My Outfit cannot be modified.",
   },
 {
     id: 87_3,
@@ -1333,6 +1416,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "double-bounty-hunt",
+link: "https://loveanddeepspace.wiki.gg/wiki/Hunting_Season#Bounty_Hunt",
   },
   {
     id: 88,
@@ -1344,6 +1428,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "myth-event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Gravity_Calls",
   },
   {
     id: 89,
@@ -1355,6 +1440,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "companion-rehearsal",
+link: "https://loveanddeepspace.wiki.gg/wiki/Caleb:_Ultimate_Weapon_X-02_Rehearsal",
   },
   {
     id: 90,
@@ -1366,6 +1452,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "bd-event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Night_Whisper",
   },
 {
     id: 90_1,
@@ -1377,6 +1464,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://lads.wiki/wiki/Jiggly_Pudding",
   },
   {
     id: 91,
@@ -1388,6 +1476,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "double-protocore",
+link: "https://loveanddeepspace.wiki.gg/wiki/Hunting_Season#Core_Hunt",
   },
 {
     id: 91_1,
@@ -1399,6 +1488,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: true,
     active: false,
     type: "companion-rehearsal",
+text: "To fully experience the combat effects, the Companion, the Team Setup, the Memories (level, rank, pair bonus, etc.), My Weapon and My Outfit cannot be modified.",
   },
   {
     id: 92,
@@ -1410,6 +1500,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Spring_Arrives",
   },
   {
     id: 93,
@@ -1421,6 +1512,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Blossom_Escape",
   },
   {
     id: 94,
@@ -1433,6 +1525,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "memory-growth",
+link: "https://loveanddeepspace.wiki.gg/wiki/Spring_and_Flowers",
   },
   {
     id: 95,
@@ -1444,6 +1537,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Blooming_Promise",
   },
   {
     id: 96,
@@ -1455,6 +1549,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "kitty-tokens",
+link: "https://loveanddeepspace.wiki.gg/wiki/Meow_Badge:_Summer_Series_Available",
   },
  {
     id: 96_1,
@@ -1466,6 +1561,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://lads.wiki/wiki/Pilot_Ribbit",
   },
 {
     id: 96_2,
@@ -1477,6 +1573,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: true,
     active: false,
     type: "companion-rehearsal",
+text: "To fully experience the combat effects, the Companion, the Team Setup, the Memories (level, rank, pair bonus, etc.), My Weapon and My Outfit cannot be modified.",
   },
 {
     id: 96_3,
@@ -1488,6 +1585,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+text: "A Season in Bloom, A Moment to Meet. The [Closer Still] Couple Outfit Pack is now available for a limited time. Claim multiple limited Accessories✨ after you buy the crate! Get two Outfits and three Accessories in one pack!",
   },
 {
     id: 96_4,
@@ -1499,6 +1597,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://lads.wiki/wiki/Timelock_Key",
   },
 {
     id: 96_5,
@@ -1510,6 +1609,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "double-bounty-hunt",
+link: "https://loveanddeepspace.wiki.gg/wiki/Hunting_Season#Bounty_Hunt",
   },
   {
     id: 97,
@@ -1521,6 +1621,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Wild_Wander",
   },
   {
     id: 98,
@@ -1532,6 +1633,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "bd-event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Summer_Daydream",
   },
 {
     id: 98_1,
@@ -1543,6 +1645,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://lads.wiki/wiki/Traveler_Slowbie",
   },
   {
     id: 99,
@@ -1554,6 +1657,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "myth-event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Merling_Oath",
   },
   {
     id: 100,
@@ -1565,6 +1669,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "companion-rehearsal",
+link: "https://loveanddeepspace.wiki.gg/wiki/Rafayel:_Lemurian_Sea_God_Rehearsal",
   },
   {
     id: 101,
@@ -1576,6 +1681,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "double-protocore",
+link: "https://loveanddeepspace.wiki.gg/wiki/Hunting_Season#Core_Hunt",
   },
   {
     id: 102,
@@ -1587,6 +1693,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/A_Call_From_Him",
   },
   {
     id: 103,
@@ -1598,6 +1705,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "illusio",
+link: "https://loveanddeepspace.wiki.gg/wiki/Illusio",
   },
   {
     id: 104,
@@ -1609,6 +1717,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Before_Sunset,_After_Vows",
   },
 {
     id: 104_1,
@@ -1620,6 +1729,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+text: "Full Formal Wear Set Free to Claim: Memory-Themed 'My' Bespoke Wedding Dress & Ring & More Accessories!",
   },
   {
     id: 105,
@@ -1631,6 +1741,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "memory-growth",
+link: "https://loveanddeepspace.wiki.gg/wiki/Witnessed_By_Deepspace",
   },
 {
     id: 105_1,
@@ -1642,6 +1753,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://lads.wiki/wiki/Vows_with_You",
   },
 {
     id: 105_2,
@@ -1653,6 +1765,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://lads.wiki/wiki/Enchanted_Season",
   },
 {
     id: 105_3,
@@ -1664,6 +1777,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://lads.wiki/wiki/Flashback_Telly",
   },
   {
     id: 106,
@@ -1675,6 +1789,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "kitty-tokens",
+link: "https://loveanddeepspace.wiki.gg/wiki/Meow_Badge:_Ceremony_Series_Available",
   },
 {
     id: 106_1,
@@ -1686,6 +1801,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "double-bounty-hunt",
+link: "https://loveanddeepspace.wiki.gg/wiki/Hunting_Season#Bounty_Hunt",
   },
   {
     id: 107,
@@ -1697,6 +1813,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "myth-event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Cycle_Unbound",
   },
   {
     id: 108,
@@ -1708,6 +1825,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "companion-rehearsal",
+link: "https://loveanddeepspace.wiki.gg/wiki/Xavier:_King_of_Darknight_Rehearsal",
   },
 {
     id: 108_1,
@@ -1719,6 +1837,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://lads.wiki/wiki/Cool_Scoops",
   },
   {
     id: 109,
@@ -1730,6 +1849,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Estival_Splash",
   },
   {
     id: 110,
@@ -1741,6 +1861,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "memory-growth",
+link: "https://loveanddeepspace.wiki.gg/wiki/You_And_Midsummer",
   },
   {
     id: 111,
@@ -1752,6 +1873,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Summery_Promise",
   },
   {
     id: 112,
@@ -1763,6 +1885,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "double-protocore",
+link: "https://loveanddeepspace.wiki.gg/wiki/Hunting_Season#Core_Hunt",
   },
   {
     id: 111,
@@ -1774,6 +1897,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "bd-event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Sunset_Finale",
   },
 {
     id: 111_1,
@@ -1785,6 +1909,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://lads.wiki/wiki/Lovie_Mangosteen",
   },
   {
     id: 112,
@@ -1796,6 +1921,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Wonder_Trove",
   },
   {
     id: 113,
@@ -1807,6 +1933,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "kitty-tokens",
+link: "https://loveanddeepspace.wiki.gg/wiki/Meow_Badge:_Autumn_Series_Available",
   },
 {
     id: 113_1,
@@ -1818,6 +1945,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "double-bounty-hunt",
+link: "https://loveanddeepspace.wiki.gg/wiki/Hunting_Season#Bounty_Hunt",
   },
   {
     id: 112,
@@ -1829,6 +1957,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Born_To_Dazzle",
   },
   {
     id: 113,
@@ -1840,6 +1969,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "myth-event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Golden_Verdict",
   },
   {
     id: 114,
@@ -1851,6 +1981,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "companion-rehearsal",
+link: "https://loveanddeepspace.wiki.gg/wiki/Zayne:_God_of_Annihilation_Rehearsal",
   },
 {
     id: 114_1,
@@ -1862,6 +1993,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://lads.wiki/wiki/Whimsy_Mooshie",
   },
   {
     id: 115,
@@ -1873,6 +2005,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Moonbloom_Date",
   },
   {
     id: 116,
@@ -1884,6 +2017,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "bd-event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Trace_the_Stars",
   },
   {
     id: 117,
@@ -1895,6 +2029,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "double-protocore",
+link: "https://loveanddeepspace.wiki.gg/wiki/Hunting_Season#Core_Hunt",
   },
 {
     id: 117_1,
@@ -1907,6 +2042,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: true,
     active: false,
     type: "companion-rehearsal",
+text: "To fully experience the combat effects, the Companion, the Team Setup, the Memories (level, rank, pair bonus, etc.), My Weapon and My Outfit cannot be modified.",
   },
 {
     id: 117_2,
@@ -1918,6 +2054,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://lads.wiki/wiki/Mellow_Pumpkin",
   },
   {
     id: 118,
@@ -1929,6 +2066,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "illusio",
+link: "https://loveanddeepspace.wiki.gg/wiki/Illusio",
   },
   {
     id: 119,
@@ -1940,6 +2078,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Evernit_Meloride",
   },
 {
     id: 119_1,
@@ -1951,6 +2090,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+text: "Log in to claim three Universal Hairpin Flowers Headwears for Free!",
   },
   {
     id: 120,
@@ -1962,6 +2102,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "memory-growth",
+link: "https://loveanddeepspace.wiki.gg/wiki/Heartbeats_Ablaze",
   },
 {
     id: 120_1,
@@ -1973,6 +2114,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "kitty-tokens",
+link: "https://lads.wiki/wiki/Meow_Badges#Pawfessions",
   },
   {
     id: 121,
@@ -1984,6 +2126,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Curious_Chase",
   },
   {
     id: 122,
@@ -1996,6 +2139,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "companion-rehearsal",
+link: "https://loveanddeepspace.wiki.gg/wiki/Sylus:_Silverwing_Fiend_Rehearsal",
   },
   {
     id: 123,
@@ -2008,6 +2152,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "myth-event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Crimson_Feast",
   },
   {
     id: 124,
@@ -2019,6 +2164,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Floofy_Party",
   },
   {
     id: 125,
@@ -2030,6 +2176,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "double-protocore",
+link: "https://loveanddeepspace.wiki.gg/wiki/Hunting_Season#Core_Hunt",
   },
 {
     id: 125_1,
@@ -2041,6 +2188,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://lads.wiki/wiki/Chirp_Shroomlet",
   },
   {
     id: 126,
@@ -2052,6 +2200,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Royal_Masque_Presale",
   },
   {
     id: 127,
@@ -2063,6 +2212,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Heart%27s_Archive",
   },
   {
     id: 128,
@@ -2074,6 +2224,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Anniversary_Offer_(2026)",
   },
   {
     id: 129,
@@ -2085,6 +2236,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Poetic_Figures",
   },
   {
     id: 130,
@@ -2096,6 +2248,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "memory-growth",
+link: "https://loveanddeepspace.wiki.gg/wiki/Throne_of_Eros",
   },
   {
     id: 131,
@@ -2107,6 +2260,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Timelock_Key_(To_Our_Yesterday)",
   },
   {
     id: 132,
@@ -2118,6 +2272,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "kitty-tokens",
+link: "https://loveanddeepspace.wiki.gg/wiki/Meow_Badge:_Garden_Series_Available",
   },
   {
     id: 133,
@@ -2129,6 +2284,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://loveanddeepspace.wiki.gg/wiki/Bashful_Roll_Drop_Rate_Up",
   },
   {
     id: 134,
@@ -2140,6 +2296,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Timelock_Key_(To_Our_Yesterday)",
   },
 {
     id: 134_1,
@@ -2151,6 +2308,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Cuteness_Charge",
   },
 {
     id: 134_2,
@@ -2162,6 +2320,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "double-bounty-hunt",
+link: "https://loveanddeepspace.wiki.gg/wiki/Hunting_Season#Bounty_Hunt",
   },
   {
     id: 135,
@@ -2170,9 +2329,10 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     cardIds: [],
     startDate: "2026-02-02T05:00:00",
     endDate: "2026-02-08T04:59:59",
-    rerun: false,
+    rerun: true,
     active: false,
     type: "companion-rehearsal",
+link: "https://loveanddeepspace.wiki.gg/wiki/Caleb:_Ultimate_Weapon_X-02_Rehearsal",
   },
   {
     id: 136,
@@ -2184,6 +2344,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "illusio",
+link: "https://loveanddeepspace.wiki.gg/wiki/Illusio",
   },
   {
     id: 137,
@@ -2195,6 +2356,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Time%27s_Banquet",
   },
   {
     id: 138,
@@ -2206,6 +2368,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Flowing_Wealth",
   },
   {
     id: 139,
@@ -2217,6 +2380,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Golden_Fortune",
   },
   {
     id: 140,
@@ -2228,6 +2392,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Festive_Cheer_Pack",
   },
   {
     id: 141,
@@ -2240,6 +2405,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "memory-growth",
+link: "https://loveanddeepspace.wiki.gg/wiki/Mortality%27s_Tenderness",
   },
   {
     id: 142,
@@ -2251,6 +2417,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Treasure_Pages_Season_2:_To_Golden_Days",
   },
   {
     id: 143,
@@ -2262,6 +2429,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Felicity_Abode",
   },
 {
     id: 143_1,
@@ -2273,6 +2441,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+text: "Claim free diamond rewards daily. Buy double-up chances to earn an equal amount of bonus rewards!",
   },
   {
     id: 144,
@@ -2284,6 +2453,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/A_Call_From_Him",
   },
   {
     id: 145,
@@ -2295,6 +2465,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://loveanddeepspace.wiki.gg/wiki/Kiwi_Curio_Drop_Rate_Up",
   },
   {
     id: 146,
@@ -2306,6 +2477,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "double-protocore",
+link: "https://loveanddeepspace.wiki.gg/wiki/Hunting_Season#Core_Hunt",
   },
   {
     id: 147,
@@ -2317,6 +2489,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Lanternet_Joy",
   },
   {
     id: 148,
@@ -2328,6 +2501,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Golden_Moment",
   },
   {
     id: 149,
@@ -2339,6 +2513,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "bd-event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Each_Step_To_You",
   },
   {
     id: 150,
@@ -2350,6 +2525,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Warming_Solace",
   },
   {
     id: 151,
@@ -2361,6 +2537,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://loveanddeepspace.wiki.gg/wiki/Puff_Squad_Drop_Rate_Up",
   },
   {
     id: 152,
@@ -2372,6 +2549,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "kitty-tokens",
+link: "https://loveanddeepspace.wiki.gg/wiki/Meow_Badge:_Classical_Series_Available",
   },
 {
     id: 152_1,
@@ -2383,6 +2561,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "double-bounty-hunt",
+link: "https://loveanddeepspace.wiki.gg/wiki/Hunting_Season#Bounty_Hunt",
   },
   {
     id: 153,
@@ -2394,6 +2573,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "myth-event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Lost_Souls",
   },
   {
     id: 154,
@@ -2405,6 +2585,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "companion-rehearsal",
+link: "https://loveanddeepspace.wiki.gg/wiki/Caleb:_Netherlord_Rehearsal",
   },
   {
     id: 155,
@@ -2416,6 +2597,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "bd-event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Rain_Noctis",
   },
   {
     id: 156,
@@ -2427,6 +2609,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://loveanddeepspace.wiki.gg/wiki/Cotton_Sheep_Drop_Rate_Up",
   },
   {
     id: 157,
@@ -2438,6 +2621,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "double-protocore",
+link: "https://loveanddeepspace.wiki.gg/wiki/Hunting_Season#Core_Hunt",
   },
   {
     id: 158,
@@ -2446,9 +2630,10 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     cardIds: [],
     startDate: "2026-04-21T05:00:00",
     endDate: "2026-04-28T04:59:59",
-    rerun: false,
+    rerun: true,
     active: false,
     type: "companion-rehearsal",
+link: "https://loveanddeepspace.wiki.gg/wiki/Rafayel:_Lemurian_Sea_God_Rehearsal",
   },
   {
     id: 159,
@@ -2460,6 +2645,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Tiptop_Hop",
   },
   {
     id: 160,
@@ -2468,9 +2654,10 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     cardIds: [],
     startDate: "2026-05-15T05:00:00",
     endDate: "2026-05-22T04:59:00",
-    rerun: false,
+    rerun: true,
     active: false,
     type: "companion-rehearsal",
+link: "https://loveanddeepspace.wiki.gg/wiki/Xavier:_King_of_Darknight_Rehearsal",
   },
   {
     id: 161,
@@ -2482,6 +2669,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Steam_Veil",
   },
   {
     id: 162,
@@ -2493,6 +2681,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "memory-growth",
+link: "https://loveanddeepspace.wiki.gg/wiki/Lingering_Lust",
   },
   {
     id: 163,
@@ -2504,6 +2693,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Misty_Promise",
   },
   {
     id: 164,
@@ -2515,6 +2705,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://loveanddeepspace.wiki.gg/wiki/Toast_Express_Drop_Rate_Up",
   },
   {
     id: 165,
@@ -2526,6 +2717,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Vibrant_Prelude",
   },
   {
     id: 166,
@@ -2537,6 +2729,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Fluff_Realm",
   },
   {
     id: 167,
@@ -2548,6 +2741,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "double-bounty-hunt",
+link: "https://loveanddeepspace.wiki.gg/wiki/Hunting_Season#Bounty_Hunt",
   },
   {
     id: 168,
@@ -2559,6 +2753,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "kitty-tokens",
+link: "https://loveanddeepspace.wiki.gg/wiki/Meow_Badge:_Adventure_Series_Available",
   },
   {
     id: 169,
@@ -2570,6 +2765,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "bd-event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Clearsky_Daydrift",
   },
   {
     id: 170,
@@ -2581,6 +2777,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://loveanddeepspace.wiki.gg/wiki/Broccoo_Bird_Drop_Rate_Up",
   },
   {
     id: 171,
@@ -2592,6 +2789,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Love_On_Screen",
   },
   {
     id: 172,
@@ -2604,6 +2802,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "memory-growth",
+link: "https://loveanddeepspace.wiki.gg/wiki/Once_Upon_a_Frame",
   },
   {
     id: 173,
@@ -2615,6 +2814,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Picture_Perfect_Pack",
   },
   {
     id: 174,
@@ -2626,6 +2826,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Spirited_Fashion",
   },
   {
     id: 175,
@@ -2637,6 +2838,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "double-protocore",
+link: "https://loveanddeepspace.wiki.gg/wiki/Hunting_Season#Core_Hunt",
   },
   {
     id: 176,
@@ -2645,9 +2847,10 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     cardIds: [],
     startDate: "2026-07-02T05:00:00",
     endDate: "2026-07-09T04:59:59",
-    rerun: false,
+    rerun: true,
     active: false,
     type: "companion-rehearsal",
+link: "https://loveanddeepspace.wiki.gg/wiki/Zayne:_God_of_Annihilation_Rehearsal",
   },
   {
     id: 177,
@@ -2659,6 +2862,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Cozy_Summer",
   },
   {
     id: 178,
@@ -2670,6 +2874,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://loveanddeepspace.wiki.gg/wiki/Crunchy_Raccoon_Drop_Rate_Up",
   },
   {
     id: 179,
@@ -2681,6 +2886,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Limited-Time_Myths_Unlock",
   },
   {
     id: 180,
@@ -2692,6 +2898,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "illusio",
+link: "https://loveanddeepspace.wiki.gg/wiki/Illusio",
   },
   {
     id: 181,
@@ -2703,6 +2910,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "double-bounty-hunt",
+link: "https://loveanddeepspace.wiki.gg/wiki/Hunting_Season#Bounty_Hunt",
   },
   {
     id: 182,
@@ -2714,6 +2922,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "kitty-tokens",
+link: "https://loveanddeepspace.wiki.gg/wiki/Meow_Badge:_Sport_Series_Available",
   },
   {
     id: 183,
@@ -2725,6 +2934,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://loveanddeepspace.wiki.gg/wiki/Wobble_Berry_Drop_Rate_Up",
   },
   {
     id: 184,
@@ -2736,6 +2946,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Cuddly_Factory",
   },
   {
     id: 185,
@@ -2747,6 +2958,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "myth-event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Skyvault_Afar",
   },
   {
     id: 186,
@@ -2758,6 +2970,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Radiant_Horizons",
   },
   {
     id: 187,
@@ -2769,6 +2982,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "companion-rehearsal",
+link: "https://loveanddeepspace.wiki.gg/wiki/Rafayel:_Vermilion_Martial_God_Rehearsal",
   },
   {
     id: 188,
@@ -2780,6 +2994,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "double-protocore",
+link: "https://loveanddeepspace.wiki.gg/wiki/Hunting_Season#Core_Hunt",
   },
   {
     id: 189,
@@ -2791,6 +3006,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "bd-event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Dawnlit_Path",
   },
   {
     id: 190,
@@ -2802,6 +3018,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://loveanddeepspace.wiki.gg/wiki/Stylish_Corn_Drop_Rate_Up",
   },
   {
     id: 191,
@@ -2813,6 +3030,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Shared_Bloom",
   },
   {
     id: 192,
@@ -2822,9 +3040,10 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     cardIds: [],
     startDate: "2026-09-08T05:00:00",
     endDate: "2026-09-15T04:59:59",
-    rerun: false,
+    rerun: true,
     active: false,
     type: "companion-rehearsal",
+link: "https://loveanddeepspace.wiki.gg/wiki/Sylus:_Silverwing_Fiend_Rehearsal",
   },
   {
     id: 193,
@@ -2836,6 +3055,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "branch-event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Voyage_Anew",
   },
   {
     id: 194,
@@ -2847,6 +3067,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Fragrant_Sachets",
   },
   {
     id: 195,
@@ -2858,6 +3079,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Blooming_Osmanthus",
   },
   {
     id: 196,
@@ -2869,6 +3091,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/A_Call_From_Him",
   },
   {
     id: 197,
@@ -2880,6 +3103,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "double-bounty-hunt",
+link: "https://loveanddeepspace.wiki.gg/wiki/Hunting_Season#Bounty_Hunt",
   },
   {
     id: 198,
@@ -2891,6 +3115,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "illusio",
+link: "https://loveanddeepspace.wiki.gg/wiki/Illusio",
   },
   {
     id: 199,
@@ -2902,6 +3127,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Refined_Revelry",
   },
   {
     id: 200,
@@ -2913,6 +3139,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Gracious_Treasure",
   },
   {
     id: 201,
@@ -2924,6 +3151,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Moonlit_Reserve",
   },
   {
     id: 202,
@@ -2936,6 +3164,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "memory-growth",
+link: "https://loveanddeepspace.wiki.gg/wiki/A_Night_That_Never_Ends",
   },
   {
     id: 203,
@@ -2947,6 +3176,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://loveanddeepspace.wiki.gg/wiki/Sweet_Pancake_Drop_Rate_Up",
   },
   {
     id: 204,
@@ -2958,6 +3188,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "kitty-tokens",
+link: "https://loveanddeepspace.wiki.gg/wiki/Meow_Badge:_Sleepwear_Series_Available",
   },
   {
     id: 205,
@@ -2969,6 +3200,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "bd-event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Flicker_of_Wishes",
   },
   {
     id: 206,
@@ -2980,6 +3212,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Rendered_Real",
   },
   {
     id: 207,
@@ -2991,6 +3224,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "double-protocore",
+link: "https://loveanddeepspace.wiki.gg/wiki/Hunting_Season#Core_Hunt",
   },
   {
     id: 208,
@@ -3002,6 +3236,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "plushie",
+link: "https://loveanddeepspace.wiki.gg/wiki/Red_Bean_Shark_Drop_Rate_Up",
   },
   {
     id: 209,
@@ -3013,6 +3248,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: false,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Plush_Rush",
   },
   {
     id: 210,
@@ -3024,6 +3260,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: true,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Sensory_Splendor",
   },
   {
     id: 211,
@@ -3035,6 +3272,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: true,
     type: "memory-growth",
+link: "https://loveanddeepspace.wiki.gg/wiki/Rebooting_Dreams",
   },
   {
     id: 212,
@@ -3046,6 +3284,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: true,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Glitchtopia",
   },
   {
     id: 213,
@@ -3057,6 +3296,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: true,
     type: "event",
+link: "https://loveanddeepspace.wiki.gg/wiki/Heart_Wave_Promise",
   },
   {
     id: 214,
@@ -3068,6 +3308,7 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: true,
     type: "illusio",
+link: "https://loveanddeepspace.wiki.gg/wiki/Illusio",
   },
   {
     id: 215,
@@ -3079,5 +3320,6 @@ link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)
     rerun: false,
     active: true,
     type: "double-bounty-hunt",
+link: "https://loveanddeepspace.wiki.gg/wiki/Hunting_Season#Bounty_Hunt",
   },
 ];
