@@ -33,9 +33,9 @@ function FilterSortBarBanners({
     const typeOptions = [
       { value: "banner", label: t("FilterSortBarBanners.types.banner") },
       { value: "promise", label: t("FilterSortBarBanners.types.promise") },
-      {
-        value: "oracle-of-stars",
-        label: t("FilterSortBarBanners.types.oracleOfStars"),
+       {
+        value: "festive-blessing",
+        label: t("FilterSortBarBanners.types.festive-blessing"),
       },
       {
         value: "fondness-treasure",
@@ -44,6 +44,18 @@ function FilterSortBarBanners({
       {
         value: "illusia-locus",
         label: t("FilterSortBarBanners.types.illusiaLocus"),
+      },
+      {
+        value: "oracle-of-stars",
+        label: t("FilterSortBarBanners.types.oracleOfStars"),
+      },
+      {
+        value: "sweetie-silk",
+        label: t("FilterSortBarBanners.types.sweetie-silk"),
+      },
+      {
+        value: "touring-in-love",
+        label: t("FilterSortBarBanners.types.touring-in-love"),
       },
       {
         value: "10-days-with-you",
@@ -67,7 +79,6 @@ function FilterSortBarBanners({
         label: t("FilterSortBarBanners.types.doubleBountyHunt"),
       },
       { value: "illusio", label: t("FilterSortBarBanners.types.illusio") },
-      { value: "event", label: t("FilterSortBarBanners.types.event") },
       {
         value: "memory-growth",
         label: t("FilterSortBarBanners.types.memory-growth"),
@@ -85,18 +96,8 @@ function FilterSortBarBanners({
         value: "myth-event",
         label: t("FilterSortBarBanners.types.myth-event"),
       },
-      {
-        value: "festive-blessing",
-        label: t("FilterSortBarBanners.types.festive-blessing"),
-      },
-      {
-        value: "sweetie-silk",
-        label: t("FilterSortBarBanners.types.sweetie-silk"),
-      },
-      {
-        value: "touring-in-love",
-        label: t("FilterSortBarBanners.types.touring-in-love"),
-      },
+      
+      { value: "event", label: t("FilterSortBarBanners.types.event") },
       {
         value: "events-cards",
         label: t("FilterSortBarBanners.types.events-cards"),

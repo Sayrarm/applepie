@@ -684,7 +684,7 @@ export const en = {
         doubleProtocore: "Double Protocores",
         doubleBountyHunt: "Double Bounty Hunt",
         illusio: "Illusio",
-        event: "Events",
+        event: "Other Events",
         "memory-growth": "Memory Growth Bonus Event",
         "companion-rehearsal": "Companion Rehearsal",
         "bd-event": "Birthday Event",
