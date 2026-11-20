@@ -1108,6 +1108,16 @@ function BannersCalendar({
                         {selectedBanner && (
                             <BannerPeriod banners={[selectedBanner]} />
                         )}
+                        {selectedBanner?.link && (
+                <a
+                    href={selectedBanner.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.bannerLink}
+                >
+                    {t('BannersCalendar.linkWiki')}
+                </a>
+            )}
                     </>
                 }
             />

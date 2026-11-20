@@ -749,6 +749,7 @@ export const ru = {
       saveAsImageActive: "📸 Сохранение...",
       hidePredicts: "С предиктами",
       showPredicts: "Без предиктов",
+      linkWiki: "Больше инфо об Эвенте на Вики",
     },
     CustomBannerModal: {
       alertName: "Введите название баннера",
@@ -768,6 +769,11 @@ export const ru = {
         standart: "Стандарт",
         myth: "Миф",
       },
+    },
+    BannerList: {
+      noBanners: "Нет доступных баннеров",
+      noMatch: "Нп один баннер не соответствует вашим фильтрам",
+      linkWiki: "Больше инфо об Эвенте на Вики",
     },
   },
 };

@@ -9,6 +9,7 @@ export const eventsData = [
     rerun: false,
     active: false,
     type: "oracle-of-stars",
+link: "https://lads.wiki/wiki/Heartbeat_Ripples",
   },
   {
     id: 1_002,
@@ -20,6 +21,7 @@ export const eventsData = [
     rerun: false,
     active: false,
     type: "oracle-of-stars",
+link: "https://lads.wiki/wiki/Traversing_Deepspace",
   },
   {
     id: 1_003,
@@ -31,6 +33,7 @@ export const eventsData = [
     rerun: true,
     active: false,
     type: "oracle-of-stars",
+link: "https://lads.wiki/wiki/Heartbeat_Ripples",
   },
   {
     id: 1_004,
@@ -42,6 +45,7 @@ export const eventsData = [
     rerun: true,
     active: false,
     type: "oracle-of-stars",
+link: "https://lads.wiki/wiki/Traversing_Deepspace",
   },
   {
     id: 2_001,
@@ -53,6 +57,7 @@ export const eventsData = [
     rerun: false,
     active: false,
     type: "fondness-treasure",
+link: "https://lads.wiki/wiki/Fondness_Treasure",
   },
   {
     id: 3_001,
@@ -64,6 +69,7 @@ export const eventsData = [
     rerun: false,
     active: false,
     type: "illusia-locus",
+link: "https://lads.wiki/wiki/Illusia_Locus",
   },
   {
     id: 3_002,
@@ -75,6 +81,7 @@ export const eventsData = [
     rerun: true,
     active: false,
     type: "illusia-locus",
+link: "https://lads.wiki/wiki/Illusia_Locus",
   },
   {
     id: 4_001,
@@ -86,6 +93,7 @@ export const eventsData = [
     rerun: false,
     active: false,
     type: "10-days-with-you",
+link: "https://loveanddeepspace.wiki.gg/wiki/10_Days_With_You_(Zayne:_Dawn%27s_Shadows)",
   },
   {
     id: 4_002,
@@ -97,6 +105,7 @@ export const eventsData = [
     rerun: false,
     active: false,
     type: "10-days-with-you",
+link: "https://loveanddeepspace.wiki.gg/wiki/10_Days_With_You_(Rafayel:_Lost_In_Your_Eyes)",
   },
   {
     id: 4_003,
@@ -108,6 +117,7 @@ export const eventsData = [
     rerun: false,
     active: false,
     type: "10-days-with-you",
+link: "https://loveanddeepspace.wiki.gg/wiki/10_Days_With_You_(Xavier:_Lost_Signal)",
   },
   {
     id: 4_004,
@@ -119,6 +129,7 @@ export const eventsData = [
     rerun: false,
     active: false,
     type: "10-days-with-you",
+link: "https://loveanddeepspace.wiki.gg/wiki/10_Days_With_You_(Sylus:_Wild_Gaze)",
   },
   {
     id: 4_005,
@@ -130,6 +141,7 @@ export const eventsData = [
     rerun: false,
     active: false,
     type: "10-days-with-you",
+link: "https://loveanddeepspace.wiki.gg/wiki/10_Days_With_You_(Zayne:_Doomsday)",
   },
   {
     id: 4_006,
@@ -141,6 +153,7 @@ export const eventsData = [
     rerun: false,
     active: false,
     type: "10-days-with-you",
+link: "https://loveanddeepspace.wiki.gg/wiki/10_Days_With_You_(Rafayel:_Glistening_Hearts)",
   },
   {
     id: 4_007,
@@ -152,6 +165,7 @@ export const eventsData = [
     rerun: false,
     active: false,
     type: "10-days-with-you",
+link: "https://loveanddeepspace.wiki.gg/wiki/10_Days_With_You_(Xavier:_Seeker_Of_Light)",
   },
   {
     id: 4_008,
@@ -163,6 +177,7 @@ export const eventsData = [
     rerun: false,
     active: false,
     type: "10-days-with-you",
+link: "https://loveanddeepspace.wiki.gg/wiki/10_Days_With_You_(Caleb:_Verified_Rumor)",
   },
   {
     id: 4_009,
@@ -174,6 +189,7 @@ export const eventsData = [
     rerun: false,
     active: false,
     type: "10-days-with-you",
+link: "https://loveanddeepspace.wiki.gg/wiki/10_Days_With_You_(Sylus:_Chaotic_Velocity)",
   },
   {
     id: 4_010,
@@ -185,6 +201,7 @@ export const eventsData = [
     rerun: false,
     active: false,
     type: "10-days-with-you",
+link: "https://loveanddeepspace.wiki.gg/wiki/10_Days_With_You_(Xavier:_Horizon%27s_Pulse)",
   },
   {
     id: 4_011,
@@ -196,6 +213,7 @@ export const eventsData = [
     rerun: false,
     active: false,
     type: "10-days-with-you",
+link: "https://loveanddeepspace.wiki.gg/wiki/10_Days_With_You_(Zayne:_5th_Intercostal_Space)",
   },
   {
     id: 4_012,
@@ -207,6 +225,7 @@ export const eventsData = [
     rerun: false,
     active: false,
     type: "10-days-with-you",
+link: "https://loveanddeepspace.wiki.gg/wiki/10_Days_With_You_(Rafayel:_Transparent_Ocean)",
   },
   {
     id: 4_013,
@@ -218,6 +237,7 @@ export const eventsData = [
     rerun: false,
     active: false,
     type: "10-days-with-you",
+link: "https://loveanddeepspace.wiki.gg/wiki/10_Days_With_You_(Caleb:_Chasing_Summer)",
   },
   {
     id: 4_014,
@@ -229,6 +249,7 @@ export const eventsData = [
     rerun: false,
     active: false,
     type: "10-days-with-you",
+link: "https://loveanddeepspace.wiki.gg/wiki/10_Days_With_You_(Sylus:_Nightglow)",
   },
   {
     id: 4_015,
@@ -240,6 +261,7 @@ export const eventsData = [
     rerun: false,
     active: false,
     type: "10-days-with-you",
+link: "https://loveanddeepspace.wiki.gg/wiki/10_Days_With_You_(Rafayel:_Vesperine_Glimmer)",
   },
   {
     id: 4_016,
@@ -251,6 +273,7 @@ export const eventsData = [
     rerun: false,
     active: false,
     type: "10-days-with-you",
+link: "https://loveanddeepspace.wiki.gg/wiki/10_Days_With_You_(Zayne:_Blooming_Hour)",
   },
   {
     id: 4_017,
@@ -262,6 +285,7 @@ export const eventsData = [
     rerun: false,
     active: false,
     type: "10-days-with-you",
+link: "https://loveanddeepspace.wiki.gg/wiki/10_Days_With_You_(Xavier:_Moments_Refined)",
   },
   {
     id: 4_018,
@@ -273,6 +297,7 @@ export const eventsData = [
     rerun: false,
     active: false,
     type: "10-days-with-you",
+link: "https://loveanddeepspace.wiki.gg/wiki/10_Days_With_You_(Caleb:_Vivid_Strokes)",
   },
   {
     id: 4_019,
@@ -284,6 +309,7 @@ export const eventsData = [
     rerun: false,
     active: false,
     type: "10-days-with-you",
+link: "https://loveanddeepspace.wiki.gg/wiki/10_Days_With_You_(Sylus:_Autumn_Eyes)",
   },
   {
     id: 5_001,
@@ -295,6 +321,7 @@ export const eventsData = [
     rerun: false,
     active: false,
     type: "heartfelt-gift",
+link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Xavier:_Unique_Aftertaste)",
   },
   {
     id: 5_002,
@@ -306,6 +333,7 @@ export const eventsData = [
     rerun: false,
     active: false,
     type: "heartfelt-gift",
+link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Rafayel:_Sparkling_Traces)",
   },
   {
     id: 5_003,
@@ -317,6 +345,7 @@ export const eventsData = [
     rerun: false,
     active: false,
     type: "heartfelt-gift",
+link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Engraved_Affection)",
   },
   {
     id: 5_004,
@@ -328,6 +357,7 @@ export const eventsData = [
     rerun: false,
     active: false,
     type: "heartfelt-gift",
+link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Sylus:_Magnum_Opus)",
   },
   {
     id: 5_005,
@@ -339,6 +369,7 @@ export const eventsData = [
     rerun: false,
     active: false,
     type: "heartfelt-gift",
+link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Caleb:_Yearly_Nostalgia)",
   },
   {
     id: 5_006,
@@ -350,6 +381,7 @@ export const eventsData = [
     rerun: false,
     active: false,
     type: "heartfelt-gift",
+link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Xavier:_Precious_Moment)",
   },
   {
     id: 5_007,
@@ -361,6 +393,7 @@ export const eventsData = [
     rerun: false,
     active: false,
     type: "heartfelt-gift",
+link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Rafayel:_Rising_Tides)",
   },
   {
     id: 5_008,
@@ -372,6 +405,7 @@ export const eventsData = [
     rerun: false,
     active: false,
     type: "heartfelt-gift",
+link: "https://loveanddeepspace.wiki.gg/wiki/Heartfelt_Gift_(Zayne:_Framed_Dusk)",
   },
 {
     id: 26,

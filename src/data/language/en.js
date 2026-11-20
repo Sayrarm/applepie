@@ -745,6 +745,7 @@ export const en = {
       saveAsImageActive: "📸 Capturing...",
       hidePredicts: "Prediction On",
       showPredicts: "Prediction Off",
+      linkWiki: "More info about event on Wiki",
     },
     CustomBannerModal: {
       alertName: "Enter the name of the banner",
@@ -764,6 +765,11 @@ export const en = {
         standart: "Standard",
         myth: "Myth",
       },
+    },
+    BannerList: {
+      noBanners: "No banners available",
+      noMatch: "No banners match your filters",
+      linkWiki: "More info about event on Wiki",
     },
   },
 };

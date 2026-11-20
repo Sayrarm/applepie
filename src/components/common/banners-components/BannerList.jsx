@@ -12,11 +12,13 @@ import {
 import { memoriesData } from "@data";
 import { getImageUrl } from "@hooks";
 import BannerPeriod from "./BannerPeriod.jsx";
+import { useTranslation } from "react-i18next";
 
 function BannerList({ banners, showFilters = false, onSelect = null }) {
     const [selectedBanner, setSelectedBanner] = useState(null);
     const memoriesModalRef = useRef();
     const filterModalRef = useRef();
+    const { t, i18n } = useTranslation();
 
     // Хуки для фильтра, поиска и сортировки
     const {
@@ -107,11 +109,11 @@ function BannerList({ banners, showFilters = false, onSelect = null }) {
             )}
 
             {(!banners || banners.length === 0) && (
-                <div className={styles.noBanners}>No banners available</div>
+                <div className={styles.noBanners}> {t('BannerList.noBanners')}</div>
             )}
 
             {banners && banners.length > 0 && processedBanners.length === 0 && (
-                <div className={styles.noBanners}>No banners match your filters</div>
+                <div className={styles.noBanners}>{t('BannerList.noMatch')}</div>
             )}
 
             <div className={styles.bannersGrid}>
@@ -140,15 +142,25 @@ function BannerList({ banners, showFilters = false, onSelect = null }) {
             </div>
 
             <ModalWindow
-                ref={memoriesModalRef}
-                title={selectedBanner?.name}
-                tag={
-                    <>
-                        <CardList cards={cards} />
-                        {selectedBanner && <BannerPeriod banners={[selectedBanner]} />}
-                    </>
-                }
-            />
+    ref={memoriesModalRef}
+    title={selectedBanner?.name}
+    tag={
+        <>
+            <CardList cards={cards} />
+            {selectedBanner && <BannerPeriod banners={[selectedBanner]} />}
+            {selectedBanner?.link && (
+                <a
+                    href={selectedBanner.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.bannerLink}
+                >
+                    {t('BannerList.linkWiki')}
+                </a>
+            )}
+        </>
+    }
+/>
         </>
     );
 }
