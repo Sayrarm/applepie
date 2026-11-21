@@ -31,6 +31,9 @@ export const en = {
       titleSchedule: "Schedule",
       titleDaily: "Reset",
     },
+    EventsBlock: {
+      noEvents: "No events available",
+    },
     AsideReplacableResources: {
       or: "or",
       titleReplacableResources: "You have replaceable resources:",

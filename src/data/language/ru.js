@@ -31,6 +31,9 @@ export const ru = {
       titleSchedule: "Расписание",
       titleDaily: "До обновления осталось",
     },
+    EventsBlock: {
+      noEvents: "Нет доступных событий",
+    },
     AsideReplacableResources: {
       or: "или",
       titleReplacableResources: "У вас есть заменяемые ресурсы:",

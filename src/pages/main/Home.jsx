@@ -23,7 +23,9 @@ function Home() {
     );
 
     // Активные эвенты
-    const newEvents = eventsData.filter((event) => event.active === true);
+  const newEvents = eventsData
+    .filter((event) => event.active === true)
+    .map((event) => ({ ...event, source: "events" }));
 
     // Активный баттлпас
     const activeBattlePass = battlePassData.filter((bp) => bp.active === true);
