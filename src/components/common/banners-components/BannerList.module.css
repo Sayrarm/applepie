@@ -6,15 +6,6 @@
   align-items: flex-start;
 }
 
-.bannerLink {
-  color: var(--a);
-  text-align: start;
-}
-
-.bannerLink:hover {
-  color: var(--a-hover);
-}
-
 .bannerCard {
   cursor: pointer;
   border: none;

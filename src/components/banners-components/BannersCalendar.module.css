@@ -423,12 +423,3 @@
         top: -35px;
     }
 }
-
-.bannerLink {
-  color: var(--a);
-  text-align: start;
-}
-
-.bannerLink:hover {
-  color: var(--a-hover);
-}

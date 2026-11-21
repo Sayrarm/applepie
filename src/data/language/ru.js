@@ -697,7 +697,7 @@ export const ru = {
         "festive-blessing": "Festive Blessing",
         "sweetie-silk": "Sweetie Silk",
         "touring-in-love": "Touring in Love",
-        "events-cards": "Эвенты с Картами"
+        "events-cards": "Эвенты с Картами",
       },
       showSpecialDays: "Показывать ДР",
       hideSpecialDays: "Спрятать ДР",
@@ -772,7 +772,9 @@ export const ru = {
     },
     BannerList: {
       noBanners: "Нет доступных баннеров",
-      noMatch: "Нп один баннер не соответствует вашим фильтрам",
+      noMatch: "Ни один баннер не соответствует вашим фильтрам",
+    },
+    BannerDetails: {
       linkWiki: "Больше инфо об Эвенте на Вики",
     },
   },

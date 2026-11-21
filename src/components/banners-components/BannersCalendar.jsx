@@ -8,11 +8,12 @@ import {
 import {getBannerColorMap, getImageUrl} from "@hooks";
 import { memoriesData } from "@data";
 import {
-    CardList,
-    ModalWindow,
-    useTimezone,
-    BannerPeriod,
-    BannerList,
+  CardList,
+  ModalWindow,
+  useTimezone,
+  BannerPeriod,
+  BannerList,
+  BannerDetails,
 } from "@components";
 import { useTranslation } from "react-i18next";
 import {
@@ -859,276 +860,295 @@ function BannersCalendar({
         .join(" ");
 
     return (
-        <>
-            <div className={styles.calendar}>
-                {/* ОБОРАЧИВАЕМ КОНТЕНТ В REF ДЛЯ СКРИНШОТА (без кнопок) */}
-                <div ref={calendarContentRef}>
-                    <div className={styles.header}>
+      <>
+        <div className={styles.calendar}>
+          {/* ОБОРАЧИВАЕМ КОНТЕНТ В REF ДЛЯ СКРИНШОТА (без кнопок) */}
+          <div ref={calendarContentRef}>
+            <div className={styles.header}>
+              <button onClick={goPrevMonth} className={styles.navBtn}>
+                ←
+              </button>
+              <h2
+                className={`${styles.title} ${styles.titleClickable}`}
+                onClick={backToYear}
+                title={t("BannersCalendar.backToYearTitle")}
+              >
+                {monthName}
+              </h2>
+              <button onClick={goNextMonth} className={styles.navBtn}>
+                →
+              </button>
 
-                        <button onClick={goPrevMonth} className={styles.navBtn}>
-                            ←
-                        </button>
-                        <h2
-                            className={`${styles.title} ${styles.titleClickable}`}
-                            onClick={backToYear}
-                            title={t('BannersCalendar.backToYearTitle')}
-                        >
-                            {monthName}
-                        </h2>
-                        <button onClick={goNextMonth} className={styles.navBtn}>
-                            →
-                        </button>
-
-                        {/* КНОПКА ДЛЯ ПОКАЗА/СКРЫТИЯ ПРЕДИКТОВ В РЕЖИМЕ "МЕСЯЦ" */}
-                        <button
-                            onClick={() => setShowPredicts(prev => !prev)}
-                            className={styles.predictButton}
-                        >
-                            {showPredicts ? t('BannersCalendar.hidePredicts') : t('BannersCalendar.showPredicts')}
-                        </button>
-                    </div>
-
-                    {/* Шапка дней недели */}
-                    <div className={styles.weekHeader}>
-                        {weekDayKeys.map((key) => (
-                            <div key={key} className={styles.weekDayName}>
-                                {t(`BannersCalendar.weekDays.${key}`)}
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Сетка календаря */}
-                    <div className={styles.monthGridWrapper}>
-                        <div
-                            ref={monthGridRef}
-                            className={styles.monthGrid}
-                            style={{ gridTemplateRows: gridTemplateRows }}
-                            onTouchStart={handleGridTouchStart}
-                            onTouchEnd={handleGridTouchEnd}
-                            onTouchCancel={handleGridTouchCancel}
-                        >
-                            {Array.from({ length: totalCells }).map((_, i) => {
-                                const dayIndex = i - firstDayOfWeek;
-                                const day = monthDays[dayIndex];
-                                const isCurrentMonth = dayIndex >= 0 && dayIndex < monthDays.length;
-
-                                // ВАЖНО: todayTime уже сдвинут, но startOfDay применяется к нему,
-                                // чтобы сравнить именно дни (без учета времени)
-                                const isToday = isCurrentMonth && day.getTime() === startOfDay(todayTime).getTime();
-                                const specialClass = isCurrentMonth && showSpecialDays
-                                    ? getSpecialDayClass(day)
-                                    : "";
-                                const isSelectedDay = isCurrentMonth && selectedDays.includes(day.getTime());
-
-                                return (
-                                    <div
-                                        key={i}
-                                        data-day-time={isCurrentMonth ? day.getTime() : undefined}
-                                        onPointerDown={(e) => isCurrentMonth && handleDayPointerDown(day, e)}
-                                        onPointerEnter={(e) => isCurrentMonth && handleDayPointerEnter(day, e)}
-                                        className={[
-                                            styles.monthDay,
-                                            !isCurrentMonth ? styles.monthDayOutside : "",
-                                            specialClass ? styles[specialClass] : "",
-                                            isToday ? styles.monthDayToday : "",
-                                            isSelectedDay ? styles.monthDaySelected : "",
-                                            editMode && isCurrentMonth ? styles.monthDayEdit : "",
-                                            editMode && isCurrentMonth ? styles.monthDayTouch : "",
-                                        ].filter(Boolean).join(" ")}
-                                    >
-                                        {isCurrentMonth ? day.getDate() : ""}
-                                    </div>
-                                );
-                            })}
-                        </div>
-
-                        {/* Слой с полосами баннеров */}
-                        <div
-                            className={styles.monthBannersLayer}
-                            style={{
-                                gridTemplateRows: gridTemplateRows,
-                                pointerEvents: editMode ? "none" : "auto",
-                            }}
-                        >
-                            {bannerRows.map((seg, idx) => {
-                                const { banner, typeLabel, imageUrl, startCol, span, row, lane } = seg;
-                                const color = bannerColorMap.get(banner.id) || getBannerColor(banner);
-                                const chars = getBannerCharacters(banner);
-                                const tooltip = `${banner.name} — ${typeLabel}${chars.length > 0 ? ` (${chars.join(", ")})` : ""}`;
-                                const isPredictBanner = banner.isPredict || banner.isCustom;
-                                const isSelectedForDelete = selectedPredictId === banner.id;
-
-                                return (
-                                    <div
-                                        key={`${banner.id}-${row}-${idx}`}
-                                        className={[
-                                            styles.bannerBar,
-                                            isSelectedForDelete ? styles.bannerBarSelected : "",
-                                        ].filter(Boolean).join(" ")}
-                                        style={{
-                                            gridColumn: `${startCol} / span ${span}`,
-                                            gridRow: row + 1,
-                                            "--bar-color": color,
-                                            marginTop: `${3 + (lane || 0) * 32}px`,
-                                        }}
-                                        title={tooltip}
-                                        onClick={(e) => {
-                                            if (!editMode) {
-                                                showMemoriesModal(banner);
-                                            } else {
-                                                e.stopPropagation();
-                                                if (isPredictBanner) {
-                                                    setSelectedPredictId(isSelectedForDelete ? null : banner.id);
-                                                }
-                                            }
-                                        }}
-                                        role="button"
-                                        tabIndex={0}
-                                        onKeyDown={(e) => {
-                                            if ((e.key === "Enter" || e.key === " ") && !editMode) {
-                                                e.preventDefault();
-                                                showMemoriesModal(banner);
-                                            }
-                                        }}
-                                    >
-                                        {span > 1 && (
-                                            <div className={styles.bannerBarText}>{banner.name}</div>
-                                        )}
-                                        {imageUrl && (
-                                            <img
-                                                src={imageUrl}
-                                                alt=""
-                                                className={`${styles.bannerBarImage} ${banner.isCustom ? styles.customBannerImage : ""}`}
-                                                loading="lazy"
-                                                onError={(e) => { e.currentTarget.style.display = "none"; }}
-                                            />
-                                        )}
-                                    </div>
-                                );
-                            })}
-                        </div>
-                    </div>
-                </div>
-
-                {/* Блок кнопок внизу календаря */}
-                <div className={styles.predictContainer}>
-                    {/* Кнопка входа/выхода из режима редактирования - ТОЛЬКО В РЕЖИМЕ МЕСЯЦА */}
-                    <button
-                        onClick={() => setEditMode(!editMode)}
-                        className={`${styles.addPredictButton} ${editMode ? styles.exitEditModeButton : styles.editModeButton}`}
-                    >
-                        {editMode ? t('BannersCalendar.exitButton') : t('BannersCalendar.addPredictButton')}
-                    </button>
-
-                    {/* Остальные кнопки - только если включен режим редактирования */}
-                    {editMode && (
-                        <>
-                            {selectedDays.length > 0 && (
-                                <button
-                                    onClick={() => {
-                                        if (predictModalRef.current) {
-                                            predictModalRef.current.showModal();
-                                        }
-                                    }}
-                                    className={styles.addBannerButton}
-                                >
-                                    {t('BannersCalendar.addBannerButton')} ({selectedDays.length})
-                                </button>
-                            )}
-
-                            {/* НОВАЯ КНОПКА ДЛЯ СОЗДАНИЯ СВОЕГО БАННЕРА */}
-                            {selectedDays.length > 0 && (
-                                <button
-                                    onClick={() => setIsCustomModalOpen(true)}
-                                    className={styles.ownBannerButton}
-                                >
-                                    {t('BannersCalendar.createBannerButton')}
-                                </button>
-                            )}
-
-                            {/* КНОПКА УДАЛЕНИЯ ВЫБРАННОГО ПРЕДИКТА */}
-                            {selectedPredictId && (
-                                <button
-                                    onClick={handleRemoveSelectedPredict}
-                                    className={styles.deletePredict}
-                                >
-                                    {t('BannersCalendar.deletePredictButton') || t('BannersCalendar.deletePredictButton')}
-                                </button>
-                            )}
-
-                            {predicts.length > 0 && (
-                                <button
-                                    onClick={handleClearAllPredicts}
-                                    className={styles.deleteAllPredictButton}
-                                >
-                                    {t('BannersCalendar.deleteAllButton')}
-                                </button>
-                            )}
-                        </>
-                    )}
-
-                    {/* КНОПКА СОХРАНЕНИЯ СКРИНШОТА */}
-                    <button
-                        onClick={() => {
-                            if (calendarContentRef.current) {
-                                captureScreenshot(calendarContentRef.current, `calendar_${selectedYear}_${selectedMonth + 1}`);
-                            }
-                        }}
-                        disabled={isCapturing}
-                        className={styles.savePicButton}
-                    >
-                        {isCapturing ? "..." : t('BannersCalendar.saveAsImage')}
-                    </button>
-                </div>
+              {/* КНОПКА ДЛЯ ПОКАЗА/СКРЫТИЯ ПРЕДИКТОВ В РЕЖИМЕ "МЕСЯЦ" */}
+              <button
+                onClick={() => setShowPredicts((prev) => !prev)}
+                className={styles.predictButton}
+              >
+                {showPredicts
+                  ? t("BannersCalendar.hidePredicts")
+                  : t("BannersCalendar.showPredicts")}
+              </button>
             </div>
 
-            {/* Модалка выбора баннера для предикта */}
-            <ModalWindow
-                ref={predictModalRef}
-                title={t('BannersCalendar.titleModalBanner')}
-                onClose={() => {}}
-                tag={
-                    <div style={{ maxHeight: "60vh", overflowY: "auto" }}>
-                        <BannerList
-                            banners={banners}
-                            showFilters={true}
-                            onSelect={(banner) => handleAddPredict(banner)}
-                        />
+            {/* Шапка дней недели */}
+            <div className={styles.weekHeader}>
+              {weekDayKeys.map((key) => (
+                <div key={key} className={styles.weekDayName}>
+                  {t(`BannersCalendar.weekDays.${key}`)}
+                </div>
+              ))}
+            </div>
+
+            {/* Сетка календаря */}
+            <div className={styles.monthGridWrapper}>
+              <div
+                ref={monthGridRef}
+                className={styles.monthGrid}
+                style={{ gridTemplateRows: gridTemplateRows }}
+                onTouchStart={handleGridTouchStart}
+                onTouchEnd={handleGridTouchEnd}
+                onTouchCancel={handleGridTouchCancel}
+              >
+                {Array.from({ length: totalCells }).map((_, i) => {
+                  const dayIndex = i - firstDayOfWeek;
+                  const day = monthDays[dayIndex];
+                  const isCurrentMonth =
+                    dayIndex >= 0 && dayIndex < monthDays.length;
+
+                  // ВАЖНО: todayTime уже сдвинут, но startOfDay применяется к нему,
+                  // чтобы сравнить именно дни (без учета времени)
+                  const isToday =
+                    isCurrentMonth &&
+                    day.getTime() === startOfDay(todayTime).getTime();
+                  const specialClass =
+                    isCurrentMonth && showSpecialDays
+                      ? getSpecialDayClass(day)
+                      : "";
+                  const isSelectedDay =
+                    isCurrentMonth && selectedDays.includes(day.getTime());
+
+                  return (
+                    <div
+                      key={i}
+                      data-day-time={isCurrentMonth ? day.getTime() : undefined}
+                      onPointerDown={(e) =>
+                        isCurrentMonth && handleDayPointerDown(day, e)
+                      }
+                      onPointerEnter={(e) =>
+                        isCurrentMonth && handleDayPointerEnter(day, e)
+                      }
+                      className={[
+                        styles.monthDay,
+                        !isCurrentMonth ? styles.monthDayOutside : "",
+                        specialClass ? styles[specialClass] : "",
+                        isToday ? styles.monthDayToday : "",
+                        isSelectedDay ? styles.monthDaySelected : "",
+                        editMode && isCurrentMonth ? styles.monthDayEdit : "",
+                        editMode && isCurrentMonth ? styles.monthDayTouch : "",
+                      ]
+                        .filter(Boolean)
+                        .join(" ")}
+                    >
+                      {isCurrentMonth ? day.getDate() : ""}
                     </div>
-                }
-            />
+                  );
+                })}
+              </div>
 
-            {/* Существующая модалка для просмотра карточек */}
-            <ModalWindow
-                ref={memoriesModalRef}
-                title={selectedBanner?.name}
-                tag={
-                    <>
-                        <CardList cards={cards} />
-                        {selectedBanner && (
-                            <BannerPeriod banners={[selectedBanner]} />
-                        )}
-                        {selectedBanner?.link && (
-                <a
-                    href={selectedBanner.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.bannerLink}
-                >
-                    {t('BannersCalendar.linkWiki')}
-                </a>
+              {/* Слой с полосами баннеров */}
+              <div
+                className={styles.monthBannersLayer}
+                style={{
+                  gridTemplateRows: gridTemplateRows,
+                  pointerEvents: editMode ? "none" : "auto",
+                }}
+              >
+                {bannerRows.map((seg, idx) => {
+                  const {
+                    banner,
+                    typeLabel,
+                    imageUrl,
+                    startCol,
+                    span,
+                    row,
+                    lane,
+                  } = seg;
+                  const color =
+                    bannerColorMap.get(banner.id) || getBannerColor(banner);
+                  const chars = getBannerCharacters(banner);
+                  const tooltip = `${banner.name} — ${typeLabel}${chars.length > 0 ? ` (${chars.join(", ")})` : ""}`;
+                  const isPredictBanner = banner.isPredict || banner.isCustom;
+                  const isSelectedForDelete = selectedPredictId === banner.id;
+
+                  return (
+                    <div
+                      key={`${banner.id}-${row}-${idx}`}
+                      className={[
+                        styles.bannerBar,
+                        isSelectedForDelete ? styles.bannerBarSelected : "",
+                      ]
+                        .filter(Boolean)
+                        .join(" ")}
+                      style={{
+                        gridColumn: `${startCol} / span ${span}`,
+                        gridRow: row + 1,
+                        "--bar-color": color,
+                        marginTop: `${3 + (lane || 0) * 32}px`,
+                      }}
+                      title={tooltip}
+                      onClick={(e) => {
+                        if (!editMode) {
+                          showMemoriesModal(banner);
+                        } else {
+                          e.stopPropagation();
+                          if (isPredictBanner) {
+                            setSelectedPredictId(
+                              isSelectedForDelete ? null : banner.id,
+                            );
+                          }
+                        }
+                      }}
+                      role="button"
+                      tabIndex={0}
+                      onKeyDown={(e) => {
+                        if ((e.key === "Enter" || e.key === " ") && !editMode) {
+                          e.preventDefault();
+                          showMemoriesModal(banner);
+                        }
+                      }}
+                    >
+                      {span > 1 && (
+                        <div className={styles.bannerBarText}>
+                          {banner.name}
+                        </div>
+                      )}
+                      {imageUrl && (
+                        <img
+                          src={imageUrl}
+                          alt=""
+                          className={`${styles.bannerBarImage} ${banner.isCustom ? styles.customBannerImage : ""}`}
+                          loading="lazy"
+                          onError={(e) => {
+                            e.currentTarget.style.display = "none";
+                          }}
+                        />
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+
+          {/* Блок кнопок внизу календаря */}
+          <div className={styles.predictContainer}>
+            {/* Кнопка входа/выхода из режима редактирования - ТОЛЬКО В РЕЖИМЕ МЕСЯЦА */}
+            <button
+              onClick={() => setEditMode(!editMode)}
+              className={`${styles.addPredictButton} ${editMode ? styles.exitEditModeButton : styles.editModeButton}`}
+            >
+              {editMode
+                ? t("BannersCalendar.exitButton")
+                : t("BannersCalendar.addPredictButton")}
+            </button>
+
+            {/* Остальные кнопки - только если включен режим редактирования */}
+            {editMode && (
+              <>
+                {selectedDays.length > 0 && (
+                  <button
+                    onClick={() => {
+                      if (predictModalRef.current) {
+                        predictModalRef.current.showModal();
+                      }
+                    }}
+                    className={styles.addBannerButton}
+                  >
+                    {t("BannersCalendar.addBannerButton")} (
+                    {selectedDays.length})
+                  </button>
+                )}
+
+                {/* НОВАЯ КНОПКА ДЛЯ СОЗДАНИЯ СВОЕГО БАННЕРА */}
+                {selectedDays.length > 0 && (
+                  <button
+                    onClick={() => setIsCustomModalOpen(true)}
+                    className={styles.ownBannerButton}
+                  >
+                    {t("BannersCalendar.createBannerButton")}
+                  </button>
+                )}
+
+                {/* КНОПКА УДАЛЕНИЯ ВЫБРАННОГО ПРЕДИКТА */}
+                {selectedPredictId && (
+                  <button
+                    onClick={handleRemoveSelectedPredict}
+                    className={styles.deletePredict}
+                  >
+                    {t("BannersCalendar.deletePredictButton") ||
+                      t("BannersCalendar.deletePredictButton")}
+                  </button>
+                )}
+
+                {predicts.length > 0 && (
+                  <button
+                    onClick={handleClearAllPredicts}
+                    className={styles.deleteAllPredictButton}
+                  >
+                    {t("BannersCalendar.deleteAllButton")}
+                  </button>
+                )}
+              </>
             )}
-                    </>
-                }
-            />
 
-            {/* НОВАЯ МОДАЛКА ДЛЯ СОЗДАНИЯ СВОЕГО БАННЕРА */}
-            <CustomBannerModal
-                open={isCustomModalOpen}
-                onClose={() => setIsCustomModalOpen(false)}
-                onSave={handleSaveCustomBanner}
-            />
-        </>
+            {/* КНОПКА СОХРАНЕНИЯ СКРИНШОТА */}
+            <button
+              onClick={() => {
+                if (calendarContentRef.current) {
+                  captureScreenshot(
+                    calendarContentRef.current,
+                    `calendar_${selectedYear}_${selectedMonth + 1}`,
+                  );
+                }
+              }}
+              disabled={isCapturing}
+              className={styles.savePicButton}
+            >
+              {isCapturing ? "..." : t("BannersCalendar.saveAsImage")}
+            </button>
+          </div>
+        </div>
+
+        {/* Модалка выбора баннера для предикта */}
+        <ModalWindow
+          ref={predictModalRef}
+          title={t("BannersCalendar.titleModalBanner")}
+          onClose={() => {}}
+          tag={
+            <div style={{ maxHeight: "60vh", overflowY: "auto" }}>
+              <BannerList
+                banners={banners}
+                showFilters={true}
+                onSelect={(banner) => handleAddPredict(banner)}
+              />
+            </div>
+          }
+        />
+
+        {/* Существующая модалка для просмотра карточек */}
+        <ModalWindow
+          ref={memoriesModalRef}
+          title={selectedBanner?.name}
+          tag={<BannerDetails banner={selectedBanner} cards={cards} />}
+        />
+
+        {/* НОВАЯ МОДАЛКА ДЛЯ СОЗДАНИЯ СВОЕГО БАННЕРА */}
+        <CustomBannerModal
+          open={isCustomModalOpen}
+          onClose={() => setIsCustomModalOpen(false)}
+          onSave={handleSaveCustomBanner}
+        />
+      </>
     );
 }
 

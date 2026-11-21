@@ -693,7 +693,7 @@ export const en = {
         "festive-blessing": "Festive Blessing",
         "sweetie-silk": "Sweetie Silk",
         "touring-in-love": "Touring in Love",
-        "events-cards": "Events with Memories"
+        "events-cards": "Events with Memories",
       },
       showSpecialDays: "Show birthdays",
       hideSpecialDays: "Hide birthdays",
@@ -769,6 +769,8 @@ export const en = {
     BannerList: {
       noBanners: "No banners available",
       noMatch: "No banners match your filters",
+    },
+    BannerDetails: {
       linkWiki: "More info about event on Wiki",
     },
   },
