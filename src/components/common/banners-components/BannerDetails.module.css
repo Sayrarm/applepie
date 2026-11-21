@@ -8,3 +8,16 @@
 .bannerLink:hover {
     color: var(--a-hover);
 }
+
+.eventImage {
+    max-width: 50%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.eventText {
+    margin: 0 0 12px;
+    font-size: 14px;
+    line-height: 1.5;
+}

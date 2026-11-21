@@ -1404,7 +1404,7 @@ link: "https://lads.wiki/wiki/Fussy_Kitty",
     rerun: true,
     active: false,
     type: "companion-rehearsal",
-link: "To fully experience the combat effects, the Companion, the Team Setup, the Memories (level, rank, pair bonus, etc.), My Weapon and My Outfit cannot be modified.",
+text: "To fully experience the combat effects, the Companion, the Team Setup, the Memories (level, rank, pair bonus, etc.), My Weapon and My Outfit cannot be modified.",
   },
 {
     id: 87_3,
