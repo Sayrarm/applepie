@@ -479,10 +479,6 @@ function BannersCalendar({
         memoriesModalRef.current.showModal();
     };
 
-    const cards = memoriesData.filter((card) =>
-        selectedBanner?.cardIds?.includes(card.id),
-    );
-
     // ===== Режим "месяц" =====
     const monthDays = useMemo(
         () => getMonthDays(selectedYear, selectedMonth),
@@ -1139,7 +1135,7 @@ function BannersCalendar({
         <ModalWindow
           ref={memoriesModalRef}
           title={selectedBanner?.name}
-          tag={<BannerDetails banner={selectedBanner} cards={cards} />}
+          tag={<BannerDetails banner={selectedBanner} />}
         />
 
         {/* НОВАЯ МОДАЛКА ДЛЯ СОЗДАНИЯ СВОЕГО БАННЕРА */}

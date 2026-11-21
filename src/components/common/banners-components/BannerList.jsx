@@ -84,10 +84,6 @@ function BannerList({ banners, showFilters = false, onSelect = null }) {
     memoriesModalRef.current.showModal();
   };
 
-  const cards = memoriesData.filter((card) =>
-    selectedBanner?.cardIds?.includes(card.id),
-  );
-
   return (
     <>
       {showFilters && (
@@ -144,7 +140,7 @@ function BannerList({ banners, showFilters = false, onSelect = null }) {
       <ModalWindow
         ref={memoriesModalRef}
         title={selectedBanner?.name}
-        tag={<BannerDetails banner={selectedBanner} cards={cards} />}
+        tag={<BannerDetails banner={selectedBanner} />}
       />
     </>
   );
