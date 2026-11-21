@@ -207,6 +207,7 @@ function CalendarPage() {
         editMode={editMode}
         setEditMode={setEditMode}
         showSpecialDays={showSpecialDays}
+        bannersForPredict={bannersDataFull}
       />
     </section>
   );

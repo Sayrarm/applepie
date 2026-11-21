@@ -356,796 +356,800 @@ function MiniMonth({ year, month, banners, onClick, showSpecialDays = true, bann
 
 // ===== Основной компонент =====
 function BannersCalendar({
-                             banners,
-                             initialDate = new Date(),
-                             editMode,
-                             setEditMode,
-                             showSpecialDays = true,
+  banners,
+  initialDate = new Date(),
+  editMode,
+  setEditMode,
+  showSpecialDays = true,
+  bannersForPredict,
 }) {
-    const { timezone } = useTimezone();
-    const { t, i18n } = useTranslation();
-    const { isCapturing, captureScreenshot } = useScreenshot();
-    const [searchParams, setSearchParams] = useSearchParams();
+  const { timezone } = useTimezone();
+  const { t, i18n } = useTranslation();
+  const { isCapturing, captureScreenshot } = useScreenshot();
+  const [searchParams, setSearchParams] = useSearchParams();
 
-    // читаем из URL при инициализации
-    const initialView = searchParams.get("view") === "month" ? "month" : "year";
-    const initialYear = Number(searchParams.get("year")) || initialDate.getFullYear();
-    const initialMonth = searchParams.has("month")
-        ? Number(searchParams.get("month"))
-        : initialDate.getMonth();
+  // читаем из URL при инициализации
+  const initialView = searchParams.get("view") === "month" ? "month" : "year";
+  const initialYear =
+    Number(searchParams.get("year")) || initialDate.getFullYear();
+  const initialMonth = searchParams.has("month")
+    ? Number(searchParams.get("month"))
+    : initialDate.getMonth();
 
-    const [selectedYear, setSelectedYear] = useState(initialYear);
-    const [viewMode, setViewMode] = useState(initialView);
-    const [selectedMonth, setSelectedMonth] = useState(initialMonth);
+  const [selectedYear, setSelectedYear] = useState(initialYear);
+  const [viewMode, setViewMode] = useState(initialView);
+  const [selectedMonth, setSelectedMonth] = useState(initialMonth);
 
-    const [isDragging, setIsDragging] = useState(false);
-    const [dragAction, setDragAction] = useState(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragAction, setDragAction] = useState(null);
 
-    // ===== ТАЧ-ЛОГИКА =====
-    const monthGridRef = useRef(null);
-    const touchStateRef = useRef({
-        active: false,
-        startX: 0,
-        startY: 0,
-        startTime: 0,
-        startDayTime: null,
-        longPressFired: false,
-        dragAction: null,
-        lastDayTime: null,
-        moved: false,
+  // ===== ТАЧ-ЛОГИКА =====
+  const monthGridRef = useRef(null);
+  const touchStateRef = useRef({
+    active: false,
+    startX: 0,
+    startY: 0,
+    startTime: 0,
+    startDayTime: null,
+    longPressFired: false,
+    dragAction: null,
+    lastDayTime: null,
+    moved: false,
+  });
+  const longPressTimerRef = useRef(null);
+  const lastTouchTimeRef = useRef(0);
+  const [touchDragging, setTouchDragging] = useState(false);
+
+  const LONG_PRESS_MS = 100;
+  const TAP_MOVE_THRESHOLD = 8;
+
+  // СТЕЙТ ДЛЯ ПОКАЗА/СКРЫТИЯ ПРЕДИКТОВ
+  const [showPredicts, setShowPredicts] = useState(getShowPredicts);
+
+  // НОВЫЙ СТЕЙТ: выбранный предикт для удаления
+  const [selectedPredictId, setSelectedPredictId] = useState(null);
+
+  const calendarContentRef = useRef();
+
+  // Состояние для модалки
+  const [selectedBanner, setSelectedBanner] = useState(null);
+  const memoriesModalRef = useRef();
+
+  const [selectedDays, setSelectedDays] = useState([]);
+  const [predicts, setPredicts] = useState(() => getPredicts());
+  const predictModalRef = useRef();
+
+  // ===== СОСТОЯНИЕ ДЛЯ КАСТОМНОГО БАННЕРА =====
+  const [isCustomModalOpen, setIsCustomModalOpen] = useState(false);
+
+  useEffect(() => {
+    saveShowPredicts(showPredicts);
+  }, [showPredicts]);
+
+  // синхронизация состояния -> URL
+  useEffect(() => {
+    const params = new URLSearchParams(searchParams);
+    if (viewMode === "month") {
+      params.set("view", "month");
+      params.set("year", String(selectedYear));
+      params.set("month", String(selectedMonth));
+    } else {
+      params.delete("view");
+      params.delete("month");
+      params.set("year", String(selectedYear));
+    }
+    setSearchParams(params, { replace: true });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [viewMode, selectedYear, selectedMonth]);
+
+  // Сброс выбранных дней при выходе из режима
+  useEffect(() => {
+    if (!editMode) {
+      setSelectedDays([]);
+      setSelectedPredictId(null);
+    }
+  }, [editMode]);
+
+  // Очистка таймера при размонтировании
+  useEffect(() => {
+    return () => {
+      if (longPressTimerRef.current) {
+        clearTimeout(longPressTimerRef.current);
+        longPressTimerRef.current = null;
+      }
+    };
+  }, []);
+
+  const allBanners = useMemo(() => {
+    if (showPredicts) {
+      return [...banners, ...predicts];
+    }
+    return banners;
+  }, [banners, predicts, showPredicts]);
+
+  const calendarBanners = useMemo(() => {
+    return allBanners.filter((b) => b.endDate !== "permanently");
+  }, [allBanners]);
+
+  const bannerColorMap = useMemo(
+    () => getBannerColorMap(calendarBanners),
+    [calendarBanners],
+  );
+
+  const showMemoriesModal = (banner) => {
+    setSelectedBanner(banner);
+    memoriesModalRef.current.showModal();
+  };
+
+  // ===== Режим "месяц" =====
+  const monthDays = useMemo(
+    () => getMonthDays(selectedYear, selectedMonth),
+    [selectedYear, selectedMonth],
+  );
+
+  const firstDayOfWeek = (monthDays[0].getDay() + 6) % 7;
+
+  const bannerRows = useMemo(
+    () =>
+      buildBannerSegments(calendarBanners, monthDays, firstDayOfWeek, timezone),
+    [calendarBanners, monthDays, firstDayOfWeek, timezone],
+  );
+
+  const goPrevMonth = () => {
+    if (selectedMonth === 0) {
+      setSelectedYear(selectedYear - 1);
+      setSelectedMonth(11);
+    } else {
+      setSelectedMonth(selectedMonth - 1);
+    }
+  };
+
+  const goNextMonth = () => {
+    if (selectedMonth === 11) {
+      setSelectedYear(selectedYear + 1);
+      setSelectedMonth(0);
+    } else {
+      setSelectedMonth(selectedMonth + 1);
+    }
+  };
+
+  const goPrevYear = () => setSelectedYear(selectedYear - 1);
+  const goNextYear = () => setSelectedYear(selectedYear + 1);
+
+  const openMonth = (monthIdx) => {
+    setSelectedMonth(monthIdx);
+    setViewMode("month");
+  };
+
+  const backToYear = () => {
+    setViewMode("year");
+  };
+
+  // ===== ОБЩИЕ ХЭНДЛЕРЫ =====
+  const applyDayAction = (time, action) => {
+    if (time == null) return;
+    setSelectedDays((prev) => {
+      const has = prev.includes(time);
+      if (action === "add") return has ? prev : [...prev, time];
+      if (action === "remove")
+        return has ? prev.filter((t) => t !== time) : prev;
+      return has ? prev.filter((t) => t !== time) : [...prev, time];
     });
-    const longPressTimerRef = useRef(null);
-    const lastTouchTimeRef = useRef(0);
-    const [touchDragging, setTouchDragging] = useState(false);
+  };
 
-    const LONG_PRESS_MS = 100;
-    const TAP_MOVE_THRESHOLD = 8;
+  // ===== МЫШЬ (через pointer events) =====
+  const handleDayPointerDown = (day, e) => {
+    if (!editMode) return;
+    // Тач обрабатывается в touch-логике контейнера
+    if (e.pointerType === "touch") return;
 
-    // СТЕЙТ ДЛЯ ПОКАЗА/СКРЫТИЯ ПРЕДИКТОВ
-    const [showPredicts, setShowPredicts] = useState(getShowPredicts);
+    const time = day.getTime();
+    const isAlreadySelected = selectedDays.includes(time);
 
-    // НОВЫЙ СТЕЙТ: выбранный предикт для удаления
-    const [selectedPredictId, setSelectedPredictId] = useState(null);
+    // Определяем, будем мы добавлять или удалять
+    setDragAction(isAlreadySelected ? "remove" : "add");
+    setIsDragging(true);
 
-    const calendarContentRef = useRef();
+    // Сразу применяем действие к первому дню
+    setSelectedDays((prev) => {
+      if (isAlreadySelected) return prev.filter((t) => t !== time);
+      return [...prev, time];
+    });
+  };
 
-    // Состояние для модалки
-    const [selectedBanner, setSelectedBanner] = useState(null);
-    const memoriesModalRef = useRef();
+  const handleDayPointerEnter = (day, e) => {
+    if (e.pointerType === "touch") return;
+    if (!isDragging || !editMode) return;
 
-    const [selectedDays, setSelectedDays] = useState([]);
-    const [predicts, setPredicts] = useState(() => getPredicts());
-    const predictModalRef = useRef();
+    const time = day.getTime();
+    const isAlreadySelected = selectedDays.includes(time);
 
-    // ===== СОСТОЯНИЕ ДЛЯ КАСТОМНОГО БАННЕРА =====
-    const [isCustomModalOpen, setIsCustomModalOpen] = useState(false);
+    if (dragAction === "add" && !isAlreadySelected) {
+      setSelectedDays((prev) => [...prev, time]);
+    } else if (dragAction === "remove" && isAlreadySelected) {
+      setSelectedDays((prev) => prev.filter((t) => t !== time));
+    }
+  };
 
-    useEffect(() => {
-        saveShowPredicts(showPredicts);
-    }, [showPredicts]);
-
-    // синхронизация состояния -> URL
-    useEffect(() => {
-        const params = new URLSearchParams(searchParams);
-        if (viewMode === "month") {
-            params.set("view", "month");
-            params.set("year", String(selectedYear));
-            params.set("month", String(selectedMonth));
-        } else {
-            params.delete("view");
-            params.delete("month");
-            params.set("year", String(selectedYear));
-        }
-        setSearchParams(params, { replace: true });
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [viewMode, selectedYear, selectedMonth]);
-
-    // Сброс выбранных дней при выходе из режима
-    useEffect(() => {
-        if (!editMode) {
-            setSelectedDays([]);
-            setSelectedPredictId(null);
-        }
-    }, [editMode]);
-
-    // Очистка таймера при размонтировании
-    useEffect(() => {
-        return () => {
-            if (longPressTimerRef.current) {
-                clearTimeout(longPressTimerRef.current);
-                longPressTimerRef.current = null;
-            }
-        };
-    }, []);
-
-    const allBanners = useMemo(() => {
-        if (showPredicts) {
-            return [...banners, ...predicts];
-        }
-        return banners;
-    }, [banners, predicts, showPredicts]);
-
-    const calendarBanners = useMemo(() => {
-        return allBanners.filter(b => b.endDate !== "permanently");
-    }, [allBanners]);
-
-    const bannerColorMap = useMemo(
-        () => getBannerColorMap(calendarBanners),
-        [calendarBanners]
-    );
-
-    const showMemoriesModal = (banner) => {
-        setSelectedBanner(banner);
-        memoriesModalRef.current.showModal();
+  // Глобальный pointerup — сбрасывает drag для мыши/пера
+  useEffect(() => {
+    const handleGlobalPointerUp = (e) => {
+      if (e.pointerType === "touch") return;
+      setIsDragging(false);
+      setDragAction(null);
     };
+    window.addEventListener("pointerup", handleGlobalPointerUp);
+    return () => window.removeEventListener("pointerup", handleGlobalPointerUp);
+  }, []);
 
-    // ===== Режим "месяц" =====
-    const monthDays = useMemo(
-        () => getMonthDays(selectedYear, selectedMonth),
-        [selectedYear, selectedMonth],
-    );
+  // ===== ТАЧ (на контейнере) =====
+  const getDayTimeFromPoint = (x, y) => {
+    const el = document.elementFromPoint(x, y);
+    if (!el) return null;
+    const dayEl = el.closest(`[data-day-time]`);
+    if (!dayEl) return null;
+    const val = dayEl.getAttribute("data-day-time");
+    return val ? Number(val) : null;
+  };
 
-    const firstDayOfWeek = (monthDays[0].getDay() + 6) % 7;
+  const cancelLongPressTimer = () => {
+    if (longPressTimerRef.current) {
+      clearTimeout(longPressTimerRef.current);
+      longPressTimerRef.current = null;
+    }
+  };
 
-    const bannerRows = useMemo(
-        () => buildBannerSegments(calendarBanners, monthDays, firstDayOfWeek, timezone),
-        [calendarBanners, monthDays, firstDayOfWeek, timezone]
-    );
+  const handleGridTouchStart = (e) => {
+    if (!editMode) return;
+    if (e.touches.length !== 1) return;
 
-    const goPrevMonth = () => {
-        if (selectedMonth === 0) {
-            setSelectedYear(selectedYear - 1);
-            setSelectedMonth(11);
-        } else {
-            setSelectedMonth(selectedMonth - 1);
-        }
-    };
+    const touch = e.touches[0];
+    const dayTime = getDayTimeFromPoint(touch.clientX, touch.clientY);
+    if (dayTime == null) return;
 
-    const goNextMonth = () => {
-        if (selectedMonth === 11) {
-            setSelectedYear(selectedYear + 1);
-            setSelectedMonth(0);
-        } else {
-            setSelectedMonth(selectedMonth + 1);
-        }
-    };
+    const st = touchStateRef.current;
+    st.active = true;
+    st.startX = touch.clientX;
+    st.startY = touch.clientY;
+    st.startTime = Date.now();
+    st.startDayTime = dayTime;
+    st.longPressFired = false;
+    st.dragAction = null;
+    st.lastDayTime = null;
+    st.moved = false;
 
-    const goPrevYear = () => setSelectedYear(selectedYear - 1);
-    const goNextYear = () => setSelectedYear(selectedYear + 1);
+    cancelLongPressTimer();
+    longPressTimerRef.current = setTimeout(() => {
+      const s = touchStateRef.current;
+      if (!s.active || s.moved) return;
 
-    const openMonth = (monthIdx) => {
-        setSelectedMonth(monthIdx);
-        setViewMode("month");
-    };
+      s.longPressFired = true;
+      setTouchDragging(true);
 
-    const backToYear = () => {
-        setViewMode("year");
-    };
+      const has = selectedDays.includes(s.startDayTime);
+      s.dragAction = has ? "remove" : "add";
+      applyDayAction(s.startDayTime, s.dragAction);
+      s.lastDayTime = s.startDayTime;
 
-    // ===== ОБЩИЕ ХЭНДЛЕРЫ =====
-    const applyDayAction = (time, action) => {
-        if (time == null) return;
-        setSelectedDays((prev) => {
-            const has = prev.includes(time);
-            if (action === "add") return has ? prev : [...prev, time];
-            if (action === "remove") return has ? prev.filter((t) => t !== time) : prev;
-            return has ? prev.filter((t) => t !== time) : [...prev, time];
-        });
-    };
+      if (navigator.vibrate) navigator.vibrate(15);
+    }, LONG_PRESS_MS);
+  };
 
-    // ===== МЫШЬ (через pointer events) =====
-    const handleDayPointerDown = (day, e) => {
-        if (!editMode) return;
-        // Тач обрабатывается в touch-логике контейнера
-        if (e.pointerType === "touch") return;
+  const handleGridTouchEnd = () => {
+    if (!editMode) return;
+    const st = touchStateRef.current;
+    if (!st.active) return;
 
-        const time = day.getTime();
-        const isAlreadySelected = selectedDays.includes(time);
+    cancelLongPressTimer();
 
-        // Определяем, будем мы добавлять или удалять
-        setDragAction(isAlreadySelected ? "remove" : "add");
-        setIsDragging(true);
+    const elapsed = Date.now() - st.startTime;
+    const wasLongPress = st.longPressFired || elapsed >= LONG_PRESS_MS;
+    const moved = st.moved;
 
-        // Сразу применяем действие к первому дню
-        setSelectedDays((prev) => {
-            if (isAlreadySelected) return prev.filter((t) => t !== time);
-            return [...prev, time];
-        });
-    };
-
-    const handleDayPointerEnter = (day, e) => {
-        if (e.pointerType === "touch") return;
-        if (!isDragging || !editMode) return;
-
-        const time = day.getTime();
-        const isAlreadySelected = selectedDays.includes(time);
-
-        if (dragAction === "add" && !isAlreadySelected) {
-            setSelectedDays((prev) => [...prev, time]);
-        } else if (dragAction === "remove" && isAlreadySelected) {
-            setSelectedDays((prev) => prev.filter((t) => t !== time));
-        }
-    };
-
-    // Глобальный pointerup — сбрасывает drag для мыши/пера
-    useEffect(() => {
-        const handleGlobalPointerUp = (e) => {
-            if (e.pointerType === "touch") return;
-            setIsDragging(false);
-            setDragAction(null);
-        };
-        window.addEventListener("pointerup", handleGlobalPointerUp);
-        return () => window.removeEventListener("pointerup", handleGlobalPointerUp);
-    }, []);
-
-    // ===== ТАЧ (на контейнере) =====
-    const getDayTimeFromPoint = (x, y) => {
-        const el = document.elementFromPoint(x, y);
-        if (!el) return null;
-        const dayEl = el.closest(`[data-day-time]`);
-        if (!dayEl) return null;
-        const val = dayEl.getAttribute("data-day-time");
-        return val ? Number(val) : null;
-    };
-
-    const cancelLongPressTimer = () => {
-        if (longPressTimerRef.current) {
-            clearTimeout(longPressTimerRef.current);
-            longPressTimerRef.current = null;
-        }
-    };
-
-    const handleGridTouchStart = (e) => {
-        if (!editMode) return;
-        if (e.touches.length !== 1) return;
-
-        const touch = e.touches[0];
-        const dayTime = getDayTimeFromPoint(touch.clientX, touch.clientY);
-        if (dayTime == null) return;
-
-        const st = touchStateRef.current;
-        st.active = true;
-        st.startX = touch.clientX;
-        st.startY = touch.clientY;
-        st.startTime = Date.now();
-        st.startDayTime = dayTime;
-        st.longPressFired = false;
-        st.dragAction = null;
-        st.lastDayTime = null;
-        st.moved = false;
-
-        cancelLongPressTimer();
-        longPressTimerRef.current = setTimeout(() => {
-            const s = touchStateRef.current;
-            if (!s.active || s.moved) return;
-
-            s.longPressFired = true;
-            setTouchDragging(true);
-
-            const has = selectedDays.includes(s.startDayTime);
-            s.dragAction = has ? "remove" : "add";
-            applyDayAction(s.startDayTime, s.dragAction);
-            s.lastDayTime = s.startDayTime;
-
-            if (navigator.vibrate) navigator.vibrate(15);
-        }, LONG_PRESS_MS);
-    };
-
-    const handleGridTouchEnd = () => {
-        if (!editMode) return;
-        const st = touchStateRef.current;
-        if (!st.active) return;
-
-        cancelLongPressTimer();
-
-        const elapsed = Date.now() - st.startTime;
-        const wasLongPress = st.longPressFired || elapsed >= LONG_PRESS_MS;
-        const moved = st.moved;
-
-        if (!wasLongPress && !moved && st.startDayTime != null) {
-            applyDayAction(st.startDayTime, "toggle");
-        }
-
-        st.active = false;
-        st.startDayTime = null;
-        st.longPressFired = false;
-        st.dragAction = null;
-        st.lastDayTime = null;
-        st.moved = false;
-        setTouchDragging(false);
-        lastTouchTimeRef.current = Date.now();
-    };
-
-    const handleGridTouchCancel = () => {
-        cancelLongPressTimer();
-        const st = touchStateRef.current;
-        st.active = false;
-        st.startDayTime = null;
-        st.longPressFired = false;
-        st.dragAction = null;
-        st.lastDayTime = null;
-        st.moved = false;
-        setTouchDragging(false);
-        lastTouchTimeRef.current = Date.now();
-    };
-
-    // ===== НАТИВНЫЙ TOUCHMOVE (passive: false) =====
-    useEffect(() => {
-        const el = monthGridRef.current;
-        if (!el) return;
-
-        const onMove = (e) => {
-            if (!editMode) return;
-            const st = touchStateRef.current;
-            if (!st.active) return;
-
-            const touch = e.touches[0];
-            const dx = touch.clientX - st.startX;
-            const dy = touch.clientY - st.startY;
-            const dist = Math.sqrt(dx * dx + dy * dy);
-
-            if (!st.longPressFired) {
-                if (dist > TAP_MOVE_THRESHOLD) {
-                    st.moved = true;
-                    cancelLongPressTimer();
-                }
-                return;
-            }
-
-            if (e.cancelable) e.preventDefault();
-
-            const dayTime = getDayTimeFromPoint(touch.clientX, touch.clientY);
-            if (dayTime != null && dayTime !== st.lastDayTime) {
-                applyDayAction(dayTime, st.dragAction);
-                st.lastDayTime = dayTime;
-            }
-        };
-
-        el.addEventListener("touchmove", onMove, { passive: false });
-        return () => el.removeEventListener("touchmove", onMove);
-    }, [editMode]);
-
-    // ===== ПРЕДИКТЫ =====
-    const handleAddPredict = (banner) => {
-        if (selectedDays.length === 0) return;
-
-        const sortedDays = [...selectedDays].sort((a, b) => a - b);
-
-        // ИСПРАВЛЕНО: ставим 00:00:00 для начала и 23:59:59 для конца
-        const startDate = new Date(sortedDays[0]);
-        startDate.setHours(0, 0, 0, 0);
-
-        const endDate = new Date(sortedDays[sortedDays.length - 1]);
-        endDate.setHours(23, 59, 59, 999);
-
-        const predict = {
-            ...banner,
-            id: `predict-${Date.now()}`,
-            startDate: startDate.toISOString(),
-            endDate: endDate.toISOString(),
-            isPredict: true,
-        };
-
-        const updatedPredicts = addPredict(predict);
-        setPredicts(updatedPredicts);
-
-        setSelectedDays([]);
-        // Закрываем модалку
-        if (predictModalRef.current) {
-            predictModalRef.current.closeModal();
-        }
-    };
-
-    // ===== СОЗДАНИЕ КАСТОМНОГО БАННЕРА =====
-    const handleSaveCustomBanner = (customBanner) => {
-        if (selectedDays.length === 0) return;
-
-        const sortedDays = [...selectedDays].sort((a, b) => a - b);
-
-        const startDate = new Date(sortedDays[0]);
-        startDate.setHours(0, 0, 0, 0);
-
-        const endDate = new Date(sortedDays[sortedDays.length - 1]);
-        endDate.setHours(23, 59, 59, 999);
-
-        // Объединяем данные кастомного баннера с датами
-        const predict = {
-            ...customBanner,
-            startDate: startDate.toISOString(),
-            endDate: endDate.toISOString(),
-            isPredict: true,
-            isCustom: true,
-        };
-
-        const updatedPredicts = addPredict(predict);
-        setPredicts(updatedPredicts);
-
-        setSelectedDays([]);
-        setIsCustomModalOpen(false);
-    };
-
-    // ===== УДАЛЕНИЕ ВСЕХ ПРЕДИКТОВ =====
-    const handleClearAllPredicts = () => {
-        if (window.confirm("Вы уверены, что хотите удалить все предикты?")) {
-            clearPredicts();
-            setPredicts([]);
-            setSelectedPredictId(null);
-        }
-    };
-
-    // ===== УДАЛЕНИЕ ОДНОГО ВЫБРАННОГО ПРЕДИКТА =====
-    const handleRemoveSelectedPredict = () => {
-        if (!selectedPredictId) return;
-        const updatedPredicts = removePredict(selectedPredictId);
-        setPredicts(updatedPredicts);
-        setSelectedPredictId(null);
-    };
-
-    const weekDayKeys = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
-
-    // ===== РЕНДЕР: режим "год" =====
-    if (viewMode === "year") {
-        return (
-            <div className={styles.calendar}>
-                <div className={styles.header}>
-                    <button onClick={goPrevYear} className={styles.navBtn}>
-                        ←
-                    </button>
-                    <h2 className={styles.title}>{selectedYear}</h2>
-                    <button onClick={goNextYear} className={styles.navBtn}>
-                        →
-                    </button>
-
-                    {/* КНОПКА ДЛЯ ПОКАЗА/СКРЫТИЯ ПРЕДИКТОВ В РЕЖИМЕ "ГОД" */}
-                    <button
-                        onClick={() => setShowPredicts(prev => !prev)}
-                        className={styles.predictButton}
-                    >
-                        {showPredicts ? t('BannersCalendar.hidePredicts') : t('BannersCalendar.showPredicts')}
-                    </button>
-                </div>
-
-                <div className={styles.yearGrid}>
-                    {Array.from({ length: 12 }).map((_, idx) => (
-                        <MiniMonth
-                            key={idx}
-                            year={selectedYear}
-                            month={idx}
-                            banners={calendarBanners}
-                            onClick={() => openMonth(idx)}
-                            showSpecialDays={showSpecialDays}
-                            bannerColorMap={bannerColorMap}
-                        />
-                    ))}
-                </div>
-            </div>
-        );
+    if (!wasLongPress && !moved && st.startDayTime != null) {
+      applyDayAction(st.startDayTime, "toggle");
     }
 
-    // ===== РЕНДЕР: режим "месяц" =====
-    const monthName = new Date(selectedYear, selectedMonth, 1).toLocaleString(
-        i18n.language,
-        { month: "long", year: "numeric" },
-    );
+    st.active = false;
+    st.startDayTime = null;
+    st.longPressFired = false;
+    st.dragAction = null;
+    st.lastDayTime = null;
+    st.moved = false;
+    setTouchDragging(false);
+    lastTouchTimeRef.current = Date.now();
+  };
 
-    const totalCells = Math.ceil((firstDayOfWeek + monthDays.length) / 7) * 7;
-    const totalWeeks = totalCells / 7;
+  const handleGridTouchCancel = () => {
+    cancelLongPressTimer();
+    const st = touchStateRef.current;
+    st.active = false;
+    st.startDayTime = null;
+    st.longPressFired = false;
+    st.dragAction = null;
+    st.lastDayTime = null;
+    st.moved = false;
+    setTouchDragging(false);
+    lastTouchTimeRef.current = Date.now();
+  };
 
-    // Сдвигаем "сегодня" в соответствии с выбранным поясом
-    const todayTime = applyTimezone(new Date(), timezone)?.getTime();
+  // ===== НАТИВНЫЙ TOUCHMOVE (passive: false) =====
+  useEffect(() => {
+    const el = monthGridRef.current;
+    if (!el) return;
 
-    const weekMaxLanes = Array(totalWeeks).fill(0);
-    bannerRows.forEach(seg => {
-        if (seg.lane !== undefined) {
-            weekMaxLanes[seg.row] = Math.max(weekMaxLanes[seg.row], seg.lane);
+    const onMove = (e) => {
+      if (!editMode) return;
+      const st = touchStateRef.current;
+      if (!st.active) return;
+
+      const touch = e.touches[0];
+      const dx = touch.clientX - st.startX;
+      const dy = touch.clientY - st.startY;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+
+      if (!st.longPressFired) {
+        if (dist > TAP_MOVE_THRESHOLD) {
+          st.moved = true;
+          cancelLongPressTimer();
         }
-    });
+        return;
+      }
 
-    const BAR_BASE_TOP = 0;
-    const LANE_STEP = 32;      // шаг между баннерами
-    const BAR_HEIGHT = 30;     // высота баннера
-    const MIN_ROW_HEIGHT = 118;
+      if (e.cancelable) e.preventDefault();
 
-    const gridTemplateRows = weekMaxLanes
-        .map(maxLane =>
-            `minmax(${Math.max(
-                MIN_ROW_HEIGHT,
-                BAR_BASE_TOP + (maxLane + 1) * LANE_STEP + BAR_HEIGHT
-            )}px, auto)`
-        )
-        .join(" ");
+      const dayTime = getDayTimeFromPoint(touch.clientX, touch.clientY);
+      if (dayTime != null && dayTime !== st.lastDayTime) {
+        applyDayAction(dayTime, st.dragAction);
+        st.lastDayTime = dayTime;
+      }
+    };
 
+    el.addEventListener("touchmove", onMove, { passive: false });
+    return () => el.removeEventListener("touchmove", onMove);
+  }, [editMode]);
+
+  // ===== ПРЕДИКТЫ =====
+  const handleAddPredict = (banner) => {
+    if (selectedDays.length === 0) return;
+
+    const sortedDays = [...selectedDays].sort((a, b) => a - b);
+
+    // ИСПРАВЛЕНО: ставим 00:00:00 для начала и 23:59:59 для конца
+    const startDate = new Date(sortedDays[0]);
+    startDate.setHours(0, 0, 0, 0);
+
+    const endDate = new Date(sortedDays[sortedDays.length - 1]);
+    endDate.setHours(23, 59, 59, 999);
+
+    const predict = {
+      ...banner,
+      id: `predict-${Date.now()}`,
+      startDate: startDate.toISOString(),
+      endDate: endDate.toISOString(),
+      isPredict: true,
+    };
+
+    const updatedPredicts = addPredict(predict);
+    setPredicts(updatedPredicts);
+
+    setSelectedDays([]);
+    // Закрываем модалку
+    if (predictModalRef.current) {
+      predictModalRef.current.closeModal();
+    }
+  };
+
+  // ===== СОЗДАНИЕ КАСТОМНОГО БАННЕРА =====
+  const handleSaveCustomBanner = (customBanner) => {
+    if (selectedDays.length === 0) return;
+
+    const sortedDays = [...selectedDays].sort((a, b) => a - b);
+
+    const startDate = new Date(sortedDays[0]);
+    startDate.setHours(0, 0, 0, 0);
+
+    const endDate = new Date(sortedDays[sortedDays.length - 1]);
+    endDate.setHours(23, 59, 59, 999);
+
+    // Объединяем данные кастомного баннера с датами
+    const predict = {
+      ...customBanner,
+      startDate: startDate.toISOString(),
+      endDate: endDate.toISOString(),
+      isPredict: true,
+      isCustom: true,
+    };
+
+    const updatedPredicts = addPredict(predict);
+    setPredicts(updatedPredicts);
+
+    setSelectedDays([]);
+    setIsCustomModalOpen(false);
+  };
+
+  // ===== УДАЛЕНИЕ ВСЕХ ПРЕДИКТОВ =====
+  const handleClearAllPredicts = () => {
+    if (window.confirm("Вы уверены, что хотите удалить все предикты?")) {
+      clearPredicts();
+      setPredicts([]);
+      setSelectedPredictId(null);
+    }
+  };
+
+  // ===== УДАЛЕНИЕ ОДНОГО ВЫБРАННОГО ПРЕДИКТА =====
+  const handleRemoveSelectedPredict = () => {
+    if (!selectedPredictId) return;
+    const updatedPredicts = removePredict(selectedPredictId);
+    setPredicts(updatedPredicts);
+    setSelectedPredictId(null);
+  };
+
+  const weekDayKeys = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+
+  // ===== РЕНДЕР: режим "год" =====
+  if (viewMode === "year") {
     return (
-      <>
-        <div className={styles.calendar}>
-          {/* ОБОРАЧИВАЕМ КОНТЕНТ В REF ДЛЯ СКРИНШОТА (без кнопок) */}
-          <div ref={calendarContentRef}>
-            <div className={styles.header}>
-              <button onClick={goPrevMonth} className={styles.navBtn}>
-                ←
-              </button>
-              <h2
-                className={`${styles.title} ${styles.titleClickable}`}
-                onClick={backToYear}
-                title={t("BannersCalendar.backToYearTitle")}
-              >
-                {monthName}
-              </h2>
-              <button onClick={goNextMonth} className={styles.navBtn}>
-                →
-              </button>
+      <div className={styles.calendar}>
+        <div className={styles.header}>
+          <button onClick={goPrevYear} className={styles.navBtn}>
+            ←
+          </button>
+          <h2 className={styles.title}>{selectedYear}</h2>
+          <button onClick={goNextYear} className={styles.navBtn}>
+            →
+          </button>
 
-              {/* КНОПКА ДЛЯ ПОКАЗА/СКРЫТИЯ ПРЕДИКТОВ В РЕЖИМЕ "МЕСЯЦ" */}
-              <button
-                onClick={() => setShowPredicts((prev) => !prev)}
-                className={styles.predictButton}
-              >
-                {showPredicts
-                  ? t("BannersCalendar.hidePredicts")
-                  : t("BannersCalendar.showPredicts")}
-              </button>
-            </div>
+          {/* КНОПКА ДЛЯ ПОКАЗА/СКРЫТИЯ ПРЕДИКТОВ В РЕЖИМЕ "ГОД" */}
+          <button
+            onClick={() => setShowPredicts((prev) => !prev)}
+            className={styles.predictButton}
+          >
+            {showPredicts
+              ? t("BannersCalendar.hidePredicts")
+              : t("BannersCalendar.showPredicts")}
+          </button>
+        </div>
 
-            {/* Шапка дней недели */}
-            <div className={styles.weekHeader}>
-              {weekDayKeys.map((key) => (
-                <div key={key} className={styles.weekDayName}>
-                  {t(`BannersCalendar.weekDays.${key}`)}
-                </div>
-              ))}
-            </div>
+        <div className={styles.yearGrid}>
+          {Array.from({ length: 12 }).map((_, idx) => (
+            <MiniMonth
+              key={idx}
+              year={selectedYear}
+              month={idx}
+              banners={calendarBanners}
+              onClick={() => openMonth(idx)}
+              showSpecialDays={showSpecialDays}
+              bannerColorMap={bannerColorMap}
+            />
+          ))}
+        </div>
+      </div>
+    );
+  }
 
-            {/* Сетка календаря */}
-            <div className={styles.monthGridWrapper}>
-              <div
-                ref={monthGridRef}
-                className={styles.monthGrid}
-                style={{ gridTemplateRows: gridTemplateRows }}
-                onTouchStart={handleGridTouchStart}
-                onTouchEnd={handleGridTouchEnd}
-                onTouchCancel={handleGridTouchCancel}
-              >
-                {Array.from({ length: totalCells }).map((_, i) => {
-                  const dayIndex = i - firstDayOfWeek;
-                  const day = monthDays[dayIndex];
-                  const isCurrentMonth =
-                    dayIndex >= 0 && dayIndex < monthDays.length;
+  // ===== РЕНДЕР: режим "месяц" =====
+  const monthName = new Date(selectedYear, selectedMonth, 1).toLocaleString(
+    i18n.language,
+    { month: "long", year: "numeric" },
+  );
 
-                  // ВАЖНО: todayTime уже сдвинут, но startOfDay применяется к нему,
-                  // чтобы сравнить именно дни (без учета времени)
-                  const isToday =
-                    isCurrentMonth &&
-                    day.getTime() === startOfDay(todayTime).getTime();
-                  const specialClass =
-                    isCurrentMonth && showSpecialDays
-                      ? getSpecialDayClass(day)
-                      : "";
-                  const isSelectedDay =
-                    isCurrentMonth && selectedDays.includes(day.getTime());
+  const totalCells = Math.ceil((firstDayOfWeek + monthDays.length) / 7) * 7;
+  const totalWeeks = totalCells / 7;
 
-                  return (
-                    <div
-                      key={i}
-                      data-day-time={isCurrentMonth ? day.getTime() : undefined}
-                      onPointerDown={(e) =>
-                        isCurrentMonth && handleDayPointerDown(day, e)
-                      }
-                      onPointerEnter={(e) =>
-                        isCurrentMonth && handleDayPointerEnter(day, e)
-                      }
-                      className={[
-                        styles.monthDay,
-                        !isCurrentMonth ? styles.monthDayOutside : "",
-                        specialClass ? styles[specialClass] : "",
-                        isToday ? styles.monthDayToday : "",
-                        isSelectedDay ? styles.monthDaySelected : "",
-                        editMode && isCurrentMonth ? styles.monthDayEdit : "",
-                        editMode && isCurrentMonth ? styles.monthDayTouch : "",
-                      ]
-                        .filter(Boolean)
-                        .join(" ")}
-                    >
-                      {isCurrentMonth ? day.getDate() : ""}
-                    </div>
-                  );
-                })}
-              </div>
+  // Сдвигаем "сегодня" в соответствии с выбранным поясом
+  const todayTime = applyTimezone(new Date(), timezone)?.getTime();
 
-              {/* Слой с полосами баннеров */}
-              <div
-                className={styles.monthBannersLayer}
-                style={{
-                  gridTemplateRows: gridTemplateRows,
-                  pointerEvents: editMode ? "none" : "auto",
-                }}
-              >
-                {bannerRows.map((seg, idx) => {
-                  const {
-                    banner,
-                    typeLabel,
-                    imageUrl,
-                    startCol,
-                    span,
-                    row,
-                    lane,
-                  } = seg;
-                  const color =
-                    bannerColorMap.get(banner.id) || getBannerColor(banner);
-                  const chars = getBannerCharacters(banner);
-                  const tooltip = `${banner.name} — ${typeLabel}${chars.length > 0 ? ` (${chars.join(", ")})` : ""}`;
-                  const isPredictBanner = banner.isPredict || banner.isCustom;
-                  const isSelectedForDelete = selectedPredictId === banner.id;
+  const weekMaxLanes = Array(totalWeeks).fill(0);
+  bannerRows.forEach((seg) => {
+    if (seg.lane !== undefined) {
+      weekMaxLanes[seg.row] = Math.max(weekMaxLanes[seg.row], seg.lane);
+    }
+  });
 
-                  return (
-                    <div
-                      key={`${banner.id}-${row}-${idx}`}
-                      className={[
-                        styles.bannerBar,
-                        isSelectedForDelete ? styles.bannerBarSelected : "",
-                      ]
-                        .filter(Boolean)
-                        .join(" ")}
-                      style={{
-                        gridColumn: `${startCol} / span ${span}`,
-                        gridRow: row + 1,
-                        "--bar-color": color,
-                        marginTop: `${3 + (lane || 0) * 32}px`,
-                      }}
-                      title={tooltip}
-                      onClick={(e) => {
-                        if (!editMode) {
-                          showMemoriesModal(banner);
-                        } else {
-                          e.stopPropagation();
-                          if (isPredictBanner) {
-                            setSelectedPredictId(
-                              isSelectedForDelete ? null : banner.id,
-                            );
-                          }
-                        }
-                      }}
-                      role="button"
-                      tabIndex={0}
-                      onKeyDown={(e) => {
-                        if ((e.key === "Enter" || e.key === " ") && !editMode) {
-                          e.preventDefault();
-                          showMemoriesModal(banner);
-                        }
-                      }}
-                    >
-                      {span > 1 && (
-                        <div className={styles.bannerBarText}>
-                          {banner.name}
-                        </div>
-                      )}
-                      {imageUrl && (
-                        <img
-                          src={imageUrl}
-                          alt=""
-                          className={`${styles.bannerBarImage} ${banner.isCustom ? styles.customBannerImage : ""}`}
-                          loading="lazy"
-                          onError={(e) => {
-                            e.currentTarget.style.display = "none";
-                          }}
-                        />
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
+  const BAR_BASE_TOP = 0;
+  const LANE_STEP = 32; // шаг между баннерами
+  const BAR_HEIGHT = 30; // высота баннера
+  const MIN_ROW_HEIGHT = 118;
+
+  const gridTemplateRows = weekMaxLanes
+    .map(
+      (maxLane) =>
+        `minmax(${Math.max(
+          MIN_ROW_HEIGHT,
+          BAR_BASE_TOP + (maxLane + 1) * LANE_STEP + BAR_HEIGHT,
+        )}px, auto)`,
+    )
+    .join(" ");
+
+  return (
+    <>
+      <div className={styles.calendar}>
+        {/* ОБОРАЧИВАЕМ КОНТЕНТ В REF ДЛЯ СКРИНШОТА (без кнопок) */}
+        <div ref={calendarContentRef}>
+          <div className={styles.header}>
+            <button onClick={goPrevMonth} className={styles.navBtn}>
+              ←
+            </button>
+            <h2
+              className={`${styles.title} ${styles.titleClickable}`}
+              onClick={backToYear}
+              title={t("BannersCalendar.backToYearTitle")}
+            >
+              {monthName}
+            </h2>
+            <button onClick={goNextMonth} className={styles.navBtn}>
+              →
+            </button>
+
+            {/* КНОПКА ДЛЯ ПОКАЗА/СКРЫТИЯ ПРЕДИКТОВ В РЕЖИМЕ "МЕСЯЦ" */}
+            <button
+              onClick={() => setShowPredicts((prev) => !prev)}
+              className={styles.predictButton}
+            >
+              {showPredicts
+                ? t("BannersCalendar.hidePredicts")
+                : t("BannersCalendar.showPredicts")}
+            </button>
           </div>
 
-          {/* Блок кнопок внизу календаря */}
-          <div className={styles.predictContainer}>
-            {/* Кнопка входа/выхода из режима редактирования - ТОЛЬКО В РЕЖИМЕ МЕСЯЦА */}
-            <button
-              onClick={() => setEditMode(!editMode)}
-              className={`${styles.addPredictButton} ${editMode ? styles.exitEditModeButton : styles.editModeButton}`}
-            >
-              {editMode
-                ? t("BannersCalendar.exitButton")
-                : t("BannersCalendar.addPredictButton")}
-            </button>
+          {/* Шапка дней недели */}
+          <div className={styles.weekHeader}>
+            {weekDayKeys.map((key) => (
+              <div key={key} className={styles.weekDayName}>
+                {t(`BannersCalendar.weekDays.${key}`)}
+              </div>
+            ))}
+          </div>
 
-            {/* Остальные кнопки - только если включен режим редактирования */}
-            {editMode && (
-              <>
-                {selectedDays.length > 0 && (
-                  <button
-                    onClick={() => {
-                      if (predictModalRef.current) {
-                        predictModalRef.current.showModal();
+          {/* Сетка календаря */}
+          <div className={styles.monthGridWrapper}>
+            <div
+              ref={monthGridRef}
+              className={styles.monthGrid}
+              style={{ gridTemplateRows: gridTemplateRows }}
+              onTouchStart={handleGridTouchStart}
+              onTouchEnd={handleGridTouchEnd}
+              onTouchCancel={handleGridTouchCancel}
+            >
+              {Array.from({ length: totalCells }).map((_, i) => {
+                const dayIndex = i - firstDayOfWeek;
+                const day = monthDays[dayIndex];
+                const isCurrentMonth =
+                  dayIndex >= 0 && dayIndex < monthDays.length;
+
+                // ВАЖНО: todayTime уже сдвинут, но startOfDay применяется к нему,
+                // чтобы сравнить именно дни (без учета времени)
+                const isToday =
+                  isCurrentMonth &&
+                  day.getTime() === startOfDay(todayTime).getTime();
+                const specialClass =
+                  isCurrentMonth && showSpecialDays
+                    ? getSpecialDayClass(day)
+                    : "";
+                const isSelectedDay =
+                  isCurrentMonth && selectedDays.includes(day.getTime());
+
+                return (
+                  <div
+                    key={i}
+                    data-day-time={isCurrentMonth ? day.getTime() : undefined}
+                    onPointerDown={(e) =>
+                      isCurrentMonth && handleDayPointerDown(day, e)
+                    }
+                    onPointerEnter={(e) =>
+                      isCurrentMonth && handleDayPointerEnter(day, e)
+                    }
+                    className={[
+                      styles.monthDay,
+                      !isCurrentMonth ? styles.monthDayOutside : "",
+                      specialClass ? styles[specialClass] : "",
+                      isToday ? styles.monthDayToday : "",
+                      isSelectedDay ? styles.monthDaySelected : "",
+                      editMode && isCurrentMonth ? styles.monthDayEdit : "",
+                      editMode && isCurrentMonth ? styles.monthDayTouch : "",
+                    ]
+                      .filter(Boolean)
+                      .join(" ")}
+                  >
+                    {isCurrentMonth ? day.getDate() : ""}
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Слой с полосами баннеров */}
+            <div
+              className={styles.monthBannersLayer}
+              style={{
+                gridTemplateRows: gridTemplateRows,
+                pointerEvents: editMode ? "none" : "auto",
+              }}
+            >
+              {bannerRows.map((seg, idx) => {
+                const {
+                  banner,
+                  typeLabel,
+                  imageUrl,
+                  startCol,
+                  span,
+                  row,
+                  lane,
+                } = seg;
+                const color =
+                  bannerColorMap.get(banner.id) || getBannerColor(banner);
+                const chars = getBannerCharacters(banner);
+                const tooltip = `${banner.name} — ${typeLabel}${chars.length > 0 ? ` (${chars.join(", ")})` : ""}`;
+                const isPredictBanner = banner.isPredict || banner.isCustom;
+                const isSelectedForDelete = selectedPredictId === banner.id;
+
+                return (
+                  <div
+                    key={`${banner.id}-${row}-${idx}`}
+                    className={[
+                      styles.bannerBar,
+                      isSelectedForDelete ? styles.bannerBarSelected : "",
+                    ]
+                      .filter(Boolean)
+                      .join(" ")}
+                    style={{
+                      gridColumn: `${startCol} / span ${span}`,
+                      gridRow: row + 1,
+                      "--bar-color": color,
+                      marginTop: `${3 + (lane || 0) * 32}px`,
+                    }}
+                    title={tooltip}
+                    onClick={(e) => {
+                      if (!editMode) {
+                        showMemoriesModal(banner);
+                      } else {
+                        e.stopPropagation();
+                        if (isPredictBanner) {
+                          setSelectedPredictId(
+                            isSelectedForDelete ? null : banner.id,
+                          );
+                        }
                       }
                     }}
-                    className={styles.addBannerButton}
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={(e) => {
+                      if ((e.key === "Enter" || e.key === " ") && !editMode) {
+                        e.preventDefault();
+                        showMemoriesModal(banner);
+                      }
+                    }}
                   >
-                    {t("BannersCalendar.addBannerButton")} (
-                    {selectedDays.length})
-                  </button>
-                )}
-
-                {/* НОВАЯ КНОПКА ДЛЯ СОЗДАНИЯ СВОЕГО БАННЕРА */}
-                {selectedDays.length > 0 && (
-                  <button
-                    onClick={() => setIsCustomModalOpen(true)}
-                    className={styles.ownBannerButton}
-                  >
-                    {t("BannersCalendar.createBannerButton")}
-                  </button>
-                )}
-
-                {/* КНОПКА УДАЛЕНИЯ ВЫБРАННОГО ПРЕДИКТА */}
-                {selectedPredictId && (
-                  <button
-                    onClick={handleRemoveSelectedPredict}
-                    className={styles.deletePredict}
-                  >
-                    {t("BannersCalendar.deletePredictButton") ||
-                      t("BannersCalendar.deletePredictButton")}
-                  </button>
-                )}
-
-                {predicts.length > 0 && (
-                  <button
-                    onClick={handleClearAllPredicts}
-                    className={styles.deleteAllPredictButton}
-                  >
-                    {t("BannersCalendar.deleteAllButton")}
-                  </button>
-                )}
-              </>
-            )}
-
-            {/* КНОПКА СОХРАНЕНИЯ СКРИНШОТА */}
-            <button
-              onClick={() => {
-                if (calendarContentRef.current) {
-                  captureScreenshot(
-                    calendarContentRef.current,
-                    `calendar_${selectedYear}_${selectedMonth + 1}`,
-                  );
-                }
-              }}
-              disabled={isCapturing}
-              className={styles.savePicButton}
-            >
-              {isCapturing ? "..." : t("BannersCalendar.saveAsImage")}
-            </button>
+                    {span > 1 && (
+                      <div className={styles.bannerBarText}>{banner.name}</div>
+                    )}
+                    {imageUrl && (
+                      <img
+                        src={imageUrl}
+                        alt=""
+                        className={`${styles.bannerBarImage} ${banner.isCustom ? styles.customBannerImage : ""}`}
+                        loading="lazy"
+                        onError={(e) => {
+                          e.currentTarget.style.display = "none";
+                        }}
+                      />
+                    )}
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
 
-        {/* Модалка выбора баннера для предикта */}
-        <ModalWindow
-          ref={predictModalRef}
-          title={t("BannersCalendar.titleModalBanner")}
-          onClose={() => {}}
-          tag={
-            <div style={{ maxHeight: "60vh", overflowY: "auto" }}>
-              <BannerList
-                banners={banners}
-                showFilters={true}
-                onSelect={(banner) => handleAddPredict(banner)}
-              />
-            </div>
-          }
-        />
+        {/* Блок кнопок внизу календаря */}
+        <div className={styles.predictContainer}>
+          {/* Кнопка входа/выхода из режима редактирования - ТОЛЬКО В РЕЖИМЕ МЕСЯЦА */}
+          <button
+            onClick={() => setEditMode(!editMode)}
+            className={`${styles.addPredictButton} ${editMode ? styles.exitEditModeButton : styles.editModeButton}`}
+          >
+            {editMode
+              ? t("BannersCalendar.exitButton")
+              : t("BannersCalendar.addPredictButton")}
+          </button>
 
-        {/* Существующая модалка для просмотра карточек */}
-        <ModalWindow
-          ref={memoriesModalRef}
-          title={selectedBanner?.name}
-          tag={<BannerDetails banner={selectedBanner} />}
-        />
+          {/* Остальные кнопки - только если включен режим редактирования */}
+          {editMode && (
+            <>
+              {selectedDays.length > 0 && (
+                <button
+                  onClick={() => {
+                    if (predictModalRef.current) {
+                      predictModalRef.current.showModal();
+                    }
+                  }}
+                  className={styles.addBannerButton}
+                >
+                  {t("BannersCalendar.addBannerButton")} ({selectedDays.length})
+                </button>
+              )}
 
-        {/* НОВАЯ МОДАЛКА ДЛЯ СОЗДАНИЯ СВОЕГО БАННЕРА */}
-        <CustomBannerModal
-          open={isCustomModalOpen}
-          onClose={() => setIsCustomModalOpen(false)}
-          onSave={handleSaveCustomBanner}
-        />
-      </>
-    );
+              {/* НОВАЯ КНОПКА ДЛЯ СОЗДАНИЯ СВОЕГО БАННЕРА */}
+              {selectedDays.length > 0 && (
+                <button
+                  onClick={() => setIsCustomModalOpen(true)}
+                  className={styles.ownBannerButton}
+                >
+                  {t("BannersCalendar.createBannerButton")}
+                </button>
+              )}
+
+              {/* КНОПКА УДАЛЕНИЯ ВЫБРАННОГО ПРЕДИКТА */}
+              {selectedPredictId && (
+                <button
+                  onClick={handleRemoveSelectedPredict}
+                  className={styles.deletePredict}
+                >
+                  {t("BannersCalendar.deletePredictButton") ||
+                    t("BannersCalendar.deletePredictButton")}
+                </button>
+              )}
+
+              {predicts.length > 0 && (
+                <button
+                  onClick={handleClearAllPredicts}
+                  className={styles.deleteAllPredictButton}
+                >
+                  {t("BannersCalendar.deleteAllButton")}
+                </button>
+              )}
+            </>
+          )}
+
+          {/* КНОПКА СОХРАНЕНИЯ СКРИНШОТА */}
+          <button
+            onClick={() => {
+              if (calendarContentRef.current) {
+                captureScreenshot(
+                  calendarContentRef.current,
+                  `calendar_${selectedYear}_${selectedMonth + 1}`,
+                );
+              }
+            }}
+            disabled={isCapturing}
+            className={styles.savePicButton}
+          >
+            {isCapturing ? "..." : t("BannersCalendar.saveAsImage")}
+          </button>
+        </div>
+      </div>
+
+      {/* Модалка выбора баннера для предикта */}
+      <ModalWindow
+        ref={predictModalRef}
+        title={t("BannersCalendar.titleModalBanner")}
+        onClose={() => {}}
+        tag={
+          <div style={{ maxHeight: "60vh", overflowY: "auto" }}>
+            <BannerList
+              banners={bannersForPredict}
+              showFilters={true}
+              onSelect={(banner) => handleAddPredict(banner)}
+            />
+          </div>
+        }
+      />
+
+      {/* Существующая модалка для просмотра карточек */}
+      <ModalWindow
+        ref={memoriesModalRef}
+        title={selectedBanner?.name}
+        tag={<BannerDetails banner={selectedBanner} />}
+      />
+
+      {/* НОВАЯ МОДАЛКА ДЛЯ СОЗДАНИЯ СВОЕГО БАННЕРА */}
+      <CustomBannerModal
+        open={isCustomModalOpen}
+        onClose={() => setIsCustomModalOpen(false)}
+        onSave={handleSaveCustomBanner}
+      />
+    </>
+  );
 }
 
 export default BannersCalendar;
