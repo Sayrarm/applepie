@@ -15,13 +15,13 @@ function CustomBannerModal({ open, onClose, onSave }) {
         { label: t('CustomBannerModal.types.solo'), value: "solo" },
         { label: t('CustomBannerModal.types.multi'), value: "multi" },
         { label: t('CustomBannerModal.types.birthday'), value: "birthday" },
-        { label: t('CustomBannerModal.types.standart'), value: "standart" },
+        { label: t('CustomBannerModal.types.standard'), value: "standard" },
         { label: t('CustomBannerModal.types.myth'), value: "myth" },
     ], [t]);
 
     // Сбрасываем персонажа, если выбран тип, где он не нужен
     useEffect(() => {
-        if (type === "multi" || type === "standart") {
+        if (type === "multi" || type === "standard") {
             setCharacter("");
         }
     }, [type]);

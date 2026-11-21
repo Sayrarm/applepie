@@ -650,7 +650,7 @@ export const ru = {
     FilterModalBanner: {
       titleModal: "Фильтр",
       type: "Тип:",
-      standart: "Стандарт",
+      standard: "Стандарт",
       multi: "Мульти",
       myth: "Миф",
       solo: "Соло",
@@ -769,7 +769,7 @@ export const ru = {
         solo: "Солобаннер",
         multi: "Мультибаннер",
         birthday: "День рождения",
-        standart: "Стандарт",
+        standard: "Стандарт",
         myth: "Миф",
       },
     },

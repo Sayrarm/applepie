@@ -646,7 +646,7 @@ export const en = {
     FilterModalBanner: {
       titleModal: "Banner filters",
       type: "Type:",
-      standart: "Standard",
+      standard: "Standard",
       multi: "Multi",
       myth: "Myth",
       solo: "Solo",
@@ -765,7 +765,7 @@ export const en = {
         solo: "Solo",
         multi: "Multi",
         birthday: "Birthday",
-        standart: "Standard",
+        standard: "Standard",
         myth: "Myth",
       },
     },

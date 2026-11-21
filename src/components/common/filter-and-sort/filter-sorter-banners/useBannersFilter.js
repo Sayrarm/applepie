@@ -68,7 +68,7 @@ export const useBannersFilter = (prefix = "") => {
                         (c) => c.toLowerCase() === selectedChar.toLowerCase(),
                     );
 
-                // --- Фильтр по типу баннера (standart/multi/myth/solo/birthday) ---
+                // --- Фильтр по типу баннера (standard/multi/myth/solo/birthday) ---
                 // Если type не задан в данных баннера — не отфильтровываем
                 const typeFilter = filters.type || [];
                 const matchesType =

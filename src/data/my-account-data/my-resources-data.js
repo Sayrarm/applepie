@@ -29,10 +29,10 @@ export const bottles = [
 //Wish
 export const wish = [
   {
-    id: "standart_wish",
+    id: "standard_wish",
     name: "Empyrean Wish",
     value: 150,
-    img: "../assets/icons/standart-wish.png",
+    img: "../assets/icons/standard-wish.png",
   },
   {
     id: "limited_wish",

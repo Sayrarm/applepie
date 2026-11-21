@@ -14,7 +14,7 @@ export const obtainData = [
       331, 332, 333, 334, 335, 348, 349, 350, 351, 358, 359, 361, 385, 386,
     ],
     description: "Can be obtain for 'Empyrean Wish' (Standard Banner).",
-    image: "../assets/main-page/modal-window/standart-banner.png",
+    image: "../assets/main-page/modal-window/standard-banner.png",
     bannerType: "xspace-echo",
   },
   {

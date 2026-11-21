@@ -693,7 +693,7 @@ function MyResources() {
         {(() => {
           const exchange = getWishExchange(diamondsState);
           const hasWishes =
-            exchange.wishes.standart > 0 ||
+            exchange.wishes.standard > 0 ||
             exchange.wishes.limited > 0 ||
             exchange.wishes.rerun > 0;
 
@@ -705,7 +705,7 @@ function MyResources() {
                 Diamonds {t('resources.exchange')}
               </h3>
               <div className={styles.exchangeGrid}>
-                {exchange.wishes.standart > 0 && (
+                {exchange.wishes.standard > 0 && (
                   <div className={styles.exchangeCard}>
                     <div className={styles.exchangeItem}>Empyrean Wish</div>
                     <img
@@ -714,7 +714,7 @@ function MyResources() {
                       className={styles.itemIconGray}
                     />
                     <div className={styles.exchangeValue}>
-                      {exchange.wishes.standart}
+                      {exchange.wishes.standard}
                     </div>
                   </div>
                 )}
